@@ -1,13 +1,13 @@
 ---
-title: "Especificando a execução do cliente- Comportamento do tempo"
-ms.custom: 
+title: Especificando a execução do cliente- Comportamento do tempo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificando a execução do cliente- Comportamento do tempo
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]os clientes, como [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviços, podem ser configurados para modificar o comportamento de tempo de execução de acordo com o aplicativo cliente. Três atributos estão disponíveis para especificar o comportamento de tempo de execução do cliente. Objetos de retorno de chamada duplex cliente podem usar o <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> atributos para modificar seu comportamento de tempo de execução. O atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, pode ser usado para separar o destino lógico de destino da rede imediata. Além disso, podem usar tipos de retorno de chamada de cliente duplex alguns comportamentos no lado do serviço. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Especificando o comportamento de tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] os clientes, como [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviços, podem ser configurados para modificar o comportamento de tempo de execução de acordo com o aplicativo cliente. Três atributos estão disponíveis para especificar o comportamento de tempo de execução do cliente. Objetos de retorno de chamada duplex cliente podem usar o <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> atributos para modificar seu comportamento de tempo de execução. O atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, pode ser usado para separar o destino lógico de destino da rede imediata. Além disso, podem usar tipos de retorno de chamada de cliente duplex alguns comportamentos no lado do serviço. Para obter mais informações, consulte [especificando comportamento de tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Usando o CallbackBehaviorAttribute  
  Você pode configurar ou estender o comportamento de execução de uma implementação do contrato de retorno de chamada em um aplicativo cliente usando o <xref:System.ServiceModel.CallbackBehaviorAttribute> classe. Esse atributo executa uma função semelhante para a classe de retorno de chamada como o <xref:System.ServiceModel.ServiceBehaviorAttribute> classe, com exceção de configurações de transações e o comportamento de instanciação.  

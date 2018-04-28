@@ -1,24 +1,26 @@
 ---
 title: Enfileiramento no WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>Enfileiramento no WCF
 Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -49,19 +51,19 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
  As filas do MSMQ também podem ser protegidas usando uma identidade de Windows registrada com o serviço de diretório do Active Directory. Ao instalar o MSMQ, você pode instalar a integração do Active Directory, o que exige que o computador é parte de uma rede de domínio do Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, consulte [instalar o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consulte [instalar o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  O [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) é a associação em fila [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece para duas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade para se comunicar usando o MSMQ. A associação, portanto, expõe as propriedades que são específicas para o MSMQ. No entanto, nem todos os recursos do MSMQ e propriedades são expostas no `NetMsmqBinding`. O compact `NetMsmqBinding` foi projetado com um conjunto ideal de recursos de que a maioria dos clientes deve ser suficiente.  
   
- O `NetMsmqBinding` manifestos os principais conceitos de enfileiramento de mensagens discutidos até agora na forma de propriedades em associações. Essas propriedades, por sua vez, se comunicam com MSMQ como transferir e entregar as mensagens. Uma descrição das categorias de propriedade está nas seções a seguir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Os tópicos conceituais que descrevem as propriedades específicas mais completamente.  
+ O `NetMsmqBinding` manifestos os principais conceitos de enfileiramento de mensagens discutidos até agora na forma de propriedades em associações. Essas propriedades, por sua vez, se comunicam com MSMQ como transferir e entregar as mensagens. Uma descrição das categorias de propriedade está nas seções a seguir. Para obter mais informações, consulte os tópicos conceituais que descrevem as propriedades específicas mais completamente.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>Propriedades duráveis e ExactlyOnce  
  O `ExactlyOnce` e `Durable` propriedades afetam como as mensagens são transferidas entre filas:  
   
 -   `ExactlyOnce`: Quando definido como `true` (o padrão), o canal em fila garante que a mensagem, se fornecido, não sejam duplicada. Ele também garante que a mensagem não será perdida. Se a mensagem não pode ser entregue, ou a mensagem de tempo de vida expira antes que a mensagem pode ser entregue, junto com o motivo da falha de entrega a mensagem de falha é registrada em uma fila de mensagens mortas. Quando definido como `false`, o canal em fila torna um esforço para transferir a mensagem. Nesse caso, opcionalmente, você pode escolher uma fila de mensagens mortas.  
   
--   `Durable:`Quando definido como `true` (o padrão), o canal em fila garante que MSMQ armazena a mensagem de forma durável no disco. Assim, se o serviço MSMQ parar e reiniciar, as mensagens em disco é transferida para a fila de destino ou entregues ao serviço. Quando definido como `false`, as mensagens são armazenadas no repositório volátil e serão perdidas em interromper e reiniciar o serviço MSMQ.  
+-   `Durable:` Quando definido como `true` (o padrão), o canal em fila garante que MSMQ armazena a mensagem de forma durável no disco. Assim, se o serviço MSMQ parar e reiniciar, as mensagens em disco é transferida para a fila de destino ou entregues ao serviço. Quando definido como `false`, as mensagens são armazenadas no repositório volátil e serão perdidas em interromper e reiniciar o serviço MSMQ.  
   
  Para `ExactlyOnce` transferência confiável, MSMQ requer a fila transacional. Além disso, o MSMQ exige uma transação ler de uma fila transacional. Dessa forma, quando você usa o `NetMsmqBinding`, lembre-se de que uma transação é necessária para enviar ou receber mensagens quando `ExactlyOnce` é definido como `true`. Da mesma forma, o MSMQ requer a fila não transacional por garantias de melhor esforço, como quando `ExactlyOnce` é `false` e para mensagens voláteis. Portanto, ao definir `ExactlyOnce` para `false` ou durável para `false`, não é possível enviar ou receber o uso de uma transação.  
   
@@ -77,19 +79,19 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
  A associação tem duas propriedades de interesse:  
   
--   `DeadLetterQueue`: Esta propriedade é uma enumeração que indica se uma fila de mensagens mortas é solicitada. A enumeração também contém o tipo de fila de mensagens mortas, se for solicitado. Os valores são `None`, `System`, e `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]a interpretação dessas propriedades, consulte [usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Esta propriedade é uma enumeração que indica se uma fila de mensagens mortas é solicitada. A enumeração também contém o tipo de fila de mensagens mortas, se for solicitado. Os valores são `None`, `System`, e `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] a interpretação dessas propriedades, consulte [usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: Essa propriedade é o endereço de identificador de recurso uniforme (URI) da fila de mensagens mortas específicas do aplicativo. Isso é necessário se `DeadLetterQueue`.`Custom` é escolhido.  
   
 #### <a name="poison-message-handling-properties"></a>Propriedades de manipulação de mensagens suspeitas  
- Quando o serviço lê mensagens da fila de destino em uma transação, o serviço pode falhar ao processar a mensagem por vários motivos. A mensagem, em seguida, é colocada de volta para a fila a ser lido novamente. Para lidar com mensagens que falham repetidamente, um conjunto de tratamento de mensagens suspeitas de propriedades podem ser configuradas na associação. Há quatro propriedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, e `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Essas propriedades, consulte [manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Quando o serviço lê mensagens da fila de destino em uma transação, o serviço pode falhar ao processar a mensagem por vários motivos. A mensagem, em seguida, é colocada de volta para a fila a ser lido novamente. Para lidar com mensagens que falham repetidamente, um conjunto de tratamento de mensagens suspeitas de propriedades podem ser configuradas na associação. Há quatro propriedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, e `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Essas propriedades, consulte [manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Propriedades de segurança  
- MSMQ expõe seu próprio modelo de segurança, como listas de controle de acesso (ACLs) em uma fila ou enviar mensagens autenticadas. O `NetMsmqBinding` expõe essas propriedades de segurança como parte de suas configurações de segurança de transporte. Há duas propriedades na associação de segurança de transporte: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Configurações nessas propriedades dependem de como o MSMQ está configurado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Proteger mensagens usando a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ MSMQ expõe seu próprio modelo de segurança, como listas de controle de acesso (ACLs) em uma fila ou enviar mensagens autenticadas. O `NetMsmqBinding` expõe essas propriedades de segurança como parte de suas configurações de segurança de transporte. Há duas propriedades na associação de segurança de transporte: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Configurações nessas propriedades dependem de como o MSMQ está configurado. Para obter mais informações, consulte [proteger mensagens usando a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
- Além da segurança de transporte, a própria mensagem SOAP real pode ser protegida usando a segurança de mensagem. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Proteger mensagens usando a segurança de mensagem](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
+ Além da segurança de transporte, a própria mensagem SOAP real pode ser protegida usando a segurança de mensagem. Para obter mais informações, consulte [proteger mensagens usando segurança de mensagem](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
- `MsmqTransportSecurity`também expõe duas propriedades, `MsmqEncryptionAlgorithm` e `MsmqHashAlgorithm`. Essas são as enumerações de algoritmos diferentes para escolher para criptografia de transferência de fila para a fila de mensagens e as assinaturas de hash.  
+ `MsmqTransportSecurity` também expõe duas propriedades, `MsmqEncryptionAlgorithm` e `MsmqHashAlgorithm`. Essas são as enumerações de algoritmos diferentes para escolher para criptografia de transferência de fila para a fila de mensagens e as assinaturas de hash.  
   
 #### <a name="other-properties"></a>Outras propriedades  
  Além das propriedades acima, outras propriedades específicas do MSMQ expostas no incluem associação:  
@@ -100,7 +102,7 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
 -   `QueueTransferProtocol`: Uma enumeração do protocolo a ser usado para transferências de mensagem da fila para a fila. MSMQ implementa um protocolo de transferência de fila para a fila nativa e um protocolo baseado em SOAP, chamado de protocolo de mensagens confiável SOAP (SRMP). SRMP é usada ao usar o transporte HTTP para transferências de fila para a fila. SRMP segura é usada quando HTTPS é usado para transferências de fila para a fila.  
   
--   `UseActiveDirectory`: Um valor booleano para indicar se o Active Directory deve ser usado para resolução de endereço da fila. Por padrão, isso está desativado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Pontos de extremidade e endereçamento de fila de serviço](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: Um valor booleano para indicar se o Active Directory deve ser usado para resolução de endereço da fila. Por padrão, isso está desativado. Para obter mais informações, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  O `MsmqIntegrationBinding` é usado quando você deseja uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ponto de extremidade para se comunicar com um aplicativo existente do MSMQ escrito em C, C++, COM ou System.Messaging APIs.  

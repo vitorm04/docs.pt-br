@@ -1,30 +1,32 @@
 ---
 title: Compartilhamento de porta Net.TCP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Compartilhamento de porta Net.TCP
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um novo protocolo de rede baseada em TCP (net.tcp://) para comunicação de alto desempenho. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também apresenta um novo componente do sistema, o serviço de compartilhamento de porta NET. TCP que permite que portas NET. TCP ser compartilhado entre vários processos de usuário.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece um novo protocolo de rede baseada em TCP (net.tcp://) para comunicação de alto desempenho. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também apresenta um novo componente do sistema, o serviço de compartilhamento de porta NET. TCP que permite que portas NET. TCP ser compartilhado entre vários processos de usuário.  
   
 ## <a name="background-and-motivation"></a>Plano de fundo e motivação  
  Quando o protocolo TCP/IP foi apresentado pela primeira vez, somente um pequeno número de protocolos de aplicativo feita usá-lo. TCP/IP usada números de porta para diferenciar entre os aplicativos, atribuindo um número de porta exclusivo de 16 bits para cada protocolo de aplicativo. Por exemplo, o tráfego HTTP hoje é padronizado para usar a porta TCP 80, SMTP usa a porta TCP 25 e FTP usa as portas TCP 20 e 21. Outros aplicativos usando TCP como um transporte podem escolher outro número de porta disponível, por convenção, ou por meio de padronização formal.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  Quando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que usa a porta net.tcp:// é aberto, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de transporte TCP não abre diretamente um soquete TCP no processo do aplicativo. Em vez disso, a infraestrutura de transporte registra o endereço de base do serviço identificador de recurso uniforme (URI) com o serviço de compartilhamento de porta NET. TCP e aguarda a serviço para escutar mensagens em seu nome de compartilhamento de porta.  A serviço de compartilhamento de porta envia as mensagens destinadas para o serviço de aplicativo assim que elas chegam.  
   
 ## <a name="installing-port-sharing"></a>Instalando o compartilhamento de porta  
- O serviço de compartilhamento de porta NET. TCP está disponível em todos os sistemas operacionais que oferecem suporte a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], mas o serviço não está habilitado por padrão. Como uma precaução de segurança, um administrador deve habilitar manualmente o serviço de compartilhamento de porta NET. TCP antes do primeiro uso. O serviço de compartilhamento de porta NET. TCP expõe as opções de configuração que permitem que você manipule várias características de soquetes de rede pela porta do serviço de compartilhamento de propriedade. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ O serviço de compartilhamento de porta NET. TCP está disponível em todos os sistemas operacionais que oferecem suporte a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], mas o serviço não está habilitado por padrão. Como uma precaução de segurança, um administrador deve habilitar manualmente o serviço de compartilhamento de porta NET. TCP antes do primeiro uso. O serviço de compartilhamento de porta NET. TCP expõe as opções de configuração que permitem que você manipule várias características de soquetes de rede pela porta do serviço de compartilhamento de propriedade. Para obter mais informações, consulte [como: habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Usando em um aplicativo de compartilhamento de porta NET. TCP  
  A maneira mais fácil de usar a porta net.tcp:// compartilhamento em sua [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo é expor um serviço usando o <xref:System.ServiceModel.NetTcpBinding> e, em seguida, habilitar o serviço de compartilhamento de porta NET. TCP usando o <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> propriedade.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como fazer isso, consulte [como: configurar um serviço WCF para usar o compartilhamento de porta](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como fazer isso, consulte [como: configurar um serviço WCF para usar o compartilhamento de porta](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Implicações de segurança de compartilhamento de porta  
  Embora o serviço de compartilhamento de porta NET. TCP fornece uma camada de processamento entre aplicativos e rede, os aplicativos que usam o compartilhamento de porta ainda devem ser protegidos como se eles foram escuta diretamente na rede. Especificamente, os aplicativos que usam o compartilhamento de porta devem avaliar os privilégios do processo em que executarem. Considere a execução de seu aplicativo usando a conta de serviço de rede interna, que é executado com um conjunto mínimo de privilégios de processo necessário para a comunicação de rede.  

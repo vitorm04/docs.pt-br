@@ -1,20 +1,17 @@
 ---
 title: Diretivas de compilador (F#)
-description: "Saiba mais sobre as diretivas de pré-processador em linguagem F #, diretivas de compilação condicional, diretivas de linha e diretivas de compilador."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba mais sobre as diretivas de pré-processador em linguagem F #, diretivas de compilação condicional, diretivas de linha e diretivas de compilador.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 
@@ -32,7 +29,7 @@ A tabela a seguir lista as diretivas de pré-processador que estão disponíveis
 |`#if` *symbol*|Dá suporte à compilação condicional. Código na seção após o `#if` é incluído se o *símbolo* está definido.|
 |`#else`|Dá suporte à compilação condicional. Marca uma seção de código para incluir se o símbolo usado com anterior `#if` não está definido.|
 |`#endif`|Dá suporte à compilação condicional. Marca o final de uma seção condicional de código.|
-|`#`[linha] *int*,<br/>`#`[linha] *int* *cadeia de caracteres*,<br/>`#`[line] *int* *verbatim-string*|Indica o nome original da fonte código linha e arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram um código de origem F #.|
+|`#`[linha] *int*,<br/>`#`[linha] *int* *cadeia de caracteres*,<br/>`#`[linha] *int* *cadeia de caracteres textuais*|Indica o nome original da fonte código linha e arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram um código de origem F #.|
 |`#nowarn` *warningcode*|Desabilita um aviso do compilador ou avisos. Para desabilitar um aviso, localize o número da saída do compilador e incluí-lo entre aspas. Omita o prefixo "FS". Para desabilitar vários números de aviso na mesma linha, incluir cada número de aspas e separe cada cadeia de caracteres por um espaço. Por exemplo:
 
 `#nowarn "9" "40"`

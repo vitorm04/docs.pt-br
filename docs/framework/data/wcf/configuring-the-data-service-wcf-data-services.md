@@ -1,13 +1,13 @@
 ---
-title: "Configurando o serviço de dados (WCF Data Services)"
-ms.custom: 
+title: Configurando o serviço de dados (WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
-Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
+Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
   
  No [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], um serviço de dados é uma classe que herda da classe <xref:System.Data.Services.DataService%601>, onde o tipo do serviço de dados é o contêiner de entidade do modelo de dados. Este contêiner de entidade tem uma ou mais propriedades que retornam um <xref:System.Linq.IQueryable%601>, que são usados para acessar conjuntos de entidades no modelo de dados.  
   
@@ -49,10 +49,10 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode cria
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|Permite que você especifique se os interceptores de alteração registrados são chamados ou não nas entidades relacionadas quando um link de relação entre as duas entidades é excluído.|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Permite que você limite o número de conjuntos de alterações e operações de consulta que são permitidos em um único lote. Para obter mais informações, consulte [OData: lote](http://go.microsoft.com/fwlink/?LinkId=185602) e [operações em lote](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Permite que você limite o número de alterações que podem ser incluídas em um único conjunto de alteração. Para obter mais informações, consulte [como: habilitar paginação de dados de resultados de serviço](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Permite que você limite o tamanho de uma resposta limitando o número de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]consulte [OData: convenções de URI](http://go.microsoft.com/fwlink/?LinkId=185564) e [carregar conteúdo adiada](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Permite que você limite o tamanho de uma resposta limitando a profundidade do grafo de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]consulte [OData: convenções de URI](http://go.microsoft.com/fwlink/?LinkId=185564) e [carregar conteúdo adiada](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Permite que você limite o tamanho de uma resposta limitando o número de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. Para obter mais informações, consulte consulte [OData: convenções de URI](http://go.microsoft.com/fwlink/?LinkId=185564) e [carregar conteúdo adiada](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Permite que você limite o tamanho de uma resposta limitando a profundidade do grafo de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. Para obter mais informações, consulte consulte [OData: convenções de URI](http://go.microsoft.com/fwlink/?LinkId=185564) e [carregar conteúdo adiada](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Permite que você limite o número de entidades a serem inseridas que podem ser contidas em uma única solicitação POST.|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Define a versão do protocolo Atom que é usado pelo serviço de dados. Quando o valor de <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> é definido como um valor menor que o valor máximo de <xref:System.Data.Services.Common.DataServiceProtocolVersion>, a funcionalidade mais recente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não está disponível para clientes que acessam o serviço de dados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Controle de versão do serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Define a versão do protocolo Atom que é usado pelo serviço de dados. Quando o valor de <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> é definido como um valor menor que o valor máximo de <xref:System.Data.Services.Common.DataServiceProtocolVersion>, a funcionalidade mais recente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não está disponível para clientes que acessam o serviço de dados. Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Permite que você limite o tamanho de uma resposta limitando o número de entidades em cada conjunto de entidades que é retornado como um feed de dados.|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|Adiciona um tipo de dados à lista de tipos que são reconhecidos pelo serviço de dados.|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|Define os direitos de acesso para os recursos do conjunto de entidades que estão disponíveis no serviço de dados. Um valor de asterisco (`*`) pode ser fornecido para o parâmetro de nome para definir o acesso para todos os conjuntos de entidades restantes para o mesmo nível. Recomendamos que você defina o acesso para conjuntos de entidades para fornecer acesso de privilégios mínimos para os recursos de serviço de dados que são exigidos por aplicativos cliente. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Para obter exemplos dos direitos de acesso mínimo necessários para uma determinada ação URI e HTTP, consulte a tabela de [requisitos de acesso de recursos mínimos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements) seção.|  
@@ -68,7 +68,7 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode cria
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|<xref:System.Data.Services.EntitySetRights.WriteAppend>|Sem suporte|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteMerge>|N/D|<xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteMerge> ou <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> -e-<br /><br /> `Orders``:` e<xref:System.Data.Services.EntitySetRights.WriteAppend>|Sem suporte|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteMerge> ou <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> -e-<br /><br /> `Orders` `:` e <xref:System.Data.Services.EntitySetRights.WriteAppend>|Sem suporte|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteMerge>|Sem suporte|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteMerge>;<br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.WriteAppend> e <xref:System.Data.Services.EntitySetRights.ReadSingle>|Sem suporte|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> e <xref:System.Data.Services.EntitySetRights.WriteMerge> ou <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|Sem suporte|  

@@ -1,12 +1,13 @@
 ---
-title: "Federação"
-ms.custom: 
+title: Federação
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>Federação
 Este tópico fornece uma visão geral sobre o conceito de segurança federada. Ele também descreve [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] suporte para implantação de arquiteturas de segurança federada. Para um aplicativo de exemplo que demonstra a federação, consulte [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -32,7 +34,7 @@ Este tópico fornece uma visão geral sobre o conceito de segurança federada. E
 ## <a name="definition-of-federated-security"></a>Definição da segurança federada  
  Segurança federada permite uma separação clara entre o serviço de que acesso a um cliente e os procedimentos de autenticação e autorização associados. Segurança federada também permite a colaboração entre vários sistemas, redes e organizações em diferentes realms de confiança.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece suporte para criação e implantação de sistemas distribuídos que utilizam segurança federada.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece suporte para criação e implantação de sistemas distribuídos que utilizam segurança federada.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elementos de uma arquitetura de segurança federada  
  A arquitetura de segurança federada tem três elementos principais, conforme descrito na tabela a seguir.  
@@ -71,14 +73,14 @@ Este tópico fornece uma visão geral sobre o conceito de segurança federada. E
   
  Em uma arquitetura de segurança federada, a usuários da organização A saber que se deseja acessar o serviço Web na organização B que eles devem apresentar um token de segurança válido do STS na organização B, que autentica e autoriza o acesso para o serviço específico.  
   
- Sobre como contatar o STS B, os usuários recebem outro nível de indireção a política associada com o STS. Ele devem apresentar uma segurança válido token da STS A (ou seja, o realm da relação de confiança do cliente) antes da STS B pode emitir a eles um token de segurança. Isso é resultado da relação de confiança estabelecida entre as duas organizações e implica que organização B não precisa gerenciar as identidades dos usuários da organização A. Na prática, o STS B geralmente tem um valor nulo `issuerAddress` e `issuerMetadataAddress`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Nesse caso, o cliente consulta uma diretiva local para localizar STS A. Essa configuração é chamada *inicial da federação de território* e dimensiona melhor porque STS B não precisa manter informações sobre STS A.  
+ Sobre como contatar o STS B, os usuários recebem outro nível de indireção a política associada com o STS. Ele devem apresentar uma segurança válido token da STS A (ou seja, o realm da relação de confiança do cliente) antes da STS B pode emitir a eles um token de segurança. Isso é resultado da relação de confiança estabelecida entre as duas organizações e implica que organização B não precisa gerenciar as identidades dos usuários da organização A. Na prática, o STS B geralmente tem um valor nulo `issuerAddress` e `issuerMetadataAddress`. Para obter mais informações, consulte [como: configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Nesse caso, o cliente consulta uma diretiva local para localizar STS A. Essa configuração é chamada *inicial da federação de território* e dimensiona melhor porque STS B não precisa manter informações sobre STS A.  
   
  Os usuários, em seguida, entre em contato com o STS da organização A e obter um token de segurança apresentando credenciais de autenticação que normalmente usam para acessar qualquer outro recurso dentro da organização A. Isso também elimina o problema de usuários precisar manter vários conjuntos de credenciais ou usando o mesmo conjunto de credenciais em vários sites de serviço.  
   
  Depois que os usuários obter um token de segurança da STS A, eles apresentam o token para o STS B. esta organização prossegue para executar a autorização de solicitações dos usuários e emite um token de segurança para os usuários do seu próprio conjunto de tokens de segurança. Os usuários, em seguida, podem apresentar seu token para o recurso na organização B e acessar o serviço.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Suporte para segurança federada no WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece suporte pronto para uso para implantação de arquiteturas de segurança federada por meio de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece suporte pronto para uso para implantação de arquiteturas de segurança federada por meio de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  O [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento fornece para uma associação segura, confiável e interoperável que envolve o uso de HTTP como o mecanismo de transporte subjacente para o estilo de comunicação de solicitação-resposta, empregando texto e XML como formato de conexão para a codificação.  
   

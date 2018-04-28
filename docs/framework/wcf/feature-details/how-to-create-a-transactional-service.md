@@ -1,24 +1,26 @@
 ---
-title: "Como criar um serviço transacional"
-ms.custom: 
+title: Como criar um serviço transacional
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Como criar um serviço transacional
 Este exemplo demonstra vários aspectos da criação de um serviço transacional e o uso de uma transação iniciada pelo cliente para coordenar operações de serviço.  
@@ -76,7 +78,7 @@ Este exemplo demonstra vários aspectos da criação de um serviço transacional
     }  
     ```  
   
-3.  Configure as ligações no arquivo de configuração, especificando que o contexto da transação deve fluir e os protocolos a ser usado para fazer isso. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configuração de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Especificamente, o tipo de associação é especificado no elemento de ponto de extremidade `binding` atributo. O [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contém um `bindingConfiguration` atributo que faz referência a uma configuração de associação denominada `transactionalOleTransactionsTcpBinding`, conforme mostrado no exemplo de configuração.  
+3.  Configure as ligações no arquivo de configuração, especificando que o contexto da transação deve fluir e os protocolos a ser usado para fazer isso. Para obter mais informações, consulte [configuração de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Especificamente, o tipo de associação é especificado no elemento de ponto de extremidade `binding` atributo. O [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contém um `bindingConfiguration` atributo que faz referência a uma configuração de associação denominada `transactionalOleTransactionsTcpBinding`, conforme mostrado no exemplo de configuração.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -193,7 +195,7 @@ Este exemplo demonstra vários aspectos da criação de um serviço transacional
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Controlando o tempo de vida de uma instância de serviço transacional  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa o <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propriedade para especificar se a instância de serviço subjacente é lançada quando uma transação é concluída. Desde que o padrão é `true`, a menos que configurado de outra forma, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exibe um comportamento de ativação de "just-in-time" eficiente e previsível. Chamadas para um serviço em uma transação subsequente terá certeza de uma nova instância de serviço com nenhuma resíduos do estado da transação anterior. Enquanto isso geralmente é útil, às vezes, convém manter o estado dentro da instância de serviço além da conclusão da transação. Exemplos disso seria quando o estado exigido ou os recursos são caros recuperar ou reconstituir. Você pode fazer isso definindo o <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propriedade `false`. Com essa configuração, a instância e qualquer estado associado estará disponíveis em chamadas subsequentes. Ao usar esta, dê atenção para quando e como estado e as transações serão limpos e concluídas. O exemplo a seguir demonstra como fazer isso, mantendo a instância com o `runningTotal` variável.  
+1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa o <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propriedade para especificar se a instância de serviço subjacente é lançada quando uma transação é concluída. Desde que o padrão é `true`, a menos que configurado de outra forma, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exibe um comportamento de ativação de "just-in-time" eficiente e previsível. Chamadas para um serviço em uma transação subsequente terá certeza de uma nova instância de serviço com nenhuma resíduos do estado da transação anterior. Enquanto isso geralmente é útil, às vezes, convém manter o estado dentro da instância de serviço além da conclusão da transação. Exemplos disso seria quando o estado exigido ou os recursos são caros recuperar ou reconstituir. Você pode fazer isso definindo o <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propriedade `false`. Com essa configuração, a instância e qualquer estado associado estará disponíveis em chamadas subsequentes. Ao usar esta, dê atenção para quando e como estado e as transações serão limpos e concluídas. O exemplo a seguir demonstra como fazer isso, mantendo a instância com o `runningTotal` variável.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

@@ -10,23 +10,23 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b1f85d4cc45075f82035fa5b8c0c95341ba142d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3025eec9c01d325d7d00a7355ff908eb1e19e410
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Uma associação segura e interoperável que deriva de [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e suporta segurança federada.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<ws2007FederationHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -100,10 +100,10 @@ Uma associação segura e interoperável que deriva de [ \<wsFederationHttpBindi
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- Federação é a capacidade de compartilhar identidades entre várias empresas ou domínios confiáveis para autenticação e autorização. Ele usa o protocolo WS-Trust para mapear a representação da identidade de domínio de uma relação de confiança para outro. Associação HTTP federada dá suporte à segurança SOAP, bem como a segurança de modo misto, mas não dá suporte a segurança de transporte. Serviços configurados com essa associação devem usar o transporte HTTP. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ Federação é a capacidade de compartilhar identidades entre várias empresas ou domínios confiáveis para autenticação e autorização. Ele usa o protocolo WS-Trust para mapear a representação da identidade de domínio de uma relação de confiança para outro. Associação HTTP federada dá suporte à segurança SOAP, bem como a segurança de modo misto, mas não dá suporte a segurança de transporte. Serviços configurados com essa associação devem usar o transporte HTTP. Para obter mais informações, consulte [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -145,4 +145,4 @@ Uma associação segura e interoperável que deriva de [ \<wsFederationHttpBindi
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

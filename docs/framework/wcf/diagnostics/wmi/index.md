@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI).  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) ferramenta do [ferramentas para tarefas administrativas do Windows 2000 Resource Kit](http://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio), e como efeito imprime os SIDs dois à linha de comando. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [SIDs conhecidos](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) ferramenta do [ferramentas para tarefas administrativas do Windows 2000 Resource Kit](http://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio), e como efeito imprime os SIDs dois à linha de comando. Para obter mais informações, consulte [Well Known SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Acessando instâncias de objeto WMI remoto  
  Se você precisar acessar [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] instâncias de WMI em um computador remoto, você deve habilitar privacidade de pacotes de ferramentas que você usa para acessar. A seção a seguir descreve como conseguir isto usando o WMI CIM Studio, o Testador de instrumentação de gerenciamento do Windows, bem como os .NET SDK 2.0.  

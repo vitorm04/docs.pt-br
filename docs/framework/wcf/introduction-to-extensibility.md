@@ -1,30 +1,30 @@
 ---
-title: "Introdução à extensibilidade"
-ms.custom: 
+title: Introdução à extensibilidade
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e16ed674c87bdb1418257a30f7f79b970127b06
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introdução à extensibilidade
 O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] modelo de aplicativo é projetado para resolver a maior parte dos requisitos de comunicação de qualquer aplicativo distribuído. Mas sempre há cenários em que o modelo de aplicativo padrão e implementações de fornecido pelo sistema não têm suporte. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de extensibilidade destina-se para dar suporte a cenários personalizados, permitindo que você modificar o comportamento do sistema em cada nível, até mesmo para o ponto de substituir o modelo de aplicativo inteiro. Este tópico descreve as várias áreas de extensão e aponta para obter mais informações sobre cada um.  
@@ -46,24 +46,24 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] modelo de aplicativo é p
  Todas as mensagens passam por meio do sistema de canal. somente as mensagens de aplicativo são passadas do sistema de canal para o aplicativo. Para criar a nova funcionalidade no nível do canal, você deve estender o sistema de canal. Para criar a nova funcionalidade no nível do aplicativo, você deve estender o tempo de execução do serviço ou cliente (distribuidores e fábricas de canais, respectivamente). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Estendendo o tempo de execução do aplicativo, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Segurança estendida  
- Para criar os mecanismos de segurança personalizada, como tokens e credenciais, você deve estender o sistema de segurança. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estendendo a segurança](../../../docs/framework/wcf/extending/extending-security.md).  
+ Para criar os mecanismos de segurança personalizada, como tokens e credenciais, você deve estender o sistema de segurança. Para obter mais informações, consulte [estendendo segurança](../../../docs/framework/wcf/extending/extending-security.md).  
   
 #### <a name="extending-metadata"></a>Estendendo metadados  
- Para expor seus metadados em diferente do padrão, você deve estender o sistema de metadados. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estendendo o sistema de metadados](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Para expor seus metadados em diferente do padrão, você deve estender o sistema de metadados. Para obter mais informações, consulte [estendendo o sistema de metadados](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 #### <a name="extending-serialization"></a>Estendendo a serialização  
- Para construir decodificadores personalizados, fornecer substitutos de dados ou outras tarefas que envolvem a personalização de dados transferidos, você deve estender o sistema de serialização. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estendendo codificadores e serializadores](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+ Para construir decodificadores personalizados, fornecer substitutos de dados ou outras tarefas que envolvem a personalização de dados transferidos, você deve estender o sistema de serialização. Para obter mais informações, consulte [estendendo codificadores e serializadores](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
   
 #### <a name="extending-bindings"></a>Estendendo associações  
- Para associar os canais de transporte ou protocolo da camada de aplicativo, você deve estender o sistema de associação. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estendendo associações](../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Para associar os canais de transporte ou protocolo da camada de aplicativo, você deve estender o sistema de associação. Para obter mais informações, consulte [estendendo associações](../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 ### <a name="extending-the-channel-system"></a>Estendendo o sistema de canal  
  Para criar canais que oferecem suporte a transportes personalizados ou funcionalidade de protocolo, consulte [estendendo a camada do canal](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ### <a name="extending-the-service-hosting-system"></a>Estendendo o serviço de sistema de hospedagem  
- Para modificar o modelo de aplicativo de todo o serviço, você deve estender <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> classe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estendendo o ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Para modificar o modelo de aplicativo de todo o serviço, você deve estender <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> classe. Para obter mais informações, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Para modificar a relação entre o domínio de aplicativo de hospedagem e o host de serviço, você deve estender o <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> classe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estendendo a hospedagem com ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ Para modificar a relação entre o domínio de aplicativo de hospedagem e o host de serviço, você deve estender o <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> classe. Para obter mais informações, consulte [estendendo hospedagem usando ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Estendendo o WCF](../../../docs/framework/wcf/extending/index.md)

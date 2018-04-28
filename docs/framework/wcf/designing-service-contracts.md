@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve qual serviço os contratos são, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudarão a criar operações que atendem a requisitos do seu cenário.  
@@ -65,7 +65,7 @@ Este tópico descreve qual serviço os contratos são, como elas são definidas,
   
  Para obter um exemplo do uso de uma interface para criar um contrato de serviço, consulte [como: criar um serviço com uma Interface de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
   
- No entanto, você pode usar uma classe para definir um contrato de serviço e implementar o contrato ao mesmo tempo. A vantagem de criar seus serviços aplicando <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> diretamente para a classe e os métodos na classe, respectivamente, é velocidade e simplicidade. As desvantagens são que classes gerenciadas não oferecem suporte a várias heranças, e assim eles somente podem implementar um contrato de serviço por vez. Além disso, qualquer modificação para as assinaturas de método ou classe modifica o contrato público para esse serviço, o que pode impedir que clientes sem modificações usando seu serviço. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ No entanto, você pode usar uma classe para definir um contrato de serviço e implementar o contrato ao mesmo tempo. A vantagem de criar seus serviços aplicando <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> diretamente para a classe e os métodos na classe, respectivamente, é velocidade e simplicidade. As desvantagens são que classes gerenciadas não oferecem suporte a várias heranças, e assim eles somente podem implementar um contrato de serviço por vez. Além disso, qualquer modificação para as assinaturas de método ou classe modifica o contrato público para esse serviço, o que pode impedir que clientes sem modificações usando seu serviço. Para obter mais informações, consulte [implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
  Para obter um exemplo que usa uma classe para criar um contrato de serviço e implementa ao mesmo tempo, consulte [como: criar um serviço com uma classe de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
   
@@ -193,7 +193,7 @@ End Interface
  O nível de proteção é um valor que especifica se as mensagens (ou partes da mensagem) que dão suporte a um serviço são assinados, assinado e criptografado ou enviados sem criptografia ou assinaturas. O nível de proteção pode ser definido em vários escopos: no nível de serviço, para uma operação específica, para uma mensagem em que a operação ou uma parte da mensagem. Os valores definidos em um escopo tornam-se o valor padrão para escopos menores, a menos que explicitamente substituído. Se uma configuração de associação não pode fornecer o nível de proteção mínima necessária para o contrato, uma exceção será lançada. E, quando nenhum valor de nível de proteção é definidos explicitamente o contrato, a configuração de associação controla o nível de proteção para todas as mensagens se a associação de segurança de mensagem. Este é o comportamento padrão.  
   
 > [!IMPORTANT]
->  Decidir se deseja definir explicitamente vários escopos de um contrato para menor que o nível de proteção completa de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> geralmente é uma decisão que lida com algum nível de segurança para melhorar o desempenho. Nesses casos, as decisões devem giram em torno de suas operações e o valor dos dados que eles do exchange. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
+>  Decidir se deseja definir explicitamente vários escopos de um contrato para menor que o nível de proteção completa de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> geralmente é uma decisão que lida com algum nível de segurança para melhorar o desempenho. Nesses casos, as decisões devem giram em torno de suas operações e o valor dos dados que eles do exchange. Para obter mais informações, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   
  Por exemplo, o exemplo de código a seguir não definido o <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> ou <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> propriedade no contrato.  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] níveis de proteção e como usá-los, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] segurança, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Outros requisitos de assinatura de operação  
- Alguns recursos de aplicativo exigir um determinado tipo de assinatura da operação. Por exemplo, o <xref:System.ServiceModel.NetMsmqBinding> associação oferece suporte a clientes, em que um aplicativo pode reiniciar no meio de comunicação e continuar onde ela parou sem perder todas as mensagens e serviços duráveis. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) No entanto, operações duráveis devem levar apenas um `in` parâmetro e não têm nenhum valor de retorno.  
+ Alguns recursos de aplicativo exigir um determinado tipo de assinatura da operação. Por exemplo, o <xref:System.ServiceModel.NetMsmqBinding> associação oferece suporte a clientes, em que um aplicativo pode reiniciar no meio de comunicação e continuar onde ela parou sem perder todas as mensagens e serviços duráveis. (Para obter mais informações, consulte [filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) No entanto, operações duráveis devem levar apenas um `in` parâmetro e não têm nenhum valor de retorno.  
   
  Outro exemplo é o uso de <xref:System.IO.Stream> tipos de operações. Porque o <xref:System.IO.Stream> parâmetro inclui o corpo da mensagem inteira, se uma entrada ou uma saída (ou seja, `ref` parâmetro `out` parâmetro ou valor de retorno) é do tipo <xref:System.IO.Stream>, em seguida, ele deve ser a única entrada ou saída especificada no seu operação. Além disso, o tipo de retorno ou parâmetro deve ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, ou <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] fluxos, consulte [dados grandes e Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   

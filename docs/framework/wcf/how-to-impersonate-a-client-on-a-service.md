@@ -1,12 +1,13 @@
 ---
-title: "Como personificar um cliente em um serviço"
-ms.custom: 
+title: Como personificar um cliente em um serviço
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,22 +17,23 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c868e2b31fa15d0f0c9228828beba03666d5591
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 95330e062ff0ab6ba080deeb01a73bb64fac4dfc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Como personificar um cliente em um serviço
-Representar um cliente em um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço permite que o serviço executar ações em nome do cliente. Para ações sujeitos a acesso (ACL) da lista de controle verifica, como acesso a diretórios e arquivos em um computador ou acesso a um banco de dados do SQL Server, a verificação ACL é em relação à conta de usuário do cliente. Este tópico mostra as etapas básicas necessárias para permitir que um cliente em um domínio do Windows definir um nível de representação do cliente. Para um exemplo de isso, consulte [representar o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]representação do cliente, consulte [delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+Representar um cliente em um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço permite que o serviço executar ações em nome do cliente. Para ações sujeitos a acesso (ACL) da lista de controle verifica, como acesso a diretórios e arquivos em um computador ou acesso a um banco de dados do SQL Server, a verificação ACL é em relação à conta de usuário do cliente. Este tópico mostra as etapas básicas necessárias para permitir que um cliente em um domínio do Windows definir um nível de representação do cliente. Para um exemplo de isso, consulte [representar o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] representação do cliente, consulte [delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
->  Quando o cliente e o serviço estiverem em execução no mesmo computador e o cliente é executado sob uma conta de sistema (ou seja, `Local System` ou `Network Service`), o cliente não pode ser representado quando uma sessão segura é estabelecida com tokens de contexto de segurança com monitoração de estado. Um aplicativo de console ou WinForms normalmente é executado sob a conta conectada no momento, para que a conta pode ser representada por padrão. No entanto, quando o cliente é um [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] página e que é hospedado no [!INCLUDE[iis601](../../../includes/iis601-md.md)] ou IIS 7.0 e, em seguida, o cliente é executado sob o `Network Service` conta por padrão. Todas as associações fornecidas pelo sistema que oferecem suporte a sessões seguras usam um token de contexto de segurança sem monitoração de estado por padrão. No entanto, se o cliente é um [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sessões seguras com tokens de contexto de segurança com monitoração de estado e página são usadas, o cliente não pode ser representado. [!INCLUDE[crabout](../../../includes/crabout-md.md)]usando tokens de contexto de segurança com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Quando o cliente e o serviço estiverem em execução no mesmo computador e o cliente é executado sob uma conta de sistema (ou seja, `Local System` ou `Network Service`), o cliente não pode ser representado quando uma sessão segura é estabelecida com tokens de contexto de segurança com monitoração de estado. Um aplicativo de console ou WinForms normalmente é executado sob a conta conectada no momento, para que a conta pode ser representada por padrão. No entanto, quando o cliente é um [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] página e que é hospedado no [!INCLUDE[iis601](../../../includes/iis601-md.md)] ou IIS 7.0 e, em seguida, o cliente é executado sob o `Network Service` conta por padrão. Todas as associações fornecidas pelo sistema que oferecem suporte a sessões seguras usam um token de contexto de segurança sem monitoração de estado por padrão. No entanto, se o cliente é um [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sessões seguras com tokens de contexto de segurança com monitoração de estado e página são usadas, o cliente não pode ser representado. [!INCLUDE[crabout](../../../includes/crabout-md.md)] usando tokens de contexto de segurança com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Para habilitar a representação de um cliente de um token do Windows em cache em um serviço  
   
@@ -46,7 +48,7 @@ Representar um cliente em um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
 ### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>Para definir o nível de representação permitidos no cliente  
   
-1.  Criar código de cliente de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Acessar serviços usando um cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1.  Criar código de cliente de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter mais informações, consulte [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
 2.  Depois de criar o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente, definir o <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade o <xref:System.ServiceModel.Security.WindowsClientCredential> classe para um do <xref:System.Security.Principal.TokenImpersonationLevel> valores de enumeração.  
   

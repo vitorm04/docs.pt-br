@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="information-disclosure"></a>Divulgação de informações
 Divulgação de informações permite que um invasor obtenha informações valiosas sobre um sistema. Portanto, sempre considere quais informações são revelar e se ele pode ser usado por um usuário mal-intencionado. A seguir lista os ataques de divulgação de informações possíveis e fornece atenuantes para cada.  
@@ -32,7 +32,7 @@ Divulgação de informações permite que um invasor obtenha informações valio
  Manter a política de segurança é importante, especialmente em cenários de Federação em que os requisitos de token emitido confidenciais ou informações de emissor de token são expostas na política. Nesses casos, a recomendação é proteger o ponto de extremidade de serviço federado diretiva para impedir que invasores obter informações sobre o serviço, como o tipo de declaração para colocar no token emitido, ou redirecionando os clientes para emissores de token mal-intencionado. Por exemplo, um invasor pode descobrir pares de nome e senha de usuário reconfigurando a cadeia de confiança federada para terminar em um emissor que executou um ataque man-in-the-middle. Também é recomendável que verifique se clientes federados que obtêm suas associações a recuperação de política que confiam os emissores na cadeia de confiança federada obtido. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cenários de federação, consulte [federação](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Despejos de memória podem revelar informações de declaração  
- Quando um aplicativo falhar, arquivos de log, como aqueles produzidos pela recuperação de desastres. Watson, pode conter as informações de declaração. Essas informações não devem ser exportadas para outras entidades, como as equipes de suporte; Caso contrário, as informações de declaração que contém dados privados também serão exportadas. Você pode mitigar isso enviando não os arquivos de log para entidades desconhecidas. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
+ Quando um aplicativo falhar, arquivos de log, como aqueles produzidos pela recuperação de desastres. Watson, pode conter as informações de declaração. Essas informações não devem ser exportadas para outras entidades, como as equipes de suporte; Caso contrário, as informações de declaração que contém dados privados também serão exportadas. Você pode mitigar isso enviando não os arquivos de log para entidades desconhecidas. Para obter mais informações, consulte [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
   
 ## <a name="endpoint-addresses"></a>Endereços do ponto de extremidade  
  Um endereço de ponto de extremidade contém as informações necessárias para se comunicar com um ponto de extremidade. Segurança SOAP deve incluir o endereço completo em que as mensagens de negociação de segurança que são trocadas para negociar uma chave simétrica entre um cliente e um servidor. Porque a negociação de segurança é um processo de inicialização, os cabeçalhos de endereço não podem ser criptografados durante esse processo. Portanto, o endereço não deve conter dados confidenciais; Caso contrário, isso leva a ataques de divulgação de informações.  

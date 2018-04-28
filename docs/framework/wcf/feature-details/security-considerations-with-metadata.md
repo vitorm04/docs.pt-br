@@ -1,33 +1,35 @@
 ---
-title: "Considerações de segurança com metadados"
-ms.custom: 
+title: Considerações de segurança com metadados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Considerações de segurança com metadados
 Quando usar os metadados de recursos no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], considere as implicações de segurança de publicação, recuperar e usando metadados de serviço.  
   
 ## <a name="when-to-publish-metadata"></a>Quando publicar metadados  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]serviços não publicar metadados por padrão. Para publicar metadados para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] você deve habilitar explicitamente a publicação de metadados com a adição de pontos de extremidade de metadados para o serviço de serviço (consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Publicação de metadados desabilitada reduz a superfície de ataque para o serviço e reduz o risco de divulgação de informações não intencionais. Nem todos os serviços devem publicar metadados. Se você não precisa publicar metadados, considere deixá-la desativado. Observe que você ainda pode gerar o código de cliente e metadados diretamente de seus conjuntos de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usar o Svcutil.exe para exportar metadados, consulte [como: usar a Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços não publicar metadados por padrão. Para publicar metadados para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] você deve habilitar explicitamente a publicação de metadados com a adição de pontos de extremidade de metadados para o serviço de serviço (consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Publicação de metadados desabilitada reduz a superfície de ataque para o serviço e reduz o risco de divulgação de informações não intencionais. Nem todos os serviços devem publicar metadados. Se você não precisa publicar metadados, considere deixá-la desativado. Observe que você ainda pode gerar o código de cliente e metadados diretamente de seus conjuntos de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usar o Svcutil.exe para exportar metadados, consulte [como: usar a Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Metadados de publicação usando uma associação de segurança  
- As associações de metadados padrão que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece não são seguro e permitir acesso anônimo aos metadados. Os metadados de serviço que um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço publica contém uma descrição detalhada sobre o serviço e podem intencionalmente ou não conter informações confidenciais. Por exemplo, os metadados de serviço podem conter informações sobre as operações de infra-estrutura que não foi desenvolvidas para ser transmitida publicamente. Para proteger os metadados de serviço contra acesso não autorizado, você pode usar uma associação de segurança para seu ponto de extremidade de metadados. Pontos de extremidade de metadados respondem a solicitações HTTP/GET que podem usar o SSL Secure Sockets Layer () para proteger os metadados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ As associações de metadados padrão que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece não são seguro e permitir acesso anônimo aos metadados. Os metadados de serviço que um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço publica contém uma descrição detalhada sobre o serviço e podem intencionalmente ou não conter informações confidenciais. Por exemplo, os metadados de serviço podem conter informações sobre as operações de infra-estrutura que não foi desenvolvidas para ser transmitida publicamente. Para proteger os metadados de serviço contra acesso não autorizado, você pode usar uma associação de segurança para seu ponto de extremidade de metadados. Pontos de extremidade de metadados respondem a solicitações HTTP/GET que podem usar o SSL Secure Sockets Layer () para proteger os metadados. Para obter mais informações, consulte [como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  Proteger os pontos de extremidade de metadados também fornece uma maneira para que os solicitantes de recuperar metadados de serviço sem o risco de falsificação ou violação.  
   
