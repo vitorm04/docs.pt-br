@@ -1,24 +1,26 @@
 ---
-title: "Amostra do elemento de associação de descoberta"
-ms.custom: 
+title: Amostra do elemento de associação de descoberta
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Amostra do elemento de associação de descoberta
 Este exemplo demonstra como usar o elemento de associação de cliente de descoberta para descobrir um serviço. Esse recurso permite aos desenvolvedores adicionar um canal de cliente de descoberta para sua pilha de canais de cliente existente, tornando o modelo de programação muito intuitiva. Quando o canal associado é aberto, o endereço do serviço é resolvido usando a descoberta. Este exemplo consiste nas seguintes projetos:  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Após o <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> é instanciada, o desenvolvedor Especifica os critérios para usar ao pesquisar para um serviço. Nesse caso, o critério de localização de descoberta é o `ICalculatorService` tipo. Além disso, o desenvolvedor Especifica um <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> que retorna um <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> que especifica onde procurar os serviços. O <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> retorna um novo <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instância. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usando uma associação personalizada com o canal cliente Discovery](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ Após o <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> é instanciada, o desenvolvedor Especifica os critérios para usar ao pesquisar para um serviço. Nesse caso, o critério de localização de descoberta é o `ICalculatorService` tipo. Além disso, o desenvolvedor Especifica um <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> que retorna um <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> que especifica onde procurar os serviços. O <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> retorna um novo <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instância. Para obter mais informações, consulte [usando uma associação personalizada com o canal cliente Discovery](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

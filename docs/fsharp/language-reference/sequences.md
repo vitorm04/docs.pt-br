@@ -1,20 +1,17 @@
 ---
-title: "Sequências (F#)"
-description: "Saiba como usar sequências de F #, quando você tiver um grande ordenados de coleta de dados, mas necessariamente não espera usar todos os elementos."
-keywords: "visual f#, f#, programação funcional"
+title: Sequências (F#)
+description: 'Saiba como usar sequências de F #, quando você tiver um grande ordenados de coleta de dados, mas necessariamente não espera usar todos os elementos.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 23dc7d75-cd26-4df2-9be3-9d1aba5c4443
-ms.openlocfilehash: b0562a6efbd2398cd8730bb835a1833955fee1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sequences"></a>Sequências
 
@@ -90,7 +87,7 @@ A saída é
 0 10 20 30 40
 ```
 
-Usando [ofarray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) e [oflist &#60;' T &#62; Função](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), você pode criar sequências de matrizes e listas. No entanto, você também pode converter matrizes e listas para sequências usando um operador cast. Ambas as técnicas são mostradas no código a seguir.
+Usando [ofarray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) e [oflist&#60;T'&#62; função](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), você pode criar sequências de matrizes e listas. No entanto, você também pode converter matrizes e listas para sequências usando um operador cast. Ambas as técnicas são mostradas no código a seguir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet11.fs)]
 
@@ -102,7 +99,7 @@ Você pode definir as sequências de infinitas usando o [initinfinite](https://m
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) gera uma sequência de uma função de computação que entra em um estado e os transforma para produzir cada elemento subsequente na sequência. O estado é apenas um valor que é usado para cada elemento de computação e pode mudar à medida que cada elemento é computado. O segundo argumento `Seq.unfold` é o valor inicial que é usado para iniciar a sequência. `Seq.unfold`usa um tipo de opção para o estado, o que permite que você encerrar a sequência, retornando o `None` valor. O código a seguir mostra dois exemplos de sequências, `seq1` e `fib`, que são gerados por um `unfold` operação. A primeira, `seq1`, é simplesmente uma sequência simple com números com até 100. O segundo, `fib`, usa `unfold` para calcular a sequência de Fibonacci. Como cada elemento na sequência Fibonacci é a soma dos dois números Fibonacci anteriores, o valor de estado é uma tupla que consiste em dois números anteriores na sequência. O valor inicial é `(1,1)`, os primeiros dois números na sequência.
+[Unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) gera uma sequência de uma função de computação que entra em um estado e os transforma para produzir cada elemento subsequente na sequência. O estado é apenas um valor que é usado para cada elemento de computação e pode mudar à medida que cada elemento é computado. O segundo argumento `Seq.unfold` é o valor inicial que é usado para iniciar a sequência. `Seq.unfold` usa um tipo de opção para o estado, o que permite que você encerrar a sequência, retornando o `None` valor. O código a seguir mostra dois exemplos de sequências, `seq1` e `fib`, que são gerados por um `unfold` operação. A primeira, `seq1`, é simplesmente uma sequência simple com números com até 100. O segundo, `fib`, usa `unfold` para calcular a sequência de Fibonacci. Como cada elemento na sequência Fibonacci é a soma dos dois números Fibonacci anteriores, o valor de estado é uma tupla que consiste em dois números anteriores na sequência. O valor inicial é `(1,1)`, os primeiros dois números na sequência.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -198,7 +195,7 @@ O código a seguir demonstra o uso de `Seq.compareWith`.
 
 No código anterior, apenas o primeiro elemento é calculado e examinado, e o resultado é -1.
 
-[CountBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) usa uma função que gera um valor chamado um *chave* para cada elemento. Uma chave é gerada para cada elemento por chamar essa função em cada elemento. `Seq.countBy`em seguida, retorna uma sequência que contém os valores de chave e uma contagem do número de elementos que gerou cada valor da chave.
+[CountBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) usa uma função que gera um valor chamado um *chave* para cada elemento. Uma chave é gerada para cada elemento por chamar essa função em cada elemento. `Seq.countBy` em seguida, retorna uma sequência que contém os valores de chave e uma contagem do número de elementos que gerou cada valor da chave.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -210,7 +207,7 @@ A saída é a seguinte.
 
 A saída anterior mostra que não houve 34 elementos da sequência de original que gerou a chave 1, 33 valores que gerou a chave 2 e 33 valores que gerou a chave de 0.
 
-Você pode agrupar os elementos de uma sequência chamando [SEQ](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy`usa uma sequência e uma função que gera uma chave de um elemento. A função é executada em cada elemento da sequência. `Seq.groupBy`Retorna uma sequência de tuplas, onde o primeiro elemento de cada tupla é a chave e o segundo é uma sequência de elementos que geram essa chave.
+Você pode agrupar os elementos de uma sequência chamando [SEQ](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy` usa uma sequência e uma função que gera uma chave de um elemento. A função é executada em cada elemento da sequência. `Seq.groupBy` Retorna uma sequência de tuplas, onde o primeiro elemento de cada tupla é a chave e o segundo é uma sequência de elementos que geram essa chave.
 
 O exemplo de código a seguir mostra o uso de `Seq.groupBy` para particionar a sequência de números de 1 a 100 em três grupos que têm os valores de chave distintos 0, 1 e 2.
 
@@ -224,7 +221,7 @@ A saída é a seguinte.
 
 Você pode criar uma sequência que elimine elementos duplicados chamando [SEQ](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401). Ou você pode usar [distinctby](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), que usa uma função de geração de chave a ser chamado em cada elemento. A sequência resultante contém elementos da sequência de original que têm chaves exclusivas; elementos posteriores que produzem uma chave duplicada para um elemento anterior são descartados.
 
-O exemplo de código a seguir ilustra o uso de `Seq.distinct`. `Seq.distinct`é demonstrado pelo gerar sequências que representam números binários e, em seguida, mostrando que elementos distintos só são 0 e 1.
+O exemplo de código a seguir ilustra o uso de `Seq.distinct`. `Seq.distinct` é demonstrado pelo gerar sequências que representam números binários e, em seguida, mostrando que elementos distintos só são 0 e 1.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -233,7 +230,7 @@ O código a seguir demonstra `Seq.distinctBy` iniciando com uma sequência que c
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet23.fs)]
     
 ## <a name="readonly-and-cached-sequences"></a>Somente leitura e armazenados em cache de sequências
-[SEQ](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) cria uma cópia somente leitura de uma sequência. `Seq.readonly`é útil quando você tem uma coleção de leitura / gravação, como uma matriz, e você não deseja modificar a coleção original. Essa função pode ser usada para preservar o encapsulamento de dados. No exemplo de código a seguir, um tipo que contém uma matriz é criado. Uma propriedade expõe a matriz, mas em vez de retornar uma matriz, ele retorna uma sequência que é criada a partir da matriz usando `Seq.readonly`.
+[SEQ](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) cria uma cópia somente leitura de uma sequência. `Seq.readonly` é útil quando você tem uma coleção de leitura / gravação, como uma matriz, e você não deseja modificar a coleção original. Essa função pode ser usada para preservar o encapsulamento de dados. No exemplo de código a seguir, um tipo que contém uma matriz é criado. Uma propriedade expõe a matriz, mas em vez de retornar uma matriz, ele retorna uma sequência que é criada a partir da matriz usando `Seq.readonly`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet24.fs)]
 

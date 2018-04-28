@@ -1,13 +1,13 @@
 ---
-title: "Programação de segurança do WCF"
-ms.custom: 
+title: Programação de segurança do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 
+caps.latest.revision: 25
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="programming-wcf-security"></a>Programação de segurança do WCF
 Este tópico descreve as tarefas de programação fundamentais usadas para criar um site seguro [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativo. Este tópico aborda somente autenticação, confidencialidade e integridade, coletivamente conhecido como *transferir segurança*. Este tópico não abrange a autorização (o controle de acesso aos recursos ou serviços); Para obter informações sobre autorização, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,26 +48,26 @@ Este tópico descreve as tarefas de programação fundamentais usadas para criar
   
     1.  `Transport`  
   
-         Segurança de transporte depende do mecanismo que usa a associação selecionada. Por exemplo, se você estiver usando `WSHttpBinding` , em seguida, o mecanismo de segurança é o protocolo (SSL) (também o mecanismo para o protocolo HTTPS). Em geral, a vantagem principal de segurança de transporte é que ele oferece uma taxa de transferência não importa qual transporte você está usando. No entanto, ele tem duas limitações: A primeira é que o mecanismo de transporte determina o tipo de credencial usado para autenticar um usuário. Isso é uma desvantagem somente se um serviço precisa interoperar com outros serviços que exigem tipos diferentes de credenciais. A segunda é que, como a segurança não é aplicada no nível da mensagem, a segurança é implementada em uma maneira de salto por salto em vez de ponta a ponta. Essa última limitação é um problema apenas se o caminho de mensagem entre cliente e serviço inclui intermediários. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]qual transporte deve ser usado, consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando a segurança de transporte, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         Segurança de transporte depende do mecanismo que usa a associação selecionada. Por exemplo, se você estiver usando `WSHttpBinding` , em seguida, o mecanismo de segurança é o protocolo (SSL) (também o mecanismo para o protocolo HTTPS). Em geral, a vantagem principal de segurança de transporte é que ele oferece uma taxa de transferência não importa qual transporte você está usando. No entanto, ele tem duas limitações: A primeira é que o mecanismo de transporte determina o tipo de credencial usado para autenticar um usuário. Isso é uma desvantagem somente se um serviço precisa interoperar com outros serviços que exigem tipos diferentes de credenciais. A segunda é que, como a segurança não é aplicada no nível da mensagem, a segurança é implementada em uma maneira de salto por salto em vez de ponta a ponta. Essa última limitação é um problema apenas se o caminho de mensagem entre cliente e serviço inclui intermediários. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] qual transporte deve ser usado, consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usando a segurança de transporte, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
          Segurança de mensagem significa que cada mensagem inclui os cabeçalhos necessários e seguro de dados para manter a mensagem. Como a composição dos cabeçalhos varia, você pode incluir qualquer número de credenciais. Isso é um fator importante, se você está interoperando com outros serviços que exigem um tipo de credencial específico que não pode fornecer um mecanismo de transporte, ou se a mensagem deve ser usada com mais de um serviço, em que cada serviço exige um tipo de credencial diferente.  
   
-         [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Segurança](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+         Para obter mais informações, consulte [segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
     3.  `TransportWithMessageCredential`  
   
          Essa opção usa a camada de transporte para proteger a transferência de mensagem, enquanto cada mensagem inclui as credenciais avançadas necessário outros serviços. Ele combina a vantagem de desempenho de segurança de transporte com a vantagem de rich credenciais de segurança de mensagem. Isso está disponível com as seguintes associações: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, e <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Se você decidir usar a segurança de transporte HTTP (em outras palavras, HTTPS), você também deve configurar o host com um certificado SSL e habilitar o SSL em uma porta. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3.  Se você decidir usar a segurança de transporte HTTP (em outras palavras, HTTPS), você também deve configurar o host com um certificado SSL e habilitar o SSL em uma porta. Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
 4.  Se você estiver usando o <xref:System.ServiceModel.WSHttpBinding> e não é necessário estabelecer uma sessão segura, defina o <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propriedade `false`.  
   
      Uma sessão segura ocorre quando um cliente e o serviço criam um canal usando uma chave simétrica (cliente e servidor para usar a mesma chave para o comprimento de uma conversa, até que a caixa de diálogo é fechada).  
   
 ## <a name="setting-the-client-credential-type"></a>Definir o tipo de credencial de cliente  
- Selecione um tipo de credencial de cliente conforme apropriado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Os seguintes tipos de credencial de cliente estão disponíveis:  
+ Selecione um tipo de credencial de cliente conforme apropriado. Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md). Os seguintes tipos de credencial de cliente estão disponíveis:  
   
 -   `Windows`  
   

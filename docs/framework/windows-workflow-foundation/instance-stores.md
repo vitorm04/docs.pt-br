@@ -1,26 +1,27 @@
 ---
-title: "Armazenamentos de instância"
-ms.custom: 
+title: Armazenamentos de instância
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instance-stores"></a>Armazenamentos de instância
-Um armazenamento de instância é um contêiner lógico instâncias. É o local onde os dados e os metadados de instância são armazenados. Um armazenamento de instância não implica o armazenamento físico dedicado. Um armazenamento de instância pode conter informações durável em uma base de dados SQL Server ou em uma informações de estado não durável na memória. Os vem de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] com a instância Store de fluxo de trabalho SQL, que é uma implementação concreta de um armazenamento de instância que permite que os fluxos de trabalho persistam dados e metadados de instância em uma base de dados SQL Server 2005 ou SQL Server 2008. Além a tela de aplicativo Windows Server também fornece uma implementação concreta de um armazenamento de instância. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Loja instância de malha de aplicativos do Windows Server, consulta e provedores de controle](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+Um armazenamento de instância é um contêiner lógico instâncias. É o local onde os dados e os metadados de instância são armazenados. Um armazenamento de instância não implica o armazenamento físico dedicado. Um armazenamento de instância pode conter informações durável em uma base de dados SQL Server ou em uma informações de estado não durável na memória. Os vem de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] com a instância Store de fluxo de trabalho SQL, que é uma implementação concreta de um armazenamento de instância que permite que os fluxos de trabalho persistam dados e metadados de instância em uma base de dados SQL Server 2005 ou SQL Server 2008. Além a tela de aplicativo Windows Server também fornece uma implementação concreta de um armazenamento de instância. Para obter mais informações, consulte [Windows Server App Fabric Instance Store, consulta e provedores de controle](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
  Persistência API é a interface entre um host e um armazenamento de instância que permite que o host enviar solicitações de comando (por exemplo, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> e <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) para o armazenamento de instância. A implementação concreta deste API é chamado um provedor de persistência. O provedor de persistência recebe solicitações de um host e altera o armazenamento de instância.  
   

@@ -1,20 +1,17 @@
 ---
 title: Referência da linguagem F#
 description: 'Encontre F # informações de recurso idioma dessa referência para tokens de linguagem, conceitos, tipos, expressões e tópicos de suporte para compilador construção.'
-keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5ab0ef364696e92064209118920dff0def21e0c8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-language-reference"></a>Referência da linguagem F#
 
@@ -42,12 +39,12 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Funções](functions/index.md)|As funções são a unidade fundamental de execução do programa em qualquer linguagem de programação. Como em outras linguagens, uma função do F# tem um nome, pode ter parâmetros e receber argumentos, e tem um corpo. O F# também oferece suporte a construções de programação funcional como tratamento de funções como valores, uso de funções sem nome em expressões, composição de funções para formar novas funções, funções via currying e a definição implícita de funções por meio da aplicação parcial dos argumentos da função.|
 |[Tipos do F#](fsharp-types.md)|Descreve os tipos que são usados no F# e como os tipos F# são nomeados e descritos.|
 |[Inferência de Tipos](type-inference.md)|Descreve como o compilador do F# infere os tipos de valores, variáveis, parâmetros e valores de retorno.|
-|[Generalização automática](generics/automatic-generalization.md)|Descreve as construções genéricas no F#.|
+|[Generalização Automática](generics/automatic-generalization.md)|Descreve as construções genéricas no F#.|
 |[Herança](inheritance.md)|Descreve a herança, que é usada para modelar a relação "é um" ou subtipagem na programação orientada a objetos.|
 |[Membros](members/index.md)|Descreve os membros de tipos de objeto do F#.|
 |[Parâmetros e Argumentos ](Parameters-and-Arguments.md)|Descreve o suporte de linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Inclui informações sobre como passar referência.|
 |[Sobrecarga de Operador](operator-overloading.md)|Descreve como sobrecarregar operadores aritméticos em uma classe ou tipo de registro e no nível global.|
-|[Conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
+|[Conversões Cast e conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
 |[Controle de Acesso](access-control.md)|Descreve o controle de acesso no F#. Controle de acesso significa declarar que os clientes são capazes de usar determinados elementos de programação, como tipos, métodos, funções e assim por diante.|
 |[Correspondência Padrão](pattern-matching.md)|Descreve os padrões, que são regras para transformar os dados de entrada que são usados em toda a linguagem F# para extrair dados de comparação com um padrão, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.|
 |[Padrões Ativos](active-patterns.md)|Descreve padrões ativos. Padrões ativos permitem definir partições nomeadas que subdividem os dados de entrada. Você pode usar padrões ativos para decompor os dados de uma maneira personalizada para cada partição.|

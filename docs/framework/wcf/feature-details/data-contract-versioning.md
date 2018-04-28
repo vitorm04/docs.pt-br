@@ -1,12 +1,13 @@
 ---
-title: "Controle de versão de contrato de dados"
-ms.custom: 
+title: Controle de versão de contrato de dados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Controle de versão de contrato de dados
 Como desenvolvem aplicativos, você também terá que alterar o uso de serviços de contratos de dados. Este tópico explica como contratos de dados de versão. Este tópico descreve os mecanismos de controle de versão do contrato de dados. Para obter uma visão geral completa e orientação prescritiva do controle de versão, consulte [práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ Como desenvolvem aplicativos, você também terá que alterar o uso de serviços
   
  Muitas das alterações consideradas incondicional, na verdade, são significativas se estrita aderência a esquema é necessária. No exemplo anterior, um `CarV1` instância com apenas o `Model` elemento seria validar em relação a `CarV2` esquema (que tem `Model` e `Horsepower`, mas são opcionais). No entanto, o inverso é verdadeiro não: uma `CarV2` instância falhará a validação em relação a `CarV1` esquema.  
   
- Ciclo também envolve algumas considerações adicionais. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]seção "Considerações sobre o esquema" [contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Ciclo também envolve algumas considerações adicionais. Para obter mais informações, consulte a seção "Considerações sobre o esquema" [contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Outras alterações de permissão  
- Implementando o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface é uma alteração incondicional. No entanto, o suporte do ciclo não existe para versões do tipo antes da versão na qual <xref:System.Runtime.Serialization.IExtensibleDataObject> foi implementado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Implementando o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface é uma alteração incondicional. No entanto, o suporte do ciclo não existe para versões do tipo antes da versão na qual <xref:System.Runtime.Serialization.IExtensibleDataObject> foi implementado. Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Enumerações  
- Adicionar ou remover um membro de enumeração é uma alteração significativa. Alterando o nome de um membro de enumeração é recentes, a menos que seu nome de contrato é mantido o mesmo que a versão antiga, usando o `EnumMemberAtttribute` atributo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos de enumeração em contratos de dados](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Adicionar ou remover um membro de enumeração é uma alteração significativa. Alterando o nome de um membro de enumeração é recentes, a menos que seu nome de contrato é mantido o mesmo que a versão antiga, usando o `EnumMemberAtttribute` atributo. Para obter mais informações, consulte [tipos de enumeração em contratos de dados](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Coleções  
- A maioria das alterações de coleção são incondicional porque a maioria dos tipos de coleção são intercambiáveis entre si no modelo de contrato de dados. No entanto, fazer uma coleção nãopersonalizada personalizada ou vice-versa é uma alteração significativa. Além disso, alterar as configurações de personalização da coleção é uma alteração significativa; ou seja, alterar seu nome de contrato de dados e o namespace, nome do elemento, o nome do elemento chave e o nome do elemento de valor de repetição. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]personalização da coleção, consulte [tipos de coleção em contratos de dados](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ A maioria das alterações de coleção são incondicional porque a maioria dos tipos de coleção são intercambiáveis entre si no modelo de contrato de dados. No entanto, fazer uma coleção nãopersonalizada personalizada ou vice-versa é uma alteração significativa. Além disso, alterar as configurações de personalização da coleção é uma alteração significativa; ou seja, alterar seu nome de contrato de dados e o namespace, nome do elemento, o nome do elemento chave e o nome do elemento de valor de repetição. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personalização da coleção, consulte [tipos de coleção em contratos de dados](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturalmente, o contrato de dados de conteúdo de uma coleção (por exemplo, a alteração de uma lista de inteiros para uma lista de cadeias de caracteres) a alteração é uma alteração significativa.  
   
 ## <a name="see-also"></a>Consulte também  

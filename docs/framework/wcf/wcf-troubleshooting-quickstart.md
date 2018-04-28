@@ -1,27 +1,29 @@
 ---
-title: "Início rápido de solução de problemas do WCF"
-ms.custom: 
+title: Início rápido de solução de problemas do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista alguns problemas conhecidos que os clientes têm executado até ao desenvolver clientes do WCF e serviços. Se o problema que você está executando em não estiver nesta lista, recomendamos que você configurar o rastreamento para o serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador de arquivo de rastreamento e obter informações detalhadas sobre exceções que pode estar ocorrendo no serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -62,11 +64,11 @@ Este tópico lista alguns problemas conhecidos que os clientes têm executado at
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Às vezes, recebo um MessageSecurityException na segunda solicitação se meu cliente ficar ocioso por um tempo após a primeira solicitação. O que está acontecendo?  
- A segunda solicitação pode falhar principalmente por duas razões: (1) a sessão expirou ou (2) o servidor Web que está hospedando o serviço é reciclado. No primeiro caso, a sessão é válida até que o serviço de tempo limite. Quando o serviço não receber uma solicitação do cliente dentro do período de tempo especificado na associação de serviço (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), o serviço encerra a sessão de segurança. Mensagens de cliente subsequentes resultam no <xref:System.ServiceModel.Security.MessageSecurityException>. O cliente novamente deve estabelecer uma sessão segura com o serviço para enviar mensagens futuras ou usar um token de contexto de segurança com monitoração de estado. Tokens de contexto de segurança com monitoração de estado também permitem que uma sessão segura sobreviver a um servidor Web que estão sendo reciclado. [!INCLUDE[crabout](../../../includes/crabout-md.md)]usando tokens de contexto de segurança com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Como alternativa, você pode desabilitar sessões seguras. Quando você usa o [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) de associação, você pode definir o `establishSecurityContext` propriedade `false` para desabilitar sessões seguras. Para desabilitar sessões seguras para outras associações, você deve criar uma associação personalizada. Para obter detalhes sobre como criar uma associação personalizada, consulte [como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Antes de aplicar qualquer uma dessas opções, você deve entender os requisitos de segurança do seu aplicativo.  
+ A segunda solicitação pode falhar principalmente por duas razões: (1) a sessão expirou ou (2) o servidor Web que está hospedando o serviço é reciclado. No primeiro caso, a sessão é válida até que o serviço de tempo limite. Quando o serviço não receber uma solicitação do cliente dentro do período de tempo especificado na associação de serviço (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), o serviço encerra a sessão de segurança. Mensagens de cliente subsequentes resultam no <xref:System.ServiceModel.Security.MessageSecurityException>. O cliente novamente deve estabelecer uma sessão segura com o serviço para enviar mensagens futuras ou usar um token de contexto de segurança com monitoração de estado. Tokens de contexto de segurança com monitoração de estado também permitem que uma sessão segura sobreviver a um servidor Web que estão sendo reciclado. [!INCLUDE[crabout](../../../includes/crabout-md.md)] usando tokens de contexto de segurança com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Como alternativa, você pode desabilitar sessões seguras. Quando você usa o [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) de associação, você pode definir o `establishSecurityContext` propriedade `false` para desabilitar sessões seguras. Para desabilitar sessões seguras para outras associações, você deve criar uma associação personalizada. Para obter detalhes sobre como criar uma associação personalizada, consulte [como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Antes de aplicar qualquer uma dessas opções, você deve entender os requisitos de segurança do seu aplicativo.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Meu serviço começa a rejeitar novos clientes após cerca de 10 clientes estão interagindo com ele. O que está acontecendo?  
- Por padrão, os serviços podem ter somente 10 sessões simultâneas. Portanto, se as associações de serviço usam sessões, o serviço aceita novas conexões de cliente até atingir esse número, após o qual ele recusará novas conexões de cliente até que uma das extremidades da sessão atual. Você pode dar suporte a mais clientes de várias maneiras. Se o serviço não requer sessões, não use uma associação de sessão. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Usando sessões](../../../docs/framework/wcf/using-sessions.md).) Outra opção é aumentar o limite de sessão, alterando o valor da <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> propriedade para o número apropriado para o caso.  
+ Por padrão, os serviços podem ter somente 10 sessões simultâneas. Portanto, se as associações de serviço usam sessões, o serviço aceita novas conexões de cliente até atingir esse número, após o qual ele recusará novas conexões de cliente até que uma das extremidades da sessão atual. Você pode dar suporte a mais clientes de várias maneiras. Se o serviço não requer sessões, não use uma associação de sessão. (Para obter mais informações, consulte [usando sessões](../../../docs/framework/wcf/using-sessions.md).) Outra opção é aumentar o limite de sessão, alterando o valor da <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> propriedade para o número apropriado para o caso.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Pode carregar minha configuração de serviço do em outro lugar que o arquivo de configuração do aplicativo WCF?  
@@ -143,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  Registre um novo SPN com o domínio usando o SetSPN. Observe que você precisará ser um administrador de domínio para fazer isso.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]o protocolo Kerberos, consulte [conceitos de segurança utilizados no WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) e:  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] o protocolo Kerberos, consulte [conceitos de segurança utilizados no WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) e:  
   
 -   [Depuração de erros de autenticação do Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -159,13 +161,13 @@ public class MyServiceHost : ServiceHost
   
 -   Não é possível dependem de exceções de serialização de um modo padrão. Alguns — como <xref:System.Security.SecurityException>— não pode ser serializado em todos os.  
   
--   Expõe os detalhes de implementação interna para os clientes. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+-   Expõe os detalhes de implementação interna para os clientes. Para obter mais informações, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Se você estiver depurando um aplicativo, no entanto, você pode serializar informações de exceção e retorná-lo para o cliente usando o <xref:System.ServiceModel.Description.ServiceDebugBehavior> classe.  
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Parece que unidirecional e operações de solicitação-resposta retornam aproximadamente a mesma velocidade quando a resposta não contém dados. O que está acontecendo?  
- Especifica que uma operação é uma maneira significa apenas que o contrato da operação aceita uma mensagem de entrada e não retorna uma mensagem de saída. Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], todas as invocações do cliente retornam quando os dados de saída foram gravados para a transmissão ou uma exceção será lançada. Operações unidirecionais funcionam da mesma forma, e eles podem gerar se o serviço não pode ser localizado ou bloquear se o serviço não está preparado para aceitar os dados da rede. Normalmente em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], isso resulta em unidirecionais chamadas de retorno ao cliente mais rapidamente do que a solicitação-resposta; mas qualquer condição que reduz o envio de dados de saída pela rede diminui operações unidirecionais, bem como as operações de solicitação-resposta. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Serviços unidirecionais](../../../docs/framework/wcf/feature-details/one-way-services.md) e [acessar serviços usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Especifica que uma operação é uma maneira significa apenas que o contrato da operação aceita uma mensagem de entrada e não retorna uma mensagem de saída. Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], todas as invocações do cliente retornam quando os dados de saída foram gravados para a transmissão ou uma exceção será lançada. Operações unidirecionais funcionam da mesma forma, e eles podem gerar se o serviço não pode ser localizado ou bloquear se o serviço não está preparado para aceitar os dados da rede. Normalmente em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], isso resulta em unidirecionais chamadas de retorno ao cliente mais rapidamente do que a solicitação-resposta; mas qualquer condição que reduz o envio de dados de saída pela rede diminui operações unidirecionais, bem como as operações de solicitação-resposta. Para obter mais informações, consulte [unidirecional serviços](../../../docs/framework/wcf/feature-details/one-way-services.md) e [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Estou usando um certificado x. 509 com o serviço e obter um System.Security.Cryptography.CryptographicException. O que está acontecendo?  
@@ -173,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  Se esse for o caso, você deve atribuir privilégios de acesso de leitura à conta do processo para o arquivo que contém a chave privada. Por exemplo, se o processo de trabalho do IIS é executado sob a conta de Bob, você precisará conceder acesso de leitura de blob para o arquivo que contém a chave privada.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]como dar acesso à conta de usuário corretos para o arquivo que contém a chave privada para um certificado x. 509 específico, consulte [como: fazer x. 509 certificados acessível ao WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] como dar acesso à conta de usuário corretos para o arquivo que contém a chave privada para um certificado x. 509 específico, consulte [como: fazer x. 509 certificados acessível ao WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Alterei o primeiro parâmetro de uma operação de maiusculas em minúsculas; Agora o cliente gera uma exceção. O que está acontecendo?  

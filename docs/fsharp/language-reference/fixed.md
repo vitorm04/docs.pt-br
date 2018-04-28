@@ -1,20 +1,17 @@
 ---
 title: 'A palavra-chave Fixed (F #)'
 description: "Saiba como você pode 'Fixar' um local para a pilha para evitar a coleta da a F # 'fixed' palavra-chave."
-keywords: "visual f#, f#, programação funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>A palavra-chave Fixed
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 Isso estende a sintaxe das expressões para permitir que um ponteiro de extração e vinculá-la a um nome que será impedido de ser coletado ou movido durante a coleta de lixo.  
 
-Um ponteiro de uma expressão é fixa por meio de `fixed` palavra-chave é associada a um identificador por meio de `use` palavra-chave.  A semântica isso é semelhante ao gerenciamento de recursos por meio de `use` palavra-chave.  O ponteiro é fixa enquanto ele está no escopo e, depois que ele está fora do escopo, ela não é fixa.  `fixed`não pode ser usado fora do contexto de um `use` associação.  Você deve associar o ponteiro para um nome com `use`.
+Um ponteiro de uma expressão é fixa por meio de `fixed` palavra-chave é associada a um identificador por meio de `use` palavra-chave.  A semântica isso é semelhante ao gerenciamento de recursos por meio de `use` palavra-chave.  O ponteiro é fixa enquanto ele está no escopo e, depois que ele está fora do escopo, ela não é fixa.  `fixed` não pode ser usado fora do contexto de um `use` associação.  Você deve associar o ponteiro para um nome com `use`.
 
 O uso de `fixed` deve ocorrer dentro de uma expressão em uma função ou um método.  Ele não pode ser usado em um escopo de nível de script ou módulo.
 

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6cf6910dd370c32120487681829e72ad2681efbe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)
 A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código de modelo de serviço de documentos de metadados e documentos de metadados de código de modelo de serviço.  
@@ -65,7 +65,7 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|/directory:\<directory>|Diretório no qual criar arquivos.<br /><br /> Padrão: o diretório atual.<br /><br /> Forma abreviada: `/d`|  
+|diretório:\<diretório >|Diretório no qual criar arquivos.<br /><br /> Padrão: o diretório atual.<br /><br /> Forma abreviada: `/d`|  
 |/help|Exibe a sintaxe de comando e as opções para a ferramenta.<br /><br /> Forma abreviada: `/?`|  
 |/noLogo|Suprime a mensagem de copyright e de banner.|  
 |/svcutilConfig:\<configFile>|Especifica um arquivo de configuração personalizado para usar em vez do arquivo App.config. Isso pode ser usado para registrar extensões system.serviceModel sem alterar o arquivo de configuração da ferramenta.|  
@@ -74,7 +74,7 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
 ### <a name="code-generation"></a>Geração de código  
  Svcutil.exe pode gerar código para contratos de serviço, clientes e tipos de dados a partir de documentos de metadados. Esses documentos de metadados podem estar em um armazenamento durável, ou serem recuperados online. A recuperação online segue o protocolo WS-Metadata Exchange ou o protocolo DISCO (para obter detalhes, consulte a seção Download de metadados).  
   
- Você pode usar a ferramenta SvcUtil.exe para gerar contratos de serviço e dados com base em um documento WSDL pré-definido. Use a opção /serviceContract e especifique uma URL ou local do arquivo de onde o documento WSDL pode ser baixado ou localizado. Isso gerará os contratos de serviço e dados definidos no documento WSDL que pode ser usado para implementar um serviço de reclamação. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Como: recuperar metadados e implementar um serviço compatível com](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ Você pode usar a ferramenta SvcUtil.exe para gerar contratos de serviço e dados com base em um documento WSDL pré-definido. Use a opção /serviceContract e especifique uma URL ou local do arquivo de onde o documento WSDL pode ser baixado ou localizado. Isso gerará os contratos de serviço e dados definidos no documento WSDL que pode ser usado para implementar um serviço de reclamação. Para obter mais informações, consulte [como: recuperar metadados e implementar um serviço compatível com](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  Para um serviço com um ponto de extremidade BasicHttpContextbinding, o Svcutil.exe gera um BasicHttpBinding com o atributo `allowCookies` definido como `true`. Os cookies são usados para o contexto no servidor. Se você quiser gerenciar o contexto no cliente quando o serviço usa cookies, poderá modificar manualmente a configuração para usar uma associação de contexto.  
   
@@ -102,10 +102,10 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
 |/idioma:\<idioma >|Especifica a linguagem de programação a ser usada para gerar o código. Você deve fornecer um nome de linguagem registrado no arquivo Machine.config, ou nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l` **Observação:** a opção somente dá suporte a C++ para o provedor de código que acompanha o Visual Studio 2005 SP1.|  
 |/mergeConfig|Mescla a configuração gerada em um arquivo existente, em vez de substituir o arquivo existente.|  
 |/messageContract|Gera tipos de contrato de mensagem.<br /><br /> Forma abreviada: `/mc`|  
-|/namespace:\<string,string>|Especifica um mapeamento de um targetNamespace do WSDL ou do esquema XML para um namespace de CLR. Usando '\*' de targetNamespace mapeia todos os targetNamespaces sem um mapeamento explícito para esse namespace CLR.<br /><br /> Para garantir que o nome do contrato da mensagem não colida com o nome da operação, você deverá qualificar a referência de tipo com `::` ou verificar se os nomes são exclusivos.<br /><br /> Padrão: derivado do namespace de destino do documento de esquema para Contratos de Dados. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n` **Observação:** ao gerar tipos para uso com o XmlSerializer, apenas um mapeamento de namespace único é suportado. Todos os tipos gerados será no namespace padrão ou o namespace especificado por ' *'.|  
+|/namespace:\<cadeia de caracteres, cadeia de caracteres >|Especifica um mapeamento de um targetNamespace do WSDL ou do esquema XML para um namespace de CLR. Usando '\*' de targetNamespace mapeia todos os targetNamespaces sem um mapeamento explícito para esse namespace CLR.<br /><br /> Para garantir que o nome do contrato da mensagem não colida com o nome da operação, você deverá qualificar a referência de tipo com `::` ou verificar se os nomes são exclusivos.<br /><br /> Padrão: derivado do namespace de destino do documento de esquema para Contratos de Dados. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n` **Observação:** ao gerar tipos para uso com o XmlSerializer, apenas um mapeamento de namespace único é suportado. Todos os tipos gerados será no namespace padrão ou o namespace especificado por ' *'.|  
 |/noConfig|Não gera arquivos de configuração.|  
 |/noStdLib|Não faz referência às bibliotecas padrão.<br /><br /> Padrão: Mscorlib.dll e System.servicemodel.dll são referenciados.|  
-|/out:\<file>|Especifica o nome do arquivo para o código gerado.<br /><br /> Padrão: derivado do nome de definição WSDL, serviço WSDL ou namespace de destino de um dos esquemas.<br /><br /> Forma abreviada: `/o`|  
+|/out:\<arquivo >|Especifica o nome do arquivo para o código gerado.<br /><br /> Padrão: derivado do nome de definição WSDL, serviço WSDL ou namespace de destino de um dos esquemas.<br /><br /> Forma abreviada: `/o`|  
 |/Reference:\<caminho do arquivo >|Os tipos de referência no assembly especificado. Ao gerar clientes, use esta opção para especificar os assemblies que podem conter tipos que representam os metadados que estão sendo importados.<br /><br /> Você não pode especificar os contratos de mensagem e os tipos <xref:System.Xml.Serialization.XmlSerializer> usando essa opção.<br /><br /> Se <xref:System.DateTimeOffset> for referenciado, esse tipo é usado em vez de gerar um novo tipo. Se o aplicativo estiver escrito usando [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], o SvcUtil.exe referenciará <xref:System.DateTimeOffset> automaticamente.<br /><br /> Forma abreviada: `/r`|  
 |/serializable|Gera classes marcadas com o atributo Serializable.<br /><br /> Forma abreviada: `/s`|  
 |/serviceContract|Gerar código somente para contratos de serviço. A classe e a configuração do cliente não serão geradas<br /><br /> Forma abreviada: `/sc`|  
@@ -192,7 +192,7 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
 |------------|-----------------|  
 |/Reference:\<caminho do arquivo >|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo.<br /><br /> Forma abreviada: `/r`|  
 |/excludeType:\<type>|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da exportação ou validação.<br /><br /> Forma abreviada: `/et`|  
-|/out:\<file>|Especifica o nome do arquivo para o código gerado. Essa opção será ignorada quando vários assemblies são passados como entrada para a ferramenta.<br /><br /> Padrão: derivado do nome do assembly.<br /><br /> Forma abreviada: `/o`|  
+|/out:\<arquivo >|Especifica o nome do arquivo para o código gerado. Essa opção será ignorada quando vários assemblies são passados como entrada para a ferramenta.<br /><br /> Padrão: derivado do nome do assembly.<br /><br /> Forma abreviada: `/o`|  
 |/UseSerializerForFaults|Especifica que o <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` deve ser usado para ler e gravar falhas, em vez do padrão <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="examples"></a>Exemplos  
@@ -235,7 +235,7 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
 ## <a name="maximum-nametable-character-count-quota"></a>Cota máxima da conta de caracteres Nametable  
  Ao usar o svcutil para gerar metadados para um serviço, você poderá receber a seguinte mensagem:  
   
- Erro: Não é possível obter metadados de http://localhost:8000/somesservice/mex que a cota de contagem de caracteres nametable máximo (16384) foi excedida durante a leitura de dados XML. Nametable é uma estrutura de dados usada para armazenar cadeias de caracteres encontradas durante o processamento do XML - documentos XML longos com nomes de elementos, nomes de atributos e valores de atributos não repetidos, podem disparar essa cota. Essa cota pode ser aumentada com a alteração da propriedade MaxNameTableCharCount no objeto XmlDictionaryReaderQuotas usado na criação da leitora XML.  
+ Erro: Não é possível obter metadados de http://localhost:8000/somesservice/mex a cota de contagem de caracteres nametable máximo (16384) foi excedida durante a leitura de dados XML. Nametable é uma estrutura de dados usada para armazenar cadeias de caracteres encontradas durante o processamento do XML - documentos XML longos com nomes de elementos, nomes de atributos e valores de atributos não repetidos, podem disparar essa cota. Essa cota pode ser aumentada com a alteração da propriedade MaxNameTableCharCount no objeto XmlDictionaryReaderQuotas usado na criação da leitora XML.  
   
  Este erro pode ser causado por um serviço que retorna um arquivo WSDL grande quando você solicita seus metadados. O problema é que a cota de caracteres para a ferramenta svcutil.exe foi excedida. Esse valor é definido para ajudar a evitar ataques de negação de serviço (dos). Você pode aumentar essa cota especificando o seguinte arquivo de configuração para o svcutil.  
   

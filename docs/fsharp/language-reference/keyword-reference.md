@@ -1,20 +1,17 @@
 ---
-title: "Referência de palavras-chave (F#)"
-description: "Encontre links para informações sobre todas as palavras-chave F # idioma."
-keywords: "visual f#, f#, programação funcional"
+title: Referência de palavras-chave (F#)
+description: 'Encontre links para informações sobre todas as palavras-chave F # idioma.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -27,7 +24,7 @@ A tabela a seguir mostra todos os F # palavras-chave em ordem alfabética, junta
 |Palavra-chave|Link|Descrição|
 |-------|----|-----------|
 |`abstract`|[Membros](members/index.md)<br /><br />[Classes Abstratas](abstract-classes.md)|Indica um método que não tem nenhuma implementação no tipo no qual ela é declarada ou que é virtual e tem uma implementação padrão.|
-|`and`|[`let`Associações](functions/let-bindings.md)<br /><br />[Membros](members/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado em mutuamente associações recursivas, em declarações de propriedade e com várias restrições em parâmetros genéricos.|
+|`and`|[`let` Associações](functions/let-bindings.md)<br /><br />[Membros](members/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado em mutuamente associações recursivas, em declarações de propriedade e com várias restrições em parâmetros genéricos.|
 |`as`|[Classes](classes.md)<br /><br />[Correspondência Padrão](Pattern-Matching.md)|Usado para fornecer um nome de objeto do objeto da classe atual. Também é usado para dar um nome a um padrão todo dentro de uma correspondência de padrão.|
 |`assert`|[Asserções](assertions.md)|Usado para verificar o código durante a depuração.|
 |`base`|[Classes](classes.md)<br /><br />[Herança](inheritance.md)|Usado como o nome do objeto de classe base.|
@@ -46,7 +43,7 @@ A tabela a seguir mostra todos os F # palavras-chave em ordem alfabética, junta
 |`extern`|[Funções Externas](functions/external-functions.md)|Indica que um elemento declarado do programa é definido em outro assembly ou binário.|
 |`false`|[Tipos Primitivos](primitive-types.md)|Usado como um literal booliano.|
 |`finally`|[Exceções: a expressão `try...finally`](exception-handling/the-try-finally-expression.md)|Usado em conjunto com `try` apresentar um bloco de código que é executado independentemente se ocorrer uma exceção.|
-|`fixed`|[Fixo](fixed.md)|Usado para "fixar" um ponteiro na pilha para impedir que ele está sendo coletado como lixo.|
+|`fixed`|[fixo](fixed.md)|Usado para "fixar" um ponteiro na pilha para impedir que ele está sendo coletado como lixo.|
 |`for`|[Loops: `for...to` expressão](loops-for-to-expression.md)<br /><br />[Loops: Expressão for...in](loops-for-in-expression.md)|Usado em construções de loop.|
 |`fun`|[Expressões lambda: A `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md)|Usada em expressões lambda, também conhecido como anônimas funções.|
 |`function`|[Expressões Match](match-expressions.md)<br /><br />[Expressões lambda: A palavra-chave fun](functions/lambda-expressions-the-fun-keyword.md)|Usado como uma alternativa mais curto para o `fun` palavra-chave e um `match` expressão em uma expressão lambda com um padrão de correspondência em um único argumento.|
@@ -58,7 +55,7 @@ A tabela a seguir mostra todos os F # palavras-chave em ordem alfabética, junta
 |`interface`|[Interfaces](interfaces.md)|Usado para declarar e implementar interfaces.|
 |`internal`|[Controle de Acesso](access-control.md)|Usado para especificar que um membro é visível dentro de um assembly, mas não fora dele.|
 |`lazy`|[Computações Lentas](lazy-computations.md)|Usado para especificar um cálculo que será executada somente quando um resultado é necessária.|
-|`let`|[`let`Associações](functions/let-bindings.md)|Usado para associar ou vincular um nome para a função ou valor.|
+|`let`|[`let` Associações](functions/let-bindings.md)|Usado para associar ou vincular um nome para a função ou valor.|
 |`let!`|[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)<br /><br />[Expressões de Computação](computation-expressions.md)|Usada em fluxos de trabalho assíncronos para associar um nome para o resultado de uma computação assíncrona, ou, em outras expressões de cálculo, usados para vincular um nome a um resultado, o que é do tipo de computação.|
 |`match`|[Expressões Match](match-expressions.md)|Usado para a ramificação comparando um valor a um padrão.|
 |`member`|[Membros](members/index.md)|Usado para declarar uma propriedade ou método em um tipo de objeto.|

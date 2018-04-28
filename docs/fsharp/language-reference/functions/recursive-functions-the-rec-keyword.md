@@ -1,20 +1,17 @@
 ---
-title: "Funções recursivas: a palavra-chave rec (F#)"
+title: 'Funções recursivas: a palavra-chave rec (F#)'
 description: "Saiba como a palavra-chave F # 'rec' é usada com a palavra-chave 'let' para definir uma função recursiva."
-keywords: "visual f#, f#, programação funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1a95639f-9bfe-4f1d-a5e2-246d1d37776e
-ms.openlocfilehash: b837d2c0f8e2b1d28980620103097ccc8345c098
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f5302c125605d2186deab0bbeaf2e84cc51edc3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funções recursivas: a palavra-chave rec
 
@@ -39,7 +36,7 @@ function2-body
 ## <a name="remarks"></a>Comentários
 Funções recursivas, funções que chamam, são identificadas explicitamente na linguagem F #. Isso disponibiliza o identificador que é definido no escopo da função.
 
-O código a seguir ilustra uma função recursiva que calcula o  *n* th Fibonacci número.
+O código a seguir ilustra uma função recursiva que calcula o *n*th Fibonacci número.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 

@@ -1,13 +1,13 @@
 ---
-title: "Como utilizar credenciais de mensagem e segurança de transporte"
-ms.custom: 
+title: Como utilizar credenciais de mensagem e segurança de transporte
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Como utilizar credenciais de mensagem e segurança de transporte
-Proteger um serviço com credenciais de transporte e de mensagem usa o melhor dos modos de segurança de transporte e de mensagem no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Sum, segurança de camada de transporte fornece integridade e confidencialidade, enquanto a segurança de camada de mensagem fornece uma variedade de credenciais que não são possíveis com os mecanismos de segurança de transporte estrito. Este tópico mostra as etapas básicas para a implementação de transporte com credenciais de mensagem usando o <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> associações. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]definir o modo de segurança, consulte [como: definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Proteger um serviço com credenciais de transporte e de mensagem usa o melhor dos modos de segurança de transporte e de mensagem no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Sum, segurança de camada de transporte fornece integridade e confidencialidade, enquanto a segurança de camada de mensagem fornece uma variedade de credenciais que não são possíveis com os mecanismos de segurança de transporte estrito. Este tópico mostra as etapas básicas para a implementação de transporte com credenciais de mensagem usando o <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> associações. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] definir o modo de segurança, consulte [como: definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Ao definir o modo de segurança para `TransportWithMessageCredential`, o transporte determina o mecanismo real que fornece a segurança no nível de transporte. Para HTTP, o mecanismo é protocolo (SSL) sobre HTTP (HTTPS). para TCP, ele é SSL sobre TCP ou Windows.  
   
@@ -38,11 +38,11 @@ Proteger um serviço com credenciais de transporte e de mensagem usa o melhor do
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Para usar o WSHttpBinding com um certificado de segurança de transporte (no código)  
   
-1.  Use a ferramenta HttpCfg.exe para associar um certificado SSL para uma porta no computador. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Use a ferramenta HttpCfg.exe para associar um certificado SSL para uma porta no computador. Para obter mais informações, consulte [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Criar uma instância do <xref:System.ServiceModel.WSHttpBinding> de classe e defina o <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> propriedade <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Definir o <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> propriedade para um valor apropriado. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) O código a seguir usa o <xref:System.ServiceModel.MessageCredentialType.Certificate> valor.  
+3.  Definir o <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> propriedade para um valor apropriado. (Para obter mais informações, consulte [selecionando um tipo de credencial](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) O código a seguir usa o <xref:System.ServiceModel.MessageCredentialType.Certificate> valor.  
   
 4.  Criar uma instância do <xref:System.Uri> classe com um endereço base apropriado. Observe que o endereço deve usar o esquema "HTTPS" e deve conter o nome real da máquina e o número da porta que o certificado SSL está associado ao. (Como alternativa, você pode definir o endereço base na configuração).  
   
@@ -97,7 +97,7 @@ Proteger um serviço com credenciais de transporte e de mensagem usa o melhor do
   
 #### <a name="to-use-the-wshttpbinding"></a>Para usar o WSHttpBinding  
   
-1.  Configure o computador com um certificado SSL associado a uma porta. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Você não precisa definir um <`transport`> valor do elemento com essa configuração.  
+1.  Configure o computador com um certificado SSL associado a uma porta. (Para obter mais informações, consulte [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Você não precisa definir um <`transport`> valor do elemento com essa configuração.  
   
 2.  Especifique o tipo de credencial de cliente para a segurança de nível de mensagem. O exemplo a seguir define o `clientCredentialType` atributo do <`message`> elemento `UserName`.  
   

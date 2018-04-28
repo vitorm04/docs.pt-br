@@ -1,20 +1,17 @@
 ---
 title: 'Gerenciamento de recursos: a palavra-chave use (F#)'
 description: "Saiba mais sobre o F # palavra-chave 'use' e a função 'usando', que pode controlar a inicialização e a liberação de recursos."
-keywords: "visual f#, f#, programação funcional"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Gerenciamento de recursos: a palavra-chave use
 
@@ -44,7 +41,7 @@ Você pode usar `use` em expressões de cálculo, caso em que uma versão person
 ## <a name="using-function"></a>usando a função
 O `using` função tem a seguinte forma:
 
-`using`(*expression1*) *função ou lambda*
+`using` (*expression1*) *função ou lambda*
 
 Em um `using` expressão, *expression1* cria o objeto deve ser descartado. O resultado de *expression1* (o objeto deve ser descartado) torna-se um argumento, *valor*, *função ou lambda*, que é a uma função que espera um único restantes argumento de um tipo que corresponde ao valor produzido por *expression1*, ou uma expressão lambda que espera um argumento de tipo. No final da execução da função, o tempo de execução chama `Dispose` e libera os recursos (a menos que o valor é `null`, caso em que a chamada Dispose não é realizada).
 
@@ -56,7 +53,7 @@ A exemplo a seguir mostra o `using` expressão com uma função.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-Observe que a função pode ser uma função que tem alguns argumentos já aplicados. O exemplo de código a seguir demonstra isso. Ele cria um arquivo que contém a cadeia de caracteres `XYZ`.
+Observe que a função pode ser uma função que tem alguns argumentos já aplicados. O código de exemplo a seguir demonstra isso. Ele cria um arquivo que contém a cadeia de caracteres `XYZ`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

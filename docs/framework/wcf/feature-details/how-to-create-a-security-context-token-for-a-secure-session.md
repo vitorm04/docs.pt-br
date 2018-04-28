@@ -1,27 +1,29 @@
 ---
-title: "Como criar um token de contexto de segurança para uma sessão segura"
-ms.custom: 
+title: Como criar um token de contexto de segurança para uma sessão segura
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3dc0e44e7f561e39128e32d3af5fbd495316fdd3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579a980d8d71b5fe3e21e49e84a602b3be37eff1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Como criar um token de contexto de segurança para uma sessão segura
 Usando um token de contexto de segurança com monitoração de estado (SCT) em uma sessão segura, a sessão pode suportar o serviço ser reciclado. Por exemplo, quando um SCT sem monitoração de estado é usado em uma sessão segura e redefinição de serviços de informações da Internet (IIS), os dados da sessão que está associados com o serviço serão perdidos. Esses dados de sessão incluem um cache de token SCT. Portanto, na próxima vez que um cliente envia o serviço um SCT sem monitoração de estado, um erro será retornado, porque a chave que está associada com o SCT não pode ser recuperada. Se, no entanto, um SCT com monitoração de estado é usado, a chave que está associada com o SCT está contida dentro de SCT. Porque a chave é contida o SCT e, portanto, contida na mensagem, a sessão segura não é afetada pelo serviço de ser reciclado. Por padrão, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa SCTs sem monitoração de estado em uma sessão segura. Este tópico fornece detalhes sobre como usar SCTs com monitoração de estado em uma sessão segura.  
@@ -33,7 +35,7 @@ Usando um token de contexto de segurança com monitoração de estado (SCT) em u
 >  Para aplicativos que usam SCTs com monitoração de estado em uma sessão segura, a identidade do segmento para o serviço deve ser uma conta de usuário que tem um perfil de usuário associado. Quando o serviço é executado sob uma conta que não tem um perfil de usuário, como `Local Service`, uma exceção pode ser lançada.  
   
 > [!NOTE]
->  Quando a representação é necessário no Windows XP, use uma sessão segura sem um SCT com monitoração de estado. Quando SCTs com monitoração de estado são usadas com representação, um <xref:System.InvalidOperationException> é gerada. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Quando a representação é necessário no Windows XP, use uma sessão segura sem um SCT com monitoração de estado. Quando SCTs com monitoração de estado são usadas com representação, um <xref:System.InvalidOperationException> é gerada. Para obter mais informações, consulte [cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>Para usar SCTs com monitoração de estado em uma sessão segura  
   
@@ -121,4 +123,4 @@ Usando um token de contexto de segurança com monitoração de estado (SCT) em u
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

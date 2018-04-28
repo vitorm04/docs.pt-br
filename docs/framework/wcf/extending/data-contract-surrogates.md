@@ -1,28 +1,28 @@
 ---
 title: Substitutos de contrato de dados
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Substitutos de contrato de dados
 O contrato de dados *substituto* é um recurso avançado baseado em modelo de contrato de dados. Esse recurso destina-se a ser usada para personalização de tipo e substituição em situações em que os usuários desejarem alterar como um tipo é serializado, desserializado ou projetado nos metadados. Alguns cenários onde um substituto pode ser usado é quando um contrato de dados não foi especificado para o tipo, campos e propriedades não são marcadas com o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo ou usuários deseja criar dinamicamente as variações de esquema.  
@@ -75,7 +75,7 @@ O contrato de dados *substituto* é um recurso avançado baseado em modelo de co
   
  O `targetType` parâmetro refere-se para o tipo declarado do membro. Esse parâmetro é do tipo surrogated retornado pelo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> método. O serializador não impõe que o objeto retornado será atribuído a esse tipo. O `obj` parâmetro é o objeto a ser serializado e será convertido em seu substituto se necessário. Esse método deve retornar o objeto de entrada se o surrogated não processa o objeto. Caso contrário, o novo objeto substituto será retornado. O substituto não será chamado se o objeto é nulo. Vários mapeamentos alternativos para instâncias diferentes podem ser definidos dentro desse método.  
   
- Ao criar um <xref:System.Runtime.Serialization.DataContractSerializer>, você pode instruir a preservar referências de objeto. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Isso é feito definindo o `preserveObjectReferences` parâmetro no construtor para `true`. Nesse caso, o substituto é chamado apenas uma vez para um objeto, desde que todas as serializações subsequentes gravar apenas a referência no fluxo. Se `preserveObjectReferences` é definido como `false`, em seguida, o substituto é chamado sempre que uma instância for encontrada.  
+ Ao criar um <xref:System.Runtime.Serialization.DataContractSerializer>, você pode instruir a preservar referências de objeto. (Para obter mais informações, consulte [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Isso é feito definindo o `preserveObjectReferences` parâmetro no construtor para `true`. Nesse caso, o substituto é chamado apenas uma vez para um objeto, desde que todas as serializações subsequentes gravar apenas a referência no fluxo. Se `preserveObjectReferences` é definido como `false`, em seguida, o substituto é chamado sempre que uma instância for encontrada.  
   
  Se o tipo da instância serializada difere do tipo declarado, informações de tipo são gravadas no fluxo, por exemplo, `xsi:type` para permitir que a instância a ser desserializado na outra extremidade. Esse processo ocorre se o objeto é substituído ou não.  
   
@@ -144,7 +144,7 @@ O contrato de dados *substituto* é um recurso avançado baseado em modelo de co
 ### <a name="getknowncustomdatatypes-method"></a>Método GetKnownCustomDataTypes  
  Esse método obtém os tipos de dados personalizados definidos no esquema. O método é opcional para a importação de esquema.  
   
- O método é chamado no começo de importação e exportação de esquema. O método retorna os tipos de dados personalizados usados no esquema exportados ou importados. O método é passado um <xref:System.Collections.ObjectModel.Collection%601> (o `customDataTypes` parâmetro), que é uma coleção de tipos. O método deve adicionar tipos conhecidos adicionais a essa coleção. Os tipos de dados personalizados conhecidos são necessárias para habilitar a serialização e desserialização de dados personalizados usando o <xref:System.Runtime.Serialization.DataContractSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ O método é chamado no começo de importação e exportação de esquema. O método retorna os tipos de dados personalizados usados no esquema exportados ou importados. O método é passado um <xref:System.Collections.ObjectModel.Collection%601> (o `customDataTypes` parâmetro), que é uma coleção de tipos. O método deve adicionar tipos conhecidos adicionais a essa coleção. Os tipos de dados personalizados conhecidos são necessárias para habilitar a serialização e desserialização de dados personalizados usando o <xref:System.Runtime.Serialization.DataContractSerializer>. Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementando um substituto  
  Para usar o substituto de contrato de dados dentro de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], você deve seguir alguns procedimentos especiais.  

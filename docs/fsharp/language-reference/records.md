@@ -1,20 +1,17 @@
 ---
 title: Registros (F#)
-description: "Saiba como registros de F # representam agregações simples de valores nomeados, opcionalmente com membros."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como registros de F # representam agregações simples de valores nomeados, opcionalmente com membros.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>Registros
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>Diferenças entre Classes e registros
 Campos de registro diferem das classes automaticamente, eles são expostos como propriedades, e são usadas na criação e cópia de registros. Construção de registro também é diferente da construção de classe. Em um tipo de registro, você não pode definir um construtor. Em vez disso, a sintaxe de construção descrita neste tópico se aplica. Classes não têm nenhuma relação direta entre os parâmetros do construtor, campos e propriedades.
 
-Como tipos de união e estrutura de registros tem semântica de igualdade estrutural. As classes têm referência semântica de igualdade. O exemplo de código a seguir demonstra isso.
+Como tipos de união e estrutura de registros tem semântica de igualdade estrutural. As classes têm referência semântica de igualdade. O código de exemplo a seguir demonstra isso.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
@@ -129,6 +126,6 @@ Se precisar fazer referência a igualdade de registros, adicione o atributo `[<R
 
 [Referência da Linguagem F#](index.md)
 
-[Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+[Igualdade de referência](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 
 [Correspondência Padrão](pattern-matching.md)

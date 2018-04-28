@@ -1,35 +1,35 @@
 ---
-title: "Auditoria de eventos de segurança"
-ms.custom: 
+title: Auditoria de eventos de segurança
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pode registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema e podem ser examinados usando o Visualizador de eventos.  
   
  A auditoria fornece uma maneira de um administrador para detectar um ataque que já ocorreu ou está em andamento. Além disso, a auditoria pode ajudar um desenvolvedor para depurar os problemas relacionados à segurança. Por exemplo, se um erro na configuração da política de verificação ou autorização acidentalmente nega acesso a um usuário autorizado, um desenvolvedor rapidamente pode descobrir e isolar a causa desse erro examinando o log de eventos.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Nível de auditoria e comportamento  
  Existem dois níveis de auditorias de segurança:  
@@ -41,11 +41,11 @@ Os aplicativos criados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  Você pode verificar os dois níveis de sucesso ou falha, que é conhecida como de auditoria a *auditoria comportamento*.  
   
 ## <a name="audit-log-location"></a>Local do Log de auditoria  
- Depois de determinar um nível de auditoria e o comportamento, você (ou um administrador) pode especificar um local para o log de auditoria. Incluem as três opções: padrão, aplicativo e segurança. Quando você especificar o padrão, o log real depende do sistema no qual você está usando e se o sistema oferece suporte à gravação no log de segurança. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a seção "Sistema operacional" neste tópico.  
+ Depois de determinar um nível de auditoria e o comportamento, você (ou um administrador) pode especificar um local para o log de auditoria. Incluem as três opções: padrão, aplicativo e segurança. Quando você especificar o padrão, o log real depende do sistema no qual você está usando e se o sistema oferece suporte à gravação no log de segurança. Para obter mais informações, consulte a seção "Sistema operacional", mais adiante neste tópico.  
   
  Para gravar no log de segurança requer a `SeAuditPrivilege`. Por padrão, apenas as contas Sistema Local e serviço de rede têm esse privilégio. Para gerenciar as funções de log de segurança `read` e `delete` requer o `SeSecurityPrivilege`. Por padrão, somente os administradores têm esse privilégio.  
   
- Por outro lado, os usuários autenticados podem ler e gravar no log de aplicativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]gravações de auditoria de eventos no log de aplicativo por padrão. O log também pode conter informações pessoais que são visíveis para todos os usuários autenticados.  
+ Por outro lado, os usuários autenticados podem ler e gravar no log de aplicativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] gravações de auditoria de eventos no log de aplicativo por padrão. O log também pode conter informações pessoais que são visíveis para todos os usuários autenticados.  
   
 ## <a name="suppressing-audit-failures"></a>Suprimir falhas de auditoria  
  Outra opção durante a auditoria é suprimir qualquer falha de auditoria. Por padrão, uma falha de auditoria não afeta a um aplicativo. Se necessário, no entanto, você pode definir a opção `false`, que faz com que uma exceção seja lançada.  
@@ -86,10 +86,10 @@ Os aplicativos criados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
 </configuration>  
 ```  
   
- Se a auditoria está habilitada e uma `auditLogLocation` não for especificado, o nome do log padrão é o log de "Segurança" para a plataforma com suporte de gravação no log de segurança; caso contrário, ele é o log de "Aplicativo". Somente o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)] sistemas operacionais oferecem suporte a gravação no log de segurança. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a seção "Sistema operacional" neste tópico.  
+ Se a auditoria está habilitada e uma `auditLogLocation` não for especificado, o nome do log padrão é o log de "Segurança" para a plataforma com suporte de gravação no log de segurança; caso contrário, ele é o log de "Aplicativo". Somente o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)] sistemas operacionais oferecem suporte a gravação no log de segurança. Para obter mais informações, consulte a seção "Sistema operacional", mais adiante neste tópico.  
   
 ## <a name="security-considerations"></a>Considerações sobre segurança  
- Se um usuário mal-intencionado sabe que a auditoria está habilitada, essa invasor pode enviar mensagens inválidas que fazer com que as entradas de auditoria a serem gravados. Se o log de auditoria é preenchido dessa maneira, o sistema de auditoria falha. Para atenuar isso, defina o <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> propriedade `true` e use as propriedades do Visualizador de eventos para controlar o comportamento de auditoria. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]o artigo Microsoft Support em Exibir e gerenciar logs de eventos usando o Visualizador de eventos no Windows XP, disponível em [como exibir e gerenciar logs de eventos no Visualizador de eventos no Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Se um usuário mal-intencionado sabe que a auditoria está habilitada, essa invasor pode enviar mensagens inválidas que fazer com que as entradas de auditoria a serem gravados. Se o log de auditoria é preenchido dessa maneira, o sistema de auditoria falha. Para atenuar isso, defina o <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> propriedade `true` e use as propriedades do Visualizador de eventos para controlar o comportamento de auditoria. Para obter mais informações, consulte o artigo do Microsoft Support em Exibir e gerenciar logs de eventos usando o Visualizador de eventos no Windows XP, disponível em [como exibir e gerenciar logs de eventos no Visualizador de eventos no Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Auditoria de eventos que são gravados no log de aplicativo [!INCLUDE[wxp](../../../../includes/wxp-md.md)] são visíveis a qualquer usuário autenticado.  
   
@@ -100,8 +100,8 @@ Os aplicativos criados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 |Sistema|Log de aplicativo|Log de segurança|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]ou posterior|Com suporte|Sem suporte|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)]|Com suporte|Deve ter o contexto de thread`SeAuditPrivilege`|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ou posterior|Com suporte|Sem suporte|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)]|Com suporte|Deve ter o contexto de thread `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Outros fatores  
  Além do sistema operacional, a tabela a seguir descreve outras configurações que controlam a habilitação de registro em log.  

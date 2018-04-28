@@ -1,24 +1,26 @@
 ---
-title: "Sessões,instanciação e simultaneidade"
-ms.custom: 
+title: Sessões,instanciação e simultaneidade
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Um *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos de extremidade. *Instanciação* refere-se para controlar o tempo de vida de objetos de serviço definido pelo usuário e seus relacionados <xref:System.ServiceModel.InstanceContext> objetos. *Simultaneidade* é o termo dado ao controle do número de threads em execução em um <xref:System.ServiceModel.InstanceContext> ao mesmo tempo.  
@@ -28,7 +30,7 @@ Um *sessão* é uma correlação de todas as mensagens enviadas entre dois ponto
 ## <a name="sessions"></a>Sessões  
  Quando um contrato de serviço define o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> propriedade <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, esse contrato é dizer que todas as chamadas (ou seja, as subjacente trocas de mensagens que oferecem suporte as chamadas) devem ser parte da mesma conversa. Se um contrato especifica que ele permite que as sessões, mas não exige um, os clientes podem se conectar e a estabelecer uma sessão ou não. Se a sessão é encerrada e uma mensagem é enviada pelo mesmo baseadas em sessão canal uma exceção é gerada.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]as sessões têm os seguintes recursos conceituais principais:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] as sessões têm os seguintes recursos conceituais principais:  
   
 -   Eles são explicitamente iniciados e finalizados pelo aplicativo de chamada.  
   
@@ -40,11 +42,11 @@ Um *sessão* é uma correlação de todas as mensagens enviadas entre dois ponto
   
  Se você estiver familiarizado com o <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe em [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e a funcionalidade que ela fornece, você observará as seguintes diferenças entre esse tipo de sessão e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessões:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]as sessões são sempre iniciadas pelo servidor.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] as sessões são sempre iniciadas pelo servidor.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]as sessões são implicitamente não ordenadas.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] as sessões são implicitamente não ordenadas.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]sessões fornecem um mecanismo de armazenamento de dados gerais em solicitações.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sessões fornecem um mecanismo de armazenamento de dados gerais em solicitações.  
   
  Aplicativos cliente e aplicativos de serviço interagem com sessões de maneiras diferentes. Aplicativos cliente iniciam sessões e, em seguida, recebem e processam as mensagens enviadas na sessão. Aplicativos de serviço podem usar sessões como um ponto de extensibilidade para adicionar outro comportamento. Isso é feito ao trabalhar diretamente com o <xref:System.ServiceModel.InstanceContext> ou implementando um provedor de contexto de instância personalizada.  
   
@@ -93,7 +95,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes operação. O serviço aceita somente essas chamadas quando ela é chamada por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto cliente.  
   
 > [!NOTE]
->  Entendendo e desenvolvimento de código com segurança usa mais de um thread podem ser difícil de escrever com êxito. Antes de usar <xref:System.ServiceModel.ConcurrencyMode.Multiple> ou <xref:System.ServiceModel.ConcurrencyMode.Reentrant> valores, certifique-se de que seu serviço corretamente é criado para esses modos. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+>  Entendendo e desenvolvimento de código com segurança usa mais de um thread podem ser difícil de escrever com êxito. Antes de usar <xref:System.ServiceModel.ConcurrencyMode.Multiple> ou <xref:System.ServiceModel.ConcurrencyMode.Reentrant> valores, certifique-se de que seu serviço corretamente é criado para esses modos. Para obter mais informações, consulte <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
  O uso de simultaneidade está relacionado ao modo de instanciamento. Em <xref:System.ServiceModel.InstanceContextMode.PerCall> instanciamento, simultaneidade não é relevante, porque cada mensagem é processada por um novo <xref:System.ServiceModel.InstanceContext> e, portanto, nunca mais de um thread está ativo no <xref:System.ServiceModel.InstanceContext>.  
   

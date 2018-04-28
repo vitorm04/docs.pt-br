@@ -1,13 +1,13 @@
 ---
-title: "Contratos de dados compatíveis por encaminhamento"
-ms.custom: 
+title: Contratos de dados compatíveis por encaminhamento
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de dados compatíveis por encaminhamento
-Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sistema de contrato de dados é que os contratos podem evoluir ao longo do tempo maneiras incondicional. Ou seja, um cliente com uma versão mais antiga de um contrato de dados pode se comunicar com um serviço com uma versão mais recente do mesmo contrato de dados, ou um cliente com uma versão mais recente de um contrato de dados pode se comunicar com uma versão mais antiga do mesmo contrato de dados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sistema de contrato de dados é que os contratos podem evoluir ao longo do tempo maneiras incondicional. Ou seja, um cliente com uma versão mais antiga de um contrato de dados pode se comunicar com um serviço com uma versão mais recente do mesmo contrato de dados, ou um cliente com uma versão mais recente de um contrato de dados pode se comunicar com uma versão mais antiga do mesmo contrato de dados. Para obter mais informações, consulte [práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
  Você pode aplicar a maioria dos recursos do controle de versão como necessário quando são criadas novas versões de um contrato de dados existente. No entanto, um recurso de controle de versão, *ciclo*, devem ser criados para o tipo da primeira versão para funcionar adequadamente.  
   

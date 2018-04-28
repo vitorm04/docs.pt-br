@@ -1,20 +1,17 @@
 ---
 title: Eventos (F#)
-description: "Saiba como F # eventos permitem que você associe a ações do usuário, que são importantes na programação de GUI de chamadas de função."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como F # eventos permitem que você associe a ações do usuário, que são importantes na programação de GUI de chamadas de função.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="events"></a>Eventos
 
@@ -33,7 +30,7 @@ O tipo do método `Add` é `('a -> unit) -> unit`. Portanto, o método do manipu
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
     
 ## <a name="creating-custom-events"></a>Criando eventos personalizados
-F # eventos são representados por F # [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) de classe que implementa o [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interface. `IEvent`é uma interface que combina a funcionalidade de duas interfaces, `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Portanto, `Event`s têm funcionalidade equivalente de delegados em outras linguagens, além da funcionalidade adicional de `IObservable` o que significa que os eventos de F# oferecem suporte à filtragem de eventos e ao uso de funções de primeira classe de F# e expressões lambda como manipuladores de eventos. Essa funcionalidade é fornecida no [módulo eventos](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F # eventos são representados por F # [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) de classe que implementa o [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interface. `IEvent` é uma interface que combina a funcionalidade de duas interfaces, `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Portanto, `Event`s têm funcionalidade equivalente de delegados em outras linguagens, além da funcionalidade adicional de `IObservable` o que significa que os eventos de F# oferecem suporte à filtragem de eventos e ao uso de funções de primeira classe de F# e expressões lambda como manipuladores de eventos. Essa funcionalidade é fornecida no [módulo eventos](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Para criar um evento em uma classe que atue como qualquer outro evento do .NET Framework, adicione à classe uma associação `let` que defina um `Event` como um campo em uma classe. Você pode especificar o tipo de argumento de evento desejado como o argumento de tipo ou deixá-lo em branco e fazer com que o compilador deduza o tipo apropriado. Você também deve definir um membro de evento que exponha o evento como um evento de CLI. Esse membro deve ter o [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) atributo. Ela é declarada como uma propriedade e sua implementação é apenas uma chamada para o [publicar](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) propriedade do evento. Os usuários de sua classe podem usar o método `Add` do evento publicado para adicionar um manipulador. O argumento para o método `Add` pode ser uma expressão lambda. Você pode usar a propriedade `Trigger` do evento para gerar o evento, passando os argumentos à função do manipulador. O exemplo de código a seguir ilustra isso. Neste exemplo, o argumento do tipo inferido para o evento é uma tupla que representa os argumentos para a expressão lambda.
 
@@ -188,6 +185,6 @@ Application.Run(appForm)
 
 [Módulo Control. Event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 
-[Control. Event &#60;' T &#62; Classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+[Control. Event&#60;T'&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 
-[Control. Event &#60;' Delegado ' Args &#62; Classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+[Control. Event&#60;'Representante' Args&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 Os aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] podem ser compilados como executáveis (.exe) do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], bibliotecas (.dll) ou como uma combinação de ambos os tipos de assemblies. Este tópico apresenta como compilar aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve as principais etapas no processo de build.  
@@ -51,7 +51,7 @@ Os aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md
 ### <a name="pre-build-initializations"></a>Inicializações pré-build  
  Antes de compilar, o [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] determina a localização das ferramentas e bibliotecas importantes, incluindo o seguinte:  
   
--   O [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
+-   O .NET Framework.  
   
 -   Os diretórios de [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].  
   
@@ -63,7 +63,7 @@ Os aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>Resolvendo referências  
- O processo de build localiza e associa os assemblies necessários para compilar o projeto de aplicativo. Essa lógica está contida na tarefa `ResolveAssemblyReference`. Todos os assemblies declarados como `Reference` no arquivo de projeto são fornecidos para a tarefa, junto com as informações sobre os caminhos de pesquisa e metadados sobre os assemblies já instalados no sistema. A tarefa procura assemblies e usa os metadados do assembly instalado para filtrar os principais assemblies do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que não precisam aparecer nos manifestos de saída. Isso é feito para evitar informações redundantes nos manifestos do ClickOnce. Por exemplo, como o PresentationFramework.dll pode ser considerado representativo de um aplicativo compilado no e para o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e, além disso, visto que todos os assemblies do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] existem no mesmo local em todos os computadores que têm o [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] instalado, não é necessário incluir todas as informações sobre todas os assemblies de referência do [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nos manifestos.  
+ O processo de build localiza e associa os assemblies necessários para compilar o projeto de aplicativo. Essa lógica está contida na tarefa `ResolveAssemblyReference`. Todos os assemblies declarados como `Reference` no arquivo de projeto são fornecidos para a tarefa, junto com as informações sobre os caminhos de pesquisa e metadados sobre os assemblies já instalados no sistema. A tarefa procura assemblies e usa os metadados do assembly instalado para filtrar os principais assemblies do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que não precisam aparecer nos manifestos de saída. Isso é feito para evitar informações redundantes nos manifestos do ClickOnce. Por exemplo, como PresentationFramework. dll pode ser considerados representante de um aplicativo criado no e para o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e Além disso já que todos os [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assemblies existirem no mesmo local em cada computador que possui o .NET Framework não é instalado, é necessário para incluir todas as informações em todos os assemblies de referência do .NET Framework nos manifestos.  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>Compilação de marcação — passo 1  

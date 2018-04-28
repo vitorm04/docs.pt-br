@@ -1,12 +1,13 @@
 ---
-title: "Estratégia de segurança do WPF - engenharia de segurança"
-ms.custom: 
+title: Estratégia de segurança do WPF - engenharia de segurança
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f5b26e63b7671e3ea37c150055f9aa646ec8293c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79ab5b1a86ad94913750cfb3ec4fdc765db40282
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estratégia de segurança do WPF - engenharia de segurança
 A Computação Confiável é uma iniciativa da Microsoft para garantir a produção de código seguro. Um elemento chave da iniciativa Computação Confiável é o [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] é uma prática de engenharia que é usada em conjunto com processos de engenharia padrão para facilitar o fornecimento de código seguro. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consiste em dez fases que combinam melhores práticas com formalização, mensurabilidade e estruturas adicionais, incluindo:  
@@ -98,7 +100,7 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Gerenciamento de código crítico  
- Para [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] cria uma área restrita de segurança usando o suporte do [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] para marcar e acompanhar códigos críticos para a segurança que elevam privilégios (consulte **Metodologia crítica para segurança** em [Estratégia de segurança do WPF – segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Considerando os altos requisitos de qualidade da segurança em códigos críticos para a segurança, esse código recebe um nível adicional de auditoria de segurança e controle de gerenciamento de código-fonte. Aproximadamente 5% a 10% do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] consiste em código crítico para a segurança, que é revisado por uma equipe de revisão dedicada. O código-fonte e o processo de check-in são gerenciados acompanhando o código crítico para segurança e mapeando cada entidade crítica (isto é, um método que contém código crítico) quanto ao seu estado de aprovação. O estado de aprovação inclui os nomes de um ou mais revisores. Cada build diária de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara o código crítico com o dos builds anteriores para verificar se há alterações não aprovadas. Se um engenheiro modificar o código crítico sem a aprovação da equipe de revisão, isso será identificado e corrigido imediatamente. Esse processo permite a aplicação e a manutenção de um nível especialmente alto de investigação do código na área restrita [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Para [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] cria uma área restrita usando o suporte do .NET Framework para marcar e rastrear código crítico de segurança que eleva privilégios (consulte **metodologia de segurança crítica** na [WPF Estratégia de segurança - segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Considerando os altos requisitos de qualidade da segurança em códigos críticos para a segurança, esse código recebe um nível adicional de auditoria de segurança e controle de gerenciamento de código-fonte. Aproximadamente 5% a 10% do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] consiste em código crítico para a segurança, que é revisado por uma equipe de revisão dedicada. O código-fonte e o processo de check-in são gerenciados acompanhando o código crítico para segurança e mapeando cada entidade crítica (isto é, um método que contém código crítico) quanto ao seu estado de aprovação. O estado de aprovação inclui os nomes de um ou mais revisores. Cada build diária de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara o código crítico com o dos builds anteriores para verificar se há alterações não aprovadas. Se um engenheiro modificar o código crítico sem a aprovação da equipe de revisão, isso será identificado e corrigido imediatamente. Esse processo permite a aplicação e a manutenção de um nível especialmente alto de investigação do código na área restrita [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança](../../../docs/framework/wpf/security-wpf.md)  

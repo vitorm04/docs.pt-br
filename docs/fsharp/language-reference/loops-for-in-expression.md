@@ -1,20 +1,17 @@
 ---
-title: "Loops: expressão for...in (F#)"
-description: "Veja como o F # loop for... na expressão de construção de loop é usado para iterar sobre a correspondência de um padrão de uma coleção enumerável."
-keywords: "visual f#, f#, programação funcional"
+title: 'Loops: expressão for...in (F#)'
+description: 'Veja como o F # loop for... na expressão de construção de loop é usado para iterar sobre a correspondência de um padrão de uma coleção enumerável.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>Loops: expressão for...in
 
@@ -138,7 +135,7 @@ A saída é a seguinte.
 Number of elements in list1: 5
 ```
 
-`Note`Você pode usar `for...in` em expressões de sequência e outras expressões de cálculo, caso em que uma versão personalizada do `for...in` expressão é usada. Para obter mais informações, consulte [sequências](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de computação](computation-expressions.md).
+`Note` Você pode usar `for...in` em expressões de sequência e outras expressões de cálculo, caso em que uma versão personalizada do `for...in` expressão é usada. Para obter mais informações, consulte [sequências](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de computação](computation-expressions.md).
 
 
 ## <a name="see-also"></a>Consulte também

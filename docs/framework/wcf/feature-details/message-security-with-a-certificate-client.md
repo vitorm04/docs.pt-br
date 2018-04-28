@@ -1,30 +1,32 @@
 ---
-title: "Segurança da mensagens com um cliente de certificado"
-ms.custom: 
+title: Segurança da mensagens com um cliente de certificado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>Segurança da mensagens com um cliente de certificado
-O cenário a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente e serviço protegido usando o modo de segurança de mensagem. O cliente e o serviço são autenticadas com certificados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Distribuídas de segurança do aplicativo](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+O cenário a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente e serviço protegido usando o modo de segurança de mensagem. O cliente e o serviço são autenticadas com certificados. Para obter mais informações, consulte [segurança de aplicativo distribuído](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
  Para um aplicativo de exemplo, consulte [certificado de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
@@ -33,7 +35,7 @@ O cenário a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]somente|  
+|Interoperabilidade|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] somente|  
 |Autenticação (servidor)|Usando o certificado de serviço|  
 |Autenticação (cliente)|Usando o certificado de cliente|  
 |Integridade|Sim|  
@@ -112,7 +114,7 @@ O cenário a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Configuração  
- A configuração a seguir especifica o certificado de cliente usando o comportamento de um ponto de extremidade. Para obter mais informações sobre certificados, consulte [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) (Trabalhando com certificados). O código também usa um <`identity`> elemento para especificar um domínio nome DNS (sistema) da identidade de servidor esperadas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identidade, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ A configuração a seguir especifica o certificado de cliente usando o comportamento de um ponto de extremidade. Para obter mais informações sobre certificados, consulte [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) (Trabalhando com certificados). O código também usa um <`identity`> elemento para especificar um domínio nome DNS (sistema) da identidade de servidor esperadas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] identidade, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

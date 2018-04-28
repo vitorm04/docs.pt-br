@@ -1,30 +1,32 @@
 ---
-title: "Considerações de segurança para dados"
-ms.custom: 
+title: Considerações de segurança para dados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
-Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], você deve considerar um número de categorias de ameaça. A tabela a seguir lista as classes de ameaça mais importantes relacionados ao processamento de dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece ferramentas para reduzir essas ameaças.  
+Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], você deve considerar um número de categorias de ameaça. A tabela a seguir lista as classes de ameaça mais importantes relacionados ao processamento de dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece ferramentas para reduzir essas ameaças.  
   
  Negação de serviço  
  Ao receber dados não confiáveis, os dados podem causar o lado de recebimento acessar uma quantidade desproporcional de vários recursos, como memória, threads, conexões disponíveis ou ciclos do processador fazendo cálculos longos. Um ataque de negação de serviço em um servidor pode causar falhar e ser incapaz de processar mensagens de clientes de outros, legítimas.  
@@ -44,7 +46,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
  Certifique-se de que nenhum código mal-intencionado é conectado a vários pontos de extensibilidade. Isso é especialmente relevante quando em execução em confiança parcial, lidar com tipos de assemblies parcialmente confiável, ou criando componentes utilizável por código parcialmente confiável. Para obter mais informações, consulte "Ameaças de confiança parcial" em uma seção posterior.  
   
- Observe que, quando executado em confiança parcial, a infraestrutura de serialização de contrato de dados oferece suporte a apenas um subconjunto limitado do contrato programação modelo de dados - por exemplo, membros de dados particulares ou tipos usando a <xref:System.SerializableAttribute> não há suporte para o atributo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
+ Observe que, quando executado em confiança parcial, a infraestrutura de serialização de contrato de dados oferece suporte a apenas um subconjunto limitado do contrato programação modelo de dados - por exemplo, membros de dados particulares ou tipos usando a <xref:System.SerializableAttribute> não há suporte para o atributo. Para obter mais informações, consulte [confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>Evitar a divulgação de informações não intencional  
  Ao criar tipos serializáveis pensando na segurança, divulgação de informações é uma possível preocupação.  
@@ -78,7 +80,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
  Observe também que `MaxReceivedMessageSize` não estabelece um limite superior no consumo de memória por mensagem, mas limita dentro de um fator constante. Por exemplo, se o `MaxReceivedMessageSize` é 1 MB e uma mensagem de 1 MB é recebida e, em seguida, desserializada memória adicional é necessária para conter o gráfico de objeto desserializado, resultando em bem de consumo total de memória acima de 1 MB. Por esse motivo, evite criar tipos serializáveis que podem resultar em consumo de memória significativa sem muitos dados de entrada. Por exemplo, um contrato de dados "MyContract" com campos de membro de dados opcional 50 e campos particulares 100 adicionais pode ser instanciado com a construção de XML "\<MyContract / >". Esse XML resulta na memória que está sendo acessada para 150 campos. Observe que os membros de dados são opcionais por padrão. O problema aumenta quando desse tipo é parte de uma matriz.  
   
- `MaxReceivedMessageSize`sozinho não é suficiente para impedir que todos os ataques de negação de serviço. Por exemplo, o desserializador pode ser forçado ao desserializar um gráfico de objeto aninhadas (um objeto que contém o outro objeto que contém um do outro e assim por diante), uma mensagem de entrada. Tanto o <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> chamar métodos de forma aninhada ao desserializar esses gráficos. Aninhamento de profundidade de chamadas de método pode resultar em um irrecuperável <xref:System.StackOverflowException>. Essa ameaça é reduzida, definindo o <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> cota para limitar o nível de aninhamento de XML, conforme discutido na seção "Usando XML com segurança" posteriormente no tópico.  
+ `MaxReceivedMessageSize` sozinho não é suficiente para impedir que todos os ataques de negação de serviço. Por exemplo, o desserializador pode ser forçado ao desserializar um gráfico de objeto aninhadas (um objeto que contém o outro objeto que contém um do outro e assim por diante), uma mensagem de entrada. Tanto o <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> chamar métodos de forma aninhada ao desserializar esses gráficos. Aninhamento de profundidade de chamadas de método pode resultar em um irrecuperável <xref:System.StackOverflowException>. Essa ameaça é reduzida, definindo o <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> cota para limitar o nível de aninhamento de XML, conforme discutido na seção "Usando XML com segurança" posteriormente no tópico.  
   
  Configurando cotas adicionais `MaxReceivedMessageSize` é especialmente importante ao usar a codificação binária de XML. Usando a codificação binária é um pouco equivalente à compactação: um pequeno grupo de bytes na mensagem de entrada pode representar muitos dados. Assim, até mesmo uma mensagem de ajuste para o `MaxReceivedMessageSize` limite pode levar muito mais memória na forma totalmente expandida. Para reduzir essas ameaças específicas de XML, todas as cotas do leitor XML devem ser definidas corretamente, conforme discutido na seção "Usando XML com segurança" neste tópico.  
   
@@ -90,12 +92,12 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
 ### <a name="maxbuffersize-details"></a>MaxBufferSize detalhes  
  O `MaxBufferSize` propriedade limita qualquer buffer em massa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does. Por exemplo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] buffers sempre cabeçalhos SOAP e falhas de SOAP, bem como quaisquer partes MIME encontrados não em ordem de leitura natural em uma mensagem do mecanismo de otimização de transmissão da mensagem (MTOM). Essa configuração limita a quantidade de buffer em todos esses casos.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]realiza isso passando o `MaxBufferSize` valor para os vários componentes que podem buffer. Por exemplo, alguns <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> sobrecargas do <xref:System.ServiceModel.Channels.Message> classe têm um `maxSizeOfHeaders` parâmetro. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]passa o `MaxBufferSize` valor para esse parâmetro para limitar a quantidade de buffer de cabeçalho SOAP. É importante definir esse parâmetro ao usar o <xref:System.ServiceModel.Channels.Message> classe diretamente. Em geral, ao usar um componente no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usa parâmetros de cota, é importante entender as implicações de segurança desses parâmetros e configurá-los corretamente.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] realiza isso passando o `MaxBufferSize` valor para os vários componentes que podem buffer. Por exemplo, alguns <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> sobrecargas do <xref:System.ServiceModel.Channels.Message> classe têm um `maxSizeOfHeaders` parâmetro. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] passa o `MaxBufferSize` valor para esse parâmetro para limitar a quantidade de buffer de cabeçalho SOAP. É importante definir esse parâmetro ao usar o <xref:System.ServiceModel.Channels.Message> classe diretamente. Em geral, ao usar um componente no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usa parâmetros de cota, é importante entender as implicações de segurança desses parâmetros e configurá-los corretamente.  
   
  O codificador de mensagem MTOM também tem um `MaxBufferSize` configuração. Ao usar associações padrão, isso será definido automaticamente para o nível de transporte `MaxBufferSize` valor. No entanto, ao usar o elemento de associação do codificador de mensagem MTOM para construir uma associação personalizada, é importante definir o `MaxBufferSize` propriedade para um valor de segurança quando o fluxo é usada.  
   
 ## <a name="xml-based-streaming-attacks"></a>Streaming de ataques baseados em XML  
- `MaxBufferSize`sozinho não é suficiente para garantir que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não pode ser forçado em buffer ao streaming é esperado. Por exemplo, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] leitores XML sempre buffer a marca de início de elemento XML inteira ao começar a ler um novo elemento. Isso é feito para que os namespaces e atributos são processados corretamente. Se `MaxReceivedMessageSize` está configurado para ser grande (por exemplo, para habilitar um arquivo grande direta para disco streaming cenário), uma mensagem mal-intencionado pode ser construída em que o corpo da mensagem inteira é uma marca de início de elemento XML grande. Uma tentativa de lê-lo resulta em um <xref:System.OutOfMemoryException>. Isso é um dos muitos ataques de negação de serviço de baseado em XML possíveis que podem todos ser atenuados com o uso de cotas do leitor XML, discutidas na seção "Usando XML com segurança" neste tópico. Quando a transmissão, é especialmente importante definir todas essas cotas.  
+ `MaxBufferSize` sozinho não é suficiente para garantir que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não pode ser forçado em buffer ao streaming é esperado. Por exemplo, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] leitores XML sempre buffer a marca de início de elemento XML inteira ao começar a ler um novo elemento. Isso é feito para que os namespaces e atributos são processados corretamente. Se `MaxReceivedMessageSize` está configurado para ser grande (por exemplo, para habilitar um arquivo grande direta para disco streaming cenário), uma mensagem mal-intencionado pode ser construída em que o corpo da mensagem inteira é uma marca de início de elemento XML grande. Uma tentativa de lê-lo resulta em um <xref:System.OutOfMemoryException>. Isso é um dos muitos ataques de negação de serviço de baseado em XML possíveis que podem todos ser atenuados com o uso de cotas do leitor XML, discutidas na seção "Usando XML com segurança" neste tópico. Quando a transmissão, é especialmente importante definir todas essas cotas.  
   
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>Combinação de Streaming e modelos de programação de buffer  
  Muitos ataques possíveis são provenientes de misturar modelos de programação streaming e não são de streaming no mesmo serviço. Suponha que há um contrato de serviço com duas operações: deles terá um <xref:System.IO.Stream> e o outro usa uma matriz de tipo personalizado. Suponha também que `MaxReceivedMessageSize` é definido com um valor grande para habilitar a primeira operação processar grandes fluxos. Infelizmente, isso significa que mensagens grandes podem agora ser enviada para a segunda operação e os armazena os dados de desserialização na memória como uma matriz antes que a operação é chamada. Este é um ataque de negação de serviço: o `MaxBufferSize` cota não limita o tamanho do corpo da mensagem, que é o que o desserializador funciona com.  
@@ -121,7 +123,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
 ### <a name="slow-stream-attacks"></a>Ataques de fluxo lento  
  Uma classe de ataques de negação de serviço de streaming não envolve o consumo de memória. Em vez disso, o ataque envolve um remetente lenta ou receptor de dados. Enquanto aguarda os dados a serem enviados ou recebidos, recursos, como threads e conexões disponíveis são esgotados. Essa situação pode ocorrer como resultado de um ataque mal-intencionado ou de um remetente/destinatário legítimo em uma conexão de rede lenta.  
   
- Para atenuar esses ataques, defina os tempos limite de transporte corretamente. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md). Em segundo lugar, nunca use síncrona `Read` ou `Write` operações ao trabalhar com fluxos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Para atenuar esses ataques, defina os tempos limite de transporte corretamente. Para obter mais informações, consulte [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md). Em segundo lugar, nunca use síncrona `Read` ou `Write` operações ao trabalhar com fluxos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="using-xml-safely"></a>Usando XML com segurança  
   
@@ -129,7 +131,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
 >  Embora esta seção é sobre XML, as informações também se aplica a documentos JSON JavaScript Object Notation (). As cotas funcionam da mesma forma, usando [mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ### <a name="secure-xml-readers"></a>Proteger os leitores XML  
- O XML Infoset constitui a base de todo o processamento de mensagem no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ao aceitar os dados XML de uma fonte não confiável, um número de ataque de negação de serviço existem possibilidades que deve ser reduzido. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece leitores XML especiais e seguros. Esses leitores são criados automaticamente ao usar uma das codificações padrão em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (texto, binária ou MTOM).  
+ O XML Infoset constitui a base de todo o processamento de mensagem no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ao aceitar os dados XML de uma fonte não confiável, um número de ataque de negação de serviço existem possibilidades que deve ser reduzido. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece leitores XML especiais e seguros. Esses leitores são criados automaticamente ao usar uma das codificações padrão em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (texto, binária ou MTOM).  
   
  Alguns dos recursos de segurança desses leitores sempre estão ativas. Por exemplo, os leitores nunca processam definições de tipo de documento (DTDs), que são uma fonte em potencial de ataques de negação de serviço e nunca devem aparecer nas mensagens SOAP legítimas. Outros recursos de segurança incluem cotas leitor devem ser configuradas, que são descritas na seção a seguir.  
   
@@ -146,7 +148,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
 -   Ter atributos XML demais pode consumir todo o tempo de processamento de maneira desproporcional porque a exclusividade dos nomes de atributo tem que ser verificada. O `MaxBytesPerRead` atenua essa ameaça.  
   
 #### <a name="maxdepth"></a>MaxDepth  
- Essa cota limita a profundidade máxima de aninhamento dos elementos XML. Por exemplo, o documento "\<um >\<B >\<C / >\</b >\</A >" tem uma profundidade de aninhamento de três. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>é importante pelos seguintes motivos:  
+ Essa cota limita a profundidade máxima de aninhamento dos elementos XML. Por exemplo, o documento "\<um >\<B >\<C / >\</b >\</A >" tem uma profundidade de aninhamento de três. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> é importante pelos seguintes motivos:  
   
 -   O `MaxDepth` interage com o `MaxBytesPerRead`: o leitor sempre mantém dados na memória para o elemento atual e todos os seus ancestrais, para que o consumo máximo de memória do leitor seja proporcional ao produto dessas duas configurações.  
   
@@ -177,7 +179,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
  O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength`, e `MaxArrayLength` propriedades apenas limitam o consumo de memória. Eles normalmente não são necessários para minimizar essas ameaças no uso de streaming não porque o uso de memória já é limitado pelo `MaxReceivedMessageSize`. No entanto, `MaxReceivedMessageSize` conta pré-expansão bytes. Quando a codificação binária está em uso, o consumo de memória pode potencialmente ir além `MaxReceivedMessageSize`, limitado somente por um fator de <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>. Por esse motivo, é importante definir sempre todas as cotas do leitor (especialmente <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>) ao usar a codificação binária.  
   
- Ao usar a codificação binária junto com o <xref:System.Runtime.Serialization.DataContractSerializer>, o `IExtensibleDataObject` interface pode ser usado de forma incorreta para montar um ataque de expansão do dicionário. Essencialmente, essa interface fornece armazenamento ilimitado para dados arbitrários que não faz parte do contrato. Se as cotas não podem ser definidas como baixas o suficiente, de modo que `MaxSessionSize` multiplicado por `MaxReceivedMessageSize` não representar um problema, desabilite o `IExtensibleDataObject` recurso ao usar a codificação binária. Definir o `IgnoreExtensionDataObject` propriedade `true` no `ServiceBehaviorAttribute` atributo. Como alternativa, não é implementam o `IExtensibleDataObject` interface. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Ao usar a codificação binária junto com o <xref:System.Runtime.Serialization.DataContractSerializer>, o `IExtensibleDataObject` interface pode ser usado de forma incorreta para montar um ataque de expansão do dicionário. Essencialmente, essa interface fornece armazenamento ilimitado para dados arbitrários que não faz parte do contrato. Se as cotas não podem ser definidas como baixas o suficiente, de modo que `MaxSessionSize` multiplicado por `MaxReceivedMessageSize` não representar um problema, desabilite o `IExtensibleDataObject` recurso ao usar a codificação binária. Definir o `IgnoreExtensionDataObject` propriedade `true` no `ServiceBehaviorAttribute` atributo. Como alternativa, não é implementam o `IExtensibleDataObject` interface. Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="quotas-summary"></a>Resumo de cotas  
  A tabela a seguir resume as diretrizes sobre as cotas.  
@@ -185,9 +187,9 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
 |Condição|Cotas importantes definir|  
 |---------------|-----------------------------|  
 |Nenhum streaming ou fluxo de mensagens pequenas, texto ou codificação de MTOM|`MaxReceivedMessageSize`, `MaxBytesPerRead` e `MaxDepth`|  
-|Nenhum streaming ou fluxo de mensagens pequenas, binárias de codificação|`MaxReceivedMessageSize`, `MaxSessionSize`e todos os`ReaderQuotas`|  
-|Fluxo de mensagens grandes, texto ou codificação de MTOM|`MaxBufferSize`e todos os`ReaderQuotas`|  
-|Codificação de streaming mensagens grandes binárias|`MaxBufferSize`, `MaxSessionSize`e todos os`ReaderQuotas`|  
+|Nenhum streaming ou fluxo de mensagens pequenas, binárias de codificação|`MaxReceivedMessageSize`, `MaxSessionSize`e todos os `ReaderQuotas`|  
+|Fluxo de mensagens grandes, texto ou codificação de MTOM|`MaxBufferSize` e todos os `ReaderQuotas`|  
+|Codificação de streaming mensagens grandes binárias|`MaxBufferSize`, `MaxSessionSize`e todos os `ReaderQuotas`|  
   
 -   Tempos limite de nível de transporte deve sempre ser definido e nunca use leituras/gravações síncronas quando o fluxo está em uso, independentemente se você estiver realizando o streaming de mensagens grandes ou pequenas.  
   
@@ -214,11 +216,11 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
  Além disso, o <xref:System.Runtime.Serialization.DataContractSerializer> oferece suporte a polimorfismo. Um membro de dados pode ser declarado como <xref:System.Object>, mas os dados de entrada podem conter um `Customer` instância. Isso é possível somente se o `Customer` tipo foi feito "conhecido" para o desserializador por meio de um desses mecanismos:  
   
--   <xref:System.Runtime.Serialization.KnownTypeAttribute>aplicado a um tipo de atributo.  
+-   <xref:System.Runtime.Serialization.KnownTypeAttribute> aplicado a um tipo de atributo.  
   
--   `KnownTypeAttribute`especificando um método que retorna uma lista de tipos de atributo.  
+-   `KnownTypeAttribute` especificando um método que retorna uma lista de tipos de atributo.  
   
--   `ServiceKnownTypeAttribute`atributo.  
+-   `ServiceKnownTypeAttribute` O atributo.  
   
 -   O `KnownTypes` seção de configuração.  
   
@@ -228,7 +230,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
  Depois que um tipo conhecido estiver no escopo, pode ser carregado a qualquer momento e instâncias do tipo podem ser criadas, mesmo se o contrato proíbe realmente usá-lo. Por exemplo, suponha que o tipo "MyDangerousType" é adicionada à lista de tipos conhecidos usando um dos mecanismos acima. Isso significa que:  
   
--   `MyDangerousType`é carregado e o construtor de classe é executado.  
+-   `MyDangerousType` é carregado e o construtor de classe é executado.  
   
 -   Mesmo quando a desserialização de um contrato de dados com um membro de dados de cadeia de caracteres, uma mensagem mal-intencionado ainda pode causar uma instância de `MyDangerousType` para criar. O código no `MyDangerousType`, como setters de propriedade, pode ser executada. Depois que isso for feito, o desserializador tenta atribuir essa instância para o membro de dados de cadeia de caracteres e falhar com uma exceção.  
   
@@ -259,7 +261,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
 -   Quando o <xref:System.Runtime.Serialization.DataContractSerializer> desserializa a maioria das classes, construtores não são executados. Portanto, não confie em qualquer feito no construtor de gerenciamento de estado.  
   
--   Use retornos de chamada para garantir que o objeto está em um estado válido. O retorno de chamada é marcado com o <xref:System.Runtime.Serialization.OnDeserializedAttribute> atributo é especialmente útil porque ele é executado após a desserialização foi concluída e tem a oportunidade de examinar e corrigir o estado geral. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Retornos de chamada de serialização tolerantes à versão](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+-   Use retornos de chamada para garantir que o objeto está em um estado válido. O retorno de chamada é marcado com o <xref:System.Runtime.Serialization.OnDeserializedAttribute> atributo é especialmente útil porque ele é executado após a desserialização foi concluída e tem a oportunidade de examinar e corrigir o estado geral. Para obter mais informações, consulte [retornos de chamada de serialização tolerantes à versão](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
 -   Não crie tipos de contrato de dados para confiar em qualquer ordem específica na qual propriedade setters devem ser chamados.  
   
@@ -267,10 +269,10 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
 -   Não confie no <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> propriedade o `DataMemberAttribute` atributo para garantir a presença de dados que diz respeito a segurança de estado. Dados podem ser sempre `null`, `zero`, ou `invalid`.  
   
--   Nunca confiança um gráfico de objeto desserializado a partir de uma fonte de dados não confiável sem validá-lo primeiro. Cada objeto individual pode estar em um estado consistente, mas o gráfico de objeto que não pode ser um inteiro. Além disso, mesmo se o modo de preservação de gráfico de objeto estiver desabilitado, o gráfico desserializado pode ter várias referências ao mesmo objeto ou ter referências circulares. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Nunca confiança um gráfico de objeto desserializado a partir de uma fonte de dados não confiável sem validá-lo primeiro. Cada objeto individual pode estar em um estado consistente, mas o gráfico de objeto que não pode ser um inteiro. Além disso, mesmo se o modo de preservação de gráfico de objeto estiver desabilitado, o gráfico desserializado pode ter várias referências ao mesmo objeto ou ter referências circulares. Para obter mais informações, consulte [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>Usando o NetDataContractSerializer com segurança  
- O <xref:System.Runtime.Serialization.NetDataContractSerializer> é um mecanismo de serialização que usa um acoplamento de tipos. Isso é semelhante de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Ou seja, ele determina que tipo de instanciar lendo o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] assembly e nome de tipo de dados de entrada. Embora seja uma parte de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], não há nenhuma maneira fornecida de conectar esse mecanismo de serialização; código personalizado deve ser gravado. O `NetDataContractSerializer` é fornecida principalmente para facilitar a migração do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoto para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a seção em [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ O <xref:System.Runtime.Serialization.NetDataContractSerializer> é um mecanismo de serialização que usa um acoplamento de tipos. Isso é semelhante de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Ou seja, ele determina que tipo de instanciar lendo o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] assembly e nome de tipo de dados de entrada. Embora seja uma parte de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], não há nenhuma maneira fornecida de conectar esse mecanismo de serialização; código personalizado deve ser gravado. O `NetDataContractSerializer` é fornecida principalmente para facilitar a migração do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoto para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para obter mais informações, consulte a seção relevante [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
  Porque a mensagem em si pode indicar qualquer tipo pode ser carregado, o <xref:System.Runtime.Serialization.NetDataContractSerializer> mecanismo é intrinsecamente não segura e deve ser usado apenas com dados confiáveis. É possível proteger escrevendo um associador de tipo seguro, limitando o tipo que permite que somente os tipos seguros carregar (usando o <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> propriedade).  
   
@@ -308,7 +310,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
   
 -   O fato de que o <xref:System.Runtime.Serialization.ExtensionDataObject> não público do tipo tem membros não significa que os dados nela são seguros. Por exemplo, se você desserializar a partir de uma fonte de dados com privilégios em um objeto no qual residem o alguns dados, disponível depois que o objeto para o código parcialmente confiável, o código parcialmente confiável pode ler os dados no `ExtensionDataObject` ao serializar o objeto. Considere a configuração de <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> para `true` quando a desserialização de uma fonte de dados com privilégios em um objeto que for posteriormente passado para código parcialmente confiável.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer>e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> oferecem suporte a serialização de membros privados, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente os membros públicos podem ser serializados. Um `SecurityException` é gerada se um aplicativo tenta serializar um membro não público.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> oferecem suporte a serialização de membros privados, protegidos, internos e públicos em confiança total. No entanto, em confiança parcial, somente os membros públicos podem ser serializados. Um `SecurityException` é gerada se um aplicativo tenta serializar um membro não público.  
   
      Para permitir interno ou membros internos protegidos a ser serializado em confiança parcial, use o `System.Runtime.CompilerServices.InternalsVisibleTo` atributo do assembly. Este atributo permite um assembly declarar que seus membros internos são visíveis para algum outro assembly. Nesse caso, um assembly que deseja que seus membros internos serializados declara que seus membros internos são visíveis para System.Runtime.Serialization.dll.  
   
@@ -350,7 +352,7 @@ Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], v
 -   Ao usar o ponto de extremidade do JavaScript, informações confidenciais e privadas podem ser retidas no cliente de cache do navegador da Web.  
   
 ## <a name="a-note-on-components"></a>Uma observação sobre componentes  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]é um sistema flexível e personalizável. A maioria do conteúdo deste tópico enfocam os mais comuns [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cenários de uso. No entanto, é possível compor componentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece muitas maneiras diferentes. É importante entender as implicações de segurança do uso de cada componente. Em particular:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é um sistema flexível e personalizável. A maioria do conteúdo deste tópico enfocam os mais comuns [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cenários de uso. No entanto, é possível compor componentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece muitas maneiras diferentes. É importante entender as implicações de segurança do uso de cada componente. Em particular:  
   
 -   Quando você deve usar leitores XML, use os leitores a <xref:System.Xml.XmlDictionaryReader> classe fornece em vez de quaisquer outros leitores. Leitores de seguros são criados usando <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>, ou <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> métodos. Não use o <xref:System.Xml.XmlReader.Create%2A> método. Sempre configure os leitores com as cotas de seguras. A serialização de mecanismos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] são seguras somente quando usada com leitores XML seguros de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   

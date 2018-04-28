@@ -1,20 +1,17 @@
 ---
 title: Matrizes (F#)
-description: "Saiba como criar e usar matrizes em F # linguagem de programação."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como criar e usar matrizes em F # linguagem de programação.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>Matrizes
 
@@ -68,7 +65,7 @@ O tipo de todas as matrizes de F # é o tipo do .NET Framework <xref:System.Arra
 O módulo biblioteca [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) dá suporte a operações em matrizes unidimensionais. Os módulos `Array2D`, `Array3D`, e `Array4D` contêm funções que oferecem suporte a operações em matrizes de duas, três e quatro dimensões, respectivamente. Você pode criar matrizes de classificação maior do que quatro usando <xref:System.Array?displayProperty=nameWithType>.
 
 ### <a name="simple-functions"></a>Funções simples
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)Obtém um elemento. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)Retorna o comprimento de uma matriz. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)define um elemento com um valor especificado. O exemplo de código a seguir ilustra o uso dessas funções.
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) Obtém um elemento. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) Retorna o comprimento de uma matriz. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) define um elemento com um valor especificado. O exemplo de código a seguir ilustra o uso dessas funções.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ A saída é a seguinte.
 
 ### <a name="functions-that-create-arrays"></a>Funções que criar matrizes
 
-Várias funções criar matrizes sem a necessidade de uma matriz existente. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)cria uma nova matriz que contém elementos. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)cria uma matriz de um tamanho especificado e define todos os elementos para valores fornecidos. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)cria uma matriz, dada uma dimensão e uma função para gerar os elementos. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)cria uma matriz na qual todos os elementos são inicializados para o valor de zero para o tipo da matriz. O código a seguir demonstra essas funções.
+Várias funções criar matrizes sem a necessidade de uma matriz existente. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) cria uma nova matriz que contém elementos. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) cria uma matriz de um tamanho especificado e define todos os elementos para valores fornecidos. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) cria uma matriz, dada uma dimensão e uma função para gerar os elementos. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) cria uma matriz na qual todos os elementos são inicializados para o valor de zero para o tipo da matriz. O código a seguir demonstra essas funções.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)cria uma nova matriz que contém elementos que são copiados de uma matriz existente. Observe que a cópia é uma cópia superficial, o que significa que, se o tipo de elemento é um tipo de referência, somente a referência é copiada, não o objeto subjacente. O exemplo de código a seguir ilustra isso.
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) cria uma nova matriz que contém elementos que são copiados de uma matriz existente. Observe que a cópia é uma cópia superficial, o que significa que, se o tipo de elemento é um tipo de referência, somente a referência é copiada, não o objeto subjacente. O exemplo de código a seguir ilustra isso.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ A saída do código anterior é da seguinte maneira:
 
 A cadeia de caracteres `Test1` aparece apenas na primeira matriz porque a operação de criação de um novo elemento substitui a referência em `firstArray` , mas não afeta a referência original para uma cadeia de caracteres vazia que ainda está presente no `secondArray`. A cadeia de caracteres `Test2` aparece em ambas as matrizes porque o `Insert` operação no <xref:System.Text.StringBuilder?displayProperty=nameWithType> afeta o tipo subjacente <xref:System.Text.StringBuilder?displayProperty=nameWithType> objeto, que é referenciado em matrizes.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)gera uma nova matriz de um subintervalo de uma matriz. Você pode especificar subintervalo fornecendo o índice inicial e o comprimento. O código a seguir demonstra o uso de `Array.sub`.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) gera uma nova matriz de um subintervalo de uma matriz. Você pode especificar subintervalo fornecendo o índice inicial e o comprimento. O código a seguir demonstra o uso de `Array.sub`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ A saída mostra que a submatriz inicia no elemento 5 e contém 10 elementos.
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)cria uma nova matriz combinando duas matrizes existentes.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) cria uma nova matriz combinando duas matrizes existentes.
 
 O código a seguir demonstra **append**.
 
@@ -126,7 +123,7 @@ A saída do código anterior é da seguinte maneira.
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)Seleciona os elementos de uma matriz para incluir em uma nova matriz. O código a seguir demonstra `Array.choose`. Observe que o tipo de elemento da matriz não precisa corresponder ao tipo do valor retornado no tipo de opção. Neste exemplo, o tipo de elemento é `int` e a opção é o resultado de uma função polinomial, `elem*elem - 1`, como um flutuante número de ponto.
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) Seleciona os elementos de uma matriz para incluir em uma nova matriz. O código a seguir demonstra `Array.choose`. Observe que o tipo de elemento da matriz não precisa corresponder ao tipo do valor retornado no tipo de opção. Neste exemplo, o tipo de elemento é `int` e a opção é o resultado de uma função polinomial, `elem*elem - 1`, como um flutuante número de ponto.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ A saída do código anterior é da seguinte maneira.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)executa uma função especificada em cada elemento de uma matriz existente e, em seguida, coleta os elementos gerados pela função e as combina em uma nova matriz. O código a seguir demonstra `Array.collect`.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) executa uma função especificada em cada elemento de uma matriz existente e, em seguida, coleta os elementos gerados pela função e as combina em uma nova matriz. O código a seguir demonstra `Array.collect`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ A saída do código anterior é da seguinte maneira.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)usa uma sequência de matrizes e as combina em uma única matriz. O código a seguir demonstra `Array.concat`.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) usa uma sequência de matrizes e as combina em uma única matriz. O código a seguir demonstra `Array.concat`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ A saída do código anterior é da seguinte maneira.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)usa uma função de condição booleana e gera uma nova matriz que contém apenas os elementos da matriz de entrada para o qual a condição for verdadeira. O código a seguir demonstra `Array.filter`.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) usa uma função de condição booleana e gera uma nova matriz que contém apenas os elementos da matriz de entrada para o qual a condição for verdadeira. O código a seguir demonstra `Array.filter`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ A saída do código anterior é da seguinte maneira.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)gera uma nova matriz invertendo a ordem de uma matriz existente. O código a seguir demonstra `Array.rev`.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) gera uma nova matriz invertendo a ordem de uma matriz existente. O código a seguir demonstra `Array.rev`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>Pesquisa de matrizes
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)usa uma função booliana e retorna o primeiro elemento para o qual a função retorna `true`, ou gera um <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> se nenhum elemento que satisfaça a condição foi encontrado. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)é como `Array.find`, exceto que ele retorna o índice do elemento, em vez do próprio elemento.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) usa uma função booliana e retorna o primeiro elemento para o qual a função retorna `true`, ou gera um <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> se nenhum elemento que satisfaça a condição foi encontrado. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) é como `Array.find`, exceto que ele retorna o índice do elemento, em vez do próprio elemento.
 
 O código a seguir usa `Array.find` e `Array.findIndex` para localizar um número que é um quadrado perfeito e o cubo perfeito.
 
@@ -346,7 +343,7 @@ A saída é a seguinte.
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)é como `Array.find`, exceto que o resultado é um tipo de opção e retorna `None` se nenhum elemento foi encontrado. `Array.tryFind`deve ser usado em vez de `Array.find` quando você não souber se um elemento correspondente é na matriz. Da mesma forma, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) é como [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) exceto que o tipo de opção é o valor de retorno. Se nenhum elemento for encontrado, a opção é `None`.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) é como `Array.find`, exceto que o resultado é um tipo de opção e retorna `None` se nenhum elemento foi encontrado. `Array.tryFind` deve ser usado em vez de `Array.find` quando você não souber se um elemento correspondente é na matriz. Da mesma forma, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) é como [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) exceto que o tipo de opção é o valor de retorno. Se nenhum elemento for encontrado, a opção é `None`.
 
 O código a seguir demonstra o uso de `Array.tryFind`. Esse código depende do código anterior.
 
@@ -380,7 +377,7 @@ O [ `Array.average` ](https://msdn.microsoft.com/library/7029f2b9-91ea-41cb-be1b
 
 Use [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) ou [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) para obter o elemento máximo ou mínimo, se o tipo de elemento dá suporte a ele. Da mesma forma, [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) e [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) permitem uma função a ser executado pela primeira vez, talvez para transformar um tipo que dá suporte à comparação.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)Adiciona os elementos de uma matriz, e [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) chama uma função em cada elemento e adiciona os resultados em conjunto.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) Adiciona os elementos de uma matriz, e [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) chama uma função em cada elemento e adiciona os resultados em conjunto.
 
 Para executar uma função em cada elemento em uma matriz sem armazenar os valores de retorno, use [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Para uma função que envolvem duas matrizes de comprimento igual, use [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Se você também precisa manter uma matriz de resultados da função, use [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) ou [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), que opera em duas matrizes de cada vez.
 
@@ -392,7 +389,7 @@ Essas funções para executar cálculos correspondem às funções de mesmo nome
 
 ### <a name="modifying-arrays"></a>Modificando matrizes
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)define um elemento com um valor especificado. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)define um intervalo de elementos em uma matriz com um valor especificado. O código a seguir fornece um exemplo de `Array.fill`.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) define um elemento com um valor especificado. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) define um intervalo de elementos em uma matriz com um valor especificado. O código a seguir fornece um exemplo de `Array.fill`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Você pode usar [ `Array.blit` ](https://msdn.microsoft.com/library/675e13e4-7fb
 
 ### <a name="converting-to-and-from-other-types"></a>Converter para e de outros tipos
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)cria uma matriz de uma lista. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)cria uma matriz de uma sequência. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)e [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) converter esses outros tipos de coleção do tipo de matriz.
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) cria uma matriz de uma lista. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) cria uma matriz de uma sequência. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) e [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) converter esses outros tipos de coleção do tipo de matriz.
 
 ### <a name="sorting-arrays"></a>Classificando matrizes
 
@@ -414,7 +411,7 @@ Use [ `Array.sort` ](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be5-
 
 ### <a name="arrays-and-tuples"></a>Matrizes e tuplas
 
-As funções [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) e [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) converter conjuntos de pares de tupla tuplas de matrizes e vice-versa. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)e [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) são semelhantes, exceto que elas funcionam com tuplas de três elementos ou tuplas de três matrizes.
+As funções [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) e [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) converter conjuntos de pares de tupla tuplas de matrizes e vice-versa. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) e [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) são semelhantes, exceto que elas funcionam com tuplas de três elementos ou tuplas de três matrizes.
 
 ## <a name="parallel-computations-on-arrays"></a>Computações paralelas em matrizes
 

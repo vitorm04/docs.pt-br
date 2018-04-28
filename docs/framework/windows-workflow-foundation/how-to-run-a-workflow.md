@@ -1,26 +1,27 @@
 ---
 title: Como executar um fluxo de trabalho
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 88c8adc74b707891a93e34aa135db82715da968e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-run-a-workflow"></a>Como executar um fluxo de trabalho
 Este tópico é uma continuação do tutorial do guia de Introdução do Windows Workflow Foundation e discute como criar um host de fluxo de trabalho e executar o fluxo de trabalho definido anteriormente na [como: criar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) tópico.  
@@ -133,7 +134,7 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
      Cada vez que o fluxo de trabalho se torna ocioso aguardando a próxima estimativa, esse manipulador é chamado e o `idleAction` <xref:System.Threading.AutoResetEvent> está definido. O código na etapa a seguir usa `idleEvent` e `syncEvent` para determinar se o fluxo de trabalho está esperando o próximo palpite ou está concluído.  
   
     > [!NOTE]
-    >  Neste exemplo, o aplicativo host usa eventos de redefinição automática nos manipuladores <xref:System.Activities.WorkflowApplication.Completed%2A> e de <xref:System.Activities.WorkflowApplication.Idle%2A> para sincronizar o aplicativo host com o progresso do fluxo de trabalho. Não é necessário bloquear e esperar que o fluxo de trabalho fique inativo antes de retomar um indicador, mas, nesse exemplo, os eventos de sincronização são necessários para que o host saiba se o fluxo de trabalho está concluído ou se está aguardando mais entrada do usuário usando o <xref:System.Activities.Bookmark>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Indicadores](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
+    >  Neste exemplo, o aplicativo host usa eventos de redefinição automática nos manipuladores <xref:System.Activities.WorkflowApplication.Completed%2A> e de <xref:System.Activities.WorkflowApplication.Idle%2A> para sincronizar o aplicativo host com o progresso do fluxo de trabalho. Não é necessário bloquear e esperar que o fluxo de trabalho fique inativo antes de retomar um indicador, mas, nesse exemplo, os eventos de sincronização são necessários para que o host saiba se o fluxo de trabalho está concluído ou se está aguardando mais entrada do usuário usando o <xref:System.Activities.Bookmark>. Para obter mais informações, consulte [indicadores](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
   
 3.  Remova a chamada para `WaitOne` e substitua-a pelo código para coletar entrada do usuário e retomar o <xref:System.Activities.Bookmark>.  
   
@@ -147,7 +148,7 @@ Este tópico é uma continuação do tutorial do guia de Introdução do Windows
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]  
   
-##  <a name="BKMK_ToRunTheApplication"></a>Para compilar e executar o aplicativo  
+##  <a name="BKMK_ToRunTheApplication"></a> Para compilar e executar o aplicativo  
   
 1.  Clique com botão direito **NumberGuessWorkflowHost** na **Solution Explorer** e selecione **definir como projeto de inicialização**.  
   

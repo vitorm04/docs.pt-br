@@ -1,34 +1,36 @@
 ---
 title: Como expor um feed como Atom e RSS
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6584f71450917669024c965c121edebb7dffc677
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Como expor um feed como Atom e RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]permite que você crie um serviço que expõe um feed de distribuição. Este tópico discute como criar um serviço de distribuição que expõe um feed usando RSS 2.0 e Atom 1.0 de distribuição. Esse serviço expõe um ponto de extremidade que pode retornar qualquer formato de distribuição. Para simplificar o serviço usado neste exemplo é auto-hospedado. Em um ambiente de produção um serviço desse tipo deve ser hospedado em IIS ou do WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]os diferentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opções de hospedagem, consulte [hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite que você crie um serviço que expõe um feed de distribuição. Este tópico discute como criar um serviço de distribuição que expõe um feed usando RSS 2.0 e Atom 1.0 de distribuição. Esse serviço expõe um ponto de extremidade que pode retornar qualquer formato de distribuição. Para simplificar o serviço usado neste exemplo é auto-hospedado. Em um ambiente de produção um serviço desse tipo deve ser hospedado em IIS ou do WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] os diferentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opções de hospedagem, consulte [hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Para criar um serviço básico de distribuição  
   
-1.  Definir um contrato de serviço usando uma interface marcada com o <xref:System.ServiceModel.Web.WebGetAttribute> atributo. Cada operação que é exposta como um distribuição de alimentação retorna um <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> objeto. Observe os parâmetros para o <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate`Especifica a URL usada para invocar esta operação de serviço. A cadeia de caracteres para este parâmetro contém literais e uma variável entre chaves ({*formato*}). Essa variável corresponde à operação de serviço `format` parâmetro. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.UriTemplate>. `BodyStyle`afeta como as mensagens que esta operação de serviço envia e recebe são gravadas. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>Especifica que os dados enviados de e para esta operação de serviço não são encapsulados por elementos XML definido de infraestrutura. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1.  Definir um contrato de serviço usando uma interface marcada com o <xref:System.ServiceModel.Web.WebGetAttribute> atributo. Cada operação que é exposta como um distribuição de alimentação retorna um <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> objeto. Observe os parâmetros para o <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` Especifica a URL usada para invocar esta operação de serviço. A cadeia de caracteres para este parâmetro contém literais e uma variável entre chaves ({*formato*}). Essa variável corresponde à operação de serviço `format` parâmetro. Para obter mais informações, consulte <xref:System.UriTemplate>. `BodyStyle` afeta como as mensagens que esta operação de serviço envia e recebe são gravadas. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Especifica que os dados enviados de e para esta operação de serviço não são encapsulados por elementos XML definido de infraestrutura. Para obter mais informações, consulte <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Para chamar GetBlog com um HTTP GET  
   
-1.  Abra o Internet Explorer, digite a URL a seguir e pressione ENTER. BlogService/http://localhost:8000/GetBlog  
+1.  Abra o Internet Explorer, digite a URL a seguir e pressione ENTER. http://localhost:8000/BlogService/GetBlog  
   
      A URL contém o endereço base do serviço (http://localhost:8000/BlogService), o endereço relativo do ponto de extremidade e chamar a operação de serviço.  
   

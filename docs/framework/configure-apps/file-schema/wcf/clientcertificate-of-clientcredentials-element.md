@@ -1,33 +1,35 @@
 ---
 title: '&lt;clientCertificate&gt; de &lt;clientCredentials&gt; Element'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c5616aab5cb54e94a62370ad682eaa55eceb8ef
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt; de &lt;clientCredentials&gt; Element
 Define um certificado x. 509 usado para autenticar um cliente para um serviço.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamento >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<clientCertificate >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -50,7 +52,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |`findValue`|Uma cadeia de caracteres que contém o valor para pesquisar no repositório de certificados x. 509. O tipo contido no atributo deve satisfazer os requisitos do `X509FindType` valor do atributo. O padrão é uma cadeia de caracteres vazia.|  
 |`storeLocation`|Especifica o local do certificado x. 509 que o cliente usa para se autenticar para o serviço. Os valores válidos incluem o seguinte:<br /><br /> -LocalMachine: o repositório de certificados atribuído ao computador local.<br />-CurrentUser: o repositório de certificados atribuído ao usuário atual.<br /><br /> O padrão é LocalMachine. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
 |`storeName`|Especifica o nome do repositório de certificados x. 509 para pesquisar. Os valores válidos incluem o seguinte:<br /><br /> -Catálogo de endereços: O repositório de certificados para outros usuários.<br />-AuthRoot: Repositório de terceiros para autoridades de certificação (CAs) do certificado.<br />-CertificateAuthority: Repositório de certificados intermediários para autoridades de certificação (CAs).<br />-Proibido: Repositório de certificados revogados de certificados.<br />-My: Repositório de certificados pessoais do certificado.<br />-Raiz: O repositório de certificados raiz confiável para autoridades de certificação (CAs).<br />-TrustedPeople: Repositório de certificados pessoas confiáveis diretamente e recursos.<br />-TrustedPublisher: Repositório de certificados para editores diretamente confiáveis.<br /><br /> O padrão é meu. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Define o tipo de pesquisa x. 509 a ser executado. O tipo contido o `findValue` atributo deve satisfazer os requisitos desse atributo. Os valores válidos incluem o seguinte:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> O valor padrão é FindBySubjectDistinguishedName. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|X509FindType|Define o tipo de pesquisa de X.509 a ser executada. O tipo contido o `findValue` atributo deve satisfazer os requisitos desse atributo. Os valores válidos incluem o seguinte:<br /><br /> -   FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> O valor padrão é FindBySubjectDistinguishedName. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -59,10 +61,10 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar o cliente para um serviço.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar o cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- Este elemento de configuração especifica o certificado usado para autenticar o cliente com esse elemento. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Como: especificar valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Este elemento de configuração especifica o certificado usado para autenticar o cliente com esse elemento. Para obter mais informações, consulte [como: especificar valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

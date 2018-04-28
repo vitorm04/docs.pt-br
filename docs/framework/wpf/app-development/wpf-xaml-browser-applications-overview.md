@@ -1,12 +1,13 @@
 ---
-title: "Visão geral dos aplicativos de navegador XAML do WPF"
-ms.custom: 
+title: Visão geral dos aplicativos de navegador XAML do WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]combina os recursos de aplicativos Web e aplicativos cliente avançados. Assim como aplicativos Web, os XBAPs podem ser implantados em um servidor Web e iniciados no Internet Explorer ou no Firefox. Como aplicativos de clientes avançados, os XBAPs podem aproveitar os recursos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O desenvolvimento de XBAPs também é semelhante ao desenvolvimento de cliente avançado. Este tópico fornece uma introdução simples e de alto nível ao desenvolvimento de XBAP e descreve em que o desenvolvimento XBAP difere do desenvolvimento padrão de cliente avançado.  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] combina os recursos de aplicativos Web e aplicativos cliente avançados. Assim como aplicativos Web, os XBAPs podem ser implantados em um servidor Web e iniciados no Internet Explorer ou no Firefox. Como aplicativos de clientes avançados, os XBAPs podem aproveitar os recursos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O desenvolvimento de XBAPs também é semelhante ao desenvolvimento de cliente avançado. Este tópico fornece uma introdução simples e de alto nível ao desenvolvimento de XBAP e descreve em que o desenvolvimento XBAP difere do desenvolvimento padrão de cliente avançado.  
   
  Esse tópico contém as seguintes seções:  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |Manifesto do aplicativo (.manifest)|Este arquivo contém os metadados associados ao aplicativo e tem uma extensão .manifest.|  
 |Manifesto de implantação (.xbap)|Esse arquivo contém as informações que o [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] usa para implantar o aplicativo e tem a extensão .xbap.|  
   
- Você implanta XBAPs em um servidor Web, por exemplo o [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ou versões posteriores. Você não precisa instalar o [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] no servidor Web, mas você precisa registrar os tipos e as extensões de nome de arquivo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]. Para obter mais informações, consulte [Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Você implanta XBAPs em um servidor Web, por exemplo o [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] ou versões posteriores. Você não precisa instalar o .NET Framework no servidor Web, mas você precisa registrar o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] extensões de nome de arquivo e tipos. Para obter mais informações, consulte [Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Para preparar seu XBAP para implantação, copie o .exe e os manifestos associados para o servidor Web. Crie uma página HTML que contenha um hiperlink para abrir o manifesto de implantação, que é o arquivo que tem a extensão .xbap. Quando o usuário clica no link para o arquivo .xbap, o [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] lida automaticamente com a mecânica de baixar e inicializar o aplicativo. O exemplo de código a seguir mostra uma página HTML que contém um hiperlink que aponta para um XBAP.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Um controle ActiveX personalizado pode ter problemas com a comunicação, pois o aplicativo do WPF está em execução em um thread separado.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>não gerado porque <xref:System.Windows.Interop.HwndHost> não é possível subclasse uma janela em execução em outro thread ou processo.  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> não gerado porque <xref:System.Windows.Interop.HwndHost> não é possível subclasse uma janela em execução em outro thread ou processo.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Criando um XBAP de confiança total  
  Se seu XBAP requer confiança total, você pode alterar seu projeto para habilitar essa permissão. As etapas a seguir descrevem como habilitar a confiança total:  

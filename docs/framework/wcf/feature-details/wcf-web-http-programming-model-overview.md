@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação HTTP WEB fornece os elementos básicos necessários para criar serviços WEB HTTP com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Serviços WEB HTTP são projetados para ser acessado por mais ampla variedade de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -33,13 +33,13 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programaçã
   
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB estende o alcance de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para cenários de rosto estilo da Web que incluem serviços HTTP da WEB, serviços de AJAX e JSON e feeds de agregação (ATOM/RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Serviços de AJAX e JSON, consulte [integração de AJAX e suporte a JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Distribuição, consulte [visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Não existem restrições adicionais sobre os tipos de dados que podem ser retornados de um serviço da WEB HTTP. Qualquer tipo serializável pode ser retornado de uma operação de serviço da WEB HTTP. Como as operações do serviço da WEB HTTP podem ser invocar um navegador da web que há uma limitação em quais dados de tipos podem ser especificados em uma URL. Para obter mais informações sobre quais tipos são suportados por padrão, consulte o **URLs e parâmetros de cadeia de caracteres de consulta do UriTemplate** seção abaixo. O comportamento padrão pode ser alterado, fornecendo sua própria implementação de T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica como converter os parâmetros especificados em uma URL para o tipo de parâmetro real. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Não existem restrições adicionais sobre os tipos de dados que podem ser retornados de um serviço da WEB HTTP. Qualquer tipo serializável pode ser retornado de uma operação de serviço da WEB HTTP. Como as operações do serviço da WEB HTTP podem ser invocar um navegador da web que há uma limitação em quais dados de tipos podem ser especificados em uma URL. Para obter mais informações sobre quais tipos são suportados por padrão, consulte o **URLs e parâmetros de cadeia de caracteres de consulta do UriTemplate** seção abaixo. O comportamento padrão pode ser alterado, fornecendo sua própria implementação de T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica como converter os parâmetros especificados em uma URL para o tipo de parâmetro real. Para obter mais informações, consulte <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
   
 > [!CAUTION]
 >  Serviços criados com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB não usa mensagens SOAP. Como SOAP não for usado, os recursos de segurança fornecidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não pode ser usado. No entanto você pode usar segurança baseada em transporte hospedando o serviço com HTTPS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Instalar a extensão WebDAV para IIS pode fazer com que os serviços da Web HTTP retornar um erro HTTP 405 como o WebDAV tentativas de extensão para manipular todas as solicitações PUT. Para contornar esse problema, você pode desinstalar a extensão WebDAV ou desabilitar a extensão WebDAV para seu site. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [O IIS e WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Instalar a extensão WebDAV para IIS pode fazer com que os serviços da Web HTTP retornar um erro HTTP 405 como o WebDAV tentativas de extensão para manipular todas as solicitações PUT. Para contornar esse problema, você pode desinstalar a extensão WebDAV ou desabilitar a extensão WebDAV para seu site. Para obter mais informações, consulte [IIS e WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>URI de processamento com UriTemplate e UriTemplateTable  
  Modelos URI fornecem uma sintaxe eficiente para expressar grandes conjuntos de URIs estruturalmente semelhantes. Por exemplo, o modelo a seguir expressa o conjunto de URIs de todos os três segmentos que começam com "a" e termina com "c" sem considerar o valor do segmento intermediário: um / /c {segmento}  
@@ -130,7 +130,7 @@ interface ICustomer
 |<xref:System.Decimal>|Qualquer decimal na notação padrão (nenhuma expoente)|  
 |<xref:System.Boolean>|VERDADEIRO ou falso (maiusculas de minúsculas)|  
 |<xref:System.String>|Qualquer cadeia de caracteres (nula não há suporte para a cadeia de caracteres e nenhuma saída é feito)|  
-|<xref:System.DateTime>|DD/MM/AAAA<br /><br /> MM/DD/YYYY HH:MM:SS [AM&#124;PM]<br /><br /> Mês dia/ano<br /><br /> Dia do mês ano hh [AM&#124;PM]|  
+|<xref:System.DateTime>|DD/MM/AAAA<br /><br /> DD/MM/AAAA HH [AM&AMP;#124;PM]<br /><br /> Mês dia/ano<br /><br /> Dia do mês ano hh [AM&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> Onde DD = dias, HH = horas, MM = minutos, SS = segundos|  
 |<xref:System.Guid>|Um GUID, por exemplo:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|DD/MM/AAAA HH MM: SS<br /><br /> Onde DD = dias, HH = horas, MM = minutos, SS = segundos|  

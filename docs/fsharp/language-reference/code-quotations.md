@@ -1,20 +1,17 @@
 ---
-title: "Citações de código (F#)"
-description: "Saiba mais sobre F # citações de código, um recurso de linguagem que permite que você gere e trabalhar programaticamente com expressões de código F #."
-keywords: "visual f#, f#, programação funcional"
+title: Citações de código (F#)
+description: 'Saiba mais sobre F # citações de código, um recurso de linguagem que permite que você gere e trabalhar programaticamente com expressões de código F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>Citações de código
 
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>Exemplo
 
 ### <a name="description"></a>Descrição
-Você também pode usar os três padrões active no [módulo ExprShape](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) atravessar árvores de expressão com menos padrões ativos. Esses padrões ativos podem ser útil quando você quiser atravessar uma árvore, mas você não precisa de todas as informações na maioria de nós. Quando você usa esses padrões, qualquer expressão F # corresponde a um dos seguintes padrões de três: `ShapeVar` se a expressão for uma variável, `ShapeLambda` se a expressão for uma expressão lambda, ou `ShapeCombination` se a expressão for diferente. Se você percorrer uma árvore de expressão usando os padrões ativos do exemplo de código anterior, você precisa usar vários padrões mais para lidar com todas as possíveis F # tipos de expressão e seu código será mais complexo. Para obter mais informações, consulte [ExprShape.ShapeVar &#124; ShapeLambda &#124; Padrão ativo ShapeCombination](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+Você também pode usar os três padrões active no [módulo ExprShape](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) atravessar árvores de expressão com menos padrões ativos. Esses padrões ativos podem ser útil quando você quiser atravessar uma árvore, mas você não precisa de todas as informações na maioria de nós. Quando você usa esses padrões, qualquer expressão F # corresponde a um dos seguintes padrões de três: `ShapeVar` se a expressão for uma variável, `ShapeLambda` se a expressão for uma expressão lambda, ou `ShapeCombination` se a expressão for diferente. Se você percorrer uma árvore de expressão usando os padrões ativos do exemplo de código anterior, você precisa usar vários padrões mais para lidar com todas as possíveis F # tipos de expressão e seu código será mais complexo. Para obter mais informações, consulte [ExprShape.ShapeVar&#124;ShapeLambda&#124;ativo Shapecombination](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
 O exemplo de código a seguir pode ser usado como base para traversais mais complexas. Nesse código, uma árvore de expressão é criada para uma expressão que envolve uma chamada de função `add`. O [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) padrão ativo é usado para detectar qualquer chamada para `add` na árvore de expressão. Esse padrão ativo atribui os argumentos da chamada para o `exprList` valor. Nesse caso, há apenas dois, para que eles retirada e a função é chamada recursivamente sobre os argumentos. Os resultados são inseridos em uma cotação de código que representa uma chamada para `mul` usando o operador de união pré-fixo (`%%`). O `println` função do exemplo anterior é usada para exibir os resultados.
 

@@ -1,12 +1,13 @@
 ---
 title: Como criar uma WSFederationHttpBinding
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Como criar uma WSFederationHttpBinding
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) na configuração) fornece um mecanismo para expor um serviço federado. Ou seja, um serviço que exige que os clientes se autentiquem usando um token de segurança emitido por um serviço de token de segurança. Este tópico mostra como configurar um <xref:System.ServiceModel.WSFederationHttpBinding> em código e configuração. Depois que a associação é criada, você pode configurar um ponto de extremidade para usar essa associação.  
@@ -36,7 +38,7 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.Servi
     > [!NOTE]
     >  O <xref:System.ServiceModel.WSFederationHttpBinding> também oferece suporte a `None` como um modo de segurança. Esse modo não é seguro e é fornecido apenas para fins de depuração. Se um ponto de extremidade de serviço é implantado com um <xref:System.ServiceModel.WSFederationHttpBinding> com seu modo de segurança definido como `None`, associação de cliente resultante (gerado pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) é um <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> com o modo de segurança `None`.  
   
-     Ao contrário de outras associações fornecidas pelo sistema, não é necessário selecionar um tipo de credencial de cliente ao usar o `WSFederationHttpBinding`. Isso ocorre porque o tipo de credencial de cliente é sempre um token emitido. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]adquire um token de um emissor especificado e apresenta esse token para o serviço para autenticar o cliente.  
+     Ao contrário de outras associações fornecidas pelo sistema, não é necessário selecionar um tipo de credencial de cliente ao usar o `WSFederationHttpBinding`. Isso ocorre porque o tipo de credencial de cliente é sempre um token emitido. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adquire um token de um emissor especificado e apresenta esse token para o serviço para autenticar o cliente.  
   
 2.  Em clientes federados, defina o <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> propriedade para a URL do serviço de token de segurança. Definir o <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> para a associação a ser usada para se comunicar com o serviço de token de segurança.  
   
@@ -46,7 +48,7 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.Servi
   
      O URI para um token SAML 1.1 é "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  Opcional. Em serviços federados, defina o <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> propriedade para a URL de metadados de um serviço de token de segurança. O ponto de extremidade de metadados permite que os clientes do serviço selecionar um par de associação/ponto de extremidade apropriado, se o serviço está configurado para publicar metadados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]publicação de metadados, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Opcional. Em serviços federados, defina o <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> propriedade para a URL de metadados de um serviço de token de segurança. O ponto de extremidade de metadados permite que os clientes do serviço selecionar um par de associação/ponto de extremidade apropriado, se o serviço está configurado para publicar metadados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] publicação de metadados, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Você também pode definir outras propriedades, incluindo o tipo de chave usado como uma chave de prova no token emitido, o conjunto de algoritmos para usar entre o cliente e o serviço se negociar ou especifique explicitamente as credenciais do serviço, qualquer específica declarações do serviço espera que o token emitido contenha e quaisquer elementos XML adicionais que devem ser adicionados à solicitação, que o cliente envia ao serviço de token de segurança.  
   
@@ -99,9 +101,9 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.Servi
   
 11. Opcional. Adicionar um `<identity>` elemento filho e especifique a identidade do serviço de token de segurança  
   
-12. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+12. Para obter mais informações, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Necessário no cliente se nenhum emissor local for especificado; não usado no serviço. Criar um [ \<associação >](../../../../docs/framework/misc/binding.md) elemento na seção de associações que pode ser usado para se comunicar com o serviço de token de segurança. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]criar uma associação, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Necessário no cliente se nenhum emissor local for especificado; não usado no serviço. Criar um [ \<associação >](../../../../docs/framework/misc/binding.md) elemento na seção de associações que pode ser usado para se comunicar com o serviço de token de segurança. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] criar uma associação, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Especificar a associação criada na etapa anterior, definindo o `binding` e `bindingConfiguration` atributos do `<issuer>` elemento.  
   

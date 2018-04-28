@@ -22,11 +22,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 34d48e7de0269449bd4ed6eedb83a7464b6d3d50
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Conversores de tipo e extensões de marcação para XAML
 Conversores de tipo e extensões de marcação são duas técnicas que sistemas de tipo XAML e gravadores XAML usam para gerar os componentes de gráfico de objeto. Embora eles compartilham algumas características, conversores de tipo e extensões de marcação são representadas diferentemente em um fluxo do nó XAML. Nesta documentação conjunto, conversores de tipo, extensões de marcação e construções semelhantes são às vezes chamadas, coletivamente como conversores de valor.  
@@ -45,7 +45,7 @@ Conversores de tipo e extensões de marcação são duas técnicas que sistemas 
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Conversores de tipo  
- Na definição de serviços XAML do .NET Framework, conversores de tipo são classes que derivam de CLR <xref:System.ComponentModel.TypeConverter> classe. <xref:System.ComponentModel.TypeConverter> é uma classe que estava sendo o [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] antes da existência desse XAML. Sua finalidade original foi oferecer suporte a janelas de propriedade e semelhantes baseado em texto edição metáforas para [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] propriedades. A introdução de XAML do .NET Framework usa <xref:System.ComponentModel.TypeConverter> para converter uma sintaxe de texto (como encontrado em um valor de atributo ou um nó de valor XAML) em um objeto. <xref:System.ComponentModel.TypeConverter> também pode ser usado para serializar um valor de objeto para a sintaxe do texto. <xref:System.ComponentModel.TypeConverter> também foi usado em implementações anteriores de XAML específica da estrutura em [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] e [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]. Para obter mais informações sobre o <xref:System.ComponentModel.TypeConverter> em XAML, consulte [conversores de tipo para XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ Na definição de serviços XAML do .NET Framework, conversores de tipo são classes que derivam de CLR <xref:System.ComponentModel.TypeConverter> classe. <xref:System.ComponentModel.TypeConverter> é uma classe que estava sendo o [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] antes da existência desse XAML. Sua finalidade original foi oferecer suporte a janelas de propriedade e semelhantes baseado em texto edição metáforas para [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] propriedades. A introdução de XAML do .NET Framework usa <xref:System.ComponentModel.TypeConverter> para converter uma sintaxe de texto (como encontrado em um valor de atributo ou um nó de valor XAML) em um objeto. <xref:System.ComponentModel.TypeConverter> também pode ser usado para serializar um valor de objeto para a sintaxe do texto. <xref:System.ComponentModel.TypeConverter> também foi usado em implementações de XAML específica da estrutura anteriores no [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] e Windows Communication Foundation (WCF). Para obter mais informações sobre o <xref:System.ComponentModel.TypeConverter> em XAML, consulte [conversores de tipo para XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Extensões de marcação  

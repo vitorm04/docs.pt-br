@@ -1,20 +1,17 @@
 ---
-title: "Parâmetros de tipo resolvidos estaticamente (F#)"
-description: "Saiba como usar uma linguagem F # parâmetro de tipo resolvidos estaticamente, que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução."
-keywords: "visual f#, f#, programação funcional"
+title: Parâmetros de tipo resolvidos estaticamente (F#)
+description: 'Saiba como usar uma linguagem F # parâmetro de tipo resolvidos estaticamente, que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b3797415-3e49-4f8a-a8ee-fa614c5721aa
-ms.openlocfilehash: 14c629d6223584113af47636495be61decca02ad
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: da730014f1c40b6c79d72e4f46a18ef36f50de36
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="statically-resolved-type-parameters"></a>Parâmetros de tipo resolvidos estaticamente
 

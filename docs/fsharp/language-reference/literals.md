@@ -1,20 +1,17 @@
 ---
 title: Literais (F#)
-description: "Saiba mais sobre os tipos de literal em F # linguagem de programação."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba mais sobre os tipos de literal em F # linguagem de programação.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Literais
 
@@ -39,15 +36,15 @@ A tabela a seguir mostra os tipos de literal em F #. Caracteres que representam 
 |uint64|número de natural de 64 bits sem sinal|UL|`86UL`|
 |único, float32|número de ponto flutuante de 32 bits|F ou f|`4.14F` ou `4.14f`|
 |||LF|`0x00000000lf`|
-|float; duplo|número de ponto flutuante de 64 bits|nenhum|`4.14`ou `2.3E+32` ou`2.3e+32`|
+|float; duplo|número de ponto flutuante de 64 bits|nenhum|`4.14` ou `2.3E+32` ou `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|inteiro que não se limitam a representação de 64 bits|I|`9999999999999999999999999999I`|
 |decimal|número fracionário representado como um ponto fixo ou um número racional|M ou m|`0.7833M` ou `0.7833m`|
 |Char|caractere Unicode|nenhum|`'a'`|
-|Cadeia de caracteres|Cadeia de caracteres Unicode|nenhum|`"text\n"`<br /><br />ou<br /><br />`@"c:\filename"`<br /><br />ou<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou<br /><br />`"string1" + "string2"`<br /><br />Consulte também [cadeias de caracteres](Strings.md).|
+|Cadeia de Caracteres|Cadeia de caracteres Unicode|nenhum|`"text\n"`<br /><br />ou<br /><br />`@"c:\filename"`<br /><br />ou<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou<br /><br />`"string1" + "string2"`<br /><br />Consulte também [cadeias de caracteres](Strings.md).|
 |byte|Caracteres ASCII|B|`'a'B`|
 |byte[]|Cadeia de caracteres ASCII|B|`"text"B`|
-|Cadeia de caracteres ou byte]|cadeia de caracteres textual|prefixo @|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|Cadeia de caracteres ou byte]|cadeia de caracteres textual|prefixo @|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Comentários
 Cadeias de caracteres Unicode podem conter codificações explícitas que você pode especificar usando `\u` seguido por um código hexadecimal de 16 bits ou UTF-32 codificações que você pode especificar usando `\U` seguido por um código hexadecimal de 32 bits que representa um Unicode par substituto.

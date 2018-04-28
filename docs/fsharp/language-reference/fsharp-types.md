@@ -1,20 +1,17 @@
 ---
 title: Tipos F#
-description: "Saiba mais sobre os tipos que são usados em F # e como tipos F # nomeados e descritos."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba mais sobre os tipos que são usados em F # e como tipos F # nomeados e descritos.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>Tipos F#
 
@@ -44,19 +41,19 @@ A tabela a seguir mostra os aspectos da sintaxe de tipo para tipos F #.
 
 |Tipo|Sintaxe de tipo|Exemplos|
 |----|-----------|--------|
-|tipo primitivo|*nome do tipo*|`int`<br /><br />`float`<br /><br />`string`|
-|tipo de agregação (classe, estrutura, união, registro, enum e assim por diante)|*nome do tipo*|`System.DateTime`<br /><br />`Color`|
+|tipo primitivo|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|tipo de agregação (classe, estrutura, união, registro, enum e assim por diante)|*type-name*|`System.DateTime`<br /><br />`Color`|
 |abreviação de tipo|*nome de abreviação de tipo*|`bigint`|
 |tipo totalmente qualificado|*nome do namespaces.Type*<br /><br />ou<br /><br />*nome do Modules.Type*<br /><br />ou<br /><br />*nome do namespaces.Modules.Type*|`System.IO.StreamWriter`|
 |array|*nome do tipo*[] ou<br /><br />*nome do tipo* matriz|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |matriz bidimensional|*nome do tipo*[,]|`int[,]`<br /><br />`float[,]`|
 |matriz tridimensional|*nome do tipo*[,]|`float[,,]`|
-|coleção de itens|*tipo name1* &#42; *tipo name2* ...|Por exemplo, `(1,'b',3)` tem tipo`int * char * int`|
+|coleção de itens|*tipo name1* &#42; *tipo name2* ...|Por exemplo, `(1,'b',3)` tem tipo `int * char * int`|
 |tipo genérico|*parâmetro de tipo* *nome de tipo genérico*<br /><br />ou<br /><br />*nome de tipo genérico*&lt;*lista de parâmetros de tipo*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |(um tipo genérico que tem um argumento de tipo específico fornecido) do tipo construído|*argumento de tipo* *nome de tipo genérico*<br /><br />ou<br /><br />*nome de tipo genérico*&lt;*lista de argumentos de tipo*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|tipo de função que tem um único parâmetro|*parâmetro type1*  - &gt; *tipo de retorno*|Uma função que usa um `int` e retorna um `string` tem tipo`int -> string`|
-|tipo de função que tem vários parâmetros|*parâmetro type1*  - &gt; *parâmetro type2*  - &gt; ... -&gt; *tipo de retorno*|Uma função que usa um `int` e um `float` e retorna um `string` tem tipo`int -> float -> string`|
-|função de ordem superior como um parâmetro|(*tipo de função*)|`List.map`tem o tipo`('a -> 'b) -> 'a list -> 'b list`|
+|tipo de função que tem um único parâmetro|*parâmetro type1*  - &gt; *tipo de retorno*|Uma função que usa um `int` e retorna um `string` tem tipo `int -> string`|
+|tipo de função que tem vários parâmetros|*parâmetro type1*  - &gt; *parâmetro type2*  - &gt; ... -&gt; *tipo de retorno*|Uma função que usa um `int` e um `float` e retorna um `string` tem tipo `int -> float -> string`|
+|função de ordem superior como um parâmetro|(*tipo de função*)|`List.map` tem o tipo `('a -> 'b) -> 'a list -> 'b list`|
 |delegado|Delegar de *tipo de função*|`delegate of unit -> int`|
 |tipos flexíveis|#*nome do tipo*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 

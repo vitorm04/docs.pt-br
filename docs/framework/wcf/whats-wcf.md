@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para criar aplicativos orientados a serviços. Usando o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], você poderá enviar dados como mensagens assíncronas de um ponto de extremidade de serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:  
@@ -44,7 +44,7 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para cri
  Embora criar esses aplicativos fosse possível antes da existência do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] facilita mais do que nunca o desenvolvimento de pontos de extremidade. Em resumo, o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é projetado para oferecer uma abordagem gerenciável para criar serviços Web e clientes de serviços Web.  
   
 ## <a name="features-of-wcf"></a>Recursos do WCF  
- O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui o seguinte conjunto de recursos. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Detalhes do recurso WCF](../../../docs/framework/wcf/feature-details/index.md).  
+ O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui o seguinte conjunto de recursos. Para obter mais informações, consulte [detalhes do recurso WCF](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Orientação de serviço**  
   
@@ -60,15 +60,15 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para cri
   
 -   **Metadados de serviço**  
   
-     O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dá suporte aos metadados de serviço de publicação usando formatos especificados nos padrões da indústria como WSDL, Esquema XML e WS-Policy. Esses metadados podem ser usados automaticamente para gerar e configurar clientes para acessar os serviços do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Os metadados podem ser publicados em HTTP e HTTPS ou usando o padrão Metadata Exchange do Serviço Web. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadados](../../../docs/framework/wcf/feature-details/metadata.md).  
+     O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dá suporte aos metadados de serviço de publicação usando formatos especificados nos padrões da indústria como WSDL, Esquema XML e WS-Policy. Esses metadados podem ser usados automaticamente para gerar e configurar clientes para acessar os serviços do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Os metadados podem ser publicados em HTTP e HTTPS ou usando o padrão Metadata Exchange do Serviço Web. Para obter mais informações, consulte [metadados](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Contratos de dados**  
   
-     Como o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é compilado usando o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ele também inclui métodos de código amigável de fornecer contratos que você deseja aplicar. Um dos tipos universais de contratos é o contrato de dados. Essencialmente, à medida que você codifica o serviço usando Visual C# ou Visual Basic, a maneira mais fácil de manipular dados é criando classes que representam uma entidade de dados com as propriedades que pertencem à entidade de dados. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui um sistema abrangente para trabalhar com dados dessa maneira fácil. Assim que você tiver criado as classes que representam dados, o serviço gera automaticamente os metadados que permitem que os clientes sejam compatíveis com os tipos de dados que você criou. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Como o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é compilado usando o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ele também inclui métodos de código amigável de fornecer contratos que você deseja aplicar. Um dos tipos universais de contratos é o contrato de dados. Essencialmente, à medida que você codifica o serviço usando Visual C# ou Visual Basic, a maneira mais fácil de manipular dados é criando classes que representam uma entidade de dados com as propriedades que pertencem à entidade de dados. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui um sistema abrangente para trabalhar com dados dessa maneira fácil. Assim que você tiver criado as classes que representam dados, o serviço gera automaticamente os metadados que permitem que os clientes sejam compatíveis com os tipos de dados que você criou. Para obter mais informações, consulte [usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Segurança**  
   
-     As mensagens podem ser criptografadas para proteger a privacidade e você pode exigir que os usuários se autentiquem antes de terem permissão de receber mensagens. A segurança pode ser implementada usando padrões conhecidos como SSL ou WS-SecureConversation. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Segurança](../../../docs/framework/wcf/feature-details/security.md).  
+     As mensagens podem ser criptografadas para proteger a privacidade e você pode exigir que os usuários se autentiquem antes de terem permissão de receber mensagens. A segurança pode ser implementada usando padrões conhecidos como SSL ou WS-SecureConversation. Para obter mais informações, consulte [Segurança](../../../docs/framework/wcf/feature-details/security.md).  
   
 -   **Várias codificações e transportes**  
   
@@ -80,7 +80,7 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para cri
   
 -   **Mensagens duráveis**  
   
-     Uma mensagem é durável porque nunca é perdida devido a um rompimento na comunicação. As mensagens em um padrão durável são sempre salvas em um banco de dados. Se um rompimento ocorrer, o banco de dados permitirá que você retome a troca de mensagens quando a conexão for restaurada. Você também pode criar uma mensagem durável usando o Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Uma mensagem é durável porque nunca é perdida devido a um rompimento na comunicação. As mensagens em um padrão durável são sempre salvas em um banco de dados. Se um rompimento ocorrer, o banco de dados permitirá que você retome a troca de mensagens quando a conexão for restaurada. Você também pode criar uma mensagem durável usando o Windows Workflow Foundation (WF). Para obter mais informações, consulte [serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transações**  
   

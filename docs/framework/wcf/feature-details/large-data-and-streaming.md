@@ -1,29 +1,29 @@
 ---
 title: Dados grandes e streaming
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infra-estrutura de comunicação baseada em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infraestrutura de comunicação com base em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
   
 ## <a name="basic-considerations"></a>Considerações básicas  
  Para fornecer informações de contexto sobre as seguintes informações do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], esta seção realça algumas preocupações e considerações gerais sobre codificações, dados binários e streaming que geralmente se aplicam às infraestruturas dos sistemas conectados.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  Como resultado, decidir entre texto ou binário não é tão fácil quanto supor que mensagens binárias sempre são menores do que mensagens de texto XML.  
   
- Uma vantagem clara das mensagens de texto XML é que elas são baseadas em padrões e oferecem a escolha mais abrangente de opções de interoperabilidade e de suporte da plataforma. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] a seção "Codificações" mais adiante neste tópico.  
+ Uma vantagem clara das mensagens de texto XML é que elas são baseadas em padrões e oferecem a escolha mais abrangente de opções de interoperabilidade e de suporte da plataforma. Para obter mais informações, consulte a seção "Codificações" mais adiante neste tópico.  
   
 ### <a name="binary-content"></a>Conteúdo binário  
  Uma área onde as codificações binárias são superiores às codificações baseadas em texto em termos de tamanho da mensagem resultante são os grandes itens de dados binários, como imagens, vídeos, clipes de som ou qualquer outro formulário de dados binários opacos que devem ser trocados entre os serviços e seus usuários. Para ajustar esses tipos de dados em texto XML, a abordagem mais comum é codificá-los usando codificação Base64.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Uma mensagem SOAP MTOM é modificada de sua versão não codificada de forma que as marcas dos elementos especiais que se referem às respectivas partes MIME tomam o lugar dos elementos originais na mensagem que continha dados binários. Como resultado, a mensagem SOAP faz referência ao conteúdo binário apontando para as partes MIME enviadas com ela, mas por outro lado carrega apenas dados de texto XML. Como esse modelo está bastante alinhado com o bem-estabelecido modelo SMTP, há um amplo suporte de ferramentas para codificar e decodificar mensagens MTOM em muitas plataformas, o que o torna uma escolha extremamente interoperável.  
   
- Ainda assim, como com a Base64, o MTOM também vem com uma sobrecarga necessária para o formato MIME, de forma que as vantagens de se usar o MTOM são consideradas apenas quando o tamanho de um elemento de dados binários excede aproximadamente 1 KB. Devido à sobrecarga, as mensagens codificadas por MTOM podem ser maiores que as mensagens que usam a codificação de Base64 para dados binários, se a carga de binários permanecer abaixo desse limite. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] a seção "Codificações" mais adiante neste tópico.  
+ Ainda assim, como com a Base64, o MTOM também vem com uma sobrecarga necessária para o formato MIME, de forma que as vantagens de se usar o MTOM são consideradas apenas quando o tamanho de um elemento de dados binários excede aproximadamente 1 KB. Devido à sobrecarga, as mensagens codificadas por MTOM podem ser maiores que as mensagens que usam a codificação de Base64 para dados binários, se a carga de binários permanecer abaixo desse limite. Para obter mais informações, consulte a seção "Codificações" mais adiante neste tópico.  
   
 ### <a name="large-data-content"></a>Grande conteúdo de dados  
  Deixando a superfície eletrônica de lado, a carga de 500 MB mencionada anteriormente também representa um grande desafio local para o serviço e o cliente. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] processa as mensagens em *modo com buffer*. Isso significa que todo o conteúdo de uma mensagem está presente na memória antes de ser enviado ou depois de ser recebido. Embora essa seja uma boa estratégia na maioria dos cenários e seja necessária para recursos de mensagens, como assinaturas digitais e entrega confiável, grandes mensagens podem esgotar os recursos do sistema.  
@@ -67,14 +67,14 @@ ms.lasthandoff: 02/01/2018
   
 -   Não estão totalmente disponíveis quando a transferência é iniciada.  
   
- Para dados que não têm essas restrições, normalmente é melhor enviar sequências de mensagens no escopo de uma sessão do que uma grande mensagem. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] a seção "Dados de streaming" mais adiante neste tópico.  
+ Para dados que não têm essas restrições, normalmente é melhor enviar sequências de mensagens no escopo de uma sessão do que uma grande mensagem. Para obter mais informações, consulte a seção "Fluxo de dados", mais adiante neste tópico.  
   
  Durante o envio de grandes quantidades de dados, você precisará definir o `maxAllowedContentLength` configuração do IIS (para obter mais informações, consulte [configurar limites de solicitações do IIS](http://go.microsoft.com/fwlink/?LinkId=253165)) e o `maxReceivedMessageSize` configuração de associação (por exemplo [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). O `maxAllowedContentLength` propriedade padrão é M 28,6 e o `maxReceivedMessageSize` propriedade padrão é 64 KB.  
   
 ## <a name="encodings"></a>Codificações  
  Um *codificação* define um conjunto de regras sobre como apresentar mensagens na conexão. Um *codificador* implementa tal uma codificação e é responsável, no lado do remetente, para ativar um <xref:System.ServiceModel.Channels.Message> mensagem na memória em um fluxo de bytes ou o buffer de bytes que pode ser enviado pela rede. No lado do destinatário, o codificador transforma uma sequência de bytes em uma mensagem na memória.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui três codificadores e permite que você escrever e conectar seus próprios codificadores, se necessário.  
+ O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui três codificadores e permite que você escreva e conecte seus próprios codificadores, se necessário.  
   
  Cada uma das associações padrão inclui um codificador pré-configurado, por meio do qual as associações com o prefixo Net* usam o codificador binário (incluindo a classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) enquanto as classes <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WSHttpBinding> usam o codificador de mensagem de texto (por meio da classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>) por padrão.  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Portanto, restringir o tamanho máximo de mensagens de entrada não é suficiente nesse caso. A propriedade `MaxBufferSize` é necessária para restringir a memória que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] armazena em buffer. É importante definir isso como um valor seguro (ou manter o valor padrão) ao usar streaming. Por exemplo, suponha que o serviço precise receber arquivos de até 4 GB de tamanho e armazená-los no disco local. Suponha também que sua memória esteja restrita de tal forma que você possa armazenar apenas 64 KB de dados em buffer de cada vez. Portanto, você deve definir `MaxReceivedMessageSize` como 4 GB e `MaxBufferSize` como 64 KB. Além disso, na implementação de seu serviço, garanta que você leia somente o fluxo de entrada em partes de 64 KB e não leia a próxima parte antes que a anterior seja gravada em disco e descartada da memória.  
   
- Também é importante compreender que a cota limita somente o buffer feito pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e não pode proteger você contra qualquer armazenamento em buffer que você faça na implementação de seu próprio serviço ou do cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Considerações de segurança adicionais, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Também é importante compreender que a cota limita somente o buffer feito pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e não pode proteger você contra qualquer armazenamento em buffer que você faça na implementação de seu próprio serviço ou do cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Considerações de segurança adicionais, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Após gerar um cliente do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para um serviço, você deve editar o arquivo de configuração dos serviços que pretende usar com transferências em streaming para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  

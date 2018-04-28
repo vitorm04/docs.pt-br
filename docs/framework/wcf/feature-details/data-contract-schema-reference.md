@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>Referência de esquema de contrato de dados
 Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System.Runtime.Serialization.DataContractSerializer> para descrever o common language runtime (CLR) tipos de serialização de XML.  
   
 ## <a name="datacontractserializer-mappings"></a>Mapeamentos de DataContractSerializer  
- O `DataContractSerializer` mapeia tipos CLR para XSD quando metadados exportado de um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usando um ponto de extremidade de metadados de serviço ou o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [O serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ O `DataContractSerializer` mapeia tipos CLR para XSD quando metadados exportado de um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usando um ponto de extremidade de metadados de serviço ou o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter mais informações, consulte [serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  O `DataContractSerializer` também mapeia XSD para tipos CLR quando Svcutil.exe é usada para acessar documentos WSDL Web Services Description Language () ou XSD e gerar contratos de dados para serviços ou clientes.  
   
@@ -39,7 +39,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System
   
 -   **Suporte para**. Não há mapeamento explícito de usar esse recurso CLR tipos ou atributos (ou ambos) `DataContractSerializer`.  
   
--   **Ignored**. O recurso é permitido em esquemas importadas pela `DataContractSerializer`, mas não tem nenhum efeito na geração de código.  
+-   **Ignorado**. O recurso é permitido em esquemas importadas pela `DataContractSerializer`, mas não tem nenhum efeito na geração de código.  
   
 -   **Proibido**. O `DataContractSerializer` não oferece suporte à importação de um esquema usando o recurso. Por exemplo, Svcutil.exe, ao acessar um WSDL com um esquema que usa o recurso, volte a usar o <xref:System.Xml.Serialization.XmlSerializer> em vez disso. Isso ocorre por padrão.  
   
@@ -63,7 +63,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System
 |`targetNamespace`|Suporte e mapeado para o namespace de contrato de dados. Se esse atributo não for especificado, o namespace em branco será usado. Não pode ser o namespace reservado http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Ignorado.|  
   
-### <a name="xsschema-contents"></a>\<xs:schema>: contents  
+### <a name="xsschema-contents"></a>\<xs: schema >: conteúdo  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -94,7 +94,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System
 |`mixed`|Deve ser false (padrão).|  
 |`name`|Suporte e mapeado para o nome do contrato de dados. Se houver pontos no nome, é feita uma tentativa para mapear o tipo para um tipo interno. Por exemplo, um tipo complexo chamado `A.B` é mapeado para um contrato de dados tipo que é um tipo interno de um tipo com o nome de contrato de dados `A`, mas somente se o tipo de contrato de tal um tipo de dados existe. Mais de um nível de aninhamento é possível: por exemplo, `A.B.C` pode ser um tipo interno, mas somente se `A` e `A.B` existem.|  
   
-### <a name="xscomplextype-contents"></a>\<xs:complexType>: contents  
+### <a name="xscomplextype-contents"></a>\<xs:complexType >: conteúdo  
   
 |Conteúdo|Esquema|  
 |--------------|------------|  
@@ -221,7 +221,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System
   
 -   Se um dado contrato com esse nome já existir, o nome é feito exclusivo, acrescentando "1", "2", "3", e assim por diante, até que um nome exclusivo é criado.  
   
-## <a name="simple-types---xssimpletype"></a>Simple Types - \<xs:simpleType>  
+## <a name="simple-types---xssimpletype"></a>Tipos simples - \<xs:simpleType >  
   
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType >: atributos  
   

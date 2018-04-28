@@ -1,31 +1,32 @@
 ---
-title: "Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho"
-ms.custom: 
+title: 'Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
 Este tópico descreve como configurar o recurso de Store de instância de fluxo de trabalho SQL para ativar persistência para os fluxos de trabalho e fluxo de trabalho serviços de aplicativos por meio e usando um arquivo de configuração.  
   
- A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configuração de persistência de malha de aplicativos](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [configuração de persistência da malha de aplicativos](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  Antes de usar o recurso de Store de instância de fluxo de trabalho SQL, crie um base de dados que o recurso usa para manter instâncias de fluxo de trabalho. Arquivos de script SQL das cópias do programa de instalação de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] associados com o recurso de Store de instância de fluxo de trabalho SQL ao %WINDIR% \ Microsoft.NET \ Framework \ v4.xxx pasta \ \ EN SQL. Executar esses arquivos de script em um base de dados SQL Server 2005 ou SQL Server 2008 que você deseja a instância Store de fluxo de trabalho SQL para usar para persistir instâncias de fluxo de trabalho. Execute o arquivo de SqlWorkflowInstanceStoreSchema.sql primeiro e execute o arquivo de SqlWorkflowInstanceStoreLogic.sql.  
   
@@ -40,7 +41,7 @@ Este tópico descreve como configurar o recurso de Store de instância de fluxo 
 >   
 >  System.Data.SqlClient.SqlException: Não foi possível encontrar o procedimento armazenado “System.Activities.DurableInstancing.CreateLockOwner”  
   
- As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Propriedades do armazenamento de instância de fluxo de trabalho de SQL, consulte [fluxo de trabalho instância repositório de propriedades do SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Propriedades do armazenamento de instância de fluxo de trabalho de SQL, consulte [fluxo de trabalho instância repositório de propriedades do SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Ativando a persistência para fluxos de trabalho são hospedados que usam WorkflowApplication  
  Você pode ativar persistência para fluxos de trabalho são hospedados que usam <xref:System.Activities.WorkflowApplication> programaticamente usando o modelo de objeto de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> . O procedimento a seguir contém as etapas para fazer isso.  

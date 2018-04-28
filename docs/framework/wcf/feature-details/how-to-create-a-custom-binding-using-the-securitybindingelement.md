@@ -1,13 +1,13 @@
 ---
-title: "Como criar uma associação personalizada utilizando o SecurityBindingElement"
-ms.custom: 
+title: Como criar uma associação personalizada utilizando o SecurityBindingElement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como criar uma associação personalizada utilizando o SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem total flexibilidade ao configurar a segurança todas as opções que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem total flexibilidade ao configurar a segurança todas as opções que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Criando associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement>não oferece suporte a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, o que é o uso de forma de canal padrão por TCP de canal de transporte quando <xref:System.ServiceModel.TransferMode> é definido como <xref:System.ServiceModel.TransferMode.Buffered>. Você deve definir <xref:System.ServiceModel.TransferMode> para <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> neste cenário.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> não oferece suporte a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, o que é o uso de forma de canal padrão por TCP de canal de transporte quando <xref:System.ServiceModel.TransferMode> é definido como <xref:System.ServiceModel.TransferMode.Buffered>. Você deve definir <xref:System.ServiceModel.TransferMode> para <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> neste cenário.  
   
 ## <a name="creating-a-custom-binding"></a>Criando uma associação personalizada  
  Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] todas as associações são compostas de *elementos de associação*. Cada elemento de associação derivado de <xref:System.ServiceModel.Channels.BindingElement> classe. Para as associações padrão fornecido pelo sistema, os elementos de associação criados e configurados para você, embora você pode personalizar algumas das configurações de propriedade.  
@@ -88,9 +88,9 @@ ms.lasthandoff: 12/22/2017
 |||SSL ou StreamSecurityBindingElement do Windows|SSL ou StreamSecurityBindingElement do Windows|SSL ou StreamSecurityBindingElement do Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Observe que há muitas definições configuráveis no SecurityBindingElements. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Modos de autenticação SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Observe que há muitas definições configuráveis no SecurityBindingElements. Para obter mais informações, consulte [modos de autenticação SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sessões seguras e conversas seguras](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Para obter mais informações, consulte [proteger conversas e proteger sessões](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Procedimentos  
   

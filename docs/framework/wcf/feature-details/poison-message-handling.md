@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não é possível processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo em fila recebe mensagens em uma transação. Anulando a transação na qual foi recebida uma mensagem na fila deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo receptor pode preso em um loop de recebimento e anule a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
@@ -75,7 +75,7 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Prática recomendada: Manipulação MsmqPoisonMessageException  
  Quando o serviço determina que uma mensagem é suspeita, transporte em fila lança um <xref:System.ServiceModel.MsmqPoisonMessageException> que contém o `LookupId` da mensagem suspeita.  
   
- Um aplicativo pode implementar o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface para tratar os erros que o aplicativo requer. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Estendendo o controle sobre o tratamento de erros e emissão de relatórios](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Um aplicativo pode implementar o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface para tratar os erros que o aplicativo requer. Para obter mais informações, consulte [estendendo controle sobre tratamento de erros e emissão de relatórios](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  O aplicativo pode exigir algum tipo de tratamento de mensagens suspeitas automatizado que move as mensagens suspeitas para uma fila de mensagens suspeitas para que o serviço pode acessar o restante das mensagens na fila. O único cenário para usar o mecanismo de manipulação de erros para escutar mensagens suspeitas exceções é quando o <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> configuração é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. O exemplo de mensagem de inviabilização do Message Queuing 3.0 demonstra esse comportamento. O exemplo a seguir descreve as etapas necessárias para tratar mensagens suspeitas, incluindo práticas recomendadas:  
   

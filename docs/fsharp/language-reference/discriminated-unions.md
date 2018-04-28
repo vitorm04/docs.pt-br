@@ -1,20 +1,17 @@
 ---
-title: "Uniões discriminadas (F#)"
-description: "Aprenda a usar o F # discriminada uniões."
-keywords: "visual f#, f#, programação funcional"
+title: Uniões discriminadas (F#)
+description: 'Aprenda a usar o F # discriminada uniões.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 16e2a011-c785-48c8-859f-79df7f3a0e29
-ms.openlocfilehash: b7a02512ce4a63885e771be56f106bc66cc2743e
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 64c91410e284ee16036c4f51bd2247475a202a45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -163,7 +160,7 @@ Os seguintes atributos são geralmente vistos em uniões discriminadas:
 * `[RequireQualifiedAccess]`
 * `[NoEquality]`
 * `[NoComparison]`
-* `[Struct]`(F # 4.1 e superior)
+* `[Struct]` (F # 4.1 e superior)
 
 ## <a name="see-also"></a>Consulte também
 [Referência da Linguagem F#](index.md)

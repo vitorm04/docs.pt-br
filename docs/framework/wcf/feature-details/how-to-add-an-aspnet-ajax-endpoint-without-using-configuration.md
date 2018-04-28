@@ -1,27 +1,29 @@
 ---
-title: "Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração"
-ms.custom: 
+title: Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b90ecd94f439472c89d0c075c8b7486abeacf38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d82febd776bfc51e3e9725701253ed19996349b5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]permite que você crie um serviço que expõe um ponto de extremidade habilitado para AJAX do ASP.NET que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, use um arquivo de configuração, assim como acontece com todos os outros pontos de extremidade do WCF ou usar um método que não requer nenhum elemento de configuração. Este tópico demonstra a segunda abordagem.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite que você crie um serviço que expõe um ponto de extremidade habilitado para AJAX do ASP.NET que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, use um arquivo de configuração, assim como acontece com todos os outros pontos de extremidade do WCF ou usar um método que não requer nenhum elemento de configuração. Este tópico demonstra a segunda abordagem.  
   
  Para criar serviços com os pontos de extremidade do ASP.NET AJAX sem configuração, os serviços devem ser hospedados por serviços de informações da Internet (IIS). Para ativar um ponto de extremidade do ASP.NET AJAX usando essa abordagem, especifique o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> como o parâmetro de fábrica no [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva no arquivo. svc. Esta fábrica personalizada é o componente que configura automaticamente um ponto de extremidade do ASP.NET AJAX para que ele pode ser chamado do JavaScript em um site do cliente.  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  O serviço de compilação e chamá-lo do cliente. Serviços de informações da Internet (IIS) ativa o serviço quando chamado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hospedagem no IIS, consulte [como: hospedar um serviço WCF no IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  O serviço de compilação e chamá-lo do cliente. Serviços de informações da Internet (IIS) ativa o serviço quando chamado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] hospedagem no IIS, consulte [como: hospedar um serviço WCF no IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Para chamar o serviço  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
  `<serviceHostingEnvironment aspNetCompatibilityEnabled="true" /> </system.serviceModel>`  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]o [serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) tópico.  
+ Para obter mais informações, consulte o [serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) tópico.  
   
  O <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> classe é uma classe derivada de <xref:System.ServiceModel.Activation.ServiceHostFactory>. Para obter uma explicação detalhada do mecanismo de fábrica do host de serviço, consulte o [estendendo hospedagem usando ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) tópico.  
   

@@ -1,13 +1,13 @@
 ---
 title: Utilizando contratos de mensagem
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>Utilizando contratos de mensagem
-Normalmente ao criar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos, os desenvolvedores preste muita atenção para as estruturas de dados e os problemas de serialização e não precisa se preocupar com a estrutura de mensagens no qual os dados são executados. Para esses aplicativos, a criação de contratos de dados para os parâmetros ou valores de retorno é simples. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Normalmente ao criar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos, os desenvolvedores preste muita atenção para as estruturas de dados e os problemas de serialização e não precisa se preocupar com a estrutura de mensagens no qual os dados são executados. Para esses aplicativos, a criação de contratos de dados para os parâmetros ou valores de retorno é simples. (Para obter mais informações, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  No entanto, às vezes, total controle sobre a estrutura de uma mensagem SOAP é tão importante quanto o controle sobre seu conteúdo. Isso é especialmente verdadeiro quando a interoperabilidade é importante ou problemas de controle especificamente a segurança no nível da mensagem ou parte da mensagem. Nesses casos, você pode criar um *contrato de mensagem* que permite que você especifique a estrutura da mensagem SOAP exata necessário.  
   
  Este tópico discute como usar os vários atributos de contrato de mensagem para criar um contrato de mensagem específica para a operação.  
   
 ## <a name="using-message-contracts-in-operations"></a>Usando contratos de mensagem em operações  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dá suporte a operações modeladas no *estilo do procedimento remoto (RPC) chamada* ou *mensagens estilo*. Em uma operação de estilo RPC, você pode usar qualquer tipo serializável, e você tem acesso aos recursos que estão disponíveis para chamadas locais, como vários parâmetros e `ref` e `out` parâmetros. Neste estilo, o formato de serialização escolhida controla a estrutura dos dados nas mensagens subjacentes e o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução cria as mensagens para dar suporte à operação. Isso permite que os desenvolvedores que não estão familiarizados com SOAP e as mensagens de SOAP rapidamente e facilmente criar e usam aplicativos de serviço.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dá suporte a operações modeladas no *estilo do procedimento remoto (RPC) chamada* ou *mensagens estilo*. Em uma operação de estilo RPC, você pode usar qualquer tipo serializável, e você tem acesso aos recursos que estão disponíveis para chamadas locais, como vários parâmetros e `ref` e `out` parâmetros. Neste estilo, o formato de serialização escolhida controla a estrutura dos dados nas mensagens subjacentes e o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução cria as mensagens para dar suporte à operação. Isso permite que os desenvolvedores que não estão familiarizados com SOAP e as mensagens de SOAP rapidamente e facilmente criar e usam aplicativos de serviço.  
   
  O exemplo de código a seguir mostra uma operação de serviço estabelecida no estilo RPC.  
   
@@ -44,7 +44,7 @@ Normalmente ao criar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] apl
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalmente, um contrato de dados é suficiente para definir o esquema para as mensagens. Por exemplo, no exemplo anterior, é suficiente para a maioria dos aplicativos se `BankingTransaction` e `BankingTransactionResponse` ter contratos de dados para definir o conteúdo das mensagens de SOAP subjacentes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]contratos de dados, consulte [usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalmente, um contrato de dados é suficiente para definir o esquema para as mensagens. Por exemplo, no exemplo anterior, é suficiente para a maioria dos aplicativos se `BankingTransaction` e `BankingTransactionResponse` ter contratos de dados para definir o conteúdo das mensagens de SOAP subjacentes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] contratos de dados, consulte [usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  No entanto, ocasionalmente, é necessário controlar exatamente como a estrutura da mensagem SOAP transmitidos eletronicamente. O cenário mais comum para isso é inserir cabeçalhos SOAP personalizados. Outro cenário comum é para definir propriedades de segurança para os cabeçalhos da mensagem e o corpo, ou seja, para decidir se esses elementos são assinados digitalmente e criptografados. Finalmente, algumas pilhas SOAP de terceiros exigem que as mensagens em um formato específico. As operações de mensagens de estilo fornecem esse controle.  
   
@@ -118,7 +118,7 @@ public class BankingTransaction
  O <xref:System.ServiceModel.MessageContractAttribute> permite que você especifique os atributos WrapperName e WrapperNamespace que controlam o nome do elemento wrapper no corpo da mensagem SOAP. Por padrão o nome do contrato de mensagem de tipo é usado para o wrapper e o namespace no qual o contrato de mensagem é definido `HYPERLINK "http://tempuri.org/" http://tempuri.org/` é usado como o namespace padrão.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute>atributos são ignorados em contratos de mensagem. Se um <xref:System.Runtime.Serialization.KnownTypeAttribute> é necessário, coloque-o sobre a operação que está usando o contrato de mensagem em questão.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> atributos são ignorados em contratos de mensagem. Se um <xref:System.Runtime.Serialization.KnownTypeAttribute> é necessário, coloque-o sobre a operação que está usando o contrato de mensagem em questão.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Controle de cabeçalho e nomes de partes de corpo e Namespaces  
  Na representação de um contrato de mensagem SOAP, cada parte de cabeçalho e corpo mapeia para um elemento XML que tem um nome e um namespace.  
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  Ter mais de uma parte de corpo de mensagem em mensagens que não são encapsuladas não é compatível com o WS-I Basic perfil 1.1 e não é recomendado durante a criação de novos contratos de mensagem. No entanto, é necessário ter mais de uma parte do corpo da mensagem não encapsulada em determinados cenários específicos de interoperabilidade. Se você pretende transmitir mais de uma parte dos dados no corpo da mensagem, é recomendável usar o modo padrão (quebrada). Ter mais de um cabeçalho de mensagem em mensagens sem é totalmente aceitável.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Usando tipos personalizados em contratos de mensagem  
- Cada cabeçalho de mensagem individual e parte do corpo da mensagem é serializado (transformado em XML) usando o mecanismo de serialização escolhidas para o contrato de serviço em que a mensagem é usada. O mecanismo de serialização padrão, o `XmlFormatter`, pode lidar com qualquer tipo que tem um contrato de dados, ou explicitamente (fazendo com que o <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) ou implicitamente (por ser um tipo primitivo, tendo o <xref:System.SerializableAttribute?displayProperty=nameWithType>, e assim por diante). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Cada cabeçalho de mensagem individual e parte do corpo da mensagem é serializado (transformado em XML) usando o mecanismo de serialização escolhidas para o contrato de serviço em que a mensagem é usada. O mecanismo de serialização padrão, o `XmlFormatter`, pode lidar com qualquer tipo que tem um contrato de dados, ou explicitamente (fazendo com que o <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) ou implicitamente (por ser um tipo primitivo, tendo o <xref:System.SerializableAttribute?displayProperty=nameWithType>, e assim por diante). Para obter mais informações, consulte [usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  No exemplo anterior, o `Operation` e `BankingTransactionData` tipos devem ter um contrato de dados, e `transactionDate` pode ser serializado porque <xref:System.DateTime> é um primitivo (e portanto, tem um contrato de dados implícitos).  
   
@@ -257,13 +257,13 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>Atributos de cabeçalho SOAP  
  O padrão SOAP define os seguintes atributos que podem existir em um cabeçalho de:  
   
--   `Actor/Role`(`Actor` em SOAP 1.1, `Role` em SOAP 1.2)  
+-   `Actor/Role` (`Actor` em SOAP 1.1, `Role` em SOAP 1.2)  
   
 -   `MustUnderstand`  
   
 -   `Relay`  
   
- O `Actor` ou `Role` atributo especifica o identificador de URI (Uniform Resource) do nó para o qual um determinado cabeçalho é pretendido. O `MustUnderstand` atributo especifica se o nó de processar o cabeçalho deve entender. O `Relay` atributo especifica se o cabeçalho deve ser retransmitidas para nós de downstream. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]não executa qualquer processamento desses atributos em mensagens de entrada, exceto para o `MustUnderstand` atributo, conforme especificado na seção "Controle de versão de contrato de mensagem", mais adiante neste tópico. No entanto, ele permite que você ler e gravar esses atributos conforme necessário, como a descrição a seguir.  
+ O `Actor` ou `Role` atributo especifica o identificador de URI (Uniform Resource) do nó para o qual um determinado cabeçalho é pretendido. O `MustUnderstand` atributo especifica se o nó de processar o cabeçalho deve entender. O `Relay` atributo especifica se o cabeçalho deve ser retransmitidas para nós de downstream. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não executa qualquer processamento desses atributos em mensagens de entrada, exceto para o `MustUnderstand` atributo, conforme especificado na seção "Controle de versão de contrato de mensagem", mais adiante neste tópico. No entanto, ele permite que você ler e gravar esses atributos conforme necessário, como a descrição a seguir.  
   
  Ao enviar uma mensagem, esses atributos não são emitidos por padrão. Você pode alterar isso de duas maneiras. Primeiro, você pode estaticamente definir os atributos para qualquer valor desejado, alterando o <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, e <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> propriedades, conforme mostrado no exemplo de código a seguir. (Observe que não há nenhum `Role` propriedade; a configuração a <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> propriedade emite o `Role` atributo se você estiver usando SOAP 1.2).  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Quando uma mensagem é recebida e, em seguida, enviada de volta, as configurações de atributo SOAP apenas ir ida e volta para cabeçalhos do <xref:System.ServiceModel.MessageHeader%601> tipo.  
   
 ## <a name="order-of-soap-body-parts"></a>Ordem das partes de corpo SOAP  
- Em algumas circunstâncias, talvez seja necessário controlar a ordem das partes de corpo. A ordem dos elementos do corpo é alfabética por padrão, mas pode ser controlada pelo <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> propriedade. Essa propriedade tem a mesma semântica de <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> propriedade, exceto o comportamento em cenários de herança (em contratos de mensagem, membros não são classificados antes dos membros de corpo de tipo derivado de corpo de tipo base). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ Em algumas circunstâncias, talvez seja necessário controlar a ordem das partes de corpo. A ordem dos elementos do corpo é alfabética por padrão, mas pode ser controlada pelo <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> propriedade. Essa propriedade tem a mesma semântica de <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> propriedade, exceto o comportamento em cenários de herança (em contratos de mensagem, membros não são classificados antes dos membros de corpo de tipo derivado de corpo de tipo base). Para obter mais informações, consulte [ordem de membro de dados](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  No exemplo a seguir, `amount` normalmente seriam primeiro porque ele é o primeiro em ordem alfabética. No entanto, o <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> propriedade coloca na terceira posição.  
   
@@ -336,9 +336,9 @@ public class BankingTransaction
   
  As seguintes regras se aplicam a cabeçalhos de controle de versão:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]objeto não aos cabeçalhos ausentes — os membros correspondentes são deixados em seus valores padrão.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto não aos cabeçalhos ausentes — os membros correspondentes são deixados em seus valores padrão.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também ignora inesperados cabeçalhos adicionais. A única exceção a essa regra é se o cabeçalho extra tem um `MustUnderstand` atributo definido como `true` na mensagem SOAP de entrada — nesse caso, uma exceção será lançada como um cabeçalho que deve ser compreendido não pode ser processado.  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também ignora inesperados cabeçalhos adicionais. A única exceção a essa regra é se o cabeçalho extra tem um `MustUnderstand` atributo definido como `true` na mensagem SOAP de entrada — nesse caso, uma exceção será lançada como um cabeçalho que deve ser compreendido não pode ser processado.  
   
  Corpos de tem regras semelhantes de controle de versão de mensagem — partes de corpo de mensagem ausente e adicionais são ignorados.  
   
@@ -383,7 +383,7 @@ public class PatientRecord : PersonRecord
 -   Quando usar a mesma mensagem de contrato em várias operações, vários tipos de mensagem são gerados no documento WSDL. Os nomes são feitos exclusivos, adicionando os números "2", "3" e assim por diante, para usos subsequentes. Ao importar novamente o WSDL, vários tipos de contrato de mensagem são criados e são idênticos, exceto seus nomes.  
   
 ## <a name="soap-encoding-considerations"></a>Considerações de codificação de SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]permite que você use o SOAP herdado codificação de estilo de XML, no entanto, seu uso não é recomendável. Ao usar esse estilo (definindo o `Use` propriedade `Encoded` no <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> aplicados ao contrato de serviço), as seguintes considerações adicionais se aplicam:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que você use o SOAP herdado codificação de estilo de XML, no entanto, seu uso não é recomendável. Ao usar esse estilo (definindo o `Use` propriedade `Encoded` no <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> aplicados ao contrato de serviço), as seguintes considerações adicionais se aplicam:  
   
 -   Não há suporte para os cabeçalhos de mensagem; Isso significa que o atributo <xref:System.ServiceModel.MessageHeaderAttribute> e o atributo de matriz <xref:System.ServiceModel.MessageHeaderArrayAttribute> são incompatíveis com codificação SOAP.  
   

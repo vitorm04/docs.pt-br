@@ -1,23 +1,24 @@
 ---
 title: Conceitos fundamentais de fluxo de trabalho do Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Conceitos fundamentais de fluxo de trabalho do Windows
 Desenvolvimento de fluxo de trabalho nos conceitos dos usos de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que podem ser novos a alguns desenvolvedores. Este tópico descreve alguns dos conceitos e como eles são implementados.  
@@ -62,7 +63,7 @@ Desenvolvimento de fluxo de trabalho nos conceitos dos usos de [!INCLUDE[netfx_c
  As atividades acedem para o ambiente de tempo de execução de fluxo de trabalho usando a classe derivada apropriada de <xref:System.Activities.ActivityContext> , como <xref:System.Activities.NativeActivityContext> ou <xref:System.Activities.CodeActivityContext>. Usam essa resolvendo argumentos e variáveis, agendando atividades filhos, e muitas outras para fins.  
   
 ## <a name="services"></a>Serviços  
- Fluxos de trabalho fornecem uma maneira natural de implementar e acessar serviços fracamente acoplados, usando atividades de mensagem. As atividades de mensagem são compiladas em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e são o mecanismo principal usado para obter e retirar dados de um fluxo de trabalho. Você pode composto atividades de mensagem juntos para modelar qualquer tipo de padrão de troca de mensagem você deseja. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]consulte [atividades de mensagens](../../../docs/framework/wcf/feature-details/messaging-activities.md). Os serviços de fluxo de trabalho são hospedados usando a classe de <xref:System.ServiceModel.Activities.WorkflowServiceHost> . [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Visão geral dos serviços de hospedagem de fluxo de trabalho](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Serviços de fluxo de trabalho consulte [serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Fluxos de trabalho fornecem uma maneira natural de implementar e acessar serviços fracamente acoplados, usando atividades de mensagem. As atividades de mensagem são compiladas em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e são o mecanismo principal usado para obter e retirar dados de um fluxo de trabalho. Você pode composto atividades de mensagem juntos para modelar qualquer tipo de padrão de troca de mensagem você deseja. Para obter mais informações, consulte consulte [atividades de mensagens](../../../docs/framework/wcf/feature-details/messaging-activities.md). Os serviços de fluxo de trabalho são hospedados usando a classe de <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Para obter mais informações, consulte [visão geral dos serviços de fluxo de trabalho de hospedagem](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Serviços de fluxo de trabalho consulte [serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistência, descarga, e fluxos de trabalho longos  
  O fluxo de trabalho do Windows simplifica a criação de programas reativos longos fornecendo:  

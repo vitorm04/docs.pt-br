@@ -1,24 +1,26 @@
 ---
-title: "Exemplo básico"
-ms.custom: 
+title: Exemplo básico
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f0d5c25e2b2d3dac042ef93e5a174b25ce17314
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d692b33c84f12976e2d1c263ca9d68475667c2a8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="basic-sample"></a>Exemplo básico
 Este exemplo mostra como criar um serviço detectável e como procurar e chamar um serviço detectável. Este exemplo é composto de dois projetos: serviço e cliente.  
@@ -93,7 +95,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Este exemplo usa pontos de extremidade HTTP e para executar este exemplo, as ACLs adequadas de URL deve ser adicionado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurando HTTP e HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Executando o seguinte comando em um privilégio elevado deve adicionar as ACLs corretas. Convém substituir seu domínio e nome de usuário para os argumentos a seguir se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Este exemplo usa pontos de extremidade HTTP e para executar este exemplo, as ACLs adequadas de URL deve ser adicionado. Para obter mais informações, consulte [Configurando HTTP e HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Executando o seguinte comando em um privilégio elevado deve adicionar as ACLs corretas. Convém substituir seu domínio e nome de usuário para os argumentos a seguir se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Usando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra o Basic.sln e compilar o exemplo.  
   

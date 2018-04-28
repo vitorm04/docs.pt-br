@@ -1,20 +1,17 @@
 ---
-title: "Operadores anuláveis (F#)"
-description: "Saiba mais sobre os operadores anuláveis que estão disponíveis no F # linguagem de programação."
-keywords: "visual f#, f#, programação funcional"
+title: Operadores anuláveis (F#)
+description: 'Saiba mais sobre os operadores anuláveis que estão disponíveis no F # linguagem de programação.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3108c4ac-9e13-464d-a829-084a6eba038f
-ms.openlocfilehash: b3c55dcbfd70c9bcddcc4a990b19a5b92620f822
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 37025e16768b949b51f6b9f0cff32e88da110ca8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nullable-operators"></a>Operadores anuláveis
 

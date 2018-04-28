@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>O que&#39;novo no Windows Workflow Foundation
 Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera várias paradigmas de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrando .NET 3.0 e 3.5 do .NET aplicativos de fluxo de trabalho para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/ne
 -   Novas atividades de mensagem, como, <xref:System.ServiceModel.Activities.SendContent> e <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Modelo de dados explícito de atividade  
- O [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] inclui novas opções para armazenar ou mover dados. Os dados podem ser armazenados em uma atividade usando <xref:System.Activities.Variable>. Ao mover dados dentro e fora de uma atividade, os tipos de argumento especializados são usados para determinar quais dados de direção estão movendo. Esses tipos são <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> e <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Modelo de dados do Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ O [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] inclui novas opções para armazenar ou mover dados. Os dados podem ser armazenados em uma atividade usando <xref:System.Activities.Variable>. Ao mover dados dentro e fora de uma atividade, os tipos de argumento especializados são usados para determinar quais dados de direção estão movendo. Esses tipos são <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> e <xref:System.Activities.OutArgument>. Para obter mais informações, consulte [modelo de dados do Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Hospedagem aprimorada, persistência e opções de rastreamento  
  O [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] contém os aprimoramentos de persistência como o seguinte:  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/ne
 -   Retomar um fluxo de trabalho pendente é agora gerenciado usando um objeto <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Maior capacidade de estender a experiência do WF Designer  
- O novo Designer de WF é criado no Windows Presentation Foundation (WPF) e fornece um modelo mais fácil de usar quando a nova hospedagem de Designer do WF fora do Visual Studio e também oferece mecanismos mais fácil para criação de designers de atividade personalizada. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Personalizando a experiência de Design de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ O novo Designer de WF é criado no Windows Presentation Foundation (WPF) e fornece um modelo mais fácil de usar quando a nova hospedagem de Designer do WF fora do Visual Studio e também oferece mecanismos mais fácil para criação de designers de atividade personalizada. Para obter mais informações, consulte [personalizar a experiência de Design de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

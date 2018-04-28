@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
 Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], essas listas podem ser representadas usando matrizes ou em uma variedade de outros tipos (lista genérica, genérico <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um cliente específico. Essas coleções são chamadas *liste coleções*, independentemente de seu tipo real.  
@@ -40,7 +40,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
   
  Requisitos adicionais em tipos de coleção, como ter um método chamado `Add` e um construtor padrão, são discutidos em detalhes nas seções a seguir. Isso garante que os tipos de coleção podem ser serializados e desserializados. Isso significa que algumas coleções não são diretamente suportadas, como genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (porque ele não possui construtor padrão). No entanto, para obter informações sobre como contornar essas restrições, consulte a seção "Usando coleção Interface tipos e coleções somente leitura", mais adiante neste tópico.  
   
- Os tipos contidos em coleções devem ser tipos de contrato de dados ou ser serializável. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Os tipos contidos em coleções devem ser tipos de contrato de dados ou ser serializável. Para obter mais informações, consulte [tipos suportados pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] o que é e o que não é considerado uma coleção válida, bem como sobre como as coleções são serializadas, consulte as informações sobre serializando coleções na seção "Regras de coleta avançados" deste tópico.  
   
@@ -152,7 +152,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] a seção "Regras de coleta avançada" neste tópico.  
+ Para obter mais informações, consulte a seção "Regras de coleta avançados" mais adiante neste tópico.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Personalizando o nome de elemento de repetição em coleções de lista  
  Lista de coleções contêm as entradas repetidas. Normalmente, cada entrada de repetição é representada como um elemento nomeado de acordo com o nome do contrato de dados do tipo contido na coleção.  

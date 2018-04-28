@@ -1,20 +1,17 @@
 ---
 title: Funções (F#)
 description: 'Saiba mais sobre funções em F # e como F # oferece suporte a construções de programação funcionais comuns.'
-keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions"></a>Funções
 
@@ -115,7 +112,7 @@ Em seguida, você forneceria o argumento adicional, conforme o necessário, para
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>Funções Recursivas
-As *funções recursivas* são funções que chamam a si próprias. Eles exigem que você especifique a palavra-chave **rec** logo após a palavra-chave **let**. Invoque a função recursiva de dentro do corpo da função, exatamente como você invocaria qualquer chamada de função. A função recursiva a seguir calcula o  *n* th Fibonacci número. A sequência numérica de Fibonacci é conhecida desde a antiguidade e é uma sequência na qual cada número sucessivo é a soma dos dois números anteriores na sequência.
+As *funções recursivas* são funções que chamam a si próprias. Eles exigem que você especifique a palavra-chave **rec** logo após a palavra-chave **let**. Invoque a função recursiva de dentro do corpo da função, exatamente como você invocaria qualquer chamada de função. A função recursiva a seguir calcula o *enésimo* número de Fibonacci. A sequência numérica de Fibonacci é conhecida desde a antiguidade e é uma sequência na qual cada número sucessivo é a soma dos dois números anteriores na sequência.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

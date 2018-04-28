@@ -1,27 +1,29 @@
 ---
-title: "Elevação de privilégio"
-ms.custom: 
+title: Elevação de privilégio
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="elevation-of-privilege"></a>Elevação de privilégio
 *Elevação de privilégio* os resultados de conceder autorização um invasor permissões além desses inicialmente concedida. Por exemplo, um invasor com um conjunto de privilégios de permissões "somente leitura" de alguma forma eleva o conjunto para incluir "leitura e gravação."  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Confiável STS deve assinar as declarações de Token SAML  
  Um token de segurança asserções Markup Language (SAML) é um token XML genérico que é o tipo padrão para tokens emitidos. Um token SAML pode ser criado por um Token de segurança Service (STS) que o final do serviço Web confia em uma troca típica. Tokens SAML contêm declarações em declarações. Um invasor pode copiar as declarações de um token válido, crie um novo token SAML e assiná-lo com um emissor diferente. A intenção é determinar se o servidor está sendo validada emissores e, se não utilizar o ponto fraco para criar tokens SAML que permitem privilégios além desses pretendido por um STS confiáveis.  
   
- O <xref:System.IdentityModel.Tokens.SamlAssertion> classe verifica a assinatura digital contida em um token SAML e o padrão <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> exige que os tokens SAML seja assinado por um certificado x. 509 que é válida quando o <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> classe é definida como <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust`modo autônomo é insuficiente para determinar se o emissor do token SAML é confiável. Serviços que exigem um modelo mais granular de confiança pode usam políticas de autorização e imposição para verificar o emissor dos conjuntos de declarações produzido pela autenticação do token emitida ou use as configurações de validação de x. 509 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir o conjunto de permitido certificados de assinatura. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) e [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ O <xref:System.IdentityModel.Tokens.SamlAssertion> classe verifica a assinatura digital contida em um token SAML e o padrão <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> exige que os tokens SAML seja assinado por um certificado x. 509 que é válida quando o <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> classe é definida como <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` modo autônomo é insuficiente para determinar se o emissor do token SAML é confiável. Serviços que exigem um modelo mais granular de confiança pode usam políticas de autorização e imposição para verificar o emissor dos conjuntos de declarações produzido pela autenticação do token emitida ou use as configurações de validação de x. 509 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir o conjunto de permitido certificados de assinatura. Para obter mais informações, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) e [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Alternância de identidade sem um contexto de segurança  
  O seguinte se aplica somente ao [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -57,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 >  Ao usar o `BeginOpen` método, as credenciais capturadas não podem ser garantidas para ser as credenciais do processo que chama o método.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Token Caches permitem reprodução usando dados obsoletos  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa a autoridade de segurança local (LSA) `LogonUser` função para autenticar usuários por nome de usuário e senha. Porque a função de logon é uma operação dispendiosa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite tokens em cache que representam usuários autenticados para aumentar o desempenho. O mecanismo de cache salva os resultados de `LogonUser` para usos subsequentes. Esse mecanismo é desabilitado por padrão. Para habilitá-lo, defina o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propriedade `true`, ou use o `cacheLogonTokens` atributo do [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa a autoridade de segurança local (LSA) `LogonUser` função para autenticar usuários por nome de usuário e senha. Porque a função de logon é uma operação dispendiosa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite tokens em cache que representam usuários autenticados para aumentar o desempenho. O mecanismo de cache salva os resultados de `LogonUser` para usos subsequentes. Esse mecanismo é desabilitado por padrão. Para habilitá-lo, defina o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propriedade `true`, ou use o `cacheLogonTokens` atributo do [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
  Você pode definir um tempo de vida (TTL) para os tokens em cache, definindo o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> propriedade para um <xref:System.TimeSpan>, ou use o `cachedLogonTokenLifetime` atributo do `userNameAuthentication` elemento; o padrão é 15 minutos. Observe que, enquanto um token é armazenado em cache, qualquer cliente que apresenta o mesmo nome de usuário e senha pode usar o token, mesmo se a conta de usuário é excluída do Windows ou se a sua senha foi alterada. Até que a TTL expirar e o token é removido do cache, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que o usuário (possivelmente mal-intencionados) autenticar.  
   

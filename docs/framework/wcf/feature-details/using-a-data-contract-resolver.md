@@ -1,27 +1,29 @@
 ---
 title: Utilizando um resolvedor de contrato de dados
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilizando um resolvedor de contrato de dados
-Um resolvedor de contrato de dados permite que você configure tipos conhecidos dinamicamente. Tipos conhecidos são necessários ao serializar ou desserializar um tipo que não se espera por um contrato de dados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos normalmente são especificados estaticamente. Isso significa que você precisa saber os possíveis tipos de uma operação pode ser exibida ao implementar a operação. Há cenários em que isso não é verdadeiro e ser capaz de especificar tipos conhecidos dinamicamente é importante.  
+Um resolvedor de contrato de dados permite que você configure tipos conhecidos dinamicamente. Tipos conhecidos são necessários ao serializar ou desserializar um tipo que não se espera por um contrato de dados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos normalmente são especificados estaticamente. Isso significa que você precisa saber os possíveis tipos de uma operação pode ser exibida ao implementar a operação. Há cenários em que isso não é verdadeiro e ser capaz de especificar tipos conhecidos dinamicamente é importante.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Criação de um resolvedor de contrato de dados  
  A criação de um resolvedor de contrato de dados envolve a implementação de dois métodos, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> e <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Esses dois métodos implementam retornos de chamada que são usados durante a serialização e desserialização, respectivamente. O <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> método é chamado durante a serialização e usa um tipo de contrato de dados e mapeia para um `xsi:type` nome e namespace. O <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> método é chamado durante a desserialização e usa um `xsi:type` nome e namespace e resolve para um tipo de contrato de dados. Esses dois métodos têm um `knownTypeResolver` parâmetro que pode ser usado para usar o padrão conhecido de resolvedor de tipo em sua implementação.  
@@ -96,7 +98,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Você pode especificar um resolvedor de contrato de dados declarativamente implementando um atributo que pode ser aplicado a um serviço.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]o [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) exemplo. Este exemplo implementa um atributo chamado "KnownAssembly" que adiciona um resolvedor de contrato de dados personalizados para o comportamento do serviço.  
+ Você pode especificar um resolvedor de contrato de dados declarativamente implementando um atributo que pode ser aplicado a um serviço.  Para obter mais informações, consulte o [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) exemplo. Este exemplo implementa um atributo chamado "KnownAssembly" que adiciona um resolvedor de contrato de dados personalizados para o comportamento do serviço.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  

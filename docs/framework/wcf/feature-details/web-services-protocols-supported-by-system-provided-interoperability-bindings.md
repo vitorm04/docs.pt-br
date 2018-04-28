@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Associações de interoperabilidade fornecidas pelo sistema oferece suporte para protocolos de serviços Web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é criado para interoperar com serviços da Web que oferecem suporte a um conjunto de especificações conhecido como especificações de serviços da Web. Para simplificar a configuração de serviço para práticas recomendadas de interoperabilidade, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] apresenta três associações fornecidas pelo sistema interoperáveis: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, e <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Para interoperabilidade com a organização para os padrões de avanço de Structured Information Standards (OASIS), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui uma associação fornecida pelo sistema interoperável: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Para publicação de metadados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui duas associações fornecidas pelo sistema interoperáveis: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) e [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Este tópico lista as especificações que dão suporte a associações de interoperabilidade fornecidas pelo sistema.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/26/2018
 |Categoria|Protocolo|Especificação e uso|  
 |--------------|--------------|-----------------------------|  
 |Mensagens|SOAP 1.2|[Livro de instruções](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo a associação HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|Mensagens|WS-Addressing 2005/08|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> O `wsHttpBinding`, `ws2007HttpBinding`, e `wsDualHttpBinding` implementar a recomendação de WS-Addressing World Wide Web Consortium (W3C) para habilitar o sistema de mensagens assíncronas, correlação de mensagem e mecanismos de transporte com neutralidade de endereçamento.<br /><br /> O WCF não dá suporte à criptografia de cabeçalhos WS-Addressing Embora isso é permitido por WS-* especificações.|  
+|Mensagens|08/2005 WS-Addressing.|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> O `wsHttpBinding`, `ws2007HttpBinding`, e `wsDualHttpBinding` implementar a recomendação de WS-Addressing World Wide Web Consortium (W3C) para habilitar o sistema de mensagens assíncronas, correlação de mensagem e mecanismos de transporte com neutralidade de endereçamento.<br /><br /> O WCF não dá suporte à criptografia de cabeçalhos WS-Addressing Embora isso é permitido por WS-* especificações.|  
 |Mensagens|WS-Addressing 1.0 - metadados|[WS-Addressing 1.0 metadados](http://www.w3.org/2007/05/addressing/metadata) suporte para esse protocolo é habilitado ao definir a versão de política no comportamento ServiceMetadata - com policyversion definido como 1.2 (o padrão), a descrição de wsdl é compatível com o WS-Addressing wsdl, com policyversion definido para 1.5, a descrição de wsdl é compatível com metadados de ws-addressing.<br /><br /> O WCF não dá suporte à criptografia de cabeçalhos WS-Addressing Embora isso é permitido por WS-* especificações.|  
 |Segurança|Segurança de mensagens SOAP do WSS 1.0|[Segurança de mensagens SOAP do WSS 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Usado quando o `securityMode` atributo é definido como "wsSecurityOverHttp" (padrão) e os parâmetros são configurados usando um `wsSecurity` elemento filho.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |Segurança|Segurança de mensagem do WSS SOAP UsernameToken Profile 1.1|[Segurança de mensagem do WSS SOAP UsernameToken perfil 1.0](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Usado quando o `wsSecurity` do elemento `authenticationMode` atributo é definido como "Username".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 03/26/2018
 |Segurança|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Usado por WS-SecureConversation (veja acima).|  
 |Mensagens confiáveis|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Use quando a associação está configurada para usar `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |Transações|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> Usado para comunicação entre os gerenciadores de transações. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e serviços sempre usam gerenciadores de transações locais.|  
-|Transações|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Usar o fluxo do contexto de transação quando o `flowTransactions` atributo é definido como "Permitido" ou "Necessário".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|Transações|Coordenação WS|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Usar o fluxo do contexto de transação quando o `flowTransactions` atributo é definido como "Permitido" ou "Necessário".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding e ws2007FederationHttpBinding  
  O [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementos são introduzidos para fornecer suporte para cenários federados, onde um terceiro parte emite um token usado para autenticar um cliente. Além de protocolos usados pelo `wsHttpBinding`, `wsFederationHttpBinding` aproveita:  
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/26/2018
 </wsFederationHttpBinding>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federação](../../../../docs/framework/wcf/feature-details/federation.md) .  
+ Para obter mais informações, consulte [federação](../../../../docs/framework/wcf/feature-details/federation.md) .  
   
 ## <a name="system-provided-metadata-bindings"></a>Associações de metadados fornecidos pelo sistema  
  As tabelas a seguir descrevem os protocolos suportados pelas associações de metadados de interoperabilidade fornecidas pelo sistema expostas pelo <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> classe.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 03/26/2018
 |--------------|--------------|-----------------------------|  
 |Transporte|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |Mensagens|SOAP 1.2|[Livro de instruções](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo a associação HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|Mensagens|WS-Addressing 2005/08|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95330)|  
+|Mensagens|08/2005 WS-Addressing.|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Metadados|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa o WS-MetadataExchange para recuperar o esquema XML, WSDL e WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
@@ -118,7 +118,7 @@ ms.lasthandoff: 03/26/2018
 |--------------|--------------|-----------------------------|  
 |Transporte|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Segurança de transporte está habilitada.|  
 |Mensagens|SOAP 1.2|[Livro de instruções](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Estrutura de mensagens](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (incluindo a associação HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|Mensagens|WS-Addressing 2005/08|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95330)|  
+|Mensagens|08/2005 WS-Addressing.|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Metadados|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa o WS-MetadataExchange para recuperar o esquema XML, WSDL e WS-Policy.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,23 +1,24 @@
 ---
-title: "Práticas recomendadas de persistência"
-ms.custom: 
+title: Práticas recomendadas de persistência
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Práticas recomendadas de persistência
 Este documento aborda as práticas recomendadas para o design e a configuração de fluxo de trabalho relacionados à persistência de fluxo de trabalho.  
@@ -31,7 +32,7 @@ Este documento aborda as práticas recomendadas para o design e a configuração
   
  Se seu fluxo de trabalho é muito ocupado por tempo, recomendamos que você persistir a instância de fluxo de trabalho regularmente ao longo do seu período ocupado. Você pode fazer isso adicionando atividades de <xref:System.Activities.Statements.Persist> durante a sequência de atividades que mantém a instância de fluxo de trabalho ocupado. Assim, reciclagem do domínio de aplicativo, falhas host, ou falhas do computador não causam o sistema a ser rolado de volta para o início do período ocupado. Esteja ciente que adicionar atividades de <xref:System.Activities.Statements.Persist> ao fluxo de trabalho pode levar a uma degradação de desempenho.  
   
- A tela de aplicativo Windows Server simplifica bastante a configuração e uso de persistência. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Persistência de malha de aplicativos do Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ A tela de aplicativo Windows Server simplifica bastante a configuração e uso de persistência. Para obter mais informações, consulte [persistência de malha de aplicativo do Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuração de parâmetros de escalabilidade  
  Os requisitos de escalabilidade e desempenho determinam as configurações dos seguintes parâmetros:  

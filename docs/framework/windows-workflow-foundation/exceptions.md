@@ -1,23 +1,24 @@
 ---
-title: "Exceções"
-ms.custom: 
+title: Exceções
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Exceções
 Fluxos de trabalho podem usar a atividade de <xref:System.Activities.Statements.TryCatch> para manipular exceções que são geradas durante a execução de um fluxo de trabalho. Essas exceções podem ser tratados ou que podem ser lançadas usando a atividade de <xref:System.Activities.Statements.Rethrow> . As atividades na seção de <xref:System.Activities.Statements.TryCatch.Finally%2A> são executadas quando a seção de <xref:System.Activities.Statements.TryCatch.Try%2A> ou a seção de <xref:System.Activities.Statements.TryCatch.Catches%2A> concluírem. Fluxos de trabalho hospedados por um <xref:System.Activities.WorkflowApplication> instância também pode usar o <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador de eventos para lidar com exceções não manipuladas por um <xref:System.Activities.Statements.TryCatch> atividade.  
@@ -58,7 +59,7 @@ Fluxos de trabalho podem usar a atividade de <xref:System.Activities.Statements.
 -   A exceção não é tratada por <xref:System.Activities.Statements.TryCatch>de alto nível, libera a raiz de trabalho, e o trabalho são configurados para cancelar em vez de finalizam ou exibe. Fluxos de trabalho usando <xref:System.Activities.WorkflowApplication> hospedados podem configurar esse manipulando <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> e retornando <xref:System.Activities.UnhandledExceptionAction.Cancel>. Um exemplo de manipular <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é fornecido anteriormente neste tópico. Os serviços de fluxo de trabalho podem configurar isso usando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> e especificando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Para obter um exemplo de configuração <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, consulte [extensibilidade de Host do serviço de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Manipulação de exceção com a compensação  
- A diferença entre a manipulação de exceção e a compensação é que a manipulação de exceção ocorre durante a execução de uma atividade. A compensação ocorre após uma atividade terminou com êxito. Manipulação de exceção fornece uma oportunidade para limpar após a atividade gerencie a exceção, enquanto a compensação fornece um mecanismo por que o trabalho com êxito concluído de uma atividade anteriormente pode ser concluída desfeito. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Compensação](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ A diferença entre a manipulação de exceção e a compensação é que a manipulação de exceção ocorre durante a execução de uma atividade. A compensação ocorre após uma atividade terminou com êxito. Manipulação de exceção fornece uma oportunidade para limpar após a atividade gerencie a exceção, enquanto a compensação fornece um mecanismo por que o trabalho com êxito concluído de uma atividade anteriormente pode ser concluída desfeito. Para obter mais informações, consulte [compensação](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Activities.Statements.TryCatch>  

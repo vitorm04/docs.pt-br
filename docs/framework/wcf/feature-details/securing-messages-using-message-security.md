@@ -1,24 +1,26 @@
 ---
-title: "Protegendo as mensagens com a segurança de mensagens"
-ms.custom: 
+title: Protegendo as mensagens com a segurança de mensagens
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
 Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança da mensagem ao usar <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -36,7 +38,7 @@ Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seg
   
  O conceito de chave de segurança de mensagem é que o cliente protege a mensagem para o aplicativo de recebimento (serviço), ao contrário de segurança de transporte em que o cliente protege a mensagem para a fila de destino. Como tal, MSMQ não desempenha nenhuma parte ao proteger o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem usando a segurança de mensagem.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]segurança de mensagem adiciona cabeçalhos de segurança para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem que se integram infra-estruturas de segurança existentes, como um certificado ou o protocolo Kerberos.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança de mensagem adiciona cabeçalhos de segurança para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem que se integram infra-estruturas de segurança existentes, como um certificado ou o protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial de mensagem  
  Usando a segurança de mensagem, o serviço e o cliente poderá apresentar credenciais para autenticar entre si. Você pode selecionar a segurança de mensagem, definindo o <xref:System.ServiceModel.NetMsmqBinding.Security%2A> modo para `Message` ou `Both` (ou seja, use a segurança de transporte e segurança de mensagem).  
@@ -52,7 +54,7 @@ Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seg
   
  Devido à natureza desconectada de filas, o cliente e o serviço podem não estar online ao mesmo tempo. Como tal, o cliente e o serviço precisam trocar certificados de fora da banda. Em particular, o cliente, em virtude mantendo o certificado do serviço (que pode ser vinculado a uma autoridade de certificação) em seu repositório confiável, deve confiar que ele está se comunicando com o serviço correto. Para autenticar o cliente, o serviço usa o certificado x. 509 anexado com uma mensagem que faz a correspondência com o certificado em seu repositório para verificar a autenticidade do cliente. Novamente, o certificado deve ser ligado a uma autoridade de certificação.  
   
- Em um computador executando o Windows, certificados são mantidos em vários tipos de armazenamentos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]os repositórios diferentes, consulte [repositórios de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Em um computador executando o Windows, certificados são mantidos em vários tipos de armazenamentos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] os repositórios diferentes, consulte [repositórios de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Tipo de credencial de mensagem do Windows usa o protocolo Kerberos.  
@@ -63,7 +65,7 @@ Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seg
   
  Observe que, ao usar esse tipo de credencial, o serviço deve ser executado sob a conta de serviço.  
   
- O protocolo Kerberos é usado por padrão, ao escolher a credencial da mensagem. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Explorar Kerberos, o protocolo para distribuídas segurança no Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ O protocolo Kerberos é usado por padrão, ao escolher a credencial da mensagem. Para obter mais informações, consulte [explorando Kerberos, o protocolo de segurança distribuído no Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Senha do nome de usuário  
  Usando essa propriedade, o cliente pode autenticar para o servidor usando uma senha de nome de usuário no cabeçalho de segurança da mensagem.  

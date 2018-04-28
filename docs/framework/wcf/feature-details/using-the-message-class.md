@@ -1,27 +1,29 @@
 ---
 title: Usando a classe de mensagens
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Usando a classe de mensagens
 O <xref:System.ServiceModel.Channels.Message> classe é fundamental para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Toda a comunicação entre clientes e serviços, por fim, resulta em <xref:System.ServiceModel.Channels.Message> instâncias que estão sendo enviadas e recebidas.  
@@ -76,7 +78,7 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para [!INCLU
 ## <a name="creating-messages-with-bodywriter"></a>Criando mensagens com BodyWriter  
  Um `CreateMessage` sobrecarregar leva um `BodyWriter` instância para descrever o corpo da mensagem. A `BodyWriter` é uma classe abstrata que pode ser derivada para personalizar como os corpos de mensagens são criados. Você pode criar seus próprios `BodyWriter` derivado da classe para descrever os corpos de mensagens de forma personalizada. Você deve substituir o `BodyWriter.OnWriteBodyContents` método que utiliza um <xref:System.Xml.XmlDictionaryWriter>; esse método é responsável por gravar o corpo.  
   
- Gravadores de corpo podem ser armazenados em buffer ou sem buffer (Streaming). Gravadores de buffer de corpo podem gravar seu conteúdo várias vezes, enquanto aquelas em fluxo podem gravar o conteúdo apenas uma vez. O `IsBuffered` propriedade indica se um gravador de corpo em buffer ou não. Você pode definir isso para o gravador de corpo chamando protegido `BodyWriter` construtor que usa um `isBuffered` parâmetro booliano. Gravadores de corpo suportam a criação de um gravador de buffer de corpo de um gravador de corpo não armazenado em buffer. Você pode substituir o `OnCreateBufferedCopy` método para personalizar esse processo. Por padrão, um buffer na memória que contém o XML retornado por `OnWriteBodyContents` é usado. `OnCreateBufferedCopy`leva um `maxBufferSize` parâmetro inteiro; se você substituir esse método, você não deve criar buffers maior do que esse tamanho máximo.  
+ Gravadores de corpo podem ser armazenados em buffer ou sem buffer (Streaming). Gravadores de buffer de corpo podem gravar seu conteúdo várias vezes, enquanto aquelas em fluxo podem gravar o conteúdo apenas uma vez. O `IsBuffered` propriedade indica se um gravador de corpo em buffer ou não. Você pode definir isso para o gravador de corpo chamando protegido `BodyWriter` construtor que usa um `isBuffered` parâmetro booliano. Gravadores de corpo suportam a criação de um gravador de buffer de corpo de um gravador de corpo não armazenado em buffer. Você pode substituir o `OnCreateBufferedCopy` método para personalizar esse processo. Por padrão, um buffer na memória que contém o XML retornado por `OnWriteBodyContents` é usado. `OnCreateBufferedCopy` leva um `maxBufferSize` parâmetro inteiro; se você substituir esse método, você não deve criar buffers maior do que esse tamanho máximo.  
   
  O `BodyWriter` classe fornece a `WriteBodyContents` e `CreateBufferedCopy` métodos, que são essencialmente fino wrappers em torno `OnWriteBodyContents` e `OnCreateBufferedCopy` métodos, respectivamente. Esses métodos fazem a verificação de estado para garantir que um gravador de corpo não armazenado em buffer não é acessado mais de uma vez. Esses métodos são chamados diretamente somente durante a criação personalizada `Message` derivado classes com base em `BodyWriters`.  
   
@@ -107,9 +109,9 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para [!INCLU
   
  Dois métodos auxiliares adicionais gravar determinadas marcas de elemento de início SOAP. Esses métodos não acessam o corpo da mensagem e portanto não alterar o estado da mensagem. Elas incluem:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A>grava o elemento de corpo de início, por exemplo, `<soap:Body>`.  
+-   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> grava o elemento de corpo de início, por exemplo, `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A>grava o elemento de envelope inicial, por exemplo, `<soap:Envelope>`.  
+-   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> grava o elemento de envelope inicial, por exemplo, `<soap:Envelope>`.  
   
  Para gravar a extremidade correspondente marcas de elemento, chamar `WriteEndElement` no gravador de XML correspondente. Esses métodos raramente são chamados diretamente.  
   
@@ -162,7 +164,7 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para [!INCLU
  Você pode usar o <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> método para acessar um determinado atributo no elemento body wrapper (por exemplo, `<soap:Body>`) identificada por um determinado nome e namespace. Se um atributo não for encontrado, `null` será retornado. Esse método pode ser chamado apenas quando o `Message` está no estado criado (quando o corpo da mensagem ainda não tiver sido acessado).  
   
 ## <a name="working-with-headers"></a>Trabalhando com cabeçalhos  
- Um `Message` pode conter qualquer número de fragmentos de XML nomeados chamado *cabeçalhos*. Cada fragmento normalmente é mapeado para um cabeçalho SOAP. Cabeçalhos são acessados por meio de `Headers` propriedade do tipo <xref:System.ServiceModel.Channels.MessageHeaders>. <xref:System.ServiceModel.Channels.MessageHeaders>é uma coleção de <xref:System.ServiceModel.Channels.MessageHeaderInfo> objetos e os cabeçalhos individuais podem ser acessados por meio de seu <xref:System.Collections.IEnumerable> interface ou por meio do seu indexador. Por exemplo, o código a seguir lista os nomes de todos os cabeçalhos em uma `Message`.  
+ Um `Message` pode conter qualquer número de fragmentos de XML nomeados chamado *cabeçalhos*. Cada fragmento normalmente é mapeado para um cabeçalho SOAP. Cabeçalhos são acessados por meio de `Headers` propriedade do tipo <xref:System.ServiceModel.Channels.MessageHeaders>. <xref:System.ServiceModel.Channels.MessageHeaders> é uma coleção de <xref:System.ServiceModel.Channels.MessageHeaderInfo> objetos e os cabeçalhos individuais podem ser acessados por meio de seu <xref:System.Collections.IEnumerable> interface ou por meio do seu indexador. Por exemplo, o código a seguir lista os nomes de todos os cabeçalhos em uma `Message`.  
   
  [!code-csharp[C_UsingTheMessageClass#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#8)]
  [!code-vb[C_UsingTheMessageClass#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#8)]  
@@ -172,7 +174,7 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para [!INCLU
   
  Recuperar um cabeçalho específico usando o <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> método. Esse método usa o nome e o namespace do cabeçalho para localizar e retorna seu índice. Se o cabeçalho ocorre mais de uma vez, uma exceção será lançada. Se o cabeçalho não for encontrado, ele retornará -1.  
   
- No modelo de cabeçalho de SOAP, os cabeçalhos podem ter um `Actor` valor que especifica o destinatário pretendido do cabeçalho. O mais básico `FindHeader` sobrecarga procura somente cabeçalhos destinados para o destinatário final da mensagem. No entanto, outra sobrecarga permite que você especifique qual `Actor` valores são incluídos na pesquisa. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a especificação de SOAP.  
+ No modelo de cabeçalho de SOAP, os cabeçalhos podem ter um `Actor` valor que especifica o destinatário pretendido do cabeçalho. O mais básico `FindHeader` sobrecarga procura somente cabeçalhos destinados para o destinatário final da mensagem. No entanto, outra sobrecarga permite que você especifique qual `Actor` valores são incluídos na pesquisa. Para obter mais informações, consulte a especificação de SOAP.  
   
  Um <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> método é fornecido para copiar os cabeçalhos de uma <xref:System.ServiceModel.Channels.MessageHeaders> coleção para uma matriz de <xref:System.ServiceModel.Channels.MessageHeaderInfo> objetos.  
   
@@ -187,7 +189,7 @@ O <xref:System.ServiceModel.Channels.Message> classe é fundamental para [!INCLU
 ### <a name="defining-the-message-body-contents"></a>Definir o conteúdo do corpo de mensagem  
  Existem três principais técnicas para acessar dados em um corpo de mensagem: gravar, ler e copiá-la para um buffer. Essas operações resultam no <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>, <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents%2A>, e <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> métodos que está sendo chamados, respectivamente, em sua classe derivada de `Message`. A base de `Message` classe garante que apenas um desses métodos é chamado para cada `Message` instância, e que ele não é chamado mais de uma vez. A classe base também garante que os métodos não são chamados em uma mensagem fechada. Não é necessário para controlar o estado de mensagem em sua implementação.  
   
- <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>é um método abstrato e deve ser implementado. A maneira mais simples para definir o conteúdo do corpo da mensagem é escrever usando esse método. Por exemplo, a seguinte mensagem de erro contém números aleatórios 100.000 de 1 a 20.  
+ <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A> é um método abstrato e deve ser implementado. A maneira mais simples para definir o conteúdo do corpo da mensagem é escrever usando esse método. Por exemplo, a seguinte mensagem de erro contém números aleatórios 100.000 de 1 a 20.  
   
  [!code-csharp[C_UsingTheMessageClass#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#9)]
  [!code-vb[C_UsingTheMessageClass#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#9)]  

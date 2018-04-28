@@ -1,20 +1,17 @@
 ---
 title: Identificadores de linha, arquivo e demarcador de origem (F#)
-description: "Saiba como usar o F # identificador valores internos que permitem que você acesse o número de linha de origem, o diretório e o nome do arquivo no seu código."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como usar o F # identificador valores internos que permitem que você acesse o número de linha de origem, o diretório e o nome do arquivo no seu código.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4cfe7439-275c-4d08-980b-784e240bbf29
-ms.openlocfilehash: 44cc0914226c120f2b877ce3decd25caa6817eec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 18a26f0aa0a0c1f9c0b448ec46eaebd540391324
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Identificadores de linha, arquivo e demarcador de origem
 

@@ -1,12 +1,13 @@
 ---
 title: Como configurar uma porta com um certificado SSL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como configurar uma porta com um certificado SSL
-Ao criar um serviço auto-hospedado do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com a classe <xref:System.ServiceModel.WSHttpBinding> que usa segurança de transporte, você também deve configurar uma porta com um certificado X.509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Ao criar um serviço auto-hospedado do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com a classe <xref:System.ServiceModel.WSHttpBinding> que usa segurança de transporte, você também deve configurar uma porta com um certificado X.509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Para configurar uma porta, a ferramenta usada depende do sistema operacional que está sendo executado no computador.  
   
- Se estiver executando o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use a ferramenta HttpCfg.exe. Com o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] essa ferramenta é instalada. Com [!INCLUDE[wxp](../../../../includes/wxp-md.md)], você pode baixar a ferramenta em [ferramentas de suporte do Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Visão geral de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). O [documentação de ferramentas de suporte do Windows](http://go.microsoft.com/fwlink/?LinkId=94840) explica a sintaxe para a ferramenta Httpcfg.exe.  
+ Se estiver executando o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use a ferramenta HttpCfg.exe. Com o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] essa ferramenta é instalada. Com [!INCLUDE[wxp](../../../../includes/wxp-md.md)], você pode baixar a ferramenta em [ferramentas de suporte do Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Para obter mais informações, consulte [visão geral de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). O [documentação de ferramentas de suporte do Windows](http://go.microsoft.com/fwlink/?LinkId=94840) explica a sintaxe para a ferramenta Httpcfg.exe.  
   
  Se estiver executando o [!INCLUDE[wv](../../../../includes/wv-md.md)], use a ferramenta Netsh.exe que já está instalada.  
   
@@ -66,9 +68,9 @@ Ao criar um serviço auto-hospedado do [!INCLUDE[indigo1](../../../../includes/i
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Para obter a impressão digital de um certificado  
   
-1.  Use o snap-in do MMC dos Certificados para localizar um certificado X.509 cuja finalidade seja a autenticação de cliente. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Use o snap-in do MMC dos Certificados para localizar um certificado X.509 cuja finalidade seja a autenticação de cliente. Para obter mais informações, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Para acessar a impressão digital do certificado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Para acessar a impressão digital do certificado. Para obter mais informações, consulte [como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Copie a impressão digital do certificado em um editor de texto, como o Bloco de Notas.  
   

@@ -1,20 +1,17 @@
 ---
 title: Propriedades (F#)
-description: "Saiba mais sobre F # propriedades, que são membros que representam os valores associados a um objeto."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba mais sobre F # propriedades, que são membros que representam os valores associados a um objeto.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>Propriedades
 
@@ -74,7 +71,7 @@ Para propriedades de leitura/gravação, que têm ambos um `get` e `set` método
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Privada que espera que os dados para as propriedades são chamados de valores *armazenamentos de backup*. Para fazer com que o compilador cria automaticamente o repositório de backup, use as palavras-chave `member val`, omita o identificador interno e forneça uma expressão para inicializar a propriedade. Se a propriedade é ser mutável, incluir `with get, set`. Por exemplo, o seguinte tipo de classe inclui duas propriedades implementadas automaticamente. `Property1`é somente leitura e é inicializado para o argumento fornecido para o construtor primário, e `Property2` é uma propriedade definível inicializada para uma cadeia de caracteres vazia:
+Privada que espera que os dados para as propriedades são chamados de valores *armazenamentos de backup*. Para fazer com que o compilador cria automaticamente o repositório de backup, use as palavras-chave `member val`, omita o identificador interno e forneça uma expressão para inicializar a propriedade. Se a propriedade é ser mutável, incluir `with get, set`. Por exemplo, o seguinte tipo de classe inclui duas propriedades implementadas automaticamente. `Property1` é somente leitura e é inicializado para o argumento fornecido para o construtor primário, e `Property2` é uma propriedade definível inicializada para uma cadeia de caracteres vazia:
 
 ```fsharp
 type MyClass(property1 : int) =

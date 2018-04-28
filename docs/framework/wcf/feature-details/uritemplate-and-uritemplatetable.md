@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate and UriTemplateTable
 Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos seus serviços de responder às URIs. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] adicionadas duas novas classes para oferecer aos desenvolvedores controle sobre suas URIs. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Essas classes também podem ser usadas em seus próprios, permitindo que desenvolvedores para tirar proveito dos modelos e o mecanismo de mapeamento de URI sem implementar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
@@ -32,8 +32,8 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 |----------|--------------|  
 |Previsão nacional|clima/nacionais|  
 |Previsão de estado|clima / {estado}|  
-|Previsão de cidade|weather/{state}/{city}|  
-|Previsão de atividade|weather/{state}/{city}/{activity}|  
+|Previsão de cidade|clima / {estado} / {cidade}|  
+|Previsão de atividade|clima / {estado} / {cidade} / {atividade}|  
   
  Esta tabela descreve um conjunto de URIs estruturalmente semelhantes. Cada entrada é um modelo de URI. Os segmentos entre chaves descrevem variáveis. Os segmentos não entre chaves descrevem cadeias de caracteres literais. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] classes de modelo permitir que os desenvolvedores levar um URI de entrada, por exemplo, "/ clima/wa/seattle/ciclo" e a correspondência em um modelo que descreve, "/weather/ {estado} / {cidade} / {atividade}".  
   
@@ -51,7 +51,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
  O <xref:System.UriTemplate.PathSegmentVariableNames%2A> propriedade contém uma coleção de nomes das variáveis usadas em segmentos de caminho na cadeia de caracteres de modelo.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> leva um <xref:System.UriTemplate> como um parâmetro e retorna um valor booleano que especifica se os dois modelos são equivalentes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Equivalência de modelo seção mais adiante neste tópico.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> leva um <xref:System.UriTemplate> como um parâmetro e retorna um valor booleano que especifica se os dois modelos são equivalentes. Para obter mais informações, consulte a seção equivalência de modelo, mais adiante neste tópico.  
   
  <xref:System.UriTemplate> foi projetado para trabalhar com qualquer esquema URI que siga a gramática do URI de HTTP. A seguir estão exemplos de esquemas URI com suporte.  
   
@@ -61,7 +61,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 -   net.tcp://  
   
--   net.pipe://  
+-   NET.pipe://  
   
 -   sb://  
   
@@ -88,27 +88,27 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 -   ""  
   
--   "/shoe"  
+-   "/ sapato"  
   
 -   "sapato / *"  
   
--   "{shoe}/boat"  
+-   "{sapato} / barco"  
   
--   "{shoe}/{boat}/bed/{quilt}"  
+-   "{sapato} / {barco} /bed/ {quilt}"  
   
 -   "sapato / {barco}"  
   
--   "shoe/{boat}/*"  
+-   "sapato / {barco} / *"  
   
--   "shoe/boat?x=2"  
+-   "sapato/barco? x = 2"  
   
--   "shoe/{boat}?x={bed}"  
+-   "sapato / {barco}? x = {cama}"  
   
--   "shoe/{boat}?x={bed}&y=band"  
+-   "sapato / {barco}? x = {cama} & y = banda"  
   
 -   "?x={shoe}"  
   
--   "shoe?x=3&y={var}  
+-   "sapato? x = y & 3 = {var}  
   
  Exemplos de cadeias de caracteres de modelo inválido:  
   
@@ -133,11 +133,11 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 -   /{filename}.{ext}/  
   
--   /{a}.{b}someLiteral{c}({d})/  
+-   / {a}. {b}someLiteral{c}({d}) /  
   
  A seguir estão exemplos de segmentos de caminho inválido.  
   
--   /{} - Variáveis devem ser nomeadas.  
+-   /{} -Variáveis devem ser nomeadas.  
   
 -   / {sapato} {barco} - variáveis devem ser separadas por um literal.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Um URI, como http://localhost:8000 / / / não coincide com o modelo listadas no código acima, porém um URI, como http://localhost:8000 / does.  
+>  Um URI, como http://localhost:8000/// não coincide com o modelo listado no código acima, porém um URI, como http://localhost:8000/ does.  
   
  O código a seguir mostra como os valores de variável padrão são manipulados durante a criação de um URI com um modelo.  
   
@@ -259,9 +259,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 ### <a name="template-equivalence"></a>Equivalência de modelo  
  Dois modelos são considerados *estruturalmente equivalente* quando todos os literais os modelos correspondem e tiverem variáveis nos mesmos segmentos. Por exemplo, os seguintes modelos são estruturalmente equivalentes:  
   
--   /a/{var1}/b b/{var2}?x=1&y=2  
+-   /a/ {var1} / b b / {var2}? x = 1 & y = 2  
   
--   a/{x}/b%20b/{var1}?y=2&x=1  
+-   a/{x}/b%20b/{var1}?y=2 & x = 1  
   
 -   a/{y}/B%20B/{z}/?y=2&x=1  
   
@@ -292,13 +292,13 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?x=1  
   
--   ?x=2  
+-   ? x = 2  
   
 -   ?x=3  
   
--   ?x=1&y={var}  
+-   ? x = 1 & y = {var}  
   
--   ?x=2&z={var}  
+-   ? x = 2 & z = {var}  
   
 -   ?x=3  
   
@@ -312,11 +312,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?m=get&c=rss  
   
--   ?m=put&c=rss  
+-   ? m = put & c = rss  
   
 -   ?m=get&c=atom  
   
--   ?m=put&c=atom  
+-   ? m = put & c = atom  
   
  Os seguintes conjuntos de modelos de cadeia de caracteres de consulta são ambíguos em si:  
   
@@ -328,17 +328,17 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?x=1  
   
--   ?y=2  
+-   ? s = 2  
   
  "x = 1 & y = 2" corresponde a ambos os modelos. Isso ocorre porque uma cadeia de caracteres de consulta pode conter variáveis de cadeia de caracteres de consulta mais e em seguida, o modelo que ela corresponde.  
   
 -   ?x=1  
   
--   ?x=1&y={var}  
+-   ? x = 1 & y = {var}  
   
  "x = 1 & y = 3" corresponde a ambos os modelos.  
   
--   ? x = y &3;= 4  
+-   ? x = y & 3 = 4  
   
 -   ?x=3&z=5  
   

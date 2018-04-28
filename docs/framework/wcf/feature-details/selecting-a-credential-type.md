@@ -1,33 +1,33 @@
 ---
 title: Selecionando um tipo de credencial
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 *Credenciais* são os dados [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa para estabelecer uma identidade reivindicada ou recursos. Por exemplo, o passport é uma credencial que emite um governo para comprovar nacionalidade em um país ou região. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], credenciais podem ter várias formas, como tokens de nome de usuário e certificados x. 509. Este tópico discute as credenciais, como eles são usados em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]e como selecionar o credencial correto para seu aplicativo.  
   
  Em vários países e regiões, a licença do driver é um exemplo de uma credencial. Uma licença contém dados que representa a identidade e os recursos de uma pessoa. Ele contém uma prova de posse na forma de imagem do detentor. A licença é emitida por uma autoridade confiável, geralmente um departamento governamental de licenciamento. A licença é fechada e pode conter um holograma, mostrando que ele não foi violado ou falsificado.  
   
- Apresentar uma credencial envolve apresentar os dados e a prova de posse dos dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a uma variedade de tipos de credenciais em níveis de segurança de transporte e de mensagem. Por exemplo, considere dois tipos de credenciais com suporte no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: credenciais de certificado de nome de usuário e (x. 509).  
+ Apresentar uma credencial envolve apresentar os dados e a prova de posse dos dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a uma variedade de tipos de credenciais em níveis de segurança de transporte e de mensagem. Por exemplo, considere dois tipos de credenciais com suporte no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: credenciais de certificado de nome de usuário e (x. 509).  
   
  Para a credencial de nome de usuário, o nome de usuário representa a identidade reivindicada e a senha fornece uma prova de posse. Nesse caso, a autoridade confiável é o sistema valida o nome de usuário e senha.  
   
@@ -53,9 +53,9 @@ ms.lasthandoff: 02/01/2018
 |-------------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar uma credencial. Isso se traduz em um cliente anônimo.|  
 |Windows|Permite que as trocas de mensagens SOAP ocorrer no contexto de segurança estabelecido com uma credencial do Windows.|  
-|Nome de usuário|Permite que o serviço exigir que o cliente seja autenticado com uma credencial de nome de usuário. Observe que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não permite qualquer operações criptográficas com nomes de usuário, como gerar uma assinatura ou criptografia de dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]garante que o transporte é protegido ao usar as credenciais de nome de usuário.|  
+|Nome de usuário|Permite que o serviço exigir que o cliente seja autenticado com uma credencial de nome de usuário. Observe que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não permite qualquer operações criptográficas com nomes de usuário, como gerar uma assinatura ou criptografia de dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o transporte é protegido ao usar as credenciais de nome de usuário.|  
 |certificado|Permite que o serviço exigir que o cliente seja autenticado usando um certificado x. 509.|  
-|Emitido Token|Um tipo de token personalizado configurado de acordo com uma política de segurança. O tipo de token padrão é Security asserções Markup Language (SAML). O token é emitido por um serviço de token seguro. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Emitido Token|Um tipo de token personalizado configurado de acordo com uma política de segurança. O tipo de token padrão é Security asserções Markup Language (SAML). O token é emitido por um serviço de token seguro. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Modelo de negociação de credenciais de serviço  
  *Negociação* é o processo de estabelecer a relação de confiança entre um cliente e um serviço trocando credenciais. O processo é executado de forma iterativa entre o cliente e o serviço para divulgar apenas as informações necessárias para a próxima etapa no processo de negociação. Na prática, o resultado final é o fornecimento de credenciais do serviço para o cliente a ser usado em operações subsequentes.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  Dependendo se você estiver programando um serviço ou um cliente, o método para definir o valor de credencial é ligeiramente diferente.  
   
 ### <a name="setting-service-credentials"></a>Credenciais do serviço de configuração  
- Se você estiver usando o modo de transporte e você estiver usando HTTP como o transporte, você deve usar o Internet Information Services (IIS) ou configurar a porta com um certificado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) e [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Se você estiver usando o modo de transporte e você estiver usando HTTP como o transporte, você deve usar o Internet Information Services (IIS) ou configurar a porta com um certificado. Para obter mais informações, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) e [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Para provisionar um serviço com credenciais no código, crie uma instância do <xref:System.ServiceModel.ServiceHost> de classe e especifique as credenciais apropriadas usando o <xref:System.ServiceModel.Description.ServiceCredentials> classe, acessado por meio de <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> propriedade.  
   

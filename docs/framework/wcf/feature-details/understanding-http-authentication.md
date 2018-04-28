@@ -1,24 +1,26 @@
 ---
-title: "Noções básicas de autenticação HTTP"
-ms.custom: 
+title: Noções básicas de autenticação HTTP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-http-authentication"></a>Noções básicas de autenticação HTTP
 A autenticação é o processo de identificar se um cliente tem permissão para acessar um recurso. O protocolo HTTP oferece suporte à autenticação como um meio de negociação de acesso a um recurso seguro.  
@@ -35,7 +37,7 @@ A autenticação é o processo de identificar se um cliente tem permissão para 
 |Digest|A autenticação Digest é um esquema de desafio / resposta que substitui a autenticação básica. O servidor envia uma cadeia de caracteres dos dados aleatórios chamados um *nonce* ao cliente como um desafio. O cliente responde com um hash que inclui o nome de usuário, senha e nonce entre informações adicionais. A complexidade que apresenta este exchange e o hash de dados tornar mais difícil roubar e reutilizar as credenciais do usuário com esse esquema de autenticação.<br /><br /> A autenticação Digest requer o uso de contas de domínio do Windows. O resumo de *realm* é o nome de domínio do Windows. Portanto, você não pode usar um servidor em execução em um sistema operacional que não oferece suporte a domínios do Windows, como o Windows XP Home Edition, com a autenticação Digest. Por outro lado, quando o cliente é executado em um sistema operacional que não oferece suporte a domínios do Windows, uma conta de domínio deve ser explicitamente especificada durante a autenticação.|  
 |NTLM|Autenticação NT LAN Manager (NTLM) é um esquema de desafio / resposta que é uma variação protegida da autenticação Digest. NTLM usa as credenciais do Windows para transformar os dados de desafio em vez da senha e nome de usuário sem codificação. A autenticação NTLM exige várias trocas entre o cliente e servidor. O servidor e todos os proxies intermediários devem oferecer suporte a conexões persistentes para concluir com êxito a autenticação.|  
 |Negotiate|Negociar autenticação seleciona automaticamente entre o protocolo Kerberos e a autenticação NTLM, dependendo da disponibilidade. O protocolo Kerberos é usado se estiver disponível; Caso contrário, a tentativa de NTLM. A autenticação Kerberos aprimora significativamente NTLM. A autenticação Kerberos é mais rápido do que NTLM e permite o uso da autenticação mútua e a delegação de credenciais para computadores remotos.|  
-|Windows Live ID|O serviço HTTP do Windows subjacente inclui a autenticação usando protocolos federados. No entanto, os transportes de HTTP padrão em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não suporta o uso de esquemas de autenticação federada, como Microsoft Windows Live ID. Suporte para esse recurso está disponível atualmente com o uso de segurança de mensagem. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|O serviço HTTP do Windows subjacente inclui a autenticação usando protocolos federados. No entanto, os transportes de HTTP padrão em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não suporta o uso de esquemas de autenticação federada, como Microsoft Windows Live ID. Suporte para esse recurso está disponível atualmente com o uso de segurança de mensagem. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Escolher um esquema de autenticação  
  Ao selecionar os possíveis esquemas de autenticação para um servidor HTTP, alguns itens a serem considerados incluem o seguinte:  

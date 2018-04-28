@@ -1,12 +1,13 @@
 ---
 title: Tipos de contratos de dados conhecidos
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>Tipos de contratos de dados conhecidos
 O <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que você especificar com antecedência, os tipos que devem ser incluídos para consideração durante a desserialização. Para obter um exemplo de funcionamento, consulte o [tipos conhecidos](../../../../docs/framework/wcf/samples/known-types.md) exemplo.  
   
  Normalmente, ao passar parâmetros e valores de retorno entre um cliente e um serviço, ambos os pontos de extremidade compartilham todos os contratos de dados dos dados a serem transmitidos. No entanto, isso não for o caso nas seguintes circunstâncias:  
   
--   O contrato de dados enviados é derivado do contrato de dados esperado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a seção sobre a herança em [equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Nesse caso, os dados transmitidos não tem os mesmos dados conforme o esperado pelo ponto de extremidade de recebimento do contrato.  
+-   O contrato de dados enviados é derivado do contrato de dados esperado. Para obter mais informações, consulte a seção sobre a herança em [equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Nesse caso, os dados transmitidos não tem os mesmos dados conforme o esperado pelo ponto de extremidade de recebimento do contrato.  
   
 -   O tipo declarado para as informações a serem transmitidos é uma interface, em vez de uma classe, estrutura ou enumeração. Portanto, ele não pode ser conhecido com antecedência qual o tipo que implementa a interface é enviada e, portanto, o ponto de extremidade de recebimento não pode determinar antecipadamente o contrato de dados para os dados transmitidos.  
   

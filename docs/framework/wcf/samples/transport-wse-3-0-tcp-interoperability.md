@@ -1,24 +1,26 @@
 ---
 title: 'Transporte: interoperabilidade de TCP de WSE 3.0'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidade de TCP de WSE 3.0
 O transporte de interoperabilidade do WSE 3.0 TCP demonstra como implementar uma sessão duplex TCP como um personalizado [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transporte. Ele também demonstra como você pode usar a extensibilidade da camada do canal para interface eletronicamente com sistemas implantados existentes. As etapas a seguir mostram como construir esse personalizado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transporte:  
@@ -31,7 +33,7 @@ O transporte de interoperabilidade do WSE 3.0 TCP demonstra como implementar uma
   
 4.  Certifique-se de que todas as exceções específicas de rede são normalizadas para a classe derivada apropriada de <xref:System.ServiceModel.CommunicationException>.  
   
-5.  Adicione um elemento de associação que adiciona o transporte personalizado para uma pilha de canais. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Adicionando um elemento de associação].  
+5.  Adicione um elemento de associação que adiciona o transporte personalizado para uma pilha de canais. Para obter mais informações, consulte [adicionando um elemento de associação].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Criando IDuplexSessionChannel  
  A primeira etapa na composição o transporte de interoperabilidade do WSE 3.0 TCP é criar uma implementação de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> na parte superior de um <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva de <xref:System.ServiceModel.Channels.ChannelBase>. A lógica de enviar uma mensagem consiste em duas partes principais: (1) codificação da mensagem em bytes e (2) bytes de enquadramento e enviá-los na conexão.  
@@ -42,13 +44,13 @@ O transporte de interoperabilidade do WSE 3.0 TCP demonstra como implementar uma
   
  Além disso, um bloqueio é usado para que o Send () chama preserva a garantia de em ordem IDuplexSessionChannel e para que as chamadas para o soquete subjacente estão sincronizadas corretamente.  
   
- `WseTcpDuplexSessionChannel`usa um <xref:System.ServiceModel.Channels.MessageEncoder> para transferir um <xref:System.ServiceModel.Channels.Message> para e de byte []. Porque ele é um transporte `WseTcpDuplexSessionChannel` também é responsável por aplicar o endereço remoto que o canal foi configurado com. `EncodeMessage`encapsula a lógica para essa conversão.  
+ `WseTcpDuplexSessionChannel` usa um <xref:System.ServiceModel.Channels.MessageEncoder> para transferir um <xref:System.ServiceModel.Channels.Message> para e de byte []. Porque ele é um transporte `WseTcpDuplexSessionChannel` também é responsável por aplicar o endereço remoto que o canal foi configurado com. `EncodeMessage` encapsula a lógica para essa conversão.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Uma vez o <xref:System.ServiceModel.Channels.Message> é codificado em bytes, ele deve ser transmitido na conexão. Isso requer um sistema para definir os limites da mensagem. WSE 3.0 usa uma versão do [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) como seu protocolo de enquadramento. `WriteData`encapsula a lógica de quadros para encapsular um byte [] em um conjunto de registros DIME.  
+ Uma vez o <xref:System.ServiceModel.Channels.Message> é codificado em bytes, ele deve ser transmitido na conexão. Isso requer um sistema para definir os limites da mensagem. WSE 3.0 usa uma versão do [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) como seu protocolo de enquadramento. `WriteData` encapsula a lógica de quadros para encapsular um byte [] em um conjunto de registros DIME.  
   
  A lógica de recebimento de mensagens é muito semelhante. A complexidade principal está tratando o fato de que um soquete de leitura pode retornar menos bytes que foram solicitadas. Para receber uma mensagem, `WseTcpDuplexSessionChannel` lê bytes na rede, decodifica o enquadramento DIME e, em seguida, usa o <xref:System.ServiceModel.Channels.MessageEncoder> para ativar o byte [] em um <xref:System.ServiceModel.Channels.Message>.  
   
@@ -63,7 +65,7 @@ O transporte de interoperabilidade do WSE 3.0 TCP demonstra como implementar uma
 ## <a name="channel-factory"></a>Fábrica de canais  
  Gravando o transporte TCP a próxima etapa é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelFactory> de canais de cliente.  
   
--   `WseTcpChannelFactory`deriva <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. É uma fábrica que substitui `OnCreateChannel` para produzir canais de cliente.  
+-   `WseTcpChannelFactory` deriva <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. É uma fábrica que substitui `OnCreateChannel` para produzir canais de cliente.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ O transporte de interoperabilidade do WSE 3.0 TCP demonstra como implementar uma
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`adiciona lógica para a base de `WseTcpDuplexSessionChannel` para se conectar a um servidor TCP em `channel.Open` tempo. Primeiro, o nome do host é resolvido para um endereço IP, conforme mostrado no código a seguir.  
+-   `ClientWseTcpDuplexSessionChannel` adiciona lógica para a base de `WseTcpDuplexSessionChannel` para se conectar a um servidor TCP em `channel.Open` tempo. Primeiro, o nome do host é resolvido para um endereço IP, conforme mostrado no código a seguir.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ O transporte de interoperabilidade do WSE 3.0 TCP demonstra como implementar uma
 ## <a name="channel-listener"></a>Ouvinte de canal  
  Gravando o transporte TCP a próxima etapa é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelListener> para aceitar os canais de servidor.  
   
--   `WseTcpChannelListener`deriva <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e substituições abrir [Begin] e [Begin] Fechar para controlam o tempo de vida de soquete de escuta. OnOpen, um soquete é criado para escutar em IP_ANY. Implementações mais avançadas podem criar um soquete de segundo para escutar em IPv6 também. Eles também podem permitir que o endereço IP seja especificado no nome do host.  
+-   `WseTcpChannelListener` deriva <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e substituições abrir [Begin] e [Begin] Fechar para controlam o tempo de vida de soquete de escuta. OnOpen, um soquete é criado para escutar em IP_ANY. Implementações mais avançadas podem criar um soquete de segundo para escutar em IPv6 também. Eles também podem permitir que o endereço IP seja especificado no nome do host.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   

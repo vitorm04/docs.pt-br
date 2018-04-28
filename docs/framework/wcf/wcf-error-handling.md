@@ -1,24 +1,26 @@
 ---
 title: Tratamento de erros do WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 860f96ee92db6a11238942202d4e202ba912d748
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b85ef2b0c077b67cc341a48c9260393e158033c5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-error-handling"></a>Tratamento de erros do WCF
 Os erros encontrados por um aplicativo WCF pertencem a um dos três grupos:  
@@ -46,10 +48,10 @@ Os erros encontrados por um aplicativo WCF pertencem a um dos três grupos:
 -   Tratamento <xref:System.ServiceModel.ServiceHost> eventos  
   
 ## <a name="fault-contracts"></a>Contratos de falha  
- Contratos de falha permitem que você defina os erros que podem ocorrer durante a operação de serviço em uma plataforma de maneira independente. Por padrão, todas as exceções lançadas a partir de uma operação de serviço serão retornadas ao cliente como um <xref:System.ServiceModel.FaultException> objeto. O <xref:System.ServiceModel.FaultException> objeto conterá informações muito pouco. Você pode controlar as informações enviadas para o cliente definir um contrato de falha e retornando o erro como uma <xref:System.ServiceModel.FaultException%601>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+ Contratos de falha permitem que você defina os erros que podem ocorrer durante a operação de serviço em uma plataforma de maneira independente. Por padrão, todas as exceções lançadas a partir de uma operação de serviço serão retornadas ao cliente como um <xref:System.ServiceModel.FaultException> objeto. O <xref:System.ServiceModel.FaultException> objeto conterá informações muito pouco. Você pode controlar as informações enviadas para o cliente definir um contrato de falha e retornando o erro como uma <xref:System.ServiceModel.FaultException%601>. Para obter mais informações, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- O <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface permite a você mais controle sobre como seu aplicativo WCF responde a erros.  Isso lhe dá controle total sobre a mensagem de falha é retornada ao cliente e permite que você execute o processamento, como o log de erro personalizada.  [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.Dispatcher.IErrorHandler> e [controle estendido através de tratamento de erros e emissão de relatórios](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ O <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface permite a você mais controle sobre como seu aplicativo WCF responde a erros.  Isso lhe dá controle total sobre a mensagem de falha é retornada ao cliente e permite que você execute o processamento, como o log de erro personalizada.  [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Dispatcher.IErrorHandler> e [controle estendido através de tratamento de erros e emissão de relatórios](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>Eventos do ServiceHost  
  O <xref:System.ServiceModel.ServiceHost> classe hospeda serviços e define vários eventos que podem ser necessárias para tratamento de erros. Por exemplo:  
@@ -58,4 +60,4 @@ Os erros encontrados por um aplicativo WCF pertencem a um dos três grupos:
   
 2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceHost>
+ Para obter mais informações, consulte <xref:System.ServiceModel.ServiceHost>.

@@ -1,12 +1,13 @@
 ---
-title: "Declarações e tokens de SAML"
-ms.custom: 
+title: Declarações e tokens de SAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="saml-tokens-and-claims"></a>Declarações e tokens de SAML
 Security asserções Markup Language (SAML) *tokens* são representações de XML de declarações. Por padrão, os tokens SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa em cenários de segurança federada é *tokens emitidos*.  
@@ -48,7 +50,7 @@ Security asserções Markup Language (SAML) *tokens* são representações de XM
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  Quando os tokens SAML são serializados em mensagens, quando eles são emitidos por um serviço de token de segurança ou quando são apresentadas pelos clientes para serviços como parte da autenticação, a cota de tamanho máximo da mensagem deve ser grande o suficiente para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas de tamanho de mensagem padrão são suficientes. No entanto, em casos em que um token SAML é grande porque ele contém centenas de declarações, você precisará aumentar as cotas para acomodar o token serializado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+>  Quando os tokens SAML são serializados em mensagens, quando eles são emitidos por um serviço de token de segurança ou quando são apresentadas pelos clientes para serviços como parte da autenticação, a cota de tamanho máximo da mensagem deve ser grande o suficiente para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas de tamanho de mensagem padrão são suficientes. No entanto, em casos em que um token SAML é grande porque ele contém centenas de declarações, você precisará aumentar as cotas para acomodar o token serializado. Para obter mais informações, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="from-samlattributes-to-claims"></a>De SamlAttributes declarações  
  Quando os tokens SAML são recebidos em mensagens, as várias instruções no token de SAML são transformadas em <xref:System.IdentityModel.Policy.IAuthorizationPolicy> objetos que são colocados no <xref:System.IdentityModel.Policy.AuthorizationContext>. As declarações de cada instrução de SAML são retornadas pelo <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> propriedade o <xref:System.IdentityModel.Policy.AuthorizationContext> e pode ser examinado para determinar se é autenticar e autorizar o usuário.  

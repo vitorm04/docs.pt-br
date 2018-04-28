@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente os recursos do certificado digital X.509 e como usá-los no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], e inclui links para tópicos que explicam esses conceitos ainda mais ou que mostram como realizar tarefas comuns usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e certificados.  
@@ -37,7 +37,7 @@ Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Os certificados devem ser emitidos por uma autoridade de certificação, que é normalmente um distribuidor de certificados de terceiros. Em um domínio do Windows, uma autoridade de certificação é incluída e pode ser usada para emitir certificados para computadores no domínio.  
   
 ## <a name="viewing-certificates"></a>Exibindo certificados  
- Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para obter mais informações, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Repositórios de certificados  
  Os certificados estão localizados em repositórios. Dois grandes repositórios de certificado existem e são divididos em sub-repositórios. Se você for o administrador em um computador, poderá exibir os dois principais repositórios usando a ferramenta do snap-in do MMC. Os não administradores podem exibir somente o repositório do usuário atual.  
@@ -96,7 +96,7 @@ Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-m
 ## <a name="custom-authentication"></a>Autenticação personalizada  
  A propriedade `CertificateValidationMode` também permite que você personalize como os certificados são autenticados. Por padrão, o nível é definido como `ChainTrust`. Para usar o valor <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, você também deverá definir o atributo `CustomCertificateValidatorType` para um assembly e um tipo usados para validar o certificado. Para criar um validador personalizado, você deverá herdar da classe abstrata <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
   
- Ao criar um autenticador personalizado, o método mais importante para substituição é o método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obter um exemplo de autenticação personalizada, consulte o [validador de certificado x. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) exemplo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Credencial personalizada e validação de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Ao criar um autenticador personalizado, o método mais importante para substituição é o método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obter um exemplo de autenticação personalizada, consulte o [validador de certificado x. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) exemplo. Para obter mais informações, consulte [credencial personalizada e validação de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Usando Makecert.exe para criar uma cadeia de certificado  
  A ferramenta de criação de certificado (Makecert.exe) cria certificados X.509 e pares de chave privada/chave pública. Você pode salvar a chave privada no disco e, em seguida, usá-la para emitir e assinar novos certificados, simulando uma hierarquia de certificados encadeados. A ferramenta é destinada para uso somente como uma ajuda ao desenvolver serviços e nunca deve ser usada para criar certificados para implantação real. Ao desenvolver um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], use as seguintes etapas para criar uma cadeia de confiança com Makecert.exe.  

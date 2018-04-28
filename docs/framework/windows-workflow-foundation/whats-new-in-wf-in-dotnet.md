@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>O que&#39;novo no Windows Workflow Foundation no .NET 4.5
 Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta muitos novos recursos, como novas atividades, os recursos de designer e modelos de desenvolvimento de fluxo de trabalho. Muitos, mas não todos, os novos recursos do fluxo de trabalho introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] têm suporte no designer de fluxo de trabalho hospedado novamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] os novos recursos que têm suporte, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho hospedado novamente](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrando .NET 3.0 e 3.5 do .NET aplicativos de fluxo de trabalho para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Este tópico fornece uma visão geral dos novos recursos de fluxo de trabalho introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45
   
 -   A atualização dinâmica é introduzida, o que fornece um mecanismo para atualizar a definição de uma instância de fluxo de trabalho persistida. Para obter mais informações, consulte [atualização dinâmica](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) e [como: atualizar a definição de uma instância de fluxo de trabalho em execução](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
--   Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade.sql é fornecido para atualizar bancos de dados de persistência criados usando os scripts de banco de dados do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Esse script atualiza bancos de dados de persistência do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] para dar suporte aos novos recursos de controle de versão introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. As instâncias de fluxo de trabalho persistidas no banco de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Atualizando bancos de dados do .NET Framework 4 persistência para dar suporte a controle de versão de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
+-   Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade.sql é fornecido para atualizar bancos de dados de persistência criados usando os scripts de banco de dados do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Esse script atualiza bancos de dados de persistência do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] para dar suporte aos novos recursos de controle de versão introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. As instâncias de fluxo de trabalho persistidas no banco de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica. Para obter mais informações, consulte [atualização .NET Framework 4 persistência bancos de dados para controle de versão de fluxo de trabalho de suporte](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).  
   
 ##  <a name="BKMK_NewActivities"></a> Atividades  
  A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes.  

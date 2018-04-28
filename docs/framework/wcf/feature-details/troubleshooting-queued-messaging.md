@@ -1,24 +1,26 @@
 ---
-title: "Mensagens em fila da solução de problemas"
-ms.custom: 
+title: Mensagens em fila da solução de problemas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 Esta seção contém perguntas comuns e resolução de problemas para usar filas em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,7 +28,7 @@ Esta seção contém perguntas comuns e resolução de problemas para usar filas
 ## <a name="common-questions"></a>Perguntas comuns  
  **P:** usei [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 e instalou o hotfix do MSMQ. É necessário remover o hotfix?  
   
- **R:** Sim. Esse hotfix não é mais suportado. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]agora funciona com MSMQ sem um requisito de hotfix.  
+ **R:** Sim. Esse hotfix não é mais suportado. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agora funciona com MSMQ sem um requisito de hotfix.  
   
  **P:** há duas associações para o MSMQ: <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. O que devo usar e quando?  
   
@@ -46,7 +48,7 @@ Esta seção contém perguntas comuns e resolução de problemas para usar filas
   
 -   Somente o MSMQ 4.0 oferece suporte à leitura transacionada remota.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Diferenças nos recursos de enfileiramento de mensagens no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Para obter mais informações, consulte [diferenças nos recursos de enfileiramento de mensagens no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
  **P:** possível usar o MSMQ 3.0 em um lado de uma comunicação em fila e MSMQ 4.0 no outro lado?  
   

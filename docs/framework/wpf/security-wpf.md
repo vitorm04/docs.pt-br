@@ -1,12 +1,13 @@
 ---
-title: "Segurança (WPF)"
-ms.custom: 
+title: Segurança (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -20,23 +21,24 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
-<a name="introduction"></a>Ao desenvolver [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autônomo e aplicativos hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]aplicativos autônomos execute com permissões irrestritas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Ao desenvolver [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autônomo e aplicativos hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos execute com permissões irrestritas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]aplicativos hospedados pelo navegador hospedados por [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ou Firefox, e pode ser [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] ou flexível [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documentos para obter mais informações, consulte [visão geral sobre aplicativos de navegador XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador hospedados por [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ou Firefox, e pode ser [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] ou flexível [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documentos para obter mais informações, consulte [visão geral sobre aplicativos de navegador XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]aplicativos hospedados pelo navegador executar em uma proteção de segurança de confiança parcial, por padrão, que é limitada ao padrão [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** conjunto de permissões da zona. Isso efetivamente isola [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador do computador cliente da mesma maneira que você esperaria típicos aplicativos da Web deve ser isolado. Um XBAP é capaz de elevar privilégios, até confiança total, dependendo da zona de segurança da URL de implantação e da configuração de segurança do cliente. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador executar em uma proteção de segurança de confiança parcial, por padrão, que é limitada ao padrão [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** conjunto de permissões da zona. Isso efetivamente isola [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador do computador cliente da mesma maneira que você esperaria típicos aplicativos da Web deve ser isolado. Um XBAP é capaz de elevar privilégios, até confiança total, dependendo da zona de segurança da URL de implantação e da configuração de segurança do cliente. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
  Este tópico discute o modelo de segurança para [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autônomo e aplicativos hospedados em navegador.  
   
@@ -100,9 +102,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-browsing-software-security-settings"></a>Configurações de segurança de software de navegação na Web  
  As configurações de segurança no seu computador determinam o acesso concedido a qualquer software de navegação Web. Navegador da Web inclui qualquer aplicativo ou componente que usa o [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) ou [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) APIs, incluindo o Internet Explorer e PresentationHost.exe.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]Fornece um mecanismo pelo qual você pode configurar a funcionalidade que pode ser executado por ou de [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], incluindo o seguinte:  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] Fornece um mecanismo pelo qual você pode configurar a funcionalidade que pode ser executado por ou de [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], incluindo o seguinte:  
   
--   Componentes dependentes de [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]  
+-   Componentes dependentes do framework .NET  
   
 -   Controles ActiveX e plug-ins  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Também é possível acessar a caixa de diálogo Opções da Internet pelo Internet Explorer. Clique em **ferramentas** e, em seguida, clique em **opções da Internet**.  
   
- Começando com [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], as seguintes configurações de segurança especificamente para [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] estão incluídos:  
+ Começando com [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], as seguintes configurações de segurança especificamente para o .NET Framework estão incluídas:  
   
 -   **XAML flexível**. Controla se [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] navegar até eles e perder [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] arquivos. (Opções de Habilitar, Desabilitar e Prompt.)  
   
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
  No entanto, é possível que um assembly APTCA apresentar uma falha de segurança após serem instalados para o [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]. Após a descoberta de uma falha de segurança, os publicadores de assembly podem produzir uma atualização de segurança para corrigir o problema em instalações existentes, além de protege de instalações que poderão ocorrer após a descoberta do problema. Uma opção para a atualização é desinstalar o assembly, embora isso possa interromper outros aplicativos clientes totalmente confiáveis que o utilizam.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Fornece um mecanismo pelo qual um assembly APTCA pode ser desabilitado para parcialmente confiável [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] sem desinstalar o assembly APTCA.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Fornece um mecanismo pelo qual um assembly APTCA pode ser desabilitado para parcialmente confiável [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] sem desinstalar o assembly APTCA.  
   
  Para desabilitar um assembly APTCA, é necessário criar uma chave do Registro especial:  
   
@@ -252,7 +254,7 @@ ms.lasthandoff: 12/22/2017
  Caso seja necessário desabilitar um assembly para aplicativos clientes parcialmente confiáveis, você pode gravar uma atualização que crie a chave do Registro e o valor.  
   
 > [!NOTE]
->  Núcleo [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] assemblies não são afetados por desabilitá-las dessa forma, porque eles são necessários para a execução de aplicativos gerenciados. O suporte para desabilitar assemblies APTCA é destinado principalmente a aplicativos de terceiros.  
+>  Assemblies do núcleo do .NET Framework não são afetados por desabilitá-las dessa forma, porque eles são necessários para a execução de aplicativos gerenciados. O suporte para desabilitar assemblies APTCA é destinado principalmente a aplicativos de terceiros.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Comportamento da área restrita para arquivos XAML flexíveis  

@@ -16,11 +16,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto do esquema XML padrão e contexto do esquema XAML WPF
 Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma produção de XAML que usa um vocabulário específico do XAML interage com o objeto de comportamento, incluindo como resolve o mapeamento de tipo, como os assemblies são carregados, como determinados leitor e gravador de gravação as configurações são interpretadas. Este tópico descreve os recursos de serviços de XAML do .NET Framework e o contexto do esquema XAML padrão associado, que é baseado no sistema de tipos CLR. Este tópico também descreve o contexto do esquema XAML que é usado para WPF.  
@@ -70,7 +70,7 @@ Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma pr
     -   Se o nome não qualificado no mapeamento, chame <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask` é usado para [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] e Windows Workflow Foundation.  
+ `XamlBuildTask` é usado para o Windows Communication Foundation (WCF) e Windows Workflow Foundation.  
   
  Observe que as referências a assembly por meio de `XamlBuildTask` são sempre totalmente qualificado.  
   

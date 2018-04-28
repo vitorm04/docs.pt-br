@@ -1,30 +1,32 @@
 ---
 title: Como criar uma credencial de suporte
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Como criar uma credencial de suporte
 É possível ter um esquema de segurança personalizado que requer mais de uma credencial. Por exemplo, um serviço pode demandar do cliente não apenas um nome de usuário e senha, mas também uma credencial que comprove o cliente é com mais de 18. A credencial de segundo é um *suporte credencial*. Este tópico explica como implementar essas credenciais em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente.  
   
 > [!NOTE]
->  A especificação para dar suporte a credenciais faz parte da especificação WS-SecurityPolicy. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Especificações de segurança de serviços web](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  A especificação para dar suporte a credenciais faz parte da especificação WS-SecurityPolicy. Para obter mais informações, consulte [especificações de segurança de serviços Web](http://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Tokens com suporte  
  Em suma, quando você usa segurança de mensagem, um *credencial primário* sempre é usado para proteger a mensagem (por exemplo, um certificado x. 509 ou um tíquete Kerberos).  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |Criptografia e não assinados|Tokens de suporte assinados e criptografados são assinados para dar suporte a tokens que também são criptografadas quando elas aparecerem no `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Credenciais de programação com suporte  
- Para criar um serviço que usa tokens de suporte, você deve criar um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Para criar um serviço que usa tokens de suporte, você deve criar um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obter mais informações, consulte [como: criar um personalizado de associação usando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  A primeira etapa ao criar uma associação personalizada é criar um elemento de associação de segurança, que pode ser um dos três tipos:  
   

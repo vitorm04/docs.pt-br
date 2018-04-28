@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, conjunto de rastreamento de atividades e propagação para oferecer suporte a correlação de rastreamento ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -155,7 +155,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
   
  Você pode configurar um ouvinte de rastreamento personalizado para enviar rastreamentos na conexão, por exemplo, para um banco de dados remoto. Como um implantador do aplicativo, você deve aplicar o controle de acesso apropriadas nos logs de rastreamento no computador remoto.  
   
- Você também pode configurar um ouvinte de rastreamento programaticamente. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Como: criar e inicializar ouvintes de rastreamento](http://go.microsoft.com/fwlink/?LinkId=94648) e [criando um TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, consulte [como: criar e inicializar ouvintes de rastreamento](http://go.microsoft.com/fwlink/?LinkId=94648) e [criando um TraceListener personalizado](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Porque `System.Diagnostics.XmlWriterTraceListener` é não segura para thread, a origem de rastreamento pode bloquear recursos exclusivamente ao exibir rastreamentos. Quando vários threads de saída de rastreamentos em uma origem de rastreamento configurado para usar este ouvinte, pode ocorrer a contenção de recursos, que resulta em um problema de desempenho significativa. Para resolver esse problema, você deve implementar um ouvinte personalizado que é thread-safe.  

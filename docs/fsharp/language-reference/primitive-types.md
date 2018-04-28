@@ -1,20 +1,17 @@
 ---
 title: Tipos primitivos (F#)
-description: "Descobre os tipos primitivos fundamentais que são usados na linguagem F #."
-keywords: "visual f#, f#, programação funcional"
+description: 'Descobre os tipos primitivos fundamentais que são usados na linguagem F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f23d98b-551b-4fd2-9f4f-0fd7254288ed
-ms.openlocfilehash: b493cdf7116d94f66940d03b86e584bcecbbb0f1
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 7832151ee211f56547ecad98fc31f1454cb18870
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="primitive-types"></a>Tipos primitivos
 
@@ -45,7 +42,7 @@ A tabela a seguir resume as propriedades de tipos F # primitivos.
 |`float, double`|`System.Double`|Um tipo de ponto flutuante de 64 bits.|
 
 >[!NOTE]
-Você pode executar cálculos com números inteiros muito grandes para o tipo de inteiro de 64 bits usando o [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint`não é considerado um tipo primitivo; é uma abreviação de `System.Numerics.BigInteger`.
+Você pode executar cálculos com números inteiros muito grandes para o tipo de inteiro de 64 bits usando o [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` não é considerado um tipo primitivo; é uma abreviação de `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Consulte também
 [Referência da Linguagem F#](index.md)

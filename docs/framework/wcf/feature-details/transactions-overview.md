@@ -1,28 +1,30 @@
 ---
-title: "Visão geral de transações do Windows Communication Foundation"
-ms.custom: 
+title: Visão geral de transações do Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Visão geral de transações do Windows Communication Foundation
 As transações fornecem uma maneira de agrupar um conjunto de ações ou operações em uma única unidade indivisível de execução. Uma transação é uma coleção de operações com as seguintes propriedades:  
@@ -35,11 +37,11 @@ As transações fornecem uma maneira de agrupar um conjunto de ações ou opera�
   
 -   Durabilidade. Isso significa que, depois de confirmada, as atualizações para recursos gerenciados (como um registro de banco de dados) será persistentes diante de falhas.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um conjunto avançado de recursos que permitem a criação de transações distribuídas em seu aplicativo de serviço Web.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece um conjunto avançado de recursos que permitem a criação de transações distribuídas em seu aplicativo de serviço Web.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementa o suporte ao protocolo WS-AtomicTransaction (WS-AT) que permite que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos transações de fluxo para aplicativos interoperáveis, como serviços da Web interoperáveis construídos usando a tecnologia de terceiros. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também implementa o suporte para o protocolo de transações OLE, que pode ser usado em cenários em que você não precisa interoperabilidade funcionalidade para habilitar o fluxo de transações.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa o suporte ao protocolo WS-AtomicTransaction (WS-AT) que permite que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos transações de fluxo para aplicativos interoperáveis, como serviços da Web interoperáveis construídos usando a tecnologia de terceiros. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também implementa o suporte para o protocolo de transações OLE, que pode ser usado em cenários em que você não precisa interoperabilidade funcionalidade para habilitar o fluxo de transações.  
   
- Você pode usar um arquivo de configuração de aplicativo para configurar as ligações para habilitar ou desabilitar o fluxo de transações, bem como definir o protocolo de transação desejadas em uma associação. Além disso, você pode definir tempos limite de transação no nível de serviço usando o arquivo de configuração. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ativando o fluxo de transação](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Você pode usar um arquivo de configuração de aplicativo para configurar as ligações para habilitar ou desabilitar o fluxo de transações, bem como definir o protocolo de transação desejadas em uma associação. Além disso, você pode definir tempos limite de transação no nível de serviço usando o arquivo de configuração. Para obter mais informações, consulte [ativando o fluxo de transação](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
  Atributos de transação no <xref:System.ServiceModel> namespace permitem que você faça o seguinte:  
   
@@ -49,7 +51,7 @@ As transações fornecem uma maneira de agrupar um conjunto de ações ou opera�
   
 -   Use o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> atributos em um método de contrato para exigir, permitir ou negar o fluxo de transações.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Atributos de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Para obter mais informações, consulte [atributos de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  

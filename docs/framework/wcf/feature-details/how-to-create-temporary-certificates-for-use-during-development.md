@@ -1,27 +1,29 @@
 ---
-title: "Como criar certificados temporários para uso durante o desenvolvimento"
-ms.custom: 
+title: Como criar certificados temporários para uso durante o desenvolvimento
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c955c3498c830403f628b4805611fadc44d68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como criar certificados temporários para uso durante o desenvolvimento
 Ao desenvolver um serviço seguro ou o cliente usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], geralmente é necessário fornecer um certificado x. 509 a ser usado como uma credencial. Normalmente, o certificado é parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente a autoridade raiz é de sua organização ou unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no armazenamento pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico descreve as etapas para criar esses dois certificados usando o [ferramenta de criação de certificado (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), que é fornecido pelo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
@@ -29,9 +31,9 @@ Ao desenvolver um serviço seguro ou o cliente usando [!INCLUDE[indigo1](../../.
 > [!IMPORTANT]
 >  Os certificados que a ferramenta de criação de certificação gera são fornecidos somente para testes. Ao implantar um serviço ou cliente, certifique-se de usar um certificado apropriado fornecido por uma autoridade de certificação. Isso pode ser de um [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] certificado de servidor em sua organização ou de terceiros.  
 >   
->  Por padrão, o [Makecert.exe (ferramenta de criação de certificado)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) cria certificados de autoridade cuja raiz é chamada "agência raiz**."** Como a agência"raiz" não está no repositório de autoridades de certificação raiz confiáveis, isso faz com que esses certificados insegura. Criando um certificado autoassinado que é colocado em autoridades de certificação raiz confiáveis repositório permite que você crie um ambiente de desenvolvimento que simula mais de perto de seu ambiente de implantação.  
+>  Por padrão, o [Makecert.exe (ferramenta de criação de certificado)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) cria certificados de autoridade cuja raiz é chamada "agência raiz **."** Como a agência"raiz" não está no repositório de autoridades de certificação raiz confiáveis, isso faz com que esses certificados insegura. Criando um certificado autoassinado que é colocado em autoridades de certificação raiz confiáveis repositório permite que você crie um ambiente de desenvolvimento que simula mais de perto de seu ambiente de implantação.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]criar e usar certificados, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando um certificado como uma credencial, consulte [protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obter um tutorial sobre como usar a tecnologia Microsoft Authenticode, consulte [visões gerais de Authenticode e tutoriais](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] criar e usar certificados, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usando um certificado como uma credencial, consulte [protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obter um tutorial sobre como usar a tecnologia Microsoft Authenticode, consulte [visões gerais de Authenticode e tutoriais](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para criar um certificado de autoridade raiz autoassinado e exportar a chave privada  
   
@@ -74,7 +76,7 @@ Ao desenvolver um serviço seguro ou o cliente usando [!INCLUDE[indigo1](../../.
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Para instalar um certificado autoassinado em autoridades de certificação raiz confiáveis  
   
-1.  Abra o snap-in de certificado. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Abra o snap-in de certificado. Para obter mais informações, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Abra a pasta para armazenar o certificado, ou o **computador Local** ou **usuário atual**.  
   
