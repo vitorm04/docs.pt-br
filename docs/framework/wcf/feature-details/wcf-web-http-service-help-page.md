@@ -1,36 +1,38 @@
 ---
-title: "Página de ajuda de serviço HTTP Web do WCF"
-ms.custom: 
+title: Página de ajuda de serviço HTTP Web do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dabb5e7a949cb26c619ad02dc73d0405222d08cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="a6f57-102">Página de ajuda de serviço HTTP Web do WCF</span><span class="sxs-lookup"><span data-stu-id="a6f57-102">WCF Web HTTP Service Help Page</span></span>
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="a6f57-103">Fornece uma página de ajuda automática para serviços WCF WEB HTTP.</span><span class="sxs-lookup"><span data-stu-id="a6f57-103"> provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="a6f57-104">Esta página de Ajuda contém uma descrição de cada operação de solicitação e resposta formatos e esquemas.</span><span class="sxs-lookup"><span data-stu-id="a6f57-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="a6f57-105">Essa funcionalidade é desativada por padrão.</span><span class="sxs-lookup"><span data-stu-id="a6f57-105">This functionality is turned off by default.</span></span> <span data-ttu-id="a6f57-106">Quando um usuário navega para um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo http://localhost:8000/clientes/ajuda, é exibida uma página de ajuda com o seguinte.</span><span class="sxs-lookup"><span data-stu-id="a6f57-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example http://localhost:8000/Customers/Help, a help page like the following is displayed.</span></span>  
+# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="d938c-102">Página de ajuda de serviço HTTP Web do WCF</span><span class="sxs-lookup"><span data-stu-id="d938c-102">WCF Web HTTP Service Help Page</span></span>
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="d938c-103"> Fornece uma página de ajuda automática para serviços WCF WEB HTTP.</span><span class="sxs-lookup"><span data-stu-id="d938c-103"> provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="d938c-104">Esta página de Ajuda contém uma descrição de cada operação de solicitação e resposta formatos e esquemas.</span><span class="sxs-lookup"><span data-stu-id="d938c-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="d938c-105">Essa funcionalidade é desativada por padrão.</span><span class="sxs-lookup"><span data-stu-id="d938c-105">This functionality is turned off by default.</span></span> <span data-ttu-id="d938c-106">Quando um usuário navega para um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo http://localhost:8000/Customers/Help, uma página de Ajuda, como o seguinte é exibido.</span><span class="sxs-lookup"><span data-stu-id="d938c-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example http://localhost:8000/Customers/Help, a help page like the following is displayed.</span></span>  
   
- <span data-ttu-id="a6f57-107">![Página de Ajuda do WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span><span class="sxs-lookup"><span data-stu-id="a6f57-107">![WCF REST Help Page](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span></span>  
+ <span data-ttu-id="d938c-107">![Página de Ajuda do WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span><span class="sxs-lookup"><span data-stu-id="d938c-107">![WCF REST Help Page](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")</span></span>  
   
- <span data-ttu-id="a6f57-108">O usuário poderá clicar em qualquer método listado na página de Ajuda e a página detalhada para essa operação é exibida mostrando mais informações sobre o método, incluindo os formatos de mensagem e respostas de exemplo.</span><span class="sxs-lookup"><span data-stu-id="a6f57-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="a6f57-109">A imagem a seguir é um exemplo de uma página de ajuda para um método.</span><span class="sxs-lookup"><span data-stu-id="a6f57-109">The following image is an example of a help page for a method.</span></span>  
+ <span data-ttu-id="d938c-108">O usuário poderá clicar em qualquer método listado na página de Ajuda e a página detalhada para essa operação é exibida mostrando mais informações sobre o método, incluindo os formatos de mensagem e respostas de exemplo.</span><span class="sxs-lookup"><span data-stu-id="d938c-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="d938c-109">A imagem a seguir é um exemplo de uma página de ajuda para um método.</span><span class="sxs-lookup"><span data-stu-id="d938c-109">The following image is an example of a help page for a method.</span></span>  
   
- <span data-ttu-id="a6f57-110">![Detalhes da página de Ajuda do WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span><span class="sxs-lookup"><span data-stu-id="a6f57-110">![WCF REST Help Page Details](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span></span>  
+ <span data-ttu-id="d938c-110">![Detalhes da página de Ajuda do WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span><span class="sxs-lookup"><span data-stu-id="d938c-110">![WCF REST Help Page Details](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")</span></span>  
   
-## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="a6f57-111">Usando a página de Ajuda do WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="a6f57-111">Using the WCF Web HTTP Help Page</span></span>  
- <span data-ttu-id="a6f57-112">A página de Ajuda do WCF WEB HTTP exibe uma breve descrição de cada operação desde que você especificar um usando o <xref:System.ComponentModel.DescriptionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a6f57-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="a6f57-113">Este atributo tem uma cadeia de caracteres que contém uma breve descrição da operação a que será aplicada.</span><span class="sxs-lookup"><span data-stu-id="a6f57-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="a6f57-114">Por exemplo, o código a seguir mostra como usar o <xref:System.ComponentModel.DescriptionAttribute> para fornecer uma breve descrição.</span><span class="sxs-lookup"><span data-stu-id="a6f57-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
+## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="d938c-111">Usando a página de Ajuda do WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="d938c-111">Using the WCF Web HTTP Help Page</span></span>  
+ <span data-ttu-id="d938c-112">A página de Ajuda do WCF WEB HTTP exibe uma breve descrição de cada operação desde que você especificar um usando o <xref:System.ComponentModel.DescriptionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="d938c-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="d938c-113">Este atributo tem uma cadeia de caracteres que contém uma breve descrição da operação a que será aplicada.</span><span class="sxs-lookup"><span data-stu-id="d938c-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="d938c-114">Por exemplo, o código a seguir mostra como usar o <xref:System.ComponentModel.DescriptionAttribute> para fornecer uma breve descrição.</span><span class="sxs-lookup"><span data-stu-id="d938c-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
   
 ```  
 [OperationContract]  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- <span data-ttu-id="a6f57-115">Para ativar a página de Ajuda do WCF WEB HTTP, você deve adicionar um comportamento de ponto de extremidade para os pontos de extremidade do serviço.</span><span class="sxs-lookup"><span data-stu-id="a6f57-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="a6f57-116">Isso pode ser feito na configuração ou código.</span><span class="sxs-lookup"><span data-stu-id="a6f57-116">This can be done in configuration or code.</span></span> <span data-ttu-id="a6f57-117">Para habilitar a idade de WCF WEB HTTP ajuda na configuração, adicione um comportamento de ponto de extremidade com um `<webHttp>` elemento, defina `enableHelp` para `true`, adicione um ponto de extremidade e configurá-lo para usar o comportamento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="a6f57-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="a6f57-118">O código de configuração a seguir mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="a6f57-118">The following configuration code shows how to do this.</span></span>  
+ <span data-ttu-id="d938c-115">Para ativar a página de Ajuda do WCF WEB HTTP, você deve adicionar um comportamento de ponto de extremidade para os pontos de extremidade do serviço.</span><span class="sxs-lookup"><span data-stu-id="d938c-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="d938c-116">Isso pode ser feito na configuração ou código.</span><span class="sxs-lookup"><span data-stu-id="d938c-116">This can be done in configuration or code.</span></span> <span data-ttu-id="d938c-117">Para habilitar a idade de WCF WEB HTTP ajuda na configuração, adicione um comportamento de ponto de extremidade com um `<webHttp>` elemento, defina `enableHelp` para `true`, adicione um ponto de extremidade e configurá-lo para usar o comportamento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="d938c-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="d938c-118">O código de configuração a seguir mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="d938c-118">The following configuration code shows how to do this.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -56,7 +58,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- <span data-ttu-id="a6f57-119">Para habilitar a página de Ajuda do WCF Web HTTP no código, adicione um ponto de extremidade de serviço e adicione um <xref:System.ServiceModel.Description.WebHttpBehavior> para a configuração de ponto de extremidade <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` para `true`.</span><span class="sxs-lookup"><span data-stu-id="a6f57-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` to `true`.</span></span> <span data-ttu-id="a6f57-120">O código a seguir mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="a6f57-120">The following code shows how to do this.</span></span>  
+ <span data-ttu-id="d938c-119">Para habilitar a página de Ajuda do WCF Web HTTP no código, adicione um ponto de extremidade de serviço e adicione um <xref:System.ServiceModel.Description.WebHttpBehavior> para a configuração de ponto de extremidade <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` para `true`.</span><span class="sxs-lookup"><span data-stu-id="d938c-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` to `true`.</span></span> <span data-ttu-id="d938c-120">O código a seguir mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="d938c-120">The following code shows how to do this.</span></span>  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -67,10 +69,10 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- <span data-ttu-id="a6f57-121">A página de Ajuda é XHTML baseado em com marcação que identifica as diferentes partes da página.</span><span class="sxs-lookup"><span data-stu-id="a6f57-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="a6f57-122">Isso permite que os clientes acessem programaticamente usando a página <xref:System.Xml.Linq.XElement> ou outras APIs XLinq.</span><span class="sxs-lookup"><span data-stu-id="a6f57-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
+ <span data-ttu-id="d938c-121">A página de Ajuda é XHTML baseado em com marcação que identifica as diferentes partes da página.</span><span class="sxs-lookup"><span data-stu-id="d938c-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="d938c-122">Isso permite que os clientes acessem programaticamente usando a página <xref:System.Xml.Linq.XElement> ou outras APIs XLinq.</span><span class="sxs-lookup"><span data-stu-id="d938c-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
   
-## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="a6f57-123">Página de ajuda de esquemas usados no serviço WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="a6f57-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
- <span data-ttu-id="a6f57-124">Os seguintes esquemas são usados na página de ajuda de serviço WCF Web HTTP.</span><span class="sxs-lookup"><span data-stu-id="a6f57-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="d938c-123">Página de ajuda de esquemas usados no serviço WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="d938c-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
+ <span data-ttu-id="d938c-124">Os seguintes esquemas são usados na página de ajuda de serviço WCF Web HTTP.</span><span class="sxs-lookup"><span data-stu-id="d938c-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -251,4 +253,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a6f57-125">o esquema de serialização de contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span><span class="sxs-lookup"><span data-stu-id="a6f57-125"> the data contract serialization schema, see [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span></span>
+ <span data-ttu-id="d938c-125">Para obter mais informações sobre o esquema de serialização de contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span><span class="sxs-lookup"><span data-stu-id="d938c-125">For more information about the data contract serialization schema, see [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span></span>
