@@ -1,24 +1,26 @@
 ---
-title: "Segurança de associação personalizada"
-ms.custom: 
+title: Segurança de associação personalizada
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94c43586606f42cca120ded59637a998d113d229
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4774e4ed6c5afc6e9c4af50e0663ffe8c0964b7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 Este exemplo demonstra como configurar a segurança por meio de uma associação personalizada. Ele mostra como usar uma associação personalizada para habilitar a segurança em nível de mensagem junto com um transporte seguro. Isso é útil quando um transporte seguro é necessária para transmitir mensagens entre cliente e serviço e simultaneamente as mensagens devem ser seguras no nível de mensagem. Essa configuração não é suportada por associações fornecidas pelo sistema.  
@@ -56,16 +58,16 @@ Este exemplo demonstra como configurar a segurança por meio de uma associação
   
 ```xml  
 <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
+    <serviceBehaviors>  
+    <behavior name="CalculatorServiceBehavior">  
+        <serviceMetadata />  
+        <serviceDebug includeExceptionDetailInFaults="False" />  
+        <serviceCredentials>  
+        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
+        </serviceCredentials>  
+    </behavior>  
+    </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Além disso, a associação personalizada usa segurança de mensagem com o tipo de credencial do Windows - esse é o tipo de credencial padrão. Isso é feito usando o `security` elemento de associação. Cliente e serviço são autenticados usando a segurança de nível de mensagem se o mecanismo de autenticação Kerberos está disponível. Isso ocorre se o exemplo é executado no ambiente do Active Directory. Se o mecanismo de autenticação Kerberos não estiver disponível, a autenticação NTLM é usada. NTLM autentica o cliente para o serviço, mas não autenticar o serviço ao cliente. O `security` elemento de associação está configurado para usar `SecureConversation``authenticationType`, que resulta na criação de uma sessão de segurança no cliente e o serviço. Isso é necessário para habilitar o contrato do serviço duplex trabalhar.  
@@ -93,7 +95,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
      O certificado é armazenado no repositório de CurrentUser para os serviços Web hospedados.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
