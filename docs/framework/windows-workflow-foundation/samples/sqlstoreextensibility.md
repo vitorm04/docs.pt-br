@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Este exemplo demonstra o uso e configuração de propriedades elevadas no armazenamento de instância de fluxo de trabalho SQL. O armazenamento de instância de fluxo de trabalho do SQL é uma implementação SQL- base de um armazenamento de instância. Permite que uma instância salve o estado e carrega o estado para e de um base de dados SQL Server ou do SQL Server Express. O recurso de extensibilidade de armazenamento permite que o usuário defina as propriedades que são armazenadas no armazenamento de instância. Essas propriedades são exibidas em uma exibição promovida propriedades que permite que o usuário possa ver para eles.  
@@ -62,7 +63,7 @@ Este exemplo demonstra o uso e configuração de propriedades elevadas no armaze
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Para verificar o exemplo está funcionando corretamente  
   
-1.  Use o SQL Server Management Studio para exibir o conteúdo da tabela de instância selecionando **bancos de dados**, **InstanceStore**e, em seguida,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** no Pesquisador de objetos, clique com botão direito **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selecione  **Selecione os primeiros 1.000 linhas**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, consulte [apresentando o SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Use o SQL Server Management Studio para exibir o conteúdo da tabela de instância selecionando **bancos de dados**, **InstanceStore**e, em seguida,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** no Pesquisador de objetos, clique com botão direito **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selecione  **Selecione os primeiros 1.000 linhas**. Para obter mais informações sobre o SQL Server Management Studio, consulte [apresentando o SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Observe as instâncias de fluxo de trabalho listadas.  
   

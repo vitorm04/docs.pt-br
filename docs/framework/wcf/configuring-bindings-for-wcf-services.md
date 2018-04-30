@@ -1,28 +1,28 @@
 ---
-title: "Configurando associações para serviços do Windows Communication Foundation"
-ms.custom: 
+title: Configurando associações para serviços do Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
 Ao criar um aplicativo, você geralmente deseja adiar decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou identificador de recurso uniforme (URI) será. Em vez de codificar um endereço, é preferível para permitir que um administrador fazer isso depois de criar um serviço. Essa flexibilidade é feita por meio da configuração.  
@@ -47,13 +47,13 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementos de ServiceModel  
- Você pode usar a seção delimitada pelo `system.ServiceModel` elemento para configurar um tipo de serviço com um ou mais pontos de extremidade, bem como configurações de um serviço. Cada ponto de extremidade, em seguida, pode ser configurado com um endereço, um contrato e uma associação. [!INCLUDE[crabout](../../../includes/crabout-md.md)]pontos de extremidade, consulte [visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md). Se nenhum ponto de extremidade forem especificados, o tempo de execução adiciona pontos de extremidade padrão. [!INCLUDE[crabout](../../../includes/crabout-md.md)]pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Você pode usar a seção delimitada pelo `system.ServiceModel` elemento para configurar um tipo de serviço com um ou mais pontos de extremidade, bem como configurações de um serviço. Cada ponto de extremidade, em seguida, pode ser configurado com um endereço, um contrato e uma associação. Para obter mais informações sobre pontos de extremidade, consulte [visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md). Se nenhum ponto de extremidade forem especificados, o tempo de execução adiciona pontos de extremidade padrão. Para obter mais informações sobre pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Uma associação especifica transportes (HTTP, TCP, pipes enfileiramento de mensagens) e protocolos (segurança, confiabilidade, os fluxos de transação) e consiste em elementos, cada um deles especifica um aspecto de como um ponto de extremidade se comunica com o mundo de associação.  
   
  Por exemplo, especificando o [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento indica para usar HTTP como o transporte de um ponto de extremidade. Isso é usado para conectar o ponto de extremidade em tempo de execução quando o serviço usando esse ponto de extremidade é aberto.  
   
- Há dois tipos de associações: predefinidos e personalizados. Associações predefinidas contêm útil combinações de elementos que são usados em cenários comuns. Para tipos de uma lista de associação predefinida [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). Se nenhuma coleção de associação predefinidas a combinação correta de recursos que precisa de um aplicativo de serviço, você pode construir associações personalizadas para atender aos requisitos do aplicativo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]associações personalizadas, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Há dois tipos de associações: predefinidos e personalizados. Associações predefinidas contêm útil combinações de elementos que são usados em cenários comuns. Para tipos de uma lista de associação predefinida [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). Se nenhuma coleção de associação predefinidas a combinação correta de recursos que precisa de um aplicativo de serviço, você pode construir associações personalizadas para atender aos requisitos do aplicativo. Para obter mais informações sobre associações personalizadas, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  Os quatro exemplos a seguir ilustram as configurações mais comuns de associação usadas para configurar um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço.  
   
@@ -71,7 +71,7 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
 </service>  
 ```  
   
- Neste exemplo, o `name` atributo indica qual tipo de serviço é a configuração para. Quando você cria um serviço em seu código com o `HelloWorld` contrato, ele é inicializado com todos os pontos de extremidade definidos na configuração de exemplo. Se o assembly que implementa apenas um contrato de serviço, o `name` atributo pode ser omitido porque o serviço usa o tipo disponível somente. O atributo utiliza uma cadeia de caracteres, deve estar no formato`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ Neste exemplo, o `name` atributo indica qual tipo de serviço é a configuração para. Quando você cria um serviço em seu código com o `HelloWorld` contrato, ele é inicializado com todos os pontos de extremidade definidos na configuração de exemplo. Se o assembly que implementa apenas um contrato de serviço, o `name` atributo pode ser omitido porque o serviço usa o tipo disponível somente. O atributo utiliza uma cadeia de caracteres, deve estar no formato `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  O `address` atributo especifica o URI que outros pontos de extremidade usam para se comunicar com o serviço. O URI pode ser um caminho absoluto ou relativo. Se for fornecido um endereço relativo, o host deve fornecer um endereço base que é apropriado para o esquema de transporte usado na associação. Se um endereço não estiver configurado, o endereço base é considerado o endereço do ponto de extremidade.  
   

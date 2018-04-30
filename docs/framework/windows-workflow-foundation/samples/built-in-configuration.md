@@ -1,23 +1,24 @@
 ---
-title: "Configuração interno"
-ms.custom: 
+title: Configuração interno
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Configuração interno
 Este exemplo demonstra o uso e a configuração da instância de fluxo de trabalho SQL. O armazenamento de instância de fluxo de trabalho do SQL é uma implementação SQL- base de um armazenamento de instância. Permite que uma instância salvar e carrega o estado para e de um base de dados SQL Server ou do SQL Server Express.  
@@ -36,7 +37,7 @@ Este exemplo demonstra o uso e a configuração da instância de fluxo de trabal
   
  Os trabalhos de contagem autodescritivos são hospedados por um host serviço de trabalho. O método de `Main` de programa cria uma instância do host serviço de fluxo de trabalho que hospeda o fluxo de trabalho de contagem. Define os pontos de extremidade em que o fluxo de trabalho de contagem pode ser alcançado. Após isso, define um comportamento do armazenamento de instância de fluxo de trabalho SQL, que é usado para configurar o armazenamento de instância de fluxo de trabalho SQL. Em seguida, o programa cria um cliente que chama o método inicial do fluxo de trabalho de contagem.  
   
- O programa é iniciado uma vez, o contador inicia automaticamente a contagem. Observe que pode levar alguns segundos para carregar a instância e configurar o armazenamento de instância de fluxo de trabalho SQL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o armazenamento de instância de fluxo de trabalho, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ O programa é iniciado uma vez, o contador inicia automaticamente a contagem. Observe que pode levar alguns segundos para carregar a instância e configurar o armazenamento de instância de fluxo de trabalho SQL. Para obter mais informações sobre o armazenamento de instância de fluxo de trabalho, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  O exemplo consiste em duas partes:  
   

@@ -1,28 +1,28 @@
 ---
-title: "Visão geral de associações do Windows Communication Foundation"
-ms.custom: 
+title: Visão geral de associações do Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de uma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço. Cada ponto de extremidade em um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, elementos de uma associação que associações são incluídas no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], e como uma associação pode ser especificada para um ponto de extremidade.  
@@ -40,7 +40,7 @@ Associações são objetos que são usados para especificar os detalhes de comun
  Determina o protocolo de transporte subjacente para usar (por exemplo, TCP ou HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Os elementos de uma associação  
- Uma associação basicamente consiste em uma pilha ordenada de elementos de associação de cada um deles especifica parte das informações de comunicação necessárias para conectar a um ponto de extremidade de serviço. As duas camadas mais baixas na pilha são necessários. Na base da pilha é o elemento de associação de transporte e acima isso é o elemento que contém as especificações de codificação de mensagem. Os elementos de associação opcional que especifica os outros protocolos de comunicação são colocadas em camadas acima desses dois elementos necessários. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Esses elementos de associação e a ordem correta, consulte [personalizado associações](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Uma associação basicamente consiste em uma pilha ordenada de elementos de associação de cada um deles especifica parte das informações de comunicação necessárias para conectar a um ponto de extremidade de serviço. As duas camadas mais baixas na pilha são necessários. Na base da pilha é o elemento de associação de transporte e acima isso é o elemento que contém as especificações de codificação de mensagem. Os elementos de associação opcional que especifica os outros protocolos de comunicação são colocadas em camadas acima desses dois elementos necessários. Para obter mais informações sobre esses elementos de associação e a ordem correta, consulte [personalizado associações](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
  As informações em uma associação podem ser complexas, e algumas configurações podem não ser compatíveis com outras pessoas. Por esse motivo, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui um conjunto de associações fornecidas pelo sistema. Essas associações são projetadas para cobrir a maioria dos requisitos do aplicativo. As classes a seguir representam alguns exemplos de associações fornecidas pelo sistema:  
@@ -56,7 +56,7 @@ Associações são objetos que são usados para especificar os detalhes de comun
  Para obter uma lista completa, com descrições de todas as [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-fornecido associações, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Usando seus próprio associações  
- Se nenhuma das associações fornecidas pelo sistema incluídas tiver a combinação certa de recursos que requer um aplicativo de serviço, você pode criar sua própria associação. Há duas formas de fazer isso. Você pode criar uma nova associação de pré-existente em elementos de associação usando um <xref:System.ServiceModel.Channels.CustomBinding> objeto ou você pode criar uma associação completamente definido pelo usuário derivando de <xref:System.ServiceModel.Channels.Binding> associação. [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar sua própria associação usando estas duas abordagens, consulte [personalizado associações](../../../docs/framework/wcf/extending/custom-bindings.md) e [Criando associações](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Se nenhuma das associações fornecidas pelo sistema incluídas tiver a combinação certa de recursos que requer um aplicativo de serviço, você pode criar sua própria associação. Há duas formas de fazer isso. Você pode criar uma nova associação de pré-existente em elementos de associação usando um <xref:System.ServiceModel.Channels.CustomBinding> objeto ou você pode criar uma associação completamente definido pelo usuário derivando de <xref:System.ServiceModel.Channels.Binding> associação. Para obter mais informações sobre como criar sua própria associação usando estas duas abordagens, consulte [personalizado associações](../../../docs/framework/wcf/extending/custom-bindings.md) e [Criando associações](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Usando associações  
  Usando associações envolve duas etapas básicas:  

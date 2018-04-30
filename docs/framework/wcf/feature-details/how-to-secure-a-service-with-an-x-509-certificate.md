@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Como proteger um serviço com um certificado X.509
 Proteger um serviço com um certificado x. 509 é uma técnica básica que a maioria das associações em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usar. Este tópico explica as etapas de configuração de um serviço hospedado automaticamente com um certificado x. 509.  
   
- Um pré-requisito é um certificado válido que pode ser usado para autenticar o servidor. O certificado deve ser emitido para o servidor por uma autoridade de certificação confiável. Se o certificado não for válido, qualquer tentativa de usar o serviço de cliente não confiará o serviço e, consequentemente, nenhuma conexão será feita. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usar certificados, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Um pré-requisito é um certificado válido que pode ser usado para autenticar o servidor. O certificado deve ser emitido para o servidor por uma autoridade de certificação confiável. Se o certificado não for válido, qualquer tentativa de usar o serviço de cliente não confiará o serviço e, consequentemente, nenhuma conexão será feita. Para obter mais informações sobre como usar certificados, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Para configurar um serviço com um certificado usando código  
   

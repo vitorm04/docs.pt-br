@@ -1,24 +1,26 @@
 ---
-title: "Configurando a descoberta em um arquivo de configuração"
-ms.custom: 
+title: Configurando a descoberta em um arquivo de configuração
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurando a descoberta em um arquivo de configuração
 Existem quatro grupos principais de definições de configuração usados na descoberta. Este tópico será brevemente descrevem cada e mostram exemplos de como configurá-los. Cada seção a seguir será um link para mais documentação detalhada sobre cada área.  
@@ -148,7 +150,7 @@ Existem quatro grupos principais de definições de configuração usados na des
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Para obter mais informações sobre <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Configuração do elemento de associação  
  Configuração do elemento de associação é mais interessante no lado do cliente. Você pode usar a configuração para especificar os critérios de localização usados para descobrir os serviços de um aplicativo de cliente do WCF.  O exemplo a seguir cria uma associação personalizada com o <xref:System.ServiceModel.Discovery.DiscoveryClient> de canal e especifica os critérios de localização que inclui um tipo e um escopo. Além de especificar valores para o <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> e <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> propriedades.  
@@ -188,7 +190,7 @@ Existem quatro grupos principais de definições de configuração usados na des
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Localizar consulte critérios [FindCriteria e descoberta localizar](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]elementos de descoberta e associação de ver, [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Para obter mais informações sobre critérios de localização, consulte [FindCriteria e descoberta localizar](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obter mais informações sobre descoberta e elementos de associação, consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Configuração de ponto de extremidade padrão  
  Pontos de extremidade padrão são pontos de extremidade predefinidos que têm valores padrão para uma ou mais propriedades (endereço, associação ou contrato) ou um ou mais valores de propriedade que não podem alterar. O .NET 4 é fornecido com 3 descoberta relacionadas a pontos de extremidade padrão: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, e <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  O <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é a associação de um ponto de extremidade padrão que é pré-configurado para operações de descoberta por meio de um multicast UDP. O <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> é um ponto de extremidade padrão que é pré-configurado para enviar mensagens de aviso sobre uma associação de UDP. O <xref:System.ServiceModel.Discovery.DynamicEndpoint> é um ponto de extremidade padrão que usa a descoberta para localizar o endereço de ponto de extremidade de um serviço descoberto dinamicamente em tempo de execução.  Associações padrão são especificadas com um <`endpoint`> elemento que contém o atributo de tipo que especificar o tipo de ponto de extremidade padrão para adicionar. O exemplo a seguir mostra como adicionar um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e um <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
@@ -280,4 +282,4 @@ Existem quatro grupos principais de definições de configuração usados na des
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pontos de extremidade padrão consulte [pontos de extremidade padrão](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Para obter mais informações sobre pontos de extremidade padrão consulte [pontos de extremidade padrão](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
-<a name="introduction"></a> Ao desenvolver [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autônomo e aplicativos hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos execute com permissões irrestritas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Ao desenvolver autônomo do Windows Presentation Foundation (WPF) e aplicativos hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos execute com permissões irrestritas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador hospedados por [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ou Firefox, e pode ser [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] ou flexível [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documentos para obter mais informações, consulte [visão geral sobre aplicativos de navegador XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador executar em uma proteção de segurança de confiança parcial, por padrão, que é limitada ao padrão [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** conjunto de permissões da zona. Isso efetivamente isola [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados pelo navegador do computador cliente da mesma maneira que você esperaria típicos aplicativos da Web deve ser isolado. Um XBAP é capaz de elevar privilégios, até confiança total, dependendo da zona de segurança da URL de implantação e da configuração de segurança do cliente. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- Este tópico discute o modelo de segurança para [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autônomo e aplicativos hospedados em navegador.  
+ Este tópico discute o modelo de segurança autônomo do Windows Presentation Foundation (WPF) e aplicativos hospedados pelo navegador.  
   
  Esse tópico contém as seguintes seções:  
   

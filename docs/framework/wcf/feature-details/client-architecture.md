@@ -1,27 +1,29 @@
 ---
 title: Arquitetura do cliente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>Arquitetura do cliente
-Os aplicativos usam [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] objetos de cliente para chamar operações de serviço. Este tópico discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canais de cliente e suas relações com a arquitetura de canal subjacente. Para uma visão geral básica de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente, consulte [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]a camada do canal, consulte [estendendo a camada do canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+Os aplicativos usam [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] objetos de cliente para chamar operações de serviço. Este tópico discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canais de cliente e suas relações com a arquitetura de canal subjacente. Para uma visão geral básica de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente, consulte [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Para obter mais informações sobre a camada do canal, consulte [estendendo a camada do canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="overview"></a>Visão geral  
  O modelo de serviço no tempo de execução cria [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes, que são compostos do seguinte:  
@@ -37,7 +39,7 @@ Os aplicativos usam [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obje
 ## <a name="client-objects-and-client-channels"></a>Objetos de cliente e canais de cliente  
  A interface base de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes é a <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interface, que expõe a funcionalidade de cliente principal, bem como a funcionalidade do objeto de comunicação básica de <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>, a funcionalidade de contexto de <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>e o extensível comportamento de <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>.  
   
- O <xref:System.ServiceModel.IClientChannel> interface, no entanto, não define um contrato de serviço. Aqueles são declarados pela interface de contrato de serviço (normalmente gerada a partir de metadados de serviço usando uma ferramenta como o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tipos de clientes estendem ambos <xref:System.ServiceModel.IClientChannel> e a interface de contrato de serviço de destino para habilitar aplicativos para chamar operações diretamente e também ter acesso à funcionalidade de tempo de execução do lado do cliente. Criando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente fornece [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> objetos com as informações necessárias para criar um tempo de execução que podem se conectar e interagir com o ponto de extremidade de serviço configurado.  
+ O <xref:System.ServiceModel.IClientChannel> interface, no entanto, não define um contrato de serviço. Aqueles são declarados pela interface de contrato de serviço (normalmente gerada a partir de metadados de serviço usando uma ferramenta como o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tipos de clientes estendem ambos <xref:System.ServiceModel.IClientChannel> e a interface de contrato de serviço de destino para habilitar aplicativos para chamar operações diretamente e também ter acesso à funcionalidade de tempo de execução do lado do cliente. Criando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente fornece [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> objetos com as informações necessárias para criar um tempo de execução que podem se conectar e interagir com o ponto de extremidade de serviço configurado.  
   
  Como mencionado anteriormente, os dois [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tipos de cliente devem ser configurados antes de você pode usá-los. A forma mais simples [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tipos de cliente são objetos que derivam de <xref:System.ServiceModel.ClientBase%601> (ou <xref:System.ServiceModel.DuplexClientBase%601> se o contrato de serviço é um contrato duplex). Você pode criar esses tipos usando um construtor, configurado programaticamente, ou usando um arquivo de configuração e, em seguida, chamado diretamente para chamar operações de serviço. Para uma visão geral básica de <xref:System.ServiceModel.ClientBase%601> objetos, consulte [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
@@ -48,7 +50,7 @@ Os aplicativos usam [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obje
   
  O mais importante sobre fábricas de canais é que criar novas instâncias do cliente de canais para a configuração fornecida-los antes de chamar <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>. Depois de você chamar <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (ou <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType>, ou qualquer operação em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto cliente), você não pode modificar a fábrica de canais e pretende obter canais para instâncias de serviço diferente, mesmo que você está alterando apenas o destino endereço de ponto de extremidade. Se você quiser criar um objeto de cliente ou um canal de cliente com uma configuração diferente, você deve criar uma nova fábrica de canais primeiro.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]vários problemas usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canais de cliente, consulte [Acessando serviços usando um cliente WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Para obter mais informações sobre diversos problemas usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canais de cliente, consulte [Acessando serviços usando um cliente WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
  As seções a seguir descrevem a criação e uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de canal do cliente.  
   

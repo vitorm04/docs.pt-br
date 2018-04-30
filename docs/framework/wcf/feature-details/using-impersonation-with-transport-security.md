@@ -1,27 +1,29 @@
 ---
-title: "Utilizando Personificação com segurança de transporte"
-ms.custom: 
+title: Utilizando Personificação com segurança de transporte
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizando Personificação com segurança de transporte
-*Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para serviços usar representação ao validar acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com o recurso de representação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para serviços usar representação ao validar acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com o recurso de representação. Para obter mais informações sobre representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Cinco níveis de representação  
  Segurança de transporte utiliza cinco níveis de representação, conforme descrito na tabela a seguir.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Pipes nomeados não podem ser usados com o `Impersonate` ou `Delegate` nível de representação. O pipe nomeado não é possível impor a garantia na máquina nestes níveis de representação.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pipes nomeados, consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Para obter mais informações sobre pipes nomeados, consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Transporte de HTTP  
  As associações que usam o transporte HTTP (<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.BasicHttpBinding>) dão suporte a vários esquemas de autenticação, conforme explicado em [Noções básicas sobre a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). A representação de nível de suporte depende do esquema de autenticação. Os itens a seguir são usados com o transporte HTTP:  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   O esquema de autenticação Kerberos, que só pode ser selecionado por meio de negociação, pode ser usado com qualquer nível de representação com suporte.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o transporte HTTP, consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Para obter mais informações sobre o transporte HTTP, consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

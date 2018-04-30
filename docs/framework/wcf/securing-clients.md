@@ -1,37 +1,37 @@
 ---
 title: Protegendo clientes
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>Protegendo clientes
-Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
+Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. Para obter mais informações sobre como criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>O serviço Especifica a segurança  
  Por padrão, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] associações têm recursos de segurança habilitados. (A exceção é o <xref:System.ServiceModel.BasicHttpBinding>.) Portanto, se o serviço foi criado usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], há uma possibilidade maior de implementar a segurança para garantir a integridade, confidencialidade e autenticação. Nesse caso, os metadados que de serviço fornece indicará requer para estabelecer um canal de comunicação seguro. Se os metadados de serviço não incluem quaisquer requisitos de segurança, não é possível impor um esquema de segurança, como o protocolo (SSL) sobre HTTP, em um serviço. Se, no entanto, o serviço exigir que o cliente forneça uma credencial, em seguida, o desenvolvedor do cliente, o implantador ou o administrador deve fornecer a credencial real que o cliente usará para se autenticar para o serviço.  
   
 ## <a name="obtaining-metadata"></a>Obtenção de metadados  
- Ao criar um cliente, a primeira etapa é obter os metadados para o serviço que o cliente se comunicará. Isso pode ser feito de duas maneiras. Primeiro, se o serviço publica um ponto de extremidade do exchange (MEX) de metadados ou disponibiliza seus metadados via HTTP ou HTTPS, você pode baixar os metadados usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), que gera a ambos arquivos de código para um cliente, bem como um arquivo de configuração. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] usando a ferramenta, consulte [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Se o serviço não publicar um ponto de extremidade MEX e também não disponibilizar seus metadados via HTTP ou HTTPS, você deve entrar em contato com o criador do serviço para obter a documentação que descreve os requisitos de segurança e os metadados.  
+ Ao criar um cliente, a primeira etapa é obter os metadados para o serviço que o cliente se comunicará. Isso pode ser feito de duas maneiras. Primeiro, se o serviço publica um ponto de extremidade do exchange (MEX) de metadados ou disponibiliza seus metadados via HTTP ou HTTPS, você pode baixar os metadados usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), que gera a ambos arquivos de código para um cliente, bem como um arquivo de configuração. (Para obter mais informações sobre como usar a ferramenta, consulte [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Se o serviço não publicar um ponto de extremidade MEX e também não disponibilizar seus metadados via HTTP ou HTTPS, você deve entrar em contato com o criador do serviço para obter a documentação que descreve os requisitos de segurança e os metadados.  
   
 > [!IMPORTANT]
 >  É recomendável que os metadados são provenientes de uma fonte confiável e se ele não ser violado. Metadados recuperados usando o protocolo HTTP é enviado em texto não criptografado e podem ser violados. Se o serviço usa o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> propriedades, use a URL que o criador do serviço fornecido para baixar os dados usando o protocolo HTTPS.  
@@ -93,11 +93,11 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os
   
 |Propriedade ClientCredential|Descrição|Observações|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Retorna um<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Representa um certificado x. 509 fornecido pelo cliente para se autenticar para o serviço.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Retorna um<xref:System.ServiceModel.Security.HttpDigestClientCredential>|Representa uma credencial de digest HTTP. A credencial é um hash do nome de usuário e senha.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Retorna um<xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Representa um token de segurança personalizada emitido por um serviço de Token de segurança, geralmente usados em cenários de Federação.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Retorna um <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Representa um certificado x. 509 fornecido pelo cliente para se autenticar para o serviço.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Retorna um <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Representa uma credencial de digest HTTP. A credencial é um hash do nome de usuário e senha.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Retorna um <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Representa um token de segurança personalizada emitido por um serviço de Token de segurança, geralmente usados em cenários de Federação.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Retorna um <xref:System.ServiceModel.Security.PeerCredential>|Representa uma credencial de ponto a ponto para participação em uma malha de pontos em um domínio do Windows.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Retorna um<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Representa um certificado x. 509 fornecido pelo serviço em uma negociação de fora da banda.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Retorna um <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Representa um certificado x. 509 fornecido pelo serviço em uma negociação de fora da banda.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Retorna um <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Representa um par de nome e a senha do usuário.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Retorna um <xref:System.ServiceModel.Security.WindowsClientCredential>|Representa uma credencial de cliente do Windows (uma credencial Kerberos). As propriedades da classe são somente leitura.|  
   
@@ -147,10 +147,10 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os
 > [!NOTE]
 >  Alguns dos valores de credencial de cliente não podem ser definido usando arquivos de configuração do aplicativo, por exemplo, nome de usuário e senha, ou usuário do Windows e valores de senha. Esses valores de credencial podem ser especificados somente no código.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]definir a credencial do cliente, consulte [como: especificar valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Para obter mais informações sobre como configurar a credencial do cliente, consulte [como: especificar valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  `ClientCredentialType`é ignorado quando `SecurityMode` é definido como `"TransportWithMessageCredential",` conforme mostrado no exemplo de configuração.  
+>  `ClientCredentialType` é ignorado quando `SecurityMode` é definido como `"TransportWithMessageCredential",` conforme mostrado no exemplo de configuração.  
   
 ```xml  
 <wsHttpBinding>  
@@ -171,7 +171,7 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
  [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

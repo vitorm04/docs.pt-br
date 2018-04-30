@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Como criar uma WSFederationHttpBinding
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) na configuração) fornece um mecanismo para expor um serviço federado. Ou seja, um serviço que exige que os clientes se autentiquem usando um token de segurança emitido por um serviço de token de segurança. Este tópico mostra como configurar um <xref:System.ServiceModel.WSFederationHttpBinding> em código e configuração. Depois que a associação é criada, você pode configurar um ponto de extremidade para usar essa associação.  
@@ -48,7 +48,7 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.Servi
   
      O URI para um token SAML 1.1 é "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  Opcional. Em serviços federados, defina o <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> propriedade para a URL de metadados de um serviço de token de segurança. O ponto de extremidade de metadados permite que os clientes do serviço selecionar um par de associação/ponto de extremidade apropriado, se o serviço está configurado para publicar metadados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] publicação de metadados, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Opcional. Em serviços federados, defina o <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> propriedade para a URL de metadados de um serviço de token de segurança. O ponto de extremidade de metadados permite que os clientes do serviço selecionar um par de associação/ponto de extremidade apropriado, se o serviço está configurado para publicar metadados. Para obter mais informações sobre metadados de publicação, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Você também pode definir outras propriedades, incluindo o tipo de chave usado como uma chave de prova no token emitido, o conjunto de algoritmos para usar entre o cliente e o serviço se negociar ou especifique explicitamente as credenciais do serviço, qualquer específica declarações do serviço espera que o token emitido contenha e quaisquer elementos XML adicionais que devem ser adicionados à solicitação, que o cliente envia ao serviço de token de segurança.  
   
@@ -103,7 +103,7 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], o <xref:System.Servi
   
 12. Para obter mais informações, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Necessário no cliente se nenhum emissor local for especificado; não usado no serviço. Criar um [ \<associação >](../../../../docs/framework/misc/binding.md) elemento na seção de associações que pode ser usado para se comunicar com o serviço de token de segurança. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] criar uma associação, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Necessário no cliente se nenhum emissor local for especificado; não usado no serviço. Criar um [ \<associação >](../../../../docs/framework/misc/binding.md) elemento na seção de associações que pode ser usado para se comunicar com o serviço de token de segurança. Para obter mais informações sobre como criar uma associação, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Especificar a associação criada na etapa anterior, definindo o `binding` e `bindingConfiguration` atributos do `<issuer>` elemento.  
   

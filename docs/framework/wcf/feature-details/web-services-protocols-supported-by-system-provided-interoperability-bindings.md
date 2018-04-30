@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Associações de interoperabilidade fornecidas pelo sistema oferece suporte para protocolos de serviços Web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é criado para interoperar com serviços da Web que oferecem suporte a um conjunto de especificações conhecido como especificações de serviços da Web. Para simplificar a configuração de serviço para práticas recomendadas de interoperabilidade, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] apresenta três associações fornecidas pelo sistema interoperáveis: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, e <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Para interoperabilidade com a organização para os padrões de avanço de Structured Information Standards (OASIS), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui uma associação fornecida pelo sistema interoperável: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Para publicação de metadados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui duas associações fornecidas pelo sistema interoperáveis: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) e [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Este tópico lista as especificações que dão suporte a associações de interoperabilidade fornecidas pelo sistema.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  As tabelas a seguir descrevem os protocolos suportados pelas associações de metadados de interoperabilidade fornecidas pelo sistema expostas pelo <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> classe.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- O [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) associação suporta os seguintes protocolos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usando essa associação, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ O [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) associação suporta os seguintes protocolos. Para obter mais informações sobre como usar essa associação, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Categoria|Protocolo|Especificação e uso|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |Metadados|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa o WS-MetadataExchange para recuperar o esquema XML, WSDL e WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) suporta os seguintes protocolos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usando essa associação, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) suporta os seguintes protocolos. Para obter mais informações sobre como usar essa associação, consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Categoria|Protocolo|Especificação e uso|  
 |--------------|--------------|-----------------------------|  

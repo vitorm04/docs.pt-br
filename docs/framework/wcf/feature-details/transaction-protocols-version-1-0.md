@@ -1,32 +1,34 @@
 ---
-title: "Protocolos de transação versão 1.0"
-ms.custom: 
+title: Protocolos de transação versão 1.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transação versão 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]versão 1 implementa versão 1.0 dos protocolos WS-AT e coordenação WS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]versão 1.1, consulte [protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] versão 1 implementa versão 1.0 dos protocolos WS-AT e coordenação WS. Para obter mais informações sobre versão 1.1, consulte [protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Documento de especificação /|Link|  
 |-----------------------------|----------|  
-|Coordenação WS|http://msdn.microsoft.com/ws/2005/08/WS-Coordination/|  
-|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/WS-AtomicTransaction/|  
+|Coordenação WS|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
+|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
  Interoperabilidade nessas especificações de protocolo é necessária em dois níveis: entre aplicativos e gerenciadores de transações (consulte a figura a seguir). Especificações descrevem detalhadamente os formatos de mensagem e a mensagem do exchange para ambos os níveis de interoperabilidade. Determinados segurança, confiabilidade e codificações para o aplicativo para exchange se aplicam para troca de aplicativo comum. No entanto, interoperabilidade com êxito entre gerenciadores de transações exige contrato na associação de determinado, porque geralmente não está configurado pelo usuário.  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
 |Prefixo|URI de Namespace|  
 |------------|-------------------|  
-|S11|http://schemas.xmlsoap.org/SOAP/envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
-|WSAT|http://schemas.xmlsoap.org/ws/2004/10/WSAT|  
+|WSAT|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
 |t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
-|o|http://docs.oasis-open.org/WSS/2004/01/OASIS-200401-WSS-wssecurity-secext-1.0.xsd|  
+|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
 |XSD|http://www.w3.org/2001/XMLSchema|  
   
 ## <a name="transaction-manager-bindings"></a>Associações do Gerenciador de transações  
@@ -94,10 +96,10 @@ ms.lasthandoff: 12/22/2017
 -   B1112: O DNS deve ser funcional entre cada par de remetente e o receptor do sistema para verificações de nome de assunto de x. 509 seja bem-sucedida.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Ativação e registro de configuração de associação  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]requer a associação de solicitação/resposta duplex com correlação via HTTPS. (Para obter mais informações sobre a correlação e descrições dos padrões de troca de mensagem de solicitação/resposta, consulte transação WS-Atomic, 8 de seção).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requer a associação de solicitação/resposta duplex com correlação via HTTPS. (Para obter mais informações sobre a correlação e descrições dos padrões de troca de mensagem de solicitação/resposta, consulte transação WS-Atomic, 8 de seção).  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuração de associação de protocolo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a mensagens unidirecionais (datagrama) sobre HTTPS. Correlação entre as mensagens será deixada como um detalhe de implementação.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a mensagens unidirecionais (datagrama) sobre HTTPS. Correlação entre as mensagens será deixada como um detalhe de implementação.  
   
  B2131: Implementações devem suportar `wsa:ReferenceParameters` conforme descrito em WS-Addressing para alcançar a correlação de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]do 2PC mensagens.  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 12/22/2017
  O `wsse:Timestamp` elemento deve ser assinado usando o `SecurityContextToken``STx` emitido. Esta assinatura é uma prova de posse do token associado à transação específica e é usada para autenticar um participante inscrição na transação. A mensagem RegistrationResponse é enviada novamente por HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuração de associação de protocolo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a mensagens unidirecionais (datagrama) sobre HTTPS. Correlação entre as mensagens será deixada como um detalhe de implementação.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a mensagens unidirecionais (datagrama) sobre HTTPS. Correlação entre as mensagens será deixada como um detalhe de implementação.  
   
  B2131: Implementações devem suportar `wsa:ReferenceParameters` conforme descrito em WS-Addressing para alcançar a correlação de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]do 2PC mensagens.  
   

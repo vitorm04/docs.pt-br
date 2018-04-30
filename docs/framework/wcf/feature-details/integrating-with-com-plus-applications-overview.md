@@ -1,30 +1,32 @@
 ---
-title: "Integração com visão geral de aplicativos COM+"
-ms.custom: 
+title: Integração com visão geral de aplicativos COM+
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um ambiente rico para criar aplicativos distribuídos. Se você já estiver usando a lógica do aplicativo baseado em componente hospedada em COM+, você pode usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor existente lógica de negócios de COM+ ou serviços corporativos por meio de serviços Web.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece um ambiente rico para criar aplicativos distribuídos. Se você já estiver usando a lógica do aplicativo baseado em componente hospedada em COM+, você pode usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor existente lógica de negócios de COM+ ou serviços corporativos por meio de serviços Web.  
   
  Quando uma interface em um componente COM+ é exposta como um serviço Web, a especificação e contrato desses serviços são determinados por um mapeamento automático que é executado em tempo de inicialização do aplicativo. A lista a seguir mostra o modelo conceitual para que esse mapeamento:  
   
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  Selecione um modo de hospedagem apropriado.  
   
-3.  Use a ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe) para adicionar um serviço Web para a interface. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como usar ComSvcConfig.exe, consulte [como: usar a ferramenta Configuração do modelo de COM+ serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3.  Use a ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe) para adicionar um serviço Web para a interface. Para obter mais informações sobre como usar ComSvcConfig.exe, consulte [como: usar a ferramenta Configuração do modelo de COM+ serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Configure as configurações de serviço adicionais no arquivo de configuração do aplicativo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como configurar um componente, consulte [como: definir configurações de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4.  Configure as configurações de serviço adicionais no arquivo de configuração do aplicativo. Para obter mais informações sobre como configurar um componente, consulte [como: definir configurações de serviço COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfaces com suporte  
  Há algumas restrições no tipo de interfaces que pode ser exposta como um serviço Web. Não há suporte para os seguintes tipos de interfaces:  

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introdução à extensibilidade
 O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] modelo de aplicativo é projetado para resolver a maior parte dos requisitos de comunicação de qualquer aplicativo distribuído. Mas sempre há cenários em que o modelo de aplicativo padrão e implementações de fornecido pelo sistema não têm suporte. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de extensibilidade destina-se para dar suporte a cenários personalizados, permitindo que você modificar o comportamento do sistema em cada nível, até mesmo para o ponto de substituir o modelo de aplicativo inteiro. Este tópico descreve as várias áreas de extensão e aponta para obter mais informações sobre cada um.  
@@ -43,7 +43,7 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] modelo de aplicativo é p
   
  As mensagens de aplicativo contém dados que são destinados a um cliente ou operação de serviço que você ou seu cliente tiver sido criado. Essas mensagens estão disponíveis para o sistema de extensão do nível do aplicativo no formato de mensagem ou de objeto, dependendo das suas necessidades.  
   
- Todas as mensagens passam por meio do sistema de canal. somente as mensagens de aplicativo são passadas do sistema de canal para o aplicativo. Para criar a nova funcionalidade no nível do canal, você deve estender o sistema de canal. Para criar a nova funcionalidade no nível do aplicativo, você deve estender o tempo de execução do serviço ou cliente (distribuidores e fábricas de canais, respectivamente). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Estendendo o tempo de execução do aplicativo, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Todas as mensagens passam por meio do sistema de canal. somente as mensagens de aplicativo são passadas do sistema de canal para o aplicativo. Para criar a nova funcionalidade no nível do canal, você deve estender o sistema de canal. Para criar a nova funcionalidade no nível do aplicativo, você deve estender o tempo de execução do serviço ou cliente (distribuidores e fábricas de canais, respectivamente). Para obter mais informações sobre como estender o tempo de execução do aplicativo, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Segurança estendida  
  Para criar os mecanismos de segurança personalizada, como tokens e credenciais, você deve estender o sistema de segurança. Para obter mais informações, consulte [estendendo segurança](../../../docs/framework/wcf/extending/extending-security.md).  

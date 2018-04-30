@@ -1,31 +1,31 @@
 ---
 title: Filas no Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Filas no Windows Communication Foundation
-Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] suporte para filas. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte para enfileiramento de mensagens, aproveitando o enfileiramento de mensagens do Microsoft (anteriormente conhecido como MSMQ) como um transporte e permite que os seguintes cenários:  
+Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] suporte para filas. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte para enfileiramento de mensagens, aproveitando o enfileiramento de mensagens do Microsoft (anteriormente conhecido como MSMQ) como um transporte e permite que os seguintes cenários:  
   
 -   Aplicativos acoplados de forma flexível. Aplicativos de envio podem enviar mensagens para filas, sem a necessidade de saber se o aplicativo de recebimento está disponível para processar a mensagem. A fila fornece independência de processamento que permite que um aplicativo de envio enviar mensagens para a fila em uma taxa que não depende da rapidez os aplicativos receptor podem processar as mensagens. Geral a disponibilidade do sistema aumenta quando enviar mensagens para uma fila não está estreitamente acoplado ao processamento de mensagem.  
   
@@ -35,7 +35,7 @@ Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indig
   
 -   Operações desconectadas. Enviar, receber e processar as operações podem ser desconectados ao se comunicar por redes de alta latência ou disponibilidade limitada, como no caso de dispositivos móveis. As filas permitem que essas operações continuar, mesmo quando os pontos de extremidade são desconectados. Quando a conexão for restabelecida, a fila encaminha mensagens para o aplicativo de recebimento.  
   
- Para usar o recurso de filas em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, você pode usar uma das associações padrão, ou você pode criar uma associação personalizada se uma das associações padrão não atender às suas necessidades. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associações padrão relevantes e escolha um, consulte [como: troca mensagens com pontos de extremidade do WCF e aplicativos de serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Para usar o recurso de filas em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, você pode usar uma das associações padrão, ou você pode criar uma associação personalizada se uma das associações padrão não atender às suas necessidades. Para obter mais informações sobre associações padrão relevantes e como escolher um, consulte [como: troca mensagens com pontos de extremidade do WCF e aplicativos de serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obter mais informações sobre como criar associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

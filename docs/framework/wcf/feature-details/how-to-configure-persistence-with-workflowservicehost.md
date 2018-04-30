@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a11ab534cbb643d17985670e202954313f5a068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: de177180dc22fc3236924da691cf9b1f594519ce
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Como configurar persistência com WorkflowServiceHost
 Este tópico descreve como configurar o recurso de armazenamento de instância de fluxo de trabalho do SQL para habilitar a persistência para fluxos de trabalho hospedados em <xref:System.ServiceModel.Activities.WorkflowServiceHost> usando um arquivo de configuração. Antes de usar o recurso de armazenamento de instância de fluxo de trabalho do SQL, você deve criar um banco de dados SQL é usado para manter instâncias de fluxo de trabalho. Para obter mais informações, consulte [como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
@@ -44,7 +44,7 @@ Este tópico descreve como configurar o recurso de armazenamento de instância d
     </serviceBehaviors>  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como configurar o armazenamento de instância de fluxo de trabalho do SQL, consulte [como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] as configurações individuais para o <`sqlWorkflowInstanceStore`> elemento de comportamento, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric fornece seu próprio repositório de persistência. Para obter mais informações, consulte [persistência de malha de aplicativo do Windows Server](http://go.microsoft.com/fwlink/?LinkId=193121).  
+     Para obter mais informações sobre como configurar o armazenamento de instância de fluxo de trabalho do SQL, consulte [como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). Para obter mais informações sobre as configurações individuais para o <`sqlWorkflowInstanceStore`> elemento de comportamento, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric fornece seu próprio repositório de persistência. Para obter mais informações, consulte [persistência de malha de aplicativo do Windows Server](http://go.microsoft.com/fwlink/?LinkId=193121).  
   
     > [!NOTE]
     >  O exemplo de configuração anterior usa a configuração simplificada. Para obter mais informações, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md)  
@@ -65,7 +65,7 @@ Este tópico descreve como configurar o recurso de armazenamento de instância d
     });  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como configurar o armazenamento de instância de fluxo de trabalho do SQL, consulte [como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] as configurações individuais para o <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> elemento de comportamento, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric fornece seu próprio repositório de persistência. Para obter mais informações, consulte [persistência de malha de aplicativo do Windows Server](http://go.microsoft.com/fwlink/?LinkId=193121).  
+     Para obter mais informações sobre como configurar o armazenamento de instância de fluxo de trabalho do SQL, consulte [como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md). Para obter mais informações sobre as configurações individuais para o <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> elemento de comportamento, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md). Windows Server App Fabric fornece seu próprio repositório de persistência. Para obter mais informações, consulte [persistência de malha de aplicativo do Windows Server](http://go.microsoft.com/fwlink/?LinkId=193121).  
   
     > [!NOTE]
     >  O exemplo de configuração anterior usa a configuração simplificada. Para obter mais informações, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md)  

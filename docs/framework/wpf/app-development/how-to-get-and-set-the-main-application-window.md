@@ -1,12 +1,13 @@
 ---
 title: Como obter e definir a janela principal do aplicativo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bdc96c509f88650edd93ba4a7f595e2b161db39
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>Como obter e definir a janela principal do aplicativo
 Este exemplo mostra como obter e definir a janela principal do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- A primeira <xref:System.Windows.Window> instanciado em um [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicativo é definido automaticamente pelo <xref:System.Windows.Application> como a janela principal do aplicativo. A primeira <xref:System.Windows.Window> para ser instanciado será provavelmente ser a janela que é especificada como a inicialização [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (consulte <xref:System.Windows.Application.StartupUri%2A>).  
+ A primeira <xref:System.Windows.Window> instanciado em um WPF Windows Presentation Foundation () aplicativo é definido automaticamente pelo <xref:System.Windows.Application> como a janela principal do aplicativo. A primeira <xref:System.Windows.Window> para ser instanciado será provavelmente ser a janela que é especificada como a inicialização [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (consulte <xref:System.Windows.Application.StartupUri%2A>).  
   
  A primeira <xref:System.Windows.Window> também pode ser instanciado usando o código. Um exemplo é abrir uma janela durante a inicialização do aplicativo, como o seguinte:  
   

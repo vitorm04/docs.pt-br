@@ -1,30 +1,32 @@
 ---
-title: "Como criar um serviço que requer sessões"
-ms.custom: 
+title: Como criar um serviço que requer sessões
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1fba00b6b8aed8e27d5f16612bb77191f6674abe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9fdf104c46757c7cf41082a2a0e134527b75b238
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Como criar um serviço que requer sessões
-As sessões criam um estado compartilhado entre dois ou mais pontos de extremidade que habilita recursos úteis como retornos de chamada, a segurança de vários salto e associações entre clientes e instâncias de serviço. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sessões em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos, consulte [sessões usando](../../../../docs/framework/wcf/using-sessions.md).  
+As sessões criam um estado compartilhado entre dois ou mais pontos de extremidade que habilita recursos úteis como retornos de chamada, a segurança de vários salto e associações entre clientes e instâncias de serviço. Para obter mais informações sobre as sessões em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos, consulte [sessões usando](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Para especificar que um contrato exige sua associação dar suporte a sessões  
   
@@ -32,11 +34,11 @@ As sessões criam um estado compartilhado entre dois ou mais pontos de extremida
   
 2.  Modificar o <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> que declara o contrato, definindo o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> propriedade como:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>Se este contrato deve ser executado em uma sessão.  
+    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Se este contrato deve ser executado em uma sessão.  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType>Se este contrato pode ser executado em uma sessão.  
+    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Se este contrato pode ser executado em uma sessão.  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType>Se este contrato não deve ser executado em uma sessão.  
+    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Se este contrato não deve ser executado em uma sessão.  
   
 3.  Configure o ponto de extremidade de serviço para usar uma associação que dá suporte a sessões. O exemplo de configuração a seguir mostra o uso do <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, que oferece suporte a um WS`-`ReliableMessaging sessão.  
   

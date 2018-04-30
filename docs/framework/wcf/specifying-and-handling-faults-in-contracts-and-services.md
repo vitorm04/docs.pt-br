@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificando e lidando com falhas em contratos e serviços
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos de lidar com situações de erro, mapeando os objetos de exceção gerenciada para objetos de falhas SOAP e objetos de falhas SOAP em objetos de exceção gerenciada. Os tópicos nesta seção abordam como criar contratos para expor o erro condições como falhas de SOAP personalizadas, como retornar essas falhas como parte da implementação de serviço e como os clientes capturar essas falhas.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="map-exceptions-to-soap-faults"></a>Mapear exceções para falhas de SOAP  
  A primeira etapa na criação de uma operação que manipula condições de erro é decidir em quais condições, um aplicativo cliente deve ser informado sobre erros. Algumas operações tem condições de erro específicas para sua funcionalidade. Por exemplo, um `PurchaseOrder` operação pode retornar informações específicas para clientes que não têm permissão para iniciar uma ordem de compra. Em outros casos, como um `Calculator` de serviço mais geral `MathFault` falha de SOAP pode ser capaz de descrever todas as condições de erro em todo o serviço. Depois que as condições de erro de clientes do serviço são identificadas, uma falha SOAP personalizada pode ser criada e a operação pode ser marcada como retornando essa falha SOAP quando surge sua condição de erro correspondente.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Esta etapa do desenvolvimento de seu serviço ou cliente, consulte [definindo e especificando falhas](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ Para obter mais informações sobre esta etapa do desenvolvimento de seu serviço ou cliente, consulte [definindo e especificando falhas](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Os clientes e serviços de lidar com falhas de SOAP como exceções  
  Identificação de condições de erro de operação, definindo as falhas de SOAP personalizadas e marcando essas operações como retornando as falhas são as primeiras etapas no bem-sucedida tratamento de erros em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos. A próxima etapa é implementar corretamente o envio e recebimento dessas falhas. Normalmente serviços enviar falhas para informar os aplicativos cliente sobre condições de erro, mas duplex clientes também podem enviar a falhas de SOAP para serviços.  

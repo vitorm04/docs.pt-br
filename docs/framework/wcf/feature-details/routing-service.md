@@ -1,24 +1,26 @@
 ---
-title: "Serviço de roteamento"
-ms.custom: 
+title: Serviço de roteamento
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Serviço de roteamento
 O serviço de roteamento é um intermediário SOAP genérico que atua como um roteador de mensagem. A funcionalidade básica do serviço de roteamento é a capacidade para rotear mensagens com base no conteúdo da mensagem, que permite que uma mensagem a serem encaminhados para um ponto de extremidade do cliente com base em um valor dentro da mensagem, no cabeçalho ou no corpo da mensagem.  
@@ -98,12 +100,12 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
   
  Se o serviço de roteamento encontrar um <xref:System.ServiceModel.CommunicationException> ao tentar enviar uma mensagem, tratamento de erro ocorrerá.  Essas exceções geralmente indicam que ocorreu um problema ao tentar se comunicar com o ponto de extremidade do cliente definido como um <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>, ou <xref:System.ServiceModel.CommunicationObjectFaultedException>.  O código de tratamento de erros também catch e tentar reenviar quando um **TimeoutException** ocorre, que é outra exceção comum que não é derivada de **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tratamento de erros, consulte [roteamento Introdução](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Para obter mais informações sobre tratamento de erros, consulte [roteamento Introdução](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Pontos de extremidade de backup  
  Além de destino os pontos de extremidade associados a cada definição de filtro na tabela de filtro, você também pode criar uma lista de pontos de extremidade de backup que a mensagem será roteada para em caso de falha de transmissão. Se ocorrer um erro e uma lista de backup é definida para a entrada de filtro, o serviço de roteamento tentará enviar a mensagem para o primeiro ponto de extremidade definido na lista. Se essa falha de tentativa de transmissão, o serviço tente o próximo ponto de extremidade e continuar este processo até que a tentativa de transmissão for bem-sucedido, retornará que um erro de transmissão não relacionado, ou todos os pontos de extremidade na lista de backup tiveram retornado um erro de transmissão.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pontos de extremidade de backup, consulte [roteamento Introdução](../../../../docs/framework/wcf/feature-details/routing-introduction.md) e [filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Para obter mais informações sobre pontos de extremidade de backup, consulte [roteamento Introdução](../../../../docs/framework/wcf/feature-details/routing-introduction.md) e [filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Streaming  
  O serviço de roteamento com êxito pode transmitir mensagens, se você definir a associação para dar suporte a streaming.  No entanto, há algumas condições sob as quais mensagens talvez precise em buffer:  

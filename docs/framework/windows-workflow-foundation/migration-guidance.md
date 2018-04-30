@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11a4b1d6665e0198f8c9afc0209e9fb09cc599ad
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e6b42296d6780d93d5835b89732d114de6d8aca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="migration-guidance"></a>Orientação de migração
 No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft lançou a segunda versão principal do Windows Workflow Foundation (WF). O [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi liberado no [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (isso inclui os tipos nos namespaces System.Workflow.*; agora referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas ele não houver junto com a nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; conhecido como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
@@ -46,7 +46,7 @@ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft
  [WF diretrizes: Máquina de estado](http://go.microsoft.com/fwlink/?LinkId=153855)  
  Discute a modelagem do fluxo de controle do WF4 na ausência de uma atividade da máquina de estado.  
   
- Observe que essa orientação somente se aplica a projetos de fluxo de trabalho destinados ao .NET Framework 4. Os fluxos de trabalho da máquina de estado eram adicionados no .NET 4.0.1 com a versão de atualização 1 da plataforma, e foram incluídos como parte do .NET Framework 4.5. [!INCLUDE[crabout](../../../includes/crabout-md.md)] fluxos de trabalho de máquina de estado no .NET 4.0.1 - 4.0.3 e o .NET Framework 4.5, consulte [atualização 4.0.1 para Microsoft .NET Framework 4 recursos](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) e [fluxos de trabalho de máquina de estado](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Observe que essa orientação somente se aplica a projetos de fluxo de trabalho destinados ao .NET Framework 4. Os fluxos de trabalho da máquina de estado eram adicionados no .NET 4.0.1 com a versão de atualização 1 da plataforma, e foram incluídos como parte do .NET Framework 4.5. Para obter mais informações sobre fluxos de trabalho de máquina de estado no .NET 4.0.1 - 4.0.3 e o .NET Framework 4.5, consulte [atualização 4.0.1 para Microsoft .NET Framework 4 recursos](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) e [fluxos de trabalho de máquina de estado](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [WF livro de receitas de migração: Atividades personalizadas](http://go.microsoft.com/fwlink/?LinkId=153856)  
  Fornece exemplos e instruções para recriar as atividades personalizadas do WF3 no WF4.  

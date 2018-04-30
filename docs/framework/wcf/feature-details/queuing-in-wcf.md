@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>Enfileiramento no WCF
 Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -51,7 +51,7 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
  As filas do MSMQ também podem ser protegidas usando uma identidade de Windows registrada com o serviço de diretório do Active Directory. Ao instalar o MSMQ, você pode instalar a integração do Active Directory, o que exige que o computador é parte de uma rede de domínio do Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consulte [instalar o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Para obter mais informações sobre o MSMQ, consulte [instalar o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  O [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) é a associação em fila [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece para duas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade para se comunicar usando o MSMQ. A associação, portanto, expõe as propriedades que são específicas para o MSMQ. No entanto, nem todos os recursos do MSMQ e propriedades são expostas no `NetMsmqBinding`. O compact `NetMsmqBinding` foi projetado com um conjunto ideal de recursos de que a maioria dos clientes deve ser suficiente.  
@@ -79,12 +79,12 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
  A associação tem duas propriedades de interesse:  
   
--   `DeadLetterQueue`: Esta propriedade é uma enumeração que indica se uma fila de mensagens mortas é solicitada. A enumeração também contém o tipo de fila de mensagens mortas, se for solicitado. Os valores são `None`, `System`, e `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] a interpretação dessas propriedades, consulte [usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Esta propriedade é uma enumeração que indica se uma fila de mensagens mortas é solicitada. A enumeração também contém o tipo de fila de mensagens mortas, se for solicitado. Os valores são `None`, `System`, e `Custom`. Para obter mais informações sobre a interpretação dessas propriedades, consulte [usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: Essa propriedade é o endereço de identificador de recurso uniforme (URI) da fila de mensagens mortas específicas do aplicativo. Isso é necessário se `DeadLetterQueue`.`Custom` é escolhido.  
   
 #### <a name="poison-message-handling-properties"></a>Propriedades de manipulação de mensagens suspeitas  
- Quando o serviço lê mensagens da fila de destino em uma transação, o serviço pode falhar ao processar a mensagem por vários motivos. A mensagem, em seguida, é colocada de volta para a fila a ser lido novamente. Para lidar com mensagens que falham repetidamente, um conjunto de tratamento de mensagens suspeitas de propriedades podem ser configuradas na associação. Há quatro propriedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, e `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Essas propriedades, consulte [manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Quando o serviço lê mensagens da fila de destino em uma transação, o serviço pode falhar ao processar a mensagem por vários motivos. A mensagem, em seguida, é colocada de volta para a fila a ser lido novamente. Para lidar com mensagens que falham repetidamente, um conjunto de tratamento de mensagens suspeitas de propriedades podem ser configuradas na associação. Há quatro propriedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay`, e `ReceiveErrorHandling`. Para obter mais informações sobre essas propriedades, consulte [manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Propriedades de segurança  
  MSMQ expõe seu próprio modelo de segurança, como listas de controle de acesso (ACLs) em uma fila ou enviar mensagens autenticadas. O `NetMsmqBinding` expõe essas propriedades de segurança como parte de suas configurações de segurança de transporte. Há duas propriedades na associação de segurança de transporte: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Configurações nessas propriedades dependem de como o MSMQ está configurado. Para obter mais informações, consulte [proteger mensagens usando a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

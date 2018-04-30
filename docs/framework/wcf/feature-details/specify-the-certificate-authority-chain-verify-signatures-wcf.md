@@ -1,27 +1,29 @@
 ---
-title: "Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)"
-ms.custom: 
+title: Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)
 Quando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recebe uma mensagem SOAP assinada usando um certificado x. 509, por padrão, ele verifica se o certificado x. 509 foi emitido por uma autoridade de certificação confiável. Isso é feito procurando em um repositório de certificados e determinar se o certificado de autoridade de certificação tiver sido designada como confiável. Para que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para determinar isso, a cadeia de certificados de autoridade de certificação deve ser instalada no repositório de certificado correto.  
@@ -42,7 +44,7 @@ Quando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recebe uma mensag
   
          No Microsoft Management Console (MMC), abra o snap-in de certificados. Para o certificado do repositório de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está configurado para recuperar certificados x. 509, selecione o **raiz confiável** **autoridades de certificação**pasta. Sob o **autoridades de certificação raiz confiáveis** pasta, com o botão direito do **certificados**pasta, aponte para **todas as tarefas**e, em seguida, clique em **importação** . Forneça o arquivo exportado na etapa um.  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando o snap-in de certificados com o MMC, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         Para obter mais informações sobre como usar o snap-in de certificados com o MMC, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 *Credenciais* são os dados [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa para estabelecer uma identidade reivindicada ou recursos. Por exemplo, o passport é uma credencial que emite um governo para comprovar nacionalidade em um país ou região. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], credenciais podem ter várias formas, como tokens de nome de usuário e certificados x. 509. Este tópico discute as credenciais, como eles são usados em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]e como selecionar o credencial correto para seu aplicativo.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  Há uma situação estar ciente de quando a identidade não pode ser alternada (ou seja, ao estabelecer a segurança contexto está ativada, o comportamento padrão). Se você criar um serviço que se comunica com um segundo serviço, a identidade usada para abrir o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para o segundo serviço não pode ser alterado. Isso se torna um problema se vários clientes têm permissão para usar o primeiro serviço e o serviço representa os clientes ao acessar o serviço de segundo. Se o serviço reutiliza o mesmo cliente para todos os chamadores, todas as chamadas para o segundo serviço são feitas sob a identidade do chamador primeiro que foi usado para abrir o cliente para o segundo serviço. Em outras palavras, o serviço usa a identidade do cliente do primeiro para todos os seus clientes para se comunicar com o segundo serviço. Isso pode levar a elevação de privilégio. Se isso não é o comportamento desejado de seu serviço, acompanhar cada chamador e criar um novo cliente para o segundo serviço para cada chamador distinto e certifique-se de que o serviço usa somente o cliente correto para o chamador da direita para se comunicar com o segundo serviço.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] as credenciais e sessões seguras, consulte [considerações de segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Para obter mais informações sobre credenciais e sessões seguras, consulte [considerações de segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

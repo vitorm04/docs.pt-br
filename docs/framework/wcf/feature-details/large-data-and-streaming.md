@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infraestrutura de comunicação com base em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Portanto, restringir o tamanho máximo de mensagens de entrada não é suficiente nesse caso. A propriedade `MaxBufferSize` é necessária para restringir a memória que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] armazena em buffer. É importante definir isso como um valor seguro (ou manter o valor padrão) ao usar streaming. Por exemplo, suponha que o serviço precise receber arquivos de até 4 GB de tamanho e armazená-los no disco local. Suponha também que sua memória esteja restrita de tal forma que você possa armazenar apenas 64 KB de dados em buffer de cada vez. Portanto, você deve definir `MaxReceivedMessageSize` como 4 GB e `MaxBufferSize` como 64 KB. Além disso, na implementação de seu serviço, garanta que você leia somente o fluxo de entrada em partes de 64 KB e não leia a próxima parte antes que a anterior seja gravada em disco e descartada da memória.  
   
- Também é importante compreender que a cota limita somente o buffer feito pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e não pode proteger você contra qualquer armazenamento em buffer que você faça na implementação de seu próprio serviço ou do cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Considerações de segurança adicionais, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Também é importante compreender que a cota limita somente o buffer feito pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e não pode proteger você contra qualquer armazenamento em buffer que você faça na implementação de seu próprio serviço ou do cliente. Para obter mais informações sobre considerações de segurança adicionais, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Após gerar um cliente do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para um serviço, você deve editar o arquivo de configuração dos serviços que pretende usar com transferências em streaming para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  

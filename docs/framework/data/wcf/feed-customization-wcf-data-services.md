@@ -1,12 +1,13 @@
 ---
-title: "Personalização de feed (WCF Data Services)"
-ms.custom: 
+title: Personalização de feed (WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalização de feed (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]oferece suporte a formatos Atom e JSON JavaScript Object Notation () para feeds de dados. Quando você usar um feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornece um método padrão para serializar os dados, como entidades e relações em um formato XML que pode ser incluído no corpo da mensagem HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e elementos do Atom. Para obter mais informações, consulte [OData: formato Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] oferece suporte a formatos Atom e JSON JavaScript Object Notation () para feeds de dados. Quando você usar um feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornece um método padrão para serializar os dados, como entidades e relações em um formato XML que pode ser incluído no corpo da mensagem HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e elementos do Atom. Para obter mais informações, consulte [OData: formato Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Você pode ter um cenário de aplicativo que exige que os dados de propriedade retornados pelo serviço de dados ser serializado de maneira personalizada em vez de no formato de feed padrão. Com [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você pode personalizar a serialização de um feed de dados para que as propriedades de uma entidade podem ser mapeadas para elementos não utilizados e atributos de uma entrada ou para elementos personalizados de uma entrada no feed.  
   
@@ -53,19 +55,19 @@ ms.lasthandoff: 01/19/2018
  Para obter mais informações, consulte [como: Personalizar Feeds com o provedor do Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Porque não há suporte para as extensões para o modelo de dados pelo Designer de entidade, você deve modificar manualmente o arquivo XML que contém o modelo de dados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o arquivo. edmx que é gerado pelo [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ferramentas, consulte [. edmx visão geral do arquivo](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Porque não há suporte para as extensões para o modelo de dados pelo Designer de entidade, você deve modificar manualmente o arquivo XML que contém o modelo de dados. Para obter mais informações sobre o arquivo. edmx que são geradas pelo [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ferramentas, consulte [. edmx visão geral do arquivo](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Atributos de Feed personalizados  
  A tabela a seguir mostra os atributos XML que personalizam feeds que podem ser adicionados para a linguagem de definição de esquema conceitual (CSDL) que define o modelo de dados. Esses atributos são equivalentes às propriedades do <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> usado com o provedor de reflexão.  
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|Indica o tipo do conteúdo. As seguintes palavras-chave definem os tipos de conteúdo de distribuição.<br /><br /> `text:`O valor da propriedade é exibido no feed como texto.<br /><br /> `html:`O valor da propriedade é exibido no feed como HTML.<br /><br /> `xhtml:`O valor da propriedade é exibido no feed como HTML formatado em XML.<br /><br /> Essas palavras-chave é equivalentes aos valores da <xref:System.Data.Services.Common.SyndicationTextContentKind> enumeração usada com o provedor de reflexão.<br /><br /> Esse atributo não é suportado quando o `FC_NsPrefix` e `FC_NsUri` os atributos são usados.<br /><br /> Quando você especifica um valor de `xhtml` para o `FC_ContentKind` atributo, você deve garantir que o valor da propriedade contém XML formatado corretamente. O serviço de dados retorna o valor sem executar todas as transformações. Você também deve garantir que os prefixos de elemento XML no XML retornado tem um URI de namespace e um prefixo definido no feed mapeado.|  
+|`FC_ContentKind`|Indica o tipo do conteúdo. As seguintes palavras-chave definem os tipos de conteúdo de distribuição.<br /><br /> `text:` O valor da propriedade é exibido no feed como texto.<br /><br /> `html:` O valor da propriedade é exibido no feed como HTML.<br /><br /> `xhtml:` O valor da propriedade é exibido no feed como HTML formatado em XML.<br /><br /> Essas palavras-chave é equivalentes aos valores da <xref:System.Data.Services.Common.SyndicationTextContentKind> enumeração usada com o provedor de reflexão.<br /><br /> Esse atributo não é suportado quando o `FC_NsPrefix` e `FC_NsUri` os atributos são usados.<br /><br /> Quando você especifica um valor de `xhtml` para o `FC_ContentKind` atributo, você deve garantir que o valor da propriedade contém XML formatado corretamente. O serviço de dados retorna o valor sem executar todas as transformações. Você também deve garantir que os prefixos de elemento XML no XML retornado tem um URI de namespace e um prefixo definido no feed mapeado.|  
 |`FC_KeepInContent`|Indica que o valor da propriedade referenciada deve ser incluído na seção de conteúdo do feed e no local mapeado. Os valores válidos são `true` e `false`. Para tornar o feed resultante compatibilidade com versões anteriores do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], especifique um valor de `true` para certificar-se de que o valor é incluído na seção de conteúdo do feed.|  
 |`FC_NsPrefix`|O prefixo de namespace do elemento XML em um mapeamento de não agregação. Esse atributo deve ser usado com o `FC_NsUri` de atributos e não pode ser usado com o `FC_ContentKind` atributo.|  
 |`FC_NsUri`|O URI do namespace do elemento XML em um mapeamento de não agregação. Esse atributo deve ser usado com o `FC_NsPrefix` de atributos e não pode ser usado com o `FC_ContentKind` atributo.|  
 |`FC_SourcePath`|O caminho da propriedade da entidade à qual o mapeamento de feed regra se aplica. Esse atributo é suportado apenas quando ele é usado em um `EntityType` elemento.<br /><br /> O <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> propriedade diretamente não pode referenciar um tipo complexo. Para tipos complexos, você deve usar uma expressão de caminho em que os nomes de propriedade são separados por uma barra invertida (`/`) caracteres. Por exemplo, os seguintes valores são permitidos para um tipo de entidade `Person` com uma propriedade de inteiro `Age` e uma propriedade complexa<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> O <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> propriedade não pode ser definida como um valor que contém um espaço ou qualquer outro caractere que não é válido em um nome de propriedade.|  
-|`FC_TargetPath`|O nome do elemento do feed resultante para mapear a propriedade de destino. Esse elemento pode ser um elemento definido pela especificação Atom ou um elemento personalizado.<br /><br /> As seguintes palavras-chave são valores de caminho de destino predefinido de agregação que apontam para o local específico em um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.<br /><br /> `SyndicationAuthorEmail:`O `atom:email` elemento filho do `atom:author` elemento.<br /><br /> `SyndicationAuthorName:`O `atom:name` elemento filho do `atom:author` elemento.<br /><br /> `SyndicationAuthorUri:`O `atom:uri` elemento filho do `atom:author` elemento.<br /><br /> `SyndicationContributorEmail:`O `atom:email` elemento filho do `atom:contributor` elemento.<br /><br /> `SyndicationContributorName:`O `atom:name` elemento filho do `atom:contributor` elemento.<br /><br /> `SyndicationContributorUri:`O `atom:uri` elemento filho do `atom:contributor` elemento.<br /><br /> `SyndicationCustomProperty:`Um elemento de propriedade personalizada. Ao mapear para um elemento personalizado, o destino deve ser uma expressão de caminho no qual os elementos aninhados são separados por uma barra invertida (`/`) e os atributos são especificados por um e comercial (`@`). No exemplo a seguir, a cadeia de caracteres `UnitsInStock/@ReorderLevel` mapeia um valor de propriedade para um atributo chamado `ReorderLevel` em um elemento filho denominado `UnitsInStock` do elemento de entrada de raiz.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Quando o destino é um nome de elemento personalizado, o `FC_NsPrefix` e `FC_NsUri` atributos também devem ser especificados.<br /><br /> `SyndicationPublished:`O `atom:published` elemento.<br /><br /> `SyndicationRights:`O `atom:rights` elemento.<br /><br /> `SyndicationSummary:`O `atom:summary` elemento.<br /><br /> `SyndicationTitle:`O `atom:title` elemento.<br /><br /> `SyndicationUpdated:`O `atom:updated` elemento.<br /><br /> Essas palavras-chave é equivalentes aos valores da <xref:System.Data.Services.Common.SyndicationItemProperty> enumeração usada com o provedor de reflexão.|  
+|`FC_TargetPath`|O nome do elemento do feed resultante para mapear a propriedade de destino. Esse elemento pode ser um elemento definido pela especificação Atom ou um elemento personalizado.<br /><br /> As seguintes palavras-chave são valores de caminho de destino predefinido de agregação que apontam para o local específico em um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.<br /><br /> `SyndicationAuthorEmail:` O `atom:email` elemento filho do `atom:author` elemento.<br /><br /> `SyndicationAuthorName:` O `atom:name` elemento filho do `atom:author` elemento.<br /><br /> `SyndicationAuthorUri:` O `atom:uri` elemento filho do `atom:author` elemento.<br /><br /> `SyndicationContributorEmail:` O `atom:email` elemento filho do `atom:contributor` elemento.<br /><br /> `SyndicationContributorName:` O `atom:name` elemento filho do `atom:contributor` elemento.<br /><br /> `SyndicationContributorUri:` O `atom:uri` elemento filho do `atom:contributor` elemento.<br /><br /> `SyndicationCustomProperty:` Um elemento de propriedade personalizada. Ao mapear para um elemento personalizado, o destino deve ser uma expressão de caminho no qual os elementos aninhados são separados por uma barra invertida (`/`) e os atributos são especificados por um e comercial (`@`). No exemplo a seguir, a cadeia de caracteres `UnitsInStock/@ReorderLevel` mapeia um valor de propriedade para um atributo chamado `ReorderLevel` em um elemento filho denominado `UnitsInStock` do elemento de entrada de raiz.<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> Quando o destino é um nome de elemento personalizado, o `FC_NsPrefix` e `FC_NsUri` atributos também devem ser especificados.<br /><br /> `SyndicationPublished:` O `atom:published` elemento.<br /><br /> `SyndicationRights:` O `atom:rights` elemento.<br /><br /> `SyndicationSummary:` O `atom:summary` elemento.<br /><br /> `SyndicationTitle:` O `atom:title` elemento.<br /><br /> `SyndicationUpdated:` O `atom:updated` elemento.<br /><br /> Essas palavras-chave é equivalentes aos valores da <xref:System.Data.Services.Common.SyndicationItemProperty> enumeração usada com o provedor de reflexão.|  
   
 > [!NOTE]
 >  Valores e nomes de atributo diferenciam maiusculas de minúsculas. Os atributos podem ser aplicadas ao `EntityType` elemento ou a um ou mais `Property` elementos, mas não para ambos.  

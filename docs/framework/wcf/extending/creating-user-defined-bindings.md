@@ -1,33 +1,33 @@
 ---
-title: "Criando associações definidas pelo usuário"
-ms.custom: 
+title: Criando associações definidas pelo usuário
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Criando associações definidas pelo usuário
 Há várias maneiras de criar associações não fornecidas pelo sistema:  
   
--   Criar uma associação personalizada, com base no <xref:System.ServiceModel.Channels.CustomBinding> classe, que é um contêiner que você preenche com elementos de associação. A associação personalizada é adicionada a um ponto de extremidade de serviço. Você pode criar a associação personalizada que o arquivo por meio de programação ou em uma configuração de aplicativo. Para usar um elemento de associação de um arquivo de configuração do aplicativo, o elemento de associação deve estender <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Criar uma associação personalizada, com base no <xref:System.ServiceModel.Channels.CustomBinding> classe, que é um contêiner que você preenche com elementos de associação. A associação personalizada é adicionada a um ponto de extremidade de serviço. Você pode criar a associação personalizada que o arquivo por meio de programação ou em uma configuração de aplicativo. Para usar um elemento de associação de um arquivo de configuração do aplicativo, o elemento de associação deve estender <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   Você pode criar uma classe que deriva de uma associação padrão. Por exemplo, você pode derivar uma classe de <xref:System.ServiceModel.WSHttpBinding> e substituir <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> método para obter os elementos de associação e inserir um elemento de associação personalizada ou estabelecer um valor específico para segurança.  
   
@@ -38,7 +38,7 @@ Há várias maneiras de criar associações não fornecidas pelo sistema:
   
  Há três tipos principais de elementos de associação: elementos de associação de protocolo, codificação de elementos de associação e os elementos de associação de transporte.  
   
- Elementos de associação de protocolo – estes elementos representam etapas de processamento de nível superior que atuam em mensagens. Canais e ouvintes criados por esses elementos de associação podem adicionar, remover ou modificar o conteúdo da mensagem. Uma associação de determinado pode ter um número arbitrário de elementos de associação de protocolo, cada herdando <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]inclui vários elementos de associação de protocolo, incluindo o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementos de associação de protocolo – estes elementos representam etapas de processamento de nível superior que atuam em mensagens. Canais e ouvintes criados por esses elementos de associação podem adicionar, remover ou modificar o conteúdo da mensagem. Uma associação de determinado pode ter um número arbitrário de elementos de associação de protocolo, cada herdando <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui vários elementos de associação de protocolo, incluindo o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Codificação de elemento de ligação – essas representam elementos transformações entre uma mensagem e uma codificação pronto para transmissão na conexão. Típico [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associações incluir exatamente um elemento de associação de codificação. Exemplos de codificação de elementos de associação a <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, o <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>e o <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Se um elemento de associação de codificação não for especificado para uma associação, a codificação padrão será usada. O padrão é texto quando o transporte é HTTP e binários, caso contrário.  
   

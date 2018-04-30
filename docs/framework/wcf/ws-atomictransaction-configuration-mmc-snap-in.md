@@ -1,24 +1,26 @@
 ---
-title: "Snap-in do MMC de configuração de WS-AtomicTransaction"
-ms.custom: 
+title: Snap-in do MMC de configuração de WS-AtomicTransaction
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in do MMC de configuração de WS-AtomicTransaction
 O Snap-in MMC de configuração de WS-AtomicTransaction é usado para configurar uma parte das configurações do WS-AtomicTransaction em computadores locais e remotos.  
@@ -28,7 +30,7 @@ O Snap-in MMC de configuração de WS-AtomicTransaction é usado para configurar
   
  Se você estiver executando o Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], snap-in do MMC pode ser encontrado clicando o **iniciar** botão e digitando `dcomcnfg.exe` no **pesquisa** caixa. Quando o MMC é aberto, navegue até o **Meus Computer\Distributed transação Coordinator\Local DTC** nó, clique com botão direito e selecione **propriedades**. Opções disponíveis para configuração são agrupadas sob o **WS-AT** guia.  
   
- As etapas anteriores são usadas para iniciar o snap-in para configurar um computador local. Se você quiser configurar um computador remoto, você deve localizar o nome da máquina remota em **controle administrativo/painel de ferramentas/serviços de componentes /**e realizar etapas semelhantes, se você estiver executando [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Se você estiver executando o Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], siga as etapas anteriores para Vista e [!INCLUDE[lserver](../../../includes/lserver-md.md)], mas usar o **Coordinator\Local de transações distribuídas DTC** nó no nó do computador remoto.  
+ As etapas anteriores são usadas para iniciar o snap-in para configurar um computador local. Se você quiser configurar um computador remoto, você deve localizar o nome da máquina remota em **controle administrativo/painel de ferramentas/serviços de componentes /** e realizar etapas semelhantes, se você estiver executando [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Se você estiver executando o Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], siga as etapas anteriores para Vista e [!INCLUDE[lserver](../../../includes/lserver-md.md)], mas usar o **Coordinator\Local de transações distribuídas DTC** nó no nó do computador remoto.  
   
  Para usar a interface de usuário fornecida pela ferramenta, você precisa registrar o arquivo WsatUI.dll, que está localizado no seguinte caminho,  
   
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  Você pode usar essa ferramenta para modificar as configurações básicas do WS-AtomicTransaction. Por exemplo, você pode habilitar e desabilitar o suporte de protocolo WS-AtomicTransaction, configurar as portas HTTP para WS-AT, associar um certificado SSL à porta HTTP, configurar certificados especificando nomes de entidade do certificado, selecione o modo de rastreamento e definir tempo limite padrão e máximo.  
   
- Se você deve configurar o suporte do WS-AtomicTransaction no computador local, você pode usar a versão de linha de comando da ferramenta. [!INCLUDE[crabout](../../../includes/crabout-md.md)]a ferramenta de linha de comando, consulte o [o utilitário de configuração do WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) tópico.  
+ Se você deve configurar o suporte do WS-AtomicTransaction no computador local, você pode usar a versão de linha de comando da ferramenta. Para obter mais informações sobre a ferramenta de linha de comando, consulte o [o utilitário de configuração do WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) tópico.  
   
- Você deve estar ciente de que tanto o Snap-in do MMC e a ferramenta de linha de comando não oferecem suporte à configuração todas as configurações de WS-AT. Essas configurações podem ser editadas somente modificando o registro diretamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Essas configurações do registro, consulte [configurando suporte a transações WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Você deve estar ciente de que tanto o Snap-in do MMC e a ferramenta de linha de comando não oferecem suporte à configuração todas as configurações de WS-AT. Essas configurações podem ser editadas somente modificando o registro diretamente. Para obter mais informações sobre essas configurações do registro, consulte [configurando suporte a transações WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Descrição de Interface do usuário  
  **Habilitar o suporte de rede WS-AT**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  Quando usar o provedor de rastreamento do WS-AT outro consumidor de rastreamento, você não pode criar uma nova sessão de log de eventos de rastreamento. Qualquer tentativa de configurar o log durante esse tempo resulta na mensagem de erro "Falha ao ativar provedor. Código de erro: 1".  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]rastreamento e registro em log, consulte [administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md).  
+ Para obter mais informações sobre o rastreamento e registro em log, consulte [administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando o suporte a transações WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] com a instância Store de fluxo de trabalho SQL, que permite que fluxos de trabalho persistam informações de estado sobre instâncias de fluxo de trabalho em uma base de dados SQL Server 2005 ou SQL Server 2008. Esse recurso é implementado primeiro na forma da classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , que deriva da classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> a estrutura de persistência. O recurso de Store de instância de fluxo de trabalho do SQL constitui um provedor de persistência SQL, que é uma implementação concreta de persistência API que um host usa para enviar comandos de persistência no armazenamento.  
@@ -29,7 +29,7 @@ Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-m
   
  Os tópicos nesta seção descrevem as propriedades e os recursos de instância de fluxo de trabalho do SQL e fornecer-l com detalhes sobre como configurar o armazenamento.  
   
- A tela de aplicativo Windows Server fornece seus próprios armazenamento e trabalho feito com ferramentas de instância para simplificar a configuração e uso da instância. Para obter mais informações, consulte consulte [Windows Server App Fabric instância Store](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Consulte o banco de dados do aplicativo do Fabric SQL Server persistência [banco de dados do aplicativo do Fabric SQL Server persistência](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ A tela de aplicativo Windows Server fornece seus próprios armazenamento e trabalho feito com ferramentas de instância para simplificar a configuração e uso da instância. Para obter mais informações, consulte consulte [Windows Server App Fabric instância Store](http://go.microsoft.com/fwlink/?LinkId=201201). Para obter mais informações sobre o banco de dados do aplicativo do Fabric SQL Server persistência consulte [banco de dados do aplicativo do Fabric SQL Server persistência](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

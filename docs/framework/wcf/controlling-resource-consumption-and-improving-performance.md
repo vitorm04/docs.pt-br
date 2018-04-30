@@ -1,30 +1,32 @@
 ---
 title: Controlando o consumo de recursos e a melhoria de desempenho
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controlando o consumo de recursos e a melhoria de desempenho
 Este tópico descreve várias propriedades em áreas diferentes do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquitetura que funcionam para controlar o consumo de recursos e afetar o desempenho.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Propriedades que restringem o consumo de recursos no WCF  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Aplica restrições em determinados tipos de processos para fins de segurança ou desempenho. Essas restrições têm duas formas principais, cotas e limitações. *Cotas* são os limites que quando atingido ou excedido disparam uma exceção imediata em algum momento no sistema. *Limita* são os limites que não causam imediatamente uma exceção seja lançada. Em vez disso, quando um limite for atingido, o processamento continuará, mas dentro dos limites definida por esse valor do acelerador. Esse processamento limitado pode disparar uma exceção em outro lugar, mas isso depende do aplicativo.  
+ [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Aplica restrições em determinados tipos de processos para fins de segurança ou desempenho. Essas restrições têm duas formas principais, cotas e limitações. *Cotas* são os limites que quando atingido ou excedido disparam uma exceção imediata em algum momento no sistema. *Limita* são os limites que não causam imediatamente uma exceção seja lançada. Em vez disso, quando um limite for atingido, o processamento continuará, mas dentro dos limites definida por esse valor do acelerador. Esse processamento limitado pode disparar uma exceção em outro lugar, mas isso depende do aplicativo.  
   
  A diferença entre as cotas e limitações, além de algumas propriedades de restrições estão localizadas no nível de serialização, alguns no nível do transporte e alguns no nível do aplicativo. Por exemplo, a cota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, que é implementado por todos os elementos de associação de transporte fornecida pelo sistema, é definido como 65.536 bytes por padrão para impedir clientes mal-intencionado de envolvidos em ataques de negação de serviço em relação a um serviço fazendo excessivo de memória consumo. (Normalmente, você pode aumentar o desempenho ao diminuir esse valor.)  
   
@@ -55,7 +57,7 @@ Este tópico descreve várias propriedades em áreas diferentes do [!INCLUDE[ind
  O [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pode melhorar o desempenho de inicialização para esses aplicativos por meio da geração de código de serialização necessários dos assemblies compilados para o aplicativo. Para obter mais informações, consulte [como: melhorar a inicialização do tempo de WCF aplicativos cliente que usam o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemas de desempenho ao hospedar serviços WCF no ASP.NET  
- Quando um serviço WCF é hospedado em IIS e ASP.NET, as definições de configuração do IIS e ASP.NET podem afetar o taxa de transferência e volume de memória do serviço WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Desempenho do ASP.NET, consulte [melhorando o desempenho do ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Uma configuração que pode ter consequências não intencionais é <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que é uma propriedade do <xref:System.Web.Configuration.ProcessModelSection>. Se seu aplicativo tiver um número fixo ou pequeno de clientes, a configuração <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 pode fornecer um aumento da taxa de transferência em um computador multiprocessador que tem uma utilização da CPU próximo a 100%. Esse aumento no desempenho vem com um custo: também causará um aumento no uso de memória, que pode reduzir escalabilidade.  
+ Quando um serviço WCF é hospedado em IIS e ASP.NET, as definições de configuração do IIS e ASP.NET podem afetar o taxa de transferência e volume de memória do serviço WCF.  Para obter mais informações sobre o desempenho do ASP.NET, consulte [melhorando o desempenho do ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Uma configuração que pode ter consequências não intencionais é <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que é uma propriedade do <xref:System.Web.Configuration.ProcessModelSection>. Se seu aplicativo tiver um número fixo ou pequeno de clientes, a configuração <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 pode fornecer um aumento da taxa de transferência em um computador multiprocessador que tem uma utilização da CPU próximo a 100%. Esse aumento no desempenho vem com um custo: também causará um aumento no uso de memória, que pode reduzir escalabilidade.  
   
 ## <a name="see-also"></a>Consulte também  
  [Administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md)  

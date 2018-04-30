@@ -1,32 +1,34 @@
 ---
-title: "Segurança de aplicativos distribuídos"
-ms.custom: 
+title: Segurança de aplicativos distribuídos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]segurança é dividida em três áreas funcionais principais: transferir a segurança, controle de acesso e auditoria. Segurança de transferência fornece autenticação, integridade e confidencialidade. Transferência de segurança é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segurança é dividida em três áreas funcionais principais: transferir a segurança, controle de acesso e auditoria. Segurança de transferência fornece autenticação, integridade e confidencialidade. Transferência de segurança é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
   
- Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança de mensagem, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]duas partes da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança de mensagem, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre as outras duas partes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Cenários de segurança de transferência  
  Cenários comuns que empregam [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transferência segurança incluem o seguinte:  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |Autenticação|*Autenticação* é a verificação de uma identidade reivindicada. Por exemplo, ao usar uma conta bancária, é fundamental que somente o proprietário real da conta poderá retirar fundos. Autenticação pode ser fornecida por vários meios. Um método comum é o sistema de senha do usuário. Um segundo é o uso de um certificado x. 509 que é fornecido por terceiros.|  
   
 ## <a name="security-modes"></a>Modos de segurança  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tem vários modos de segurança de transferência, que são descritos na tabela a seguir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem vários modos de segurança de transferência, que são descritos na tabela a seguir.  
   
 |Modo|Descrição|  
 |----------|-----------------|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |Ambos|Executa a proteção e a autenticação em ambos os níveis. Esse modo está disponível apenas no [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elemento.|  
   
 ## <a name="credentials-and-transfer-security"></a>As credenciais e segurança de transferência  
- Um *credencial* são dados que são exibidos para estabelecer uma identidade reivindicada ou recursos. Apresentar uma credencial envolve apresentar os dados e a prova de posse dos dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a uma variedade de tipos de credenciais em níveis de segurança de transporte e de mensagem. Você pode especificar um tipo de credencial para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação.  
+ Um *credencial* são dados que são exibidos para estabelecer uma identidade reivindicada ou recursos. Apresentar uma credencial envolve apresentar os dados e a prova de posse dos dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a uma variedade de tipos de credenciais em níveis de segurança de transporte e de mensagem. Você pode especificar um tipo de credencial para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação.  
   
  Em muitos países ou regiões, de motorista uma carteira é um exemplo de uma credencial. Uma licença contém dados que representa uma identidade e recursos. Ele contém uma prova de posse na forma de imagem do detentor. A licença é emitida por uma autoridade confiável, geralmente um departamento de licenciamento governamental. A licença é fechada e pode conter um holograma, mostrando que ele não foi violado ou falsificado.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  Na credencial do certificado, o nome do assunto, nome alternativo da entidade ou campos específicos no certificado podem ser usados para representar a identidade reivindicada e/ou recursos. Prova de posse dos dados na credencial é estabelecida usando a chave privada associada para gerar uma assinatura.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programação de segurança de transferência e especificar credenciais, consulte [associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) e [comportamentos de segurança](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Para obter mais informações sobre como programar a transferência de segurança e especificar credenciais, consulte [associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) e [comportamentos de segurança](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Tipos de credenciais de cliente de transporte  
  A tabela a seguir mostra os possíveis valores usados ao criar um aplicativo que usa a segurança de transferência. Você pode usar esses valores no código ou configurações de associação.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="programming-credentials"></a>Credenciais de programação  
  Para cada um dos tipos de credencial de cliente, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação permite que você especifique os valores de credencial e validadores de credencial usando comportamentos de serviço e comportamentos do canal.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]a segurança tem dois tipos de credenciais: comportamentos de credencial e comportamentos de credencial do canal de serviço. Credencial comportamentos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especificar os dados reais, ou seja, as credenciais usadas para atender aos requisitos de segurança expressados por meio de associações. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uma classe de cliente é o componente de tempo de execução que converte entre a invocação de operação e mensagens. Todos os clientes herdam o <xref:System.ServiceModel.ClientBase%601> classe. O <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade na classe base permite que você especifique vários valores de credenciais de cliente.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a segurança tem dois tipos de credenciais: comportamentos de credencial e comportamentos de credencial do canal de serviço. Credencial comportamentos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especificar os dados reais, ou seja, as credenciais usadas para atender aos requisitos de segurança expressados por meio de associações. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uma classe de cliente é o componente de tempo de execução que converte entre a invocação de operação e mensagens. Todos os clientes herdam o <xref:System.ServiceModel.ClientBase%601> classe. O <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade na classe base permite que você especifique vários valores de credenciais de cliente.  
   
  Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], comportamentos de serviço são atributos aplicados para a classe que implementa um contrato de serviço (interface) para controlar programaticamente o serviço. O <xref:System.ServiceModel.Description.ServiceCredentials> classe permite que você especifique certificados para configurações de validação de cliente e a credencial de serviço para vários tipos de credencial de cliente.  
   

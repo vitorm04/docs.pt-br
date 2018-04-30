@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] não oferece suporte a alguns cenários de segurança específico. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e a autenticação integrada do HTTP/HTTPS são suportados ao executar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no Windows XP Home Edition.  
@@ -58,7 +58,7 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
 >  O valor padrão para o <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade o <xref:System.ServiceModel.Security.WindowsClientCredential> classe é <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Na maioria dos casos, um contexto de representação de nível de identificação não tem direitos para carregar todos os assemblies adicionais. Este é o valor padrão, portanto, esta é uma condição muito comuns a serem consideradas. Representação de nível de identificação também ocorre quando o processo de representação não tiver o `SeImpersonate` privilégio. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>A delegação exige a negociação de credencial  
- Para usar o protocolo de autenticação Kerberos com delegação, você deve implementar o protocolo Kerberos com a negociação de credencial (às vezes chamada de Kerberos vários trecho ou várias etapas). Se você implementar a autenticação Kerberos sem negociação de credencial (às vezes chamada de Kerberos única ou segmento único), uma exceção será lançada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como implementar a negociação de credencial, consulte [depurando erros de autenticação do Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Para usar o protocolo de autenticação Kerberos com delegação, você deve implementar o protocolo Kerberos com a negociação de credencial (às vezes chamada de Kerberos vários trecho ou várias etapas). Se você implementar a autenticação Kerberos sem negociação de credencial (às vezes chamada de Kerberos única ou segmento único), uma exceção será lançada. Para obter mais informações sobre como implementar a negociação de credencial, consulte [depurando erros de autenticação do Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Criptografia  
   

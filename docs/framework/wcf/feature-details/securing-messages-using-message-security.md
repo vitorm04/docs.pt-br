@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
 Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança da mensagem ao usar <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -54,7 +54,7 @@ Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seg
   
  Devido à natureza desconectada de filas, o cliente e o serviço podem não estar online ao mesmo tempo. Como tal, o cliente e o serviço precisam trocar certificados de fora da banda. Em particular, o cliente, em virtude mantendo o certificado do serviço (que pode ser vinculado a uma autoridade de certificação) em seu repositório confiável, deve confiar que ele está se comunicando com o serviço correto. Para autenticar o cliente, o serviço usa o certificado x. 509 anexado com uma mensagem que faz a correspondência com o certificado em seu repositório para verificar a autenticidade do cliente. Novamente, o certificado deve ser ligado a uma autoridade de certificação.  
   
- Em um computador executando o Windows, certificados são mantidos em vários tipos de armazenamentos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] os repositórios diferentes, consulte [repositórios de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Em um computador executando o Windows, certificados são mantidos em vários tipos de armazenamentos. Para obter mais informações sobre os repositórios diferentes, consulte [repositórios de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Tipo de credencial de mensagem do Windows usa o protocolo Kerberos.  

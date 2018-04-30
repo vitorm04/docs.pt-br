@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
@@ -52,10 +52,10 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
  Scripts e arquivos de lote de Setup.exe e Cleanup.exe devem ser executados em um prompt de comando do Visual Studio. Vários conjunto de backup e limpar arquivos executam tarefas que exigem privilégios administrativos e devem ser iniciadas com privilégios de administrador.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Informações de segurança importantes sobre pontos de extremidade de metadados  
- Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importa ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade são potencialmente disponíveis para consumidores não autenticados anônimos e deve ter cuidado antes de implantar esses pontos de extremidade para garantir que publicamente destinatária metadados do serviço são apropriado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] publicação de metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte o [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteção de um ponto de extremidade de metadados.  
+ Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importa ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade são potencialmente disponíveis para consumidores não autenticados anônimos e deve ter cuidado antes de implantar esses pontos de extremidade para garantir que publicamente destinatária metadados do serviço são apropriado. Para obter mais informações sobre como publicar metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte o [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteção de um ponto de extremidade de metadados.  
   
 ## <a name="exception-handling"></a>Tratamento de Exceção  
- Em termos gerais esses exemplos não incluem o tratamento de exceções para manter o foco no assunto do exemplo de código. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] tratamento de exceção, consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo.  
+ Em termos gerais esses exemplos não incluem o tratamento de exceções para manter o foco no assunto do exemplo de código. Para obter mais informações sobre o tratamento de exceções, consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Regenerando os clientes e a configuração com Svcutil  
  Você pode usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar novamente o código de cliente e de configuração para a maioria dos exemplos. Alguns exemplos exigem configuração editada manualmente. Por exemplo, se você usar o Svcutil.exe para gerar novamente a configuração para obter um exemplo que usa credenciais de certificado de cliente, você deve especificar manualmente as credenciais configuradas anteriormente. Alguns exemplos usam opções específicas do Svcutil.exe para afetar o código gerado, essas opções são especificadas nos tópicos de exemplo específico.  

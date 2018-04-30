@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Armazenando em cache em clientes de automação de interface do usuário
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  Em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], cache significa pré-leitura de dados. Os dados possam ser acessados sem ainda mais a comunicação entre processos. Cache é normalmente usado por aplicativos clientes de automação de interface do usuário para recuperar as propriedades e padrões de controle em massa. Informações, em seguida, são recuperadas do cache conforme necessário. O aplicativo atualiza o cache periodicamente, geralmente em resposta a eventos significando que algo no [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] foi alterado.  
   
- Os benefícios do armazenamento em cache são mais perceptíveis com [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controles e personalizadas que têm provedores de automação de interface do usuário do lado do servidor. Há menos benefício ao acessar provedores do lado do cliente, como os provedores padrão para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles.  
+ Os benefícios do armazenamento em cache são mais perceptíveis com controles do Windows Presentation Foundation (WPF) e personalizadas que têm provedores de automação de interface do usuário do lado do servidor. Há menos benefício ao acessar provedores do lado do cliente, como os provedores padrão para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles.  
   
  Armazenamento em cache ocorre quando o aplicativo ativa um <xref:System.Windows.Automation.CacheRequest> e, em seguida, usa qualquer método ou propriedade que retorna um <xref:System.Windows.Automation.AutomationElement>; por exemplo, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Os métodos do <xref:System.Windows.Automation.TreeWalker> classe são uma exceção; o cache é feito somente se um <xref:System.Windows.Automation.CacheRequest> é especificado como um parâmetro (por exemplo, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   

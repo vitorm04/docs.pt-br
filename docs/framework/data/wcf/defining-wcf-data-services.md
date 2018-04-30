@@ -1,31 +1,31 @@
 ---
 title: Configurando WCF Data Services
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-caps.latest.revision: 
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 569f2e16cca7ec6dbfbe83cce5a597be37bce8e0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-wcf-data-services"></a>Configurando WCF Data Services
-Esta seção descreve como criar e configurar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as etapas básicas necessárias para criar um serviço de dados, consulte [expondo seus dados como um serviço](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  
+Esta seção descreve como criar e configurar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Para obter mais informações sobre as etapas básicas necessárias para criar um serviço de dados, consulte [expondo seus dados como um serviço](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  

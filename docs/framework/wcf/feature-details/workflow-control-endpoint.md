@@ -1,24 +1,26 @@
 ---
 title: Ponto de extremidade de controle de fluxo de trabalho
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>Ponto de extremidade de controle de fluxo de trabalho
 O ponto de extremidade de controle de fluxo de trabalho permite aos desenvolvedores chamar as operações de controle para controlar remotamente as instâncias de fluxo de trabalho hospedadas usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Esse recurso pode ser usado para executar programaticamente as operações de controle como suspender, continuar e encerrar.  
@@ -27,7 +29,7 @@ O ponto de extremidade de controle de fluxo de trabalho permite aos desenvolvedo
 >  Se usar o ponto de extremidade de controle de fluxo de trabalho dentro de uma transação e o fluxo de trabalho que está sendo controlado contém um <xref:System.Activities.Statements.Persist> atividade, a instância de fluxo de trabalho parará até que a transação de tempo limite.  
   
 ## <a name="workflow-instance-management"></a>Gerenciamento de instância de fluxo de trabalho  
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]define um novo contrato chamado <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Este contrato define uma série de controle de operações que permitem que você remotamente controlam instâncias de fluxo de trabalho hospedadas por <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>é um ponto de extremidade padrão que fornece uma implementação de <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contrato. <xref:System.ServiceModel.Activities.WorkflowControlClient>é uma classe que é usada para enviar as operações de controle para o <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] define um novo contrato chamado <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Este contrato define uma série de controle de operações que permitem que você remotamente controlam instâncias de fluxo de trabalho hospedadas por <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> é um ponto de extremidade padrão que fornece uma implementação de <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contrato. <xref:System.ServiceModel.Activities.WorkflowControlClient> é uma classe que é usada para enviar as operações de controle para o <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  
   
  Instâncias de fluxo de trabalho podem estar em um dos seguintes estados:  
   
@@ -57,10 +59,10 @@ O ponto de extremidade de controle de fluxo de trabalho permite aos desenvolvedo
 |TransactedTerminate|Executa a operação terminar em uma transação (recebida no fluxo do cliente ou criado localmente). Se o sistema mantém o estado durável da instância do fluxo de trabalho, a instância de fluxo de trabalho deve ser persistida durante a execução desta operação.|  
 |TransactedUnsuspend|Executa a operação Unsuspend em uma transação (recebida no fluxo do cliente ou criado localmente). Se o sistema mantém o estado durável da instância do fluxo de trabalho, a instância de fluxo de trabalho deve ser persistida durante a execução desta operação.|  
   
- O <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contrato não fornecem um meio para criar uma nova instância de fluxo de trabalho, apenas para gerenciar instâncias de fluxo de trabalho existentes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]remotamente criando uma nova instância de fluxo de trabalho, consulte [extensibilidade de Host do serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ O <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contrato não fornecem um meio para criar uma nova instância de fluxo de trabalho, apenas para gerenciar instâncias de fluxo de trabalho existentes. Para obter mais informações sobre como criar remotamente uma nova instância de fluxo de trabalho, consulte [extensibilidade de Host do serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>é um ponto de extremidade padrão com um contrato fixo, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Quando adicionada a um <xref:System.ServiceModel.Activities.WorkflowServiceHost> de instância, esse ponto de extremidade pode então ser usado para enviar as operações de comando em qualquer instância de fluxo de trabalho hospedada pela instância de host. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pontos de extremidade padrão, consulte [pontos de extremidade padrão](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> é um ponto de extremidade padrão com um contrato fixo, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Quando adicionada a um <xref:System.ServiceModel.Activities.WorkflowServiceHost> de instância, esse ponto de extremidade pode então ser usado para enviar as operações de comando em qualquer instância de fluxo de trabalho hospedada pela instância de host. Para obter mais informações sobre pontos de extremidade padrão, consulte [pontos de extremidade padrão](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
- <xref:System.ServiceModel.Activities.WorkflowControlClient>é uma classe que permite enviar mensagens de controle para um <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> em um <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ele contém um método para cada uma das operações com suporte a <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contrato, exceto as operações transacionadas. <xref:System.ServiceModel.Activities.WorkflowControlClient>usa a transação de ambiente para determinar se uma operação transacionada deve ser usada.
+ <xref:System.ServiceModel.Activities.WorkflowControlClient> é uma classe que permite enviar mensagens de controle para um <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> em um <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ele contém um método para cada uma das operações com suporte a <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> contrato, exceto as operações transacionadas. <xref:System.ServiceModel.Activities.WorkflowControlClient> usa a transação de ambiente para determinar se uma operação transacionada deve ser usada.

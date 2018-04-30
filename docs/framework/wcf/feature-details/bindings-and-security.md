@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Associações e segurança
 As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferecem uma maneira rápida de programa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos. Com uma exceção, todas as associações de tem um esquema de segurança padrão habilitado. Este tópico ajuda você a selecionar a associação certa para suas necessidades de segurança.  
   
- Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando associações, consulte [de programação WCF segurança](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando associações, consulte [de programação WCF segurança](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Se você já tiver selecionado uma associação, você pode encontrar mais informações sobre os comportamentos de tempo de execução que estão associados com a segurança em [comportamentos de segurança](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Algumas funções de segurança não são programáveis usando as associações fornecidas pelo sistema. Para obter mais controle utilizando uma associação personalizada, consulte [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funções de segurança de associações  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui um número de associações fornecidas pelo sistema que atendem a maioria das necessidades. Se uma associação específica não é suficiente, você também pode criar uma associação personalizada. Para obter uma lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui um número de associações fornecidas pelo sistema que atendem a maioria das necessidades. Se uma associação específica não é suficiente, você também pode criar uma associação personalizada. Para obter uma lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Todas as associações de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem duas formas: como uma API e um elemento XML usados em um arquivo de configuração. Por exemplo, o `WSHttpBinding` (API) tem um equivalente [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

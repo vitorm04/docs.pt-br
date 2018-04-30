@@ -1,24 +1,26 @@
 ---
-title: "Solucionando problemas de instalação"
-ms.custom: 
+title: Solucionando problemas de instalação
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Solucionando problemas de instalação
 Este tópico descreve como solucionar problemas de configuração do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -63,7 +65,7 @@ Este tópico descreve como solucionar problemas de configuração do [!INCLUDE[i
   
  As etapas a seguir devem ser seguidas para resolver o problema descrito anteriormente.  
   
-1.  Executar [o utilitário de diagnósticos WMI, versão 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) para reparar o serviço WMI. [!INCLUDE[crabout](../../../includes/crabout-md.md)]usando essa ferramenta, consulte o [utilitário de diagnósticos WMI](http://go.microsoft.com/fwlink/?LinkId=94686) tópico.  
+1.  Executar [o utilitário de diagnósticos WMI, versão 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) para reparar o serviço WMI. Para obter mais informações sobre como usar essa ferramenta, consulte o [utilitário de diagnósticos WMI](http://go.microsoft.com/fwlink/?LinkId=94686) tópico.  
   
  Reparar a instalação do .NET Framework 3.0 usando o **adicionar ou remover programas** miniaplicativo localizado em **painel de controle**, ou desinstale/reinstale o .NET Framework 3.0.  
   

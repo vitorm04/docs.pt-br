@@ -20,16 +20,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c66e7d8f610126e2702a6c593a93ee496108ecf
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Os tópicos contidos nesta seção visam fornecer uma exposição rápida da experiência em programação do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhe com este tutorial para adquirir uma compreensão introdutória das etapas necessárias para criar serviços e aplicativos de cliente do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço onde o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecido pelo serviço para seus clientes.  
   
- Após concluir a sequência de tópicos neste tutorial, você terá um serviço em execução e um cliente que chama o serviço. Os três primeiros tópicos descrevem como definir um contrato de serviço, como implementá-lo e como hospedar o serviço. O serviço criado é auto-hospedado em um aplicativo de console. Os serviços também podem ser hospedados no IIS (Serviços de Informações da Internet). [!INCLUDE[crabout](../../../includes/crabout-md.md)] como fazer isso, consulte [como: hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). O serviço está configurado no código; no entanto, os serviços também podem ser configurados em um arquivo de configuração. [!INCLUDE[crabout](../../../includes/crabout-md.md)] usando um arquivo de configuração consulte [Configurando serviços usando arquivos de configuração](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ Após concluir a sequência de tópicos neste tutorial, você terá um serviço em execução e um cliente que chama o serviço. Os três primeiros tópicos descrevem como definir um contrato de serviço, como implementá-lo e como hospedar o serviço. O serviço criado é auto-hospedado em um aplicativo de console. Os serviços também podem ser hospedados no IIS (Serviços de Informações da Internet). Para obter mais informações sobre como fazer isso, consulte [como: hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). O serviço está configurado no código; no entanto, os serviços também podem ser configurados em um arquivo de configuração. Para obter mais informações sobre como usar um arquivo de configuração, consulte [Configurando serviços usando arquivos de configuração](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
  Os três tópicos a seguir descrevem como criar um proxy do cliente, configurar o aplicativo cliente e usar o proxy do cliente para chamar a operação de serviço exposta pelo serviço. Os serviços publicam metadados que definem as informações que um aplicativo cliente precisa para se comunicar com o serviço. O [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] automatiza o processo de acesso a esses metadados e usa-o para construir e configurar o aplicativo cliente para o serviço. Se você não estiver usando [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], você pode usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para construir e configurar o aplicativo cliente para o serviço.  
   

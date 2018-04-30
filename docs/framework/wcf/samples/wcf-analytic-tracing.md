@@ -1,45 +1,47 @@
 ---
-title: "Rastreamento analítico do WCF"
-ms.custom: 
+title: Rastreamento analítico do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de analíticos rastreamentos que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] grava ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos analíticos destinam-se para tornar mais fácil obter visibilidade em seus serviços sem pagar uma penalidade de desempenho alto. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Para obter mais informações sobre o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Para saber mais sobre o rastreamento de eventos do Windows, consulte [melhorar a depuração e ajuste de desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Descartando EventProvider  
- Este exemplo usa o <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> de classe que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço, é provável que você pode usar o <xref:System.Diagnostics.Eventing.EventProvider>de recursos para o tempo de vida do serviço. Por esse motivo e para facilitar a leitura, este exemplo nunca descarta o encapsulado <xref:System.Diagnostics.Eventing.EventProvider>. Se por algum motivo, o serviço tem diferentes requisitos de rastreamento e você devem descartar este recurso, você deve modificar esse exemplo de acordo com as práticas recomendadas para o descarte de recursos não gerenciados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]descartar os recursos não gerenciados, consulte [implementar um método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ Este exemplo usa o <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> de classe que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço, é provável que você pode usar o <xref:System.Diagnostics.Eventing.EventProvider>de recursos para o tempo de vida do serviço. Por esse motivo e para facilitar a leitura, este exemplo nunca descarta o encapsulado <xref:System.Diagnostics.Eventing.EventProvider>. Se por algum motivo, o serviço tem diferentes requisitos de rastreamento e você devem descartar este recurso, você deve modificar esse exemplo de acordo com as práticas recomendadas para o descarte de recursos não gerenciados. Para obter mais informações sobre como descartar os recursos não gerenciados, consulte [implementar um método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Auto-hospedagem vs. Hospedagem na Web  
- Para serviços Web hospedados, rastreamentos analíticos do WCF fornecem um campo chamado "HostReference", que é usado para identificar o serviço que está emitindo rastreamentos. Os rastreamentos do usuário extensíveis podem participar neste modelo e demonstra práticas recomendadas para fazer isso. O formato de um host da Web referência quando o pipe ' &#124;' caracteres será exibida na resultante cadeia de caracteres pode ser qualquer um dos seguintes:  
+ Para serviços Web hospedados, rastreamentos analíticos do WCF fornecem um campo chamado "HostReference", que é usado para identificar o serviço que está emitindo rastreamentos. Os rastreamentos do usuário extensíveis podem participar neste modelo e demonstra práticas recomendadas para fazer isso. O formato de um host da Web referência quando o pipe '&#124;' caractere será exibida na resultante cadeia de caracteres pode ser qualquer um dos seguintes:  
   
 -   Se o aplicativo não estiver na raiz.  
   
-     \<Nome do site >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Nome do site >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Se o aplicativo está na raiz.  
   
-     \<Nome do site > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Nome do site >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  Para serviços de hospedagem interna, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]do rastreamentos analíticos não preenchem o campo "HostReference". O `WCFUserEventProvider` classe neste exemplo se comporta de forma consistente quando usado por um serviço auto-hospedado.  
   

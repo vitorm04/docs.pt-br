@@ -1,24 +1,26 @@
 ---
 title: Usando o canal cliente Discovery
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11d693e35017d7290e1cf1209dc3d6423afc38b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7828b3037318e4fb63820fe8d235a92e64fb0b07
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-the-discovery-client-channel"></a>Usando o canal cliente Discovery
 Ao escrever um aplicativo cliente WCF que você precisa saber o endereço do ponto de extremidade do serviço que você está chamando. Em muitas situações o endereço do ponto de extremidade de serviço não for conhecido antecipadamente ou o endereço do serviço de alterações ao longo do tempo. O canal cliente Discovery permite que você escrever um aplicativo de cliente do WCF, descreva o serviço que você deseja chamar e o canal cliente envia uma solicitação de investigação automaticamente. Quando um serviço responde, o canal cliente discovery recupera o endereço de ponto de extremidade para o serviço da resposta de investigação e as usa para chamar o serviço.  
@@ -33,9 +35,9 @@ Ao escrever um aplicativo cliente WCF que você precisa saber o endereço do pon
   
 1.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, que é usado para descrever o serviço que você deseja chamar.  
   
-2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>que especifica o ponto de extremidade para enviar mensagens de descoberta para descoberta.  
+2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> que especifica o ponto de extremidade para enviar mensagens de descoberta para descoberta.  
   
- O <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> propriedade permite que você especifique o contrato de serviço que você está procurando, qualquer necessário URIs de escopo e o número máximo de tempo para tentar abrir o canal. O tipo de contrato é especificado chamando o construtor <xref:System.ServiceModel.Discovery.FindCriteria>. URIs de escopo podem ser adicionados para o <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> propriedade. O <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> propriedade permite que você especifique o número máximo de resultados para o qual o cliente tenta se conectar ao. Quando é recebida uma resposta de investigação o cliente tenta abrir o canal usando o endereço de ponto de extremidade da resposta de investigação. Se uma exceção ocorrer, que o cliente passa para a próxima resposta de investigação, aguardando respostas mais ser recebidas se necessário. Ela continua a fazer isso até que o canal é aberto com êxito ou o número máximo de resultados for atingido. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Essas configurações, consulte <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ O <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> propriedade permite que você especifique o contrato de serviço que você está procurando, qualquer necessário URIs de escopo e o número máximo de tempo para tentar abrir o canal. O tipo de contrato é especificado chamando o construtor <xref:System.ServiceModel.Discovery.FindCriteria>. URIs de escopo podem ser adicionados para o <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> propriedade. O <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> propriedade permite que você especifique o número máximo de resultados para o qual o cliente tenta se conectar ao. Quando é recebida uma resposta de investigação o cliente tenta abrir o canal usando o endereço de ponto de extremidade da resposta de investigação. Se uma exceção ocorrer, que o cliente passa para a próxima resposta de investigação, aguardando respostas mais ser recebidas se necessário. Ela continua a fazer isso até que o canal é aberto com êxito ou o número máximo de resultados for atingido. Para obter mais informações sobre essas configurações, consulte <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
  O <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> propriedade permite que você especifique o ponto de extremidade de descoberta para usar. Geralmente, isso é um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, mas pode ser qualquer ponto de extremidade válido.  
   
@@ -71,4 +73,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>Segurança e o canal cliente Discovery  
- Ao usar o canal cliente discovery, dois pontos de extremidade estão sendo especificados. Um é usado para mensagens de descoberta, geralmente <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, e o outro é o ponto de extremidade do aplicativo. Ao implementar um serviço seguro, deve ter cuidado para proteger os pontos de extremidade. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]segurança, consulte [protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+ Ao usar o canal cliente discovery, dois pontos de extremidade estão sendo especificados. Um é usado para mensagens de descoberta, geralmente <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, e o outro é o ponto de extremidade do aplicativo. Ao implementar um serviço seguro, deve ter cuidado para proteger os pontos de extremidade. Para obter mais informações sobre segurança, consulte [protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).

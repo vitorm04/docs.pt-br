@@ -1,24 +1,26 @@
 ---
 title: Executando os exemplos do Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Executando os exemplos do Windows Communication Foundation
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser executados em uma configuração de computador único ou entre computadores. Fornecido, os exemplos estão prontos para execução em um único computador. Em uma configuração entre computadores, é necessário modificar o arquivo de configuração do exemplo. Os procedimentos a seguir explicam como executar um exemplo em configurações do mesmo computador e entre computadores. Observe que há variações nas etapas para serviços hospedados no serviços de informações da Internet (IIS) e os exemplos auto-hospedado. A maioria dos exemplos estão hospedados no IIS; Consulte as informações do Leiame do exemplo para determinar como ele está hospedado.  
@@ -64,7 +66,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser exe
   
     1.  Se o serviço não está em execução em uma conta de domínio, abra o arquivo de configuração do cliente e altere o valor do endereço da definição do ponto de extremidade para coincidir com o novo endereço do seu serviço. Substitua todas as referências a "localhost" com um nome de domínio totalmente qualificado no endereço.  
   
-    2.  Se o serviço é executado sob uma conta de domínio, gerar novamente a configuração do cliente executando Svcutil.exe em relação ao serviço. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]executando o Svcutil.exe, consulte [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Use o arquivo gerado em vez do arquivo de configuração no exemplo. O arquivo de configuração gerado tem informações de identidade adicional e contém todas as configurações necessárias para se conectar ao ponto de extremidade de serviço, mesmo que eles são as configurações padrão. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]informações de identidade, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), e [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Se o serviço é executado sob uma conta de domínio, gerar novamente a configuração do cliente executando Svcutil.exe em relação ao serviço. Para obter mais informações sobre como executar o Svcutil.exe, consulte [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Use o arquivo gerado em vez do arquivo de configuração no exemplo. O arquivo de configuração gerado tem informações de identidade adicional e contém todas as configurações necessárias para se conectar ao ponto de extremidade de serviço, mesmo que eles são as configurações padrão. Para obter mais informações sobre informações de identidade, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), e [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  No computador cliente, inicie Client.exe em um prompt de comando.  
   
@@ -74,7 +76,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser exe
   
 2.  Se o serviço está hospedado no IIS:  
   
-    1.  Ative o serviço usando um navegador, digitando o endereço http://localhost/servicemodelsamples/service.svc.  
+    1.  Ativar o serviço usando um navegador inserindo o endereço http://localhost/servicemodelsamples/service.svc.  
   
     2.  Na solução, escolha o **depurar** menu e **anexar ao processo** item de menu.  
   

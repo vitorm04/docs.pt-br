@@ -1,24 +1,26 @@
 ---
 title: Decodificadores personalizados
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Decodificadores personalizados
 Este tópico discute como criar decodificadores personalizados.  
@@ -32,20 +34,20 @@ Este tópico discute como criar decodificadores personalizados.
  Ao se conectar a um servidor ou cliente preexistente, talvez você não tenha a opção de usar uma codificação de mensagem específica. No entanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços podem se tornar acessíveis através de vários pontos de extremidade, cada um com um codificador de mensagem diferentes. Quando um codificador único não abrange todo o público para o serviço, considere a possibilidade de expor seu serviço em vários pontos de extremidade. Aplicativos cliente podem escolher o ponto de extremidade que é melhor para eles. Usar vários pontos de extremidade permite que você combine as vantagens de codificadores de mensagem diferente com outros elementos de associação.  
   
 ## <a name="system-provided-encoders"></a>Codificadores fornecido pelo sistema  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece várias associações fornecidas pelo sistema que são projetadas para cobrir os cenários mais comuns do aplicativo. Cada uma dessas vinculações combinar um transporte, o codificador de mensagem e outras opções (security, por exemplo). Este tópico descreve como estender o `Text`, `Binary`, e `MTOM` mensagem codificadores são incluídos no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ou criar seu próprio codificador personalizado. O codificador de mensagem de texto oferece suporte tanto uma codificação de XML simples como codificações SOAP. O modo de codificação XML simples do codificador de mensagem de texto é chamado o codificador POX ("Plain Old XML") para distingui-lo de que a codificação de SOAP com base em texto.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece várias associações fornecidas pelo sistema que são projetadas para cobrir os cenários mais comuns do aplicativo. Cada uma dessas vinculações combinar um transporte, o codificador de mensagem e outras opções (security, por exemplo). Este tópico descreve como estender o `Text`, `Binary`, e `MTOM` mensagem codificadores são incluídos no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ou criar seu próprio codificador personalizado. O codificador de mensagem de texto oferece suporte tanto uma codificação de XML simples como codificações SOAP. O modo de codificação XML simples do codificador de mensagem de texto é chamado o codificador POX ("Plain Old XML") para distingui-lo de que a codificação de SOAP com base em texto.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as combinações de elementos de associação fornecidos pelo associações fornecidas pelo sistema, consulte a seção correspondente em [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Para obter mais informações sobre as combinações de elementos de associação fornecidos pelas associações de fornecido pelo sistema, consulte a seção correspondente [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Como trabalhar com codificadores fornecido pelo sistema  
  Uma codificação é adicionada a uma associação usando uma classe derivada de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece os seguintes tipos de elementos de associação derivados de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> classe que pode fornecer para texto, binária e codificação de mecanismo de otimização de transmissão da mensagem (MTOM):  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece os seguintes tipos de elementos de associação derivados de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> classe que pode fornecer para texto, binária e codificação de mecanismo de otimização de transmissão da mensagem (MTOM):  
   
 -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Mais interoperável, mas o codificador menos eficiente para mensagens XML. Um cliente de serviço Web ou serviço Web geralmente pode entender XML textual. No entanto, não é eficiente transmitir grandes blocos de dados binários como texto.  
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>Representa o elemento de associação que especifica a codificação de caracteres e versionamento de mensagens utilizados para mensagens XML baseadas em binário. Isso é mais eficiente das opções de codificação, mas menos interoperável, porque ele é suportado somente pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: representa o elemento de associação que especifica a codificação de caracteres e versionamento de mensagem usado para uma mensagem usando uma codificação de mecanismo de otimização de transmissão da mensagem (MTOM). MTOM é uma tecnologia eficiente para transmitir dados binários em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens. O codificador MTOM tenta equilíbrio entre eficiência e interoperabilidade. A codificação de MTOM transmite a maioria dos XML no formato textual, mas otimiza o transmiti-los como blocos grandes de dados binários-é, sem conversão de texto.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: representa o elemento de associação que especifica a codificação de caracteres e versionamento de mensagem usado para uma mensagem usando uma codificação de mecanismo de otimização de transmissão da mensagem (MTOM). MTOM é uma tecnologia eficiente para transmitir dados binários em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens. O codificador MTOM tenta equilíbrio entre eficiência e interoperabilidade. A codificação de MTOM transmite a maioria dos XML no formato textual, mas otimiza o transmiti-los como blocos grandes de dados binários-é, sem conversão de texto.  
   
  O elemento de associação cria um binário, MTOM ou texto <xref:System.ServiceModel.Channels.MessageEncoderFactory>. A fábrica cria um binário, MTOM ou texto <xref:System.ServiceModel.Channels.MessageEncoderFactory> instância. Normalmente, há apenas uma única instância. No entanto se sessões forem usadas, um codificador diferente pode ser fornecido para cada sessão. O codificador binário usa isso para coordenar dicionários dinâmicos (consulte a infraestrutura de XML).  
   
@@ -61,7 +63,7 @@ Este tópico discute como criar decodificadores personalizados.
 ### <a name="pooling"></a>Agrupamento  
  Cada uma das implementações do codificador tenta pool tanto quanto possível. Reduzir as alocações é uma maneira de chave para melhorar o desempenho do código gerenciado. Para executar este pool, usam as implementações de `SynchronizedPool` classe. O arquivo c# contém uma descrição das otimizações adicionais usados por esta classe.  
   
- `XmlDictionaryReader`e `XmlDictionaryWriter` instâncias são agrupadas e reinicializadas para evitar a alocar novos para cada mensagem. Para os leitores, um `OnClose` o leitor recupera o retorno de chamada quando `Close()` é chamado. O codificador recicla também alguns objetos de estado de mensagem usados durante a construção de mensagens. Os tamanhos desses pools são configuráveis pelo `MaxReadPoolSize` e `MaxWritePoolSize` propriedades em cada uma das três classes derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ `XmlDictionaryReader` e `XmlDictionaryWriter` instâncias são agrupadas e reinicializadas para evitar a alocar novos para cada mensagem. Para os leitores, um `OnClose` o leitor recupera o retorno de chamada quando `Close()` é chamado. O codificador recicla também alguns objetos de estado de mensagem usados durante a construção de mensagens. Os tamanhos desses pools são configuráveis pelo `MaxReadPoolSize` e `MaxWritePoolSize` propriedades em cada uma das três classes derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Codificação binária  
  Quando usa sessões de codificação binária, a cadeia de caracteres de dicionário dinâmico deve ser comunicada ao destinatário da mensagem. Isso é feito, prefixando a mensagem com as cadeias de caracteres de dicionário dinâmico. O receptor ignora as cadeias de caracteres, adiciona à sessão e processa a mensagem. Corretamente passar cadeias de caracteres de dicionário requer que o transporte de buffer.  
@@ -90,9 +92,9 @@ Este tópico discute como criar decodificadores personalizados.
   
 -   Os principais métodos dessa classe que você deve substituir são:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>qual toma uma <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> do objeto e grava-o em um <xref:System.IO.Stream> objeto.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> qual toma uma <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> do objeto e grava-o em um <xref:System.IO.Stream> objeto.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>qual toma uma <xref:System.IO.Stream> objeto e um tamanho máximo do cabeçalho e retorna um <xref:System.ServiceModel.Channels.Message> objeto.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> qual toma uma <xref:System.IO.Stream> objeto e um tamanho máximo do cabeçalho e retorna um <xref:System.ServiceModel.Channels.Message> objeto.  
   
  É o código escrito em métodos que manipula a conversão entre o protocolo de transporte padrão e a codificação personalizada.  
   

@@ -1,13 +1,13 @@
 ---
-title: "Visão geral de pincéis do WPF"
-ms.custom: 
+title: Visão geral de pincéis do WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Visão geral de pincéis do WPF
 Tudo o que é visível na tela é visível porque foi pintado por um pincel. Por exemplo, um pincel é usado para descrever a tela de fundo de um botão, o primeiro plano do texto e o preenchimento de uma forma. Este tópico apresenta os conceitos de pintura com pincéis [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e fornece exemplos. Os pincéis permitem que você pinte objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com qualquer coisa, desde cores simples e sólidas a conjuntos complexos de padrões e imagens.  
@@ -142,7 +142,7 @@ Um retângulo pintado usando um VisualBrush
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Pintar usando pincéis do sistema e predefinidos  
- Para fins de conveniência, o [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fornece um conjunto de pincéis do sistema e predefinidos que você pode usar para pintar objetos.  
+ Para sua conveniência, o Windows Presentation Foundation (WPF) fornece predefinidos de um conjunto de e pincéis de sistema que você pode usar para pintar objetos.  
   
 -   Para obter uma lista de pincéis predefinidos disponíveis, consulte o <xref:System.Windows.Media.Brushes> classe. Para ver um exemplo que mostra como usar um pincel predefinido, consulte [Pintar uma área com uma cor sólida](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Um retângulo pintado usando um VisualBrush
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Recursos comuns de pincel  
- <xref:System.Windows.Media.Brush>objetos fornecem um <xref:System.Windows.Media.Brush.Opacity%2A> propriedade que pode ser usada para fazer um pincel transparente ou parcialmente transparente. Um <xref:System.Windows.Media.Brush.Opacity%2A> valor 0 torna um pincel completamente transparente, enquanto um <xref:System.Windows.Media.Brush.Opacity%2A> valor 1 faz com que um pincel completamente opaco. O exemplo a seguir usa o <xref:System.Windows.Media.Brush.Opacity%2A> propriedade para tornar um <xref:System.Windows.Media.SolidColorBrush> 25 por cento opaco.  
+ <xref:System.Windows.Media.Brush> objetos fornecem um <xref:System.Windows.Media.Brush.Opacity%2A> propriedade que pode ser usada para fazer um pincel transparente ou parcialmente transparente. Um <xref:System.Windows.Media.Brush.Opacity%2A> valor 0 torna um pincel completamente transparente, enquanto um <xref:System.Windows.Media.Brush.Opacity%2A> valor 1 faz com que um pincel completamente opaco. O exemplo a seguir usa o <xref:System.Windows.Media.Brush.Opacity%2A> propriedade para tornar um <xref:System.Windows.Media.SolidColorBrush> 25 por cento opaco.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

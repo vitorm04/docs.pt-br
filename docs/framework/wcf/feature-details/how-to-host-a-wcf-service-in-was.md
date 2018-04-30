@@ -1,29 +1,31 @@
 ---
-title: "Como hospedar um serviço do WCF em WAS"
-ms.custom: 
+title: Como hospedar um serviço do WCF em WAS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Como hospedar um serviço do WCF em WAS
-Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processos do Windows (também conhecido como WAS) hospedado [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço. FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, pipes nomeados e enfileiramento de mensagens.  
+Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processos do Windows (também conhecido como WAS) hospedado [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço. FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, pipes nomeados e enfileiramento de mensagens.  
   
- Essa opção de hospedagem requer que os componentes de ativação do WAS são instalados e configurados corretamente, mas não exige qualquer código de hospedagem para ser gravado como parte do aplicativo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Instalando e configurando o WAS, consulte [como: instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Essa opção de hospedagem requer que os componentes de ativação do WAS são instalados e configurados corretamente, mas não exige qualquer código de hospedagem para ser gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurar o WAS, consulte [como: instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  Não foi oferece suporte à ativação se o pipeline de processamento de solicitação do servidor web está definido para o modo clássico. Pipeline de processamento de solicitação do servidor web deve ser definido para o modo integrado se a ativação do WAS será usado.  

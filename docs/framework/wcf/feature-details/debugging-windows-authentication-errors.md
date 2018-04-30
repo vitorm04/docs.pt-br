@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depurando erros de autenticação do Windows
 Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface de provedor de suporte de segurança (SSPI) gerencia os processos de segurança. Quando ocorrem erros de segurança na camada de SSPI, eles são apresentados pelo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este tópico fornece uma estrutura e um conjunto de perguntas para ajudar a diagnosticar os erros.  
@@ -75,7 +75,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface
 ### <a name="kerberos-protocol"></a>Protocolo Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Problemas SPN/UPN com o protocolo Kerberos  
- Ao usar a autenticação do Windows e o protocolo é usado ou negociado por SSPI do Kerberos, a URL que usa o ponto de extremidade do cliente deve incluir o nome de domínio totalmente qualificado do host do serviço dentro da URL de serviço. Isso pressupõe que a conta sob a qual o serviço está sendo executado tem acesso para a chave de nome principal (SPN) de serviço do computador (padrão) que é criado quando o computador é adicionado ao domínio do Active Directory, que geralmente é feito através da execução do serviço no Conta de serviço de rede. Se o serviço não tiver acesso à chave SPN de máquina, você deve fornecer o correta SPN nome UPN ou (UPN) da conta sob a qual o serviço está em execução na identidade do ponto de extremidade do cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funciona com o SPN e UPN, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Ao usar a autenticação do Windows e o protocolo é usado ou negociado por SSPI do Kerberos, a URL que usa o ponto de extremidade do cliente deve incluir o nome de domínio totalmente qualificado do host do serviço dentro da URL de serviço. Isso pressupõe que a conta sob a qual o serviço está sendo executado tem acesso para a chave de nome principal (SPN) de serviço do computador (padrão) que é criado quando o computador é adicionado ao domínio do Active Directory, que geralmente é feito através da execução do serviço no Conta de serviço de rede. Se o serviço não tiver acesso à chave SPN de máquina, você deve fornecer o correta SPN nome UPN ou (UPN) da conta sob a qual o serviço está em execução na identidade do ponto de extremidade do cliente. Para obter mais informações sobre como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funciona com o SPN e UPN, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  No balanceamento de carga cenários, como Web farms ou ambientes Web, uma prática comum é definir uma conta exclusiva para cada aplicativo, atribua um SPN para essa conta, e certifique-se de que todos os serviços do aplicativo executados nessa conta.  
   
@@ -134,7 +134,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] representação, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Para obter mais informações sobre representação, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Como alternativa, o cliente está sendo executado como um serviço do Windows, usando a conta interna do sistema.  
   

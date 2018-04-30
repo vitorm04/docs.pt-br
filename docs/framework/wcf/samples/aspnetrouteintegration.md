@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-Este exemplo demonstra como hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rotas de serviço REST usando o ASP.NET. O [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo mostra uma versão auto-hospedado deste cenário e descreve a implementação do serviço em camadas. Este tópico enfoca o recurso de integração do ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET roteamento, consulte <xref:System.Web.Routing>.  
+Este exemplo demonstra como hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rotas de serviço REST usando o ASP.NET. O [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo mostra uma versão auto-hospedado deste cenário e descreve a implementação do serviço em camadas. Este tópico enfoca o recurso de integração do ASP.NET. Para obter mais informações sobre roteamento ASP.NET, consulte <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço expõe uma coleção de clientes de uma maneira de recurso-orientado/REST. Assim como um baseado em SOAP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, o serviço pode ser hospedado no ASP.NET usando um arquivo. svc. No entanto, isso nem sempre é preferencial para cenários HTTP, porque ele requer tendo. svc na URL para o serviço. Além disso, requer a implantação de um arquivo. svc junto com a biblioteca de serviço. Essas limitações podem ser evitadas hospedando o serviço usando o ASP.NET rotas, conforme é mostrado neste exemplo.  

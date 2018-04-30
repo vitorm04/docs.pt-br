@@ -1,27 +1,29 @@
 ---
-title: "Configurando a serialização em um serviço de fluxo de trabalho"
-ms.custom: 
+title: Configurando a serialização em um serviço de fluxo de trabalho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8138fb94de953f133ab21cc2320e0914bc380fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47c66077da051fd70300e1961593e906fe8e77aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Configurando a serialização em um serviço de fluxo de trabalho
-Serviços de fluxo de trabalho são [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços e, portanto, ter a opção de usar qualquer um de <xref:System.Runtime.Serialization.DataContractSerializer> (o padrão) ou o <xref:System.Xml.Serialization.XmlSerializer>. Quando o tipo de serializador a ser usado de serviços gravar o fluxo de trabalho não é especificado no contrato de serviço ou operação. Ao criar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços de fluxo de trabalho, você não especificar esses contratos em código, mas em vez disso, eles são gerados em tempo de execução por inferência de contrato. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]inferência de tipos de contrato, consulte [usando contratos no fluxo de trabalho](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  O serializador é especificado usando o <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> propriedade. Isso pode ser definido no designer como mostrado na ilustração a seguir.  
+Serviços de fluxo de trabalho são [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços e, portanto, ter a opção de usar qualquer um de <xref:System.Runtime.Serialization.DataContractSerializer> (o padrão) ou o <xref:System.Xml.Serialization.XmlSerializer>. Quando o tipo de serializador a ser usado de serviços gravar o fluxo de trabalho não é especificado no contrato de serviço ou operação. Ao criar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços de fluxo de trabalho, você não especificar esses contratos em código, mas em vez disso, eles são gerados em tempo de execução por inferência de contrato. Para obter mais informações sobre a inferência de tipos de contrato, consulte [usando contratos no fluxo de trabalho](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  O serializador é especificado usando o <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> propriedade. Isso pode ser definido no designer como mostrado na ilustração a seguir.  
   
  ![Definindo o serializador](../../../../docs/framework/wcf/feature-details/media/settingserialzier.png "SettingSerialzier")  
   
@@ -38,7 +40,7 @@ Receive approveExpense = new Receive
             };  
 ```  
   
- Tipos conhecidos podem ser especificados em serviços de fluxo de trabalho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Conhecido Consulte tipos [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos podem ser especificados no designer ou no código. Para especificar os tipos conhecidos no designer, clique no botão de reticências ao lado da propriedade KnownTypes na janela Propriedades para um <xref:System.ServiceModel.Activities.Receive> atividade conforme mostrado na ilustração a seguir.  
+ Tipos conhecidos podem ser especificados em serviços de fluxo de trabalho. Para obter mais informações sobre os tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos podem ser especificados no designer ou no código. Para especificar os tipos conhecidos no designer, clique no botão de reticências ao lado da propriedade KnownTypes na janela Propriedades para um <xref:System.ServiceModel.Activities.Receive> atividade conforme mostrado na ilustração a seguir.  
   
  ![Propriedade KnownTypes](../../../../docs/framework/wcf/feature-details/media/knowntypes.png "KnownTypes")  
   

@@ -1,24 +1,26 @@
 ---
-title: "Criando um serviço de fluxo de trabalho de execução longa"
-ms.custom: 
+title: Criando um serviço de fluxo de trabalho de execução longa
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Criando um serviço de fluxo de trabalho de execução longa
 Este tópico descreve como criar um serviço de fluxo de trabalho de longa execução. Serviços de fluxo de trabalho de longa execução pode ser executada por longos períodos de tempo. Em algum momento o fluxo de trabalho pode ficar ocioso aguardando algumas informações adicionais. Quando isso ocorre o fluxo de trabalho para um banco de dados SQL é persistente e é removido da memória. Quando as informações adicionais se torna disponíveis a instância de fluxo de trabalho é carregada para a memória e continua executando.  Nesse cenário, você está implementando um sistema de pedidos muito simplificado.  O cliente envia uma mensagem inicial para o serviço de fluxo de trabalho para iniciar a ordem. Ele retorna uma ID de ordem para o cliente. Neste ponto o serviço de fluxo de trabalho está esperando por outra mensagem do cliente e entra no estado ocioso e é mantido para um banco de dados do SQL Server.  Quando o cliente envia a mensagem seguinte para solicitar um item, o serviço de fluxo de trabalho é carregado para a memória e termina de processar o pedido. No exemplo de código, ele retorna uma cadeia de caracteres informando que o item foi adicionado na ordem. O exemplo de código não deve ser um aplicativo do mundo real de tecnologia, mas em vez disso, um exemplo simple que ilustra os serviços de fluxo de trabalho de longa execução. Este tópico pressupõe que você sabe como criar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projetos e soluções.  
@@ -30,7 +32,7 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
   
 2.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
   
-3.  Microsoft[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
   
 4.  Você está familiarizado com o WCF e [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] e sabe como criar projetos/soluções.  
   
@@ -82,7 +84,7 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
   
          ![Conjunto de propriedades de atividade de recebimento](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         A propriedade DisplayName define o nome exibido para a atividade de recebimento no designer. As propriedades ServiceContractName e OperationName especificam o nome do contrato de serviço e operação que são implementadas pela atividade de recebimento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como os contratos são usados no fluxo de trabalho de serviços consulte [usando contratos no fluxo de trabalho](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         A propriedade DisplayName define o nome exibido para a atividade de recebimento no designer. As propriedades ServiceContractName e OperationName especificam o nome do contrato de serviço e operação que são implementadas pela atividade de recebimento. Para obter mais informações sobre como os contratos são usados nos serviços de fluxo de trabalho, consulte [usando contratos no fluxo de trabalho](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Clique o **definir...**  link no **ReceiveStartOrder** atividade e defina as propriedades mostradas na ilustração a seguir.  Observe que o **parâmetros** botão de opção é selecionada, um parâmetro denominado `p_customerName` está associada ao `customerName` variável. Isso configura o **Receive** atividade receber alguns dados e associar dados a variáveis locais.  
   
@@ -120,13 +122,13 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
   
          ![Especificar parâmetros para o segundo recebem](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Clique o **CorrelateOn** reticências botão e digite `orderIdHandle`. Em **consultas XPath**, clique na seta suspensa e selecione `p_orderId`. Isso configura a correlação na segunda atividade de recebimento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte correlação [correlação](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Clique o **CorrelateOn** reticências botão e digite `orderIdHandle`. Em **consultas XPath**, clique na seta suspensa e selecione `p_orderId`. Isso configura a correlação na segunda atividade de recebimento. Para obter mais informações sobre a correlação consulte [correlação](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![Definindo a propriedade CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Arraste e solte um **se** atividade imediatamente após o **ReceiveAddItem** atividade. Essa atividade atua como um se instrução.  
   
-        1.  Definir o **condição** propriedade`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Definir o **condição** propriedade `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Arrastar e soltar um **atribuir** atividade para o **, em seguida,** seção e outro para o **Else** seção define as propriedades do **atribuir** atividades, conforme mostrado na ilustração a seguir.  
   

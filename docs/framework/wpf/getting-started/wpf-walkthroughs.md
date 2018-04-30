@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-walkthroughs"></a>Explicações passo a passo WPF
 Instruções passo a passo oferecem orientações em etapas para cenários comuns. Isso torna esse bom local para começar a conhecer o produto ou uma área de recurso específica.  
   
- Este tópico contém links para as instruções passo a passo do [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+ Este tópico contém links para instruções passo a passo do Windows Presentation Foundation (WPF).  
   
 ## <a name="wpf-designer-walkthroughs"></a>Instruções passo a passo do WPF Designer  
   

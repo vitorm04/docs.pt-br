@@ -1,28 +1,30 @@
 ---
-title: "Serviços unidirecionais"
-ms.custom: 
+title: Serviços unidirecionais
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>Serviços unidirecionais
 O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método. Com uma operação unidirecional, somente uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem o remetente esperado um.  
@@ -31,7 +33,7 @@ O comportamento padrão de uma operação de serviço é o padrão de solicitaç
   
 -   Quando o cliente deve chamar as operações e não é afetado pelo resultado da operação no nível da operação.  
   
--   Ao usar o <xref:System.ServiceModel.NetMsmqBinding> ou <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] neste cenário, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Ao usar o <xref:System.ServiceModel.NetMsmqBinding> ou <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe. (Para obter mais informações sobre esse cenário, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Quando uma operação é unidirecional, não há nenhuma mensagem de resposta para transmitir informações de erro para o cliente. Você pode detectar condições de erro usando recursos de associação subjacente, como sessões confiáveis, ou criando um contrato de serviço duplex que usa duas operações unidirecionais — um contrato unidirecional do cliente para o serviço para chamar a operação de serviço e outro unidirecional entre o cliente e o serviço de contrato de forma que o serviço pode enviar falhas de backup para o cliente usando um retorno de chamada que implementa o cliente.  
   

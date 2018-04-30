@@ -1,26 +1,26 @@
 ---
-title: "Controle de versão de serviço"
-ms.custom: 
+title: Controle de versão de serviço
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e potencialmente várias vezes durante a vida útil, serviços (e os pontos de extremidade expõem) podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou aborda outros problemas. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -138,7 +138,7 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
  As alterações para o endereço de ponto de extremidade e associação são as alterações recentes, a menos que os clientes são capazes de descobrir dinamicamente o novo endereço de ponto de extremidade ou associação. É um mecanismo para implementar essa funcionalidade usando um registro de descrição de descoberta Universal e integração (UDDI) e o padrão de invocação UDDI onde um cliente tenta se comunicar com um ponto de extremidade e, em caso de falha, consulta um UDDI conhecido Registro para os metadados do ponto de extremidade atual. O cliente usa o endereço e associação de metadados para se comunicar com o ponto de extremidade. Se essa comunicação for bem-sucedida, o cliente armazena em cache as informações de endereço e associação para uso futuro.  
   
 ## <a name="routing-service-and-versioning"></a>Controle de versão e o serviço de roteamento  
- Se as alterações feitas a um serviço são as recentes alterações e você precisa ter duas ou mais versões diferentes de um serviço em execução simultaneamente você pode usar o serviço de roteamento do WCF para rotear mensagens para a instância de serviço apropriado. O serviço de roteamento do WCF usa roteamento baseado em conteúdo, em outras palavras, ele usa informações dentro da mensagem para determinar onde rotear a mensagem. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Consulte o serviço de roteamento de WCF [serviço de roteamento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obter um exemplo de como usar o serviço de roteamento do WCF para controle de versão de serviço, consulte [como: controle de versão do serviço](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Se as alterações feitas a um serviço são as recentes alterações e você precisa ter duas ou mais versões diferentes de um serviço em execução simultaneamente você pode usar o serviço de roteamento do WCF para rotear mensagens para a instância de serviço apropriado. O serviço de roteamento do WCF usa roteamento baseado em conteúdo, em outras palavras, ele usa informações dentro da mensagem para determinar onde rotear a mensagem. Para obter mais informações sobre o serviço de roteamento de WCF consulte [serviço de roteamento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obter um exemplo de como usar o serviço de roteamento do WCF para controle de versão de serviço, consulte [como: controle de versão do serviço](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Anexo  
  As diretrizes de controle de versão do contrato dados gerais quando for necessário estrito controle de versão são tratar os contratos de dados como imutável e criar novos quando são necessárias alterações. Uma nova classe precisa ser criado para cada novo contrato de dados, portanto, um mecanismo é necessária para evitar ter de levar o código existente que foi escrito em termos de dados antigos de contrato de classe e reescrevê-la em termos da nova classe de contrato de dados.  

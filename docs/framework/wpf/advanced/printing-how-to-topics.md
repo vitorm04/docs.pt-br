@@ -1,34 +1,36 @@
 ---
-title: "Tópicos explicativos de impressão"
-ms.custom: 
+title: Tópicos explicativos de impressão
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
 Os tópicos nesta seção demonstram como usar os recursos de impressão e gerenciamento do sistema de impressão incluídas no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Invocar uma caixa de diálogo Imprimir](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- Instruções para marcação XAML para declarar um objeto de caixa de diálogo de impressão [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] e usar código para invocar o diálogo de dentro de um aplicativo [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+ Instruções para marcação XAML para declarar um [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] imprimir o objeto de caixa de diálogo e usar código para chamar a caixa de diálogo de dentro de um aplicativo do Windows Presentation Foundation (WPF).  
   
  [Clonar uma impressora](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  Instruções sobre como instalar uma segunda fila de impressão com exatamente as mesmas propriedades de uma existente.  

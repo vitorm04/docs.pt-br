@@ -1,35 +1,35 @@
 ---
-title: "Terminologia de segurança do WCF"
-ms.custom: 
+title: Terminologia de segurança do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada ao abordar a segurança podem não ser conhecidas. Este tópico fornece curtas explicações sobre alguns dos termos de segurança, mas não se destina a fornecer a documentação abrangente para cada item.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] termos usados no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentação, consulte [fundamentais conceitos do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Para obter mais informações sobre termos usados no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentação, consulte [fundamentais conceitos do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de controle de acesso (ACL)  
  Uma lista de proteções de segurança que se aplica a um objeto. (Um objeto pode ser um arquivo, processo, eventos ou qualquer outro com um descritor de segurança). Uma entrada em uma ACL é uma entrada de controle de acesso (ACE). Há dois tipos de ACLs: condicional e do sistema.  
@@ -93,7 +93,7 @@ Parte da terminologia usada ao abordar a segurança podem não ser conhecidas. E
  Valor de uso único  
  Um valor gerado aleatoriamente usado para anular a ataques "Repetir".  
   
- nonrepudiation  
+ não-repúdio  
  A capacidade de identificar os usuários que executaram determinadas ações, portanto irrefutably responder a qualquer tentativa de negar a responsabilidade por um usuário. Por exemplo, um sistema pode registrar a ID de um usuário sempre que um arquivo é excluído.  
   
  Padrão de criptografia de chave pública (PKCS)  
@@ -102,7 +102,7 @@ Parte da terminologia usada ao abordar a segurança podem não ser conhecidas. E
  PKCS #7  
  O padrão de sintaxe de mensagem criptografada. Uma sintaxe geral para a qual a criptografia pode ser aplicada, como assinaturas digitais e criptografia de dados. Ele também fornece uma sintaxe para disseminar certificados ou listas de revogação de certificados e outros atributos da mensagem, como os carimbos de hora para a mensagem.  
   
- plaintext  
+ texto sem formatação  
  Uma mensagem que não está criptografada. Mensagens de texto sem formatação às vezes são chamadas de *texto não criptografado* mensagens.  
   
  privilégio  

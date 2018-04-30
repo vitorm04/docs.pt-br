@@ -1,27 +1,29 @@
 ---
-title: "Transmissão de transferência de mensagem"
-ms.custom: 
+title: Transmissão de transferência de mensagem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>Transmissão de transferência de mensagem
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]transportes oferecem suporte a dois modos de transferência de mensagens:  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportes oferecem suporte a dois modos de transferência de mensagens:  
   
 -   Transferências em buffer armazenar a mensagem inteira em um buffer de memória até que a transferência for concluída. Uma mensagem em buffer deve ser entregue completamente antes de um destinatário possa lê-lo.  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  Alguns [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recursos, como mensagens confiáveis, transações e segurança em nível de mensagem SOAP, dependem de mensagens para as transmissões de buffer. Usando esses recursos pode reduzir ou eliminar os benefícios de desempenho obtidos usando streaming. Para proteger um transporte em fluxo, use apenas a segurança de nível de transporte ou usar segurança em nível de transporte e segurança de mensagem somente autenticação.  
   
- Cabeçalhos SOAP são sempre armazenados em buffer, mesmo quando o modo de transferência é definido como em fluxo. Os cabeçalhos para uma mensagem não devem exceder o tamanho do `MaxBufferSize` cota de transporte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Essa configuração, consulte [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Cabeçalhos SOAP são sempre armazenados em buffer, mesmo quando o modo de transferência é definido como em fluxo. Os cabeçalhos para uma mensagem não devem exceder o tamanho do `MaxBufferSize` cota de transporte. Para obter mais informações sobre essa configuração, consulte [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Diferenças entre as transferências em buffer e em fluxo  
  Alterar o modo de transferência do buffer transmitido também altera a forma de canal nativo do TCP e transportes de pipe nomeado. Para transferências em buffer, a forma de canal nativo é <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para transferências em fluxo, os canais nativo são <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. Alterar o modo de transferência em um aplicativo existente que usa estes transporta diretamente (ou seja, não por meio de um contrato de serviço) requer a alteração da forma de canal esperado para fábricas de canais e ouvintes.  

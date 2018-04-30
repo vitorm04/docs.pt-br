@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7bf6512be6fabb87797fb6338f64320d5787d547
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objeto de programação HTTP Web do WCF
 O modelo de programação WCF WEB HTTP permite aos desenvolvedores expor [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web services por meio de solicitações HTTP básicas sem a necessidade de SOAP. O modelo de programação WCF WEB HTTP é criado sobre existente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de extensibilidade. Define as classes a seguir:  
@@ -110,7 +110,7 @@ O modelo de programação WCF WEB HTTP permite aos desenvolvedores expor [!INCLU
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB não usa mensagens de baseado em SOAP e, portanto, não suporta o WS-* protocolos. No entanto, você pode expor o mesmo contrato pelo ponto de extremidade duas diferentes: uma usando SOAP e outros não usando SOAP. Consulte [como: expor um contrato para clientes SOAP e Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obter um exemplo.  
   
 ## <a name="security"></a>Segurança  
- Porque o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a modelo de programação HTTP WEB WS-* protocolos a única maneira de proteger um serviço Web criado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB é expor seu serviço usando SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Configurar o SSL com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] consulte [como implementar o SSL no IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Porque o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a modelo de programação HTTP WEB WS-* protocolos a única maneira de proteger um serviço Web criado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB é expor seu serviço usando SSL. Para obter mais informações sobre como configurar o SSL com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] consulte [como implementar o SSL no IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.WebHttpBinding>  

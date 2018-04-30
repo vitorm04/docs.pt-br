@@ -1,24 +1,26 @@
 ---
-title: "Sessões confiáveis e filas"
-ms.custom: 
+title: Sessões confiáveis e filas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9a78bab9f7c4af23cf01c44e1d22a41a87a96f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Sessões confiáveis e filas
 Sessões confiáveis e filas são o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos que implementam o sistema de mensagens confiável. Os tópicos contidos nesta seção discutem o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recursos de mensagens confiáveis.  
@@ -40,14 +42,14 @@ Sessões confiáveis e filas são o [!INCLUDE[indigo1](../../../../includes/indi
 ## <a name="reliable-sessions"></a>Sessões confiáveis  
  Sessões confiáveis fornecem transferência confiável de ponta a ponta de mensagens entre uma origem e um destino usando o protocolo WS-ReliableMessaging, independentemente do número ou tipo de intermediários que separam os pontos de extremidade de mensagens (origem e destino). Isso inclui qualquer intermediários de transporte que não usam SOAP (por exemplo, proxies HTTP) ou intermediários que usam SOAP (por exemplo, roteadores baseados em SOAP ou pontes) que são necessários para mensagens entre os pontos de extremidade. Sessões confiáveis usam uma janela de transferência na memória para falhas de nível de mensagem SOAP máscara e restabelecer conexões no caso de falhas de transporte.  
   
- Sessões confiáveis fornecem transferências de mensagens confiável de baixa latência. Eles fornecem para mensagens SOAP através de qualquer proxies ou intermediários, equivalente ao qual TCP permite pacotes por pontes IP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sessões confiáveis, consulte [sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Sessões confiáveis fornecem transferências de mensagens confiável de baixa latência. Eles fornecem para mensagens SOAP através de qualquer proxies ou intermediários, equivalente ao qual TCP permite pacotes por pontes IP. Para obter mais informações sobre sessões confiáveis, consulte [sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Filas  
- As filas no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornecer ambas as transferências confiáveis de mensagens e separação entre fontes e destinos às custas de alta latência. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]comunicação em fila é criada sobre enfileiramento de mensagens (também conhecido como MSMQ).  
+ As filas no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornecer ambas as transferências confiáveis de mensagens e separação entre fontes e destinos às custas de alta latência. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunicação em fila é criada sobre enfileiramento de mensagens (também conhecido como MSMQ).  
   
  MSMQ é enviado como uma opção com Windows que é executado como um serviço NT. Ele captura mensagens de transmissão em uma fila de transmissão em nome da fonte e entrega para uma fila de destino. A fila de destino aceita mensagens em nome de destino para envio posterior sempre que o destino de solicitações de mensagens. Os gerenciadores de fila MSMQ implementam um protocolo de transferência de mensagens confiáveis para que as mensagens não serão perdidas durante a transmissão. O protocolo pode ser nativo ou baseado em SOAP, como confiável de mensagens protocolo SRMP (Soap).  
   
- A separação, juntamente com as transferências de mensagens confiáveis entre as filas, permite que os aplicativos que são acoplados de forma flexível para se comunicar de forma confiável. Ao contrário das sessões confiáveis, a origem e destino não precisa estar em execução ao mesmo tempo. Implicitamente, isso permite cenários onde as filas são, na verdade, usadas como um mecanismo de nivelamento de carga quando há uma incompatibilidade entre a taxa de produção de mensagem, a origem e a taxa de consumo de mensagem pelo destino. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as filas, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ A separação, juntamente com as transferências de mensagens confiáveis entre as filas, permite que os aplicativos que são acoplados de forma flexível para se comunicar de forma confiável. Ao contrário das sessões confiáveis, a origem e destino não precisa estar em execução ao mesmo tempo. Implicitamente, isso permite cenários onde as filas são, na verdade, usadas como um mecanismo de nivelamento de carga quando há uma incompatibilidade entre a taxa de produção de mensagem, a origem e a taxa de consumo de mensagem pelo destino. Para obter mais informações sobre as filas, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  

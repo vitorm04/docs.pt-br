@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-feature-details"></a>Detalhes de funcionalidades do WCF
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite intenso controle sobre as funções de mensagens de um aplicativo. Os tópicos nesta seção fornecem detalhes sobre os recursos disponíveis. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte básica de programação, [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite intenso controle sobre as funções de mensagens de um aplicativo. Os tópicos nesta seção fornecem detalhes sobre os recursos disponíveis. Para obter mais informações sobre programação básica, consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  

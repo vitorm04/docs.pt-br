@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 73f4364d92c366dc6750144668f722fea93bca2b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>O que&#39;novo no Windows Workflow Foundation
-Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera várias paradigmas de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrando .NET 3.0 e 3.5 do .NET aplicativos de fluxo de trabalho para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera várias paradigmas de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Modelo de atividade de fluxo de trabalho  
  A atividade agora é a unidade base da criação de um fluxo de trabalho, em vez de usar as classes <xref:System.Workflow.Activities.SequentialWorkflowActivity> ou <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. A classe <xref:System.Activities.Activity> fornece a abstração básica do comportamento de fluxo de trabalho. Os autores de atividade podem implementar o <xref:System.Activities.CodeActivity> para a funcionalidade básica de atividade personalizada ou <xref:System.Activities.NativeActivity> para a funcionalidade de atividade personalizada que usa a largura do tempo de execução. <xref:System.Activities.Activity> é uma classe usada por autores de atividade para expressar novos comportamentos declarativamente em termos de outros <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, ou <xref:System.Activities.DynamicActivity> objetos, independentemente de estarem personalizado ou esteja incluída no [interno de atividades Biblioteca](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Especificando transferência de dados em contratos de serviço
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pode ser pensada como uma infraestrutura de mensagens. Operações de serviço podem receber mensagens, processá-los e enviar mensagens. As mensagens são descritas usando contratos de operação. Por exemplo, considere o seguinte contrato.  
@@ -453,7 +453,7 @@ End Class
  Você pode fazer algumas coisas para personalizar a maneira como os dados são serializados.  
   
 ### <a name="changing-server-serialization-settings"></a>Alterando as definições de serialização do servidor  
- Quando o padrão <xref:System.Runtime.Serialization.DataContractSerializer> está em uso, você pode controlar alguns aspectos do processo de serialização no serviço aplicando o <xref:System.ServiceModel.ServiceBehaviorAttribute> de atributo para o serviço. Especificamente, você pode usar o `MaxItemsInObjectGraph` propriedade para definir a cota que limita o número máximo de objetos de <xref:System.Runtime.Serialization.DataContractSerializer> desserializa. Você pode usar o `IgnoreExtensionDataObject` propriedade para desativar o recurso de controle de versão de ciclo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cotas, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ciclo, consulte [contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Quando o padrão <xref:System.Runtime.Serialization.DataContractSerializer> está em uso, você pode controlar alguns aspectos do processo de serialização no serviço aplicando o <xref:System.ServiceModel.ServiceBehaviorAttribute> de atributo para o serviço. Especificamente, você pode usar o `MaxItemsInObjectGraph` propriedade para definir a cota que limita o número máximo de objetos de <xref:System.Runtime.Serialization.DataContractSerializer> desserializa. Você pode usar o `IgnoreExtensionDataObject` propriedade para desativar o recurso de controle de versão de ciclo. Para obter mais informações sobre cotas, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Para obter mais informações sobre o ciclo, consulte [contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Antes de abrir o host de serviço ou criar um canal de cliente, remova existente <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> comportamento e plug-in a classe personalizada derivada que você criou nas etapas anteriores.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] conceitos de serialização de avançados, consulte [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Para obter mais informações sobre conceitos de serialização avançada, consulte [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando a classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

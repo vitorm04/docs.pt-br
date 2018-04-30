@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>Utilizando contratos de mensagem
 Normalmente ao criar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos, os desenvolvedores preste muita atenção para as estruturas de dados e os problemas de serialização e não precisa se preocupar com a estrutura de mensagens no qual os dados são executados. Para esses aplicativos, a criação de contratos de dados para os parâmetros ou valores de retorno é simples. (Para obter mais informações, consulte [especificando a transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ Normalmente ao criar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] apl
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalmente, um contrato de dados é suficiente para definir o esquema para as mensagens. Por exemplo, no exemplo anterior, é suficiente para a maioria dos aplicativos se `BankingTransaction` e `BankingTransactionResponse` ter contratos de dados para definir o conteúdo das mensagens de SOAP subjacentes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] contratos de dados, consulte [usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalmente, um contrato de dados é suficiente para definir o esquema para as mensagens. Por exemplo, no exemplo anterior, é suficiente para a maioria dos aplicativos se `BankingTransaction` e `BankingTransactionResponse` ter contratos de dados para definir o conteúdo das mensagens de SOAP subjacentes. Para obter mais informações sobre contratos de dados, consulte [usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  No entanto, ocasionalmente, é necessário controlar exatamente como a estrutura da mensagem SOAP transmitidos eletronicamente. O cenário mais comum para isso é inserir cabeçalhos SOAP personalizados. Outro cenário comum é para definir propriedades de segurança para os cabeçalhos da mensagem e o corpo, ou seja, para decidir se esses elementos são assinados digitalmente e criptografados. Finalmente, algumas pilhas SOAP de terceiros exigem que as mensagens em um formato específico. As operações de mensagens de estilo fornecem esse controle.  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>Referência de esquema de contrato de dados
 Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System.Runtime.Serialization.DataContractSerializer> para descrever o common language runtime (CLR) tipos de serialização de XML.  
@@ -245,7 +245,7 @@ Este tópico descreve o subconjunto do esquema XML (XSD) usado pelo <xref:System
   
 -   Restrições de tipo simples de `xs:string` que não têm qualquer facetas de restrição que `xs:enumeration` são mapeados para os contratos de dados de enumeração.  
   
--   Todas as outras restrições de tipo simples são mapeadas para os tipos que eles restringem o. Por exemplo, uma restrição de `xs:int` é mapeado para um número inteiro, assim como `xs:int` does por si mesmo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] tipo primitivo mapeamento, consulte o mapeamento de tipo/primitivo.  
+-   Todas as outras restrições de tipo simples são mapeadas para os tipos que eles restringem o. Por exemplo, uma restrição de `xs:int` é mapeado para um número inteiro, assim como `xs:int` does por si mesmo. Para obter mais informações sobre o mapeamento de tipo primitivo, consulte o mapeamento de tipo/primitivo.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: Restriction >: atributos  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- O atributo opcional `ser:FactoryType` declarado na serialização de contrato de dados de esquema faz referência a uma classe de fábrica que pode desserializar o tipo. A classe de fábrica deve ser parte da coleção de tipos conhecidos a `DataContractSerializer` instância que está sendo usado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ O atributo opcional `ser:FactoryType` declarado na serialização de contrato de dados de esquema faz referência a uma classe de fábrica que pode desserializar o tipo. A classe de fábrica deve ser parte da coleção de tipos conhecidos a `DataContractSerializer` instância que está sendo usado. Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>Esquema de serialização de DataContract  
  Um número de esquemas exportados pelo `DataContractSerializer` usar tipos de elementos e atributos de um namespace de serialização de contrato de dados especial:  

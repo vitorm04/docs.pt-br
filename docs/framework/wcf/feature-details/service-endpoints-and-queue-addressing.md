@@ -1,24 +1,26 @@
 ---
-title: "Pontos de extremidade de serviço e endereçamento de fila"
-ms.custom: 
+title: Pontos de extremidade de serviço e endereçamento de fila
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leem de filas e como pontos de extremidade de serviço são mapeados para filas. Como um lembrete, a ilustração a seguir mostra o clássico [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] na fila de implantação do aplicativo.  
@@ -32,7 +34,7 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
  Nomes de caminho são mapeados para "FormatNames" para determinar os aspectos adicionais do endereço, incluindo o protocolo de transferência de Gerenciador de roteamento e a fila. O Gerenciador de fila dá suporte a dois protocolos de transferência: o protocolo nativo do MSMQ e confiável de mensagens protocolo SRMP (SOAP).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Nomes de caminho e o formato do MSMQ, consulte [sobre enfileiramento](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ Para obter mais informações sobre nomes de caminho e o formato do MSMQ, consulte [sobre enfileiramento](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding e endereçamento de serviço  
  Ao endereçar uma mensagem para um serviço, o esquema de URI é escolhido com base no transporte usado para comunicação. Cada transporte em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem um esquema exclusivo. O esquema deve refletir a natureza de transporte usado para comunicação. Por exemplo, net.tcp, NET. pipe, HTTP e assim por diante.  
@@ -49,7 +51,7 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
 -   [privada] é opcional. Ele é usado ao endereçar uma fila de destino é uma fila particular. Para resolver uma fila pública, você não deve especificar privada. Observe que, ao contrário dos caminhos MSMQ, não há nenhum "$" no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] forma de URI.  
   
--   \<*nome da fila*> é o nome da fila. O nome da fila também pode referir-se para uma subfila de mensagens. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+-   \<*nome da fila*> é o nome da fila. O nome da fila também pode referir-se para uma subfila de mensagens. Portanto, \< *nome de fila*> = \< *nome-da-fila*> [; *nome de queue sub*].  
   
  Exemplo 1: Para endereçar uma fila particular PurchaseOrders hospedados no computador abc atadatum.com, o URI seria net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -83,9 +85,9 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
 |Endereço da fila com base no URI do WCF|Use a propriedade do Active Directory|Propriedade de protocolo de transferência de fila|Nomes de formato resultantes do MSMQ|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (padrão)|Nativo (padrão)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
-|Net.msmq://\<machine-name>/private/abc|verdadeiro|Nativo|PÚBLICO = alguns guid (o GUID da fila)|  
+|NET.MSMQ://\<machine-name >/privado/abc|False (padrão)|Nativo (padrão)|DIRECT=OS:machine-name\private$\abc|  
+|NET.MSMQ://\<machine-name >/privado/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
+|NET.MSMQ://\<machine-name >/privado/abc|verdadeiro|Nativo|PÚBLICO = alguns guid (o GUID da fila)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lendo mensagens da fila de mensagens mortas ou a fila de mensagens suspeitas  
  Para ler mensagens de uma fila de mensagens suspeitas é uma subfila da fila de destino, abra o `ServiceHost` com o endereço da subfila.  
@@ -98,7 +100,7 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
  Ao usar uma fila de mensagens mortas personalizada, observe que a fila de mensagens mortas deve residir no computador local. Como tal, o URI para a fila de mensagens mortas é restrito ao formulário:  
   
- net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
+ NET. MSMQ: //localhost/ [privada /] \< *personalizado-mortas-letra--nome de fila*>.  
   
  Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço verifica que todas as mensagens recebidas foram resolvidas para a fila particular está escutando nas. Se a fila de destino da mensagem não coincide com a fila que for localizado no, o serviço não processa a mensagem. Este é um problema que serviços de escuta em uma fila de mensagens mortas devem tratar porque qualquer mensagem na fila de mensagens mortas deveria ser entregue em outro lugar. Para ler mensagens de uma fila de mensagens mortas ou de uma fila suspeita, um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro deve ser usado. Para obter um exemplo, consulte [filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
@@ -111,7 +113,7 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
  Observe que você só pode usar nomes de formato direto e nomes de formato públicos e privados (requer a integração do Active Directory) ao receber mensagens de uma fila usando `MsmqIntegrationBinding`. No entanto, é recomendável que você use nomes de formato direto. Por exemplo, em [!INCLUDE[wv](../../../../includes/wv-md.md)], usar qualquer outro nome de formato causa um erro porque o sistema tenta abrir uma subfila, que só pode ser aberta com nomes de formato direto.  
   
- Ao abordar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito de adicionar /msmq/ no nome de formato direto para ajudar a serviços de informações da Internet (IIS) com a distribuição. Por exemplo: quando uma fila de protocolo abc usando o SRMP, em vez de direta de endereçamento = $ http://adatum.com/msmq/private/abc, você deve usar o DIRECT = http://adatum.com/private$ / abc.  
+ Ao abordar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito de adicionar /msmq/ no nome de formato direto para ajudar a serviços de informações da Internet (IIS) com a distribuição. Por exemplo: quando uma fila de protocolo abc usando o SRMP, em vez de direta de endereçamento =http://adatum.com/msmq/private$/ abc, você deve usar DIRECT =http://adatum.com/private$/ abc.  
   
  Observe que você não pode usar o endereçamento net.msmq:// com `MsmqIntegrationBinding`. Porque `MsmqIntegrationBinding` dá suporte a forma livre MSMQ formato nome de endereçamento, você pode usar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que usa esta associação para usar os recursos da lista de distribuição e multicast em MSMQ. Especificação de uma exceção `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve estar net.msmq:// a forma, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   

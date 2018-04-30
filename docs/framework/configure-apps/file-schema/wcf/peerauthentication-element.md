@@ -1,37 +1,39 @@
 ---
 title: Elemento &lt;peerAuthentication&gt;
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b0195ec042a0ad342f199f0bf9c2fd3a19821f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9d8809378d8ad8bd5b62d6435919602e4ad0b042
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltpeerauthenticationgt-element"></a>Elemento &lt;peerAuthentication&gt;
 Especifica as opções de autenticação para clientes ponto a ponto.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Consulte programação, a ponto [rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Para obter mais informações sobre programação ponto a ponto, consulte [rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<clientCredentials>  
-\<peer>  
-\<PeerAuthentication>  
+\<par >  
+\<PeerAuthentication >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +58,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`revocationMode`|Enumeração opcional. Um dos modos usados para verificar por listas de certificados revogados (CRL). O padrão é `Online`.|  
 |`trustedStoreLocation`|Enumeração opcional. Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. A validação é executada em relação a **pessoas confiáveis** armazenar no local de armazenamento especificado. O padrão é `CurrentUser`.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -87,7 +89,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
+|[\<par >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
   
 ## <a name="remarks"></a>Comentários  
  O `<authentication>` elemento corresponde à <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> classe. Este elemento Especifica um validador, que é invocado durante a autenticação de vizinho de vizinho na malha. Quando um novo par tenta estabelecer uma conexão vizinha, ele passa suas próprias credenciais para o par está respondendo. O validador do Respondente é invocado para verificar a credencial da parte remota. Sempre que uma conexão ponto a ponto é estabelecida na malha, os pontos são autenticados mutuamente, validadores significado em ambas as extremidades são invocados.  

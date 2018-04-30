@@ -1,12 +1,13 @@
 ---
 title: Definindo e especificando falhas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definindo e especificando falhas
-Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de forma interoperável. Este tópico discute quando e como definir o conteúdo de falhas personalizado e especificar quais operações podem retorná-los. [!INCLUDE[crabout](../../../includes/crabout-md.md)]como um serviço ou cliente duplex, pode enviar as falhas e como um cliente ou aplicativo de serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de forma interoperável. Este tópico discute quando e como definir o conteúdo de falhas personalizado e especificar quais operações podem retorná-los. Para obter mais informações sobre como um serviço ou cliente duplex, pode enviar as falhas e como um cliente ou aplicativo de serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Visão geral  
  Declarado falhas de SOAP são aquelas em que uma operação tem um <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> que especifica um tipo personalizado de falhas SOAP. Falhas de SOAP não declaradas são aqueles que não são especificados no contrato para uma operação. Este tópico ajuda você a identificar as condições de erro e criar um contrato de falha para o serviço que os clientes podem usar para lidar adequadamente com essas condições de erro quando notificado por falhas de SOAP personalizadas. As tarefas básicas são, em ordem:  
@@ -77,7 +79,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]como garantir que seus dados é serializável, consulte [especificando a transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Para obter uma lista de serialização de suporte que <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> fornece, consulte [tipos suportados pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Para obter mais informações sobre como garantir que seus dados é serializável, consulte [especificando a transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Para obter uma lista de serialização de suporte que <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> fornece, consulte [tipos suportados pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Operações de marca para estabelecer o contrato de falha  
  Depois que uma estrutura de dados serializáveis que é retornada como parte de uma falha SOAP personalizada é definida, a última etapa é marcar seu contrato de operação como gerar uma falha SOAP desse tipo. Para fazer isso, use o <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> de atributos e passar o tipo do tipo de dados personalizado que você tenha criado. O exemplo de código a seguir mostra como usar o <xref:System.ServiceModel.FaultContractAttribute> atributo para especificar que o `Divide` operação pode retornar uma falha SOAP do tipo `MathFault`. Outras operações matemáticas agora também podem especificar que eles podem retornar um `MathFault`.  
@@ -96,7 +98,7 @@ End Class
   
  Acordo com o padrão SOAP, uma falha pode ter um `Action`, um `Code`e um `Reason`. O `Action` é controlado pelo <xref:System.ServiceModel.FaultContractAttribute.Action%2A> propriedade. O <xref:System.ServiceModel.FaultException.Code%2A> propriedade e <xref:System.ServiceModel.FaultException.Reason%2A> propriedade são ambas as propriedades do <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> classe, que é a classe pai de genérica <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. O `Code` propriedade inclui um <xref:System.ServiceModel.FaultCode.SubCode%2A> membro.  
   
- Ao acessar não serviços que geram falhas, existem certas limitações. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]dá suporte a falhas somente com tipos de detalhe que descreve o esquema e que são compatíveis com os contratos de dados. Por exemplo, como mencionado acima, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não oferece suporte a falhas que usam atributos XML em seus tipos de detalhes, ou falhas com mais de um elemento de nível superior na seção de detalhes.  
+ Ao acessar não serviços que geram falhas, existem certas limitações. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dá suporte a falhas somente com tipos de detalhe que descreve o esquema e que são compatíveis com os contratos de dados. Por exemplo, como mencionado acima, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não oferece suporte a falhas que usam atributos XML em seus tipos de detalhes, ou falhas com mais de um elemento de nível superior na seção de detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.FaultContractAttribute>  

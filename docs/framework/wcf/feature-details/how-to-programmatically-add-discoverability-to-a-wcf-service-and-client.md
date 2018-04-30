@@ -1,24 +1,26 @@
 ---
-title: "Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF"
-ms.custom: 
+title: Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
 Este tópico explica como fazer uma [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço detectável. Ele se baseia o [auto-host](http://go.microsoft.com/fwlink/?LinkId=145523) exemplo.  
@@ -69,7 +71,7 @@ Este tópico explica como fazer uma [!INCLUDE[indigo1](../../../../includes/indi
   
 1.  Adicionar um novo aplicativo de console para a solução chamado `DiscoveryClientApp`.  
   
-2.  Adicione uma referência ao `System.ServiceModel.dll` e`System.ServiceModel.Discovery.dll`  
+2.  Adicione uma referência ao `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
   
 3.  Copie os arquivos GeneratedClient.cs e App. config do projeto de cliente existente para o novo projeto DiscoveryClientApp. Para fazer isso, clique com botão direito os arquivos a **Solution Explorer**, selecione **cópia**e, em seguida, selecione o **DiscoveryClientApp** do projeto, clique com botão direito e selecione **Colar**.  
   
@@ -231,7 +233,7 @@ Este tópico explica como fazer uma [!INCLUDE[indigo1](../../../../includes/indi
     ```  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma listagem de código para este exemplo. Como esse código é baseado no [auto-host](http://go.microsoft.com/fwlink/?LinkId=145523) exemplo, são listados somente os arquivos que são alterados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o exemplo de hospedagem interna, consulte [instruções de instalação](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ A seguir está uma listagem de código para este exemplo. Como esse código é baseado no [auto-host](http://go.microsoft.com/fwlink/?LinkId=145523) exemplo, são listados somente os arquivos que são alterados. Para obter mais informações sobre o próprio Host de exemplo, consulte [instruções de instalação](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

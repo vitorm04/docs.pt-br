@@ -1,24 +1,26 @@
 ---
-title: "Como publicar metadados para um serviço usando um arquivo de configuração"
-ms.custom: 
+title: Como publicar metadados para um serviço usando um arquivo de configuração
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Como publicar metadados para um serviço usando um arquivo de configuração
 Este é um dos dois tópicos de instruções que demonstram os metadados de publicação para um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço. Há duas maneiras de especificar como um serviço deve publicar metadados, usando um arquivo de configuração e código. Este tópico mostra como publicar metadados para um serviço usando um arquivo de configuração.  
@@ -26,7 +28,7 @@ Este é um dos dois tópicos de instruções que demonstram os metadados de publ
 > [!CAUTION]
 >  Este tópico mostra como publicar metadados de maneira insegura. Qualquer cliente pode recuperar os metadados do serviço. Se você precisar de seu serviço para publicar metadados de uma maneira segura, consulte [ponto de extremidade de metadados de segurança personalizada](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]a publicação de metadados no código, consulte [como: publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Metadados de publicação permite que os clientes recuperar os metadados usando uma solicitação GET do WS-transferência ou uma solicitação HTTP/GET usando o `?wsdl` cadeia de caracteres de consulta. Para certificar-se de que o código está funcionando, criar básico [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço. Para simplificar, um serviço auto-hospedado básico é fornecido no código a seguir.  
+ Para obter mais informações sobre metadados de publicação no código, consulte [como: publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Metadados de publicação permite que os clientes recuperar os metadados usando uma solicitação GET do WS-transferência ou uma solicitação HTTP/GET usando o `?wsdl` cadeia de caracteres de consulta. Para certificar-se de que o código está funcionando, criar básico [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço. Para simplificar, um serviço auto-hospedado básico é fornecido no código a seguir.  
   
 ```csharp  
 using System;  
@@ -115,7 +117,7 @@ namespace Metadata.Samples
   
   
   
-4.  Adicionar um `<serviceMetadata>` elemento para o `<behavior>` elemento. Definir o `httpGetEnabled` atributo `true` e `policyVersion` atributo Policy15. `httpGetEnabled`permite que o serviço responder a solicitações de metadados feitas por uma solicitação HTTP GET. `policyVersion`informa o serviço de acordo com a especificação WS-Policy 1.5 durante a geração de metadados.  
+4.  Adicionar um `<serviceMetadata>` elemento para o `<behavior>` elemento. Definir o `httpGetEnabled` atributo `true` e `policyVersion` atributo Policy15. `httpGetEnabled` permite que o serviço responder a solicitações de metadados feitas por uma solicitação HTTP GET. `policyVersion` informa o serviço de acordo com a especificação WS-Policy 1.5 durante a geração de metadados.  
   
   
   
@@ -159,13 +161,13 @@ namespace Metadata.Samples
   
 7.  Para os pontos de extremidade de metadados adicionados na etapa anterior, defina o `binding` de atributo para um dos seguintes:  
   
-    -   `mexHttpBinding`para publicação de HTTP.  
+    -   `mexHttpBinding` para publicação de HTTP.  
   
-    -   `mexHttpsBinding`para publicação de HTTPS.  
+    -   `mexHttpsBinding` para publicação de HTTPS.  
   
-    -   `mexNamedPipeBinding`para publicação de pipe nomeado.  
+    -   `mexNamedPipeBinding` para publicação de pipe nomeado.  
   
-    -   `mexTcpBinding`para publicação de TCP.  
+    -   `mexTcpBinding` para publicação de TCP.  
   
 8.  Para os pontos de extremidade de metadados adicionados em uma etapa anterior, defina o endereço para:  
   
@@ -198,7 +200,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Porque o serviço possui um <xref:System.ServiceModel.Description.ServiceMetadataBehavior> com o `httpGetEnabled` definida como `true`, o serviço tem metadados de publicação habilitado e porque nenhum ponto de extremidade foram adicionados explicitamente, o tempo de execução adiciona pontos de extremidade padrão. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Porque o serviço possui um <xref:System.ServiceModel.Description.ServiceMetadataBehavior> com o `httpGetEnabled` definida como `true`, o serviço tem metadados de publicação habilitado e porque nenhum ponto de extremidade foram adicionados explicitamente, o tempo de execução adiciona pontos de extremidade padrão. Para obter mais informações sobre pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir mostra a implementação de um basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço e o arquivo de configuração que publica os metadados para o serviço.  

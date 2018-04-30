@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>Usando representantes de atividades
 Os representantes de atividade permitem autores de atividade para expor retornos de chamada com assinaturas específicas, para que os usuários de atividade podem fornecer manipuladores atividades base. Dois tipos de representantes de atividade estão disponíveis: <xref:System.Activities.ActivityAction%601> é usado para definir os representantes de atividade que não têm um valor de retorno, e <xref:System.Activities.ActivityFunc%601> é usado para definir os representantes de atividade que têm um valor de retorno.  
@@ -38,7 +38,7 @@ Os exemplos deste tópico usam sintaxe de inicialização de objeto. A sintaxe d
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] inicializadores de objeto, consulte [como: inicializar objetos sem chamar um construtor (c# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=161015) e [como: declarar um objeto usando um inicializador de objeto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Para obter mais informações sobre os inicializadores de objeto, consulte [como: inicializar objetos sem chamar um construtor (c# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=161015) e [como: declarar um objeto usando um inicializador de objeto](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  No exemplo a seguir, uma atividade de <xref:System.Activities.Statements.TryCatch> é usada em um fluxo de trabalho. <xref:System.ApplicationException> é gerada pelo fluxo de trabalho, e tratado por uma atividade de <xref:System.Activities.Statements.Catch%601> . O manipulador para o <xref:System.Activities.Statements.Catch%601> ação de atividade da atividade é uma <xref:System.Activities.Statements.WriteLine> atividade e os detalhes da exceção flui através de usando o `ex` <xref:System.Activities.DelegateInArgument%601>.  
   

@@ -1,12 +1,13 @@
 ---
-title: "Arquivos de recurso, conteúdo e dados do aplicativo WPF"
-ms.custom: 
+title: Arquivos de recurso, conteúdo e dados do aplicativo WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]aplicativos geralmente dependem dos arquivos que contêm dados não executável, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. O [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] dá um suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados do aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplicativos geralmente dependem dos arquivos que contêm dados não executável, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados do aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
   
 -   **Arquivos de recurso**: arquivos de dados que são compilados em um executável ou biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Uma distinção importante a se fazer entre esses três tipos de arquivos é que os arquivos de recurso e os arquivos de conteúdo são conhecidos em tempo de build; um assembly tem o conhecimento explícito sobre eles. Para arquivos do site de origem, no entanto, um assembly pode não ter nenhum conhecimento sobre eles, ou conhecimento implícito através de um pacote [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referência; no caso do último, não há nenhuma garantia de que o site de referência do arquivo de origem realmente existe.  
   
- Para fazer referência a arquivos de dados de aplicativo, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] usa o pacote de [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] esquema, que é descrito em detalhes em [URIs de pacote no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Para fazer referência a arquivos de dados de aplicativo, o Windows Presentation Foundation (WPF) usa o pacote de [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] esquema, que é descrito em detalhes em [URIs de pacote no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
   
  Este tópico descreve como configurar e usar arquivos de dados do aplicativo.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  Quando o projeto é compilado, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] compila o recurso dentro do assembly.  
   
 ### <a name="using-resource-files"></a>Usando arquivos de recurso  
- Para carregar um arquivo de recurso, você pode chamar o <xref:System.Windows.Application.GetResourceStream%2A> método o <xref:System.Windows.Application> classe, passando um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica o arquivo de recurso desejado. <xref:System.Windows.Application.GetResourceStream%2A>Retorna um <xref:System.Windows.Resources.StreamResourceInfo> objeto, que expõe o arquivo de recurso como um <xref:System.IO.Stream> e descreve seu tipo de conteúdo.  
+ Para carregar um arquivo de recurso, você pode chamar o <xref:System.Windows.Application.GetResourceStream%2A> método o <xref:System.Windows.Application> classe, passando um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica o arquivo de recurso desejado. <xref:System.Windows.Application.GetResourceStream%2A> Retorna um <xref:System.Windows.Resources.StreamResourceInfo> objeto, que expõe o arquivo de recurso como um <xref:System.IO.Stream> e descreve seu tipo de conteúdo.  
   
  Por exemplo, o código a seguir mostra como usar <xref:System.Windows.Application.GetResourceStream%2A> para carregar um <xref:System.Windows.Controls.Page> recursos de arquivo e defina-o como o conteúdo de um <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  O <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> valor também é o valor do caminho para o arquivo de conteúdo na pasta de saída de compilação.  
   
 ### <a name="using-content-files"></a>Usando arquivos de conteúdo  
- Para carregar um arquivo de conteúdo, você pode chamar o <xref:System.Windows.Application.GetContentStream%2A> método o <xref:System.Windows.Application> classe, passando um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica o arquivo de conteúdo desejado. <xref:System.Windows.Application.GetContentStream%2A>Retorna um <xref:System.Windows.Resources.StreamResourceInfo> objeto, que expõe o arquivo de conteúdo como um <xref:System.IO.Stream> e descreve seu tipo de conteúdo.  
+ Para carregar um arquivo de conteúdo, você pode chamar o <xref:System.Windows.Application.GetContentStream%2A> método o <xref:System.Windows.Application> classe, passando um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica o arquivo de conteúdo desejado. <xref:System.Windows.Application.GetContentStream%2A> Retorna um <xref:System.Windows.Resources.StreamResourceInfo> objeto, que expõe o arquivo de conteúdo como um <xref:System.IO.Stream> e descreve seu tipo de conteúdo.  
   
  Por exemplo, o código a seguir mostra como usar <xref:System.Windows.Application.GetContentStream%2A> para carregar um <xref:System.Windows.Controls.Page> arquivo de conteúdo e defina-o como o conteúdo de um <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  Quando o projeto é compilado, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] copia os arquivos especificados para a pasta de saída de compilação.  
   
 ### <a name="using-site-of-origin-files"></a>Usando arquivos de site de origem  
- Para carregar um arquivo do site de origem, você pode chamar o <xref:System.Windows.Application.GetRemoteStream%2A> método o <xref:System.Windows.Application> classe, passando um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica o local desejado do arquivo de origem. <xref:System.Windows.Application.GetRemoteStream%2A>Retorna um <xref:System.Windows.Resources.StreamResourceInfo> objeto, que expõe o local do arquivo de origem como um <xref:System.IO.Stream> e descreve seu tipo de conteúdo.  
+ Para carregar um arquivo do site de origem, você pode chamar o <xref:System.Windows.Application.GetRemoteStream%2A> método o <xref:System.Windows.Application> classe, passando um pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] que identifica o local desejado do arquivo de origem. <xref:System.Windows.Application.GetRemoteStream%2A> Retorna um <xref:System.Windows.Resources.StreamResourceInfo> objeto, que expõe o local do arquivo de origem como um <xref:System.IO.Stream> e descreve seu tipo de conteúdo.  
   
  Por exemplo, o código a seguir mostra como usar <xref:System.Windows.Application.GetRemoteStream%2A> para carregar um <xref:System.Windows.Controls.Page> site de origem de arquivo e defina-o como o conteúdo de um <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   

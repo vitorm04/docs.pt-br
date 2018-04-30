@@ -2,7 +2,8 @@
 title: 'O modelo de objeto Ink: Windows Forms e COM versus WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>O modelo de objeto Ink: Windows Forms e COM versus WPF
 
-Há basicamente três plataformas que dão suporte à tinta digital: a plataforma Tablet PC Windows Forms, a plataforma Tablet PC COM e a plataforma [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  As plataformas Windows Forms e COM compartilham um modelo de objeto semelhante, mas o modelo de objeto para a plataforma [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é significativamente diferente.  Este tópico discute as diferenças em um alto nível para que os desenvolvedores que trabalharam com um modelo de objetos possam entender o outro.  
+Há basicamente três plataformas que dão suporte à tinta digital: a plataforma Tablet PC Windows Forms, a plataforma Tablet PC COM e a plataforma Windows Presentation Foundation (WPF).  As plataformas Windows Forms e COM compartilham um modelo de objeto semelhante, mas o modelo de objeto para a plataforma [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é significativamente diferente.  Este tópico discute as diferenças em um alto nível para que os desenvolvedores que trabalharam com um modelo de objetos possam entender o outro.  
   
 ## <a name="enabling-ink-in-an-application"></a>Habilitando o Ink em um aplicativo  
  Todas as três plataformas vêm com objetos e controles que permitem que um aplicativo receba entrada de uma caneta eletrônica.  As plataformas Windows Forms e COM acompanham [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) e [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) classes.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) e [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) são controles que você pode adicionar a um aplicativo para coletar tinta.  O [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) e [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) pode ser anexado a uma janela existente para ativar tinta nas janelas e controles personalizados.  
@@ -64,7 +66,7 @@ Há basicamente três plataformas que dão suporte à tinta digital: a plataform
 |Teste de clique|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Copiar tinta|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Colar tinta|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Acessar propriedades personalizadas em uma coleção de traços|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(as propriedades são armazenadas internamente e acessadas via <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, e <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Use [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Acessar propriedades personalizadas em uma coleção de traços|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (as propriedades são armazenadas internamente e acessadas via <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, e <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Use [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Compartilhando tinta entre plataformas  
  Embora as plataformas tenham modelos de objeto diferentes para os dados de tinta, o compartilhamento de dados entre as plataformas é muito fácil. Os exemplos a seguir salva a tinta de um aplicativo Windows Forms e carregam a tinta em um aplicativo do Windows Presentation Foundation.  

@@ -1,24 +1,26 @@
 ---
-title: "Correlação baseada em conteúdo"
-ms.custom: 
+title: Correlação baseada em conteúdo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>Correlação baseada em conteúdo
 Quando os serviços de fluxo de trabalho se comunicar com clientes e outros serviços, geralmente há alguns dados de mensagens trocadas que relaciona exclusivamente uma mensagem para uma determinada instância. Correlação baseada em conteúdo usa esses dados na mensagem, como um número ou a ordem de ID de cliente, para rotear mensagens para a instância de fluxo de trabalho adequado. Este tópico explica como usar a correlação baseada em conteúdo em fluxos de trabalho.  
@@ -27,7 +29,7 @@ Quando os serviços de fluxo de trabalho se comunicar com clientes e outros serv
  Correlação baseada em conteúdo é usada quando um serviço de fluxo de trabalho tem vários métodos que são acessados por um único cliente e uma parte dos dados nas mensagens trocadas identifica a instância desejada.  
   
 > [!NOTE]
->  Correlação baseada em conteúdo é útil quando a correlação de contexto não pode ser usada porque a associação não é uma das ligações de troca de contexto com suporte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlação de contexto, consulte [intercâmbio de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  Correlação baseada em conteúdo é útil quando a correlação de contexto não pode ser usada porque a associação não é uma das ligações de troca de contexto com suporte. Para obter mais informações sobre a correlação de contexto, consulte [intercâmbio de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Cada atividade mensagens nessas comunicações deve especificar o local dos dados na mensagem que identifica exclusivamente a instância. Isso é feito fornecendo uma <xref:System.ServiceModel.MessageQuerySet>, usando um <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> ou <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, que consulta a mensagem para a parte ou partes de dados que identificam exclusivamente a instância.  
   

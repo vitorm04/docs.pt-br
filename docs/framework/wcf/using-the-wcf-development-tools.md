@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e315c9e77eace9bdb0e66abed203452e5d7f9bb
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7ec09b6b99b831245d11d858f90c27de05d1e21f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizando as ferramentas de desenvolvimento do WCF
 Esta seção descreve as ferramentas de desenvolvimento do Visual Studio que podem ajudá-lo a desenvolver sua [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]serviço.  
@@ -53,7 +53,7 @@ Esta seção descreve as ferramentas de desenvolvimento do Visual Studio que pod
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Netsh.exe, consulte [como usar a ferramenta Netsh.exe e as opções de linha de comando](http://go.microsoft.com/fwlink/?LinkId=97877).  
+ Para obter mais informações sobre Netsh.exe, consulte [como usar a ferramenta Netsh.exe e as opções de linha de comando](http://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos do Visual Studio do WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  

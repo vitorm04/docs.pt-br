@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Equivalência de contrato de dados
 Para um cliente enviar dados de um determinado tipo com êxito a um serviço ou um serviço para enviar dados com êxito a um cliente, o tipo de envio não necessariamente precisa existir na extremidade de recebimento. O único requisito é que os contratos de ambos os tipos de dados ser equivalentes. (Às vezes, equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Para um cliente enviar dados de um determinado tipo com êxito a um serviço ou 
 > [!NOTE]
 >  Observação de contrato de dados nomes e namespaces, bem como nomes de membros de dados diferenciam maiusculas de minúsculas.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] namespaces e nomes de contrato de dados, bem como os nomes de membros de dados, consulte [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Para obter mais informações sobre namespaces e nomes de contrato de dados, bem como os nomes de membros de dados, consulte [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Se existem dois tipos no mesmo lado (remetente ou destinatário) e seus contratos de dados não são equivalentes (por exemplo, eles têm membros de dados diferente), você deve não lhes o mesmo nome e namespace. Isso pode causar exceções sejam geradas.  
   

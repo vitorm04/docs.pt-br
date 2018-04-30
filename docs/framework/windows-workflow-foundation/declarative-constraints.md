@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Restrições declarativas
 As restrições declarativas fornecem um método poderoso de validação para uma atividade e suas relações com outras atividades. As restrições são configuradas para uma atividade durante o processo de design, mas as restrições adicionais podem também ser especificadas pelo host de fluxo de trabalho. Este tópico fornece uma visão geral do uso de restrições declarativas para fornecer validação de atividade.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Se a propriedade de <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> é `true`, então somente as restrições adicionais especificadas são avaliadas quando a validação é chamada chamando o <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Isso pode ser útil para inspecionar fluxos de trabalho para configurações específicas de validação. Observe entretanto que quando o fluxo de trabalho é chamado, a lógica de validação configurou no fluxo de trabalho é avaliado e deve passar para o fluxo de trabalho inicia com êxito. [!INCLUDE[crabout](../../../includes/crabout-md.md)] invocando a validação, consulte [invocando a validação de atividades](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Se a propriedade de <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> é `true`, então somente as restrições adicionais especificadas são avaliadas quando a validação é chamada chamando o <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Isso pode ser útil para inspecionar fluxos de trabalho para configurações específicas de validação. Observe entretanto que quando o fluxo de trabalho é chamado, a lógica de validação configurou no fluxo de trabalho é avaliado e deve passar para o fluxo de trabalho inicia com êxito. Para obter mais informações sobre invocando a validação, consulte [invocando a validação de atividades](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

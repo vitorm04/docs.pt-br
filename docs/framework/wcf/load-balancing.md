@@ -1,36 +1,36 @@
 ---
 title: Balanceamento de carga
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="load-balancing"></a>Balanceamento de carga
-Uma maneira de aumentar a capacidade de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos é aumentar a escala-los por implantá-los em um farm de servidores com balanceamento de carga. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]aplicativos podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
+Uma maneira de aumentar a capacidade de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos é aumentar a escala-los por implantá-los em um farm de servidores com balanceamento de carga. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
   
  As seções a seguir abordam as considerações para balanceamento de carga [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos criados usando várias associações fornecidas pelo sistema.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Balanceamento de carga com a associação HTTP básica  
- Da perspectiva do balanceamento de carga, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos que se comunicam usando o <xref:System.ServiceModel.BasicHttpBinding> não são diferentes de outros tipos comuns de HTTP (estático conteúdo HTML, páginas ASP.NET ou serviços Web ASMX) o tráfego de rede. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]canais que utilizam esta associação são inerentemente sem monitoração de estado e encerram as conexões quando fecha o canal. Como tal, o <xref:System.ServiceModel.BasicHttpBinding> funciona perfeitamente com técnicas de balanceamento de carga HTTP existente.  
+ Da perspectiva do balanceamento de carga, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos que se comunicam usando o <xref:System.ServiceModel.BasicHttpBinding> não são diferentes de outros tipos comuns de HTTP (estático conteúdo HTML, páginas ASP.NET ou serviços Web ASMX) o tráfego de rede. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] canais que utilizam esta associação são inerentemente sem monitoração de estado e encerram as conexões quando fecha o canal. Como tal, o <xref:System.ServiceModel.BasicHttpBinding> funciona perfeitamente com técnicas de balanceamento de carga HTTP existente.  
   
  Por padrão, o <xref:System.ServiceModel.BasicHttpBinding> envia um cabeçalho de conexão HTTP de mensagens com um `Keep-Alive` valor, que permite que os clientes estabelecer conexões persistentes com os serviços que dão suporte a eles. Essa configuração oferece aprimorada de taxa de transferência porque estabelecida anteriormente conexões podem ser reutilizados para enviar mensagens subsequentes para o mesmo servidor. No entanto, a reutilização da conexão pode causar clientes para se tornar altamente associado a um servidor específico dentro do farm com balanceamento de carga, o que reduz a eficácia de balanceamento de carga de round-robin. Se esse comportamento é desejável, HTTP `Keep-Alive` pode ser desabilitado no servidor usando o <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> propriedade com um <xref:System.ServiceModel.Channels.CustomBinding> ou definido pelo usuário <xref:System.ServiceModel.Channels.Binding>. O exemplo a seguir mostra como fazer isso usando a configuração.  
   
@@ -90,7 +90,7 @@ Uma maneira de aumentar a capacidade de [!INCLUDE[indigo1](../../../includes/ind
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Para obter mais informações sobre pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Balanceamento de carga com a associação de WSHttp e a associação de WSDualHttp  
  Tanto o <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.WSDualHttpBinding> pode ser com balanceamento de carga usando técnicas de balanceamento de carga HTTP fornecido várias modificações são feitas para o padrão de configuração de associação.  

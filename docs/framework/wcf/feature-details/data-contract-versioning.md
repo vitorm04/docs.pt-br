@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>Controle de versão de contrato de dados
 Como desenvolvem aplicativos, você também terá que alterar o uso de serviços de contratos de dados. Este tópico explica como contratos de dados de versão. Este tópico descreve os mecanismos de controle de versão do contrato de dados. Para obter uma visão geral completa e orientação prescritiva do controle de versão, consulte [práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -125,7 +125,7 @@ Como desenvolvem aplicativos, você também terá que alterar o uso de serviços
  Adicionar ou remover um membro de enumeração é uma alteração significativa. Alterando o nome de um membro de enumeração é recentes, a menos que seu nome de contrato é mantido o mesmo que a versão antiga, usando o `EnumMemberAtttribute` atributo. Para obter mais informações, consulte [tipos de enumeração em contratos de dados](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Coleções  
- A maioria das alterações de coleção são incondicional porque a maioria dos tipos de coleção são intercambiáveis entre si no modelo de contrato de dados. No entanto, fazer uma coleção nãopersonalizada personalizada ou vice-versa é uma alteração significativa. Além disso, alterar as configurações de personalização da coleção é uma alteração significativa; ou seja, alterar seu nome de contrato de dados e o namespace, nome do elemento, o nome do elemento chave e o nome do elemento de valor de repetição. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personalização da coleção, consulte [tipos de coleção em contratos de dados](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ A maioria das alterações de coleção são incondicional porque a maioria dos tipos de coleção são intercambiáveis entre si no modelo de contrato de dados. No entanto, fazer uma coleção nãopersonalizada personalizada ou vice-versa é uma alteração significativa. Além disso, alterar as configurações de personalização da coleção é uma alteração significativa; ou seja, alterar seu nome de contrato de dados e o namespace, nome do elemento, o nome do elemento chave e o nome do elemento de valor de repetição. Para obter mais informações sobre personalização da coleção, consulte [tipos de coleção em contratos de dados](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturalmente, o contrato de dados de conteúdo de uma coleção (por exemplo, a alteração de uma lista de inteiros para uma lista de cadeias de caracteres) a alteração é uma alteração significativa.  
   
 ## <a name="see-also"></a>Consulte também  

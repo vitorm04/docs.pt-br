@@ -1,28 +1,28 @@
 ---
-title: "Usando associações para configurar serviços e clientes"
-ms.custom: 
+title: Usando associações para configurar serviços e clientes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Usando associações para configurar serviços e clientes
 Associações são objetos que especificam os detalhes de comunicação necessários para conectar a um ponto de extremidade. Mais especificamente, associações contém informações de configuração que são usadas para criar o tempo de execução do cliente ou serviço, definindo as especificações de transportes (codificação de mensagens) para formatos de conexão e protocolos a serem usados para o canal de ponto de extremidade ou cliente respectivo. Para criar um funcionando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service, cada ponto de extremidade no serviço requer uma associação. Este tópico explica as associações são, como elas são definidas e como uma associação específica é especificada para um ponto de extremidade.  
@@ -40,7 +40,7 @@ Associações são objetos que especificam os detalhes de comunicação necessá
  Determina a codificação de mensagens, por exemplo, texto/XML, binário ou mensagem de transmissão de otimização do mecanismo (MTOM), que determina como as mensagens são representadas como fluxos de bytes na conexão.  
   
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]inclui um conjunto de associações fornecidas pelo sistema que são projetados para cobrir a maioria dos requisitos de aplicativos e cenários. As classes a seguir representam alguns exemplos de associações fornecidas pelo sistema:  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui um conjunto de associações fornecidas pelo sistema que são projetados para cobrir a maioria dos requisitos de aplicativos e cenários. As classes a seguir representam alguns exemplos de associações fornecidas pelo sistema:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que é compatível com o WS-I Basic Profile 1.1 especificação (por exemplo, [ASMX] de serviços Web do ASP.NET-serviços baseados em).  
   
@@ -53,7 +53,7 @@ Associações são objetos que especificam os detalhes de comunicação necessá
  Para obter uma lista de associações fornecidas pelo sistema, com descrições, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Associações personalizadas  
- Se a coleção de associação fornecida pelo sistema não tiver a combinação correta de recursos que requer um aplicativo de serviço, você pode criar um <xref:System.ServiceModel.Channels.CustomBinding> associação. [!INCLUDE[crabout](../../../includes/crabout-md.md)]os elementos de um <xref:System.ServiceModel.Channels.CustomBinding> de associação, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) e [personalizado associações](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Se a coleção de associação fornecida pelo sistema não tiver a combinação correta de recursos que requer um aplicativo de serviço, você pode criar um <xref:System.ServiceModel.Channels.CustomBinding> associação. Para obter mais informações sobre os elementos de um <xref:System.ServiceModel.Channels.CustomBinding> de associação, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) e [personalizado associações](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Usando associações  
  Usando associações envolve duas etapas básicas:  

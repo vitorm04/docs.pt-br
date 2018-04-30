@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, conjunto de rastreamento de atividades e propagação para oferecer suporte a correlação de rastreamento ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -146,7 +146,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] definido pelo usuário de criar fontes de rastreamento, consulte [estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Para obter mais informações sobre como criar fontes de rastreamento definidos pelo usuário, consulte [estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurando os ouvintes de rastreamento para consumir rastreamentos  
  Em tempo de execução, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] feeds de dados para os ouvintes que processam os dados de rastreamento. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fornece vários ouvintes predefinidos para <xref:System.Diagnostics>, que são diferentes no formato usado para saída. Você também pode adicionar tipos de ouvinte personalizado.  
@@ -187,7 +187,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
   
  O `propagateActivity` atributo indica se a atividade deve ser propagada para outros pontos de extremidade que participam da troca de mensagens. Ao definir esse valor como `true`, você pode colocar arquivos de rastreamento gerados por dois pontos de extremidade e observar como um conjunto de rastreamentos em um ponto de extremidade de fluxo para um conjunto de rastreamentos em outro ponto de extremidade.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] rastreamento de atividades e propagação, consulte [propagação](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Para obter mais informações sobre rastreamento de atividades e propagação, consulte [propagação](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Ambos `propagateActivity` e `ActivityTracing` valores booleanos se aplicam a TraceSource a System. ServiceModel. O `ActivityTracing` valor também se aplica a qualquer origem de rastreamento, incluindo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ou aquelas definidas pelo usuário.  
   

@@ -20,11 +20,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d38183d90e99c7b8b9b5ffabb871f13886d801f0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementação de automação de interface do usuário  
- Como mencionado anteriormente, sem o modelo unificado fornecido pela [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as ferramentas de teste e os desenvolvedores precisam saber informações específicas do framework para expor as propriedades e os comportamentos dos controles no framework. Já que pode haver várias estruturas da interface do usuário diferentes em qualquer momento em sistemas operacionais Windows, incluindo [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], e [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], pode ser uma tarefa intimidadora para testar vários aplicativos com controles que parecem semelhantes . Por exemplo, a tabela a seguir descreve os nomes de propriedade específicas do framework necessários para recuperar o nome (ou texto) associado a um controle de botão e mostra a única equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedade.  
+ Como mencionado anteriormente, sem o modelo unificado fornecido pela [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as ferramentas de teste e os desenvolvedores precisam saber informações específicas do framework para expor as propriedades e os comportamentos dos controles no framework. Já que pode haver várias estruturas da interface do usuário diferentes em qualquer momento em sistemas operacionais Windows, incluindo [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], e o Windows Presentation Foundation (WPF), ele pode ser uma tarefa intimidadora para testar vários aplicativos com controles que parecem semelhantes. Por exemplo, a tabela a seguir descreve os nomes de propriedade específicas do framework necessários para recuperar o nome (ou texto) associado a um controle de botão e mostra a única equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedade.  
   
 |Tipo de controle de automação de interface do usuário|Estrutura de interface do usuário|Propriedade específica do Framework|Propriedade de automação de interface do usuário|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

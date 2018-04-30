@@ -1,23 +1,24 @@
 ---
-title: "Processamento de aplicativos com a política"
-ms.custom: 
+title: Processamento de aplicativos com a política
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>Processamento de aplicativos com a política
 O exemplo de política de processamento de aplicativos demonstra alguns dos principais recursos introduzidos em [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] do Windows Workflow Foundation (WF). A seguinte funcionalidade é novo para o mecanismo de regras WF:  
@@ -34,7 +35,7 @@ O exemplo de política de processamento de aplicativos demonstra alguns dos prin
  O exemplo demonstra um projeto de `OrderProcessingPolicy` a que um pedido de cliente, que consiste em uma lista numerada de itens disponíveis e um código postal, é inserido. A ordem é processado com êxito se ambas as entradas estão corretas; caso contrário, a diretiva cria objetos de erro, utilizando um operador sobrecarregado de `+` e um método de extensão predefinido para informar ao usuário de erros.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]métodos de extensão, consulte [c# versão 3.0 especificação](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Para obter mais informações sobre métodos de extensão, consulte [c# versão 3.0 especificação](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  O exemplo é composto de projetos seguintes:  
   

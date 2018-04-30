@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>Arquitetura de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravados em transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  
@@ -43,7 +43,7 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Suporte a distribuição baseia-se na parte superior do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST que define o <xref:System.ServiceModel.WebHttpBinding> associação, que é usada em conjunto com <xref:System.ServiceModel.Description.WebHttpBehavior> para disponibilizar feeds como serviços. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST, consulte [WCF Web HTTP de programação visão geral do modelo](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Suporte a distribuição baseia-se na parte superior do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST que define o <xref:System.ServiceModel.WebHttpBinding> associação, que é usada em conjunto com <xref:System.ServiceModel.Description.WebHttpBehavior> para disponibilizar feeds como serviços. Para obter mais informações sobre o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST, consulte [WCF Web HTTP de programação visão geral do modelo](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  Permite a especificação Atom 1.0 para frações de segundos ser especificado em qualquer um dos seus construtores de data. Ao serializar e desserializar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementação ignora as frações de segundo.  

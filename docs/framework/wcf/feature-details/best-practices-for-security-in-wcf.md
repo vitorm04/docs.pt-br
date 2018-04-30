@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Práticas recomendadas para segurança no WCF
-As seções a seguir listam as práticas recomendadas a serem considerados durante a criação de aplicativos seguros usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] segurança, consulte [considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), e [considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+As seções a seguir listam as práticas recomendadas a serem considerados durante a criação de aplicativos seguros usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Para obter mais informações sobre segurança, consulte [considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), e [considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identificar os serviços para executar a autenticação do Windows com os SPNs  
  Os serviços podem ser identificados com nomes principais de usuário (UPNs) ou nomes principais de serviço (SPNs). Serviços executados em contas de computador como serviço de rede tem uma identidade SPN correspondente para o computador que está sendo executado. Serviços executados em contas de usuário tem uma identidade UPN correspondente para o usuário que está sendo executado, embora o `setspn` ferramenta pode ser usada para atribuir um SPN para a conta de usuário. Configurar um serviço para que ele possa ser identificado por meio de SPN e configurar os clientes que se conectar ao serviço para usar esse SPN pode fazer certas ataques mais difícil. Essas diretrizes se aplicam às associações usando Kerberos ou SSPI negociação.  Os clientes ainda devem especificar um SPN no caso onde SSPI reverterá para NTLM.  
@@ -66,7 +66,7 @@ As seções a seguir listam as práticas recomendadas a serem considerados duran
  Se um endereço do emissor e a associação especificadas para uma associação de determinado, o emissor local não é usado para pontos de extremidade que utilizam essa associação. Clientes que pretende usar sempre o emissor local devem garantir que eles não usam essa associação ou que eles modificarem a associação, de modo que o endereço do emissor é nulo.  
   
 ## <a name="saml-token-size-quotas"></a>Cotas de tamanho de Token SAML  
- Quando os tokens de segurança asserções Markup Language (SAML) são serializados em mensagens, quando eles são emitidos por um Token de segurança Service (STS) ou quando os clientes apresentação-los para serviços como parte da autenticação, a cota de tamanho máximo da mensagem deve ser suficientemente grande para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas de tamanho de mensagem padrão são suficientes. No entanto, nos casos em que um token SAML é grande porque ele contém centenas de declarações, as cotas devem ser aumentadas para acomodar o token serializado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cotas, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Quando os tokens de segurança asserções Markup Language (SAML) são serializados em mensagens, quando eles são emitidos por um Token de segurança Service (STS) ou quando os clientes apresentação-los para serviços como parte da autenticação, a cota de tamanho máximo da mensagem deve ser suficientemente grande para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas de tamanho de mensagem padrão são suficientes. No entanto, nos casos em que um token SAML é grande porque ele contém centenas de declarações, as cotas devem ser aumentadas para acomodar o token serializado. Para obter mais informações sobre cotas, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Defina SecurityBindingElement.IncludeTimestamp como True em associações personalizadas  
  Quando você cria uma associação personalizada, você deve definir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> para `true`. Caso contrário, se <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> é definido como `false`, e o cliente está usando um token com chave assimétrico como X509 certificado, a mensagem não será assinada.  

@@ -1,12 +1,13 @@
 ---
 title: Como restringir acesso com a PrincipalPermissionAttribute class
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Como restringir acesso com a PrincipalPermissionAttribute class
 Controlar o acesso aos recursos em um computador de domínio do Windows é uma tarefa de segurança básico. Por exemplo, somente a certos usuários devem ser capazes de exibir dados confidenciais, como informações de folha de pagamento. Este tópico explica como restringir o acesso a um método exigindo que o usuário pertence a um grupo predefinido. Para obter um exemplo de funcionamento, consulte [autorizar o acesso a operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -50,7 +52,7 @@ Controlar o acesso aos recursos em um computador de domínio do Windows é uma t
   
 ### <a name="to-demand-user-membership"></a>A associação do usuário por demanda  
   
-1.  Abra o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquivo de código que contém o código de contrato de serviço implementado. [!INCLUDE[crabout](../../../includes/crabout-md.md)]implementar um contrato, consulte [implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Abra o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquivo de código que contém o código de contrato de serviço implementado. Para obter mais informações sobre como implementar um contrato, consulte [implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2.  Aplicar o <xref:System.Security.Permissions.PrincipalPermissionAttribute> de atributo para cada método que deve ser restrito a um grupo específico. Definir o <xref:System.Security.Permissions.SecurityAttribute.Action%2A> propriedade <xref:System.Security.Permissions.SecurityAction.Demand> e o <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> propriedade para o nome do grupo. Por exemplo:  
   

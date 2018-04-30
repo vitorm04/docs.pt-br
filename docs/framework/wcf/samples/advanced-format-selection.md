@@ -1,30 +1,32 @@
 ---
-title: "Seleção de formato avançada"
-ms.custom: 
+title: Seleção de formato avançada
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-format-selection"></a>Seleção de formato avançada
 Este exemplo demonstra como estender o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação REST para dar suporte a novos formatos de resposta de saída. Além disso, o exemplo usa um modelo T4 para retornar a resposta como uma página XHTML, demonstrando como um modelo de programação de estilo de exibição pode ser implementado.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- O exemplo consiste em um serviço simples junto com o código do cliente que faz solicitações para o serviço.  O serviço oferece suporte a uma única operação [WebGet], que tem a assinatura de método a seguir:`Message EchoListWithGet(string list);`  
+ O exemplo consiste em um serviço simples junto com o código do cliente que faz solicitações para o serviço.  O serviço oferece suporte a uma única operação [WebGet], que tem a assinatura de método a seguir: `Message EchoListWithGet(string list);`  
   
  Quando o cliente faz uma solicitação para o serviço, ele fornece uma lista separada por vírgulas de itens a partir de `list` parâmetro de cadeia de caracteres de consulta e o serviço retorna essa mesma lista em um dos seguintes formatos: XML, JSON, Atom, XHTML ou jpeg.  
   
@@ -32,7 +34,7 @@ Este exemplo demonstra como estender o [!INCLUDE[indigo1](../../../../includes/i
   
  O tipo de retorno da operação é vale a pena observar. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST modelo de programação somente modo nativo oferece suporte aos formatos de resposta XML e JSON quando uma operação retorna um tipo diferente de <xref:System.ServiceModel.Channels.Message>. No entanto, ao usar <xref:System.ServiceModel.Channels.Message> como o tipo de retorno, o desenvolvedor tenha controle completo sobre como o conteúdo da mensagem deve ser formatado.  
   
- O exemplo usa o <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> métodos para serializar a lista de cadeias de caracteres em XML, JSON e ATOM mensagens respectivamente. Para o formato de resposta de jpeg, o <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> método é usado e a imagem é salva no fluxo. Para a resposta XHTML, o <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> é usado junto com um modelo T4 pré-processados, que consiste em um arquivo. TT e um arquivo. cs gerado automaticamente. O arquivo. TT permite que um desenvolvedor gravar uma resposta em um formulário de modelo que contém variáveis e estruturas de controle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, consulte [gerando artefatos por usando modelos de texto](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ O exemplo usa o <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> métodos para serializar a lista de cadeias de caracteres em XML, JSON e ATOM mensagens respectivamente. Para o formato de resposta de jpeg, o <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> método é usado e a imagem é salva no fluxo. Para a resposta XHTML, o <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> é usado junto com um modelo T4 pré-processados, que consiste em um arquivo. TT e um arquivo. cs gerado automaticamente. O arquivo. TT permite que um desenvolvedor gravar uma resposta em um formulário de modelo que contém variáveis e estruturas de controle. Para obter mais informações sobre T4, consulte [gerando artefatos por usando modelos de texto](http://go.microsoft.com/fwlink/?LinkId=166023).  
   
  O exemplo consiste em um serviço auto-hospedado e um cliente que é executado dentro de um aplicativo de console. Como o aplicativo de console é executado, o cliente faz solicitações para o serviço e grava as informações pertinentes entre as respostas para a janela do console.  
   

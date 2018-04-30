@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI).  
   
 ## <a name="enabling-wmi"></a>Habilitando o WMI  
- O WMI é a implementação da Microsoft a Web-Based Enterprise Management (WBEM) padrão. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] o SDK do WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). O WBEM é um padrão da indústria para como aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
+ O WMI é a implementação da Microsoft a Web-Based Enterprise Management (WBEM) padrão. Para obter mais informações sobre o SDK do WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). O WBEM é um padrão da indústria para como aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
   
  Um provedor WMI é um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ele consiste em um conjunto de objetos WMI com pares de atributo/valor. Pares de podem ser de um número de tipos simples. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
   

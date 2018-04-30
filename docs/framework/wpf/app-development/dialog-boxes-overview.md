@@ -1,12 +1,13 @@
 ---
-title: "Visão geral das caixas de diálogo"
-ms.custom: 
+title: Visão geral das caixas de diálogo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>Visão geral das caixas de diálogo
 Aplicativos autônomos geralmente têm uma janela principal que exibe os principais dados sobre os quais o aplicativo opera e expõe a funcionalidade para processar os dados por meio de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como barras de menus, barras de ferramentas e barras de status. Um aplicativo não trivial também pode exibir janelas adicionais para fazer o seguinte:  
@@ -43,7 +45,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
  Um *sem janela restrita* caixa de diálogo, por outro lado, não impede que um usuário ative outras janelas enquanto ele está aberto. Por exemplo, se um usuário desejar localizar ocorrências de uma palavra específica em um documento, uma janela principal geralmente abrirá uma caixa de diálogo para solicitar a um usuário qual palavra ele está procurando. No entanto, como a localização de uma palavra não impede que um usuário edite o documento, a caixa de diálogo não precisa ser restrita. Uma caixa de diálogo sem janela restrita fornece pelo menos um **fechar** botão para fechar a caixa de diálogo e pode fornecer outros botões para executar funções específicas, como um **Localizar próximo** botão para localizar a próxima palavra que corresponde aos critérios de localização de uma pesquisa de palavra.  
   
- O [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] permite que você crie vários tipos de caixas de diálogo, incluindo caixas de mensagem, caixas de diálogo comuns e caixas de diálogo personalizadas. Este tópico aborda cada um e o [exemplo de caixa de diálogo](http://go.microsoft.com/fwlink/?LinkID=159984) fornece os exemplos correspondentes.  
+ Windows Presentation Foundation (WPF) permite que você crie vários tipos de caixas de diálogo, incluindo caixas de mensagem, caixas de diálogo comuns e caixas de diálogo personalizadas. Este tópico aborda cada um e o [exemplo de caixa de diálogo](http://go.microsoft.com/fwlink/?LinkID=159984) fornece os exemplos correspondentes.  
   
  
   
@@ -53,7 +55,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
  ![Caixa de diálogo do Processador de Texto](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Para criar uma caixa de mensagem, use o <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox>permite configurar o texto da caixa de mensagem, título, ícone e botões, usando código semelhante ao seguinte.  
+ Para criar uma caixa de mensagem, use o <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox> permite configurar o texto da caixa de mensagem, título, ícone e botões, usando código semelhante ao seguinte.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
  Embora <xref:System.Windows.MessageBox> pode oferecer uma experiência de usuário de caixa de diálogo simples, a vantagem de usar <xref:System.Windows.MessageBox> é que é o único tipo de janela que pode ser mostrado por aplicativos que são executados em uma área restrita de confiança parcial (consulte [segurança](../../../../docs/framework/wpf/security-wpf.md)), como [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- A maioria das caixas de diálogo exibe e coleta dados mais complexos que o resultado de uma caixa de mensagem, incluindo texto, seleção (caixas de seleção), seleção mutuamente exclusiva (botões de opção) e seleção de lista (caixas de listagem, caixas de combinação, caixas de listagem suspensas). Para isso, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fornece várias caixas de diálogo comuns e permite que você crie suas próprias caixas de diálogo, embora o uso de qualquer um é limitado a aplicativos executados com confiança total.  
+ A maioria das caixas de diálogo exibe e coleta dados mais complexos que o resultado de uma caixa de mensagem, incluindo texto, seleção (caixas de seleção), seleção mutuamente exclusiva (botões de opção) e seleção de lista (caixas de listagem, caixas de combinação, caixas de listagem suspensas). Para isso, o Windows Presentation Foundation (WPF) fornece várias caixas de diálogo comuns e permite que você crie suas próprias caixas de diálogo, embora o uso de qualquer um é limitado a aplicativos executados com confiança total.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Caixas de diálogo comuns  
  O [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa uma variedade de caixas de diálogo reutilizáveis que são comuns a todos os aplicativos, incluindo caixas de diálogo Abrir Arquivo, Salvar Arquivo e Imprimir. Como essas caixas de diálogo são implementadas pelo sistema operacional, elas podem ser compartilhadas entre todos os aplicativos executados no sistema operacional, o que ajuda na consistência da experiência do usuário. Quando os usuários estiverem familiarizados com o uso de uma caixa de diálogo fornecida pelo sistema operacional em um aplicativo, eles não precisarão aprender a usar a caixa de diálogo em outros aplicativos. Como essas caixas de diálogo estão disponíveis para todos os aplicativos e como elas ajudam a fornecer uma experiência de usuário consistente, eles são conhecidos como *caixas de diálogo comuns*.  
   
- O [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] encapsula as caixas de diálogo comuns Abrir Arquivo, Salvar Arquivo e Imprimir e as expõe como classes gerenciadas para uso em aplicativos autônomos. Este tópico fornece uma visão geral breve de cada uma delas.  
+ Windows Presentation Foundation (WPF) encapsula o arquivo aberto, salve o arquivo e caixas de diálogo comuns de impressão e as expõe como classes gerenciadas para uso em aplicativos autônomos. Este tópico fornece uma visão geral breve de cada uma delas.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Caixa de diálogo Abrir  
@@ -94,7 +96,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
  Para obter mais informações sobre a caixa de diálogo Abrir arquivo, consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>pode ser usado para recuperar nomes de arquivo com segurança por aplicativos em execução com confiança parcial (consulte [segurança](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> pode ser usado para recuperar nomes de arquivo com segurança por aplicativos em execução com confiança parcial (consulte [segurança](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Caixa de diálogo Salvar Arquivo  
@@ -124,7 +126,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Caixas de diálogo personalizadas  
- Embora as caixas de diálogo comuns sejam úteis e devam ser usadas quando possível, elas não dão suporte aos requisitos de caixas de diálogo específicas ao domínio. Nesses casos, você precisa criar suas próprias caixas de diálogo. Como veremos, uma caixa de diálogo é uma janela com comportamentos especiais. <xref:System.Windows.Window>implementa esses comportamentos e, consequentemente, você usará <xref:System.Windows.Window> para criar caixas de diálogo modais e sem janela restrita personalizadas.  
+ Embora as caixas de diálogo comuns sejam úteis e devam ser usadas quando possível, elas não dão suporte aos requisitos de caixas de diálogo específicas ao domínio. Nesses casos, você precisa criar suas próprias caixas de diálogo. Como veremos, uma caixa de diálogo é uma janela com comportamentos especiais. <xref:System.Windows.Window> implementa esses comportamentos e, consequentemente, você usará <xref:System.Windows.Window> para criar caixas de diálogo modais e sem janela restrita personalizadas.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Criando uma caixa de diálogo personalizada restrita  
@@ -307,7 +309,7 @@ Aplicativos autônomos geralmente têm uma janela principal que exibe os princip
  Ao contrário de <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> retorna imediatamente. Consequentemente, a janela de chamada não pode saber quando a caixa de diálogo sem janela restrita é fechada e, portanto, não sabe quando procurar um resultado da caixa de diálogo nem quando obter dados da caixa de diálogo para processamento adicional. Em vez disso, a caixa de diálogo precisa criar uma maneira alternativa de retornar dados para a janela de chamada para o processamento.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Processando os dados retornados de uma caixa de diálogo sem janela restrita  
- Neste exemplo, o `FindDialogBox` pode retornar resultados para a janela principal, dependendo do texto que está sendo procurado sem qualquer frequência específica de localizar um ou mais. Assim como ocorre com uma caixa de diálogo modal, uma caixa de diálogo sem janela restrita pode retornar resultados usando propriedades. No entanto, a janela que possui a caixa de diálogo precisa saber quando deve verificar essas propriedades. Uma maneira de habilitar essa opção é para que a caixa de diálogo implemente um evento que é acionado sempre que um texto é encontrado. `FindDialogBox`implementa o `TextFoundEvent` para essa finalidade, que primeiro requer um representante.  
+ Neste exemplo, o `FindDialogBox` pode retornar resultados para a janela principal, dependendo do texto que está sendo procurado sem qualquer frequência específica de localizar um ou mais. Assim como ocorre com uma caixa de diálogo modal, uma caixa de diálogo sem janela restrita pode retornar resultados usando propriedades. No entanto, a janela que possui a caixa de diálogo precisa saber quando deve verificar essas propriedades. Uma maneira de habilitar essa opção é para que a caixa de diálogo implemente um evento que é acionado sempre que um texto é encontrado. `FindDialogBox` implementa o `TextFoundEvent` para essa finalidade, que primeiro requer um representante.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

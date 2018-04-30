@@ -1,27 +1,29 @@
 ---
 title: Como implementar um proxy de descoberta
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Como implementar um proxy de descoberta
-Este tópico explica como implementar um proxy de descoberta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o recurso de descoberta no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Um proxy de descoberta pode ser implementado, criando uma classe que estende o <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe abstrata. Há um número de outras classes de suporte definido e usado neste exemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Essas classes implementam o <xref:System.IAsyncResult> interface. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> consulte [interface System. IAsyncResult](xref:System.IAsyncResult).
+Este tópico explica como implementar um proxy de descoberta. Para obter mais informações sobre o recurso de descoberta no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Um proxy de descoberta pode ser implementado, criando uma classe que estende o <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe abstrata. Há um número de outras classes de suporte definido e usado neste exemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Essas classes implementam o <xref:System.IAsyncResult> interface. Para obter mais informações sobre <xref:System.IAsyncResult> consulte [interface System. IAsyncResult](xref:System.IAsyncResult).
   
  Implementar um proxy de descoberta é dividido em três partes principais neste tópico:  
   

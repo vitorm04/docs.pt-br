@@ -1,31 +1,31 @@
 ---
-title: "Mensagens de lote em uma transação"
-ms.custom: 
+title: Mensagens de lote em uma transação
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensagens de lote em uma transação
-Na fila de aplicativos usam transações para garantir a correção e a entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira de melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. É a compensação entre desempenho e a recuperação: à medida que aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessárias se as transações são revertidas. É importante observar a diferença entre mensagens de lote em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens de lote em uma transação são uma otimização que não seja alterado como o aplicativo é executado.  
+Na fila de aplicativos usam transações para garantir a correção e a entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira de melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. É a compensação entre desempenho e a recuperação: à medida que aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessárias se as transações são revertidas. É importante observar a diferença entre mensagens de lote em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. Para obter mais informações sobre as sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens de lote em uma transação são uma otimização que não seja alterado como o aplicativo é executado.  
   
 ## <a name="entering-batching-mode"></a>Inserir o modo de lote  
  O <xref:System.ServiceModel.Description.TransactedBatchingBehavior> controles de comportamento de ponto de extremidade envio em lote. Adicionar esse comportamento de ponto de extremidade para um ponto de extremidade de serviço informa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para mensagens em lote em uma transação. Nem todas as mensagens necessitam de uma transação, de forma que apenas as mensagens que requerem uma transação são colocadas em um lote, e apenas as mensagens enviadas com as operações marcadas com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  =  `true` são considerado para um lote. Se todas as operações no contrato de serviço são marcadas com `TransactionScopeRequired`  =  `false` e `TransactionAutoComplete`  =  `false`, em seguida, o modo de lote nunca é inserido.  

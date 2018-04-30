@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 17528db182676ae69694c4e416ee10bff1ae6ef2
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="c-expressions"></a>Expressões C#
 Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões c# têm suporte no Windows Workflow Foundation (WF). Novos projetos de fluxo de trabalho do C# criados no [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] destinados ao [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usam expressões C# e os projetos de fluxo de trabalho do Visual Basic usam expressões do Visual Basic. Os projetos de fluxo de trabalho existentes do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usam as expressões do Visual Basic podem ser migrados para o [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independentemente da linguagem do projeto e têm suporte. Este tópico fornece uma visão geral de expressões C# no [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
@@ -45,7 +45,7 @@ Começando com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as express�
  ![Criado automaticamente atividade sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
 > [!NOTE]
->  Expressões c# têm suporte apenas no Visual Studio e não há suporte para o designer de fluxo de trabalho hospedado novamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] novos recursos de WF45 têm suporte no designer de re-hospedado, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho hospedado novamente](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
+>  Expressões c# têm suporte apenas no Visual Studio e não há suporte para o designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos de WF45 com suporte no designer de re-hospedado, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho hospedado novamente](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).  
   
 ####  <a name="BackwardCompat"></a> Versões anteriores compatibilidade  
  As expressões do Visual Basic em projetos existentes de fluxo de trabalho do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] C# que foram migrados para [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] têm suporte. Quando as expressões do Visual Basic são exibidas no designer de fluxo de trabalho, o texto da expressão existente do Visual Basic é substituído por **valor foi definido em XAML**, a menos que a expressão do Visual Basic é uma sintaxe c# válida. Se a expressão do Visual Basic for uma sintaxe C# válida, a expressão será exibida. Para atualizar as expressões do Visual Basic para C#, você poderá editá-las no designer de fluxo de trabalho e especificar a expressão C# equivalente. Não é necessário atualizar as expressões do Visual Basic para C#, mas, assim que as expressões forem atualizadas no designer de fluxo de trabalho, serão convertidas em C# e não poderão ser revertidas para o Visual Basic.  
@@ -195,7 +195,7 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
   
 -   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` é chamado em vez de `CompiledExpressionInvoker.SetCompiledExpressionRoot`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Trabalhando com expressões no código, consulte [criação de fluxos de trabalho, atividades e expressões usando imperativo código](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Para obter mais informações sobre como trabalhar com expressões no código, consulte [criação de fluxos de trabalho, atividades e expressões usando imperativo código](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 ###  <a name="XamlWorkflows"></a> Usando expressões c# em fluxos de trabalho XAML  
  As expressões C# têm suporte em fluxos de trabalho XAML. Os fluxos de trabalho XAML compilados são criados em um tipo e os fluxos de trabalho XAML flexíveis são carregados pelo tempo de execução e compilados em uma árvore de atividade quando o fluxo de trabalho é executado.  
@@ -219,7 +219,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Trabalhando com fluxos de trabalho XAML, consulte [serializando fluxos de trabalho e atividades para e do XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ Para obter mais informações sobre como trabalhar com fluxos de trabalho XAML, consulte [serializando fluxos de trabalho e atividades para e do XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 ###  <a name="WFServices"></a> Usando o c# expressões nos serviços de fluxo de trabalho XAMLX  
  Expressões C# têm suporte em serviços de fluxo de trabalho do XAMLX. Quando um serviço de fluxo de trabalho é hospedado no IIS ou WAS, nenhuma etapa adicional é necessária. Porém, se o serviço de fluxo de trabalho XAML for auto-hospedado, as expressões C# deverão ser compiladas. Para compilar as expressões c# em um serviço de fluxo de trabalho XAMLX auto-hospedado, primeiro carregar o arquivo de XAMLX em uma `WorkflowService`e, em seguida, passar o `Body` do `WorkflowService` para o `CompileExpressions` método descrito anteriormente na [usando c# expressões em fluxos de trabalho de código](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) seção. No exemplo a seguir, um serviço de fluxo de trabalho XAMLX é carregado, as expressões C# são criadas e o serviço do fluxo de trabalho é aberto e aguarda solicitações.  

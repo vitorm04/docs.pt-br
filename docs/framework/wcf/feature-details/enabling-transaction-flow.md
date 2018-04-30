@@ -1,31 +1,31 @@
 ---
-title: "Ativando o fluxo de transações"
-ms.custom: 
+title: Ativando o fluxo de transações
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>Ativando o fluxo de transações
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece opções altamente flexíveis para controlar o fluxo de transações. Configurações de fluxo de transações do serviço podem ser expressadas usando uma combinação de atributos e configuração.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece opções altamente flexíveis para controlar o fluxo de transações. Configurações de fluxo de transações do serviço podem ser expressadas usando uma combinação de atributos e configuração.  
   
 ## <a name="transaction-flow-settings"></a>Configurações de fluxo de transações  
  Configurações de fluxo de transação são geradas para um ponto de extremidade de serviço como resultado da interseção dos três valores a seguir:  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  Se a associação tiver desabilitado o fluxo de transações, mas uma das operações em um contrato de serviço exige uma transação de entrada, uma exceção de validação é lançada durante a inicialização do serviço.  
   
- A maioria das associações aguardando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece contêm o `transactionFlow` e `transactionProtocol` atributos para que você possa configurar a associação específica para aceitar as transações de entrada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]definir os elementos de configuração, consulte [ \<associação >](../../../../docs/framework/misc/binding.md).  
+ A maioria das associações aguardando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece contêm o `transactionFlow` e `transactionProtocol` atributos para que você possa configurar a associação específica para aceitar as transações de entrada. Para obter mais informações sobre como definir os elementos de configuração, consulte [ \<associação >](../../../../docs/framework/misc/binding.md).  
   
  Um administrador ou implantador pode usar o fluxo de transações de nível de ponto de extremidade para configurar restrições ou requisitos de transação de fluxo no momento da implantação usando o arquivo de configuração.  
   
@@ -101,7 +101,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Supp
  Além disso, os serviços devem ser configurados para aceitar as transações de entrada somente de clientes que eles têm autenticado e autorizado. Transações de entrada devem ser aceita somente se eles forem provenientes de clientes altamente confiáveis.  
   
 ## <a name="policy-assertions"></a>Declarações de política  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa declarações de política para controlar o fluxo de transações. Declarações de política podem ser encontradas no documento de política do serviço, que é gerado por contratos de agregação, configuração e atributos. O cliente pode obter o documento de política do serviço usando um HTTP GET ou uma resposta de solicitação do WS-MetadataExchange. Os clientes podem processar o documento de política para determinar quais operações em um contrato de serviço podem dar suporte a ou exigir o fluxo de transações.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa declarações de política para controlar o fluxo de transações. Declarações de política podem ser encontradas no documento de política do serviço, que é gerado por contratos de agregação, configuração e atributos. O cliente pode obter o documento de política do serviço usando um HTTP GET ou uma resposta de solicitação do WS-MetadataExchange. Os clientes podem processar o documento de política para determinar quais operações em um contrato de serviço podem dar suporte a ou exigir o fluxo de transações.  
   
  Declarações de política de fluxo de transações afetam o fluxo de transações, especificando os cabeçalhos SOAP que um cliente deve enviar para um serviço para representar uma transação. Todos os cabeçalhos de transação devem ser marcados com `MustUnderstand` igual a `true`. Qualquer mensagem com um cabeçalho marcada caso contrário é rejeitada com uma falha de SOAP.  
   

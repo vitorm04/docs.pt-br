@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>Visão geral da arquitetura de metadados
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece uma infraestrutura avançada para exportar, publicação, recuperar e importação de metadados de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os serviços usam metadados para descrever como interagir com pontos de extremidade do serviço para que as ferramentas, como Svcutil.exe, podem gerar automaticamente o código do cliente para acessar o serviço.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  Para adicionar pontos de extremidade de metadados que usam o protocolo MEX, adicione pontos de extremidade de serviço para o host de serviço que usam o contrato de serviço chamado IMetadataExchange.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Define o <xref:System.ServiceModel.Description.IMetadataExchange> interface que tem esse nome de contrato de serviço. Pontos de extremidade do WS-MetadataExchange ou pontos de extremidade MEX, podem usar uma das associações quatro padrão expostas pelos métodos de fábrica estáticos no <xref:System.ServiceModel.Description.MetadataExchangeBindings> classe para corresponder as associações padrão usadas pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ferramentas, como o Svcutil.exe. Você também pode configurar pontos de extremidade de metadados MEX usando uma associação personalizada.  
   
- O <xref:System.ServiceModel.Description.ServiceMetadataBehavior> usa um <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> para exportação de metadados para todos os pontos de extremidade de serviço em seu serviço. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] exportação de metadados de um serviço, consulte [exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ O <xref:System.ServiceModel.Description.ServiceMetadataBehavior> usa um <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> para exportação de metadados para todos os pontos de extremidade de serviço em seu serviço. Para obter mais informações sobre como exportar metadados de um serviço, consulte [exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  O <xref:System.ServiceModel.Description.ServiceMetadataBehavior> aumenta o host de serviço, adicionando um <xref:System.ServiceModel.Description.ServiceMetadataExtension> instância como uma extensão para o host de serviço. O <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> fornece a implementação para os protocolos de publicação de metadados. Você também pode usar o <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> para obter metadados do serviço em tempo de execução, acessando o <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> propriedade.  
   

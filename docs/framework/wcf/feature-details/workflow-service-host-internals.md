@@ -1,49 +1,51 @@
 ---
-title: "Internos do host de serviço de fluxo de trabalho"
-ms.custom: 
+title: Internos do host de serviço de fluxo de trabalho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84bd0c5b93984e126019699caf64a61183c08f13
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-service-host-internals"></a>Internos do host de serviço de fluxo de trabalho
-<xref:System.ServiceModel.WorkflowServiceHost>Fornece um host para os serviços de fluxo de trabalho. Ele é responsável por escutar mensagens de entrada e roteá-los para a instância do serviço de fluxo de trabalho apropriado, ele controla descarregar e persistentes de fluxos de trabalho ociosos e muito mais. Este tópico descreve como WorkflowServiceHost processa mensagens de entrada.  
+<xref:System.ServiceModel.WorkflowServiceHost> Fornece um host para os serviços de fluxo de trabalho. Ele é responsável por escutar mensagens de entrada e roteá-los para a instância do serviço de fluxo de trabalho apropriado, ele controla descarregar e persistentes de fluxos de trabalho ociosos e muito mais. Este tópico descreve como WorkflowServiceHost processa mensagens de entrada.  
   
 ## <a name="workflowservicehost-overview"></a>Visão geral de WorkflowServiceHost  
  O <xref:System.ServiceModel.WorkflowServiceHost> classe é usada para hospedar serviços de fluxo de trabalho. Ele escuta mensagens de entrada e os direciona para a instância de serviço apropriado, criando novas instâncias ou carregar instâncias existentes de armazenamento durável, conforme necessário.  O diagrama a seguir ilustra em um alto nível como <xref:System.ServiceModel.WorkflowServiceHost> funciona.  
   
  ![Visão geral de WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/media/wfshhighlevel.gif "WFSHHighLevel")  
   
- Este diagrama mostra que <xref:System.ServiceModel.WorkflowServiceHost> carrega as definições de serviço de fluxo de trabalho de arquivos .xamlx e carrega as informações de configuração de um arquivo de configuração. Ele também carrega controle de configuração do perfil de rastreamento. <xref:System.ServiceModel.WorkflowServiceHost>expõe um ponto de extremidade de controle de fluxo de trabalho que permite que você envie as operações de controle para instâncias de fluxo de trabalho.  Para obter mais informações, consulte [ponto de extremidade de controle de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) e [exemplo de ponto de extremidade de gerenciamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md).  
+ Este diagrama mostra que <xref:System.ServiceModel.WorkflowServiceHost> carrega as definições de serviço de fluxo de trabalho de arquivos .xamlx e carrega as informações de configuração de um arquivo de configuração. Ele também carrega controle de configuração do perfil de rastreamento. <xref:System.ServiceModel.WorkflowServiceHost> expõe um ponto de extremidade de controle de fluxo de trabalho que permite que você envie as operações de controle para instâncias de fluxo de trabalho.  Para obter mais informações, consulte [ponto de extremidade de controle de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) e [exemplo de ponto de extremidade de gerenciamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md).  
   
- <xref:System.ServiceModel.WorkflowServiceHost>também expõe pontos de extremidade do aplicativo escutam mensagens de aplicativo de entrada. Quando chega uma mensagem de entrada, ela é enviada para a instância do serviço de fluxo de trabalho apropriado (se ele é carregado no momento). Se for necessário uma nova instância de fluxo de trabalho é criado. Ou, se uma instância existente é persistente é carregado do armazenamento de persistência.  
+ <xref:System.ServiceModel.WorkflowServiceHost> também expõe pontos de extremidade do aplicativo escutam mensagens de aplicativo de entrada. Quando chega uma mensagem de entrada, ela é enviada para a instância do serviço de fluxo de trabalho apropriado (se ele é carregado no momento). Se for necessário uma nova instância de fluxo de trabalho é criado. Ou, se uma instância existente é persistente é carregado do armazenamento de persistência.  
   
 ## <a name="workflowservicehost-details"></a>Detalhes do WorkflowServiceHost  
  O diagrama a seguir mostra como <xref:System.ServiceModel.WorkflowServiceHost> manipula mensagens em mais detalhes.  
   
  ![Fluxo de mensagens do Host de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- Este diagrama mostra três pontos de extremidade diferentes, um ponto de extremidade do aplicativo, um ponto de extremidade de controle de fluxo de trabalho e um ponto de extremidade de hospedagem de fluxo de trabalho. O ponto de extremidade do aplicativo recebe mensagens que são vinculadas para uma instância de fluxo de trabalho específico. Verifica se o ponto de extremidade de controle de fluxo de trabalho para operações de controle. O fluxo de trabalho que hospeda o ponto de extremidade de escuta para mensagens que causam <xref:System.ServiceModel.WorkflowServiceHost> para carregar e executar fluxos de trabalho sem serviço. Conforme mostrado no diagrama de todas as mensagens são processadas pelo tempo de execução do WCF.  Limitação de instância do serviço de fluxo de trabalho é obtida usando o <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> propriedade. Essa propriedade limita o número de instâncias de serviço de fluxo de trabalho simultâneas. Quando essa limitação é excedida adicional serão enfileiradas solicitações para novas instâncias de serviço de fluxo de trabalho ou solicitações para ativar instâncias de fluxo de trabalho persistentes. As solicitações em fila são processadas em ordem de FIFO independentemente de estarem solicitações para uma nova instância ou uma instância em execução e persistente. Informações de política de host são carregadas que determina como exceções sem tratamento são tratadas e serviços de fluxo de trabalho ocioso são descarregados e persistente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]consulte estes tópicos [como: configurar o fluxo de trabalho sem tratamento comportamento de exceção com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) e [como: configurar comportamento ocioso com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Instâncias de fluxo de trabalho são mantidas de acordo com as políticas de host e são recarregadas quando necessário. Para obter mais informações sobre a persistência de fluxo de trabalho, consulte: [como: configurar persistência com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), e [persistência de fluxo de trabalho ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ Este diagrama mostra três pontos de extremidade diferentes, um ponto de extremidade do aplicativo, um ponto de extremidade de controle de fluxo de trabalho e um ponto de extremidade de hospedagem de fluxo de trabalho. O ponto de extremidade do aplicativo recebe mensagens que são vinculadas para uma instância de fluxo de trabalho específico. Verifica se o ponto de extremidade de controle de fluxo de trabalho para operações de controle. O fluxo de trabalho que hospeda o ponto de extremidade de escuta para mensagens que causam <xref:System.ServiceModel.WorkflowServiceHost> para carregar e executar fluxos de trabalho sem serviço. Conforme mostrado no diagrama de todas as mensagens são processadas pelo tempo de execução do WCF.  Limitação de instância do serviço de fluxo de trabalho é obtida usando o <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> propriedade. Essa propriedade limita o número de instâncias de serviço de fluxo de trabalho simultâneas. Quando essa limitação é excedida adicional serão enfileiradas solicitações para novas instâncias de serviço de fluxo de trabalho ou solicitações para ativar instâncias de fluxo de trabalho persistentes. As solicitações em fila são processadas em ordem de FIFO independentemente de estarem solicitações para uma nova instância ou uma instância em execução e persistente. Informações de política de host são carregadas que determina como exceções sem tratamento são tratadas e serviços de fluxo de trabalho ocioso são descarregados e persistente. Para obter mais informações sobre esses tópicos, consulte [como: configurar o fluxo de trabalho sem tratamento comportamento de exceção com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) e [como: configurar comportamento ocioso com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Instâncias de fluxo de trabalho são mantidas de acordo com as políticas de host e são recarregadas quando necessário. Para obter mais informações sobre a persistência de fluxo de trabalho, consulte: [como: configurar persistência com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), e [persistência de fluxo de trabalho ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  A ilustração a seguir mostra o que é chamado de WorkflowServiceHost. Open.  
   
  ![Quando o WorkflowServiceHost. Open é chamado](../../../../docs/framework/wcf/feature-details/media/wfhostopen.gif "WFHostOpen")  
   
- O fluxo de trabalho XAML é carregado e a árvore de atividade é criada. <xref:System.ServiceModel.WorkflowServiceHost>conduzirá a árvore de atividade e cria a descrição do serviço. Configuração é aplicada ao host. Finalmente, o host começa a escutar mensagens de entrada.  
+ O fluxo de trabalho XAML é carregado e a árvore de atividade é criada. <xref:System.ServiceModel.WorkflowServiceHost> conduzirá a árvore de atividade e cria a descrição do serviço. Configuração é aplicada ao host. Finalmente, o host começa a escutar mensagens de entrada.  
   
  A ilustração a seguir mostra o que o <xref:System.ServiceModel.WorkflowServiceHost> quando ele recebe uma mensagem associada para uma atividade de recebimento com o CanCreateInstance definida como `true`.  
   

@@ -1,33 +1,35 @@
 ---
 title: Interoperabilidade com aplicativos de POX
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilidade com aplicativos de POX
-"Plain Old XML" (POX) os aplicativos se comunicam troca de mensagens HTTP brutas que contêm apenas dados de aplicativo XML que não são incluídos em um envelope SOAP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]pode fornecer serviços e clientes que usam mensagens POX. Sobre o serviço, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode ser usado para implementar serviços que expõe pontos de extremidade para os clientes, como navegadores da Web e linguagens de script que enviar e recebem mensagens POX. No cliente, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação pode ser usado para implementar a clientes que se comunicam com serviços baseados em POX.  
+"Plain Old XML" (POX) os aplicativos se comunicam troca de mensagens HTTP brutas que contêm apenas dados de aplicativo XML que não são incluídos em um envelope SOAP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pode fornecer serviços e clientes que usam mensagens POX. Sobre o serviço, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode ser usado para implementar serviços que expõe pontos de extremidade para os clientes, como navegadores da Web e linguagens de script que enviar e recebem mensagens POX. No cliente, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação pode ser usado para implementar a clientes que se comunicam com serviços baseados em POX.  
   
 > [!NOTE]
->  Este documento foi gravado originalmente para o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]3.5 tem suporte interno para trabalhar com aplicativos de POX. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]consulte [modelo de programação do WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+>  Este documento foi gravado originalmente para o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 tem suporte interno para trabalhar com aplicativos de POX. Para obter mais informações sobre consulte [modelo de programação do WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>Programação de POX com WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]serviços que se comunicam por HTTP usando mensagens POX, use um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços que se comunicam por HTTP usando mensagens POX, use um [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ```xml  
 <customBinding>  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  O padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] codificador de mensagem de texto é especialmente configurado para usar o <xref:System.ServiceModel.Channels.MessageVersion.None%2A> valor, o que permite processar XML cargas de mensagem que não chegam encapsuladas em um envelope SOAP.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]os clientes que se comunicam por HTTP usando mensagens POX usam uma associação semelhante (mostrada no seguinte código obrigatório).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os clientes que se comunicam por HTTP usando mensagens POX usam uma associação semelhante (mostrada no seguinte código obrigatório).  
   
 ```  
 private static Binding CreatePoxBinding()  
@@ -67,7 +69,7 @@ private static Binding CreatePoxBinding()
   
 -   <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>, que contém informações sobre a resposta HTTP, como a descrição de status e o código de status HTTP, bem como quaisquer cabeçalhos de resposta HTTP.  
   
- O exemplo de código a seguir mostra como criar uma mensagem HTTP GET solicitação endereçado http://localhost:8100/clientes.  
+ O exemplo de código a seguir mostra como criar uma mensagem de solicitação HTTP GET é endereçada a http://localhost:8100/customers.  
   
 ```  
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );  

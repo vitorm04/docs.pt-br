@@ -1,27 +1,29 @@
 ---
-title: "Segurança de mensagem no WCF"
-ms.custom: 
+title: Segurança de mensagem no WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>Segurança de mensagem no WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]tem dois modos principais para fornecer segurança (`Transport` e `Message`) e um terceiro modo (`TransportWithMessageCredential`) que combina os dois. Este tópico aborda a segurança de mensagem e os motivos para usá-lo.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tem dois modos principais para fornecer segurança (`Transport` e `Message`) e um terceiro modo (`TransportWithMessageCredential`) que combina os dois. Este tópico aborda a segurança de mensagem e os motivos para usá-lo.  
   
 ## <a name="what-is-message-security"></a>O que é a segurança de mensagem?  
  Segurança de mensagem usa a especificação WS-Security para proteger as mensagens. O WS-Securityspecification descreve aprimoramentos para garantir a confidencialidade, integridade e autenticação no nível da mensagem SOAP (em vez de nível de transporte) de mensagens SOAP.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Suporte para vários transportes. Você pode enviar mensagens protegidas em muitos transportes diferentes, como pipes nomeados e TCP, sem a necessidade de contar com o protocolo de segurança. Com segurança em nível de transporte, todas as informações de segurança tem escopo para uma conexão de transporte particular único e não estão disponíveis para o conteúdo da mensagem. Segurança de mensagem faz com que a mensagem segura, independentemente de qual transporte você use para transmitir a mensagem e o contexto de segurança é inserido diretamente dentro a mensagem.  
   
--   Suporte para um amplo conjunto de credenciais e declarações. A segurança da mensagem é baseada na especificação WS-Security, que fornece uma estrutura extensível capaz de transmitir qualquer tipo de declaração dentro da mensagem SOAP. Ao contrário de segurança de transporte, o conjunto de mecanismos de autenticação ou declarações, que você pode usar não é limitado pelos recursos de transporte. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]segurança de mensagem inclui vários tipos de declaração e autenticação de transmissão e pode ser estendida para dar suporte a tipos adicionais conforme necessário. Por esses motivos, já por exemplo, um cenário federado credenciais não é possível sem segurança de mensagem. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oferece suporte a cenários de Federação WCF, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Suporte para um amplo conjunto de credenciais e declarações. A segurança da mensagem é baseada na especificação WS-Security, que fornece uma estrutura extensível capaz de transmitir qualquer tipo de declaração dentro da mensagem SOAP. Ao contrário de segurança de transporte, o conjunto de mecanismos de autenticação ou declarações, que você pode usar não é limitado pelos recursos de transporte. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança de mensagem inclui vários tipos de declaração e autenticação de transmissão e pode ser estendida para dar suporte a tipos adicionais conforme necessário. Por esses motivos, já por exemplo, um cenário federado credenciais não é possível sem segurança de mensagem. Para obter mais informações sobre suporte WCF de cenários de federação, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>Como comparam a mensagem e segurança de transporte  
   

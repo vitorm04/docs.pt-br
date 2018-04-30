@@ -1,36 +1,38 @@
 ---
-title: "Como hospedar um serviço do WCF em um aplicativo gerenciado"
-ms.custom: 
+title: Como hospedar um serviço do WCF em um aplicativo gerenciado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f2671dc381e0d3ef8f55ced01268de6205fcb7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Como hospedar um serviço do WCF em um aplicativo gerenciado
 Para hospedar um serviço dentro de um aplicativo gerenciado, o código inserido para o serviço dentro do código de aplicativo gerenciado, definir um ponto de extremidade para o serviço de imperativa no código, declarativamente por meio de configuração ou usando os pontos de extremidade padrão e, em seguida, criar um instância do <xref:System.ServiceModel.ServiceHost>.  
   
  Para iniciar o recebimento de mensagens, chame <xref:System.ServiceModel.ICommunicationObject.Open%2A> em <xref:System.ServiceModel.ServiceHost>. Isso cria e abre o ouvinte para o serviço. Hospedar um serviço dessa maneira é conhecida como "hospedagem interna" porque o aplicativo gerenciado está fazendo o trabalho de hospedagem em si. Para fechar o serviço, chame <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> em <xref:System.ServiceModel.ServiceHost>.  
   
- Um serviço também pode ser hospedado em um serviço gerenciado do Windows, no Internet Information Services (IIS) ou no serviço de ativação de processo para Windows (WAS). [!INCLUDE[crabout](../../../includes/crabout-md.md)]opções para um serviço de hospedagem, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).  
+ Um serviço também pode ser hospedado em um serviço gerenciado do Windows, no Internet Information Services (IIS) ou no serviço de ativação de processo para Windows (WAS). Para obter mais informações sobre opções de um serviço de hospedagem, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).  
   
- Hospedar um serviço em um aplicativo gerenciado é a opção mais flexível porque ela exige a menor infra-estrutura para implantar. [!INCLUDE[crabout](../../../includes/crabout-md.md)]hospedagem de serviços em aplicativos gerenciados, consulte [hospedando um aplicativo gerenciado](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ Hospedar um serviço em um aplicativo gerenciado é a opção mais flexível porque ela exige a menor infra-estrutura para implantar. Para obter mais informações sobre hospedagem de serviços em aplicativos gerenciados, consulte [hospedando um aplicativo gerenciado](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
   
  O procedimento a seguir demonstra como implementar um serviço hospedado automaticamente em um aplicativo de console.  
   
@@ -58,7 +60,7 @@ Para hospedar um serviço dentro de um aplicativo gerenciado, o código inserido
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]como definir e implementar uma interface de serviço, consulte [como: definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) e [como: implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
+    >  Para obter mais informações sobre como definir e implementar uma interface de serviço, consulte [como: definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) e [como: implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
   
 7.  Na parte superior do `Main` método, crie uma instância do <xref:System.Uri> classe com o endereço base para o serviço.  
   
@@ -71,7 +73,7 @@ Para hospedar um serviço dentro de um aplicativo gerenciado, o código inserido
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  Este exemplo usa pontos de extremidade padrão, e nenhum arquivo de configuração é necessário para este serviço. Se nenhum ponto de extremidade estiverem configurados, o tempo de execução cria um ponto de extremidade para cada endereço base para cada contrato de serviço implementado pelo serviço. [!INCLUDE[crabout](../../../includes/crabout-md.md)]pontos de extremidade padrão, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  Este exemplo usa pontos de extremidade padrão, e nenhum arquivo de configuração é necessário para este serviço. Se nenhum ponto de extremidade estiverem configurados, o tempo de execução cria um ponto de extremidade para cada endereço base para cada contrato de serviço implementado pelo serviço. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 9. Pressione CTRL+SHIFT+B para criar a solução.  
   

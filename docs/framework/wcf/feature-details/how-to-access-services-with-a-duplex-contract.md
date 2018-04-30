@@ -1,13 +1,13 @@
 ---
-title: "Como acessar serviços com um contrato duplex"
-ms.custom: 
+title: Como acessar serviços com um contrato duplex
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Como acessar serviços com um contrato duplex
 Um recurso de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é a capacidade de criar um serviço que usa um padrão de mensagens duplex. Esse padrão permite que um serviço para se comunicar com o cliente por meio de um retorno de chamada. Este tópico mostra as etapas para criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente em uma classe de cliente que implementa a interface de retorno de chamada.  
@@ -36,7 +36,7 @@ Um recurso de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é a capac
   
 ### <a name="to-access-a-duplex-service"></a>Para acessar um serviço duplex  
   
-1.  Crie um serviço que contém duas interfaces. É a primeira interface para o serviço, o segundo é para o retorno de chamada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]criar um serviço duplex, consulte [como: criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+1.  Crie um serviço que contém duas interfaces. É a primeira interface para o serviço, o segundo é para o retorno de chamada. Para obter mais informações sobre como criar um serviço duplex, consulte [como: criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 2.  Execute o serviço.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Postagem de formulário"
-ms.custom: 
+title: Postagem de formulário
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Postagem de formulário
 Este exemplo demonstra como estender o WCF REST modelo de programação para dar suporte a novos formatos de solicitação de entrada. O exemplo também inclui uma implementação de um formatador que pode desserializar uma solicitação de uma postagem de formulário HTML em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipo. Além disso, o exemplo usa um modelo T4 para retornar uma página HTML, que fornece um formulário HTML que usuários podem lançar o serviço WCF REST.  
@@ -38,7 +40,7 @@ Este exemplo demonstra como estender o WCF REST modelo de programação para dar
   
  Este projeto de aplicativo de console estende o [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo. O exemplo de serviço básico do recurso demonstra como expor um recurso de uma maneira que usa o modelo de programação WCF REST. No exemplo de serviço básico do recurso, um recurso de coleção do cliente é exposto, de modo que os clientes na coleção podem ser criados, recuperar, atualizados e excluídos. O exemplo de serviço básico de recurso usa apenas os dois suportados nativamente solicitação formatos de entrada, XML e JSON.  
   
- O aplicativo de console neste exemplo de postagem de formulário utiliza o formatador personalizado na biblioteca HtmlFormProcessing, que permite aos usuários criar clientes enviando uma solicitação de uma postagem de formulário HTML usando um navegador. Ele também adiciona uma operação que retorna uma página HTML, que inclui o formulário a ser enviada de volta para o serviço. Esta página HTML é gerada usando um modelo T4 pré-processados, que consiste em um arquivo. TT e um arquivo. cs gerado automaticamente. O arquivo. TT permite que um desenvolvedor gravar uma resposta em um formulário de modelo que contém variáveis e estruturas de controle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, consulte [gerando artefatos por usando modelos de texto](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ O aplicativo de console neste exemplo de postagem de formulário utiliza o formatador personalizado na biblioteca HtmlFormProcessing, que permite aos usuários criar clientes enviando uma solicitação de uma postagem de formulário HTML usando um navegador. Ele também adiciona uma operação que retorna uma página HTML, que inclui o formulário a ser enviada de volta para o serviço. Esta página HTML é gerada usando um modelo T4 pré-processados, que consiste em um arquivo. TT e um arquivo. cs gerado automaticamente. O arquivo. TT permite que um desenvolvedor gravar uma resposta em um formulário de modelo que contém variáveis e estruturas de controle. Para obter mais informações sobre T4, consulte [gerando artefatos por usando modelos de texto](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Para executar a amostra  
   

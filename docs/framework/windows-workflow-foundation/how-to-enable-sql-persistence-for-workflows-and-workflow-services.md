@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3e5872be7e8b686a744832bf63a98e97a99cf9b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
 Este tópico descreve como configurar o recurso de Store de instância de fluxo de trabalho SQL para ativar persistência para os fluxos de trabalho e fluxo de trabalho serviços de aplicativos por meio e usando um arquivo de configuração.  
@@ -41,7 +41,7 @@ Este tópico descreve como configurar o recurso de Store de instância de fluxo 
 >   
 >  System.Data.SqlClient.SqlException: Não foi possível encontrar o procedimento armazenado “System.Activities.DurableInstancing.CreateLockOwner”  
   
- As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Propriedades do armazenamento de instância de fluxo de trabalho de SQL, consulte [fluxo de trabalho instância repositório de propriedades do SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. Para obter mais informações sobre as propriedades do repositório de instância de fluxo de trabalho do SQL, consulte [fluxo de trabalho instância repositório de propriedades do SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Ativando a persistência para fluxos de trabalho são hospedados que usam WorkflowApplication  
  Você pode ativar persistência para fluxos de trabalho são hospedados que usam <xref:System.Activities.WorkflowApplication> programaticamente usando o modelo de objeto de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> . O procedimento a seguir contém as etapas para fazer isso.  

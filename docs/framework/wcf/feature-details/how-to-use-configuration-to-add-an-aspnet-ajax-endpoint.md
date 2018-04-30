@@ -1,31 +1,33 @@
 ---
-title: "Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET"
-ms.custom: 
+title: Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]permite que você crie um serviço que permite que um ponto de extremidade AJAX ASP.NET habilitado disponível que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, você pode usar um arquivo de configuração, assim como acontece com todos os outros [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pontos de extremidade, ou use um método que não requer nenhum elemento de configuração. Este tópico demonstra o método de configuração.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite que você crie um serviço que permite que um ponto de extremidade AJAX ASP.NET habilitado disponível que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, você pode usar um arquivo de configuração, assim como acontece com todos os outros [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pontos de extremidade, ou use um método que não requer nenhum elemento de configuração. Este tópico demonstra o método de configuração.  
   
  A parte do procedimento que permite que o ponto de extremidade de serviço seja habilitado pelo AJAX ASP.NET consiste em configurar o ponto de extremidade para usar o <xref:System.ServiceModel.WebHttpBinding> e adicionar o [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) comportamento de ponto de extremidade. Depois de configurar o ponto de extremidade, as etapas para implementar e hospedar o serviço são semelhantes àquelas usadas por qualquer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço. Para obter um exemplo de funcionamento, consulte o [AJAX Service usando HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como configurar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração, consulte [como: adicionar um ASP.NET AJAX ponto de extremidade sem usando a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ Para obter mais informações sobre como configurar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração, consulte [como: adicionar um ASP.NET AJAX ponto de extremidade sem usando a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Para criar um serviço WCF básico  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hospedagem no IIS, consulte [como: hospedar um serviço WCF no IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Para obter mais informações sobre como hospedar no IIS, consulte [como: hospedar um serviço WCF no IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Para chamar o serviço  
   

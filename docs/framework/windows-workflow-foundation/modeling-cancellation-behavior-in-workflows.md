@@ -1,23 +1,24 @@
 ---
 title: Modelando o comportamento cancelar em fluxos de trabalho
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modelando o comportamento cancelar em fluxos de trabalho
 As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma atividade de <xref:System.Activities.Statements.Parallel> que cancela ramificações incompletos quando seu <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> avalia a `true`, ou fora de fluxo de trabalho, se o host chama <xref:System.Activities.WorkflowApplication.Cancel%2A>. Para fornecer tratamento cancelar, os autores de fluxo de trabalho podem usar a atividade de <xref:System.Activities.Statements.CancellationScope> , a atividade de <xref:System.Activities.Statements.CompensableActivity> , ou crie as atividades personalizados que fornecem lógica cancelar. Este tópico fornece uma visão geral de cancelamento em fluxos de trabalho.  
@@ -26,7 +27,7 @@ As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma 
  As transações fornecem ao seu aplicativo a capacidade de nulo () para reverter as alterações executadas dentro de transação se qualquer erro ocorre durante qualquer parte do processo de transação. No entanto, nem todo o trabalho que precise ser cancelado ou desfeito é apropriado para transações, como o trabalho longo ou o trabalho que não envolvem recursos transacionais. A compensação fornece um modelo para desfazer o trabalho não transacional anteriormente concluído se houver uma falha subsequente no fluxo de trabalho. Cancelamento fornece um modelo para autores de fluxo de trabalho e atividade do trabalho não transacional de forma que não foi concluído. Se uma atividade não concluiu sua execução e será cancelada, sua lógica cancelar será chamada está disponível.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]transações e compensação, consulte [transações](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) e [compensação](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+>  Para obter mais informações sobre transações e compensação, consulte [transações](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) e [compensação](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="using-cancellationscope"></a>Usando CancellationScope  
  A atividade de <xref:System.Activities.Statements.CancellationScope> tem duas seções que podem conter atividades filhos: <xref:System.Activities.Statements.CancellationScope.Body%2A> e <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>. <xref:System.Activities.Statements.CancellationScope.Body%2A> é onde as atividades que compõem a lógica de atividade são colocadas, e <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> é onde as atividades que fornecem lógica cancelar para atividades são colocadas. Uma atividade pode ser cancelada somente se não tiver concluído. No caso de atividade de <xref:System.Activities.Statements.CancellationScope> , o preenchimento refere-se a conclusão de atividades em <xref:System.Activities.Statements.CancellationScope.Body%2A>. Se uma solicitação cancelar é agendada e as atividades em <xref:System.Activities.Statements.CancellationScope.Body%2A> não tiverem terminado, então <xref:System.Activities.Statements.CancellationScope> será marcado como <xref:System.Activities.ActivityInstanceState.Canceled> e as atividades de <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> serão executadas.  

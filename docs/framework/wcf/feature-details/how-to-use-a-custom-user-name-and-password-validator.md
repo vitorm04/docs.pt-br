@@ -1,13 +1,13 @@
 ---
-title: "Como usar um validador personalizado de nome de usuário e senha"
-ms.custom: 
+title: Como usar um validador personalizado de nome de usuário e senha
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Como usar um validador personalizado de nome de usuário e senha
 Por padrão, quando um nome de usuário e uma senha são usados para autenticação, o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa o Windows para validar esses dados. No entanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite para esquemas de autenticação de nome e a senha da personalizadas do usuário, também conhecido como *validadores*. Para inserir um validador personalizado de nome de usuário e senha, crie uma classe que deriva de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configure-a.  
@@ -64,7 +64,7 @@ Por padrão, quando um nome de usuário e uma senha são usados para autenticaç
   
     1.  No arquivo de configuração, sob o [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, adicionar um [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-    2.  Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ou [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento para a seção de associações. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação elemento, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ou [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento para a seção de associações. Para obter mais informações sobre como criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação elemento, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Definir o `mode` atributo o [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) ou [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) para `Message`, `Transport`, `or``TransportWithMessageCredential`.  
   
@@ -77,7 +77,7 @@ Por padrão, quando um nome de usuário e uma senha são usados para autenticaç
         > [!NOTE]
         >  Quando um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está hospedado nos Serviços de Informações da Internet (IIS) usando a segurança em nível de transporte e a propriedade <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> está definida como <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, o esquema de autenticação personalizada usa um subconjunto de autenticação do Windows. Isso ocorre porque, neste cenário, o IIS efetua a autenticação do Windows antes de o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] chamar o autenticador personalizado.  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação elemento, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Para obter mais informações sobre como criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação elemento, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      O exemplo a seguir mostra o código de configuração para a associação.  
   

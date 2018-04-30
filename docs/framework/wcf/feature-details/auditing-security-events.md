@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pode registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema e podem ser examinados usando o Visualizador de eventos.  
   
  A auditoria fornece uma maneira de um administrador para detectar um ataque que já ocorreu ou está em andamento. Além disso, a auditoria pode ajudar um desenvolvedor para depurar os problemas relacionados à segurança. Por exemplo, se um erro na configuração da política de verificação ou autorização acidentalmente nega acesso a um usuário autorizado, um desenvolvedor rapidamente pode descobrir e isolar a causa desse erro examinando o log de eventos.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Para obter mais informações sobre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Nível de auditoria e comportamento  
  Existem dois níveis de auditorias de segurança:  

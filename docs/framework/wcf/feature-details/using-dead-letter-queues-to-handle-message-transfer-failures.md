@@ -1,27 +1,29 @@
 ---
-title: "Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha"
-ms.custom: 
+title: Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
 Mensagens em fila podem não entrega. Essas mensagens com falha são registradas em uma fila de mensagens mortas. Falha na entrega pode ser causado por motivos como falhas de rede, uma fila excluída, uma fila cheia, falha de autenticação ou uma falha ao entregar no tempo.  
@@ -54,7 +56,7 @@ Mensagens em fila podem não entrega. Essas mensagens com falha são registradas
   
 -   Para ler mensagens de uma fila de mensagens mortas personalizada, o URI deve ser do formulário: net.msmq://localhost/private/\<*nome de dlq personalizada*> onde *nome de dlq personalizada* é o nome personalizado fila de mensagens mortas.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como as filas de endereço, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Para obter mais informações sobre como as filas de endereço, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha os endereços de correspondências de destinatário que o serviço está escutando com o endereço na mensagem. Se os endereços corresponderem, a mensagem é enviada; Caso contrário, a mensagem não é enviada. Isso pode causar problemas durante a leitura da fila de mensagens mortas, porque as mensagens na fila de mensagens mortas normalmente são endereçadas para o serviço e não o serviço de fila de mensagens mortas. Portanto, a leitura da fila de mensagens mortas do serviço deve instalar um filtro de endereço `ServiceBehavior` que instrui a pilha para corresponder a todas as mensagens na fila, independentemente do destinatário. Especificamente, você deve adicionar um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro para o serviço de leitura de mensagens da fila de mensagens mortas.  
   

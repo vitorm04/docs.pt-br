@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Serialização JSON autônoma
 JSON (JavaScript Object Notation) é um formato de dados que é projetado especificamente para ser usado pelo código JavaScript em execução em páginas da Web dentro do navegador. É o formato de dados padrão usado por serviços ASP.NET AJAX criados no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -53,7 +53,7 @@ JSON (JavaScript Object Notation) é um formato de dados que é projetado especi
 |`Null` valor de qualquer tipo|Nulo|Tipos anuláveis também têm suporte e mapear para JSON da mesma maneira como os tipos de não anuláveis.|  
   
 ### <a name="enumerations-and-json"></a>Enumerações e JSON  
- Valores de membro de enumeração são tratados como números em JSON, que é diferente de como elas são tratadas em contratos de dados, onde eles são incluídos como nomes de membros. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] o contrato de dados tratamento, consulte [tipos de enumeração em contratos de dados](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Valores de membro de enumeração são tratados como números em JSON, que é diferente de como elas são tratadas em contratos de dados, onde eles são incluídos como nomes de membros. Para obter mais informações sobre o tratamento de contrato de dados, consulte [tipos de enumeração em contratos de dados](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Por exemplo, se você tiver `public enum Color {red, green, blue, yellow, pink}`, serializar `yellow` produz o número 3 e não é a cadeia de caracteres "amarelo".  
   

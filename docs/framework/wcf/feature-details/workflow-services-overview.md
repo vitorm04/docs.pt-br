@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>Visão geral de serviços de fluxo de trabalho
-Serviços de fluxo de trabalho são [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-com base em serviços que são implementados usando fluxos de trabalho. Serviços de fluxo de trabalho são fluxos de trabalho que usam as atividades de mensagens para enviar e receber [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mensagens. .NET framework 4.5 apresenta uma série de atividades de mensagens que permite enviar e receber mensagens de um fluxo de trabalho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] atividades de mensagem e como eles podem ser usados para implementar os padrões de troca de mensagens diferentes, consulte [atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Serviços de fluxo de trabalho são [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-com base em serviços que são implementados usando fluxos de trabalho. Serviços de fluxo de trabalho são fluxos de trabalho que usam as atividades de mensagens para enviar e receber [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mensagens. .NET framework 4.5 apresenta uma série de atividades de mensagens que permite enviar e receber mensagens de um fluxo de trabalho. Para obter mais informações sobre atividades e como eles podem ser usados para implementar os padrões de troca de mensagem diferente de mensagens, consulte [atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Benefícios do uso de serviços de fluxo de trabalho  
  À medida que os aplicativos cada vez mais tornou-se distribuído, serviços individuais são responsáveis por chamar outros serviços para descarregar uma parte do trabalho. Implementar essas chamadas como operações assíncronas apresenta alguma complexidade no código. Tratamento de erro adiciona complexidade adicional na forma de tratamento de exceções e fornecer informações de rastreamento detalhadas. Alguns serviços geralmente são longas e podem levar até valiosos recursos do sistema ao aguardar a entrada. Devido a esses problemas, aplicativos distribuídos são geralmente muito complexa e difícil de escrever e manter. Fluxos de trabalho são uma maneira natural para expressar a coordenação de trabalho assíncrono, especialmente as chamadas para os serviços externos. Fluxos de trabalho também são eficazes para representar a processos de negócios de longa execução. É essas qualidades que tornam o fluxo de trabalho um excelente ativo para a criação de serviços em um ambiente distribuído.  

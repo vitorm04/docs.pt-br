@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como criar uma associação personalizada utilizando o SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem total flexibilidade ao configurar a segurança todas as opções que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Criando associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem total flexibilidade ao configurar a segurança todas as opções que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> não oferece suporte a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, o que é o uso de forma de canal padrão por TCP de canal de transporte quando <xref:System.ServiceModel.TransferMode> é definido como <xref:System.ServiceModel.TransferMode.Buffered>. Você deve definir <xref:System.ServiceModel.TransferMode> para <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> neste cenário.  

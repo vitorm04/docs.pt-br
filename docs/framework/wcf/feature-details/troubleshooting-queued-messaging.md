@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 Esta seção contém perguntas comuns e resolução de problemas para usar filas em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -125,7 +125,7 @@ Esta seção contém perguntas comuns e resolução de problemas para usar filas
   
  **P:** onde posso encontrar respostas para perguntas comuns sobre o MSMQ?  
   
- **R:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consulte [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **R:** para obter mais informações sobre o MSMQ, consulte [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **P:** por que meu serviço lançar um `ProtocolException` quando ao ler de uma fila que contém mensagens de sessão em fila e datagrama mensagens em fila?  
   

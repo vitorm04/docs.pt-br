@@ -22,11 +22,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 827fef90a6277387ceac1c8f1d6df00a69a5d612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Como criar um serviço de token de segurança
 Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validar tokens de segurança. Um serviço de token de segurança fornece um ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  
@@ -124,7 +124,7 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como criar o token de prova quando o cliente e o token de segurança de serviço ambos fornecem material de chave para a chave compartilhada, consulte [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Para obter mais informações sobre como construir o token de prova quando o cliente e o serviço de token de segurança fornecem material de chave para a chave compartilhada, consulte [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  As referências de tokens emitidas são construídas com a criação de instâncias da <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> classe.  
   

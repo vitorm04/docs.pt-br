@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 349a9627c20de24a17c533bb9b2fd5f6d1735c70
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 10d723f8a685d76cc739ac88770aad3e1de982ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Instruções passo a passo: criar um botão animado personalizado
-Como o nome sugere, o [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] é excelente para fazer experiências avançadas de apresentação para clientes. Essas instruções passo a passo mostram como personalizar a aparência e o comportamento de um botão (incluindo animações). Essa personalização é feita usando um estilo e modelo para que você possa aplicar esse botão personalizado facilmente aos botões em seu aplicativo. A ilustração a seguir mostra o botão personalizado que você criará.  
+Como o nome sugere, o Windows Presentation Foundation (WPF) é excelente para fazer experiências de apresentação rica para os clientes. Essas instruções passo a passo mostram como personalizar a aparência e o comportamento de um botão (incluindo animações). Essa personalização é feita usando um estilo e modelo para que você possa aplicar esse botão personalizado facilmente aos botões em seu aplicativo. A ilustração a seguir mostra o botão personalizado que você criará.  
   
  ![O botão personalizado que você criará](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   

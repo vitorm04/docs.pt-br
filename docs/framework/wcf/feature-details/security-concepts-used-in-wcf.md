@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72712e0934646a39c1e03a38716179384051003a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceitos de segurança utilizados no WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a segurança é construída conceitos já está em uso e implantada em várias infraestruturas de segurança.  
@@ -36,10 +36,10 @@ ms.lasthandoff: 04/28/2018
  Infraestrutura de chave pública (PKI) é um sistema de certificados digitais, autoridades de certificação e outras autoridades de registro que verificam e autenticar cada parte envolvida em uma transação eletrônica com o uso de criptografia de chave pública. Para obter mais informações, consulte [serviços de certificados do Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=210211).  
   
 ### <a name="kerberos-protocol"></a>Protocolo Kerberos  
- O *protocolo Kerberos* é uma especificação para a criação de um mecanismo de segurança que autentica os usuários em um domínio do Windows. Ele permite que um usuário estabelecer um contexto de seguro com outras entidades dentro de um domínio. Plataformas Windows 2000 e posteriores usam o protocolo Kerberos, por padrão. Noções básicas sobre os mecanismos do sistema é útil ao criar um serviço que irá interagir com os clientes da intranet. Além disso, desde o *Web Services Security Kerberos associação* é amplamente publicados, você pode usar o protocolo Kerberos para se comunicar com clientes de Internet (ou seja, o protocolo Kerberos é interoperável). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como o protocolo Kerberos é implementado no Windows, consulte [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
+ O *protocolo Kerberos* é uma especificação para a criação de um mecanismo de segurança que autentica os usuários em um domínio do Windows. Ele permite que um usuário estabelecer um contexto de seguro com outras entidades dentro de um domínio. Plataformas Windows 2000 e posteriores usam o protocolo Kerberos, por padrão. Noções básicas sobre os mecanismos do sistema é útil ao criar um serviço que irá interagir com os clientes da intranet. Além disso, desde o *Web Services Security Kerberos associação* é amplamente publicados, você pode usar o protocolo Kerberos para se comunicar com clientes de Internet (ou seja, o protocolo Kerberos é interoperável). Para obter mais informações sobre como o protocolo Kerberos é implementado no Windows, consulte [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
   
 ### <a name="x509-certificates"></a>Certificados x. 509  
- Certificados x. 509 são uma forma de credencial primário usada em aplicativos de segurança. Para obter mais informações sobre o x. 509 certificados Consulte [certificados de chave pública x. 509](http://go.microsoft.com/fwlink/?LinkId=210213). Certificados x. 509 são armazenados em um repositório de certificados. Um computador executando o Windows tem vários tipos de armazenamentos de certificados, cada um com uma finalidade diferente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] os repositórios diferentes, consulte [repositórios de certificados](http://go.microsoft.com/fwlink/?LinkID=87787).  
+ Certificados x. 509 são uma forma de credencial primário usada em aplicativos de segurança. Para obter mais informações sobre o x. 509 certificados Consulte [certificados de chave pública x. 509](http://go.microsoft.com/fwlink/?LinkId=210213). Certificados x. 509 são armazenados em um repositório de certificados. Um computador executando o Windows tem vários tipos de armazenamentos de certificados, cada um com uma finalidade diferente. Para obter mais informações sobre os repositórios diferentes, consulte [repositórios de certificados](http://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>As especificações de segurança de serviços Web  
  As associações definidas pelo sistema oferecem suporte a várias especificações de segurança de serviços web comumente usadas. Para obter uma lista de associações fornecidas pelo sistema e as especificações de serviços da web oferecem suporte a consulte: [Web Services dá suporte para protocolos System-Provided associações de interoperabilidade](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

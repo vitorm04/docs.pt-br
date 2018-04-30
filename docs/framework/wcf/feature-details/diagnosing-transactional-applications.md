@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnosticando aplicativos transacionais
 Este tópico descreve como usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recurso de gerenciamento e diagnóstico para solucionar problemas de um aplicativo transacional.  
@@ -58,7 +58,7 @@ Este tópico descreve como usar o [!INCLUDE[indigo1](../../../../includes/indigo
 |Fluxo de transações por segundo|O número de transações que fluíram para operações neste ponto de extremidade dentro de cada segundo. Esse contador é incrementado sempre que uma transação está presente na mensagem que é enviada para o ponto de extremidade.|  
   
 ## <a name="windows-management-instrumentation"></a>Instrumentação de gerenciamento do Windows  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Acessando dados do WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI). Para obter mais informações sobre como acessar dados do WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Um número de propriedades somente leitura do WMI indicar as configurações aplicadas de transação para um serviço. As tabelas a seguir listam todas essas configurações.  
   
