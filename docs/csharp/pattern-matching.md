@@ -1,6 +1,6 @@
 ---
-title: "Correspondência de padrões – Guia de C#"
-description: "Saiba mais sobre expressões de correspondência de padrões em C#"
+title: Correspondência de padrões – Guia de C#
+description: Saiba mais sobre expressões de correspondência de padrões em C#
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Correspondência padrão #
 
@@ -112,27 +112,27 @@ Por fim, você pode adicionar um case `null` para garantir que o argumento não 
 
 O comportamento especial para o padrão `null` é interessante porque a constante `null` no padrão não tem um tipo, mas pode ser convertida em qualquer tipo de referência ou tipo que permite valor nulo. Em vez de converter um `null` em qualquer tipo, a linguagem define que um `null` valor não será correspondente ao padrão de qualquer tipo, independentemente do tipo de tempo de compilação da variável. Esse comportamento torna o novo padrão de tipo baseado em `switch` consistente com a instrução `is`: instruções `is` sempre retornam `false` quando o valor sendo verificado é `null`. Isso também é mais simples: depois de verificar o tipo, não é necessário fazer uma verificação adicional de nulos. Você pode ver isso pelo fato de que não há nenhuma verificação de nulos em nenhum dos blocos de casos dos exemplos acima: elas não são necessárias, já que a correspondência do padrão de tipo assegura um valor não nulo.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`declarações `case` expressões
+## <a name="var-declarations-in-case-expressions"></a>`var` declarações em expressões `case`
 
-A introdução de `var` como uma das expressões correspondência apresenta novas regras para a correspondência de padrão.
+A introdução de `var` como uma das expressões de correspondência introduz novas regras à correspondência de padrão.
 
-A primeira regra é que o `var` declaração segue as regras de inferência de tipo normal: O tipo é inferido para ser o tipo estático da expressão switch. Essa regra, o tipo sempre faz a correspondência.
+A primeira regra é de que a declaração `var` segue as regras de inferência de tipos normais: o tipo é inferido como tipo estático da expressão switch. Com base nessa regra, o tipo sempre é correspondente.
 
-A segunda regra é que um `var` declaração não tem a verificação de nulos incluem outras expressões do tipo padrão. Isso significa que a variável pode ser nula e uma verificação de nulos é necessária nesse caso.
+A segunda regra é que uma declaração `var` não tem a verificação de nulos que outras expressões do tipo padrão incluem. Isso significa que a variável pode ser nula e uma verificação de nulos é necessária nesse caso.
 
-Essas duas regras significam que, em muitos casos, um `var` declaração em um `case` expressão corresponde às mesmas condições como uma `default` expressão.
-Como um caso de não-padrão é preferencial para o `default` caso, o `default` caso nunca será executado.
+Essas duas regras significam que, em muitos casos, uma declaração `var` em uma expressão `case` corresponde às mesmas condições que uma expressão `default`.
+Como um case não padrão é preferencial ao case `default`, o case `default` nunca será executado.
 
 > [!NOTE]
-> O compilador não emite um aviso nos casos em que um `default` caso tenha sido gravado, mas nunca será executado. Isso é consistente com a atual `switch` comportamento da instrução em que todos os casos possíveis foram listados.
+> O compilador não emite um aviso nos casos em que um case `default` foi gravado, mas nunca será executado. Isso é coerente com a atual comportamento da instrução `switch`, em que todos os casos possíveis foram listados.
 
-A terceira regra apresenta usa onde um `var` caso pode ser útil. Imagine que você esteja fazendo uma correspondência de padrão em que a entrada é uma cadeia de caracteres e você está pesquisando valores de comando conhecido. Você pode escrever algo parecido com:
+A terceira regra introduz usos em que um case `var` pode ser útil. Imagine que você esteja fazendo uma correspondência de padrão em que a entrada é uma cadeia de caracteres e você está pesquisando valores de comando conhecidos. Você pode escrever algo parecido com:
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-O `var` caso correspondências `null`, a cadeia de caracteres vazia ou qualquer cadeia de caracteres que contém apenas espaços em branco. Observe que o código anterior usa a `?.` operador para garantir que ele não acidentalmente gerará um <xref:System.NullReferenceException>. O `default` caso lida com outros valores de cadeia de caracteres que não são entendidos pelo analisador comando.
+O case `var` corresponde a `null`, a cadeia de caracteres vazia ou qualquer cadeia de caracteres que contém somente espaços em branco. Observe que o código anterior usa o operador `?.` para garantir que ele não gere um <xref:System.NullReferenceException>acidentalmente. O case `default` lida com outros valores de cadeia de caracteres que não são entendidos pelo analisador de comando.
 
-Este é um exemplo em que talvez você queira considerar um `var` caso a expressão que é diferente de um `default` expressão.
+Este é um exemplo em que talvez você queira considerar uma expressão case `var` diferente de uma expressão `default`.
 
 ## <a name="conclusions"></a>Conclusões
 

@@ -3,16 +3,16 @@ title: Valores ref return e ref local (Guia de C#)
 description: Saiba como definir e usar os valores ref return e ref local
 author: rpetrusha
 ms.author: ronpet
-ms.date: 01/23/2017
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -20,21 +20,21 @@ Começando com o C# 7, o C# dá suporte a valores retornados por referência (re
 
 ## <a name="what-is-a-reference-return-value"></a>O que é um valor retornado por referência?
 
-A maioria dos desenvolvedores estão familiarizados com passar um argumento para um método chamado *por referência*. A lista de argumentos de um método chamado inclui uma variável passada por referência, e todas as alterações no valor dela pelo método chamado são observadas pelo chamador. Um *valor retornado de referência* significa que um método retorna uma *referência* (ou um alias) para alguma variável cujo escopo inclui o método e cujo tempo de vida deve ultrapassar o retorno do método. As modificações no valor retornado do método pelo chamador são feitas na variável que é retornada pelo método.
+A maioria dos desenvolvedores estão familiarizados com passar um argumento para um método chamado *por referência*. A lista de argumentos de um método chamado inclui uma variável passada por referência. Todas as alterações feitas pelo método chamado ao valor são observadas pelo chamador. Um *valor retornado de referência* significa que um método retorna uma *referência* (ou um alias) para alguma variável. O escopo da variável deve incluir o método. O tempo de vida da variável deve ultrapassar o retorno do método. As modificações no valor retornado do método pelo chamador são feitas na variável que é retornada pelo método.
 
 Declarar que um método retorna um *valor retornado de referência* indica que o método retorna um alias para uma variável. A intenção de design muitas vezes é que o código de chamada deve ter acesso a essa variável por meio do alias, inclusive para modificá-lo. Por conseguinte, métodos retornados por referência não podem ter o tipo de retorno `void`.
 
-Há algumas restrições quanto à expressão que um método pode retornar como um valor retornado por referência. Elas incluem:
+Há algumas restrições quanto à expressão que um método pode retornar como um valor retornado por referência. As restrições incluem:
 
 - O valor retornado deve ter um tempo de vida que ultrapasse a execução do método. Em outras palavras, não pode ser uma variável local no método que o retorna. Ele pode ser uma instância ou um campo estático de uma classe ou pode ser um argumento passado para o método. Tentar retornar a uma variável local gera o erro do compilador CS8168, "não é possível retornar o 'obj' local por referência porque ele não é um ref local".
 
-- O valor retornado não pode ser um `null` literal. A tentativa de retornar `null` gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
+- O valor retornado não pode ser um `null` literal. Retornar `null` gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
    Um método com um retorno de referência pode retornar um alias para uma variável cujo valor é atualmente o valor nulo (não instanciado) ou um [tipo anulável](../nullable-types/index.md) para um tipo de valor.
  
-- O valor retornado não pode ser uma constante, um membro de enumeração, o valor retornado por valor de uma propriedade ou um método `class` ou `struct`. A tentativa de retornar um deles gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
+- O valor retornado não pode ser uma constante, um membro de enumeração, o valor retornado por valor de uma propriedade ou um método `class` ou `struct`. Violar essa regra gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
-Além disso, como um método assíncrono pode ser retornado antes de sua execução ser concluída, embora seu valor retornado ainda seja desconhecido, os valores retornados de referência não são permitidos em métodos assíncronos.
+Além disso, valores retornados de referência não são permitidos em métodos assíncronos. Um método assíncrono pode retornar antes de concluir a execução, enquanto o valor retornado ainda é desconhecido.
  
 ## <a name="defining-a-ref-return-value"></a>Definindo um valor retornado ref
 
@@ -57,7 +57,7 @@ O valor retornado de ref é um alias para outra variável no escopo do método c
 - Ao atribuir o valor, você atribui um valor à variável da qual ele é um alias.
 - Ao ler o valor, você lê o valor da variável da qual ele é um alias.
 - Se o retornar *por referência*, você retornará um alias para a mesma variável.
-- Se você o passar para outro método *por referência*, passará uma referência à variável da qual ele é um alias.
+- Se o passar para outro método *por referência*, você passará uma referência à variável da qual ele é um alias.
 - Ao criar um alias de [referência local](#ref-local), você cria um novo alias para a mesma variável.
 
 
@@ -85,7 +85,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 O uso subsequente de `p` é o mesmo que usar a variável retornada pelo `GetContactInformation` porque `p` é um alias dessa variável. As alterações em `p` também alteram a variável retornada de `GetContactInformation`.
 
-Observe que a palavra-chave `ref` é usada antes da declaração de variável local *e* antes da chamada de método. 
+A palavra-chave `ref` é usada antes da declaração de variável local *e* antes da chamada de método. 
 
 Você pode acessar um valor por referência da mesma maneira. Em alguns casos, acessar um valor por referência aumenta o desempenho, evitando uma operação de cópia potencialmente dispendiosa. Por exemplo, a instrução a seguir mostra como é possível definir um valor de local de ref que é usado para fazer referência a um valor.
 
@@ -93,20 +93,35 @@ Você pode acessar um valor por referência da mesma maneira. Em alguns casos, a
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Observe que a palavra-chave `ref` é usada antes da declaração da variável local *e* antes do valor, no segundo exemplo. A falha ao incluir as palavras-chave `ref` na declaração e na atribuição da variável nos dois exemplos resulta no erro do compilador CS8172, "Não é possível inicializar uma variável por referência com um valor." 
- 
+A palavra-chave `ref` é usada antes da declaração da variável local *e* antes do valor, no segundo exemplo. A falha ao incluir as palavras-chave `ref` na declaração e na atribuição da variável nos dois exemplos resulta no erro do compilador CS8172, "Não é possível inicializar uma variável por referência com um valor." 
+
+Antes do C# 7.3, variáveis locais de referência não podiam ser reatribuídas para se referir a um armazenamento diferente depois de serem inicializadas. Essa restrição foi removida. O exemplo a seguir mostra uma transferência:
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct; // initialization
+refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
+```
+
+ Variáveis locais de referência ainda devem ser inicializadas quando são declaradas.
+
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref returns e ref locals: um exemplo
 
 O exemplo a seguir define uma classe `NumberStore` que armazena uma matriz de valores inteiros. O método `FindNumber` retorna por referência o primeiro número maior ou igual ao número passado como um argumento. Se nenhum número for maior ou igual ao argumento, o método retornará o número no índice 0. 
 
-[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
-A exemplo a seguir chama o método `NumberStore.FindNumber` para recuperar o primeiro valor maior ou igual a 16. O chamador então dobra o valor retornado pelo método. Assim como mostra a saída do exemplo, essa alteração é refletida no valor dos elementos de matriz da instância `NumberStore`.
+A exemplo a seguir chama o método `NumberStore.FindNumber` para recuperar o primeiro valor maior ou igual a 16. O chamador então dobra o valor retornado pelo método. A saída do exemplo mostra a alteração refletida no valor dos elementos de matriz da instância `NumberStore`.
 
-[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#2)]
 
-Sem suporte para valores retornados por referência, essa operação normalmente é executada retornando-se o índice do elemento de matriz, juntamente com o respectivo valor. O chamador pode usar esse índice para modificar o valor em uma chamada de método separada. No entanto, o chamador também pode modificar o índice para acessar e possivelmente modificar outros valores de matriz.  
- 
+Sem suporte para valores retornados por referência, essa operação é executada retornando-se o índice do elemento de matriz, juntamente com o respectivo valor. O chamador pode usar esse índice para modificar o valor em uma chamada de método separada. No entanto, o chamador também pode modificar o índice para acessar e possivelmente modificar outros valores de matriz.  
+
+A exemplo a seguir mostra como o método `FindNumber` poderia ser reescrito após o C# 7.3 para usar a transferência de local de referência:
+
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStoreUpdated.cs#1)]
+
+Essa segunda versão é mais eficiente, com sequências mais longas em cenários em que o número procurado é mais próximo ao final da matriz.
+
 ## <a name="see-also"></a>Consulte também
 
 [ref keyword](../../language-reference/keywords/ref.md)  

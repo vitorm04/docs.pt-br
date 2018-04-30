@@ -1,21 +1,22 @@
 ---
-title: "Genéricos e reflexão (Guia de Programação em C#)"
+title: Genéricos e reflexão (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos e reflexão (Guia de Programação em C#)
 Como o tempo de execução do CLR (Common Language Runtime) tem acesso às informações de tipo genérico em tempo de execução, você pode usar a reflexão para obter informações sobre tipos genéricos da mesma forma como para tipos não genéricos. Para obter mais informações, consulte [Genéricos em tempo de execução](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -38,15 +39,15 @@ Como o tempo de execução do CLR (Common Language Runtime) tem acesso às infor
 |<xref:System.Type.DeclaringMethod%2A>|Retorna o método genérico que definiu o parâmetro de tipo genérico atual ou nulo, se o parâmetro de tipo não foi definido por um método genérico.|  
 |<xref:System.Type.MakeGenericType%2A>|Substitui os elementos de uma matriz de tipos pelos parâmetros de tipo da definição de tipo genérico atual e retorna um objeto <xref:System.Type> que representa o tipo construído resultante.|  
   
- Além disso, foram adicionados novos membros à classe <xref:System.Reflection.MethodInfo> para habilitar as informações em tempo de execução para métodos genéricos. Consulte os comentários sobre a propriedade <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> para obter uma lista das condições invariáveis para termos usados para refletir sobre os métodos genéricos.  
+ Além disso, membros da classe <xref:System.Reflection.MethodInfo> habilitam informações em tempo de execução para métodos genéricos. Consulte os comentários sobre a propriedade <xref:System.Reflection.MethodBase.IsGenericMethod%2A> para obter uma lista das condições invariáveis para termos usados para refletir sobre os métodos genéricos.  
   
 |Nome do membro System.Reflection.MemberInfo|Descrição|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Retorna verdadeiro se um método for genérico.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Retorna verdadeiro se um método for genérico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Retorna uma matriz de objetos Type que representam os argumentos de tipo de um método genérico construído ou os parâmetros de tipo de uma definição de método genérico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Retorna a definição de método genérico subjacente para o método construído atual.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Retorna verdadeiro se o método ou qualquer um dos seus tipos de delimitação contêm parâmetros de tipo para os quais não foram fornecidos tipos específicos.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Retorna verdadeiro se o <xref:System.Reflection.MethodInfo> atual representar a definição de um método genérico.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Retorna verdadeiro se o método ou qualquer um dos seus tipos de delimitação contêm parâmetros de tipo para os quais não foram fornecidos tipos específicos.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Retorna verdadeiro se o <xref:System.Reflection.MethodInfo> atual representar a definição de um método genérico.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Substitui os elementos de uma matriz de tipos pelos parâmetros de tipo da definição de método genérico atual e retorna um objeto <xref:System.Reflection.MethodInfo> que representa o método construído resultante.|  
   
 ## <a name="see-also"></a>Consulte também  

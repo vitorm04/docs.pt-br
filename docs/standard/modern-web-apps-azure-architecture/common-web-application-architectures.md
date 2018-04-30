@@ -6,16 +6,17 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 911935379fd126ccbafe825a6ce4049c2e9b5cde
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-#<a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
+# <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
 > "Se você acha que uma boa arquitetura é cara, tente usar uma arquitetura ruim."  
 > _- Brian Foote e Joseph Yoder_
@@ -226,7 +227,7 @@ Embora os aplicativos monolíticos possam se beneficiar com o Docker, a divisão
 > <http://deviq.com/repository-pattern/>
 > - **Amostra de solução de Arquitetura Limpa**  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **Livro eletrônico Projetando microsserviços** <http://aka.ms/MicroservicesEbook>
+> - **Livro eletrônico Architecting Microservices** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 [Anterior] (architectural-principles.md) [Próximo] (common-client-side-web-technologies.md)

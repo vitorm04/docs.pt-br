@@ -1,7 +1,8 @@
 ---
 title: Novidades no .NET Standard
+description: Este artigo resume os novos recursos e melhorias encontrados em cada nova versão do .NET Standard.
 ms.custom: updateeachrelease
-ms.date: 11/08/2017
+ms.date: 04/12/2018
 ms.prod: .net
 ms.topic: article
 ms.technology: dotnet-standard
@@ -11,11 +12,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3a5833bdfcf1e3433ea82403908e9a06a88cde27
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 13efc4a927d744662ba8d2e1210d5f8fc166a472
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novidades no .NET Standard
 
@@ -27,21 +28,21 @@ A versão mais recente do .NET Standard é a 2.0. Ela está incluída com o SDK 
 
 O .NET Standard 2.0 tem suporte das seguintes implementações do .NET:
 
-- .NET Core 2.0
-- .NET Framework 4.6.1
-- Mono 5.4
-- Xamarin.iOS 10.14
-- Xamarin.Mac 3.8
-- Xamarin.Android 8.0
-- Plataforma Universal do Windows 10.0.16299
+- .NET Core 2.0 ou posterior
+- .NET Framework 4.6.1 ou posterior
+- Mono 5.4 ou posterior
+- Xamarin.iOS 10.14 ou posterior
+- Xamarin.Mac 3.8 ou posterior
+- Xamarin.Android 8.0 ou posterior
+- Plataforma Universal do Windows 10.0.16299 ou posterior
 
 ## <a name="whats-new-in-the-net-standard-20"></a>Novidades no .NET Standard 2.0
- 
+
 O .NET Standard 2.0 inclui estes recursos novos:
 
-**Um conjunto muito maior de APIs**
+### <a name="a-vastly-expanded-set-of-apis"></a>Um conjunto muito maior de APIs
 
-Na versão 1.6, o .NET Standard incluía um subconjunto de APIs comparativamente pequeno. Entre os excluídos estavam várias APIs usadas normalmente no .NET Framework ou no Xamarin. Isso complica o desenvolvimento, pois exige que os desenvolvedores encontrem substituições adequadas para APIs conhecidas quando desenvolvem aplicativos e bibliotecas direcionadas a várias implementações do .NET. O .NET Standard 2.0 resolve essa limitação adicionando mais de 20.000 APIs que estavam disponíveis no .NET Standard 1.6, a versão anterior do Standard. Para obter uma lista com as APIs que foram adicionadas ao .NET Standard 2.0, confira [.NET Standard 2.0 versus 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md). 
+Na versão 1.6, o .NET Standard incluía um subconjunto de APIs comparativamente pequeno. Entre os excluídos estavam várias APIs usadas normalmente no .NET Framework ou no Xamarin. Isso complica o desenvolvimento, pois exige que os desenvolvedores encontrem substituições adequadas para APIs conhecidas quando desenvolvem aplicativos e bibliotecas direcionadas a várias implementações do .NET. O .NET Standard 2.0 resolve essa limitação adicionando mais de 20.000 APIs que estavam disponíveis no .NET Standard 1.6, a versão anterior do Standard. Para obter uma lista com as APIs que foram adicionadas ao .NET Standard 2.0, confira [.NET Standard 2.0 versus 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 Algumas das adições ao namespace <xref:System> no .NET Standard 2.0 incluem:
 
@@ -57,37 +58,45 @@ Algumas das adições ao namespace <xref:System> no .NET Standard 2.0 incluem:
 - Aprimoramento considerável da funcionalidade na classe <xref:System.Type>.
 - Aprimoramento do suporte para desserialização de objetos de exceção com a adição de um construtor de exceção com os parâmetros <xref:System.Runtime.Serialization.SerializationInfo> e <xref:System.Runtime.Serialization.StreamingContext>.
 
-**Suporte a bibliotecas do .NET Framework**
+### <a name="support-for-net-framework-libraries"></a>Suporte a bibliotecas do .NET Framework
 
 A grande maioria das bibliotecas são direcionadas ao .NET Framework em vez do .NET Standard. No entanto, a maioria das chamadas nessas bibliotecas são para APIs incluídas no .NET Standard 2.0. A partir do .NET Standard 2.0, você pode acessar bibliotecas do .NET Framework de uma biblioteca do .NET Standard usando uma [shim de compatibilidade](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Essa camada de compatibilidade é transparente para os desenvolvedores; você não precisa fazer nada para tirar proveito das bibliotecas do .NET Framework.
 
 O único requisito é que as APIs chamadas pela biblioteca de classes .NET Framework estejam incluídas no .NET Standard 2.0.
 
-**Suporte a Visual Basic**
+### <a name="support-for-visual-basic"></a>Suporte para Visual Basic
 
-Agora, você pode desenvolver bibliotecas .NET Standard no Visual Basic. Para desenvolvedores em Visual Basic que usam o Visual Studio 2017 versão 15.3 ou posterior com a carga de trabalho do .NET Core instalada, agora o Visual Studio inclui um modelo de biblioteca de classes .NET Standard. Para desenvolvedores em Visual Basic que usam outros ambientes e ferramentas de desenvolvimento, use o comando [dotnet new](../../core/tools/dotnet-new.md) para criar um projeto de biblioteca do .NET Standard. Para saber mais, confira o [Suporte a ferramentas para bibliotecas .NET Standard](#tooling).
+Agora, você pode desenvolver bibliotecas .NET Standard no Visual Basic. Para desenvolvedores em Visual Basic que usam o Visual Studio 2017 versão 15.3 ou posterior com a carga de trabalho do .NET Core instalada, agora o Visual Studio inclui um modelo de biblioteca de classes .NET Standard. Para desenvolvedores em Visual Basic que usam outros ambientes e ferramentas de desenvolvimento, use o comando [dotnet new](../../core/tools/dotnet-new.md) para criar um projeto de biblioteca do .NET Standard. Para saber mais, confira o [Suporte a ferramentas para bibliotecas .NET Standard](#tooling-support-for-net-standard-libraries).
 
-<a name="tooling" />**Suporte a ferramentas para bibliotecas .NET Standard**
+### <a name="tooling-support-for-net-standard-libraries"></a>Suporte a ferramentas para bibliotecas .NET Standard
 
-Com o lançamento do .NET Core 2.0 e do .NET Standard 2.0, o Visual Studio 2017 e a [CLI (Interface de linha de comando) do .NET Core](../../core/tools/index.md) incluem o suporte a ferramentas para criação de bibliotecas .NET Standard. 
+Com o lançamento do .NET Core 2.0 e do .NET Standard 2.0, o Visual Studio 2017 e a [CLI (Interface de linha de comando) do .NET Core](../../core/tools/index.md) incluem o suporte a ferramentas para criação de bibliotecas .NET Standard.
 
-Se você instalar o Visual Studio com a carga de trabalho **desenvolvimento de plataforma cruzada do .NET Core**, você pode criar um projeto de biblioteca .NET Standard 2.0 usando um modelo de projeto, como mostra a figura a seguir. 
+Se instalar o Visual Studio com a carga de trabalho **desenvolvimento de plataforma cruzada do .NET Core**, você poderá criar um projeto de biblioteca .NET Standard 2.0 usando um modelo de projeto, como mostra a figura a seguir:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 ![Adicionar um novo projeto de biblioteca .NET Standard](./media/std-project-cs.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="add-new-net-standard-library-projectmediastd-project-vbpng"></a>![Adicionar um novo projeto de biblioteca .NET Standard](./media/std-project-vb.png)
----
 
-Se você estiver usando a CLI do .NET Core, o seguinte comando [dotnet new](../../core/tools/dotnet-new.md) criará um projeto de biblioteca de classes direcionado ao .NET Standard 2.0.
+Se você estiver usando a CLI do .NET Core, o seguinte comando [dotnet new](../../core/tools/dotnet-new.md) criará um projeto de biblioteca de classes direcionado ao .NET Standard 2.0:
 
-```csharp
+```
 dotnet new classlib
 ```
-```vb
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
+![Adicionar um novo projeto de biblioteca .NET Standard](./media/std-project-vb.png)
+
+Se você estiver usando a CLI do .NET Core, o seguinte comando [dotnet new](../../core/tools/dotnet-new.md) criará um projeto de biblioteca de classes direcionado ao .NET Standard 2.0:
+
+```
 dotnet new classlib -lang vb
 ```
-  
+
+---
+
 ## <a name="see-also"></a>Consulte também
-[.NET Standard](../net-standard.md)
-[Apresentação do .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
+
+[.NET Standard](../net-standard.md)  
+[Apresentando o .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)

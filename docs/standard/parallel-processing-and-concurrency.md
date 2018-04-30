@@ -1,50 +1,37 @@
 ---
-title: Processamento paralelo e simultaneidade no .NET Framework
-ms.custom: 
-ms.date: 03/30/2017
+title: Processamento paralelo, simultaneidade e programação assíncrona no .NET
+description: Saiba como tornar seu aplicativo mais ágil e mais rápido com recursos do .NET para processamento paralelo e programação assíncrona
+ms.date: 04/06/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- .NET Framework, parallel processing
-- parallel processing [.NET Framework]
-- concurrency [.NET Framework]
-- .NET Framework, concurrency
+- parallel processing [.NET]
+- concurrency [.NET]
+- asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ab15fd38a467eec398f8383e40067d2135c042b5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e4ee282f226d553a8bca92c1afb184bc181d6bb7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="parallel-processing-and-concurrency-in-the-net-framework"></a>Processamento paralelo e simultaneidade no .NET Framework
-O .NET Framework fornece várias maneiras para você usar vários threads de execução a fim de manter o seu aplicativo responsivo ao usuário, maximizando, ao mesmo tempo, o desempenho do computador do usuário.  
+# <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Processamento paralelo, simultaneidade e programação assíncrona no .NET
+O .NET fornece várias maneiras de escrever código assíncrono para tornar seu aplicativo mais ágil para o usuário e a escrever código paralelo que usa vários threads de execução para maximizar o desempenho do computador do usuário.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Threading](../../docs/standard/threading/index.md)  
- Descreve os mecanismos básicos de sincronização e simultaneidade fornecidos pelo .NET Framework.  
-  
- [Padrões de programação assíncrona](../../docs/standard/asynchronous-programming-patterns/index.md)  
- Fornece uma rápida visão geral sobre os três padrões de programação assíncronos com suporte no .NET Framework:  
-  
--   [APM (Modelo assíncrono de programação)](../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (herdado)  
-  
--   [EAP (Padrão assíncrono baseado em evento)](../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (herdado)  
-  
--   [TAP (Padrão assíncrono baseado em tarefa)](../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (recomendado para novos desenvolvimentos)  
+ [Programação Assíncrona](../../docs/standard/async.md)  
+ Descreve mecanismos para programação assíncrona fornecida pelo .NET.  
   
  [Programação paralela](../../docs/standard/parallel-programming/index.md)  
  Descreve um modelo de programação baseado em tarefa que simplifica o desenvolvimento paralelo, permitindo escrever código paralelo refinado, eficiente e escalonável em uma linguagem natural sem a necessidade de trabalhar diretamente com threads ou o pool de threads.  
-  
-## <a name="see-also"></a>Consulte também  
- [Guia de desenvolvimento](../../docs/framework/development-guide.md)
+
+ [Threading](../../docs/standard/threading/index.md)  
+ Descreve os mecanismos básicos de sincronização e simultaneidade fornecidos pelo .NET.  

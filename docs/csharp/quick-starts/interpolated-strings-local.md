@@ -1,32 +1,32 @@
 ---
-title: Tutorial sobre cadeias de caracteres interpoladas – guias de início rápido de C#
-description: Neste guia de início rápido sobre cadeias de caracteres interpoladas, você escreve código em C# para incluir o resultado de uma expressão em uma cadeia de caracteres maior.
+title: Tutorial sobre interpolação de cadeias de caracteres – guias de início rápido de C#
+description: Este guia de início rápido mostra como usar o recurso de interpolação de cadeias de caracteres em C# para incluir resultados de expressão formatada em uma cadeia de caracteres maior.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 01/11/2018
+ms.date: 04/14/2018
 ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 7ef904e30475d2cc0584f2baf56bc33a68e172d4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="interpolated-strings"></a>Cadeias de caracteres interpoladas
+# <a name="string-interpolation"></a>Interpolação de cadeias de caracteres
 
-Este guia de início rápido ensina como usar cadeias de caracteres interpoladas em C# para inserir valores em uma única cadeia de caracteres de saída. Escreva o código em C# e veja os resultados da compilação e da execução. O início rápido contém uma série de lições que inserem valores em cadeias de caracteres e formatam esses valores de diferentes maneiras.
+Este guia de início rápido ensina como usar a [interpolação de cadeias de caracteres](../language-reference/tokens/interpolated.md) em C# para inserir valores em uma única cadeia de caracteres de resultado. Escreva o código em C# e veja os resultados da compilação e da execução. O início rápido contém uma série de lições que mostram como inserir valores em cadeias de caracteres e formatar esses valores de diferentes maneiras.
 
-Este início rápido espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes. 
+Este início rápido espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes. Você também pode concluir a [versão interativa](interpolated-strings.yml) deste guia de início rápido em seu navegador.
 
 ## <a name="create-an-interpolated-string"></a>Criar uma cadeia de caracteres interpolada
 
-Crie um diretório chamado **interpolated-quickstart**. Faça com que esse seja o diretório atual e execute o seguinte comando em uma janela do console:
+Crie um diretório chamado **interpolated**. Faça com que esse seja o diretório atual e execute o seguinte comando em uma janela do console:
 
 ```console
-dotnet new console -n interpolated -o .
+dotnet new console
 ```
 
 Esse comando cria um novo aplicativo de console .NET Core no diretório atual.
@@ -37,21 +37,34 @@ Abra **Program.cs** em seu editor favorito e substitua a linha `Console.WriteLin
 var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
-Experimente este código digitando `dotnet run` na sua janela do console. Ao executar o programa, ele exibe uma única cadeia de caracteres que inclui seu nome na saudação. A cadeia de caracteres incluída na chamada de método <xref:System.Console.WriteLine%2A> é uma *cadeia de caracteres interpolada*. Ela é um tipo de modelo que permite que você construa uma única cadeia de caracteres (chamado de *cadeia de caracteres de resultado*) com base em uma cadeia de caracteres que inclui o código inserido. As cadeias de caracteres interpoladas são particularmente úteis para inserir valores em uma cadeia de caracteres ou para concatenar (unir) cadeias de caracteres. 
-    
-Esse exemplo simples contém os dois elementos que toda cadeia de caracteres interpolada deve ter: 
 
-- Um literal de cadeia de caracteres que começa com o caractere `$` antes do caractere de aspas de abertura. Não pode haver nenhum espaço entre o símbolo `$` e o caractere de aspas. (Se você quiser ver o que acontece ao incluir um espaço, insira um após o caractere `$`, salve o arquivo e execute novamente o programa, digitando `dotnet run` na janela do console. O compilador do C# exibirá uma mensagem de erro "Erro CS1056: caractere '$' inesperado".) 
+Experimente este código digitando `dotnet run` na sua janela do console. Ao executar o programa, ele exibe uma única cadeia de caracteres que inclui seu nome na saudação. A cadeia de caracteres incluída na chamada de método <xref:System.Console.WriteLine%2A> é uma *cadeia de caracteres interpolada*. Ela é um tipo de modelo que permite que você construa uma única cadeia de caracteres (chamado de *cadeia de caracteres de resultado*) com base em uma cadeia de caracteres que inclui o código inserido. As cadeias de caracteres interpoladas são particularmente úteis para inserir valores em uma cadeia de caracteres ou para concatenar (unir) cadeias de caracteres.
 
-- Uma ou mais *expressões interpoladas*. Uma expressão interpolada é indicada por chaves de abertura e fechamento (`{` e `}`). Você pode colocar qualquer expressão de C# que retorne um valor (incluindo `null`) dentro das chaves. 
+Esse exemplo simples contém os dois elementos que toda cadeia de caracteres interpolada deve ter:
 
-Vamos experimentar mais alguns exemplos de cadeia de caracteres interpolados com outros tipos de dados.
-    
+- Um literal de cadeia de caracteres que começa com o caractere `$` antes do caractere de aspas de abertura. Não pode haver nenhum espaço entre o símbolo `$` e o caractere de aspas. (Se você quiser ver o que acontece ao incluir um espaço, insira um após o caractere `$`, salve o arquivo e execute novamente o programa, digitando `dotnet run` na janela do console. O compilador do C# exibirá uma mensagem de erro "Erro CS1056: caractere '$' inesperado".)
+
+- Uma ou mais *expressões interpoladas*. Uma expressão interpolada é indicada por chaves de abertura e fechamento (`{` e `}`). Você pode colocar qualquer expressão de C# que retorne um valor (incluindo `null`) dentro das chaves.
+
+Vamos testar mais alguns exemplos de interpolação de cadeias de caracteres com outros tipos de dados.
+
 ## <a name="include-different-data-types"></a>Incluir diferentes tipos de dados
 
-Na seção anterior, você usou uma cadeia de caracteres interpolada para inserir uma cadeia de caracteres dentro de outra. No entanto, uma expressão de cadeia de caracteres interpolada pode ser de qualquer tipo de dados. Vamos experimentar uma cadeia de caracteres interpolada com valores de vários tipos de dados. 
-    
-O exemplo a seguir inclui expressões interpoladas com um objeto `Vegetable`, um membro da enumeração `Unit`, um valor <xref:System.DateTime> e um valor <xref:System.Decimal>. Substitua todo o código C# em seu editor pelo seguinte código e, depois, use o comando `console run` para executá-lo:
+Na seção anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Entretanto, o resultado de uma expressão interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de vários tipos de dados em uma cadeia de caracteres interpolada.
+
+No exemplo a seguir, primeiro, definimos um tipo de dados personalizado `Vegetable` que tem a [propriedade](../properties.md) `Name` e o método `ToString`. O código do cliente pode usar esse método para obter a representação de cadeia de caracteres de uma instância `Vegetable`. No exemplo, o método `Vegetable.ToString` retorna o valor da propriedade `Name` que é inicializada no construtor `Vegetable`:
+
+```csharp
+public Vegetable(string name) => Name = name;
+```
+
+Nós criamos uma instância do tipo `Vegetable` usando a palavra-chave `new` e fornecendo um parâmetro de nome para o construtor `Vegetable`:
+
+```csharp
+var item = new Vegetable("eggplant");
+```
+
+Por fim, incluímos a variável `item` em uma cadeia de caracteres interpolada que também contém um valor <xref:System.DateTime>, um valor <xref:System.Decimal> e um valor de [enumeração](../programming-guide/enumeration-types.md) `Unit` valor. Substitua todo o código C# em seu editor pelo seguinte código e, depois, use o comando `dotnet run` para executá-lo:
 
 ```csharp
 using System;
@@ -65,10 +78,10 @@ public class Vegetable
    public override string ToString() => Name;
 }
 
-public class Example
+public class Program
 {
    public enum Unit { item, pound, ounce, dozen };
-   
+
    public static void Main()
    {
       var item = new Vegetable("eggplant");
@@ -79,35 +92,35 @@ public class Example
    }
 }
 ```
-    
-Observe que a segunda expressão interpolada inclui o objeto `item` na cadeia de caracteres de resultado que é exibida no console e, nesse caso, a cadeia de caracteres "eggplant" é inserida na cadeia de caracteres de resultado. Isso ocorre porque, quando o tipo de uma expressão interpolada não é uma cadeia de caracteres, o compilador do C# faz o seguinte:
 
-- Se a expressão interpolada é `null`, a expressão interpolada retorna uma cadeia de caracteres vazia ("" ou <xref:System.String.Empty?displayProperty=nameWithType>).
+Observe que a expressão interpolada `item` na cadeia de caracteres interpolada é resolvida como o texto "eggplant" na cadeia de caracteres de resultado. Isso ocorre porque, quando o tipo do resultado da expressão não é uma cadeia de caracteres, o resultado é resolvido como uma cadeia de caracteres da seguinte maneira:
 
-- Se a expressão interpolada não é `null`, o método `ToString` do tipo da expressão interpolada é chamado. Você pode testar isso comentando a definição do método `Vegetable.ToString` no exemplo, colocando um símbolo de comentário (`//`) na frente dele. Na saída, a cadeia de caracteres "eggplant" é substituída pelo nome do tipo, "Vegetable", que é o comportamento padrão do método <xref:System.Object.ToString?displayProperty=nameWithType>.   
+- Se a expressão interpolada for avaliada como `null`, uma cadeia de caracteres vazia ("" ou <xref:System.String.Empty?displayProperty=nameWithType>) será usada.
 
-Na saída deste exemplo, a data é muito precisa (o preço de eggplant não varia por segundo) e o valor do preço não indica uma unidade monetária. Na próxima seção, você aprenderá como corrigir esses problemas controlando o formato das cadeias de caracteres retornadas pelas expressões interpoladas.
+- Se a expressão interpolada não foi avaliada como `null`, normalmente o método `ToString` do tipo de resultado será chamado. Você pode testar isso atualizando a implementação do método `Vegetable.ToString`. Você pode até mesmo não implementar o método `ToString`, uma vez que cada tipo de dados de C# tem alguma implementação deste método. Para testar isso, comente a definição do método `Vegetable.ToString` no exemplo (para fazer isso, coloque um símbolo de comentário `//` na frente dele). Na saída, a cadeia de caracteres "eggplant" é substituída pelo nome do tipo totalmente qualificado, ("Vegetable" neste exemplo), que é o comportamento padrão do método <xref:System.Object.ToString?displayProperty=nameWithType>. O comportamento padrão do método `ToString` para um tipo de enumeração é retornar a representação de cadeia de caracteres de um valor usado na definição da enumeração.
+
+Na saída deste exemplo, a data é muito precisa (o preço de "eggplant" não muda a cada segundo) e o valor do preço não indica uma unidade monetária. Na próxima seção, você aprenderá como corrigir esses problemas controlando o formato das representações das cadeias de caracteres dos resultados de expressão.
 
 ## <a name="control-the-formatting-of-interpolated-expressions"></a>Controlar a formatação de expressões interpoladas
 
-Na seção anterior, duas cadeias de caracteres formatadas de maneira inadequada foram inseridas na cadeia de caracteres de resultado. Uma era um valor de data e hora para a qual apenas a data era adequada. A segunda era um preço que não indicava a unidade monetária. Os dois problemas são fáceis de se resolver. As expressões interpoladas podem incluir *cadeias de caracteres de formato* que controlam a formatação de tipos específicos. Modifique a chamada a `Console.WriteLine` no exemplo anterior para incluir o especificador de formato para os campos de data e de preço, conforme mostrado na linha a seguir:
+Na seção anterior, duas cadeias de caracteres formatadas de maneira inadequada foram inseridas na cadeia de caracteres de resultado. Uma era um valor de data e hora para a qual apenas a data era adequada. A segunda era um preço que não indicava a unidade monetária. Os dois problemas são fáceis de se resolver. A interpolação de cadeias de caracteres permite especificar *cadeias de caracteres de formato* que controlam a formatação de tipos específicos. Modifique a chamada a `Console.WriteLine` no exemplo anterior para incluir as cadeias de caracteres de formato para as expressões de data e de preço, conforme mostrado na linha a seguir:
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
-    
-Você especifica uma cadeia de caracteres de formato colocando dois-pontos e a cadeia de caracteres de formato após a expressão interpolada. "d" é uma [cadeia de caracteres de formato de data e hora padrão](../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa o formato de data abreviada. "C2" é um [cadeia de caracteres de formato numérico padrão](../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa um número como um valor de moeda com dois dígitos após o ponto decimal.
 
-Diversos tipos nas bibliotecas do .NET Standard são compatíveis com um conjunto predefinido de cadeias de caracteres de formato. Isso inclui todos os tipos numéricos e os tipos de data e hora. Para obter uma lista completa dos tipos que são compatíveis com as cadeias de caracteres de formato, consulte [Cadeias de caracteres de formato e tipos da biblioteca de classes do .NET](../../standard/base-types/formatting-types.md#stringRef) no artigo [Tipos de formatação no .NET](../../standard/base-types/formatting-types.md). Qualquer tipo pode ser compatível com um conjunto de cadeias de caracteres de formato, e você também pode desenvolver extensões de formatação personalizadas que fornecem formatação personalizada para os tipos existentes. Para obter informações sobre formatação personalizada com o fornecimento de uma implementação de <xref:System.ICustomFormatter>, consulte [Formatação personalizada com ICustomFormatter](../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) no artigo [Tipos de formatação no .NET](../../standard/base-types/formatting-types.md).
+Você especifica uma cadeia de caracteres de formato colocando dois-pontos (":") e a cadeia de caracteres de formato após a expressão interpolada. "d" é uma [cadeia de caracteres de formato de data e hora padrão](../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa o formato de data abreviada. "C2" é um [cadeia de caracteres de formato numérico padrão](../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa um número como um valor de moeda com dois dígitos após o ponto decimal.
+
+Diversos tipos nas bibliotecas do .NET são compatíveis com um conjunto predefinido de cadeias de caracteres de formato. Isso inclui todos os tipos numéricos e os tipos de data e hora. Para obter uma lista completa dos tipos que são compatíveis com as cadeias de caracteres de formato, consulte [Cadeias de caracteres de formato e tipos da biblioteca de classes do .NET](../../standard/base-types/formatting-types.md#stringRef) no artigo [Tipos de formatação no .NET](../../standard/base-types/formatting-types.md).
 
 Tente modificar as cadeias de caracteres de formato em seu editor de texto e, sempre que fizer uma alteração, execute novamente o programa para ver como as alterações afetam a formatação da data e hora e do valor numérico. Altere o "d" em `{date:d}` para "t" (para exibir o formato de hora abreviada), para "y" (para exibir o ano e o mês) e para "yyyy" (para exibir o ano como um número de quatro dígitos). Altere o "C2" em `{price:C2}` para "e" (para obter notação exponencial) e para "F3" (para um valor numérico com três dígitos após o ponto decimal).
 
-Além de controlar a formatação, você também pode controlar a largura do campo e o alinhamento das cadeias de caracteres retornadas por uma expressão interpolada. Na próxima seção, você aprenderá como fazer isso.
+Além de controlar a formatação, você também pode controlar a largura do campo e o alinhamento das cadeias de caracteres formatadas incluídas na cadeia de caracteres de resultado. Na próxima seção, você aprenderá como fazer isso.
 
 ## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>Controlar a largura do campo e o alinhamento de expressões interpoladas
 
-Normalmente, quando a cadeia de caracteres retornada por uma expressão interpolada é incluída em uma cadeia de caracteres de resultado, ela não tem espaços à esquerda nem à direita. Especialmente para casos em que você esteja trabalhando com um conjunto de dados, as expressões interpoladas permitem que você especifique uma largura de campo e seu alinhamento. Para ver isso, substitua todo o código em seu editor de texto pelo código a seguir e, em seguida, digite `console run` para executar o programa:
-    
+Normalmente, quando o resultado de uma expressão interpolada é formatado em uma cadeia de caracteres, essa cadeia de caracteres é incluída em uma cadeia de caracteres sem espaços à esquerda nem à direita. Especialmente quando você trabalha com um conjunto de dados, poder controlar a largura do campo e o alinhamento do texto ajuda a produzir uma saída mais legível. Para ver isso, substitua todo o código em seu editor de texto pelo código a seguir e, em seguida, digite `dotnet run` para executar o programa:
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -116,54 +129,48 @@ public class Example
 {
    public static void Main()
    {
-      var titles = new Dictionary<string, string>();
-      titles.Add("Doyle, Arthur Conan", "Hound of the Baskervilles, The");
-      titles.Add("London, Jack", "Call of the Wild, The");
-      titles.Add("Shakespeare, William", "Tempest, The");
+      var titles = new Dictionary<string, string>()
+      {
+          ["Doyle, Arthur Conan"] = "Hound of the Baskervilles, The",
+          ["London, Jack"] = "Call of the Wild, The",
+          ["Shakespeare, William"] = "Tempest, The"
+      };
 
       Console.WriteLine("Author and Title List");
-      Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+      Console.WriteLine();
+      Console.WriteLine($"|{"Author",-25}|{"Title",30}|");
       foreach (var title in titles)
-         Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+         Console.WriteLine($"|{title.Key,-25}|{title.Value,30}|");
    }
 }
 ```
-    
-Os nomes de autores são alinhados à esquerda e os títulos que eles escreveram são alinhados à direita. Você especifica o alinhamento adicionando uma vírgula (",") após a expressão e designando a largura do campo. Se a largura do campo for um número positivo, o campo será alinhado à direita:
 
-```text
-{expression, width}
-```
+Os nomes de autores são alinhados à esquerda e os títulos que eles escreveram são alinhados à direita. Você especifica o alinhamento adicionando uma vírgula (",") após a expressão interpolada e designando a largura *mínima* do campo. Se o valor especificado for um número positivo, o campo será alinhado à direita. Se for um número negativo, o campo será alinhado à esquerda.
 
-Se a largura do campo for um número negativo, o campo será alinhado à esquerda:
-
-```text
-{expression, -width}
-```
-
-Tente remover os sinais negativos das expressões interpoladas `{"Author",-25}` e `{title.Key,-25}` e execute o exemplo novamente, como feito no código a seguir:
+Tente remover os sinais negativos do código `{"Author",-25}` e `{title.Key,-25}` e execute o exemplo novamente, como feito no código a seguir:
 
 ```csharp
-Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
+Console.WriteLine($"|{"Author",25}|{"Title",30}|");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
+   Console.WriteLine($"|{title.Key,25}|{title.Value,30}|");
 ```
 
 Desta vez, as informações sobre o autor são alinhadas à direita.
 
-Você pode combinar uma largura de campo e uma cadeia de caracteres de formato em uma única expressão interpolada. A largura do campo vem primeiro, seguida por dois-pontos e a cadeia de caracteres de formato. Substitua todo o código dentro do método `Main` pelo código a seguir, que exibe três cadeias de caracteres formatadas com larguras de campo definidas. Em seguida, execute o programa inserindo o comando `dotnet run`.
+Você pode combinar um especificador de alinhamento e uma cadeia de caracteres de formato em uma única expressão interpolada. Para fazer isso, especifique o alinhamento primeiro, seguido por dois-pontos e pela cadeia de caracteres de formato. Substitua todo o código dentro do método `Main` pelo código a seguir, que exibe três cadeias de caracteres formatadas com larguras de campo definidas. Em seguida, execute o programa inserindo o comando `dotnet run`.
 
 ```csharp
-Console.WriteLine($"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15:N2} feet");
+Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
 ```
+
 A saída é semelhante ao seguinte:
 
 ```console
-1/11/2018            Hour 09                1,063.34 feet
+[04/14/2018          ] Hour [16        ] [       1,063.34] feet
 ```
 
-Você concluiu o guia de início rápido de cadeias de caracteres interpoladas. 
-    
-Continue com o início rápido [Matrizes e coleções](arrays-and-collections.md) em seu próprio ambiente de desenvolvimento.
+Você concluiu o guia de início rápido de interpolação de cadeias de caracteres.
 
-Saiba mais sobre cadeias de caracteres interpoladas no tópico [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) na Referência do C#.
+Continue com o início rápido [Coleção de lista](arrays-and-collections.md) em seu próprio ambiente de desenvolvimento.
+
+Saiba mais sobre a interpolação de cadeias de caracteres no tópico [Interpolação de cadeias de caracteres](../language-reference/tokens/interpolated.md) na Referência do C#.

@@ -1,7 +1,7 @@
 ---
-title: "Projetando um microsserviço orientado a DDD"
-description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Criar um microsserviço orientado a DDD"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Projetando um microsserviço orientado a DDD
+description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Criar um microsserviço orientado a DDD
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Projetando um microsserviço orientado a DDD
 
@@ -57,7 +57,7 @@ Você deseja criar o sistema de modo que cada camada se comunique apenas com det
 
 ### <a name="the-domain-model-layer"></a>A camada de modelo de domínio
 
-O excelente livro de Eric Evans, [Domain Driven Design](http://domainlanguage.com/ddd/) (Projeto Orientado a Domínio) diz o seguinte sobre a camada de modelo de domínio e a camada de aplicativo.
+O excelente livro de Eric Evans, [Domain Driven Design](https://domainlanguage.com/ddd/) (Projeto Orientado a Domínio) diz o seguinte sobre a camada de modelo de domínio e a camada de aplicativo.
 
 **Camada de modelo de domínio**: responsável por representar conceitos de negócios, informações sobre a situação de negócios e as regras de negócio. O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. Essa camada é a essência do software de negócios.
 
@@ -75,7 +75,7 @@ Além disso, isso não significa que você pode pegar um modelo criado para um b
 
 ### <a name="the-application-layer"></a>A camada de aplicativo
 
-Passando para a camada de aplicativo, novamente podemos citar o livro de Eric Evans [Domain Driven Design](http://domainlanguage.com/ddd/) (Projeto Orientado a Domínio):
+Passando para a camada de aplicativo, novamente podemos citar o livro de Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) (Projeto Orientado a Domínio):
 
 **Camada de aplicativo:** define os trabalhos que o software deve fazer e direciona os objetos de domínio expressivos para resolver problemas. As tarefas pelas quais esta camada é responsável são significativas para os negócios ou necessárias para a interação com as camadas do aplicativo de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio nem conhecimento, mas apenas coordena o trabalho de tarefas e delegados para colaborações de objetos de domínio na próxima camada abaixo. Ele não tem um estado refletindo a situação de negócios, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou o programa.
 
@@ -101,13 +101,13 @@ Esse design de camada deve ser independente de cada microsserviço. Conforme obs
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **DevIQ. Princípio da Ignorância de Persistência**
+-   **DevIQ. Princípio de Ignorância de persistência**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastructure Ignorance (Ignorância de Infraestrutura)**
+-   **Oren Eini. Ignorância de infraestrutura**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Arquitetura em camadas no design orientado a domínio**
+-   **Angel Lopez. Arquitetura em camadas no design controlado por domínio**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

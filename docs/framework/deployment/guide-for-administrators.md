@@ -1,7 +1,7 @@
 ---
 title: Guia de implantação do .NET Framework para administradores
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 Este artigo passo a passo descreve como um administrador de sistemas pode implantar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas dependências de sistema pela rede usando o Microsoft System Center Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -165,7 +165,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
 8.  Conclua o assistente.  
   
- O pacote agora contém todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de você implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição, consulte a seção "Monitorar conteúdo" em [Operações e manutenção para o gerenciamento de conteúdo no Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) na biblioteca de documentação do Configuration Manager.  
+ O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de você implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição, consulte a seção "Monitorar conteúdo" em [Operações e manutenção para o gerenciamento de conteúdo no Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) na biblioteca de documentação do Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Implante o pacote  
@@ -230,11 +230,16 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ## <a name="troubleshooting"></a>Solução de problemas  
   
 ### <a name="log-file-locations"></a>Localizações dos arquivos de log  
- Os seguintes arquivos de log são gerados durante a configuração do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:  
+ Os seguintes arquivos de log são gerados durante a configuração do .NET Framework:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *versão*\*.txt  
+ %temp%\Microsoft .NET Framework *versão*\*.html  
   
- Você pode usar a [ferramenta de coleta de logs](http://www.microsoft.com/download/details.aspx?id=12493) para coletar os arquivos de log do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e criar um arquivo de gabinete compactado (.cab) que reduz o tamanho dos arquivos.  
+ em que *versão* é a versão do .NET Framework que você está instalando, como 4.5 ou 4.7.2.  
+ 
+ Também é possível especificar o diretório no qual os arquivos de log são gravados usando a opção de linha de comando `/log` no comando de instalação do .NET Framework. Para obter mais informações, consulte [Guia de implantação do .NET Framework para desenvolvedores](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Você pode usar a [ferramenta de coleta de logs](https://www.microsoft.com/download/details.aspx?id=12493) para coletar os arquivos de log do .NET Framework e criar um arquivo de gabinete compactado (.cab) que reduz o tamanho dos arquivos.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Códigos de retorno  

@@ -1,21 +1,22 @@
 ---
-title: "Processando o arquivo XML (Guia de Programação em C#)"
+title: Processando o arquivo XML (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Processando o arquivo XML (Guia de Programação em C#)
 O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [Marcas recomendadas para comentários da documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo XML podem usar a cadeia de identificação para identificar o item de metadados/reflexão do .NET Framework correspondente ao qual a documentação se aplica.  
@@ -24,7 +25,7 @@ O compilador gera uma cadeia de identificação para cada constructo no seu cód
   
  O compilador observa as seguintes regras quando gera as cadeias de identificação:  
   
--   Não há nenhum espaço em branco na cadeia de caracteres.  
+-   Não há espaços em branco na cadeia de caracteres.  
   
 -   A primeira parte da cadeia de identificação identifica o tipo de membro que está sendo identificado por meio de um único caractere seguido por dois-pontos. São usados os seguintes tipos de membro:  
   
@@ -87,5 +88,5 @@ O compilador gera uma cadeia de identificação para cada constructo no seu cód
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [/doc (opções do compilador c#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [-doc (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

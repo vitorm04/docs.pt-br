@@ -1,12 +1,12 @@
 ---
-title: "Linguagem de expressões regulares - referência rápida"
-ms.custom: 
+title: Linguagem de expressões regulares - referência rápida
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares - referência rápida
 <a name="top"></a> Uma expressão regular é um padrão ao qual o mecanismo de expressões regulares tenta corresponder no texto de entrada. Um padrão consiste em um ou mais literais de caracteres, operadores ou constructos.  Para ver uma breve introdução, confira [Expressões regulares no .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  Também fornecemos essas informações em dois formatos, que podem ser baixados e impressos para uma consulta simplificada:  
   
- [Baixar no formato Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Baixar no formato PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Baixar no formato Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Baixar no formato PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Escapes de caracteres  
@@ -69,9 +69,9 @@ ms.lasthandoff: 12/23/2017
 |`\n`|Corresponde a uma nova linha, \u000A.|`\r\n(\w+)`|“\r\nThese” em “\r\nThese are\ntwo lines.”|  
 |`\e`|Corresponde a um escape, \u001B.|`\e`|“\x001B” em “\x001B”|  
 |`\` *nnn*|Usa representação octal para especificar um caractere (*nnn* consiste em dois ou três dígitos).|`\w\040\w`|"a b", "c d" em<br /><br /> "a bc d"|  
-|`\x` *nn*|Usa representação hexadecimais para especificar um caractere (*nn* consiste exatamente em dois dígitos).|`\w\x20\w`|"a b", "c d" em<br /><br /> "a bc d"|  
+|`\x` *nn*|Usa representação hexadecimal para especificar um caractere (*nn* consiste exatamente em dois dígitos).|`\w\x20\w`|"a b", "c d" em<br /><br /> "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Corresponde ao caractere de controle ASCII especificado por *X* ou *x*, em que *X* ou *x* é a letra do caractere de controle.|`\cC`|“\x0003” em “\x0003” (Ctrl-C)|  
-|`\u` *nnnn*|Corresponde a um caractere Unicode usando representação hexadecimal (exatamente quatro dígitos, conforme representado por *nnnn*).|`\w\u0020\w`|"a b", "c d" em<br /><br /> "a bc d"|  
+|`\u` *nnnn*|Corresponde a um caractere Unicode usando representação hexadecimal (exatamente quatro dígitos, como representado por *nnnn*).|`\w\u0020\w`|"a b", "c d" em<br /><br /> "a bc d"|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere de escape nesta e em outras tabelas deste tópico, corresponde a esse caractere. Por exemplo, `\*` é igual a `\x2A`, e `\.` é igual a `\x2E`. Isso permite que o mecanismo de expressões regulares remova ambiguidades de elementos da linguagem (como \* ou ?) e caracteres literais (representados por `\*` ou `\?`).|`\d+[\+-x\*]\d+`|"2+2" e "3\*9" em "(2+2) \* 3\*9"|  
   
  [Voltar ao início](#top)  
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/23/2017
  [Voltar ao início](#top)  
   
 <a name="grouping_constructs"></a>   
-## <a name="grouping-constructs"></a>Constructos de agrupamento  
+## <a name="grouping-constructs"></a>Agrupando construtores  
  Os constructos de agrupamento delineiam subexpressões de uma expressão regular e, em geral, capturam subcadeias de caracteres de uma cadeia de caracteres de entrada. Os constructos de agrupamento incluem os elementos de linguagem listados na tabela a seguir. Para saber mais, confira [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).  
   
 |Constructo de agrupamento|Descrição|Padrão|Correspondências|  
@@ -217,7 +217,7 @@ ms.lasthandoff: 12/23/2017
  [Voltar ao início](#top)  
   
 <a name="miscellaneous_constructs"></a>   
-## <a name="miscellaneous-constructs"></a>Constructos diversos  
+## <a name="miscellaneous-constructs"></a>Diversos construtores  
  Os constructos diversos modificam um expressão regular padrão ou fornecem informações sobre ela. A tabela a seguir lista os constructos diversos que têm suporte no .NET. Para saber mais, confira [Constructos diversos](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Constructo|Definição|Exemplo|  
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [Expressões regulares](regular-expressions.md)  
  [Classes de expressões regulares](the-regular-expression-object-model.md)  
  [Exemplos de expressões regulares](regular-expression-examples.md)  
- [Expressões regulares - referência rápida (fazer download no formato Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Expressões regulares - referência rápida (fazer download no formato PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Expressões regulares - referência rápida (fazer download no formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Expressões regulares - referência rápida (fazer download no formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

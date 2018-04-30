@@ -1,12 +1,12 @@
 ---
-title: "Independência da linguagem e componentes independentes da linguagem"
-ms.custom: 
+title: Independência da linguagem e componentes independentes da linguagem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1d588768f53bf5850a0fa7cc825c5ffa1114ec6f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens que segmentam o .NET Framework, como C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. É possível acessar os tipos e os membros das bibliotecas de classes desenvolvidas para o .NET Framework sem que seja necessário conhecer a linguagem em que foram originalmente gravados e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo do .NET Framework, independentemente da linguagem.  
@@ -38,7 +38,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 > [!NOTE]
 >  A primeira parte deste artigo discorre sobre a criação de componentes independentes de linguagem, ou seja, componentes que podem ser consumidos por aplicativos escritos em qualquer linguagem. Você também pode criar um único componente ou aplicativo de código-fonte gravado em várias linguagens; consulte [Interoperabilidade em qualquer idioma](#CrossLang) na segunda parte deste artigo.  
   
- Para interagir completamente com outros objetos gravados em qualquer linguagem, os objetos devem expor aos chamadores somente os recursos comuns a todas as linguagens. Esse conjunto comum de recursos é definido pela CLS (Common Language Specification), que é um conjunto de regras que se aplicam aos assemblies gerados. A Common Language Specification é definida na Partição I, cláusulas 7 a 11 do [Padrão ECMA-335: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487).  
+ Para interagir completamente com outros objetos gravados em qualquer linguagem, os objetos devem expor aos chamadores somente os recursos comuns a todas as linguagens. Esse conjunto comum de recursos é definido pela CLS (Common Language Specification), que é um conjunto de regras que se aplicam aos assemblies gerados. A Common Language Specification é definida na Partição I, cláusulas 7 a 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Se o componente estiver de acordo com a Common Language Specification, ele será compatível com a CLS e poderá ser acessado pelo código em assemblies gravados em qualquer linguagem de programação que dê suporte a CLS. É possível determinar se o componente está de acordo com a Common Language Specification no tempo de compilação aplicando-se o atributo <xref:System.CLSCompliantAttribute> ao código-fonte. Para obter mais informações, consulte [O atributo CLSCompliantAttribute](#CLSAttribute).  
   
@@ -82,7 +82,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>Regras de conformidade com CLS  
- Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, consulte Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487).  
+ Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, consulte Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 > [!NOTE]
 >  A Common Language Specification aborda cada regra de conformidade com CLS à medida que se aplica a consumidores (desenvolvedores que estão acessando programaticamente um componente compatível com CLS), estruturas (desenvolvedores que estão usando um compilador de linguagem para criar bibliotecas compatíveis com CLS) e extensores (desenvolvedores que estão criando uma ferramenta, como um compilador de linguagem ou um analisador de código que cria componentes compatíveis com CLS). Este artigo enfoca as regras que se aplicam às estruturas. Entretanto, algumas das regras que se aplicam a extensores também podem ser aplicadas a assemblies criados usando-se Reflection.Emit.  
@@ -110,7 +110,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 -   Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.  
   
- As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras é tirado literalmente do [Padrão ECMA-335: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.  
+ As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras é tirado literalmente do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.  
   
 |Categoria|Consulte|Regra|Número da regra|  
 |--------------|---------|----------|-----------------|  
@@ -144,7 +144,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |Membros|[Membros de tipo em geral](#members)|Campos e métodos estáticos globais não são compatíveis com CLS.|36|  
 |Membros|--|O valor de um estático literal é especificado por meio do uso de metadados de inicialização do campo. Um literal compatível com CLS deve ter um valor especificado em metadados de inicialização de campo que sejam exatamente do mesmo tipo que o literal (ou do tipo subjacente, se esse literal for um `enum`).|13|  
 |Membros|[Membros de tipo em geral](#members)|A restrição vararg não faz parte da CLS e a única convenção de chamada com suporte pela CLS é a convenção de chamada gerenciada padrão.|15|  
-|Convenções de nomenclatura|[Convenções de nomenclatura](#naming)|Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres permitidos para iniciar e ser incluídos em identificadores, disponíveis online em http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, sem distinção de localidade do Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.|4|  
+|Convenções de nomenclatura|[Convenções de nomenclatura](#naming)|Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres que podem iniciar e ser incluídos em identificadores, disponíveis online em http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, sem distinção de localidade do Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.|4|  
 |Sobrecarga|[Convenções de nomenclatura](#naming)|Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga. Ou seja, embora o CTS permita que um único tipo use o mesmo nome para um método e um campo, a CLS não permite.|5|  
 |Sobrecarga|[Convenções de nomenclatura](#naming)|Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra CLS 39.|6|  
 |Sobrecarga|[Sobrecargas](#overloads)|Somente propriedades e métodos podem ser sobrecarregados.|37|  
@@ -236,7 +236,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](http://www.unicode.org/reports/tr15/tr15-18.html). Isso significa que:  
+ Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html). Isso significa que:  
   
 -   O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra. Para obter informações sobre categorias de caracteres Unicode, consulte a enumeração <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
@@ -372,7 +372,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- Os nomes de tipo genérico são codificados no formato *name\`n*, em que *name* é o nome do tipo, \` é um literal de caractere e *n* é o número de parâmetros declarados no tipo ou, para tipos genéricos aninhados, o número de parâmetros de tipo recém-introduzidos. Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.  
+ Os nomes de tipo genérico são codificados no formato *nome\`n*, em que *nome* é o nome do tipo, \` é um literal de caractere e *n* é o número de parâmetros declarados no tipo ou, para tipos genéricos aninhados, o número de parâmetros de tipo recém-introduzidos. Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.  
   
  Se as restrições forem aplicadas a um tipo genérico, qualquer tipo usado como restrição também deverá ser compatível com CLS. O exemplo a seguir define uma classe chamada `BaseClass` que não é compatível com CLS e uma classe genérica chamada `BaseCollection` cujo parâmetro de tipo deve derivar de `BaseClass`. Mas como `BaseClass` não é compatível com CLS, o compilador emite um aviso.  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  Para obter mais informações sobre a sintaxe de linha de comando do compilador do C#, consulte [Compilando na linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Então você usa a [ferramenta Link (Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) para compilar os dois módulos em um assembly:  
+ Então você usa a [ferramenta Link (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) para compilar os dois módulos em um assembly:  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

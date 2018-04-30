@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -209,7 +209,7 @@ Executar uma única transação entre agregações em vez de depender de consist
 
 Não é esperado que toda regra que abrange Agregações esteja atualizada em todos os momentos. Por meio de processamento de eventos, processamento em lote ou de outros mecanismos de atualização, outras dependências podem ser resolvidas dentro de um período específico. (página 128)
 
-Vaughn Vernon diz o seguinte no [Effective Aggregate Design. Part II: Making Aggregates Work Together (Design de agregação eficaz, parte 2: fazer com que agregações trabalhem em conjunto)](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon diz o seguinte no [Effective Aggregate Design. Part II: Making Aggregates Work Together (Design de agregação eficaz, parte 2: fazer com que agregações trabalhem em conjunto)](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
 Portanto, se a execução de um comando em uma instância de agregação exigir que as regras de negócio adicionais sejam executadas em uma ou mais agregações, use consistência eventual \[...\] Há uma maneira prática para dar suporte à consistência eventual em um modelo de DDD. Um método de agregação publica um evento de domínio que é entregue no momento exato a um ou mais assinantes assíncronos.
 
@@ -347,13 +347,13 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 -   **Vaughn Vernon. Design de agregação efetivo parte II: fazendo agregações trabalharem juntas**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Reforçando seu domínio: eventos de domínio**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
 -   **Tony Truong. Exemplo de padrão de eventos de domínio**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
 -   **Udi Dahan. Como criar modelos de domínio totalmente encapsulados**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

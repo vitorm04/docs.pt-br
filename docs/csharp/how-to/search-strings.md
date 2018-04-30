@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: cb381ee811846ae8ff0589d918be4f43b3e9ddc3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-search-strings"></a>Como pesquisar cadeias de caracteres
 
@@ -77,7 +77,7 @@ O código a seguir usa expressões regulares para validar o formato de cada cade
 
 Este padrão de pesquisa único corresponde a várias cadeias de caracteres válidas. Expressões regulares são melhores para pesquisar por ou validar mediante um padrão, em vez de uma única cadeia de caracteres de texto.
 
-Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
+Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Consulte também  
 

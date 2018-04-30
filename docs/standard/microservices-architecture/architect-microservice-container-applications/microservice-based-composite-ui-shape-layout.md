@@ -1,7 +1,7 @@
 ---
-title: "Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais da interface do usuário gerados por vários microsserviços"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais de interface do usuário gerados por vários microsserviços"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais da interface do usuário gerados por vários microsserviços
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais de interface do usuário gerados por vários microsserviços
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais da interface do usuário gerados por vários microsserviços
 
@@ -47,20 +47,20 @@ No entanto, recomendamos que você use as seguintes referências para saber mais
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Interface do usuário de composição usando ASP.NET (workshop específico)**
+-   **Interface do usuário composta usando ASP.NET (Particular’s Workshop)**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga. O front-end monolítico na arquitetura de microsserviços**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti. O segredo da melhor composição de interface do usuário**
+-   **Mauro Servienti. O segredo de uma composição melhor de interface do usuário**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic. Incluindo componentes da Web de front-end em microsserviços**
+-   **Viktor Farcic. Incluindo componentes Web de front-end em microsserviços**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Gerenciando o front-end na arquitetura de microsserviços**\
-    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]

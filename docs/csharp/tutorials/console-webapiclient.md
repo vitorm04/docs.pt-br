@@ -1,6 +1,6 @@
 ---
 title: Cria um cliente REST usando .NET Core
-description: "Este tutorial ensina vários recursos no .NET Core e da linguagem C#."
+description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 8cca71b9b8e09fd26f80d53618a3f1e278e28390
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -31,7 +31,7 @@ Você compilará um aplicativo que emite solicitações HTTP para um serviço RE
 
 Há vários recursos neste tutorial. Vamos compilá-los individualmente.
 
-Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core). Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
@@ -63,7 +63,7 @@ A maioria dos editores de código fornece conclusão para versões diferentes de
 Após fazer essas alterações, execute `dotnet restore` ([veja a observação](#dotnet-restore-note)) novamente para que o pacote seja instalado em seu sistema.
 
 ## <a name="making-web-requests"></a>Como fazer solicitações da Web
-Agora você está pronto para começar a obter dados da Web. Neste aplicativo, você lerá informações da [API do GitHub](https://developer.github.com/v3/). Vamos ler informações sobre os projetos em [.NET Foundation](http://www.dotnetfoundation.org/). Comece fazendo a solicitação à API do GitHub para recuperar informações sobre os projetos. Você usará o ponto de extremidade: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Você quer obter todas as informações sobre esses projetos, portanto, use uma solicitação HTTP GET.
+Agora você está pronto para começar a obter dados da Web. Neste aplicativo, você lerá informações da [API do GitHub](https://developer.github.com/v3/). Vamos ler informações sobre os projetos em [.NET Foundation](http://www.dotnetfoundation.org/). Comece fazendo a solicitação à API do GitHub para recuperar informações sobre os projetos. O ponto de extremidade que você usará é: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Você quer obter todas as informações sobre esses projetos, portanto, use uma solicitação HTTP GET.
 O navegador também usa solicitações HTTP GET, para que você possa colar essa URL em seu navegador e ver as informações que receberá.
 
 Use a classe <xref:System.Net.Http.HttpClient> para fazer solicitações da Web. Como todas as APIs .NET modernas, a <xref:System.Net.Http.HttpClient> oferece suporte apenas aos métodos assíncronos para suas APIs de longa execução.
@@ -380,7 +380,7 @@ Por fim, adicione mais uma instrução de saída no console, e você estará pro
 Console.WriteLine(repo.LastPush);
 ```
 
-Agora, sua versão deve corresponder ao [exemplo finalizado](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+Agora, sua versão deve corresponder ao [exemplo finalizado](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
  
 ## <a name="conclusion"></a>Conclusão
 

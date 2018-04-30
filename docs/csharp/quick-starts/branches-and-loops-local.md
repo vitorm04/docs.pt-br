@@ -1,6 +1,6 @@
 ---
-title: "Tutorial de loops e branches – guias de início rápido locais de C#"
-description: "Neste início rápido sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções."
+title: Tutorial de loops e branches – guias de início rápido locais de C#
+description: Neste início rápido sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>Loops e branches
 
@@ -68,7 +68,7 @@ A instrução após a palavra-chave `else` é executada somente quando a condiç
 
 > [!IMPORTANT]
 > O recuo sob as instruções `if` e `else` é para leitores humanos.
-> A linguagem C# não considera recuo ou espaço em branco como significativo. A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste início rápido seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.
+> A linguagem C# não considera recuos ou espaços em branco como significativos. A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste início rápido seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.
 
 Como o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é igual ao que você acabou de criar. Modifique o código acima para coincidir com o código a seguir:
 
@@ -249,11 +249,11 @@ Agora que você viu a instrução `if` e as construções de loop na linguagem C
 - A instrução `if` retorna a condição para ver se um número deve ser parte da soma.
 - O loop `for` pode ajudar você a repetir uma série de etapas para todos os números de 1 a 20.
 
-Tente você mesmo. Depois verifique como você fez. Você deve obter 63 como resposta. Veja uma resposta possível [exibindo o código completo no GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Tente você mesmo. Depois verifique como você fez. Você deve obter 63 como resposta. Veja uma resposta possível [exibindo o código completo no GitHub](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54).
 
 Você concluiu o início rápido "branches e loops".
 
-Continue com o início rápido [Cadeias de caracteres interpoladas](interpolated-strings-local.md) em seu próprio ambiente de desenvolvimento.
+Continue com o início rápido [Interpolação de cadeias de caracteres](interpolated-strings-local.md) em seu próprio ambiente de desenvolvimento.
 
 Saiba mais sobre esses conceitos nestes tópicos:
 

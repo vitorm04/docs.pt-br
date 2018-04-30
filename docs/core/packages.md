@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 
@@ -78,6 +78,7 @@ O metapacote da .NET Standard é:
 Os principais metapacotes do .NET Core são:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – Descreve as bibliotecas que fazem parte da distribuição do .NET Core. Estabelece a estrutura [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Conta com o `NETStandard.Library` menor.
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) – inclui todos os pacotes com suporte do ASP.NET Core, Entity Framework Core e dependências internas e de terceiros usadas pelo ASP.NET Core e pelo Entity Framework Core. Consulte [Metapacote do Microsoft.AspNetCore.All para ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage) para obter mais informações.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – Um conjunto de fachadas de compatibilidade que permitem que PCLs (Bibliotecas de Classes Portáteis) baseadas em mscorlib sejam executadas no .NET Core.
 
 ## <a name="frameworks"></a>Estruturas

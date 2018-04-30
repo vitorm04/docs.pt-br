@@ -1,22 +1,24 @@
 ---
-title: "Problemas de migração do .NET Framework 4"
+title: Problemas de migração do .NET Framework 4
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
-ms.author: mariaw
+ms.author: ronpet
 manager: wpickett
-ms.workload: mariaw
-ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- mariaw
+ms.openlocfilehash: 05c86759b16fa4e1cbf31b7409601cb6b91cd08e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migração do .NET Framework 4
 
@@ -48,7 +50,7 @@ Namespaces: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Securi
 
 | Recurso | Diferenças de 3.5 SP1 | Alterações recomendadas |
 | ------- | ------------------------ | ------------------- |
-| **Arquivos de definição do navegador** | Os arquivos de definição do navegador foram atualizados para incluir informações sobre dispositivos e navegadores novos e atualizados. Navegadores e dispositivos mais antigos como o Netscape Navigator foram removidos e navegadores e dispositivos mais novos como o Google Chrome e Apple iPhone foram adicionados.<br><br>Se seu aplicativo contiver definições do navegador personalizadas herdadas de uma das definições do navegador que foram removidas, você verá um erro.<br><br>O objeto <xref:System.Web.HttpBrowserCapabilities> (exposto pela propriedade da página `Request.Browse`) é orientada pelos arquivos de definição do navegador. Portanto, as informações retornadas ao acessar uma propriedade desse objeto no ASP.NET 4 talvez sejam diferentes das informações retornadas em uma versão anterior do ASP.NET. | Se seu aplicativo depender dos antigos arquivos de definição do navegador, será possível copiá-los da pasta a seguir:<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>Copie os arquivos para a pasta  *\\CONFIG\\Browsers* correspondente do ASP.NET 4. Depois de copiar os arquivos, execute a ferramenta de linha de comando [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx). Para obter mais informações, consulte o site da Web [http://www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkId=182900). |
+| **Arquivos de definição do navegador** | Os arquivos de definição do navegador foram atualizados para incluir informações sobre dispositivos e navegadores novos e atualizados. Navegadores e dispositivos mais antigos como o Netscape Navigator foram removidos e navegadores e dispositivos mais novos como o Google Chrome e Apple iPhone foram adicionados.<br><br>Se seu aplicativo contiver definições do navegador personalizadas herdadas de uma das definições do navegador que foram removidas, você verá um erro.<br><br>O objeto <xref:System.Web.HttpBrowserCapabilities> (exposto pela propriedade da página `Request.Browse`) é orientada pelos arquivos de definição do navegador. Portanto, as informações retornadas ao acessar uma propriedade desse objeto no ASP.NET 4 talvez sejam diferentes das informações retornadas em uma versão anterior do ASP.NET. | Se seu aplicativo depender dos antigos arquivos de definição do navegador, será possível copiá-los da pasta a seguir:<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>Copie os arquivos para a pasta  *\\CONFIG\\Browsers* correspondente do ASP.NET 4. Depois de copiar os arquivos, execute a ferramenta de linha de comando [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx). Para obter mais informações, consulte o site [http://www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkId=182900). |
 | **Aplicativos filho em execução em diferentes versões do ASP.NET** | Os aplicativos ASP.NET 4 configurados como filhos de aplicativos que executam versões anteriores do ASP.NET talvez falhem ao iniciar devido a erros de configuração ou de compilação. O erro específico que ocorre depende se o aplicativo é executado no IIS 6.0 ou no IIS 7 ou no IIS 7.5. | É possível fazer alterações nos arquivos de configuração dos aplicativos afetados para que o sistema de configuração reconheça corretamente o aplicativo ASP.NET 4. Para obter informações sobre as alterações que você deverá fazer, consulte a seção "ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications" (Aplicativos ASP.NET 4 filho falham ao iniciar nos Aplicativos ASP.NET 2.0 ou ASP.NET 3.5) no documento [ASP.NET 4 Breaking Changes](http://go.microsoft.com/fwlink/?LinkId=182908) (Alterações recentes do ASP.NET 4) no site da Web do ASP.NET. |
 | **Alterações da ClientID** | A nova configuração `clientIDMode` no ASP.NET 4 permite especificar como o ASP.NET gera o atributo `id` para elementos HTML. Nas versões anteriores do ASP.NET, o comportamento padrão era equivalente à configuração `AutoID` do `clientIDMode`. A configuração padrão agora é `Predictable`. Para obter mais informações, consulte [ASP.NET Web Server Control Identification](https://msdn.microsoft.com/library/1d04y8ss(v=vs.100).aspx) (Identificação de controles do servidor Web do ASP.NET). | Se você usar o Visual Studio 2010 para atualizar seu aplicativo do ASP.NET 2.0 ou do ASP.NET 3.5, a ferramenta adicionará automaticamente uma configuração ao arquivo Web.config que preservará o comportamento das versões anteriores do .NET Framework. No entanto, se você atualizar um aplicativo alterando o pool de aplicativos no IIS para direcionar o .NET Framework 4, o ASP.NET usará o novo modo por padrão. Para desabilitar o novo modo da ID do cliente, adicione a seguinte configuração ao arquivo Web.config:<br><br>`<pages clientIDMode="AutoID" />` |
 | **CAS (Segurança de Acesso do Código)** | Os recursos NET do ASP.NET 2.0 que foram adicionados no ASP.NET 3.5 usam o modelo CAS (Segurança de Acesso do Código) do .NET Framework 1.1 e .NET Framework 2.0. No entanto, a implementação da CAS no ASP.NET 4 foi substancialmente revisada. Como resultado, os aplicativos ASP.NET de confiança parcial que dependem de código confiável em execução no cache de assembly global talvez falhem com diversas exceções de segurança. Aplicativos de confiança parcial que dependem de grandes modificações na política de CAS do computador talvez falhem e gerem exceções de segurança também. | É possível reverter aplicativos ASP.NET 4 de confiança parcial para o comportamento do ASP.NET 1.1 e 2.0 usando o novo atributo `legacyCasModel` no elemento `trust`, conforme mostrado no exemplo a seguir:<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>Importante: reverter para o modelo CAS mais antigo talvez represente menos segurança.<br><br>Para obter mais informações sobre o novo modelo de segurança de acesso do código do ASP.NET 4, consulte [Segurança de acesso do código em aplicativos ASP.NET 4](https://msdn.microsoft.com/library/dd984947.aspx). |

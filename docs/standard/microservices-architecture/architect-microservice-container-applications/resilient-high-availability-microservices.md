@@ -1,7 +1,7 @@
 ---
-title: "Resiliência e a alta disponibilidade em microsserviços"
-description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Resiliência e a alta disponibilidade em microsserviços"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Resiliência e a alta disponibilidade em microsserviços
+description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Resiliência e a alta disponibilidade em microsserviços
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 3ad3fc88a3e857f49283ff596e0385d0daad64b6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resiliência e a alta disponibilidade em microsserviços
 
@@ -43,7 +43,7 @@ Logs fornecem informações sobre como um aplicativo ou serviço está sendo exe
 
 Em aplicativos baseados em servidor monolíticos, você pode simplesmente gravar logs de um arquivo no disco (um arquivo de log) e então analisá-lo com qualquer ferramenta. Uma vez que a execução do aplicativo está limitada a um servidor ou VM fixo, geralmente não é complexo demais analisar o fluxo de eventos. No entanto, em um aplicativo distribuído em que vários serviços são executados em vários nós em um cluster do orquestrador, poder correlacionar eventos distribuídos é um desafio.
 
-Um aplicativo baseado em microsserviço não deve tentar armazenar o fluxo de saída de eventos nem arquivos de log por si só, nem tentar gerenciar o roteamento de eventos para um local central. Ele deve ser transparente, o que significa que cada processo deve gravar apenas seu fluxo de eventos em uma saída padrão que, por baixo, será coletado pela infraestrutura do ambiente de execução em que está sendo executado. Um exemplo desses roteadores do fluxo de evento é [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que coleta os fluxos de eventos de várias fontes e publica-os em sistemas de saída. Eles podem incluir saída simples padrão para um ambiente de desenvolvimento ou sistemas de nuvem como [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (para aplicativos locais) e [Diagnóstico do Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Também há boas plataformas e ferramentas de análise de log de terceiros que podem pesquisar, alertar, relatar e monitorar logs, inclusive em tempo real, como [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Um aplicativo baseado em microsserviço não deve tentar armazenar o fluxo de saída de eventos nem arquivos de log por si só, nem tentar gerenciar o roteamento de eventos para um local central. Ele deve ser transparente, o que significa que cada processo deve gravar apenas seu fluxo de eventos em uma saída padrão que, por baixo, será coletado pela infraestrutura do ambiente de execução em que está sendo executado. Um exemplo desses roteadores do fluxo de evento é [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que coleta os fluxos de eventos de várias fontes e publica-os em sistemas de saída. Eles podem incluir saída simples padrão para um ambiente de desenvolvimento ou sistemas de nuvem como [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (para aplicativos locais) e [Diagnóstico do Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Também há boas plataformas e ferramentas de análise de log de terceiros que podem pesquisar, alertar, relatar e monitorar logs, inclusive em tempo real, como [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orquestradores gerenciando informações de integridade e diagnóstico
 
@@ -69,16 +69,16 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 -   **O que é o Diagnóstico do Azure**
     [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Conectar computadores Windows ao serviço Log Analytics no Azure**
+-   **Conectar computadores Windows ao serviço do Log Analytics no Azure**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Registrando em log o que você quer dizer: usando o bloco de aplicativo de registro em log semântico**
+-   **Registrando o que você quer: usando o bloco de aplicativo de log de semântica**
     [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Site oficial.
-    [*http://www.splunk.com*](http://www.splunk.com)
+    [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Classe EventSource**. API para rastreamento de eventos para Windows (ETW) [ *https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+-   **Classe EventSource**. API para ETW (Rastreamento de Eventos para Windows) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

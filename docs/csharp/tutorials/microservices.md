@@ -1,7 +1,7 @@
 ---
-title: "Microsserviços hospedados no Docker - C#"
-description: "Aprenda a criar serviços asp.net core que são executados em contêineres do Docker"
-keywords: ".NET, .NET Core, Docker, C#, ASP.NET, Microsserviço"
+title: Microsserviços hospedados no Docker - C#
+description: Aprenda a criar serviços asp.net core que são executados em contêineres do Docker
+keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microsserviço
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Microsserviços hospedados no Docker
 
@@ -32,7 +32,7 @@ Ao longo do caminho, você também verá alguns recursos da linguagem C#:
 * Como processar solicitações HTTP de entrada e gerar a resposta HTTP
 * Como trabalhar com tipos de valor anulável
 
-Você pode [exibir ou baixar o aplicativo de exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Você pode [exibir ou baixar o aplicativo de exemplo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Por que o Docker?
 
@@ -98,7 +98,7 @@ E, depois de compilar o aplicativo, execute-o na linha de comando:
 dotnet run
 ```
 
-A configuração padrão escuta http://localhost:5000. Abra um navegador, navegue até a página e veja uma mensagem "Hello World!" .
+A configuração padrão escuta `http://localhost:5000`. Abra um navegador, navegue até a página e veja uma mensagem "Hello World!" .
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomia de um aplicativo ASP.NET Core
 

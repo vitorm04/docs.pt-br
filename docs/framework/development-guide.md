@@ -1,28 +1,28 @@
 ---
 title: Guia de Desenvolvimento do .NET Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -49,7 +49,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Aplicativos do Serviço Windows](../../docs/framework/windows-services/index.md)  
  Explica como é possível usar o Visual Studio e o .NET Framework para criar um aplicativo que é instalado como um serviço e, iniciar, parar e de outro modo controlar seu comportamento.  
   
- [Processamento paralelo e simultaneidade](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Processamento paralelo, simultaneidade e programação assíncrona no .NET](../../docs/standard/parallel-processing-and-concurrency.md)  
  Fornece informações sobre padrões de design de threading gerenciado, programação paralela e programação assíncrona.  
   
  [Programação de rede no .NET Framework](../../docs/framework/network-programming/index.md)  

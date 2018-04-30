@@ -1,21 +1,22 @@
 ---
-title: "Preservar espaço em branco ao serializar3"
-ms.custom: 
+title: Preservar espaço em branco ao serializar3
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df0ee9bedd4123ac47c06d1c64f305fcf0b0825a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a73c4ec01c1a4d2cebe71ae1afdcce0466762c9c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="preserving-white-space-while-serializing"></a>Preservar espaço em branco para serializar
 Este tópico descreve como controlar o espaço em branco para serializar uma árvore XML.  
@@ -24,7 +25,7 @@ Este tópico descreve como controlar o espaço em branco para serializar uma ár
   
  Outro cenário comum é ler e modificar XML que já foi recuado intencionalmente. Você pode não querer modificar este recuo de nenhuma forma. Para fazer isso em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você preserva o espaço em branco quando você carregar ou analisar XML e desativa o formatação quando você serializa XML.  
   
-## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>Comportamento de espaço em branco de métodos que serialize árvores XML  
+## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>Comportamento de espaço em branco de métodos que serializam árvores XML  
  Os seguintes métodos nas classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XDocument> serialize uma árvore XML. Você pode serializar uma árvore XML para um arquivo, um <xref:System.IO.TextReader>, ou um <xref:System.Xml.XmlReader>. O método de `ToString` serializa a uma cadeia de caracteres.  
   
 -   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  

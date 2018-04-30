@@ -1,5 +1,5 @@
 ---
-title: "-langversion (opções do compilador C#)"
+title: -langversion (opções do compilador C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-caps.latest.revision: 
+caps.latest.revision: 33
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f1088221a96d0176f08b4c01044e20ab6238fc13
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opções do compilador C#)
 Faz com que o compilador aceite somente a sintaxe incluída na especificação de linguagem C# escolhida.  
@@ -36,7 +36,7 @@ Faz com que o compilador aceite somente a sintaxe incluída na especificação d
   
 |Opção|Significado|  
 |------------|-------------|  
-|default|O compilador aceita toda a sintaxe de linguagem à qual dá suporte. <sup id="TDefault">[Padrão](#FDefault)</sup>| 
+|default|O compilador aceita toda a sintaxe de linguagem válida da versão principal mais recente à qual dá suporte. <sup id="TDefault">[Padrão](#FDefault)</sup>| 
 |ISO-1|O compilador aceita somente a sintaxe incluída em C# ISO/IEC 23270:2003 (1.0/1.1) <sup id="TISO1">[ISO1](#FISO1)</sup>|  
 |ISO-2|O compilador aceita somente a sintaxe incluída em C# ISO/IEC 23270:2006 (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |3|O compilador aceita somente a sintaxe incluída em C# 3.0 ou inferior <sup id="TCS3">[CS3](#FCS3)</sup>|

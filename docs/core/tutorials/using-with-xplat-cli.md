@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8587857ef0d0f48f88331d9588e7e97e3290d34c
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c5082806c907a6c6d4f51bf77e54deee08de3d8b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -31,7 +31,7 @@ Se não estiver familiarizado com o conjunto de ferramentas da CLI do .NET Core,
 
 ## <a name="hello-console-app"></a>Olá, Aplicativo de Console.
 
-Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) do repositório dotnet/docs do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) do repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Abra um prompt de comando e crie uma pasta chamada *Hello*. Navegue até a pasta que você criou e digite o seguinte:
 
@@ -54,7 +54,7 @@ Vejamos um breve passo a passo:
    O arquivo de projeto especifica tudo o que é necessário para restaurar as dependências e compilar o programa.
 
    * A marca `OutputType` especifica que estamos copilando um executável, em outras palavras, um aplicativo de console.
-   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar para todas elas em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 1.0.
+   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, é possível especificar várias estruturas de destino e criar para todas elas em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 1.0.
 
    `Program.cs`:
 

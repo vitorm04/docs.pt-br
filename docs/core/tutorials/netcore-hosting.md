@@ -1,6 +1,6 @@
 ---
 title: Hospedando o .NET Core
-description: "Hospedando o tempo de execução do .NET Core com base no código nativo"
+description: Hospedando o tempo de execução do .NET Core com base no código nativo
 keywords: .NET, .NET Core, Hospedagem, Hospedando o .NET Core
 author: mjrousos
 ms.author: mikerou
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>Hospedando o .NET Core
 
@@ -35,7 +35,7 @@ Este tutorial e seu exemplo associado criam um host do Windows, consulte as nota
 
 ## <a name="creating-the-host"></a>Criando o host
 
-Um [host de exemplo](https://github.com/dotnet/docs/tree/master/samples/core/hosting) que demonstra as etapas descritas neste artigo está disponível no repositório dotnet/docs do GitHub. Os comentários no arquivo *host.cpp* do exemplo associam claramente as etapas numeradas deste tutorial aos pontos em que são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Um [host de exemplo](https://github.com/dotnet/samples/tree/master/core/hosting) que demonstra as etapas descritas neste artigo está disponível no repositório dotnet/samples do GitHub. Os comentários no arquivo *host.cpp* do exemplo associam claramente as etapas numeradas deste tutorial aos pontos em que são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Lembre-se de que o host de exemplo destina-se a ser usado para fins de aprendizado e, portanto, não leva a sério a verificação de erros e é projetado para enfatizar a legibilidade em detrimento da eficiência. Mais amostras de host do mundo real estão disponíveis no repositório [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts). O [host CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), em particular, é um bom host de uso geral para ser estudado depois de ler toda a amostra mais simples.
 
@@ -90,7 +90,7 @@ As propriedades comuns de AppDomain incluem:
 *  `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos a serem investigados quanto a assemblies satélite de recursos (em subdiretórios específicos à cultura).
 *  `AppDomainCompatSwitch` Essa cadeia de caracteres especifica quais particularidades de compatibilidade deverão ser usadas para assemblies sem um Moniker de Estrutura de Destino explícito (um atributo no nível de assembly que indica em qual Estrutura um assembly deve ser executado). Normalmente, isso deve ser definido como `"UseLatestBehaviorWhenTFMNotSpecified"`, mas alguns hosts podem preferir obter particularidades de compatibilidade do Silverlight ou do Windows Phone mais antigas.
 
-Em nosso [host de exemplo simples](https://github.com/dotnet/docs/tree/master/samples/core/hosting), essas propriedades são configuradas da seguinte maneira:
+Em nosso [host de exemplo simples](https://github.com/dotnet/samples/tree/master/core/hosting), essas propriedades são configuradas da seguinte maneira:
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

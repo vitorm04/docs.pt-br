@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8d048c89ee416de0b225d3e58cd24e73e1570785
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de dados (biblioteca de tarefas paralelas)
 *Paralelismo de dados* refere-se a cenários em que a mesma operação é realizada simultaneamente (ou seja, em paralelo) em elementos em uma matriz ou coleção de origem. Nas operações paralelas de dados, a coleção de origem é particionada de modo que múltiplos threads possam operar em segmentos diferentes simultaneamente.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/19/2018
   
  Ambos os métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> têm várias sobrecargas que permitem parar ou interromper a execução do loop, monitorar o estado do loop em outros threads, manter o estado local do thread, finalizar os objetos locais do thread, controlar o grau de simultaneidade, e assim por diante. Os tipos auxiliares que permitem essa funcionalidade incluem <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken>, e <xref:System.Threading.CancellationTokenSource>.  
   
- Para obter mais informações, confira [Padrões da programação paralela](http://go.microsoft.com/fwlink/p/?LinkId=265491).  
+ Para obter mais informações, consulte [Padrões para programação paralela: noções básicas e aplicação de padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222).  
   
  O paralelismo de dados com a sintaxe declarativa ou similar a uma consulta é suportado pelo PLINQ. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[Como escrever um loop Parallel.For simples](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.For%2A> sobre qualquer matriz ou coleção de origem <xref:System.Collections.Generic.IEnumerable%601> indexável.|  
 |[Como escrever um loop Parallel.ForEach simples](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A> sobre qualquer coleção de origem <xref:System.Collections.Generic.IEnumerable%601>.|  
-|[Como parar ou interromper um loop Parallel.For](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Descreve como parar ou interromper um loop paralelo para que todos os threads sejam informados da ação.|  
+|[Como parar ou interromper um loop Parallel.For](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Descreve como parar ou interromper um loop paralelo para que todos os threads sejam informados da ação.|  
 |[Como escrever um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.For%2A> em que cada thread mantém uma variável privada que não está visível para outros threads, e como sincronizar os resultados de todos os threads quando o loop for concluído.|  
 |[Como escrever um loop Parallel.ForEach com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Descreve como gravar um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A> em que cada thread mantém uma variável privada que não está visível para outros threads, e como sincronizar os resultados de todos os threads quando o loop for concluído.|  
 |[Como cancelar um loop Parallel.For ou ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Descreve como cancelar um loop paralelo usando um <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  

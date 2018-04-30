@@ -1,6 +1,6 @@
 ---
 title: Indexadores
-description: "Saiba mais sobre indexadores C# e como implementar propriedades indexadas, que são propriedades referenciadas usando um ou mais argumentos."
+description: Saiba mais sobre indexadores C# e como implementar propriedades indexadas, que são propriedades referenciadas usando um ou mais argumentos.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>Indexadores
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-Neste exemplo inicial, você pode ver a relação entre a sintaxe das propriedades e dos indexadores. Essa analogia impulsiona a maioria das regras de sintaxe para indexadores. Indexadores podem ter qualquer modificadores de acesso válido (pública, protegida interna, protegida, interna, privada ou privada protegida). Eles podem ser sealed, virtual ou abstract. Assim como acontece com as propriedades, você pode especificar modificadores de acesso diferentes para os acessadores get e set em um indexador.
+Neste exemplo inicial, você pode ver a relação entre a sintaxe das propriedades e dos indexadores. Essa analogia impulsiona a maioria das regras de sintaxe para indexadores. Os indexadores podem ter qualquer modificador de acesso válido (público, protegido interno, protegido, interno, particular ou protegido de forma privada). Eles podem ser sealed, virtual ou abstract. Assim como acontece com as propriedades, você pode especificar modificadores de acesso diferentes para os acessadores get e set em um indexador.
 Você também pode especificar indexadores somente leitura (omitindo o acessador set) ou indexadores somente gravação (omitindo o acessador get).
 
 Você pode aplicar aos indexadores quase tudo o que aprendeu ao trabalhar com propriedades. A única exceção a essa regra são as *propriedades autoimplementadas*. O compilador não pode gerar sempre o armazenamento correto para um indexador.
@@ -51,7 +51,7 @@ A presença dos argumentos para referenciar um item em um conjunto de itens dist
 Você deve definir *indexadores* em seu tipo quando a API do tipo modela alguma coleção na qual você define os argumentos para essa coleção. Seu indexadores podem ou não mapear diretamente para os tipos de coleção que fazem parte da estrutura principal do .NET. O tipo pode ter outras responsabilidades, além da modelagem de uma coleção.
 Os indexadores permitem que você forneça a API que corresponda à abstração do tipo, sem expor os detalhes internos de como os valores dessa abstração são armazenados ou computados.
 
-Vamos examinar alguns dos cenários comuns de uso de *indexadores*. Você pode acessar a [pasta de exemplo para indexadores](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers). Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Vamos examinar alguns dos cenários comuns de uso de *indexadores*. Você pode acessar a [pasta de exemplo para indexadores](https://github.com/dotnet/samples/tree/master/csharp/indexers). Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Matrizes e vetores
 

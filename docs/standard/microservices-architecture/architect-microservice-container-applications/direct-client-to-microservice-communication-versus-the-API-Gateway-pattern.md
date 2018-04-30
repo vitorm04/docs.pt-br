@@ -1,7 +1,7 @@
 ---
-title: "Comunicação direta do cliente para microsserviços versus o padrão de Gateway de API"
-description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Comunicação direta de cliente com microsserviço versus o padrão de Gateway de API"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner, Gateway de API"
+title: Comunicação direta do cliente para microsserviços versus o padrão de Gateway de API
+description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Comunicação direta de cliente com microsserviço versus o padrão de Gateway de API
+keywords: Docker, Microsserviços, ASP.NET, Contêiner, Gateway de API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Comunicação direta do cliente para microsserviços versus o padrão de Gateway de API
 
@@ -57,7 +57,7 @@ A API de vários microsserviços podem não ser bem projetadas para as necessida
 
 ## <a name="using-an-api-gateway"></a>Usando um Gateway de API
 
-Quando você projeta e cria aplicativos grandes ou complexos baseado em microsserviço com vários aplicativos cliente, uma boa abordagem a considerar pode ser um [Gateway de API](http://microservices.io/patterns/apigateway.html). Esse é um serviço que fornece um único ponto de entrada para determinados grupos de microsserviços. É semelhante ao [padrão Fachada](https://en.wikipedia.org/wiki/Facade_pattern) do design orientada a objeto, mas, neste caso, faz parte de um sistema distribuído. O padrão de Gateway de API às vezes também é conhecido como [BFF](http://samnewman.io/patterns/architectural/bff/) ("back-end para front-end"), porque ele é criado pensando nas necessidades do aplicativo cliente.
+Quando você projeta e cria aplicativos grandes ou complexos baseado em microsserviço com vários aplicativos cliente, uma boa abordagem a considerar pode ser um [Gateway de API](https://microservices.io/patterns/apigateway.html). Esse é um serviço que fornece um único ponto de entrada para determinados grupos de microsserviços. É semelhante ao [padrão Fachada](https://en.wikipedia.org/wiki/Facade_pattern) do design orientada a objeto, mas, neste caso, faz parte de um sistema distribuído. O padrão de Gateway de API às vezes também é conhecido como [BFF](https://samnewman.io/patterns/architectural/bff/) ("back-end para front-end"), porque ele é criado pensando nas necessidades do aplicativo cliente.
 
 A Figura 4-13 mostra como um Gateway de API personalizado pode se enquadrar em uma arquitetura baseada em microsserviço.
 É importante destacar que, neste diagrama, você usa um único serviço de Gateway de API personalizado voltada para vários aplicativos cliente diferentes. Esse fato pode ser um risco importante, pois seu serviço de Gateway de API estará crescendo e em evolução com base em vários requisitos diferentes dos aplicativos cliente. Eventualmente, ele será inflado devido a essas necessidades diferentes e efetivamente pode ser muito semelhante a um aplicativo monolítico ou serviço monolítico. É por isso que é muito recomendável dividir o Gateway de API em vários serviços ou vários Gateways API menores, um por tipo de fator forma, por exemplo.
@@ -110,8 +110,8 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), estamo
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Charles Richardson. Padrão: Gateway de API/back-end para front-end**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson. Padrão: Gateway de API / Back- end para front-end**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 -   **Gerenciamento de API do Azure**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
@@ -119,7 +119,7 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), estamo
 -   **Udi Dahan. Composição orientada a serviços**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Mensagens e microsserviços em GOTO 2016** (vídeo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Mensagens e microsserviços no GOTO 2016** (vídeo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

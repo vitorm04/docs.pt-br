@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e xUnit
-description: "Aprenda os conceitos de teste de unidade para F# no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo usando dotnet test e xUnit."
+description: Aprenda os conceitos de teste de unidade para F# no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo usando dotnet test e xUnit.
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
@@ -10,15 +10,15 @@ dev_langs:
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6a9596db49024bead9c33b52642f46f519bb2b4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8485b1a64992c7a632d22d9dc492ee4d83592208
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e xUnit
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-with-fsharp/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem
 
@@ -36,7 +36,7 @@ Torne *MathService* o diretório atual e execute [`dotnet new classlib -lang F#`
 
 ```fsharp
 module MyMath =
-    let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
+    let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
 Altere o diretório de volta para o diretório *unit-testing-with-fsharp*. Execute [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
@@ -70,7 +70,7 @@ O projeto de teste requer outros pacotes para criar e executar testes de unidade
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-Você pode ver o arquivo inteiro no [repositório de exemplos](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) no GitHub.
+Você pode ver o arquivo inteiro no [repositório de exemplos](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) no GitHub.
 
 Você tem o seguinte layout de solução final:
 
@@ -102,22 +102,22 @@ let ``Fail every time`` () = Assert.True(false)
 
 O atributo `[<Fact>]` indica um método de teste que é executado pelo executor de teste. Em *unit-testing-with-fsharp*, execute [`dotnet test`](../tools/dotnet-test.md) para criar os testes e a biblioteca de classes e execute os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
-Esses dois testes mostram testes com aprovação e falha mais básicos. `My test` é aprovado e `Fail every time` falha. Agora, crie um teste para o método `sumOfSquares`. O método `sumOfSquares` retorna a soma dos quadrados de todos os valores inteiros ímpares que fazem parte da sequência de entrada. Em vez de tentar gravar todas as funções de uma vez, você pode criar testes iterativamente que validam a funcionalidade. Fazer com que cada teste passe significa criar a funcionalidade necessária para o método.
+Esses dois testes mostram testes com aprovação e falha mais básicos. `My test` é aprovado e `Fail every time` falha. Agora, crie um teste para o método `squaresOfOdds`. O método `squaresOfOdds` retorna uma sequência dos quadrados de todos os valores inteiros ímpares que fazem parte da sequência de entrada. Em vez de tentar gravar todas as funções de uma vez, você pode criar testes iterativamente que validam a funcionalidade. Fazer com que cada teste passe significa criar a funcionalidade necessária para o método.
 
-O teste mais simples que podemos escrever é chamar `sumOfSquares` com todos os números pares, em que o resultado deve ser uma sequência vazia de inteiros.  Este é o teste:
+O teste mais simples que podemos escrever é chamar `squaresOfOdds` com todos os números pares, em que o resultado deve ser uma sequência vazia de inteiros.  Este é o teste:
 
 ```fsharp
 [<Fact>]
-let ``Sum of evens returns empty collection`` () =
+let ``Sequence of Evens returns empty collection`` () =
     let expected = Seq.empty<int>
-    let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
+    let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
 O teste falha. Você ainda não criou a implementação. Faça esse teste escrevendo o código mais simples na classe `MathService` que funciona:
 
 ```csharp
-let sumOfSquares xs =
+let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
@@ -129,18 +129,18 @@ Agora que você fez um teste ser aprovado, é hora de escrever mais. O próximo 
 
 ```fsharp
 [<Fact>]
-let ``Sum of sequences of Ones and Evens`` () =
+let ``Sequences of Ones and Evens returns Ones`` () =
     let expected = [1; 1; 1; 1]
-    let actual = MyMath.sumOfSquares [2; 1; 4; 1; 6; 1; 8; 1; 10]
+    let actual = MyMath.squaresOfOdds [2; 1; 4; 1; 6; 1; 8; 1; 10]
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-A execução de `dotnet test` executa os testes e mostra que o novo teste falha. Agora, atualize o método `sumOfSquares` para lidar com esse novo teste. Remova todos os números pares da sequência para que esse teste seja aprovado. Faça isso escrevendo uma pequena função de filtro e usando `Seq.filter`:
+A execução de `dotnet test` executa os testes e mostra que o novo teste falha. Agora, atualize o método `squaresOfOdds` para lidar com esse novo teste. Remova todos os números pares da sequência para que esse teste seja aprovado. Faça isso escrevendo uma pequena função de filtro e usando `Seq.filter`:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
 ```
@@ -151,7 +151,7 @@ Há mais uma etapa a ser executada: eleve ao quadrado cada um dos números ímpa
 [<Fact>]
 let ``SquaresOfOdds works`` () =
     let expected = [1; 9; 25; 49; 81]
-    let actual = MyMath.sumOfSquares [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+    let actual = MyMath.squaresOfOdds [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
     Assert.Equal(expected, actual)
 ```
 
@@ -161,7 +161,7 @@ Você pode corrigir o teste redirecionando a sequência filtrada por meio de uma
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs = 
+let squaresOfOdds xs = 
     xs 
     |> Seq.filter isOdd 
     |> Seq.map square

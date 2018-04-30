@@ -1,7 +1,7 @@
 ---
-title: "Comunicação assíncrona baseada em mensagens"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Comunicação assíncrona baseada em mensagens"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Comunicação assíncrona baseada em mensagens
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Comunicação assíncrona baseada em mensagens
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -59,7 +59,7 @@ Se um sistema usa consistência eventual orientada por eventos de integração, 
 
 Conforme observado anteriormente na seção [Desafios e soluções para o gerenciamento de dados distribuídos](#challenges-and-solutions-for-distributed-data-management), você pode usar eventos de integração para implementar as tarefas de negócios que abrangem vários microsserviços. Assim, você terá consistência eventual entre esses serviços. Uma transação eventualmente consistente é composta por uma coleção de ações distribuídas. Em cada ação, o microsserviço relacionado atualiza uma entidade de domínio e publica outro evento de integração que gera a próxima ação dentro da mesma tarefa comercial de ponta a ponta.
 
-Um ponto importante é que você pode querer comunicar-se com vários microsserviços inscritos para o mesmo evento. Para fazer isso, você pode usar mensagens de publicação/assinatura com base em comunicação controlada por evento, conforme mostra a Figura 4-19. Esse mecanismo de publicação/assinatura não é exclusivo da arquitetura de microsserviço. É semelhante à maneira como [Contextos Limitados](http://martinfowler.com/bliki/BoundedContext.html) no DDD devem se comunicar ou à maneira como você propaga atualizações do banco de dados de gravação para o banco de dados de leitura no padrão de arquitetura de [CQRS (Segregação de Responsabilidade de Comando e Consulta)](http://martinfowler.com/bliki/CQRS.html). A meta é ter consistência eventual entre várias fontes de dados em seu sistema distribuído.
+Um ponto importante é que você pode querer comunicar-se com vários microsserviços inscritos para o mesmo evento. Para fazer isso, você pode usar mensagens de publicação/assinatura com base em comunicação controlada por evento, conforme mostra a Figura 4-19. Esse mecanismo de publicação/assinatura não é exclusivo da arquitetura de microsserviço. É semelhante à maneira como [Contextos Limitados](https://martinfowler.com/bliki/BoundedContext.html) no DDD devem se comunicar ou à maneira como você propaga atualizações do banco de dados de gravação para o banco de dados de leitura no padrão de arquitetura de [CQRS (Segregação de Responsabilidade de Comando e Consulta)](https://martinfowler.com/bliki/CQRS.html). A meta é ter consistência eventual entre várias fontes de dados em seu sistema distribuído.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ Um desafio ao implementar uma arquitetura orientada a eventos em vários micross
 
 -   Usando uma fila transacional (baseada em DTC) como MSMQ. (No entanto, essa é uma abordagem herdada.)
 
--   Usando [mineração do log de transações](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Usando [mineração do log de transações](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Usando o padrão [Event Sourcing](https://msdn.microsoft.com/library/dn589792.aspx) completo.
 
@@ -94,22 +94,22 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 -   **Mensagens controladas por eventos**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Canal de publicação/assinatura**
+-   **Publicar/assinar canal**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan. CQRS esclarecido**
+-   **Udi Dahan. CQRS esclarecida**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS (Segregação de Responsabilidade de Comando e Consulta)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communicating Between Bounded Contexts (Comunicação entre contextos limitados)**
+-   **Comunicação entre contextos limitados**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency (Consistência eventual)**
+-   **Coerência eventual**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refatoração para resiliência: avaliando o acoplamento)**
+-   **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 

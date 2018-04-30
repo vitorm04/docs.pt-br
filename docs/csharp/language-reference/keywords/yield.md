@@ -1,5 +1,5 @@
 ---
-title: "yield (Referência de C#)"
+title: yield (Referência de C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11fe3734df61333916e7a07010393bddc96e525c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 98453fb218dca1feb36c64331403d6761d231a0e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="yield-c-reference"></a>yield (Referência de C#)
 Quando você usa a palavra-chave `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador. Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita (a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.  
@@ -79,7 +79,7 @@ foreach (string element in elements)
  Em cada iteração subsequente do loop `foreach`, a execução do corpo do iterador continuará de onde parou, parando novamente quando atingir uma instrução `yield return`. O loop `foreach` é concluído quando o fim do método iterador ou uma instrução `yield break` é atingida.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir contém uma instrução `yield return` dentro de um loop `for`. Cada iteração do corpo da instrução `foreach` em `Process` cria uma chamada à função iteradora `Power`. Cada chamada à função iteradora prossegue para a próxima execução da instrução `yield return` que ocorre durante a próxima iteração do loop `for`.  
+ O exemplo a seguir contém uma instrução `yield return` dentro de um loop `for`. Cada iteração do corpo da instrução `foreach` no método `Main` cria uma chamada à função iteradora `Power`. Cada chamada à função iteradora prossegue para a próxima execução da instrução `yield return` que ocorre durante a próxima iteração do loop `for`.  
   
  O tipo de retorno do método iterador é <xref:System.Collections.IEnumerable> que é um tipo de interface de iterador. Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.  
   

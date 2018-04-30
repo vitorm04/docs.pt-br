@@ -1,7 +1,7 @@
 ---
-title: "Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -124,20 +124,20 @@ Atualmente, o ACS está disponível para Máquinas Virtuais do Linux das séries
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Introdução às soluções de hospedagem de contêineres do Docker com o Serviço de Contêiner do Azure**
+-   **Introdução a soluções de hospedagem do contêiner do Docker com o Serviço de Contêiner do Azure**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
 -   **Visão geral do Docker Swarm**
     [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
 
--   **Visão geral do Modo Swarm**
+-   **Visão geral do modo Swarm**
     [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
 
 -   **Visão geral do Mesosphere DC/OS**
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** Site oficial.\
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

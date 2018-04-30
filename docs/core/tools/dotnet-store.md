@@ -1,18 +1,19 @@
 ---
 title: Comando dotnet store
-description: "O comando 'dotnet store' armazena os assemblies especificados no repositório de pacotes de tempo de execução."
+description: O comando "dotnet store" armazena os assemblies especificados no repositório de pacotes de tempo de execução.
 author: bleroy
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: c8e09141eebef2cbddf6742cceeff05e11c25adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6baa28256535d6a9d653d9df743cd3cdf45ab910
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="description"></a>Descrição
 
-`dotnet store` armazena os assemblies especificados no [repositório de pacotes de tempo de execução](../deploying/runtime-store.md). Por padrão, os assemblies são otimizados para a estrutura e o tempo de execução de destino. Para obter mais informações, consulte o tópico [runtime package store](../deploying/runtime-store.md) (repositório de pacotes de tempo de execução).
+`dotnet store` armazena os assemblies especificados no [repositório de pacotes de tempo de execução](../deploying/runtime-store.md). Por padrão, os assemblies são otimizados para a estrutura e o tempo de execução de destino. Para obter mais informações, consulte o tópico [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).
 
 ## <a name="required-options"></a>Opções obrigatórias
 
@@ -42,7 +43,7 @@ O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que conté
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-O identificador do tempo de execução a ser direcionado.
+O [identificador do tempo de execução](../rid-catalog.md) a ser usado como destino.
 
 ## <a name="optional-options"></a>Opções opcionais
 

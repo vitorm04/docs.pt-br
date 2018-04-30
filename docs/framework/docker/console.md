@@ -1,19 +1,19 @@
 ---
 title: Executando aplicativos de console no Docker
-description: "Saiba como selecionar um aplicativo de console do .NET Framework e executá-lo em um contêiner do Docker do Windows."
+description: Saiba como selecionar um aplicativo de console do .NET Framework e executá-lo em um contêiner do Docker do Windows.
 author: spboyer
-keywords: ".NET, contêiner, console, aplicativos"
+keywords: .NET, contêiner, console, aplicativos
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Executando aplicativos de console em contêineres do Windows
 
@@ -25,7 +25,7 @@ O aplicativo de console de exemplo é um exemplo simples que usa um argumento, n
 
 Além da resposta, `Environment.MachineName` foi adicionado à resposta para mostrar a diferença entre executar o aplicativo localmente e em um contêiner do Windows. Ao executar o aplicativo localmente, o nome do computador local deve ser retornado e, ao executar em um contêiner do Windows, a ID da sessão do contêiner é retornada.
 
-O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) está disponível no repositório de documentos/dotnet no GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) está disponível no repositório de exemplos/dotnet no GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Você precisa estar familiarizado com alguns termos do Docker antes de começar a mover seu aplicativo para um contêiner.
 

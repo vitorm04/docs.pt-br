@@ -1,7 +1,7 @@
 ---
-title: "Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 641439267d7fcb504965487aeed165188b2cf123
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 
-A pasta de solução contém uma pasta *SeedWork*. A pasta *SeedWork* contém classes base personalizadas que podem ser usadas como uma base para suas entidades de domínio e objetos de valor. Use essas classes base para que você não tenha código redundante na classe de objeto de cada domínio. A pasta para esses tipos de classes é chamada *SeedWork* e não algo como *Framework*. Ela é chamada *SeedWork*, porque a pasta contém apenas um pequeno subconjunto de classes reutilizáveis que realmente não podem ser consideradas uma estrutura. *Seedwork* é um termo introduzido por [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) e popularizado por [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html), mas você também pode nomear essa pasta Common, SharedKernel, ou semelhantes.
+A pasta de solução contém uma pasta *SeedWork*. A pasta *SeedWork* contém classes base personalizadas que podem ser usadas como uma base para suas entidades de domínio e objetos de valor. Use essas classes base para que você não tenha código redundante na classe de objeto de cada domínio. A pasta para esses tipos de classes é chamada *SeedWork* e não algo como *Framework*. Ela é chamada *SeedWork*, porque a pasta contém apenas um pequeno subconjunto de classes reutilizáveis que realmente não podem ser consideradas uma estrutura. *Seedwork* é um termo introduzido por [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) e popularizado por [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html), mas você também pode nomear essa pasta Common, SharedKernel, ou semelhantes.
 
 A Figura 9-12 mostra as classes que formam o seedwork do modelo de domínio no microsserviço de ordenação. Ele tem algumas classes base personalizadas como Entity, ValueObject e Enumeration, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de Injeção de dependência da camada de aplicativo.
 
@@ -119,7 +119,7 @@ Os contratos de repositório são simplesmente interfaces .NET que expressam os 
 
 Os repositórios em si, com código do EF Core ou quaisquer outras dependências de infraestrutura e código (LINQ, SQL, etc.), não devem ser implementados no modelo de domínio; os repositórios só deverão implementar as interfaces que você definir. 
 
-Um padrão relacionado a essa prática (inserir as interfaces de repositório na camada do modelo de domínio) é o padrão Interface separada. Como [explicado](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler "Use a Interface separada para definir uma interface em um pacote, mas a implemente em outro. Dessa forma, um cliente que precisa da dependência com a interface pode não estar completamente ciente da implementação."
+Um padrão relacionado a essa prática (inserir as interfaces de repositório na camada do modelo de domínio) é o padrão Interface separada. Como [explicado](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler "Use a Interface separada para definir uma interface em um pacote, mas a implemente em outro. Dessa forma, um cliente que precisa da dependência com a interface pode não estar completamente ciente da implementação."
 
 Seguir o padrão Interface separada permite que a camada de aplicativo (nesse caso, o projeto da API Web para o microsserviço) tenha uma dependência nos requisitos definidos no modelo de domínio, mas não uma dependência direta com a camada de infraestrutura/persistência. Além disso, é possível usar a Injeção de dependência para isolar a implementação, o que é implementado na camada de infraestrutura/persistência que usam repositórios.
 
@@ -146,7 +146,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Recursos adicionais
 
 -   **Martin Fowler. Interface separada.**
-    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]

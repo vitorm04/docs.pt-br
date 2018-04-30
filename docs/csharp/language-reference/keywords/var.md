@@ -14,11 +14,11 @@ ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
 caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d2be56243f9c4ddafb3903d14fa6d6f9cb0e2f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e0df25eb46bb769214412646d0ac3a7a576b3b73
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="var-c-reference"></a>var (Referência de C#)
 Começando com o Visual C# 3.0, as variáveis que são declaradas no escopo do método podem ter um “tipo” implícito `var`. Uma variável local de tipo implícito é fortemente tipada, como se você mesmo tivesse declarado o tipo, mas o compilador determina o tipo. As duas declarações a seguir de `i` são funcionalmente equivalentes:  
@@ -31,7 +31,7 @@ int i = 10; //explicitly typed
  Para obter mais informações, consulte [Variáveis locais de tipo implícito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) e [Relacionamentos de tipo em operações de consulta LINQ](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra duas expressões de consulta. Na primeira expressão, o uso de `var` é permitido, mas não é necessário, pois o tipo do resultado da consulta pode ser declarado explicitamente como um `IEnumerable<string>`. No entanto, na segunda expressão, `var` deve ser usado porque o resultado é uma coleção de tipos anônimos e o nome desse tipo não é acessível, exceto para o próprio compilador. Observe que no exemplo 2, a variável de iteração `foreach` `item` também deve ser implicitamente tipada.  
+ O exemplo a seguir mostra duas expressões de consulta. Na primeira expressão, o uso de `var` é permitido, mas não é necessário, pois o tipo do resultado da consulta pode ser declarado explicitamente como um `IEnumerable<string>`. No entanto, na segunda expressão, `var` permite que o resultado seja uma coleção de tipos anônimos e o nome desse tipo não é acessível, exceto para o próprio compilador. O uso de `var` elimina a necessidade de criar uma nova classe para o resultado. Observe que no exemplo 2, a variável de iteração `foreach` `item` também deve ser implicitamente tipada.  
   
  [!code-csharp[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   

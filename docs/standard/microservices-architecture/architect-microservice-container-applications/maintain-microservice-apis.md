@@ -1,7 +1,7 @@
 ---
-title: "Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
 
@@ -33,13 +33,13 @@ Por fim, se você estiver usando uma arquitetura REST, o [Hypermedia](https://ww
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Controle de versão da API Web RESTful ASP.NET Core facilitado)**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+-   **Scott Hanselman. Facilitando o controle de versão da API Web RESTful do ASP.NET Core**
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 -   **Controle de versão de uma API Web RESTful**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Versioning, Hypermedia, and REST (Controle de versão, hipermídia e REST)**
+-   **Roy Fielding. Controle de versão, hipermídia e REST**
     <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 

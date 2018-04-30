@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projetando a camada de persistência da infraestrutura
 
-Os componentes de persistência de dados fornecem acesso aos dados hospedados dentro dos limites de um microsserviço (ou seja, em um banco de dados de microsserviço). Eles contêm a implementação real dos componentes, como repositórios e classes [Unidade de Trabalho](http://martinfowler.com/eaaCatalog/unitOfWork.html), como DBContexts de EF personalizados.
+Os componentes de persistência de dados fornecem acesso aos dados hospedados dentro dos limites de um microsserviço (ou seja, em um banco de dados de microsserviço). Eles contêm a implementação real dos componentes, como repositórios e classes [Unidade de Trabalho](https://martinfowler.com/eaaCatalog/unitOfWork.html), como DBContexts de EF personalizados.
 
 ## <a name="the-repository-pattern"></a>O padrão de repositório
 
@@ -90,7 +90,7 @@ Um objeto de acesso a dados executa operações de acesso e persistência de dad
 
 Uma unidade de trabalho é conhecida como uma única transação que envolve várias operações de inserção, atualização ou exclusão. Simplificando, isso significa que, para uma ação de usuário específica (por exemplo, o registro em um site), as transações de inserção, atualização e exclusão são tratadas em uma única transação. Isso é mais eficiente do que tratar várias transações de banco de dados de uma maneira mais intensa.
 
-Essas várias operações de persistência serão executadas mais tarde em uma única ação quando o código da camada de aplicativo executar um comando para isso. A decisão de como aplicar as alterações realizadas na memória ao armazenamento de banco de dados real geralmente se baseia no [padrão de unidade de trabalho](http://martinfowler.com/eaaCatalog/unitOfWork.html). No EF, o padrão de unidade de trabalho é implementado como o DBContext.
+Essas várias operações de persistência serão executadas mais tarde em uma única ação quando o código da camada de aplicativo executar um comando para isso. A decisão de como aplicar as alterações realizadas na memória ao armazenamento de banco de dados real geralmente se baseia no [padrão de unidade de trabalho](https://martinfowler.com/eaaCatalog/unitOfWork.html). No EF, o padrão de unidade de trabalho é implementado como o DBContext.
 
 Em muitos casos, esse padrão ou uma maneira de aplicar operações em relação ao armazenamento pode aumentar o desempenho do aplicativo e reduzir a possibilidade de inconsistências. Além disso, ele reduz o bloqueio de transações nas tabelas do banco de dados, porque todas as operações pretendidas são confirmadas em uma única transação. Isso é mais eficiente em comparação com a execução de muitas operações isoladas no banco de dados. Portanto, o ORM selecionado é capaz de otimizar a execução no banco de dados agrupando várias ações de atualização na mesma transação, em vez de executar várias transações pequenas e separadas.
 
@@ -138,21 +138,21 @@ Nas próximas seções, é explicado como implementar o padrão de especificaç�
 
 ### <a name="the-repository-pattern"></a>O padrão de repositório
 
--   **Edward Hieatt e Rob Mee. Padrão de repositório.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt e Rob Mee. Padrão de Repositório**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **O padrão de repositório**
+-   **O Padrão de Repositório**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repositório padrão: Uma persistência abstração de dados**
+-   **Padrão de Repositório: uma abstração da persistência de dados**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre o padrão de repositório) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre o padrão de Repositório) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Padrão de unidade de trabalho
 
--   **Martin Fowler. Unidade de padrão de trabalho.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Padrão de Unidade de Trabalho.**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,7 +161,7 @@ Nas próximas seções, é explicado como implementar o padrão de especificaç�
 
 ### <a name="the-specification-pattern"></a>O padrão de especificação
 
--   **O padrão de especificação.**
+-   **O Padrão de Especificação.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design (Design orientado por domínio). Addison-Wesley. pág. 224.**

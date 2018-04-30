@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 2057609c7f5c26668eac49cecce522135545e7dd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validação do lado do cliente (validação nas camadas de apresentação)
 
@@ -35,10 +35,10 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validação de aplicativos móveis Xamarin
 
--   **Validar a entrada de texto e mostrar erros**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controles/texto\_campo/Validar\_entrada /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validar a entrada de texto e exibir erros**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Retorno de chamada de validação**
+-   **Chamada de retorno de validação**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validação em aplicativos ASP.NET Core
@@ -48,14 +48,14 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validação em aplicativos Web SPA (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Validação de formulário 2 angular** **
+-   **Ado Kukic. Validação de formulário angular 2** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Validação do formulário**
+-   **Validação de formulário**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Validação.** Documentação da Breeze.
-    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
+    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 Em resumo, estes são os conceitos mais importantes no que diz respeito à validação:
 

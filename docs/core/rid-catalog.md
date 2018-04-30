@@ -1,17 +1,18 @@
 ---
-title: "Catálogo do RID (Identificador de Tempo de Execução) do .NET Core"
-description: "Saiba mais sobre o RID (Identificador de tempo de execução) e como os RIDs são usados no .NET Core."
+title: Catálogo do RID (Identificador de Tempo de Execução) do .NET Core
+description: Saiba mais sobre o RID (Identificador de tempo de execução) e como os RIDs são usados no .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de RIDs do .NET Core
 
@@ -19,7 +20,7 @@ RID é a abreviação de *Identificador de Tempo de Execução*. Os valores do R
 Eles são usados por pacotes .NET para representar ativos específicos de plataforma em pacotes NuGet. Os seguintes valores são exemplos de RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` ou `osx.10.12-x64`.
 Para os pacotes com dependências nativas, o RID designará as plataformas em que o pacote pode ser restaurado.
 
-Os RIDs podem ser definidos no elemento `<RuntimeIdentifier>` do arquivo de projeto. Eles também são usados por meio da opção `--runtime` com os seguintes [comandos da CLI do .NET Core](./tools/index.md):
+Um único RID pode ser definido no elemento `<RuntimeIdentifier>` do arquivo de projeto. Vários RIDs podem ser definidos como uma lista separada por ponto-e-vírgula no elemento `<RuntimeIdentifiers>` do arquivo de projeto. Eles também são usados por meio da opção `--runtime` com os seguintes [comandos da CLI do .NET Core](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)

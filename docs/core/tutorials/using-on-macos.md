@@ -1,21 +1,19 @@
 ---
 title: Guia de Introdução ao .NET Core no macOS
 description: Este documento fornece as etapas e o fluxo de trabalho para criar uma Solução do .NET Core usando o Visual Studio Code.
-keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
 ms.topic: get-started-article
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 18f825e75e7d32198a52a091948bc9dd064dacbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Guia de Introdução ao .NET Core no macOS
 
@@ -34,7 +32,7 @@ Para instalar a extensão de C# do Visual Studio Code, abra o Visual Studio Code
 
 ## <a name="getting-started"></a>Introdução
 
-Neste tutorial, você criará três projetos: um projeto de biblioteca, testes para esse projeto de biblioteca e um aplicativo de console que usa a biblioteca. Você pode [exibir ou baixar a fonte](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) para este tópico no repositório dotnet/docs do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Neste tutorial, você criará três projetos: um projeto de biblioteca, testes para esse projeto de biblioteca e um aplicativo de console que usa a biblioteca. Você pode [exibir ou baixar a fonte](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) para este tópico no repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Inicie o Visual Studio Code. Pressione <kbd>Ctrl</kbd>+<kbd>\`</kbd> (o caractere de acento grave) ou escolha **Exibir > Terminal Integrado** no menu para abrir um terminal inserido no Visual Studio Code. Você ainda pode abrir um shell externo com o comando **Abrir no Prompt de Comando** do Gerenciador (**Abrir no Terminal**, no Mac ou Linux), caso prefira trabalhar fora do Visual Studio Code.
 

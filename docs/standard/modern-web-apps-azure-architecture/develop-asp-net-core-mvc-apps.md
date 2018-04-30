@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -72,16 +73,16 @@ Se estiver usando a validação de modelos, sempre verifique se o modelo é vál
 Para APIs Web, o ASP.NET Core MVC é compatível com a [*negociação de conteúdo*](https://docs.microsoft.com/aspnet/core/mvc/models/formatting), permitindo que as solicitações especifiquem como as respostas devem ser formatadas. Com base nos cabeçalhos fornecidos na solicitação, as ações que retornam dados formatarão a resposta em XML, JSON ou outro formato compatível. Esse recurso permite que a mesma API seja usada por vários clientes com diferentes requisitos de formato de dados.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Referências – Mapeando solicitações para respostas
-> - **Roteamento para as ações do controlador**
+> - **Ações de roteamento para o controlador**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **Associação de modelos** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
-> - **Validação de modelos**
+> - **Validação de modelo**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtros** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Trabalhando com dependências
 
-O ASP.NET Core tem suporte interno para uma técnica conhecida como [injeção de dependência](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection), além de fazer uso dela internamente. A injeção de dependência é uma técnica que permitiu um acoplamento flexível entre diferentes partes de um aplicativo. Um acoplamento mais flexível é desejável porque facilita o isolamento de partes do aplicativo, permitindo o teste ou a substituição. Ele também torna menos provável que uma alteração em uma parte do aplicativo tenha um impacto inesperado em outro lugar do aplicativo. A injeção de dependência baseia-se no princípio da inversão de dependência e costuma ser fundamental para alcançar o princípio do aberto/fechado. Ao avaliar como o aplicativo funciona com suas dependências, tenha cuidado com o code smell [adesão estática](http://deviq.com/static-cling/) e lembre-se do aforismo "[new é associação](http://ardalis.com/new-is-glue)".
+O ASP.NET Core tem suporte interno para uma técnica conhecida como [injeção de dependência](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection), além de fazer uso dela internamente. A injeção de dependência é uma técnica que permitiu um acoplamento flexível entre diferentes partes de um aplicativo. Um acoplamento mais flexível é desejável porque facilita o isolamento de partes do aplicativo, permitindo o teste ou a substituição. Ele também torna menos provável que uma alteração em uma parte do aplicativo tenha um impacto inesperado em outro lugar do aplicativo. A injeção de dependência baseia-se no princípio da inversão de dependência e costuma ser fundamental para alcançar o princípio do aberto/fechado. Ao avaliar como o aplicativo funciona com suas dependências, tenha cuidado com o code smell [adesão estática](http://deviq.com/static-cling/) e lembre-se do aforismo "[new é associação](https://ardalis.com/new-is-glue)".
 
 A adesão estática ocorre quando as classes fazem chamadas a métodos estáticos ou acessam propriedades estáticas que têm efeitos colaterais ou dependências na infraestrutura. Por exemplo, se você tiver um método que chama um método estático, que, por sua vez, grava em um banco de dados, o método terá um acoplamento rígido com o banco de dados. Qualquer coisa que interrompa essa chamada de banco de dados interromperá o método. O teste desses métodos é notoriamente difícil, pois testes desse tipo exigem bibliotecas fictícias comerciais para simular as chamadas estáticas ou podem ser testados somente com um banco de dados de teste em vigor. As chamadas estáticas que não têm nenhuma dependência na infraestrutura, especialmente aquelas que estão completamente sem estado, têm a permissão de chamar e não têm nenhum impacto sobre o acoplamento ou a capacidade de teste (além do acoplamento do código com a própria chamada estática).
 
@@ -283,7 +284,7 @@ Leia mais sobre como implementar filtros e baixe uma amostra funcional no artigo
 > ### <a name="references--structuring-applications"></a>Referências – Estruturando aplicativos
 > - **Áreas**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN – Fatias de recurso para o ASP.NET Core MVC**
+> - **MSDN – Fatias de Recurso do ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtros**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
@@ -400,7 +401,7 @@ A maioria das APIs Web deve implementar um sistema de autenticação baseada em 
 
 ## <a name="client-communication"></a>Comunicação do cliente
 
-Além de fornecer páginas e responder a solicitações de dados por meio de APIs Web, os aplicativos ASP.NET Core podem se comunicar diretamente com os clientes conectados. Essa comunicação de saída pode usar uma variedade de tecnologias de transporte, sendo a mais comum o WebSockets. O SignalR do ASP.NET Core é uma biblioteca que simplifica o tipo de funcionalidade de comunicação de servidor para cliente em tempo real para os aplicativos. O SignalR é compatível com uma variedade de tecnologias de transporte, incluindo o WebSockets, e abstrai muitos dos detalhes de implementação do desenvolvedor.
+Além de fornecer páginas e responder a solicitações de dados por meio de APIs Web, os aplicativos ASP.NET Core podem se comunicar diretamente com os clientes conectados. Essa comunicação de saída pode usar uma variedade de tecnologias de transporte, sendo a mais comum o WebSockets. O SignalR do ASP.NET Core é uma biblioteca que simplifica o acréscimo da funcionalidade de comunicação de servidor para cliente em tempo real aos aplicativos. O SignalR é compatível com uma variedade de tecnologias de transporte, incluindo o WebSockets, e abstrai muitos dos detalhes de implementação do desenvolvedor.
 
 Atualmente, o SignalR do ASP.NET Core está em desenvolvimento e estará disponível na próxima versão do ASP.NET Core. No entanto, outras [bibliotecas do WebSockets de software livre](https://github.com/radu-matei/websocket-manager) estão disponíveis no momento.
 

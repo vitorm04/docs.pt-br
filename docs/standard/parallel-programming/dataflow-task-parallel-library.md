@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7671001fb63a5e09c5d7a3dc4b2414d41a790e16
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Fluxo de dados (Task Parallel Library)
 <a name="top"></a> A TPL (biblioteca de paralelismo de tarefas) fornece componentes de fluxo de dados para ajudar a aumentar a robustez de aplicativos habilitados para simultaneidade. Esses componentes de fluxo de dados são coletivamente chamados de *biblioteca de fluxos de dados TPL*. Esse modelo de fluxo de dados promove programação baseada em ator que fornece transmissão de mensagem no processo para fluxo de dados de alta granularidade e tarefas de pipelining. Os componentes de fluxo de dados usam como base os tipos e infraestrutura de programação da TPL e integram-se ao suporte às linguagens C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e F# para programação assíncrona. Esses componentes do fluxo de dados são úteis quando você tem várias operações que devem se comunicar umas com as outras de modo assíncrono ou quando você deseja processar dados à medida que são disponibilizados. Por exemplo, considere um aplicativo que processa dados de imagem de uma webcam. Usando o modelo de fluxo de dados, o aplicativo pode processar quadros de imagem assim que eles se tornarem disponíveis. Se o aplicativo aprimora os quadros de imagem, por exemplo, executando a redução de olhos vermelhos ou correção de luz, você pode criar um *pipeline* dos componentes de fluxo de dados. Cada estágio do pipeline pode usar mais funcionalidade de paralelismo de alta granularidade, assim como a funcionalidade fornecida pela TPL, para transformar a imagem.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- Você também pode usar propriedades como <xref:System.Threading.Tasks.Task.IsCanceled%2A> no corpo da tarefa de continuação para determinar informações adicionais sobre o status de conclusão de um bloco de fluxo de dados. Para obter mais informações sobre tarefas de continuação e como elas se relacionam com cancelamento e tratamento de erro, consulte [Encadeamento de tarefas pelo uso de tarefas de continuação](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md), [Tratamento de exceções](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [NIB: como manipular exceções lançadas por tarefas](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+ Você também pode usar propriedades como <xref:System.Threading.Tasks.Task.IsCanceled%2A> no corpo da tarefa de continuação para determinar informações adicionais sobre o status de conclusão de um bloco de fluxo de dados. Para obter mais informações sobre tarefas de continuação e como elas se relacionam com cancelamento e tratamento de erro, consulte [Encadeamento de tarefas pelo uso de tarefas de continuação](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md), [Tratamento de exceções](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [NIB: como manipular exceções lançadas por tarefas](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
  [[ir para o topo](#top)]  
   
@@ -166,8 +166,8 @@ ms.lasthandoff: 01/19/2018
   
 |Tipo|Tipo de delegado síncrono|Tipo de delegado assíncrono|  
 |----------|-------------------------------|--------------------------------|  
-|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func\<TInput, Task>`|  
-|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func\<TInput, TOutput>`2`|`System.Func<TInput, Task<TOutput>>`|  
+|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
+|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|`System.Func<TInput, IEnumerable<TOutput>>`|`System.Func<TInput, Task<IEnumerable<TOutput>>>`|  
   
  Você também pode usar expressões lambda ao trabalhar com tipos de blocos de execução. Para obter um exemplo que mostra como usar uma expressão lambda com um bloco de execução, consulte [Como executar ações quando um bloco de fluxo de dados recebe dados](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md).  
