@@ -16,11 +16,11 @@ ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)
 
@@ -48,7 +48,7 @@ Objetos dinâmicos expõem membros como métodos e propriedades em tempo de exec
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Para criar uma classe dinâmica personalizada  
   
-1.  Inicie o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+1.  Inicie o Visual Studio.  
   
 2.  No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
   
@@ -143,7 +143,7 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Para criar uma classe dinâmica personalizada  
   
-1.  Em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
+1.  No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
   
 2.  Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicIronPythonSample` e clique em **OK**. O novo projeto é criado.  
   
