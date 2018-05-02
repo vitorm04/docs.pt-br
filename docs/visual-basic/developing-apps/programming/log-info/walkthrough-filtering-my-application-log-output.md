@@ -1,105 +1,106 @@
 ---
-title: "Filtrando a saída de My.Application.Log (Visual Basic)"
-ms.custom: 
+title: Filtrando a saída de My.Application.Log (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="de379-102">Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de379-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
-<span data-ttu-id="de379-103">Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes.</span><span class="sxs-lookup"><span data-stu-id="de379-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="de379-104">Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="de379-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="66b3e-102">Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66b3e-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
+<span data-ttu-id="66b3e-103">Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes.</span><span class="sxs-lookup"><span data-stu-id="66b3e-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="66b3e-104">Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="66b3e-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
   
-## <a name="getting-started"></a><span data-ttu-id="de379-105">Guia de Introdução</span><span class="sxs-lookup"><span data-stu-id="de379-105">Getting Started</span></span>  
- <span data-ttu-id="de379-106">Cada mensagem que `My.Application.Log` grava tem um nível de gravidade associado, que os mecanismos de filtragem usam para controlar a saída de log.</span><span class="sxs-lookup"><span data-stu-id="de379-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="de379-107">Este aplicativo de exemplo usa métodos `My.Application.Log` para gravar diversas mensagens de log com diferentes níveis de gravidade.</span><span class="sxs-lookup"><span data-stu-id="de379-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>  
+## <a name="getting-started"></a><span data-ttu-id="66b3e-105">Guia de Introdução</span><span class="sxs-lookup"><span data-stu-id="66b3e-105">Getting Started</span></span>  
+ <span data-ttu-id="66b3e-106">Cada mensagem que `My.Application.Log` grava tem um nível de gravidade associado, que os mecanismos de filtragem usam para controlar a saída de log.</span><span class="sxs-lookup"><span data-stu-id="66b3e-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="66b3e-107">Este aplicativo de exemplo usa métodos `My.Application.Log` para gravar diversas mensagens de log com diferentes níveis de gravidade.</span><span class="sxs-lookup"><span data-stu-id="66b3e-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>  
   
-#### <a name="to-build-the-sample-application"></a><span data-ttu-id="de379-108">Para compilar o aplicativo de exemplo</span><span class="sxs-lookup"><span data-stu-id="de379-108">To build the sample application</span></span>  
+#### <a name="to-build-the-sample-application"></a><span data-ttu-id="66b3e-108">Para compilar o aplicativo de exemplo</span><span class="sxs-lookup"><span data-stu-id="66b3e-108">To build the sample application</span></span>  
   
-1.  <span data-ttu-id="de379-109">Abra um novo projeto de aplicativos do Windows [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de379-109">Open a new [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows Application project.</span></span>  
+1.  <span data-ttu-id="66b3e-109">Abra um novo projeto de aplicativo do Windows Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="66b3e-109">Open a new Visual Basic Windows Application project.</span></span>  
   
-2.  <span data-ttu-id="de379-110">Adicione um botão denominado Button1 a Form1.</span><span class="sxs-lookup"><span data-stu-id="de379-110">Add a button named Button1 to Form1.</span></span>  
+2.  <span data-ttu-id="66b3e-110">Adicione um botão denominado Button1 a Form1.</span><span class="sxs-lookup"><span data-stu-id="66b3e-110">Add a button named Button1 to Form1.</span></span>  
   
-3.  <span data-ttu-id="de379-111">No manipulador de eventos <xref:System.Windows.Forms.Control.Click> de Button1, adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="de379-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>  
+3.  <span data-ttu-id="66b3e-111">No manipulador de eventos <xref:System.Windows.Forms.Control.Click> de Button1, adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="66b3e-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
-4.  <span data-ttu-id="de379-112">Execute o aplicativo no depurador.</span><span class="sxs-lookup"><span data-stu-id="de379-112">Run the application in the debugger.</span></span>  
+4.  <span data-ttu-id="66b3e-112">Execute o aplicativo no depurador.</span><span class="sxs-lookup"><span data-stu-id="66b3e-112">Run the application in the debugger.</span></span>  
   
-5.  <span data-ttu-id="de379-113">Pressione **Button1**.</span><span class="sxs-lookup"><span data-stu-id="de379-113">Press **Button1**.</span></span>  
+5.  <span data-ttu-id="66b3e-113">Pressione **Button1**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-113">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="de379-114">O aplicativo grava as informações a seguir no arquivo de log e na saída da depuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="de379-114">The application writes the following information to the application's debug output and log file.</span></span>  
+     <span data-ttu-id="66b3e-114">O aplicativo grava as informações a seguir no arquivo de log e na saída da depuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="66b3e-114">The application writes the following information to the application's debug output and log file.</span></span>  
   
      `DefaultSource Information: 0 : In Button1_Click`  
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  <span data-ttu-id="de379-115">Feche o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="de379-115">Close the application.</span></span>  
+6.  <span data-ttu-id="66b3e-115">Feche o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="66b3e-115">Close the application.</span></span>  
   
-     <span data-ttu-id="de379-116">Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window).</span><span class="sxs-lookup"><span data-stu-id="de379-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="de379-117">Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span><span class="sxs-lookup"><span data-stu-id="de379-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
+     <span data-ttu-id="66b3e-116">Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window).</span><span class="sxs-lookup"><span data-stu-id="66b3e-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="66b3e-117">Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span><span class="sxs-lookup"><span data-stu-id="66b3e-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="de379-118">Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.</span><span class="sxs-lookup"><span data-stu-id="de379-118">By default, the application flushes the log-file output when the application closes.</span></span>  
+    >  <span data-ttu-id="66b3e-118">Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.</span><span class="sxs-lookup"><span data-stu-id="66b3e-118">By default, the application flushes the log-file output when the application closes.</span></span>  
   
-     <span data-ttu-id="de379-119">No exemplo acima, a segunda chamada para o método <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> e a chamada para o método <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> produzem a saída de log, enquanto as primeira e última chamadas para o método `WriteEntry` não.</span><span class="sxs-lookup"><span data-stu-id="de379-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="de379-120">Isso ocorre porque os níveis de gravidade de `WriteEntry` e `WriteException` são "Information" e "Error", que são permitidos pela filtragem de log padrão do objeto `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="de379-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="de379-121">No entanto, os eventos com os níveis de gravidade "Start" e "Stop" são impedidos de produzir a saída de log.</span><span class="sxs-lookup"><span data-stu-id="de379-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>  
+     <span data-ttu-id="66b3e-119">No exemplo acima, a segunda chamada para o método <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> e a chamada para o método <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> produzem a saída de log, enquanto as primeira e última chamadas para o método `WriteEntry` não.</span><span class="sxs-lookup"><span data-stu-id="66b3e-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="66b3e-120">Isso ocorre porque os níveis de gravidade de `WriteEntry` e `WriteException` são "Information" e "Error", que são permitidos pela filtragem de log padrão do objeto `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="66b3e-121">No entanto, os eventos com os níveis de gravidade "Start" e "Stop" são impedidos de produzir a saída de log.</span><span class="sxs-lookup"><span data-stu-id="66b3e-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>  
   
-## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="de379-122">Filtragem de ouvintes de My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="de379-122">Filtering for All My.Application.Log Listeners</span></span>  
- <span data-ttu-id="de379-123">O objeto `My.Application.Log` usa um <xref:System.Diagnostics.SourceSwitch> chamado `DefaultSwitch` para controlar quais mensagens ele passa dos métodos `WriteEntry` e `WriteException` para os ouvintes de log.</span><span class="sxs-lookup"><span data-stu-id="de379-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="de379-124">Você pode configurar `DefaultSwitch` no arquivo de configuração de aplicativo definindo seu valor como um dos valores de enumeração <xref:System.Diagnostics.SourceLevels>.</span><span class="sxs-lookup"><span data-stu-id="de379-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="de379-125">Por padrão, seu valor é “Information".</span><span class="sxs-lookup"><span data-stu-id="de379-125">By default, its value is "Information".</span></span>  
+## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="66b3e-122">Filtragem de ouvintes de My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="66b3e-122">Filtering for All My.Application.Log Listeners</span></span>  
+ <span data-ttu-id="66b3e-123">O objeto `My.Application.Log` usa um <xref:System.Diagnostics.SourceSwitch> chamado `DefaultSwitch` para controlar quais mensagens ele passa dos métodos `WriteEntry` e `WriteException` para os ouvintes de log.</span><span class="sxs-lookup"><span data-stu-id="66b3e-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="66b3e-124">Você pode configurar `DefaultSwitch` no arquivo de configuração de aplicativo definindo seu valor como um dos valores de enumeração <xref:System.Diagnostics.SourceLevels>.</span><span class="sxs-lookup"><span data-stu-id="66b3e-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="66b3e-125">Por padrão, seu valor é “Information".</span><span class="sxs-lookup"><span data-stu-id="66b3e-125">By default, its value is "Information".</span></span>  
   
- <span data-ttu-id="de379-126">Esta tabela mostra o nível de gravidade necessário para o log gravar uma mensagem nos ouvintes, dada uma determinada configuração `DefaultSwitch`.</span><span class="sxs-lookup"><span data-stu-id="de379-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>  
+ <span data-ttu-id="66b3e-126">Esta tabela mostra o nível de gravidade necessário para o log gravar uma mensagem nos ouvintes, dada uma determinada configuração `DefaultSwitch`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>  
   
-|<span data-ttu-id="de379-127">Valor DefaultSwitch</span><span class="sxs-lookup"><span data-stu-id="de379-127">DefaultSwitch Value</span></span>|<span data-ttu-id="de379-128">Gravidade da mensagem necessária para a saída</span><span class="sxs-lookup"><span data-stu-id="de379-128">Message severity required for output</span></span>|  
+|<span data-ttu-id="66b3e-127">Valor DefaultSwitch</span><span class="sxs-lookup"><span data-stu-id="66b3e-127">DefaultSwitch Value</span></span>|<span data-ttu-id="66b3e-128">Gravidade da mensagem necessária para a saída</span><span class="sxs-lookup"><span data-stu-id="66b3e-128">Message severity required for output</span></span>|  
 |---|---| 
 |`Critical`|`Critical`|  
-|`Error`|<span data-ttu-id="de379-129">`Critical` ou `Error`</span><span class="sxs-lookup"><span data-stu-id="de379-129">`Critical` or `Error`</span></span>|  
-|`Warning`|<span data-ttu-id="de379-130">`Critical`, `Error` ou `Warning`</span><span class="sxs-lookup"><span data-stu-id="de379-130">`Critical`, `Error`, or `Warning`</span></span>|  
-|`Information`|<span data-ttu-id="de379-131">`Critical`, `Error`, `Warning` ou `Information`</span><span class="sxs-lookup"><span data-stu-id="de379-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|  
-|`Verbose`|<span data-ttu-id="de379-132">`Critical`, `Error`, `Warning`, `Information` ou `Verbose`</span><span class="sxs-lookup"><span data-stu-id="de379-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|  
-|`ActivityTracing`|<span data-ttu-id="de379-133">`Start`, `Stop`, `Suspend`, `Resume` ou `Transfer`</span><span class="sxs-lookup"><span data-stu-id="de379-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|  
-|`All`|<span data-ttu-id="de379-134">Todas as mensagens são permitidas.</span><span class="sxs-lookup"><span data-stu-id="de379-134">All messages are allowed.</span></span>|  
-|`Off`|<span data-ttu-id="de379-135">Todas as mensagens são bloqueadas.</span><span class="sxs-lookup"><span data-stu-id="de379-135">All messages are blocked.</span></span>|  
+|`Error`|<span data-ttu-id="66b3e-129">`Critical` ou `Error`</span><span class="sxs-lookup"><span data-stu-id="66b3e-129">`Critical` or `Error`</span></span>|  
+|`Warning`|<span data-ttu-id="66b3e-130">`Critical`, `Error` ou `Warning`</span><span class="sxs-lookup"><span data-stu-id="66b3e-130">`Critical`, `Error`, or `Warning`</span></span>|  
+|`Information`|<span data-ttu-id="66b3e-131">`Critical`, `Error`, `Warning` ou `Information`</span><span class="sxs-lookup"><span data-stu-id="66b3e-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|  
+|`Verbose`|<span data-ttu-id="66b3e-132">`Critical`, `Error`, `Warning`, `Information` ou `Verbose`</span><span class="sxs-lookup"><span data-stu-id="66b3e-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|  
+|`ActivityTracing`|<span data-ttu-id="66b3e-133">`Start`, `Stop`, `Suspend`, `Resume` ou `Transfer`</span><span class="sxs-lookup"><span data-stu-id="66b3e-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|  
+|`All`|<span data-ttu-id="66b3e-134">Todas as mensagens são permitidas.</span><span class="sxs-lookup"><span data-stu-id="66b3e-134">All messages are allowed.</span></span>|  
+|`Off`|<span data-ttu-id="66b3e-135">Todas as mensagens são bloqueadas.</span><span class="sxs-lookup"><span data-stu-id="66b3e-135">All messages are blocked.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="de379-136">Os métodos `WriteEntry` e `WriteException` têm uma sobrecarga que não especifica um nível de gravidade.</span><span class="sxs-lookup"><span data-stu-id="de379-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="de379-137">O nível de gravidade implícito para a sobrecarga `WriteEntry` é "Information" e o nível de gravidade implícito para a sobrecarga `WriteException` é "Error".</span><span class="sxs-lookup"><span data-stu-id="de379-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>  
+>  <span data-ttu-id="66b3e-136">Os métodos `WriteEntry` e `WriteException` têm uma sobrecarga que não especifica um nível de gravidade.</span><span class="sxs-lookup"><span data-stu-id="66b3e-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="66b3e-137">O nível de gravidade implícito para a sobrecarga `WriteEntry` é "Information" e o nível de gravidade implícito para a sobrecarga `WriteException` é "Error".</span><span class="sxs-lookup"><span data-stu-id="66b3e-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>  
   
- <span data-ttu-id="de379-138">Esta tabela explica a saída de log mostrada no exemplo anterior: com a configuração de `DefaultSwitch` padrão de "Information", apenas a segunda chamada para o método `WriteEntry` e a chamada para o método `WriteException` produzem a saída de log.</span><span class="sxs-lookup"><span data-stu-id="de379-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>  
+ <span data-ttu-id="66b3e-138">Esta tabela explica a saída de log mostrada no exemplo anterior: com a configuração de `DefaultSwitch` padrão de "Information", apenas a segunda chamada para o método `WriteEntry` e a chamada para o método `WriteException` produzem a saída de log.</span><span class="sxs-lookup"><span data-stu-id="66b3e-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>  
   
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="de379-139">Para registrar em log apenas eventos de rastreamento de atividade</span><span class="sxs-lookup"><span data-stu-id="de379-139">To log only activity tracing events</span></span>  
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="66b3e-139">Para registrar em log apenas eventos de rastreamento de atividade</span><span class="sxs-lookup"><span data-stu-id="66b3e-139">To log only activity tracing events</span></span>  
   
-1.  <span data-ttu-id="de379-140">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="de379-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>  
+1.  <span data-ttu-id="66b3e-140">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>  
   
-     <span data-ttu-id="de379-141">-ou-</span><span class="sxs-lookup"><span data-stu-id="de379-141">-or-</span></span>  
+     <span data-ttu-id="66b3e-141">-ou-</span><span class="sxs-lookup"><span data-stu-id="66b3e-141">-or-</span></span>  
   
-     <span data-ttu-id="de379-142">Se não houver nenhum arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="de379-142">If there is no app.config file:</span></span>  
+     <span data-ttu-id="66b3e-142">Se não houver nenhum arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="66b3e-142">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="de379-143">No menu **Projeto**, escolha **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="de379-143">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="66b3e-143">No menu **Projeto**, escolha **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-143">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="de379-144">Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="de379-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="66b3e-144">Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="de379-145">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="de379-145">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="66b3e-145">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-145">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="de379-146">Localize a seção `<switches>`, que está na seção `<system.diagnostics>`, que está na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="de379-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>  
+2.  <span data-ttu-id="66b3e-146">Localize a seção `<switches>`, que está na seção `<system.diagnostics>`, que está na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="66b3e-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>  
   
-3.  <span data-ttu-id="de379-147">Localize o elemento que adiciona `DefaultSwitch` à coleção de opções.</span><span class="sxs-lookup"><span data-stu-id="de379-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="de379-148">Ele deve ser semelhante a este:</span><span class="sxs-lookup"><span data-stu-id="de379-148">It should look similar to this element:</span></span>  
+3.  <span data-ttu-id="66b3e-147">Localize o elemento que adiciona `DefaultSwitch` à coleção de opções.</span><span class="sxs-lookup"><span data-stu-id="66b3e-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="66b3e-148">Ele deve ser semelhante a este:</span><span class="sxs-lookup"><span data-stu-id="66b3e-148">It should look similar to this element:</span></span>  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  <span data-ttu-id="de379-149">Altere o valor do atributo `value` para "ActivityTracing".</span><span class="sxs-lookup"><span data-stu-id="de379-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>  
+4.  <span data-ttu-id="66b3e-149">Altere o valor do atributo `value` para "ActivityTracing".</span><span class="sxs-lookup"><span data-stu-id="66b3e-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>  
   
-5.  <span data-ttu-id="de379-150">O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:</span><span class="sxs-lookup"><span data-stu-id="de379-150">The content of the app.config file should be similar to the following XML:</span></span>  
+5.  <span data-ttu-id="66b3e-150">O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:</span><span class="sxs-lookup"><span data-stu-id="66b3e-150">The content of the app.config file should be similar to the following XML:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -128,49 +129,49 @@ ms.lasthandoff: 11/21/2017
     </configuration>  
     ```  
   
-6.  <span data-ttu-id="de379-151">Execute o aplicativo no depurador.</span><span class="sxs-lookup"><span data-stu-id="de379-151">Run the application in the debugger.</span></span>  
+6.  <span data-ttu-id="66b3e-151">Execute o aplicativo no depurador.</span><span class="sxs-lookup"><span data-stu-id="66b3e-151">Run the application in the debugger.</span></span>  
   
-7.  <span data-ttu-id="de379-152">Pressione **Button1**.</span><span class="sxs-lookup"><span data-stu-id="de379-152">Press **Button1**.</span></span>  
+7.  <span data-ttu-id="66b3e-152">Pressione **Button1**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-152">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="de379-153">O aplicativo grava as informações a seguir no arquivo de log e na saída da depuração do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="de379-153">The application writes the following information to the application's debug output and log file:</span></span>  
+     <span data-ttu-id="66b3e-153">O aplicativo grava as informações a seguir no arquivo de log e na saída da depuração do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="66b3e-153">The application writes the following information to the application's debug output and log file:</span></span>  
   
      `DefaultSource Start: 4 : Entering Button1_Click`  
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  <span data-ttu-id="de379-154">Feche o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="de379-154">Close the application.</span></span>  
+8.  <span data-ttu-id="66b3e-154">Feche o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="66b3e-154">Close the application.</span></span>  
   
-9. <span data-ttu-id="de379-155">Altere o valor do atributo `value` de volta para "Information".</span><span class="sxs-lookup"><span data-stu-id="de379-155">Change the value of the `value` attribute back to "Information".</span></span>  
+9. <span data-ttu-id="66b3e-155">Altere o valor do atributo `value` de volta para "Information".</span><span class="sxs-lookup"><span data-stu-id="66b3e-155">Change the value of the `value` attribute back to "Information".</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="de379-156">A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="de379-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="de379-157">Ele não altera como as classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> se comportam.</span><span class="sxs-lookup"><span data-stu-id="de379-157">It does not change how the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>  
+    >  <span data-ttu-id="66b3e-156">A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="66b3e-157">Ele não altera como as classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> se comportam.</span><span class="sxs-lookup"><span data-stu-id="66b3e-157">It does not change how the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>  
   
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="de379-158">Filtragem individual de ouvintes de My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="de379-158">Individual Filtering For My.Application.Log Listeners</span></span>  
- <span data-ttu-id="de379-159">O exemplo anterior mostra como alterar a filtragem para toda a saída `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="de379-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="de379-160">Este exemplo demonstra como filtrar um ouvinte de log individual.</span><span class="sxs-lookup"><span data-stu-id="de379-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="de379-161">Por padrão, um aplicativo tem dois ouvintes que gravam na saída de depuração do aplicativo e no arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="de379-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>  
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="66b3e-158">Filtragem individual de ouvintes de My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="66b3e-158">Individual Filtering For My.Application.Log Listeners</span></span>  
+ <span data-ttu-id="66b3e-159">O exemplo anterior mostra como alterar a filtragem para toda a saída `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="66b3e-160">Este exemplo demonstra como filtrar um ouvinte de log individual.</span><span class="sxs-lookup"><span data-stu-id="66b3e-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="66b3e-161">Por padrão, um aplicativo tem dois ouvintes que gravam na saída de depuração do aplicativo e no arquivo de log.</span><span class="sxs-lookup"><span data-stu-id="66b3e-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>  
   
- <span data-ttu-id="de379-162">O arquivo de configuração controla o comportamento dos ouvintes de log, permitindo que cada um deles tenha um filtro, que é semelhante a uma opção para `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="de379-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="de379-163">Um ouvinte de log produzirá uma mensagem somente se a gravidade da mensagem for permitida pelo `DefaultSwitch` do log e pelo filtro do ouvinte de log.</span><span class="sxs-lookup"><span data-stu-id="de379-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>  
+ <span data-ttu-id="66b3e-162">O arquivo de configuração controla o comportamento dos ouvintes de log, permitindo que cada um deles tenha um filtro, que é semelhante a uma opção para `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="66b3e-163">Um ouvinte de log produzirá uma mensagem somente se a gravidade da mensagem for permitida pelo `DefaultSwitch` do log e pelo filtro do ouvinte de log.</span><span class="sxs-lookup"><span data-stu-id="66b3e-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>  
   
- <span data-ttu-id="de379-164">Este exemplo demonstra como configurar a filtragem para um novo ouvinte de depuração e adicioná-lo ao objeto `Log`.</span><span class="sxs-lookup"><span data-stu-id="de379-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="de379-165">O ouvinte de depuração padrão deve ser removido do objeto `Log`, de modo que seja claro que as mensagens de depuração são provenientes do novo ouvinte de depuração.</span><span class="sxs-lookup"><span data-stu-id="de379-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>  
+ <span data-ttu-id="66b3e-164">Este exemplo demonstra como configurar a filtragem para um novo ouvinte de depuração e adicioná-lo ao objeto `Log`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="66b3e-165">O ouvinte de depuração padrão deve ser removido do objeto `Log`, de modo que seja claro que as mensagens de depuração são provenientes do novo ouvinte de depuração.</span><span class="sxs-lookup"><span data-stu-id="66b3e-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>  
   
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="de379-166">Para registrar em log apenas eventos de rastreamento de atividade</span><span class="sxs-lookup"><span data-stu-id="de379-166">To log only activity-tracing events</span></span>  
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="66b3e-166">Para registrar em log apenas eventos de rastreamento de atividade</span><span class="sxs-lookup"><span data-stu-id="66b3e-166">To log only activity-tracing events</span></span>  
   
-1.  <span data-ttu-id="de379-167">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="de379-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>  
+1.  <span data-ttu-id="66b3e-167">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="de379-168">-ou-</span><span class="sxs-lookup"><span data-stu-id="de379-168">-or-</span></span>  
+     <span data-ttu-id="66b3e-168">-ou-</span><span class="sxs-lookup"><span data-stu-id="66b3e-168">-or-</span></span>  
   
-     <span data-ttu-id="de379-169">Se não houver nenhum arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="de379-169">If there is no app.config file:</span></span>  
+     <span data-ttu-id="66b3e-169">Se não houver nenhum arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="66b3e-169">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="de379-170">No menu **Projeto**, escolha **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="de379-170">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="66b3e-170">No menu **Projeto**, escolha **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-170">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="de379-171">Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="de379-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="66b3e-171">Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="de379-172">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="de379-172">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="66b3e-172">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-172">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="de379-173">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="de379-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="de379-174">Escolha **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="de379-174">Choose **Open**.</span></span>  
+2.  <span data-ttu-id="66b3e-173">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="66b3e-174">Escolha **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-174">Choose **Open**.</span></span>  
   
-3.  <span data-ttu-id="de379-175">Localize a seção `<listeners>`, na seção `<source>` com o atributo de `name` "DefaultSource", que está na seção `<sources>`.</span><span class="sxs-lookup"><span data-stu-id="de379-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="de379-176">A seção `<sources>` está na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="de379-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+3.  <span data-ttu-id="66b3e-175">Localize a seção `<listeners>`, na seção `<source>` com o atributo de `name` "DefaultSource", que está na seção `<sources>`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="66b3e-176">A seção `<sources>` está na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="66b3e-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-4.  <span data-ttu-id="de379-177">Adicione esse elemento à seção `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="de379-177">Add this element to the `<listeners>` section:</span></span>  
+4.  <span data-ttu-id="66b3e-177">Adicione esse elemento à seção `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="66b3e-177">Add this element to the `<listeners>` section:</span></span>  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -179,9 +180,9 @@ ms.lasthandoff: 11/21/2017
     <add name="NewDefault"/>  
     ```  
   
-5.  <span data-ttu-id="de379-178">Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="de379-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+5.  <span data-ttu-id="66b3e-178">Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="66b3e-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-6.  <span data-ttu-id="de379-179">Adicione esse elemento a essa seção `<sharedListeners>`:</span><span class="sxs-lookup"><span data-stu-id="de379-179">Add this element to that `<sharedListeners>` section:</span></span>  
+6.  <span data-ttu-id="66b3e-179">Adicione esse elemento a essa seção `<sharedListeners>`:</span><span class="sxs-lookup"><span data-stu-id="66b3e-179">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="NewDefault"   
@@ -194,9 +195,9 @@ ms.lasthandoff: 11/21/2017
     </add>  
     ```  
   
-     <span data-ttu-id="de379-180">O filtro <xref:System.Diagnostics.EventTypeFilter> escolhe um dos valores de enumeração <xref:System.Diagnostics.SourceLevels> como seu atributo `initializeData`.</span><span class="sxs-lookup"><span data-stu-id="de379-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>  
+     <span data-ttu-id="66b3e-180">O filtro <xref:System.Diagnostics.EventTypeFilter> escolhe um dos valores de enumeração <xref:System.Diagnostics.SourceLevels> como seu atributo `initializeData`.</span><span class="sxs-lookup"><span data-stu-id="66b3e-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>  
   
-7.  <span data-ttu-id="de379-181">O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:</span><span class="sxs-lookup"><span data-stu-id="de379-181">The content of the app.config file should be similar to the following XML:</span></span>  
+7.  <span data-ttu-id="66b3e-181">O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:</span><span class="sxs-lookup"><span data-stu-id="66b3e-181">The content of the app.config file should be similar to the following XML:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -237,28 +238,28 @@ ms.lasthandoff: 11/21/2017
     </configuration>  
     ```  
   
-8.  <span data-ttu-id="de379-182">Execute o aplicativo no depurador.</span><span class="sxs-lookup"><span data-stu-id="de379-182">Run the application in the debugger.</span></span>  
+8.  <span data-ttu-id="66b3e-182">Execute o aplicativo no depurador.</span><span class="sxs-lookup"><span data-stu-id="66b3e-182">Run the application in the debugger.</span></span>  
   
-9. <span data-ttu-id="de379-183">Pressione **Button1**.</span><span class="sxs-lookup"><span data-stu-id="de379-183">Press **Button1**.</span></span>  
+9. <span data-ttu-id="66b3e-183">Pressione **Button1**.</span><span class="sxs-lookup"><span data-stu-id="66b3e-183">Press **Button1**.</span></span>  
   
-     <span data-ttu-id="de379-184">O aplicativo grava as informações a seguir no arquivo de log do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="de379-184">The application writes the following information to the application's log file:</span></span>  
+     <span data-ttu-id="66b3e-184">O aplicativo grava as informações a seguir no arquivo de log do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="66b3e-184">The application writes the following information to the application's log file:</span></span>  
   
      `Default Information: 0 : In Button1_Click`  
   
      `Default Error: 2 : Error in the application.`  
   
-     <span data-ttu-id="de379-185">O aplicativo grava menos informações na saída da depuração do aplicativo devido à filtragem mais restritiva.</span><span class="sxs-lookup"><span data-stu-id="de379-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>  
+     <span data-ttu-id="66b3e-185">O aplicativo grava menos informações na saída da depuração do aplicativo devido à filtragem mais restritiva.</span><span class="sxs-lookup"><span data-stu-id="66b3e-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>  
   
      `Default Error   2   Error`  
   
-10. <span data-ttu-id="de379-186">Feche o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="de379-186">Close the application.</span></span>  
+10. <span data-ttu-id="66b3e-186">Feche o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="66b3e-186">Close the application.</span></span>  
   
- <span data-ttu-id="de379-187">Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span><span class="sxs-lookup"><span data-stu-id="de379-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>  
+ <span data-ttu-id="66b3e-187">Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span><span class="sxs-lookup"><span data-stu-id="66b3e-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de379-188">Consulte também</span><span class="sxs-lookup"><span data-stu-id="de379-188">See Also</span></span>  
- [<span data-ttu-id="de379-189">Instruções passo a passo: determinando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="de379-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="de379-190">Instruções passo a passo: alterando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="de379-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="de379-191">Instruções passo a passo: criando ouvintes de log personalizados</span><span class="sxs-lookup"><span data-stu-id="de379-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [<span data-ttu-id="de379-192">Como gravar mensagens de log</span><span class="sxs-lookup"><span data-stu-id="de379-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [<span data-ttu-id="de379-193">Opções de rastreamento</span><span class="sxs-lookup"><span data-stu-id="de379-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)  
- [<span data-ttu-id="de379-194">Registrando informações em log no aplicativo</span><span class="sxs-lookup"><span data-stu-id="de379-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+## <a name="see-also"></a><span data-ttu-id="66b3e-188">Consulte também</span><span class="sxs-lookup"><span data-stu-id="66b3e-188">See Also</span></span>  
+ [<span data-ttu-id="66b3e-189">Instruções passo a passo: determinando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="66b3e-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="66b3e-190">Instruções passo a passo: alterando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="66b3e-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="66b3e-191">Instruções passo a passo: criando ouvintes de log personalizados</span><span class="sxs-lookup"><span data-stu-id="66b3e-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [<span data-ttu-id="66b3e-192">Como gravar mensagens de log</span><span class="sxs-lookup"><span data-stu-id="66b3e-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="66b3e-193">Opções de rastreamento</span><span class="sxs-lookup"><span data-stu-id="66b3e-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)  
+ [<span data-ttu-id="66b3e-194">Registrando informações em log no aplicativo</span><span class="sxs-lookup"><span data-stu-id="66b3e-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

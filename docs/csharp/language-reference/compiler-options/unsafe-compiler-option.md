@@ -1,6 +1,6 @@
 ---
-title: "-unsafe (opções do compilador C#)"
-ms.date: 07/20/2015
+title: -unsafe (opções do compilador C#)
+ms.date: 04/25/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,45 +11,53 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.assetid: fdb77ed9-da03-45bd-bb7f-250704da1bcc
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b253a9ddafead823480f9893e809f17b6c22a179
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 35868923ed2f34587c66f04395324489e8b36538
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="-unsafe-c-compiler-options"></a><span data-ttu-id="255c8-102">-unsafe (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="255c8-102">-unsafe (C# Compiler Options)</span></span>
-<span data-ttu-id="255c8-103">A opção do compilador **-unsafe** permite que o código que usa a palavra-chave [unsafe](../../../csharp/language-reference/keywords/unsafe.md) seja compilado.</span><span class="sxs-lookup"><span data-stu-id="255c8-103">The **-unsafe** compiler option allows code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword to compile.</span></span>  
+# <a name="-unsafe-c-compiler-options"></a><span data-ttu-id="386d5-102">-unsafe (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="386d5-102">-unsafe (C# Compiler Options)</span></span>
+<span data-ttu-id="386d5-103">A opção do compilador **-unsafe** permite que o código que usa a palavra-chave [unsafe](../../../csharp/language-reference/keywords/unsafe.md) seja compilado.</span><span class="sxs-lookup"><span data-stu-id="386d5-103">The **-unsafe** compiler option allows code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword to compile.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="255c8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="255c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="386d5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="386d5-104">Syntax</span></span>  
   
 ```console  
 -unsafe  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="255c8-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="255c8-105">Remarks</span></span>  
- <span data-ttu-id="255c8-106">Para obter mais informações sobre código não seguro, consulte [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="255c8-106">For more information about unsafe code, see [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="386d5-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="386d5-105">Remarks</span></span>  
+ <span data-ttu-id="386d5-106">Para obter mais informações sobre código não seguro, consulte [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="386d5-106">For more information about unsafe code, see [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="255c8-107">Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="255c8-107">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="386d5-107">Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="386d5-107">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="255c8-108">Abra a página **Propriedades** do projeto.</span><span class="sxs-lookup"><span data-stu-id="255c8-108">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="386d5-108">Abra a página **Propriedades** do projeto.</span><span class="sxs-lookup"><span data-stu-id="386d5-108">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="255c8-109">Clique na página de propriedades **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="255c8-109">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="386d5-109">Clique na página de propriedades **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="386d5-109">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="255c8-110">Marque a caixa de seleção **Permitir código não seguro**.</span><span class="sxs-lookup"><span data-stu-id="255c8-110">Select the **Allow Unsafe Code** check box.</span></span>  
+3.  <span data-ttu-id="386d5-110">Marque a caixa de seleção **Permitir código não seguro**.</span><span class="sxs-lookup"><span data-stu-id="386d5-110">Select the **Allow Unsafe Code** check box.</span></span>  
   
- <span data-ttu-id="255c8-111">Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.</span><span class="sxs-lookup"><span data-stu-id="255c8-111">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.</span></span>  
+### <a name="to-add-this-option-in-a-csproj-file"></a><span data-ttu-id="386d5-111">Para adicionar essa opção em um arquivo csproj</span><span class="sxs-lookup"><span data-stu-id="386d5-111">To add this option in a csproj file</span></span>
+
+<span data-ttu-id="386d5-112">Abra o arquivo .csproj de um projeto e adicione os seguintes elementos:</span><span class="sxs-lookup"><span data-stu-id="386d5-112">Open the .csproj file for a project, and add the following elements:</span></span>
+
+```xml
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+```
+
+ <span data-ttu-id="386d5-113">Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.</span><span class="sxs-lookup"><span data-stu-id="386d5-113">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="255c8-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="255c8-112">Example</span></span>  
- <span data-ttu-id="255c8-113">Compile `in.cs` para o modo não seguro:</span><span class="sxs-lookup"><span data-stu-id="255c8-113">Compile `in.cs` for unsafe mode:</span></span>  
+## <a name="example"></a><span data-ttu-id="386d5-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="386d5-114">Example</span></span>  
+ <span data-ttu-id="386d5-115">Compile `in.cs` para o modo não seguro:</span><span class="sxs-lookup"><span data-stu-id="386d5-115">Compile `in.cs` for unsafe mode:</span></span>  
   
 ```console  
 csc -unsafe in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="255c8-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="255c8-114">See Also</span></span>  
- [<span data-ttu-id="255c8-115">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="255c8-115">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="255c8-116">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="255c8-116">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="386d5-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="386d5-116">See Also</span></span>  
+ [<span data-ttu-id="386d5-117">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="386d5-117">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="386d5-118">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="386d5-118">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
