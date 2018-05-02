@@ -1,5 +1,5 @@
 ---
-title: "Explicação passo a passo: Criando um pipeline de fluxo de dados"
+title: 'Explicação passo a passo: Criando um pipeline de fluxo de dados'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2d0c886a443263897330dbd46a7f6f194bb20857
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e6471de1a6231f114f6967bb6f777a8dc4d39b82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Explicação passo a passo: Criando um pipeline de fluxo de dados
 Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para receber mensagens dos blocos de origem, você também pode conectar blocos de mensagens para formar um *pipeline de fluxo de dados*. Um pipeline de fluxo de dados é uma série de componentes, ou *blocos de fluxo de dados*, e cada uma série executa uma tarefa específica que contribui para um objetivo maior. Todos os blocos de fluxo de dados em um pipeline de fluxo de dados realizam trabalhos ao receber uma mensagem de outro bloco de fluxo de dados. Como analogia, podemos usar uma linha de montagem de automóveis. À medida que os veículos passam por ela, uma estação monta a carroceria, a seguinte instala o motor e assim por diante. Como a linha de montagem permite que vários veículos sejam montados ao mesmo tempo, seu desempenho é superior se comparado com a montagem de um veículo completo por vez.
@@ -45,7 +45,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
  Leia sobre o [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de iniciar essa explicação passo a passo.  
   
 ## <a name="creating-a-console-application"></a>Criar um Aplicativo de console  
- Em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], crie um projeto de Aplicativo de console [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ou [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Instale o pacote NuGet de System.Threading.Tasks.Dataflow.
+ No [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], crie um projeto de Aplicativo de console do Visual Basic ou do Visual C#. Instale o pacote NuGet de System.Threading.Tasks.Dataflow.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -103,7 +103,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
  Você pode aguardar a conclusão do fluxo de dados de qualquer thread ou de vários threads ao mesmo tempo.  
   
 ## <a name="the-complete-example"></a>O Exemplo Completo  
- O exemplo a seguir mostra o código completo dessa explicação passo a passo.  
+ O exemplo a seguir mostra o código completo para este passo a passo.  
   
  [!code-csharp[TPLDataflow_Palindromes#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#1)]
  [!code-vb[TPLDataflow_Palindromes#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#1)]  

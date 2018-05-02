@@ -1,12 +1,12 @@
 ---
 title: Como aplicar uma viagem de ida e volta a valores de data e hora
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 68667369e1c7541313a166a1066e1ad9d69b6b71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6ded0a08970e55b7f1267cb229eaf668313392c6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Como aplicar uma viagem de ida e volta a valores de data e hora
 Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambiguidade um único ponto no tempo. Este tópico mostra como salvar e restaurar um valor <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> para que o valor restaurado identifique o mesmo horário que o valor salvo.  
@@ -93,7 +93,7 @@ Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambi
 ## <a name="compiling-the-code"></a>Compilando o código  
  Esses exemplos precisam de:  
   
--   Os seguintes namespaces sejam importados com instruções `using` em C# ou instruções [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `Imports`:  
+-   Os seguintes namespaces sejam importados com instruções `using` em C# ou instruções `Imports` em Visual Basic:  
   
     -   <xref:System> (apenas para C#).  
   

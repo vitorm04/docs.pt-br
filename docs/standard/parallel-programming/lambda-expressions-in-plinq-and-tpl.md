@@ -1,12 +1,12 @@
 ---
-title: "Expressões lambda em PLINQ e TPL"
-ms.custom: 
+title: Expressões lambda em PLINQ e TPL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 364d23db41aac4733226189f7c8ae85d281b9887
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b1739bf8d98bbee49cf3cb3d83cac27796ccf72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Expressões lambda em PLINQ e TPL
 A TPL (Biblioteca de Paralelismo de Tarefas) contém vários métodos que usam uma das família de delegados <xref:System.Func%601?displayProperty=nameWithType> ou <xref:System.Action?displayProperty=nameWithType> como parâmetros de entrada. Você pode usar esses delegados para transmitir sua lógica de programa personalizada para o loop paralelo, tarefa ou consulta. Os exemplos de código para TPL, bem como o PLINQ, usam expressões lambda para criar instâncias desses delegados como blocos de código embutido. Este tópico fornece uma breve introdução a Func e Action, e mostra como usar expressões lambda no PLINQ e na Biblioteca de paralelismo de tarefas.  
   
- **Observação** Para saber mais sobre delegados em geral, consulte [Delegados](../../csharp/programming-guide/delegates/index.md) e [Delegados](../../visual-basic/programming-guide/language-features/delegates/index.md). Para saber mais sobre expressões lambda em C# e [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], confira [Expressões lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) e [Expressões lambda](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ **Observação** Para saber mais sobre delegados em geral, consulte [Delegados](../../csharp/programming-guide/delegates/index.md) e [Delegados](../../visual-basic/programming-guide/language-features/delegates/index.md). Para saber mais sobre expressões lambda em C# e em Visual Basic, confira [Expressões lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) e [Expressões lambda](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="func-delegate"></a>Delegado Func  
  Um delegado `Func` encapsula um método que retorna um valor. Em uma assinatura Func, o último parâmetro de tipo, ou da extrema direita, sempre especifica o tipo de retorno. Uma causa comum de erros do compilador é tentar passar dois parâmetros de entrada para um <xref:System.Func%602?displayProperty=nameWithType>; na verdade, esse tipo usa somente um parâmetro de entrada. A Biblioteca de Classes do Framework define 17 versões do `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> e assim por diante até <xref:System.Func%6017?displayProperty=nameWithType>.  
   
 ## <a name="action-delegate"></a>Delegado Action  
- Um delegado <xref:System.Action?displayProperty=nameWithType> encapsula um método (Sub no [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) que não retorna um valor, ou retorna [void](~/docs/csharp/language-reference/keywords/void.md). Em uma assinatura de tipo Action, os parâmetros de tipo representam apenas os parâmetros de entrada. Assim como Func, a Biblioteca de Classes do Framework define 17 versões de Action, partindo de uma versão que não tem nenhum parâmetro de tipo até uma versão que tenha 16 parâmetros de tipo.  
+ Um delegado <xref:System.Action?displayProperty=nameWithType> encapsula um método (Sub em Visual Basic) que não retorna um valor, ou que retorna [void](~/docs/csharp/language-reference/keywords/void.md). Em uma assinatura de tipo Action, os parâmetros de tipo representam apenas os parâmetros de entrada. Assim como Func, a Biblioteca de Classes do Framework define 17 versões de Action, partindo de uma versão que não tem nenhum parâmetro de tipo até uma versão que tenha 16 parâmetros de tipo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir para o método <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> mostra como expressar delegados Func e Action usando expressões lambda.  

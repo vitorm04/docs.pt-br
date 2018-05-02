@@ -1,27 +1,29 @@
 ---
-title: "Visão geral dos serviços de aplicativo cliente"
-ms.custom: 
+title: Visão geral dos serviços de aplicativo cliente
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>Visão geral dos serviços de aplicativo cliente
 Os serviços de aplicativo cliente fornecem acesso simplificado ao logon, às funções e aos serviços de perfil do [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] por meio dos aplicativos Windows Forms e WPF (Windows Presentation Foundation). Os serviços de aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] estão incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0, que estão incluídas no [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] e no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor.  
@@ -59,7 +61,7 @@ Os serviços de aplicativo cliente fornecem acesso simplificado ao logon, às fu
  Para obter informações sobre como configurar o serviço [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Usando funções de informações com Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Configurações  
- Você pode usar serviços de aplicativos cliente para recuperar configurações de aplicativo do usuário de um serviço de perfil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. O recurso de configurações da Web dos serviços de aplicativos cliente se integra ao recurso de configurações de aplicativo fornecido em [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Para recuperar as configurações da Web, primeiro gere uma classe `Settings` (acessada como `Properties.Settings.Default` no C# e `My.Settings` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) para seu projeto usando a guia **Configurações** do designer de projeto [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Na guia **Configurações**, você pode usar o botão **Carregar Configurações da Web** para recuperar as configurações da Web e adicioná-las à classe `Settings` gerada. Você pode usar as configurações da Web configuradas para uso por todos os usuários autenticados ou todos os usuários anônimos.  
+ Você pode usar serviços de aplicativos cliente para recuperar configurações de aplicativo do usuário de um serviço de perfil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. O recurso de configurações da Web dos serviços de aplicativos cliente se integra ao recurso de configurações de aplicativo fornecido em [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Para recuperar as configurações da Web, primeiro gere uma classe `Settings` (acessada como `Properties.Settings.Default` em C# e `My.Settings` em Visual Basic) para o seu projeto usando a guia **Configurações** do designer de projeto do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Na guia **Configurações**, você pode usar o botão **Carregar Configurações da Web** para recuperar as configurações da Web e adicioná-las à classe `Settings` gerada. Você pode usar as configurações da Web configuradas para uso por todos os usuários autenticados ou todos os usuários anônimos.  
   
  Para obter mais informações sobre as configurações de aplicativo, consulte [Visão geral sobre configurações de aplicativo](../../../docs/framework/winforms/advanced/application-settings-overview.md). Para obter informações sobre como implementar sua própria classe de configurações em vez de gerar uma no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], consulte [How to: Create Application Settings](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md) (Como criar configurações de aplicativo). Para obter informações sobre como configurar o serviço de perfil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Usando perfis de informações com Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   

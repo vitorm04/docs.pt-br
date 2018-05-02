@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Como: Especificar um agendador de tarefas em um bloco de fluxo de dados
 Este documento demonstra como associar um agendador de tarefas específico quando você usa o fluxo de dados em seu aplicativo. O exemplo usa a classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> em um aplicativo Windows Forms para mostrar quando as tarefas do leitor estão ativas e quando uma tarefa de gravador está ativa. Ele também usa o método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> para permitir que um bloco de fluxo de dados seja executado no thread da interface do usuário.
@@ -31,9 +31,9 @@ Este documento demonstra como associar um agendador de tarefas específico quand
 
 ## <a name="to-create-the-windows-forms-application"></a>Para criar o aplicativo do Windows Forms  
   
-1.  Crie um projeto [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ou Visual Basic  **para o aplicativo Windows Forms**. Nas etapas a seguir, o projeto é denominado `WriterReadersWinForms`.  
+1.  Crie um projeto de **aplicativo do Windows Forms** em C# ou em Visual Basic. Nas etapas a seguir, o projeto é denominado `WriterReadersWinForms`.  
   
-2.  No designer de formulários para o formulário principal, Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), adicione quatro controles <xref:System.Windows.Forms.CheckBox>. Configure a propriedade <xref:System.Windows.Forms.Control.Text%2A> do **Leitor 1** como `checkBox1`, **Leitor 2** como `checkBox2`, **Leitor 3** como `checkBox3`, e **Gravador** como `checkBox4`. Defina a propriedade <xref:System.Windows.Forms.Control.Enabled%2A> de cada controle como `False`.  
+2.  No designer de formulários do formulário principal, Form1.cs (Form1.vb para Visual Basic), adicione quatro controles <xref:System.Windows.Forms.CheckBox>. Configure a propriedade <xref:System.Windows.Forms.Control.Text%2A> do **Leitor 1** como `checkBox1`, **Leitor 2** como `checkBox2`, **Leitor 3** como `checkBox3`, e **Gravador** como `checkBox4`. Defina a propriedade <xref:System.Windows.Forms.Control.Enabled%2A> de cada controle como `False`.  
   
 3.  Adicione um controle <xref:System.Windows.Forms.Timer> ao formulário. Defina a propriedade <xref:System.Windows.Forms.Timer.Interval%2A> como `2500`.  
   
@@ -44,7 +44,7 @@ Este documento demonstra como associar um agendador de tarefas específico quand
   
 1.  No seu projeto, adicione uma referência a System.Threading.Tasks.Dataflow.dll.  
   
-2.  O Form1 (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) deve conter as seguintes instruções `using` (`Imports` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Verifique se o Form1.cs (Form1.vb para Visual Basic) contém as seguintes instruções `using` (`Imports` em Visual Basic).  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ Este documento demonstra como associar um agendador de tarefas específico quand
  Este exemplo também usa a classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> para permitir que alguns blocos de fluxo de dados atuem simultaneamente e outro bloco de fluxo de dados atue de forma exclusiva em relação a todos os outros blocos de fluxo de dados que são executados no mesmo objeto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>. Essa técnica é útil quando vários blocos de fluxo de dados compartilham um recurso e alguns exigem acesso exclusivo a esse recurso, pois elimina o requisito de sincronizar manualmente o acesso a esse recurso. A eliminação da sincronização manual pode tornar o código mais eficiente.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o código completo para Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ O exemplo a seguir mostra o código completo para o Form1.cs (Form1.vb para Visual Basic).  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

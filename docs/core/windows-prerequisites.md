@@ -1,18 +1,18 @@
 ---
-title: "Pré-requisitos para .NET Core no Windows"
-description: "Saiba quais dependências você precisa em seu computador Windows para desenvolver e executar aplicativos .NET Core."
+title: Pré-requisitos para .NET Core no Windows
+description: Saiba quais dependências você precisa em seu computador Windows para desenvolver e executar aplicativos .NET Core.
 author: JRAlexander
 ms.author: johalex
-ms.date: 03/02/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac898ea87c0247581154eb7de65e8cbe6ea6ba15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
 
@@ -50,7 +50,7 @@ A [Atualização 3 dos Pacotes Redistribuíveis do Microsoft Visual C++ 2015](ht
 * Instalar o .NET Core por meio de um arquivo *.zip*. Isso pode incluir servidores de build/CI/CD.
 
 > [!NOTE]
-> *Somente para computadores Windows 7 e Windows Server 2008:* verifique se a instalação do Windows está atualizada e inclui o hotfix [KB2533623](https://support.microsoft.com/help/2533623) instalado por meio do Windows Update.
+> *Para o Windows 8.1 e as versões anteriores, ou o Windows Server 2012 R2 e as versões anteriores:* verifique se a instalação do Windows está atualizada e inclui o [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) que pode ser instalado por meio do Windows Update. Se essa atualização não estiver instalada, será exibido um erro quando você iniciar um aplicativo .NET Core, como o seguinte: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Pré-requisitos do Visual Studio 2017
 

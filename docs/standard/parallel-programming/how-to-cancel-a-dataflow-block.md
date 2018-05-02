@@ -1,5 +1,5 @@
 ---
-title: 'Como: cancelar um bloco de fluxo de dados'
+title: 'Como: Cancelar um bloco de fluxo de dados'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,13 +18,13 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>Como: cancelar um bloco de fluxo de dados
+# <a name="how-to-cancel-a-dataflow-block"></a>Como: Cancelar um bloco de fluxo de dados
 Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exemplo usa o Windows Forms para mostrar onde os itens de trabalho estão ativos em um pipeline de fluxo de dados, assim como os efeitos de cancelamento.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -33,7 +33,7 @@ Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exem
   
 1.  Crie um projeto de **aplicativo do Windows Forms** no C# ou Visual Basic. Nas etapas a seguir, o projeto é denominado `CancellationWinForms`.  
   
-2.  No designer de formulários, para o formulário principal, Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), adicione um controle <xref:System.Windows.Forms.ToolStrip>.  
+2.  No designer de formulários do formulário principal, Form1.cs (Form1.vb para Visual Basic), adicione um controle <xref:System.Windows.Forms.ToolStrip>.  
   
 3.  Adicione um controle <xref:System.Windows.Forms.ToolStripButton> ao controle <xref:System.Windows.Forms.ToolStrip>. Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> como <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> e a propriedade <xref:System.Windows.Forms.ToolStripItem.Text%2A> como **Adicionar itens de trabalho**.  
   
@@ -48,7 +48,7 @@ Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exem
   
 1.  No seu projeto, adicione uma referência a System.Threading.Tasks.Dataflow.dll.  
   
-2.  O Form1 (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) deve conter as seguintes instruções `using` (`Imports` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Verifique se o Form1.cs (Form1.vb para Visual Basic) contém as seguintes instruções `using` (`Imports` em Visual Basic).  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
@@ -92,7 +92,7 @@ Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exem
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o código completo para Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ O exemplo a seguir mostra o código completo para o Form1.cs (Form1.vb para Visual Basic).  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#100)]  

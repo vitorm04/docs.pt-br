@@ -1,5 +1,5 @@
 ---
-title: "Visão geral sobre interoperabilidade (Guia de Programação em C#)"
+title: Visão geral sobre interoperabilidade (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -55,11 +55,11 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
 1.  Adicione atributos de interoperabilidade no projeto do C#.  
   
-     Você pode tornar visível um assembly do COM ao modificar as propriedades de projeto do [!INCLUDE[csprcs](~/includes/csprcs-md.md)]. Para obter mais informações, consulte [Caixa de diálogo de informações do assembly](/visualstudio/ide/reference/assembly-information-dialog-box).  
+     Você pode tornar visível um assembly COM ao modificar as propriedades do projeto do Visual C#. Para obter mais informações, consulte [Caixa de diálogo de informações do assembly](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
 2.  Gere e registre uma biblioteca de tipos COM para ser usada pelo COM.  
   
-     Você pode modificar as propriedades do projeto do [!INCLUDE[csprcs](~/includes/csprcs-md.md)] para registrar automaticamente o assembly do C# para a interoperabilidade COM. O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa a [Regasm.exe (Ferramenta de Registro de Assembly)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), usando a opção de linha de comando `/tlb`, que utiliza um assembly gerenciado como entrada, para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
+     Você pode modificar as propriedades do projeto do Visual C# para registrar automaticamente o assembly do C# para a interoperabilidade COM. O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa a [Regasm.exe (Ferramenta de Registro de Assembly)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), usando a opção de linha de comando `/tlb`, que utiliza um assembly gerenciado como entrada, para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
   
  Para obter mais informações, consulte [Expondo componentes do .NET Framework para o COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) e [Classe COM de exemplo](../../../csharp/programming-guide/interop/example-com-class.md).  
   

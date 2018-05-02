@@ -1,8 +1,9 @@
 ---
-title: "Palavra-chave switch (Referência de C#)"
+title: Palavra-chave switch (Referência de C#)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch (Referência de C#)
 `switch` é uma instrução de seleção que escolhe uma única *seção switch* para ser executada de uma lista de candidatas com base em uma correspondência de padrão com a *expressão de correspondência*. 
@@ -53,7 +54,7 @@ No C# 6, a expressão de correspondência deve ser uma expressão que retorna um
 - um valor de inteiro, como um [int](int.md) ou um [long](long.md).
 - um valor [enum](enum.md).
 
-Começando com o C# 7, a expressão de correspondência pode ser qualquer expressão não nula.
+Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
  
 ## <a name="the-switch-section"></a>A seção switch
  
@@ -91,7 +92,7 @@ Esse requisito é atendido normalmente saindo explicitamente da seção switch u
 
  Como o C# 6 dá suporte apenas ao padrão de constante e não permite a repetição de valores de constantes, os rótulos case definem valores mutuamente exclusivos e apenas um padrão pode corresponder à expressão de correspondência. Como resultado, a ordem na qual as instruções `case` aparecem não é importante.
 
- No C# 7, no entanto, como outros padrões têm suporte, os rótulos case não precisam definir valores mutuamente exclusivos e vários padrões podem corresponder à expressão de correspondência. Como apenas as instruções na seção switch que contém o primeiro padrão de correspondência são executadas, a ordem na qual as instruções `case` aparecem agora é importante. Se o C# detecta uma seção switch cujas instruções case são equivalentes ou são subconjuntos de instruções anteriores, ele gera um erro do compilador, CS8120, “O switch case já foi tratado por um case anterior”. 
+ No entanto, no C# 7.0, como há suporte para outros padrões, os rótulos case não precisam definir valores mutuamente exclusivos e vários padrões podem corresponder à expressão de correspondência. Como apenas as instruções na seção switch que contém o primeiro padrão de correspondência são executadas, a ordem na qual as instruções `case` aparecem agora é importante. Se o C# detecta uma seção switch cujas instruções case são equivalentes ou são subconjuntos de instruções anteriores, ele gera um erro do compilador, CS8120, “O switch case já foi tratado por um case anterior”. 
 
  O exemplo a seguir ilustra uma instrução `switch` que usa uma variedade de padrões não mutuamente exclusivos. Se você mover a seção switch `case 0:` para que ela não seja mais a primeira seção na instrução `switch`, o C# gera um erro do compilador porque um inteiro cujo valor é zero é um subconjunto de todos os inteiros, que é o padrão definido pela instrução `case int val`.
 
@@ -111,7 +112,7 @@ O case `default` pode aparecer em qualquer ordem na instrução `switch`. Indepe
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Correspondência de padrões com a instrução `switch`
   
-Cada instrução `case` define um padrão que, se corresponde à expressão de correspondência, faz com que sua seção switch recipiente seja executada. Todas as versões do C# dão suporte ao padrão de constante. Os padrões restantes têm suporte a partir do C# 7. 
+Cada instrução `case` define um padrão que, se corresponde à expressão de correspondência, faz com que sua seção switch recipiente seja executada. Todas as versões do C# dão suporte ao padrão de constante. Começando com o C# 7.0, há suporte para os padrões restantes. 
   
 ### <a name="constant-pattern"></a>Padrão de constante 
 
@@ -181,7 +182,7 @@ Sem a correspondência de padrões, esse código pode ser escrito da seguinte ma
 
 ## <a name="the-case-statement-and-the-when-clause"></a>A instrução `case` e a cláusula `when`
 
-A partir do C# 7, como as instruções case não precisam ser mutuamente exclusivas, você pode usar a adição de uma cláusula `when` para especificar uma condição adicional que deve ser atendida para a instrução case ser avaliada como true. A cláusula `when` pode ser qualquer expressão que retorna um valor booliano. Um dos usos mais comuns para a cláusula `when` é para impedir que uma seção switch seja executada quando o valor de uma expressão de correspondência é `null`. 
+Começando com o C# 7.0, como as instruções case não precisam ser mutuamente exclusivas, você pode usar a adição de uma cláusula `when` para especificar uma condição adicional que precisa ser atendida para que a instrução case seja avaliada como true. A cláusula `when` pode ser qualquer expressão que retorna um valor booliano. Um dos usos mais comuns para a cláusula `when` é para impedir que uma seção switch seja executada quando o valor de uma expressão de correspondência é `null`. 
 
  O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que deriva de `Shape` e uma classe `Square` que deriva de `Rectangle`. Ele usa a cláusula `when` para garantir que o trata `ShowShapeInfo` um objeto `Rectangle` que recebeu comprimentos e larguras como um `Square` mesmo se ele não tiver sido instanciado como um objeto `Square`. O método não tenta exibir informações a sobre um objeto que é `null` ou uma forma cuja área é zero. 
 

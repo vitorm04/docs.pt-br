@@ -1,19 +1,20 @@
 ---
-title: "Membros aptos para expressão (Guia de Programação em C#)"
+title: Membros aptos para expressão (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membros aptos para expressão (Guia de Programação em C#)
 As definições de corpo da expressão permitem que você forneça uma implementação de um membro em uma forma bastante concisa e legível. Você pode usar uma definição de corpo da expressão sempre que a lógica para qualquer membro com suporte, como um método ou propriedade, consiste em uma única expressão. Uma definição de corpo da expressão tem a seguinte sintaxe geral:
@@ -24,16 +25,16 @@ member => expression;
 
 em que *expression* é uma expressão válida. 
 
-O suporte para definições de corpo da expressão foi introduzido para acessadores get da propriedade e de métodos no C# 6 e foi expandido no C# 7. As definições de corpo da expressão podem ser usadas com os membros de tipo listados na tabela a seguir: 
+O suporte para definições no corpo da expressão foi introduzido para acessadores get de propriedade e de métodos no C# 6 e foi expandido no C# 7.0. As definições de corpo da expressão podem ser usadas com os membros de tipo listados na tabela a seguir: 
 
 |Membro  |Com suporte desde... |
 |---------|---------|
 |[Método](#methods)  |C# 6 |
-|[Construtor](#constructors)   |C# 7 |
-|[Finalizador](#finalizers)     |C# 7 |
+|[Construtor](#constructors)   |C# 7.0 |
+|[Finalizador](#finalizers)     |C# 7.0 |
 |[Get da propriedade](#property-get-statements)  |C# 6 |
-|[Set da propriedade](#property-set-statements)  |C# 7 |
-|[Indexador](#indexers)       |C# 7 |
+|[Set da propriedade](#property-set-statements)  |C# 7.0 |
+|[Indexador](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Métodos
 

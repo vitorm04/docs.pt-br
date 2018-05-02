@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Desconstruindo tuplas e outros tipos #
 
@@ -24,7 +24,7 @@ Uma tupla fornece uma maneira leve de recuperar vários valores de uma chamada d
 
 Recuperar vários valores de propriedade e de campo de um objeto pode ser igualmente complicado: é necessário atribuir um valor de campo ou de propriedade a uma variável, membro por membro. 
 
-Do C# 7 em diante, você pode recuperar vários elementos de uma tupla ou recuperar vários valores calculados, de campo e de propriedade de um objeto em uma única operação de *desconstrução*. Quando você desconstrói uma tupla, você atribui os elementos dela a variáveis individuais. Quando você desconstrói um objeto, você atribui os elementos dela a variáveis individuais. 
+Começando com o C# 7.0, você pode recuperar vários elementos de uma tupla ou recuperar vários valores calculados, de campo e de propriedade de um objeto em uma única operação *deconstruct*. Quando você desconstrói uma tupla, você atribui os elementos dela a variáveis individuais. Quando você desconstrói um objeto, você atribui os elementos dela a variáveis individuais. 
 
 ## <a name="deconstructing-a-tuple"></a>Desconstruir uma tupla
 
@@ -34,7 +34,7 @@ O C# conta com suporte interno à desconstrução de tuplas, que permite que voc
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Há três maneiras de decompor uma tupla:
+Há três maneiras de desconstruir uma tupla:
 
 - Você pode declarar explicitamente o tipo de cada campo dentro de parênteses. O exemplo a seguir usa essa abordagem para desconstruir a tupla de 3 retornada pelo método `QueryCityData`.
 
@@ -50,7 +50,7 @@ Há três maneiras de decompor uma tupla:
 
     Isso é difícil e não é recomendado.
 
-- Por fim, você pode decompor a tupla em variáveis que já foi declarados.
+- Por fim, você pode desconstruir a tupla em variáveis que já foram declaradas.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ Observe que você não poderá especificar um tipo específico fora dos parênte
 
 Observe que você também deve atribuir cada elemento da tupla a uma variável. Se você omitir qualquer elemento, o compilador gerará o erro CS8132, "Não é possível desconstruir uma tupla de 'x' elementos em 'y' variáveis."
 
-Observe que você não pode misturar declarações e as atribuições de variáveis existentes no lado esquerdo de uma deconstruction. O compilador gera erro CS8184, "um deconstruction não é possível misturar declarações e expressões no esquerdo lado". Quando os membros incluem variáveis recentemente declarados e existentes.
+Observe que não é possível combinar declarações e as atribuições com as variáveis existentes do lado esquerdo de uma desconstrução. O compilador gera o erro CS8184, "uma desconstrução não pode combinar declarações e expressões no lado esquerdo." quando os membros incluem variáveis recém-declaradas e existentes.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Desconstruir elementos de tupla com descartes
 
-Geralmente, ao desconstruir uma tupla, você está interessado nos valores de apenas alguns elementos. Do C# 7 em diante, você pode tirar proveito do suporte do C# a *descartes*, que são variáveis somente gravação cujos valores você optou por ignorar. Um descarte é designado por um caractere de sublinhado ("\_") em uma atribuição. Você pode descartar tantos valores quantos desejar; todos são representados pelo descarte único, `_`.
+Geralmente, ao desconstruir uma tupla, você está interessado nos valores de apenas alguns elementos. Começando com o C# 7.0, você pode aproveitar o suporte do C# para *descartes*, que são variáveis somente gravação cujos valores você opta por ignorar. Um descarte é designado por um caractere de sublinhado ("\_") em uma atribuição. Você pode descartar tantos valores quantos desejar; todos são representados pelo descarte único, `_`.
 
 O exemplo a seguir ilustra o uso de tuplas com descartes. O método `QueryCityDataForYears` a seguir retorna uma tupla de 6 com o nome de uma cidade, sua área, um ano, a população da cidade nesse ano, um segundo ano e população da cidade nesse segundo ano. O exemplo mostra a alteração na população entre esses dois anos. Entre os dados disponíveis da tupla, não estamos preocupados com a área da cidade e sabemos o nome da cidade e as duas datas em tempo de design. Como resultado, estamos interessados apenas nos dois valores de população armazenados na tupla e podemos lidar com seus valores restantes como descartes.  
 

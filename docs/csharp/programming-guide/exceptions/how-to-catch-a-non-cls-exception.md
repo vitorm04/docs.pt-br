@@ -1,5 +1,5 @@
 ---
-title: "Como capturar uma exceção não compatível com CLS"
+title: Como capturar uma exceção não compatível com CLS
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,21 +8,21 @@ ms.topic: article
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 473cace033983915c66647d14cae16dc7f5d5b9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5647fc8501afe2a4bf74739fd8efd4e6b74559a2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Como capturar uma exceção não compatível com CLS
-Algumas linguagens .NET, incluindo o C++/CLI, permite que os objetos lancem exceções que não derivam de <xref:System.Exception>. Essas exceções são chamadas de *exceções não CLS* ou *não exceções*. No [!INCLUDE[csprcs](~/includes/csprcs-md.md)] não é possível lançar exceções não CLS, mas você pode capturá-las de duas maneiras:  
+Algumas linguagens .NET, incluindo o C++/CLI, permite que os objetos lancem exceções que não derivam de <xref:System.Exception>. Essas exceções são chamadas de *exceções não CLS* ou *não exceções*. No Visual C# não é possível gerar exceções não CLS, mas você pode capturá-las de duas maneiras:  
   
 -   Dentro de um bloco `catch (Exception e)` como uma <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
   
-     Por padrão, um assembly do [!INCLUDE[csprcs](~/includes/csprcs-md.md)] captura exceções não CLS como exceções encapsuladas. Use este método se você precisar de acesso à exceção original, que pode ser acessada por meio da propriedade <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>. O procedimento, mais adiante neste tópico, explica como capturar exceções dessa maneira.  
+     Por padrão, um assembly do Visual C# captura exceções não CLS como exceções encapsuladas. Use este método se você precisar de acesso à exceção original, que pode ser acessada por meio da propriedade <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>. O procedimento, mais adiante neste tópico, explica como capturar exceções dessa maneira.  
   
 -   Dentro de um bloco catch geral (um bloco catch sem um tipo de exceção especificado), que é colocado após um bloco `catch (Exception)` ou `catch (Exception e)`.  
   
@@ -35,7 +35,7 @@ Algumas linguagens .NET, incluindo o C++/CLI, permite que os objetos lancem exce
 2.  Acesse exceção original por meio da propriedade <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como capturar uma exceção não CLS que foi lançada de uma biblioteca de classes escrita no C++ /CLR. Observe que, neste exemplo, o código cliente do [!INCLUDE[csprcs](~/includes/csprcs-md.md)] sabe com antecedência que o tipo da exceção que está sendo lançada é uma <xref:System.String?displayProperty=nameWithType>. Você pode converter a propriedade <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> de volta a seu tipo original, desde que o tipo seja acessível por meio do código.  
+ O exemplo a seguir mostra como capturar uma exceção não CLS que foi lançada de uma biblioteca de classes escrita no C++ /CLR. Observe que, neste exemplo, o código do cliente do Visual C# sabe com antecedência que o tipo de exceção que está sendo gerado é um <xref:System.String?displayProperty=nameWithType>. Você pode converter a propriedade <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> de volta a seu tipo original, desde que o tipo seja acessível por meio do código.  
   
 ```  
 // Class library written in C++/CLR.  

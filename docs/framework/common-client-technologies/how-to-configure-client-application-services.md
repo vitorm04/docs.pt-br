@@ -1,28 +1,28 @@
 ---
-title: "Como configurar serviços de aplicativo cliente"
-ms.custom: 
+title: Como configurar serviços de aplicativo cliente
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Como configurar serviços de aplicativo cliente
 Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Designer de Projeto** para habilitar e configurar serviços de aplicativos cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -111,7 +111,7 @@ Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  Para usar seu próprio banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], especifique sua própria sequência de conexão. Para obter informações sobre formatos de sequências de conexão válidos, consulte a documentação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse banco de dados não é gerado automaticamente. A sequência de conexão deve se referir a um banco de dados existente que você pode criar usando as instruções SQL a seguir.  
+5.  Para usar seu próprio banco de dados do SQL Server, especifique sua própria cadeia de conexão. Para obter informações sobre formatos de cadeia de conexão válidos, confira a documentação do SQL Server. Esse banco de dados não é gerado automaticamente. A sequência de conexão deve se referir a um banco de dados existente que você pode criar usando as instruções SQL a seguir.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.
 ## <a name="using-custom-providers"></a>Usando provedores personalizados  
  Por padrão, o recurso de serviços do aplicativo cliente usa os provedores no namespace <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>. Quando você configura seu aplicativo usando a página **Serviços** do **Designer de Projeto**, referências a esses provedores são adicionadas ao seu arquivo App.config. Esses provedores padrão acessam provedores correspondentes no servidor. Os serviços da Web são geralmente configurados para acessar dados do usuário por meio de provedores como <xref:System.Web.Security.SqlMembershipProvider> e <xref:System.Web.Security.SqlRoleProvider>.  
   
- Se desejar usar provedores de serviço personalizado, você normalmente alterará os provedores no lado do servidor para que eles afetem todos os aplicativos cliente que acessam o servidor. No entanto, você tem a opção de usar provedores não padrão no lado do cliente. Você pode especificar provedores de autenticação ou de funções personalizados no arquivo App.config do seu projeto, conforme mostrado no procedimento a seguir. Para obter informações sobre como criar provedores de função e de autenticação personalizada, consulte [Implementando um Provedor de Associação](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementar um provedor de função](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Também é possível usar um provedor de configurações personalizado, modificando a classe `Settings` do seu projeto (acessada como `Properties.Settings.Default` em C# e `My.Settings` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Para obter mais informações, consulte [Application Settings Architecture](../../../docs/framework/winforms/advanced/application-settings-architecture.md) (Arquitetura das configurações do aplicativo).  
+ Se desejar usar provedores de serviço personalizado, você normalmente alterará os provedores no lado do servidor para que eles afetem todos os aplicativos cliente que acessam o servidor. No entanto, você tem a opção de usar provedores não padrão no lado do cliente. Você pode especificar provedores de autenticação ou de funções personalizados no arquivo App.config do seu projeto, conforme mostrado no procedimento a seguir. Para obter informações sobre como criar provedores de função e de autenticação personalizada, consulte [Implementando um Provedor de Associação](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementar um provedor de função](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Também é possível usar um provedor de configurações personalizado modificando a classe `Settings` do projeto (acessada como `Properties.Settings.Default` em C# e `My.Settings` em Visual Basic). Para obter mais informações, consulte [Application Settings Architecture](../../../docs/framework/winforms/advanced/application-settings-architecture.md) (Arquitetura das configurações do aplicativo).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>Para configurar os serviços do aplicativo cliente para usar provedores não padrão  
   

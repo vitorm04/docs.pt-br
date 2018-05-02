@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tarefa*, que representa uma operação assíncrona. De certa forma, uma tarefa é semelhante a um thread ou a um item de trabalho <xref:System.Threading.ThreadPool>, mas em um nível mais alto de abstração. O termo *paralelismo de tarefas* refere-se a uma ou mais tarefas independentes que são executadas simultaneamente. As tarefas fornecem dois benefícios principais:  
@@ -191,7 +191,7 @@ A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tare
  Ao aguardar uma tarefa, você espera implicitamente todas as filhos da tarefa que foram criadas usando a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>. <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> retorna imediatamente se a tarefa já foi concluída. Todas as exceções geradas por uma tarefa serão geradas por um método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, mesmo se o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> tiver sido chamado após o término da tarefa.  
   
 ## <a name="composing-tasks"></a>Compondo tarefas  
- As classes <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> fornecem vários métodos que podem ajudá-lo na composição de várias tarefas para implementar padrões comuns e melhorar o uso dos recursos de linguagem assíncronos que são fornecidos pelo C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e F#. Esta seção descreve os métodos <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> e <xref:System.Threading.Tasks.Task.FromResult%2A>.  
+ As classes <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> fornecem vários métodos que podem ajudá-lo na composição de várias tarefas para implementar padrões comuns e melhorar o uso dos recursos de linguagem assíncronos que são fornecidos por C#, Visual Basic e F#. Esta seção descreve os métodos <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> e <xref:System.Threading.Tasks.Task.FromResult%2A>.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  O método <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> espera assincronamente a conclusão de vários objetos <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Ele fornece versões sobrecarregadas que permitem aguardar conjuntos não uniformes de tarefas. Por exemplo, você pode aguardar vários objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> para concluir após uma chamada de método.  

@@ -1,5 +1,5 @@
 ---
-title: "long (Referência de C#)"
+title: long (Referência de C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f18bed80550b293195961fd9d42491dd571cbaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f11c904aadc5cd27482072e9f6f97236c0cdce2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="long-c-reference"></a>long (Referência de C#)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literais 
 
-Você pode declarar e inicializar uma variável `long` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. 
+Você pode declarar e inicializar uma variável `long` atribuindo a ela um literal decimal, um literal hexadecimal ou (começando com o C# 7.0) um literal binário. 
 
 No exemplo a seguir, inteiros iguais a 4.294.967.296 representados como literais decimais, hexadecimais e binários são atribuídos a valores `long`.  
   
@@ -39,9 +39,9 @@ No exemplo a seguir, inteiros iguais a 4.294.967.296 representados como literais
 > [!NOTE] 
 > Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo. 
 
-Iniciando com o c# 7, alguns recursos foram adicionados melhorar a legibilidade. 
- - C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.
- - 7.2 c# permite `_` a ser usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
+Começando com o C# 7.0, alguns recursos foram adicionados para melhorar a legibilidade. 
+ - O C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.
+ - O C# 7.2 permite que `_` seja usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
 
 Alguns exemplos são mostrados abaixo.
 

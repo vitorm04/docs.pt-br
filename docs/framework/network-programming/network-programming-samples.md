@@ -1,80 +1,74 @@
 ---
-title: "Amostras de programação de rede"
-ms.custom: 
+title: Amostras de programação de rede
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: df1e1c16c52afc79219d7ea2503b200a420477df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e450582e85c07060d13eb90a4c069abdbd17982
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="network-programming-samples"></a>Amostras de programação de rede
-Esta seção contém descrições e links para amostras de programação de rede que podem ser baixadas e que usam classes nos <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> e namespaces relacionados.  
+Esta seção contém descrições e links para amostras de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> e <xref:System.Net.Sockets>, e em outros relacionados. 
   
+> [!NOTE]
+> Todas as amostras estão disponíveis no [Download das amostras do SDK do .NET Framework versão 2.0](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181), que foi lançado para o .NET Framework 2.0 e podem estar desatualizadas.
+
 ## <a name="in-this-section"></a>Nesta seção  
- [Baixe a amostra de tecnologia de indicador de progresso](http://go.microsoft.com/fwlink/?LinkID=179556)  
+ [Baixe a amostra de tecnologia de indicador de progresso](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx)  
  Mostra como exibir o andamento de um download de arquivo.  
   
- [Amostra de tecnologia de cliente FTP](http://go.microsoft.com/fwlink/?LinkID=179557)  
+ [Amostra de tecnologia de cliente FTP](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx)  
  Mostra como carregar e baixar arquivos de e para um servidor FTP.  
   
- [Amostra de tecnologia HttpListener](http://go.microsoft.com/fwlink/?LinkID=179558)  
+ [Amostra de tecnologia HttpListener](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
  Mostra como processar solicitações HTTP de dentro de um aplicativo.  
+ 
+ [Amostra de aplicativo host ASPX HttpListener](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ Demonstra como usar os recursos da classe <xref:System.Net.HttpListener?displayProperty=nameWithType> para criar um servidor HTTP que roteia as chamadas para um aplicativo ASP.NET hospedado.
   
- [Amostra de aplicativo host ASPX HttpListener](http://go.microsoft.com/fwlink/?LinkID=179560)  
- Demonstra como usar os recursos da classe <xref:System.Net.HttpListener> para criar um servidor HTTP que roteia as chamadas para um aplicativo ASP.NET hospedado.  
-  
- [Amostra de tecnologia de mensageiro](http://go.microsoft.com/fwlink/?LinkID=179561)  
+ [Amostra de tecnologia de mensageiro](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  
  Mostra como enviar mensagens de email de um aplicativo cliente.  
   
- [Amostra de tecnologia de ferramenta NetStat](http://go.microsoft.com/fwlink/?LinkID=179562)  
+ [Amostra de tecnologia de ferramenta NetStat](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx)  
  Demonstra a ferramenta de informações de rede NCLNetStat.  
   
- [Amostra de tecnologia da informação de rede](http://go.microsoft.com/fwlink/?LinkID=179564)  
+ [Amostra de tecnologia da informação de rede](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx)  
  Mostra como monitorar e exibir informações de rede.  
   
- [Amostra de tecnologia de cliente de ping](http://go.microsoft.com/fwlink/?LinkID=179565)  
+ [Amostra de tecnologia de cliente de ping](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx)  
  Demonstra um aplicativo cliente que pode executar ping em um host remoto.  
   
- [Amostra de tecnologia de cliente WebClient](http://go.microsoft.com/fwlink/?LinkID=179566)  
+ [Amostra de tecnologia de cliente WebClient](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx)  
  Demonstra como executar operações comuns, como o upload ou download de arquivos ou dados.  
   
- [Amostra de fluxos seguros](http://go.microsoft.com/fwlink/?LinkID=179567)  
+ [Amostra de fluxos seguros](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx)  
  Mostra como usar um fluxo seguro para comunicação entre um cliente e um servidor.  
   
- [Amostra de soquetes IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [Amostra de soquetes IPv6](https://msdn.microsoft.com/en-us/library/ms180981(v=vs.85).aspx)  
  Demonstra como usar soquetes quando o IPv6 está habilitado.  
   
- [Amostra de tecnologia do Gerenciador de FTP](http://go.microsoft.com/fwlink/?LinkID=179569)  
+ [Amostra de tecnologia do Gerenciador de FTP](https://msdn.microsoft.com/en-us/library/ms233623(v=vs.85).aspx)  
  Demonstra como listar o conteúdo de um servidor FTP.  
   
- [Amostra de tecnologia de desempenho de soquete](http://go.microsoft.com/fwlink/?LinkID=179570)  
- Mostra como usar as melhorias na classe <xref:System.Net.Sockets.Socket> para criar um aplicativo para servidores que usa E/S de rede assíncrona para obter o mais alto desempenho.  
-  
- [Amostra de tecnologia PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)  
- Mostra como usar as novas classes no namespace <xref:System.Net.PeerToPeer> para registrar e publicar um nome de par e, em seguida, resolver um nome de par.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
- <xref:System.Net.PeerToPeer>  
-  
- <xref:System.Net.Sockets>  
-  
 ## <a name="see-also"></a>Consulte também  
  [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Tópicos de instruções de programação de rede](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Amostras de rede para .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

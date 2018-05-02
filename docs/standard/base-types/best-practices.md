@@ -1,12 +1,12 @@
 ---
-title: "Práticas recomendadas para expressões regulares no .NET"
-ms.custom: 
+title: Práticas recomendadas para expressões regulares no .NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 59ec9ead0fd010baccaadb1eda0f469b7b4dcb46
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 <a name="top"></a> O mecanismo de expressões regulares no .NET é uma ferramenta poderosa e repleta de recursos que processa o texto com base em correspondências de padrões em vez de em comparar e corresponder o texto literal. Na maioria dos casos, ele realiza a correspondência de padrões de forma rápida e eficiente. No entanto, em alguns casos, o mecanismo de expressões regulares pode parecer ser muito lento. Em casos extremos, pode até mesmo parecer parar de responder enquanto processa uma entrada relativamente pequena em um período de horas ou até mesmo dias.  
@@ -208,7 +208,7 @@ ms.lasthandoff: 02/27/2018
  Em muitos casos, o retrocesso é essencial para corresponder um padrão de expressão regular ao texto de entrada. No entanto, o retrocesso excessivo pode prejudicar severamente o desempenho e criar a impressão de que um aplicativo parou de responder. Em particular, isso acontece quando quantificadores são aninhados e o texto que corresponde à subexpressão externa é um subconjunto do texto que corresponde à subexpressão interna.  
   
 > [!WARNING]
->  Além de evitar retrocessos excessivos, você deve usar o recurso de tempo limite para garantir que retrocessos excessivos não degradem severamente o desempenho da expressão regular. Para obter mais informações, confira a seção [Use valores de tempo limite](#Timeouts).  
+>  Além de evitar retrocessos excessivos, você deve usar o recurso de tempo limite para garantir que retrocessos excessivos não degradem severamente o desempenho da expressão regular. Para obter mais informações, confira a seção [Usar valores de tempo limite](#Timeouts).  
   
  Por exemplo, o padrão de expressão regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` destina-se a corresponder a um número de peça que consiste em pelo menos um caractere alfanumérico. Todos os demais caracteres podem consistir em um caractere alfanumérico, um hífen, um sublinhado ou um ponto, embora o último caractere deva ser alfanumérico. Um cifrão termina o número da peça. Em alguns casos, esse padrão de expressão regular pode exibir um desempenho muito ruim porque os quantificadores estão aninhados e porque a subexpressão `[0-9A-Z]` é um subconjunto da subexpressão `[-.\w]*`.  
   

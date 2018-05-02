@@ -1,12 +1,12 @@
 ---
 title: Como gravar texto em um arquivo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>Como gravar texto em um arquivo
 Este tópico mostra diferentes maneiras de gravar texto em um arquivo para aplicativos .NET Framework ou aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. As classes e métodos seguintes normalmente são usados para gravar texto em um arquivo:  
@@ -38,7 +38,10 @@ Este tópico mostra diferentes maneiras de gravar texto em um arquivo para aplic
 -   <xref:System.IO.File> – a ser usado com aplicativos do .NET Framework. Fornece métodos estáticos para gravar texto em um arquivo, como <xref:System.IO.File.WriteAllLines%2A> e <xref:System.IO.File.WriteAllText%2A>, ou para acrescentar texto em um arquivo (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> ou <xref:System.IO.File.AppendText%2A>).  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) - a ser usado com aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Contém métodos assíncronos para gravar texto em um arquivo ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) ou [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) ou acrescentar texto em um arquivo ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) ou [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
-  
+
+- <xref:System.IO.Path> – a ser usado em cadeias de caracteres que contêm informações de caminho de arquivo ou de diretório. Contém o método <xref:System.IO.Path.Combine%2A>, que permite a concatenação de cadeias de caracteres para criar um caminho de arquivo ou de diretório.
+
+
  Os exemplos foram mantidos simples de modo que se possa concentrar na tarefa sendo executada. Por esse motivo, os exemplos executam a verificação de erros mínima e o tratamento de exceções, se houver. Um aplicativo do mundo real geralmente fornece uma verificação de erros e um tratamento de exceções mais robustos.  
   
 ## <a name="example"></a>Exemplo  
@@ -95,6 +98,7 @@ Este tópico mostra diferentes maneiras de gravar texto em um arquivo para aplic
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IO.StreamWriter>  
+ <xref:System.IO.Path>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
  [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
  [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

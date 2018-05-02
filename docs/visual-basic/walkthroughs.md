@@ -1,8 +1,9 @@
 ---
-title: "Instruções passo a passo da linguagem Visual Basic"
+title: Instruções passo a passo da linguagem Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Instruções passo a passo da linguagem Visual Basic
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -26,13 +27,13 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Mostra como criar uma solução assíncrona usando [Async](../visual-basic/language-reference/modifiers/async.md) e [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Declarando e gerando eventos](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Ilustra como eventos são declarados e gerados em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Ilustra como eventos são declarados e gerados em Visual Basic.  
   
  [Manipulando eventos](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  Mostra como manipular eventos usando a palavra-chave `WithEvents` padrão ou as novas palavras-chave `AddHandler`/`RemoveHandler`.  
   
  [Criando e implementando interfaces](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Mostra como interfaces são declaradas e implementadas no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Mostra como as interfaces são declaradas e implementadas em Visual Basic.  
   
  [Definindo classes](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Descreve como declarar uma classe e seu campos, propriedades, métodos e eventos.  
@@ -47,10 +48,10 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Explica como usar instruções `Declare` e chamar APIs do Windows. Inclui informações sobre como usar atributos para controlar o marshaling para a chamada à API e como expor uma chamada à API como um método de uma classe.  
   
  [Criando objetos COM com o Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Demonstra como criar objetos COM em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], com e sem o modelo de classe COM.  
+ Demonstra como criar objetos COM em Visual Basic, com e sem o modelo de classe COM.  
   
  [Implementando a herança com objetos COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Demonstra como usar o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 para criar um objeto COM contendo uma classe e usá-la como uma classe base em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Demonstra como usar o Visual Basic 6.0 para criar um objeto COM contendo uma classe e, em seguida, usá-la como uma classe base em Visual Basic.  
   
  [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Mostra como criar um aplicativo multi-threaded que pesquisa um arquivo de texto para ocorrências de uma palavra.  
@@ -77,7 +78,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Mostra como usar a classe <xref:System.Security.Cryptography.DESCryptoServiceProvider> para criptografar e descriptografar cadeias de caracteres.  
   
  [Manipulando arquivos e pastas no Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Demonstra como usar funções [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para determinar informações sobre um arquivo, pesquisar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  
+ Demonstra como usar funções do Visual Basic para determinar informações sobre um arquivo, procurar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  
   
  [Manipulando arquivos usando métodos do .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Demonstra como usar métodos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para determinar informações sobre um arquivo, pesquisar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  

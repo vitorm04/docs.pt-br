@@ -14,21 +14,19 @@ ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1078dd21101a41969754de1afc8919f8ac0bda8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3885dbe2d82768d01cb1b3981bcaae65331d91d7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-c-reference"></a>default (Referência de C#)
-
-A palavra-chave `default`.
 
 A palavra-chave `default` pode ser usada na instrução `switch` ou na expressão de valor padrão:
 
 - [A instrução switch](switch.md): especifica o rótulo padrão.
 
-- [Expressões de valor padrão](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produz o valor padrão do tipo. Será nulo para tipos de referência, zero para tipos de valor e o padrão de bit 0 para structs.
+- [Expressões de valor padrão](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produz o valor padrão de um tipo.
 
 ## <a name="see-also"></a>Consulte também
 

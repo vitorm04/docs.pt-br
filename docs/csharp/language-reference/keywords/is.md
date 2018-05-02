@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (Referência de C#) #
 
-Verifica se um objeto é compatível com um determinado tipo ou (a partir do C# 7) testa uma expressão com relação a um padrão.
+Verifica se um objeto é compatível com um determinado tipo ou (começando com o C# 7.0) testa uma expressão em relação a um padrão.
 
 ## <a name="testing-for-type-compatibility"></a>Testando a compatibilidade de tipo ##
 
@@ -60,11 +60,11 @@ A palavra-chave `is` gera um aviso de tempo de compilação caso seja conhecido 
 `expr` pode ser qualquer expressão que retorna um valor, com exceção de métodos anônimos e expressões lambda. O exemplo a seguir usa `is` para avaliar o valor retornado de uma chamada de método.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-A partir do C# 7, você pode usar a correspondência de padrões com o [padrão de tipo](#type) para escrever códigos mais concisos que usam a instrução `is`.
+Começando com o C# 7.0, você pode usar a correspondência de padrões com o [padrão de tipo](#type) para escrever códigos mais concisos que usam a instrução `is`.
 
 ## <a name="pattern-matching-with-is"></a>Correspondência de padrões com `is` ##
 
-A partir do C# 7, as instruções `is` e [switch](../../../csharp/language-reference/keywords/switch.md) dão suporte à correspondência de padrões. A palavra-chave `is` dá suporte aos seguintes padrões:
+Começando com o C# 7.0, as instruções `is` e [switch](../../../csharp/language-reference/keywords/switch.md) permitem a correspondência de padrões. A palavra-chave `is` dá suporte aos seguintes padrões:
 
 - [Padrão de tipo](#type), que testa se uma expressão pode ser convertida em um tipo especificado e, caso possa, a converte em uma variável desse tipo.
 
@@ -112,7 +112,7 @@ O código equivalente sem correspondência de padrões requer uma atribuição s
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Padrão constante ###
 
-Ao executar a correspondência de padrões com o padrão constante, `is` testa se uma expressão é igual a uma constante especificada. No C# 6 e em versões anteriores, o padrão constante tem suporte da instrução [switch](switch.md). A partir do C# 7, ele tem suporte também da instrução `is`. A sintaxe é:
+Ao executar a correspondência de padrões com o padrão constante, `is` testa se uma expressão é igual a uma constante especificada. No C# 6 e em versões anteriores, o padrão constante tem suporte da instrução [switch](switch.md). Começando com o C# 7.0, ele também é compatível com a instrução `is`. A sintaxe é:
 
 ```csharp
    expr is constant
