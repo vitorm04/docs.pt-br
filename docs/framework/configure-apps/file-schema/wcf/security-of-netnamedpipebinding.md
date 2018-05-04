@@ -1,33 +1,23 @@
 ---
-title: "&lt;segurança&gt; de &lt;netNamedPipeBinding&gt;"
-ms.custom: 
+title: '&lt;segurança&gt; de &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3a018c502aead84eb6936001acb5bc24c59188f8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74bf0d14b0acfd8a5382575d2ee1e51174b6b6b8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;segurança&gt; de &lt;netNamedPipeBinding&gt;
 Define as configurações de segurança para uma associação.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<netNamedPipeBinding>  
 \<associação >  
-\<security>  
+\<segurança >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,4 +62,4 @@ Define as configurações de segurança para uma associação.
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

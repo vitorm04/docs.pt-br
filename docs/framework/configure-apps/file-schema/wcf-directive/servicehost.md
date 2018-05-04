@@ -1,24 +1,12 @@
 ---
 title: '@ServiceHost'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Associa a fábrica usada para produzir o host de serviço com o serviço hospedado e outros aspectos de programação necessários para acessar ou compilar o código de hospedagem fornecido no arquivo. svc.  
@@ -43,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  O nome do tipo CLR da fábrica de host de serviço usado para instanciar o host de serviço. Esse atributo é opcional. Se não for especificado, o padrão <xref:System.ServiceModel.Activation.ServiceHostFactory> for usado, que retorna uma instância de <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Depurar  
- Indica se o [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] serviço deve ser compilado com símbolos de depuração. `true`Se o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviço deve ser compilada com símbolos de depuração; caso contrário, `false`.  
+ Indica se o serviço do Windows Communication Foundation (WCF) deve ser compilado com símbolos de depuração. `true` Se o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviço deve ser compilada com símbolos de depuração; caso contrário, `false`.  
   
 #### <a name="language"></a>Idioma  
  Especifica o idioma usado ao compilar todo o código embutido no arquivo (. svc). Os valores podem representar qualquer. Idiomas com suporte a rede, incluindo c#, VB e JS, que se referem a c#, Visual Basic .NET e JScript .NET, respectivamente. Esse atributo é opcional.  
@@ -52,7 +40,7 @@ CodeBehind = "CodeBehind"%>
  Especifica o arquivo de origem que implementa o serviço Web XML, quando a classe que implementa o serviço Web XML não residem no mesmo arquivo e não foi compilada em um assembly e colocada no diretório \Bin.  
   
 ## <a name="remarks"></a>Comentários  
- O <xref:System.ServiceModel.ServiceHost> usado para hospedar o serviço é um ponto de extensibilidade dentro de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de programação. Um padrão de fábrica é usado para instanciar o <xref:System.ServiceModel.ServiceHost> porque ele é, potencialmente, um tipo polimórfico que o ambiente de hospedagem não deve instanciar diretamente.  
+ O <xref:System.ServiceModel.ServiceHost> usado para hospedar o serviço é um ponto de extensibilidade dentro do modelo de programação do Windows Communication Foundation (WCF). Um padrão de fábrica é usado para instanciar o <xref:System.ServiceModel.ServiceHost> porque ele é, potencialmente, um tipo polimórfico que o ambiente de hospedagem não deve instanciar diretamente.  
   
  A implementação padrão usa <xref:System.ServiceModel.Activation.ServiceHostFactory> para criar uma instância de <xref:System.ServiceModel.ServiceHost>. Mas você pode fornecer sua própria fábrica (aquele retorna seu host derivada), especificando o nome de tipo CLR da sua implementação de fábrica no [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva.  
   

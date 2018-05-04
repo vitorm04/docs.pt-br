@@ -1,27 +1,15 @@
 ---
-title: "Manipulação de eventos DataAdapter"
-ms.custom: 
+title: Manipulação de eventos DataAdapter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 71524de2edbedb24cacc6727654aac5be0a48bb7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-dataadapter-events"></a>Manipulação de eventos DataAdapter
 O ADO.NET <xref:System.Data.Common.DataAdapter> expõe três eventos que você pode usar para responder às alterações feitas nos dados na fonte de dados. A tabela a seguir mostra o `DataAdapter` eventos.  
@@ -33,7 +21,7 @@ O ADO.NET <xref:System.Data.Common.DataAdapter> expõe três eventos que você p
 |`FillError`|Ocorreu um erro durante uma `Fill` operação.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating e RowUpdated  
- `RowUpdating`é gerado antes de qualquer atualização para uma linha de <xref:System.Data.DataSet> foi processada na fonte de dados. `RowUpdated`é gerado depois que qualquer atualização para uma linha de `DataSet` foi processada na fonte de dados. Como resultado, você pode usar `RowUpdating` para modificar o comportamento da atualização antes que elas ocorram, para fornecer manipulação adicional quando uma atualização ocorrerá, para manter uma referência a uma linha atualizada, para cancelar a atualização atual e a agenda para um lote de processar a ser processada mais tarde , e assim por diante. `RowUpdated`é útil para responder a erros e exceções que ocorrem durante a atualização. Você pode adicionar informações de erro para o `DataSet`, bem como a lógica de repetição e assim por diante.  
+ `RowUpdating` é gerado antes de qualquer atualização para uma linha de <xref:System.Data.DataSet> foi processada na fonte de dados. `RowUpdated` é gerado depois que qualquer atualização para uma linha de `DataSet` foi processada na fonte de dados. Como resultado, você pode usar `RowUpdating` para modificar o comportamento da atualização antes que elas ocorram, para fornecer manipulação adicional quando uma atualização ocorrerá, para manter uma referência a uma linha atualizada, para cancelar a atualização atual e a agenda para um lote de processar a ser processada mais tarde , e assim por diante. `RowUpdated` é útil para responder a erros e exceções que ocorrem durante a atualização. Você pode adicionar informações de erro para o `DataSet`, bem como a lógica de repetição e assim por diante.  
   
  O <xref:System.Data.Common.RowUpdatingEventArgs> e <xref:System.Data.Common.RowUpdatedEventArgs> argumentos passados para o `RowUpdating` e `RowUpdated` eventos incluem o seguinte: uma `Command` propriedade que faz referência a `Command` do objeto que está sendo usado para executar a atualização; um `Row` propriedade que faz referência a `DataRow` objeto que contém as informações atualizadas; um `StatementType` propriedade para o tipo de atualização está sendo executada; o `TableMapping`, se aplicável; e o `Status` da operação.  
   

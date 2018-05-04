@@ -1,27 +1,17 @@
 ---
 title: '&lt;UseSmallInternalThreadStacks&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c96537cad59034578d1284f7dc432e5775f3730b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a11b9a008878e716e9b3d8cd54abe5eb4169672a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; elemento
 Solicitações que o common language runtime (CLR) reduzir memória usam com a especificação de tamanhos de pilha explícita ao criar determinados threads que ele usa internamente, em vez de usar o tamanho da pilha padrão para esses threads.  
@@ -43,7 +33,7 @@ Solicitações que o common language runtime (CLR) reduzir memória usam com a e
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Habilitado|Atributo obrigatório.<br /><br /> Especifica se deve solicitar que os tamanhos de pilha explícita de uso CLR em vez do tamanho da pilha padrão ao criar determinados threads que ele usa internamente. Os tamanhos de pilha explícitas são menores que o tamanho da pilha padrão de 1 MB.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se deve solicitar que os tamanhos de pilha explícita de uso CLR em vez do tamanho da pilha padrão ao criar determinados threads que ele usa internamente. Os tamanhos de pilha explícitas são menores que o tamanho da pilha padrão de 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

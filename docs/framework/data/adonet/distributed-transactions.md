@@ -1,24 +1,12 @@
 ---
-title: "Transações distribuídas"
-ms.custom: 
+title: Transações distribuídas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>Transações distribuídas
 Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (confirmação) ou falha (anulação) como uma unidade, entre outras coisas. Um *transação distribuída* é uma transação que afeta a vários recursos. Para que uma transação distribuída seja confirmada, todos os participantes devem garantir que qualquer alteração nos dados será permanente. As alterações devem persistir mesmo que haja falhas do sistema ou outros eventos imprevisíveis. Mesmo se um único participante não fizer essa garantia, a transação inteira falhará e todas as alterações aos dados dentro do escopo da transação serão revertidas.  
@@ -44,7 +32,7 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
   
  Inscrever-se em transações distribuídas é aplicável principalmente ao agrupar objetos de negócios. Se um objeto de negócios é agrupado com uma conexão aberta, a inscrição automática da transação ocorre somente quando essa conexão está aberta. Se várias transações são executadas usando o objeto comercial agrupado, a conexão aberta para esse objeto não se inscreverá automaticamente em transações iniciadas recentemente. Nesse caso, você pode desabilitar a inscrição automática de transação para a conexão e inscrever a conexão nas transações usando `EnlistTransaction`.  
   
- `EnlistTransaction`aceita um único argumento de tipo <xref:System.Transactions.Transaction> que é uma referência à transação existente. Após chamar o método `EnlistTransaction` da conexão, as modificações feitas na fonte de dados usando a conexão serão incluídas na transação. Passar um valor nulo cancela a inscrição da conexão de sua inscrição de transação distribuída atual. Observe que a conexão deve ser aberta antes de chamar `EnlistTransaction`.  
+ `EnlistTransaction` aceita um único argumento de tipo <xref:System.Transactions.Transaction> que é uma referência à transação existente. Após chamar o método `EnlistTransaction` da conexão, as modificações feitas na fonte de dados usando a conexão serão incluídas na transação. Passar um valor nulo cancela a inscrição da conexão de sua inscrição de transação distribuída atual. Observe que a conexão deve ser aberta antes de chamar `EnlistTransaction`.  
   
 > [!NOTE]
 >  Assim que uma conexão é inscrita explicitamente em uma transação, ela não pode ter a inscrição cancelada nem ser inscrita em outra transação até a primeira transação terminar.  

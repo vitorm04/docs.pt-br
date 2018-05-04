@@ -1,30 +1,18 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Fornece controle total sobre a pilha de mensagens para o usuário.  
   
  \<system.serviceModel>  
-\<bindings>  
+\<associações >  
 \<customBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -241,7 +229,7 @@ Fornece controle total sobre a pilha de mensagens para o usuário.
   
 -   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> que fornece uma sessão e o mecanismo de ordenação conforme definido na especificação WS-ReliableMessaging. Essa noção de uma sessão pode cruzar com intermediários SOAP e transporte.  
   
--   Em seguida, é um elemento de associação de segurança opcional que fornece recursos de segurança como autenticação, autorização, proteção e confidencialidade. Os seguintes elementos de associação de segurança são fornecidos por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Em seguida, é um elemento de associação de segurança opcional que fornece recursos de segurança como autenticação, autorização, proteção e confidencialidade. Os seguintes elementos de associação de segurança são fornecidos pelo Windows Communication Foundation (WCF):  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ Fornece controle total sobre a pilha de mensagens para o usuário.
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   Na parte inferior é um elemento de transporte necessário. Você pode usar seu próprio transporte ou use um dos elementos fornecidos por de associação de transporte [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Na parte inferior é um elemento de transporte necessário. Você pode usar seu próprio transporte ou use um transporte fornecidos pelo Windows Communication Foundation (WCF) de elementos de associação:  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -310,7 +298,7 @@ Fornece controle total sobre a pilha de mensagens para o usuário.
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<associação >](../../../../../docs/framework/misc/binding.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

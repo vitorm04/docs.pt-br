@@ -1,30 +1,18 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Este elemento define o tipo que o ambiente de hospedagem de serviço instancia para um transporte particular. Se esse elemento estiver vazio, o tipo padrão é usado. Esse elemento só pode ser usado no aplicativo ou arquivos de configuração no nível de máquina.  
   
- \<sistema. ServiceModel >  
-\<ServiceHostingEnvironment >  
+ \<system.ServiceModel>  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,9 +39,9 @@ Este elemento define o tipo que o ambiente de hospedagem de serviço instancia p
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Um valor booliano que indica se o modo de compatibilidade ASP.NET foi ativado para o aplicativo atual. O padrão é `false`.<br /><br /> Quando esse atributo é definido como `true`, solicitações [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] serviços fluem através do pipeline HTTP do ASP.NET e comunicação por meio de protocolos não HTTP está proibida. Para obter mais informações, consulte [serviços WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|aspNetCompatibilityEnabled|Um valor booliano que indica se o modo de compatibilidade ASP.NET foi ativado para o aplicativo atual. O padrão é `false`.<br /><br /> Quando esse atributo é definido como `true`, fluem de solicitações para serviços do Windows Communication Foundation (WCF) por meio do pipeline HTTP do ASP.NET e comunicação por meio de protocolos não HTTP está proibida. Para obter mais informações, consulte [serviços WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
 |minFreeMemoryPercentageToActivateService|Um inteiro que especifica a quantidade mínima de memória livre que deve estar disponível para o sistema, antes que um serviço [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] possa ser ativado. **Cuidado:** especificar esse atributo juntamente com confiança parcial no arquivo Web. config de um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviço resultará em um <xref:System.Security.SecurityException> quando o serviço é executado.|  
-|multipleSiteBindingsEnabled|Um valor booleano que especifica se várias associações IIS por site está habilitado.<br /><br /> IIS consiste em sites, que são contêineres de aplicativos virtuais que contém diretórios virtuais. O aplicativo em um site pode ser acessado por meio de um ou mais associação do IIS. Uma associação IIS oferece dois tipos de informações: um protocolo de associação e informações de associação. Protocolo de associação define o esquema durante o qual a comunicação ocorre, e informações de associação são as informações usadas para acessar o site. Um exemplo de um protocolo de associação pode ser HTTP, enquanto as informações de associação podem conter um endereço IP, porta, o cabeçalho de host, etc.<br /><br /> O IIS oferece suporte à especificação várias associações IIS por site, o que resulta em vários endereços de base por esquema. No entanto, um [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] serviço hospedado em um site permite que a associação baseAddress apenas uma por esquema.<br /><br /> Para habilitar várias associações IIS por site para um [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] de serviço, defina este atributo como `true`. Observe que várias associação de site só tem suporte para o protocolo HTTP. O endereço dos pontos de extremidade no arquivo de configuração deve ser um URI completo.|  
+|multipleSiteBindingsEnabled|Um valor booleano que especifica se várias associações IIS por site está habilitado.<br /><br /> IIS consiste em sites, que são contêineres de aplicativos virtuais que contém diretórios virtuais. O aplicativo em um site pode ser acessado por meio de um ou mais associação do IIS. Uma associação IIS oferece dois tipos de informações: um protocolo de associação e informações de associação. Protocolo de associação define o esquema durante o qual a comunicação ocorre, e informações de associação são as informações usadas para acessar o site. Um exemplo de um protocolo de associação pode ser HTTP, enquanto as informações de associação podem conter um endereço IP, porta, o cabeçalho de host, etc.<br /><br /> O IIS oferece suporte à especificação várias associações IIS por site, o que resulta em vários endereços de base por esquema. No entanto, um serviço do Windows Communication Foundation (WCF) hospedado em um site permite que a associação baseAddress apenas uma por esquema.<br /><br /> Para habilitar várias associações IIS por site para um serviço do Windows Communication Foundation (WCF), defina este atributo como `true`. Observe que várias associação de site só tem suporte para o protocolo HTTP. O endereço dos pontos de extremidade no arquivo de configuração deve ser um URI completo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   

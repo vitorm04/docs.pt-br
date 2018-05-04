@@ -1,12 +1,13 @@
 ---
-title: "Instruções passo a passo: emitindo código em cenários de confiança parcial"
-ms.custom: 
+title: 'Instruções passo a passo: emitindo código em cenários de confiança parcial'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Instruções passo a passo: emitindo código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  
@@ -144,7 +146,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      O método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> cria o objeto no domínio do aplicativo de destino e retorna um proxy pode ser usado para chamar as propriedades e métodos do objeto.  
   
     > [!NOTE]
-    >  Se você usar esse código em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], deverá alterar o nome da classe para incluir o namespace. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
+    >  Se você usar esse código em Visual Studio, deverá alterar o nome da classe para incluir o namespace. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
   
 6.  Adicionar código para chamar o método `SimpleEmitDemo`. É realizado marshaling na chamada além do limite de domínio do aplicativo e o código é executado no domínio do aplicativo em área restrita.  
   
@@ -218,7 +220,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Se você compilar esse exemplo de código no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], deverá alterar o nome da classe para incluir o namespace ao passá-lo para o método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
+-   Se você compilar esse exemplo de código no Visual Studio, deverá alterar o nome da classe para incluir o namespace ao passá-lo para o método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
   
 ## <a name="see-also"></a>Consulte também  
  [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

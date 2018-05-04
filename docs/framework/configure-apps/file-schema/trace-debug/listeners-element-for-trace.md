@@ -1,31 +1,20 @@
 ---
 title: '&lt;ouvintes de&gt; elemento para &lt;rastreamento&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
 helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9c1f52f880a38791a9a8d5b5372b2ad53c5569f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;ouvintes de&gt; elemento para &lt;rastreamento&gt;
 Especifica um ouvinte que coleta, armazena e roteamento de mensagens. Os ouvintes direcionam a saída de rastreamento para um destino satisfatório.  
@@ -74,7 +63,7 @@ Especifica um ouvinte que coleta, armazena e roteamento de mensagens. Os ouvinte
  Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<ouvintes >** elemento para adicionar os ouvintes `MyListener` e `MyEventListener` para o **ouvintes** coleção. `MyListener`cria um arquivo chamado `MyListener.log` e grava a saída para o arquivo. `MyEventListener`cria uma entrada no log de eventos.  
+ O exemplo a seguir mostra como usar o  **\<ouvintes >** elemento para adicionar os ouvintes `MyListener` e `MyEventListener` para o **ouvintes** coleção. `MyListener` cria um arquivo chamado `MyListener.log` e grava a saída para o arquivo. `MyEventListener` cria uma entrada no log de eventos.  
   
 ```xml  
 <configuration>  

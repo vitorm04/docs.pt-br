@@ -1,29 +1,17 @@
 ---
 title: Derivando a estrutura relacional do DataSet do esquema XML (XSD)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: eb4f6e3a63c901ec69ca5572a6f79d2f0ac4adfc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, uma tabela é gerada no `DataSet`. A estrutura da tabela é determinada pela definição do tipo complexo. Tabelas são criadas no `DataSet` para elementos de nível superior no esquema. No entanto, uma tabela é criada somente para um nível superior `complexType` elemento quando o `complexType` elemento está aninhado em outro `complexType` aninhada de caso de elemento, no qual `complexType` elemento é mapeado para um `DataTable` dentro de `DataSet`.  
   
- Para obter mais informações sobre o XSD, consulte a parte de esquema XML do World Wide Web Consortium (W3C) 0: Primer recomendação, o esquema de XML parte 1: estruturas de recomendação e o esquema XML parte 2: recomendação de tipos de dados, localizado em [http:// www.w3.org/](http://www.w3.org/TR/).  
+ Para obter mais informações sobre o XSD, consulte a parte de esquema XML do World Wide Web Consortium (W3C) 0: Primer recomendação, o esquema de XML parte 1: estruturas de recomendação e o esquema XML parte 2: recomendação de tipos de dados, localizado em [ http://www.w3.org/ ](http://www.w3.org/TR/).  
   
  O exemplo a seguir demonstra um esquema XML onde `customers` é o elemento filho do `MyDataSet` elemento, que é um **DataSet** elemento.  
   

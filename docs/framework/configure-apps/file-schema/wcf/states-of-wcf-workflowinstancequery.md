@@ -1,35 +1,23 @@
 ---
 title: '&lt;estados&gt; do WCF, &lt;workflowInstanceQuery&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5995ebfc2cee0f636d2acd8b1cadead0bc7b67e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef3d8d05dad684b07ee527dbd34ae6269ae57657
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;estados&gt; do WCF, &lt;workflowInstanceQuery&gt;
 Representa uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.  
   
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de controle](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<controle >  
-\<trackingProfile >  
-\<fluxo de trabalho >  
-\<workflowInstanceQueries >  
+\<trackingProfile>  
+\<workflow>  
+\<workflowInstanceQueries>  
 \<workflowInstanceQuery >  
 \<estados >  
   
@@ -55,7 +43,7 @@ Representa uma coleção de estados inscritos da instância do fluxo de trabalho
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Uma consulta que controla as alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.|  
+|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Uma consulta que controla as alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.|  
   
 ## <a name="remarks"></a>Comentários  
  Os registros retornados são filtrados por estados nesta coleção.  

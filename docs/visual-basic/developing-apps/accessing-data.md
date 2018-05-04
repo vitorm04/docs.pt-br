@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Acessando dados em aplicativos do Visual Basic
 O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de aplicativos que acessam dados. Formulários de associação de dados para aplicativos do Windows são criados arrastando itens da janela [Fontes de Dados](/visualstudio/data-tools/add-new-data-sources) para um formulário. Associe controles a dados arrastando itens da janela **Fontes de Dados** para os controles existentes.  
@@ -26,7 +26,7 @@ O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de a
  Fornece links para páginas que discutem a incorporação da funcionalidade de acesso a dados aos seus aplicativos.
 
  [Ferramentas de dados do Visual Studio para .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Fornece links para páginas sobre como criar aplicativos que funcionam com os dados, usando [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Fornece links para páginas sobre como usar o Visual Studio para criar aplicativos que funcionam com dados.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Fornece links para tópicos que descrevem como usar LINQ com Visual Basic.  
@@ -41,7 +41,7 @@ O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de a
  Fornece links para tópicos sobre como criar aplicativos de dados multicamadas.  
      
  [Adicionar novas conexões](/visualstudio/data-tools/add-new-connections)  
- Fornece links para páginas sobre como conectar seu aplicativo a dados com ferramentas de tempo de design e objetos de conexão ADO.NET, usando [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Fornece links para páginas sobre como usar o Visual Studio para conectar o aplicativo a dados com ferramentas de tempo de design e objetos de conexão ADO.NET.  
 
  [Ferramentas de conjunto de dados no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Fornece links para páginas que descrevem como carregar dados em conjuntos de dados e como executar instruções SQL e procedimentos armazenados.  

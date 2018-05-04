@@ -1,24 +1,12 @@
 ---
-title: "Visão geral do ADO.NET"
-ms.custom: 
+title: Visão geral do ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0857df4e4f7e12f78af6b91a76022bcaf94cc027
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 50881c05c8b6f2602d19817373a16e4661d3d133
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-overview"></a>Visão geral do ADO.NET
 O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML, e a fontes de dados expostas através do OLE DB e do ODBC. Os aplicativos do consumidor de compartilhamento de dados podem usar o ADO.NET para se conectar a essas fontes de dados, e para recuperar, manipular e atualizar os dados nelas contidos.  
@@ -31,7 +19,7 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
   
  O ADO.NET fornece o método mais direto de acesso a dados no .NET Framework. Para uma abstração de alto nível que permite que os aplicativos funcionam em um modelo conceitual em vez do modelo de armazenamento subjacente, consulte o [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Privacy Statement**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll, and System.Data.DataSetExtensions.dll assemblies do not distinguish between a user's private data and non-private data.  Esses assemblies não coletam, não armazenam nem transmitem dados privados de nenhum usuário. No entanto, os aplicativos de terceiros podem coletar, armazenar ou transmitir dados privados de um usuário usando esses assemblies.  
+ **Declaração de privacidade**: O System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, SqlServerCe e System.Data.DataSetExtensions.dll assemblies não distingui entre um usuário dados privados e dados de não-particulares.  Esses assemblies não coletam, não armazenam nem transmitem dados privados de nenhum usuário. No entanto, os aplicativos de terceiros podem coletar, armazenar ou transmitir dados privados de um usuário usando esses assemblies.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Arquitetura do ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  

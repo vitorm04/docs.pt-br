@@ -1,30 +1,18 @@
 ---
-title: '&lt;metadados&gt;'
-ms.custom: 
+title: '&lt;Metadados&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1da05ebd48a3fff7c35510db4093d56831a8fcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e314ae56ed7a1b532bb8946fbb28802e72d3e20
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltmetadatagt"></a>&lt;metadados&gt;
+# <a name="ltmetadatagt"></a>&lt;Metadados&gt;
 Especifica como os metadados de serviço podem ser processado.  
   
- \<sistema. ServiceModel >  
-\<cliente >  
+ \<system.ServiceModel>  
+\<client>  
   
 ## <a name="syntax"></a>Sintaxe  
   

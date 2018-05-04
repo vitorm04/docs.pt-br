@@ -1,24 +1,12 @@
 ---
-title: "Funções da cadeia de caracteres"
-ms.custom: 
+title: Funções da cadeia de caracteres
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba371840cf5c3b19ee232be0934557d87e7c343f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>Funções da cadeia de caracteres
 O provedor de dados .NET Framework para SQL Server (SqlClient) fornece funções `String` que executam operações em um `String` de entrada e retornam `String` ou um resultado de valor numérico. Essas funções estão no namespace SqlServer, que está disponível quando você usa o SqlClient. A propriedade de namespace de um provedor permite que o Entity Framework descubra qual prefixo é usado por esse provedor para construções específicas, como tipos e funções.  
@@ -46,7 +34,7 @@ O provedor de dados .NET Framework para SQL Server (SqlClient) fornece funções
 |`SOUNDEX(expression)`|Retorna um código de (SOUNDEX) de quatro caracteres para avaliar a semelhança de duas cadeias de caracteres. **Argumentos**<br /><br /> `expression`: um tipo de cadeia de caracteres Unicode ou ASCII.<br /><br /> **Valor retornado**<br /><br /> Um `String` ASCII. Um código de quatro caracteres (SOUNDEX) é uma cadeia de caracteres que avalia a semelhança de duas cadeias de caracteres.<br /><br /> **Exemplo**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **Retorna**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|Retorna um `String` ASCII de espaços repetidos.<br /><br /> **Argumentos**<br /><br /> `int_expression`: um `Int64` (não retornado no SQL Server 2000) ou `Int32` que indica o número de espaços.<br /><br /> **Valor retornado**<br /><br /> Um `String` ASCII.<br /><br /> **Exemplo**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|Retorna um `String` ASCII convertido de dados numéricos.<br /><br /> **Argumentos**<br /><br /> `float _expression`: uma expressão do tipo de dados numérico aproximado (`Double`) com um ponto decimal.<br /><br /> `length`: (opcional) um `Int32` que representa o tamanho total. Isso inclui o ponto decimal, o sinal, os dígitos e os espaços. O padrão é 10.<br /><br /> `decimal`: (opcional) um `Int32` que representa o número de casas à direita da vírgula decimal. decimal deve ser menor que ou igual a 16. Se o decimal é mais que 16, o resultado será truncado a dezesseis locais à direita do ponto decimal.<br /><br /> **Valor retornado**<br /><br /> Um `String` ASCII.<br /><br /> **Exemplo**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|Exclui um comprimento especificado de caracteres e insere um outro conjunto de caracteres em um ponto de partida especificado em uma expressão de cadeia de caracteres.<br /><br /> **Argumentos**<br /><br /> `str_expression`: um `String` Unicode ou ASCII.<br /><br /> `start:`Um `Int64` (não é retornado no SQL Server 2000) ou `Int32` valor que especifica o local para iniciar a exclusão e inserção.<br /><br /> `length`: um `Int64` (não retornado no SQL Server 2000) ou valor `Int32` especificando o número de caracteres para excluir.<br /><br /> `str_expression_to_insert`: um `String` Unicode ou ASCII.<br /><br /> **Valor retornado**<br /><br /> Um `String` Unicode ou ASCII.<br /><br /> **Exemplo**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|Exclui um comprimento especificado de caracteres e insere um outro conjunto de caracteres em um ponto de partida especificado em uma expressão de cadeia de caracteres.<br /><br /> **Argumentos**<br /><br /> `str_expression`: um `String` Unicode ou ASCII.<br /><br /> `start:` Um `Int64` (não é retornado no SQL Server 2000) ou `Int32` valor que especifica o local para iniciar a exclusão e inserção.<br /><br /> `length`: um `Int64` (não retornado no SQL Server 2000) ou valor `Int32` especificando o número de caracteres para excluir.<br /><br /> `str_expression_to_insert`: um `String` Unicode ou ASCII.<br /><br /> **Valor retornado**<br /><br /> Um `String` Unicode ou ASCII.<br /><br /> **Exemplo**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|Retorna a parte de uma expressão de `String`.<br /><br /> **Argumentos**<br /><br /> `str_expression`: uma expressão de um tipo `String` (ASCII ou Unicode) ou um tipo `Binary`.<br /><br /> `start`: um `Int64` (não retornado no SQL Server 2000) ou `Int32` que especifica onde a subcadeia de caracteres começa. 1 refere-se ao primeiro caractere na cadeia de caracteres.<br /><br /> `length`: um `Int64` (não retornado no SQL Server 2000) ou `Int32` que especifica quantos caracteres da expressão serão retornados.<br /><br /> **Valor retornado**<br /><br /> Um tipo `String` (ASCII ou Unicode) ou um tipo `Binary`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|Retorna o valor inteiro, como definido pelo padrão Unicode, para o primeiro caractere da expressão de entrada.<br /><br /> **Argumentos**<br /><br /> `expression`: um `String`Unicode.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|Retorna uma expressão de `String` após converter dados de caracteres minúsculos em maiúsculos.<br /><br /> **Argumentos**<br /><br /> `expression`: uma expressão de um tipo de cadeia de caracteres ASCII ou Unicode.<br /><br /> **Valor retornado**<br /><br /> Um tipo `String` ASCII ou Unicode.<br /><br /> **Exemplo**<br /><br /> `SqlServer.UPPER('AbB')`|  

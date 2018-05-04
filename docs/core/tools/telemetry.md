@@ -1,22 +1,20 @@
 ---
 title: Telemetria de Ferramentas da CLI do .NET Core
-description: "Descubra os recursos de telemetria das ferramentas do .NET Core que coletam informações de uso para análise, quais dados são coletados e como desabilitá-la."
-keywords: .NET,.NET Core,telemetria
+description: Descubra os recursos de telemetria das ferramentas do .NET Core que coletam informações de uso para análise, quais dados são coletados e como desabilitá-la.
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>Telemetria de Ferramentas da CLI do .NET Core
 
@@ -113,7 +111,7 @@ A distribuição da Microsoft do .NET Core é licenciada com o [EULA da MICROSOF
 
 Os [Pacotes NuGet do .NET](https://www.nuget.org/profiles/dotnetframework) usam essa mesma licença, mas não habilitam a telemetria (consulte o [Escopo](#scope)).
 
-> 2. DADOS. O software pode coletar informações sobre você e seu uso do software e enviá-las para a Microsoft. A Microsoft pode usar essas informações para melhorar nossos produtos e serviços. Você pode saber mais sobre coleta e uso de dados na Documentação de Ajuda e na política de privacidade em http://go.microsoft.com/fwlink/?LinkId=528096. O uso do software serve como consentimento para essas práticas.
+> 2. DADOS. O software pode coletar informações sobre você e seu uso do software e enviá-las para a Microsoft. A Microsoft pode usar essas informações para melhorar nossos produtos e serviços. Você pode saber mais sobre coleta e uso de dados na documentação de ajuda e na política de privacidade em http://go.microsoft.com/fwlink/?LinkId=528096. O uso do software serve como consentimento para essas práticas.
 
 ## <a name="disclosure"></a>Divulgação
 

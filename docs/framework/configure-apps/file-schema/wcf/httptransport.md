@@ -1,32 +1,18 @@
 ---
 title: '&lt;httpTransport&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
   
  \<system.serviceModel>  
-\<bindings>  
+\<associações >  
 \<customBinding>  
 \<associação >  
 \<httpTransport>  
@@ -59,7 +45,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |---------------|-----------------|  
 |allowCookies|Um valor booleano que especifica se o cliente aceita cookies e os propaga em solicitações futuras. O padrão é `false`.<br /><br /> Você pode usar esse atributo quando você interage com os serviços Web ASMX que usam cookies. Dessa forma, você poderá ter certeza de que os cookies retornados do servidor são copiados automaticamente para todas as solicitações de cliente futuras desse serviço.|  
 |authenticationScheme|Especifica o protocolo usado para autenticar solicitações de cliente processadas por um ouvinte HTTP. Os valores válidos incluem o seguinte:<br /><br /> -Digest: Especifica a autenticação digest.<br />-Negotiate: Negocia com o cliente para determinar o esquema de autenticação. Se o cliente e o servidor oferecem suporte ao Kerberos, ele é usado; caso contrário, o NTLM é usado.<br />-Ntlm: Especifica a autenticação NTLM.<br />-Básico: Especifica a autenticação básica.<br />-Anônimo: Especifica a autenticação anônima.<br /><br /> O padrão é anônimo. Esse atributo é do tipo <xref:System.Net.AuthenticationSchemes>. Esse atributo só pode ser definido uma vez.|  
-|bypassProxyOnLocal|Um valor booliano que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.<br /><br /> Um endereço local é aquele que está na rede local ou intranet.<br /><br /> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Sempre ignora o proxy se o endereço do serviço começa com http://localhost.<br /><br /> Se você deseja que os clientes passar por um proxy ao conversar com serviços no mesmo computador, você deve usar o nome de host em vez de localhost.|  
+|bypassProxyOnLocal|Um valor booliano que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.<br /><br /> Um endereço local é aquele que está na rede local ou intranet.<br /><br /> Windows Communication Foundation (WCF) sempre ignora o proxy se o endereço do serviço começa com http://localhost.<br /><br /> Se você deseja que os clientes passar por um proxy ao conversar com serviços no mesmo computador, você deve usar o nome de host em vez de localhost.|  
 |hostnameComparisonMode|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Os valores válidos são,<br /><br /> -StrongWildcard: ("+") corresponde a todos os possíveis nomes de host no contexto do esquema especificado, porta e URI relativo.<br />-Exato: sem curingas<br />-WeakWildcard: ("*") corresponde a todas as possíveis hostname no contexto do esquema especificado, porta e UIR relativo que não foram correspondidas explicitamente ou por meio do mecanismo de curinga forte.<br /><br /> O padrão é StrongWildcard. Esse atributo é do tipo `System.ServiceModel.HostnameComparisonMode`.|  
 |keepAliveEnabled|Um valor booleano que especifica se deve fazer uma conexão persistente para o recurso de internet.|  
 |maxBufferSize|Um inteiro positivo que especifica o tamanho máximo do buffer. O padrão é 524288|  
@@ -77,10 +63,10 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- O `httpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTP. O HTTP é o transporte primário usado para fins de interoperabilidade. Esse transporte é suportado pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] para garantir a interoperabilidade com outros não -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pilhas de serviços da Web.  
+ O `httpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTP. O HTTP é o transporte primário usado para fins de interoperabilidade. Esse transporte é suportado pelo Windows Communication Foundation (WCF) para garantir a interoperabilidade com outros não -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pilhas de serviços da Web.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  

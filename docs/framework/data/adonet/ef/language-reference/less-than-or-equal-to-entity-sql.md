@@ -1,24 +1,12 @@
 ---
 title: '&lt;= (Menor que ou igual a) (Entity SQL)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c6ad4e03a2221491276ae64cf292df8ce3ccd53d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dd861bf3490794a7a54a09719ae4ae377d0e2861
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lt-less-than-or-equal-to-entity-sql"></a>&lt;= (Menor que ou igual a) (Entity SQL)
 Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que ou igual à expressão da direita.  

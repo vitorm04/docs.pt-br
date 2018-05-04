@@ -1,13 +1,6 @@
 ---
-title: "&lt;httpWebRequest&gt; elemento (configurações de rede)"
-ms.custom: 
+title: '&lt;httpWebRequest&gt; elemento (configurações de rede)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#httpWebRequest
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dadb2d7635f132b44d6fca8c56f53b847ffb1ff9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d1dce38e5188824ba1412d3f2a285bd2304f147
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; elemento (configurações de rede)
 Personaliza os parâmetros de solicitação da Web.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Configurações >  
 \<httpWebRequest >  
   
@@ -64,7 +55,7 @@ Personaliza os parâmetros de solicitação da Web.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[Configurações](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, o .NET Framework estritamente impõe RFC 2616 para análise do URI. Algumas respostas do servidor podem incluir caracteres de controle em campos proibidos, o que fará com que o <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> método para lançar um <xref:System.Net.WebException>. Se **useUnsafeHeaderParsing** é definido como **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> não lançará nesse caso; no entanto, seu aplicativo estará vulnerável a várias formas de ataques de análise de URI. A melhor solução é alterar o servidor de modo que a resposta não inclui caracteres de controle.  

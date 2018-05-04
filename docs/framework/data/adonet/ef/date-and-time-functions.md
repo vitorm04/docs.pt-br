@@ -1,32 +1,20 @@
 ---
-title: "Funções de data e hora"
-ms.custom: 
+title: Funções de data e hora
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e68a78a3a24bf6da4e9827cb17d4715b6d60d0b8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dbde1a2d19e9cf1559129adf8fe3dcc4fadddf0a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-functions"></a>Funções de data e hora
 O provedor de dados. NET Framework para SQL Server (SqlClient) fornece funções de data e hora que executam operações em uma entrada de `System.DateTime` avalia e retorna um resultado de `string`, numérico, ou de `System.DateTime` de valor. Essas funções estão no namespace SqlServer, que está disponível quando você usa o SqlClient. A propriedade de namespace de um provedor permite que Entity Framework descobrir que prefixo é usado por esse provedor para compilações específicas, como tipos e funções. A tabela a seguir mostra as funções de data e hora SqlClient.  
   
 |Função|Descrição|  
 |--------------|-----------------|  
-|`DATEADD(` `datepart`, `number`, `date``)`|Retorna um novo valor de `DateTime` que é baseado em adicionar um intervalo para a data especificada.<br /><br /> **Argumentos**<br /><br /> `datepart`: `String` que representa a parte de data para retornar um novo valor.<br /><br /> `number`: `Int32`, `Int64`, `Decimal`, ou valor de `Double` usado para incrementar `datepart`.<br /><br /> `date:`Uma expressão que retorna um `DateTime`, ou `DateTimeOffset`, ou `Time` com precisão = [0-7], ou uma cadeia de caracteres em um formato de data.<br /><br /> **Valor retornado**<br /><br /> Novo `DateTime`, ou `DateTimeOffset`, ou valor de `Time` com precisão = [] 0-7.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
-|`DATEDIFF(` `datepart`, `startdate`, `enddate``)`|Retorna o número de limites de data e hora cruzados entre duas datas especificado.<br /><br /> **Argumentos**<br /><br /> `datepart`: `String` que representa a parte de data para calcular a diferença.<br /><br /> `startdate`: Uma data de início para o cálculo é uma expressão que retorna `DateTime`, ou `DateTimeOffset`, ou valor de `Time` com precisão = [] 0-7, ou uma cadeia de caracteres em um formato de data.<br /><br /> `enddate:`Uma data de término para o cálculo é uma expressão que retorna um `DateTime`, ou `DateTimeOffset`, ou `Time` valor com precisão = [0-7], ou uma cadeia de caracteres em um formato de data.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
+|`DATEADD(` `datepart`, `number`, `date``)`|Retorna um novo valor de `DateTime` que é baseado em adicionar um intervalo para a data especificada.<br /><br /> **Argumentos**<br /><br /> `datepart`: `String` que representa a parte de data para retornar um novo valor.<br /><br /> `number`: `Int32`, `Int64`, `Decimal`, ou valor de `Double` usado para incrementar `datepart`.<br /><br /> `date:` Uma expressão que retorna um `DateTime`, ou `DateTimeOffset`, ou `Time` com precisão = [0-7], ou uma cadeia de caracteres em um formato de data.<br /><br /> **Valor retornado**<br /><br /> Novo `DateTime`, ou `DateTimeOffset`, ou valor de `Time` com precisão = [] 0-7.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
+|`DATEDIFF(` `datepart`, `startdate`, `enddate``)`|Retorna o número de limites de data e hora cruzados entre duas datas especificado.<br /><br /> **Argumentos**<br /><br /> `datepart`: `String` que representa a parte de data para calcular a diferença.<br /><br /> `startdate`: Uma data de início para o cálculo é uma expressão que retorna `DateTime`, ou `DateTimeOffset`, ou valor de `Time` com precisão = [] 0-7, ou uma cadeia de caracteres em um formato de data.<br /><br /> `enddate:` Uma data de término para o cálculo é uma expressão que retorna um `DateTime`, ou `DateTimeOffset`, ou `Time` valor com precisão = [0-7], ou uma cadeia de caracteres em um formato de data.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
 |`DATENAME(` `datepart`, `date``)`|Retorna uma cadeia de caracteres que representa o datepart especificado de data especificada.<br /><br /> **Argumentos**<br /><br /> `datepart`: `String` que representa a parte de data para retornar um novo valor.<br /><br /> `date`: Uma expressão que retorna `DateTime,` ou `DateTimeOffset`, ou valor de `Time` com precisão = [] 0-7, ou uma cadeia de caracteres em um formato de data.<br /><br /> **Valor retornado**<br /><br /> A cadeia de caracteres que representa o datepart especificado de data especificada.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DATENAME('year', cast('6/9/2006' as DateTime))`|  
 |`DATEPART(` `datepart`, `date``)`|Retorna um inteiro que representa o datepart especificado de data especificada.<br /><br /> **Argumentos**<br /><br /> `datepart`: `String` que representa a parte de data para retornar um novo valor.<br /><br /> `date`: Uma expressão que retorna `DateTime,` ou `DateTimeOffset,` ou valor de `Time` com precisão = [] 0-7, ou uma cadeia de caracteres em um formato de data.<br /><br /> **Valor retornado**<br /><br /> O datepart especificado de data especificada, como `Int32`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DATEPART('year', cast('6/9/2006' as DateTime))`|  
 |`DAY(``date``)`|Rreturns o dia de data especificada como um número inteiro.<br /><br /> **Argumentos**<br /><br /> `date`: Uma expressão de tipo `DateTime` ou `DateTimeOffset` com precisão = 0-7.<br /><br /> **Valor retornado**<br /><br /> O dia de data especificada como `Int32`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.DAY(cast('6/9/2006' as DateTime))`|  

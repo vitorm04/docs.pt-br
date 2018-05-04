@@ -1,29 +1,17 @@
 ---
 title: '&lt;adicionar&gt; &lt;authorizationPolicies&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;adicionar&gt; &lt;authorizationPolicies&gt;
 Especifica uma política de autorização para transformação de declaração.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
 \<comportamento >  
 \<serviceAuthorization >  
@@ -48,7 +36,7 @@ Especifica uma política de autorização para transformação de declaração.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`policyType`|Um atributo de cadeia de caracteres necessário.<br /><br /> O [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de controle de acesso oferece suporte a um conjunto de políticas de autorização como tipos de provisionamento. Esse atributo especifica uma política de autorização, que permite que a transformação de um conjunto de declarações de entrada em outro conjunto de declarações. Controle de acesso pode ser concedido ou negado com base nisso.|  
+|`policyType`|Um atributo de cadeia de caracteres necessário.<br /><br /> O modelo de controle de acesso do Windows Communication Foundation (WCF) oferece suporte a um conjunto de políticas de autorização como tipos de provisionamento. Esse atributo especifica uma política de autorização, que permite que a transformação de um conjunto de declarações de entrada em outro conjunto de declarações. Controle de acesso pode ser concedido ou negado com base nisso.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

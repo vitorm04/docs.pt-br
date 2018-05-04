@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8100f986a98c9e4712603c45a88d48cbb93be649
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Explicação passo a passo: Usando um fluxo de dados em um Aplicativo do Windows Forms
 Este documento demonstra como criar uma rede de blocos de fluxo de dados que executam o processamento de imagens em um Aplicativo do Windows Forms.  
@@ -48,7 +48,7 @@ Este documento demonstra como criar uma rede de blocos de fluxo de dados que exe
   
 #### <a name="to-create-the-windows-forms-application"></a>Para criar o aplicativo do Windows Forms  
   
-1.  No [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], crie um projeto de **aplicativo do Windows Forms** em C# ou em Visual Basic. Neste documento, o projeto é chamado `CompositeImages`.  
+1.  No Visual Studio, crie um projeto de **aplicativo do Windows Forms** do Visual Basic ou do Visual C#. Neste documento, o projeto é chamado `CompositeImages`.  
   
 2.  No designer de formulários do formulário principal, Form1.cs (Form1.vb para Visual Basic), adicione um controle <xref:System.Windows.Forms.ToolStrip>.  
   

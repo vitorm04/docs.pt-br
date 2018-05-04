@@ -1,13 +1,6 @@
 ---
-title: "&lt;IPv6&gt; elemento (configurações de rede)"
-ms.custom: 
+title: '&lt;IPv6&gt; elemento (configurações de rede)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4a98d1d21d7df4e88c668262e60397029fe44c5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b73e5d781829292513e809c39ac9de9dfc6d0e8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; elemento (configurações de rede)
 Permite que o protocolo IP versão 6 (IPv6) respostas de membros obsoletos do <xref:System.Net.Dns> classe.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Configurações >  
 \<IPv6 >  
   
@@ -58,7 +49,7 @@ Permite que o protocolo IP versão 6 (IPv6) respostas de membros obsoletos do <x
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[Configurações](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa configuração habilita o suporte para os membros obsoletos do IPv6 a <xref:System.Net.Dns> classe: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, e <xref:System.Net.Dns.Resolve%2A>. Para outros membros de <xref:System.Net?displayProperty=nameWithType> namespace, endereços IPv6 podem ser retornados se o IPv6 estiver habilitado no sistema operacional.  

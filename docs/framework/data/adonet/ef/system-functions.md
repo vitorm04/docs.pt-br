@@ -1,24 +1,12 @@
 ---
-title: "Funções do sistema"
-ms.custom: 
+title: Funções do sistema
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4dae900f82b67815543dea915e9f29b56683c3b9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91c8e178fc6903dddc287ac2ca00c3152a9e3ce7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-functions"></a>Funções do sistema
 O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as seguintes funções do sistema:  

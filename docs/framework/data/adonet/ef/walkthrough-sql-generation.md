@@ -1,26 +1,12 @@
 ---
 title: 'Passo a passo: Geração SQL'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
 Este tópico ilustra como geração SQL ocorre no [provedor exemplo](http://go.microsoft.com/fwlink/?LinkId=180616). A seguinte consulta SQL Entity usa o modelo que está incluído com o provedor exemplo:  
@@ -125,7 +111,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Quando o nó de projeto é visitado, VisitInputExpression é chamado sobre sua entrada (Join4), que causa a visitar de Join4 pelo método VisitJoinExpression. Porque este é um nível superior, se associa os retornos de IsParentAJoin e falsos um novo SqlSelectStatement (SelectStatement0) é criado e empurrado na pilha da declaração SELECT. Além disso, um novo escopo (scope0) é inserido na tabela de símbolo. Antes que a primeira entrada (deixada) do join foi visitada, “true” é empurrado na pilha de IsParentAJoin. Right before Join1, que é a entrada esquerda de Join4, é visitado, o estado do visitante é conforme mostrado na figura a seguir.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
+ ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
  Quando o método de visita de associação é chamado sobre Join4, IsParentAJoin é true, então reutiliza a instrução select SelectStatement0 atuais. Um novo escopo é inserido (scope1). Antes de visitar seu filho esquerdo, Extent1, outro verdadeiro é empurrado na pilha de IsParentAJoin.  
   

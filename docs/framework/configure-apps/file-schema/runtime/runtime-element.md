@@ -1,13 +1,6 @@
 ---
-title: "&lt;tempo de execução&gt; elemento"
-ms.custom: 
+title: '&lt;tempo de execução&gt; elemento'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime
@@ -16,22 +9,20 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-caps.latest.revision: "70"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 547e6a5b800f1adf5ba9835470d2dd405ce97b14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltruntimegt-element"></a>&lt;tempo de execução&gt; elemento
 Fornece informações usadas pelo common language runtime para configurar os aplicativos.  
   
  \<configuration>  
-\<tempo de execução >  
+\<runtime>  
   
 ## <a name="syntax"></a>Sintaxe  
   

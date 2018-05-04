@@ -1,31 +1,21 @@
 ---
 title: '&lt;audienceUris&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 69c96698b309a789b4527c76e1fe8b8b99811a19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7415cb3f1792d2de566161ae6c348ef591b4a0c3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Especifica o conjunto de URIs que são aceitáveis identificadores da terceira parte confiável (RP). Tokens não serão aceitas, a menos que eles têm o escopo para uma das URIs de audiência permitidas.  
   
- \<System. IdentityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration >  
 \<audienceUris >  
   
@@ -71,7 +61,7 @@ Especifica o conjunto de URIs que são aceitáveis identificadores da terceira p
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornece manipuladores de token de configuração para uma coleção de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, a coleção está vazia. Use `<add>`, `<clear>`, e `<remove>` elementos para modificar a coleção. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>e <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> objetos usam os valores no conjunto de URI público para configurar quaisquer permitido público restrições URI <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objetos.  
+ Por padrão, a coleção está vazia. Use `<add>`, `<clear>`, e `<remove>` elementos para modificar a coleção. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> e <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> objetos usam os valores no conjunto de URI público para configurar quaisquer permitido público restrições URI <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objetos.  
   
  O `<audienceUris>` elemento é representado pela <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> classe. Um URI individual adicionado à coleção é representado pela <xref:System.IdentityModel.Configuration.AudienceUriElement> classe.  
   

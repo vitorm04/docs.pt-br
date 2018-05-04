@@ -1,24 +1,12 @@
 ---
-title: "Cadeias de caracteres de conexão"
-ms.custom: 
+title: Cadeias de caracteres de conexão
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>Cadeias de caracteres de conexão
 Uma cadeia de conexão contém informações de inicialização que são passadas como parâmetros de um provedor de dados para uma fonte de dados. A sintaxe depende do provedor de dados, e a cadeia de conexão é analisada durante a tentativa de abrir uma conexão. As cadeias de conexão usadas por Entity Framework contêm informações usadas para conectar ao provedor de dados ADO.NET subjacente que dá suporte a Entity Framework. Elas também contêm informações sobre os arquivos de modelo e de mapeamento necessários.  
@@ -102,19 +90,19 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Suporte para o &#124; DataDirectory &#124; Cadeia de caracteres de substituição e o operador de raiz do aplicativo Web (~)  
- `DataDirectory`e o ~ operador são usados no <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte do `Metadata` e `Provider Connection String` palavras-chave. <xref:System.Data.EntityClient.EntityConnection> encaminha `DataDirectory` e o operador ~ para <xref:System.Data.Metadata.Edm.MetadataWorkspace> e para o provedor de armazenamento, respectivamente.  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Suporte para o &#124;DataDirectory&#124; cadeia de caracteres de substituição e o aplicativo Web raiz do operador (~)  
+ `DataDirectory` e o ~ operador são usados no <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte do `Metadata` e `Provider Connection String` palavras-chave. <xref:System.Data.EntityClient.EntityConnection> encaminha `DataDirectory` e o operador ~ para <xref:System.Data.Metadata.Edm.MetadataWorkspace> e para o provedor de armazenamento, respectivamente.  
   
 |Termo|Descrição|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Resolve como um caminho relativo a arquivos de mapeamento e metadados. Este é o valor que é definido por meio do método `AppDomain.SetData("DataDirectory", objValue)`. A cadeia de caracteres de substituição `DataDirectory` deve ser cercada por caracteres de pipe e não pode haver nenhum espaço em branco entre seu nome e os caracteres de pipe. O nome `DataDirectory` não diferencia maiúsculas de minúsculas.<br /><br /> Se um diretório físico nomeado "DataDirectory" tiver de ser passado como membro da lista de caminhos de metadados, adicione espaço em branco a um dos lados ou aos dois lados do nome, por exemplo: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Um aplicativo ASP.NET resolve &#124; DataDirectory &#124; para o "\<raiz do aplicativo > / app_data" pasta.|  
+|`&#124;DataDirectory&#124;`|Resolve como um caminho relativo a arquivos de mapeamento e metadados. Este é o valor que é definido por meio do método `AppDomain.SetData("DataDirectory", objValue)`. A cadeia de caracteres de substituição `DataDirectory` deve ser cercada por caracteres de pipe e não pode haver nenhum espaço em branco entre seu nome e os caracteres de pipe. O nome `DataDirectory` não diferencia maiúsculas de minúsculas.<br /><br /> Se um diretório físico nomeado "DataDirectory" tiver de ser passado como membro da lista de caminhos de metadados, adicione espaço em branco a um dos lados ou aos dois lados do nome, por exemplo: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Resolve um aplicativo ASP.NET &#124;DataDirectory&#124; para o "\<raiz do aplicativo > / app_data" pasta.|  
 |~|Resolve como a raiz do aplicativo Web. O caractere ~ em uma posição à esquerda é sempre interpretado como o operador raiz do aplicativo Web (~), embora possa representar um subdiretório local válido. Para fazer referência a um subdiretório local, o usuário deve passar `./~` explicitamente.|  
   
  `DataDirectory` e o operador ~ devem ser especificados somente no início de um caminho; eles não são resolvidos em nenhuma outra posição. O Entity Framework tentará resolver `~/data`, mas tratará `/data/~` como um caminho físico.  
   
  Um caminho que começa com `DataDirectory` ou com o operador ~ não pode ser resolvido como um caminho físico fora da ramificação de `DataDirectory` e do operador ~. Por exemplo, os seguintes caminhos serão resolvidos: `~`, `~/data`, `~/bin/Model/SqlServer`. Os seguintes caminhos não serão resolvidos: `~/..`, `~/../other`.  
   
- `DataDirectory`e o ~ operador pode ser estendido para incluir os subdiretórios, da seguinte forma: `|DataDirectory|\Model`,`~/bin/Model`  
+ `DataDirectory` e o ~ operador pode ser estendido para incluir os subdiretórios, da seguinte forma: `|DataDirectory|\Model`, `~/bin/Model`  
   
  A resolução da cadeia de caracteres de substituição `DataDirectory` e do operador ~ é não recursiva. Por exemplo, quando `DataDirectory` incluir o caractere `~`, será gerada uma exceção. Isso evita uma recursão infinita.  
   

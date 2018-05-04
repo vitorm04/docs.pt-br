@@ -1,31 +1,21 @@
 ---
 title: '&lt;secureConversationBootstrap&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5cff19fc6d931f5dd391776c39f3934c8809a5ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f7eab333899f5fc379db8fb5683ea3d29d04943c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Especifica os valores padrão usados para iniciar um serviço de conversa segura.  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<associações >  
-\<customBinding >  
+\<customBinding>  
 \<associação >  
 \<segurança >  
 \<secureConversationBootstrap >  
@@ -69,13 +59,13 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |`requireDerivedKeys`|Um valor booleano que especifica se as chaves podem ser derivadas das chaves de prova originais. O padrão é `true`.|  
 |`requireSecurityContextCancellation`|Um valor booleano que especifica se o contexto de segurança deve ser cancelado e encerrado quando não é mais necessário. O padrão é `true`.|  
 |`requireSignatureConfirmation`|Um valor booleano que especifica se a confirmação de assinatura de WS-Security está habilitada. Quando definido como `true`, assinaturas de mensagem são confirmadas pelo respondente. O padrão é `false`.<br /><br /> Confirmação de assinatura é usada para confirmar que o serviço está respondendo no reconhecimento completo de uma solicitação.|  
-|`securityHeaderLayout`|Especifica a ordenação dos elementos no cabeçalho de segurança. Os valores válidos são:<br /><br /> -Estrito. Itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".<br />-Incerta. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirmam WSS: segurança de mensagem SOAP.<br />-LaxWithTimestampFirst. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirmam WSS: segurança de mensagem SOAP exceto que o primeiro elemento no cabeçalho de segurança deve ser um elemento wsse:Timestamp.<br />-LaxWithTimestampLast. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirmam WSS: segurança de mensagem SOAP exceto que o último elemento no cabeçalho de segurança deve ser um elemento wsse:Timestamp.<br /><br /> O padrão é estrito.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|`securityHeaderLayout`|Especifica a ordenação dos elementos no cabeçalho de segurança. Os valores válidos são:<br /><br /> -Estrito. Itens são adicionados ao cabeçalho de segurança de acordo com o princípio geral de "declarar antes do uso".<br />-Incerta. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: segurança de mensagem SOAP.<br />-LaxWithTimestampFirst. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: segurança de mensagem SOAP, exceto pelo fato de que o primeiro elemento no cabeçalho de segurança deve ser um elemento wsse:Timestamp.<br />-LaxWithTimestampLast. Itens são adicionados ao cabeçalho de segurança em qualquer ordem que confirme para WSS: segurança de mensagem SOAP, exceto pelo fato de que o último elemento no cabeçalho de segurança deve ser um elemento wsse:Timestamp.<br /><br /> O padrão é estrito.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica um token emitido atual. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica um token emitido atual. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Especifica as configurações de segurança de um cliente local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Especifica as configurações de segurança de um serviço local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
   
@@ -83,7 +73,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
@@ -93,6 +83,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

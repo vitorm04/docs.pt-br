@@ -1,24 +1,12 @@
 ---
 title: SELECIONAR (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 26d62b4ccab71d1d21a8f65f7feacb8cec727a94
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-entity-sql"></a>SELECIONAR (Entity SQL)
 Especifica os elementos retornados por uma consulta.  
@@ -50,7 +38,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Uma expressão da forma:  
   
- `expr`como `identifier` &#124;`expr`  
+ `expr` como `identifier`&#124; `expr`  
   
  `expr`  
  Um literal ou uma expressão.  

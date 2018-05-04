@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -42,7 +42,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
 2.  Adicione ao projeto uma referência ao componente COM ou à biblioteca de tipo.  
   
-     Quando você adiciona a referência, o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa o [Tlbimp.exe (Importador da biblioteca de tipos)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que utiliza uma biblioteca de tipos como entrada para produzir um assembly de interoperabilidade do .NET Framework. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] adiciona ao projeto uma referência ao assembly gerado.  
+     Quando você adiciona a referência, o Visual Studio usa o [Tlbimp.exe (Importador da biblioteca de tipos)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que usa uma biblioteca de tipos como entrada para produzir um assembly de interoperabilidade do .NET Framework. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O Visual Studio adiciona ao projeto uma referência ao assembly gerado.  
   
 3.  Crie uma instância de uma classe que esteja definida no RCW. Isso, por sua vez, criará uma instância do objeto COM.  
   
@@ -59,7 +59,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
 2.  Gere e registre uma biblioteca de tipos COM para ser usada pelo COM.  
   
-     Você pode modificar as propriedades do projeto do Visual C# para registrar automaticamente o assembly do C# para a interoperabilidade COM. O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa a [Regasm.exe (Ferramenta de Registro de Assembly)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), usando a opção de linha de comando `/tlb`, que utiliza um assembly gerenciado como entrada, para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
+     Você pode modificar as propriedades do projeto do Visual C# para registrar automaticamente o assembly do C# para a interoperabilidade COM. O Visual Studio usa a [Regasm.exe (ferramenta Assembly Registration)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), com a opção de linha de comando `/tlb`, que usa um assembly gerenciado como entrada para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
   
  Para obter mais informações, consulte [Expondo componentes do .NET Framework para o COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) e [Classe COM de exemplo](../../../csharp/programming-guide/interop/example-com-class.md).  
   

@@ -1,27 +1,28 @@
 ---
-title: "Como chamar um serviço Web de forma assíncrona (Visual Basic)"
+title: Como chamar um serviço Web de forma assíncrona (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6410ef93a706c047047aa24b3d47f8915e928015
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c7a9666141accdcc0b1346de7b0c2903c7cc86df
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Como chamar um serviço Web de forma assíncrona (Visual Basic)
-Este exemplo conecta um manipulador a um evento de manipulador assíncrono do serviço Web, para que ele possa recuperar o resultado de uma chamada de método assíncrono. Este exemplo usou o serviço Web DemoTemperatureService disponível em http://www.xmethods.net.  
+Este exemplo conecta um manipulador a um evento de manipulador assíncrono do serviço Web, para que ele possa recuperar o resultado de uma chamada de método assíncrono. Este exemplo usou o serviço Web DemoTemperatureService em http://www.xmethods.net.  
   
- Quando você faz referência a um serviço Web em seu projeto no Ambiente de Desenvolvimento Integrado (IDE) do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], ele é adicionado ao objeto `My.WebServices` e o IDE gera uma classe proxy do cliente para acesso a um serviço Web especificado  
+ Quando você faz referência a um serviço Web em seu projeto no IDE (Ambiente de Desenvolvimento Integrado) do Visual Studio, ele é adicionado ao objeto `My.WebServices`, e o IDE gera uma classe proxy do cliente para acesso a um serviço Web especificado  
   
  A classe proxy permite chamar os métodos de serviço Web de forma síncrona, em que seu aplicativo aguarda até que a função seja concluída. Além disso, o proxy cria membros adicionais para ajudar a chamar o método de forma assíncrona. Para cada função de serviço Web, *NameOfWebServiceFunction*, o proxy cria uma sub-rotina *NameOfWebServiceFunction*`Async`, um evento *NameOfWebServiceFunction*`Completed` e uma classe *NameOfWebServiceFunction*`CompletedEventArgs`. Este exemplo demonstra como usar os membros assíncronos para acessar a função `getTemp` do serviço Web DemoTemperatureService.  
   
@@ -30,7 +31,7 @@ Este exemplo conecta um manipulador a um evento de manipulador assíncrono do se
   
 ### <a name="to-call-a-web-service-asynchronously"></a>Para chamar um serviço Web de forma assíncrona  
   
-1.  Referencie o serviço Web DemoTemperatureService em http://www.xmethods.net. O endereço é  
+1.  Consulte o serviço Web DemoTemperatureService em http://www.xmethods.net. O endereço é  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

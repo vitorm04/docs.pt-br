@@ -1,13 +1,6 @@
 ---
-title: "&lt;defaultProxy&gt; elemento (configurações de rede)"
-ms.custom: 
+title: '&lt;defaultProxy&gt; elemento (configurações de rede)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d0b09f5c845fc9a18c2a1dd919272c2924478eaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a91775ff9f46eba772a959cfac3115c9720ac5ab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; elemento (configurações de rede)
 Configura o servidor de proxy do protocolo HTTP (Hypertext Transfer).  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<defaultProxy >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -60,8 +51,8 @@ Configura o servidor de proxy do protocolo HTTP (Hypertext Transfer).
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem os endereços que não usam o proxy.|  
-|[módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Adiciona um novo módulo de proxy para o aplicativo.|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Define um servidor proxy.|  
+|[Módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Adiciona um novo módulo de proxy para o aplicativo.|  
+|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Define um servidor proxy.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

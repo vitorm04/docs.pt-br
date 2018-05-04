@@ -1,31 +1,19 @@
 ---
 title: '&lt;webMessageEncoding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3b5a8ff5fdf9e3da8824e7eb9443f71613899dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc1f83128dacb588d8179dea95c132da1ab2be91
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
-Permite que o XML de texto sem formatação, codificações de mensagem (JSON JavaScript Object Notation) e conteúdo binário "CRU" para ser lido e escrito quando usado em um [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] associação.  
+Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object Notation) e conteúdo binário "bruto" para ser lido e gravado quando usado em uma associação WCF (Windows Communication Foundation).  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<associações >  
-\<customBinding >  
+\<customBinding>  
 \<associação >  
 \<webMessageEncoding >  
   
@@ -54,7 +42,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define as restrições na complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define as restrições na complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -71,7 +59,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
  O elemento de associação pode ser configurado com uma codificação de caracteres de gravação usando o `writeEncoding` atributo. Fornecido <xref:System.Text.Encoding> valor Especifica o comportamento de gravação para os casos JSON e XML Textual. Leitura, qualquer codificação de mensagem válido e a codificação de texto é entendido.  
   
- `maxReadPoolSize`e `maxWritePoolSize` também pode ser usado para definir o número máximo de leitores e gravadores a ser alocada respectivamente. Por padrão, são alocados 64 leitores e 16 gravadores.  
+ `maxReadPoolSize` e `maxWritePoolSize` também pode ser usado para definir o número máximo de leitores e gravadores a ser alocada respectivamente. Por padrão, são alocados 64 leitores e 16 gravadores.  
   
  Restrições de complexidade padrão também são definidas usando o [ \<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) elemento para proteger contra uma classe de negação de serviço (DOS) ataques que tentem usar complexidade de mensagem para ligar o processamento do ponto de extremidade recursos.  
   
@@ -96,4 +84,4 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

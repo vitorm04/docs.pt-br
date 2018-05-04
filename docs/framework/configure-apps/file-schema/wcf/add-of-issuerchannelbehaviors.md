@@ -1,24 +1,12 @@
 ---
 title: '&lt;adicionar&gt; &lt;issuerChannelBehaviors&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf66b3d3b531ae41329aade6a416c330957d83c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;adicionar&gt; &lt;issuerChannelBehaviors&gt;
 Adiciona um comportamento de ponto de extremidade a ser usado ao se comunicar com um STS.  
@@ -26,11 +14,11 @@ Adiciona um comportamento de ponto de extremidade a ser usado ao se comunicar co
 > [!NOTE]
 >  Se qualquer comportamento de ponto de extremidade contém um [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento, uma exceção será lançada.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
 \<comportamento >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
 \<issuerChannelBehaviors > elemento  
 \<add>  
@@ -59,10 +47,10 @@ seção endpointBehaviors
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contém uma coleção de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] comportamentos de ponto de extremidade de cliente a ser usado ao se comunicar com os serviços de Token de serviço especificado.|  
+|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contém uma coleção de comportamentos de ponto de extremidade de cliente do Windows Communication Foundation (WCF) a ser usado ao se comunicar com os serviços de Token de serviço especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- `issuerAddress`contém o URI do serviço de Token de segurança que o cliente deseja se comunicar com. `behaviorConfiguration`aponta para um comportamento de ponto de extremidade que o aplicativo usa os canais criados pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] para obter os tokens emitidos de serviços de Token de segurança.  
+ `issuerAddress` contém o URI do serviço de Token de segurança que o cliente deseja se comunicar com. `behaviorConfiguration` aponta para um comportamento de ponto de extremidade que o aplicativo usa os canais criados pelo Windows Communication Foundation (WCF) para obter os tokens emitidos de serviços de Token de segurança.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  

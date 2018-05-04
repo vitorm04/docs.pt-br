@@ -1,26 +1,12 @@
 ---
 title: Coleções de esquema comuns
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
 As coleções de esquema comum são as coleções de esquemas que são implementadas por cada um dos provedores gerenciados do .NET Framework. Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de coleções de esquema com suporte ao chamar o **GetSchema** método sem argumentos, ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam. Essas coleções descrevem todas as colunas necessárias. Provedores serão livres para adicionar colunas adicionais, se desejarem. Por exemplo, `SqlClient` e `OracleClient` adicionar o nome do parâmetro na coleção de restrições.  
@@ -51,7 +37,7 @@ As coleções de esquema comum são as coleções de esquemas que são implement
 |IdentifierPattern|cadeia de caracteres|Uma expressão regular que corresponde a um identificador e tem um valor de correspondência do identificador. Por exemplo, "[A-Za-z0-9 _ #$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indica se os identificadores entre aspas não são tratados como maiusculas e minúsculas ou não.|  
 |OrderByColumnsInSelect|bool|Especifica se as colunas em uma cláusula ORDER BY devem estar na lista de seleção. Um valor true indica que eles devem estar na lista de seleção, um valor false indica que eles não precisam estar na lista de seleção.|  
-|ParameterMarkerFormat|cadeia de caracteres|Uma cadeia de caracteres de formato representa como formatar um parâmetro.<br /><br /> Se a fonte de dados oferece suporte a parâmetros nomeados, o primeiro espaço reservado na cadeia de caracteres deve ser onde o nome do parâmetro deve ser formatado.<br /><br /> Por exemplo, se a fonte de dados espera parâmetros nomeado e prefixado com um ':' deve ser ": {0}". Ao formatar isso com um nome de parâmetro "P1" resultante é cadeia de caracteres ": p1".<br /><br /> Se a fonte de dados espera parâmetros para ser prefixados com o ' @', mas os nomes já incluírem-los, deve ser '{0}' e o resultado da formatação de um parâmetro denominado "@p1"poderia ser simplesmente"@p1".<br /><br /> Para fontes de dados que não espera parâmetros nomeados e esperar que o uso do '?' caracteres, a cadeia de caracteres de formato pode ser especificada simplesmente '?', que deve ignorar o nome do parâmetro. Para OLE DB retornamos '?'.|  
+|ParameterMarkerFormat|cadeia de caracteres|Uma cadeia de caracteres de formato representa como formatar um parâmetro.<br /><br /> Se a fonte de dados oferece suporte a parâmetros nomeados, o primeiro espaço reservado na cadeia de caracteres deve ser onde o nome do parâmetro deve ser formatado.<br /><br /> Por exemplo, se a fonte de dados espera parâmetros nomeado e prefixado com um ':' deve ser ":{0}". Ao formatar isso com um nome de parâmetro "P1" resultante é cadeia de caracteres ": p1".<br /><br /> Se a fonte de dados espera parâmetros para ser prefixados com o ' @', mas os nomes já incluírem-los, deve ser '{0}' e o resultado da formatação de um parâmetro denominado "@p1"poderia ser simplesmente"@p1".<br /><br /> Para fontes de dados que não espera parâmetros nomeados e esperar que o uso do '?' caracteres, a cadeia de caracteres de formato pode ser especificada simplesmente '?', que deve ignorar o nome do parâmetro. Para OLE DB retornamos '?'.|  
 |ParameterMarkerPattern|cadeia de caracteres|Uma expressão regular que corresponda a um marcador de parâmetro. Ele tem um valor de correspondência do nome do parâmetro, se houver.<br /><br /> Por exemplo, se os parâmetros nomeados são compatíveis com um '\@' caracteres iniciais que serão incluído no nome do parâmetro, isso seria: "(\@[A-Za-z0-9 _ $#]*)".<br /><br /> No entanto, se os parâmetros nomeados são compatíveis com um ':' como o caractere de apresentação e não é parte do nome do parâmetro, isso seria: ": ([A-Za-z0-9 _ $#]\*)".<br /><br /> É claro que, se a fonte de dados não dá suporte a parâmetros nomeados, isso seria apenas "?".|  
 |ParameterNameMaxLength|int|O comprimento máximo de um nome de parâmetro em caracteres. O Visual Studio espera que se há suporte para nomes de parâmetro, o valor mínimo para o tamanho máximo é de 30 caracteres.<br /><br /> Se a fonte de dados não dá suporte a parâmetros nomeados, essa propriedade retornará zero.|  
 |ParameterNamePattern|cadeia de caracteres|Uma expressão regular compatível com os nomes de parâmetro válido. Fontes de dados diferentes têm diferentes regras relativas ao uso de caracteres que podem ser usados para nomes de parâmetro.<br /><br /> O Visual Studio espera se há suporte para nomes de parâmetro, os caracteres "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" são o conjunto com suporte mínimo de caracteres que são válidos para nomes de parâmetro.|  
@@ -69,8 +55,8 @@ As coleções de esquema comum são as coleções de esquemas que são implement
 |NomeDoTipo|cadeia de caracteres|Os dados específicos do provedor de nome de tipo.|  
 |ProviderDbType|int|O valor de tipo específico de provedor que deve ser usado ao especificar o tipo do parâmetro. Por exemplo, SqlDbType.Money ou OracleType.Blob.|  
 |ColumnSize|long|O comprimento de uma coluna não numérica ou parâmetro refere-se para o máximo ou o comprimento definido para esse tipo pelo provedor.<br /><br /> Para dados de caracteres, esse é o máximo ou definido o comprimento em unidades, definidas pela fonte de dados. Oracle tem o conceito de especificar um comprimento e, em seguida, especificando o tamanho real do armazenamento para alguns tipos de dados de caractere. Isso define apenas o tamanho em unidades para Oracle.<br /><br /> Para tipos de dados de data e hora, esse é o comprimento da representação de cadeia de caracteres (supondo que a precisão máxima permitida do componente frações de segundo).<br /><br /> Se o tipo de dados for numérico, esse é o limite superior na precisão máxima do tipo de dados.|  
-|CreateFormat|cadeia de caracteres|Cadeia de caracteres de formato que representa como adicionar essa coluna para uma instrução de definição de dados, como CREATE TABLE. Cada elemento na matriz CreateParameter deve ser representado por um "marcador de parâmetro" na cadeia de caracteres de formato.<br /><br /> Por exemplo, o tipo de dados SQL DECIMAL requer uma precisão e uma escala. Nesse caso, a cadeia de caracteres de formato seria "DECIMAL({0},{1})".|  
-|CreateParameters|cadeia de caracteres|Os parâmetros de criação devem ser especificados ao criar uma coluna desse tipo de dados. Cada parâmetro de criação é listado na cadeia de caracteres, separada por uma vírgula na ordem em que eles devem ser fornecidos.<br /><br /> Por exemplo, o tipo de dados SQL DECIMAL requer uma precisão e uma escala. Nesse caso, os parâmetros de criação devem conter a cadeia de caracteres "precisão, escala".<br /><br /> Em um comando de texto para criar uma coluna DECIMAL com uma precisão de 10 e uma escala de 2, o valor da coluna CreateFormat pode ser DECIMAL({0},{1}) "e a especificação de tipo completa seria DECIMAL(10,2).|  
+|CreateFormat|cadeia de caracteres|Cadeia de caracteres de formato que representa como adicionar essa coluna para uma instrução de definição de dados, como CREATE TABLE. Cada elemento na matriz CreateParameter deve ser representado por um "marcador de parâmetro" na cadeia de caracteres de formato.<br /><br /> Por exemplo, o tipo de dados SQL DECIMAL requer uma precisão e uma escala. Nesse caso, seria a cadeia de caracteres de formato "DECIMAL ({0},{1})".|  
+|CreateParameters|cadeia de caracteres|Os parâmetros de criação devem ser especificados ao criar uma coluna desse tipo de dados. Cada parâmetro de criação é listado na cadeia de caracteres, separada por uma vírgula na ordem em que eles devem ser fornecidos.<br /><br /> Por exemplo, o tipo de dados SQL DECIMAL requer uma precisão e uma escala. Nesse caso, os parâmetros de criação devem conter a cadeia de caracteres "precisão, escala".<br /><br /> Em um comando de texto para criar uma coluna DECIMAL com uma precisão de 10 e uma escala de 2, o valor da coluna CreateFormat pode ser DECIMAL ({0},{1}) "e a especificação de tipo completa seria DECIMAL(10,2).|  
 |DataType|cadeia de caracteres|O nome do tipo do tipo de dados do .NET Framework.|  
 |IsAutoincrementable|bool|True – valores desse tipo de dados podem ser de incremento automático.<br /><br /> FALSO-valores desse tipo de dados podem não ser incremento automático.<br /><br /> Observe que isso apenas indica se uma coluna desse tipo de dados pode ser incremento automático, nem todas as colunas desse tipo são incremento automático.|  
 |IsBestMatch|bool|True – o tipo de dados é a melhor correspondência entre todos os tipos de dados no repositório de dados e o tipo de dados do .NET Framework indicado pelo valor na coluna de tipo de dados.<br /><br /> False – o tipo de dados não é a melhor correspondência.<br /><br /> Para cada conjunto de linhas em que o valor da coluna de tipo de dados é o mesmo, a coluna IsBestMatch é definida como true em apenas uma linha.|  

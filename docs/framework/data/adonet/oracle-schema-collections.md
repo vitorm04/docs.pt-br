@@ -1,24 +1,12 @@
 ---
-title: "Coleções de esquema do Oracle"
-ms.custom: 
+title: Coleções de esquema do Oracle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Coleções de esquema do Oracle
 O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos seguintes coleções de esquema específico além das coleções de esquema comuns:  
@@ -53,7 +41,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
   
 -   PrimaryKeys  
   
--   ForeignKeys  
+-   Chaves externas  
   
 -   ForeignKeyColumns  
   
@@ -84,7 +72,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TABLE_NAME|Cadeia de Caracteres|Nome do objeto indexado.|  
 |TABLE_TYPE|Cadeia de Caracteres|Tipo do objeto indexado (por exemplo, a tabela, o CLUSTER).|  
 |EXCLUSIVIDADE|Cadeia de Caracteres|Se o índice é exclusivo ou NONUNIQUE.|  
-|COMPRESSION|Cadeia de Caracteres|Se o índice está habilitado ou desabilitado.|  
+|COMPACTAÇÃO|Cadeia de Caracteres|Se o índice está habilitado ou desabilitado.|  
 |PREFIX_LENGTH|Decimal|Número de colunas no prefixo da chave de compactação.|  
 |TABLESPACE_NAME|Cadeia de Caracteres|Nome do espaço de tabela que contém o índice.|  
 |INI_TRANS|Decimal|Número inicial de transações.|  
@@ -112,10 +100,10 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |LAST_ANALYZED|DateTime|Data em que esse índice mais recentemente foi analisado.|  
 |GRAU|Cadeia de Caracteres|Número de threads por instância, para verificar o índice.|  
 |INSTÂNCIAS|Cadeia de Caracteres|Número de instâncias em que os índices a serem examinados.|  
-|PARTICIONADO|Cadeia de Caracteres|Se esse índice é particionado (Sim &#124; NÃO).|  
+|PARTICIONADO|Cadeia de Caracteres|Se esse índice é particionado (Sim &#124; não).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o índice está em uma tabela temporária.|  
-|GERADO|Cadeia de Caracteres|Se o nome do índice é sistema gerado (Y &#124; N).|  
-|SECUNDÁRIO|Cadeia de Caracteres|Se o índice é um objeto secundário criado pelo método ODCIIndexCreate de cartucho de dados Oracle9i (Y &#124; N).|  
+|GERADO|Cadeia de Caracteres|Se o nome do índice é gerada pelo sistema (Y&#124;N).|  
+|SECUNDÁRIO|Cadeia de Caracteres|Se o índice é um objeto secundário criado pelo método ODCIIndexCreate de cartucho de dados Oracle9i (Y&#124;N).|  
 |BUFFER_POOL|Cadeia de Caracteres|Nome do pool de buffer padrão a ser usado para os blocos de índice.|  
 |USER_STATS|Cadeia de Caracteres|Se as estatísticas foram inseridas diretamente pelo usuário.|  
 |DURAÇÃO|Cadeia de Caracteres|Indica a duração de uma tabela temporária: 1) SYS$ sessão: as linhas são preservadas para a duração da sessão, 2) SYS$ transação: as linhas são excluídas após a confirmação, 3) Null para tabelas permanentes.|  
@@ -156,7 +144,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere).|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que foi colocada no próprio objeto).|  
-|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &AMP;#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate de cartucho de dados Oracle9i (Y &#124; N).|  
 |CRIADO|DateTime|A data em que o objeto foi criado.|  
   
@@ -171,7 +159,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |INCREMENT_BY|Decimal|Valor pelo qual a sequência é incrementada.|  
 |CYCLE_FLAG|Cadeia de Caracteres|Sequência circundar ao atingir o limite.|  
 |ORDER_FLAG|Cadeia de Caracteres|Números de sequência são gerados na ordem.|  
-|CACHE_SIZE|Decimal|Número de números de sequência em cache.|  
+|TAMANHO_DO_CACHE|Decimal|Número de números de sequência em cache.|  
 |LAST_NUMBER|Decimal|Número de sequência último gravado no disco. Se uma sequência usa o cache, o número gravado em disco é o último número colocado no cache de sequência. Esse número é provavelmente será maior que o último número de sequência que foi usado.|  
   
 ## <a name="synonyms"></a>Sinônimos  
@@ -209,7 +197,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TEXT_LENGTH|Decimal|Comprimento do texto de exibição.|  
 |TEXTO|Cadeia de Caracteres|Texto de exibição.|  
 |TYPE_TEXT_LENGTH|Decimal|Comprimento da cláusula de tipo do modo de exibição digitada.|  
-|TYPE_TEXT|Cadeia de Caracteres|Digite a cláusula do modo de exibição digitada.|  
+|TIPO_TEXTO|Cadeia de Caracteres|Digite a cláusula do modo de exibição digitada.|  
 |OID_TEXT_LENGTH|Decimal|Comprimento da cláusula com OID do modo de exibição digitada.|  
 |OID_TEXT|Cadeia de Caracteres|COM a cláusula OID do modo de exibição digitada.|  
 |VIEW_TYPE_OWNER|Cadeia de Caracteres|Proprietário do tipo da exibição se a exibição é um modo de exibição digitado.|  
@@ -231,7 +219,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere)|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que foi colocada no próprio objeto).|  
-|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &AMP;#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate de cartucho de dados Oracle9i (Y &#124; N).|  
   
 ## <a name="packages"></a>Pacotes  
@@ -247,7 +235,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere).|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que foi colocada no próprio objeto).|  
-|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &AMP;#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate de cartucho de dados Oracle9i (Y &#124; N).|  
 |CRIADO|DateTime|A data em que o objeto foi criado.|  
   
@@ -264,7 +252,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere).|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que foi colocada no próprio objeto).|  
-|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome do sistema objeto gerado? (Y &AMP;#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate de cartucho de dados Oracle9i (Y &#124; N).|  
 |CRIADO|DateTime|A data em que o objeto foi criado.|  
   
@@ -328,7 +316,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |INDEX_OWNER|Cadeia de Caracteres|Nome do usuário que possui o índice.|  
 |INDEX_NAME|Cadeia de Caracteres|Nome do índice.|  
   
-## <a name="foreignkeys"></a>ForeignKeys  
+## <a name="foreignkeys"></a>Chaves externas  
   
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
@@ -368,7 +356,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |OBJECT_NAME|Cadeia de Caracteres|Nome do procedimento ou função.|  
 |PACKAGE_NAME|Cadeia de Caracteres|Nome do procedimento ou função.|  
 |OBJECT_ID|Decimal|Número de objeto do objeto.|  
-|OVERLOAD|Cadeia de Caracteres|Identificador exclusivo da sobrecarga.|  
+|SOBRECARGA|Cadeia de Caracteres|Identificador exclusivo da sobrecarga.|  
 |ARGUMENT_NAME|Cadeia de Caracteres|Nome do argumento.|  
 |POSIÇÃO|Decimal|Posição na lista de argumentos, ou null para um valor de retorno da função.|  
 |SEQUÊNCIA|Decimal|Sequência de argumento, incluindo todos os níveis de aninhamento.|  
@@ -380,7 +368,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |DATA_LENGTH|Decimal|Comprimento da coluna (em bytes).|  
 |DATA_PRECISION|Decimal|Comprimento em decimal (número) ou binary dígitos (FLOAT).|  
 |DATA_SCALE|Decimal|Dígitos à direita da vírgula decimal em um número.|  
-|RADIX|Decimal|Base do argumento para um número.|  
+|BASE|Decimal|Base do argumento para um número.|  
 |CHARACTER_SET_NAME|Cadeia de Caracteres|Nome para o argumento do conjunto de caracteres.|  
 |TYPE_OWNER|Cadeia de Caracteres|Proprietário do tipo do argumento.|  
 |TYPE_NAME|Cadeia de Caracteres|Nome do tipo do argumento. Se o tipo for um tipo de local do pacote (isto é, ela é declarada em uma especificação de pacote), em seguida, essa coluna exibe o nome do pacote.|  

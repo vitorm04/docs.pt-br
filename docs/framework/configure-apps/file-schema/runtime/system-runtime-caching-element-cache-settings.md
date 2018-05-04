@@ -1,34 +1,24 @@
 ---
-title: "&lt;System.Runtime.Caching&gt; elemento (configurações de Cache)"
-ms.custom: 
+title: '&lt;System.Runtime.Caching&gt; elemento (configurações de Cache)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <system.runtime.caching> element
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83964d3a6e07267eaa946fa306301bc6d0d16e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 659a168f6c0bcb459bcfbdb247a9959c61c9c996
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching&gt; elemento (configurações de Cache)
 Fornece configuração para a padrão de memória <xref:System.Runtime.Caching.ObjectCache> implementação por meio de `memoryCache` entrada no arquivo de configuração.  
   
  \<configuration>  
-\<System.Runtime.Caching >  
+\<system.runtime.caching>  
   
 ## <a name="syntax"></a>Sintaxe  
   

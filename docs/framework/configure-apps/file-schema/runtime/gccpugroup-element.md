@@ -1,29 +1,19 @@
 ---
-title: '&lt;GCCpuGroup&gt; Element'
-ms.custom: 
+title: '&lt;GCCpuGroup&gt; elemento'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dcead28d7bf66e0626a0108015add4f22c5fa476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d4461667bdb47d410c857b4ac2c9dd268438a02f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; Element
+# <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; elemento
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.  
   
  \<configuration>  
@@ -85,4 +75,4 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Como: desabilitar a coleta de lixo simultânea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
- [Coleta de lixo de estação de trabalho e servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+ [Coleta de lixo de estação de trabalho ou de servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

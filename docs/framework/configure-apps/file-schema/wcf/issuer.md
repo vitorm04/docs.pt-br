@@ -1,34 +1,22 @@
 ---
-title: '&lt;emissor&gt;'
-ms.custom: 
+title: '&lt;Emissor&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e034b3ed0813d621ed86c2c3e86bb901ab39e40b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638b206f5372a654eca68d2f6ebb69bb0ac9e241
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltissuergt"></a>&lt;emissor&gt;
+# <a name="ltissuergt"></a>&lt;Emissor&gt;
 Especifica o Token de segurança Service (STS) que emite tokens de segurança.  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<associações >  
 \<wsFederationHttpBinding >  
 \<associação >  
 \<segurança >  
-\<mensagem >  
+\<message>  
 \<emissor >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -68,13 +56,13 @@ Especifica o Token de segurança Service (STS) que emite tokens de segurança.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<cabeçalhos >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Uma coleção de cabeçalhos de endereço para o construtor pode criar os pontos de extremidade.|  
-|[\<identidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Ao usar um token emitido, especifica configurações que permitem que o cliente autenticar o servidor.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Ao usar um token emitido, especifica configurações que permitem que o cliente autenticar o servidor.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<mensagem >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança de nível de mensagem para o [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento.|  
+|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança de nível de mensagem para o [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  

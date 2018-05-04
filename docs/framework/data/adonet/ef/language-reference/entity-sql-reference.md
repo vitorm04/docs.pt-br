@@ -1,26 +1,12 @@
 ---
 title: Referência de Entity SQL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a114bf9b58da255f560564d3fedfee598adb22b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-reference"></a>Referência de Entity SQL
 Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tópicos de referência. Este tópico resume e agrupa os [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores por categoria.  
@@ -59,10 +45,10 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |[= (É igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compara a igualdade de duas expressões.|  
 |[> (Maior que)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que a expressão da direita.|  
 |[>= (Maior ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.|  
-|[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina se uma expressão de consulta é nula.|  
+|[É &AMP;#91;NÃO&AMP;#93; NULO](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina se uma expressão de consulta é nula.|  
 |[< (Menor que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que a expressão da direita.|  
 |[<= (Menor ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que ou igual à expressão da direita.|  
-|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se uma expressão resulta em um valor em um intervalo especificado.|  
+|[&AMP;#91;NÃO&AMP;#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se uma expressão resulta em um valor em um intervalo especificado.|  
 |[!= (Não é igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda não é igual a expressão da direita.|  
 |[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.|  
   

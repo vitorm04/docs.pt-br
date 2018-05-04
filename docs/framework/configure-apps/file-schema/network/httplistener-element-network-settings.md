@@ -1,30 +1,21 @@
 ---
-title: "&lt;httpListener&gt; elemento (configurações de rede)"
-ms.custom: 
+title: '&lt;httpListener&gt; elemento (configurações de rede)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8d880583016e6ccc0ae57fea10c35cb32726c93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a327f757f26c815d5b2cffe179af68bbe3d152eb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; elemento (configurações de rede)
 Personaliza os parâmetros usados pelo <xref:System.Net.HttpListener> classe.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Configurações >  
 \<httpListener >  
   
@@ -54,7 +45,7 @@ Personaliza os parâmetros usados pelo <xref:System.Net.HttpListener> classe.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[Configurações](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
  O **unescapeRequestUrl** atributo indica se <xref:System.Net.HttpListener> usa o URI de escape bruto em vez do URI convertido em que quaisquer valores codificados por percentual são convertidos e outras etapas de normalização são obtidas.  

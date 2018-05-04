@@ -1,34 +1,20 @@
 ---
 title: '&lt;msmqIntegrationBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 Define uma associação que oferece suporte a enfileiramento de mensagens, roteamento de mensagens através de MSMQ.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -71,7 +57,7 @@ msmqIntegrationBinding
 |duráveis|Um valor booliano que indica se a mensagem é duráveis ou voláteis na fila. Uma mensagem durável sobrevive a uma falha do Gerenciador de fila, enquanto uma mensagem volátil não. Mensagens voláteis são úteis quando aplicativos necessitam de latência mais baixa e podem tolerar mensagens perdidas ocasionais. Se o `exactlyOnce` atributo é definido como `true`, as mensagens devem ser duráveis. O padrão é `true`.|  
 |exactlyOnce|Um valor booliano que indica se cada mensagem é entregue apenas uma vez. O remetente, em seguida, será notificado das falhas de entrega. Quando `durable` é `false`, esse atributo é ignorado e mensagens são transferidas sem garantia de entrega. O padrão é `true`. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Um número inteiro positivo que define o tamanho máximo, em bytes, incluindo os cabeçalhos, que é processado por essa associação. O remetente de uma mensagem exceder esse limite recebem uma falha SOAP. O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536. Isso associado ao tamanho da mensagem serve para limitar a exposição a ataques dos (negação de serviço).|  
-|maxRetryCycles|Um inteiro que indica o número de ciclos de repetição usada pelo recurso de detecção de mensagens suspeitas. Uma mensagem se torna uma mensagem suspeita quando falhar todas as tentativas de entrega de todos os ciclos. O padrão é 2. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
+|MaxRetryCycles|Um inteiro que indica o número de ciclos de repetição usada pelo recurso de detecção de mensagens suspeitas. Uma mensagem se torna uma mensagem suspeita quando falhar todas as tentativas de entrega de todos os ciclos. O padrão é 2. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
 |name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo, porque ele é usado como uma identificação para a associação. Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre a configuração padrão e associações de nomes e comportamentos, consulte [configuração simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de abertura concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |ReceiveErrorHandling|Um <xref:System.ServiceModel.ReceiveErrorHandling> valor que especifica como mensagens suspeitas e nondispatchable são tratadas.|  
@@ -81,8 +67,8 @@ msmqIntegrationBinding
 |retryCycleDelay|Um valor TimeSpan que especifica o tempo de espera entre ciclos de tentativa de entregar uma mensagem que não pôde ser entregue imediatamente. O valor define apenas o mínimo tempo de espera porque o tempo de espera real pode ser maior. O valor padrão é 00:30:00. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |sendTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |serializationFormat|Define o formato usado para serialização do corpo da mensagem. Esse atributo é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
-|timeToLive|Um valor TimeSpan que especifica quanto tempo as mensagens são válidos antes de expirarem e colocados na fila de mensagens mortas. O padrão é 1.00:00:00.<br /><br /> Esse atributo é definido para garantir que as mensagens de detecção de hora não tornam-se obsoletos antes que elas são processadas pelos aplicativos de recebimento. Uma mensagem em uma fila que não é consumida pelo aplicativo de recebimento dentro do intervalo de tempo especificado deve ser expirados. As mensagens expiradas são enviadas à fila especial chamada fila de mensagens mortas. O local da fila de mensagens mortas é definido com o `DeadLetterQueue` de atributo ou como o padrão apropriado, com base em garantia.|  
-|useMsmqTracing|Um valor booleano que especifica se as mensagens processadas por essa associação deve ser rastreado. O padrão é `false`. Quando o rastreamento estiver habilitado, as mensagens de relatório criadas e enviadas para a fila de relatórios sempre que a mensagem sai ou chega em um computador do serviço de enfileiramento de mensagens.|  
+|TimeToLive|Um valor TimeSpan que especifica quanto tempo as mensagens são válidos antes de expirarem e colocados na fila de mensagens mortas. O padrão é 1.00:00:00.<br /><br /> Esse atributo é definido para garantir que as mensagens de detecção de hora não tornam-se obsoletos antes que elas são processadas pelos aplicativos de recebimento. Uma mensagem em uma fila que não é consumida pelo aplicativo de recebimento dentro do intervalo de tempo especificado deve ser expirados. As mensagens expiradas são enviadas à fila especial chamada fila de mensagens mortas. O local da fila de mensagens mortas é definido com o `DeadLetterQueue` de atributo ou como o padrão apropriado, com base em garantia.|  
+|UseMsmqTracing|Um valor booleano que especifica se as mensagens processadas por essa associação deve ser rastreado. O padrão é `false`. Quando o rastreamento estiver habilitado, as mensagens de relatório criadas e enviadas para a fila de relatórios sempre que a mensagem sai ou chega em um computador do serviço de enfileiramento de mensagens.|  
 |useSourceJournal|Um valor booleano que especifica as cópias de mensagens processadas por essa associação deve ser armazenado no diário de origem. O padrão é `false`.<br /><br /> Na fila de aplicativos que deseja manter um registro das mensagens que deixaram a fila de saída do computador podem copiar as mensagens para uma fila do diário. Depois que uma mensagem deixa a fila de saída e é recebida uma confirmação que a mensagem foi recebida no computador de destino, uma cópia da mensagem é mantida na fila de diário do sistema do computador de envio.|  
   
 ## <a name="serializationformat-attribute"></a>{serializationFormat} Atributo  
@@ -105,7 +91,7 @@ msmqIntegrationBinding
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento de associação pode ser usado para permitir que os aplicativos do Windows Communication Foundation (WCF) enviar mensagens para e receber mensagens de aplicativos MSMQ existentes que usam o COM, APIs nativas do MSMQ ou os tipos definidos no <xref:System.Messaging?displayProperty=nameWithType> namespace você pode usar este elemento de configuração para especificar as maneiras de tratar a fila, garantias de transferência, se as mensagens devem ser armazenadas de forma durável e como as mensagens devem ser protegidas e autenticadas. Para obter mais informações, consulte [como: troca mensagens com pontos de extremidade do WCF e aplicativos de serviço de enfileiramento de mensagens](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
@@ -147,7 +133,7 @@ msmqIntegrationBinding
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<associação >](../../../../../docs/framework/misc/binding.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

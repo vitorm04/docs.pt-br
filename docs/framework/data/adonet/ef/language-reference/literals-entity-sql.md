@@ -1,24 +1,12 @@
 ---
 title: Literais (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7665d0cb2e3c0a3cff5f602e7b02c572a3dc341d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="literals-entity-sql"></a>Literais (Entity SQL)
 Este tópico descreve o suporte de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para literais.  
@@ -78,7 +66,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Um literal de datetimeoffset é independente da localidade e composta de uma parte da data, uma parte de tempo, e uma parte de deslocamento. Todos datam, multiplicado por, e as partes de deslocamento são imperativas e não há nenhum valor padrão. A parte de data deve ter o formato YYYY YYYY-MM-DD, onde é um valor do ano de quatro dígitos entre 0001 e 9999, mm é o mês entre 1 e 12, e o DD é o valor do dia que é válido para o mês determinado. A parte de tempo deve ter o formato HH:MM[:SS[.fffffff]], onde HH é o valor de hora entre 0 e 23, MM são o minuto valor entre 0 e 59, SS são o segundo valor entre 0 e 59, e fffffff é o segundo valor fracionário entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou frações não for especificado, o valor padrão de zero será usado em vez disso. A parte de deslocamento deve ter o formato {+ &#124;-} hh: mm, onde HH e MM têm o mesmo significado como a parte de hora. O intervalo de deslocamento, no entanto, deve estar entre o 14:00 e + -14:00  
+ Um literal de datetimeoffset é independente da localidade e composta de uma parte da data, uma parte de tempo, e uma parte de deslocamento. Todos datam, multiplicado por, e as partes de deslocamento são imperativas e não há nenhum valor padrão. A parte de data deve ter o formato YYYY YYYY-MM-DD, onde é um valor do ano de quatro dígitos entre 0001 e 9999, mm é o mês entre 1 e 12, e o DD é o valor do dia que é válido para o mês determinado. A parte de tempo deve ter o formato HH:MM[:SS[.fffffff]], onde HH é o valor de hora entre 0 e 23, MM são o minuto valor entre 0 e 59, SS são o segundo valor entre 0 e 59, e fffffff é o segundo valor fracionário entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou frações não for especificado, o valor padrão de zero será usado em vez disso. A parte de deslocamento deve ter o formato {+&#124;-} hh: mm, onde HH e MM têm o mesmo significado como a parte de hora. O intervalo de deslocamento, no entanto, deve estar entre o 14:00 e + -14:00  
   
  Pode haver qualquer número de espaços entre o símbolo de DATETIMEOFFSET e a carga útil literal, mas nenhuma novas linhas.  
   

@@ -1,30 +1,18 @@
 ---
 title: '&lt;ws2007HttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8749fbb1940b07255a6a9681a7c7360d2f6c2f40
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6531e35cbed56029a8f772f0cd63aad521a166ef
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt;
 Define uma associação interoperável que fornece suporte para as versões corretas do <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, e <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementos de associação.  
   
  \<system.serviceModel>  
-\<bindings>  
+\<associações >  
 \<ws2007HttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -77,7 +65,7 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
 |`bypassProxyOnLocal`|Um valor que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.|  
 |`closeTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo para concluir uma operação de fechamento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |`hostnameComparisonMode`|Especifica o modo de comparação de nome de host HTTP usado para analisar o Uniform Resource Identifier (URIs). Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
-|`maxBufferPoolSize`|O tamanho do pool de buffer máximo para esta associação. O padrão é 524.288 bytes (512 × 1.024). Muitas partes do [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usar buffers. Criação e destruição de buffers de cada vez que elas são usadas é caro, como coleta de lixo para buffers. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Isso evita a sobrecarga na criação e destruição de buffers.|  
+|`maxBufferPoolSize`|O tamanho do pool de buffer máximo para esta associação. O padrão é 524.288 bytes (512 × 1.024). Muitas partes do Windows Communication Foundation (WCF) usam buffers. Criação e destruição de buffers de cada vez que elas são usadas é caro, como coleta de lixo para buffers. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Isso evita a sobrecarga na criação e destruição de buffers.|  
 |`maxReceivedMessageSize`|O tamanho máximo da mensagem, em bytes, incluindo cabeçalhos, o que pode receber um canal configurado com essa associação. O remetente de uma mensagem exceder esse limite recebe uma falha SOAP. O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536.|  
 |`messageEncoding`|Define o codificador usado para codificar a mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   `Text`: Use um codificador de mensagem de texto.<br />-   `Mtom`: Use um codificador de mensagem transmissão organização mecanismo 1.0 (MTOM).<br /><br /> O padrão é `Text`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
 |`name`|O nome da configuração da associação. Esse valor deve ser exclusivo, porque ele é usado como uma identificação para a associação. Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre a configuração padrão e associações de nomes e comportamentos, consulte [configuração simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
@@ -101,7 +89,7 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O `WS2007HttpBinding` adiciona uma associação fornecida pelo sistema semelhante ao `WSHttpBinding` , mas usa a organização para as versões de avanço de Structured Information Standards (OASIS) padrão dos protocolos TransactionFlow, ReliableSession e segurança. Nenhuma alteração para as configurações padrão ou de modelo de objeto é necessária ao usar essa associação.  
@@ -151,4 +139,4 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

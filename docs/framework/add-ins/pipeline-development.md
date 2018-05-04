@@ -1,13 +1,6 @@
 ---
 title: Desenvolvimento de pipelines
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Desenvolvimento de pipelines
 O pipeline de suplemento é o caminho de segmentos de pipeline que o aplicativo de host e o suplemento devem usar para se comunicar entre si.  
   
  A ilustração a seguir mostra o canal de comunicação e seus segmentos.  
   
- ![Adicionar &#45; no modelo de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Adicionar&#45;no modelo de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline de suplemento  
   
  O aplicativo host é um final do pipeline e o suplemento está na outra extremidade. A partir de cada extremidade e movendo no meio, o aplicativo de host e o suplemento tem uma classe base abstrata que define uma exibição do modelo de objeto que ambos compartilham. Esses tipos (classes) compõem o segmento de pipeline de suplemento do modo de exibição e o modo de host do segmento de pipeline de suplemento. O segmento de pipeline de suplemento exibição geralmente contém mais de uma classe abstrata, mas a classe que o suplemento herda é conhecida como a base de suplemento.  
@@ -45,7 +35,7 @@ Pipeline de suplemento
   
  A ilustração a seguir mostra os tipos que compõem os segmentos de pipeline. Os nomes dos tipos mostrados na ilustração são arbitrários, mas todos os tipos, exceto para o host e o host de exibição dos atributos suplemento exigem para que possam ser descobertos por métodos que construir um armazenamento de informações.  
   
- ![Adicionar &#45; no modelo com atributos necessários em tipos. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Adicionar&#45;no modelo com atributos necessários em tipos. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Pipeline de suplemento com tipos  
   
  A tabela a seguir descreve os segmentos de pipeline para ativar um suplemento. Para obter mais informações sobre esses segmentos, consulte [contratos, exibições e adaptadores](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
@@ -63,7 +53,7 @@ Pipeline de suplemento com tipos
 ## <a name="pipeline-activation-path"></a>Caminho de ativação de pipeline  
  A ilustração a seguir mostra a ativação de tipos, quando um suplemento é ativado. Ele também mostra a passagem de objetos para o host, como os resultados de um cálculo ou uma coleção de objetos. Este é o cenário mais comum.  
   
- ![Adicionar &#45; no modelo com caminho de ativação. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Adicionar&#45;no modelo com caminho de ativação. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Caminho de ativação de suplemento para o host  
   
  O caminho de ativação do pipeline ocorre da seguinte maneira:  

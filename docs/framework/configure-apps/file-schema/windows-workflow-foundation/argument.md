@@ -1,33 +1,23 @@
 ---
-title: '&lt;argumento&gt;'
-ms.custom: 
+title: '&lt;argument&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9537a7443617cbe62f1b4ed1f424260559f4071b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfcb98085e0b2292d46acfd0a57096219afff606
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltargumentgt"></a>&lt;argumento&gt;
+# <a name="ltargumentgt"></a>&lt;argument&gt;
 Um elemento de configuração que representa um argumento associado a uma consulta de estado de atividade.  
   
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis controle](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-\<System. ServiceModel >  
+\<system.serviceModel>  
 \<controle >  
-\<trackingProfile >  
-\<fluxo de trabalho >  
+\<trackingProfile>  
+\<workflow>  
 \<activityStateQueries >  
 \<activityStateQuery >  
 \<argumentos >  

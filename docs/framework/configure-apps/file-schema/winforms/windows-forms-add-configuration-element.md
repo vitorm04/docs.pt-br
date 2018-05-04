@@ -1,26 +1,17 @@
 ---
-title: "Windows Forms adicionar elemento de configuração"
-ms.custom: 
+title: Windows Forms adicionar elemento de configuração
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms adicionar elemento de configuração
 
@@ -45,19 +36,19 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 | `key`     | Atributo obrigatório. Um nome de chave predefinido que corresponde a um determinado recurso personalizável de formulários do Windows. |
 | `value`   | Atributo obrigatório. O valor a ser atribuído a `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`nomes de atributos e valores associados
+### <a name="key-attribute-names-and-associated-values"></a>`key` nomes de atributos e valores associados
 
 | nome de `key` | Valores | Descrição |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "verdadeiro" &#124;" False" | Indica se os controles ancorados são dimensionados em uma única passagem. passa "true" para desabilitar única escala; Caso contrário, false. Consulte a seção "Único passar dimensionamento" o [comentários](#Remarks) para obter mais informações. |
-| "DpiAwareness" | "PerMonitorV2" &#124;" False" | Indica se um aplicativo com reconhecimento de DPI. Defina a chave como "PerMonitorV2" para dar suporte ao reconhecimento de Dpi; Caso contrário, defina-o como "false". Reconhecimento DPI é um recurso de aceitação; para aproveitar o suporte DPI alto de formulários do Windows, você deve definir seu valor como "PerMonitorV2". Consulte o [comentários](#remarks) para obter mais informações. |
-| "CheckedListBox.DisableHighDpiImprovements" | "verdadeiro" &#124;" False" | Indica se o <xref:System.Windows.Forms.CheckedListBox> controle tira proveito dos aprimoramentos de dimensionamento e o layout introduzidos no .NET Framework 4.7. "true" para recusar aprimoramentos de layout e caling; Caso contrário, "falso". |
-| "DataGridView.DisableHighDpiImprovements" | "verdadeiro" &#124;" False" | Indica se o <xref:System.Windows.Forms.DataGridView> controlar aprimoramentos de dimensionamento e o layout introduzidos no .NET Framework 4.7. "true" para recusar o reconhecimento DPI; "false" caso contrário. |
-| "DisableDpiChangedMessageHandling" | "verdadeiro" &#124;" False" | "true" para recusar o recebimento de mensagens relacionadas a alterações; de dimensionamento de DPI "false" caso contrário. Consulte o [comentários](#remarks) para obter mais informações. |
-| "EnableWindowsFormsHighDpiAutoResizing" | "verdadeiro" &#124;" False" | Indica se um aplicativo do Windows Forms é redimensionado automaticamente devido a alterações de dimensionamento de DPI. "true" para habilitar o redimensionamento automático; Caso contrário, false. |
-| "Form.DisableSinglePassControlScaling" | "verdadeiro" &#124;" False" | Indica se o <xref:System.Windows.Forms.Form> é dimensionado em uma única passagem. "true" para desabilitar a passagem única escala; Caso contrário, false. Consulte a seção "Único passar dimensionamento" o [comentários](#Remarks) para obter mais informações. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "verdadeiro" &#124;" False" | Indica se o <xref:System.Windows.Forms.MonthCalendar> controle é dimensionado em uma única passagem. "true" para desabilitar a passagem única escala; Caso contrário, false. Consulte a seção "Único passar dimensionamento" o [comentários](#Remarks) para obter mais informações. |
-| "Toolstrip.DisableHighDpiImprovements" | "verdadeiro" &#124;" False" | Indica se o <xref:System.Windows.Forms.ToolStrip> controle tira proveito dos aprimoramentos de dimensionamento e o layout introduzidos no .NET Framework 4.7. "true" para recusar o reconhecimento DPI; "false" caso contrário. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"falso" | Indica se os controles ancorados são dimensionados em uma única passagem. passa "true" para desabilitar única escala; Caso contrário, false. Consulte a seção "Único passar dimensionamento" o [comentários](#Remarks) para obter mais informações. |
+| "DpiAwareness" | "PerMonitorV2"&#124;"falso" | Indica se um aplicativo com reconhecimento de DPI. Defina a chave como "PerMonitorV2" para dar suporte ao reconhecimento de Dpi; Caso contrário, defina-o como "false". Reconhecimento DPI é um recurso de aceitação; para aproveitar o suporte DPI alto de formulários do Windows, você deve definir seu valor como "PerMonitorV2". Consulte o [comentários](#remarks) para obter mais informações. |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"falso" | Indica se o <xref:System.Windows.Forms.CheckedListBox> controle tira proveito dos aprimoramentos de dimensionamento e o layout introduzidos no .NET Framework 4.7. "true" para recusar aprimoramentos de layout e caling; Caso contrário, "falso". |
+| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"falso" | Indica se o <xref:System.Windows.Forms.DataGridView> controlar aprimoramentos de dimensionamento e o layout introduzidos no .NET Framework 4.7. "true" para recusar o reconhecimento DPI; "false" caso contrário. |
+| "DisableDpiChangedMessageHandling" | "true"&#124;"falso" | "true" para recusar o recebimento de mensagens relacionadas a alterações; de dimensionamento de DPI "false" caso contrário. Consulte o [comentários](#remarks) para obter mais informações. |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"falso" | Indica se um aplicativo do Windows Forms é redimensionado automaticamente devido a alterações de dimensionamento de DPI. "true" para habilitar o redimensionamento automático; Caso contrário, false. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"falso" | Indica se o <xref:System.Windows.Forms.Form> é dimensionado em uma única passagem. "true" para desabilitar a passagem única escala; Caso contrário, false. Consulte a seção "Único passar dimensionamento" o [comentários](#Remarks) para obter mais informações. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"falso" | Indica se o <xref:System.Windows.Forms.MonthCalendar> controle é dimensionado em uma única passagem. "true" para desabilitar a passagem única escala; Caso contrário, false. Consulte a seção "Único passar dimensionamento" o [comentários](#Remarks) para obter mais informações. |
+| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"falso" | Indica se o <xref:System.Windows.Forms.ToolStrip> controle tira proveito dos aprimoramentos de dimensionamento e o layout introduzidos no .NET Framework 4.7. "true" para recusar o reconhecimento DPI; "false" caso contrário. |
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -69,7 +60,7 @@ nenhuma.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Configura o suporte a novos recursos de aplicativos de formulários do Windows. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />Comentários
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Comentários
 
 A partir do .NET Framework 4.7, o elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar os aplicativos do Windows Forms para aproveitar os recursos adicionados em versões recentes do .NET Framework. 
 

@@ -1,12 +1,13 @@
 ---
-title: "Serviços de aplicativo cliente"
-ms.custom: 
+title: Serviços de aplicativo cliente
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - role-based security [.NET Framework], client application services
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9532594f5f243faed28229388b9a6d597be57a7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services"></a>Serviços de aplicativo cliente
 Os serviços de aplicativos cliente facilitam a criação de aplicativos baseados em Windows que usam os serviços de aplicativo de perfil, funções e logon [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor. Por exemplo, você pode usar esses serviços para executar as seguintes tarefas:  
@@ -53,7 +55,7 @@ Os serviços de aplicativos cliente facilitam a criação de aplicativos baseado
  Descreve os recursos disponíveis por meio de provedores de serviço de aplicativos cliente.  
   
  [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- Descreve como usar o designer de projeto [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para habilitar e configurar serviços de aplicativo. Também descreve as alterações correspondentes no arquivo App.config.  
+ Descreve como usar o designer de projeto do Visual Studio para habilitar e configurar serviços de aplicativo. Também descreve as alterações correspondentes no arquivo App.config.  
   
  [Como implementar login de usuário com serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  Descreve como validar um usuário quando seu aplicativo está configurado para usar um provedor de serviços de autenticação de cliente.  

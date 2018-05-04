@@ -1,27 +1,15 @@
 ---
 title: Identificadores (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>Identificadores (Entity SQL)
-Os identificadores são usados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para representar alias de expressão de consulta, referências variáveis, propriedades de objetos, funções, e assim por diante. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]fornece dois tipos de identificadores: identificadores simples e identificadores entre aspas.  
+Os identificadores são usados em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para representar alias de expressão de consulta, referências variáveis, propriedades de objetos, funções, e assim por diante. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece dois tipos de identificadores: identificadores simples e identificadores entre aspas.  
   
 ## <a name="simple-identifiers"></a>Identificadores simples  
  Um identificador simple no [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma sequência de alfanuméricos e caracteres de sublinhado. O primeiro caractere identificador deve ser um caractere alfabético (a-z ou A-Z).  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>Regras de escopo  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Define as regras de escopo que determinam quando variáveis particulares são visíveis na linguagem de consulta. Algumas expressões ou instruções apresenta novos nomes. As regras de escopo determinar onde os nomes podem ser usados, e quando ou onde uma nova declaração com o mesmo nome que outro pode ocultar o antecessor.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Define as regras de escopo que determinam quando variáveis particulares são visíveis na linguagem de consulta. Algumas expressões ou instruções apresenta novos nomes. As regras de escopo determinar onde os nomes podem ser usados, e quando ou onde uma nova declaração com o mesmo nome que outro pode ocultar o antecessor.  
   
  Quando os nomes são definidos em um [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta, eles são considerados a ser definido dentro de um escopo. Um escopo aborda uma região inteira de consulta. Todas as expressões ou referências de nome em um determinado escopo podem ver os nomes que são definidos dentro do escopo. Antes que um escopo iniciar e depois termina, os nomes que são definidos no escopo não podem ser referenciados.  
   
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   A ordem de classificação das cláusulas dentro da expressão SELECT determina a ordem que os nomes são introduzidos no escopo. A cláusula é avaliado primeiro, seguido por uma cláusula WHERE, cláusula GROUP BY TENDO, a cláusula, a cláusula SELECT, e finalmente a cláusula GROUP BY.  
   
 ### <a name="aggregate-handling"></a>Tratamento aggregate  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]dá suporte a duas formas de agregações: baseada em coleção agregações e agregações com base em grupo. Agregados coleção com base são a compilação preferencial em [!INCLUDE[esql](../../../../../../includes/esql-md.md)], e grupo- com agregados são suportadas para compatibilidade SQL.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a duas formas de agregações: baseada em coleção agregações e agregações com base em grupo. Agregados coleção com base são a compilação preferencial em [!INCLUDE[esql](../../../../../../includes/esql-md.md)], e grupo- com agregados são suportadas para compatibilidade SQL.  
   
  Ao resolver uma agregação, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primeiro tenta tratá-la como uma agregação baseada em coleção. Se isso falhar, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforma a entrada de agregação em uma referência para a agregação de aninhamento e tenta resolver esta nova expressão, conforme ilustrado no exemplo a seguir.  
   

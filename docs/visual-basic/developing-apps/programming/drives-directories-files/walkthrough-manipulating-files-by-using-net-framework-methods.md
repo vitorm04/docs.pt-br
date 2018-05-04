@@ -1,11 +1,12 @@
 ---
-title: "Manipulando arquivos usando métodos do .NET Framework (Visual Basic)"
-ms.custom: 
+title: Manipulando arquivos usando métodos do .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework (Visual Basic)
 Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a classe <xref:System.IO.StreamReader>, verificar se um arquivo está sendo acessado, pesquisar uma cadeia de caracteres dentro de um arquivo lido com uma instância da classe <xref:System.IO.StreamReader> e gravar em um arquivo usando a classe <xref:System.IO.StreamWriter>.  
@@ -36,7 +37,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Criando o aplicativo  
- Inicie o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] e comece o projeto criando um formulário que o usuário pode usar para gravar no arquivo designado.  
+ Inicie o Visual Studio e comece o projeto criando um formulário que o usuário pode usar para gravar no arquivo designado.  
   
 #### <a name="to-create-the-project"></a>Para criar o projeto  
   
@@ -46,7 +47,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
   
 3.  Na caixa **Nome**, digite `MyDiary` e clique em **OK**.  
   
-     O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] adiciona o projeto ao **Gerenciador de Soluções** e o **Designer de Formulários do Windows** é aberto.  
+     O Visual Studio adiciona o projeto ao **Gerenciador de Soluções** e o **Designer de Formulários do Windows** é aberto.  
   
 4.  Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.  
   

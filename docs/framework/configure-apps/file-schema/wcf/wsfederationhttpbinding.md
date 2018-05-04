@@ -1,34 +1,20 @@
 ---
 title: '&lt;wsFederationHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5d4e55f7ad2d4a347d51c3cd79647c070c11e2d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: d89d0aeb68aed91b28ca7358a6140e171d3b36b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 Define uma associação que dá suporte ao WS-Federation.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 elemento FederationBinding  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -147,10 +133,10 @@ elemento FederationBinding
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- Federação é a capacidade de compartilhar identidades entre vários sistemas de autenticação e autorização. Essas identidades podem referir-se a usuários ou computadores. HTTP federado dá suporte à segurança SOAP, bem como a segurança de modo misto, mas ele não oferece suporte ao uso exclusivamente a segurança de transporte. Essa associação fornece [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] suporte para o protocolo WS-Federation. Serviços configurados com essa associação devem usar o transporte HTTP.  
+ Federação é a capacidade de compartilhar identidades entre vários sistemas de autenticação e autorização. Essas identidades podem referir-se a usuários ou computadores. HTTP federado dá suporte à segurança SOAP, bem como a segurança de modo misto, mas ele não oferece suporte ao uso exclusivamente a segurança de transporte. Essa associação oferece suporte do Windows Communication Foundation (WCF) para o protocolo WS-Federation. Serviços configurados com essa associação devem usar o transporte HTTP.  
   
  Associações consistem em uma pilha de elementos de associação. A pilha de elementos de associação  
   
@@ -208,4 +194,4 @@ elemento FederationBinding
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

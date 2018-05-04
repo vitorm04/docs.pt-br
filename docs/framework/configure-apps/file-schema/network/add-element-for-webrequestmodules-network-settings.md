@@ -1,14 +1,6 @@
 ---
-title: "&lt;Adicionar&gt; elemento webRequestModules (configurações de rede)"
-ms.custom: 
+title: '&lt;Adicionar&gt; elemento webRequestModules (configurações de rede)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -18,24 +10,21 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b7d2c0f52ea42fcb98be149ab005cd67c2db46a
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Adicionar&gt; elemento webRequestModules (configurações de rede)
 Adiciona um módulo de solicitação da Web personalizado para o aplicativo.  
   
  \<configuration>  
 \<system.net>  
-\<webRequestModules>  
+\<webRequestModules >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  

@@ -1,31 +1,19 @@
 ---
 title: '&lt;transporte&gt; de &lt;peerTransport&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bb0fbce0d7b45fd051db187cd6d7e920b08cab3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transporte&gt; de &lt;peerTransport&gt;
 Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurados com essa associação.  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<associações >  
-\<customBinding >  
+\<customBinding>  
 \<associação >  
 \<peerTransport >  
 \<segurança >  
@@ -52,7 +40,7 @@ Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurad
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|certificado|Requer a autenticação do transporte de canal par X509 certificado.|  
+|certificado|A autenticação do transporte de canal par requer um certificado X509.|  
 |Senha|A autenticação do transporte de canal par requer uma senha correta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -62,7 +50,7 @@ Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurad
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Define as configurações de segurança para um transporte de par.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Define as configurações de segurança para um transporte de par.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento é definido somente se o atributo de modo de [ \<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) é definido como `Transport` ou `TransportWithMessageCredential`.  
@@ -78,4 +66,4 @@ Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurad
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

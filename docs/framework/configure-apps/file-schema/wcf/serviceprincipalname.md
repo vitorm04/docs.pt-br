@@ -1,26 +1,14 @@
 ---
-title: '&lt;servicePrincipalName&gt;'
-ms.custom: 
+title: '&lt;ServicePrincipalName&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f9b4ec506097cf010af78b3504def08102e0774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
 Especifica a identidade de um serviço por seu serviço Nome Principal (SPN).  
   
  Para obter mais informações sobre como configurar o SPN, consulte [autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -50,10 +38,10 @@ Especifica a identidade de um serviço por seu serviço Nome Principal (SPN).
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Seguro [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] cliente que se conecta a um ponto de extremidade com esta identidade usa o SPN ao executar a autenticação de SSPI com o ponto de extremidade.  
+ Um cliente seguro do Windows Communication Foundation (WCF) que se conecta a um ponto de extremidade com esta identidade usa o SPN ao executar a autenticação de SSPI com o ponto de extremidade.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
@@ -61,4 +49,4 @@ Especifica a identidade de um serviço por seu serviço Nome Principal (SPN).
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.SpnEndpointIdentity>  
  [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

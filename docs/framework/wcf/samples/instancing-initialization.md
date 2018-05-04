@@ -1,24 +1,26 @@
 ---
-title: "Inicialização de instancialização"
-ms.custom: 
+title: Inicialização de instancialização
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: f32b1c7159185bb9d4ccd99c916f00c552502748
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instancing-initialization"></a>Inicialização de instancialização
 Este exemplo estende o [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemplo definindo uma interface `IObjectControl`, que personaliza a inicialização de um objeto por ativando e desativando-lo. O cliente chama os métodos que retornam o objeto para o pool e que não retornam o objeto para o pool.  
@@ -27,7 +29,7 @@ Este exemplo estende o [Pooling](../../../../docs/framework/wcf/samples/pooling.
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 ## <a name="extensibility-points"></a>Pontos de extensibilidade  
- A primeira etapa na criação de um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] extensão é decidir o ponto de extensibilidade para usar. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o termo *EndpointDispatcher* refere-se a um componente de tempo de execução responsável pela conversão de mensagens de entrada em invocações do método no serviço do usuário e para converter valores de retorno do método para um mensagem de saída. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço cria um EndpointDispatcher para cada ponto de extremidade.  
+ A primeira etapa na criação de uma extensão do Windows Communication Foundation (WCF) é decidir o ponto de extensibilidade para usar. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o termo *EndpointDispatcher* refere-se a um componente de tempo de execução responsável pela conversão de mensagens de entrada em invocações do método no serviço do usuário e para converter valores de retorno do método para um mensagem de saída. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço cria um EndpointDispatcher para cada ponto de extremidade.  
   
  EndpointDispatcher oferece extensibilidade de escopo (para todas as mensagens recebidos ou enviados pelo serviço) de ponto de extremidade usando o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> classe. Essa classe permite personalizar várias propriedades que controlam o comportamento do EndpointDispatcher. Este exemplo enfoca o <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> propriedade que aponta para o objeto que fornece as instâncias da classe de serviço.  
   
@@ -165,7 +167,7 @@ if (activeObjectsCount == 0)
   
  Este exemplo usa um atributo personalizado. Quando o <xref:System.ServiceModel.ServiceHost> é construída, ele examina os atributos usados na definição de tipo de serviço e adiciona os comportamentos disponíveis para a coleção de comportamentos da descrição de serviço.  
   
- O <xref:System.ServiceModel.Description.IServiceBehavior> interface tem três métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Esses métodos são chamados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando o <xref:System.ServiceModel.ServiceHost> está sendo inicializado. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>é chamado pela primeira vez; Ele permite que o serviço a ser inspecionado para detectar inconsistências. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>é chamado em seguida; Esse método só é necessário em cenários muito avançados. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>é chamado por último e é responsável por configurar o tempo de execução. Os seguintes parâmetros são passados para <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ O <xref:System.ServiceModel.Description.IServiceBehavior> interface tem três métodos: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Esses métodos são chamados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando o <xref:System.ServiceModel.ServiceHost> está sendo inicializado. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> é chamado pela primeira vez; Ele permite que o serviço a ser inspecionado para detectar inconsistências. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> é chamado em seguida; Esse método só é necessário em cenários muito avançados. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> é chamado por último e é responsável por configurar o tempo de execução. Os seguintes parâmetros são passados para <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Esse parâmetro fornece a descrição do serviço para o serviço inteiro. Isso pode ser usado para inspecionar dados descrição sobre pontos de extremidade do serviço e outros dados associados ao serviço, associações e contratos.  
   
@@ -214,7 +216,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Interceptação de ativação e desativação  
  É o principal objetivo do pool de objetos otimizar a curta duração objetos com a criação relativamente cara e inicialização. Portanto, ela pode fornecer um aumento significativo de desempenho para um aplicativo se usados corretamente. Como o objeto é retornado do pool, o construtor é chamado apenas uma vez. No entanto, alguns aplicativos exigem algum nível de controle para que eles possam inicializar e limpar os recursos usados durante um único contexto. Por exemplo, um objeto que está sendo usado para um conjunto de cálculos pode redefinir seus campos particulares antes de processar o próximo cálculo. Serviços corporativos habilitado esse tipo de inicialização de contexto específico, permitindo que o desenvolvedor de objeto substituir `Activate` e `Deactivate` métodos de <xref:System.EnterpriseServices.ServicedComponent> classe base.  
   
- As chamadas de pool do objeto de `Activate` método antes de retornar o objeto do pool. `Deactivate`é chamado quando o objeto retorna para o pool. O <xref:System.EnterpriseServices.ServicedComponent> classe base também tem um `boolean` propriedade chamada `CanBePooled`, que pode ser usado para notificar o pool se o objeto pode ser agrupado ainda mais.  
+ As chamadas de pool do objeto de `Activate` método antes de retornar o objeto do pool. `Deactivate` é chamado quando o objeto retorna para o pool. O <xref:System.EnterpriseServices.ServicedComponent> classe base também tem um `boolean` propriedade chamada `CanBePooled`, que pode ser usado para notificar o pool se o objeto pode ser agrupado ainda mais.  
   
  Para simular essa funcionalidade, o exemplo declara uma interface pública (`IObjectControl`) que tem os membros mencionados acima. Essa interface é implementada, em seguida, pelo serviço de classes deverá fornecer a inicialização de contexto específico. O <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementação deve ser modificada para atender a esses requisitos. Agora, cada vez que você obtém um objeto chamando o `GetInstance` método, você deve verificar se o objeto implementa `IObjectControl.` em caso afirmativo, você deve chamar o `Activate` método adequadamente.  
   
@@ -272,7 +274,7 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

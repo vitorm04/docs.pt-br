@@ -1,28 +1,16 @@
 ---
-title: '&lt;roteamento&gt;'
-ms.custom: 
+title: '&lt;Roteamento&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6ef71753a4b0ff20a966842119adb6e637ded1f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1771d8a2603a8f61af6ba6e2acf6243d2fd073f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltroutinggt"></a>&lt;roteamento&gt;
+# <a name="ltroutinggt"></a>&lt;Roteamento&gt;
 
-Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como o roteamento de tabelas que definem os pontos de extremidade de destino para enviar mensagens quando um corresponde ao filtro.
+Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como o roteamento de tabelas que definem os pontos de extremidade de destino para envie mensagens para quando houver correspondência de filtro.
 
 [**\<System. ServiceModel >**](system-servicemodel.md)   
 &nbsp;&nbsp;**\<roteamento >**
@@ -63,7 +51,7 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<Filtros >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Contém um conjunto de filtros de roteamento que determinam o tipo de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] MessageFilter será usada ao avaliar mensagens recebidas. |
+| [**\<Filtros >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Contém um conjunto de filtros de roteamento que determinam que o tipo de MessageFilter do Windows Communication Foundation (WCF) será usado ao avaliar mensagens recebidas. |
 | [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Contém os mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para especificar qual ponto de extremidade a ser usado ao correspondências de filtro. |
 
 ### <a name="parent-elements"></a>Elementos pai

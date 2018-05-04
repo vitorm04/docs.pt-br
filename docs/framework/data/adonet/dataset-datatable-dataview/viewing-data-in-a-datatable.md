@@ -1,27 +1,15 @@
 ---
 title: Exibindo dados em uma DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Exibindo dados em uma DataTable
 Você pode acessar o conteúdo de um <xref:System.Data.DataTable> usando o **linhas** e **colunas** coleções do **DataTable**. Você também pode usar o <xref:System.Data.DataTable.Select%2A> método para retornar subconjuntos de dados em um **DataTable** acordo com critérios inclusive critérios de pesquisa, ordem de classificação e o estado de linha. Além disso, você pode usar o <xref:System.Data.DataRowCollection.Find%2A> método o **DataRowCollection** durante a pesquisa de uma linha específica usando um valor de chave primária.  
@@ -36,13 +24,13 @@ Você pode acessar o conteúdo de um <xref:System.Data.DataTable> usando o **lin
 |Valor de DataViewRowState|Descrição|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Linhas atuais, incluindo inalteradas, adicionadas e modificadas.|  
-|**Excluído**|Uma linha excluída.|  
+|**excluído**|Uma linha excluída.|  
 |**ModifiedCurrent**|A versão atual, que é uma versão modificada dos dados originais. (Consulte **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|A versão original de todas as linhas alteradas. A versão atual está disponível com **ModifiedCurrent**.|  
 |**Adicionado**|Uma nova linha.|  
 |**Nenhum**|nenhuma.|  
 |**OriginalRows**|Linhas originais, incluindo linhas inalteradas e excluídas.|  
-|**Unchanged**|Uma linha inalterada.|  
+|**Inalterado**|Uma linha inalterada.|  
   
  No exemplo a seguir, o **DataSet** objeto for filtrado para que você está apenas trabalhando com linhas cuja **DataViewRowState** é definido como **CurrentRows**.  
   

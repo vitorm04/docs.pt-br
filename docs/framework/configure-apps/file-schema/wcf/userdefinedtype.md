@@ -1,30 +1,18 @@
 ---
 title: '&lt;userDefinedType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bb67a585d7abf3e885c483145215ed4fb9f92be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffa9480312c278097ae110c686fb507209c117e1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
 Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contrato de serviço.  
   
- \<sistema. ServiceModel >  
-\<comContracts >  
+ \<system.ServiceModel>  
+\<comContracts>  
 \<comContract >  
 \<userDefinedTypes >  
   
@@ -63,7 +51,7 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`userDefinedTypes`|Uma coleção de `userDefinedType` elementos.|  
+|`userDefinedTypes`|Uma coleção de elementos `userDefinedType`.|  
   
 ## <a name="remarks"></a>Comentários  
  O tempo de execução de integração COM+ cria serviços inspecionando a biblioteca de tipos. Quando um componente COM+ contém métodos que passam um tipo VARIANT, o sistema não pode determinar os tipos reais a serem passados antes do tempo de execução. Portanto, quando você tentar passar um usuário definido pelo tipo (UDT) dentro de um tipo VARIANT, ele falha porque não é um tipo conhecido para serialização.  
@@ -106,6 +94,6 @@ Representa um tipo definido pelo usuário (UDT) que deve ser incluído no contra
  <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
  <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
  <xref:System.ServiceModel.Configuration.ComUdtElement>  
- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [Integração de aplicativos COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [Como definir configurações de serviço COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

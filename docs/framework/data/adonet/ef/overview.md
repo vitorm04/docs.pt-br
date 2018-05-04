@@ -1,24 +1,12 @@
 ---
-title: "Visão geral do Entity Framework"
-ms.custom: 
+title: Visão geral do Entity Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8b07fb9b80d5d0d13967c807198194b3a2228202
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-framework-overview"></a>Visão geral do Entity Framework
 O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] é um conjunto de tecnologias no ADO.NET que dão suporte ao desenvolvimento de aplicativos de software orientados a dados. Os arquitetos e desenvolvedores de aplicativos orientados a dados lutam com a necessidade de realizar dois objetivos muito diferentes. Precisam modelar as entidades, as relações e a lógica dos problemas de negócios que estão solucionando e também precisam trabalhar com os mecanismos de dados usados para armazenar e recuperar os dados. Os dados podem se estender por vários sistemas de armazenamento, cada um com seus próprios protocolos. Mesmo aplicativos que trabalhem com um único sistema de armazenamento devem balancear os requisitos do sistema de armazenamento com os requisitos de gravação eficiente e código de aplicativo que possa ser mantido.  
@@ -73,7 +61,7 @@ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] é um conjunto 
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Fornece suporte a LINQ (consulta) para consultar os tipos de entidade que são definidos em um modelo conceitual. Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Um dialeto independente de armazenamento do SQL que trabalha diretamente com entidades no modelo conceitual e que oferece suporte a [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] conceitos. [!INCLUDE[esql](../../../../../includes/esql-md.md)]é usado com consultas que são executadas usando o provedor EntityClient e consultas de objeto. Para obter mais informações, consulte [visão geral do Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Um dialeto independente de armazenamento do SQL que trabalha diretamente com entidades no modelo conceitual e que oferece suporte a [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] conceitos. [!INCLUDE[esql](../../../../../includes/esql-md.md)] é usado com consultas que são executadas usando o provedor EntityClient e consultas de objeto. Para obter mais informações, consulte [visão geral do Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
   
  O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclui o provedor de dados EntityClient. Esse provedor gerencia conexões, converte consultas de entidade em consultas específicas à fonte de dados e retorna um leitor de dados que o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa para materializar dados de entidade em objetos. Quando materialização de objetos não é necessária, o provedor EntityClient também pode ser usado como um padrão [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] provedor de dados, permitindo que aplicativos sejam executados [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas e consumir o leitor de dados retornados de somente leitura. Para obter mais informações, consulte [provedor EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   

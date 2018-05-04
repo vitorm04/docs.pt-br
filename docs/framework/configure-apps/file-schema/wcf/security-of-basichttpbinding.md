@@ -1,33 +1,23 @@
 ---
-title: "&lt;segurança&gt; de &lt;basicHttpBinding&gt;"
-ms.custom: 
+title: '&lt;segurança&gt; de &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-caps.latest.revision: "16"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 8d61075bc96427736f7e6f5a39302bbd59d434f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: ddf120d5462c7fcb0774e29fa18e80b71727acd8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;segurança&gt; de &lt;basicHttpBinding&gt;
 Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<basicHttpBinding>  
 \<associação >  
-\<security>  
+\<segurança >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +56,7 @@ Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Define as configurações de segurança de transporte para um serviço básico de HTTP. Esse elemento corresponde a <xref:System.ServiceModel.HttpTransportSecurity>.|  
+|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Define as configurações de segurança de transporte para um serviço básico de HTTP. Esse elemento corresponde a <xref:System.ServiceModel.HttpTransportSecurity>.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Define as configurações de segurança de mensagem para um serviço básico de HTTP. Esse elemento corresponde a <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -88,4 +78,4 @@ Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

@@ -1,31 +1,19 @@
 ---
-title: '&lt;transactionFlow&gt;'
-ms.custom: 
+title: '&lt;TransactionFlow&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3720294ac937c6aa7ce99ab687efa76b2e860abb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c708098676e5634281e29c17639304a1a9cf5afe
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
+# <a name="lttransactionflowgt"></a>&lt;TransactionFlow&gt;
 Especifica o suporte de fluxo de transação para a associação personalizada.  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<associações >  
-\<customBinding >  
+\<customBinding>  
 \<associação >  
 \<transactionFlow >  
   
@@ -42,7 +30,7 @@ Especifica o suporte de fluxo de transação para a associação personalizada.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|transactionProtocol|Especifica o protocolo de transação a ser usado. Os valores válidos incluem o seguinte:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> O padrão é OleTransactions.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Especifica o protocolo de transação a ser usado. Os valores válidos incluem o seguinte:<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> O padrão é OleTransactions.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.TransactionProtocol>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -68,4 +56,4 @@ Especifica o suporte de fluxo de transação para a associação personalizada.
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

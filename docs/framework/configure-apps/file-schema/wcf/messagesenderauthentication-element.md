@@ -1,24 +1,12 @@
 ---
 title: elemento &lt;messageSenderAuthentication&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 898569796c65a7999583f4faba9f11a6172a5af8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>elemento &lt;messageSenderAuthentication&gt;
 Especifica opções de autenticação para remetentes de mensagens ponto a ponto.  
@@ -28,9 +16,9 @@ Especifica opções de autenticação para remetentes de mensagens ponto a ponto
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<clientCredentials>  
-\<peer>  
+\<par >  
 \<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -56,7 +44,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |revocationMode|Um dos modos usados para verificar por listas de certificados revogados (CRL).|  
 |trustedStoreLocation|Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. A validação é executada em relação a **pessoas confiáveis** armazenar no local de armazenamento especificado.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -87,7 +75,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
+|[\<par >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento deve ser configurado se você escolher autenticação de mensagem. Para canais de saída, cada mensagem é assinada usando o certificado fornecido pelo [ \<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Todas as mensagens, antes da entrega para o aplicativo, são verificados em relação a credencial de mensagem usando o validador especificado pelo `customCertificateValidatorType` atributos desse elemento. O validador pode aceitar ou rejeitar a credencial.  

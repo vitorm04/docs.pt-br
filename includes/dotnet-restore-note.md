@@ -1,0 +1,3 @@
+> [!NOTE]
+> Começando com o .NET Core 2.0, não é necessário executar [`dotnet restore`](~/docs/core/tools/dotnet-restore.md), pois ele é executado implicitamente por todos os comandos que exigem uma restauração, como `dotnet new`, `dotnet build` e `dotnet run`.
+> Ainda é um comando válido em determinados cenários em que realizar uma restauração explícita faz sentido, como [builds de integração contínua no Visual Studio Team Services](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core) ou em sistemas de build que precisam controlar explicitamente o horário em que a restauração ocorrerá.

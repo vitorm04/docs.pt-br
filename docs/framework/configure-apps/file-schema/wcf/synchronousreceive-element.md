@@ -1,31 +1,19 @@
 ---
 title: elemento &lt;synchronousReceive&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63923121ae96b85bd192899a8d8ad285a3ad5b2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsynchronousreceivegt-element"></a>elemento &lt;synchronousReceive&gt;
 Este elemento de configuração é usado para especificar o comportamento de tempo de execução para receber mensagens em um cliente ou serviço de aplicativo. Ele não tem atributos ou elementos filho.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamento >  
 \<synchronousReceive >  
   
@@ -51,7 +39,7 @@ Este elemento de configuração é usado para especificar o comportamento de tem
 |[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
- Use esse comportamento para instruir o ouvinte de canal para usar um síncrono receber, em vez do padrão assíncrono. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]emite um novo thread para a bomba de cada canal aceito. Se houver muita canais, há a possibilidade de falta de threads.  
+ Use esse comportamento para instruir o ouvinte de canal para usar um síncrono receber, em vez do padrão assíncrono. Windows Communication Foundation (WCF) emite um novo thread para a bomba de cada canal aceito. Se houver muita canais, há a possibilidade de falta de threads.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  

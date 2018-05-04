@@ -1,26 +1,14 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Especifica configurações que habilitem a auditoria de eventos de segurança durante operações de serviço.  
@@ -28,7 +16,7 @@ Especifica configurações que habilitem a auditoria de eventos de segurança du
  \<system.ServiceModel>  
 \<comportamentos >  
 \<serviceBehaviors >  
-\<behavior>  
+\<comportamento >  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -60,10 +48,10 @@ Especifica configurações que habilitem a auditoria de eventos de segurança du
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Este elemento de configuração é usado para auditoria [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] eventos de autenticação. Quando a auditoria estiver habilitada, a autenticação com êxito ou falha tentativas (ou ambos) podem ser auditados. Os eventos são gravados em um dos três logs de eventos: o log padrão para a versão do sistema operacional, aplicativo ou segurança. Os logs de eventos podem ser exibidos usando o Visualizador de eventos do Windows.  
+ Este elemento de configuração é usado para auditoria de eventos de autenticação do Windows Communication Foundation (WCF). Quando a auditoria estiver habilitada, a autenticação com êxito ou falha tentativas (ou ambos) podem ser auditados. Os eventos são gravados em um dos três logs de eventos: o log padrão para a versão do sistema operacional, aplicativo ou segurança. Os logs de eventos podem ser exibidos usando o Visualizador de eventos do Windows.  
   
  Para obter um exemplo detalhado de como usar este elemento de configuração, consulte [o comportamento de auditoria de serviço](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   

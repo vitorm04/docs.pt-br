@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
 Na programação assíncrona, é muito comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, isso foi feito usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
@@ -130,7 +130,7 @@ Na programação assíncrona, é muito comum para uma operação assíncrona, ap
   
  O estado de continuação é útil quando você converte o código existente que usa o [APM (Modelo de Programação Assíncrona)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para usar o TPL. No APM, você normalmente fornece o estado do objeto no método **Begin***Method* e acessa posteriormente esse estado usando a propriedade <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Usando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A>, você pode preservar esse estado ao converter o código que usa o APM para usar a TPL.  
   
- O estado de continuação também pode ser útil quando você trabalha com objetos <xref:System.Threading.Tasks.Task> no depurador [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Por exemplo, na janela **Tarefas Paralelas**, a coluna **Tarefa** exibe a representação de cadeia de caracteres do objeto de estado para cada tarefa. Para saber mais sobre a janela **Tarefas Paralelas**, veja [Uso da janela Tarefas](/visualstudio/debugger/using-the-tasks-window).  
+ O estado de continuação também pode ser útil quando você trabalha com objetos <xref:System.Threading.Tasks.Task> no depurador do Visual Studio. Por exemplo, na janela **Tarefas Paralelas**, a coluna **Tarefa** exibe a representação de cadeia de caracteres do objeto de estado para cada tarefa. Para saber mais sobre a janela **Tarefas Paralelas**, veja [Uso da janela Tarefas](/visualstudio/debugger/using-the-tasks-window).  
   
  O exemplo a seguir mostra como usar o estado de continuação. Ele cria uma cadeia de tarefas de continuação. Cada tarefa fornece a hora atual, um objeto <xref:System.DateTime>, para o parâmetro `state` do método <xref:System.Threading.Tasks.Task.ContinueWith%2A>. Cada objeto <xref:System.DateTime> representa a hora em que a tarefa de continuação é criada. Cada tarefa gera como resultado um segundo objeto <xref:System.DateTime> que representa a hora de conclusão da tarefa. Depois de concluir todas as tarefas, este exemplo exibe a hora de criação e a hora em que cada continuação a tarefa é concluída.  
   

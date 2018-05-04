@@ -1,31 +1,19 @@
 ---
 title: elemento &lt;localServiceSettings&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7a5c4962b46ccd9bb6fa589e21ef17e09d60cc1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1257b151f75d05b610fe3463f8bef5f78d2b2fcd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlocalservicesettingsgt-element"></a>elemento &lt;localServiceSettings&gt;
 Especifica as configurações de segurança de um serviço local para esta associação.  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<associações >  
-\<customBinding >  
+\<customBinding>  
 \<associação >  
 \<segurança >  
   
@@ -69,7 +57,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
 |`replayCacheSize`|Um inteiro positivo que especifica o número de momentos em cache usados para detecção de repetição. Se esse limite for excedido, o valor de uso único mais antigo é removido e um novo valor de uso único é criado para a nova mensagem. O valor padrão é 500000.|  
 |`replayWindow`|Um <xref:System.TimeSpan> que especifica a duração em que momentos de mensagens individuais são válidos.<br /><br /> Após a duração, uma mensagem enviada com o mesmo nonce como aquela enviada antes não serão aceitas. Este atributo é usado em conjunto com o `maxClockSkew` atributo para impedir ataques de repetição. Um invasor pode repetir uma mensagem depois de sua janela de reprodução tiver expirado. Esta mensagem, no entanto, falhará a `maxClockSkew` teste que rejeita mensagens com carimbos de hora de envio até uma hora especificada posterior ou anterior à hora que a mensagem foi recebida.|  
 |`sessionKeyRenewalInterval`|Um <xref:System.TimeSpan> que especifica a duração após a qual o iniciador renovará a chave da sessão de segurança. O padrão é "10: 00:00".|  
-|`sessionKeyRolloverInterval`|Um <xref:System.TimeSpan> que especifica o intervalo de tempo, uma chave de sessão anterior é válido nas mensagens de entrada durante uma renovação de chave. O padrão é "00: 05:00".<br /><br /> Durante a renovação de chave, o cliente e o servidor sempre devem enviar mensagens usando a chave disponível mais recente. Ambas as partes aceitará as mensagens de entrada protegidas com a chave de sessão anterior até que o tempo de sobreposição expire.|  
+|`sessionKeyRolloverInterval`|Um <xref:System.TimeSpan> que especifica o intervalo de tempo, uma chave de sessão anterior é válido nas mensagens de entrada durante uma renovação de chave. O padrão é "00:05:00".<br /><br /> Durante a renovação de chave, o cliente e o servidor sempre devem enviar mensagens usando a chave disponível mais recente. Ambas as partes aceitará as mensagens de entrada protegidas com a chave de sessão anterior até que o tempo de sobreposição expire.|  
 |`timestampValidityDuration`|Um positivo <xref:System.TimeSpan> que especifica a duração na qual um carimbo de data / hora é válido. O padrão é "00: 15:00".|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -79,7 +67,7 @@ Especifica as configurações de segurança de um serviço local para esta assoc
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica as opções de segurança para uma associação personalizada.|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -106,6 +94,6 @@ Especifica as configurações de segurança de um serviço local para esta assoc
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -1,24 +1,12 @@
 ---
-title: "!= (Não é igual a) (Entity SQL)"
-ms.custom: 
+title: '!= (Não é igual a) (Entity SQL)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 237dae641c272260e37fa7757792247700784d17
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4ed09b0c5f10ef1ac77c4b374619508d714f1dc3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (Não é igual a) (Entity SQL)
 Compara duas expressões para determinar se a expressão da esquerda não é igual a expressão da direita. O operador != (não é igual a) é funcionalmente equivalente ao operador <>.  

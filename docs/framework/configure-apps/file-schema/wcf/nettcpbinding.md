@@ -1,34 +1,20 @@
 ---
 title: '&lt;netTcpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 057baf6d18cba61c0ceeb7d5152edcf082392310
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Especifica uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação de tempo de execução com a segurança do Windows para segurança de mensagem e autenticação, TCP para entrega de mensagens e a codificação de mensagem binária.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<netTcpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -101,10 +87,10 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa associação gera uma pilha de comunicação de tempo de execução por padrão, que usa a segurança de transporte TCP para entrega de mensagens e uma codificação de mensagem binária. Essa associação é um apropriado [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] opção fornecida pelo sistema para se comunicar através de uma Intranet.  
+ Essa associação gera uma pilha de comunicação de tempo de execução por padrão, que usa a segurança de transporte TCP para entrega de mensagens e uma codificação de mensagem binária. Essa associação é uma Windows Communication Foundation (WCF) fornecida pelo sistema opção apropriada para a comunicação em uma Intranet.  
   
  A configuração padrão para o `netTcpBinding` é mais rápido que a configuração fornecida pelo `wsHttpBinding`, mas ele é destinado apenas para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- para -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] comunicação. O comportamento de segurança é configurável usando opcional `securityMode` atributo. O uso de WS-ReliableMessaging é configurável usando opcional `reliableSessionEnabled` atributo. Mas o sistema de mensagens confiável está desativado por padrão. Geralmente, as fornecida pelo sistema associações de HTTP, como `wsHttpBinding` e `basicHttpBinding` são configurados para ativar as coisas, por padrão, enquanto o `netTcpBinding` associação desativa coisas por padrão para que você tenha se registrar para obter suporte, por exemplo, para um de WS-* especificações. Isso significa que a configuração padrão de TCP mais rápida na troca de mensagens entre pontos de extremidade daqueles configurado por padrão para as associações de HTTP.  
   
@@ -161,4 +147,4 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

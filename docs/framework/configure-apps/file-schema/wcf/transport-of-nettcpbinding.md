@@ -1,33 +1,21 @@
 ---
 title: '&lt;transporte&gt; de &lt;netTcpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ad2271b86d37d9063ac54d9a4e45681d132eb1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transporte&gt; de &lt;netTcpBinding&gt;
 Define o tipo de requisitos de segurança de nível de mensagem para um ponto de extremidade configurado com o [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<netTcpBinding>  
 \<associação >  
-\<security>  
+\<segurança >  
 \<transporte >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -59,8 +47,8 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
 |---------------|-----------------|  
 |clientCredentialType|Opcional. Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente usando a segurança de transporte.<br /><br /> -O valor padrão é `Windows`.<br />-Este atributo é do tipo <xref:System.ServiceModel.TcpClientCredentialType>.|  
 |protectionLevel|Opcional. Define a segurança no nível do transporte TCP. Assinatura de mensagens reduz o risco de um terceiro que viole a mensagem enquanto eles estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte.<br /><br /> O valor padrão é `EncryptAndSign`.|  
-|sslProtocols|Um valor de sinalizador de enumeração de SslProtocols que especifica quais SslProtocols têm suporte. O padrão é Tls &#124; Tls11 &#124; Tls12.|  
-|policyEnforcement|Esta enumeração Especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> devem ser impostas.<br /><br /> 1.  Nunca – a política é aplicada nunca (proteção estendida é desabilitada).<br />2.  WhenSupported – a política será aplicada somente se o cliente oferece suporte à proteção estendida.<br />3.  Sempre – a política sempre é aplicada. Os clientes que não oferecem suporte a proteção estendida falhará ao autenticar.|  
+|sslProtocols|Um valor de sinalizador de enumeração de SslProtocols que especifica quais SslProtocols têm suporte. O padrão é Tls&#124;Tls11&#124;Tls12.|  
+|policyenforcement definida como|Esta enumeração Especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> devem ser impostas.<br /><br /> 1.  Nunca – a política é aplicada nunca (proteção estendida é desabilitada).<br />2.  WhenSupported – a política será aplicada somente se o cliente oferece suporte à proteção estendida.<br />3.  Sempre – a política sempre é aplicada. Os clientes que não oferecem suporte a proteção estendida falhará ao autenticar.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType atributo  
   
@@ -99,4 +87,4 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

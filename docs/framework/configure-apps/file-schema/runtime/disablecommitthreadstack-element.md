@@ -1,13 +1,6 @@
 ---
 title: '&lt;disableCommitThreadStack&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCommitThreadStack
@@ -15,22 +8,19 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a7961c62d46a10767b119c4c55a4b620e1ad782
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d8724d16a25cdec040fa5b1f5472da06b11f669
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt; elemento
 Especifica se a pilha do thread completo é confirmada quando um thread é iniciado.  
   
  \<configuration>  
-\<tempo de execução >  
+\<runtime>  
 \<disableCommitThreadStack >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +36,7 @@ Especifica se a pilha do thread completo é confirmada quando um thread é inici
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Habilitado|Atributo obrigatório.<br /><br /> Especifica se a confirmação a pilha do thread completa na inicialização do thread (o comportamento padrão) está desabilitado.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se a confirmação a pilha do thread completa na inicialização do thread (o comportamento padrão) está desabilitado.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

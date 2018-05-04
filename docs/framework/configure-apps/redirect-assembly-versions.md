@@ -1,14 +1,6 @@
 ---
 title: Redirecionando versões de assembly
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - assembly binding, redirection
 - redirecting assembly binding to earlier version
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-caps.latest.revision: 26
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 24343e1ee2e95cbeb7613d3b22dd7cdac848903b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 Você pode redirecionar referências de associação de tempo de compilação para assemblies do .NET Framework, os assemblies de terceiros ou assemblies do seu próprio aplicativo. Você pode redirecionar seu aplicativo para usar uma versão diferente de um assembly de várias maneiras: por meio da política de publicador, por meio de um arquivo de configuração do aplicativo. ou por meio do arquivo de configuração de máquina. Este artigo descreve o funcionamento de associação de assembly do .NET Framework e como ele pode ser configurado.  

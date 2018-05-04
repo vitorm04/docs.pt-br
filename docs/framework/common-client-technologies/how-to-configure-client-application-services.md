@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Como configurar serviços de aplicativo cliente
-Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Designer de Projeto** para habilitar e configurar serviços de aplicativos cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para habilitar e configurar serviços do aplicativo cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Você pode habilitar e configurar serviços de aplicativos cliente na página **Serviços** do **Designer de Projeto**. A página **Serviços** atualiza os valores no arquivo App.config do projeto. Para acessar o **Designer de Projeto**, use o comando **Propriedades** no menu **Projeto**. Para obter mais informações sobre a página **Serviços**, consulte [Página Serviços, Designer de Projeto](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.
   
      O valor padrão de `Data Source = |SQL/CE|` é exibido na caixa de texto.  
   
-3.  Para gerar e usar um banco de dados do SQL Server Compact, mantenha o valor de cadeia de conexão padrão. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] gerará um arquivo de banco de dados e o colocará no diretório indicado pela propriedade <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
+3.  Para gerar e usar um banco de dados do SQL Server Compact, mantenha o valor de cadeia de conexão padrão. O Visual Studio gera um arquivo de banco de dados e o coloca no diretório indicado pela propriedade <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Para gerar e usar um banco de dados [!INCLUDE[ssEW](../../../includes/ssew-md.md)] criptografado, adicione os valores `password` e `encrypt database` à sequência de conexão, conforme mostrado no exemplo a seguir.  
   

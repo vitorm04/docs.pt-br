@@ -1,33 +1,23 @@
 ---
 title: '&lt;legacyCorruptedStateExceptionsPolicy&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f09d6cf256e072d01f3cfc79987aa4d240f96235
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6228aaf4c7da70337d9d1a99adcb78f71a0039b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; elemento
 Especifica se o common language runtime permite que o código gerenciado detectar violações de acesso e outras exceções de estado corrompido.  
   
  \<configuration>  
-\<tempo de execução >  
+\<runtime>  
 \<legacyCorruptedStateExceptionsPolicy >  
   
 ## <a name="syntax"></a>Sintaxe  

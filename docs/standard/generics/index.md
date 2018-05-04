@@ -1,13 +1,7 @@
 ---
-title: Genéricos no .NET Framework
-ms.custom: ''
+title: Generics in .NET (Genéricos no .NET)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -32,23 +26,19 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="generics-in-the-net-framework"></a>Genéricos no .NET Framework
+# <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
+
 <a name="top"></a> Os genéricos permitem que você personalize um método, uma classe, uma estrutura ou uma interface para o tipo exato de dados no qual ele atua. Por exemplo, em vez de usar a classe <xref:System.Collections.Hashtable>, que permite que as chaves e os valores sejam de qualquer tipo, você pode usar a classe genérica <xref:System.Collections.Generic.Dictionary%602> e especificar o tipo permitido para a chave e o tipo permitido para o valor. Entre os benefícios de genéricos estão maior reutilização de códigos e segurança de tipos.  
   
- Este tópico fornece uma visão geral de genéricos no .NET Framework e um resumo de tipos ou métodos genéricos. Ele contém as seguintes seções:  
+ Este tópico fornece uma visão geral de genéricos no .NET e um resumo de tipos ou métodos genéricos. Ele contém as seguintes seções:  
   
 -   [Definindo e usando genéricos](#defining_and_using_generics)  
   
@@ -78,7 +68,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Terminologia de genéricos  
- Os seguintes termos são usados para discutir genéricos no .NET Framework:  
+ Os seguintes termos são usados para discutir genéricos no .NET:  
   
 -   A *definição de tipo genérico* é uma classe, estrutura ou declaração de interface que funciona como um modelo, com espaços reservados para os tipos que ela pode conter ou usar. Por exemplo, a classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> pode conter dois tipos: chaves e valores. Como uma definição de tipo genérico é apenas um modelo, não é possível criar instâncias de uma classe, estrutura ou interface que seja uma definição de tipo genérico.  
   
@@ -145,11 +135,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>Biblioteca de classes e suporte ao idioma  
- O .NET Framework fornece várias classes de coleção genérica nos seguintes namespaces:  
+ O .NET fornece várias classes de coleção genérica nos seguintes namespaces:  
   
--   O namespace <xref:System.Collections.Generic> cataloga a maioria dos tipos de coleção genérica fornecida pelo .NET Framework, tal como as classes genéricas <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602>.  
+-   O namespace <xref:System.Collections.Generic> contém a maioria dos tipos de coleção genérica fornecida pelo .NET, tal como as classes genéricas <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602>.  
   
--   O namespace <xref:System.Collections.ObjectModel> cataloga tipos adicionais de coleção genérica, tais como a classe genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, que são úteis para expor modelos de objeto para usuários de suas classes.  
+-   O namespace <xref:System.Collections.ObjectModel> contém tipos adicionais de coleção genérica, tais como a classe genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, que são úteis para expor modelos de objeto para usuários de suas classes.  
   
  Interfaces genéricas para a implementação de comparações de classificação e de igualdade são fornecidas no namespace <xref:System>, juntamente com tipos de delegados genéricos para manipuladores de eventos, conversões e predicados de pesquisa.  
   
@@ -172,11 +162,11 @@ ms.lasthandoff: 12/23/2017
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Coleções genéricas no .NET Framework](../../../docs/standard/generics/collections.md)|Descreve as classes de coleção genérica e outros tipos genéricos no .NET Framework.|  
+|[Coleções genéricas no .NET](../../../docs/standard/generics/collections.md)|Descreve as classes de coleção genérica e outros tipos genéricos no .NET.|  
 |[Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Descreve delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.|  
 |[Interfaces genéricas](../../../docs/standard/generics/interfaces.md)|Descreve interfaces genéricas que fornecem funcionalidade comum entre famílias de tipos genéricos.|  
 |[Covariância e Contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)|Descreve covariância e contravariância em parâmetros de tipo genérico.|  
-|[Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornece informações de resumo sobre as características e os cenários de uso dos tipos de coleção no .NET Framework, incluindo tipos genéricos.|  
+|[Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornece informações de resumo sobre as características e os cenários de uso dos tipos de coleção no .NET, incluindo tipos genéricos.|  
 |[Quando Usar Coleções Genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve regras gerais para determinar quando usar tipos de coleção genérica.|  
 |[Como definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica como gerar assemblies dinâmicos que incluem tipos e métodos genéricos.|  
 |[Tipos genéricos no Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Descreve o recurso genérico para usuários do Visual Basic, incluindo tópicos de instruções para uso e definição de tipos genéricos.|  

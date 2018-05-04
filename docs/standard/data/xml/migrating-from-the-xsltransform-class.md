@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrar da classe XslTransform
 A arquitetura XSLT foi reprojetada na versão [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. A classe de <xref:System.Xml.Xsl.XslTransform> foi substituída pela classe de <xref:System.Xml.Xsl.XslCompiledTransform> .  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Opção de depuração  
- A classe de <xref:System.Xml.Xsl.XslCompiledTransform> pode gerar informações de depuração, que permite você depurar a folha de estilos com o depurador Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] . Consulte <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> para obter mais informações.  
+ A classe de <xref:System.Xml.Xsl.XslCompiledTransform> pode gerar informações de depuração, que permite você depurar a folha de estilos com o Depurador do Microsoft Visual Studio. Consulte <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> para obter mais informações.  
   
 ## <a name="behavioral-differences"></a>Diferenças de comportamento  
   

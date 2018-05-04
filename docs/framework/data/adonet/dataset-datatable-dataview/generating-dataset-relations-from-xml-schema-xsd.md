@@ -1,24 +1,12 @@
 ---
-title: "Gerar relações de conjunto de dados de esquema XML (XSD)"
-ms.custom: 
+title: Gerar relações de conjunto de dados de esquema XML (XSD)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Gerar relações de conjunto de dados de esquema XML (XSD)
 Em um <xref:System.Data.DataSet>, formam uma associação entre duas ou mais colunas, criando uma relação pai-filho. Há três maneiras para representar um **DataSet** relação dentro de um esquema de linguagem XSD de definição de esquema XML:  
@@ -44,7 +32,7 @@ Em um <xref:System.Data.DataSet>, formam uma associação entre duas ou mais col
 </xs:element>  
 ```  
   
- O processo de mapeamento de esquema XML cria tabelas de **conjunto de dados** que correspondem aos tipos aninhados complexos no esquema. Ele também cria colunas adicionais que são usadas como pai**-**colunas-filho para as tabelas geradas. Observe que essas pai**-**colunas filho especificam relações, que não é o mesmo que especificar restrições de chave estrangeira/de chave primária.  
+ O processo de mapeamento de esquema XML cria tabelas de **conjunto de dados** que correspondem aos tipos aninhados complexos no esquema. Ele também cria colunas adicionais que são usadas como pai**-** colunas-filho para as tabelas geradas. Observe que essas pai**-** colunas filho especificam relações, que não é o mesmo que especificar restrições de chave estrangeira/de chave primária.  
   
 ## <a name="msdatarelationship-annotation"></a>MSDATA:Relationship anotação  
  O **msdata:Relationship** anotação permite que você especifique explicitamente as relações pai-filho entre elementos do esquema que não estão aninhadas. O exemplo a seguir mostra a estrutura do **relação** elemento.  

@@ -1,34 +1,20 @@
 ---
 title: '&lt;basicHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80494dd0050c7a3a873e6885a8001a55171ffc8e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 75ac5acab14c053adb1b1bec164e52be57670839
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
-Representa uma associação que um serviço [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] pode usar para configurar e expor pontos de extremidade que podem se comunicar com serviços e clientes Web baseados em ASMX e outros serviços que estão em conformidade com o WS-I Basic Profile 1.1.  
+Representa uma associação que um serviço do WCF (Windows Communication Foundation) pode usar para configurar e expor pontos de extremidade capazes de se comunicar com clientes e serviços Web baseados em ASMX e outros serviços que estejam em conformidade com o WS-I Basic Profile 1.1.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<basicHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -77,7 +63,7 @@ Representa uma associação que um serviço [!INCLUDE[indigo1](../../../../../in
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`allowCookies`|Um valor booliano que indica se o cliente aceita cookies e os propaga em solicitações futuras. O padrão é `false`.<br /><br /> Você pode usar essa propriedade quando você interage com os serviços Web ASMX que usam cookies. Dessa forma, você poderá ter certeza de que os cookies retornados do servidor são copiados automaticamente para todas as solicitações de cliente futuras desse serviço.|  
-|`bypassProxyOnLocal`|Um valor booliano que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.<br /><br /> Um recurso de Internet é local se ele tem um endereço local. Um endereço local é aquele que está no mesmo computador, a rede local ou da intranet e é identificado, sintaticamente, pela falta de um ponto (.) como no URIs "http://webserver/" e "http://localhost/".<br /><br /> Definir este atributo determina se os pontos de extremidade configurados com o BasicHttpBinding usam o servidor proxy ao acessar recursos locais. Se esse atributo for `true`, solicitações aos recursos da Internet locais não usar o servidor proxy. Use o nome do host (em vez de localhost) se desejar que os clientes para passar por um proxy ao conversar com serviços no mesmo computador, quando esse atributo é definido como `true`.<br /><br /> Quando esse atributo é `false`, todas as solicitações de Internet são feitas por meio do servidor proxy.|  
+|`bypassProxyOnLocal`|Um valor booliano que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.<br /><br /> Um recurso de Internet é local se ele tem um endereço local. Um endereço local é aquele que está no mesmo computador, o local LAN ou da intranet e é identificado, sintaticamente, pela falta de um ponto (.) como os URIs "http://webserver/"e"http://localhost/".<br /><br /> Definir este atributo determina se os pontos de extremidade configurados com o BasicHttpBinding usam o servidor proxy ao acessar recursos locais. Se esse atributo for `true`, solicitações aos recursos da Internet locais não usar o servidor proxy. Use o nome do host (em vez de localhost) se desejar que os clientes para passar por um proxy ao conversar com serviços no mesmo computador, quando esse atributo é definido como `true`.<br /><br /> Quando esse atributo é `false`, todas as solicitações de Internet são feitas por meio do servidor proxy.|  
 |`closeTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de fechamento concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |`envelopeVersion`|Especifica a versão do SOAP que é usado para as mensagens processadas por essa associação. O único valor válido é Soap11.|  
 |`hostnameComparisonMode`|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
@@ -106,7 +92,7 @@ Representa uma associação que um serviço [!INCLUDE[indigo1](../../../../../in
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O BasicHttpBinding usa HTTP como o transporte para enviar mensagens de SOAP 1.1. Um serviço pode usar essa associação para expor pontos de extremidade que está de acordo com WS-I BP 1.1, como aqueles que clientes ASMX consumam. Da mesma forma, um cliente pode usar o BasicHttpBinding para se comunicar com serviços expor pontos de extremidade que está de acordo com WS-I BP 1.1, como serviços Web ASMX ou serviços configurados com o BasicHttpBinding.  
@@ -198,4 +184,4 @@ Representa uma associação que um serviço [!INCLUDE[indigo1](../../../../../in
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)

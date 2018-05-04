@@ -1,24 +1,12 @@
 ---
-title: "Coleções de esquema de banco de dados OLE"
-ms.custom: 
+title: Coleções de esquema de banco de dados OLE
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 33e794559abd7f619f7431683f06e59705b57d41
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-schema-collections"></a>Coleções de esquema de banco de dados OLE
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -259,7 +247,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DESCRIÇÃO|Cadeia de Caracteres|  
-|OVERLOAD|Int16|  
+|SOBRECARGA|Int16|  
   
 ### <a name="views"></a>Exibições  
   

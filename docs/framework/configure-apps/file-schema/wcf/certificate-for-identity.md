@@ -1,24 +1,12 @@
 ---
 title: '&lt;certificado&gt; de &lt;identidade&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c1fb253ed166b4e8106f68bf2782cf215541294
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7d8e7abbc95521d85dc5999c36687f9becea9fb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a>&lt;certificado&gt; de &lt;identidade&gt;
 Especifica um certificado x. 509 usado para validar um servidor para um cliente.  
@@ -50,7 +38,7 @@ Especifica um certificado x. 509 usado para validar um servidor para um cliente.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir especifica a representação codificada de um certificado usado para validar um servidor para um cliente.  
@@ -67,4 +55,4 @@ Especifica um certificado x. 509 usado para validar um servidor para um cliente.
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.EndpointIdentity>  
  [Autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

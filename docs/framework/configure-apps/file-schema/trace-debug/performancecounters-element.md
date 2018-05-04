@@ -1,13 +1,6 @@
 ---
 title: '&lt;performanceCounters&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Especifica o tamanho da memória global compartilhada por contadores de desempenho.  
@@ -46,7 +37,7 @@ Especifica o tamanho da memória global compartilhada por contadores de desempen
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|filemappingsize|Atributo obrigatório.<br /><br /> Especifica o tamanho, em bytes, da memória global compartilhado por contadores de desempenho. O padrão é 524288.|  
+|filemappingsize|Atributo obrigatório.<br /><br /> Especifica o tamanho, em bytes, da memória global compartilhada pelos contadores de desempenho. O padrão é 524288.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -63,7 +54,7 @@ Especifica o tamanho da memória global compartilhada por contadores de desempen
   
  O tamanho de memória compartilhada global pode ser definido somente com um arquivo de configuração.  O tamanho padrão é 524.288 bytes, o tamanho máximo é 33,554,432 bytes e o tamanho mínimo é 32.768 bytes.  Desde que a memória compartilhada global é compartilhada por todos os processos e categorias, o criador do primeiro especifica o tamanho.  Se você definir o tamanho em seu arquivo de configuração do aplicativo, esse tamanho só será usado se o aplicativo é o primeiro aplicativo que faz com que os contadores de desempenho executar.  Portanto, o local correto para especificar o `filemappingsize` valor é o arquivo Machine. config.  Não é possível liberar memória na memória compartilhada global por individuais contadores de desempenho, portanto, eventualmente, a memória compartilhada global seja exaurida se um grande número de instâncias de contador de desempenho com nomes diferentes é criado.  
   
- O tamanho de memória compartilhada separada, o valor de DWORD FileMappingSize no registro chave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome da categoria >*\Performance é referenciado primeiro, seguido pelo valor especificado para a memória compartilhada global no arquivo de configuração. Se o valor de FileMappingSize não existir, o tamanho de memória compartilhada separada é definido como um quarto (1/4) a configuração global no arquivo de configuração.  
+ O tamanho de memória compartilhada separada, o valor de DWORD FileMappingSize no registro chave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome da categoria >* \Performance é referenciado primeiro, seguido pelo valor especificado para a memória compartilhada global no arquivo de configuração. Se o valor de FileMappingSize não existir, o tamanho de memória compartilhada separada é definido como um quarto (1/4) a configuração global no arquivo de configuração.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Diagnostics.PerformanceCounter>  

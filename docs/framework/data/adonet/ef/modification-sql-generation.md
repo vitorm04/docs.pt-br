@@ -1,24 +1,12 @@
 ---
-title: "Geração de alteração SQL"
-ms.custom: 
+title: Geração de alteração SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.  
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Gerando um comando SQL de inserção  
  Para um DbInsertCommandTree determinado no provedor de exemplo, o comando gerado de inserção segue um dos dois modelos de inserção abaixo.  
   
- O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento predicado "@@ROWCOUNT > 0" ocorre quando uma linha foi inserida. O elemento predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY () "assume a forma" keyMemberI = SCOPE_IDENTITY () "somente se keyMemeberI é uma chave gerada pelo repositório, pois SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma coluna de identidade (gerado pelo repositório).  
+ O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento predicado "@@ROWCOUNT > 0" ocorre quando uma linha foi inserida. O elemento predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume a forma "keyMemberI = SCOPE_IDENTITY ()" somente se keyMemeberI é uma chave gerada pelo repositório, pois SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo repositório).  
   
 ```  
 -- first insert Template  

@@ -1,13 +1,6 @@
 ---
-title: "&lt;webRequestModules&gt; elemento (configurações de rede)"
-ms.custom: 
+title: '&lt;webRequestModules&gt; elemento (configurações de rede)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webRequestModules
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f0da0e8afb2a9f89116b0d30992ce27b8520271d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7454099d8af0f2d656296be55677c648cc0c36c9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; elemento (configurações de rede)
 Especifica módulos a ser usado para solicitar informações de hosts de rede.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<webRequestModules >  
   
 ## <a name="syntax"></a>Sintaxe  

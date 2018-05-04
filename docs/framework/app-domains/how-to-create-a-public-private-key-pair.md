@@ -1,12 +1,13 @@
 ---
-title: "Como criar um par de chaves pública/privada"
-ms.custom: 
+title: Como criar um par de chaves pública/privada
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,22 +23,23 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 991affd7074cd69c1c56c37ab2d0a55f8b3af148
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Como criar um par de chaves pública/privada
 Para assinar um assembly com um nome forte, você deve ter um par de chaves pública/privada. Esse par de chaves de criptografia pública/privada é usado durante a compilação para criar um assembly de nome forte. Você pode criar um par de chaves usando a [ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Os arquivos de par de chaves geralmente têm uma extensão .snk.  
   
 > [!NOTE]
->  No [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], as páginas de propriedades de projeto C# e Visual Basic incluem uma guia **Assinatura** que permite que você selecione arquivos de chave existentes ou gere novos arquivos de chaves sem usar Sn.exe. No Visual C++, você pode especificar o local de um arquivo de chave existente na página de propriedades **Avançado** na seção **Vinculador** da seção **Propriedades de Configuração** da janela **Páginas de Propriedades**. O uso do atributo <xref:System.Reflection.AssemblyKeyFileAttribute> para identificar pares de arquivos de chave se tornou obsoleto começando com [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
+>  No Visual Studio, as páginas de propriedades de projeto C# e Visual Basic incluem uma guia **Assinatura** que permite que você selecione arquivos de chave existentes ou gere novos arquivos de chaves sem usar Sn.exe. No Visual C++, você pode especificar o local de um arquivo de chave existente na página de propriedades **Avançado** na seção **Vinculador** da seção **Propriedades de Configuração** da janela **Páginas de Propriedades**. O uso do atributo <xref:System.Reflection.AssemblyKeyFileAttribute> para identificar pares de arquivos de chave se tornou obsoleto começando com [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
   
 ### <a name="to-create-a-key-pair"></a>Para criar um par de chaves  
   
@@ -69,7 +71,7 @@ sn -p keypair.snk public.snk
   
  Ao assinar um assembly com um nome forte, o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) procura o arquivo de chave relativo ao diretório atual e ao diretório de saída. Ao usar compiladores de linha de comando, você pode simplesmente copiar a chave para o diretório atual que contém seus módulos de código.  
   
- Se você estiver usando uma versão anterior do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que não tem uma guia **Assinatura** nas propriedades do projeto, o local do arquivo de chave recomendado é o diretório do projeto com o atributo de arquivo especificado da seguinte maneira:  
+ Se você estiver usando uma versão anterior do Visual Studio que não tenha uma guia **Assinatura** nas propriedades do projeto, o local do arquivo de chave recomendado será o diretório do projeto com o atributo de arquivo especificado da seguinte maneira:  
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
