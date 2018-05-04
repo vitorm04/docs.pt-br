@@ -1,27 +1,15 @@
 ---
 title: Criando tipos (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-types-entity-sql"></a>Criando tipos (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]fornece três tipos de construtores: construtores e construtores de tipo nomeado construtores de conjunto de linhas.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece três tipos de construtores: construtores e construtores de tipo nomeado construtores de conjunto de linhas.  
   
 ## <a name="row-constructors"></a>Coloque construtores  
  Você usa construtores de linha em [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para construir registros anônimos, tipados estrutural de um ou mais valores. O tipo do resultado de um construtor de linha é um tipo de linha cujos tipos de campo correspondem aos tipos de valores usados para construir a linha. Por exemplo, a expressão a seguir constrói um valor do tipo `Record(a int, b string, c int)`:  

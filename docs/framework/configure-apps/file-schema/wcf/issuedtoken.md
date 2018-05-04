@@ -1,33 +1,21 @@
 ---
-title: '&lt;issuedToken&gt;'
-ms.custom: 
+title: '&lt;IssuedToken&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c4090dacdbb55f66bf7c27bdd02adf371049f7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a8d701e0806aae0a17a1c5ff7284606dd080f85
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
 Especifica um token personalizado usado para autenticar um cliente para um serviço.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
 \<comportamento >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -61,14 +49,14 @@ seção endpointBehaviors
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Especifica o endereço do emissor do token e a associação usada para se comunicar com o ponto de extremidade local.|  
+|[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Especifica o endereço do emissor do token e a associação usada para se comunicar com o ponto de extremidade local.|  
 |[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Especifica os comportamentos de ponto de extremidade a ser usado ao entrar em contato com um emissor local.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
  Um token emitido é um tipo de credencial personalizada usado, por exemplo, durante a autenticação com um Token STS (serviço seguro) em um cenário federado. Por padrão, o token é um token SAML. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). e [federação e Tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  

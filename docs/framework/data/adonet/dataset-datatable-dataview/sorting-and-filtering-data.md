@@ -1,34 +1,22 @@
 ---
 title: Classificando e filtrando dados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Classificando e filtrando dados
 O <xref:System.Data.DataView> fornece várias maneiras de classificar e filtrar dados em uma <xref:System.Data.DataTable>:  
   
 -   Você pode usar a propriedade <xref:System.Data.DataView.Sort%2A> para especificar uma ou várias ordens de classificação de coluna, e para incluir parâmetros ASC (crescente) e DESC (decrescente).  
   
--   Você pode usar a propriedade <xref:System.Data.DataView.ApplyDefaultSort%2A> para criar automaticamente uma ordem de classificação, em ordem crescente, com base na coluna de chave primária ou nas colunas da tabela. <xref:System.Data.DataView.ApplyDefaultSort%2A>só se aplica quando o **classificação** propriedade é uma referência nula ou uma cadeia de caracteres vazia, e quando a tabela tem uma chave primária definida.  
+-   Você pode usar a propriedade <xref:System.Data.DataView.ApplyDefaultSort%2A> para criar automaticamente uma ordem de classificação, em ordem crescente, com base na coluna de chave primária ou nas colunas da tabela. <xref:System.Data.DataView.ApplyDefaultSort%2A> só se aplica quando o **classificação** propriedade é uma referência nula ou uma cadeia de caracteres vazia, e quando a tabela tem uma chave primária definida.  
   
 -   Você pode usar a propriedade <xref:System.Data.DataView.RowFilter%2A> para especificar subconjuntos de linhas com base nos valores de coluna. Para obter detalhes sobre expressões válidas para o **RowFilter** propriedade, consulte as informações de referência para o <xref:System.Data.DataColumn.Expression%2A> propriedade o <xref:System.Data.DataColumn> classe.  
   
@@ -42,12 +30,12 @@ O <xref:System.Data.DataView> fornece várias maneiras de classificar e filtrar 
     |------------------------------|-----------------|  
     |**CurrentRows**|O **atual** versão de linha de todos os **inalterado**, **adicionado**, e **modificadas** linhas. Esse é o padrão.|  
     |**Adicionado**|O **atual** versão de linha de todos os **adicionado** linhas.|  
-    |**Excluído**|O **Original** versão de linha de todos os **excluído** linhas.|  
+    |**excluído**|O **Original** versão de linha de todos os **excluído** linhas.|  
     |**ModifiedCurrent**|O **atual** versão de linha de todos os **modificadas** linhas.|  
     |**ModifiedOriginal**|O **Original** versão de linha de todos os **modificadas** linhas.|  
     |**Nenhum**|Nenhuma linha.|  
     |**OriginalRows**|O **Original** versão de linha de todos os **inalterado**, **modificadas**, e **excluído** linhas.|  
-    |**Unchanged**|O **atual** versão de linha de todos os **inalterado** linhas.|  
+    |**Inalterado**|O **atual** versão de linha de todos os **inalterado** linhas.|  
   
  Para obter mais informações sobre estados de linha e versões de linha, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   

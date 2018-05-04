@@ -1,27 +1,15 @@
 ---
 title: Sincronizando um conjunto de dados com um XmlDataDocument
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c09ddd9ad4d945fc0704e25400dc8c94bdacb933
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d026a425f7a38777fcb5bbb4b18816c39a99aa72
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizando um conjunto de dados com um XmlDataDocument
 Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando um fortemente tipada <xref:System.Data.DataSet> sincronizado com um <xref:System.Xml.XmlDataDocument>. Os exemplos a seguir criam um **DataSet** com um esquema minimizado que corresponde apenas uma parte do documento XML de origem. Os exemplos usam um **XmlDataDocument** para preservar a fidelidade do documento XML de origem, permitindo que o **conjunto de dados** a ser usado para expor um subconjunto do documento XML.  

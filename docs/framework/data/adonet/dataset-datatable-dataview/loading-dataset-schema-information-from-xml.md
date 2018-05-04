@@ -1,27 +1,15 @@
 ---
-title: "Carregando informações do esquema de DataSet do XML"
-ms.custom: 
+title: Carregando informações do esquema de DataSet do XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Carregando informações do esquema de DataSet do XML
 O esquema de um <xref:System.Data.DataSet> (suas tabelas, colunas, relações e restrições) podem ser definidas programaticamente, criado pelo **preencher** ou **FillSchema** métodos de um <xref:System.Data.Common.DataAdapter>, ou carregados de um Documento XML. Para carregar **conjunto de dados** informações de esquema de um documento XML, você pode usar o **ReadXmlSchema** ou o **InferXmlSchema** método o **deconjuntodedados**. **ReadXmlSchema** permite que você carregue ou inferir **DataSet** informações de esquema do documento que contém o esquema de linguagem XSD de definição de esquema XML ou um documento XML com embutido esquema XML. **InferXmlSchema** permite inferir o esquema do documento XML ignorando certas namespaces XML que você especificar.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Você também pode instruir o **DataSet** para inferir a esquema de um documento XML usando o **InferXmlSchema** método o **conjunto de dados**. **InferXmlSchema** funciona da mesma maneira que ambos **ReadXml** com um **XmlReadMode** de **InferSchema** (carrega dados, bem como infere o esquema) e  **ReadXmlSchema** se o documento que está sendo lido não contém nenhum esquema embutido. No entanto, **InferXmlSchema** fornece a capacidade adicional de permitir que você especifique namespaces XML específico sejam ignorados quando o esquema é inferido. **InferXmlSchema** leva dois argumentos necessários: o local do documento XML, especificado por um nome de arquivo, um fluxo ou um **XmlReader**; e uma matriz de cadeia de caracteres de namespaces XML para ser ignorada pela operação.  
+ Você também pode instruir o **DataSet** para inferir a esquema de um documento XML usando o **InferXmlSchema** método o **conjunto de dados**. **InferXmlSchema** funciona da mesma maneira que ambos **ReadXml** com um **XmlReadMode** de **InferSchema** (carrega dados, bem como infere o esquema) e **ReadXmlSchema** se o documento que está sendo lido não contém nenhum esquema embutido. No entanto, **InferXmlSchema** fornece a capacidade adicional de permitir que você especifique namespaces XML específico sejam ignorados quando o esquema é inferido. **InferXmlSchema** leva dois argumentos necessários: o local do documento XML, especificado por um nome de arquivo, um fluxo ou um **XmlReader**; e uma matriz de cadeia de caracteres de namespaces XML para ser ignorada pela operação.  
   
  Por exemplo, considere o seguinte XML:  
   

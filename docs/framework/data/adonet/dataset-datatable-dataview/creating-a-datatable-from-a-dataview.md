@@ -1,27 +1,15 @@
 ---
 title: Criando um DataTable de um DataView
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1dff746ff4767f2d0f9a9ab66275ee4d9fc8d3e0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Criando um DataTable de um DataView
 Depois de recuperar dados de uma fonte de dados e preencher um <xref:System.Data.DataTable> com os dados, você talvez queira classificar, filtrar ou caso contrário, limite os dados retornados sem recuperá-la novamente. O <xref:System.Data.DataView> classe torna isso possível. Além disso, se você precisa criar um novo <xref:System.Data.DataTable> do <xref:System.Data.DataView>, você pode usar o <xref:System.Data.DataView.ToTable%2A> método para copiar todas as linhas e colunas ou um subconjunto dos dados em um novo <xref:System.Data.DataTable>. O <xref:System.Data.DataView.ToTable%2A> método fornece sobrecargas para:  

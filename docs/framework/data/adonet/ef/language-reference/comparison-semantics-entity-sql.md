@@ -1,26 +1,12 @@
 ---
-title: "Semântica de comparação (Entity SQL)"
-ms.custom: 
+title: Semântica de comparação (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e20d47e0ae97067d2dcafcf929f717598d4e3e80
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 2184f86ee43f88b0c4cfc1b96e42e2486c17fe5f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semântica de comparação (Entity SQL)
 Executar alguns dos seguintes operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] envolve a comparação de instâncias do tipo:  

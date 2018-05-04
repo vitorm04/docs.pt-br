@@ -1,20 +1,13 @@
 ---
 title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
-keywords: .NET, .NET Core, C#, C# Primer, Guia do C#
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#  
 

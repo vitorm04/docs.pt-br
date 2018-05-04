@@ -1,33 +1,23 @@
 ---
-title: "&lt;segurança&gt; do &lt;netMsmqBinding&gt;"
-ms.custom: 
+title: '&lt;segurança&gt; do &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fb381d6970d72cc1ff88ed1238d8d8541c40a40d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0ed1021bdc45d0d64a20ff19410ad56e0d304ed3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;segurança&gt; do &lt;netMsmqBinding&gt;
 Define as configurações de segurança para uma associação de MSMQ. Especifica se o transporte ou segurança SOAP está habilitada e, em caso afirmativo, quais níveis de proteção e o modo de autenticação estão em uso.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<netMsmqBinding>  
 \<associação >  
-\<security>  
+\<segurança >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +47,7 @@ Define as configurações de segurança para uma associação de MSMQ. Especific
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|Define as configurações de segurança de mensagem SOAP. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Define as configurações de segurança para o transporte MSMQ. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Define as configurações de segurança para o transporte MSMQ. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -74,5 +64,5 @@ Define as configurações de segurança para uma associação de MSMQ. Especific
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<associação >](../../../../../docs/framework/misc/binding.md)  
  [Filas no WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

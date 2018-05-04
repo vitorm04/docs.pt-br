@@ -1,27 +1,15 @@
 ---
 title: Gerando comandos com CommandBuilders
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f250f74303fb3f2835781318e655b435e748153
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Gerando comandos com CommandBuilders
 Quando a propriedade `SelectCommand` é especificada dinamicamente em tempo de execução, como através de uma ferramenta de consulta que usa um comando textual do usuário, você não poderá especificar o `InsertCommand`, `UpdateCommand` ou `DeleteCommand` apropriado em tempo de design. Se seu <xref:System.Data.DataTable> mapear para ou for gerado a partir de uma única tabela do banco de dados, você poderá aproveitar o objeto <xref:System.Data.Common.DbCommandBuilder> para gerar automaticamente o `DeleteCommand`, `InsertCommand` e `UpdateCommand` do <xref:System.Data.Common.DbDataAdapter>.  

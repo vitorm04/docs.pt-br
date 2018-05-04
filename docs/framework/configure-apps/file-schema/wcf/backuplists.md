@@ -1,29 +1,17 @@
 ---
 title: '&lt;backupLists&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fee9e455189d5be1c81fb950eff3882aa8222b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb89ce5a942db40b07a65f59ddd05ab4cd624aa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbackuplistsgt"></a>&lt;backupLists&gt;
 Representa uma seção de configuração para definir um conjunto de serviços de backup usado na manipulação de erro. Cada elemento filho é uma lista de backup que enumera um conjunto de pontos de extremidade que você deseja que o serviço de roteamento para usar no caso do ponto de extremidade primário não pode ser alcançado. Se o primeiro ponto de extremidade na lista estiver inativo, o serviço de roteamento irá automaticamente failover para o próximo na lista.  Isso fornece uma maneira rápida de adicionar confiabilidade para seu aplicativo sem ter que ensinar seu aplicativo cliente como lidar com padrões complexos ou onde todos os serviços são implantados.  
   
- \<System. ServiceModel >  
+ \<system.serviceModel>  
 \<roteamento >  
 \<backupLists >  
   
@@ -49,7 +37,7 @@ Representa uma seção de configuração para definir um conjunto de serviços d
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<roteamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como o roteamento de tabelas que definem os pontos de extremidade de destino para enviar mensagens quando um corresponde ao filtro.|  
+|[\<roteamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como o roteamento de tabelas que definem os pontos de extremidade de destino para envie mensagens para quando houver correspondência de filtro.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    

@@ -1,22 +1,12 @@
 ---
 title: Atributos (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f9fc23cf7afbd28f0c9ae438cbce298cbf362fbd
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a7e64c29ab8ca56a47ec6554ebc316f4922d3aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 Os atributos fornecem um método eficiente de associação de metadados, ou informações declarativas, ao código (assemblies, tipos, métodos, propriedades e etc.). Após um atributo ser associado a uma entidade de programa, o atributo poderá ser consultado no tempo de execução usando uma técnica chamada *reflexão*. Para obter mais informações, consulte [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
@@ -107,10 +97,10 @@ void TraceMethod()
 |`assembly`|Assembly inteiro|  
 |`module`|Módulo do assembly atual|  
 |`field`|Campo em uma classe ou um struct|  
-|`event`|Evento|  
+|`event`|evento|  
 |`method`|Método ou acessadores de propriedade `get` e `set`|  
 |`param`|Parâmetros de método ou parâmetros de acessador de propriedade `set`|  
-|`property`|Propriedade|  
+|`property`|propriedade|  
 |`return`|Valor retornado de um método, indexador de propriedade ou acessador de propriedade `get`|  
 |`type`|Struct, classe, interface, enum ou delegado|  
   

@@ -1,30 +1,18 @@
 ---
 title: '&lt;udpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a476a2a6f3b5814803323ca5cb3072f16aa7041e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1d9535f60bca101e53b678da25915ac9afb41aab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Um elemento de configuração usado para configurar o <xref:System.ServiceModel.UdpBinding> associação.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<associações >  
 \<udpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -84,7 +72,7 @@ Um elemento de configuração usado para configurar o <xref:System.ServiceModel.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O UdpBinding permite que os serviços do WCF para se comunicar por meio do transporte UDP. Permite trocas de mensagens de "disparar e esquecer" onde um cliente envia uma mensagem para um serviço e espera sem resposta de volta.  
@@ -120,4 +108,4 @@ Um elemento de configuração usado para configurar o <xref:System.ServiceModel.
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<associação >](../../../../../docs/framework/misc/binding.md)
