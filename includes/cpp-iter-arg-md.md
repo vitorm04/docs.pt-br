@@ -1,1 +1,0 @@
-O tipo de um elemento na sequência controlada.

@@ -1,1 +1,0 @@
-Atributo do .NET Framework
