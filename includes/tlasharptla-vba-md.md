@@ -1,1 +1,0 @@
-<span data-ttu-id="a5043-101">VBA (Microsoft Visual Basic for Applications)</span><span class="sxs-lookup"><span data-stu-id="a5043-101">Microsoft Visual Basic for Applications (VBA)</span></span>
