@@ -1,31 +1,17 @@
 ---
-title: "Provedor de reflexão (WCF Data Services)"
-ms.custom: 
+title: Provedor de reflexão (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Provedor de reflexão (WCF Data Services)
-Além de expor os dados de um modelo de dados por meio do Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pode expor dados que não é estritamente definidos em um modelo baseado na entidade. O provedor de reflexão expõe dados em classes que retornam tipos que implementam o <xref:System.Linq.IQueryable%601> interface. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]usa reflexão para deduzir um modelo de dados para essas classes e pode traduzir consultas de endereço com base em recursos em consulta integrada à linguagem (LINQ)-com base em consultas em relação a exposto <xref:System.Linq.IQueryable%601> tipos.  
+Além de expor os dados de um modelo de dados por meio do Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pode expor dados que não é estritamente definidos em um modelo baseado na entidade. O provedor de reflexão expõe dados em classes que retornam tipos que implementam o <xref:System.Linq.IQueryable%601> interface. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa reflexão para deduzir um modelo de dados para essas classes e pode traduzir consultas de endereço com base em recursos em consulta integrada à linguagem (LINQ)-com base em consultas em relação a exposto <xref:System.Linq.IQueryable%601> tipos.  
   
 > [!NOTE]
 >  Você pode usar o <xref:System.Linq.Queryable.AsQueryable%2A> método para retornar um <xref:System.Linq.IQueryable%601> interface de qualquer classe que implementa o <xref:System.Collections.Generic.IEnumerable%601> interface. Isso permite que os tipos de coleção mais genéricos ser usado como uma fonte de dados para o serviço de dados.  
@@ -102,7 +88,7 @@ Além de expor os dados de um modelo de dados por meio do Entity Framework, [!IN
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|Fornece a funcionalidade para definir o valor da propriedade de um recurso.|  
   
 ## <a name="handling-concurrency"></a>Tratamento de simultaneidade  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]oferece suporte a um modelo de simultaneidade otimista, permitindo que você defina um token de simultaneidade para uma entidade. Este token de simultaneidade, que inclui uma ou mais propriedades da entidade, é usado pelo serviço de dados para determinar se uma alteração ocorreu nos dados que estão sendo solicitados, atualizados ou excluídos. Quando os valores do token obtidos da eTag na solicitação diferem dos valores atuais da entidade, uma exceção é gerada pelo serviço de dados. O <xref:System.Data.Services.ETagAttribute> é aplicado a um tipo de entidade para definir um token de simultaneidade no provedor de reflexão. O token de simultaneidade não pode incluir uma propriedade de chave ou uma propriedade de navegação. Para obter mais informações, consulte [atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oferece suporte a um modelo de simultaneidade otimista, permitindo que você defina um token de simultaneidade para uma entidade. Este token de simultaneidade, que inclui uma ou mais propriedades da entidade, é usado pelo serviço de dados para determinar se uma alteração ocorreu nos dados que estão sendo solicitados, atualizados ou excluídos. Quando os valores do token obtidos da eTag na solicitação diferem dos valores atuais da entidade, uma exceção é gerada pelo serviço de dados. O <xref:System.Data.Services.ETagAttribute> é aplicado a um tipo de entidade para definir um token de simultaneidade no provedor de reflexão. O token de simultaneidade não pode incluir uma propriedade de chave ou uma propriedade de navegação. Para obter mais informações, consulte [atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Usando o LINQ to SQL com o provedor de reflexão  
  Como o Entity Framework tem suporte nativo por padrão, é o provedor de dados recomendado para usar dados relacionais com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. No entanto, você pode usar o provedor de reflexão para usar o LINQ para classes do SQL com um serviço de dados. O <xref:System.Data.Linq.Table%601> retornado por métodos de conjuntos de resultados de <xref:System.Data.Linq.DataContext> gerado pelo LINQ para implementar SQL Object Relational Designer (O/R Designer) a <xref:System.Linq.IQueryable%601> interface. Isso permite que o provedor de reflexão acessar esses métodos e retornar dados de entidade do SQL Server usando o gerado classes LINQ to SQL. No entanto, porque o LINQ to SQL não implementa o <xref:System.Data.Services.IUpdatable> interface, você precisa adicionar uma classe parcial que estende o existente <xref:System.Data.Linq.DataContext> classe parcial para adicionar o <xref:System.Data.Services.IUpdatable> implementação. Para obter mais informações, consulte [como: criar um serviço de dados usando uma fonte de dados SQL do LINQ](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  

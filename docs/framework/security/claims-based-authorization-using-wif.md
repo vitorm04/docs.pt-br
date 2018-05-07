@@ -1,24 +1,14 @@
 ---
-title: "Autorização baseada em declarações usando o WIF"
-ms.custom: 
+title: Autorização baseada em declarações usando o WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
@@ -52,7 +42,7 @@ Em um aplicativo de terceira parte confiável, a autorização determina quais r
   
 -   **Durante a emissão de token**. Quando um usuário é autenticado, a declaração de função pode ser emitida pelo STS do provedor de identidade ou por um provedor de federação, como o ACS (Serviço de Controle de Acesso) do Microsoft Azure.  
   
--   **Transformando declarações arbitrárias em um tipo de declaração de função usando ClaimsAuthenticationManager**. O ClaimsAuthenticationManager é um componente fornecido como parte do WIF. Ele permite que as solicitações sejam interceptadas quando iniciam um aplicativo, inspecionando os tokens e transformando-os adicionando, alterando ou removendo declarações. Para obter mais informações sobre como usar o ClaimsAuthenticationManager para transformar declarações, consulte [Como implementar o RBAC (Controle de Acesso Baseado em Função) em um aplicativo ASP.NET baseado em declarações usando o WIF e o ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
+-   **Transformando declarações arbitrárias em um tipo de declaração de função usando ClaimsAuthenticationManager**. O ClaimsAuthenticationManager é um componente fornecido como parte do WIF. Ele permite que as solicitações sejam interceptadas quando iniciam um aplicativo, inspecionando os tokens e transformando-os adicionando, alterando ou removendo declarações. Para obter mais informações sobre como usar o ClaimsAuthenticationManager declarações, consulte [como: implementar com base em acesso controle função (RBAC) em um declarações com suporte a ASP.NET aplicativo usando o WIF e o ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
   
 -   **Mapeando declarações arbitrárias para um tipo de função usando a seção de configuração samlSecurityTokenRequirement** – uma abordagem declarativa em que a transformação de declarações é feita usando apenas a configuração, sem a necessidade de codificação.  
   

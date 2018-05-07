@@ -1,27 +1,15 @@
 ---
 title: Modificando dados de valores grandes (max) no ADO.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificando dados de valores grandes (max) no ADO.NET
 Os tipos de dados de objetos grandes (LOB) são os que excedem o tamanho de linha máximo de 8 quilobytes (KB). O SQL Server fornece um especificador `max` para os tipos de dados `varchar`, `nvarchar` e `varbinary` para permitir o armazenamento de valores grandes como 2^32 bytes. As colunas da tabela e variáveis Transact-SQL podem especificar os tipos de dados `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. No ADO.NET, os tipos de dados `max` podem ser encontrados por `DataReader` e também podem ser especificados como valores de parâmetro de entrada e saída sem nenhuma manipulação especial. Para tipos de dados `varchar`, os dados podem ser recuperados e atualizados incrementalmente.  
@@ -72,13 +60,13 @@ FROM OPENROWSET
   
  SET  
   
- { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
+ { *column_name* = {. GRAVAR ( *expressão* , @Offset , @Length )}  
   
  O método WRITE Especifica que uma seção do valor da *column_name* será modificada. A expressão é o valor que será copiado para o *column_name*, o `@Offset` é o ponto de início na qual a expressão será gravada, e o `@Length` argumento é o comprimento da seção na coluna.  
   
 |If|Then|  
 |--------|----------|  
-|A expressão é definida como NULL|`@Length`é ignorado e o valor na *column_name* é truncado no local especificado `@Offset`.|  
+|A expressão é definida como NULL|`@Length` é ignorado e o valor na *column_name* é truncado no local especificado `@Offset`.|  
 |`@Offset` é NULL|A operação de atualização acrescentará a expressão no final do existente *column_name* valor e `@Length` será ignorado.|  
 |`@Offset` é maior do que o comprimento do valor column_name|O SQL Server retornará um erro.|  
 |`@Length` é NULL|A operação de atualização remove todos os dados de `@Offset` para o final do valor `column_name`.|  

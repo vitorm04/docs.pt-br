@@ -2,11 +2,11 @@
 title: '&lt;mensagem&gt; de &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 6e4cd2c000d577e26b54e09f24279e0fd74afcf1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;mensagem&gt; de &lt;netHttpBinding&gt;
 Define as configurações de segurança em nível de mensagem do [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -40,7 +40,7 @@ Define as configurações de segurança em nível de mensagem do [ \<basicHttpBi
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|UserName|-Requer que o cliente seja autenticado para o servidor com uma credencial de nome de usuário. Essa credencial precisa ser especificado usando o <`clientCredentials`> elemento.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] não oferece suporte a enviar um resumo de senha ou a derivação de chaves usando senhas e essas chaves para segurança de mensagem. Portanto, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] impõe que o transporte ser protegido ao usar credenciais de nome de usuário. Para o `basicHttpBinding`, isso requer a configuração de um canal SSL.|  
+|UserName|-Requer que o cliente seja autenticado para o servidor com uma credencial de nome de usuário. Essa credencial precisa ser especificado usando o <`clientCredentials`> elemento.<br />-WCF não oferece suporte para enviar um resumo de senha ou a derivação de chaves usando senhas e essas chaves para segurança de mensagem. Portanto, o WCF impõe que o transporte ser protegido ao usar credenciais de nome de usuário. Para o `basicHttpBinding`, isso requer a configuração de um canal SSL.|  
 |certificado|Requer que o cliente seja autenticado para o servidor usando um certificado. A credencial do cliente nesse caso deve ser especificado usando <`clientCredentials`> e <`clientCertificate`>. Além disso, ao usar o modo de segurança de mensagem, o cliente precisa ser provisionado com o certificado de serviço. A credencial de serviço nesse caso deve ser especificado usando <xref:System.ServiceModel.Description.ClientCredentials> classe ou `ClientCredentials` elemento de comportamento e especificando o serviço de certificado usando o \<serviceCertificate > elemento de serviceCredentials.|  
   
 ### <a name="child-elements"></a>Elementos filho  

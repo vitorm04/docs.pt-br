@@ -1,31 +1,19 @@
 ---
 title: Biblioteca de cliente do WCF Data Services
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95ca3ab8768b59b52640cfd17d230a544a8b2052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca de cliente do WCF Data Services
-Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-com base em serviço de dados se ele pode enviar uma solicitação HTTP e o processo de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed que retorna um serviço de dados. Essa interoperabilidade permite que você acesse [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviços de aplicativos um intervalo de Web habilitado. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]inclui bibliotecas de cliente que fornecem uma experiência de programação avançada, quando você consumir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds do .NET Framework ou aplicativos baseados no Silverlight.  
+Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-com base em serviço de dados se ele pode enviar uma solicitação HTTP e o processo de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed que retorna um serviço de dados. Essa interoperabilidade permite que você acesse [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviços de aplicativos um intervalo de Web habilitado. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui bibliotecas de cliente que fornecem uma experiência de programação avançada, quando você consumir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds do .NET Framework ou aplicativos baseados no Silverlight.  
   
  As duas principais classes de biblioteca de cliente são as classes <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601>. A classe <xref:System.Data.Services.Client.DataServiceContext> encapsula as operações que têm suporte em um serviço de dados especificado. Embora os serviços do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sejam sem estado, o contexto não é. Portanto, você pode usar o <xref:System.Data.Services.Client.DataServiceContext> classe para manter o estado no cliente entre as interações com o serviço de dados para oferecer suporte a recursos como gerenciamento de alterações. Essa classe também gerencia identidades e rastreia alterações. A classe <xref:System.Data.Services.Client.DataServiceQuery%601> representa uma consulta em um conjunto de entidades específico.  
   

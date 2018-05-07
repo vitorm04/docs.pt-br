@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 0ce459b5b3d739770353d9913f30c6feaceabfd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;System. ServiceModel&gt;
 Esta seção de configuração contém todos os elementos de configuração de ServiceModel do Windows Communication Foundation (WCF).  
@@ -62,7 +62,7 @@ Esta seção de configuração contém todos os elementos de configuração de S
 |[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esta seção contém uma coleção de associações padrão e personalizadas. Cada entrada é identificada pelo seu exclusivo `name`. Serviços usar associações vinculando-as usando o `name`.|  
 |[\<cliente >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Esta seção contém uma lista de pontos de extremidade de que um cliente usa para se conectar a um serviço.|  
 |[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Esta seção define os contratos COM habilitado para interoperabilidade COM e o WCF.|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Esta seção só pode ser definida no arquivo Machine. config. Ele define duas coleções filhas nomeadas `endpointBehaviors` e `serviceBehaviors`.  Cada coleção define elementos de comportamento consumidos por todos os [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pontos de extremidade e serviços no computador respectivamente.  Se um comportamento é definido em `<commonBehaviors>` e `<behaviors>` seções, o comportamento de \<comportamentos > seção tem preferência.|  
+|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Esta seção só pode ser definida no arquivo Machine. config. Ele define duas coleções filhas nomeadas `endpointBehaviors` e `serviceBehaviors`.  Cada coleção define elementos de comportamento consumidos por todos os pontos de extremidade do WCF e serviços no computador, respectivamente.  Se um comportamento é definido em `<commonBehaviors>` e `<behaviors>` seções, o comportamento de \<comportamentos > seção tem preferência.|  
 |[\<Extensões >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Esta seção contém uma coleção de extensões, que permitem que o usuário crie associações definidas pelo usuário, comportamentos e outros aspectos de extensões.|  
 |[\<diagnóstico >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Esta seção contém as configurações para os recursos de diagnóstico do WCF. O usuário pode ativar/desativar o rastreamento, contadores de desempenho e o provedor WMI e pode adicionar filtros de mensagem personalizada.|  
 |[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Esta seção define um conjunto de mapeamento de padrão de protocolo entre esquemas de protocolo de transporte (por exemplo, http, net.tcp, NET. pipe, etc.) e as associações do WCF.|  
@@ -78,9 +78,9 @@ Esta seção de configuração contém todos os elementos de configuração de S
 |\<configuration>|O elemento raiz para todos os elementos de configuração em um arquivo de configuração do .NET.|  
   
 ## <a name="remarks"></a>Comentários  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Não adicione elementos para as seções de configuração de outros produtos.  
+ WCF não adiciona elementos para as seções de configuração de outros produtos.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] os serviços são definidos no `services` seção do arquivo de configuração. Um assembly pode conter qualquer número de serviços. Cada serviço tem seu próprio `service` seção de configuração. A seção e seu conteúdo definem o contrato de serviço, o comportamento e os pontos de extremidade do serviço em questão.  
+ Serviços WCF são definidos no `services` seção do arquivo de configuração. Um assembly pode conter qualquer número de serviços. Cada serviço tem seu próprio `service` seção de configuração. A seção e seu conteúdo definem o contrato de serviço, o comportamento e os pontos de extremidade do serviço em questão.  
   
  Do somente um serviço `name` atributo é necessário.  Por padrão, o nome do serviço descreve o tipo CLR subjacente usado para implementar um serviço; No entanto, você pode alterar a propriedade ConfigurationName em um <xref:System.ServiceModel.ServiceContractAttribute> para substituir o requisito de tipo CLR.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Práticas recomendadas de confiabilidade"
-ms.custom: 
+title: Práticas recomendadas de confiabilidade
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Práticas recomendadas de confiabilidade
 As seguintes regras de confiabilidade estão orientadas ao SQL Server. No entanto, eles também se aplicam a qualquer aplicativo para servidores baseado em host. É extremamente importante que os servidores como o SQL Server não tenham perda de recursos e não fiquem inoperantes.  No entanto, isso não pode ser feito para escrever código de recuo para cada método que altera o estado de um objeto.  A meta é não gravar código gerenciado 100 por cento confiável que se recuperará de erros em todos os locais com o código de recuo.  Isso seria uma tarefa difícil, com pouca probabilidade de êxito.  O CLR (Common Language Runtime) não pode fornecer com facilidade garantias suficientemente fortes para que o código gerenciado possa tornar a tarefa de escrever código perfeito viável.  Observe que, diferentemente do ASP.NET, o SQL Server usa somente um processo que não pode ser reciclado sem a interrupção de um banco de dados por um período de tempo inaceitavelmente longo.  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  Considere a possibilidade de alterar todos os locais que capturam todas as exceções para capturar um tipo específico de exceção que você espera ser gerada, tal como uma <xref:System.FormatException> de métodos de formatação de cadeia de caracteres.  Isso impede que o bloco catch encontre exceções inesperadas e ajuda a garantir que o código não oculte bugs capturando exceções inesperadas.  Como regra geral, nunca manipule uma exceção no código de biblioteca (código que requer que você capture uma exceção pode indicar uma falha de design no código que você está chamando).  Em alguns casos, talvez você queira capturar uma exceção e gerar um tipo de exceção diferente para fornecer mais dados.  Usar exceções aninhadas nesse caso, armazenando a causa real da falha na propriedade <xref:System.Exception.InnerException%2A> da nova exceção.  
   
 #### <a name="code-analysis-rule"></a>Regra de análise de código  
- Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  Em C#, isso significa sinalizar ambos `catch` {} e `catch(Exception)` {}.  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.  
+ Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  Em c#, isso significa sinalizar ambos `catch` {} e `catch(Exception)` {}.  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Não suponha que um thread gerenciado é um thread do Win32 – ele é uma fibra  
  O uso do armazenamento local de thread gerenciado funciona, mas você não pode usar o armazenamento local de thread não gerenciado ou supor que o código será executado novamente no thread do sistema operacional atual.  Não altere as configurações, como o local de thread.  Não chame `InitializeCriticalSection` ou `CreateMutex` por meio de invocação de plataforma porque eles requerem que o thread de sistema operacional que entra em um bloqueio também saia do bloqueio.  Como isso não será o caso ao usar fibras, mutexes e seções críticas do Win32 não podem ser usados no SQL diretamente.  Observe que a classe <xref:System.Threading.Mutex> gerenciada não lida com essas preocupações de afinidade de thread.  

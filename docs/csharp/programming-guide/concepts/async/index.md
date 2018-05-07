@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3f8df58503fe0dd4c3096250c920db250b06046b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programação assíncrona com async e await (C#)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
@@ -153,7 +153,7 @@ Os métodos assíncronos destinam-se a ser operações não causadoras de bloque
   
 As palavras-chave `async` e `await` não fazem com que threads adicionais sejam criados. Os métodos assíncronos não exigem multithreading, pois um método assíncrono não executa em seu próprio thread. O método é executado no contexto de sincronização atual e usa tempo no thread somente quando o método está ativo. É possível usar <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> para mover o trabalho de CPU associado a um thread em segundo plano, mas um thread em segundo plano não ajuda com um processo que está apenas aguardando que os resultados tornem-se disponíveis.  
   
-A abordagem baseada em async para a programação assíncrona é preferível às abordagens existentes em quase todos os casos. Em particular, essa abordagem é melhor do que a classe <xref:System.ComponentModel.BackgroundWorker> para operações associadas à E/S, porque o código é mais simples e você não precisa se proteger contra condições de corrida. Em combinação com o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>, a programação assíncrona é melhor que <xref:System.ComponentModel.BackgroundWorker> para operações associadas à CPU, porque a programação assíncrona separa os detalhes de coordenação da execução do código do trabalho que `Task.Run` transfere ao pool de threads.  
+A abordagem baseada em async para a programação assíncrona é preferível às abordagens existentes em quase todos os casos. Essa abordagem é especialmente mais eficiente do que a classe <xref:System.ComponentModel.BackgroundWorker> para operações de entrada e saída, porque o código é mais simples e você não precisa se proteger contra condições de corrida. Em combinação com o método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>, a programação assíncrona é melhor que <xref:System.ComponentModel.BackgroundWorker> para operações associadas à CPU, porque a programação assíncrona separa os detalhes de coordenação da execução do código do trabalho que `Task.Run` transfere ao pool de threads.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> async e await  
  Se você especificar que um método é assíncrono usando um modificador [async](../../../../csharp/language-reference/keywords/async.md), você habilitará os dois recursos a seguir.  

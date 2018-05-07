@@ -1,33 +1,19 @@
 ---
 title: '&lt;userPrincipalName&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Especifica o usuário nome Principal (UPN) de um serviço para ser autenticado pelo cliente.  
   
  Para obter mais informações sobre como configurar o UPN, consulte [autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-\<identity>  
+\<identidade >  
 \<userPrincipalName>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +41,7 @@ Especifica o usuário nome Principal (UPN) de um serviço para ser autenticado p
 |[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica a identidade do serviço para ser autenticado pelo cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Seguro [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] cliente que se conecta a um ponto de extremidade com esta identidade usa o UPN ao executar a autenticação de SSPI com o ponto de extremidade.  
+ Um cliente seguro do Windows Communication Foundation (WCF) que se conecta a um ponto de extremidade com esta identidade usa o UPN ao executar a autenticação de SSPI com o ponto de extremidade.  
   
 ## <a name="example"></a>Exemplo  
  O código de configuração a seguir especifica o UPN do serviço para ser autenticado pelo cliente.  

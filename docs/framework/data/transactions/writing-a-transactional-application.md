@@ -1,23 +1,12 @@
 ---
 title: Escrevendo um aplicativo transacional
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 048df434ff0ada2ab5f8c7473913f6c34c05d1a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-transactional-application"></a>Escrevendo um aplicativo transacional
 Como um programador de aplicativo transacional, você pode tirar proveito dos dois modelos de programação fornecidas pelo <xref:System.Transactions> namespace para criar uma transação. Você pode utilizar o modelo de programação explícito usando o <xref:System.Transactions.Transaction> classe ou o modelo de programação implícito na qual as transações são automaticamente gerenciadas pela infraestrutura, usando o <xref:System.Transactions.TransactionScope> classe. É recomendável que você use o modelo de transação implícita para o desenvolvimento. Você pode encontrar mais informações sobre como usar um escopo de transação no [implementando uma transação implícita, usando o escopo da transação](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tópico.  

@@ -1,14 +1,6 @@
 ---
-title: "Diagnosticando erros com assistentes de depuração gerenciados"
-ms.custom: 
+title: Diagnosticando erros com assistentes de depuração gerenciados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - EHMDA
 helpviewer_keywords:
@@ -37,17 +29,13 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16a039a5edb0e1023551f97deefbf7874a19638b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnosticando erros com assistentes de depuração gerenciados
 Os MDAs (Assistentes para depuração gerenciada) são recursos de depuração que trabalham com o CLR (Common Language Runtime) para fornecer informações sobre o estado do tempo de execução. Os assistentes geram mensagens informativas sobre eventos de tempo de execução que não podem ser interceptados de outro modo. É possível usar MDAs para isolar bugs de aplicativos difíceis de encontrar que ocorrem durante a transição entre código gerenciado e não gerenciado. É possível habilitar ou desabilitar todos os MDAs adicionando uma chave ao Registro do Windows ou definindo uma variável de ambiente. Você pode habilitar MDAs específicos usando definições de configuração do aplicativo. É possível definir configurações adicionais para alguns MDAs individuais no arquivo de configuração do aplicativo. Como esses arquivos de configuração são analisados quando o tempo de execução é carregado, você deve habilitar o MDA antes da inicialização do aplicativo gerenciado. Não será possível habilitá-lo para aplicativos já iniciados.  

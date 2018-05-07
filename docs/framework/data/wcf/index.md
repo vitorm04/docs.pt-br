@@ -1,29 +1,15 @@
 ---
 title: WCF Data Services 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 148e6e50e81552b2418abba9f6655234fc023c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente conhecido como "ADO.NET Data Services") é um componente do .NET Framework que permite criar serviços que usam o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor e consumir dados na Web ou na intranet usando a semântica de [REST (Transferência de Estado Representacional)](http://go.microsoft.com/fwlink/?LinkId=113919). O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expõe dados como recursos endereçáveis por URIs. Os dados são acessados e alterados usando os verbos HTTP padrão GET, PUT, POST e DELETE. O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usa as convenções de relacionamento de entidade do [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.  
@@ -84,7 +70,7 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente con
 -   [Entity Framework Provider](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md) (Provedor de Entity Framework)  
   
  O que posso fazer com ele?  
- -   [Visão Geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
+ -   [Visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
   
 -   [Whitepaper: Introducing OData](http://go.microsoft.com/fwlink/?LinkId=220867) (White paper: Introdução ao OData)  
   
@@ -119,7 +105,7 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente con
 -   [Site do Protocolo Open Data](http://go.microsoft.com/fwlink/?LinkID=184554)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão Geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
+ [Visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Apresenta uma visão geral dos recursos e da funcionalidade disponíveis no [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [What's New in WCF Data Services](http://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8) (Novidades no WCF Data Services)  

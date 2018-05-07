@@ -1,27 +1,15 @@
 ---
-title: "LINQ to SQL de n camadas com serviços da Web"
-ms.custom: 
+title: LINQ to SQL de n camadas com serviços da Web
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL de n camadas com serviços da Web
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]foi desenvolvido especialmente para uso na camada intermediária em uma camada de acesso de dados flexível (DAL) como um serviço Web. Se a camada de apresentação é uma página da Web ASP.NET, então você usa o controle de servidor Web de <xref:System.Web.UI.WebControls.LinqDataSource> para gerenciar a transferência de dados entre a interface do usuário e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Se a camada de apresentação não é uma página ASP.NET, então a camada intermediária e a camada de apresentação devem fazer qualquer trabalho adicional para gerenciar serialização e desserialização de dados.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] foi desenvolvido especialmente para uso na camada intermediária em uma camada de acesso de dados flexível (DAL) como um serviço Web. Se a camada de apresentação é uma página da Web ASP.NET, então você usa o controle de servidor Web de <xref:System.Web.UI.WebControls.LinqDataSource> para gerenciar a transferência de dados entre a interface do usuário e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Se a camada de apresentação não é uma página ASP.NET, então a camada intermediária e a camada de apresentação devem fazer qualquer trabalho adicional para gerenciar serialização e desserialização de dados.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Foundation LINQ to SQL na camada intermediária  
  Em um serviço Web ou em um aplicativo de n camadas, a camada intermediária contém o contexto de dados e classes de entidade. Você pode criar essas classes manualmente, ou usando SQLMetal.exe ou [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] como descrito em outro lugar na documentação. Em tempo de design, você tem a opção fazer as classes de entidade serializável. Para obter mais informações, consulte [como: fazer entidades serializável](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Outra opção é criar um conjunto separado de classes que encapsulam os dados a ser serializados, e em projetos nesses tipos serializados quando você retorna dados nas consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] .  

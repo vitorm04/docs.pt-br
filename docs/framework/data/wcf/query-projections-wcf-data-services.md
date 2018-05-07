@@ -1,13 +1,6 @@
 ---
-title: "Projeções de consulta (WCF Data Services)"
-ms.custom: 
+title: Projeções de consulta (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 903acaa7493dc83fd6bf50f5a578a067c15e6294
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-projections-wcf-data-services"></a>Projeções de consulta (WCF Data Services)
 Projeção fornece um mecanismo no [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para reduzir a quantidade de dados no feed retornado por uma consulta especificando que somente algumas propriedades de uma entidade são retornadas na resposta. Para obter mais informações, consulte [OData: Selecionar opção de consulta do sistema ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
@@ -65,7 +53,7 @@ Projeção fornece um mecanismo no [!INCLUDE[ssODataFull](../../../../includes/s
   
  Além disso, os dados do `Customer` projetado em uma instância do tipo de `CustomerAddress` tipo de entidade em vez de um tipo anônimo. Há suporte para a projeção em tipos anônimos, mas os dados são somente leitura, como tipos anônimos são tratados como tipos de entidade não.  
   
- O <xref:System.Data.Services.Client.MergeOption> configurações do <xref:System.Data.Services.Client.DataServiceContext> são usados para resolução de identidade durante a projeção de consulta. Isso significa que, se uma instância do `Customer` tipo já existe no <xref:System.Data.Services.Client.DataServiceContext>, uma instância de `CustomerAddress` com a mesma identidade seguirão a resolução de identidade regras definidas pelo<xref:System.Data.Services.Client.MergeOption>  
+ O <xref:System.Data.Services.Client.MergeOption> configurações do <xref:System.Data.Services.Client.DataServiceContext> são usados para resolução de identidade durante a projeção de consulta. Isso significa que, se uma instância do `Customer` tipo já existe no <xref:System.Data.Services.Client.DataServiceContext>, uma instância de `CustomerAddress` com a mesma identidade seguirão a resolução de identidade regras definidas pelo <xref:System.Data.Services.Client.MergeOption>  
   
  A tabela a seguir descreve os comportamentos na projeção de resultados em tipos de entidade e não da entidade:  
   

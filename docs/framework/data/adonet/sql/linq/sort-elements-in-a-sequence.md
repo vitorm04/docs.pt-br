@@ -1,33 +1,21 @@
 ---
-title: "Elementos de tipo em uma sequência"
-ms.custom: 
+title: Elementos de tipo em uma sequência
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f296565beb284095dce2520cd545f8af61dc6b48
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sort-elements-in-a-sequence"></a>Elementos de tipo em uma sequência
 Use o operador de <xref:System.Linq.Enumerable.OrderBy%2A> para classificar uma sequência de acordo com um ou mais chaves.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]foi projetado para oferecer suporte a ordenação por tipos primitivos simples, como `string`, `int`e assim por diante. Não suporta classificação para várias classes avaliadas complexo, como tipos anônimos. Também não suporta tipos de dados de `byte` .  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] foi projetado para oferecer suporte a ordenação por tipos primitivos simples, como `string`, `int`e assim por diante. Não suporta classificação para várias classes avaliadas complexo, como tipos anônimos. Também não suporta tipos de dados de `byte` .  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir classe `Employees` a data de aluguer.  

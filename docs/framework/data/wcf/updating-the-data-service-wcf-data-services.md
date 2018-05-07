@@ -1,13 +1,6 @@
 ---
-title: "Atualizando o serviço de dados (WCF Data Services)"
-ms.custom: 
+title: Atualizando o serviço de dados (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Atualizando o serviço de dados (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são controladas por meio de <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla alterações para entidades que relatam usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastrear entidades adicionadas e excluídas e também as alterações feitas nos valores de propriedade ou relações entre instâncias de entidade. As alterações controladas são enviadas para o serviço de dados como operações baseadas em REST ao chamar o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método.  
@@ -78,13 +66,13 @@ Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] b
 ## <a name="creating-and-modifying-relationship-links"></a>Criando e modificando Links de relação  
  Quando você adiciona uma nova entidade usando o <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> apropriado ou método *AdicionarPara* método do <xref:System.Data.Services.Client.DataServiceContext> classe que o **adicionar referência de serviço** diálogo gera, todas as relações entre a nova entidade e entidades relacionadas não são automaticamente definidas.  
   
- Você pode criar e alterar relações entre instâncias de entidade e que a biblioteca cliente refletir essas alterações no serviço de dados. Relações entre entidades são definidas como associações no modelo e o <xref:System.Data.Services.Client.DataServiceContext> controla cada relação como um objeto de link no contexto. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]fornece os métodos a seguir sobre o <xref:System.Data.Services.Client.DataServiceContext> classe para criar, modificar e excluir esses links:  
+ Você pode criar e alterar relações entre instâncias de entidade e que a biblioteca cliente refletir essas alterações no serviço de dados. Relações entre entidades são definidas como associações no modelo e o <xref:System.Data.Services.Client.DataServiceContext> controla cada relação como um objeto de link no contexto. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] fornece os métodos a seguir sobre o <xref:System.Data.Services.Client.DataServiceContext> classe para criar, modificar e excluir esses links:  
   
 |Método|Descrição|  
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Cria um novo link entre dois objetos de entidade relacionada. Chamar esse método é equivalente a chamar <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> e <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> para criar o novo objeto e definir a relação a um objeto existente.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Cria um novo link entre dois objetos de entidade relacionada.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Atualiza um link existente entre dois objetos de entidade relacionada. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>também é usado para excluir links com uma cardinalidade de zero-ou-um-para-um (`0..1:1`) e um para um (`1:1`). Você pode fazer isso definindo o objeto relacionado `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Atualiza um link existente entre dois objetos de entidade relacionada. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> também é usado para excluir links com uma cardinalidade de zero-ou-um-para-um (`0..1:1`) e um para um (`1:1`). Você pode fazer isso definindo o objeto relacionado `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Marca um link que o contexto está controlando para exclusão quando o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método é chamado. Use esse método quando você exclui um objeto relacionado ou alterar uma relação, primeiro excluir o link para um objeto existente e, em seguida, adicionar um link para o novo objeto relacionado.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Notifica o contexto de um link existente entre dois objetos de entidade. O contexto supõe que esse relação já existe no serviço de dados e não tentará criar o link quando você chamar o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método. Use este método quando você anexar objetos em um contexto e precisa anexar também o link entre os dois. Se você estiver definindo uma nova relação, você deve usar <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Interrompe o link especificado no contexto de controle. Esse método é usado para excluir um-para-muitos (`*:*`) relações. Para obter links de relacionamento com uma cardinalidade de um, você deve usar <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  

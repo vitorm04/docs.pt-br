@@ -1,27 +1,17 @@
 ---
 title: Eventos ETW no .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ce0b322c2601709bdb17cb6990c4b6d96480bb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55ae8a7773bf50c57d36b63412a787636a85ab63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="etw-events-in-the-net-framework"></a>Eventos ETW no .NET Framework
 O rastreamento de eventos para Windows (ETW) é um sistema de rastreamento de alto desempenho, baixa sobrecarga e escalonável fornecido pelos sistemas operacionais Windows. Ele complementa o suporte de depuração e criação de perfil fornecido pelo .NET Framework e pode ser usado para solucionar problemas de uma variedade de cenários.  

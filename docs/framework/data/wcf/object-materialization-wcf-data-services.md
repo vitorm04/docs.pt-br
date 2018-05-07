@@ -1,32 +1,20 @@
 ---
-title: "Materialização de objetos (WCF Data Services)"
-ms.custom: 
+title: Materialização de objetos (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54f8cc876b373fcfa8e8e514abf50111942de88c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialização de objetos (WCF Data Services)
 Quando você usa o **adicionar referência de serviço** caixa de diálogo para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed em um aplicativo cliente com base no .NET Framework, classes de dados equivalentes são gerados para cada tipo de entidade no modelo de dados exposto pelo feed. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Dados de entidade que são retornados por uma consulta estão materializados em uma instância de uma dessas classes de serviço de dados de cliente gerada. Para obter informações sobre opções de mesclagem e a resolução de identidade para objetos rastreados, consulte [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]também permite que você defina suas próprias classes de serviço de dados do cliente em vez de usar as classes de dados gerados por ferramenta. Isso permite que você use suas próprias classes de dados, também conhecido como "objeto CLR plain old" classes de dados (POCO). Ao usar esses tipos de classes de dados personalizados, você deve atributo classe de dados com um <xref:System.Data.Services.Common.DataServiceKeyAttribute> ou <xref:System.Data.Services.Common.DataServiceEntityAttribute> e certifique-se de que o tipo de nomes nos nomes de tipo de correspondência de cliente no modelo de dados do serviço de dados.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] também permite que você defina suas próprias classes de serviço de dados do cliente em vez de usar as classes de dados gerados por ferramenta. Isso permite que você use suas próprias classes de dados, também conhecido como "objeto CLR plain old" classes de dados (POCO). Ao usar esses tipos de classes de dados personalizados, você deve atributo classe de dados com um <xref:System.Data.Services.Common.DataServiceKeyAttribute> ou <xref:System.Data.Services.Common.DataServiceEntityAttribute> e certifique-se de que o tipo de nomes nos nomes de tipo de correspondência de cliente no modelo de dados do serviço de dados.  
   
  Depois que a biblioteca de recebe a mensagem de resposta de consulta, ele materializa os dados retornados do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] classes de serviço que são do tipo de consulta de feed em instâncias de dados do cliente. O processo geral para materializar desses objetos é da seguinte maneira:  
   

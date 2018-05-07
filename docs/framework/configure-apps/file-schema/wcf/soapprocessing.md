@@ -2,11 +2,11 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: cc720c9e3a8ab934ffa8d3cb0c6eceb47a708fb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -48,7 +48,7 @@ Nenhum
 
 Processamento de SOAP é o processo em que as mensagens são convertidas entre as versões de mensagem.
 
-O serviço de roteamento do Windows Communication Foundation (WCF) pode converter mensagens de um protocolo para outro. Se as versões de mensagem de entrada e saída são diferentes, é criada uma nova mensagem da versão correta. Processamento de mensagens de um <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` para outro é feito criando um novo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mensagem que contém a parte do corpo e os cabeçalhos relevantes de entrada [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mensagem. Cabeçalhos específicos de endereçamento, ou que são entendidas no nível do roteador, não são usados durante a construção da nova mensagem WCF porque esses cabeçalhos são de uma versão diferente (no caso de cabeçalhos de endereçamento) ou tem sido processados como parte da comunicação entre o cliente e o roteador.
+O serviço de roteamento do Windows Communication Foundation (WCF) pode converter mensagens de um protocolo para outro. Se as versões de mensagem de entrada e saída são diferentes, é criada uma nova mensagem da versão correta. Processamento de mensagens de um <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` para outro é feito criando uma nova mensagem WCF que contém a parte do corpo e os cabeçalhos relevantes da mensagem recebida do WCF. Cabeçalhos específicos de endereçamento, ou que são entendidas no nível do roteador, não são usados durante a construção da nova mensagem WCF porque esses cabeçalhos são de uma versão diferente (no caso de cabeçalhos de endereçamento) ou tem sido processados como parte da comunicação entre o cliente e o roteador.
 
 Se um cabeçalho é colocado na mensagem de saída é determinado pelo ou não foi marcado como compreender quando transmitidas por meio da camada de canal de entrada. Cabeçalhos que não são compreendidos (como cabeçalhos personalizados) não são removidos e passam para o serviço de roteamento por que está sendo copiado para a mensagem de saída. O corpo da mensagem é copiado para a mensagem de saída. A mensagem é enviada, em seguida, o canal de saída, no momento em que todos os cabeçalhos e outros dados de envelope específicos para essa comunicação/transporte de protocolo será criado e adicionado.
 

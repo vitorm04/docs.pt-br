@@ -2,11 +2,11 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 77400348e9adc31d8121fc75f46d75d757af270f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
@@ -66,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- O `httpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTP. O HTTP é o transporte primário usado para fins de interoperabilidade. Esse transporte é suportado pelo Windows Communication Foundation (WCF) para garantir a interoperabilidade com outros não -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pilhas de serviços da Web.  
+ O `httpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte HTTP. O HTTP é o transporte primário usado para fins de interoperabilidade. Esse transporte é suportado pelo Windows Communication Foundation (WCF) para garantir a interoperabilidade com outros pilhas de serviços não WCF Web.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  

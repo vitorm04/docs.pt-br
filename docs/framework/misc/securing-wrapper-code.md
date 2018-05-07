@@ -1,29 +1,19 @@
 ---
-title: "Protegendo código de wrapper"
-ms.custom: 
+title: Protegendo código de wrapper
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], wrapper code
 - wrapper code, securing
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e29a2bdd0bfa338d0266c0841e11aa2ac366529
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-wrapper-code"></a>Protegendo código de wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  A segurança declarativa oferece as seguintes verificações de segurança:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand>Especifica a código acesso segurança na pilha. Todos os chamadores na pilha devem ter a permissão especificada ou a identidade para passar. **Demanda** ocorre em cada chamada porque a pilha pode conter chamadores diferentes. Se você chamar um método repetidamente, essa verificação de segurança ocorre a cada vez. **Demanda** é boa proteção contra ataques; código não autorizado tentar obter por meio dele será detectado.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> Especifica a código acesso segurança na pilha. Todos os chamadores na pilha devem ter a permissão especificada ou a identidade para passar. **Demanda** ocorre em cada chamada porque a pilha pode conter chamadores diferentes. Se você chamar um método repetidamente, essa verificação de segurança ocorre a cada vez. **Demanda** é boa proteção contra ataques; código não autorizado tentar obter por meio dele será detectado.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) ocorre em tempo de compilação just-in-time (JIT) e verifica somente o chamador imediato. Essa verificação de segurança não verifica o chamador do chamador. Depois de correspondência, não há nenhuma segurança adicional sobrecarga, independentemente de quantas vezes o chamador pode chamar. No entanto, também não há nenhuma proteção contra ataques de atração. Com **LinkDemand**, qualquer código que passe no teste e pode fazer referência a seu código pode comprometer a segurança, permitindo que o código mal-intencionado chamar usando o código não autorizado. Portanto, não use **LinkDemand** , a menos que todas as possíveis falhas podem ser completamente evitadas.  
   

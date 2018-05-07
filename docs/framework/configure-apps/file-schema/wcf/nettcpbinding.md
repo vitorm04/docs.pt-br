@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Especifica uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação de tempo de execução com a segurança do Windows para segurança de mensagem e autenticação, TCP para entrega de mensagens e a codificação de mensagem binária.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Comentários  
  Essa associação gera uma pilha de comunicação de tempo de execução por padrão, que usa a segurança de transporte TCP para entrega de mensagens e uma codificação de mensagem binária. Essa associação é uma Windows Communication Foundation (WCF) fornecida pelo sistema opção apropriada para a comunicação em uma Intranet.  
   
- A configuração padrão para o `netTcpBinding` é mais rápido que a configuração fornecida pelo `wsHttpBinding`, mas ele é destinado apenas para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]- para -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] comunicação. O comportamento de segurança é configurável usando opcional `securityMode` atributo. O uso de WS-ReliableMessaging é configurável usando opcional `reliableSessionEnabled` atributo. Mas o sistema de mensagens confiável está desativado por padrão. Geralmente, as fornecida pelo sistema associações de HTTP, como `wsHttpBinding` e `basicHttpBinding` são configurados para ativar as coisas, por padrão, enquanto o `netTcpBinding` associação desativa coisas por padrão para que você tenha se registrar para obter suporte, por exemplo, para um de WS-* especificações. Isso significa que a configuração padrão de TCP mais rápida na troca de mensagens entre pontos de extremidade daqueles configurado por padrão para as associações de HTTP.  
+ A configuração padrão para o `netTcpBinding` é mais rápido que a configuração fornecida pelo `wsHttpBinding`, mas ele é destinado apenas para comunicação do WCF. O comportamento de segurança é configurável usando opcional `securityMode` atributo. O uso de WS-ReliableMessaging é configurável usando opcional `reliableSessionEnabled` atributo. Mas o sistema de mensagens confiável está desativado por padrão. Geralmente, as fornecida pelo sistema associações de HTTP, como `wsHttpBinding` e `basicHttpBinding` são configurados para ativar as coisas, por padrão, enquanto o `netTcpBinding` associação desativa coisas por padrão para que você tenha se registrar para obter suporte, por exemplo, para um de WS-* especificações. Isso significa que a configuração padrão de TCP mais rápida na troca de mensagens entre pontos de extremidade daqueles configurado por padrão para as associações de HTTP.  
   
 ## <a name="example"></a>Exemplo  
  A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo o `<endpoint>` elemento. Se você quiser configurar a associação netTcpBinding e alterar algumas de suas configurações, é necessário definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação com um `bindingConfiguration` atributo. No exemplo a seguir, uma configuração de associação é definida.  

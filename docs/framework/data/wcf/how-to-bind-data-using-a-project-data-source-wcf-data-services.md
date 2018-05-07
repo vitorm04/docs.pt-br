@@ -1,13 +1,6 @@
 ---
 title: 'Como: associar dados usando uma fonte de dados do projeto (WCF Data Services)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0807b8de6bad5e70fbf522cb1cc20872c59fe1b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Como: associar dados usando uma fonte de dados do projeto (WCF Data Services)
 Você pode criar fontes de dados que são baseados nos objetos de dados gerados em um [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aplicativo cliente. Quando você adiciona uma referência a um serviço de dados usando o **adicionar referência de serviço** caixa de diálogo, uma fonte de dados do projeto é criada junto com as classes de dados do cliente gerado. Uma fonte de dados é criada para cada conjunto de entidades que o serviço de dados expõe. Você pode criar formulários que exibem dados do serviço ao arrastar esses itens de fonte de dados do **fontes de dados** janela no designer. Esses itens se tornam os controles que estão associados à fonte de dados. Durante a execução, essa fonte de dados está associada a uma instância do <xref:System.Data.Services.Client.DataServiceCollection%601> classe, que é preenchido com objetos que são retornados por uma consulta para o serviço de dados. Para obter mais informações, consulte [vinculação de dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

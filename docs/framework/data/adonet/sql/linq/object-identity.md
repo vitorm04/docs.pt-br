@@ -1,27 +1,15 @@
 ---
 title: Identidade do objeto
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21b8dbb934b778d792ff55d54f60fca92cac8e88
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-identity"></a>Identidade do objeto
 Os objetos em tempo de execução têm identidades exclusivas. Duas variáveis que referem-se ao mesmo objeto realmente referem-se à mesma instância de objeto. Devido ao fato, as alterações feitas por um caminho com uma variável imediatamente são visíveis com o outro.  
@@ -34,7 +22,7 @@ Os objetos em tempo de execução têm identidades exclusivas. Duas variáveis q
   
  Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> gerencia a identidade do objeto. Sempre que você recupera uma nova linha de base de dados, a linha é entrada uma tabela de identidade por sua chave primária, e um novo objeto é criado. Sempre que você mesmo que recupera linhas, a instância original de objeto é entregada de volta para o aplicativo. Assim <xref:System.Data.Linq.DataContext> converte o conceito de identidade como mostrado por base de dados (isto é, chaves primárias) no conceito de identidade consultado pela linguagem (isto é, instâncias). O aplicativo considera apenas o objeto no estado que foi recuperado primeiro. Novos dados, se diferentes, são descartados. Para obter mais informações, consulte [recuperar objetos do Cache de identidade](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]usa essa abordagem para gerenciar a integridade de objetos de locais para dar suporte a atualizações otimistas. Porque as únicas alterações que ocorrem após o objeto é criado no início essas são feitas pelo aplicativo, a intenção de aplicativo são claras. Se as alterações por uma parte externo ocorreram em ínterim, são identificadas em `SubmitChanges()` é chamado.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa essa abordagem para gerenciar a integridade de objetos de locais para dar suporte a atualizações otimistas. Porque as únicas alterações que ocorrem após o objeto é criado no início essas são feitas pelo aplicativo, a intenção de aplicativo são claras. Se as alterações por uma parte externo ocorreram em ínterim, são identificadas em `SubmitChanges()` é chamado.  
   
 > [!NOTE]
 >  Se o objeto solicitado pela consulta é facilmente identificável porque se já recuperado, nenhuma consulta é executada. A tabela de identidade atua como um cache de todos os objetos anteriormente recuperados.  
