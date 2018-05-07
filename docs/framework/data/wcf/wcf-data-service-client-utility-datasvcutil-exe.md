@@ -1,28 +1,16 @@
 ---
-title: "Utilitário de cliente do WCF Data Service (DataSvcUtil.exe)"
-ms.custom: 
+title: Utilitário de cliente do WCF Data Service (DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilitário de cliente do WCF Data Service (DataSvcUtil.exe)
 DataSvcUtil.exe é uma ferramenta de linha de comando fornecida pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que consome um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed e gera as classes de serviço de dados do cliente que são necessárias para acessar um serviço de dados de um aplicativo cliente .NET Framework. Esse utilitário pode gerar classes de dados usando as seguintes fontes de metadados:  
@@ -50,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/dataservicecollection`|Especifica que o código necessário para associar objetos a controles também é gerado.|  
 |`/help`<br /><br /> -ou-<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|  
 |`/in:` *\<arquivo >*|Especifica o arquivo. CSDL ou. edmx ou um diretório onde o arquivo está localizado.|  
-|`/language:`[VB &#124; CSharp]|Especifica a linguagem dos arquivos de código-fonte gerados. A linguagem volta automaticamente para C#.|  
+|`/language:`[VB&#124;CSharp]|Especifica a linguagem dos arquivos de código-fonte gerados. A linguagem volta automaticamente para C#.|  
 |`/nologo`|Suprime a notificação de direitos autorais da exibição.|  
 |`/out:` *\<arquivo >*|Especifica o nome do arquivo de código fonte que contém as classes de serviço de dados de cliente gerada.|  
 |`/uri:` *\<cadeia de caracteres >*|O URI do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.|  
