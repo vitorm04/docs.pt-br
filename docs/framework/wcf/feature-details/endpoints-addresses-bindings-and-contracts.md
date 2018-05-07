@@ -1,33 +1,19 @@
 ---
 title: 'Pontos de extremidade: endereços, associações e contratos'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Pontos de extremidade: endereços, associações e contratos
-Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade de fornecem aos clientes acesso para a funcionalidade oferecida por um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
+Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade de fornecem aos clientes acesso para a funcionalidade oferecida por um serviço WCF.  
   
  Cada ponto de extremidade consiste em quatro propriedades:  
   
@@ -39,12 +25,12 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
 -   Um conjunto de comportamentos que especifique os detalhes de implementação de local do ponto de extremidade.  
   
- Este tópico aborda essa estrutura de ponto de extremidade e explica como ele é representado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de objeto.  
+ Este tópico aborda essa estrutura de ponto de extremidade e explica como ele é representado no modelo de objeto do WCF.  
   
 ## <a name="the-structure-of-an-endpoint"></a>A estrutura de um ponto de extremidade  
  Cada ponto de extremidade consiste no seguinte:  
   
--   Endereço: O endereço identifica exclusivamente o ponto de extremidade e informa o potencial de consumidores do serviço onde ele está localizado. Ele é representado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de objeto, o <xref:System.ServiceModel.EndpointAddress> classe. Um <xref:System.ServiceModel.EndpointAddress> classe contém:  
+-   Endereço: O endereço identifica exclusivamente o ponto de extremidade e informa o potencial de consumidores do serviço onde ele está localizado. Ela é representada no modelo de objeto WCF, a <xref:System.ServiceModel.EndpointAddress> classe. Um <xref:System.ServiceModel.EndpointAddress> classe contém:  
   
     -   Um <xref:System.ServiceModel.EndpointAddress.Uri%2A> propriedade, que representa o endereço do serviço.  
   
@@ -60,7 +46,7 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
     -   Os requisitos de segurança necessários (por exemplo, SSL ou SOAP segurança de mensagem).  
   
-     Para obter mais informações, consulte [visão geral de associações do WCF](../../../../docs/framework/wcf/bindings-overview.md). Uma associação é representada no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de objeto pela classe base abstrata <xref:System.ServiceModel.Channels.Binding>. Na maioria dos cenários, os usuários podem usar uma das associações fornecidas pelo sistema. Para obter mais informações, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Para obter mais informações, consulte [visão geral de associações do WCF](../../../../docs/framework/wcf/bindings-overview.md). Uma associação é representada no modelo de objeto WCF, a classe base abstrata <xref:System.ServiceModel.Channels.Binding>. Na maioria dos cenários, os usuários podem usar uma das associações fornecidas pelo sistema. Para obter mais informações, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Contratos: O contrato descreve qual funcionalidade expõe o ponto de extremidade para o cliente. Especifica um contrato:  
   
@@ -74,7 +60,7 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
      Para obter mais informações sobre como definir um contrato, consulte [criar contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Comportamentos: Você pode usar os comportamentos de ponto de extremidade para personalizar o comportamento local do ponto de extremidade de serviço. Comportamentos de ponto de extremidade alcançar isso participando no processo de criação um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tempo de execução. Um exemplo de um comportamento de ponto de extremidade é o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> propriedade, que permite que você especifique um endereço de escutando diferente que o endereço SOAP ou WSDL Web Services Description Language (). Para obter mais informações, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Comportamentos: Você pode usar os comportamentos de ponto de extremidade para personalizar o comportamento local do ponto de extremidade de serviço. Comportamentos de ponto de extremidade conseguir isso participando no processo de criação de um WCFruntime. Um exemplo de um comportamento de ponto de extremidade é o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> propriedade, que permite que você especifique um endereço de escutando diferente que o endereço SOAP ou WSDL Web Services Description Language (). Para obter mais informações, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definir pontos de extremidade  
  Você pode especificar o ponto de extremidade para um serviço usando código imperativa ou declarativamente por meio da configuração. Para obter mais informações, consulte [como: criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [como: criar um ponto de extremidade de serviço em código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
@@ -83,7 +69,7 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
  Esta seção explica a finalidade de associações, pontos de extremidade e endereços; mostra como configurar uma associação e um ponto de extremidade; e demonstra como usar o `ClientVia` comportamento e `ListenUri` propriedade.  
   
  [Endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- Descreve como os pontos de extremidade são resolvidos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Descreve como os pontos de extremidade são resolvidos no WCF.  
   
  [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Descreve como as associações são usadas para especificar o transporte, a codificação e detalhes de protocolo necessárias para clientes e serviços para se comunicar entre si.  

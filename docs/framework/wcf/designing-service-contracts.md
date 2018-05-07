@@ -1,37 +1,23 @@
 ---
 title: Criando contratos de serviço
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve qual serviço os contratos são, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudarão a criar operações que atendem a requisitos do seu cenário.  
   
 ## <a name="creating-a-service-contract"></a>Criar um contrato de serviço  
- Serviços de expõem um número de operações. Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, define as operações de criação de um método e marcá-lo com o <xref:System.ServiceModel.OperationContractAttribute> atributo. Em seguida, para criar um contrato de serviço, agrupar suas operações, por declará-los dentro de uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute> de atributo ou pelo definindo-os em uma classe marcada com o mesmo atributo. (Para obter um exemplo básico, consulte [como: definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
+ Serviços de expõem um número de operações. Em aplicativos do Windows Communication Foundation (WCF), define as operações de criação de um método e marcá-lo com o <xref:System.ServiceModel.OperationContractAttribute> atributo. Em seguida, para criar um contrato de serviço, agrupar suas operações, por declará-los dentro de uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute> de atributo ou pelo definindo-os em uma classe marcada com o mesmo atributo. (Para obter um exemplo básico, consulte [como: definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).)  
   
  Todos os métodos que não têm um <xref:System.ServiceModel.OperationContractAttribute> atributo não são operações de serviço e não são expostos por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços.  
   
@@ -82,7 +68,7 @@ Este tópico descreve qual serviço os contratos são, como elas são definidas,
 >  O valor dos nomes de parâmetro na assinatura de operação são parte do contrato e diferenciam maiusculas de minúsculas. Se você quiser usar o mesmo nome de parâmetro localmente mas modificar o nome nos metadados publicados, consulte o <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Contratos de dados  
- Aplicativos orientados a serviços como [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos são criados para interoperar com o maior número possível de aplicativos de cliente no Microsoft e plataformas da Microsoft não. Para a mais ampla interoperabilidade possível, é recomendável que você marca seus tipos com o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos para criar um contrato de dados, que é a parte do contrato de serviço que descreve os dados que suas operações de serviço Exchange.  
+ Aplicativos orientados a serviços, como aplicativos do Windows Communication Foundation (WCF) são projetados para interagir com o maior número possível de aplicativos de cliente no Microsoft e plataformas da Microsoft não. Para a mais ampla interoperabilidade possível, é recomendável que você marca seus tipos com o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos para criar um contrato de dados, que é a parte do contrato de serviço que descreve os dados que suas operações de serviço Exchange.  
   
  Contratos de dados são contratos de estilo de aceitar: nenhum tipo ou membro de dados é serializado, a menos que você explicitamente aplique o atributo de contrato de dados. Contratos de dados não estão relacionados ao escopo de acesso do código gerenciado: membros de dados particular podem ser serializados e enviados em qualquer lugar para ser acessados publicamente. (Para obter um exemplo básico de um contrato de dados, consulte [como: criar um contrato de dados básico para uma classe ou estrutura](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] lida com a definição das mensagens SOAP subjacentes que habilitar a funcionalidade da operação, bem como a serialização dos seus tipos de dados dentro e fora do corpo das mensagens. Como seus tipos de dados são serializáveis, você não precisa pensar sobre a infraestrutura de troca de mensagem subjacente ao projetar suas operações.  
   

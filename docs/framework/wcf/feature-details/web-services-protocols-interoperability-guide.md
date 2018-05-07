@@ -1,34 +1,20 @@
 ---
 title: Guia de interoperabilidade de protocolos de serviços
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guia de interoperabilidade de protocolos de serviços
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa um número de protocolos de serviços da Web. Muitos desses protocolos incluem um número de pontos de extensibilidade da esquerda para a critério do implementador e opções. Este tópico fornece uma lista de Web services protocolos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa. Outros tópicos nesta seção fornecem detalhes de implementação para cada protocolo tem suportado.  
+Windows Communication Foundation (WCF) implementa um número de protocolos de serviços da Web. Muitos desses protocolos incluem um número de pontos de extensibilidade da esquerda para a critério do implementador e opções. Este tópico fornece uma lista de protocolos de serviços Web que WCF implementa. Outros tópicos nesta seção fornecem detalhes de implementação para cada protocolo tem suportado.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Os protocolos implementados pelo WCF de serviços Web  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece suporte para protocolos de infraestrutura do Web services (WS) por meio de canais e protocolos de aplicativo de serviços da Web por meio do recurso de contratos. Interoperabilidade de protocolos de aplicativos é realizada por meio da linguagem de descrição de esquema XML 1.0 (XSD) e Web Services Description Language (WSDL) 1.1.  
+ O WCF fornece suporte para protocolos de infraestrutura do Web services (WS) por meio de canais e protocolos de aplicativo por meio do recurso de contratos de serviços Web. Interoperabilidade de protocolos de aplicativos é realizada por meio da linguagem de descrição de esquema XML 1.0 (XSD) e Web Services Description Language (WSDL) 1.1.  
   
- Interoperabilidade de protocolos de infraestrutura é fornecida pelo WS-* especificações. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os canais oferecem suporte para um número de WS -\* protocolos de infraestrutura. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canais são configurados usando elementos de associação. As tabelas a seguir contêm a lista completa de WS -\* protocolos infraestrutura implementados por várias [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementos de associação.  
+ Interoperabilidade de protocolos de infraestrutura é fornecida pelo WS-* especificações. Canais WCF dão suporte a um número de WS -\* protocolos de infraestrutura. Canais WCF são configurados usando elementos de associação. As tabelas a seguir contêm a lista completa de WS -\* protocolos infraestrutura implementados por diversos elementos de associação do WCF.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> oferece suporte às especificações na tabela a seguir.  
   
@@ -45,7 +31,7 @@ ms.lasthandoff: 03/26/2018
 |XML|[Extensible Markup Language (XML) 1.0 (quarta edição)](http://go.microsoft.com/fwlink/?LinkId=15139)|  
 |SOAP 1.1|[Protocolo de acesso a objeto simples (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=96687)|  
 |SOAP 1.2 Core|[Versão do SOAP 1.2 parte 1: Estrutura da mensagem (segunda edição)](http://go.microsoft.com/fwlink/?LinkId=94664)|  
-|WS-Addressing 2004/08|[Endereçamento (WS-Addressing) de serviços Web](http://go.microsoft.com/fwlink/?LinkId=81239)|  
+|2004 do WS-Addressing/08|[Endereçamento (WS-Addressing) de serviços Web](http://go.microsoft.com/fwlink/?LinkId=81239)|  
 |Endereçamento 1.0 - Core de serviços Web do W3C|[1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=96688)|  
 |Endereçamento associação SOAP 1.0 - de serviços Web do W3C|[Associação de SOAP 1.0 - endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=96689)|  
 |Serviços Web de W3C endereçamento 1.0 - WSDL associação *|[Associação de WSDL 1.0 - endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkId=96690)|  
@@ -84,7 +70,7 @@ ms.lasthandoff: 03/26/2018
   
 |Documento de especificação /|Link|  
 |-----------------------------|----------|  
-|WS-Coordination|[Coordenação de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95324)|  
+|Coordenação WS|[Coordenação de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Transação atômica de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95323)|  
   
  O <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, e <xref:System.ServiceModel.Description.MetadataResolver> classes oferecem suporte para as seguintes especificações de metadados:  
@@ -101,11 +87,11 @@ ms.lasthandoff: 03/26/2018
   
 -   [WS-PolicyAttachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [O WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [Transferência de WS obter para recuperação de metadados](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- Além disso, os seguintes perfis de interoperabilidade são implementados em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Além disso, os seguintes perfis de interoperabilidade são implementados em WCF:  
   
 -   [Basic Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
   

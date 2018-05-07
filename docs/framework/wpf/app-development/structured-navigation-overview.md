@@ -1,31 +1,17 @@
 ---
-title: "Visão geral da navegação estruturada"
-ms.custom: 
+title: Visão geral da navegação estruturada
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>Visão geral da navegação estruturada
 Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], um <xref:System.Windows.Controls.Frame>, ou um <xref:System.Windows.Navigation.NavigationWindow> é composto de páginas que podem ser identificadas pelo pacote [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e navegado por hiperlinks. A estrutura de páginas e as maneiras pelas quais elas podem ser navegadas, como definidas pelos hiperlinks, é conhecida como uma topologia de navegação. Uma topologia como esta serve a uma variedade de tipos de aplicativos, especialmente aqueles que navegam através de documentos. Para tais aplicativos, o usuário pode navegar de uma página à outra sem que as páginas precisem saber qualquer coisa sobre a outra.  
@@ -160,7 +146,7 @@ Conteúdo que pode ser hospedado por um [!INCLUDE[TLA#tla_xbap](../../../../incl
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- Neste exemplo, se um usuário pressiona o botão Cancelar, um valor de `null` é retornado para a página chamadora. Se, em vez disso, o botão OK for pressionado, será retornado o valor de cadeia de caracteres fornecido pelo usuário. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>é um `protected``virtual` método que você chamar para retornar os dados para a página chamada. Os dados precisam ser empacotados em uma instância do genérica <xref:System.Windows.Navigation.ReturnEventArgs%601> tipo, cujo argumento de tipo Especifica o tipo de valor que <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> retorna. Dessa forma, quando você declara um <xref:System.Windows.Navigation.PageFunction%601> com um argumento de tipo particular, você está dizendo que um <xref:System.Windows.Navigation.PageFunction%601> retornará uma instância do tipo especificado pelo argumento de tipo. Neste exemplo, o argumento de tipo e, consequentemente, o valor de retorno é do tipo <xref:System.String>.  
+ Neste exemplo, se um usuário pressiona o botão Cancelar, um valor de `null` é retornado para a página chamadora. Se, em vez disso, o botão OK for pressionado, será retornado o valor de cadeia de caracteres fornecido pelo usuário. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> é um `protected``virtual` método que você chamar para retornar os dados para a página chamada. Os dados precisam ser empacotados em uma instância do genérica <xref:System.Windows.Navigation.ReturnEventArgs%601> tipo, cujo argumento de tipo Especifica o tipo de valor que <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> retorna. Dessa forma, quando você declara um <xref:System.Windows.Navigation.PageFunction%601> com um argumento de tipo particular, você está dizendo que um <xref:System.Windows.Navigation.PageFunction%601> retornará uma instância do tipo especificado pelo argumento de tipo. Neste exemplo, o argumento de tipo e, consequentemente, o valor de retorno é do tipo <xref:System.String>.  
   
  Quando <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> é chamado, as necessidades de página uma forma de receber o valor de retorno de chamada a <xref:System.Windows.Navigation.PageFunction%601>. Por esse motivo, <xref:System.Windows.Navigation.PageFunction%601> implementa o <xref:System.Windows.Navigation.PageFunction%601.Return> evento para páginas para tratar de chamada. Quando <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> é chamado, <xref:System.Windows.Navigation.PageFunction%601.Return> é gerado para a página de chamada pode registrar com <xref:System.Windows.Navigation.PageFunction%601.Return> para receber a notificação.  
   

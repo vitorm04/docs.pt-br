@@ -1,28 +1,19 @@
 ---
-title: "Implementando o Padrão Controle de Value de Automação de Interface de Usuário"
-ms.custom: 
+title: Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5f74b103092032e35cce47d893f9e3b6e9d7727b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b9c748ccc695ae67306c293c10248c4f3f22c043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 > [!NOTE]
@@ -45,9 +36,9 @@ Exemplo de um Item de lista editável
   
 -   Para recuperar o conteúdo textual de um controle de edição de várias linhas, o controle deve implementar <xref:System.Windows.Automation.Provider.ITextProvider>. No entanto, <xref:System.Windows.Automation.Provider.ITextProvider> não oferece suporte para a definição do valor de um controle.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider>não oferece suporte a recuperação de informações ou valores de subcadeia de caracteres de formatação. Implementar <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> não oferece suporte a recuperação de informações ou valores de subcadeia de caracteres de formatação. Implementar <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider>deve ser implementado por controles, como o **seletor de cores** controle de seleção do [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (ilustrado abaixo), que oferece suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "amarelo") e um equivalente interno[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]estrutura.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> deve ser implementado por controles, como o **seletor de cores** controle de seleção do [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (ilustrado abaixo), que oferece suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "amarelo") e um equivalente interno[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]estrutura.  
   
  ![Seletor de cores com amarelo realçado. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemplo de mapeamento de cadeia de caracteres de amostra de cor  

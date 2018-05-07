@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo4::InitializeCurrentThread"
-ms.custom: 
+title: Método ICorProfilerInfo4::InitializeCurrentThread
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4::InitializeCurrentThread
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f3c261068b38861dca2633a490e46d9f44371d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5a4a6bc7b1e79068b11b099352cec64dd09f301
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>Método ICorProfilerInfo4::InitializeCurrentThread
 Inicializa o thread atual antes de criador de perfil subsequente chamadas à API no mesmo thread, portanto esse deadlock pode ser evitado.  
@@ -48,7 +36,7 @@ HRESULT InitializeCurrentThread ();
  É recomendável que você chamar `InitializeCurrentThread` em qualquer thread que chamará um criador de perfil API enquanto houver suspenso threads. Esse método é normalmente usado por criadores de perfil de amostragem que criar seu próprio thread para chamar o [Icorprofilerinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método executar pilha orienta enquanto o thread de destino está suspenso. Chamando `InitializeCurrentThread` depois quando o criador de perfil primeiro cria o thread de amostragem, criadores de perfil podem garantir que a inicialização lenta por thread que o CLR executaria caso contrário, durante a primeira chamada para `DoStackSnapshot` agora pode ocorrer com segurança quando nenhum outro thread está suspenso.  
   
 > [!NOTE]
->  `InitializeCurrentThread`faz a inicialização com antecedência para concluir tarefas que usam bloqueios e podem fazer um deadlock. Chamar `InitializeCurrentThread` somente quando não há nenhum thread suspenso.  
+>  `InitializeCurrentThread` faz a inicialização com antecedência para concluir tarefas que usam bloqueios e podem fazer um deadlock. Chamar `InitializeCurrentThread` somente quando não há nenhum thread suspenso.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,7 +45,7 @@ HRESULT InitializeCurrentThread ();
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  

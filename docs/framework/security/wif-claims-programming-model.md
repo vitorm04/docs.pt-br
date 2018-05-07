@@ -1,26 +1,14 @@
 ---
-title: "Modelo de programação de declarações do WIF"
-ms.custom: 
+title: Modelo de programação de declarações do WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-claims-programming-model"></a>Modelo de programação de declarações do WIF
 Os desenvolvedores do ASP.NET e do WCF (Windows Communication Foundation) normalmente usam as interfaces de IIdentity e IPrincipal para trabalhar com as informações de identidade do usuário. No .NET 4.5, o WIF (Windows Identity Foundation) foi integrado, de modo que as declarações agora estejam sempre presentes para qualquer entidade de segurança, conforme ilustrado no seguinte diagrama:  
@@ -35,7 +23,7 @@ Os desenvolvedores do ASP.NET e do WCF (Windows Communication Foundation) normal
   
 -   <xref:System.Security.Claims.Claim.Value%2A> contém o valor da declaração e é representado como uma cadeia de caracteres. Por exemplo, o endereço de email pode ser representado como "someone@contoso.com".  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A> representa o tipo do valor de declaração e geralmente é um URI. Por exemplo, o tipo de cadeia de caracteres é representado como `http://www.w3.org/2001/XMLSchema#string`. O tipo de valor deve ser um QName de acordo com o esquema XML. O valor deve estar no formato `namespace#format` para permitir que o WIF produza um valor de QName válido. Se o namespace não for um namespace bem-definido, o XML gerado provavelmente não poderá ser validado pelo esquema, porque não haverá um arquivo XSD publicado para esse namespace. O tipo de valor padrão é `http://www.w3.org/2001/XMLSchema#string`. Consulte [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) para obter tipos de valores conhecidos que podem ser usados com segurança.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> representa o tipo do valor de declaração e geralmente é um URI. Por exemplo, o tipo de cadeia de caracteres é representado como `http://www.w3.org/2001/XMLSchema#string`. O tipo de valor deve ser um QName de acordo com o esquema XML. O valor deve estar no formato `namespace#format` para permitir que o WIF produza um valor de QName válido. Se o namespace não for um namespace bem-definido, o XML gerado provavelmente não poderá ser validado pelo esquema, porque não haverá um arquivo XSD publicado para esse namespace. O tipo de valor padrão é `http://www.w3.org/2001/XMLSchema#string`. Consulte [ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155) para tipos de valores conhecidos que você pode usar com segurança.  
   
 -   <xref:System.Security.Claims.Claim.Issuer%2A> é o identificador do STS (serviço de token de segurança) que emitiu a declaração. Isso pode ser representado como a URL do STS ou um nome que representa o STS, como `https://sts1.contoso.com/sts`.  
   

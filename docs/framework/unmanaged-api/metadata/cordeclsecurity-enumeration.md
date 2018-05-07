@@ -1,14 +1,6 @@
 ---
-title: "Enumeração CorDeclSecurity"
-ms.custom: 
+title: Enumeração CorDeclSecurity
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDeclSecurity
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30fd7ca2cf7962c6cadb43d4d8e3031b59292463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordeclsecurity-enumeration"></a>Enumeração CorDeclSecurity
 Especifica as ações de segurança que podem ser executadas usando a segurança declarativa.  
@@ -81,7 +69,7 @@ typedef enum CorDeclSecurity {
 |`dclLinktimeCheck`|O chamador imediato é necessário ter a permissão especificada para um determinado período de tempo.|  
 |`dclInheritanceCheck`|A classe derivada herdar de outra classe ou substituindo um método é necessária para ter a permissão especificada.|  
 |`dclRequestMinimum`|O chamador pode solicitar para as permissões mínimas necessárias para a execução de código. Esta ação só pode ser usada no escopo do assembly.|  
-|`dclRequestOptional`|O chamador pode solicitar permissões adicionais que são opcionais (não é necessário para executar). Essa solicitação implicitamente recusa todas as outras permissões não especificamente solicitadas. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclRequestOptional`|O chamador pode solicitar permissões adicionais que são opcionais (não é necessário para executar). Essa solicitação recusa implicitamente todas as outras permissões não solicitadas especificamente. Esta ação só pode ser usada no escopo do assembly.|  
 |`dclRequestRefuse`|Solicitação do chamador para permissões que pode ser usado de forma incorreta não será concedida. Esta ação só pode ser usada no escopo do assembly.|  
 |`dclPrejitGrant`|Reservado.|  
 |`dclPrejitDenied`|Reservado.|  
@@ -98,7 +86,7 @@ typedef enum CorDeclSecurity {
   
  **Cabeçalho:** Corhdr  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,13 +1,6 @@
 ---
 title: O modelo de threading da tinta
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>O modelo de threading da tinta
 Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escrever com uma caneta comum e papel.  Para fazer isso, a caneta eletrônica coleta dados de entrada a uma taxa muito maior do que um mouse e renderiza a tinta enquanto o usuário escreve.  O thread da interface do usuário do aplicativo não é suficiente para coletar dados da caneta e renderizar a tinta, porque ele pode ser bloqueado.  Para resolver isso, um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa dois threads adicionais quando um usuário escreve com tinta.  
@@ -74,7 +62,7 @@ Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escre
   
 1.  `StylusPlugin1` modifica os valores de x e y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>recebe os pontos de caneta modificados e renderiza-os no thread de processamento dinâmico.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recebe os pontos de caneta modificados e renderiza-os no thread de processamento dinâmico.  
   
 3.  `StylusPlugin2` recebe os pontos da caneta modificados e modifica mais os valores de x e y.  
   

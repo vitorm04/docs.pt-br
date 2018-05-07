@@ -1,13 +1,6 @@
 ---
 title: Fontes de dados com suporte do Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  
@@ -50,7 +38,7 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
  Matriz ou coleção  
  Para atuar como uma fonte de dados, uma lista deve implementar o <xref:System.Collections.IList> interface; um exemplo seria uma matriz que é uma instância do <xref:System.Array> classe. Para obter mais informações sobre matrizes, consulte [Como criar uma matriz de objetos (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- Em geral, você deve usar <xref:System.ComponentModel.BindingList%601> quando você cria a lista de objetos para associação de dados. <xref:System.ComponentModel.BindingList%601>é uma versão genérica do <xref:System.ComponentModel.IBindingList> interface. O <xref:System.ComponentModel.IBindingList> interface estende o <xref:System.Collections.IList> interface Adicionando propriedades, métodos e eventos necessários para a associação de dados bidirecional.  
+ Em geral, você deve usar <xref:System.ComponentModel.BindingList%601> quando você cria a lista de objetos para associação de dados. <xref:System.ComponentModel.BindingList%601> é uma versão genérica do <xref:System.ComponentModel.IBindingList> interface. O <xref:System.ComponentModel.IBindingList> interface estende o <xref:System.Collections.IList> interface Adicionando propriedades, métodos e eventos necessários para a associação de dados bidirecional.  
   
  <xref:System.Collections.IEnumerable>  
  Controles de formulários do Windows podem ser associados a fontes de dados que oferecem suporte apenas a <xref:System.Collections.IEnumerable> interface se eles são vinculados por meio de um <xref:System.Windows.Forms.BindingSource> componente.  

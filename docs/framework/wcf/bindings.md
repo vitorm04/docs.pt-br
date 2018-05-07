@@ -1,31 +1,17 @@
 ---
-title: "Associações do Windows Communication Foundation"
-ms.custom: 
+title: Associações do Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associações do Windows Communication Foundation
-Especificar associações como um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ponto de extremidade de serviço se comunica com outros pontos de extremidade. Basicamente, uma associação deve especificar o transporte (por exemplo, HTTP ou TCP) a ser usado. Você também pode definir outras características, como segurança e suportem, por meio de associações.  
+Associações de especificam como um ponto de extremidade de serviço do Windows Communication Foundation (WCF) se comunica com outros pontos de extremidade. Basicamente, uma associação deve especificar o transporte (por exemplo, HTTP ou TCP) a ser usado. Você também pode definir outras características, como segurança e suportem, por meio de associações.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de associações do WCF](../../../docs/framework/wcf/bindings-overview.md)  

@@ -1,22 +1,15 @@
 ---
 title: Cadeias de caracteres (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 41
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -125,12 +118,14 @@ string s = String.Empty;
 |-----------|-----------------|  
 |[Como modificar o conteúdo de uma cadeia de caracteres](../../how-to/modify-string-contents.md)|Ilustra as técnicas para transformar cadeias de caracteres e modificar o conteúdo delas.|  
 |[Como comparar cadeias de caracteres](../../how-to/compare-strings.md)|Mostra como executar comparações ordinais e específicas da cultura de cadeias de caracteres.|  
-|[Como analisar cadeias de caracteres usando String.Split ](../../how-to/parse-strings-using-split.md)|Contém um exemplo que ilustra como usar o método `String.Split` para analisar cadeias de caracteres.|  
+|[Como concatenar várias cadeias de caracteres](../../how-to/concatenate-multiple-strings.md)|Demonstra várias maneiras de unir diversas cadeias de caracteres em uma só.|
+|[Como analisar cadeias de caracteres usando String.Split ](../../how-to/parse-strings-using-split.md)|Contém exemplos de código que descrevem como usar o método `String.Split` para analisar cadeias de caracteres.|  
 |[Como pesquisar cadeias de caracteres](../../how-to/search-strings.md)|Explica como usar a pesquisa para texto específico ou padrões em cadeias de caracteres.|  
 |[Como determinar se uma cadeia de caracteres representa um valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  
-|[Como converter uma cadeia de caracteres em um DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Mostra como converter uma cadeia de caracteres como "24/01/2008" em um objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
+|[Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md)|Descreve o recurso de interpolação de cadeia de caracteres que fornece uma sintaxe prática para cadeias de caracteres de formato.|
 |[Operações básicas de cadeias de caracteres](../../../../docs/standard/base-types/basic-string-operations.md)|Fornece links para tópicos que usam os métodos <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> para executar operações básicas de cadeia de caracteres.|  
-|[Análise de cadeias de caracteres](../../../../docs/standard/base-types/parsing-strings.md)|Descreve como inserir caracteres ou espaços vazios em uma cadeia de caracteres.|  
+|[Análise de cadeias de caracteres](../../../standard/base-types/parsing-strings.md)|Descreve como converter representações de cadeia de caracteres de tipos base do .NET em instâncias de tipos correspondentes.|  
+|[Como analisar cadeias de caracteres de data e hora no .NET](../../../standard/base-types/parsing-datetime.md)|Mostra como converter uma cadeia de caracteres como "24/01/2008" em um objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Comparação de cadeias de caracteres](../../../../docs/standard/base-types/comparing.md)|Inclui informações sobre como comparar cadeias de caracteres e fornece exemplos em C# e Visual Basic.|  
 |[Uso da classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Descreve como criar e modificar objetos de cadeia de caracteres dinâmica usando a classe <xref:System.Text.StringBuilder>.|  
 |[LINQ e Cadeias de Caracteres](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Fornece informações sobre como executar várias operações de cadeia de caracteres usando consultas LINQ.|  

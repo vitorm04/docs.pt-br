@@ -1,14 +1,6 @@
 ---
-title: "Função CreateAssemblyEnum"
-ms.custom: 
+title: Função CreateAssemblyEnum
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateAssemblyEnum
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3719da442b2c2c589772a0bc19cec3efb4e6dace
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2098d5d9ce1c01f232cf2904c1fd3e990dfbe2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createassemblyenum-function"></a>Função CreateAssemblyEnum
 Obtém um ponteiro para um [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) instância que pode enumerar os objetos no assembly com especificado [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
@@ -56,7 +44,7 @@ HRESULT CreateAssemblyEnum (
  [out] Ponteiro para um local de memória que contém a solicitação `IAssemblyEnum` ponteiro.  
   
  `pUnkReserved`  
- [in] Reservado para extensibilidade futura. `pUnkReserved`deve ser uma referência nula.  
+ [in] Reservado para extensibilidade futura. `pUnkReserved` deve ser uma referência nula.  
   
  `pName`  
  [in] O `IAssemblyName` do assembly solicitado. Esse nome é usado para filtrar a enumeração. Ele pode ser nulo para enumerar todos os assemblies no cache de assembly global.  
@@ -65,7 +53,7 @@ HRESULT CreateAssemblyEnum (
  [in] Sinalizadores para modificar o comportamento do enumerador. Este parâmetro contém exatamente um bit do [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumeração.  
   
  `pvReserved`  
- [in] Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
+ [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
   
 ## <a name="remarks"></a>Comentários  
  O `dwFlags` parâmetro contém exatamente um bit do `ASM_CACHE_FLAGS` enumeração.  
@@ -77,7 +65,7 @@ HRESULT CreateAssemblyEnum (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  

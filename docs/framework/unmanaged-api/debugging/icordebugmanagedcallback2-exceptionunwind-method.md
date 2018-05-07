@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugManagedCallback2::ExceptionUnwind"
-ms.custom: 
+title: Método ICorDebugManagedCallback2::ExceptionUnwind
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugManagedCallback2.ExceptionUnwind
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64b85311f625e39dd25c48a60dde2fbaf66a957f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92c4f488dcdc5712dcd2632f489fb0cd65d05ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Método ICorDebugManagedCallback2::ExceptionUnwind
 Fornece uma notificação de status durante o processo de desenrolamento da exceção.  
@@ -63,7 +51,7 @@ HRESULT ExceptionUnwind (
  [in] Um valor de [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeração que especifica informações adicionais sobre a exceção.  
   
 ## <a name="remarks"></a>Comentários  
- `ExceptionUnwind`é chamado em vários pontos durante a fase de liberação do processo de tratamento de exceção. `ExceptionUnwind`pode ser chamado mais de uma vez durante a liberação de uma única exceção.  
+ `ExceptionUnwind` é chamado em vários pontos durante a fase de liberação do processo de tratamento de exceção. `ExceptionUnwind` pode ser chamado mais de uma vez durante a liberação de uma única exceção.  
   
  Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, o ponteiro de instrução será no quadro folha do thread no ponto de sequência antes (podem ser várias instruções antes) da instrução que levou à exceção.  
   
@@ -74,7 +62,7 @@ HRESULT ExceptionUnwind (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  

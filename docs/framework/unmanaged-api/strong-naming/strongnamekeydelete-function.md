@@ -1,14 +1,6 @@
 ---
-title: "Função StrongNameKeyDelete"
-ms.custom: 
+title: Função StrongNameKeyDelete
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyDelete
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d3acd8ae5f330e23642a679962a04ccb4f7e8ec6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a35ec4e3c3110616ac20cd31db134371838deda0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeydelete-function"></a>Função StrongNameKeyDelete
 Exclui o contêiner de chave especificado.  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyDelete (
  [in] O nome do contêiner de chave para excluir.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true`Após a conclusão bem-sucedida; Caso contrário, `false`.  
+ `true` Após a conclusão bem-sucedida; Caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  Use o [StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md) função importante um par de chaves pública/privada para um contêiner.  
@@ -66,7 +54,7 @@ BOOLEAN StrongNameKeyDelete (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  

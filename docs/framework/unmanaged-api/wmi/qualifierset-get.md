@@ -1,11 +1,7 @@
 ---
-title: "Função QualifierSet_Get (referência de API não gerenciada)"
-description: "A função QualifierSet_Get obtém um qualificador nomeado."
+title: Função QualifierSet_Get (referência de API não gerenciada)
+description: A função QualifierSet_Get obtém um qualificador nomeado.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93ba4e59dda4806931ba085f8c63b63a1d8bd797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetget-function"></a>Função QualifierSet_Get
 Obtém o qualificador nomeado especificado.  
@@ -86,7 +79,7 @@ Essa função encapsula uma chamada para o [IWbemQualifierSet::Get](https://msdn
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

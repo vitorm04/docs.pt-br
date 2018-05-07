@@ -1,28 +1,14 @@
 ---
-title: "Definindo tipos personalizados para uso com serviços XAML do .NET Framework"
-ms.custom: 
+title: Definindo tipos personalizados para uso com serviços XAML do .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definindo tipos personalizados para uso com serviços XAML do .NET Framework
 Quando você define tipos personalizados que são objetos de negócios ou tipos que não têm uma dependência em estruturas específicas, há algumas melhores práticas para XAML, você pode seguir. Se você seguir essas práticas recomendadas, serviços XAML do .NET Framework e seus leitores XAML e gravadores XAML podem descobrir as características XAML de seu tipo e dê a ele representação apropriada em um fluxo do nó XAML usando o sistema de tipo XAML. Este tópico descreve as práticas recomendadas para definições de tipo, definições de membro e atribuição de CLR de tipos ou membros.  
@@ -103,7 +89,7 @@ Quando você define tipos personalizados que são objetos de negócios ou tipos 
  Lembre-se de que o valor para este método é a entrada proveniente do uso de XAML, normalmente na forma de atributo. De forma de atributo deve haver suporte de conversor de valor para uma sintaxe de texto e atributo no `Get` *PropertyName* acessador.  
   
 ### <a name="attachable-member-stores"></a>Repositórios de membro anexável  
- Os métodos acessadores normalmente não são suficientes para fornecer um meio para inserir os valores de membro anexável em um gráfico de objeto, ou para recuperar valores fora do gráfico do objeto e serializá-los corretamente. Para fornecer essa funcionalidade, o `target` objetos nas assinaturas acessador anterior devem ser capazes de armazenar valores. O mecanismo de armazenamento deve ser consistente com o princípio de anexável que o membro anexável para destinos de onde o membro anexável não está na lista de membros. Serviços XAML do .NET framework fornece uma técnica de implementação para o membro anexável armazena através das APIs <xref:System.Xaml.IAttachedPropertyStore> e <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>é usado pelos autores XAML para descobrir a implementação de armazenamento e deve ser implementado no tipo que é o `target` de acessadores. Estático <xref:System.Xaml.AttachablePropertyServices> APIs são usados dentro do corpo de acessadores e consulte o membro anexável por seu <xref:System.Xaml.AttachableMemberIdentifier>.  
+ Os métodos acessadores normalmente não são suficientes para fornecer um meio para inserir os valores de membro anexável em um gráfico de objeto, ou para recuperar valores fora do gráfico do objeto e serializá-los corretamente. Para fornecer essa funcionalidade, o `target` objetos nas assinaturas acessador anterior devem ser capazes de armazenar valores. O mecanismo de armazenamento deve ser consistente com o princípio de anexável que o membro anexável para destinos de onde o membro anexável não está na lista de membros. Serviços XAML do .NET framework fornece uma técnica de implementação para o membro anexável armazena através das APIs <xref:System.Xaml.IAttachedPropertyStore> e <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> é usado pelos autores XAML para descobrir a implementação de armazenamento e deve ser implementado no tipo que é o `target` de acessadores. Estático <xref:System.Xaml.AttachablePropertyServices> APIs são usados dentro do corpo de acessadores e consulte o membro anexável por seu <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>Atributos CLR relacionados a XAML  
  Atribuição corretamente os tipos, membros e assemblies é importante na ordem para o relatório de informações do sistema de tipo XAML para serviços XAML do .NET Framework. Isso é relevante se você pretende seus tipos para uso com os sistemas XAML diretamente com base em leitores de XAML de serviços XAML do .NET Framework e gravadores XAML, ou se você define ou usa uma estrutura utilizando XAML com base nesses leitores XAML e gravadores XAML.  

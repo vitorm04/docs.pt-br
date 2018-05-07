@@ -1,27 +1,15 @@
 ---
-title: "Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço"
-ms.custom: 
+title: Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço
-Este tópico é o terceiro de três tópicos que descreve como implementar um proxy de descoberta. No tópico anterior, [como: implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), você já implementou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que é registrado com o proxy de descoberta. Neste tópico, você cria um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente que usa o proxy de descoberta para localizar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+Este tópico é o terceiro de três tópicos que descreve como implementar um proxy de descoberta. No tópico anterior, [como: implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementado um serviço WCF que se registra com o proxy de descoberta. Neste tópico, você cria um cliente WCF que usa o proxy de descoberta para localizar o serviço WCF.  
   
 ### <a name="implement-the-client"></a>Implementar o cliente  
   

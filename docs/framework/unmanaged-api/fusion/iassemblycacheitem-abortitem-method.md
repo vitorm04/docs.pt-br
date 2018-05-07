@@ -1,14 +1,6 @@
 ---
-title: "Método IAssemblyCacheItem::AbortItem"
-ms.custom: 
+title: Método IAssemblyCacheItem::AbortItem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyCacheItem.AbortItem
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: be9f47f1-f532-4603-a192-a73cb7a0c4b2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9c369c77706cba45ac92ddea24150628d7154d68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b7b0d5ec61ddf81c39e2d58dc972db119b06417
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>Método IAssemblyCacheItem::AbortItem
 Permite que o assembly no cache de assembly global executar operações de limpeza antes que ele seja liberado.  
@@ -49,7 +37,7 @@ HRESULT AbortItem ();
   
  **Cabeçalho:** Fusion.h  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

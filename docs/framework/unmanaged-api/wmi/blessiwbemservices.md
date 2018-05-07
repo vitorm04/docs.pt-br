@@ -1,11 +1,7 @@
 ---
-title: "Função BlessIWbemServices (referência de API não gerenciada)"
-description: "A função BlessIWbemServices indica se as credenciais do usuário permitirem o acesso a uma classe IWbemServices."
+title: Função BlessIWbemServices (referência de API não gerenciada)
+description: A função BlessIWbemServices indica se as credenciais do usuário permitirem o acesso a uma classe IWbemServices.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservices-function"></a>Função BlessIWbemServices
 Indica se as credenciais do usuário permitirem o acesso a especificado [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) classe.   
@@ -58,11 +51,11 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in] A senha associada com `strUser`.
 
-`strAuthority`[in] O nome de domínio do usuário. Consulte o [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+`strAuthority` [in] O nome de domínio do usuário. Consulte o [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
-`impLevel`[in] O nível de representação.
+`impLevel` [in] O nível de representação.
 
-`authnLevel`[in] O nível de autorização.
+`authnLevel` [in] O nível de autorização.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -81,7 +74,7 @@ Os seguintes valores retornados por essa função são definidos no *Winerror. H
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

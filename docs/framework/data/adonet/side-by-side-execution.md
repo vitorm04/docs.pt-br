@@ -1,24 +1,12 @@
 ---
-title: "Execução lado a lado no ADO.NET"
-ms.custom: 
+title: Execução lado a lado no ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Execução lado a lado no ADO.NET
 Execução lado a lado no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é a capacidade de executar um aplicativo em um computador que tem várias versões do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] instalado exclusivamente usando a versão para a qual o aplicativo foi compilado. Para obter informações detalhadas sobre a configuração de execução lado a lado, consulte [execução lado a lado](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -26,7 +14,7 @@ Execução lado a lado no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshor
  Um aplicativo compilado com uma versão do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pode ser executado em uma versão diferente de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. No entanto, recomendamos que você compila uma versão do aplicativo para cada versão instalada do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]e executá-los separadamente. Em qualquer cenário, você deve estar ciente das alterações no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] entre as versões que podem afetar a compatibilidade ou compatibilidade com versões anteriores do seu aplicativo.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilidade e compatibilidade com versões anteriores  
- Compatibilidade com versões posteriores significa que um aplicativo pode ser compilado com uma versão anterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], mas ainda será executado com êxito em uma versão posterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]o código escrito para o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.1 é compatível com versões posteriores.  
+ Compatibilidade com versões posteriores significa que um aplicativo pode ser compilado com uma versão anterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], mas ainda será executado com êxito em uma versão posterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] o código escrito para o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versão 1.1 é compatível com versões posteriores.  
   
  Compatibilidade com versões anteriores significa que um aplicativo é compilado para uma versão mais recente do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], mas continua a ser executado em versões anteriores do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sem qualquer perda de funcionalidade. Obviamente, isso não será o caso dos recursos introduzidos em uma nova versão do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   

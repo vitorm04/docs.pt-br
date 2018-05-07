@@ -1,29 +1,15 @@
 ---
 title: Ferramentas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>Ferramentas
-Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ferramentas.  
+Este tópico lista todas as exceções geradas pelas ferramentas do Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Lista de exceções  
   
@@ -64,7 +50,7 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |ErrCannotCreateDirectory|Não é possível criar o diretório especificado.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Não é possível carregar todos os tipos no assembly especificado.|  
 |ErrUnknownSwitch|A chave especificada é uma opção reconhecida.|  
-|Logo|O logotipo da ferramenta é "Ferramenta de metadados do Microsoft® serviço modelo" com a versão.|  
+|logotipo|O logotipo da ferramenta é "Ferramenta de metadados do Microsoft® serviço modelo" com a versão.|  
 |NoCodeWasGenerated|Nenhum código foi gerado.<br /><br /> Se você tentar gerar um cliente, isso pode ocorrer porque os documentos de metadados não continha nenhum contrato válido ou os serviços<br /><br /> ou, porque todos os contratos/serviços foram descobertos existam em assemblies de referência. Verifique se que todos os documentos de metadados é passado para a ferramenta.|  
 |WrnUnableToLoadContractForSGen|Ocorreu um erro ao carregar um tipo de contrato. Não é possível gerar o tipo de XmlSerializer para este contrato. O tipo e os detalhes são especificados.|  
 |WrnOptionConflictsWithInput|A opção especificada não pode ser usada com vários assemblies de entrada. A opção especificada é ignorada.|  
@@ -81,14 +67,14 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |HelpCodeGenerationCategory|-= GERAÇÃO DE CÓDIGO =-|  
 |RetreivingMetadataWithMexAndDisco|Tentativa de fazer o download de metadados especificado usando o WS-Metadata Exchange ou DISCO.|  
 |ErrGeneralSchemaValidation|Ocorreu um erro ao verificar se os esquemas XML que foram gerados durante a exportação.|  
-|ParametersDirectory|\<directory>|  
+|ParametersDirectory|\<diretório >|  
 |ErrCannotLoadSpecifiedType|Nenhum tipo pode ser carregado para o valor especificado foi passado para a opção especificada. Certifique-se de que o assembly que pertence este tipo é especificado usando a opção especificada.|  
 |ErrOptionModeConflict|A opção especificada não pode ser usada com a opção especificada porque eles implicam tipos de saída diferente.|  
 |ErrIsNotAnAssembly|Não é possível carregar especificado como um assembly. Verifique se esse arquivo é um assembly .NET.|  
 |ErrInputConflictsWithMode|A entrada de leitura especificado é inconsistente com outras opções.|  
 |ErrDuplicateValuePassedToTypeArg|O valor especificado foi passado para a opção especificada várias vezes. Cada tipo pode ser especificado somente uma vez.|  
 |ErrInputEPRFileParseError|Não é possível ler a referência de ponto de extremidade especificado. Verifique se o XML está bem formado e válido.|  
-|ErrCouldNotCreateCodeProvider|Um provedor de código não pode ser criado para o valor especificado, que foi passado para o argumento /{1}. Verifique se o provedor de código está instalado e configurado corretamente.|  
+|ErrCouldNotCreateCodeProvider|Um provedor de código não pode ser criado para o valor especificado, que foi passado para o /{1} argumento. Verifique se o provedor de código está instalado e configurado corretamente.|  
 |ErrPathTooLongDirOnly|O caminho especificado resultante é muito longo. Examine o argumento especificado.|  
 |HelpDataContractSerializer|Gere tipos de dados que usam o serializador DataContract para serialização e desserialização.|  
 |ErrUnableToExportEndpoint|Ocorreu um erro ao exportar o nome do ponto de extremidade especificado no namespace especificado no tipo de serviço especificado encontrado no arquivo de configuração carregado para o assembly.|  
@@ -127,7 +113,7 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |HelpCommonOptionsCategory|-= OPÇÕES COMUNS =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Nenhum arquivo de entrada válido especificado. Especifique documentos de metadados ou arquivos de assembly.|  
-|ParametersLanguage|\<language>|  
+|ParametersLanguage|\<idioma >|  
 |ErrUnableToLoadMetadataDocument|Ocorreu um erro ao ler os metadados de um dos documentos carregados. O identificador do documento é especificado.|  
 |ErrConflictingInputs|Os conflitos de argumento de entrada especificado com especificado porque eles implicam diferentes modos de operação da ferramenta.|  
 |WrnUnableToLoadContractForValidation|Ocorreu um erro ao carregar um tipo de contrato. O tipo e os detalhes são especificados.|  

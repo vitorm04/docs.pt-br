@@ -1,14 +1,6 @@
 ---
-title: "Método ICLRDebuggingLibraryProvider::ProvideLibrary"
-ms.custom: 
+title: Método ICLRDebuggingLibraryProvider::ProvideLibrary
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebuggingLibraryProvider.ProvideLibrary Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf6860a616312504e3d23177734cb532405bd714
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Método ICLRDebuggingLibraryProvider::ProvideLibrary
 Obtém um provedor de biblioteca de interface de retorno de chamada que permite common language runtime (CLR) específicos da versão depuração bibliotecas de ser localizada e carregada na demanda.  
@@ -71,7 +59,7 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- `ProvideLibrary`permite que o depurador fornecer os módulos que são necessários para a depuração de arquivos específicos do CLR como mscordbi.dll e qual mscordacwks.dll. Os identificadores de módulo precisam permanecer válida até uma chamada para o [: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) método indica que eles podem ser liberados, no ponto em que é de responsabilidade do chamador para liberar os identificadores.  
+ `ProvideLibrary` permite que o depurador fornecer os módulos que são necessários para a depuração de arquivos específicos do CLR como mscordbi.dll e qual mscordacwks.dll. Os identificadores de módulo precisam permanecer válida até uma chamada para o [: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) método indica que eles podem ser liberados, no ponto em que é de responsabilidade do chamador para liberar os identificadores.  
   
  O depurador pode usar qualquer meio disponível para localizar ou adquirir o módulo de depuração.  
   
@@ -87,7 +75,7 @@ HRESULT ProvideLibrary(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

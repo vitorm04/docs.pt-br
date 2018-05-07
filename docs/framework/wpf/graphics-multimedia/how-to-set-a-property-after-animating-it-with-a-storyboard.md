@@ -1,31 +1,17 @@
 ---
-title: "Como definir uma propriedade depois de animá-la com um storyboard"
-ms.custom: 
+title: Como definir uma propriedade depois de animá-la com um storyboard
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Como definir uma propriedade depois de animá-la com um storyboard
 Em alguns casos, pode parecer que não é possível alterar o valor de uma propriedade depois dela ter sido animada.  
@@ -43,7 +29,7 @@ Em alguns casos, pode parecer que não é possível alterar o valor de uma propr
   
  O código anterior parece não fazer nada: o pincel permanece amarelo, que é o valor fornecido pelo <xref:System.Windows.Media.Animation.ColorAnimation> que o pincel de animação. O valor da propriedade subjacente (o valor de base) é efetivamente alterado para azul. No entanto, o valor efetivo atual, ou, permanece amarelo porque o <xref:System.Windows.Media.Animation.ColorAnimation> ainda está substituindo o valor base. Se desejar que o valor de base se torne o valor efetivo novamente, você deverá impedir que a animação influencie a propriedade. Há três maneiras de fazer isso com animações do storyboard:  
   
--   Definir a animação <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriedade<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   Definir a animação <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriedade <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   Remova todo o storyboard.  
   

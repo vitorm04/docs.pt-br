@@ -1,13 +1,6 @@
 ---
 title: Usar a propriedade AutomationID
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-the-automationid-property"></a>Usar a propriedade AutomationID
 > [!NOTE]
@@ -33,16 +24,16 @@ ms.lasthandoff: 01/19/2018
   
  Este tópico contém cenários e código de exemplo que mostram como e quando o <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> pode ser usado para localizar um elemento dentro do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>identifica exclusivamente um elemento de automação de interface do usuário de seus irmãos. Para obter mais informações sobre identificadores de propriedade relacionados à identificação de controles, consulte [visão geral de propriedades de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifica exclusivamente um elemento de automação de interface do usuário de seus irmãos. Para obter mais informações sobre identificadores de propriedade relacionados à identificação de controles, consulte [visão geral de propriedades de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>não garante uma identidade exclusiva em toda a árvore; Normalmente, ele deve contêiner e informações de escopo para ser útil. Por exemplo, um aplicativo pode conter um controle de menu com vários itens de menu de nível superior que, por sua vez, têm vários itens de menu filho. Esses itens de menu secundários podem ser identificados por um esquema genérico, como "Item1", "Item 2" e assim por diante, permitindo identificadores duplicados para os filhos entre itens de menu de nível superior.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> não garante uma identidade exclusiva em toda a árvore; Normalmente, ele deve contêiner e informações de escopo para ser útil. Por exemplo, um aplicativo pode conter um controle de menu com vários itens de menu de nível superior que, por sua vez, têm vários itens de menu filho. Esses itens de menu secundários podem ser identificados por um esquema genérico, como "Item1", "Item 2" e assim por diante, permitindo identificadores duplicados para os filhos entre itens de menu de nível superior.  
   
 ## <a name="scenarios"></a>Cenários  
  Foram identificados três cenários de aplicativo de cliente automação de interface do usuário primários que exigem o uso de <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> para obter resultados precisos e consistentes ao procurar elementos.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>há suporte para todos os elementos de automação de interface do usuário na exibição de controle, exceto windows de aplicativos de nível superior, os elementos de automação de interface do usuário derivados [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controles que não têm uma ID ou X:UID e elementos de automação de interface do usuário derivados [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] controles que não têm uma ID de controle.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> há suporte para todos os elementos de automação de interface do usuário na exibição de controle, exceto windows de aplicativos de nível superior, os elementos de automação de interface do usuário derivados [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controles que não têm uma ID ou X:UID e elementos de automação de interface do usuário derivados [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] controla que não tem uma ID de controle.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Use um AutomationID exclusivo e identificável para localizar um elemento específico na árvore de automação de interface do usuário  
   

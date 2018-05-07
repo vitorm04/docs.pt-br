@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugController::Continue"
-ms.custom: 
+title: Método ICorDebugController::Continue
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugController.Continue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6a96145801aa8ef6482e30e9c00b763d2501f36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcontrollercontinue-method"></a>Método ICorDebugController::Continue
 Retoma a execução de threads gerenciados após uma chamada para [método Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
@@ -51,7 +39,7 @@ HRESULT Continue (
  [in] Definido como `true` se continuar a partir de um evento fora de banda; caso contrário, defina como `false`.  
   
 ## <a name="remarks"></a>Comentários  
- `Continue`continua o processo após uma chamada para o `ICorDebugController::Stop` método.  
+ `Continue` continua o processo após uma chamada para o `ICorDebugController::Stop` método.  
   
  Ao fazer a depuração de modo misto, não chame `Continue` em Win32 do thread eventos, a menos que você está continuando a partir de um evento fora de banda.  
   
@@ -66,7 +54,7 @@ HRESULT Continue (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  

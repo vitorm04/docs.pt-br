@@ -1,30 +1,18 @@
 ---
-title: "Como configurar um serviço do Windows Communication Foundation para utilizar o compartilhamento de porta"
-ms.custom: 
+title: Como configurar um serviço do Windows Communication Foundation para utilizar o compartilhamento de porta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0086e145ca2aab325764467742a4ff2e6e3c0b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Como configurar um serviço do Windows Communication Foundation para utilizar o compartilhamento de porta
-A maneira mais fácil de usar a porta net.tcp:// compartilhamento em sua [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativo é expor um serviço usando o <xref:System.ServiceModel.NetTcpBinding>.  
+É a maneira mais fácil de usar em seu aplicativo do Windows Communication Foundation (WCF) de compartilhamento de porta net.tcp:// para expor um serviço usando o <xref:System.ServiceModel.NetTcpBinding>.  
   
  Essa associação fornece um <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> propriedade que controla se o compartilhamento de porta net.tcp:// está habilitado para o serviço que está sendo configurado com essa associação.  
   

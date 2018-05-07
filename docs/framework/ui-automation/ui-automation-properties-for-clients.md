@@ -1,13 +1,6 @@
 ---
-title: "Automação de Propriedades de Interface de Usuário para Clientes."
-ms.custom: 
+title: Automação de Propriedades de Interface de Usuário para Clientes.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: fdd748da4bb414726e2eae88dcab59cf60259a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-properties-for-clients"></a>Automação de Propriedades de Interface de Usuário para Clientes.
 > [!NOTE]
@@ -36,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  Padrões de controle também têm propriedades. As propriedades dos padrões de controle são específicas para o padrão. Por exemplo, <xref:System.Windows.Automation.ScrollPattern> tem propriedades que permitem que um aplicativo cliente para descobrir se uma janela é rolável vertical ou horizontalmente, e quais são os tamanhos de exibição atual e as posições de rolagem. Padrões de controle expõem todas as suas propriedades por meio de uma estrutura; Por exemplo, <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]propriedades são somente leitura. Para definir propriedades de um controle, você deve usar os métodos do padrão de controle apropriado. Por exemplo, use <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> para alterar os valores de posição de uma janela rolável.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades são somente leitura. Para definir propriedades de um controle, você deve usar os métodos do padrão de controle apropriado. Por exemplo, use <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> para alterar os valores de posição de uma janela rolável.  
   
  Para melhorar o desempenho, os valores de propriedade de controles e padrões de controle pode ser armazenados em cache quando <xref:System.Windows.Automation.AutomationElement> objetos são recuperados. Para obter mais informações, consulte [cache em clientes de automação de interface do usuário](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   

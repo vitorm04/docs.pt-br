@@ -1,14 +1,6 @@
 ---
 title: Declarações e tokens de SAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>Declarações e tokens de SAML
-Security asserções Markup Language (SAML) *tokens* são representações de XML de declarações. Por padrão, os tokens SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa em cenários de segurança federada é *tokens emitidos*.  
+Security asserções Markup Language (SAML) *tokens* são representações de XML de declarações. Por padrão, os tokens SAML que usa o Windows Communication Foundation (WCF) em cenários de segurança federada são *tokens emitidos*.  
   
  Tokens SAML executar instruções que são conjuntos de declarações feitas por uma entidade sobre outra entidade. Por exemplo, em cenários de segurança federada, as instruções são feitas por um serviço de token de segurança sobre um usuário no sistema. O serviço de token de segurança assina o token SAML para indicar a veracidade das instruções contidas no token. Além disso, o token SAML é associado ao material de chave de criptografia que o usuário do token SAML prova conhecimento de. Essa prova de acordo com a terceira parte confiável que o token SAML, na verdade, é emitido para o usuário. Por exemplo, em um cenário típico:  
   
@@ -44,7 +30,7 @@ Security asserções Markup Language (SAML) *tokens* são representações de XM
 4.  A assinatura sobre o token SAML informa a terceira parte confiável que o serviço de token de segurança emitido o token. A assinatura da mensagem criada com a chave de prova informa a terceira parte confiável que o token foi emitido para o cliente.  
   
 ## <a name="from-claims-to-samlattributes"></a>De declarações para SamlAttributes  
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], declarações nos tokens SAML são modeladas como <xref:System.IdentityModel.Tokens.SamlAttribute> objetos, que podem ser preenchidos diretamente do <xref:System.IdentityModel.Claims.Claim> objetos, fornecidos o <xref:System.IdentityModel.Claims.Claim> objeto tem um <xref:System.IdentityModel.Claims.Claim.Right%2A> propriedade de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> e o <xref:System.IdentityModel.Claims.Claim.Resource%2A> a propriedade é do tipo <xref:System.String>. Por exemplo:  
+ No WCF, declarações nos tokens SAML são modeladas como <xref:System.IdentityModel.Tokens.SamlAttribute> objetos, que podem ser preenchidos diretamente do <xref:System.IdentityModel.Claims.Claim> objetos, fornecidos o <xref:System.IdentityModel.Claims.Claim> objeto tem um <xref:System.IdentityModel.Claims.Claim.Right%2A> propriedade <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> e o <xref:System.IdentityModel.Claims.Claim.Resource%2A> é de propriedade do tipo <xref:System.String>. Por exemplo:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

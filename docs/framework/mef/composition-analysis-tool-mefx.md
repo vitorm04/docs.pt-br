@@ -1,28 +1,18 @@
 ---
-title: "Ferramenta de Análise de Composição (Mefx)"
-ms.custom: 
+title: Ferramenta de Análise de Composição (Mefx)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6e5ab22ff2fe382fa2a266e3180cb34f970cc48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composition-analysis-tool-mefx"></a>Ferramenta de Análise de Composição (Mefx)
 A ferramenta de análise de composição (Mefx) é um aplicativo de linha de comando que analisa biblioteca (. dll) e arquivos de aplicativo (.exe) contendo partes Managed Extensibility Framework (MEF). A principal finalidade de Mefx é fornecer aos desenvolvedores uma maneira de diagnosticar falhas de composição em seus aplicativos de MEF sem a necessidade de adicionar o código de rastreamento incômodo ao próprio aplicativo. Ele também pode ser útil para ajudar a entender as partes de uma biblioteca fornecidos por terceiros. Este tópico descreve como usar Mefx e fornece uma referência para a sintaxe.  
@@ -83,7 +73,7 @@ MyAddin.AddIn
 ## <a name="finding-rejected-parts"></a>Localizando rejeitadas partes  
  Depois de ter carregado as partes disponíveis, Mefx usa o mecanismo de composição de MEF para compor-los. Partes que não podem ser compostas com êxito são chamados de *rejeitadas*. Para listar todas as partes rejeitadas, use o `/rejected` ação.  
   
- Você pode usar o `/verbose` opção com o `/rejected` ação Imprimir informações detalhadas sobre rejeitada partes. No exemplo a seguir, o `ClassLibrary1` DLL contém o `AddIn` parte, que importa o `MemberPart` e `ChainOne` partes. `ChainOne`importa `ChainTwo`, mas `ChainTwo` não existe. Isso significa que `ChainOne` for rejeitada, que faz com que `AddIn` sejam rejeitadas.  
+ Você pode usar o `/verbose` opção com o `/rejected` ação Imprimir informações detalhadas sobre rejeitada partes. No exemplo a seguir, o `ClassLibrary1` DLL contém o `AddIn` parte, que importa o `MemberPart` e `ChainOne` partes. `ChainOne` importa `ChainTwo`, mas `ChainTwo` não existe. Isso significa que `ChainOne` for rejeitada, que faz com que `AddIn` sejam rejeitadas.  
   
 ```  
 mefx /file:ClassLibrary1.dll /rejected /verbose  

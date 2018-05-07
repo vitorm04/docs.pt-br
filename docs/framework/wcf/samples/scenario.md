@@ -1,27 +1,15 @@
 ---
 title: Scenario2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f241bf6d4fb2d5f463b85cadf093ab308015c6a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scenario"></a>Cenário
-Esta seção contém exemplos que demonstram [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cenários.  
+Esta seção contém exemplos que demonstram cenários do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Cenários de associação de dados](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
@@ -40,4 +28,4 @@ Esta seção contém exemplos que demonstram [!INCLUDE[indigo1](../../../../incl
  Demonstra como fluxo de informações de identidade do chamador, de um serviço para outro usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança.  
   
  [Padrões de design: lista de publicação-assinatura baseada](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
- Demonstra o padrão com base em lista de publicação-assinatura implementado como um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programa.
+ Demonstra o padrão com base em lista de publicação-assinatura implementado como um programa do Windows Communication Foundation (WCF).

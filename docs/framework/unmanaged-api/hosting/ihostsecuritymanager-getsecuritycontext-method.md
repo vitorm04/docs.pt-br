@@ -1,14 +1,6 @@
 ---
-title: "Método IHostSecurityManager::GetSecurityContext"
-ms.custom: 
+title: Método IHostSecurityManager::GetSecurityContext
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.GetSecurityContext
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 958970d6-f6a2-4b84-b32a-f555cbaf8f61
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a5fcdf0d0244694a52cf1964d0e7c4be692df2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8b6c110a4e7754a6bcca326b659599ffa2caedf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>Método IHostSecurityManager::GetSecurityContext
 Obtém a solicitação [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) do host.  
@@ -58,7 +46,7 @@ HRESULT GetSecurityContext (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetSecurityContext`retornou com êxito.|  
+|S_OK|`GetSecurityContext` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -66,7 +54,7 @@ HRESULT GetSecurityContext (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Um host pode controlar o acesso de código de todos os tokens de thread pelo código do usuário e o CLR. Ele também pode assegurar que a segurança completa informações de contexto são passadas pela operações assíncronas ou pontos de código com acesso restrito de código. `IHostSecurityContext`encapsula essas informações de contexto de segurança, que é opacas para o CLR. O CLR captura essas informações e movê-lo em expedição de item de trabalho de pool de thread, a execução do finalizador e a construção de módulo e classe.  
+ Um host pode controlar o acesso de código de todos os tokens de thread pelo código do usuário e o CLR. Ele também pode assegurar que a segurança completa informações de contexto são passadas pela operações assíncronas ou pontos de código com acesso restrito de código. `IHostSecurityContext` encapsula essas informações de contexto de segurança, que é opacas para o CLR. O CLR captura essas informações e movê-lo em expedição de item de trabalho de pool de thread, a execução do finalizador e a construção de módulo e classe.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ HRESULT GetSecurityContext (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumeração EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)  

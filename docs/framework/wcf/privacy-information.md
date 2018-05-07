@@ -1,34 +1,22 @@
 ---
-title: "Informações de privacidade do Windows Communication Foundation"
-ms.custom: 
+title: Informações de privacidade do Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
-A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você cria um aplicativo usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versão 3.0, seu aplicativo pode afetar a privacidade de seus usuários finais. Por exemplo, seu aplicativo explicitamente pode coletar informações de contato do usuário, ou pode solicitar ou enviar informações pela Internet para seu site da Web. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia pode ter seu próprio comportamento que pode afetar a privacidade. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]não enviar informações à Microsoft do seu aplicativo, a menos que você ou o usuário final optar por enviá-lo para nós.  
+A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você compila um aplicativo usando o Windows Communication Foundation (WCF), versão 3.0, seu aplicativo pode afetar a privacidade de seus usuários finais. Por exemplo, seu aplicativo explicitamente pode coletar informações de contato do usuário, ou pode solicitar ou enviar informações pela Internet para seu site da Web. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia pode ter seu próprio comportamento que pode afetar a privacidade. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não enviar informações à Microsoft do seu aplicativo, a menos que você ou o usuário final optar por enviá-lo para nós.  
   
 ## <a name="wcf-in-brief"></a>WCF no resumo  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]é uma estrutura de mensagens distribuída usando o Microsoft .NET Framework que permite aos desenvolvedores criar aplicativos distribuídos. Mensagens trocadas entre os dois aplicativos contêm informações de cabeçalho e corpo.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é uma estrutura de mensagens distribuída usando o Microsoft .NET Framework que permite aos desenvolvedores criar aplicativos distribuídos. Mensagens trocadas entre os dois aplicativos contêm informações de cabeçalho e corpo.  
   
  Cabeçalhos podem conter o roteamento de mensagens, as informações de segurança, transações e muito mais dependendo dos serviços usados pelo aplicativo. Normalmente, as mensagens são criptografadas por padrão. A única exceção é quando usando o `BasicHttpBinding`, que foi projetado para uso com os serviços Web herdados, não é seguro. Como criador do aplicativo, você é responsável pelo design final. Mensagens no corpo de SOAP contêm dados específicos do aplicativo; No entanto, esses dados, como definido pelo aplicativo informações pessoais podem ser protegidos usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] recursos de criptografia ou confidencialidade. As seções a seguir descrevem os recursos que afetam a privacidade.  
   
@@ -45,7 +33,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  Hospedagem não expõem quaisquer informações específicas da rede e não mantém dados no computador.  
   
 ## <a name="message-security"></a>Segurança de mensagem  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]segurança fornece os recursos de segurança para aplicativos de mensagens. As funções de segurança fornecidas incluem autenticação e autorização.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] segurança fornece os recursos de segurança para aplicativos de mensagens. As funções de segurança fornecidas incluem autenticação e autorização.  
   
  Autenticação é realizada pela transmissão de credenciais entre clientes e serviços. A autenticação pode ser por meio da segurança de nível de transporte ou por meio de SOAP mensagem de nível de segurança, da seguinte maneira:  
   
@@ -58,7 +46,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 |Dados|Armazenamento|  
 |----------|-------------|  
 |Credenciais de apresentação, como nome de usuário, certificados x. 509, tokens Kerberos e as referências às credenciais.|Mecanismos de gerenciamento, como o repositório de certificados do Windows de credencial do Windows padrão.|  
-|Informações de associação de usuário, como nomes de usuário e senhas.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]provedores de associação.|  
+|Informações de associação de usuário, como nomes de usuário e senhas.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] provedores de associação.|  
 |Informações de identidade sobre o serviço usado para autenticar o serviço para clientes.|Endereço de ponto de extremidade do serviço.|  
 |Informações do chamador.|Logs de auditoria.|  
   
@@ -84,7 +72,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  Nenhuma informação pessoal é mantida no computador do usuário final.  
   
 ## <a name="queued-channels"></a>Canais em fila  
- Filas de armazenam mensagens em um aplicativo de envio em nome de um aplicativo de recebimento e encaminhá-los posteriormente essas mensagens para o aplicativo receptor. Eles ajudam a garantir a transferência de mensagens de envio de aplicativos para aplicativos de recebimento quando, por exemplo, o aplicativo de recebimento é transitório. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]fornece suporte para enfileiramento de mensagens usando o Microsoft Message Queuing (MSMQ) como um transporte.  
+ Filas de armazenam mensagens em um aplicativo de envio em nome de um aplicativo de recebimento e encaminhá-los posteriormente essas mensagens para o aplicativo receptor. Eles ajudam a garantir a transferência de mensagens de envio de aplicativos para aplicativos de recebimento quando, por exemplo, o aplicativo de recebimento é transitório. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece suporte para enfileiramento de mensagens usando o Microsoft Message Queuing (MSMQ) como um transporte.  
   
  O recurso de canais na fila não adiciona cabeçalhos para uma mensagem. Em vez disso, ele cria uma mensagem de enfileiramento de mensagens com o conjunto de propriedades de mensagem de enfileiramento de mensagens apropriado e invoca métodos de enfileiramento de mensagens para colocar a mensagem na fila do serviço de enfileiramento de mensagens. O Message Queuing é um componente opcional que é fornecido com o Windows.  
   
@@ -138,13 +126,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Chaves são removidas:  
   
- \-Para xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Para xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:password  
   
@@ -152,15 +140,15 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Informações potencialmente pessoais que são removidas:  
   
- \-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:username  
   
  wsse:BinarySecurityToken  
   
- \-Para xmlns:saml = "urn: oasis: nomes: tc: SAML:1.0:assertion" os itens em negrito (abaixo) são removidos:  
+ \- Para xmlns:saml = "urn: oasis: nomes: tc: SAML:1.0:assertion" os itens em negrito (abaixo) são removidos:  
   
- \<Asserção  
+ \<asserção  
   
  MajorVersion="1"  
   
@@ -174,7 +162,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Condições NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
  \<AudienceRestrictionCondition>  
   
@@ -182,7 +170,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition / > *  
   
  <\!– o tipo base abstrato  
   
@@ -196,7 +184,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion>[assertion]\</Assertion>*  
+ \<Asserção > [asserção]\</Assertion > *  
   
  [Nenhum] *  
   
@@ -206,7 +194,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Instrução / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
  \<Assunto >  
   
@@ -224,9 +212,9 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
+ \<SubjectConfirmationData > [qualquer]\</SubjectConfirmationData >?  
   
  \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
@@ -234,13 +222,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</Subject>  
   
- \</SubjectStatement>*  
+ \</ SubjectStatement > *  
   
  -->  
   
  \<AuthenticationStatement  
   
- AuthenticationMethod="[uri]"  
+ AuthenticationMethod = "[uri]"  
   
  AuthenticationInstant="[dateTime]"  
   
@@ -268,7 +256,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</AuthenticationStatement>*  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Assunto]  
   
@@ -284,11 +272,11 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</ Atributo > +  
   
- \</AttributeStatement>*  
+ \</ AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
- Resource="[uri]"  
+ Recurso = "[uri]"  
   
  Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
@@ -302,7 +290,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion>[assertion]\</Assertion>+  
+ \<Asserção > [asserção]\</Assertion > +  
   
  \</ Evidência >?  
   
@@ -368,7 +356,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Nenhuma informação é removida da cabeçalhos específicos de aplicativos e dados do corpo  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]não rastreia informações pessoais em cabeçalhos específicos do aplicativo (por exemplo, cadeias de consulta) ou o corpo de dados (por exemplo, o número do cartão de crédito).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não rastreia informações pessoais em cabeçalhos específicos do aplicativo (por exemplo, cadeias de consulta) ou o corpo de dados (por exemplo, o número do cartão de crédito).  
   
  Quando o log de mensagens estiver ativada, informações pessoais em cabeçalhos específicos do aplicativo e as informações de corpo podem estar visíveis nos logs. Novamente, o implantador de aplicativo é responsável por definir as ACLs nos arquivos de configuração e de log. Ele também pode desativar registro se ele não quer que essa informação fique visível, ou ele pode filtrar essas informações dos arquivos de log depois que ele está registrado.  
   
@@ -383,14 +371,14 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  Para ambas as mensagens de log e rastreamento, um ouvinte de rastreamento personalizada pode ser configurado, o que pode enviar mensagens e rastreamentos na conexão (por exemplo, para um banco de dados remoto). O implantador de aplicativo é responsável por configurar ouvintes personalizados ou permitindo que os usuários fazer isso. Ele também é responsável por quaisquer informações pessoais exposto no local remoto e para aplicar as ACLs adequadamente para esse local.  
   
 ### <a name="other-features-for-it-professionals"></a>Outros recursos para profissionais de TI  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]tem um provedor WMI que expõe o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] informações de configuração de infraestrutura por meio do WMI (fornecido com o Windows). Por padrão, a interface WMI está disponível para administradores.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tem um provedor WMI que expõe o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] informações de configuração de infraestrutura por meio do WMI (fornecido com o Windows). Por padrão, a interface WMI está disponível para administradores.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]configuração usa o mecanismo de configuração do .NET Framework. Os arquivos de configuração são armazenados no computador. O desenvolvedor do aplicativo e o administrador criam os arquivos de configuração e a ACL para cada um dos requisitos do aplicativo. Um arquivo de configuração pode conter endereços de ponto de extremidade e links para os certificados no repositório de certificados. Os certificados podem ser usados para fornecer dados de aplicativo para configurar várias propriedades dos recursos usados pelo aplicativo.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuração usa o mecanismo de configuração do .NET Framework. Os arquivos de configuração são armazenados no computador. O desenvolvedor do aplicativo e o administrador criam os arquivos de configuração e a ACL para cada um dos requisitos do aplicativo. Um arquivo de configuração pode conter endereços de ponto de extremidade e links para os certificados no repositório de certificados. Os certificados podem ser usados para fornecer dados de aplicativo para configurar várias propriedades dos recursos usados pelo aplicativo.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]também usa a funcionalidade de despejo de processo do .NET Framework ao chamar o <xref:System.Environment.FailFast%2A> método.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] também usa a funcionalidade de despejo de processo do .NET Framework ao chamar o <xref:System.Environment.FailFast%2A> método.  
   
 ### <a name="it-pro-tools"></a>IT Pro ferramentas  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]também fornece as ferramentas de profissional seguir IT, fornecidas no SDK do Windows.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] também fornece as ferramentas de profissional seguir IT, fornecidas no SDK do Windows.  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
  O visualizador exibe [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] arquivos de rastreamento. O visualizador mostra o texto que está contido nos rastreamentos.  

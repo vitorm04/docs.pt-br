@@ -1,14 +1,6 @@
 ---
 title: Operações síncronas e assíncronas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
   
- Muitos aplicativos chamam métodos de forma assíncrona porque isso permite que o aplicativo continue a fazer trabalho útil enquanto a chamada do método é executada. Os serviços e clientes do[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] podem participar de chamadas de operações assíncronas em dois níveis diferentes do aplicativo, o que fornece aos aplicativos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ainda mais flexibilidade para maximizar a taxa de transferência balanceada contra interatividade.  
+ Muitos aplicativos chamam métodos de forma assíncrona porque isso permite que o aplicativo continue a fazer trabalho útil enquanto a chamada do método é executada. Serviços Windows Communication Foundation (WCF) e os clientes podem participar de chamadas de operação assíncrona em dois níveis distintos do aplicativo, que fornecem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contraposição a ainda mais flexibilidade para maximizar a taxa de transferência de aplicativos interatividade.  
   
 ## <a name="types-of-asynchronous-operations"></a>Tipos de operações assíncronas  
  Todos os contratos de serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], independentemente dos tipos de parâmetros e valores de retorno, usam os atributos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para especificar um padrão de troca de mensagens específico entre o cliente e o serviço. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] roteia automaticamente mensagens de entrada e de saída para a operação apropriada do serviço ou o código do cliente em execução.  

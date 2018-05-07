@@ -1,28 +1,19 @@
 ---
-title: "Implementando o padrão de controle de encaixe da automação de interface do usuário"
-ms.custom: 
+title: Implementando o padrão de controle de encaixe da automação de interface do usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 136d4ec56cf0c78aac03d1b3f44a18cd268d3bc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e04814885ae0963d4da99acecf00dc646ecc96f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementando o padrão de controle de encaixe da automação de interface do usuário
 > [!NOTE]
@@ -39,7 +30,7 @@ Encaixe o exemplo do Visual Studio onde o "Modo de exibição de classe" janela 
 ## <a name="implementation-guidelines-and-conventions"></a>Convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de encaixe, observe as seguintes diretrizes e convenções:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider>não expõe as propriedades do contêiner de encaixe ou propriedades de controles que estão encaixados adjacente ao controle atual dentro do contêiner de encaixe.  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> não expõe as propriedades do contêiner de encaixe ou propriedades de controles que estão encaixados adjacente ao controle atual dentro do contêiner de encaixe.  
   
 -   Controles são encaixados em relação a outros com base em sua ordem-z atual; o mais alto sua ordem z colocação, quanto eles são colocados da borda do contêiner de encaixe especificada.  
   

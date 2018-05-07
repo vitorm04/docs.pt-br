@@ -1,40 +1,28 @@
 ---
 title: Como criar uma associação personalizada utilizando o SecurityBindingElement
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como criar uma associação personalizada utilizando o SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem total flexibilidade ao configurar a segurança todas as opções que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecer total flexibilidade ao configurar todas as opções de segurança que dá suporte ao WCF. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> não oferece suporte a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, o que é o uso de forma de canal padrão por TCP de canal de transporte quando <xref:System.ServiceModel.TransferMode> é definido como <xref:System.ServiceModel.TransferMode.Buffered>. Você deve definir <xref:System.ServiceModel.TransferMode> para <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> neste cenário.  
   
 ## <a name="creating-a-custom-binding"></a>Criando uma associação personalizada  
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] todas as associações são compostas de *elementos de associação*. Cada elemento de associação derivado de <xref:System.ServiceModel.Channels.BindingElement> classe. Para as associações padrão fornecido pelo sistema, os elementos de associação criados e configurados para você, embora você pode personalizar algumas das configurações de propriedade.  
+ No WCF todas as associações são compostas de *elementos de associação*. Cada elemento de associação derivado de <xref:System.ServiceModel.Channels.BindingElement> classe. Para as associações padrão fornecido pelo sistema, os elementos de associação criados e configurados para você, embora você pode personalizar algumas das configurações de propriedade.  
   
  Por outro lado, para criar uma associação personalizada, elementos de associação são criados e configurados e um <xref:System.ServiceModel.Channels.CustomBinding> é criado a partir de elementos de associação.  
   

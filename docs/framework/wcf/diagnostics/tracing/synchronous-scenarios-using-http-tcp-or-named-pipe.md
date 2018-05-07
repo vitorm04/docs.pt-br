@@ -1,24 +1,12 @@
 ---
-title: "Cenários síncronos utilizando HTTP, TCP ou pipe nomeado"
-ms.custom: 
+title: Cenários síncronos utilizando HTTP, TCP ou pipe nomeado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Cenários síncronos utilizando HTTP, TCP ou pipe nomeado
 Este tópico descreve as atividades e transferências para cenários diferentes de solicitação/resposta síncrona, com um cliente de thread único, usando HTTP, TCP ou pipe nomeado. Consulte [cenários assíncronos usando HTTP, TCP ou Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) para obter mais informações sobre solicitações de multi-threads.  
@@ -56,9 +44,9 @@ Este tópico descreve as atividades e transferências para cenários diferentes 
 #### <a name="closing-a-service-host"></a>Fechando um Host de serviço  
  Atividade de fechamento do ServiceHost (Z) é criada da atividade de ambiente.  
   
- ![Cenários síncronos utilizando HTTP &#47; TCP &#47; Pipes nomeados](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "sincronização")  
+ ![Cenários síncronos utilizando HTTP&#47;TCP&#47; Pipes nomeados](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "sincronização")  
   
- Em \<nome de unidade: >, `A` é um símbolo de atalho que descreve a atividade no texto anterior e na tabela 3. `Name`é um nome abreviado da atividade.  
+ Em \<nome de unidade: >, `A` é um símbolo de atalho que descreve a atividade no texto anterior e na tabela 3. `Name` é um nome abreviado da atividade.  
   
  Se `propagateActivity` = `true`, ação de processo no cliente e de serviço tem a mesma ID de atividade.  
   

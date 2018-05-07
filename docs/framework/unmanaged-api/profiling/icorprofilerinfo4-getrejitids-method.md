@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo4::GetReJITIDs"
-ms.custom: 
+title: Método ICorProfilerInfo4::GetReJITIDs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.GetReJITIDs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fb1e507bea6f52e4959f241f1507807a76c0ec5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1055366576f45a7ca137b6d8170d1786c2ba4492
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
 Retorna uma matriz de IDs de identificar todos os recompilado JIT versões da função especificada ainda alocados. Isso inclui versões recompilado JIT de funções que foram posteriormente revertidas, mas ainda não liberadas (por exemplo, quando o domínio de aplicativo que contém a função revertida ainda está em uso).  
@@ -62,7 +50,7 @@ HRESULT GetReJITIDs (
  [out] Uma matriz alocada pelo chamador que conterá as IDs recompilado JIT para a função especificada.  
   
 ## <a name="remarks"></a>Comentários  
- `GetReJITIDs`Enumera as IDs de recompilado JIT ativas para uma instância de função determinada. Ele segue o mesmo padrão de uso como outros `ICorProfilerInfo` funções que aceitam buffers alocada pelo chamador.  
+ `GetReJITIDs` Enumera as IDs de recompilado JIT ativas para uma instância de função determinada. Ele segue o mesmo padrão de uso como outros `ICorProfilerInfo` funções que aceitam buffers alocada pelo chamador.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -71,7 +59,7 @@ HRESULT GetReJITIDs (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  

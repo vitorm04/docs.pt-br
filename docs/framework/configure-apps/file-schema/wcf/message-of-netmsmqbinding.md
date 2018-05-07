@@ -2,11 +2,11 @@
 title: '&lt;mensagem&gt; de &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: a552b0f22a79b30dcbbe1951906b121d4c5e8cf8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0e947667c414079f24398b401456efd56bf9922c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;mensagem&gt; de &lt;netMsmqBinding&gt;
 Define as configurações de segurança de mensagem SOAP neste `netMsmqBinding` associação.  
@@ -39,7 +39,7 @@ Define as configurações de segurança de mensagem SOAP neste `netMsmqBinding` 
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |algorithmSuite|Define a mensagem de algoritmos de criptografia e a disposição de chave que são usados para atingir a segurança baseada em mensagem para mensagens enviadas pelo transporte MSMQ.<br /><br /> O valor padrão é `Aes256`. Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente para mensagens enviadas por meio do transporte MSMQ. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Isso permite que o serviço interaja com clientes anônimos. O serviço, nem o cliente requer uma credencial.<br />-Windows: Isso permite que as trocas SOAP estar sob o contexto autenticado de uma credencial do Windows. Isso sempre realiza a autenticação Kerberos.<br />-Nome de usuário: Isso permite que o serviço exigir que o cliente seja autenticado usando uma credencial de nome de usuário. A credencial nesse caso deve ser especificado usando o `clientCredentials` comportamento **cuidado:** Windows Communication Foundation (WCF) não oferece suporte para enviar uma senha digest ou derivação de chaves usando a senha e usando essas chaves para segurança de mensagem. Portanto, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] impõe que o exchange é protegido ao usar credenciais de nome de usuário. Esse modo exige que o certificado de serviço seja especificada no lado cliente usando `clientCredential` comportamento e `serviceCertificate`. <br /><br /> -O certificado: Isso permite que o serviço exigir que o cliente seja autenticado usando um certificado. A credencial do cliente nesse caso deve ser especificado usando o `clientCredentials` comportamento. A credencial de serviço nesse caso deve ser especificado usando o `clientCredentials` comportamento especificando o `serviceCertificate`.<br />-CardSpace: Isso permite que o serviço exigir que o cliente seja autenticado usando um CardSpace. O `serviceCertiifcate` devem ser provisionados no `clientCredential` comportamento.<br /><br /> O valor padrão é `Windows`. Esse atributo é do tipo <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente para mensagens enviadas por meio do transporte MSMQ. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Isso permite que o serviço interaja com clientes anônimos. O serviço, nem o cliente requer uma credencial.<br />-Windows: Isso permite que as trocas SOAP estar sob o contexto autenticado de uma credencial do Windows. Isso sempre realiza a autenticação Kerberos.<br />-Nome de usuário: Isso permite que o serviço exigir que o cliente seja autenticado usando uma credencial de nome de usuário. A credencial nesse caso deve ser especificado usando o `clientCredentials` comportamento **cuidado:** Windows Communication Foundation (WCF) não oferece suporte para enviar uma senha digest ou derivação de chaves usando a senha e usando essas chaves para segurança de mensagem. Portanto, o WCF impõe que o exchange é protegido ao usar credenciais de nome de usuário. Esse modo exige que o certificado de serviço seja especificada no lado cliente usando `clientCredential` comportamento e `serviceCertificate`. <br /><br /> -O certificado: Isso permite que o serviço exigir que o cliente seja autenticado usando um certificado. A credencial do cliente nesse caso deve ser especificado usando o `clientCredentials` comportamento. A credencial de serviço nesse caso deve ser especificado usando o `clientCredentials` comportamento especificando o `serviceCertificate`.<br />-CardSpace: Isso permite que o serviço exigir que o cliente seja autenticado usando um CardSpace. O `serviceCertiifcate` devem ser provisionados no `clientCredential` comportamento.<br /><br /> O valor padrão é `Windows`. Esse atributo é do tipo <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  

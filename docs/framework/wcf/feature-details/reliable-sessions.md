@@ -1,13 +1,6 @@
 ---
-title: "Sessões confiáveis"
-ms.custom: 
+title: Sessões confiáveis
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>Sessões confiáveis
 
-Esta seção descreve o que um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sessão confiável está, que ela é usada, como e quando usar um, quais configurações de associação dão suporte a ele e ponteiros de práticas recomendadas. A tabela a seguir resume os detalhes sobre os pontos essenciais e tópicos relacionados nesta seção.
+Esta seção descreve quais um Windows Communication Foundation (WCF) é de sessão confiável, a que ela é usada, como e quando usar um, quais configurações de associação dão suporte a ele e ponteiros de práticas recomendadas. A tabela a seguir resume os detalhes sobre os pontos essenciais e tópicos relacionados nesta seção.
 
-A sessão confiável [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece featrues garantem que as mensagens enviadas entre pontos de extremidade são transferidas em SOAP ou transporte intermediários e são entregues somente uma vez e, opcionalmente, na mesma ordem em que foram enviadas.
+A sessão confiável WCF fornece featrues garantem que as mensagens enviadas entre pontos de extremidade são transferidas em SOAP ou transporte intermediários e são entregues somente uma vez e, opcionalmente, na mesma ordem em que foram enviadas.
 
-Para usar uma sessão confiável com um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, use uma das associações fornecidas pelo sistema em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que oferece suporte a uma sessão confiável por padrão ou como uma opção ou criar sua própria associação personalizada que ofereça suporte a sessão.
+Para usar uma sessão confiável com um aplicativo WCF, use uma das ligações de fornecido pelo sistema no WCF que dão suporte a uma sessão confiável por padrão ou como uma opção ou criar sua própria associação personalizada que ofereça suporte a sessão.
 
 ## <a name="in-this-section"></a>Nesta seção
 

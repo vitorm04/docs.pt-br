@@ -1,14 +1,6 @@
 ---
-title: "Método IHostMemoryManager::VirtualQuery"
-ms.custom: 
+title: Método IHostMemoryManager::VirtualQuery
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.VirtualQuery
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 757af1e6-b9e8-49e7-b5db-342be3aa205f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fd893cd92f7e7621aefe59595cfd9905bc77afd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68a9d6ad7470ffaf1143a4a8e3134f20edb9e3c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>Método IHostMemoryManager::VirtualQuery
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualQuery` recupera informações sobre um intervalo de páginas no espaço de endereço virtual do processo de chamada.  
@@ -66,7 +54,7 @@ HRESULT VirtualQuery (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery`retornou com êxito.|  
+|S_OK|`VirtualQuery` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -74,7 +62,7 @@ HRESULT VirtualQuery (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `VirtualQuery`Fornece informações sobre um intervalo de páginas no espaço de endereço virtual do processo de chamada. Esta implementação define o valor de `pResult` parâmetro para o número de bytes retornados no buffer de informações e retorna um valor HRESULT. Em Win32 `VirtualQuery` função, o valor de retorno é o tamanho do buffer. Para obter mais informações, consulte a documentação da plataforma Windows.  
+ `VirtualQuery` Fornece informações sobre um intervalo de páginas no espaço de endereço virtual do processo de chamada. Esta implementação define o valor de `pResult` parâmetro para o número de bytes retornados no buffer de informações e retorna um valor HRESULT. Em Win32 `VirtualQuery` função, o valor de retorno é o tamanho do buffer. Para obter mais informações, consulte a documentação da plataforma Windows.  
   
 > [!IMPORTANT]
 >  A implementação do sistema operacional de `VirtualQuery` não incorrerá em deadlock e pode executar o preenchimento com aleatórios threads suspensos no código do usuário. Use muito cuidado ao implementar uma versão hospedada deste método.  
@@ -86,7 +74,7 @@ HRESULT VirtualQuery (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

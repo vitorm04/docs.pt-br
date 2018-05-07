@@ -1,32 +1,18 @@
 ---
 title: Integração com visão geral de aplicativos COM+
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece um ambiente rico para criar aplicativos distribuídos. Se você já estiver usando a lógica do aplicativo baseado em componente hospedada em COM+, você pode usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor existente lógica de negócios de COM+ ou serviços corporativos por meio de serviços Web.  
+Windows Communication Foundation (WCF) fornece um ambiente rico para criar aplicativos distribuídos. Se você já estiver usando a lógica do aplicativo baseado em componente hospedada em COM+, você pode usar o WCF para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor existente lógica de negócios de COM+ ou serviços corporativos por meio de serviços Web.  
   
  Quando uma interface em um componente COM+ é exposta como um serviço Web, a especificação e contrato desses serviços são determinados por um mapeamento automático que é executado em tempo de inicialização do aplicativo. A lista a seguir mostra o modelo conceitual para que esse mapeamento:  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  Em um aplicativo cliente, os métodos de <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> objeto pode ser usado para passar um objeto em um serviço e, da mesma forma, para recuperar um objeto.  
   
 > [!NOTE]
->  Devido à natureza personalizada e específicos de plataforma da abordagem de serialização, isso é mais adequado para uso entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  
+>  Devido à natureza personalizada e específicos de plataforma da abordagem de serialização, isso é mais adequado para uso entre clientes e serviços WCF WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Selecionar o modo de hospedagem  
  COM+ expõe serviços da Web em um dos seguintes modos de hospedagem:  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Hospedado na Web  
   
-     O serviço da Web é hospedado dentro de um processo de trabalho do servidor Web. Esse modo não requer COM+ esteja ativa quando a solicitação inicial é recebida. Se o aplicativo não estiver ativo quando essa solicitação é recebida, ela é automaticamente ativada antes de processar a solicitação. Este modo também fornece o serviço Web e acesso DCOM para o aplicativo de servidor, mas faz com que um nó de processo para solicitações de serviço Web. Isso geralmente exige que o cliente habilitar a representação. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], isso pode ser feito com o <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade do <xref:System.ServiceModel.Security.WindowsClientCredential> classe, que pode é acessada como uma propriedade de genérica <xref:System.ServiceModel.ChannelFactory%601> classe, bem como a <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valor de enumeração.  
+     O serviço da Web é hospedado dentro de um processo de trabalho do servidor Web. Esse modo não requer COM+ esteja ativa quando a solicitação inicial é recebida. Se o aplicativo não estiver ativo quando essa solicitação é recebida, ela é automaticamente ativada antes de processar a solicitação. Este modo também fornece o serviço Web e acesso DCOM para o aplicativo de servidor, mas faz com que um nó de processo para solicitações de serviço Web. Isso geralmente exige que o cliente habilitar a representação. No WCF, isso pode ser feito com o <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade do <xref:System.ServiceModel.Security.WindowsClientCredential> classe, que pode é acessada como uma propriedade de genérica <xref:System.ServiceModel.ChannelFactory%601> classe, bem como a <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valor de enumeração.  
   
 -   Web hospedada no processo  
   
      O serviço Web e a lógica do aplicativo COM+ são hospedadas no processo de trabalho do servidor Web. Isso fornece a ativação automática do modo hospedado da Web sem causar um salto de processo para solicitações de serviço Web. A desvantagem é que o aplicativo de servidor não pode ser acessado por meio do DCOM.  
   
 ### <a name="security-considerations"></a>Considerações sobre segurança  
- Assim como outros [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços, as configurações de segurança para o serviço exposto são administrados por meio de configurações para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal. Configurações de segurança DCOM tradicionais, como as configurações de máquina permissões DCOM não são impostas. Para aplicar funções de aplicativo do COM+, autorização "verificações de acesso no nível do componente" deve ser habilitada para o componente.  
+ Como outros serviços do WCF, as configurações de segurança para o serviço exposto são administradas por meio de configurações para o canal WCF. Configurações de segurança DCOM tradicionais, como as configurações de máquina permissões DCOM não são impostas. Para aplicar funções de aplicativo do COM+, autorização "verificações de acesso no nível do componente" deve ser habilitada para o componente.  
   
  O uso de uma associação não é seguro pode deixar comunicação aberta a divulgação de informações ou violação. Para evitar isso, é recomendável que você use uma associação segura.  
   
- Para o COM+-modos hospedados e hospedado na Web, aplicativos cliente devem permitir que o processo do servidor para representar o usuário do cliente. Isso pode ser feito [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes definindo a representação de nível para <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Para o COM+-modos hospedados e hospedado na Web, aplicativos cliente devem permitir que o processo do servidor para representar o usuário do cliente. Isso pode ser feito em clientes do WCF, definindo a representação de nível para <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Com os serviços de informações da Internet (IIS) ou o processo de ativação Windows Service (WAS) usando o transporte HTTP, a ferramenta Httpcfg.exe pode ser usada para reservar um endereço de ponto de extremidade de transporte. Em outras configurações, é importante proteger contra serviços mal-intencionados que agem como o serviço pretendido. Para impedir a inicialização no ponto de extremidade desejado de um serviço autorizado, o serviço legítimo pode ser configurado para ser executado como um serviço NT. Isso permite que o serviço legítimo declarar o endereço do ponto de extremidade antes de qualquer serviço autorizado.  
   

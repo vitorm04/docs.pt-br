@@ -1,24 +1,14 @@
 ---
-title: "Proteção estendida para visão geral de autenticação"
-ms.custom: 
+title: Proteção estendida para visão geral de autenticação
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b061f9395c3917c196030678ede007071e681027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdf18564d3545e0061d8323e544aecfeed621d0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Proteção estendida para visão geral de autenticação
 Proteção estendida para autenticação ajuda a impedir ataques man-in-the-middle (MITM), em que um invasor intercepta as credenciais do cliente e encaminha-os para um servidor.  

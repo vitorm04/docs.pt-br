@@ -1,28 +1,14 @@
 ---
 title: Configurando associações para serviços do Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
 Ao criar um aplicativo, você geralmente deseja adiar decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou identificador de recurso uniforme (URI) será. Em vez de codificar um endereço, é preferível para permitir que um administrador fazer isso depois de criar um serviço. Essa flexibilidade é feita por meio da configuração.  
@@ -31,7 +17,7 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
 >  Use o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com o `/config` switch para criar rapidamente os arquivos de configuração.  
   
 ## <a name="major-sections"></a>Seções principais  
- O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] esquema de configuração inclui as seguintes três seções principais (`serviceModel`, `bindings`, e `services`):  
+ O esquema de configuração do Windows Communication Foundation (WCF) inclui as seguintes três seções principais (`serviceModel`, `bindings`, e `services`):  
   
 ```xml  
 <configuration>  

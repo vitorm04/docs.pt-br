@@ -1,26 +1,12 @@
 ---
 title: Sessões,instanciação e simultaneidade
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Um *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos de extremidade. *Instanciação* refere-se para controlar o tempo de vida de objetos de serviço definido pelo usuário e seus relacionados <xref:System.ServiceModel.InstanceContext> objetos. *Simultaneidade* é o termo dado ao controle do número de threads em execução em um <xref:System.ServiceModel.InstanceContext> ao mesmo tempo.  
@@ -30,7 +16,7 @@ Um *sessão* é uma correlação de todas as mensagens enviadas entre dois ponto
 ## <a name="sessions"></a>Sessões  
  Quando um contrato de serviço define o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> propriedade <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, esse contrato é dizer que todas as chamadas (ou seja, as subjacente trocas de mensagens que oferecem suporte as chamadas) devem ser parte da mesma conversa. Se um contrato especifica que ele permite que as sessões, mas não exige um, os clientes podem se conectar e a estabelecer uma sessão ou não. Se a sessão é encerrada e uma mensagem é enviada pelo mesmo baseadas em sessão canal uma exceção é gerada.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] as sessões têm os seguintes recursos conceituais principais:  
+ As sessões WCF têm os seguintes recursos conceituais principais:  
   
 -   Eles são explicitamente iniciados e finalizados pelo aplicativo de chamada.  
   
@@ -38,9 +24,9 @@ Um *sessão* é uma correlação de todas as mensagens enviadas entre dois ponto
   
 -   Sessões de correlação um grupo de mensagens em uma conversa. O significado da correlação de que é uma abstração. Por exemplo, um canal de sessão pode correlacionar as mensagens com base em uma conexão de rede compartilhada enquanto outro canal baseadas em sessão pode correlacionar as mensagens com base em uma marca compartilhada no corpo da mensagem. Os recursos que podem ser derivados da sessão dependem da natureza da correlação.  
   
--   Há um repositório de dados gerais associado com um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessão.  
+-   Há um repositório de dados gerais associado com uma sessão do WCF.  
   
- Se você estiver familiarizado com o <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe em [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e a funcionalidade que ela fornece, você observará as seguintes diferenças entre esse tipo de sessão e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessões:  
+ Se você estiver familiarizado com o <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe em [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativos e a funcionalidade que ela fornece, você observará as seguintes diferenças entre esse tipo de sessão e sessões do WCF:  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] as sessões são sempre iniciadas pelo servidor.  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  Use o <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> construtor para criar um serviço. Ele fornece uma alternativa à implementação de uma <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> quando você deseja fornecer uma instância de objeto específico para uso por um serviço de singleton. Você pode usar essa sobrecarga ao seu tipo de implementação de serviço é difícil construir (por exemplo, se ele não implementa um construtor público padrão sem parâmetros).  
   
- Observe que quando um objeto é fornecido para esse construtor, alguns recursos relacionados a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] instância trabalho comportamento diferente. Por exemplo, chamar <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> não tem nenhum efeito quando uma instância do objeto singleton é fornecida. Da mesma forma, qualquer outro mecanismo de versão de instância é ignorado. O <xref:System.ServiceModel.ServiceHost> sempre se comporta como se o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> está definida como <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas as operações.  
+ Observe que quando um objeto é fornecido para esse construtor, alguns recursos relacionados para o Windows Communication Foundation (WCF) comportamento de instâncias funcionam de forma diferente. Por exemplo, chamar <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> não tem nenhum efeito quando uma instância do objeto singleton é fornecida. Da mesma forma, qualquer outro mecanismo de versão de instância é ignorado. O <xref:System.ServiceModel.ServiceHost> sempre se comporta como se o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> está definida como <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas as operações.  
   
 ### <a name="sharing-instancecontext-objects"></a>Compartilhamento InstanceContext objetos  
  Você também pode controlar qual canal de sessão ou chamada está associada com a qual <xref:System.ServiceModel.InstanceContext> objeto executando essa associação por conta própria.  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Cada instância de serviço pode ter vários threads que processam mensagens simultaneamente. A implementação do serviço deve ser thread-safe para usar o modo de simultaneidade.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes operação. O serviço aceita somente essas chamadas quando ela é chamada por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto cliente.  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes operação. O serviço aceita somente essas chamadas quando ela é chamada por meio de um objeto de cliente do WCF.  
   
 > [!NOTE]
 >  Entendendo e desenvolvimento de código com segurança usa mais de um thread podem ser difícil de escrever com êxito. Antes de usar <xref:System.ServiceModel.ConcurrencyMode.Multiple> ou <xref:System.ServiceModel.ConcurrencyMode.Reentrant> valores, certifique-se de que seu serviço corretamente é criado para esses modos. Para obter mais informações, consulte <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

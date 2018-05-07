@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugNativeFrame2::IsMatchingParentFrame"
-ms.custom: 
+title: Método ICorDebugNativeFrame2::IsMatchingParentFrame
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.IsMatchingParentFrame Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fc2d8eacb05e861290ad19a34c261943dc2959a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Método ICorDebugNativeFrame2::IsMatchingParentFrame
 Determina se o intervalo especificado é o pai do quadro atual.  
@@ -65,7 +53,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- `IsMatchingParentFrame`Retorna `true` se o objeto de quadro passar para o método é o pai do objeto de quadro no qual o método foi chamado. Se você chamar o método em um quadro que não é um filho do quadro especificado, ele retornará um erro.  
+ `IsMatchingParentFrame` Retorna `true` se o objeto de quadro passar para o método é o pai do objeto de quadro no qual o método foi chamado. Se você chamar o método em um quadro que não é um filho do quadro especificado, ele retornará um erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,7 +62,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  

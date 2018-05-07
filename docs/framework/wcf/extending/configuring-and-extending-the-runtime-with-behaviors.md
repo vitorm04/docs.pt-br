@@ -1,34 +1,20 @@
 ---
-title: "Configurando e estendendo o tempo de execução com comportamentos"
-ms.custom: 
+title: Configurando e estendendo o tempo de execução com comportamentos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configurando e estendendo o tempo de execução com comportamentos
-Comportamentos permitem que você modificar o comportamento padrão e adicionar extensões personalizadas que Inspecione e validarem a configuração do serviço ou modificam o comportamento de tempo de execução no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos cliente e de serviço. Este tópico descreve as interfaces de comportamento, como implementá-los e como adicioná-los para a descrição de serviço (em um aplicativo de serviço) ou o ponto de extremidade (em um aplicativo de cliente) por meio de programação ou em um arquivo de configuração. Para obter mais informações sobre como usar comportamentos fornecido pelo sistema, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [especificando comportamento de tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Comportamentos permitem modificar o comportamento padrão e adicionar extensões personalizadas que inspecionem e validar a configuração de serviço ou modificam o comportamento de tempo de execução em aplicativos cliente e o serviço do Windows Communication Foundation (WCF). Este tópico descreve as interfaces de comportamento, como implementá-los e como adicioná-los para a descrição de serviço (em um aplicativo de serviço) ou o ponto de extremidade (em um aplicativo de cliente) por meio de programação ou em um arquivo de configuração. Para obter mais informações sobre como usar comportamentos fornecido pelo sistema, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) e [especificando comportamento de tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Comportamentos  
- Tipos de comportamento são adicionados para o serviço ou objetos de descrição do ponto de extremidade de serviço (no serviço ou cliente, respectivamente) antes que esses objetos são usados pelo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para criar um tempo de execução que executa um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço ou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente. Quando esses comportamentos são chamados durante o processo de construção de tempo de execução, em seguida, eles são capazes de acessar os métodos e propriedades de tempo de execução que modificar o tempo de execução criado com o contrato, associações e endereços.  
+ Tipos de comportamento são adicionados para o serviço ou objetos de descrição do ponto de extremidade de serviço (no serviço ou cliente, respectivamente) antes que esses objetos são usados pelo Windows Communication Foundation (WCF) para criar um tempo de execução que executa um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço ou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente. Quando esses comportamentos são chamados durante o processo de construção de tempo de execução, em seguida, eles são capazes de acessar os métodos e propriedades de tempo de execução que modificar o tempo de execução criado com o contrato, associações e endereços.  
   
 ### <a name="behavior-methods"></a>Métodos de comportamento  
  Todos os comportamentos têm um `AddBindingParameters` método, uma `ApplyDispatchBehavior` método, uma `Validate` método e um `ApplyClientBehavior` método com uma exceção: como <xref:System.ServiceModel.Description.IServiceBehavior> não é possível executar em um cliente, ele não implementa `ApplyClientBehavior`.  

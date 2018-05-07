@@ -1,29 +1,15 @@
 ---
 title: Dados de data e hora
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para manipular as informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora, e tipos de dados expandidos com maior intervalo, precisão e reconhecimento de fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -44,7 +30,7 @@ O SQL Server 2008 apresenta novos tipos de dados para manipular as informações
 |`date`|O tipo de dados `date` tem um intervalo de 1 de janeiro de 01 a 31 de dezembro de 9999 com uma precisão de 1 dia. O valor padrão é 1 de janeiro de 1900. O tamanho do armazenamento é 3 bytes.|  
 |`time`|O tipo de dados `time` armazena apenas valores de hora, com base em um relógio de 24 horas. O tipo de dados `time` tem um intervalo de 00:00:00,0000000 a 23:59:59,9999999 com uma precisão de 100 nanossegundos. O valor padrão é 00:00:00,0000000 (meia-noite). O tipo de dados `time` oferece suporte à precisão de segundos fracionária definida pelo usuário, e o tamanho de armazenamento varia de 3 a 6 bytes dependendo da precisão especificada.|  
 |`datetime2`|O tipo de dados `datetime2` combina o intervalo e a precisão dos tipos de dados `date` e `time` em um único tipo de dados.<br /><br /> Os formatos de valores padrão e literal de cadeia de caracteres são os mesmos que os definidos nos tipos de dados `date` e `time`.|  
-|`datetimeoffset`|O tipo de dados `datetimeoffset` tem todos os recursos de `datetime2` com um deslocamento adicional de fuso horário. O deslocamento de fuso horário é representado como [+ &#124;-] hh: mm. HH significa 2 dígitos variando de 00 a 14, que representa o número de horas no deslocamento de fuso horário. MM significa 2 dígitos variando de 00 a 59, que representa o número de minutos adicionais no deslocamento de fuso horário. Os formatos de hora têm suporte para 100 nanossegundos. O sinal de + ou - obrigatório indica se o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado ou Horário do Meridiano de Greenwich) para obter a hora local.|  
+|`datetimeoffset`|O tipo de dados `datetimeoffset` tem todos os recursos de `datetime2` com um deslocamento adicional de fuso horário. O deslocamento de fuso horário é representado como [+&#124;-] hh: mm. HH significa 2 dígitos variando de 00 a 14, que representa o número de horas no deslocamento de fuso horário. MM significa 2 dígitos variando de 00 a 59, que representa o número de minutos adicionais no deslocamento de fuso horário. Os formatos de hora têm suporte para 100 nanossegundos. O sinal de + ou - obrigatório indica se o deslocamento de fuso horário é adicionado ou subtraído do UTC (Tempo Universal Coordenado ou Horário do Meridiano de Greenwich) para obter a hora local.|  
   
 > [!NOTE]
 >  Para obter mais informações sobre como usar a palavra-chave `Type System Version`, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -250,7 +236,7 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[Dados de data e hora tipos e funções (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Fornece uma visão geral de todos os tipos e as funções de dados de data e hora de Transact-SQL.|  
 |[Usando dados de data e hora](http://go.microsoft.com/fwlink/?LinkId=98361)|Fornece informações sobre os tipos e as funções de dados de data e hora, e exemplos de como usá-los.|  
-|[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Descreve os tipos de dados do sistema no SQL Server 2008.|  
+|[Tipos de dados (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Descreve os tipos de dados do sistema no SQL Server 2008.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

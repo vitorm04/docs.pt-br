@@ -1,33 +1,21 @@
 ---
-title: "Expondo seus dados como um serviço (WCF Data Services)"
-ms.custom: 
+title: Expondo seus dados como um serviço (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, configuring
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ab349125419a0589d68ccb821009f8227c942e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Expondo seus dados como um serviço (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]integra-se com o Visual Studio para que você possa definir mais facilmente os serviços para expor seus dados como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Criando um serviço de dados que expõe um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed envolve as seguintes etapas básicas:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] integra-se com o Visual Studio para que você possa definir mais facilmente os serviços para expor seus dados como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Criando um serviço de dados que expõe um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed envolve as seguintes etapas básicas:  
   
-1.  **Definir** **o modelo de dados**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]oferece suporte nativo a modelos de dados que se baseiam o [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Para obter mais informações, consulte [como: criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
+1.  **Definir** **o modelo de dados**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oferece suporte nativo a modelos de dados que se baseiam o [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Para obter mais informações, consulte [como: criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   
      O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] também dá suporte a modelos de dados que se baseiam em objetos CLR (Common Language Runtime) que retornam uma instância da interface <xref:System.Linq.IQueryable%601>. Isso permite que você implante os serviços de dados se baseiam em listas, matrizes e coleções do .NET Framework. Para permitir criar, atualizar e excluir operações sobre essas estruturas de dados, você também deve implementar o <xref:System.Data.Services.IUpdatable> interface. Para obter mais informações, consulte [como: criar um serviço de dados usando o provedor de reflexão](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
@@ -41,4 +29,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [Visão Geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+ [Visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

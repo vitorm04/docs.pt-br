@@ -1,13 +1,6 @@
 ---
-title: "Automação da Interface do Usuário e Escala da Tela"
-ms.custom: 
+title: Automação da Interface do Usuário e Escala da Tela
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,22 +10,20 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c34c10ee1701adba2dfb64be8ef39d6bf9f203e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
 >  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]permite que os usuários alterem o [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] configuração assim que a maioria [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos na tela pareçam maiores. Embora esse recurso tenha sido disponibilizado no [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], nas versões anteriores a escala precisava ser implementada pelos aplicativos. Em [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], o Gerenciador de janelas da área de trabalho executa a escala para todos os aplicativos que não lidam com seus próprios escala padrão. Aplicativos de cliente de automação de interface do usuário devem levar esse recurso em conta.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permite que os usuários alterem o [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] configuração assim que a maioria [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos na tela pareçam maiores. Embora esse recurso tenha sido disponibilizado no [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], nas versões anteriores a escala precisava ser implementada pelos aplicativos. Em [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], o Gerenciador de janelas da área de trabalho executa a escala para todos os aplicativos que não lidam com seus próprios escala padrão. Aplicativos de cliente de automação de interface do usuário devem levar esse recurso em conta.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Escala no Windows Vista  

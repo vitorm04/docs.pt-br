@@ -1,14 +1,6 @@
 ---
 title: Controle de versão de contrato de dados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-versioning"></a>Controle de versão de contrato de dados
 Como desenvolvem aplicativos, você também terá que alterar o uso de serviços de contratos de dados. Este tópico explica como contratos de dados de versão. Este tópico descreve os mecanismos de controle de versão do contrato de dados. Para obter uma visão geral completa e orientação prescritiva do controle de versão, consulte [práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -110,7 +96,7 @@ Como desenvolvem aplicativos, você também terá que alterar o uso de serviços
 ## <a name="schema-considerations"></a>Considerações de esquema  
  Para obter uma explicação de como o esquema é produzida para tipos de contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- O esquema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] produz para tipos de contrato de dados faz com que não pode fornecer controle de versão. Ou seja, o esquema exportado de uma determinada versão de um tipo contém somente os membros de dados presentes nessa versão. Implementando o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface não altera o esquema para um tipo.  
+ O esquema WCF produz para tipos de contrato de dados torna não pode fornecer controle de versão. Ou seja, o esquema exportado de uma determinada versão de um tipo contém somente os membros de dados presentes nessa versão. Implementando o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface não altera o esquema para um tipo.  
   
  Membros de dados são exportados para o esquema como elementos opcionais por padrão. Ou seja, o `minOccurs` (atributo XML) valor é definido como 0. Membros de dados necessários são exportados com `minOccurs` definido como 1.  
   

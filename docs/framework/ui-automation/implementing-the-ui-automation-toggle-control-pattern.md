@@ -1,28 +1,19 @@
 ---
-title: "Implementando o padrão de controle Toggle de automação de interface de usuário"
-ms.custom: 
+title: Implementando o padrão de controle Toggle de automação de interface de usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Toggle control pattern
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 73a1182adad742f1cb53b809ae07d78d1ec27cd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eed3f6771526f7a026bd411b3f12c39b4bb64bf4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementando o padrão de controle Toggle de automação de interface de usuário
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Um controle deve percorrer seu <xref:System.Windows.Automation.ToggleState> na seguinte ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> e, se suportado, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
--   <xref:System.Windows.Automation.TogglePattern>não fornece um método SetState devido a problemas envolvendo a configuração direta de uma caixa de seleção de três estados sem percorrer seu apropriado <xref:System.Windows.Automation.ToggleState> sequência.  
+-   <xref:System.Windows.Automation.TogglePattern> não fornece um método SetState devido a problemas envolvendo a configuração direta de uma caixa de seleção de três estados sem percorrer seu apropriado <xref:System.Windows.Automation.ToggleState> sequência.  
   
 -   O controle RadioButton não implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, pois não é capaz de percorrendo seus estados válidos.  
   

@@ -1,34 +1,20 @@
 ---
 title: Como fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Como fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF
-Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre um cliente e um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de serviço, mesmo se o serviço não está disponível no momento da comunicação. Os procedimentos a seguir mostram como garantir a comunicação durável entre um cliente e um serviço usando o padrão na fila associação ao implementar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre um cliente e um serviço Windows Communication Foundation (WCF), mesmo se o serviço não está disponível no momento da comunicação. Os procedimentos a seguir mostram como garantir a comunicação durável entre um cliente e um serviço usando o padrão na fila associação ao implementar o serviço WCF.  
   
- Esta seção explica como usar <xref:System.ServiceModel.NetMsmqBinding> para comunicação em fila entre um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
+ Esta seção explica como usar <xref:System.ServiceModel.NetMsmqBinding> para comunicação em fila entre um cliente WCF e um serviço WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Para usar o enfileiramento de mensagens em um serviço WCF  
   
@@ -54,7 +40,7 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço do serviço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação. Para obter mais informações sobre como usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuração, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço do serviço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação. Para obter mais informações sobre como usar a configuração do WCF, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -65,7 +51,7 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Para criar um cliente para o serviço na fila  
   
-1.  O exemplo a seguir mostra como executar o aplicativo de hospedagem e use a ferramenta Svcutil.exe para criar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente.  
+1.  O exemplo a seguir mostra como executar o aplicativo de hospedagem e usar a ferramenta Svcutil.exe para criar o cliente do WCF.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
   
   
   
-3.  Criar um escopo de transação para gravar na fila transacional, a chamada a `SubmitPurchaseOrder` operação e fechar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente, conforme mostrado no exemplo a seguir.  
+3.  Criar um escopo de transação para gravar na fila transacional, a chamada a `SubmitPurchaseOrder` operação e fechar o cliente do WCF, conforme mostrado no exemplo a seguir.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

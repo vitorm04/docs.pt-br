@@ -1,30 +1,18 @@
 ---
 title: Frente e verso durável
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex"></a>Frente e verso durável
 Este exemplo demonstra como instalar e configurar o exchange mensagem duplex durável usando as atividades de mensagens no Windows Workflow Foundation (WF). Uma troca frente e verso durável de mensagem é uma troca bidirecional de mensagem que ocorra um longo período de tempo. O tempo de vida de troca de mensagem pode ser maior que o tempo de vida do canal de comunicação e o tempo de vida de memória das instâncias de serviço.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Neste exemplo, dois [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços implementados usando o Windows Workflow Foundation estão configurados para ter uma troca de mensagens duplex durável. A troca de mensagens duplex durável é composta de duas mensagens unidirecionais enviadas através de MSMQ e correlacionados usando [.NET contexto Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). As mensagens são enviadas usando as atividades de mensagem de <xref:System.ServiceModel.Activities.Send> e de <xref:System.ServiceModel.Activities.Receive> . O contexto - .NET é usado especificar o endereço de retorno de chamada nas mensagens enviadas. Ambos os serviços são hospedados usando serviços de ativação de processo do Windows (WAS) e configurados para ativar persistência de instâncias de serviços.  
+ Neste exemplo, dois serviços do Windows Communication Foundation (WCF) implementados usando o Windows Workflow Foundation são configurados para ter uma troca de mensagens duplex durável. A troca de mensagens duplex durável é composta de duas mensagens unidirecionais enviadas através de MSMQ e correlacionados usando [.NET contexto Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). As mensagens são enviadas usando as atividades de mensagem de <xref:System.ServiceModel.Activities.Send> e de <xref:System.ServiceModel.Activities.Receive> . O contexto - .NET é usado especificar o endereço de retorno de chamada nas mensagens enviadas. Ambos os serviços são hospedados usando serviços de ativação de processo do Windows (WAS) e configurados para ativar persistência de instâncias de serviços.  
   
  O primeiro serviço (Service1.xamlx) envia uma solicitação para o serviço de enviar (Service2.xamlx) fazer qualquer trabalho. O trabalho é concluído uma vez, envia de Service2.xamlx uma notificação de volta a Service1.xamlx para indicar que o trabalho foi concluído. Um aplicativo de console do fluxo de trabalho configura as filas que os serviços são escuta sobre e envia a mensagem inicial de Início para ativar Service1.xamlx. Uma vez que Service1.xamlx recebe notificação de Service2.xamlx que o aplicativo trabalho foi concluído, Service1.xamlx salva o resultado a um arquivo XML. Enquanto aguarda a mensagem de retorno de chamada, Service1.xamlx mantém o estado da instância que usa <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>padrão. Service2.xamlx mantém o estado da instância como parte de concluir o trabalho solicitado por Service1.xamlx.  
   
@@ -190,6 +178,6 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

@@ -1,26 +1,12 @@
 ---
 title: FindCriteria e descoberta achada
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das ações de descoberta principais. Executar uma pesquisa envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. Para obter mais informações sobre mensagens de descoberta, consulte o [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ Uma operação de localização de descoberta é iniciada por um cliente para de
   
  Critérios de pesquisa incluem:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Opcional. O nome do contrato do serviço que está sendo pesquisado e os critérios usados normalmente durante a pesquisa de um serviço. Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondente a todos os contratos de resposta. Observe que em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] um ponto de extremidade só pode oferecer suporte a um contrato.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Opcional. O nome do contrato do serviço que está sendo pesquisado e os critérios usados normalmente durante a pesquisa de um serviço. Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondente a todos os contratos de resposta. Observe que no WCF um ponto de extremidade suporta apenas um contrato.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -Opcional. Os escopos são URIs absolutos são usadas para categorizar os pontos de extremidade de serviço individual. Você talvez queira usá-lo em cenários onde vários pontos de extremidade expõem o mesmo contrato e você deseja uma maneira para pesquisar um subconjunto de pontos de extremidade. Se mais de um escopo for especificado, somente pontos de extremidade correspondente a todos os escopos de respondam.  
   

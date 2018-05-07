@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Define um elemento de associação que é usado para configurar pontos de extremidade para serviços Web do Windows Communication Foundation (WCF) que respondem às solicitações HTTP em vez de mensagens SOAP.  
@@ -86,9 +86,9 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- O [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] o modelo de programação da Web permite aos desenvolvedores expor [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviços por meio de solicitações HTTP que usam "plain old XML" Web estilo (POX) de mensagens em vez de mensagens baseadas em SOAP. Para os clientes se comunicam com um serviço usando solicitações HTTP, um ponto de extremidade do serviço deve ser configurado com o [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) que tem o \<WebHttpBehavior > anexado a ele.  
+ O modelo de programação WCF Web permite aos desenvolvedores expor serviços Web WCF por meio de solicitações HTTP que usam "plain old XML" estilo (POX) de mensagens em vez de mensagens baseadas em SOAP. Para os clientes se comunicam com um serviço usando solicitações HTTP, um ponto de extremidade do serviço deve ser configurado com o [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) que tem o \<WebHttpBehavior > anexado a ele.  
   
- Suporte em [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] para distribuição e do ASP. Integração de AJAX são desenvolvidos com base no modelo de programação da Web. Para obter mais informações sobre o modelo, consulte [modelo de programação do WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ Suporte em WCF para distribuição e do ASP. Integração de AJAX são desenvolvidos com base no modelo de programação da Web. Para obter mais informações sobre o modelo, consulte [modelo de programação do WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.WebHttpBinding>  

@@ -1,14 +1,6 @@
 ---
 title: Interface ICorDebug
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>Interface ICorDebug
 Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambiente do common language runtime (CLR).  
@@ -55,7 +43,7 @@ Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambient
 |[Método Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Encerra o `ICorDebug` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebug`representa um loop de processamento de eventos para um processo do depurador. O depurador deve aguardar o [: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) retorno de chamada de todos os processos que está sendo depurado antes de liberar esta interface.  
+ `ICorDebug` representa um loop de processamento de eventos para um processo do depurador. O depurador deve aguardar o [: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) retorno de chamada de todos os processos que está sendo depurado antes de liberar esta interface.  
   
  O `ICorDebug` é o objeto inicial para controlar a depuração gerenciada tudo mais. Nas versões do .NET Framework 1.0 e 1.1, este objeto foi uma `CoClass` objeto criado pela COM. No .NET Framework versão 2.0, esse objeto não é mais um `CoClass` objeto. Ele deve ser criado pelo [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) função, que tem mais suporte a versão. Essa nova função de criação permite que os clientes obter uma implementação específica de `ICorDebug`, que emula também uma versão específica da API de depuração.  
   
@@ -69,7 +57,7 @@ Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambient
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

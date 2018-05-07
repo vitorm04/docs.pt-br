@@ -1,13 +1,6 @@
 ---
-title: "Usando contêineres de elementos gráficos aninhados"
-ms.custom: 
+title: Usando contêineres de elementos gráficos aninhados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>Usando contêineres de elementos gráficos aninhados
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Fornece contêineres que você pode usar para substituir temporariamente ou aumentar a parte do estado de um <xref:System.Drawing.Graphics> objeto. Criar um contêiner chamando o <xref:System.Drawing.Graphics.BeginContainer%2A> método de um <xref:System.Drawing.Graphics> objeto. Você pode chamar <xref:System.Drawing.Graphics.BeginContainer%2A> repetidamente para formar contêineres aninhados. Cada chamada para <xref:System.Drawing.Graphics.BeginContainer%2A> devem estar combinados com uma chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece contêineres que você pode usar para substituir temporariamente ou aumentar a parte do estado de um <xref:System.Drawing.Graphics> objeto. Criar um contêiner chamando o <xref:System.Drawing.Graphics.BeginContainer%2A> método de um <xref:System.Drawing.Graphics> objeto. Você pode chamar <xref:System.Drawing.Graphics.BeginContainer%2A> repetidamente para formar contêineres aninhados. Cada chamada para <xref:System.Drawing.Graphics.BeginContainer%2A> devem estar combinados com uma chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Transformações em contêineres aninhados  
  O exemplo a seguir cria um <xref:System.Drawing.Graphics> objeto e um contêiner dentro desse <xref:System.Drawing.Graphics> objeto. A transformação global do <xref:System.Drawing.Graphics> objeto é um unidades de tradução 100 na direção x e 80 na direção y. A transformação global do contêiner é uma rotação de 30 graus. O código faz a chamada `DrawRectangle(pen, -60, -30, 120, 60)` duas vezes. A primeira chamada para <xref:System.Drawing.Graphics.DrawRectangle%2A> está dentro do contêiner; ou seja, a chamada é entre as chamadas para <xref:System.Drawing.Graphics.BeginContainer%2A> e <xref:System.Drawing.Graphics.EndContainer%2A>. A segunda chamada para <xref:System.Drawing.Graphics.DrawRectangle%2A> após a chamada para <xref:System.Drawing.Graphics.EndContainer%2A>.  

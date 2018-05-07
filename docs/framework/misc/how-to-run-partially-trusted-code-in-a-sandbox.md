@@ -1,13 +1,6 @@
 ---
-title: "Como executar código parcialmente confiável em uma área restrita"
-ms.custom: 
+title: Como executar código parcialmente confiável em uma área restrita
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - sandboxing
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc335bfef4993f6e730dca93cd645d886a9d13b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Como executar código parcialmente confiável em uma área restrita
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -72,7 +62,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     O <xref:System.Security.SecurityManager.GetStandardSandbox%2A> método retorna um uma `Internet` conjunto de permissões ou uma `LocalIntranet` conjunto de permissões dependendo da zona na evidência. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>constrói as permissões de identidade para alguns dos objetos de evidência passados como referências.  
+     O <xref:System.Security.SecurityManager.GetStandardSandbox%2A> método retorna um uma `Internet` conjunto de permissões ou uma `LocalIntranet` conjunto de permissões dependendo da zona na evidência. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> constrói as permissões de identidade para alguns dos objetos de evidência passados como referências.  
   
 2.  Assinar o assembly que contém a classe de hospedagem (chamada `Sandboxer` neste exemplo) que chama o código não confiável. Adicionar o <xref:System.Security.Policy.StrongName> usado para assinar o assembly para o <xref:System.Security.Policy.StrongName> matriz do `fullTrustAssemblies` parâmetro do <xref:System.AppDomain.CreateDomain%2A> chamar. A classe de hospedagem deve ser executado como totalmente confiável para habilitar a execução do código parcialmente confiável ou para oferecer serviços para o aplicativo de confiança parcial. Isso é como você ler o <xref:System.Security.Policy.StrongName> de um assembly:  
   
@@ -176,7 +166,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
     ```  
   
-     <xref:System.Reflection>é usado para obter um identificador de um método no assembly parcialmente confiável. O identificador pode ser usado para executar código em um modo seguro com permissões mínimas.  
+     <xref:System.Reflection> é usado para obter um identificador de um método no assembly parcialmente confiável. O identificador pode ser usado para executar código em um modo seguro com permissões mínimas.  
   
      No código anterior, observe o <xref:System.Security.PermissionSet.Assert%2A> para a permissão de confiança total antes de imprimir o <xref:System.Security.SecurityException>.  
   

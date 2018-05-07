@@ -1,35 +1,21 @@
 ---
 title: Utilizando Transações WS-Atomic
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d437b0bf3b14b60899028e293feecf5b1e36f766
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7880d46d4827b36c7806c61877edf79faa766371
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ws-atomictransaction"></a>Utilizando Transações WS-Atomic
 WS-AtomicTransaction (WS-AT) é um protocolo de transação interoperável. Permite o fluxo de transações distribuídas por meio de mensagens do serviço Web e coordenar de maneira interoperável entre infraestruturas de transação heterogêneos. WS-AT usa o protocolo de confirmação de duas fases para direcionar um resultado atômico entre aplicativos distribuídos, gerenciadores de transações e os gerenciadores de recursos.  
   
- A implementação de WS-AT [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornece inclui um serviço de protocolo incorporado ao Gerenciador de transações do coordenador de transações distribuídas da Microsoft (MSDTC). Usando o WS-AT [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos possam fluir transações para outros aplicativos, incluindo os serviços da Web interoperáveis construídos usando a tecnologia de terceiros.  
+ A implementação de WS-AT fornece Windows Communication Foundation (WCF) inclui um serviço de protocolo incorporado ao Gerenciador de transações do coordenador de transações distribuídas da Microsoft (MSDTC). Usando o WS-AT, aplicativos WCF podem fluir transações para outros aplicativos, incluindo os serviços da Web interoperáveis construídos usando a tecnologia de terceiros.  
   
- Quando uma transação entre um aplicativo cliente e um aplicativo de servidor de fluxo, o protocolo de transação usado é determinado pela associação que o servidor expõe no ponto de extremidade de cliente selecionado. Alguns [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] padrão de associações fornecidas pelo sistema para especificar o `OleTransactions` protocolo como o formato de propagação de transação, enquanto outros padrão à especificação WS-AT. Você pode modificar também programaticamente a opção de protocolo de transação dentro de uma associação fornecida.  
+ Quando uma transação entre um aplicativo cliente e um aplicativo de servidor de fluxo, o protocolo de transação usado é determinado pela associação que o servidor expõe no ponto de extremidade de cliente selecionado. Alguns padrão de associações fornecidas pelo sistema do WCF para especificar o `OleTransactions` protocolo como o formato de propagação de transação, enquanto outros padrão à especificação WS-AT. Você pode modificar também programaticamente a opção de protocolo de transação dentro de uma associação fornecida.  
   
  A escolha de protocol influencia:  
   
@@ -37,7 +23,7 @@ WS-AtomicTransaction (WS-AT) é um protocolo de transação interoperável. Perm
   
 -   O protocolo de rede usado para executar o protocolo de confirmação de duas fases entre o Gerenciador de transações do cliente e da transação do servidor, para resolver o resultado da transação.  
   
- Se o cliente e servidor são escritos usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], você não precisa usar WS-AT. Em vez disso, você pode usar as configurações padrão de `NetTcpBinding` com o `TransactionFlow` atributo habilitado, que usará o `OleTransactions` protocolo em vez disso. Para obter mais informações, consulte [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). Caso contrário, se o fluxo de transações para serviços da Web criados nas tecnologias de terceiros, você deve usar WS-AT.  
+ Se o cliente e servidor são escritos usando o WCF, você não precisa usar WS-AT. Em vez disso, você pode usar as configurações padrão de `NetTcpBinding` com o `TransactionFlow` atributo habilitado, que usará o `OleTransactions` protocolo em vez disso. Para obter mais informações, consulte [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). Caso contrário, se o fluxo de transações para serviços da Web criados nas tecnologias de terceiros, você deve usar WS-AT.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando o suporte a transações WS-Atomic](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

@@ -1,24 +1,12 @@
 ---
-title: "Ativação de processo do Windows"
-ms.custom: 
+title: Ativação de processo do Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b482d0a8a3b45e00d8e1faaa9e4a5c561595126
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcfca1d58b7672cd9bcc7f8ba9afa861d140e3b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-process-activation"></a>Ativação de processo do Windows
 Esta seção contém exemplos que demonstram a ativação do serviço por meio de protocolos de rede.  

@@ -1,14 +1,6 @@
 ---
-title: "Visão geral do controle ToolStrip (Windows Forms)"
-ms.custom: 
+title: Visão geral do controle ToolStrip (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Toolstrip
 helpviewer_keywords:
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3927f180e738541f2f2f8af6d03d281f6a601167
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Visão geral do controle ToolStrip (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ToolStrip> controle e suas classes associadas fornecem uma estrutura comum para a combinação de elementos da interface do usuário em menus, barras de ferramentas e barras de status. <xref:System.Windows.Forms.ToolStrip>controles de oferecem uma experiência avançada de tempo de design que inclui a ativação no local e editar, layout personalizado e rafting, que é a capacidade de compartilhar espaço horizontal ou vertical das barras de ferramentas.  
+Windows Forms <xref:System.Windows.Forms.ToolStrip> controle e suas classes associadas fornecem uma estrutura comum para a combinação de elementos da interface do usuário em menus, barras de ferramentas e barras de status. <xref:System.Windows.Forms.ToolStrip> controles de oferecem uma experiência avançada de tempo de design que inclui a ativação no local e editar, layout personalizado e rafting, que é a capacidade de compartilhar espaço horizontal ou vertical das barras de ferramentas.  
   
  Embora <xref:System.Windows.Forms.ToolStrip> substitui e adiciona a funcionalidade para o controle nas versões anteriores, <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e o uso futuro, se desejado.  
   
@@ -66,9 +52,9 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> controle e suas classes asso
 |<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|Obtém ou define um valor que indica como o <xref:System.Windows.Forms.ToolStrip> apresenta seus itens.|  
 |<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|Obtém ou define se um <xref:System.Windows.Forms.ToolStripItem> está associada a <xref:System.Windows.Forms.ToolStrip> ou <xref:System.Windows.Forms.ToolStripOverflowButton> ou podem flutuar entre os dois.|  
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|Obtém um valor que indica se um <xref:System.Windows.Forms.ToolStripItem> exibe outros itens na lista suspensa lista quando o <xref:System.Windows.Forms.ToolStripItem> é clicado.|  
-|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Obtém o <xref:System.Windows.Forms.ToolStripItem> que é o botão de estouro para um <xref:System.Windows.Forms.ToolStrip> com estouro habilitado.|  
+|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Obtém o <xref:System.Windows.Forms.ToolStripItem> que é o botão de estouro para um <xref:System.Windows.Forms.ToolStrip> com o estouro habilitado.|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|Obtém ou define um <xref:System.Windows.Forms.ToolStripRenderer> usadas para personalizar a aparência e comportamento (e aparência) de um <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Obtém ou define os estilos de pintura a serem aplicadas para o <xref:System.Windows.Forms.ToolStrip>.|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Obtém ou define os estilos de pintura a serem aplicados ao <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Gerado quando o <xref:System.Windows.Forms.ToolStrip.Renderer%2A> alterações de propriedade.|  
   
  O <xref:System.Windows.Forms.ToolStrip> flexibilidade do controle é obtida com o uso de um número de classes complementar. Abaixo estão algumas das mais importantes:  
@@ -84,7 +70,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> controle e suas classes asso
 |<xref:System.Windows.Forms.ToolStripContainer>|Fornece um contêiner com um painel em cada lado do formulário em que os controles podem ser organizados de várias maneiras.|  
 |<xref:System.Windows.Forms.ToolStripRenderer>|Manipula a funcionalidade de pintura para objetos <xref:System.Windows.Forms.ToolStrip>.|  
 |<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|Fornece a aparência no estilo do Microsoft Office.|  
-|<xref:System.Windows.Forms.ToolStripManager>|Controles de <xref:System.Windows.Forms.ToolStrip> renderização rafting e a mesclagem de <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, e <xref:System.Windows.Forms.ToolStripMenuItem> objetos.|  
+|<xref:System.Windows.Forms.ToolStripManager>|Controla a renderização e o reposicionamento de <xref:System.Windows.Forms.ToolStrip> e a mesclagem de objetos <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu> e <xref:System.Windows.Forms.ToolStripMenuItem>.|  
 |<xref:System.Windows.Forms.ToolStripManagerRenderMode>|Especifica o estilo de pintura (personalizada, Windows XP ou o Microsoft Office Professional) aplicado a vários <xref:System.Windows.Forms.ToolStrip> objetos contidos em um formulário.|  
 |<xref:System.Windows.Forms.ToolStripRenderMode>|Especifica o estilo de pintura (personalizada, Windows XP ou o Microsoft Office Professional) aplicado a um <xref:System.Windows.Forms.ToolStrip> objeto contido em um formulário.|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|Hospeda outros controles que não sejam especificamente <xref:System.Windows.Forms.ToolStrip> controles mas para a qual você deseja <xref:System.Windows.Forms.ToolStrip> funcionalidade.|  

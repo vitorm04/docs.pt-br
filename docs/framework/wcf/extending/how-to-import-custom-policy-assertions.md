@@ -1,27 +1,15 @@
 ---
-title: "Como importar asserções de políticas personalizadas"
-ms.custom: 
+title: Como importar asserções de políticas personalizadas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Como importar asserções de políticas personalizadas
 Declarações de política descrevem os recursos e requisitos de um ponto de extremidade de serviço.  Aplicativos cliente podem usar declarações de política nos metadados de serviço para configurar a ligação do cliente ou para personalizar o contrato de serviço para um ponto de extremidade de serviço.  
@@ -51,7 +39,7 @@ Declarações de política descrevem os recursos e requisitos de um ponto de ext
   
 3.  Execute a personalização para a associação ou o contrato que suporta o recurso ou requisito especificado pela declaração de política. Asserções indicam que uma associação requer uma configuração específica ou um elemento de associação específica. Fazer essas modificações, acessando o <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> propriedade. Outras declarações exigem que você modifique o contrato.  Você pode acessar e modificar o contrato usando o <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> propriedade.  Observe que o importador de política pode obter chamado várias vezes para a mesma associação e contrato, mas falhar alternativas de políticas diferentes se estiver importando uma alternativa de política. Seu código deve ser resiliente em relação a esse comportamento.  
   
-4.  Remova a declaração de política personalizada da coleção de asserção. Se você não remover a declaração [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pressupõe que a importação da política não foi bem-sucedida e não importa a associação associada. Se você usou o <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> método para localizar a declaração de política personalizada e removê-lo da coleção em uma única etapa, você não precisa executar essa etapa.  
+4.  Remova a declaração de política personalizada da coleção de asserção. Se você não remover a asserção Windows Communication Foundation (WCF) pressupõe que a importação da política não foi bem-sucedida e não importa a associação associada. Se você usou o <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> método para localizar a declaração de política personalizada e removê-lo da coleção em uma única etapa, você não precisa executar essa etapa.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Para inserir o importador de política personalizada para os metadados do sistema usando um arquivo de configuração  
   

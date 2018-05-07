@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerModuleEnum::Next"
-ms.custom: 
+title: Método ICorProfilerModuleEnum::Next
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerModuleEnum.Next Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2fca8a0f999ccc497c1929faa6cead04a1ec2774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 974879b854f7a4c18aa4625ea88abb4953123f3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>Método ICorProfilerModuleEnum::Next
 Obtém o número especificado de contíguos módulos de uma coleção sequencial de módulos, começando na posição atual do enumerador na sequência.  
@@ -62,7 +50,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt`elementos foram retornados.|  
+|S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Menos de `celt` elementos foram retornados, que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -72,7 +60,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  

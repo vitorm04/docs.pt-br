@@ -1,27 +1,18 @@
 ---
-title: "Visão geral das propriedades de automação da interface do usuário"
-ms.custom: 
+title: Visão geral das propriedades de automação da interface do usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 38237dd1885047eed5be06aba092c261f56f6da3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3fe06a0cd07979a14f2029ac3ece590496ecf74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-properties-overview"></a>Visão geral das propriedades de automação da interface do usuário
 > [!NOTE]
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="property-identifiers"></a>Identificadores de propriedade  
  Cada propriedade é identificada por um número e um nome. Os nomes das propriedades são usados somente para depuração e diagnóstico. Os provedores de usar o valor numérico [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] para identificar solicitações de propriedade recebidas. Aplicativos cliente, no entanto, apenas usam <xref:System.Windows.Automation.AutomationProperty>, que encapsula o número e o nome, para identificar as propriedades desejam recuperar.  
   
- <xref:System.Windows.Automation.AutomationProperty>objetos que representam propriedades particulares estão disponíveis como campos de várias classes. Por motivos de segurança, provedores de automação de interface de usuário obtêm esses objetos de um conjunto separado de classes que estão contidos em UIAutomationTypes.  
+ <xref:System.Windows.Automation.AutomationProperty> objetos que representam propriedades particulares estão disponíveis como campos de várias classes. Por motivos de segurança, provedores de automação de interface de usuário obtêm esses objetos de um conjunto separado de classes que estão contidos em UIAutomationTypes.  
   
  A tabela a seguir categoriza as propriedades pelas classes que contêm o <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
@@ -148,7 +139,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>Localização  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]provedores devem apresentar as seguintes propriedades no idioma do sistema operacional:  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedores devem apresentar as seguintes propriedades no idioma do sistema operacional:  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   

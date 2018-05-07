@@ -1,31 +1,17 @@
 ---
 title: Identidade e autenticação de serviço
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>Identidade e autenticação de serviço
 Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço WSDL Web Services Description Language (). Esse valor, propagada para qualquer cliente, é usado para autenticar o serviço. Depois que o cliente inicia uma comunicação para um ponto de extremidade e o serviço se autentica para o cliente, o cliente compara o valor de identidade do ponto de extremidade com o valor real retornado o processo de autenticação de ponto de extremidade. Se elas corresponderem, o cliente terá certeza que ele contatou o ponto de extremidade de serviço esperada. Isso funciona como uma proteção contra *phishing* , impedindo que um cliente que está sendo redirecionado para um ponto de extremidade hospedado por um serviço mal-intencionado.  
@@ -35,7 +21,7 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
 > [!NOTE]
 >  Quando você usa LanMan NT (NTLM) para autenticação, a identidade do serviço não está marcada como sob NTLM, o cliente é capaz de autenticar o servidor. NTLM é usado quando os computadores fazem parte de um grupo de trabalho do Windows ou ao executar uma versão mais antiga do Windows que não dá suporte à autenticação de Kerberos.  
   
- Quando o cliente inicia um canal seguro para enviar uma mensagem para um serviço, o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infraestrutura autentica o serviço e envia a mensagem somente se a identidade de serviço coincide com a identidade especificada no endereço do ponto de extremidade usa o cliente.  
+ Quando o cliente inicia um canal seguro para enviar uma mensagem para um serviço por ele, a infraestrutura do Windows Communication Foundation (WCF) autentica o serviço e envia a mensagem somente se a identidade de serviço coincide com a identidade especificada no ponto de extremidade o cliente usa o endereço.  
   
  Processamento de identidade consiste das seguintes etapas:  
   
@@ -45,7 +31,7 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
   
  Identidade de processamento no cliente é semelhante à autenticação de cliente no serviço. Um serviço seguro não executar código até que as credenciais do cliente foi autenticadas. Da mesma forma, o cliente envia mensagens para o serviço até que as credenciais do serviço foram autenticadas com base no que é conhecido com antecedência de metadados do serviço.  
   
- O <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade o <xref:System.ServiceModel.EndpointAddress> classe representa a identidade do serviço chamado pelo cliente. O serviço publica o <xref:System.ServiceModel.EndpointAddress.Identity%2A> em seus metadados. Quando o desenvolvedor do cliente é executado o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) contra o ponto de extremidade de serviço, a configuração gerada contém o valor do serviço de <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura (se configurado com segurança) verifica se o serviço possui a identidade especificada.  
+ O <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade o <xref:System.ServiceModel.EndpointAddress> classe representa a identidade do serviço chamado pelo cliente. O serviço publica o <xref:System.ServiceModel.EndpointAddress.Identity%2A> em seus metadados. Quando o desenvolvedor do cliente é executado o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) contra o ponto de extremidade de serviço, a configuração gerada contém o valor do serviço de <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade. A infra-estrutura do WCF (se configurado com segurança) verifica se o serviço possui a identidade especificada.  
   
 > [!IMPORTANT]
 >  O metadados contém a identidade esperada do serviço, portanto, é recomendável que você exponha os metadados de serviço por meio de forma segura, por exemplo, ao criar um ponto de extremidade HTTPS para o serviço. Para obter mais informações, consulte [como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -75,7 +61,7 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
   
   
 ## <a name="setting-identity-programmatically"></a>Definir a identidade por meio de programação  
- O serviço não precisa especificar explicitamente uma identidade, porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina automaticamente. No entanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que você especifique uma identidade em um ponto de extremidade, se necessário. O código a seguir adiciona um novo ponto de extremidade de serviço com uma identidade específica de DNS.  
+ Seu serviço não precisa especificar explicitamente uma identidade, pois WCF determina automaticamente. No entanto, o WCF permite que você especifique uma identidade em um ponto de extremidade, se necessário. O código a seguir adiciona um novo ponto de extremidade de serviço com uma identidade específica de DNS.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
   
  Se o canal está configurado para autenticar usando o nível de transporte ou mensagem de protocolo (SSL) com certificados x. 509 para autenticação, os seguintes valores de identidade são válidos:  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o certificado fornecido durante o handshake SSL contém um DNS ou `CommonName` atributo de (CN) igual ao valor especificado na identidade do DNS no cliente. Observe que essas verificações são feitas Além disso, para determinar a validade do certificado do servidor. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] valida que o certificado do servidor é emitido por uma autoridade raiz confiável.  
+-   DNS. WCF garante que o certificado fornecido durante o handshake SSL contém um DNS ou `CommonName` atributo de (CN) igual ao valor especificado na identidade do DNS no cliente. Observe que essas verificações são feitas Além disso, para determinar a validade do certificado do servidor. Por padrão, o WCF valida que o certificado do servidor é emitido por uma autoridade raiz confiável.  
   
--   Certificado. Durante o handshake SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o ponto de extremidade remoto fornece o valor exato do certificado especificado na identidade.  
+-   Certificado. Durante o handshake SSL, o WCF garante que o ponto de extremidade remoto fornece o valor exato do certificado especificado na identidade.  
   
 -   Referência de certificado. Mesmo que o certificado.  
   
--   RSA. Durante o handshake SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o ponto de extremidade remoto fornece a chave RSA exata especificada na identidade.  
+-   RSA. Durante o handshake SSL, o WCF garante que o ponto de extremidade remoto fornece a chave RSA exata especificada na identidade.  
   
  Se o serviço autentica usando o SSL de nível de transporte ou de mensagem com uma credencial do Windows para autenticação e negocia a credencial, os valores de identidade a seguir são válidos:  
   

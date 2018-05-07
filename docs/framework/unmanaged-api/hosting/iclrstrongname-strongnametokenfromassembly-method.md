@@ -1,14 +1,6 @@
 ---
-title: "Método ICLRStrongName::StrongNameTokenFromAssembly"
-ms.custom: 
+title: Método ICLRStrongName::StrongNameTokenFromAssembly
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameTokenFromAssembly
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fc725afb-b66b-4015-aa44-1c0d1304197f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 455a04c3c5465ec263c5d2131ac8f3c4e34ea610
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea9fb2bb9c4535e30a42ad956b04b3bb06a798a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>Método ICLRStrongName::StrongNameTokenFromAssembly
 Cria um token de nome forte do arquivo de assembly especificado.  
@@ -59,7 +47,7 @@ HRESULT StrongNameTokenFromAssembly (
  [out] O tamanho, em bytes, do token de nome forte.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK`Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+ `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
   
 ## <a name="remarks"></a>Comentários  
  Um token de nome forte é a forma abreviada de uma chave pública. O token é um hash de 64 bits que é criado a partir de chave pública usada para assinar o assembly. O token é uma parte do nome forte do assembly e pode ser lidos dos metadados do assembly.  
@@ -73,7 +61,7 @@ HRESULT StrongNameTokenFromAssembly (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  

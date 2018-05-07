@@ -1,30 +1,18 @@
 ---
-title: "Como habilitar transmissão"
-ms.custom: 
+title: Como habilitar transmissão
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-streaming"></a>Como habilitar transmissão
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]pode enviar mensagens usando transferências em buffer ou transmitidas. No modo de transferência em buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes de entregar completamente. O modo de streaming é útil quando as informações que são passadas é demoradas e podem ser processadas em série. O modo contínuo também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  
+Windows Communication Foundation (WCF) pode enviar mensagens usando transferências em buffer ou transmitidas. No modo de transferência em buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes de entregar completamente. O modo de streaming é útil quando as informações que são passadas é demoradas e podem ser processadas em série. O modo contínuo também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  
   
  Para habilitar o streaming, definir o `OperationContract` adequadamente e habilitar o streaming no nível do transporte.  
   
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     O `GetStream` operação recebe alguns dados no buffer de entrada como um `string`, que é armazenado em buffer e retorna um `Stream`, que é transmitido. Por outro lado `UploadStream` assume um `Stream` (Streaming) e retorna um `bool` (em buffer). `EchoStream`Obtém e retorna `Stream` e é um exemplo de uma operação cujas entradas e mensagens de saída ambos são transmitidas. Por fim, `GetReversedStream` não usa nenhuma entrada e retorna um `Stream` (Streaming).  
+     O `GetStream` operação recebe alguns dados no buffer de entrada como um `string`, que é armazenado em buffer e retorna um `Stream`, que é transmitido. Por outro lado `UploadStream` assume um `Stream` (Streaming) e retorna um `bool` (em buffer). `EchoStream` Obtém e retorna `Stream` e é um exemplo de uma operação cujas entradas e mensagens de saída ambos são transmitidas. Por fim, `GetReversedStream` não usa nenhuma entrada e retorna um `Stream` (Streaming).  
   
 2.  Streaming deve ser habilitado na associação. Definir um `TransferMode` propriedade, que pode ter um dos seguintes valores:  
   
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Para fazer um processamento especial em cada parte de um fluxo de dados como ele está sendo enviado ou recebida, derive uma classe de fluxo personalizados de <xref:System.IO.Stream>. Como um exemplo de um fluxo personalizado, o código a seguir contém um `GetReversedStream` método e uma `ReverseStream` classe-.  
   
-     `GetReversedStream`cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre como o sistema lê a partir de `ReverseStream` objeto. O `ReverseStream.Read` método lê um bloco de bytes do arquivo de base, reverte-los e retorna os bytes invertidos. Esse método não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este exemplo mostra como você pode executar o processamento de fluxo que o conteúdo está sendo lida para ou gravada do fluxo.  
+     `GetReversedStream` cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre como o sistema lê a partir de `ReverseStream` objeto. O `ReverseStream.Read` método lê um bloco de bytes do arquivo de base, reverte-los e retorna os bytes invertidos. Esse método não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este exemplo mostra como você pode executar o processamento de fluxo que o conteúdo está sendo lida para ou gravada do fluxo.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  

@@ -1,14 +1,6 @@
 ---
-title: "Método ICLRPolicyManager::SetDefaultAction"
-ms.custom: 
+title: Método ICLRPolicyManager::SetDefaultAction
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetDefaultAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 751853aaf4322c15b44bb9b912d293a081c24ba8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a183c7491ad5d67bc2c68edba3ef2d54839da12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>Método ICLRPolicyManager::SetDefaultAction
 Especifica a ação de política, que o common language runtime (CLR) deve ser executada quando ocorre a operação especificada.  
@@ -58,7 +46,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`retornou com êxito.|  
+|S_OK|`SetDefaultAction` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -67,9 +55,9 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|Inválido `action` foi especificado para o `operation`, ou um valor inválido foi fornecido para `operation`.|  
   
 ## <a name="remarks"></a>Comentários  
- Nem todos os valores da política de ação podem ser especificados como o comportamento padrão para operações de CLR. `SetDefaultAction`normalmente podem ser usadas somente para escalonar o comportamento. Por exemplo, um host pode especificar que anulações de thread se tornar educado anulações de thread, mas não é possível especificar o oposto. A tabela a seguir descreve o válido `action` valores para cada possível `operation` valor.  
+ Nem todos os valores da política de ação podem ser especificados como o comportamento padrão para operações de CLR. `SetDefaultAction` normalmente podem ser usadas somente para escalonar o comportamento. Por exemplo, um host pode especificar que anulações de thread se tornar educado anulações de thread, mas não é possível especificar o oposto. A tabela a seguir descreve o válido `action` valores para cada possível `operation` valor.  
   
-|Valor para`operation`|Valores válidos para`action`|  
+|Valor para `operation`|Valores válidos para `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -85,7 +73,7 @@ HRESULT SetDefaultAction (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumeração EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

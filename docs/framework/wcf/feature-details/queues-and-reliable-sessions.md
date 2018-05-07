@@ -1,29 +1,15 @@
 ---
 title: Sessões confiáveis e filas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Sessões confiáveis e filas
-Sessões confiáveis e filas são o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos que implementam o sistema de mensagens confiável. Os tópicos contidos nesta seção discutem o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recursos de mensagens confiáveis.  
+Sessões confiáveis e filas são os recursos do Windows Communication Foundation (WCF) que implementa o sistema de mensagens confiável. Os tópicos contidos nesta seção abordam os recursos de mensagens confiáveis do WCF.  
   
  Mensagens confiáveis são como uma fonte confiável de mensagens (chamada de origem) transfere mensagens de forma confiável em um destino de mensagens confiável (chamado de destino).  
   
@@ -33,7 +19,7 @@ Sessões confiáveis e filas são o [!INCLUDE[indigo1](../../../../includes/indi
   
 -   Separação de origem e destino de um do outro, que fornece falha independente e recuperação de origem e de destino como bem como confiável transferência e a entrega de mensagens, mesmo que a origem ou destino está indisponível.  
   
- Mensagens confiáveis com frequência ocorre às custas de alta latência. Latência é o tempo necessário alcançar o destino da origem da mensagem. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], portanto, fornece os seguintes tipos de mensagens confiáveis:  
+ Mensagens confiáveis com frequência ocorre às custas de alta latência. Latência é o tempo necessário alcançar o destino da origem da mensagem. WCF, portanto, fornece os seguintes tipos de mensagens confiáveis:  
   
 -   [Sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), que oferecem transferência confiável sem o custo de alta latência  
   
@@ -45,7 +31,7 @@ Sessões confiáveis e filas são o [!INCLUDE[indigo1](../../../../includes/indi
  Sessões confiáveis fornecem transferências de mensagens confiável de baixa latência. Eles fornecem para mensagens SOAP através de qualquer proxies ou intermediários, equivalente ao qual TCP permite pacotes por pontes IP. Para obter mais informações sobre sessões confiáveis, consulte [sessões confiáveis](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Filas  
- As filas no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornecer ambas as transferências confiáveis de mensagens e separação entre fontes e destinos às custas de alta latência. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunicação em fila é criada sobre enfileiramento de mensagens (também conhecido como MSMQ).  
+ As filas no WCF fornecem ambas as transferências confiáveis de mensagens e separação entre fontes e destinos às custas de alta latência. WCF na fila comunicação se baseia no enfileiramento de mensagens (também conhecido como MSMQ).  
   
  MSMQ é enviado como uma opção com Windows que é executado como um serviço NT. Ele captura mensagens de transmissão em uma fila de transmissão em nome da fonte e entrega para uma fila de destino. A fila de destino aceita mensagens em nome de destino para envio posterior sempre que o destino de solicitações de mensagens. Os gerenciadores de fila MSMQ implementam um protocolo de transferência de mensagens confiáveis para que as mensagens não serão perdidas durante a transmissão. O protocolo pode ser nativo ou baseado em SOAP, como confiável de mensagens protocolo SRMP (Soap).  
   

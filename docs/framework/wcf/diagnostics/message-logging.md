@@ -1,27 +1,15 @@
 ---
 title: Registro em log de mensagens
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-logging"></a>Registro em log de mensagens
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece a capacidade de registrar em log mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja quais a mensagem e é de corpo de mensagem semelhante. Esse tipo de log é particularmente útil para que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem foi recebida. Você também pode examinar a segurança tokens utilizados, partes criptografado e assinado e partes permanecem intactas.  
+Windows Communication Foundation (WCF) fornece a capacidade de registrar em log mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja quais a mensagem e é de corpo de mensagem semelhante. Esse tipo de log é particularmente útil para que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem foi recebida. Você também pode examinar a segurança tokens utilizados, partes criptografado e assinado e partes permanecem intactas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do fluxo de mensagens](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  

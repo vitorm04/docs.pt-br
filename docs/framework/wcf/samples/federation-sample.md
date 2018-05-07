@@ -1,32 +1,18 @@
 ---
 title: Exemplo de federação
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-sample"></a>Exemplo de federação
 Este exemplo demonstra segurança federada.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornece suporte para implantação de arquiteturas de segurança federada por meio de `wsFederationHttpBinding`. O `wsFederationHttpBinding` fornece uma associação segura, confiável e interoperável que envolve o uso do HTTP como o mecanismo de transporte subjacente para comunicação de solicitação/resposta e Text/XML como formato de conexão para a codificação. Para obter mais informações sobre a federação no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [federação](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) oferece suporte para implantação de arquiteturas de segurança federada por meio de `wsFederationHttpBinding`. O `wsFederationHttpBinding` fornece uma associação segura, confiável e interoperável que envolve o uso do HTTP como o mecanismo de transporte subjacente para comunicação de solicitação/resposta e Text/XML como formato de conexão para a codificação. Para obter mais informações sobre a federação no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [federação](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  O cenário é composto de 4 partes:  
   
@@ -126,7 +112,7 @@ Este exemplo demonstra segurança federada.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

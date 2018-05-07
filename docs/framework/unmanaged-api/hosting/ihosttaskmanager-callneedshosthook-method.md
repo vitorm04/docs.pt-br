@@ -1,14 +1,6 @@
 ---
-title: "Método IHostTaskManager::CallNeedsHostHook"
-ms.custom: 
+title: Método IHostTaskManager::CallNeedsHostHook
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.CallNeedsHostHook
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4774c9f37f73692bf8d9455c51e76aa4c590f925
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Método IHostTaskManager::CallNeedsHostHook
 Permite que o host especificar se o common language runtime (CLR) pode embutido chamada especificado para uma função não gerenciada.  
@@ -58,7 +46,7 @@ HRESULT CallNeedsHostHook (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`retornou com êxito.|  
+|S_OK|`CallNeedsHostHook` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -66,7 +54,7 @@ HRESULT CallNeedsHostHook (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Para ajudar a otimizar a execução de código, o CLR realiza uma análise de cada plataforma chamar invoke durante a compilação para determinar se a chamada pode ser embutida. `CallNeedsHostHook`permite que o host substituir essa decisão, exigindo que uma chamada para uma função não gerenciada ser vinculada. Se o host requer um gancho, o tempo de execução não embutido não a chamada.  
+ Para ajudar a otimizar a execução de código, o CLR realiza uma análise de cada plataforma chamar invoke durante a compilação para determinar se a chamada pode ser embutida. `CallNeedsHostHook` permite que o host substituir essa decisão, exigindo que uma chamada para uma função não gerenciada ser vinculada. Se o host requer um gancho, o tempo de execução não embutido não a chamada.  
   
  O host geralmente exigem um gancho onde ele deve ajustar o estado de ponto flutuante, ou depois de receber a notificação de que uma chamada é entrar em um estado em que o host não pode controlar as solicitações do runtime memória ou qualquer bloqueios. Quando o host requer que a chamada ser conectado, o tempo de execução notifica o host de transições de e para código gerenciado por meio de chamadas para [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), e [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
@@ -77,7 +65,7 @@ HRESULT CallNeedsHostHook (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

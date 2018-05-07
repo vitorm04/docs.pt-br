@@ -1,37 +1,23 @@
 ---
-title: "Como instalar e configurar componentes de ativação do WCF"
-ms.custom: 
+title: Como instalar e configurar componentes de ativação do WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Como instalar e configurar componentes de ativação do WCF
-Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) em [!INCLUDE[wv](../../../../includes/wv-md.md)] host [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
+Este tópico descreve as etapas necessárias para configurar o serviço de ativação de processos do Windows (também conhecido como WAS) no [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar o Windows Communication Foundation (WCF) protocolos de rede de serviços que não se comunicam por HTTP. As seções a seguir descrevem as etapas para essa configuração:  
   
--   Instalar (ou confirmar a instalação de) o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] componentes de ativação.  
+-   Instalar (ou confirmar a instalação do) os componentes de ativação do WCF.  
   
 -   Configure o WAS para oferecer suporte a um protocolo diferente de HTTP. O procedimento a seguir configura [!INCLUDE[wv](../../../../includes/wv-md.md)] para ativação TCP.  
   
- Depois de instalar e configurar o WAS, consulte [como: hospedar um serviço WCF em WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) para os procedimentos para criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que expõe um ponto de extremidade HTTP não utiliza o WAS.  
+ Depois de instalar e configurar o WAS, consulte [como: hospedar um serviço WCF em WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) para os procedimentos para criar um serviço WCF que expõe um ponto de extremidade HTTP não utiliza o WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Para instalar os componentes de ativação não HTTP do WCF  
   
@@ -64,7 +50,7 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
     ```  
   
     > [!NOTE]
-    >  Esse comando é uma única linha de texto. Este comando habilita o /\<*aplicativo WCF*> aplicativo sejam acessados usando ambos os http://localhost*/\<aplicativo WCF >* e net.tcp:// localhost /*\<aplicativo WCF >*.  
+    >  Esse comando é uma única linha de texto. Este comando habilita o /\<*aplicativo WCF*> aplicativo seja acessado usando http://localhost  */ \<aplicativo WCF >* e net.tcp:// localhost /*\<aplicativo WCF >*.  
   
      Remova a associação de site do NET. TCP adicionado para este exemplo.  
   

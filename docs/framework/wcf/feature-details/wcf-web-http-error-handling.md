@@ -1,29 +1,15 @@
 ---
 title: Tratamento de erros HTTP Web do WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Tratamento de erros de Web HTTP permite que você retorne erros de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços Web HTTP que especificam um status HTTP de código e retornar detalhes do erro usando o mesmo formato que a operação (por exemplo, XML ou JSON).  
+Tratamento de erros do Windows Communication Foundation (WCF) HTTP da Web permite que você retorne erros dos serviços WCF Web HTTP que especifique um código de status HTTP e retornam detalhes do erro usando o mesmo formato que a operação (por exemplo, XML ou JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF  
  O <xref:System.ServiceModel.Web.WebFaultException> classe define um construtor que permite que você especifique um código de status HTTP. Esse código de status, em seguida, é retornado ao cliente. Uma versão genérica do <xref:System.ServiceModel.Web.WebFaultException> classe <xref:System.ServiceModel.Web.WebFaultException%601> permite que você retorne um tipo definido pelo usuário que contém informações sobre o erro que ocorreu. Este objeto personalizado é serializado usando o formato especificado pela operação e retornado ao cliente. O exemplo a seguir mostra como retornar um código de status HTTP.  

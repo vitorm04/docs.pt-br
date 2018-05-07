@@ -1,24 +1,14 @@
 ---
-title: "Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)"
-ms.custom: 
+title: Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 009d70423a3eb29c97f3279a288c37623dac927e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de configuração XML que especifica se os elementos do programa designado estão disponíveis para reflexão. Aqui está um exemplo de um arquivo de diretivas de tempo de execução:  

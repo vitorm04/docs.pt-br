@@ -1,30 +1,18 @@
 ---
-title: "Modos de classificação da coluna no controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Modos de classificação da coluna no controle DataGridView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ebcfc435fcc7d2b0dfbfe3004d958c73dd1347c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modos de classificação da coluna no controle DataGridView dos Windows Forms
-<xref:System.Windows.Forms.DataGridView>colunas tem três modos de classificação. O modo de classificação para cada coluna é especificado por meio de <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propriedade da coluna, que pode ser definida como um dos seguintes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valores de enumeração.  
+<xref:System.Windows.Forms.DataGridView> colunas tem três modos de classificação. O modo de classificação para cada coluna é especificado por meio de <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propriedade da coluna, que pode ser definida como um dos seguintes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valores de enumeração.  
   
 |Valor `DataGridViewColumnSortMode`|Descrição|  
 |----------------------------------------|-----------------|  

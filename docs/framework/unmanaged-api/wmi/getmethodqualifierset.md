@@ -1,11 +1,7 @@
 ---
-title: "Função GetMethodQualifierSet (referência de API não gerenciada)"
-description: "A função GetMethodQualifierSet recupera o conjunto do qualificador do método."
+title: Função GetMethodQualifierSet (referência de API não gerenciada)
+description: A função GetMethodQualifierSet recupera o conjunto do qualificador do método.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethodQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2999bef31576cf2bc025868260c2b1782a9b69f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethodqualifierset-function"></a>Função GetMethodQualifierSet
 Recupera o qualificador definido para um método específico.
@@ -54,7 +47,7 @@ HRESULT GetMethodQualifierSet (
 [in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
 
 `wszMethod`  
-[in] O nome do método. `wszMethod`deve apontar para um válida `LPCWSTR`. 
+[in] O nome do método. `wszMethod` deve apontar para um válida `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Recebe o ponteiro de interface que permite acessar os qualificadores do método. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é definido para apontar para `null`. 
@@ -82,7 +75,7 @@ Como cada método pode ter seus próprio qualificadores de [IWbemQualifierSet po
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -1,14 +1,6 @@
 ---
-title: "Método IHostThreadPoolManager::QueueUserWorkItem"
-ms.custom: 
+title: Método IHostThreadPoolManager::QueueUserWorkItem
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.QueueUserWorkItem
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c0a304c2052192d3cba761a128e15dc463011030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>Método IHostThreadPoolManager::QueueUserWorkItem
 Uma função para a execução de filas e especifica um objeto que contém dados a serem usados por essa função. A função é executada quando um thread estiver disponível.  
@@ -62,7 +50,7 @@ HRESULT QueueUserWorkItem (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem`retornou com êxito.|  
+|S_OK|`QueueUserWorkItem` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -70,7 +58,7 @@ HRESULT QueueUserWorkItem (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `QueueUserWorkItem`Enfileira um item de trabalho para um thread de trabalho no pool de threads. Tipos de assinatura e o parâmetro são idênticos da função Win32 correspondente, que tem o mesmo nome. Para obter mais informações, consulte a documentação da plataforma Windows.  
+ `QueueUserWorkItem` Enfileira um item de trabalho para um thread de trabalho no pool de threads. Tipos de assinatura e o parâmetro são idênticos da função Win32 correspondente, que tem o mesmo nome. Para obter mais informações, consulte a documentação da plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -79,7 +67,7 @@ HRESULT QueueUserWorkItem (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  

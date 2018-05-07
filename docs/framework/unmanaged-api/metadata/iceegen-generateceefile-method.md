@@ -1,14 +1,6 @@
 ---
-title: "Método ICeeGen::GenerateCeeFile"
-ms.custom: 
+title: Método ICeeGen::GenerateCeeFile
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeGen.GenerateCeeFile
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 10b579a3d0ff8cbe02a3b47231114521486d8e2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iceegengenerateceefile-method"></a>Método ICeeGen::GenerateCeeFile
 Gera um arquivo de base de código que contém o código base atualmente carregado nisso [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
@@ -47,7 +35,7 @@ HRESULT GenerateCeeFile ();
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `GenerateCeeFile`não usa nenhum parâmetro.  
+ `GenerateCeeFile` não usa nenhum parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -56,7 +44,7 @@ HRESULT GenerateCeeFile ();
   
  **Biblioteca:** usado como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

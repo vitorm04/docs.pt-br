@@ -1,30 +1,18 @@
 ---
 title: Atividade
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>Atividade
-Este tópico descreve os rastreamentos de atividade no [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de rastreamento. Atividades são unidades que ajudam o usuário a restringir o escopo de uma falha de processamento. Erros que ocorrem na mesma atividade estão diretamente relacionados. Por exemplo, uma operação falha porque a descriptografia da mensagem falhou. Os rastreamentos de operação e Falha na descriptografia mensagem aparecem na mesma atividade, mostrando uma correlação direta entre o erro de descriptografia e o erro de solicitação.  
+Este tópico descreve os rastreamentos de atividades no modelo de rastreamento do Windows Communication Foundation (WCF). Atividades são unidades que ajudam o usuário a restringir o escopo de uma falha de processamento. Erros que ocorrem na mesma atividade estão diretamente relacionados. Por exemplo, uma operação falha porque a descriptografia da mensagem falhou. Os rastreamentos de operação e Falha na descriptografia mensagem aparecem na mesma atividade, mostrando uma correlação direta entre o erro de descriptografia e o erro de solicitação.  
   
 ## <a name="configuring-activity-tracing"></a>Configurando o rastreamento de atividade  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]oferece atividades predefinidas para aplicativos de processamento (consulte [lista de atividades](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Você também pode definir atividades programaticamente para rastreamentos de usuário do grupo. Para obter mais informações, consulte [emitindo rastreamentos de código de usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oferece atividades predefinidas para aplicativos de processamento (consulte [lista de atividades](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Você também pode definir atividades programaticamente para rastreamentos de usuário do grupo. Para obter mais informações, consulte [emitindo rastreamentos de código de usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
  Para emitir rastreamentos de atividade em tempo de execução, use o `ActivityTracing` configuração para o `System.ServiceModel` rastreamento fonte ou outros [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ou fontes de rastreamento personalizada, conforme demonstrado pelo código de configuração a seguir.  
   
@@ -49,9 +37,9 @@ Este tópico descreve os rastreamentos de atividade no [!INCLUDE[indigo1](../../
 ## <a name="defining-the-scope-of-an-activity"></a>Definir o escopo de uma atividade  
  Uma atividade é definida em tempo de design e denota uma unidade lógica de trabalho. Emitido rastreamentos com o mesmo identificador de atividade estão diretamente relacionados, elas fazem parte da mesma atividade. Como uma atividade pode atravessar limites de ponto de extremidade (uma solicitação), dois escopos para uma atividade são definidos.  
   
--   `Global`escopo, por aplicativo. Este escopo, a atividade é identificada por seu identificador de atividade exclusivo de 128 bits, o gAId. O gAid é o que é propagado entre pontos de extremidade.  
+-   `Global` escopo, por aplicativo. Este escopo, a atividade é identificada por seu identificador de atividade exclusivo de 128 bits, o gAId. O gAid é o que é propagado entre pontos de extremidade.  
   
--   `Local`escopo, por ponto de extremidade. Este escopo, a atividade é identificada pelo seu gAId, junto com o nome de origem de rastreamento emitindo os rastreamentos de atividade e o processo de identificação. Este Trio constitui a id de atividade local, apresentada. O perfeitos é usado para definir os limites (locais) de uma atividade.  
+-   `Local` escopo, por ponto de extremidade. Este escopo, a atividade é identificada pelo seu gAId, junto com o nome de origem de rastreamento emitindo os rastreamentos de atividade e o processo de identificação. Este Trio constitui a id de atividade local, apresentada. O perfeitos é usado para definir os limites (locais) de uma atividade.  
   
 ## <a name="trace-schema"></a>Esquema de rastreamento  
  Rastreamentos podem ser emitidos usando qualquer esquema e entre plataformas da Microsoft. "e2e" (para "ponta a ponta") é um esquema mais usado. Esse esquema inclui um identificador de 128 bits (gAId), o nome de origem de rastreamento e o ID de processo. No código gerenciado, <xref:System.Diagnostics.XmlWriterTraceListener> emite rastreamentos no esquema E2E.  

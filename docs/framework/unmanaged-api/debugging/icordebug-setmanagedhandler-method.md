@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebug::SetManagedHandler"
-ms.custom: 
+title: Método ICorDebug::SetManagedHandler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug.SetManagedHandler
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dde32b6a8251474c4254e35a3a1ba3ba3bafcb8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bcf97f9fffabb9ae9579016517cfc335e6f783a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>Método ICorDebug::SetManagedHandler
 Especifica o objeto do manipulador de eventos para eventos gerenciados.  
@@ -51,7 +39,7 @@ HRESULT SetManagedHandler (
  [in] Um ponteiro para um [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) objeto, que é o objeto do manipulador de eventos.  
   
 ## <a name="remarks"></a>Comentários  
- `SetManagedHandler`deve ser chamado no momento da criação.  
+ `SetManagedHandler` deve ser chamado no momento da criação.  
   
  Se o `ICorDebugManagedCallback` implementação não contém interfaces suficientes para manipular eventos de depuração para o aplicativo que está sendo depurado, `SetManagedHandler` retorna um HRESULT de E_NOINTERFACE.  
   
@@ -62,7 +50,7 @@ HRESULT SetManagedHandler (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

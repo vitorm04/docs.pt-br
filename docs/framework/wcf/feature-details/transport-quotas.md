@@ -1,36 +1,22 @@
 ---
 title: Cotas de transporte
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Cotas de transporte
 Cotas de transporte são um mecanismo de política para decidir quando uma conexão está consumindo recursos excessivos. Uma cota é um limite rígido que impede o uso de recursos adicionais quando o valor da cota for excedido. Cotas de transporte impedir mal-intencionados ou não intencionais ataques de negação de serviço.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]transportes têm valores de cota padrão com base em uma alocação de recursos de conservadora. Esses valores padrão são adequados para ambientes de desenvolvimento e cenários de instalação pequeno. Os administradores de serviço devem revisar cotas de transporte e ajustar os valores de cota individuais se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas apesar da disponibilidade dos recursos adicionais.  
+ Transportes do Windows Communication Foundation (WCF) têm valores de cota padrão com base em uma alocação de recursos de conservadora. Esses valores padrão são adequados para ambientes de desenvolvimento e cenários de instalação pequeno. Os administradores de serviço devem revisar cotas de transporte e ajustar os valores de cota individuais se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas apesar da disponibilidade dos recursos adicionais.  
   
 ## <a name="types-of-transport-quotas"></a>Tipos de cotas de transporte  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]transportes têm três tipos de cotas:  
+ Transportes WCF têm três tipos de cotas:  
   
 -   *Tempos limite* mitigar ataques negação de serviço que dependem de prender os recursos por um longo período de tempo.  
   
@@ -39,7 +25,7 @@ Cotas de transporte são um mecanismo de política para decidir quando uma conex
 -   *Limites de tamanho da coleção* associado o consumo de recursos que indiretamente alocar memória ou em oferta limitada.  
   
 ## <a name="transport-quota-descriptions"></a>Descrições de cota de transporte  
- Esta seção descreve as cotas de transporte disponíveis para o padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportes: HTTP (S), TCP/IP e pipes nomeados. Transportes personalizados podem expor seus próprios cotas configuráveis não incluídas nessa lista. Consulte a documentação de um transporte personalizado obter informações sobre suas cotas.  
+ Esta seção descreve as cotas de transporte disponíveis para os transportes WCF padrão: HTTP (S), TCP/IP e pipes nomeados. Transportes personalizados podem expor seus próprios cotas configuráveis não incluídas nessa lista. Consulte a documentação de um transporte personalizado obter informações sobre suas cotas.  
   
  Cada configuração de cota tem um tipo, o valor mínimo e o valor padrão. O valor máximo de uma cota é limitado por seu tipo. Devido às limitações de máquina, nem sempre é possível definir uma cota para seu valor máximo.  
   

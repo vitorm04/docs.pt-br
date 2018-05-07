@@ -1,11 +1,7 @@
 ---
-title: "Função clone (referência de API não gerenciada)"
-description: "A função de Clone retorna um novo objeto que é um clone completo atual."
+title: Função clone (referência de API não gerenciada)
+description: A função de Clone retorna um novo objeto que é um clone completo atual.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>Função clone
 Retorna um novo objeto que é um clone completo do objeto atual.   
@@ -62,7 +55,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`foi especificado como um parâmetro, e não é permitido nessa uso. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` foi especificado como um parâmetro, e não é permitido nessa uso. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para clonar o objeto. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
@@ -77,7 +70,7 @@ O objeto clonado é um objeto COM que tem uma contagem de referência de 1.
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

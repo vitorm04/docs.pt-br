@@ -1,14 +1,6 @@
 ---
-title: "Método ICeeGen::GetIlSection"
-ms.custom: 
+title: Método ICeeGen::GetIlSection
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeGen.GetIlSection
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4805e9421a80954c01ba1ffb6e04332c07e5d84e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6025b5914d4e96d10d83fc47a6baea7aa09605d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iceegengetilsection-method"></a>Método ICeeGen::GetIlSection
 Obtém a seção do código de idioma intermediário base referenciada pelo identificador especificado.  
@@ -59,7 +47,7 @@ HRESULT GetIlSection (
   
  **Biblioteca:** usado como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

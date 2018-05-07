@@ -1,14 +1,6 @@
 ---
-title: "Função PreBindAssemblyEx"
-ms.custom: 
+title: Função PreBindAssemblyEx
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - PreBindAssemblyEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05977db8e01d00af6e160cb2993867cf83eb24c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="prebindassemblyex-function"></a>Função PreBindAssemblyEx
 Obtém o nome de exibição de pós-política para um assembly.  
@@ -69,7 +57,7 @@ HRESULT PreBindAssemblyEx (
  [out] Contém o nome de exibição de pós política de.  
   
  `pvReserved`  
- [in] Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
+ [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
   
 ## <a name="remarks"></a>Comentários  
  O `ppNamePostPolicy` parâmetro de saída é definido somente se a função retorna um HRESULT FUSION_E_REF_DEF_MISMATCH. Caso contrário, será nulo.  
@@ -81,7 +69,7 @@ HRESULT PreBindAssemblyEx (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

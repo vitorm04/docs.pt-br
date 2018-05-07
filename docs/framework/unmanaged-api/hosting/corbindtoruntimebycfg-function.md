@@ -1,14 +1,6 @@
 ---
-title: "Função CorBindToRuntimeByCfg"
-ms.custom: 
+title: Função CorBindToRuntimeByCfg
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorBindToRuntimeByCfg
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dccd777ef20f68d091cfdd7939c57a1f8d42ad5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd7a1fd7bdd7e143ab89d509c4c70026d3f22c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corbindtoruntimebycfg-function"></a>Função CorBindToRuntimeByCfg
 Carrega o common language runtime (CLR) em um processo usando as informações de versão que é lido de um arquivo XML.  
@@ -81,7 +69,7 @@ HRESULT CorBindToRuntimeByCfg (
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Função CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

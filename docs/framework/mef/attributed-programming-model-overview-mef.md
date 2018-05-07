@@ -1,9 +1,6 @@
 ---
-title: "Visão geral do modelo de programação atribuído (MEF)"
+title: Visão geral do modelo de programação atribuído (MEF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Visão geral do modelo de programação atribuído (MEF)
 No Managed Extensibility Framework (MEF), um *modelo de programação* é um método específico de definir o conjunto de objetos conceituais opera MEF. Esses objetos conceituais incluem partes, importações e exportações. O MEF usa esses objetos, mas não especifica como eles devem ser representados. Portanto, uma grande variedade de modelos de programação são possíveis, incluindo modelos de programação personalizados.  
@@ -407,7 +401,7 @@ public class MyClass
 ## <a name="avoiding-discovery"></a>Evitando descobertas  
  Em alguns casos, talvez você queira impedir que uma parte seja descoberta como parte de um catálogo. Por exemplo, a parte pode ser uma classe base para fins de herança, mas não para ser usada. Há duas maneiras de fazer isso. Primeiramente, você pode usar a palavra-chave `abstract` na classe da parte. Classes abstratas nunca oferecem exportações, embora possam fornecer exportações herdadas a classes derivadas.  
   
- Se a classe não puder se tornar abstrata, você poderá decorá-la com o atributo `PartNotDiscoverable`. Uma parte decorada com esse atributo não será incluída em nenhum catálogo. O exemplo a seguir demonstra esses padrões. `DataOne`serão descobertos pelo catálogo. Uma vez que `DataTwo` é abstrato, ele não será descoberto. Uma vez que `DataThree` usou o atributo `PartNotDiscoverable`, ele não será descoberto.  
+ Se a classe não puder se tornar abstrata, você poderá decorá-la com o atributo `PartNotDiscoverable`. Uma parte decorada com esse atributo não será incluída em nenhum catálogo. O exemplo a seguir demonstra esses padrões. `DataOne` serão descobertos pelo catálogo. Uma vez que `DataTwo` é abstrato, ele não será descoberto. Uma vez que `DataThree` usou o atributo `PartNotDiscoverable`, ele não será descoberto.  
   
 ```vb  
 <Export()>  
@@ -588,7 +582,7 @@ public class User
   
  Exportações declaradas usando o atributo `Export` não são herdadas por subclasses. Entretanto, uma parte pode exportar a si mesma usando o atributo `InheritedExport`. Subclasses da parte herdarão e fornecerão a mesma exportação, incluindo o nome e o tipo do contrato. Diferentemente de um atributo `Export`, `InheritedExport` pode ser aplicado somente no nível da classe e não no nível do membro. Portanto, exportações no nível do membro nunca podem ser herdadas.  
   
- As quatro classes a seguir demonstram os princípios da herança de importação e exportação. `NumTwo`herda de `NumOne`, portanto `NumTwo` importará `IMyData`. Exportações comuns não são herdadas, por isso, `NumTwo` não exportará nada. `NumFour` herda de `NumThree`. Como `NumThree` usou `InheritedExport`, `NumFour` tem uma exportação com o tipo de contrato `NumThree`. Exportações no nível do membro nunca são herdadas, portanto, `IMyData` não é exportado.  
+ As quatro classes a seguir demonstram os princípios da herança de importação e exportação. `NumTwo` herda de `NumOne`, portanto `NumTwo` importará `IMyData`. Exportações comuns não são herdadas, por isso, `NumTwo` não exportará nada. `NumFour` herda de `NumThree`. Como `NumThree` usou `InheritedExport`, `NumFour` tem uma exportação com o tipo de contrato `NumThree`. Exportações no nível do membro nunca são herdadas, portanto, `IMyData` não é exportado.  
   
 ```vb  
 <Export()>  
@@ -812,7 +806,7 @@ public MyAddin myAddin { get; set; }
   
  A importação e a exportação podem especificar a política de criação de uma parte, dentre os valores `Shared`, `NonShared` ou `Any`. O padrão é `Any` para importações e exportações. Uma exportação que especifica `Shared` ou `NonShared` será correspondente somente a uma importação com a mesma especificação, ou que especificar `Any`. Da mesma forma, uma importação que especifica `Shared` ou `NonShared` será correspondente somente a uma exportação com a mesma especificação, ou que especificar `Any`. Importações e exportações com políticas de criação incompatíveis não são consideradas correspondentes, da mesma maneira que uma importação e uma exportação cujo nome ou tipo de contrato não são correspondentes. Se a importação e a exportação especificarem `Any`, ou não especificarem uma política de criação e o padrão for definido como `Any`, a política de criação será definida como compartilhada por padrão.  
   
- O exemplo a seguir mostra importações e exportações que especificam políticas de criação. `PartOne`não especifique uma política de criação, portanto, o padrão é `Any`. `PartTwo`não especifique uma política de criação, portanto, o padrão é `Any`. Como o padrão da importação e da exportação é `Any`, `PartOne` será compartilhada. `PartThree`Especifica um `Shared` política de criação, de modo `PartTwo` e `PartThree` compartilharão a mesma cópia de `PartOne`. `PartFour`Especifica um `NonShared` política de criação, de modo `PartFour` será compartilhado não em `PartFive`. `PartSix`Especifica um `NonShared` política de criação. `PartFive`e `PartSix` cada receberão cópias separadas dos `PartFour`. `PartSeven`Especifica um `Shared` política de criação. Como não há `PartFour` exportado com uma política de criação de `Shared`, a importação `PartSeven` não é correspondente a nada e não será preenchida.  
+ O exemplo a seguir mostra importações e exportações que especificam políticas de criação. `PartOne` não especifique uma política de criação, portanto, o padrão é `Any`. `PartTwo` não especifique uma política de criação, portanto, o padrão é `Any`. Como o padrão da importação e da exportação é `Any`, `PartOne` será compartilhada. `PartThree` Especifica um `Shared` política de criação, de modo `PartTwo` e `PartThree` compartilharão a mesma cópia de `PartOne`. `PartFour` Especifica um `NonShared` política de criação, de modo `PartFour` será compartilhado não em `PartFive`. `PartSix` Especifica um `NonShared` política de criação. `PartFive` e `PartSix` cada receberão cópias separadas dos `PartFour`. `PartSeven` Especifica um `Shared` política de criação. Como não há `PartFour` exportado com uma política de criação de `Shared`, a importação `PartSeven` não é correspondente a nada e não será preenchida.  
   
 ```vb  
 <Export()>  
@@ -959,7 +953,7 @@ public class PartSeven
   
  Para contêineres de composição de longa vida, o consumo de memória pelas partes com uma política de criação não compartilhada pode se tornar um problema. Essas partes não compartilhadas podem ser criadas diversas vezes e não serão descartadas até que o contêiner em si seja descartado. Para lidar com isso, o contêiner oferece o método `ReleaseExport`. Chamar esse método em uma exportação não compartilhada remove essa exportação do contêiner de composição e o descarta. Partes que são usadas somente pela exportação removida, e assim por diante na árvore, também são removidas e descartadas. Dessa maneira, os recursos podem ser reivindicados novamente sem descartar o contêiner de composição em si.  
   
- `IPartImportsSatisfiedNotification`contém um método chamado `OnImportsSatisfied`. Esse método é chamado pelo contêiner de composição em qualquer parte que implementar a interface quando a composição tiver sido concluída e as importações da parte estiverem prontas para uso. As partes são criadas pelo mecanismo de composição para preencher as importações de outras partes. Antes de as importações de uma parte terem sido definidas, você não pode realizar nenhuma inicialização que dependa de ou manipule valores importados no construtor da parte, a menos que esses valores tenham sido especificados como pré-requisitos usando o atributo `ImportingConstructor`. Normalmente, esse é o método preferido, mas, em alguns casos, a injeção do construtor pode não estar disponível. Na maioria dos casos, a inicialização pode ser realizada em `OnImportsSatisfied`, e a parte deve implementar `IPartImportsSatisfiedNotification`.  
+ `IPartImportsSatisfiedNotification` contém um método chamado `OnImportsSatisfied`. Esse método é chamado pelo contêiner de composição em qualquer parte que implementar a interface quando a composição tiver sido concluída e as importações da parte estiverem prontas para uso. As partes são criadas pelo mecanismo de composição para preencher as importações de outras partes. Antes de as importações de uma parte terem sido definidas, você não pode realizar nenhuma inicialização que dependa de ou manipule valores importados no construtor da parte, a menos que esses valores tenham sido especificados como pré-requisitos usando o atributo `ImportingConstructor`. Normalmente, esse é o método preferido, mas, em alguns casos, a injeção do construtor pode não estar disponível. Na maioria dos casos, a inicialização pode ser realizada em `OnImportsSatisfied`, e a parte deve implementar `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Vídeo do Channel 9: Abrir os seus aplicativos com o Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  

@@ -1,26 +1,12 @@
 ---
 title: Ativação de MSMQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processo para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo Web hospedado e o cliente é auto-hospedado e saídas para o console para observar o status das ordens de compra enviada.  
@@ -33,11 +19,11 @@ Este exemplo demonstra como hospedar aplicativos no serviço de ativação de pr
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Se este diretório não existir, vá para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e o Windows Workflow Foundation (WF) exemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para baixar todos os [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para o Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e o Windows Workflow Foundation (WF) exemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para baixar todos os [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Processo de ativação do WAS (serviço Windows), o novo mecanismo de ativação de processo para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornece recursos como IIS que estavam anteriormente disponíveis somente para aplicativos baseados em HTTP para aplicativos que usam protocolos não HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, Pipes nomeados e MSMQ. A funcionalidade para receber solicitações por meio de protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost.exe.  
+ Processo de ativação do WAS (serviço Windows), o novo mecanismo de ativação de processo para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornece recursos como IIS que estavam anteriormente disponíveis somente para aplicativos baseados em HTTP para aplicativos que usam protocolos não HTTP. Windows Communication Foundation (WCF) usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, Pipes nomeados e MSMQ. A funcionalidade para receber solicitações por meio de protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost.exe.  
   
  O serviço de adaptador de escuta NET. MSMQ (NetMsmqActivator) ativa aplicativos na fila com base em mensagens na fila.  
   

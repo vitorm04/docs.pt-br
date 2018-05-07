@@ -1,27 +1,15 @@
 ---
 title: ConcurrencyMode Reentrant
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 450d47a9cdff709657458ed3fcc4b5948ccb960c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0ecd4b0c39c6a736a176a61490f454c2bab2e20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
-Este exemplo demonstra a necessidade e implicações de usar Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (como `ConcurencyMode.Single`). Para garantir a segurança de thread, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bloqueios a `InstanceContext` processar uma mensagem para que nenhuma outra mensagem pode ser processada. No caso do modo reentrante, o `InstanceContext` está desbloqueada antes do serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante conforme demonstrado no exemplo) ao obter o bloqueio a próxima vez que se trata para o serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e um cliente podem enviar mensagens entre si usando um contrato duplex.  
+Este exemplo demonstra a necessidade e implicações de usar Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (como `ConcurencyMode.Single`). Para garantir a segurança do thread, o Windows Communication Foundation (WCF) bloqueia o `InstanceContext` processar uma mensagem para que nenhuma outra mensagem pode ser processada. No caso do modo reentrante, o `InstanceContext` está desbloqueada antes do serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante conforme demonstrado no exemplo) ao obter o bloqueio a próxima vez que se trata para o serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e um cliente podem enviar mensagens entre si usando um contrato duplex.  
   
  O contrato definido é um contrato duplex com o `Ping` sendo implementado pelo serviço e o método de retorno de chamada de método `Pong` que está sendo implementado pelo cliente. Um cliente invoca o servidor `Ping` iniciando, assim, a chamada de contagem de método com uma escala. O serviço verifica se a contagem em escala não é igual a 0 e, em seguida, invoca os retornos de chamada `Pong` método diminuindo a contagem de tiques. Isso é feito pelo código a seguir no exemplo.  
   
@@ -89,7 +77,7 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   

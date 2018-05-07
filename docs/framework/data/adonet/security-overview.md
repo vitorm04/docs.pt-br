@@ -1,24 +1,12 @@
 ---
-title: "Segurança 2"
-ms.custom: 
+title: Segurança 2
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca será um ponto em que um desenvolvedor pode garantir que um aplicativo é seguro de todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros causará. Por outro lado, só porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existem ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante o tempo de vida do aplicativo.  

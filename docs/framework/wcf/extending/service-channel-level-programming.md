@@ -1,30 +1,18 @@
 ---
-title: "Programação de nível por canal de serviço"
-ms.custom: 
+title: Programação de nível por canal de serviço
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1a6ef03b3ee0cc68809ec6ba80a7eadbc44cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-level-programming"></a>Programação de nível por canal de serviço
-Este tópico descreve como escrever um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativo de serviço sem usar o <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e seu modelo de objeto associado.  
+Este tópico descreve como escrever um aplicativo de serviço do Windows Communication Foundation (WCF) sem usar o <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e seu modelo de objeto associado.  
   
 ## <a name="receiving-messages"></a>Recebendo mensagens  
  Para estar pronto para receber e processar mensagens, são necessárias as seguintes etapas:  
@@ -40,14 +28,14 @@ Este tópico descreve como escrever um [!INCLUDE[indigo1](../../../../includes/i
 5.  Feche todos os objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Criar uma associação  
- A primeira etapa na escutando e recebimento de mensagens está criando uma associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]é fornecido com várias ligações internas ou fornecido pelo sistema que podem ser usados diretamente, criando um deles. Além disso, você também pode criar sua própria associação personalizada criando uma instância de uma classe CustomBinding que é o que faz o código na listagem 1.  
+ A primeira etapa na escutando e recebimento de mensagens está criando uma associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é fornecido com várias ligações internas ou fornecido pelo sistema que podem ser usados diretamente, criando um deles. Além disso, você também pode criar sua própria associação personalizada criando uma instância de uma classe CustomBinding que é o que faz o código na listagem 1.  
   
  O exemplo de código a seguir cria uma instância de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> e adiciona um <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> à sua coleção de elementos que é uma coleção de elementos que são usados para criar a pilha de canais de associação. Neste exemplo, porque a coleção de elementos tem apenas o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, a pilha de canais resultante tem o canal de transporte HTTP.  
   
 #### <a name="building-a-channellistener"></a>Criando ChannelListener  
  Depois de criar uma associação, podemos chamar <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` para criar o ouvinte de canal em que o parâmetro de tipo é a forma de canal para criar. Neste exemplo estamos usando <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> como queremos escutar mensagens de entrada em um padrão de troca de mensagem de solicitação/resposta.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel>é usado para receber mensagens e retornando mensagens de resposta de solicitação. Chamando <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> retorna um <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que pode ser usado para receber a mensagem de solicitação e enviar uma mensagem de resposta de volta.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> é usado para receber mensagens e retornando mensagens de resposta de solicitação. Chamando <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> retorna um <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que pode ser usado para receber a mensagem de solicitação e enviar uma mensagem de resposta de volta.  
   
  Ao criar o ouvinte, passamos o endereço de rede no qual ele escuta, nesse caso `http://localhost:8080/channelapp`. Em geral, cada canal de transporte dá suporte a uma ou possivelmente vários esquemas de endereço, por exemplo, o transporte HTTP dá suporte a esquemas http e https.  
   

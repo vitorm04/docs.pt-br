@@ -1,14 +1,6 @@
 ---
 title: Interface ICorDebugDataTarget
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugDataTarget
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5d3a3b190cfa606bd4239e24c5defdaff9f4257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugdatatarget-interface"></a>Interface ICorDebugDataTarget
 Fornece uma interface de retorno de chamada que oferece acesso a um determinado processo de destino.  
@@ -46,7 +34,7 @@ Fornece uma interface de retorno de chamada que oferece acesso a um determinado 
 |[Método GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Solicita o contexto do thread atual para o segmento especificado.|  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebugDataTarget`e seus métodos têm as seguintes características:  
+ `ICorDebugDataTarget` e seus métodos têm as seguintes características:  
   
 -   Os serviços de depuração chamar métodos nessa interface para acessar a memória e outros dados no processo de destino.  
   
@@ -68,7 +56,7 @@ Fornece uma interface de retorno de chamada que oferece acesso a um determinado 
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

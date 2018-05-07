@@ -1,24 +1,14 @@
 ---
-title: "Método ICorDebugProcess6::GetExportStepInfo"
-ms.custom: 
+title: Método ICorDebugProcess6::GetExportStepInfo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3c69bbc904f54636e56be6d235d1070b9fecf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d0758a8603b7c31844b39c9f3beefea04e0a029
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>Método ICorDebugProcess6::GetExportStepInfo
 Fornece informações sobre funções exportadas de tempo de execução para ajudar a percorrer o código gerenciado.  
@@ -48,7 +38,7 @@ HRESULT GetExportStepInfo(
 |Valor de retorno|Descrição|  
 |------------------|-----------------|  
 |`S_OK`|A chamada de método foi bem-sucedida.|  
-|`E_POINTER`|`pInvokeKind`ou `pInvokePurpose` é **nulo**.|  
+|`E_POINTER`|`pInvokeKind` ou `pInvokePurpose` é **nulo**.|  
 |Outros valores `HRESULT` com falha.|Conforme apropriado.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -63,7 +53,7 @@ HRESULT GetExportStepInfo(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  

@@ -1,28 +1,19 @@
 ---
-title: "Implementando o padrão de controle MultipleView de interface de usuário "
-ms.custom: 
+title: 'Implementando o padrão de controle MultipleView de interface de usuário '
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5ff185ddb145d51fe8bc32ac10f3a45b57ec954c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 777f529b3b925a965b24cf1a4b38b9d3b9adae7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementando o padrão de controle MultipleView de interface de usuário
 > [!NOTE]
@@ -38,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="implementation-guidelines-and-conventions"></a>Convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de exibição de várias, observe as seguintes diretrizes e convenções:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider>também deve ser implementada em um contêiner que gerencia o modo de exibição atual, se ele for diferente de um controle que fornece a exibição atual. Por exemplo, o Windows Explorer contém um controle de lista para o conteúdo da pasta atual enquanto o modo de exibição para o controle é gerenciado pelo aplicativo Windows Explorer.  
+-   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> também deve ser implementada em um contêiner que gerencia o modo de exibição atual, se ele for diferente de um controle que fornece a exibição atual. Por exemplo, o Windows Explorer contém um controle de lista para o conteúdo da pasta atual enquanto o modo de exibição para o controle é gerenciado pelo aplicativo Windows Explorer.  
   
 -   Um controle que é capaz de classificar o seu conteúdo não é considerado para dar suporte a vários modos de exibição.  
   

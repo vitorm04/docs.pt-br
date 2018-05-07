@@ -1,29 +1,15 @@
 ---
 title: Cenários sem suporte
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cc4e65ce4f93a352b651203757a484a9d90a85d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
-Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] não oferece suporte a alguns cenários de segurança específico. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e a autenticação integrada do HTTP/HTTPS são suportados ao executar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no Windows XP Home Edition.  
+Por várias razões, o Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específico. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos, e, portanto, WCF não suporta a execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e a autenticação integrada do HTTP/HTTPS são suportados durante a execução do WCF no Windows XP Home Edition.  
   
 ## <a name="impersonation-scenarios"></a>Cenários de representação  
   
@@ -31,7 +17,7 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
  Quando um cliente WCF faz chamadas assíncronas para um serviço WCF usando a autenticação do Windows em representação, autenticação pode ocorrer com a identidade do processo de cliente em vez da identidade representada.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP e o Cookie de Token de contexto de segurança habilitado  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não dá suporte à representação e um <xref:System.InvalidOperationException> é lançada quando existem as seguintes condições:  
+ O WCF não oferece suporte à representação e um <xref:System.InvalidOperationException> é lançada quando existem as seguintes condições:  
   
 -   O sistema operacional é [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -49,7 +35,7 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
 >  Os requisitos acima são específicos. Por exemplo, o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> cria um elemento de associação que resulta em uma identidade do Windows, mas não estabelece um SCT. Portanto, você pode usá-lo com o `Required` opção [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Possíveis conflitos de ASP.NET  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] podem habilitar ou desabilitar a representação. Quando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hosts um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, um conflito pode existir entre o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] definições de configuração. Em caso de conflito, a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuração terá precedência, a menos que o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> está definida como <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, caso em que o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] representação configuração terá precedência.  
+ WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pode habilitar ou desabilitar a representação. Quando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda um aplicativo WCF, pode existir um conflito entre o WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] definições de configuração. Em caso de conflito, a configuração do WCF tem precedência, a menos que o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> está definida como <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, caso em que o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] representação configuração terá precedência.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Cargas de assembly podem falhar em representação  
  Se o contexto representado não tem direitos de acesso para carregar um assembly e se for a primeira vez que o common language runtime (CLR) está tentando carregar o assembly para AppDomain, o <xref:System.AppDomain> armazena em cache a falha. Falha nas tentativas subsequentes de carregar o assembly (ou assemblies), mesmo depois de reverter a representação e até mesmo se o contexto revertido tem direitos de acesso para carregar o assembly. Isso ocorre porque o CLR não tenta novamente a carga depois que o contexto de usuário é alterado. Você deve reiniciar o domínio do aplicativo para se recuperar da falha.  
@@ -63,13 +49,13 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
 ## <a name="cryptography"></a>Criptografia  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 tem suportada apenas para os usos de chave simétricos  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a uma variedade de criptografia e assinatura de criação de algoritmos de compilação que você pode especificar usando o conjunto de algoritmos nas associações fornecidas pelo sistema. Para maior segurança, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dá suporte a algoritmos de Secure Hash Algorithm (SHA) 2, especificamente SHA-256, para criar hashes de resumo da assinatura. Esta versão dá suporte a SHA-256 somente para usos de chave simétricos, tais como chaves de Kerberos, e onde um certificado x. 509 não é usado para assinar a mensagem. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a assinaturas RSA (usadas em certificados x. 509) usando o hash SHA-256 devido à falta de suporte atual para RSA-SHA256 no [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ O WCF dá suporte a uma variedade de criptografia e algoritmos de criação de resumo de assinatura que você pode especificar usando o conjunto de algoritmos nas associações fornecidas pelo sistema. Para maior segurança, o WCF dá suporte a algoritmos de Secure Hash Algorithm (SHA) 2, especificamente SHA-256, para criar hashes de resumo da assinatura. Esta versão dá suporte a SHA-256 somente para usos de chave simétricos, tais como chaves de Kerberos, e onde um certificado x. 509 não é usado para assinar a mensagem. O WCF não oferece suporte a assinaturas RSA (usadas em certificados x. 509) usando o hash SHA-256 devido à falta de suporte atual para RSA-SHA256 no [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Compatível com FIPS hash SHA-256 não tem suportada  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não suporta compatível com FIPS SHA-256 hashes, portanto não há suporte para pacotes de algoritmo que usam o SHA-256 por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em sistemas em que é necessário o uso de algoritmos compatíveis com FIPS.  
+ WCF não oferece suporte a hashes compatível com FIPS SHA-256, para que os pacotes de algoritmo que usam o SHA-256 não são suportados pelo WCF em sistemas em que é necessário o uso de algoritmos compatíveis com FIPS.  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Algoritmos compatíveis com FIPS podem falhar se o registro está sendo editado  
- Você pode habilitar e desabilitar FIPS Federal Information Processing Standards () - algoritmos compatíveis com usando o snap Local segurança configurações Microsoft Management Console (MMC) - no. Você também pode acessar a configuração no registro. No entanto, observe que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não dá suporte ao uso do registro para redefinir a configuração. Se o valor é definido como qualquer coisa diferente de 1 ou 0, podem ocorrer resultados inconsistentes entre o CLR e o sistema operacional.  
+ Você pode habilitar e desabilitar FIPS Federal Information Processing Standards () - algoritmos compatíveis com usando o snap Local segurança configurações Microsoft Management Console (MMC) - no. Você também pode acessar a configuração no registro. No entanto, observe que o WCF não oferece suporte usando o registro para redefinir a configuração. Se o valor é definido como qualquer coisa diferente de 1 ou 0, podem ocorrer resultados inconsistentes entre o CLR e o sistema operacional.  
   
 ### <a name="fips-compliant-aes-encryption-limitation"></a>Limitação de criptografia AES compatível com FIPS  
  Criptografia de AES compatível com FIPS não funciona em retornos de chamada duplex na representação de nível de identificação.  
@@ -86,7 +72,7 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
 -   Use o `certutil` comando da linha de comando de consulta de certificados. Para obter mais informações, consulte [tarefas do Certutil para solucionar problemas de certificados](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Falha de segurança de mensagem se é necessário usar a representação do ASP.NET e compatibilidade com ASP.NET  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a seguinte combinação de configurações, porque eles podem impedir que a autenticação do cliente ocorra:  
+ O WCF não oferece suporte a seguinte combinação de configurações porque eles podem impedir que a autenticação do cliente ocorra:  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Representação está habilitada. Isso é feito no arquivo Web. config, definindo o `impersonate` atributo do <`identity`> elemento `true`.  
   
@@ -94,7 +80,7 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
   
 -   Segurança de modo de mensagem é usada.  
   
- A solução é desativar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade. Ou, se o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade é necessário, desative o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recurso de representação e use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-fornecida a representação em vez disso. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ A solução é desativar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade. Ou, se o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade é necessário, desative o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] representação de recurso e usar a representação fornecido com o WCF em vez disso. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Falha de Literal de endereço IPv6  
  Solicitações de segurança falharem quando o cliente e o serviço estiverem no mesmo computador, e os endereços IPv6 literais são usados para o serviço.  
@@ -102,7 +88,7 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
  Literal IPv6 endereços trabalho se o cliente e serviço estão em computadores diferentes.  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Falhas de recuperação de WSDL com confiança federada  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requer exatamente um documento WSDL para cada nó da cadeia de confiança federada. Tenha cuidado para não configurar um loop ao especificar pontos de extremidade. Uma maneira em que podem surgir loops está usando um download WSDL cadeias de relação de confiança federada com dois ou mais links no mesmo documento WSDL. Um cenário comum que pode produzir esse problema é um serviço federado em que o servidor de Token de segurança e o serviço estão contidos dentro do mesmo ServiceHost.  
+ WCF requer exatamente um documento WSDL para cada nó da cadeia de confiança federada. Tenha cuidado para não configurar um loop ao especificar pontos de extremidade. Uma maneira em que podem surgir loops está usando um download WSDL cadeias de relação de confiança federada com dois ou mais links no mesmo documento WSDL. Um cenário comum que pode produzir esse problema é um serviço federado em que o servidor de Token de segurança e o serviço estão contidos dentro do mesmo ServiceHost.  
   
  Um exemplo dessa situação é um serviço com três endereços de ponto de extremidade a seguir:  
   

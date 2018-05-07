@@ -1,14 +1,6 @@
 ---
-title: "Método ISymUnmanagedWriter::OpenNamespace"
-ms.custom: 
+title: Método ISymUnmanagedWriter::OpenNamespace
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.OpenNamespace
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77d50f6bac87d5a110b53a69044f96f547c51904
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 02f57fdbbc1ea9a391d9c58c7ab49af0ef02f001
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>Método ISymUnmanagedWriter::OpenNamespace
 Abre um novo namespace. Chame este método antes de definir métodos ou variáveis que ocupam um namespace. Namespaces podem ser aninhados.  
