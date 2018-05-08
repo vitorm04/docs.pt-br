@@ -1,30 +1,16 @@
 ---
 title: Serviços XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], System.Xaml concepts
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fbe67e81bdc461e290b5cdbb9e1050aec32ce8fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-services"></a>Serviços XAML
 Este tópico descreve os recursos de um conjunto de tecnologia serviços conhecidos como XAML do .NET Framework. A maioria dos serviços e APIs descritos estão localizados no assembly System. XAML, que é um assembly introduzido com o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] conjunto de assemblies de núcleo do .NET. Os serviços incluem leitores e gravadores, classes de esquema e suporte a esquema, fábricas, atribuição de classes, suporte intrínseco de linguagem XAML e outros recursos de linguagem XAML.  
@@ -49,7 +35,7 @@ Este tópico descreve os recursos de um conjunto de tecnologia serviços conheci
  Se você estiver procurando material introdutório em XAML, como um idioma, você pode tentar [visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Esse tópico discute XAML para um público que há de novo para [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e também para usar a marcação XAML e recursos de linguagem XAML. Outro documento útil é o material introdutório o [especificação da linguagem XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Serviços XAML do .NET framework e System. XAML na arquitetura do .NET  
- Em versões anteriores do [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], suporte para recursos de linguagem XAML foi implementado por estruturas criado em [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e portanto variadas em seu o comportamento e a API usada, dependendo de qual estrutura específica que você estava usando. Isso incluído o XAML analisador e seu objeto de gráfico de mecanismo de criação, intrínsecos de linguagem XAML, suporte de serialização e assim por diante.  
+ Em versões anteriores do Microsoft .NET Framework, o suporte para recursos de linguagem XAML foi implementado por estruturas criado no Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e, portanto, variadas em seu comportamento e a API usada dependendo de qual estrutura específica que você estava usando. Isso incluído o XAML analisador e seu objeto de gráfico de mecanismo de criação, intrínsecos de linguagem XAML, suporte de serialização e assim por diante.  
   
  Em [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], serviços XAML do .NET Framework e o assembly System. XAML definem muita o que é necessário para dar suporte a recursos de linguagem XAML. Isso inclui classes base para os leitores XAML e gravadores XAML. O recurso mais importante adicionado para serviços XAML do .NET Framework que não estava presente em qualquer uma das implementações de XAML específica da estrutura é uma representação de sistema de tipo para XAML. A representação de tipo de sistema apresenta XAML de forma orientada a objeto centers nos recursos XAML sem colocar as dependências nos recursos específicos de estruturas.  
   

@@ -1,17 +1,13 @@
 ---
 title: Cadeias de caracteres interpoladas (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Cadeias de caracteres interpoladas (referência do Visual Basic)
 
@@ -61,7 +57,7 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
 
    Esse é o resultado final de uma interpretação de cadeia de caracteres. Todas as ocorrências de chaves duplas ("{{" e "}}") serão convertidas em uma chave única. 
 
-2. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable> que permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura de uma única instância <xref:System.IFormattable>. Isso é útil para incluir itens como os formatos de número e data corretos para culturas individuais.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até que você formate a cadeia de caracteres explícita ou implicitamente chamando o método <xref:System.Object.ToString>.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
+2. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable> que permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura de uma única instância <xref:System.IFormattable>. Isso é útil para incluir itens como os formatos de número e data corretos para culturas individuais.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até que você formate a cadeia de caracteres explícita ou implicitamente chamando o método <xref:System.Object.ToString>.  Todas as expressões de interpolação contidos são convertidas em {0}, {1}e assim por diante.  
 
    O exemplo a seguir usa reflexão para exibir os membros, bem como os valores de campo e propriedade de uma variável <xref:System.IFormattable> criada de uma cadeia de caracteres interpolada. Ele também passa a variável <xref:System.IFormattable> para o método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -71,13 +67,13 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
 
 3. Conversão de uma cadeia de caracteres interpolada um <xref:System.FormattableString> variável que representa uma cadeia de caracteres de formato composto. Inspecionar a cadeia de caracteres de formato composto e como ela é renderizada como uma cadeia de caracteres de resultado pode, por exemplo, ajudar a proteger contra um ataque de injeção se você estiver criando uma consulta. Um <xref:System.FormattableString> também inclui:
 
-      - Um <xref:System.FormattableString.ToString> sobrecarga que produz uma cadeia de caracteres de resultado para o <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Uma sobrecarga <xref:System.FormattableString.ToString> que produza uma cadeia de caracteres de resultado para a <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
       - Um <xref:System.FormattableString.Invariant%2A> método que produz uma cadeia de caracteres para o <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
-      - Um <xref:System.FormattableString.ToString(System.IFormatProvider)> método que produz uma cadeia de caracteres de resultado para uma cultura específica. 
+      - Um método <xref:System.FormattableString.ToString(System.IFormatProvider)> que produza uma cadeia de caracteres de resultado para uma cultura específica. 
   
-    Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até você formatar.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
+    Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até você formatar.  Todas as expressões de interpolação contidos são convertidas em {0}, {1}e assim por diante.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

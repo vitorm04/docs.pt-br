@@ -1,13 +1,6 @@
 ---
-title: "Como navegar para frente ou para trás por meio do histórico de navegação"
-ms.custom: 
+title: Como navegar para frente ou para trás por meio do histórico de navegação
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78fd9fec6a93c100da6b4e7174376a963ae8beb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac3b8b71b6adf04d71cf35edbb042b82c57d8e1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Como navegar para frente ou para trás por meio do histórico de navegação
 Este exemplo ilustra como navegar para frente ou para trás nas entradas no histórico de navegação.  
@@ -32,9 +20,9 @@ Este exemplo ilustra como navegar para frente ou para trás nas entradas no hist
 ## <a name="example"></a>Exemplo  
  Código executado do conteúdo dos seguintes hosts pode navegar para frente ou para trás no histórico de navegação, uma entrada de cada vez.  
   
--   <xref:System.Windows.Navigation.NavigationWindow>usando o<xref:System.Windows.Navigation.NavigationService>  
+-   <xref:System.Windows.Navigation.NavigationWindow> Usando o <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame>usando o<xref:System.Windows.Navigation.NavigationService>  
+-   <xref:System.Windows.Controls.Frame> Usando o <xref:System.Windows.Navigation.NavigationService>  
   
 -   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   

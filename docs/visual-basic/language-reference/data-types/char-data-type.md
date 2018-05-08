@@ -1,11 +1,6 @@
 ---
 title: Tipo de dados Char (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Char
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16ff547fccbf4481d31ca79537962cc7090fc9b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="char-data-type-visual-basic"></a>Tipo de dados Char (Visual Basic)
 Armazena pontos de código de (2 bytes) de 16 bits sem sinal que variam de 0 a 65535. Cada *ponto de código*, ou código de caractere, representa um único caractere Unicode.  
@@ -54,13 +46,13 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
--   **Números negativos.** `Char`é um tipo não assinado e não pode representar um valor negativo. Em qualquer caso, você não deve usar `Char` para armazenar valores numéricos.  
+-   **Números negativos.** `Char` é um tipo não assinado e não pode representar um valor negativo. Em qualquer caso, você não deve usar `Char` para armazenar valores numéricos.  
   
 -   **Considerações de interoperabilidade.** Interface com componentes não escritos para o .NET Framework, como objetos de automação ou COM, lembre-se de que tipos de caracteres uma largura de dados diferente (8 bits) em outros ambientes. Se você passar um argumento de 8 bits para tal componente, declare-o como `Byte` em vez de `Char` no seu novo código do Visual Basic.  
   
 -   **Ampliação.** O `Char` tipo de dados amplia a `String`. Isso significa que você pode converter `Char` para `String` e não encontrará um <xref:System.OverflowException?displayProperty=nameWithType> erro.  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `C` para uma cadeia de único caractere literal força-o `Char` tipo de dados. `Char`não tem nenhum caractere de tipo identificador.  
+-   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `C` para uma cadeia de único caractere literal força-o `Char` tipo de dados. `Char` não tem nenhum caractere de tipo identificador.  
   
 -   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Char?displayProperty=nameWithType>.  
   

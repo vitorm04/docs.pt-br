@@ -1,12 +1,6 @@
 ---
-title: "Como corresponder uma cadeia de caracteres a um padrão (Visual Basic)"
-ms.custom: 
+title: Como corresponder uma cadeia de caracteres a um padrão (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - pattern matching
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aef378bfc32d6deff431a2caac1261a6cd7520c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Como corresponder uma cadeia de caracteres a um padrão (Visual Basic)
 Se você quiser saber se uma expressão do [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfaz um padrão, você pode usar o [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
- `Like`leva dois operandos. O operando esquerdo é uma expressão de cadeia de caracteres, e o operando à direita é uma cadeia de caracteres contendo o padrão a ser usado para correspondência. `Like`Retorna um `Boolean` valor que indica se a expressão de cadeia de caracteres satisfaz o padrão.  
+ `Like` leva dois operandos. O operando esquerdo é uma expressão de cadeia de caracteres, e o operando à direita é uma cadeia de caracteres contendo o padrão a ser usado para correspondência. `Like` Retorna um `Boolean` valor que indica se a expressão de cadeia de caracteres satisfaz o padrão.  
   
  Você pode corresponder a cada caractere na expressão de cadeia de caracteres com um caractere específico, um caractere curinga, uma lista de caracteres ou um intervalo de caracteres. As posições das especificações na cadeia de caracteres padrão correspondem às posições dos caracteres a ser correspondido na expressão de cadeia de caracteres.  
   
@@ -72,7 +63,7 @@ Se você quiser saber se uma expressão do [tipo de dados de cadeia de caractere
      Observe que essa correspondência diferencia maiusculas de minúsculas.  
   
 ## <a name="matching-empty-strings"></a>Correspondência de cadeias de caracteres vazias  
- `Like`trata a sequência `[]` como uma cadeia de caracteres de comprimento zero (`""`). Você pode usar `[]` para testar se a expressão de cadeia de caracteres inteira está vazia, mas você não pode usá-lo para testar se uma determinada posição na expressão de cadeia de caracteres está vazia. Se uma posição vazia é uma das opções que você precisa testar, você pode usar `Like` mais de uma vez.  
+ `Like` trata a sequência `[]` como uma cadeia de caracteres de comprimento zero (`""`). Você pode usar `[]` para testar se a expressão de cadeia de caracteres inteira está vazia, mas você não pode usá-lo para testar se uma determinada posição na expressão de cadeia de caracteres está vazia. Se uma posição vazia é uma das opções que você precisa testar, você pode usar `Like` mais de uma vez.  
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Para corresponder um caractere na expressão de cadeia de caracteres com uma lista de caracteres ou nenhum caractere  
   

@@ -1,27 +1,15 @@
 ---
-title: "Exportando metadados personalizados para uma extensão do WCF"
-ms.custom: 
+title: Exportando metadados personalizados para uma extensão do WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportando metadados personalizados para uma extensão do WCF
-Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], exportação de metadados é o processo de descrever os pontos de extremidade de serviço e projeção-los em uma representação padronizada paralela que os clientes podem usar para entender como usar o serviço. Metadados personalizados consistem em elementos XML que não é possível exportar os exporters metadados fornecidos pelo sistema. Normalmente, isso inclui elementos WSDL personalizados para elementos de associação e comportamentos definidos pelo usuário e declarações de política sobre os recursos e requisitos de associações e contratos.  
+No Windows Communication Foundation (WCF), a exportação de metadados é o processo de descrever os pontos de extremidade de serviço e projeção-los em uma representação padronizada paralela que os clientes podem usar para entender como usar o serviço. Metadados personalizados consistem em elementos XML que não é possível exportar os exporters metadados fornecidos pelo sistema. Normalmente, isso inclui elementos WSDL personalizados para elementos de associação e comportamentos definidos pelo usuário e declarações de política sobre os recursos e requisitos de associações e contratos.  
   
  Esta seção descreve a exportação WSDL personalizado ou declarações de política e não se concentra em que o processo de exportação. Para obter mais informações sobre como usar os tipos que exportar e importar metadados seja metadados personalizados ou construída pelo sistema, consulte [exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   

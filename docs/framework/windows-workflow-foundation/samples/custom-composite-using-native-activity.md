@@ -1,23 +1,12 @@
 ---
 title: Atividade nativo de usar composta personalizada
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40a042aeaecd63c9932d7919f54a4cb1b026e988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78d00a13bdc018946fa20635a47677b1508c1ed1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-composite-using-native-activity"></a>Atividade nativo de usar composta personalizada
 Este exemplo demonstra como escrever <xref:System.Activities.NativeActivity> que agenda outros objetos de <xref:System.Activities.Activity> para controlar o fluxo de execução de um fluxo de trabalho. Este exemplo usar dois fluxos comuns de controle, e quando sequência, para demonstrar como fazer isso.  
@@ -35,7 +24,7 @@ Este exemplo demonstra como escrever <xref:System.Activities.NativeActivity> que
   
  Quando a atividade filho termina, <xref:System.Activities.CompletionCallback> é executado. O loop continua a parte superior. Como `Execute`, <xref:System.Activities.CompletionCallback> leva <xref:System.Activities.NativeActivityContext>, fornecendo acesso do implementador em tempo de execução.  
   
- `MyWhile`difere `MySequence` em que ele agenda um único <xref:System.Activities.Activity> objeto várias vezes e, em que ele usa um <xref:System.Activities.Activity%601>< bool\> chamado `Condition` para determinar se esse agendamento deve ocorrer. Como `MySequence`, `MyWhile` usa um método de `InternalExecute` para centralizar sua lógica de programação. Ele agenda o `Condition` <xref:System.Activities.Activity>< bool\> com um <xref:System.Activities.CompletionCallback%601> \<bool > denominado `OnEvaluationCompleted`. Quando a execução de `Condition` é concluída, o resultado fica disponível com esse <xref:System.Activities.CompletionCallback> em um parâmetro fortemente tipado chamado `result`. Se `true`, `MyWhile` chama o <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, passando o objeto e em `Body` de <xref:System.Activities.Activity>`InternalExecute` como <xref:System.Activities.CompletionCallback>. Quando a execução de `Body` terminar, `Condition` obtém agendada novamente em `InternalExecute`, iniciar o loop sobre novamente. Quando `Condition` retorna `false`, uma instância de `MyWhile` fornece o controle de volta para o tempo de execução sem agendar `Body` e o tempo de execução movê-lo ao estado de <xref:System.Activities.ActivityInstanceState.Closed> .  
+ `MyWhile` difere `MySequence` em que ele agenda um único <xref:System.Activities.Activity> objeto várias vezes e, em que ele usa um <xref:System.Activities.Activity%601>< bool\> chamado `Condition` para determinar se esse agendamento deve ocorrer. Como `MySequence`, `MyWhile` usa um método de `InternalExecute` para centralizar sua lógica de programação. Ele agenda o `Condition` <xref:System.Activities.Activity>< bool\> com um <xref:System.Activities.CompletionCallback%601> \<bool > denominado `OnEvaluationCompleted`. Quando a execução de `Condition` é concluída, o resultado fica disponível com esse <xref:System.Activities.CompletionCallback> em um parâmetro fortemente tipado chamado `result`. Se `true`, `MyWhile` chama o <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, passando o objeto e em `Body` de <xref:System.Activities.Activity>`InternalExecute` como <xref:System.Activities.CompletionCallback>. Quando a execução de `Body` terminar, `Condition` obtém agendada novamente em `InternalExecute`, iniciar o loop sobre novamente. Quando `Condition` retorna `false`, uma instância de `MyWhile` fornece o controle de volta para o tempo de execução sem agendar `Body` e o tempo de execução movê-lo ao estado de <xref:System.Activities.ActivityInstanceState.Closed> .  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -48,6 +37,6 @@ Este exemplo demonstra como escrever <xref:System.Activities.NativeActivity> que
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`

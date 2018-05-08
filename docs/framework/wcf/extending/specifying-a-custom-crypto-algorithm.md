@@ -1,29 +1,17 @@
 ---
 title: Especificando um algoritmo de criptografia personalizada
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificando um algoritmo de criptografia personalizada
 WCF permite que você especifique um algoritmo de criptografia personalizado para usar ao criptografar dados ou computação assinaturas digitais. Isso é feito com as seguintes etapas:  
   
-1.  Derive uma classe de<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1.  Derive uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Registre o algoritmo  
   
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- A seção sob o <`cryptoClasses`> elemento cria o mapeamento entre o SHA256CryptoServiceProvider e o alias "SHA256CSP". O <`nameEntry`> elemento cria o mapeamento entre o alias "SHA256CSP" e a URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
+ A seção sob o <`cryptoClasses`> elemento cria o mapeamento entre o SHA256CryptoServiceProvider e o alias "SHA256CSP". O <`nameEntry`> elemento cria o mapeamento entre o alias "SHA256CSP" e a URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Para registrar o algoritmo personalizado em código de uso de <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> método. Esse método cria ambos os mapeamentos. O exemplo a seguir mostra como chamar esse método:  
   

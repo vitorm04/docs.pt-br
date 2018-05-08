@@ -1,28 +1,16 @@
 ---
-title: "Visão geral da classe SoundPlayer"
-ms.custom: 
+title: Visão geral da classe SoundPlayer
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - playing sounds [Windows Forms], SoundPlayer class
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dc355fbe0d8262cb24779b99375d6075f758bbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31ce87303b7b96cfd14d4daf07fd21c9de91a548
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="soundplayer-class-overview"></a>Visão geral da classe SoundPlayer
 A classe <xref:System.Media.SoundPlayer> permite que você inclua facilmente sons em seus aplicativos.  

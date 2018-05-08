@@ -1,11 +1,6 @@
 ---
-title: "Instrução SyncLock"
+title: Instrução SyncLock
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>Instrução SyncLock
 Obtém um bloqueio exclusivo para um bloco de instruções antes de executar o bloco.  
@@ -45,7 +37,7 @@ End SyncLock
  Encerra um `SyncLock` bloco.  
   
 ## <a name="remarks"></a>Comentários  
- O `SyncLock` instrução garante que vários threads não executem o bloco de instrução ao mesmo tempo. `SyncLock`impede cada segmento de entrar no bloco até que nenhum outro thread está executando.  
+ O `SyncLock` instrução garante que vários threads não executem o bloco de instrução ao mesmo tempo. `SyncLock` impede cada segmento de entrar no bloco até que nenhum outro thread está executando.  
   
  O uso mais comum de `SyncLock` é para proteger dados de serem atualizados por mais de um segmento simultaneamente. Se as instruções que manipulam os dados devem ir até a conclusão sem interrupção, coloque-as em um `SyncLock` bloco.  
   

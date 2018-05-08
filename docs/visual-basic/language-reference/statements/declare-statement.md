@@ -1,11 +1,6 @@
 ---
-title: "Instrução Declare"
+title: Instrução Declare
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Instrução Declare
 Declara uma referência a um procedimento implementado em um arquivo externo.  
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Conjuntos de caracteres.** Você pode especificar em `charsetmodifier` como Visual Basic deve realizar marshaling de cadeias de caracteres quando ele chama o procedimento externo. O `Ansi` modificador direciona o Visual Basic para empacotar todas as cadeias de caracteres para valores ANSI e o `Unicode` modificador direciona realizar marshaling de todas as cadeias de caracteres para valores Unicode. O `Auto` modificador direciona o Visual Basic para empacotar cadeias de caracteres de acordo com o .NET Framework regras com base em referência externa `name`, ou `aliasname` se especificado. O valor padrão é `Ansi`.  
   
-     `charsetmodifier`também especifica como Visual Basic deve consultar o procedimento externo em seu arquivo externo. `Ansi`e `Unicode` direta Visual Basic para procurá-lo sem modificar seu nome durante a pesquisa. `Auto`direciona o Visual Basic para determinar o conjunto de caracteres base da plataforma de tempo de execução e possivelmente modificar o nome do procedimento externo, da seguinte maneira:  
+     `charsetmodifier` também especifica como Visual Basic deve consultar o procedimento externo em seu arquivo externo. `Ansi` e `Unicode` direta Visual Basic para procurá-lo sem modificar seu nome durante a pesquisa. `Auto` direciona o Visual Basic para determinar o conjunto de caracteres base da plataforma de tempo de execução e possivelmente modificar o nome do procedimento externo, da seguinte maneira:  
   
     -   Em uma plataforma de ANSI, como Windows 95, Windows 98 ou Windows Millennium Edition, primeiro consultar o procedimento externo sem modificação do nome. Se isso falhar, acrescente "A" ao final do nome do procedimento externo e procurá-lo novamente.  
   

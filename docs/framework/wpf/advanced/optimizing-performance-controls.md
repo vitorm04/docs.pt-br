@@ -1,28 +1,16 @@
 ---
 title: 'Otimizando desempenho: controles'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>Otimizando desempenho: controles
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui muitos dos componentes comuns de interface do usuário que são usados na maioria dos aplicativos do Windows. Este tópico contém técnicas para melhorar o desempenho de sua interface do usuário.  
@@ -35,7 +23,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  A virtualização da interface do usuário é um aspecto importante dos controles de lista. A virtualização da interface do usuário não deve ser confundida com a virtualização de dados. A virtualização da interface do usuário armazena somente os itens visíveis na memória, mas em um cenário de associação de dados, armazena toda a estrutura de dados na memória. Em contraste, a virtualização de dados armazena somente os itens de dados visíveis na tela na memória.  
   
- Por padrão, a virtualização de interface do usuário está habilitada para o <xref:System.Windows.Controls.ListView> e <xref:System.Windows.Controls.ListBox> controla quando seus itens de lista estão associados aos dados. <xref:System.Windows.Controls.TreeView>a virtualização pode ser habilitada definindo o <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` anexado a propriedade `true`. Se você deseja habilitar a virtualização de interface do usuário para controles personalizados que derivam de <xref:System.Windows.Controls.ItemsControl> ou controles de item existente que usam o <xref:System.Windows.Controls.StackPanel> classe, como <xref:System.Windows.Controls.ComboBox>, você pode definir o <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> para <xref:System.Windows.Controls.VirtualizingStackPanel> e defina <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> para `true`. Infelizmente, você pode desabilitar a virtualização da interface do usuário para esses controles sem perceber. A seguir, temos uma lista de condições que desabilitam a virtualização da interface do usuário.  
+ Por padrão, a virtualização de interface do usuário está habilitada para o <xref:System.Windows.Controls.ListView> e <xref:System.Windows.Controls.ListBox> controla quando seus itens de lista estão associados aos dados. <xref:System.Windows.Controls.TreeView> a virtualização pode ser habilitada definindo o <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` anexado a propriedade `true`. Se você deseja habilitar a virtualização de interface do usuário para controles personalizados que derivam de <xref:System.Windows.Controls.ItemsControl> ou controles de item existente que usam o <xref:System.Windows.Controls.StackPanel> classe, como <xref:System.Windows.Controls.ComboBox>, você pode definir o <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> para <xref:System.Windows.Controls.VirtualizingStackPanel> e defina <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> para `true`. Infelizmente, você pode desabilitar a virtualização da interface do usuário para esses controles sem perceber. A seguir, temos uma lista de condições que desabilitam a virtualização da interface do usuário.  
   
 -   Contêineres de itens são adicionados diretamente para o <xref:System.Windows.Controls.ItemsControl>. Por exemplo, se um aplicativo explicitamente adiciona <xref:System.Windows.Controls.ListBoxItem> objetos para um <xref:System.Windows.Controls.ListBox>, o <xref:System.Windows.Controls.ListBox> não virtualizar o <xref:System.Windows.Controls.ListBoxItem> objetos.  
   
@@ -57,7 +45,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>Suporte à virtualização bidirecional  
- <xref:System.Windows.Controls.VirtualizingStackPanel>oferece suporte interno para virtualização de interface do usuário em uma direção, horizontal ou verticalmente. Se você deseja usar virtualização bidirecional para os controles, você deve implementar um painel personalizado que estende o <xref:System.Windows.Controls.VirtualizingStackPanel> classe. O <xref:System.Windows.Controls.VirtualizingStackPanel> classe expõe os métodos virtuais, como <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, e <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Esses métodos virtuais permitem detectar uma alteração na parte visível de uma lista e manipulá-lo adequadamente.  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> oferece suporte interno para virtualização de interface do usuário em uma direção, horizontal ou verticalmente. Se você deseja usar virtualização bidirecional para os controles, você deve implementar um painel personalizado que estende o <xref:System.Windows.Controls.VirtualizingStackPanel> classe. O <xref:System.Windows.Controls.VirtualizingStackPanel> classe expõe os métodos virtuais, como <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, e <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Esses métodos virtuais permitem detectar uma alteração na parte visível de uma lista e manipulá-lo adequadamente.  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>Otimizando modelos  
@@ -67,7 +55,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 ## <a name="deferred-scrolling"></a>Rolagem Adiada  
  Por padrão, quando o usuário arrasta o controle de posição em uma barra de rolagem, a exibição de conteúdo é atualizada continuamente.  Se a rolagem estiver lenta em seu controle, considere usar a rolagem adiada.  Com a rolagem adiada, o conteúdo é atualizado somente quando o usuário libera o controle de posição.  
   
- Para implementar a rolagem adiada, defina o <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> propriedade `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>é uma propriedade anexada e pode ser definida em <xref:System.Windows.Controls.ScrollViewer> e qualquer controle que possui um <xref:System.Windows.Controls.ScrollViewer> em seu modelo de controle.  
+ Para implementar a rolagem adiada, defina o <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> propriedade `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é uma propriedade anexada e pode ser definida em <xref:System.Windows.Controls.ScrollViewer> e qualquer controle que possui um <xref:System.Windows.Controls.ScrollViewer> em seu modelo de controle.  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>Controles que implementam recursos de desempenho  

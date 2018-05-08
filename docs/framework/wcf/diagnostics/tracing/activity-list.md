@@ -1,27 +1,15 @@
 ---
 title: Lista de atividades
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>Lista de atividades
-Este tópico lista todas as atividades definidas pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Este tópico lista todas as atividades definidas pelo Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  Você também pode definir atividades programaticamente para rastreamentos de usuário do grupo. Para obter mais informações, consulte [emitindo rastreamentos de código de usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -33,8 +21,8 @@ Este tópico lista todas as atividades definidas pelo [!INCLUDE[indigo1](../../.
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Atividade de ambiente|N/d (isso não é controlado pelo ServiceModel)|A atividade cuja ID é definido no TLS antes de qualquer chamada para o código de ServiceModel (do lado do cliente ou servidor).<br /><br /> Exemplo: Uma atividade onde open é chamada no [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] cliente ou ServiceHost é chamado.|  
 |B|Constructo<br /><br /> ChannelFactory. ContractType: '[tipo]'.|Constructo||  
-|C|Abrir<br /><br /> [ClientBase &#124; ChannelFactory]. ContractType: '[tipo]'.|Abrir||  
-|I|Fechar [ClientBase &#124; ChannelFactory]. ContractType: '[tipo]'.|Fechar||  
+|C|Abrir<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType: '[tipo]'.|Abrir||  
+|I|Fechar [ClientBase&#124;ChannelFactory]. ContractType: '[tipo]'.|Fechar||  
 |M|Construa ServiceHost. ServiceType: '[tipo]'.|Constructo||  
 |N|Abrir o ServiceHost. ServiceType: '[tipo]'.|Abrir||  
 |Z|Feche o ServiceHost. ServiceType: '[tipo]'.|Fechar||  

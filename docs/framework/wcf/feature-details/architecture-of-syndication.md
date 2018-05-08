@@ -1,26 +1,12 @@
 ---
 title: Arquitetura de sindicalização
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>Arquitetura de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravados em transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  
@@ -37,16 +23,16 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
  Essas classes mapeiam com precisão para as construções definidas na especificação do Atom 1.0, embora alguns dos nomes são diferentes.  
   
- Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], feeds de agregação são modelados como outro tipo de operação de serviço, um em que o tipo de retorno é uma das classes derivadas de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. A recuperação de um feed é modelada como uma troca de mensagens de solicitação-resposta. Um cliente envia que uma solicitação para o serviço e o serviço responde. A mensagem de solicitação é definida por meio de um protocolo de infraestrutura (por exemplo, HTTP bruto) e a mensagem de resposta contém uma carga que consiste em um formato de fácil compreensão de agregação (2.0 RSS ou Atom 1.0). Serviços que implementam essas trocas de mensagens são referidos como serviços de distribuição.  
+ No Windows Communication Foundation (WCF), os feeds de agregação são modelados como outro tipo de operação de serviço, onde o tipo de retorno é uma das classes derivadas de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. A recuperação de um feed é modelada como uma troca de mensagens de solicitação-resposta. Um cliente envia que uma solicitação para o serviço e o serviço responde. A mensagem de solicitação é definida por meio de um protocolo de infraestrutura (por exemplo, HTTP bruto) e a mensagem de resposta contém uma carga que consiste em um formato de fácil compreensão de agregação (2.0 RSS ou Atom 1.0). Serviços que implementam essas trocas de mensagens são referidos como serviços de distribuição.  
   
  O contrato para um serviço de distribuição consiste em um conjunto de operações que retorna uma instância do <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> classe. O exemplo a seguir demonstra uma declaração de interface para um serviço de distribuição.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Suporte a distribuição baseia-se na parte superior do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST que define o <xref:System.ServiceModel.WebHttpBinding> associação, que é usada em conjunto com <xref:System.ServiceModel.Description.WebHttpBehavior> para disponibilizar feeds como serviços. Para obter mais informações sobre o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST, consulte [WCF Web HTTP de programação visão geral do modelo](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Suporte de distribuição é criado sobre o modelo de programação de REST WCF que define o <xref:System.ServiceModel.WebHttpBinding> associação, que é usada em conjunto com <xref:System.ServiceModel.Description.WebHttpBehavior> para disponibilizar feeds como serviços. Para obter mais informações sobre o modelo de programação WCF REST, consulte [WCF Web HTTP de programação visão geral do modelo](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  Permite a especificação Atom 1.0 para frações de segundos ser especificado em qualquer um dos seus construtores de data. Ao serializar e desserializar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementação ignora as frações de segundo.  
+>  Permite a especificação Atom 1.0 para frações de segundos ser especificado em qualquer um dos seus construtores de data. Ao serializar e desserializar a implementação de WCF ignora as frações de segundo.  
   
 ## <a name="object-model"></a>Modelo de objeto  
  O modelo de objeto para distribuição consiste em grupos de classes nas tabelas a seguir.  
@@ -88,7 +74,7 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
 ## <a name="extensibility"></a>Extensibilidade  
   
--   Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e RSS 2.0 permitem que você adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação de distribuição fornece duas maneiras de trabalhar com os atributos personalizados e extensões: derivar uma nova classe e tipadas vagamente acesso. Para obter mais informações, consulte [extensibilidade de Sindicalização](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e RSS 2.0 permitem que você adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O modelo de programação WCF distribuição fornece duas maneiras de trabalhar com os atributos personalizados e extensões: derivar uma nova classe e tipadas vagamente acesso. Para obter mais informações, consulte [extensibilidade de Sindicalização](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

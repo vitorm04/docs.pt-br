@@ -1,27 +1,15 @@
 ---
-title: "Visão geral do pop-up"
-ms.custom: 
+title: Visão geral do pop-up
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>Visão geral do pop-up
 O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira de exibir o conteúdo em uma janela separada que flutua sobre a janela atual do aplicativo em relação a um elemento designado ou tela coordenada. Este tópico apresenta o <xref:System.Windows.Controls.Primitives.Popup> controlar e fornece informações sobre seu uso.  
@@ -81,7 +69,7 @@ O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira d
 ### <a name="popup-size"></a>Tamanho de pop-up  
  Por padrão, um <xref:System.Windows.Controls.Primitives.Popup> é dimensionado automaticamente para o seu conteúdo. Quando o dimensionamento automático ocorre, alguns efeitos de bitmap podem estar ocultos porque o tamanho padrão da área da tela que está definido para o <xref:System.Windows.Controls.Primitives.Popup> conteúdo não fornece espaço suficiente para os efeitos de bitmap exibir.  
   
- <xref:System.Windows.Controls.Primitives.Popup>conteúdo também podem ficar obscuros quando você define um <xref:System.Windows.UIElement.RenderTransform%2A> no conteúdo. Nesse cenário, alguns conteúdos podem estar ocultos se o conteúdo transformado <xref:System.Windows.Controls.Primitives.Popup> ultrapassa a área do original <xref:System.Windows.Controls.Primitives.Popup>. Se um efeito de bitmap ou transformação requer mais espaço, você pode definir uma margem ao redor de <xref:System.Windows.Controls.Primitives.Popup> conteúdo para fornecer mais área para o controle.  
+ <xref:System.Windows.Controls.Primitives.Popup> conteúdo também podem ficar obscuros quando você define um <xref:System.Windows.UIElement.RenderTransform%2A> no conteúdo. Nesse cenário, alguns conteúdos podem estar ocultos se o conteúdo transformado <xref:System.Windows.Controls.Primitives.Popup> ultrapassa a área do original <xref:System.Windows.Controls.Primitives.Popup>. Se um efeito de bitmap ou transformação requer mais espaço, você pode definir uma margem ao redor de <xref:System.Windows.Controls.Primitives.Popup> conteúdo para fornecer mais área para o controle.  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Definindo a posição de pop-up  

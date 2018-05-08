@@ -1,9 +1,6 @@
 ---
-title: "Convenções tipográficas e de código (Visual Basic)"
+title: Convenções tipográficas e de código (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Convenções tipográficas e de código (Visual Basic)
 Documentação do Visual Basic usa o seguinte tipográficas e convenções de código.  
@@ -32,7 +26,7 @@ Documentação do Visual Basic usa o seguinte tipográficas e convenções de c�
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Palavras-chave e membros de tempo de execução têm letras maiusculas iniciais e são formatados como mostrado neste exemplo.|  
 |**SmallProject**, **ButtonCollection**|Palavras e frases que você é instruído a digitar são formatados como mostrado neste exemplo.|  
 |[Instrução Module](../../visual-basic/language-reference/statements/module-statement.md)|Links, que você pode clicar para ir para outra página de ajuda são formatados como mostrado neste exemplo.|  
-|*objeto*, *variableName*,`argumentList`|Espaços reservados para informações que você fornece são formatados como mostrado neste exemplo.|  
+|*objeto*, *variableName*, `argumentList`|Espaços reservados para informações que você fornece são formatados como mostrado neste exemplo.|  
 |Sombras, [ *expressionList* ]|Na sintaxe, itens opcionais estão entre colchetes.|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|Na sintaxe, quando você deve fazer uma escolha entre dois ou mais itens, os itens são colocados entre colchetes e separados por barras verticais.<br /><br /> Você deve selecionar um e somente um dos itens.|  
 |[ `Protected` &#124; `Friend` ]|Na sintaxe, quando você tem a opção de selecionar entre dois ou mais itens, os itens são colocados entre colchetes e separados por barras verticais.<br /><br /> Você pode selecionar qualquer combinação dos itens, ou nenhum item.|  

@@ -1,31 +1,17 @@
 ---
 title: Tipos com suporte fornecido pelo serializador de contrato de dados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipos com suporte fornecido pelo serializador de contrato de dados
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa o <xref:System.Runtime.Serialization.DataContractSerializer> como seu mecanismo de serialização padrão para converter dados em XML e converter XML novamente nos dados. O <xref:System.Runtime.Serialization.DataContractSerializer> foi projetado para serializar *contrato de dados* tipos. No entanto, ele oferece suporte a muitos outros tipos, o que podem ser considerados como tendo um contrato de dados implícita. O exemplo a seguir é uma lista completa de tipos que pode ser serializado:  
+Windows Communication Foundation (WCF) usa o <xref:System.Runtime.Serialization.DataContractSerializer> como seu mecanismo de serialização padrão para converter dados em XML e converter XML novamente nos dados. O <xref:System.Runtime.Serialization.DataContractSerializer> foi projetado para serializar *contrato de dados* tipos. No entanto, ele oferece suporte a muitos outros tipos, o que podem ser considerados como tendo um contrato de dados implícita. O exemplo a seguir é uma lista completa de tipos que pode ser serializado:  
   
 -   Todos os tipos visíveis publicamente que tem um construtor que não tem parâmetros.  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   Para serializar ou desserializar um tipo que implementa <xref:System.Runtime.Serialization.ISerializable> código parcialmente confiável usando o <xref:System.Runtime.Serialization.DataContractSerializer> requer o <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> e <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> permissões.  
   
--   Ao executar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de código em [confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md) modo, a serialização e desserialização de `readonly` campos (ambos `public` e `private`) não tem suporte. Isso ocorre porque o IL gerado não é verificável e, portanto, requer permissões elevadas.  
+-   Ao executar o código do WCF [confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md) modo, a serialização e desserialização de `readonly` campos (ambos `public` e `private`) não tem suporte. Isso ocorre porque o IL gerado não é verificável e, portanto, requer permissões elevadas.  
   
 -   Tanto o <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> têm suporte em um ambiente de confiança parcial. No entanto, usar o <xref:System.Runtime.Serialization.DataContractSerializer> está sujeita às seguintes condições:  
   
     -   Todos os serializável `[DataContract]` tipos devem ser públicos.  
   
-    -   Todos os serializável `[DataMember]` campos ou propriedades em um `[DataContract]` tipo deve ser público e leitura/gravação. A serialização e desserialização de `readonly` campos não é suportado quando executando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em um aplicativo parcialmente confiável.  
+    -   Todos os serializável `[DataMember]` campos ou propriedades em um `[DataContract]` tipo deve ser público e leitura/gravação. A serialização e desserialização de `readonly` campos não tem suporte durante a execução do WCF em um aplicativo parcialmente confiável.  
   
     -   O `[Serializable]` / `ISerializable]` não há suporte para o modelo de programação em um ambiente de confiança parcial.  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Há suporte para estruturas e classes.  
   
--   O <xref:System.Runtime.Serialization.DataContractSerializer> não oferece suporte para o modelo de programação usado pelo <xref:System.Xml.Serialization.XmlSerializer> e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web. Em particular, não dá suporte a atributos como <xref:System.Xml.Serialization.XmlElementAttribute> e <xref:System.Xml.Serialization.XmlAttributeAttribute>. Para habilitar o suporte para este modelo de programação, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve ser ativada para usar o <xref:System.Xml.Serialization.XmlSerializer> em vez do <xref:System.Runtime.Serialization.DataContractSerializer>.  
+-   O <xref:System.Runtime.Serialization.DataContractSerializer> não oferece suporte para o modelo de programação usado pelo <xref:System.Xml.Serialization.XmlSerializer> e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web. Em particular, não dá suporte a atributos como <xref:System.Xml.Serialization.XmlElementAttribute> e <xref:System.Xml.Serialization.XmlAttributeAttribute>. Para habilitar o suporte para este modelo de programação, o WCF deve ser ativado para usar o <xref:System.Xml.Serialization.XmlSerializer> em vez do <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 -   O <xref:System.DBNull> tipo é tratado de maneira especial. Ele é um tipo singleton e após a desserialização o desserializador respeita a restrição de singleton e todos os pontos `DBNull` referências para a instância singleton. Porque `DBNull` é um tipo serializável, ele exige <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> permissão.  
   

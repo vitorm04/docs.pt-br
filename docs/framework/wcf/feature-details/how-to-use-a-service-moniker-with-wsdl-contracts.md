@@ -1,24 +1,12 @@
 ---
-title: "Como usar um Moniker de serviço com contratos WSDL"
-ms.custom: 
+title: Como usar um Moniker de serviço com contratos WSDL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 838e7affcf47742c8f372879fcb33946d53ba43f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Como usar um Moniker de serviço com contratos WSDL
 Há situações quando desejar que um cliente totalmente independente de interoperabilidade COM. O serviço que você deseja chamar não pode expor um ponto de extremidade MEX e o cliente do WCF com que dll não pode ser registrado para interoperabilidade. Nesses casos, você pode criar um arquivo WSDL que descreve o serviço e passá-lo para o moniker de serviço do WCF. Este tópico descreve como chamar o exemplo de obter WCF iniciado usando um moniker de WCF WSDL.  
@@ -37,7 +25,7 @@ Há situações quando desejar que um cliente totalmente independente de interop
   
   
   
-5.  Crie um arquivo WSDL para o aplicativo leia. Porque os namespaces foram adicionados nas etapas 3 e 4, você pode usar o Internet Explorer para consultar a descrição inteira do WSDL do serviço, navegando para http://localhost/ServiceModelSamples/Service.svc?wsdl. Em seguida, você pode salvar o arquivo do Internet Explorer como serviceWSDL.xml. Se você não especificar os namespaces nas etapas 3 e 4, o documento WSDL retornado das consultas URL anterior não será concluída WSDL. O documento WSDL retornado incluirá várias instruções de importação que importar outros documentos WSDL. Você precisará passar por cada instrução de importação e criar o documento WSDL completo, combinando WSDL retornada do serviço com o WSDL importado.  
+5.  Crie um arquivo WSDL para o aplicativo leia. Como os namespaces foram adicionados nas etapas 3 e 4, você pode usar o IE para consultar a descrição inteira do WSDL do serviço, navegando para http://localhost/ServiceModelSamples/Service.svc?wsdl. Em seguida, você pode salvar o arquivo do Internet Explorer como serviceWSDL.xml. Se você não especificar os namespaces nas etapas 3 e 4, o documento WSDL retornado das consultas URL anterior não será concluída WSDL. O documento WSDL retornado incluirá várias instruções de importação que importar outros documentos WSDL. Você precisará passar por cada instrução de importação e criar o documento WSDL completo, combinando WSDL retornada do serviço com o WSDL importado.  
   
 6.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o código a seguir para o manipulador de cliques:  
   

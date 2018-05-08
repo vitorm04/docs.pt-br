@@ -1,14 +1,6 @@
 ---
 title: Como criar certificados X.509 que podem ser acessados pelo WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,26 +9,20 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cd13eae0a72ceaf5abfb93dfe84a53cfc3c8dec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Como criar certificados X.509 que podem ser acessados pelo WCF
-Para disponibilizar um certificado x. 509 para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], código do aplicativo deve especificar o nome do repositório de certificado e o local. Em determinadas circunstâncias, a identidade do processo deve ter acesso ao arquivo que contém a chave privada associada ao certificado x. 509. Para obter a chave privada associada com um certificado x. 509 no repositório de certificados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve ter permissão para fazer isso. Por padrão, somente o proprietário e a conta do sistema podem acessar a chave privada de um certificado.  
+Para tornar um certificado x. 509 acessíveis para o Windows Communication Foundation (WCF), o código do aplicativo deve especificar o nome do repositório de certificado e o local. Em determinadas circunstâncias, a identidade do processo deve ter acesso ao arquivo que contém a chave privada associada ao certificado x. 509. Para obter a chave privada associada a um certificado x. 509 em um repositório de certificados, o WCF deve ter permissão para fazer isso. Por padrão, somente o proprietário e a conta do sistema podem acessar a chave privada de um certificado.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Para disponibilizar os certificados x. 509 para o WCF  
   
-1.  Conceda à conta sob a qual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está executando o acesso de leitura para o arquivo que contém a chave privada associada ao certificado x. 509.  
+1.  Conceda à conta sob a qual WCF está executando o acesso de leitura para o arquivo que contém a chave privada associada ao certificado x. 509.  
   
-    1.  Determinar se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requer acesso de leitura à chave privada do certificado x. 509.  
+    1.  Determine se o WCF requer acesso de leitura à chave privada do certificado x. 509.  
   
          A tabela a seguir fornece detalhes sobre se uma chave privada deve estar disponível ao usar um certificado x. 509.  
   
@@ -64,9 +50,9 @@ Para disponibilizar um certificado x. 509 para [!INCLUDE[indigo1](../../../../in
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  Determinar a conta que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está sendo executado.  
+    4.  Determine a conta que o WCF está sendo executado.  
   
-         A tabela a seguir fornece detalhes sobre a conta sob a qual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está em execução para um determinado cenário.  
+         A tabela a seguir fornece detalhes sobre a conta sob a qual o WCF está em execução para um determinado cenário.  
   
         |Cenário|Identidade de processo|  
         |--------------|----------------------|  
@@ -75,7 +61,7 @@ Para disponibilizar um certificado x. 509 para [!INCLUDE[indigo1](../../../../in
         |Serviço hospedado no IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) ou IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|SERVIÇO DE REDE|  
         |Serviço que é hospedado no IIS 5. x ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Controlado pelo `<processModel>` elemento no arquivo Machine. config. A conta padrão é ASPNET.|  
   
-    5.  Conceder acesso de leitura para o arquivo que contém a chave privada para a conta que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está em execução, usando uma ferramenta como cacls.exe.  
+    5.  Conceder acesso de leitura para o arquivo que contém a chave privada para a conta que o WCF está em execução, usando uma ferramenta como cacls.exe.  
   
          Edições de exemplo de código a seguir (/ E) a lista de controle de acesso (ACL) para o arquivo especificado conceder (/ G) a conta de serviço de rede de leitura (: R) acesso ao arquivo.  
   

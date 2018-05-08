@@ -1,13 +1,6 @@
 ---
 title: Controle ToolStripPanel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripPanel control [Windows Forms]
 - horizontal space
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14ddd56540d8649a3705ef2d19726499fbfcaf9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrippanel-control"></a>Controle ToolStripPanel
-`ToolStripPanel`controle habilita o compartilhamento de espaço horizontal ou vertical dentro da área de ferramenta quando estiver encaixada e organização de <xref:System.Windows.Forms.ToolStrip> controla quando você não precisa de quatro painéis e painel central de um <xref:System.Windows.Forms.ToolStripContainer>.  
+`ToolStripPanel` controle habilita o compartilhamento de espaço horizontal ou vertical dentro da área de ferramenta quando estiver encaixada e organização de <xref:System.Windows.Forms.ToolStrip> controla quando você não precisa de quatro painéis e painel central de um <xref:System.Windows.Forms.ToolStripContainer>.  
   
  Os tópicos nesta seção descrevem os conceitos e técnicas que você pode usar para compilar recursos `ToolStripPanel` em seus aplicativos.  
   

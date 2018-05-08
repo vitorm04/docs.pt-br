@@ -1,31 +1,17 @@
 ---
 title: Rastreamento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing"></a>Rastreamento
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Fornece dados de diagnóstico e de instrumentação do aplicativo para análise e monitoramento de falhas. Você pode usar o rastreamento em vez de um depurador para entender como um aplicativo está funcionando, ou por que ele falha. Você também pode correlacionar processamento e falhas em componentes para fornecer uma experiência de ponta a ponta.  
+Windows Communication Foundation (WCF) fornece instrumentação de aplicativos e dados de diagnóstico para análise e monitoramento de falhas. Você pode usar o rastreamento em vez de um depurador para entender como um aplicativo está funcionando, ou por que ele falha. Você também pode correlacionar processamento e falhas em componentes para fornecer uma experiência de ponta a ponta.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]gera os seguintes dados para o rastreamento de diagnóstico:  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] gera os seguintes dados para o rastreamento de diagnóstico:  
   
 -   Rastreamentos para as etapas do processo em todos os componentes de aplicativos, como chamadas de operação, código de exceções, avisos e outros eventos de processamento significativo."  
   

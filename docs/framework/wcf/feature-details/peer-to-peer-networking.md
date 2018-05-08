@@ -1,29 +1,17 @@
 ---
 title: Rede peer-to-peer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fe3fe122e758d8460d98793cb8028ad696cb5302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking"></a>Rede peer-to-peer
-Canal par é uma tecnologia de comunicação (P2P) com vários participantes, ponto a ponto no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ele fornece um seguro e escalonável com base em mensagem P2P canal de comunicação para os desenvolvedores de aplicativos. Um exemplo comum de um aplicativo com vários participantes que pode se beneficiar de canal par é um aplicativo de colaboração, como bate-papo, quando um grupo de pessoas bate-papo entre si de maneira ponto a ponto, sem servidores. Canal par permite P2P colaboração, distribuição de conteúdo, balanceamento de carga e processamento distribuído para os cenários de consumidor e empresariais.  
+Canal par é uma com vários participantes, ponto a ponto (P2P) comunicação tecnologia Windows Communication Foundation (WCF). Ele fornece um seguro e escalonável com base em mensagem P2P canal de comunicação para os desenvolvedores de aplicativos. Um exemplo comum de um aplicativo com vários participantes que pode se beneficiar de canal par é um aplicativo de colaboração, como bate-papo, quando um grupo de pessoas bate-papo entre si de maneira ponto a ponto, sem servidores. Canal par permite P2P colaboração, distribuição de conteúdo, balanceamento de carga e processamento distribuído para os cenários de consumidor e empresariais.  
   
- Canal par é habilitado por padrão em [!INCLUDE[wv](../../../../includes/wv-md.md)], conforme são todos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para acessar as classes de canal par, adicione referências a System.ServiceModel.dll para seu projeto.  
+ Canal par é habilitado por padrão em [!INCLUDE[wv](../../../../includes/wv-md.md)], conforme é tudo do WCF. Para acessar as classes de canal par, adicione referências a System.ServiceModel.dll para seu projeto.  
   
  As seções a seguir contêm informações sobre rede ponto a ponto e o uso de classes de canal par para criar aplicativos de rede ponto a ponto.  
   

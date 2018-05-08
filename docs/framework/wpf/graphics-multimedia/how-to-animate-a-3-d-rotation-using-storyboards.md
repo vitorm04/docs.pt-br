@@ -1,28 +1,16 @@
 ---
-title: "Como animar uma rotação 3D usando storyboards"
-ms.custom: 
+title: Como animar uma rotação 3D usando storyboards
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Storyboards [WPF]
 - 3-D translations [WPF], animating [WPF], with Storyboards
 - animation [WPF], 3-D translations [WPF], with Storyboards
 ms.assetid: 1020e44e-e21e-49a8-be53-53cbc1910e83
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aa67db777ee04edcafa6ca3a53a37a638992fe29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6cc8774c14d4b393b0d04822216c894e486ba66
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>Como animar uma rotação 3D usando storyboards
 O exemplo a seguir mostra como fazer com que um objeto 3D gire enquanto ele "vibra" pela animação de <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> e <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> propriedades de uma <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto. Isso <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto Especifica a transformação de rotação do objeto 3D e suas propriedades de animação assim cria o efeito de rotação desejado. Dentro do Storyboard, <xref:System.Windows.Media.Animation.DoubleAnimation> é usado para animar a <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> propriedade ao <xref:System.Windows.Media.Animation.Vector3DAnimation> é usado para animar a <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> propriedade.  

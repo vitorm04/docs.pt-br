@@ -1,13 +1,6 @@
 ---
 title: Windows Forms e arquitetura de entrada da interoperabilidade do WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms e arquitetura de entrada da interoperabilidade do WPF
 A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requer que as duas tecnologias tenham o processamento de entrada de teclado apropriado. Este tópico descreve como essas tecnologias implementam o processamento de mensagens e teclado para permitir uma interoperação suave em aplicativos híbridos.  
@@ -131,7 +119,7 @@ A interoperação entre o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
 -   O <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> método é substituído para garantir que todas as mensagens WM_CHAR são encaminhadas para elementos hospedados.  
   
--   Se a tecla ALT estiver pressionada, a mensagem será WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]não processa previamente a esta mensagem por meio de <xref:System.Windows.Forms.Control.IsInputChar%2A> método. Portanto, o <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> método é substituído para consultar o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> para um acelerador registrado. Se um acelerador registrado for encontrado, <xref:System.Windows.Input.AccessKeyManager> processa.  
+-   Se a tecla ALT estiver pressionada, a mensagem será WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não processa previamente a esta mensagem por meio de <xref:System.Windows.Forms.Control.IsInputChar%2A> método. Portanto, o <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> método é substituído para consultar o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> para um acelerador registrado. Se um acelerador registrado for encontrado, <xref:System.Windows.Input.AccessKeyManager> processa.  
   
 -   Se não for pressionada a tecla ALT, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> classe processa a entrada não tratada. Se a entrada é um acelerador de <xref:System.Windows.Input.AccessKeyManager> processa. O <xref:System.Windows.Input.InputManager.PostProcessInput> evento é tratado para mensagens WM_CHAR que não foram processadas.  
   

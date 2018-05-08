@@ -1,28 +1,21 @@
 ---
-title: "Introdução ao controle DataRepeater (Visual Studio)"
+title: Introdução ao controle DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>Introdução ao controle DataRepeater (Visual Studio)
 O Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle é um contêiner rolável para repetido de controles que exibem dados, por exemplo, as linhas em uma tabela de banco de dados. Ele pode ser usado como uma alternativa para o <xref:System.Windows.Forms.DataGridView> controlar quando precisar de mais controle sobre o layout dos dados. O <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "repete" de um grupo de controles relacionados com a criação de várias instâncias em uma exibição da rolagem. Isso permite aos usuários exibir vários registros ao mesmo tempo.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Em tempo de design, o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle consiste em duas seções. A seção externa é o *visor*, onde os dados de rolagem serão exibidos em tempo de execução. A seção (superior) interna, conhecida como o *modelo de item*, é onde você posicionar controles que serão repetidos em tempo de execução, normalmente um controle para cada campo na fonte de dados. As propriedades e os controles no modelo de item são encapsulados no <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> propriedade.  
   
  Em tempo de execução, o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> é copiado para uma máquina virtual <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> objeto que é usado para exibir os dados quando cada registro é colocado na exibição. Você pode personalizar a exibição de registros individuais de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> evento, por exemplo, realce um campo com base no valor que ele contém. Para obter mais informações, consulte [como: alterar a aparência de um controle DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md).  

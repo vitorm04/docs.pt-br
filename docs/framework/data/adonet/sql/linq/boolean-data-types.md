@@ -1,26 +1,12 @@
 ---
 title: Tipos de dados booleanos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: a3a11b4dfde2afcf738f125a1fd7324ceff74669
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8b0eba237e713cc34859d2cdfe3da62f03f955f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-data-types"></a>Tipos de dados booleanos
 Os operadores boolianos funciona como esperado em Common Language Runtime (CLR), exceto que short-circuiting o comportamento não é convertido. Por exemplo, o operador do Visual Basic `AndAlso` se comporta como o operador de `And` . O operador C# `&&` se comporta como o operador de `&` .  

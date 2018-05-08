@@ -1,26 +1,12 @@
 ---
 title: Publicando e recuperando metadados através de uma associação personalizada
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publicando e recuperando metadados através de uma associação personalizada
 O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fornece suporte para adicionar o ponto de extremidade de metadados para um serviço. Esses pontos de extremidade de metadados podem responder a solicitações HTTP GET em uma URL que tenha um `?wsdl` querystring e solicitações GET do WS-transferência conforme definido na especificação WS-MetadataExchange (MEX). Pontos de extremidade MEX implementam o <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contrato.  
@@ -28,7 +14,7 @@ O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=
 ## <a name="publishing-metadata-over-a-custom-binding"></a>Publicando metadados através de uma associação personalizada  
  Os pontos de extremidade de metadados HTTP GET e HTTPS obter pontos de extremidade de metadados estão habilitados, definindo o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> propriedades `true`. As ligações para esses pontos de extremidade não podem ser configuradas.  
   
- O <xref:System.ServiceModel.Description.IMetadataExchange> contrato, no entanto, pode ser usado com qualquer ponto de extremidade, incluindo aquelas que usam associações personalizadas, como <xref:System.ServiceModel.Description.IMetadataExchange> pontos de extremidade são idênticos a qualquer outro [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ponto de extremidade de serviço. Se você souber como modificar a configuração de uma associação fornecida pelo sistema ou você sabe como configurar um <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, em seguida, você pode configurar uma associação para uso com um <xref:System.ServiceModel.Description.IMetadataExchange> ponto de extremidade.  
+ O <xref:System.ServiceModel.Description.IMetadataExchange> contrato, no entanto, pode ser usado com qualquer ponto de extremidade, incluindo aquelas que usam associações personalizadas, como <xref:System.ServiceModel.Description.IMetadataExchange> pontos de extremidade são idênticos a qualquer outro ponto de extremidade de serviço de Windows Communication Foundation (WCF). Se você souber como modificar a configuração de uma associação fornecida pelo sistema ou você sabe como configurar um <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, em seguida, você pode configurar uma associação para uso com um <xref:System.ServiceModel.Description.IMetadataExchange> ponto de extremidade.  
   
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Recuperando metadados através de uma associação personalizada  
  Metadados podem ser recuperados de pontos de extremidade de metadados Get do HTTP e HTTPS Get usando solicitações de HTTP ou HTTPS GET padrão.  

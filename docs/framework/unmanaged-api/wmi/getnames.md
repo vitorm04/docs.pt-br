@@ -1,11 +1,7 @@
 ---
-title: "Função GetNames (referência de API não gerenciada)"
-description: "A função GetNames recupera os nomes das propriedades de um objeto."
+title: Função GetNames (referência de API não gerenciada)
+description: A função GetNames recupera os nomes das propriedades de um objeto.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>Função GetNames
 Recupera um subconjunto ou todos os nomes das propriedades de um objeto. 
@@ -75,7 +68,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos ou foi especificada uma combinação incorreta de sinalizadores e parâmetros. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
@@ -91,7 +84,7 @@ Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são campo
 
 | Sinalizadores de grupo 1 |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Retorne todos os nomes de propriedade. `strQualifierName`e `pQualifierVal` são utilizadas. |
+| `WBEM_FLAG_ALWAYS` | 0 | Retorne todos os nomes de propriedade. `strQualifierName` e `pQualifierVal` são utilizadas. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Retornar somente as propriedades que têm um qualificador do nome especificado pelo `strQualifierName` parâmetro. Se este sinalizador é usado, você deve especificar `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Retornar somente as propriedades que não têm um qualificador do nome especificado pelo `strQualifierName` parâmetro. Se este sinalizador é usado, você deve especificar `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Retornar apenas as propriedades que têm um qualificador do nome especificado pelo `wszQualifierName` parâmetro e também ter um valor idêntico ao especificado pelo `pQualifierVal` estrutura. Se esse sinalizador for usado, você deve especificar ambos um `wszQualifierName` e um `pQualifierValue`. |
@@ -115,7 +108,7 @@ A função sempre aloca um novo `SAFEARRAY` se ele retorna `WBEM_S_NO_ERROR`, e 
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

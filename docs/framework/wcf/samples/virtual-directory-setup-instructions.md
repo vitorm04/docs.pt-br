@@ -1,27 +1,15 @@
 ---
-title: "Instruções de definição de diretório virtual"
-ms.custom: 
+title: Instruções de definição de diretório virtual
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instruções de definição de diretório virtual
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos destinam-se para compartilhar um diretório virtual comum denominado servicemodelsamples que é mapeada para a pasta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+Os exemplos do Windows Communication Foundation (WCF) devem compartilhar um diretório virtual comum denominado servicemodelsamples que é mapeada para a pasta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
 > [!NOTE]
 >  % SystemDrive % normalmente é c: ou d:., dependendo do local de unidade em que os serviços de informações da Internet (IIS) está instalado.  
@@ -52,7 +40,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos destinam-se p
     > [!NOTE]
     >  Para fins desta documentação, o termo `virtual directory` é sinônimo de `Web application`.  
   
-     Além de criar o diretório virtual, você também deve definir as propriedades para habilitar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços para serem executados. Consulte abaixo para obter detalhes.  
+     Além de criar o diretório virtual, você também deve definir as propriedades para habilitar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços para serem executados. Veja mais detalhes a seguir.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Para criar um diretório virtual no IIS 5.1 ou 6.0  
   
@@ -87,7 +75,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos destinam-se p
   
 3.  No painel Ações, selecione o **habilitar** opção. Isso permite que você acesse o diretório do diretório usando o Internet Explorer, que é útil quando a depuração de um serviço.  
   
- Por fim, você deve definir as propriedades de segurança da pasta servicemodelsamples para permitir que ele seja acessado por outras pessoas. Consulte abaixo para obter detalhes.  
+ Por fim, você deve definir as propriedades de segurança da pasta servicemodelsamples para permitir que ele seja acessado por outras pessoas. Veja mais detalhes a seguir.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Para definir propriedades adicionais de diretório virtual no IIS 5.1 ou 6.0  
   

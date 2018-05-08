@@ -1,13 +1,7 @@
 ---
 title: Design de eventos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-design"></a>Design de eventos
 Os eventos são a forma mais usada de retornos de chamada (construções que permitem que a estrutura chamar o código de usuário). Outros mecanismos de retorno de chamada incluem membros colocar delegados, membros virtuais e plug-ins com base em interface. Dados de estudos de usabilidade indicam que a maioria dos desenvolvedores são mais familiarizado com o uso de eventos que estão usando outros mecanismos de retorno de chamada. Eventos são integrados perfeitamente com o Visual Studio e muitos idiomas.  

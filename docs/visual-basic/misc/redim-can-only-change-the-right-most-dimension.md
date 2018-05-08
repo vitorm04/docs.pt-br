@@ -1,23 +1,16 @@
 ---
-title: "&#39; ReDim &#39; só é possível alterar a dimensão mais à direita"
+title: '&#39;ReDim&#39; só pode alterar a dimensão mais à direita'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 752e0e54c48b3b348a477787e5e911f1b1777667
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: efb98df13a7e3e378347b30b6fc00b90030ec194
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39redim39-can-only-change-the-right-most-dimension"></a>&#39; ReDim &#39; só é possível alterar a dimensão mais à direita
+# <a name="39redim39-can-only-change-the-right-most-dimension"></a>&#39;ReDim&#39; só pode alterar a dimensão mais à direita
 Um `ReDim` instrução tentou usar o `Preserve` palavra-chave para alterar uma dimensão de uma matriz que não é da última dimensão. Ao usar `Preserve`, você pode redimensionar a última dimensão de uma matriz. Para todas as outras dimensões, você deve especificar o mesmo tamanho de matriz existente.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

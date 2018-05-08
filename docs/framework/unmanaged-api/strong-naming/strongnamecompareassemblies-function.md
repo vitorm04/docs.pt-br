@@ -1,14 +1,6 @@
 ---
-title: "Função StrongNameCompareAssemblies"
-ms.custom: 
+title: Função StrongNameCompareAssemblies
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>Função StrongNameCompareAssemblies
 Determina se os dois assemblies diferem somente por suas assinaturas de nome forte.  
@@ -59,14 +47,14 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Um dos seguintes valores:  
   
--   `SN_CMP_DIFFERENT`(0) - Especifica que os assemblies conterem dados diferentes.  
+-   `SN_CMP_DIFFERENT` (0) - Especifica que os assemblies conterem dados diferentes.  
   
--   `SN_CMP_IDENTICAL`(1) - Especifica que os assemblies são exatamente iguais, incluindo suas assinaturas e a soma de verificação.  
+-   `SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente iguais, incluindo suas assinaturas e a soma de verificação.  
   
--   `SN_CMP_SIGONLY`(2) - Especifica que os assemblies diferem somente por assinatura e soma de verificação.  
+-   `SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e soma de verificação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true`Após a conclusão bem-sucedida; Caso contrário, `false`.  
+ `true` Após a conclusão bem-sucedida; Caso contrário, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Comentários  
  A assinatura de um assembly de nome forte consiste em nome de texto, versão, cultura e token de chave pública do assembly.  

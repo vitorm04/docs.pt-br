@@ -1,31 +1,19 @@
 ---
-title: "Protegendo serviços e clientes"
-ms.custom: 
+title: Protegendo serviços e clientes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52e07a83f5a1b84abc46f00e6fd6e80e4b9a2622
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e0440aadcad7c4297cdc6e6489ca004480420ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services-and-clients"></a>Protegendo serviços e clientes
-As informações nesta seção se concentra na programação de segurança no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Em geral, isso inclui a seleção de uma associação fornecida pelo sistema apropriada, definindo as propriedades do elemento de segurança e, em seguida, definir propriedades dos comportamentos de serviço que determinam como as credenciais são recuperadas para uso, o serviço ou cliente. Essas técnicas aborda os requisitos de segurança da maioria dos usuários para a maioria dos cenários, como mostrado na [cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se seu cenário exigir mais recursos, consulte primeiro [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se uma solução não estiver visível, consulte [estendendo segurança](../../../../docs/framework/wcf/extending/extending-security.md). Se você estiver criando (ou interagir com) um sistema que usa declarações avançada, consulte os tópicos [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+As informações nesta seção se concentra na programação de segurança no Windows Communication Foundation (WCF). Em geral, isso inclui a seleção de uma associação fornecida pelo sistema apropriada, definindo as propriedades do elemento de segurança e, em seguida, definir propriedades dos comportamentos de serviço que determinam como as credenciais são recuperadas para uso, o serviço ou cliente. Essas técnicas aborda os requisitos de segurança da maioria dos usuários para a maioria dos cenários, como mostrado na [cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se seu cenário exigir mais recursos, consulte primeiro [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se uma solução não estiver visível, consulte [estendendo segurança](../../../../docs/framework/wcf/extending/extending-security.md). Se você estiver criando (ou interagir com) um sistema que usa declarações avançada, consulte os tópicos [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
@@ -35,10 +23,10 @@ As informações nesta seção se concentra na programação de segurança no [!
  Uma visão geral de como proteger mensagens por meio da camada de transporte.  
   
  [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- Resume os motivos para usar a segurança em nível de mensagem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Resume os motivos para usar a segurança em nível de mensagem no Windows Communication Foundation (WCF).  
   
  [Sessões seguras](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- Uma discussão sobre as considerações necessárias ao proteger um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessão.  
+ Uma discussão sobre as considerações necessárias ao proteger uma sessão do WCF.  
   
  [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Obter uma explicação de algumas das tarefas comuns exigidas quando usando certificados x. 509.  

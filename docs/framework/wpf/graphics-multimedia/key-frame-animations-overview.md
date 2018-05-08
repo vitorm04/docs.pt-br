@@ -1,28 +1,16 @@
 ---
-title: "Visão geral das animações de quadro-chave"
-ms.custom: 
+title: Visão geral das animações de quadro-chave
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  
@@ -290,7 +278,7 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
   
 6.  Resolver o <xref:System.Windows.Media.Animation.KeyTime> valores de quadros chave com momentos chave não especificados usando os quadros chave declarados mais próximos deles que tenham resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-7.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> usar o <xref:System.Windows.Media.Animation.KeyTime> valores de vizinhos chave quadros para determinar seu tempo resolvido.  O objetivo é garantir que a velocidade da animação é constante em relação ao tempo resolvido desse quadro-chave.  
+7.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Use o <xref:System.Windows.Media.Animation.KeyTime> valores de vizinhos chave quadros para determinar seu tempo resolvido.  O objetivo é garantir que a velocidade da animação é constante em relação ao tempo resolvido desse quadro-chave.  
   
 8.  Classificar os quadros-chave no tempo resolvidos (chave primária) e ordem de declaração (chave secundária), ou seja, usa uma classificação estável com base no quadro chave resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   

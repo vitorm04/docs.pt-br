@@ -1,33 +1,19 @@
 ---
 title: Como serializar e desserializar dados JSON
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9152e0047102661664f9b158aa26f83fb1d3c25c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f51ffb180adfc8310c91ff3c1ec7b7725f6b8b15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Como serializar e desserializar dados JSON
 JSON (JavaScript Object Notation) é um formato eficiente de codificação de dados que permite a troca rápida de pequenas quantidades de dados entre navegadores cliente e serviços Web habilitados para AJAX.  
   
  Este tópico demonstra como serializar objetos do tipo .NET em dados codificados por JSON e depois desserializar os dados no formato JSON em instâncias de tipos .NET usando a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Este exemplo usa um contrato de dados para demonstrar a serialização e a desserialização de um tipo `Person` definido pelo usuário.  
   
- Normalmente, o processo de serialização e desserialização JSON é tratado automaticamente pelo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] quando você usa tipos de contrato de dados em operações de serviço que são expostas em pontos de extremidade habilitados para AJAX. Entretanto, em alguns casos, convém trabalhar com dados JSON diretamente. Este tópico demonstra um cenário desse tipo.  
+ Normalmente, desserialização e serialização JSON é tratado automaticamente pelo Windows Communication Foundation (WCF) quando você usar tipos de contrato de dados em operações de serviço que são expostas em pontos de extremidade habilitado para AJAX. Entretanto, em alguns casos, convém trabalhar com dados JSON diretamente. Este tópico demonstra um cenário desse tipo.  
   
 > [!NOTE]
 >  Se ocorrer um erro durante a serialização de uma resposta de saída no servidor ou se a operação de resposta gerar uma exceção por algum outro motivo, ela poderá não ser retornada ao cliente como uma falha.  

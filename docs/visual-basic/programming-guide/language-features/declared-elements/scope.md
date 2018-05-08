@@ -1,12 +1,6 @@
 ---
 title: Escopo no Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Escopo no Visual Basic
 O *escopo* de um elemento declarado é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome ou tornando-o disponível por meio de um [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Um elemento pode ter escopo em um dos seguintes níveis:  
@@ -61,7 +52,7 @@ O *escopo* de um elemento declarado é o conjunto de todo o código que pode faz
   
 -   `Do` e `Loop`  
   
--   `For`[`Each`] e`Next`  
+-   `For` [`Each`] e `Next`  
   
 -   `If` e `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Escopo de Namespace inclui namespaces aninhados. Um elemento disponível dentro de um namespace também está disponível de dentro de qualquer namespace aninhado dentro desse namespace.  
   
- Se o projeto não contém nenhum [declaração de Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), tudo no projeto está no mesmo namespace. Nesse caso, o escopo de namespace pode ser considerado como escopo do projeto. `Public`elementos em um módulo, classe ou estrutura também estão disponíveis para qualquer projeto que referencia o seu projeto.  
+ Se o projeto não contém nenhum [declaração de Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), tudo no projeto está no mesmo namespace. Nesse caso, o escopo de namespace pode ser considerado como escopo do projeto. `Public` elementos em um módulo, classe ou estrutura também estão disponíveis para qualquer projeto que referencia o seu projeto.  
   
 ## <a name="choice-of-scope"></a>Opção de escopo  
  Quando você declara uma variável, você deve ter em mente os seguintes pontos ao escolher seu escopo.  

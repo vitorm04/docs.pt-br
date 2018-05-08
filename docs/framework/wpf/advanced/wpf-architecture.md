@@ -1,14 +1,6 @@
 ---
 title: Arquitetura do WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tutorial sobre a hierarquia de classe do Windows Presentation Foundation (WPF). Ele aborda a maioria dos subsistemas principais do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve como eles interagem. Ele também detalha algumas das escolhas feitas pelos arquitetos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +50,7 @@ Este tópico fornece um tutorial sobre a hierarquia de classe do Windows Present
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  Uma das principais filosofias da arquitetura usadas ao compilar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] foi a preferência por propriedades sobre métodos ou eventos. Propriedades são declarativas e permitem que você especifique mais facilmente a intenção em vez de ação. Isso também deu suporte para um sistema controlado por modelo ou por dados para exibição do conteúdo de interface do usuário. Essa filosofia tinha o efeito desejado de criar mais propriedades do que o número ao qual você era capaz de se associar, de modo a controlar melhor o comportamento de um aplicativo.  
   
- Para que mais do sistema fosse controlado por propriedades, era necessário um sistema de propriedades mais sofisticado do que o fornecido pelo [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Um exemplo simples desta sofisticação é encontrado nas notificações de alteração. Para habilitar a associação bidirecional, você precisa que ambos os lados da associação deem suporte à notificação de alteração. Para ter comportamento ligado aos valores de propriedade, você precisa ser notificado quando o valor da propriedade é alterado. O [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] tem uma interface, **INotifyPropertyChange**, que permite que um objeto publique notificações de alteração, mas isso é opcional.  
+ Para que mais do sistema fosse controlado por propriedades, era necessário um sistema de propriedades mais sofisticado do que o fornecido pelo [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Um exemplo simples desta sofisticação é encontrado nas notificações de alteração. Para habilitar a associação bidirecional, você precisa que ambos os lados da associação deem suporte à notificação de alteração. Para ter comportamento ligado aos valores de propriedade, você precisa ser notificado quando o valor da propriedade é alterado. O Microsoft .NET Framework tem uma interface **INotifyPropertyChange**, que permite que um objeto publique notificações de alteração, mas isso é opcional.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fornece um sistema de propriedade mais sofisticado, derivado do <xref:System.Windows.DependencyObject> tipo. O sistema de propriedades é realmente um sistema de propriedade de "dependência", que controla as dependências entre expressões de propriedade e revalida automaticamente valores de propriedade quando as dependências são alteradas. Por exemplo, se você tiver uma propriedade herdada (como <xref:System.Windows.Controls.Control.FontSize%2A>), o sistema é atualizado automaticamente se a propriedade é alterada em um pai de um elemento que herda o valor.  
   

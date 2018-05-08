@@ -1,12 +1,6 @@
 ---
-title: "Instrução On Error (Visual Basic)"
+title: Instrução On Error (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrução On Error (Visual Basic)
 Ativa uma rotina de tratamento de erros e especifica o local da rotina de dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros.  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Observe que o `On Error GoTo` instrução intercepta todos os erros, independentemente da classe de exceção.  
   
 ## <a name="on-error-resume-next"></a>Houver erro, continuar  
- `On Error Resume Next`faz a execução continuar com a instrução imediatamente após a instrução que causou o erro de tempo de execução, ou com a instrução imediatamente após o mais recente de chamadas fora do procedimento que contém o `On Error Resume Next` instrução. Essa instrução permite a execução a continuar apesar de um erro de tempo de execução. Você pode colocar a rotina de tratamento de erros em que o erro ocorrer em vez de transferir o controle para outro local dentro do procedimento. Um `On Error Resume Next` instrução se torna inativa quando outro procedimento é chamado, portanto, você deve executar um `On Error Resume Next` instrução em cada chamada rotina se você quiser dentro da rotina de tratamento de erros embutidos.  
+ `On Error Resume Next` faz a execução continuar com a instrução imediatamente após a instrução que causou o erro de tempo de execução, ou com a instrução imediatamente após o mais recente de chamadas fora do procedimento que contém o `On Error Resume Next` instrução. Essa instrução permite a execução a continuar apesar de um erro de tempo de execução. Você pode colocar a rotina de tratamento de erros em que o erro ocorrer em vez de transferir o controle para outro local dentro do procedimento. Um `On Error Resume Next` instrução se torna inativa quando outro procedimento é chamado, portanto, você deve executar um `On Error Resume Next` instrução em cada chamada rotina se você quiser dentro da rotina de tratamento de erros embutidos.  
   
 > [!NOTE]
 >  O `On Error Resume Next` construção pode ser preferível `On Error GoTo` ao tratar erros gerados durante o acesso a outros objetos. Verificando `Err` após cada interação com um objeto remove ambiguidade sobre qual objeto foi acessado pelo código. Você pode ter certeza de qual objeto colocado o código de erro `Err.Number`, bem como de objeto que originalmente gerou o erro (o objeto especificado em `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`desativa o tratamento de erro no procedimento atual. Ela não especifica a linha 0 como o início do código de tratamento de erros, mesmo que o procedimento contenha uma linha numerada como 0. Sem um `On Error GoTo 0` instrução, um manipulador de erros é desativada automaticamente quando um procedimento é encerrado.  
+ `On Error GoTo 0` desativa o tratamento de erro no procedimento atual. Ela não especifica a linha 0 como o início do código de tratamento de erros, mesmo que o procedimento contenha uma linha numerada como 0. Sem um `On Error GoTo 0` instrução, um manipulador de erros é desativada automaticamente quando um procedimento é encerrado.  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo -1  
- `On Error GoTo -1`Desabilita a exceção no procedimento atual. Ele não especificar uma linha -1 como o início do código de tratamento de erros, mesmo que o procedimento contenha uma linha numerada como -1. Sem um `On Error GoTo -1` instrução, uma exceção é desativada automaticamente quando um procedimento é encerrado.  
+ `On Error GoTo -1` Desabilita a exceção no procedimento atual. Ele não especificar uma linha -1 como o início do código de tratamento de erros, mesmo que o procedimento contenha uma linha numerada como -1. Sem um `On Error GoTo -1` instrução, uma exceção é desativada automaticamente quando um procedimento é encerrado.  
   
  Para impedir que o código de tratamento de erros em execução quando nenhum erro ocorreu, coloque uma `Exit Sub`, `Exit Function`, ou `Exit Property` instrução imediatamente antes da rotina de tratamento de erros, como o fragmento a seguir:  
   

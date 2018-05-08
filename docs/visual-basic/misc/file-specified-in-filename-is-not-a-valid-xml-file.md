@@ -1,18 +1,12 @@
 ---
-title: "Arquivo especificado no nome do arquivo não é um arquivo XML válido"
+title: Arquivo especificado no nome do arquivo não é um arquivo XML válido
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f3275608a1871ac981eb5b3aa39f0be6ab4e758e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3aecb0c2c87539717656a29f5b48f94fce3c8453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Arquivo especificado no nome do arquivo não é um arquivo XML válido
 O nome do arquivo que você forneceu não é um arquivo XML válido. Para especificar a estrutura permitida e o conteúdo de um documento XML, você pode usar uma definição de tipo de documento (DTD), um esquema Microsoft XML-Data Reduced (XDR) ou um esquema de linguagem XSD de definição de esquema XML. Esquemas XSD são a melhor maneira de especificar gramáticas XML no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

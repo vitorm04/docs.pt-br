@@ -1,34 +1,24 @@
 ---
 title: Criptografando e descriptografando cadeias de caracteres no Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [Visual Basic], strings
 - strings [Visual Basic], encrypting
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd9ec8e7af771db3f042e08c8ab30f6ed5832c2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Instruções passo a passo: criptografando e descriptografando cadeias de caracteres no Visual Basic
 Este passo a passo mostra como usar o <xref:System.Security.Cryptography.DESCryptoServiceProvider> classe para criptografar e descriptografar cadeias de caracteres usando a versão CSP (provedor) de serviços de criptografia do padrão de criptografia de dados triplo (<xref:System.Security.Cryptography.TripleDES>) algoritmo. A primeira etapa é criar uma classe wrapper simples que encapsula o algoritmo 3DES e armazena os dados criptografados como uma cadeia de caracteres codificada de base 64. Em seguida, esse wrapper é usado para armazenar com segurança dados particulares do usuário em um arquivo de texto publicamente acessível.  
   
  Você pode usar criptografia para proteger segredos do usuário (por exemplo, senhas) e fazer com que as credenciais ilegível por usuários não autorizados. Isso pode proteger a identidade de um usuário autorizado de ser roubada, que protege os ativos do usuário e fornece não-repúdio. A criptografia também pode proteger dados de um usuário que está sendo acessado por usuários não autorizados.  
   
- Para obter mais informações, consulte [serviços criptográficos](../../../../standard/security/cryptographic-services.md).  
+ Para obter mais informações, consulte [Serviços Criptográficos](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
 >  O Rijndael (agora conhecido como Advanced Encryption Standard [AES]) e algoritmos Triple Data Encryption Standard (3DES) fornecem maior segurança do que o DES porque eles são mais computação intensa. Para obter mais informações, consulte <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.Rijndael>.  

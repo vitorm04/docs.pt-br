@@ -1,12 +1,6 @@
 ---
 title: Cláusula Let (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryLet
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 70e47517a62f58dcababd31c26277417b62eab66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="let-clause-visual-basic"></a>Cláusula Let (Visual Basic)
 Calcula um valor e o atribui a uma nova variável dentro da consulta.  
@@ -36,8 +27,8 @@ Let variable = expression [, ...]
   
 |Termo|Definição|  
 |---|---|  
-|`variable`|Necessário. Um alias que pode ser usado para referenciar os resultados da expressão fornecida.|  
-|`expression`|Necessário. Uma expressão que será avaliada e atribuída à variável especificada.|  
+|`variable`|Obrigatório. Um alias que pode ser usado para referenciar os resultados da expressão fornecida.|  
+|`expression`|Obrigatório. Uma expressão que será avaliada e atribuída à variável especificada.|  
   
 ## <a name="remarks"></a>Comentários  
  O `Let` cláusula permite que você calcule valores para cada resultado de consulta e referenciam-los usando um alias. O alias pode ser usado em outras cláusulas, como o `Where` cláusula. O `Let` cláusula permite que você crie uma instrução de consulta que é mais fácil de ler, pois você pode especificar um alias para uma cláusula de expressão incluída na consulta e substituir o alias cada vez que a cláusula de expressão é usada.  

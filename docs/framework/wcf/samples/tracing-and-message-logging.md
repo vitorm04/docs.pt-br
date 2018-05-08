@@ -1,28 +1,14 @@
 ---
 title: Registro de mensagem e rastreamento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cae7d806ce68f6804f97195c9bf2571328af6dff
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-message-logging"></a>Registro de mensagem e rastreamento
 Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. Os rastreamentos resultantes e os logs de mensagem são exibidos usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +17,7 @@ Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. O
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 ## <a name="tracing"></a>Rastreamento  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]usa o mecanismo de rastreamento definido no <xref:System.Diagnostics> namespace. Nesse modelo de rastreamento, dados de rastreamento são produzidos por fontes de rastreamento que implementam aplicativos. Cada origem é identificada por um nome. Os consumidores de rastreamento criar ouvintes de rastreamento para as fontes de rastreamento para o qual deseja recuperar informações. Para receber dados de rastreamento, você deve criar um ouvinte para a origem de rastreamento. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], isso pode ser feito adicionando o código a seguir do serviço ou o arquivo de configuração do cliente, definindo a origem de rastreamento de modelo de serviço `switchValue`:  
+ Windows Communication Foundation (WCF) usa o mecanismo de rastreamento definido no <xref:System.Diagnostics> namespace. Nesse modelo de rastreamento, dados de rastreamento são produzidos por fontes de rastreamento que implementam aplicativos. Cada origem é identificada por um nome. Os consumidores de rastreamento criar ouvintes de rastreamento para as fontes de rastreamento para o qual deseja recuperar informações. Para receber dados de rastreamento, você deve criar um ouvinte para a origem de rastreamento. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], isso pode ser feito adicionando o código a seguir do serviço ou o arquivo de configuração do cliente, definindo a origem de rastreamento de modelo de serviço `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -141,7 +127,7 @@ Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. O
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

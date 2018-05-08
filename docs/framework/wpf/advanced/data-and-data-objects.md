@@ -1,13 +1,6 @@
 ---
 title: Dados e objetos de dados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>Dados e objetos de dados
 Dados que são transferidos como parte de uma operação do tipo "arrastar e soltar" são armazenados em um objeto de dados.  Conceitualmente, um objeto de dados consiste em um ou mais dos seguintes pares:  
@@ -47,7 +35,7 @@ Dados que são transferidos como parte de uma operação do tipo "arrastar e sol
 |<xref:System.Windows.IDataObject.GetFormats%2A>|Retorna uma lista de formatos em que os dados deste objeto de dados estão armazenados ou em que podem ser convertidos.|  
 |<xref:System.Windows.IDataObject.SetData%2A>|Armazena os dados especificados neste objeto de dados.|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Fornece uma implementação básica de <xref:System.Windows.IDataObject> no <xref:System.Windows.DataObject> classe. O estoque <xref:System.Windows.DataObject> classe é suficiente para muitos cenários comuns de transferência de dados.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fornece uma implementação básica de <xref:System.Windows.IDataObject> no <xref:System.Windows.DataObject> classe. O estoque <xref:System.Windows.DataObject> classe é suficiente para muitos cenários comuns de transferência de dados.  
   
  Há diversos formatos predefinidos, como bitmap, CSV, arquivo, HTML, RTF, cadeia de caracteres, texto e áudio. Para obter informações sobre formatos de dados predefinidos fornecidos com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte o <xref:System.Windows.DataFormats> tópico de referência de classe.  
   
@@ -86,7 +74,7 @@ Dados que são transferidos como parte de uma operação do tipo "arrastar e sol
  Para obter mais exemplos de códigos que consultam um objeto de dados quanto aos formatos de dados disponíveis, consulte [Listar os formatos de dados em um objeto de dados](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Para obter exemplos de consulta a um objeto de dados quanto à presença de um formato de dados específico, consulte [Determinar se um formato de dados está presente em um objeto de dados](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
   
 ### <a name="retrieving-data-from-a-data-object"></a>Recuperando dados de um objeto de dados  
- Recuperar dados de um objeto de dados em um determinado formato envolve simplesmente chamar um do <xref:System.Windows.DataObject.GetData%2A> métodos e especificar o formato de dados desejado.  Uma da <xref:System.Windows.DataObject.GetDataPresent%2A> métodos podem ser usados para verificar a presença de um formato específico de dados.  <xref:System.Windows.DataObject.GetData%2A>Retorna os dados em um <xref:System.Object>; dependendo do formato de dados, esse objeto pode ser convertido em um contêiner de um tipo específico.  
+ Recuperar dados de um objeto de dados em um determinado formato envolve simplesmente chamar um do <xref:System.Windows.DataObject.GetData%2A> métodos e especificar o formato de dados desejado.  Uma da <xref:System.Windows.DataObject.GetDataPresent%2A> métodos podem ser usados para verificar a presença de um formato específico de dados.  <xref:System.Windows.DataObject.GetData%2A> Retorna os dados em um <xref:System.Object>; dependendo do formato de dados, esse objeto pode ser convertido em um contêiner de um tipo específico.  
   
  O código de exemplo a seguir usa o <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> sobrecarga para verificar se um formato de dados especificado está disponível (nativa ou por conversão automática). Se o formato especificado estiver disponível, o exemplo recupera os dados usando o <xref:System.Windows.DataObject.GetData%28System.String%29> método.  
   

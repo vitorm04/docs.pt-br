@@ -1,13 +1,6 @@
 ---
-title: "Implementação do método em controles personalizados"
-ms.custom: 
+title: Implementação do método em controles personalizados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e07d4a5f0a4e66e412b22e1f6cabd24cd81b5ea4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9df2bc9257c3f697f30cbe8c679ffc88ec34517b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementação do método em controles personalizados
 Um método é implementado em um controle da mesma maneira que seria em qualquer outro componente.  
@@ -59,7 +47,7 @@ public int ConvertMatterToEnergy(int matter)
  Se desejar permitir aos usuários de seu controle fornecer diferentes combinações de parâmetros a um método, forneça múltiplas sobrecargas do método, usando tipos de dados explícitos. Evite criar parâmetros declarados `As Object` que podem conter qualquer tipo de dados, pois isso pode levar a erros que podem não ser capturados no teste.  
   
 > [!NOTE]
->  O tipo de dados universal no Common Language Runtime é `Object` ao invés de `Variant`. `Variant`foi removido do idioma.  
+>  O tipo de dados universal no Common Language Runtime é `Object` ao invés de `Variant`. `Variant` foi removido do idioma.  
   
  Por exemplo, o `Spin` método de um hipotético `Widget` controle pode permitir que a especificação direta de direção de rotação e velocidade ou especificação de outro `Widget` objeto do qual impulso angular será absorvidos:  
   

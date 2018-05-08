@@ -1,11 +1,7 @@
 ---
-title: "Excluir função (referência de API não gerenciada)"
-description: "A função de exclusão exclui a propriedade especificada e todos os seus qualificadores de uma definição de classe do CIM."
+title: Excluir função (referência de API não gerenciada)
+description: A função de exclusão exclui a propriedade especificada e todos os seus qualificadores de uma definição de classe do CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>Excluir função
 Exclui a propriedade especificada e todos os seus qualificadores de uma definição de classe do CIM.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
 
 `wszName`  
-[in] O nome da propriedade a excluir. `wszName`deve ser um ponteiro para um válida `LPCWSTR`.
+[in] O nome da propriedade a excluir. `wszName` deve ser um ponteiro para um válida `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -80,7 +73,7 @@ Essa função encapsula uma chamada para o [IWbemClassObject::Delete](https://ms
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

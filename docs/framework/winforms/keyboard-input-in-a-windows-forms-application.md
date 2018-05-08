@@ -1,28 +1,16 @@
 ---
 title: Entrada do teclado em um aplicativo do Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90070ec6fb27e2f9892a3874cc326fe77af1a063
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Entrada do teclado em um aplicativo do Windows Forms
 Windows Forms inclui eventos de teclado padrão que permitem que você responder a pressionamentos de teclas específicos e também fornece maneiras de interceptar, modificar e consumir pressionamentos de teclas no aplicativo, formulário e nível de controle.  

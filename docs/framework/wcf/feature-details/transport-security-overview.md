@@ -1,35 +1,23 @@
 ---
 title: Visão geral de segurança de transporte
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>Visão geral de segurança de transporte
-Transporte de mecanismos de segurança em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dependem de associação e transporte que está sendo usado. Por exemplo, ao usar o <xref:System.ServiceModel.WSHttpBinding> classe, o transporte é HTTP e o mecanismo principal para proteger o transporte é o protocolo (SSL) sobre HTTP, comumente chamado de HTTPS. Este tópico discute os mecanismos de segurança de transporte principal usados no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associações fornecidas pelo sistema.  
+Mecanismos de segurança de transporte no Windows Communication Foundation (WCF) dependem da associação e o transporte está sendo usado. Por exemplo, ao usar o <xref:System.ServiceModel.WSHttpBinding> classe, o transporte é HTTP e o mecanismo principal para proteger o transporte é o protocolo (SSL) sobre HTTP, comumente chamado de HTTPS. Este tópico discute os mecanismos de segurança de transporte principais usados nas associações de WCF fornecido pelo sistema.  
   
 > [!NOTE]
->  Quando a segurança SSL é usada com o .NET Framework 3.5 e versões posteriores um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente usa tanto os certificados intermediários em seu repositório de certificado e os certificados intermediários recebidos durante a negociação SSL para executar a validação da cadeia de certificado na certificado do serviço. .NET framework 3.0 usa apenas os certificados intermediários instalados no repositório de certificados local.  
+>  Quando a segurança SSL é usada com o .NET Framework 3.5 e versões posteriores um cliente WCF usa ambos os certificados intermediários em seu repositório de certificado e os certificados intermediários recebido durante a negociação SSL para executar a validação da cadeia de certificado do serviço certificado. .NET framework 3.0 usa apenas os certificados intermediários instalados no repositório de certificados local.  
   
 > [!WARNING]
 >  Quando a segurança de transporte é usada, o <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` propriedade pode ser substituída. Para impedir que isso aconteça conjunto o <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` como None. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> é um comportamento de serviço que pode ser definido na descrição do serviço.  
@@ -75,7 +63,7 @@ Transporte de mecanismos de segurança em [!INCLUDE[indigo1](../../../../include
  Isso permite que o servidor usam NTLM para autenticação, se o protocolo Kerberos falhar. Para obter mais informações sobre como configurar o IIS no [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [forçar a autenticação NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Para [!INCLUDE[iisver](../../../../includes/iisver-md.md)], a autenticação do Windows inclui a autenticação NTLM. Para obter mais informações, consulte [IIS 7.0 Beta: Configurando certificados de servidor no IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- O <xref:System.ServiceModel.WSHttpBinding> classe destina-se a interoperação com os serviços que implementam o WS-* especificações. A segurança de transporte para essa associação é o protocolo (SSL) via HTTP ou HTTPS. Para criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo que usa o SSL, use o IIS para hospedar o aplicativo. Como alternativa, se você estiver criando um aplicativo hospedado automaticamente, use a ferramenta HttpCfg.exe para associar um certificado x. 509 a uma porta específica em um computador. O número da porta é especificado como parte do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo como um endereço de ponto de extremidade. Ao usar o modo de transporte, o endereço de ponto de extremidade deve incluir o protocolo HTTPS ou uma exceção será lançada em tempo de execução. Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ O <xref:System.ServiceModel.WSHttpBinding> classe destina-se a interoperação com os serviços que implementam o WS-* especificações. A segurança de transporte para essa associação é o protocolo (SSL) via HTTP ou HTTPS. Para criar um aplicativo WCF que usa o SSL, use o IIS para hospedar o aplicativo. Como alternativa, se você estiver criando um aplicativo hospedado automaticamente, use a ferramenta HttpCfg.exe para associar um certificado x. 509 a uma porta específica em um computador. O número da porta é especificado como parte do aplicativo do WCF como um endereço de ponto de extremidade. Ao usar o modo de transporte, o endereço de ponto de extremidade deve incluir o protocolo HTTPS ou uma exceção será lançada em tempo de execução. Para obter mais informações, consulte [segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Para autenticação de cliente, defina o <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> propriedade o <xref:System.ServiceModel.HttpTransportSecurity> classe para um do <xref:System.ServiceModel.HttpClientCredentialType> valores de enumeração. Os valores de enumeração são idênticos para os tipos de credencial de cliente para <xref:System.ServiceModel.BasicHttpBinding> e são projetados para ser hospedado com os serviços do IIS.  
   

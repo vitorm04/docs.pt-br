@@ -1,29 +1,15 @@
 ---
 title: Serviços de fluxo de trabalho de hospedagem
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 21c4ba6a85c2da655b3d0988917165bf84ae64d1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 02d77b851dcd35108668ee6a42022e9721b84bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-workflow-services"></a>Serviços de fluxo de trabalho de hospedagem
-Um serviço de fluxo de trabalho deve ser hospedado para responder às mensagens de entrada. Serviços de fluxo de trabalho usam o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens infraestrutura e são, portanto, hospedado de forma semelhante. Como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços de fluxo de trabalho de serviços podem ser hospedados em qualquer aplicativo gerenciado, em serviços de informações da Internet (IIS), ou em serviços de ativação de processo para Windows (WAS). Além disso, serviços de fluxo de trabalho podem ser hospedados em Windows Server App Fabric. Para obter mais informações sobre o Windows Server App Fabric consulte [documentação do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [recursos de hospedagem do AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), e [conceitos de hospedagem do AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Para obter mais informações sobre as várias maneiras de host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services consulte [serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md).  
+Um serviço de fluxo de trabalho deve ser hospedado para responder às mensagens de entrada. Serviços de fluxo de trabalho usam a infraestrutura de mensagens do WCF e, portanto, são hospedados em forma semelhante. Como os serviços do WCF, serviços de fluxo de trabalho podem ser hospedados em qualquer aplicativo gerenciado, em serviços de informações da Internet (IIS), ou em serviços de ativação de processo para Windows (WAS). Além disso, serviços de fluxo de trabalho podem ser hospedados em Windows Server App Fabric. Para obter mais informações sobre o Windows Server App Fabric consulte [documentação do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [recursos de hospedagem do AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), e [conceitos de hospedagem do AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Para obter mais informações sobre as várias maneiras de host WCF serviços consulte [serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="hosting-in-a-managed-application"></a>Hospedando em um aplicativo gerenciado  
  Para hospedar um serviço de fluxo de trabalho em um aplicativo gerenciado, use o <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe. O <xref:System.ServiceModel.Activities.WorkflowServiceHost> construtor permite que você especifique uma instância de serviço de fluxo de trabalho de singleton, uma definição de serviço de fluxo de trabalho ou uma atividade que usa o fluxo de trabalho de atividades de mensagens. Chamar <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> faz com que o serviço escutar mensagens de entrada.  

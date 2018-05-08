@@ -1,13 +1,6 @@
 ---
 title: Como agrupar, classificar e filtrar dados no controle DataGrid
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 675c1441201fa1578023d6ed758f389a38f3b79a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Como agrupar, classificar e filtrar dados no controle DataGrid
 Geralmente é útil exibir dados em um <xref:System.Windows.Controls.DataGrid> de diferentes maneiras por agrupamento, classificação e filtragem dos dados. Para agrupar, classificar e filtrar os dados em um <xref:System.Windows.Controls.DataGrid>, você associa um <xref:System.Windows.Data.CollectionView> que dá suporte a essas funções. Em seguida, você pode trabalhar com os dados de <xref:System.Windows.Data.CollectionView> sem afetar os dados de origem subjacentes. As alterações no modo de exibição de coleção são refletidas no <xref:System.Windows.Controls.DataGrid> interface do usuário (IU).  

@@ -1,24 +1,12 @@
 ---
 title: Modelo de objeto de descoberta do WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 68d6e156612ce707aa678b6589510b710b73e38a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a325ee0fd6376f101ca8ccc6097e79c30198a011
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-discovery-object-model"></a>Modelo de objeto de descoberta do WCF
 Descoberta de WCF consiste em um conjunto de tipos que fornecem um modelo de programação unificado que permite que você escreva serviços que podem ser descobertos no tempo de execução e os clientes que encontrarem e usam esses serviços.  
@@ -83,10 +71,10 @@ Descoberta de WCF consiste em um conjunto de tipos que fornecem um modelo de pro
  O <xref:System.ServiceModel.Discovery.AnnouncementClient> classe fornece métodos síncronos e assíncronos para enviar mensagens de aviso. Há dois tipos de mensagens de aviso, Hello e Bye. Uma mensagem de saudação é enviada para indicar que um serviço se tornou disponível e uma mensagem Bye é enviada para indicar que um serviço existente se tornou indisponível. O desenvolvedor cria um <xref:System.ServiceModel.Discovery.AnnouncementClient> instância, passando uma instância do <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> como um parâmetro de construtor.  
   
 ## <a name="announcementendpoint"></a>AnnouncementEndpoint  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>representa um ponto de extremidade padrão com um contrato de anúncio fixo. Ele é usado por um serviço ou cliente para enviar e receber mensagens de aviso. Por padrão, o <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> classe está definida para usar a versão do protocolo WS_Discovery 11.  
+ <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> representa um ponto de extremidade padrão com um contrato de anúncio fixo. Ele é usado por um serviço ou cliente para enviar e receber mensagens de aviso. Por padrão, o <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> classe está definida para usar a versão do protocolo WS_Discovery 11.  
   
 ## <a name="announcementservice"></a>AnnouncementService  
- <xref:System.ServiceModel.Discovery.AnnouncementService>é uma implementação fornecido pelo sistema de um serviço de notificação que recebe e processa mensagens de aviso. Quando uma mensagem de saudação ou Bye é recebida, o <xref:System.ServiceModel.Discovery.AnnouncementService> instância chama o método virtual apropriado <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement%2A> ou <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement%2A>, que gera eventos de aviso.  
+ <xref:System.ServiceModel.Discovery.AnnouncementService> é uma implementação fornecido pelo sistema de um serviço de notificação que recebe e processa mensagens de aviso. Quando uma mensagem de saudação ou Bye é recebida, o <xref:System.ServiceModel.Discovery.AnnouncementService> instância chama o método virtual apropriado <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement%2A> ou <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement%2A>, que gera eventos de aviso.  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  O <xref:System.ServiceModel.Discovery.DiscoveryClient> classe é usada por um aplicativo cliente para localizar e resolver os serviços disponíveis. Fornece métodos síncronos e assíncronos para localizar e resolver os serviços com base em especificado <xref:System.ServiceModel.Discovery.FindCriteria> e <xref:System.ServiceModel.Discovery.ResolveCriteria> respectivamente. O desenvolvedor cria um <xref:System.ServiceModel.Discovery.DiscoveryClient> instância e fornece uma instância de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> como um parâmetro de construtor.  
@@ -98,10 +86,10 @@ Descoberta de WCF consiste em um conjunto de tipos que fornecem um modelo de pro
  Se houver um proxy de descoberta na rede e o <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient` envia solicitações a descoberta de forma seletiva, o proxy de descoberta pode responder com a mensagem de saudação de supressão multicast. O <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient` gera o `ProxyAvailable` evento quando ele recebe mensagens de saudação em resposta a pendentes `Find` ou `Resolve` solicitações. O `ProxyAvailable` evento contém o <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> sobre o proxy de descoberta. É responsabilidade do desenvolvedor para usar essas informações para alternar do Ad-hoc para modo gerenciado.  
   
 ## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>representa um ponto de extremidade padrão com um contrato de correção da descoberta. Ele é usado por um cliente ou serviço enviar ou receber mensagens de descoberta. Por padrão, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> está definido para usar <!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>--> `Managed` modo e a versão de WSDiscovery11 WS-Discovery.  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> representa um ponto de extremidade padrão com um contrato de correção da descoberta. Ele é usado por um cliente ou serviço enviar ou receber mensagens de descoberta. Por padrão, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> está definido para usar <!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>--> `Managed` modo e a versão de WSDiscovery11 WS-Discovery.  
   
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>é usado para gerar um <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> quando o serviço envia mensagens de descoberta ou anúncio.  
+ <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> é usado para gerar um <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> quando o serviço envia mensagens de descoberta ou anúncio.  
   
 ## <a name="discoveryservice"></a>DiscoveryService  
  O <xref:System.ServiceModel.Discovery.DiscoveryService> classe abstrata fornece uma estrutura para recebimento e processamento `Probe` e `Resolve` mensagens. Quando um `Probe` mensagem é recebida, <xref:System.ServiceModel.Discovery.DiscoveryService> cria uma instância de <xref:System.ServiceModel.Discovery.FindRequestContext> com base na mensagem de entrada e chama o <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> método virtual. Quando um `Resolve` mensagem é recebida, <xref:System.ServiceModel.Discovery.DiscoveryService> invoca o <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginResolve%2A> método virtual. É possível herdar desta classe para fornecer uma implementação personalizada do serviço de descoberta.  

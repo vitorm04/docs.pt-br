@@ -2,11 +2,11 @@
 title: '&lt;peerAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: a8cc52fb2179bb5fc38635e4de0063a1dc1b1833
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 4d84ffc3fbca03e43c34808e03a57b015898ee07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 Especifica as configurações de autenticação para um certificado de ponto a ponto usado por um nó ponto a ponto.  
@@ -40,7 +40,7 @@ Especifica as configurações de autenticação para um certificado de ponto a p
 |`certificateValidationMode`|Enumeração opcional. Especifica um dos três modos usados para validar credenciais. Esse atributo é do tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se definido como `Custom`, em seguida, um `customCertificateValidator` também deve ser fornecido.|  
 |`customCertificateValidatorType`|Cadeia de caracteres opcional. Especifica um tipo e assembly usados para validar um tipo personalizado. Esse atributo deve ser definido quando `certificateValidationMode` é definido como `Custom`. Esse atributo é do tipo <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Windows Communication Foundation (WCF) fornece um par de padrão de validador de certificado que verifica o certificado de ponto a ponto em relação ao armazenamento de pessoas confiáveis. Ele também verifica se o certificado se encadeia uma raiz válido. Você pode implementar um validador personalizado para especificar um comportamento diferente e usar esse atributo para apontar para o validador personalizado.|  
 |`revocationMode`|Enumeração opcional. Especifica o modo de revogação de certificado. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. O sistema verifica se o certificado de ponto a ponto não foi revogado por procurar na lista de certificados revogados. Essa verificação pode ser executada através da verificação online ou em uma lista de revogação em cache. Verificação de revogação pode ser desativado por configuração deste atributo como NoCheck.|  
-|`trustedStoreLocation`|Enumeração opcional. Especifica o local de armazenamento confiável em que o certificado de ponto a ponto é validado pelo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] sistema de segurança. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|`trustedStoreLocation`|Enumeração opcional. Especifica o local de armazenamento confiável em que o certificado de ponto a ponto é validado pelo sistema de segurança do WCF. Esse atributo é do tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

@@ -1,12 +1,6 @@
 ---
-title: "Instrução Sub (Visual Basic)"
+title: Instrução Sub (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Instrução Sub (Visual Basic)
 Declara o nome, parâmetros e código que definem um `Sub` procedimento.  
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>Definindo um procedimento Sub  
  Você pode definir um `Sub` procedimento apenas no nível de módulo. O contexto da declaração para um procedimento sub deve, portanto, ser uma classe, uma estrutura, um módulo ou uma interface e não pode ser um arquivo de origem, um namespace, um procedimento ou um bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](declaration-contexts-and-default-access-levels.md).  
   
- `Sub`padrão de procedimentos para acesso público. Você pode ajustar os níveis de acesso usando os modificadores de acesso.  
+ `Sub` padrão de procedimentos para acesso público. Você pode ajustar os níveis de acesso usando os modificadores de acesso.  
   
  Se o procedimento usa o `Implements` deve ter a palavra-chave, a classe ou estrutura contendo um `Implements` instrução que segue imediatamente seus `Class` ou `Structure` instrução. O `Implements` instrução deve incluir cada interface que é especificado em `implementslist`. No entanto, o nome pelo qual uma interface define o `Sub` (em `definedname`) não precisa corresponder ao nome do procedimento (em `name`).  
   
@@ -214,7 +205,7 @@ End Sub
   
  Você também pode marcar um [instrução Function](function-statement.md) com o `Async` modificador. Um `Async` função pode ter um tipo de retorno <xref:System.Threading.Tasks.Task%601> ou <xref:System.Threading.Tasks.Task>. Um exemplo mais tarde neste tópico mostra um `Async` função que tem um tipo de retorno <xref:System.Threading.Tasks.Task%601>.  
   
- `Async``Sub` procedimentos são usados principalmente para manipuladores de eventos, onde um valor não pode ser retornado. Um `Async``Sub` procedimento não pode ser esperado e o chamador de um `Async``Sub` procedimento não é possível capturar exceções que o `Sub` procedimento lança.  
+ `Async` `Sub` os procedimentos são usados principalmente para manipuladores de eventos, onde um valor não pode ser retornado. Um `Async``Sub` procedimento não pode ser esperado e o chamador de um `Async``Sub` procedimento não é possível capturar exceções que o `Sub` procedimento lança.  
   
  Um `Async` procedimento não pode declarar qualquer [ByRef](../modifiers/byref.md) parâmetros.  
   

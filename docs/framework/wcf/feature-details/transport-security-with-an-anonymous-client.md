@@ -1,32 +1,20 @@
 ---
 title: Segurança de transporte com um cliente anônimo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Segurança de transporte com um cliente anônimo
-Isso [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cenário usa a segurança de transporte (HTTPS) para garantir a integridade e confidencialidade. O servidor deve ser autenticado com um certificado Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. O cliente não foi autenticado por qualquer mecanismo e é, portanto, anônimo.  
+Esse cenário do Windows Communication Foundation (WCF) usa a segurança de transporte (HTTPS) para garantir a integridade e confidencialidade. O servidor deve ser autenticado com um certificado Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. O cliente não foi autenticado por qualquer mecanismo e é, portanto, anônimo.  
   
  Para um aplicativo de exemplo, consulte [segurança de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). Para obter mais informações sobre a segurança de transporte, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
@@ -38,7 +26,7 @@ Isso [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cenário usa a segu
 |--------------------|-----------------|  
 |Modo de segurança|Transporte|  
 |Interoperabilidade|Com clientes e serviços da Web existentes|  
-|Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim<br /><br /> Nível de aplicativo (nenhum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suporte)|  
+|Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim<br /><br /> Nível de aplicativo (sem suporte do WCF)|  
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
 |Transporte|HTTPS|  

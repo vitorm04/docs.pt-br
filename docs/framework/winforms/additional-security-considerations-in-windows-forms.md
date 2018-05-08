@@ -1,32 +1,20 @@
 ---
-title: "Considerações adicionais sobre Segurança do Windows Forms"
-ms.custom: 
+title: Considerações adicionais sobre Segurança do Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, secure calls to Windows API
 - security [Windows Forms]
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a1d8606eb972a6e3bea52f6230cb893a4bbb5aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerações adicionais sobre Segurança do Windows Forms
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]configurações de segurança podem fazer com que seu aplicativo para execução de maneira diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [arquivo mais seguro e acesso a dados em formulários do Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão no Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo para execução de maneira diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [arquivo mais seguro e acesso a dados em formulários do Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão no Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
   
  As seções a seguir discutem como trabalhar com a área de transferência, executar a manipulação de janela e chamar a API do Win32 de aplicativos que são executados em um ambiente de confiança parcial.  
   
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  Cada nível de permissão identificado pelo <xref:System.Security.Permissions.UIPermissionWindow> enumeração permite menos ações do que o nível acima dele. As tabelas a seguir indicam as ações que são restritos pelo <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> e <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> valores. Para obter as permissões exatas que são necessárias para cada membro, consulte a referência para esse membro na documentação da biblioteca de classe do .NET Framework.  
   
- <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>a permissão restringe as ações listadas na tabela a seguir.  
+ <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> a permissão restringe as ações listadas na tabela a seguir.  
   
 |Componente|Ações restritas|  
 |---------------|------------------------|  
@@ -87,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
 |Componente|Membro|  
 |---------------|------------|  
-|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A>método<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>propriedade<br />-   `Exit`método<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A>método<br />-   <xref:System.Windows.Forms.Application.ThreadException>evento|  
-|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A>método<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ método<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A>método<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>método|  
-|<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A>método<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A>método<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A>método<br />-   <xref:System.Windows.Forms.Control.WndProc%2A>método|  
-|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A>métodos<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A>método|  
-|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> class|  
-|<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A>método|  
-|<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A>método<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A>método|  
+|<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> Método<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> Propriedade<br />-   `Exit` Método<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> Método<br />-   <xref:System.Windows.Forms.Application.ThreadException> Evento|  
+|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> Método<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ método<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> Método<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> Método|  
+|<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> Método<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> Método<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> Método<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> Método|  
+|<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> Métodos<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> Método|  
+|<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> classe|  
+|<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> Método|  
+|<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> Método<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> Método|  
   
  Se seu aplicativo não tem permissão para chamar código não gerenciado, seu aplicativo deve solicitar <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão, ou você deve considerar maneiras alternativas de implementar recursos; em muitos casos, o Windows Forms fornece uma alternativa gerenciada para API do Win32 funções. Se existe nenhum meio alternativo e o aplicativo deve acessar código não gerenciado, você terá que elevar as permissões para o aplicativo.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Comunicações principais: Canais de transporte de HTTP-HTTPS"
-ms.custom: 
+title: 'Comunicações principais: Canais de transporte de HTTP-HTTPS'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Comunicações principais: canais de transportes de HTTP/HTTPS
-Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] canais do transporte HTTP/HTTPS.  
+Este tópico lista todas as exceções geradas pelos canais do Windows Communication Foundation (WCF) transporte HTTP/HTTPS.  
   
 ## <a name="exception-list"></a>Lista de exceções  
   

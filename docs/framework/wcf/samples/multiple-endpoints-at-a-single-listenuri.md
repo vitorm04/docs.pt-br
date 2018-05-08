@@ -1,24 +1,12 @@
 ---
-title: "Vários pontos de extremidade em único ListenUri"
-ms.custom: 
+title: Vários pontos de extremidade em único ListenUri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Vários pontos de extremidade em único ListenUri
 Este exemplo demonstra um serviço que hospeda vários pontos de extremidade em um único `ListenUri`. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo.  
@@ -50,7 +38,7 @@ Este exemplo demonstra um serviço que hospeda vários pontos de extremidade em 
   
  Todos os três pontos de extremidade são hospedados no mesmo `ListenUri` e usar o mesmo `binding` -pontos de extremidade no mesmo `ListenUri` deve ter a mesma associação, porque eles compartilham uma pilha de canal que escuta mensagens nesse endereço físico do máquina. O `address` de cada ponto de extremidade é um URN; embora normalmente endereços representam locais físicos, na verdade o endereço pode ser qualquer tipo de URI, como o endereço é usado para correspondência e fins de filtragem, conforme é mostrado neste exemplo.  
   
- Como todos os três pontos de extremidade compartilham o mesmo `ListenUri`, quando uma mensagem chega, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] deve decidir qual ponto de extremidade é destinada a mensagem. Cada ponto de extremidade tem um filtro de mensagem que é composto de duas partes: o filtro de endereço e o filtro de contrato. O filtro de endereço corresponde a `To` da mensagem SOAP para o endereço do ponto de extremidade de serviço. Por exemplo, apenas as mensagens endereçadas `To "Urn:OtherEcho"` são candidatos para o terceiro ponto de extremidade do serviço. O filtro de contrato coincide com as ações associadas com as operações de um contrato específico. Por exemplo, as mensagens com a ação de `IEcho`. `Echo`corresponder aos filtros de contrato de segundo e terceiro pontos de extremidade do serviço, porque ambos os hosts de pontos de extremidade de `IEcho` contrato.  
+ Como todos os três pontos de extremidade compartilham o mesmo `ListenUri`, quando uma mensagem chega, o Windows Communication Foundation (WCF) deve decidir qual ponto de extremidade é destinada a mensagem. Cada ponto de extremidade tem um filtro de mensagem que é composto de duas partes: o filtro de endereço e o filtro de contrato. O filtro de endereço corresponde a `To` da mensagem SOAP para o endereço do ponto de extremidade de serviço. Por exemplo, apenas as mensagens endereçadas `To "Urn:OtherEcho"` são candidatos para o terceiro ponto de extremidade do serviço. O filtro de contrato coincide com as ações associadas com as operações de um contrato específico. Por exemplo, as mensagens com a ação de `IEcho`. `Echo` corresponder aos filtros de contrato de segundo e terceiro pontos de extremidade do serviço, porque ambos os hosts de pontos de extremidade de `IEcho` contrato.  
   
  Assim, a combinação de filtros de endereço e contrato possibilita rotear cada mensagem que chega a esse serviço `ListenUri` ao ponto de extremidade correto. O terceiro ponto de extremidade é diferenciado dos outros dois porque ele aceita mensagens enviadas para um endereço diferente de outros pontos de extremidade. Os pontos de extremidade primeiro e segundo são diferenciados entre si com base em seus contratos (a ação da mensagem de entrada).  
   
@@ -86,7 +74,7 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   

@@ -1,14 +1,6 @@
 ---
 title: Visão geral de painéis
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Visão geral de painéis
 <xref:System.Windows.Controls.Panel> elementos são componentes que controlam o processamento de elementos, seu tamanho e dimensões, sua posição e a disposição de conteúdo filho. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece inúmeras predefinidos <xref:System.Windows.Controls.Panel> elementos, bem como a capacidade de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Tela  
- O <xref:System.Windows.Controls.Canvas> elemento habilita o posicionamento de conteúdo de acordo com absoluto *x -* e *y -*coordenadas. Os elementos podem ser desenhados em um local exclusivo; ou, se os elementos ocupam as mesmas coordenadas, a ordem em que aparecem na marcação determina a ordem na qual os elementos são desenhados.  
+ O <xref:System.Windows.Controls.Canvas> elemento habilita o posicionamento de conteúdo de acordo com absoluto *x -* e *y -* coordenadas. Os elementos podem ser desenhados em um local exclusivo; ou, se os elementos ocupam as mesmas coordenadas, a ordem em que aparecem na marcação determina a ordem na qual os elementos são desenhados.  
   
  <xref:System.Windows.Controls.Canvas> fornece o suporte de layout mais flexível de qualquer <xref:System.Windows.Controls.Panel>. Propriedades de altura e largura são usadas para definir a área da tela, e elementos dentro recebem absolutas coordenadas relativas à área do pai <xref:System.Windows.Controls.Canvas>. Propriedades, quatro anexadas <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, permitir que o controle refinado de posicionamento de objeto dentro de um <xref:System.Windows.Controls.Canvas>, permitindo que o desenvolvedor posicionar e organizar os elementos com precisão na tela.  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  Da mesma forma, o comportamentos de layout personalizado com base em classes derivadas (como <xref:System.Windows.Controls.Canvas> ou <xref:System.Windows.Controls.Grid>) podem ser definidas por meio da substituição seus <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> e <xref:System.Windows.FrameworkElement.MeasureOverride%2A> métodos.  
   
- A marcação a seguir demonstra como criar um personalizado <xref:System.Windows.Controls.Panel> elemento. Essa nova <xref:System.Windows.Controls.Panel>, definida como `PlotPanel`, oferece suporte ao posicionamento dos elementos filho com o uso de embutido *x -* e *y -*coordenadas. Neste exemplo, um <xref:System.Windows.Shapes.Rectangle> (não mostrado) do elemento é posicionado no ponto de plotagem 50 (*x*) e 50 (*y*).  
+ A marcação a seguir demonstra como criar um personalizado <xref:System.Windows.Controls.Panel> elemento. Essa nova <xref:System.Windows.Controls.Panel>, definida como `PlotPanel`, oferece suporte ao posicionamento dos elementos filho com o uso de embutido *x -* e *y -* coordenadas. Neste exemplo, um <xref:System.Windows.Shapes.Rectangle> (não mostrado) do elemento é posicionado no ponto de plotagem 50 (*x*) e 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

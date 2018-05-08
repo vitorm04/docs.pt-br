@@ -1,36 +1,24 @@
 ---
 title: Filtragem
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>Filtragem
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] filtragem de sistema pode usar filtros declarativos para corresponder as mensagens e tomar decisões operacionais. Você pode usar filtros para determinar o que fazer com uma mensagem examinando a parte da mensagem. Um processo de enfileiramento de mensagens, por exemplo, pode usar uma consulta XPath 1.0 para verificar se o elemento de prioridade de um cabeçalho conhecido para determinar se deve mover uma mensagem para o início da fila.  
+O Windows Communication Foundation (WCF) a filtragem de sistema pode usar filtros declarativos para corresponder as mensagens e tomar decisões operacionais. Você pode usar filtros para determinar o que fazer com uma mensagem examinando a parte da mensagem. Um processo de enfileiramento de mensagens, por exemplo, pode usar uma consulta XPath 1.0 para verificar se o elemento de prioridade de um cabeçalho conhecido para determinar se deve mover uma mensagem para o início da fila.  
   
- O sistema de filtragem é composto de um conjunto de classes com eficiência pode determinar que um conjunto de filtros são `true` para um determinado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem.  
+ O sistema de filtragem é composto de um conjunto de classes com eficiência pode determinar que um conjunto de filtros são `true` para uma determinada mensagem WCF.  
   
- O sistema de filtragem é um componente principal do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens; ele é projetado para ser extremamente rápido. Cada implementação do filtro foi otimizada para um determinado tipo de correspondência com base em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens.  
+ O sistema de filtragem é um componente principal do sistema de mensagens do WCF; ele é projetado para ser extremamente rápido. Cada implementação do filtro foi otimizada para um determinado tipo de correspondência com base em mensagens do WCF.  
   
  O sistema de filtragem não é thread-safe. O aplicativo deve lidar com nenhuma semântica de bloqueio. No entanto, ele suporta um gravador único, vários leitor.  
   
 ## <a name="where-filtering-fits"></a>Qual a filtragem se encaixa  
- A filtragem é executada depois que uma mensagem é recebida e faz parte do processo de expedir a mensagem para o componente de aplicativo apropriado. O design do sistema filtragem atende aos requisitos de várias [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] subsistemas, incluindo mensagens, roteamento, segurança, manipulação de eventos e o gerenciamento do sistema.  
+ A filtragem é executada depois que uma mensagem é recebida e faz parte do processo de expedir a mensagem para o componente de aplicativo apropriado. O design do sistema filtragem atende aos requisitos dos vários subsistemas WCF, incluindo mensagens, roteamento, segurança, manipulação de eventos e o gerenciamento do sistema.  
   
 ## <a name="filters"></a>Filtros  
  O mecanismo de filtro tem dois componentes principais, filtros e tabelas de filtro. Um filtro de toma decisões Boolianas sobre uma mensagem com base nas condições de lógicas especificada pelo usuário. Filtros implementam a <xref:System.ServiceModel.Dispatcher.MessageFilter> classe.  
@@ -79,7 +67,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] filtragem de sistema p
   
  O <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> otimiza a classe correspondente para um subconjunto de XPath que aborda a maioria dos cenários de mensagens e também oferece suporte à gramática XPath 1.0 completa. Ele tem otimização de algoritmos para correspondência paralela eficiente.  
   
- Esta tabela tem várias especializado `Match` métodos que operam em um <xref:System.Xml.XPath.XPathNavigator> e um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> estende o <xref:System.Xml.XPath.XPathNavigator> classe adicionando um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> propriedade. Essa propriedade permite posições dentro do documento XML a serem salvos e carregados rapidamente sem a necessidade de clonar o navegador, uma alocação de memória caro que o <xref:System.Xml.XPath.XPathNavigator> requer para essa operação. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mecanismo XPath frequentemente deve registrar a posição do cursor no decorrer da execução de consultas em documentos XML, portanto, o <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> oferece uma otimização importante para processamento de mensagens.  
+ Esta tabela tem várias especializado `Match` métodos que operam em um <xref:System.Xml.XPath.XPathNavigator> e um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> estende o <xref:System.Xml.XPath.XPathNavigator> classe adicionando um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> propriedade. Essa propriedade permite posições dentro do documento XML a serem salvos e carregados rapidamente sem a necessidade de clonar o navegador, uma alocação de memória caro que o <xref:System.Xml.XPath.XPathNavigator> requer para essa operação. O mecanismo do XPath WCF frequentemente deve registrar a posição do cursor no decorrer da execução de consultas em documentos XML, portanto, o <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> oferece uma otimização importante para processamento de mensagens.  
   
 ## <a name="customer-scenarios"></a>Cenários de cliente  
  Você pode usar a filtragem a qualquer momento em que você deseja enviar uma mensagem para os módulos de processamento diferentes dependendo dos dados contidos na mensagem. Dois cenários típicos são rotear uma mensagem com base no seu código de ação e Cancelar multiplexação um fluxo de mensagens com base no endereço de ponto de extremidade as mensagens.  

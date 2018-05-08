@@ -1,22 +1,12 @@
 ---
-title: "Comparação XPath e de LINQ to XML1"
-ms.custom: 
+title: Comparação XPath e de LINQ to XML1
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c3fd07c1-6761-4e4b-8eb1-ddd780ed8d44
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 761df14ee4bdfa9ddeb3f742134f4f47f8bb283f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fe6b0b77f82a9fcb5475e31e096a636211faa578
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparação XPath e de LINQ to XML
 O XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornecer alguma funcionalidade semelhante. Ambos podem ser usados para ver uma árvore XML, retornando resultados como uma coleção de elementos, uma coleção de atributos, uma coleção de nós, ou o valor de um elemento ou de um atributo. No entanto, também há algumas diferenças.  

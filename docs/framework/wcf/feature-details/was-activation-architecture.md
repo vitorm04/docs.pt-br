@@ -1,24 +1,12 @@
 ---
-title: "Arquitetura de ativação do WAS"
-ms.custom: 
+title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
 Este tópico relaciona e descreve os componentes do Windows Process Activation Service (também conhecido como WAS).  
@@ -41,14 +29,14 @@ Este tópico relaciona e descreve os componentes do Windows Process Activation S
  ![ARQUITETURA](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Adaptadores de escuta  
- Os adaptadores de escuta são serviços individuais do Windows que implementam a lógica de comunicação de rede usada para receber mensagens usando o protocolo de rede na escuta. A tabela a seguir lista os adaptadores de escuta para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protocolos.  
+ Os adaptadores de escuta são serviços individuais do Windows que implementam a lógica de comunicação de rede usada para receber mensagens usando o protocolo de rede na escuta. A tabela a seguir lista os adaptadores de escuta para protocolos do Windows Communication Foundation (WCF).  
   
 |Nome de serviço do adaptador de escuta|Protocolo|Observações|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|HTTP|Componente comum que fornece ativação de HTTP para ambos os IIS 7.0 e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|W3SVC|HTTP|Componente comum que fornece ativação de HTTP para IIS 7.0 e WCF.|  
 |NetTcpActivator|net.tcp|Depende do serviço de NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|NET. MSMQ|Para uso com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-com base em aplicativos de enfileiramento de mensagens.|  
+|NetMsmqActivator|NET. MSMQ|Para uso com aplicativos de enfileiramento de mensagens de baseado no WCF.|  
 |NetMsmqActivator|FormatName|Versões anteriores fornece compatibilidade com aplicativos de enfileiramento de mensagens existentes.|  
   
  Os adaptadores de escuta para protocolos específicos são registrados durante a instalação no arquivo applicationHost. config, conforme mostrado no exemplo XML a seguir.  

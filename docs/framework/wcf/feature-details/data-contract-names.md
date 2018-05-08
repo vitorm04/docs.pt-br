@@ -1,34 +1,20 @@
 ---
 title: Nomes de contrato de dados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Nomes de contrato de dados
-Às vezes, um cliente e um serviço não compartilham os mesmos tipos. Eles ainda podem passar dados entre si como os contratos de dados são equivalentes em ambos os lados. [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) é baseado no contrato de dados e nomes de membros de dados, e, portanto, um mecanismo é fornecido para mapear tipos e membros para esses nomes. Este tópico explica as regras de nomeação de contratos de dados, bem como o comportamento padrão do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ao criar nomes de infraestrutura.  
+Às vezes, um cliente e um serviço não compartilham os mesmos tipos. Eles ainda podem passar dados entre si como os contratos de dados são equivalentes em ambos os lados. [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) é baseado no contrato de dados e nomes de membros de dados, e, portanto, um mecanismo é fornecido para mapear tipos e membros para esses nomes. Este tópico explica as regras de nomeação de contratos de dados, bem como o comportamento padrão da infraestrutura do Windows Communication Foundation (WCF) ao criar nomes.  
   
 ## <a name="basic-rules"></a>Regras básicas  
  Regras básicas sobre os dados de nomenclatura contratos incluem:  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Membros de dados têm apenas nomes, mas nenhum namespace.  
   
--   Durante o processamento de contratos de dados, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura diferencia maiusculas de minúsculas para os namespaces e os nomes dos contratos de dados e os membros de dados.  
+-   Durante o processamento de contratos de dados, a infraestrutura WCF diferencia maiusculas de minúsculas para os namespaces e os nomes dos contratos de dados e os membros de dados.  
   
 ## <a name="data-contract-namespaces"></a>Namespaces de contrato de dados  
  Um namespace de contrato de dados assume a forma de um URI Uniform Resource Identifier (). O URI pode ser absoluta ou relativa. Por padrão, os contratos de dados para um tipo específico são atribuídos a um namespace que vem do namespace de runtime (CLR) de linguagem comum desse tipo.  
@@ -45,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  Por padrão, qualquer dado namespace CLR (no formato *Clr.Namespace*) é mapeado para o namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace". Para substituir esse padrão, se aplicam a <xref:System.Runtime.Serialization.ContractNamespaceAttribute> de atributo para o assembly ou módulo inteiro. Como alternativa, para controlar o namespace de contrato de dados para cada tipo, defina o <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> propriedade o <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  O namespace "http://schemas.microsoft.com/2003/10/Serialization" é reservado e não pode ser usado como um namespace de contrato de dados.  
+>  O "http://schemas.microsoft.com/2003/10/Serialization"namespace é reservado e não pode ser usado como um namespace de contrato de dados.  
   
 > [!NOTE]
 >  Você não pode substituir o namespace padrão em tipos de contrato de dados que contêm `delegate` declarações.  

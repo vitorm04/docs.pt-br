@@ -1,26 +1,12 @@
 ---
 title: Como usar filtros
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>Como usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são roteadas para duas implementações de um serviço de cálculo, regularCalc e roundingCalc. Suportam a ambas as implementações as mesmas operações; No entanto, um serviço Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar a versão de arredondamento do serviço; Se nenhuma preferência de serviço é expresso em seguida, a mensagem é carga balanceada entre os dois serviços. As operações expostas por ambos os serviços são:  
@@ -145,7 +131,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Se uma mensagem é recebida em um endereço que começa com "http://localhost/routingservice/router/rounding/", esse filtro é avaliada como **true**. Como o endereço base usado por esta configuração é "http://localhost/routingservice/router" e o endereço especificado para o roundingEndpoint é "arredondamento/cálculo", o endereço completo usado para se comunicar com este ponto de extremidade é "http://localhost/ routingservice/roteador/arredondamento/cálculo", que corresponde a este filtro.  
+     Se uma mensagem é recebida em um endereço que começa com "http://localhost/routingservice/router/rounding/", em seguida, esse filtro é avaliada como **true**. Porque o endereço base usado por esta configuração é "http://localhost/routingservice/router"e o endereço especificado para o roundingEndpoint é "arredondamento/cálculo", o endereço completo usado para se comunicar com este ponto de extremidade é"http://localhost/routingservice/router/rounding/calculator", que corresponde a este filtro.  
   
     > [!NOTE]
     >  O filtro de PrefixEndpointAddress não avalia o nome de host ao executar uma correspondência, porque um único host pode ser chamado por meio de uma variedade de nomes de host que podem todos ser válidas maneiras de fazer referência ao host do aplicativo cliente. Por exemplo, todos os itens a seguir podem se referir ao mesmo host:  

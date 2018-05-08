@@ -1,17 +1,12 @@
 ---
 title: Correspondência padrão (F#)
 description: 'Saiba como os padrões são usados em F # para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 64f5b2534190552db71a67b30ece41bafed3d16e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -50,7 +45,7 @@ Padrões suportados são mostrados na tabela a seguir. Em tempo de execução, a
 |Padrão de curinga|_|`_`|
 |Padrão junto com a anotação de tipo|*padrão de* : *tipo*|`a : int`|
 |Padrão de teste de tipo|:? *tipo* [como *identificador* ]|`:? System.DateTime as dt`|
-|Padrão nulo|nulo|`null`|
+|Padrão nulo|null|`null`|
 
 ## <a name="constant-patterns"></a>Padrões de constantes
 Constantes padrões são numéricos, caracteres e literais de cadeia de caracteres, constantes de enumeração (com o nome de tipo de enumeração incluído). Um `match` expressão que contém apenas os padrões constantes pode ser comparado a uma instrução case em outros idiomas. A entrada é comparada com o valor literal e o padrão corresponde se os valores são iguais. O tipo do literal deve ser compatível com o tipo da entrada.

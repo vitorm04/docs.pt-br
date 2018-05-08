@@ -1,26 +1,12 @@
 ---
 title: Expedição por elemento Body
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>Expedição por elemento Body
 Este exemplo demonstra como implementar um algoritmo alternativo para a atribuição de mensagens de entrada para as operações.  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Adicionando um seletor de operação para um serviço  
- Seletores de operação de expedição de serviço são extensões para o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dispatcher. Para selecionar os métodos no canal de retorno de chamada de contratos duplex, também há seletores de operação de cliente, que funcionam muito bem como os seletores de operação de expedição descritos aqui, mas que não é abordado neste exemplo explicitamente.  
+ Seletores de operação de expedição de serviço são extensões para o dispatcher do Windows Communication Foundation (WCF). Para selecionar os métodos no canal de retorno de chamada de contratos duplex, também há seletores de operação de cliente, que funcionam muito bem como os seletores de operação de expedição descritos aqui, mas que não é abordado neste exemplo explicitamente.  
   
  Como a maioria das extensões do modelo de serviço, expedição seletores são adicionados para o distribuidor usando comportamentos de operação. Um *comportamento* é um objeto de configuração, que adiciona uma ou mais extensões para o tempo de execução de despacho (ou no tempo de execução do cliente) ou se transforma suas configurações.  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

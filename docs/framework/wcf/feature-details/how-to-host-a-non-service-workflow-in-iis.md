@@ -1,24 +1,12 @@
 ---
-title: "Como hospedar um fluxo de trabalho sem serviço no IIS"
-ms.custom: 
+title: Como hospedar um fluxo de trabalho sem serviço no IIS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Como hospedar um fluxo de trabalho sem serviço no IIS
 Fluxos de trabalho que não são serviços de fluxo de trabalho podem ser hospedados em IIS / WAS. Isso é útil quando você precisa hospedar um fluxo de trabalho gravado por outra pessoa. Por exemplo, se o novo host do designer de fluxo de trabalho e permitir que os usuários criem seus próprios fluxos de trabalho.  Hospedando fluxos de trabalho sem serviço no IIS fornece suporte para recursos como o desligamento ocioso, reciclagem de processo, o monitoramento de integridade do processo e a ativação baseada em mensagem. Serviços de fluxo de trabalho hospedados no IIS contêm <xref:System.ServiceModel.Activities.Receive> atividades e o são ativados quando uma mensagem é recebida pelo IIS. Fluxos de trabalho não não contêm atividades de mensagem e por padrão, não não possível ativar enviando uma mensagem.  Você deve derivar uma classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> e definir um contrato de serviço que contém operações para criar uma instância do fluxo de trabalho. Este tópico o orientará na criação de um fluxo de trabalho simple, definir um contrato de serviço que um cliente pode usar para ativar o fluxo de trabalho e derivar uma classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que usa o contrato de serviço para escutar as solicitações de criação de fluxo de trabalho.  
@@ -332,7 +320,7 @@ Fluxos de trabalho que não são serviços de fluxo de trabalho podem ser hosped
   
 8.  Copie o Web. config para seu diretório de aplicativo do IIS.  
   
-9. Verifique se o ponto de extremidade de criação está funcionando, inicie o Internet Explorer e navegando até http://localhost/MyCreationEndpoint/Workflow1.xamlx. O Internet Explorer deve exibir a tela a seguir:  
+9. Teste para ver se o ponto de extremidade de criação está funcionando, inicie o Internet Explorer e navegando até http://localhost/MyCreationEndpoint/Workflow1.xamlx. O Internet Explorer deve exibir a tela a seguir:  
   
      ![Testando o serviço](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

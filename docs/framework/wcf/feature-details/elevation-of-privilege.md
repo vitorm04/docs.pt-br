@@ -1,29 +1,15 @@
 ---
 title: Elevação de privilégio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="elevation-of-privilege"></a>Elevação de privilégio
 *Elevação de privilégio* os resultados de conceder autorização um invasor permissões além desses inicialmente concedida. Por exemplo, um invasor com um conjunto de privilégios de permissões "somente leitura" de alguma forma eleva o conjunto para incluir "leitura e gravação."  
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="switching-identity-without-a-security-context"></a>Alternância de identidade sem um contexto de segurança  
  O seguinte se aplica somente ao [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Quando uma conexão é estabelecida entre um cliente e servidor, a identidade do cliente não for alterado, exceto em uma situação: após o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente é aberto, se todas as seguintes condições forem verdadeiras:  
+ Quando uma conexão é estabelecida entre um cliente e servidor, a identidade do cliente não for alterado, exceto em uma situação: depois que o cliente do WCF é aberto, se todas as seguintes condições forem verdadeiras:  
   
 -   Os procedimentos para estabelecer um contexto de segurança (usando um segurança de transporte sessão ou a sessão de segurança de mensagem) for desativada (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> está definida como `false` no caso de segurança de mensagem ou não capaz de estabelecer a segurança de transporte sessões é usado em caso de segurança de transporte. HTTPS é um exemplo de tal transporte).  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Você está chamando o serviço sob o contexto de segurança representado.  
   
- Se essas condições forem verdadeiras, talvez a identidade usada para autenticar o cliente para o serviço de alteração (ele pode não ser a identidade representada, mas a identidade do processo em vez disso) após o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente é aberto. Isso ocorre porque a credencial do Windows usada para autenticar o cliente para o serviço é transmitida com cada mensagem e a credencial usada para autenticação é obtida da identidade do Windows do thread atual. Se a identidade do Windows do thread atual é alterado (por exemplo, representando um chamador diferente), a credencial que é anexada à mensagem e usada para autenticar o cliente para o serviço também pode alterar.  
+ Se essas condições forem verdadeiras, a identidade usada para autenticar o cliente para o serviço pode ser alterado (ele pode não ser a identidade representada, mas a identidade do processo em vez disso) depois que o cliente do WCF é aberto. Isso ocorre porque a credencial do Windows usada para autenticar o cliente para o serviço é transmitida com cada mensagem e a credencial usada para autenticação é obtida da identidade do Windows do thread atual. Se a identidade do Windows do thread atual é alterado (por exemplo, representando um chamador diferente), a credencial que é anexada à mensagem e usada para autenticar o cliente para o serviço também pode alterar.  
   
  Se você quiser ter comportamento determinístico ao usar a autenticação do Windows junto com a representação é necessário definir explicitamente a credencial do Windows ou você precisa estabelecer um contexto de segurança com o serviço. Para fazer isso, use uma sessão de segurança de mensagem ou uma sessão de segurança de transporte. Por exemplo, o transporte de NET. TCP pode fornecer uma sessão de segurança de transporte. Além disso, você deve usar apenas uma versão síncrona de operações do cliente ao chamar o serviço. Se você estabelecer um contexto de segurança de mensagem, não mantenha a conexão ao serviço abrir mais tempo do que o período de renovação de sessão configurado, porque a identidade também pode ser alterado durante o processo de renovação de sessão.  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 04/28/2018
 >  Ao usar o `BeginOpen` método, as credenciais capturadas não podem ser garantidas para ser as credenciais do processo que chama o método.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Token Caches permitem reprodução usando dados obsoletos  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa a autoridade de segurança local (LSA) `LogonUser` função para autenticar usuários por nome de usuário e senha. Porque a função de logon é uma operação dispendiosa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite tokens em cache que representam usuários autenticados para aumentar o desempenho. O mecanismo de cache salva os resultados de `LogonUser` para usos subsequentes. Esse mecanismo é desabilitado por padrão. Para habilitá-lo, defina o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propriedade `true`, ou use o `cacheLogonTokens` atributo do [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ A autoridade de segurança local (LSA) usa o WCF `LogonUser` função para autenticar usuários por nome de usuário e senha. Como a função de logon é uma operação dispendiosa, WCF permite que você tokens em cache que representam usuários autenticados ao aumentar o desempenho. O mecanismo de cache salva os resultados de `LogonUser` para usos subsequentes. Esse mecanismo é desabilitado por padrão. Para habilitá-lo, defina o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propriedade `true`, ou use o `cacheLogonTokens` atributo do [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
- Você pode definir um tempo de vida (TTL) para os tokens em cache, definindo o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> propriedade para um <xref:System.TimeSpan>, ou use o `cachedLogonTokenLifetime` atributo do `userNameAuthentication` elemento; o padrão é 15 minutos. Observe que, enquanto um token é armazenado em cache, qualquer cliente que apresenta o mesmo nome de usuário e senha pode usar o token, mesmo se a conta de usuário é excluída do Windows ou se a sua senha foi alterada. Até que a TTL expirar e o token é removido do cache, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que o usuário (possivelmente mal-intencionados) autenticar.  
+ Você pode definir um tempo de vida (TTL) para os tokens em cache, definindo o <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> propriedade para um <xref:System.TimeSpan>, ou use o `cachedLogonTokenLifetime` atributo do `userNameAuthentication` elemento; o padrão é 15 minutos. Observe que, enquanto um token é armazenado em cache, qualquer cliente que apresenta o mesmo nome de usuário e senha pode usar o token, mesmo se a conta de usuário é excluída do Windows ou se a sua senha foi alterada. Até que a TTL expirar e o token é removido do cache, o WCF permite ao usuário (possivelmente mal-intencionados) autenticar.  
   
  Para atenuar esse: diminuir a janela de ataque, definindo o `cachedLogonTokenLifetime` valor para o menor tempo span suas necessidades de usuários.  
   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Computador do serviço contém duas ou mais certificados com a mesma chave pública, mas eles contêm informações diferentes.  
   
--   O serviço recupera um certificado que corresponde ao identificador de chave de assunto, mas ele não é o cliente pretende usar. Quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recebe a mensagem e verifica a assinatura, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mapeia as informações no certificado x. 509 não intencional para um conjunto de declarações que são diferentes e potencialmente com privilégios elevados do que o cliente esperava.  
+-   O serviço recupera um certificado que corresponde ao identificador de chave de assunto, mas ele não é o cliente pretende usar. Quando o WCF recebe a mensagem e verifica a assinatura, o WCF mapeia as informações no certificado x. 509 não intencional para um conjunto de declarações que são diferentes e potencialmente com privilégios elevados do que o cliente esperava.  
   
  Para atenuar isso, outra maneira, como o uso de certificados de referência a x. 509 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

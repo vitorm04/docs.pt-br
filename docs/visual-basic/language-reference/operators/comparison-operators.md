@@ -1,11 +1,6 @@
 ---
-title: "Operadores de comparação (Visual Basic)"
+title: Operadores de comparação (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Operadores de comparação (Visual Basic)
 A seguir estão os operadores de comparação definidos no Visual Basic.  
   
- `<`operador  
+ `<` Operador  
   
- `<=`operador  
+ `<=` Operador  
   
- `>`operador  
+ `>` Operador  
   
- `>=`operador  
+ `>=` Operador  
   
- `=`operador  
+ `=` Operador  
   
- `<>`operador  
+ `<>` Operador  
   
  [Operador Is](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -97,14 +89,14 @@ result = string Like pattern
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir contém uma lista de operadores de comparação relacional e as condições que determinam se `result` é `True` ou `False`.  
   
-|Operador|`True`Se|`False`Se|  
+|Operador|`True` Se|`False` Se|  
 |--------------|---------------|----------------|  
-|`<`(Menor que)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Menor que ou igual a)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Maior que)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Maior que ou igual a)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Igual a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Não igual a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Menor que)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Menor que ou igual a)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Maior que)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Maior que ou igual a)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Igual a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Não igual a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  O [= operador](../../../visual-basic/language-reference/operators/assignment-operator.md) também é usado como um operador de atribuição.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Comparando cadeias de caracteres  
  Ao comparar cadeias de caracteres, as expressões de cadeia de caracteres são avaliadas com base em sua ordem de classificação em ordem alfabética, que depende de `Option Compare` configuração.  
   
- `Option Compare Binary`bases de comparações em uma ordem de classificação derivada de representações binárias internas dos caracteres da cadeia de caracteres. A ordem de classificação é determinada pela página de código. O exemplo a seguir mostra uma ordem de classificação binária típica.  
+ `Option Compare Binary` bases de comparações em uma ordem de classificação derivada de representações binárias internas dos caracteres da cadeia de caracteres. A ordem de classificação é determinada pela página de código. O exemplo a seguir mostra uma ordem de classificação binária típica.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`bases de dados de cadeia de caracteres comparações em uma ordem de classificação de maiusculas e minúsculas, textual determinadas pela localidade do seu aplicativo. Quando você define `Option Compare Text` e classificar os caracteres no exemplo anterior, a ordem de classificação seguinte se aplica:  
+ `Option Compare Text` bases de dados de cadeia de caracteres comparações em uma ordem de classificação de maiusculas e minúsculas, textual determinadas pela localidade do seu aplicativo. Quando você define `Option Compare Text` e classificar os caracteres no exemplo anterior, a ordem de classificação seguinte se aplica:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |Se os operandos forem|Comparação|  
 |---------------------|-------------------|  
-|Ambos`String`|Comparação com base em características de classificação de cadeia de caracteres de classificação.|  
+|Ambos `String`|Comparação com base em características de classificação de cadeia de caracteres de classificação.|  
 |Ambos os numérico|Os objetos convertidos em `Double`, comparação numérica.|  
-|Um numérico e uma`String`|O `String` é convertido em um `Double` e comparação numérica será realizada. Se o `String` não pode ser convertido em `Double`, uma <xref:System.InvalidCastException> é gerada.|  
-|Um ou ambos são tipos de referência diferente de`String`|<xref:System.InvalidCastException> é lançada.|  
+|Um numérico e uma `String`|O `String` é convertido em um `Double` e comparação numérica será realizada. Se o `String` não pode ser convertido em `Double`, uma <xref:System.InvalidCastException> é gerada.|  
+|Um ou ambos são tipos de referência diferente de `String`|<xref:System.InvalidCastException> é lançada.|  
   
  Tratam comparações numéricas `Nothing` como 0. Comparações de cadeia de caracteres tratam `Nothing` como `""` (uma cadeia de caracteres vazia).  
   

@@ -1,24 +1,12 @@
 ---
-title: "Cache e fábrica de canal"
-ms.custom: 
+title: Cache e fábrica de canal
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1bf8e3fe4833b662f16bd6311056fda8609dd9d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-factory-and-caching"></a>Cache e fábrica de canal
 Os aplicativos cliente do WCF usam a classe <xref:System.ServiceModel.ChannelFactory%601> para criar um canal de comunicação com um serviço WCF.  Criar instâncias de <xref:System.ServiceModel.ChannelFactory%601> resulta em alguma sobrecarga porque envolve as seguintes operações:  
@@ -36,7 +24,7 @@ Os aplicativos cliente do WCF usam a classe <xref:System.ServiceModel.ChannelFac
 > [!TIP]
 >  Você tem controle direto sobre a criação da fábrica de canal, quando você usa o <xref:System.ServiceModel.ChannelFactory%601> classe diretamente.  
   
- Os proxies de cliente WCF gerados com [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) são derivados de <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601>define um estático <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> propriedade que define o comportamento de cache de fábrica de canal. Configurações de cache são feitas para um tipo específico. Por exemplo, definindo `ClientBase<ITest>.CacheSettings` para um dos valores definidos abaixo afetará apenas esses proxy/ClientBase do tipo `ITest`. A configuração de cache para um determinado <xref:System.ServiceModel.ClientBase%601> é imutável, assim que a primeira instância de proxy/ClientBase é criada.  
+ Os proxies de cliente WCF gerados com [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) são derivados de <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> define um estático <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> propriedade que define o comportamento de cache de fábrica de canal. Configurações de cache são feitas para um tipo específico. Por exemplo, definindo `ClientBase<ITest>.CacheSettings` para um dos valores definidos abaixo afetará apenas esses proxy/ClientBase do tipo `ITest`. A configuração de cache para um determinado <xref:System.ServiceModel.ClientBase%601> é imutável, assim que a primeira instância de proxy/ClientBase é criada.  
   
 ## <a name="specifying-caching-behavior"></a>Especificar o comportamento do cache  
  Comportamento do cache é especificado pela configuração de <xref:System.ServiceModel.ClientBase%601.CacheSetting> propriedade para um dos valores a seguir.  

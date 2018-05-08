@@ -1,13 +1,6 @@
 ---
-title: "Solucionando problemas de aplicativos híbridos"
-ms.custom: 
+title: Solucionando problemas de aplicativos híbridos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Solucionando problemas de aplicativos híbridos
 <a name="introduction"></a> Este tópico lista alguns problemas comuns que podem ocorrer ao criar aplicativos híbridos que usam tecnologias [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  Um controle hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sempre aparece na parte superior do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]conteúdo hospedado em um <xref:System.Windows.Forms.Integration.ElementHost> controle aparece na ordem z do <xref:System.Windows.Forms.Integration.ElementHost> controle. É possível sobrepor <xref:System.Windows.Forms.Integration.ElementHost> controles, mas hospedado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo não combinar ou interagir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo hospedado em um <xref:System.Windows.Forms.Integration.ElementHost> controle aparece na ordem z do <xref:System.Windows.Forms.Integration.ElementHost> controle. É possível sobrepor <xref:System.Windows.Forms.Integration.ElementHost> controles, mas hospedado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo não combinar ou interagir.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Propriedade Filho  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Dispose  
- O não descarte correto das classes pode causar perda de recursos. Em seus aplicativos, verifique se o <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost> classes são descartadas, ou você pode deixar vazar recursos. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]descarta <xref:System.Windows.Forms.Integration.ElementHost> controla quando seu não modal <xref:System.Windows.Forms.Form> pai for fechada. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]descarta <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos quando seu aplicativo é desligado. É possível mostrar uma <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento em um <xref:System.Windows.Window> em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] loop de mensagem. Nesse caso, seu código pode não receber notificação de que seu aplicativo está sendo desligado.  
+ O não descarte correto das classes pode causar perda de recursos. Em seus aplicativos, verifique se o <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost> classes são descartadas, ou você pode deixar vazar recursos. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] descarta <xref:System.Windows.Forms.Integration.ElementHost> controla quando seu não modal <xref:System.Windows.Forms.Form> pai for fechada. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] descarta <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos quando seu aplicativo é desligado. É possível mostrar uma <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento em um <xref:System.Windows.Window> em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] loop de mensagem. Nesse caso, seu código pode não receber notificação de que seu aplicativo está sendo desligado.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Habilitar estilos visuais  

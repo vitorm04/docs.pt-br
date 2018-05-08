@@ -1,10 +1,6 @@
 ---
 title: Modo virtual no controle DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - DataRepeater
 - DataRepeater, virtual mode
 ms.assetid: 5fb805dc-2d8b-4139-b1e3-86e4c2667221
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c85ce4541e32991bfa09b1436385281d27ad355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7aa462f670c95f2d5996cf04b676bf09e9ec62b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>Modo virtual no controle DataRepeater (Visual Studio)
 Quando você deseja exibir grandes quantidades de dados tabulares em uma <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle, você pode melhorar o desempenho, definindo o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> propriedade para `True` e gerenciar explicitamente a interação do controle com sua fonte de dados. O <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle fornece vários eventos que você pode manipular para interagir com sua fonte de dados e exibir os dados necessários em tempo de execução.  

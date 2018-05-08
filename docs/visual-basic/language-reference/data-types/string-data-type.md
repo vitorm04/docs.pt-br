@@ -1,11 +1,6 @@
 ---
 title: Tipo de dados da cadeia de caracteres (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo de dados da cadeia de caracteres (Visual Basic)
 Contém sequências de pontos de código de (2 bytes) de 16 bits sem sinal que variam de 0 a 65535. Cada *ponto de código*, ou código de caractere, representa um único caractere Unicode. Uma cadeia de caracteres pode conter de 0 a aproximadamente dois bilhões (2 ^ 31) caracteres Unicode.  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos de automação ou COM, lembre-se de que os caracteres de cadeia de caracteres têm uma largura de dados diferente (8 bits) em outros ambientes. Se você estiver passando um argumento de cadeia de caracteres de 8 bits para tal componente, declare-o como `Byte()`, uma matriz de `Byte` elementos, em vez de `String` no seu novo código do Visual Basic.  
   
--   **Caracteres de tipo.** Acrescentar o caractere de tipo identificador `$` a qualquer identificador força-o `String` tipo de dados. `String`não tem nenhum caractere de tipo literal. No entanto, o compilador trata literais entre aspas (`" "`) como `String`.  
+-   **Caracteres de tipo.** Acrescentar o caractere de tipo identificador `$` a qualquer identificador força-o `String` tipo de dados. `String` não tem nenhum caractere de tipo literal. No entanto, o compilador trata literais entre aspas (`" "`) como `String`.  
   
 -   **Tipo de estrutura.** O tipo correspondente do .NET Framework é o <xref:System.String?displayProperty=nameWithType> classe.  
   

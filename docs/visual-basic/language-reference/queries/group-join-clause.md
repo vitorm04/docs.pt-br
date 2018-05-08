@@ -1,11 +1,6 @@
 ---
-title: "Cláusula Join Group (Visual Basic)"
+title: Cláusula Join Group (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupJoinIn
 - vb.QueryGroupJoinOn
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 094281b0afb34451ae8539e4eb967043b21d379c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-join-clause-visual-basic"></a>Cláusula Join Group (Visual Basic)
 Combina duas coleções em uma única coleção hierárquica. A operação de junção é baseada em chaves correspondentes.  
@@ -43,7 +35,7 @@ Group Join element [As type] In collection _
 |`element`|Necessário. A variável de controle para a coleção sendo unida.|  
 |`type`|Opcional. O tipo de `element`. Se nenhum `type` for especificado, o tipo de `element` é inferido do `collection`.|  
 |`collection`|Necessário. A coleção a combinar com a coleção que está no lado esquerdo do `Group Join` operador. Um `Group Join` cláusula pode ser aninhada em uma `Join` cláusula ou em outro `Group Join` cláusula.|  
-|`key1` `Equals` `key2`|Necessário. Identifica chaves para as coleções que estão sendo combinadas. Você deve usar o `Equals` operador para comparar chaves das coleções que estão sendo combinadas. Você pode combinar condições de junção usando o `And` operador para identificar várias chaves. O `key1` parâmetro deve ser da coleção no lado esquerdo do `Join` operador. O `key2` parâmetro deve ser da coleção no lado direito do `Join` operador.<br /><br /> As chaves usadas na condição de junção podem ser expressões que incluem mais de um item da coleção. No entanto, cada expressão de chave pode conter apenas os itens da sua respectiva coleção.|  
+|`key1``Equals``key2`|Necessário. Identifica chaves para as coleções que estão sendo combinadas. Você deve usar o `Equals` operador para comparar chaves das coleções que estão sendo combinadas. Você pode combinar condições de junção usando o `And` operador para identificar várias chaves. O `key1` parâmetro deve ser da coleção no lado esquerdo do `Join` operador. O `key2` parâmetro deve ser da coleção no lado direito do `Join` operador.<br /><br /> As chaves usadas na condição de junção podem ser expressões que incluem mais de um item da coleção. No entanto, cada expressão de chave pode conter apenas os itens da sua respectiva coleção.|  
 |`expressionList`|Necessário. Uma ou mais expressões que identificam como os grupos de elementos da coleção são agregados. Para identificar um nome de membro para os resultados agrupados, use o `Group` palavra-chave (`<alias> = Group`). Você também pode incluir funções agregadas para aplicar ao grupo.|  
   
 ## <a name="remarks"></a>Comentários  

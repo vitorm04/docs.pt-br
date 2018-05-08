@@ -1,29 +1,17 @@
 ---
 title: LINQ to SQL com aplicativos Apertado- agrupados do servidor cliente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6ff0ee9019f8c61ad2fc18c5d22240abb2dc6b9b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f094bb319a4ca5241e60993770c9c49c3151635c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL com aplicativos Apertado- agrupados do servidor cliente
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]pode ser usado na camada intermediária com clientes inteligentes estreitamente ligado na camada de apresentação. Em cenários que não envolvem acesso a dados somente leitura, a nenhuma verificação de concorrência otimista, ou concorrência otimista com os carimbos de data/hora, não há muito mais complexidade do que com cenários de não remoto. No entanto, quando uma base de dados requer verificação de simultaneidade otimista com valores originais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não fornece o nível de suporte para fazer ide de dados que que você localiza em datasets. No entanto, uma camada intermediária de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode trocar dados com clientes em qualquer plataforma.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode ser usado na camada intermediária com clientes inteligentes estreitamente ligado na camada de apresentação. Em cenários que não envolvem acesso a dados somente leitura, a nenhuma verificação de concorrência otimista, ou concorrência otimista com os carimbos de data/hora, não há muito mais complexidade do que com cenários de não remoto. No entanto, quando uma base de dados requer verificação de simultaneidade otimista com valores originais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não fornece o nível de suporte para fazer ide de dados que que você localiza em datasets. No entanto, uma camada intermediária de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode trocar dados com clientes em qualquer plataforma.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]em [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] não fornece nenhuma infraestrutura para controlar o estado de entidade depois que eles tiverem sido serializados em um cliente. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Habilita arquiteturas orientadas a serviços em que as interações entre as camadas de apresentação e de dados são pequenos e relativamente atômica, mas não executa qualquer ciclo de valores originais. Portanto, se você desejar usar um cliente inteligente apertado- acoplado com [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], e uma concorrência otimista com valores originais, você usos de base de dados precisará implementar seu próprio mecanismo para alterações de comunicação entre a camada de apresentação e a camada intermediária. Depende o designer do sistema para decidir se faz sentido fazer isso bit de trabalho extra de troca de benefícios que fornece [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Por outro lado, se o base de dados tem data/hora, não há necessidade de lógica personalizada de controle de alterações.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] em [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] não fornece nenhuma infraestrutura para controlar o estado de entidade depois que eles tiverem sido serializados em um cliente. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Habilita arquiteturas orientadas a serviços em que as interações entre as camadas de apresentação e de dados são pequenos e relativamente atômica, mas não executa qualquer ciclo de valores originais. Portanto, se você desejar usar um cliente inteligente apertado- acoplado com [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], e uma concorrência otimista com valores originais, você usos de base de dados precisará implementar seu próprio mecanismo para alterações de comunicação entre a camada de apresentação e a camada intermediária. Depende o designer do sistema para decidir se faz sentido fazer isso bit de trabalho extra de troca de benefícios que fornece [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Por outro lado, se o base de dados tem data/hora, não há necessidade de lógica personalizada de controle de alterações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  

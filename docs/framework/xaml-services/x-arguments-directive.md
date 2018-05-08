@@ -1,28 +1,16 @@
 ---
 title: Diretiva x:Arguments
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - x:Arguments directive [XAML Services]
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: "12"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xarguments-directive"></a>Diretiva x:Arguments
 Argumentos de construção de pacotes para uma declaração de elemento de objeto do construtor não-padrão em XAML ou para uma declaração de objeto do método de fábrica.  
@@ -55,7 +43,7 @@ Argumentos de construção de pacotes para uma declaração de elemento de objet
 |`methodName`|O nome do método de fábrica que deve processar qualquer `x:Arguments` argumentos.|  
   
 ## <a name="dependencies"></a>Dependências  
- `x:FactoryMethod`pode modificar o escopo e o comportamento onde `x:Arguments` se aplica.  
+ `x:FactoryMethod` pode modificar o escopo e o comportamento onde `x:Arguments` se aplica.  
   
  Se nenhum `x:FactoryMethod` for especificado, `x:Arguments` se aplica às assinaturas de (não-padrão) alternativas dos construtores de backup.  
   
@@ -66,7 +54,7 @@ Argumentos de construção de pacotes para uma declaração de elemento de objet
   
  O `x:Arguments` uso XAML não é uso de elemento de propriedade no sentido típico, porque a marcação de diretiva não faz referência a tipo de elemento de objeto que contém. Ele é mais semelhante a outras diretivas como `x:Code` onde o elemento determina um intervalo no qual a marcação deve ser interpretada como diferente do padrão para o conteúdo filho. Nesse caso, o tipo de XAML de cada elemento do objeto se comunica informações sobre os tipos de argumento, que são usadas pelo analisadores XAML para determinar qual método de fábrica construtor específico assinatura um `x:Arguments` uso está tentando fazer referência.  
   
- `x:Arguments`para um elemento de objeto que está sendo construído deve preceder quaisquer outros elementos de propriedade, conteúdo, texto interno ou cadeias de caracteres de inicialização do elemento de objeto. Os elementos de objeto dentro de `x:Arguments` podem incluir atributos e cadeias de caracteres de inicialização, conforme permitido pelo tipo XAML e seu método de construtor ou fábrica de backup. Para o objeto ou os argumentos, você pode especificar os tipos XAML personalizados ou tipos XAML que estiverem fora do namespace XAML padrão referenciando mapeamentos de prefixo estabelecida.  
+ `x:Arguments` para um elemento de objeto que está sendo construído deve preceder quaisquer outros elementos de propriedade, conteúdo, texto interno ou cadeias de caracteres de inicialização do elemento de objeto. Os elementos de objeto dentro de `x:Arguments` podem incluir atributos e cadeias de caracteres de inicialização, conforme permitido pelo tipo XAML e seu método de construtor ou fábrica de backup. Para o objeto ou os argumentos, você pode especificar os tipos XAML personalizados ou tipos XAML que estiverem fora do namespace XAML padrão referenciando mapeamentos de prefixo estabelecida.  
   
  Processadores XAML usam as diretrizes a seguir para determinar como os argumentos especificados em `x:Arguments` deve ser usado para construir um objeto. Se `x:FactoryMethod` for especificado, as informações são comparadas especificado `x:FactoryMethod` (Observe que o valor de `x:FactoryMethod` é o nome do método e o método nomeado pode ter sobrecargas. Se `x:FactoryMethod` não for especificado, as informações são comparadas ao conjunto de todas as sobrecargas de construtor público do objeto. Lógica de processamento de XAML, em seguida, compara o número de parâmetros e seleciona a sobrecarga com arity correspondente. Se houver mais de uma correspondência, o processador XAML compare os tipos dos parâmetros com base nos tipos de XAML dos elementos de objeto fornecido. Se houver ainda mais de uma correspondência, o comportamento de processador do XAML é indefinido. Se um `x:FactoryMethod` for especificado, mas o método não pode ser resolvido, um processador XAML deve lançar uma exceção.  
   

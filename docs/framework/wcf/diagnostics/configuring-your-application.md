@@ -1,29 +1,15 @@
 ---
 title: Configurando seu aplicativo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 7dfd662fafa636e0fa97f118217ad1786d5aa444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-your-application"></a>Configurando seu aplicativo
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa o sistema de configuração do .NET e permite que você configure serviços no escopo máquina e do aplicativo.  
+Windows Communication Foundation (WCF) usa o sistema de configuração do .NET e permite que você configure serviços no escopo máquina e do aplicativo.  
   
  Configurações definidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estão localizados no `<system.serviceModel>` grupo da seção. Para obter mais informações sobre como configurar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço, consulte os tópicos a seguir:  
   

@@ -1,33 +1,21 @@
 ---
 title: Serviços de segurança
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>Serviços de segurança
-Segurança de um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço consiste em dois requisitos principais: transferir a segurança e a autorização. (Um terceiro requisito, a auditoria de eventos de segurança, é descrita em [auditoria](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Em suma, a segurança de transferência inclui integridade (para detectar violação de assinatura digital), confidencialidade (criptografia de mensagens) e autenticação (verificar a identidade do serviço e o cliente). Autorização é o controle de acesso a recursos, por exemplo, permitindo que apenas usuários com privilégios ler um arquivo. Usando recursos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], os dois principais requisitos facilmente são implementados.  
+Segurança de um serviço do Windows Communication Foundation (WCF) consiste em dois requisitos principais: transferir a segurança e a autorização. (Um terceiro requisito, a auditoria de eventos de segurança, é descrita em [auditoria](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Em suma, a segurança de transferência inclui integridade (para detectar violação de assinatura digital), confidencialidade (criptografia de mensagens) e autenticação (verificar a identidade do serviço e o cliente). Autorização é o controle de acesso a recursos, por exemplo, permitindo que apenas usuários com privilégios ler um arquivo. Usando recursos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], os dois principais requisitos facilmente são implementados.  
   
  Com exceção do <xref:System.ServiceModel.BasicHttpBinding> classe (ou o [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento na configuração), segurança de transferência é habilitada por padrão para todas as associações predefinidas. Os tópicos nesta seção abordam dois cenários básicos: Implementando a segurança de transferência e autorização em um serviço de intranet hospedado no Internet Information Services (IIS) e implementar a segurança de transferência e a autorização em um serviço hospedado no IIS.  
   

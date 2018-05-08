@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo3::RequestProfilerDetach"
-ms.custom: 
+title: Método ICorProfilerInfo3::RequestProfilerDetach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.RequestProfilerDetach Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 33a5c45bbb64029177a0a680243dd39a825683e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e69a15d70b8f1b9e271571be92f1f6717a9f196c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Método ICorProfilerInfo3::RequestProfilerDetach
 Instrui o tempo de execução para desanexar o criador de perfil.  
@@ -59,7 +47,7 @@ HRESULT RequestProfilerDetach(
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Desconexão é impossível porque o criador de perfil definir sinalizadores imutáveis na inicialização. Não foi tentada a desconexão; o criador de perfil ainda totalmente está anexado.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Desconexão é impossível porque o criador de perfil usado instrumentado código Microsoft intermediate language (MSIL) ou inseridas `enter` / `leave` ganchos. Não foi tentada a desconexão; o criador de perfil ainda totalmente está anexado.<br /><br /> **Observação** instrumentado MSIL é o código é um código que é fornecido pelo criador de perfil usando o [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) método.|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|O tempo de execução não foi inicializado ainda no aplicativo gerenciado. (Ou seja, o tempo de execução não foi totalmente carregado.) Esse código de erro pode ser retornado quando desconexão for solicitado dentro o retorno de chamada de criador de perfil [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach`foi chamado em um momento sem suporte. Isso ocorre se o método for chamado em um thread gerenciado, mas não de dentro um [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método ou de dentro um [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método que não pode tolerar uma coleta de lixo. Para obter mais informações, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` foi chamado em um momento sem suporte. Isso ocorre se o método for chamado em um thread gerenciado, mas não de dentro um [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método ou de dentro um [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método que não pode tolerar uma coleta de lixo. Para obter mais informações, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Comentários  
  Durante o procedimento de desanexação, o thread de desanexar (o thread criado especificamente para desanexar o criador de perfil), ocasionalmente, verifica se todos os threads abandonaram o código do criador de perfil. O criador de perfil deve fornecer uma estimativa de quanto tempo isso levará por meio de `dwExpectedCompletionMilliseconds` parâmetro. Um bom valor para usar é a quantidade normal de tempo que o criador de perfil gasta em nenhum dado `ICorProfilerCallback*` método; esse valor não deve ser menor do que a metade da quantidade máxima de tempo de espera que o criador de perfil para gastar.  
@@ -75,7 +63,7 @@ HRESULT RequestProfilerDetach(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  

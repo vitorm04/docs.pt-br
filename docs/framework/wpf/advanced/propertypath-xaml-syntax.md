@@ -1,27 +1,15 @@
 ---
 title: Sintaxe PropertyPath (XAML)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxe PropertyPath (XAML)
 O <xref:System.Windows.PropertyPath> objeto oferece suporte a um complexo embutido [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxe para definir várias propriedades que tomam a <xref:System.Windows.PropertyPath> tipo como seu valor. Este tópico documenta o <xref:System.Windows.PropertyPath> sintaxe conforme aplicado a sintaxes de associação e animação.  
@@ -29,7 +17,7 @@ O <xref:System.Windows.PropertyPath> objeto oferece suporte a um complexo embuti
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>Onde o PropertyPath é usado  
- <xref:System.Windows.PropertyPath>é um objeto comum que é usado em vários [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] recursos. Apesar do uso comum <xref:System.Windows.PropertyPath> para transmitir informações de caminho de propriedade, os usos para cada tipo de recurso onde <xref:System.Windows.PropertyPath> é usado como um tipo variam. Portanto, é mais prático documentar as sintaxes por recurso.  
+ <xref:System.Windows.PropertyPath> é um objeto comum que é usado em vários [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] recursos. Apesar do uso comum <xref:System.Windows.PropertyPath> para transmitir informações de caminho de propriedade, os usos para cada tipo de recurso onde <xref:System.Windows.PropertyPath> é usado como um tipo variam. Portanto, é mais prático documentar as sintaxes por recurso.  
   
  Primeiramente, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa <xref:System.Windows.PropertyPath> para descrever os caminhos de modelo de objeto para percorrer as propriedades de um objeto de fonte de dados e para descrever o caminho de destino para animações de destino.  
   
@@ -39,7 +27,7 @@ O <xref:System.Windows.PropertyPath> objeto oferece suporte a um complexo embuti
 ## <a name="propertypath-for-objects-in-data-binding"></a>PropertyPath para objetos em associação de dados  
  A associação de dados é um recurso do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] por meio do qual é possível se associar ao valor de destino de qualquer propriedade de dependência. No entanto, a origem dessa associação de dados não precisa ser uma propriedade de dependência; pode ser qualquer tipo de propriedade que seja reconhecido pelo provedor de dados aplicável. Caminhos de propriedade são usados principalmente para o <xref:System.Windows.Data.ObjectDataProvider>, que é usado para obter fontes de vinculação de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objetos e suas propriedades.  
   
- Observe que associação de dados para [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] não usa <xref:System.Windows.PropertyPath>, porque ele não usa <xref:System.Windows.Data.Binding.Path%2A> no <xref:System.Windows.Data.Binding>. Em vez disso, você usar <xref:System.Windows.Data.Binding.XPath%2A> e especificar a sintaxe XPath válida para o [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] dos dados. <xref:System.Windows.Data.Binding.XPath%2A>também é especificado como uma cadeia de caracteres, mas não está documentado aqui; consulte [associar a dados XML usando um XMLDataProvider e consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Observe que associação de dados para [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] não usa <xref:System.Windows.PropertyPath>, porque ele não usa <xref:System.Windows.Data.Binding.Path%2A> no <xref:System.Windows.Data.Binding>. Em vez disso, você usar <xref:System.Windows.Data.Binding.XPath%2A> e especificar a sintaxe XPath válida para o [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] dos dados. <xref:System.Windows.Data.Binding.XPath%2A> também é especificado como uma cadeia de caracteres, mas não está documentado aqui; consulte [associar a dados XML usando um XMLDataProvider e consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  A chave para entender os caminhos da propriedade na associação de dados é que você pode direcionar a associação a um valor da propriedade individual ou, em vez disso, pode associar a propriedades de destino que assumem listas ou coleções. Se você estiver associando coleções, por exemplo associando um <xref:System.Windows.Controls.ListBox> que expandirá dependendo de quantos itens de dados estão na coleção e o caminho de propriedade deve fazer referência a objeto de coleção, os itens individuais não. O mecanismo de associação de dados corresponderá a coleção usada como a fonte de dados para o tipo de destino da associação automaticamente, resultando em comportamentos como popular um <xref:System.Windows.Controls.ListBox> com uma matriz de itens.  
   
@@ -70,7 +58,7 @@ O <xref:System.Windows.PropertyPath> objeto oferece suporte a um complexo embuti
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`deve ser resolvido para o nome de uma propriedade que é atual <xref:System.Windows.FrameworkElement.DataContext%2A>. As propriedades de caminho `propertyName` e `propertyName2` podem ser quaisquer propriedades que existam em uma relação, em que `propertyName2` é uma propriedade que existe no tipo que é o valor de `propertyName`.  
+ `propertyName` deve ser resolvido para o nome de uma propriedade que é atual <xref:System.Windows.FrameworkElement.DataContext%2A>. As propriedades de caminho `propertyName` e `propertyName2` podem ser quaisquer propriedades que existam em uma relação, em que `propertyName2` é uma propriedade que existe no tipo que é o valor de `propertyName`.  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>Propriedade única, anexada ou de tipo qualificado  
@@ -166,7 +154,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName`deve ser resolvido para o nome de uma propriedade de dependência que existe no especificado <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> tipo.  
+ `propertyName` deve ser resolvido para o nome de uma propriedade de dependência que existe no especificado <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> tipo.  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>Direcionamento indireto de propriedade  
@@ -175,7 +163,7 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`deve ser uma propriedade que seja um <xref:System.Windows.Freezable> valor ou um tipo primitivo, que exista no especificado <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> tipo.  
+ `propertyName` deve ser uma propriedade que seja um <xref:System.Windows.Freezable> valor ou um tipo primitivo, que exista no especificado <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> tipo.  
   
  `propertyName2` deve ser o nome de uma propriedade de dependência que existe no objeto que é o valor de `propertyName`. Em outras palavras, `propertyName2` deve existir como uma propriedade de dependência no tipo que é o `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   

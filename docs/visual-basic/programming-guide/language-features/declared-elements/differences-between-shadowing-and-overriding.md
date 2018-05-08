@@ -1,24 +1,15 @@
 ---
-title: "Diferenças entre sombreamento e sobreposição (Visual Basic)"
-ms.custom: 
+title: Diferenças entre sombreamento e sobreposição (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ce3e7fe25b7942730e6e89a53654b03d91c42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferenças entre sombreamento e sobreposição (Visual Basic)
 Quando você define uma classe que herda de uma classe base, às vezes você deseja redefinir um ou mais dos elementos de classe base na classe derivada. Sombreamento e sobreposição estão disponíveis para essa finalidade.  
@@ -36,8 +27,8 @@ Quando você define uma classe que herda de uma classe base, às vezes você des
 |Elemento redefinido|Qualquer tipo de elemento declarado|Somente um procedimento ou propriedade com a sequência de chamada idêntica<sup>1</sup>|  
 |Nível de acesso do elemento redefinido|Qualquer nível de acesso|Não é possível alterar o nível de acesso do elemento substituído|  
 |Legibilidade de gravabilidade do elemento redefinido|Qualquer combinação|Não é possível alterar a legibilidade ou gravabilidade de propriedade substituída|  
-|Controle da redefinição|Elemento de classe base não pode forçar ou proibir sombreamento|Elemento de classe base pode especificar `MustOverride`, `NotOverridable`, ou`Overridable`|  
-|Uso da palavra-chave|`Shadows`recomendado na classe derivada; `Shadows` pressuposto se nenhum `Shadows` nem `Overrides` especificado<sup>2</sup>|`Overridable`ou `MustOverride` necessário na classe base. `Overrides` necessário na classe derivada|  
+|Controle da redefinição|Elemento de classe base não pode forçar ou proibir sombreamento|Elemento de classe base pode especificar `MustOverride`, `NotOverridable`, ou `Overridable`|  
+|Uso da palavra-chave|`Shadows` recomendado na classe derivada; `Shadows` pressuposto se nenhum `Shadows` nem `Overrides` especificado<sup>2</sup>|`Overridable` ou `MustOverride` necessário na classe base. `Overrides` necessário na classe derivada|  
 |Herança do elemento redefinido em classes derivadas da classe derivada|Sombreamento de elemento herdado por futuras classes derivadas; elemento sombreado ainda ocultado<sup>3</sup>|Substituir o elemento herdado por futuras classes derivadas; elemento sobrescrito ainda sobrescrito|  
   
  <sup>1</sup> o *sequência de chamada* consiste em tipo de elemento (`Function`, `Sub`, `Operator`, ou `Property`), nome, listas de parâmetros e tipo de retorno. Você não pode substituir um procedimento com uma propriedade ou o oposto. Você não pode substituir um tipo de procedimento (`Function`, `Sub`, ou `Operator`) com outro tipo.  

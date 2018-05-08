@@ -1,13 +1,6 @@
 ---
 title: Como definir o alinhamento horizontal e vertical de um TileBrush
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dcbf4715c80f72178295c0b6abdc1272a055a8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4352067f149a1af25cd0a04a12596693188445fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Como definir o alinhamento horizontal e vertical de um TileBrush
 Este exemplo mostra como controlar o alinhamento horizontal e vertical do conteúdo em um bloco. Para controlar o alinhamento horizontal e vertical de um <xref:System.Windows.Media.TileBrush>, use seu <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriedades.  
@@ -40,7 +28,7 @@ Este exemplo mostra como controlar o alinhamento horizontal e vertical do conte�
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir alinha o conteúdo de um <xref:System.Windows.Media.DrawingBrush>, que é um tipo de <xref:System.Windows.Media.TileBrush>, para o canto superior esquerdo do seu bloco. Para alinhar o conteúdo, o exemplo define o <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriedade o <xref:System.Windows.Media.DrawingBrush> para <xref:System.Windows.Media.AlignmentX.Left> e o <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriedade <xref:System.Windows.Media.AlignmentY.Top>. Este exemplo gerencia a seguinte saída.  
   
- ![Um TileBrush com top &#45; alinhamento à esquerda](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
+ ![Um TileBrush com superior&#45;à esquerda](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
 TileBrush com conteúdo alinhado ao canto superior esquerdo  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmentinline)]
@@ -50,7 +38,7 @@ TileBrush com conteúdo alinhado ao canto superior esquerdo
 ## <a name="example"></a>Exemplo  
  O próximo exemplo alinha o conteúdo de um <xref:System.Windows.Media.DrawingBrush> para o canto inferior direito do seu tile, definindo a <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriedade <xref:System.Windows.Media.AlignmentX.Right> e o <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriedade <xref:System.Windows.Media.AlignmentY.Bottom>. O exemplo produz a saída a seguir.  
   
- ![Um TileBrush com inferior &#45; alinhamento à direita](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
+ ![Um TileBrush com inferior&#45;direita alinhamento](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
 TileBrush com conteúdo alinhado ao canto inferior direito  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
@@ -60,7 +48,7 @@ TileBrush com conteúdo alinhado ao canto inferior direito
 ## <a name="example"></a>Exemplo  
  O próximo exemplo alinha o conteúdo de um <xref:System.Windows.Media.DrawingBrush> para o canto superior esquerdo do seu tile, definindo o <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriedade <xref:System.Windows.Media.AlignmentX.Left> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriedade <xref:System.Windows.Media.AlignmentY.Top>. Ele também define o <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.TileMode%2A> do <xref:System.Windows.Media.DrawingBrush> para produzir um padrão de bloco. O exemplo produz a saída a seguir.  
   
- ![Um TileBrush lado a lado com top &#45; alinhamento à esquerda](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
+ ![Um lado TileBrush com superior&#45;à esquerda](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
 Padrão de blocos com conteúdo alinhado à parte superior esquerda no bloco base  
   
  A ilustração destaca um bloco da base para que você possa ver como seu conteúdo está alinhado. Observe que o <xref:System.Windows.Media.TileBrush.AlignmentX%2A> configuração não tem nenhum efeito porque o conteúdo do <xref:System.Windows.Media.DrawingBrush> preenche completamente o bloco base horizontalmente.  
@@ -72,7 +60,7 @@ Padrão de blocos com conteúdo alinhado à parte superior esquerda no bloco bas
 ## <a name="example"></a>Exemplo  
  Exemplo alinha o conteúdo de um <xref:System.Windows.Media.DrawingBrush> para o canto inferior direito do seu tile base definindo o <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriedade <xref:System.Windows.Media.AlignmentX.Right> e o <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriedade <xref:System.Windows.Media.AlignmentY.Bottom>. O exemplo produz a saída a seguir.  
   
- ![Um lado TileBrush com inferior &#45; diretamente alinhamento](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
+ ![Um lado TileBrush com inferior&#45;direita alinhamento](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
 Padrão de blocos com conteúdo alinhado à parte inferior direita no bloco base  
   
  Novamente, o <xref:System.Windows.Media.TileBrush.AlignmentX%2A> configuração não tem nenhum efeito porque o conteúdo do <xref:System.Windows.Media.DrawingBrush> preenche completamente o bloco base horizontalmente.  

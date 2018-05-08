@@ -1,13 +1,6 @@
 ---
 title: Empacotando fontes com aplicativos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>Empacotando fontes com aplicativos
 Este tópico fornece uma visão geral de como fontes de pacote com o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo.  
@@ -40,7 +28,7 @@ Este tópico fornece uma visão geral de como fontes de pacote com o [!INCLUDE[T
 ## <a name="introduction-to-packaging-fonts"></a>Introdução a empacotamento de fontes  
  Você pode facilmente empacotar fontes como recursos dentro de sua [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo baseado em aplicativos para exibir o texto de interface de usuário e outros tipos de texto. As fontes podem ser separadas ou inseridas nos arquivos de assembly do aplicativo. Você também pode criar uma biblioteca de fontes somente recursos, que seu aplicativo pode fazer referência.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]e [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] fontes contém um sinalizador de tipo, fsType, que indica a incorporação de licenciamento de fontes de direitos para a fonte. No entanto, esse sinalizador de tipo somente referencia fontes embutidas armazenadas em um documento. Ele não referencia fontes incorporadas em um aplicativo. Você pode recuperar os direitos de fonte para uma fonte, criando uma <xref:System.Windows.Media.GlyphTypeface> objeto e referenciando seu <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> propriedade. Consulte a seção "métricas dos / 2 e Windows" o [Especificação OpenType](http://www.microsoft.com/typography/otspec/os2.htm) para obter mais informações sobre o sinalizador fsType.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] e [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] fontes contém um sinalizador de tipo, fsType, que indica a incorporação de licenciamento de fontes de direitos para a fonte. No entanto, esse sinalizador de tipo somente referencia fontes embutidas armazenadas em um documento. Ele não referencia fontes incorporadas em um aplicativo. Você pode recuperar os direitos de fonte para uma fonte, criando uma <xref:System.Windows.Media.GlyphTypeface> objeto e referenciando seu <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> propriedade. Consulte a seção "métricas dos / 2 e Windows" o [Especificação OpenType](http://www.microsoft.com/typography/otspec/os2.htm) para obter mais informações sobre o sinalizador fsType.  
   
  O [Microsoft Typography](http://www.microsoft.com/typography/links/) site inclui informações de contato que podem ajudá-lo a localizar um fornecedor particular de fontes ou encontrar um fornecedor de fontes para um trabalho personalizado.  
   

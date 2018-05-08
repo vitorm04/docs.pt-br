@@ -1,11 +1,7 @@
 ---
-title: "Função SpawnDerivedClass (referência de API não gerenciada)"
-description: "A função SpawnDerivedClass cria um novo objeto que deriva de um objeto."
+title: Função SpawnDerivedClass (referência de API não gerenciada)
+description: A função SpawnDerivedClass cria um novo objeto que deriva de um objeto.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnDerivedClass
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawnderivedclass-function"></a>Função SpawnDerivedClass
 Cria um objeto de classe derivada recentemente de um objeto especificado.    
@@ -67,7 +60,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 | `WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Uma operação inválida, como a geração de uma classe de uma instância, foi solicitada. |
 | `WBEM_E_INCOMPLETE_CLASS` | A classe de origem não completamente definida ou registrada no gerenciamento do Windows, para que uma nova classe derivada não é permitida. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` é `null`. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
@@ -75,7 +68,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 
 Essa função encapsula uma chamada para o [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) método.
 
-`ptr`deve ser uma definição de classe torna-se a classe pai do objeto gerado. O objeto retornado se torna uma subclasse do objeto atual.
+`ptr` deve ser uma definição de classe torna-se a classe pai do objeto gerado. O objeto retornado se torna uma subclasse do objeto atual.
 
 O novo objeto retornado `ppNewClass` automaticamente se torna uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
 
@@ -84,7 +77,7 @@ O novo objeto retornado `ppNewClass` automaticamente se torna uma subclasse do o
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

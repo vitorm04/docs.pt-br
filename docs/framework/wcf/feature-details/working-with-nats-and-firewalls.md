@@ -1,34 +1,20 @@
 ---
 title: Trabalhando com NATs e firewalls
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72582af358d363038d09b313632c023f3c054dbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede com frequência não têm uma conexão direta e abrir o caminho para a comunicação. Pacotes são filtradas, roteadas, analisados e transformados em máquinas de ponto de extremidade e intermediários máquinas na rede. Conversões de endereço de rede (NAT) e firewalls são exemplos comuns de aplicativos intermediários que podem participar de comunicação de rede.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportes e (MEPs) de padrões de troca de mensagem diferente de reagem a presença de NATs e firewalls. Este tópico descreve como NATs e firewalls funcionam em comum topologias de rede. Recomendações para combinações específicas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transportes e MEPs recebem que ajuda a tornar seus aplicativos mais robustos NATs e firewalls na rede.  
+ Transportes do Windows Communication Foundation (WCF) e (MEPs) de padrões de troca de mensagem diferente de reagem a presença de NATs e firewalls. Este tópico descreve como NATs e firewalls funcionam em comum topologias de rede. Recomendações para combinações específicas de transportes WCF e MEPs recebem que ajuda a tornar seus aplicativos mais robustos NATs e firewalls na rede.  
   
 ## <a name="how-nats-affect-communication"></a>Como NATs afetam a comunicação  
  NAT foi criado para permitir que várias máquinas compartilhar um único endereço IP externo. O remapeamento de porta NAT mapeia um endereço IP interno e a porta para uma conexão para um endereço IP externo com um novo número de porta. O novo número de porta permite o NAT correlacionar o tráfego de retorno com a comunicação original. Muitos usuários domésticos agora têm um endereço IP só é roteável em particular e dependem de um NAT para fornecer roteamento global de pacotes.  
@@ -45,7 +31,7 @@ O cliente e o servidor de uma conexão de rede com frequência não têm uma con
  Uma configuração comum de um firewall de usuário inicial é proíbem conexões de entrada, a menos que uma conexão de saída foi feita a essa máquina anteriormente. Uma configuração comum de um firewall de usuário de negócios é proíbem conexões de entrada em todas as portas, exceto um grupo especificamente identificado. Um exemplo é um firewall que impede conexões em todas as portas, exceto as portas 80 e 443 para fornecer o serviço HTTP e HTTPS. Firewalls gerenciados existem para usuários domésticos e de negócios que permite que um usuário confiável ou um processo no computador para alterar a configuração de firewall. Firewalls gerenciados são mais comuns para usuários domésticos onde não há nenhuma política corporativa controlando o uso de rede.  
   
 ## <a name="using-teredo"></a>Usando o Teredo  
- Teredo é uma tecnologia de transição IPv6 que permite que o endereçamento direto de máquinas por um NAT. Teredo depende do uso de um servidor que pode ser publicamente e globalmente roteado para anunciarem conexões potenciais. O servidor Teredo fornece aplicativos cliente e servidor um ponto de reunião comum em que eles podem trocar informações de conexão. As máquinas, em seguida, solicitam um endereço de Teredo temporário e pacotes são encapsulados por meio da rede existente. Suporte a Teredo no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requer habilitar o suporte a IPv6 e Teredo no sistema operacional. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e suporte a sistemas operacionais posteriores Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] e sistemas operacionais posteriores oferecem suporte ao IPv6 por padrão e requer apenas que o usuário habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] requer que o usuário habilitar o IPv6 e Teredo. Para obter mais informações, consulte o [visão geral de Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo é uma tecnologia de transição IPv6 que permite que o endereçamento direto de máquinas por um NAT. Teredo depende do uso de um servidor que pode ser publicamente e globalmente roteado para anunciarem conexões potenciais. O servidor Teredo fornece aplicativos cliente e servidor um ponto de reunião comum em que eles podem trocar informações de conexão. As máquinas, em seguida, solicitam um endereço de Teredo temporário e pacotes são encapsulados por meio da rede existente. Suporte de Teredo no WCF requer habilitar o suporte a IPv6 e Teredo no sistema operacional. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e suporte a sistemas operacionais posteriores Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] e sistemas operacionais posteriores oferecem suporte ao IPv6 por padrão e requer apenas que o usuário habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] requer que o usuário habilitar o IPv6 e Teredo. Para obter mais informações, consulte o [visão geral de Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Escolhendo um transporte e padrões de troca de mensagem  
  Selecionando um transporte e MEPS é um processo de três etapas:  
@@ -64,7 +50,7 @@ O cliente e o servidor de uma conexão de rede com frequência não têm uma con
   
 -   Usar um serviço pode ser acessado para registrar pontos de extremidade ou retransmitir o tráfego. Usando um serviço de conexão global pode ser acessado, como um servidor Teredo, aumenta a probabilidade de se conectar com êxito quando a topologia de rede é restritiva ou desconhecido.  
   
- As tabelas a seguir examine o unidirecional, solicitação-resposta e MEPs duplex e o TCP padrão, TCP com Teredo e transportes HTTP padrão e duas em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ As tabelas a seguir, examine o unidirecional, solicitação-resposta e MEPs duplex e TCP padrão, TCP com Teredo, e transportes HTTP padrão e dois no WCF.  
   
 |Endereçamento|Direto de servidor|Servidor direto com NAT transversal|Servidor NAT|Servidor NAT com NAT transversal|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  

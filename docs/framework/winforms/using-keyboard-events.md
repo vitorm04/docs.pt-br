@@ -1,13 +1,6 @@
 ---
 title: Usando eventos do teclado
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - KeyPress event [Windows Forms]
 - keyboards [Windows Forms], keyboard events
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 394ebc503338ad73001aa9859e0aa0d9c3fa42b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-keyboard-events"></a>Usando eventos do teclado
 A maioria dos programas do Windows Forms processa a entrada do teclado tratando eventos de teclado. Este tópico fornece uma visão geral dos eventos de teclado, incluindo detalhes sobre quando usar cada evento e os dados que são fornecidos para cada evento.  Consulte também [Visão geral de manipuladores de eventos (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Visão geral de eventos (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
@@ -46,7 +34,7 @@ A maioria dos programas do Windows Forms processa a entrada do teclado tratando 
 |Evento de teclado|Descrição|Resultados|  
 |--------------------|-----------------|-------------|  
 |<xref:System.Windows.Forms.Control.KeyDown>|Esse evento é gerado quando um usuário pressiona uma tecla física.|O manipulador para <xref:System.Windows.Forms.Control.KeyDown> recebe:<br /><br /> <ul><li>Um <xref:System.Windows.Forms.KeyEventArgs> parâmetro, que fornece o <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> propriedade (que especifica um botão físico do teclado).</li><li>O <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propriedade (SHIFT, CTRL ou ALT).</li><li>O <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> propriedade (que combina o código de tecla e modificador). O <xref:System.Windows.Forms.KeyEventArgs> também fornece um parâmetro:<br /><br /> <ul><li>O <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> propriedade, que pode ser definida para impedir que o controle subjacente receba a chave.</li><li>O <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> propriedade, que pode ser usada para suprimir o <xref:System.Windows.Forms.Control.KeyPress> e <xref:System.Windows.Forms.Control.KeyUp> eventos para este pressionamento de tecla.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|Esse evento é gerado quando as teclas são pressionadas resultam em um caractere. Por exemplo, um usuário pressiona as teclas SHIFT e a letra “a” minúscula, o que resulta em uma letra “A” maiúscula.|<xref:System.Windows.Forms.Control.KeyPress>é gerado após <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>O manipulador para <xref:System.Windows.Forms.Control.KeyPress> recebe:</li><li>Um <xref:System.Windows.Forms.KeyPressEventArgs> parâmetro, que contém o código de caractere da tecla foi pressionada. Esse código de caractere é exclusivo para cada combinação de uma tecla de caractere e tecla modificadora.<br /><br />     Por exemplo, a tecla “A” gerará:<br /><br /> <ul><li>O código de caractere 65, se ela estiver pressionada com a tecla SHIFT</li><li>Ou a tecla CAPS LOCK, 97 se ela for pressionada sozinha,</li><li>E 1 se ela estiver pressionada com a tecla CTRL.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|Esse evento é gerado quando as teclas são pressionadas resultam em um caractere. Por exemplo, um usuário pressiona as teclas SHIFT e a letra “a” minúscula, o que resulta em uma letra “A” maiúscula.|<xref:System.Windows.Forms.Control.KeyPress> é gerado após <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>O manipulador para <xref:System.Windows.Forms.Control.KeyPress> recebe:</li><li>Um <xref:System.Windows.Forms.KeyPressEventArgs> parâmetro, que contém o código de caractere da tecla foi pressionada. Esse código de caractere é exclusivo para cada combinação de uma tecla de caractere e tecla modificadora.<br /><br />     Por exemplo, a tecla “A” gerará:<br /><br /> <ul><li>O código de caractere 65, se ela estiver pressionada com a tecla SHIFT</li><li>Ou a tecla CAPS LOCK, 97 se ela for pressionada sozinha,</li><li>E 1 se ela estiver pressionada com a tecla CTRL.</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyUp>|Esse evento é gerado quando um usuário libera uma tecla física.|O manipulador para <xref:System.Windows.Forms.Control.KeyUp> recebe:<br /><br /> <ul><li>Um <xref:System.Windows.Forms.KeyEventArgs> parâmetro:<br /><br /> <ul><li>Que fornece o <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> propriedade (que especifica um botão físico do teclado).</li><li>O <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propriedade (SHIFT, CTRL ou ALT).</li><li>O <xref:System.Globalization.SortKey.KeyData%2A> propriedade (que combina o código de tecla e modificador).</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Consulte também  

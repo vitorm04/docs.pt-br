@@ -1,14 +1,6 @@
 ---
 title: Administração e diagnósticos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Administração e diagnósticos
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece um rico conjunto de funcionalidades que podem ajudá-lo a monitorar os diferentes estágios de vida do aplicativo. Por exemplo, você pode usar a configuração para configurar serviços e clientes na implantação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI). Quando o aplicativo apresenta uma falha ou inicia funcionando incorretamente, você pode usar o Log de eventos para ver se algo significativo ocorreu. Você também pode usar a mensagem de log e rastreamento para ver quais eventos estão acontecendo ponta em seu aplicativo. Esses recursos ajudar os desenvolvedores e profissionais de TI para solucionar problemas de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo quando ele não está funcionando corretamente.  
+Windows Communication Foundation (WCF) fornece um rico conjunto de funcionalidades que podem ajudá-lo a monitorar os diferentes estágios de vida do aplicativo. Por exemplo, você pode usar a configuração para configurar serviços e clientes na implantação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI). Quando o aplicativo apresenta uma falha ou inicia funcionando incorretamente, você pode usar o Log de eventos para ver se algo significativo ocorreu. Você também pode usar a mensagem de log e rastreamento para ver quais eventos estão acontecendo ponta em seu aplicativo. Esses recursos ajudar os desenvolvedores e profissionais de TI para solucionar problemas de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo quando ele não está funcionando corretamente.  
   
 > [!NOTE]
 >  Se você estiver recebendo falhas sem informações de detalhe específico, você deve habilitar o `includeExceptionDetailInFaults` atributo o [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) elemento de configuração. Isso instrui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enviar detalhes da exceção para clientes, o que permite que você detecte muitos problemas comuns sem a necessidade de diagnóstico mais avançado. Para obter mais informações, consulte [enviando e recebendo falhas](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

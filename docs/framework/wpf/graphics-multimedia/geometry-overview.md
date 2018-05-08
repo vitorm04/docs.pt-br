@@ -1,13 +1,6 @@
 ---
-title: "Visão geral da geometria"
-ms.custom: 
+title: Visão geral da geometria
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Visão geral da geometria
 Esta visão geral descreve como usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes para descrever formas. Este tópico também contrasta as diferenças entre <xref:System.Windows.Media.Geometry> objetos e <xref:System.Windows.Shapes.Shape> elementos.  
@@ -34,7 +22,7 @@ Esta visão geral descreve como usar o [!INCLUDE[TLA#tla_winclient](../../../../
 ## <a name="what-is-a-geometry"></a>O que é uma geometria?  
  O <xref:System.Windows.Media.Geometry> e as classes que derivam dela, como <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, e <xref:System.Windows.Media.CombinedGeometry>, permitem que você descreva a geometria de uma forma 2D. Essas descrições geométricas têm muitos tipos de uso, como definir uma forma para pintar na tela ou definir regiões de teste de clique e recorte. Você pode até mesmo usar uma geometria para definir um caminho de animação.  
   
- <xref:System.Windows.Media.Geometry>objetos podem ser simples, como retângulos e círculos ou compostos, criados a partir de dois ou mais objetos de geometria.  Geometrias mais complexas podem ser criadas usando o <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> classes, que permitem que você descreva arcos e curvas.  
+ <xref:System.Windows.Media.Geometry> objetos podem ser simples, como retângulos e círculos ou compostos, criados a partir de dois ou mais objetos de geometria.  Geometrias mais complexas podem ser criadas usando o <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> classes, que permitem que você descreva arcos e curvas.  
   
  Porque um <xref:System.Windows.Media.Geometry> é um tipo de <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> objetos fornecem vários recursos especiais: eles podem ser declarados como [recursos](../../../../docs/framework/wpf/advanced/xaml-resources.md), compartilhados entre vários objetos, feitos somente leitura para melhorar o desempenho, clonado, e feita a thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte o [visão geral de objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
@@ -187,7 +175,7 @@ Uma PathGeometry com várias figuras
 ## <a name="composite-geometries"></a>Geometrias compostas  
  Objetos de geometria composta podem ser criados usando um <xref:System.Windows.Media.GeometryGroup>, um <xref:System.Windows.Media.CombinedGeometry>, ou chamando estático <xref:System.Windows.Media.Geometry> método <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   O <xref:System.Windows.Media.CombinedGeometry> objeto e o <xref:System.Windows.Media.Geometry.Combine%2A> método executa uma operação booleana para combinar a área definida pelas duas geometrias. <xref:System.Windows.Media.Geometry>objetos que não possuem área são descartados. Apenas dois <xref:System.Windows.Media.Geometry> objetos podem ser combinados (Embora essas duas geometrias também podem ser geometrias compostas).  
+-   O <xref:System.Windows.Media.CombinedGeometry> objeto e o <xref:System.Windows.Media.Geometry.Combine%2A> método executa uma operação booleana para combinar a área definida pelas duas geometrias. <xref:System.Windows.Media.Geometry> objetos que não possuem área são descartados. Apenas dois <xref:System.Windows.Media.Geometry> objetos podem ser combinados (Embora essas duas geometrias também podem ser geometrias compostas).  
   
 -   O <xref:System.Windows.Media.GeometryGroup> classe cria uma junção do <xref:System.Windows.Media.Geometry> objetos que ele contém sem combinar suas áreas. Qualquer número de <xref:System.Windows.Media.Geometry> objetos podem ser adicionados a um <xref:System.Windows.Media.GeometryGroup>. Para obter um exemplo, consulte [Instruções: criar uma forma composta](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md).  
   
@@ -219,11 +207,11 @@ Uma PathGeometry com várias figuras
 ## <a name="other-geometry-features"></a>Outras funcionalidades da geometria  
  O <xref:System.Windows.Media.Geometry> classe também fornece métodos de utilitário úteis, como o seguinte:  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-Obtém a área do <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -Obtém a área do <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-Determina se o Geometry contém outro <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -Determina se o Geometry contém outro <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-Determina se o traço de um <xref:System.Windows.Media.Geometry> contém um ponto específico.  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -Determina se o traço de um <xref:System.Windows.Media.Geometry> contém um ponto específico.  
   
  Consulte o <xref:System.Windows.Media.Geometry> classe para uma lista completa de seus métodos.  
   

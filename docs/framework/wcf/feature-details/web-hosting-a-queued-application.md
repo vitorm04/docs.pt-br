@@ -1,29 +1,15 @@
 ---
 title: Hospedando na Web um aplicativo em fila
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Hospedando na Web um aplicativo em fila
-O serviço de ativação de processos do Windows (WAS) gerencia a ativação e a vida útil dos processos de trabalho que contêm aplicativos que hospedam [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços. O modelo de processo WAS generaliza o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] modelo de processo para o servidor HTTP, removendo a dependência no HTTP. Isso permite que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services para usar HTTP e protocolos não HTTP, como NET. MSMQ e FormatName, em um ambiente de hospedagem que oferece suporte à ativação baseada em mensagem e oferece a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
+O serviço de ativação de processos do Windows (WAS) gerencia a ativação e a vida útil dos processos de trabalho que contêm aplicativos que hospedar serviços do Windows Communication Foundation (WCF). O modelo de processo WAS generaliza o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] modelo de processo para o servidor HTTP, removendo a dependência no HTTP. Isso permite que os serviços do WCF para usar HTTP e protocolos não HTTP, como NET. MSMQ e FormatName, em um ambiente de hospedagem que oferece suporte à ativação baseada em mensagem e oferece a capacidade de hospedar um grande número de aplicativos em um determinado computador.  
   
  FOI inclui um serviço de ativação de enfileiramento de mensagens (MSMQ) que ativa um aplicativo em fila quando uma ou mais mensagens são colocadas em uma das filas usadas pelo aplicativo. O serviço de ativação MSMQ é um serviço do NT é iniciado automaticamente por padrão.  
   
@@ -49,7 +35,7 @@ O serviço de ativação de processos do Windows (WAS) gerencia a ativação e a
  O serviço de ativação MSMQ é executado como serviço de rede. É o serviço que monitora filas para ativar aplicativos. Para ele ativar aplicativos da fila, a fila deve fornecer acesso de serviço de rede ao inspecionar mensagens na sua lista de controle de acesso (ACL).  
   
 ### <a name="poison-messaging"></a>Suspeitas de mensagens  
- Mensagem suspeita tratamento em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é tratado pelo canal, que não só detecta que uma mensagem é adulterada mas seleciona uma disposição com base na configuração de usuário. Como resultado, há uma única mensagem na fila. O aplicativo Web hospedado anula sucessivas vezes e a mensagem será movida para uma fila de repetição. Em um momento determinado, o atraso de ciclo de repetição, a mensagem é movida da fila de repetição para a fila principal para tentar novamente. Mas isso exige que o canal em fila esteja ativo. Se o aplicativo é reciclado WAS, em seguida, a mensagem permanece na fila de repetição até que outra mensagem chega na fila principal para ativar o aplicativo na fila. Nesse caso, a solução alternativa é retornar a mensagem manualmente da fila de repetição para a fila principal para reativar o aplicativo.  
+ Manipulação do WCF de mensagens suspeitas é tratada pelo canal, que não só detecta que uma mensagem é adulterada mas seleciona uma disposição com base na configuração de usuário. Como resultado, há uma única mensagem na fila. O aplicativo Web hospedado anula sucessivas vezes e a mensagem será movida para uma fila de repetição. Em um momento determinado, o atraso de ciclo de repetição, a mensagem é movida da fila de repetição para a fila principal para tentar novamente. Mas isso exige que o canal em fila esteja ativo. Se o aplicativo é reciclado WAS, em seguida, a mensagem permanece na fila de repetição até que outra mensagem chega na fila principal para ativar o aplicativo na fila. Nesse caso, a solução alternativa é retornar a mensagem manualmente da fila de repetição para a fila principal para reativar o aplicativo.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>Subfila de mensagens e a limitação de fila do sistema  
  Um aplicativo hospedado WAS não pode ser ativado com base em mensagens em uma fila do sistema, como a fila de mensagens mortas de todo o sistema ou filas sub, como filas sub suspeitas. Essa é uma limitação para esta versão do produto.  

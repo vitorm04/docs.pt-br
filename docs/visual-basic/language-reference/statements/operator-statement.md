@@ -1,12 +1,6 @@
 ---
 title: Instrução Operator
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Instrução Operator
 Declara o símbolo do operador, operandos e código que definem um procedimento de operador em uma classe ou estrutura.  
@@ -78,7 +69,7 @@ End Operator
  `operand2`  
  Necessário para os operadores binários. O nome e o tipo do operando à direita de um operador binário.  
   
- `operand1`e `operand2` tem a seguinte sintaxe e partes:  
+ `operand1` e `operand2` tem a seguinte sintaxe e partes:  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
@@ -174,7 +165,7 @@ End Operator
  Se há possibilidade de um procedimento de conversão não pode ter êxito ou que ele pode causar uma exceção sem tratamento, você deve declarar a ser `Narrowing`.  
   
 ## <a name="example"></a>Exemplo  
- O seguinte exemplo de código usa o `Operator` instrução para definir o contorno de uma estrutura que inclui procedimentos de operador para o `And`, `Or`, `IsFalse`, e `IsTrue` operadores. `And`e `Or` cada usam dois operandos do tipo `abc` e tipo de retorno `abc`. `IsFalse`e `IsTrue` recebem um único operando do tipo `abc` e retornar `Boolean`. Essas definições de permitir que o código de chamada usar `And`, `AndAlso`, `Or`, e `OrElse` com operandos do tipo `abc`.  
+ O seguinte exemplo de código usa o `Operator` instrução para definir o contorno de uma estrutura que inclui procedimentos de operador para o `And`, `Or`, `IsFalse`, e `IsTrue` operadores. `And` e `Or` cada usam dois operandos do tipo `abc` e tipo de retorno `abc`. `IsFalse` e `IsTrue` recebem um único operando do tipo `abc` e retornar `Boolean`. Essas definições de permitir que o código de chamada usar `And`, `AndAlso`, `Or`, e `OrElse` com operandos do tipo `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

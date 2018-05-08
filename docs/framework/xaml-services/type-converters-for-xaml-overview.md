@@ -1,28 +1,16 @@
 ---
-title: "Visão geral de conversores de tipo para XAML"
-ms.custom: 
+title: Visão geral de conversores de tipo para XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converters
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df6b7f212a60d8d51bb684891055de7e285ddf4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-for-xaml-overview"></a>Visão geral de conversores de tipo para XAML
 Tipo conversores lógica de fonte para um gravador de objeto que converte de uma cadeia de caracteres na marcação XAML em objetos específicos em um gráfico de objeto. Serviços XAML do .NET Framework, o conversor de tipo deve ser uma classe que deriva de <xref:System.ComponentModel.TypeConverter>. Alguns conversores também oferecem suporte a XAML caminho de salvamento e podem ser usados para serializar um objeto em um formulário de cadeia de caracteres na marcação de serialização. Este tópico descreve como e quando conversores de tipo em XAML são invocados e fornece recomendações sobre a implementação para o método de substituições do <xref:System.ComponentModel.TypeConverter>.  
@@ -43,7 +31,7 @@ Tipo conversores lógica de fonte para um gravador de objeto que converte de uma
  Usos de extensão de marcação devem ser tratados por um processador XAML antes de verificar o tipo de propriedade e outras considerações. Por exemplo, se a propriedade sendo definida como um atributo normalmente tem uma conversão de tipo, mas em um caso específico é definida por um uso de extensão de marcação, em seguida, o comportamento de extensão de marcação processa primeiro. É uma situação comum em que uma extensão de marcação é necessária fazer uma referência a um objeto que já existe. Para este cenário, um conversor de tipo sem monitoração de estado só pode gerar uma nova instância, que pode não ser desejável. Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Conversores de tipos nativos  
- As implementações de serviços do WPF e XAML do .NET, há certos tipos CLR que têm o tratamento de conversão de tipo nativo, no entanto, esses tipos CLR não são convencionalmente pensados como primitivos. Um exemplo desse tipo é <xref:System.DateTime>. Uma razão para isso é como funciona a arquitetura do .NET Framework: o tipo <xref:System.DateTime> é definido no mscorlib, a biblioteca mais básica do .NET. <xref:System.DateTime>não tem permissão para ser atribuído com um atributo que vêm de outro assembly que apresenta uma dependência (<xref:System.ComponentModel.TypeConverterAttribute> é do sistema); portanto, o mecanismo de descoberta de conversor de tipo normal por atribuição não pode ser suportado. Em vez disso, o analisador XAML tem uma lista de tipos que precisam de processamento nativa e processa esses tipos semelhantes a como os primitivos true são processados. No caso de <xref:System.DateTime>, esse processamento envolve uma chamada para <xref:System.DateTime.Parse%2A>.  
+ As implementações de serviços do WPF e XAML do .NET, há certos tipos CLR que têm o tratamento de conversão de tipo nativo, no entanto, esses tipos CLR não são convencionalmente pensados como primitivos. Um exemplo desse tipo é <xref:System.DateTime>. Uma razão para isso é como funciona a arquitetura do .NET Framework: o tipo <xref:System.DateTime> é definido no mscorlib, a biblioteca mais básica do .NET. <xref:System.DateTime> não tem permissão para ser atribuído com um atributo que vêm de outro assembly que apresenta uma dependência (<xref:System.ComponentModel.TypeConverterAttribute> é do sistema); portanto, o mecanismo de descoberta de conversor de tipo normal por atribuição não pode ser suportado. Em vez disso, o analisador XAML tem uma lista de tipos que precisam de processamento nativa e processa esses tipos semelhantes a como os primitivos true são processados. No caso de <xref:System.DateTime>, esse processamento envolve uma chamada para <xref:System.DateTime.Parse%2A>.  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>Implementando um conversor de tipos  
@@ -54,7 +42,7 @@ Tipo conversores lógica de fonte para um gravador de objeto que converte de uma
   
  Para XAML, a função de <xref:System.ComponentModel.TypeConverter> é expandido. Para fins XAML, <xref:System.ComponentModel.TypeConverter> é a classe base para fornecer suporte para a cadeia de caracteres e conversões de cadeia de certos. Na cadeia de caracteres habilita a análise de um valor de atributo de cadeia de caracteres do XAML. A cadeia de caracteres pode permitir que um valor de tempo de execução de uma propriedade de objeto específico de processamento volta para um atributo em XAML para serialização.  
   
- <xref:System.ComponentModel.TypeConverter>define quatro membros que são relevantes para converter a cadeia de caracteres e de cadeia de caracteres para fins de processamento de XAML:  
+ <xref:System.ComponentModel.TypeConverter> define quatro membros que são relevantes para converter a cadeia de caracteres e de cadeia de caracteres para fins de processamento de XAML:  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -68,7 +56,7 @@ Tipo conversores lógica de fonte para um gravador de objeto que converte de uma
   
  O método segundo mais importante é <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Se um aplicativo é convertido em uma representação de marcação (por exemplo, se ele for salvo em XAML, como um arquivo), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> está envolvido no cenário mais de uma produção de gravadores de texto uma representação de marcação XAML. Nesse caso, o caminho de código importantes para XAML é quando o chamador passa uma `destinationType` de <xref:System.String>.  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> são métodos de suporte que são usados quando os recursos de consultas de um serviço de <xref:System.ComponentModel.TypeConverter> implementação. Esses métodos devem ser implementados para retornar o `true` para casos específicos de tipo aos quais os métodos de conversão equivalentes do seu conversor dão suporte. Para fins XAML, isso geralmente significa o <xref:System.String> tipo.  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> são métodos de suporte que são usados quando os recursos de consultas de um serviço de <xref:System.ComponentModel.TypeConverter> implementação. Esses métodos devem ser implementados para retornar o `true` para casos específicos de tipo aos quais os métodos de conversão equivalentes do seu conversor dão suporte. Para fins XAML, isso geralmente significa o <xref:System.String> tipo.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informações de cultura e conversores de tipos para XAML  
  Cada <xref:System.ComponentModel.TypeConverter> implementação exclusivamente pode interpretar o que é uma cadeia de caracteres válida para uma conversão e também pode usar ou ignorar a descrição do tipo que é passada como parâmetros. Uma consideração importante para a conversão de tipo de cultura e XAML é o seguinte: embora usando cadeias de caracteres localizáveis como valores de atributo é suportado pela XAML, você não pode usar essas cadeias de caracteres localizáveis como entrada de conversor de tipo com requisitos específicos de cultura. Essa limitação existe porque conversores de tipo para valores de atributo XAML envolvem um comportamento de processamento de XAML idioma necessariamente fixa que usa `en-US` cultura. Para obter mais informações sobre os motivos de design para essa restrição, consulte a especificação da linguagem XAML ([\[XAML MS\]](http://go.microsoft.com/fwlink/?LinkId=114525)) ou [WPF globalização e localização visão geral](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
@@ -86,7 +74,7 @@ Tipo conversores lógica de fonte para um gravador de objeto que converte de uma
  Ele é apropriado lançar uma exceção quando o conversor de tipo deve ter acesso a um serviço XAML do gravador de objeto de serviços XAML do .NET Framework, mas o <xref:System.IServiceProvider.GetService%2A> chamada é feita em relação ao contexto não retorna esse serviço.  
   
 ### <a name="implementing-convertto"></a>Implementando ConvertTo  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>potencialmente é usado para suporte de serialização. Suporte a serialização por <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> para seu tipo personalizado e seu tipo de conversor não é um requisito absoluto. No entanto, se você estiver implementando um controle ou usando a serialização de como parte dos recursos ou o design da sua classe, você deve implementar <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> potencialmente é usado para suporte de serialização. Suporte a serialização por <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> para seu tipo personalizado e seu tipo de conversor não é um requisito absoluto. No entanto, se você estiver implementando um controle ou usando a serialização de como parte dos recursos ou o design da sua classe, você deve implementar <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>.  
   
  Para ser usado como um <xref:System.ComponentModel.TypeConverter> implementação com suporte para XAML, a <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> método para esse conversor deverá aceitar uma instância do tipo (ou um valor) que tem suporte como a `value` parâmetro. Quando o `destinationType` parâmetro é do tipo <xref:System.String>, o objeto retornado deve ser capaz de ser convertida como <xref:System.String>. A cadeia de caracteres retornada deve representar um valor serializado de `value`. Idealmente, o formato de serialização que você escolher deve ser capaz de gerar o mesmo valor como se essa cadeia de caracteres foi passada para o <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> implementação de conversor do mesmo, sem perda significativa de informações.  
   
@@ -106,7 +94,7 @@ Tipo conversores lógica de fonte para um gravador de objeto que converte de uma
 ## <a name="applying-the-typeconverterattribute"></a>Aplicando o TypeConverterAttribute  
  Para o conversor de tipo personalizado a ser usado como a atuar conversor de tipo para uma classe personalizada por serviços XAML do .NET Framework, você deve aplicar o [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> à sua definição de classe. O <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> que você especifique por meio do atributo deve ser o nome do tipo do seu conversor de tipo personalizado. Se você aplicar esse atributo, quando um processador XAML manipula valores onde o tipo de propriedade usa o tipo de classe personalizada, ele pode cadeias de caracteres de entrada e retornar as instâncias de objeto.  
   
- Também é possível fornecer um conversor de tipos por propriedade. Em vez de aplicar um [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> na definição de classe, aplicá-la a uma definição de propriedade (definição do principal, não o `get` / `set` implementações dentro dela). O tipo da propriedade deve corresponder ao tipo que é processado pelo conversor de tipos personalizado. Com esse atributo aplicado, quando um processador XAML manipula valores de propriedade, ele pode processar cadeias de caracteres de entrada e retornar as instâncias de objeto. A técnica de conversor de tipo de propriedade é particularmente útil se você optar por usar um tipo de propriedade do [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ou de alguma outra biblioteca onde você não pode controlar a definição de classe e não é possível aplicar um <xref:System.ComponentModel.TypeConverterAttribute> existe.  
+ Também é possível fornecer um conversor de tipos por propriedade. Em vez de aplicar um [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> na definição de classe, aplicá-la a uma definição de propriedade (definição do principal, não o `get` / `set` implementações dentro dela). O tipo da propriedade deve corresponder ao tipo que é processado pelo conversor de tipos personalizado. Com esse atributo aplicado, quando um processador XAML manipula valores de propriedade, ele pode processar cadeias de caracteres de entrada e retornar as instâncias de objeto. A técnica de conversor de tipo de propriedade é particularmente útil se você optar por usar um tipo de propriedade do Microsoft .NET Framework ou de alguma outra biblioteca onde você não pode controlar a definição de classe e não é possível aplicar um <xref:System.ComponentModel.TypeConverterAttribute> existe.  
   
  Para fornecer um comportamento de conversão de tipo de membro personalizado anexado, aplicar <xref:System.ComponentModel.TypeConverterAttribute> para o `Get` método de acessador do padrão de implementação para o membro anexado.  
   

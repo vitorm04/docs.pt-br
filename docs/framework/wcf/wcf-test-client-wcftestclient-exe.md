@@ -1,29 +1,15 @@
 ---
 title: Cliente de Teste do WCF (WcfTestClient.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: fa06077cef3a53b796b85a1eb84bf0fdfba2f598
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de Teste do WCF (WcfTestClient.exe)
-O Cliente de Teste do[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClient.exe) é uma ferramenta da GUI que permite que os usuários digitem parâmetros de teste, enviem essa entrada ao serviço e exibam a resposta retornada pelo serviço. Fornece uma experiência de teste de serviço contínua quando combinada com o Host de Serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient.exe) é uma ferramenta de interface gráfica do usuário que permite aos usuários inserir parâmetros de teste, enviar para o serviço de entrada e exibir a resposta que o serviço envia de volta. Fornece uma experiência de teste de serviço contínua quando combinada com o Host de Serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
  Normalmente, você pode encontrar o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) de cliente de teste no seguinte local: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE - comunidade pode ser "Empresarial", "Professional" ou "Comunidade" Dependendo de qual nível do Visual Studio está instalado.
   

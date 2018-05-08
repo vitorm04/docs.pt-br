@@ -1,32 +1,20 @@
 ---
 title: Considerações de segurança para sessões seguras
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d1e5082ace452eabddd91a45a20c6d6363e118b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f4ee56204d6980f412b9781868714dedb3c2675c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Considerações de segurança para sessões seguras
 Você deve considerar os itens a seguir que afetam a segurança ao implementar sessões seguras. Para obter mais informações sobre considerações de segurança, consulte [considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) e [práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
 ## <a name="secure-sessions-and-metadata"></a>Sessões seguras e metadados  
- Quando uma sessão segura é estabelecida e o <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> está definida como `false`, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] envia um `mssp:MustNotSendCancel` asserção como parte dos metadados do documento WSDL Web Services Description Language () para o ponto de extremidade de serviço. O `mssp:MustNotSendCancel` asserção informa os clientes que o serviço não responde às solicitações para cancelar a sessão segura. Quando o <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> está definida como `true`, em seguida, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não emite um `mssp:MustNotSendCancel` asserção no documento WSDL. Os clientes devem enviar uma solicitação de cancelamento para o serviço quando eles não exigem a sessão segura. Quando um cliente é gerado usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), o código do cliente reage adequadamente a presença ou ausência do `mssp:MustNotSendCancel` asserção.  
+ Quando uma sessão segura é estabelecida e o <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> está definida como `false`, Windows Communication Foundation (WCF) envia um `mssp:MustNotSendCancel` asserção como parte dos metadados do documento WSDL Web Services Description Language () para o ponto de extremidade de serviço. O `mssp:MustNotSendCancel` asserção informa os clientes que o serviço não responde às solicitações para cancelar a sessão segura. Quando o <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> está definida como `true`, em seguida, o WCF não emite um `mssp:MustNotSendCancel` asserção no documento WSDL. Os clientes devem enviar uma solicitação de cancelamento para o serviço quando eles não exigem a sessão segura. Quando um cliente é gerado usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), o código do cliente reage adequadamente a presença ou ausência do `mssp:MustNotSendCancel` asserção.  
   
 ## <a name="secure-conversations-and-custom-tokens"></a>Conversas seguras e Tokens personalizados  
  Há alguns problemas com a mistura de tokens personalizados e chaves derivadas devido à maneira que ele é definido na especificação WS-SecureConversation. A especificação diz que `wsse:SecurityTokenReference` é um elemento opcional que referencia o token derivada: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` esse elemento opcional é usado para especificar o token de contexto de segurança, o token de segurança ou usado para a derivação de chave/segredo compartilhado. Se não for especificado, presume-se que o destinatário pode determinar a chave compartilhada do contexto da mensagem. Se o contexto não pode ser determinado, em seguida, uma falha, como `wsc:UnknownDerivationSource` deve ser gerado. "  

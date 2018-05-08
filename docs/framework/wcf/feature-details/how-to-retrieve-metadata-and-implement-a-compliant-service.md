@@ -1,31 +1,17 @@
 ---
 title: Como recuperar metadados e implementar um serviço compatível
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Como recuperar metadados e implementar um serviço compatível
-Geralmente, a mesma pessoa não projetar e implementar serviços. Em ambientes com aplicativos interoperacionais importantes, contratos podem ser criados ou descritos no WSDL Web Services Description Language () e um desenvolvedor deve implementar um serviço que está em conformidade com o contrato fornecido. Talvez você queira migrar um serviço existente para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mas preservar o formato de transmissão. Além disso, os contratos duplex exigem chamadores implementar um contrato de retorno de chamada também.  
+Geralmente, a mesma pessoa não projetar e implementar serviços. Em ambientes com aplicativos interoperacionais importantes, contratos podem ser criados ou descritos no WSDL Web Services Description Language () e um desenvolvedor deve implementar um serviço que está em conformidade com o contrato fornecido. Talvez você queira migrar um serviço existente para o Windows Communication Foundation (WCF), mas preservar o formato de transmissão. Além disso, os contratos duplex exigem chamadores implementar um contrato de retorno de chamada também.  
   
- Nesses casos, você deve usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (ou uma ferramenta equivalente) para gerar uma interface de contrato de serviço em uma linguagem gerenciada que você pode implementar para atender aos requisitos de contrato. Normalmente o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) é usado para adquirir um contrato de serviço que é usado com uma fábrica de canais ou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assim como um arquivo de configuração de cliente que define o tipo de cliente do endereço e a associação correta. Para usar o arquivo de configuração gerado, você deve alterar para um arquivo de configuração do serviço. Você também precisará modificar o contrato de serviço.  
+ Nesses casos, você deve usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (ou uma ferramenta equivalente) para gerar uma interface de contrato de serviço em uma linguagem gerenciada que você pode implementar para atender aos requisitos de contrato. Normalmente o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) é usado para adquirir um contrato de serviço que é usado com uma fábrica de canais ou um tipo de cliente do WCF, bem como com um arquivo de configuração de cliente que configura a associação correta e o endereço. Para usar o arquivo de configuração gerado, você deve alterar para um arquivo de configuração do serviço. Você também precisará modificar o contrato de serviço.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Para recuperar dados e implementar um serviço compatível  
   

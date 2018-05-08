@@ -1,27 +1,15 @@
 ---
 title: Estendendo a hospedagem com ServiceHostFactory
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Estendendo a hospedagem com ServiceHostFactory
-O padrão <xref:System.ServiceModel.ServiceHost> API para hospedar os serviços em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é um ponto de extensibilidade de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitetura. Os usuários podem derivar suas próprias classes de host do <xref:System.ServiceModel.ServiceHost>, geralmente para substituir <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> usar <xref:System.ServiceModel.Description.ServiceDescription> para adicionar pontos de extremidade padrão imperativa ou modificar comportamentos, antes de abrir o serviço.  
+O padrão <xref:System.ServiceModel.ServiceHost> API para hospedar os serviços no Windows Communication Foundation (WCF) é um ponto de extensibilidade no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitetura. Os usuários podem derivar suas próprias classes de host do <xref:System.ServiceModel.ServiceHost>, geralmente para substituir <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> usar <xref:System.ServiceModel.Description.ServiceDescription> para adicionar pontos de extremidade padrão imperativa ou modificar comportamentos, antes de abrir o serviço.  
   
  No ambiente de hospedagem interna, você não precisa criar um personalizado <xref:System.ServiceModel.ServiceHost> porque você escrever o código que instancia o host e, em seguida, chamar <xref:System.ServiceModel.ICommunicationObject.Open> nele após você instanciá-la. Entre essas duas etapas, você pode fazer tudo o que você quiser. Você pode, por exemplo, adicionar um novo <xref:System.ServiceModel.Description.IServiceBehavior>:  
   
@@ -91,4 +79,4 @@ public class DerivedFactory : ServiceHostFactory
   
  Embora não haja nenhum limite técnica fazendo o que você deseja o <xref:System.ServiceModel.ServiceHost> retornar de <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, sugerimos que você mantenha suas implementações de fábrica mais simples possível. Se você tiver muita lógica personalizada, é melhor colocar essa lógica dentro de host para você, em vez de dentro de fábrica para que ele possa ser reutilizável.  
   
- Há uma camada a mais para a API de hospedagem que deve ser mencionada aqui. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também tem <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, do qual <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.Activation.ServiceHostFactory> respectivamente derivar. Aqueles existem em cenários mais avançados em que você deve alternar grande parte do sistema de metadados com suas próprias criações personalizadas.
+ Há uma camada a mais para a API de hospedagem que deve ser mencionada aqui. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também tem <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, do qual <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.Activation.ServiceHostFactory> respectivamente derivar. Aqueles existem em cenários mais avançados em que você deve alternar grande parte do sistema de metadados com suas próprias criações personalizadas.

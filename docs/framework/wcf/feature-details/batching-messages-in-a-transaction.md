@@ -1,34 +1,20 @@
 ---
 title: Mensagens de lote em uma transação
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c8a69c10ddb8b6be35bdd39e3feb91495279be3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>Mensagens de lote em uma transação
 Na fila de aplicativos usam transações para garantir a correção e a entrega confiável de mensagens. Transações, no entanto, são operações caras e podem reduzir drasticamente a taxa de transferência de mensagem. Uma maneira de melhorar a taxa de transferência de mensagem é ter um aplicativo de ler e processar várias mensagens em uma única transação. É a compensação entre desempenho e a recuperação: à medida que aumenta o número de mensagens em um lote, aumenta a quantidade de trabalho de recuperação que necessárias se as transações são revertidas. É importante observar a diferença entre mensagens de lote em uma transação e sessões. Um *sessão* é um agrupamento de mensagens relacionadas que são processados por um único aplicativo e confirmado como uma única unidade. Sessões geralmente são usadas quando um grupo de mensagens relacionadas deve ser processado em conjunto. Um exemplo disso é um site de compra online. *Lotes* são usados para processar vários, não relacionados a mensagens de forma que a taxa de transferência de mensagem aumenta. Para obter mais informações sobre as sessões, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Mensagens em um lote também são processadas por um único aplicativo e confirmadas como uma única unidade, mas não pode haver nenhuma relação entre as mensagens no lote. Mensagens de lote em uma transação são uma otimização que não seja alterado como o aplicativo é executado.  
   
 ## <a name="entering-batching-mode"></a>Inserir o modo de lote  
- O <xref:System.ServiceModel.Description.TransactedBatchingBehavior> controles de comportamento de ponto de extremidade envio em lote. Adicionar esse comportamento de ponto de extremidade para um ponto de extremidade de serviço informa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para mensagens em lote em uma transação. Nem todas as mensagens necessitam de uma transação, de forma que apenas as mensagens que requerem uma transação são colocadas em um lote, e apenas as mensagens enviadas com as operações marcadas com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  =  `true` são considerado para um lote. Se todas as operações no contrato de serviço são marcadas com `TransactionScopeRequired`  =  `false` e `TransactionAutoComplete`  =  `false`, em seguida, o modo de lote nunca é inserido.  
+ O <xref:System.ServiceModel.Description.TransactedBatchingBehavior> controles de comportamento de ponto de extremidade envio em lote. Adicionar esse comportamento de ponto de extremidade para um ponto de extremidade de serviço informa ao Windows Communication Foundation (WCF) para mensagens em lote em uma transação. Nem todas as mensagens necessitam de uma transação, de forma que apenas as mensagens que requerem uma transação são colocadas em um lote, e apenas as mensagens enviadas com as operações marcadas com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  =  `true` são considerado para um lote. Se todas as operações no contrato de serviço são marcadas com `TransactionScopeRequired`  =  `false` e `TransactionAutoComplete`  =  `false`, em seguida, o modo de lote nunca é inserido.  
   
 ## <a name="committing-a-transaction"></a>Confirmar uma transação  
  Uma transação em lote é confirmada com base no seguinte:  
@@ -37,7 +23,7 @@ Na fila de aplicativos usam transações para garantir a correção e a entrega 
   
 -   `Transaction Timeout`. Depois de decorrido 80 por cento do tempo-limite da transação, o lote será confirmado e é criado um novo lote. Isso significa que se 20 por cento ou menos de tempo fornecido para a conclusão de uma transação permanece, o lote será confirmado.  
   
--   `TransactionScopeRequired`. Durante o processamento de um lote de mensagens, se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encontrar um que tenha `TransactionScopeRequired`  =  `false`, ele confirma o lote e reabre um novo lote no recebimento da primeira mensagem com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`. Durante o processamento de um lote de mensagens, se o WCF encontrar um que tenha `TransactionScopeRequired`  =  `false`, ele confirma o lote e reabre um novo lote no recebimento da primeira mensagem com `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  = `true`.  
   
 -   Se não mais houver mensagens na fila, o lote atual for confirmado, mesmo se o `MaxBatchSize` não foi atingido ou 80 por cento do tempo-limite da transação ainda não tiver decorrido.  
   
@@ -56,7 +42,7 @@ Na fila de aplicativos usam transações para garantir a correção e a entrega 
 ## <a name="concurrency-and-batching"></a>Simultaneidade e envio em lote  
  Para aumentar a taxa de transferência, você também pode ter muitos lotes executados simultaneamente. Definindo `ConcurrencyMode.Multiple` em `ServiceBehaviorAttribute`, habilitar o processamento em lotes simultâneos.  
   
- *Limitação de serviço* é um comportamento de serviço que é usado para indicar o número máximo de chamadas simultâneas pode ser feito no serviço. Quando usado com o envio em lote, isso é interpretado como muitos lotes simultâneos podem ser executados. Se a limitação de serviço não for definida, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] padrão é o máximo de chamadas simultâneas para 16. Portanto, se o comportamento de lote foram adicionado por padrão, um máximo de 16 lotes pode ser ativo ao mesmo tempo. É aconselhável ajustar a limitação de serviço e envio em lote com base na sua capacidade. Por exemplo, se a fila tem 100 mensagens e um lote de 20 for desejado, com o máximo de chamadas simultâneas definido como 16 não é útil porque, dependendo da taxa de transferência, 16 transações podem ser ativo, semelhante a não ter o envio em lote ativado. Portanto, quando ajustar o desempenho, ou não ter o processamento em lotes simultâneos ou tenha lotes simultâneos com o tamanho de limitação de serviço correta.  
+ *Limitação de serviço* é um comportamento de serviço que é usado para indicar o número máximo de chamadas simultâneas pode ser feito no serviço. Quando usado com o envio em lote, isso é interpretado como muitos lotes simultâneos podem ser executados. Se a limitação de serviço não for definida, o WCF padrão é o máximo de chamadas simultâneas para 16. Portanto, se o comportamento de lote foram adicionado por padrão, um máximo de 16 lotes pode ser ativo ao mesmo tempo. É aconselhável ajustar a limitação de serviço e envio em lote com base na sua capacidade. Por exemplo, se a fila tem 100 mensagens e um lote de 20 for desejado, com o máximo de chamadas simultâneas definido como 16 não é útil porque, dependendo da taxa de transferência, 16 transações podem ser ativo, semelhante a não ter o envio em lote ativado. Portanto, quando ajustar o desempenho, ou não ter o processamento em lotes simultâneos ou tenha lotes simultâneos com o tamanho de limitação de serviço correta.  
   
 ## <a name="batching-and-multiple-endpoints"></a>Envio em lote e vários pontos de extremidade  
  Um ponto de extremidade é composto de um endereço e um contrato. Pode haver vários pontos de extremidade que compartilham a mesma associação. É possível que dois pontos de extremidade compartilhar a mesma associação e escutar identificador de recurso uniforme (URI) ou o endereço da fila. Se dois pontos de extremidade estão lendo da mesma fila e transacionado comportamento de lote é adicionado a ambos os pontos de extremidade, um conflito no lote tamanhos especificados podem surgir. Isto pode ser resolvido com a implementação de envio em lote usando o tamanho do lote mínimo especificado entre os dois comportamentos de envio em lote transacionados. Nesse cenário, se um dos pontos de extremidade não especificar o lote transacionado, em seguida, os pontos de extremidade não usaria envio em lote.  

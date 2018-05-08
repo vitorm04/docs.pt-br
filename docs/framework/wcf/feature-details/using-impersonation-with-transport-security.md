@@ -1,29 +1,17 @@
 ---
 title: Utilizando Personificação com segurança de transporte
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: 12
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a4b05031061183cf0dddd82c900065155b1e561
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizando Personificação com segurança de transporte
-*Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para serviços usar representação ao validar acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com o recurso de representação. Para obter mais informações sobre representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para serviços usar representação ao validar acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte no Windows Communication Foundation (WCF) com o recurso de representação. Para obter mais informações sobre representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Cinco níveis de representação  
  Segurança de transporte utiliza cinco níveis de representação, conforme descrito na tabela a seguir.  
@@ -32,7 +20,7 @@ ms.lasthandoff: 04/30/2018
 |-------------------------|-----------------|  
 |Nenhum|O aplicativo de servidor não tenta representar o cliente.|  
 |Anônimo|O aplicativo de servidor pode executar verificações de acesso em relação às credenciais do cliente, mas não recebeu nenhuma informação sobre a identidade do cliente. Esse nível de representação é significativa apenas para comunicação na máquina, como pipes nomeados. Usando `Anonymous` com uma conexão remota promove o nível de representação para identificar.|  
-|Identificar|O aplicativo de servidor sabe a identidade do cliente e pode executar a validação de acesso em relação às credenciais do cliente, mas não é possível representar o cliente. Identificar é o nível de representação padrão usado com as credenciais SSPI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , a menos que o provedor de token fornece um nível de representação diferentes.|  
+|Identificar|O aplicativo de servidor sabe a identidade do cliente e pode executar a validação de acesso em relação às credenciais do cliente, mas não é possível representar o cliente. Identificar é o nível de representação padrão usado com as credenciais SSPI no WCF, a menos que o provedor de token fornece um nível de representação diferentes.|  
 |Impersonate|O aplicativo do servidor pode acessar recursos no computador servidor como o cliente, além de realizar verificações de acesso. O aplicativo de servidor não pode acessar recursos em máquinas remotas usando a identidade do cliente porque o token de representação não tem credenciais de rede|  
 |delegado|Além de ter os mesmos recursos `Impersonate`, o nível de representação de representante também permite que o aplicativo do servidor para acessar os recursos em máquinas remotas usando a identidade do cliente e para passar a identidade para outros aplicativos.<br /><br /> **Importante** a conta de domínio do servidor deve ser marcada como confiáveis para delegação no controlador de domínio para usar esses recursos adicionais. Esse nível de representação não pode ser usado com contas de domínio do cliente marcadas como confidenciais.|  
   
@@ -41,12 +29,12 @@ ms.lasthandoff: 04/30/2018
  Usando a representação no `Impersonate` ou `Delegate` níveis requer que o aplicativo de servidor para que o `SeImpersonatePrivilege` privilégio. Um aplicativo tem esse privilégio por padrão, se ele estiver em execução em uma conta no grupo Administradores ou em uma conta com um SID de serviço (serviço de rede, serviço Local ou sistema Local). Representação não exige autenticação mútua do cliente e servidor. Alguns esquemas de autenticação que oferecem suporte a representação, como NTLM, não podem ser usadas com a autenticação mútua.  
   
 ## <a name="transport-specific-issues-with-impersonation"></a>Problemas de transporte específicos com a representação  
- A escolha de um transporte em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] afeta as opções possíveis para a representação. Esta seção descreve problemas que afetam o HTTP padrão e nomeadas transportes de pipe no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Transportes personalizados têm seus próprios restrições sobre o suporte para representação.  
+ A escolha de um transporte em WCF afeta as opções possíveis para a representação. Esta seção descreve problemas que afetam o HTTP padrão e nomeadas transportes de pipe no WCF. Transportes personalizados têm seus próprios restrições sobre o suporte para representação.  
   
 ### <a name="named-pipe-transport"></a>Transporte de Pipe de chamada  
  Os itens a seguir são usados com o transporte de pipe nomeado:  
   
--   O transporte de pipe nomeado é destinado ao uso somente no computador local. O transporte de pipe nomeado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proíba explicitamente conexões entre computadores.  
+-   O transporte de pipe nomeado é destinado ao uso somente no computador local. O transporte de pipe nomeado no WCF proíba explicitamente conexões entre computadores.  
   
 -   Pipes nomeados não podem ser usados com o `Impersonate` ou `Delegate` nível de representação. O pipe nomeado não é possível impor a garantia na máquina nestes níveis de representação.  
   

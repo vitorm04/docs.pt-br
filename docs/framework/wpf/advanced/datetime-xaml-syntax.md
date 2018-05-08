@@ -1,13 +1,6 @@
 ---
 title: Sintaxe DateTime (XAML)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DateTime XAML syntax [WPF], strings for
 - DateTime XAML syntax [WPF], where used
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 286117cc0cce9fb54ea2c372360b13865fba77ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetime-xaml-syntax"></a>Sintaxe DateTime (XAML)
 Alguns controles, como <xref:System.Windows.Controls.Calendar> e <xref:System.Windows.Controls.DatePicker>, têm propriedades que usam o <xref:System.DateTime> tipo. Embora você normalmente especifique uma data ou horário inicial para esses controles no code-behind no tempo de execução, você poderá especificar uma data ou horário inicial na linguagem XAML. O analisador de WPF XAML lida com a análise de <xref:System.DateTime> valores usando uma sintaxe de texto interno do XAML. Este tópico descreve as especificações de <xref:System.DateTime> sintaxe de texto XAML.  
@@ -36,11 +24,11 @@ Alguns controles, como <xref:System.Windows.Controls.Calendar> e <xref:System.Wi
  A configuração das datas na linguagem XAML nem sempre é necessária e pode nem mesmo ser desejável. Por exemplo, você pode usar o <xref:System.DateTime.Now%2A?displayProperty=nameWithType> propriedade para inicializar uma data no tempo de execução, ou você pode fazer todos os ajustes de data para um calendário no code-behind com base na entrada do usuário. No entanto, há situações em que você pode deseja embutir datas em um <xref:System.Windows.Controls.Calendar> e <xref:System.Windows.Controls.DatePicker> em um modelo de controle. O <xref:System.DateTime> sintaxe XAML deve ser usada para esses cenários.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>A sintaxe DateTime (XAML) é um comportamento nativo  
- <xref:System.DateTime>é uma classe que é definida nas bibliotecas de classe base do CLR. Por causa de como as bibliotecas de classes base se relacionam com o restante do CLR, não é possível aplicar <xref:System.ComponentModel.TypeConverterAttribute> para a classe e use um conversor de tipo para processar cadeias de caracteres de XAML e convertê-las para <xref:System.DateTime> no modelo de objeto de tempo de execução. Não há nenhuma classe `DateTimeConverter` que fornece o comportamento de conversão; o comportamento de conversão descrito neste tópico é nativo para o analisador de XAML do WPF.  
+ <xref:System.DateTime> é uma classe que é definida nas bibliotecas de classe base do CLR. Por causa de como as bibliotecas de classes base se relacionam com o restante do CLR, não é possível aplicar <xref:System.ComponentModel.TypeConverterAttribute> para a classe e use um conversor de tipo para processar cadeias de caracteres de XAML e convertê-las para <xref:System.DateTime> no modelo de objeto de tempo de execução. Não há nenhuma classe `DateTimeConverter` que fornece o comportamento de conversão; o comportamento de conversão descrito neste tópico é nativo para o analisador de XAML do WPF.  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>Cadeias de caracteres de formato para obter a sintaxe DateTime (XAML)  
- Você pode especificar o formato de um <xref:System.DateTime> com uma cadeia de caracteres de formato. As cadeias de caracteres de formato formalizam a sintaxe de texto que pode ser usada para criar um valor. <xref:System.DateTime>valores para o WPF existente controla o uso geralmente somente os componentes de data do <xref:System.DateTime> e não os componentes de tempo.  
+ Você pode especificar o formato de um <xref:System.DateTime> com uma cadeia de caracteres de formato. As cadeias de caracteres de formato formalizam a sintaxe de texto que pode ser usada para criar um valor. <xref:System.DateTime> valores para o WPF existente controla o uso geralmente somente os componentes de data do <xref:System.DateTime> e não os componentes de tempo.  
   
  Ao especificar um <xref:System.DateTime> em XAML, você pode usar qualquer uma das cadeias de caracteres de formato alternadamente.  
   

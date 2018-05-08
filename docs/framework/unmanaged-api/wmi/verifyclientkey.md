@@ -1,11 +1,7 @@
 ---
-title: "Função VerifyClientKey (referência de API não gerenciada)"
-description: "A função VerifyClientKey garante que a chave do cliente tem a segurança correta."
+title: Função VerifyClientKey (referência de API não gerenciada)
+description: A função VerifyClientKey garante que a chave do cliente tem a segurança correta.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - VerifyClientKey
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ada878ff8bc430ab2a2d48cac13a81b1f64d39f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="verifyclientkey-function"></a>Função VerifyClientKey
 Garante que a chave do cliente tem a segurança correta.  
@@ -51,7 +44,7 @@ Se a função falhar, o valor de retorno é um código de erro diferente de zero
   
  **Cabeçalho:** WMINet_Utils.def  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

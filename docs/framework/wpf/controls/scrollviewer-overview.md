@@ -1,13 +1,6 @@
 ---
-title: "Visão geral de ScrollViewer"
-ms.custom: 
+title: Visão geral de ScrollViewer
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1797f956ec41ba085dee7e1cb11a3129004552b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrollviewer-overview"></a>Visão geral de ScrollViewer
 O conteúdo dentro de uma interface do usuário geralmente é maior do que a área de exibição de uma tela de computador. O <xref:System.Windows.Controls.ScrollViewer> controle fornece uma maneira conveniente para habilitar a rolagem do conteúdo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos. Este tópico apresenta o <xref:System.Windows.Controls.ScrollViewer> elemento e fornece vários exemplos de uso.  
@@ -45,7 +33,7 @@ O conteúdo dentro de uma interface do usuário geralmente é maior do que a ár
 #### <a name="the-iscrollinfo-interface"></a>A interface IScrollInfo  
  O <xref:System.Windows.Controls.Primitives.IScrollInfo> interface representa a área de rolagem principal em um <xref:System.Windows.Controls.ScrollViewer> ou controle derivado. A interface define propriedades e métodos que podem ser implementados por rolagem <xref:System.Windows.Controls.Panel> elementos que requerem a rolagem por unidade lógica, em vez de um incremento físico. Conversão de uma instância de <xref:System.Windows.Controls.Primitives.IScrollInfo> para um derivado <xref:System.Windows.Controls.Panel> e, em seguida, usar seus métodos de rolagem fornece uma maneira útil de rolar para a próxima unidade lógica em uma coleção de filhos, e não por incremento de pixel. Por padrão, o <xref:System.Windows.Controls.ScrollViewer> controle oferece suporte a rolagem por unidades físicas.  
   
- <xref:System.Windows.Controls.StackPanel>e <xref:System.Windows.Controls.VirtualizingStackPanel> ambos implementam <xref:System.Windows.Controls.Primitives.IScrollInfo> e suporte nativo a rolagem lógica. Para controles de layout que nativamente suporte rolagem lógica, você ainda pode obter rolagem física encapsulando host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e configuração o <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+ <xref:System.Windows.Controls.StackPanel> e <xref:System.Windows.Controls.VirtualizingStackPanel> ambos implementam <xref:System.Windows.Controls.Primitives.IScrollInfo> e suporte nativo a rolagem lógica. Para controles de layout que nativamente suporte rolagem lógica, você ainda pode obter rolagem física encapsulando host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e configuração o <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
   
  O exemplo de código a seguir demonstra como converter uma instância de <xref:System.Windows.Controls.Primitives.IScrollInfo> para um <xref:System.Windows.Controls.StackPanel> e usar os métodos de rolagem de conteúdo (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> e <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) definidos pela interface.  
   
@@ -54,7 +42,7 @@ O conteúdo dentro de uma interface do usuário geralmente é maior do que a ár
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>Definindo e usando um elemento ScrollViewer  
- O exemplo a seguir cria um <xref:System.Windows.Controls.ScrollViewer> em uma janela que contém algum texto e um retângulo. <xref:System.Windows.Controls.Primitives.ScrollBar>os elementos aparecem somente quando são necessários. Quando você redimensiona a janela, o <xref:System.Windows.Controls.Primitives.ScrollBar> elementos aparecem e desaparecem, devido a valores atualizados do <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> e <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> propriedades.  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ScrollViewer> em uma janela que contém algum texto e um retângulo. <xref:System.Windows.Controls.Primitives.ScrollBar> os elementos aparecem somente quando são necessários. Quando você redimensiona a janela, o <xref:System.Windows.Controls.Primitives.ScrollBar> elementos aparecem e desaparecem, devido a valores atualizados do <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> e <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> propriedades.  
   
  [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
@@ -67,7 +55,7 @@ O conteúdo dentro de uma interface do usuário geralmente é maior do que a ár
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>Paginando documentos  
- Para o conteúdo do documento, uma alternativa à rolagem é escolher um contêiner de documento que dá suporte à paginação. <xref:System.Windows.Documents.FlowDocument>para documentos que são projetados para ser hospedado em um controle de exibição, como <xref:System.Windows.Controls.FlowDocumentPageViewer>, que oferece suporte à paginação de conteúdo em várias páginas, evitando a necessidade de rolagem. <xref:System.Windows.Controls.DocumentViewer>Fornece uma solução para exibição <xref:System.Windows.Documents.FixedDocument> conteúdo, que usa rolagem tradicional para exibir o conteúdo fora do realm da área de exibição.  
+ Para o conteúdo do documento, uma alternativa à rolagem é escolher um contêiner de documento que dá suporte à paginação. <xref:System.Windows.Documents.FlowDocument> para documentos que são projetados para ser hospedado em um controle de exibição, como <xref:System.Windows.Controls.FlowDocumentPageViewer>, que oferece suporte à paginação de conteúdo em várias páginas, evitando a necessidade de rolagem. <xref:System.Windows.Controls.DocumentViewer> Fornece uma solução para exibição <xref:System.Windows.Documents.FixedDocument> conteúdo, que usa rolagem tradicional para exibir o conteúdo fora do realm da área de exibição.  
   
  Para obter informações adicionais sobre formatos de documento e opções de apresentação, consulte [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   

@@ -1,24 +1,12 @@
 ---
-title: "Tipos serializáveis"
-ms.custom: 
+title: Tipos serializáveis
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bf272e785968f9116cea20ad0c3f40eb786d1f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e54fd860ce757257253dad097a52e634dbb5d8bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializable-types"></a>Tipos serializáveis
 Por padrão, o <xref:System.Runtime.Serialization.DataContractSerializer> serializa todos os tipos de publicamente visíveis. Todas as propriedades públicas de leitura/gravação e os campos do tipo são serializados.  
@@ -38,7 +26,7 @@ Por padrão, o <xref:System.Runtime.Serialization.DataContractSerializer> serial
   
 -   Campos somente leitura, propriedades sem um `get` ou `set` método e as propriedades com interno ou privado `set` ou `get` métodos não são serializados. Essas propriedades são ignoradas e nenhuma exceção for lançada, exceto no caso de coleções somente get.  
   
--   <xref:System.Xml.Serialization.XmlSerializer>atributos (como `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`e assim por diante) são ignorados.  
+-   <xref:System.Xml.Serialization.XmlSerializer> atributos (como `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`e assim por diante) são ignorados.  
   
 -   Se você não se aplicam a <xref:System.Runtime.Serialization.DataContractAttribute> atributo para um determinado tipo, o serializador ignora qualquer membro no tipo ao qual o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é aplicado.  
   

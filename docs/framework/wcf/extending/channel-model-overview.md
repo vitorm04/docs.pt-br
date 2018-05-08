@@ -1,34 +1,20 @@
 ---
-title: "Visão geral de modelo de canal"
-ms.custom: 
+title: Visão geral de modelo de canal
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="channel-model-overview"></a>Visão geral de modelo de canal
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais é uma pilha de comunicação em camadas com um ou mais canais que processar mensagens. Na parte inferior da pilha é um canal de transporte é responsável para adaptar a pilha de canais de transporte subjacente (por exemplo, TCP, HTTP, SMTP e outros tipos de transporte.). Canais fornecem um modelo de programação de nível baixo para enviar e receber mensagens. Este modelo de programação se baseia em várias interfaces e outros tipos de coletivamente conhecidos como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de canal. Este tópico discute as formas de canal, a construção de um ouvinte de canal básica (no serviço) e a fábrica de canais (no cliente).  
+A pilha de canais do Windows Communication Foundation (WCF) é uma pilha de comunicação em camadas com um ou mais canais que processar mensagens. Na parte inferior da pilha é um canal de transporte é responsável para adaptar a pilha de canais de transporte subjacente (por exemplo, TCP, HTTP, SMTP e outros tipos de transporte.). Canais fornecem um modelo de programação de nível baixo para enviar e receber mensagens. Este modelo de programação se baseia em várias interfaces e outros tipos de coletivamente conhecidos como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de canal. Este tópico discute as formas de canal, a construção de um ouvinte de canal básica (no serviço) e a fábrica de canais (no cliente).  
   
 ## <a name="channel-stack"></a>Pilha de canais  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]pontos de extremidade de se comunicar com o mundo usando uma pilha de comunicação chamada a pilha de canais. O diagrama a seguir compara a pilha de canais com outros pilhas de comunicação, como TCP/IP.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade de se comunicar com o mundo usando uma pilha de comunicação chamada a pilha de canais. O diagrama a seguir compara a pilha de canais com outros pilhas de comunicação, como TCP/IP.  
   
  ![Modelo de canal](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   
@@ -77,7 +63,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais é uma
   
  Fábricas de canais são responsáveis por criar canais que são usados para enviar mensagens e para fechar todos os canais criados quando a fábrica de canais é fechada.  
   
- <xref:System.ServiceModel.ICommunicationObject>é a interface principal que define a máquina de estado básica que todos os objetos de comunicação implementar. <xref:System.ServiceModel.Channels.CommunicationObject>Fornece uma implementação desta interface principal que outras classes de canal podem derivar em vez de re-implementar a interface. No entanto, isso não é obrigatório: um canal personalizado pode implementar <xref:System.ServiceModel.ICommunicationObject> diretamente e não herda de <xref:System.ServiceModel.Channels.CommunicationObject>. Nenhuma das classes na Figura 3 são consideradas parte do modelo de canal. eles estão disponíveis para os implementadores de canal personalizado que desejam criar canais de auxiliares.  
+ <xref:System.ServiceModel.ICommunicationObject> é a interface principal que define a máquina de estado básica que todos os objetos de comunicação implementar. <xref:System.ServiceModel.Channels.CommunicationObject> Fornece uma implementação desta interface principal que outras classes de canal podem derivar em vez de re-implementar a interface. No entanto, isso não é obrigatório: um canal personalizado pode implementar <xref:System.ServiceModel.ICommunicationObject> diretamente e não herda de <xref:System.ServiceModel.Channels.CommunicationObject>. Nenhuma das classes na Figura 3 são consideradas parte do modelo de canal. eles estão disponíveis para os implementadores de canal personalizado que desejam criar canais de auxiliares.  
   
  ![Modelo de canal](../../../../docs/framework/wcf/extending/media/wcfc-wcfcchannelsigure3omumtreec.gif "wcfc_WCFCChannelsigure3OMUMTreec")  
   

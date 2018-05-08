@@ -1,13 +1,6 @@
 ---
-title: "Trabalhando com imagens, bitmaps, ícones e metarquivos"
-ms.custom: 
+title: Trabalhando com imagens, bitmaps, ícones e metarquivos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metafiles [Windows Forms], working with
 - examples [Windows Forms], bitmaps
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d2f0a2f4acebaac59f2d8180f2de4ccb88b2965
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Trabalhando com imagens, bitmaps, ícones e metarquivos
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece a classe `Bitmap` para trabalhar com imagens de varredura e a classe `Metafile` para trabalhar com imagens vetoriais. as classes `Bitmap` e `Metafile` são herdadas da classe `Image`.  

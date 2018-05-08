@@ -1,24 +1,12 @@
 ---
-title: "Pontos de extremidade padrão"
-ms.custom: 
+title: Pontos de extremidade padrão
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-endpoints"></a>Pontos de extremidade padrão
 Pontos de extremidade são definidos pela especificação de um endereço, uma ligação e um contrato. Outros parâmetros que podem ser definidos em um ponto de extremidade incluem a configuração de comportamento, cabeçalhos e escutam URIs.  Para determinados tipos de pontos de extremidade que não altere esses valores. Por exemplo, pontos de extremidade de troca de metadados sempre usam o <xref:System.ServiceModel.Description.IMetadataExchange> contrato. Outros pontos de extremidade, como <xref:System.ServiceModel.Description.WebHttpEndpoint> sempre exigem um comportamento de ponto de extremidade especificado. O uso de um ponto de extremidade pode ser melhorado por ter pontos de extremidade com valores padrão para propriedades de ponto de extremidade de uso geral. Pontos de extremidade padrão permitem que um desenvolvedor definir um ponto de extremidade que tem valores padrão ou em que as propriedades de um ou mais do ponto de extremidade não é alterado.  Esses pontos de extremidade permitem que você use um ponto de extremidade sem precisar especificar informações de natureza estática. Pontos de extremidade padrão podem ser usados para pontos de extremidade de infraestrutura e aplicativo.  
@@ -171,10 +159,10 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
  Um ponto de extremidade padrão que é usado pelos serviços para enviar mensagens de descoberta.  
   
  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
- Associação de um ponto de extremidade padrão que é pré-configurado para operações de descoberta através de um UDP multicast.  
+ Um ponto de extremidade padrão pré-configurado para operações de descoberta por meio de uma associação multicast UDP.  
   
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
- Um ponto de extremidade padrão que é usado pelos serviços para enviar mensagens de aviso sobre uma associação de UDP.  
+ Um ponto de extremidade padrão usado pelos serviços para enviar mensagens de comunicado por meio de uma associação UDP.  
   
  <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
  Um ponto de extremidade padrão que usa o WS-Discovery para localizar o endereço de ponto de extremidade dinamicamente em tempo de execução.  
@@ -192,7 +180,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
  Um ponto de extremidade padrão com um <xref:System.ServiceModel.WebHttpBinding> associação.  
   
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>  
- Um ponto de extremidade padrão que permite que você possa chamar operações de controle em instâncias de fluxo de trabalho.  
+ Um ponto de extremidade padrão que permite chamar operações de controle em instâncias de fluxo de trabalho.  
   
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>  
  Um ponto de extremidade padrão que dá suporte a retomada da criação e o indicador de fluxo de trabalho.

@@ -1,27 +1,15 @@
 ---
 title: Comportamentos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d4c3a91d69fd7adc863c6e947b72aa9134c376b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 949c56ea44162166f32eefec013b490a49272f7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="behaviors"></a>Comportamentos
-Esta seção contém exemplos que demonstram [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] comportamentos de serviço.  
+Esta seção contém exemplos que demonstram os comportamentos de serviço do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md)  

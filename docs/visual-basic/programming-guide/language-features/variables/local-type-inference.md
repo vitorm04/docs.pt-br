@@ -1,13 +1,6 @@
 ---
-title: "Inferência de tipo local (Visual Basic)"
-ms.custom: 
+title: Inferência de tipo local (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferência de tipo local (Visual Basic)
 O compilador do Visual Basic usa *inferência de tipo* para determinar os tipos de dados de variável local declarada sem um `As` cláusula. O compilador infere o tipo da variável do tipo da expressão de inicialização. Isso permite que você declare variáveis sem especificar explicitamente um tipo, conforme mostrado no exemplo a seguir. Como resultado de declarações, ambos `num1` e `num2` são fortemente tipadas como inteiros.  
@@ -68,7 +58,7 @@ O compilador do Visual Basic usa *inferência de tipo* para determinar os tipos 
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Opção Infer  
- `Option Infer`permite que você especifique se a inferência de tipo local é permitida em um arquivo específico. Para permitir ou bloquear a opção, digite uma das seguintes instruções no início do arquivo.  
+ `Option Infer` permite que você especifique se a inferência de tipo local é permitida em um arquivo específico. Para permitir ou bloquear a opção, digite uma das seguintes instruções no início do arquivo.  
   
  `Option Infer On`  
   

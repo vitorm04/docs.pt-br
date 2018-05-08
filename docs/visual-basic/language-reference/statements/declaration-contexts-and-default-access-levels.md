@@ -1,11 +1,6 @@
 ---
-title: "Contextos de declaração e níveis de acesso padrão (Visual Basic)"
+title: Contextos de declaração e níveis de acesso padrão (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module level, defined
 - declaration contexts, Visual Basic
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b30b1068fe662d5f0318a1712dc4690b79bd739d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contextos de declaração e níveis de acesso padrão (Visual Basic)
 Este tópico descreve quais tipos de Visual Basic podem ser declarados em quais outros tipos e o que os níveis de acesso padrão se não especificado.  
@@ -41,18 +33,18 @@ Este tópico descreve quais tipos de Visual Basic podem ser declarados em quais 
   
 |Elementos declarados|Nível de Namespace|Nível de módulo|Nível de procedimento|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variável ([instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md))|Não permitido|`Private`(`Public` na `Structure`, não é permitido em `Interface`)|`Public`|  
-|Constante ([instrução Const](../../../visual-basic/language-reference/statements/const-statement.md))|Não permitido|`Private`(`Public` na `Structure`, não é permitido em `Interface`)|`Public`|  
+|Variável ([instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md))|Não permitido|`Private` (`Public` na `Structure`, não é permitido em `Interface`)|`Public`|  
+|Constante ([instrução Const](../../../visual-basic/language-reference/statements/const-statement.md))|Não permitido|`Private` (`Public` na `Structure`, não é permitido em `Interface`)|`Public`|  
 |Enumeração ([instrução Enum](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|Não permitido|  
 |Classe ([instrução Class](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|Não permitido|  
 |Estrutura ([estrutura instrução](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|Não permitido|  
 |Módulo ([instrução Module](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|Não permitido|Não permitido|  
 |Interface ([instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|Não permitido|  
 |Procedimento ([função instrução](../../../visual-basic/language-reference/statements/function-statement.md), [Sub instrução](../../../visual-basic/language-reference/statements/sub-statement.md))|Não permitido|`Public`|Não permitido|  
-|Referência externa ([instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md))|Não permitido|`Public`(não permitido em `Interface`)|Não permitido|  
-|Operador ([instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md))|Não permitido|`Public`(não permitido em `Interface` ou `Module`)|Não permitido|  
+|Referência externa ([instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md))|Não permitido|`Public` (não permitido em `Interface`)|Não permitido|  
+|Operador ([instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md))|Não permitido|`Public` (não permitido em `Interface` ou `Module`)|Não permitido|  
 |Propriedade ([declaração de propriedade](../../../visual-basic/language-reference/statements/property-statement.md))|Não permitido|`Public`|Não permitido|  
-|Propriedade padrão ([padrão](../../../visual-basic/language-reference/modifiers/default.md))|Não permitido|`Public`(não permitido em `Module`)|Não permitido|  
+|Propriedade padrão ([padrão](../../../visual-basic/language-reference/modifiers/default.md))|Não permitido|`Public` (não permitido em `Module`)|Não permitido|  
 |Evento ([instrução Event](../../../visual-basic/language-reference/statements/event-statement.md))|Não permitido|`Public`|Não permitido|  
 |Delegado ([instrução Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|Não permitido|  
   

@@ -1,30 +1,16 @@
 ---
 title: Como utilizar o provedor de associação do ASP.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Como utilizar o provedor de associação do ASP.NET
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permitem aos usuários criar combinações de nome e senha de usuário exclusivo. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entre para obter acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, que exige que os usuários possuem contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome e senha de usuário) pode usar o site e seus serviços.  
@@ -33,10 +19,10 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
   
  O recurso de associação requer o uso de um banco de dados do SQL Server para armazenar as informações do usuário. O recurso também inclui métodos para solicitar uma pergunta quaisquer usuários que tenham esquecido suas senhas.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] os desenvolvedores podem aproveitar esses recursos para fins de segurança. Quando integrado a um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, os usuários devem fornecer uma combinação de nome e senha de usuário para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo cliente. Para transferir dados para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço, use uma associação que dá suporte a credenciais de nome e senha do usuário, como o <xref:System.ServiceModel.WSHttpBinding> (na configuração, o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e defina a credencial do cliente Digite para `UserName`. Sobre o serviço, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança autentica o usuário com base no nome de usuário e senha e também atribui a função especificada pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] função.  
+ Os desenvolvedores do Windows Communication Foundation (WCF) podem tirar proveito desses recursos para fins de segurança. Quando integrado em um aplicativo WCF, os usuários devem fornecer uma combinação de nome e senha de usuário para o aplicativo de cliente do WCF. Para transferir os dados para o serviço WCF, usar uma associação que dá suporte a credenciais de nome e senha do usuário, como o <xref:System.ServiceModel.WSHttpBinding> (na configuração, o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) e definir o tipo de credencial para `UserName`. No serviço de segurança do WCF autentica o usuário com base no nome de usuário e senha e também atribui a função especificada pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] função.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não fornece métodos para preencher o banco de dados com combinações de nome e senha de usuário ou outras informações do usuário.  
+>  O WCF não fornece métodos para preencher o banco de dados com combinações de nome e senha de usuário ou outras informações do usuário.  
   
 ### <a name="to-configure-the-membership-provider"></a>Para configurar o provedor de associação  
   
@@ -73,7 +59,7 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
   
 1.  No arquivo de configuração, sob o [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, adicionar um [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) para a seção de associações. Para obter mais informações sobre como criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação elemento, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Adicionar um [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) para a seção de associações. Para obter mais informações sobre como criar um elemento de associação do WCF, consulte [como: especificar uma associação de serviço na configuração](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Defina o atributo `mode` do elemento `<security>` como `Message`.  
   
@@ -111,7 +97,7 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
 6.  Definir o `userNamePasswordValidationMode` atributo `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Se o `userNamePasswordValidationMode` valor não for definido, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa a autenticação do Windows em vez do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação.  
+    >  Se o `userNamePasswordValidationMode` valor não for definido, o WCF usa a autenticação do Windows em vez do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação.  
   
 7.  Definir o `membershipProviderName` de atributo para o nome do provedor (especificado ao adicionar o provedor no primeiro procedimento neste tópico). O exemplo a seguir mostra o fragmento do `<serviceCredentials>` para este ponto.  
   

@@ -1,11 +1,7 @@
 ---
-title: "Colocar a função (referência de API não gerenciada)"
-description: "A função Put atribui um novo valor para uma propriedade nomeada."
+title: Colocar a função (referência de API não gerenciada)
+description: A função Put atribui um novo valor para uma propriedade nomeada.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Colocar a função
 Define uma propriedade nomeada para um novo valor.
@@ -77,7 +70,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | O tipo de propriedade não é reconhecido. Esse valor é retornado ao criar instâncias de classe, se a classe já existe. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Para instâncias: indica que `pVal` aponta para um `VARIANT` de um tipo incorreto para a propriedade. <br/> Para obter definições de classe: A propriedade já existe na classe pai e o novo tipo de COM é diferente do tipo de COM antigo. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida. |
   
@@ -93,7 +86,7 @@ Um usuário não é possível criar propriedades com nomes que podem começam ou
 
 Se a propriedade definida `Put` função existe na classe pai, o valor padrão da propriedade é alterado, a menos que o tipo de propriedade não coincide com o tipo de classe pai. Se a propriedade não existe e não é uma incompatibilidade de tipo, a propriedade é ceated.
 
-Use o `vtType` parâmetro somente durante a criação de novas propriedades em uma definição de classe do CIM e `pVal` é `null` ou aponta para um `VARIANT` do tipo `VT_NULL`. Nesse caso, o `vType` parâmetro especifica o tipo CIM da propriedade. Em todos os outros casos, `vtType` deve ser 0. `vtType`também deve ser 0 se o objeto subjacente é uma instância (mesmo se `Val` é `null`) porque o tipo da propriedade é fixo e não pode ser alterado.   
+Use o `vtType` parâmetro somente durante a criação de novas propriedades em uma definição de classe do CIM e `pVal` é `null` ou aponta para um `VARIANT` do tipo `VT_NULL`. Nesse caso, o `vType` parâmetro especifica o tipo CIM da propriedade. Em todos os outros casos, `vtType` deve ser 0. `vtType` também deve ser 0 se o objeto subjacente é uma instância (mesmo se `Val` é `null`) porque o tipo da propriedade é fixo e não pode ser alterado.   
 
 ## <a name="example"></a>Exemplo
 
@@ -104,7 +97,7 @@ Para obter um exemplo, consulte o [IWbemClassObject::Put](https://msdn.microsoft
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

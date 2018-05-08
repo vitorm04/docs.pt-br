@@ -1,35 +1,23 @@
 ---
 title: Considerações de segurança com metadados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: 10
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 393730ffe57c4678f53d16e67b8b8f64ad16509c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8028b27e721e19a5fc01887e4095218d0e14436
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Considerações de segurança com metadados
-Quando usar os metadados de recursos no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], considere as implicações de segurança de publicação, recuperar e usando metadados de serviço.  
+Ao usar os recursos de metadados no Windows Communication Foundation (WCF), considere as implicações de segurança de publicação, recuperar e usando metadados de serviço.  
   
 ## <a name="when-to-publish-metadata"></a>Quando publicar metadados  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços não publicar metadados por padrão. Para publicar metadados para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] você deve habilitar explicitamente a publicação de metadados com a adição de pontos de extremidade de metadados para o serviço de serviço (consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Publicação de metadados desabilitada reduz a superfície de ataque para o serviço e reduz o risco de divulgação de informações não intencionais. Nem todos os serviços devem publicar metadados. Se você não precisa publicar metadados, considere deixá-la desativado. Observe que você ainda pode gerar o código de cliente e metadados diretamente de seus conjuntos de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter mais informações sobre como usar o Svcutil.exe para exportar metadados, consulte [como: usar a Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ Serviços WCF não publicar metadados por padrão. Para publicar metadados para um serviço WCF você deve habilitar explicitamente publicação de metadados com a adição de pontos de extremidade de metadados para o serviço (consulte [metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Publicação de metadados desabilitada reduz a superfície de ataque para o serviço e reduz o risco de divulgação de informações não intencionais. Nem todos os serviços devem publicar metadados. Se você não precisa publicar metadados, considere deixá-la desativado. Observe que você ainda pode gerar o código de cliente e metadados diretamente de seus conjuntos de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter mais informações sobre como usar o Svcutil.exe para exportar metadados, consulte [como: usar a Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Metadados de publicação usando uma associação de segurança  
- As associações de metadados padrão que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece não são seguro e permitir acesso anônimo aos metadados. Os metadados de serviço que um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço publica contém uma descrição detalhada sobre o serviço e podem intencionalmente ou não conter informações confidenciais. Por exemplo, os metadados de serviço podem conter informações sobre as operações de infra-estrutura que não foi desenvolvidas para ser transmitida publicamente. Para proteger os metadados de serviço contra acesso não autorizado, você pode usar uma associação de segurança para seu ponto de extremidade de metadados. Pontos de extremidade de metadados respondem a solicitações HTTP/GET que podem usar o SSL Secure Sockets Layer () para proteger os metadados. Para obter mais informações, consulte [como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ As associações de metadados padrão que o WCF fornece não são seguras e permitir o acesso anônimo aos metadados. Os metadados de serviço que um serviço WCF publica contém uma descrição detalhada sobre o serviço e podem intencionalmente ou não conter informações confidenciais. Por exemplo, os metadados de serviço podem conter informações sobre as operações de infra-estrutura que não foi desenvolvidas para ser transmitida publicamente. Para proteger os metadados de serviço contra acesso não autorizado, você pode usar uma associação de segurança para seu ponto de extremidade de metadados. Pontos de extremidade de metadados respondem a solicitações HTTP/GET que podem usar o SSL Secure Sockets Layer () para proteger os metadados. Para obter mais informações, consulte [como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  Proteger os pontos de extremidade de metadados também fornece uma maneira para que os solicitantes de recuperar metadados de serviço sem o risco de falsificação ou violação.  
   
@@ -41,9 +29,9 @@ Quando usar os metadados de recursos no [!INCLUDE[indigo1](../../../../includes/
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Usando técnicas de seguras para o processamento de metadados  
  Metadados de serviço com frequência são recuperados de um serviço em uma rede usando protocolos padronizados, como WS-MetadataExchange (MEX). Vários formatos de metadados incluem mecanismos para apontar para metadados adicionais de referência. O <xref:System.ServiceModel.Description.MetadataExchangeClient> tipo processa automaticamente as referências para você em documentos WSDL Web Services Description Language (), o esquema XML e documentos MEX. O tamanho do <xref:System.ServiceModel.Description.MetadataSet> objeto criado a partir de metadados recuperados é diretamente proporcional ao <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> valor para o <xref:System.ServiceModel.Description.MetadataExchangeClient> instância é usada e o `MaxReceivedMessageSize` valor para a associação está sendo usada por que <xref:System.ServiceModel.Description.MetadataExchangeClient> instância. Defina essas cotas para os valores apropriados, conforme determinado pelo seu cenário.  
   
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], metadados de serviço é processado como XML. Durante o processamento de documentos XML, aplicativos devem se proteger contra mal-intencionado estruturas XML. Use o `XmlDictionaryReader` com apropriado cotas durante o processamento de XML e também definir o <xref:System.Xml.XmlTextReader.DtdProcessing%2A> propriedade `Prohibit`.  
+ No WCF, os metadados de serviço é processado como XML. Durante o processamento de documentos XML, aplicativos devem se proteger contra mal-intencionado estruturas XML. Use o `XmlDictionaryReader` com apropriado cotas durante o processamento de XML e também definir o <xref:System.Xml.XmlTextReader.DtdProcessing%2A> propriedade `Prohibit`.  
   
- O sistema de metadados em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é extensível e as extensões de metadados podem ser registradas em seu arquivo de configuração do aplicativo (consulte [estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Extensões de metadados podem executar um código arbitrário, para que você deve proteger seu arquivo de configuração do aplicativo com o controle de acesso apropriadas de ACLs e registrar apenas os metadados confiável implementações de extensão.  
+ O sistema de metadados no WCF é extensível e as extensões de metadados podem ser registradas em seu arquivo de configuração do aplicativo (consulte [estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Extensões de metadados podem executar um código arbitrário, para que você deve proteger seu arquivo de configuração do aplicativo com o controle de acesso apropriadas de ACLs e registrar apenas os metadados confiável implementações de extensão.  
   
 ## <a name="validating-generated-clients"></a>Validando clientes gerados  
  Ao gerar o código do cliente de metadados recuperados de uma fonte que não é confiável, valide o código de cliente gerada para garantir que o cliente gerado está em conformidade com as políticas de segurança de aplicativos cliente. Você pode usar um comportamento de validação para verificar as configurações no seu cliente de associação ou inspecionar visualmente o código gerado por ferramentas. Para obter um exemplo de como implementar um cliente que valida os comportamentos, consulte [validação do cliente](../../../../docs/framework/wcf/samples/client-validation.md).  

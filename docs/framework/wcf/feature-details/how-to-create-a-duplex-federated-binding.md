@@ -1,27 +1,15 @@
 ---
-title: "Como criar uma associação duplex federada"
-ms.custom: 
+title: Como criar uma associação duplex federada
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d40d13ca861cd18cf5f2a72e94d1aca146c2c19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d736d0119f3e938d81a15d57bb6d97ca2a1990fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Como criar uma associação duplex federada
-<xref:System.ServiceModel.WSFederationHttpBinding>suporta apenas os contratos de troca de mensagem de datagrama e solicitação/resposta. Para usar o contrato de troca de mensagens duplex, você deve criar uma associação personalizada. Os procedimentos a seguir mostram como fazer isso na configuração, usando segurança de modo de mensagem para os transportes HTTP e TCP e segurança de modo misto para o transporte TCP. Código de exemplo mostrando todas as associações de 3 é no final deste tópico.  
+<xref:System.ServiceModel.WSFederationHttpBinding> suporta apenas os contratos de troca de mensagem de datagrama e solicitação/resposta. Para usar o contrato de troca de mensagens duplex, você deve criar uma associação personalizada. Os procedimentos a seguir mostram como fazer isso na configuração, usando segurança de modo de mensagem para os transportes HTTP e TCP e segurança de modo misto para o transporte TCP. Código de exemplo mostrando todas as associações de 3 é no final deste tópico.  
   
  Você também pode criar a associação no código. Para obter uma descrição da pilha de elementos de associação para criar, consulte [como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   

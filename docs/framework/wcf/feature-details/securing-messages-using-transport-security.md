@@ -1,24 +1,14 @@
 ---
-title: "Mensagens de segurança que usam a segurança de transporte"
-ms.custom: 
+title: Mensagens de segurança que usam a segurança de transporte
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-caps.latest.revision: "21"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>Mensagens de segurança que usam a segurança de transporte
 Esta seção aborda a segurança de transporte do serviço de enfileiramento de mensagens (MSMQ) que você pode usar para proteger as mensagens enviadas para uma fila.  
@@ -26,11 +16,11 @@ Esta seção aborda a segurança de transporte do serviço de enfileiramento de 
 > [!NOTE]
 >  Antes de ler este tópico, é recomendável que você leia [conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- A ilustração a seguir fornece um modelo conceitual de comunicação em fila usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Esta ilustração e terminologia é usado para explicar os conceitos de segurança de transporte.  
+ A ilustração a seguir fornece um modelo conceitual de comunicação em fila usando o Windows Communication Foundation (WCF). Esta ilustração e terminologia é usado para explicar os conceitos de segurança de transporte.  
   
  ![Na fila de diagrama do aplicativo](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figura distribuídas de fila")  
   
- Ao enviar mensagens em fila usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] com <xref:System.ServiceModel.NetMsmqBinding>, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem for anexada como um corpo da mensagem do MSMQ. Segurança de transporte protege a mensagem inteira do MSMQ (cabeçalhos de mensagem MSMQ ou propriedades e o corpo da mensagem). Como o corpo da mensagem do MSMQ, usando a segurança de transporte também protege o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem.  
+ Ao enviar mensagens em fila usando o WCF com <xref:System.ServiceModel.NetMsmqBinding>, a mensagem WCF está anexada como um corpo da mensagem do MSMQ. Segurança de transporte protege a mensagem inteira do MSMQ (cabeçalhos de mensagem MSMQ ou propriedades e o corpo da mensagem). Como o corpo da mensagem do MSMQ, usando a segurança de transporte também protege a mensagem WCF.  
   
  O conceito principal por trás da segurança de transporte é que o cliente precisa atender aos requisitos de segurança para receber a mensagem à fila de destino. Isso é diferente de segurança de mensagem, onde a mensagem é protegida para o aplicativo que recebe a mensagem.  
   
@@ -49,19 +39,19 @@ Esta seção aborda a segurança de transporte do serviço de enfileiramento de 
   
  MSMQ também fornece a capacidade de anexar um certificado com a mensagem que não está registrado com o Active Directory. Nesse caso, ele garante que a mensagem foi assinada usando o certificado anexado.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece segurança de transporte essas opções como parte do MSMQ e são a chave dinâmica para segurança de transporte.  
+ WCF fornece ambas as opções como parte da segurança de transporte MSMQ e são a chave dinâmica para segurança de transporte.  
   
  Por padrão, a segurança de transporte é ativada.  
   
  Devido a essas Noções básicas, as seções a seguir propriedades de segurança de transporte detalhes agrupadas com <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
 #### <a name="msmq-authentication-mode"></a>Modo de autenticação do MSMQ  
- O <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> determina se deve usar a segurança de domínio do Windows ou uma de segurança externa baseada em certificado para proteger a mensagem. Em ambos os modos de autenticação, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa o canal de transporte em fila o `CertificateValidationMode` especificado na configuração do serviço. O modo de validação de certificado Especifica o mecanismo usado para verificar a validade do certificado.  
+ O <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> determina se deve usar a segurança de domínio do Windows ou uma de segurança externa baseada em certificado para proteger a mensagem. Em ambos os modos de autenticação, o canal de transporte em fila WCF usa o `CertificateValidationMode` especificado na configuração do serviço. O modo de validação de certificado Especifica o mecanismo usado para verificar a validade do certificado.  
   
  Quando a segurança de transporte é ativada, a configuração padrão é <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="windows-domain-authentication-mode"></a>Modo de autenticação de domínio do Windows  
- A opção de usar a segurança do Windows requer a integração do Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>é o modo de segurança de transporte padrão. Quando isso for definido, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel anexa o SID do Windows para a mensagem do MSMQ e usa seu certificado interno obtido do Active Directory. MSMQ usa esse certificado interno para proteger a mensagem. Gerenciador de fila de recebimento usa o Active Directory para pesquisar e localizar um certificado correspondente ao autenticar o cliente e verifica se o SID também corresponde do cliente. Essa etapa de autenticação será executada se um certificado, geradas internamente no caso de `WindowsDomain` modo de autenticação ou gerados externamente no caso de `Certificate` o modo de autenticação é anexado à mensagem, mesmo se a fila de destino não é marcado como exigir autenticação.  
+ A opção de usar a segurança do Windows requer a integração do Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> é o modo de segurança de transporte padrão. Quando isso for definido, o canal WCF anexa o SID do Windows para a mensagem do MSMQ e usa seu certificado interno obtido do Active Directory. MSMQ usa esse certificado interno para proteger a mensagem. Gerenciador de fila de recebimento usa o Active Directory para pesquisar e localizar um certificado correspondente ao autenticar o cliente e verifica se o SID também corresponde do cliente. Essa etapa de autenticação será executada se um certificado, geradas internamente no caso de `WindowsDomain` modo de autenticação ou gerados externamente no caso de `Certificate` o modo de autenticação é anexado à mensagem, mesmo se a fila de destino não é marcado como exigir autenticação.  
   
 > [!NOTE]
 >  Ao criar uma fila, você pode marcar a fila como uma fila autenticada para indicar que a fila requer autenticação do cliente enviar mensagens à fila. Isso garante que nenhuma mensagem não autenticadas é aceitos na fila.  
@@ -71,9 +61,9 @@ Esta seção aborda a segurança de transporte do serviço de enfileiramento de 
 #### <a name="certificate-authentication-mode"></a>Modo de autenticação de certificado  
  A opção de usar o modo de autenticação de certificado não exige a integração do Active Directory. Na verdade, em alguns casos, como quando o MSMQ está instalado no modo de grupo de trabalho (sem a integração do Active Directory) ou quando usando o protocolo de mensagens confiável SOAP (SRMP) para enviar mensagens à fila, somente o protocolo de transferência <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> funciona.  
   
- Ao enviar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagem com <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal não é anexado a um SID do Windows para a mensagem do MSMQ. Como tal, a fila de destino ACL deve permitir `Anonymous` acesso do usuário para enviar para a fila. Gerenciador de fila de recebimento verifica se a mensagem do MSMQ foi assinada com o certificado, mas não realiza nenhuma autenticação.  
+ Ao enviar uma mensagem WCF com <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>, o canal WCF não é anexado a um SID do Windows para a mensagem do MSMQ. Como tal, a fila de destino ACL deve permitir `Anonymous` acesso do usuário para enviar para a fila. Gerenciador de fila de recebimento verifica se a mensagem do MSMQ foi assinada com o certificado, mas não realiza nenhuma autenticação.  
   
- O certificado com suas declarações e informações de identidade é populado no <xref:System.ServiceModel.ServiceSecurityContext> pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em fila o canal de transporte. O serviço pode usar essas informações para executar sua própria autenticação do remetente.  
+ O certificado com suas declarações e informações de identidade é populado no <xref:System.ServiceModel.ServiceSecurityContext> pelo canal de transporte em fila de WCF. O serviço pode usar essas informações para executar sua própria autenticação do remetente.  
   
 ### <a name="msmq-protection-level"></a>Nível de proteção do MSMQ  
  O nível de proteção determina como proteger a mensagem do MSMQ para garantir que ele não foi violado. Isso é especificado no <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> propriedade. O valor padrão é <xref:System.Net.Security.ProtectionLevel.Sign>.  

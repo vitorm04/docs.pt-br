@@ -1,13 +1,6 @@
 ---
 title: Como navegar por dados no Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d99d794164307cb22c5dfc89d6c9c227aa457a59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9572c1234c07c77d5df0c9cd58499faafe460e4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Como navegar por dados no Windows Forms
 Em um aplicativo do Windows, a maneira mais fácil de navegar por meio de registros em uma fonte de dados é associar um <xref:System.Windows.Forms.BindingSource> componente para a fonte de dados e controles de associação para o <xref:System.Windows.Forms.BindingSource>. Você pode usar o método de navegação internos no <xref:System.Windows.Forms.BindingSource> tais um <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usar esses métodos ajustará o <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> propriedades do <xref:System.Windows.Forms.BindingSource> adequadamente. Você também pode localizar um item e defina-o como o item atual, definindo o <xref:System.Windows.Forms.BindingSource.Position%2A> propriedade.  

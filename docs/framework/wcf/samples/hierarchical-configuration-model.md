@@ -1,24 +1,12 @@
 ---
-title: "Modelo de configuração hierárquica"
-ms.custom: 
+title: Modelo de configuração hierárquica
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cf8e7b37b6430be1eed9bc037bfa06aeb825b866
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Modelo de configuração hierárquica
 Este exemplo demonstra como implementar uma hierarquia de arquivos de configuração para serviços. Ele também mostra como as associações, comportamentos de serviço e comportamentos de ponto de extremidade são herdados de níveis mais altos na hierarquia.  
@@ -26,7 +14,7 @@ Este exemplo demonstra como implementar uma hierarquia de arquivos de configura�
 ## <a name="sample-details"></a>Detalhes de exemplo  
  Um dos recursos desenvolvidos para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] é o aperfeiçoamento no modelo de configuração hierárquica. Um exemplo de um modelo de configuração hierárquica seria definida por Machine. config -> Rootweb.config -> Web. config. Em [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], essas associações e comportamentos que são definidos em níveis superiores na hierarquia de configuração são adicionados aos serviços sem nenhuma configuração explícita. Este exemplo mostra como é possível simplificar sua configuração de serviço confiando em elementos de configuração definidos no computador ou no nível do aplicativo.  
   
- Este exemplo consiste em nove serviços, definidos em três níveis de hierarquia. `Service1`está na raiz. `Service2`e `Service3` herdam os elementos de padrão de `Service1`. `Service4`, `Service5`, `Service6` e `Service7` são definidos em um terceiro nível da hierarquia de herança os elementos de padrão de `Service3`. Por fim `Service10` e `Service11` estão em um quarto nível da hierarquia.  
+ Este exemplo consiste em nove serviços, definidos em três níveis de hierarquia. `Service1` está na raiz. `Service2` e `Service3` herdam os elementos de padrão de `Service1`. `Service4`, `Service5`, `Service6` e `Service7` são definidos em um terceiro nível da hierarquia de herança os elementos de padrão de `Service3`. Por fim `Service10` e `Service11` estão em um quarto nível da hierarquia.  
   
  Todos os serviços de implementam o `IDesc` contrato. A seguir está a definição do `IDesc` interface que mostra os métodos expostos nessa interface. O `IDesc` interface é definida em Service1.  
   
@@ -44,7 +32,7 @@ public interface IDesc
 }  
 ```  
   
- A implementação desses métodos pelos serviços é simples. `ListEndpoints`itera em todos os pontos de extremidade do serviço e retorna uma lista de todos os pontos de extremidade que tem o serviço. `ListServiceBehaviors`itera em todos os comportamentos adicionados ao serviço e retorna a lista de todos os comportamentos de serviço associado ao serviço. `ListEndpointBehaviors`se comporta de forma semelhante ao `ListServiceBehaviors`, mas retorna a lista de comportamentos de ponto de extremidade em vez disso.  
+ A implementação desses métodos pelos serviços é simples. `ListEndpoints` itera em todos os pontos de extremidade do serviço e retorna uma lista de todos os pontos de extremidade que tem o serviço. `ListServiceBehaviors` itera em todos os comportamentos adicionados ao serviço e retorna a lista de todos os comportamentos de serviço associado ao serviço. `ListEndpointBehaviors` se comporta de forma semelhante ao `ListServiceBehaviors`, mas retorna a lista de comportamentos de ponto de extremidade em vez disso.  
   
  Essa implementação permite que o cliente para saber quantos pontos de extremidade de serviço está expondo e quais comportamentos de serviço e comportamentos de ponto de extremidade foram adicionados ao serviço. O cliente tiver sido implementado como parte do exemplo adiciona uma referência de serviço para todos os serviços na solução e mostra esses elementos para cada um dos serviços.  
   
@@ -80,7 +68,7 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   

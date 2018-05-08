@@ -1,11 +1,6 @@
 ---
-title: "Cláusula Join (Visual Basic)"
+title: Cláusula Join (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Cláusula Join (Visual Basic)
 Combina duas coleções em uma única coleção. A operação de junção é baseada em chaves correspondentes e usa o `Equals` operador.  
@@ -49,8 +41,8 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `groupJoinClause`  
  Opcional. Um ou mais adicionais `Group Join` mais cláusulas refinar a consulta.  
   
- `key1` `Equals` `key2`  
- Necessário. Identifica chaves para as coleções que estão sendo combinadas. Você deve usar o `Equals` operador para comparar chaves das coleções que estão sendo combinadas. Você pode combinar condições de junção usando o `And` operador para identificar várias chaves. `key1`deve ser da coleção no lado esquerdo do `Join` operador. `key2`deve ser da coleção no lado direito do `Join` operador.  
+ `key1``Equals``key2`  
+ Necessário. Identifica chaves para as coleções que estão sendo combinadas. Você deve usar o `Equals` operador para comparar chaves das coleções que estão sendo combinadas. Você pode combinar condições de junção usando o `And` operador para identificar várias chaves. `key1` deve ser da coleção no lado esquerdo do `Join` operador. `key2` deve ser da coleção no lado direito do `Join` operador.  
   
  As chaves usadas na condição de junção podem ser expressões que incluem mais de um item da coleção. No entanto, cada expressão de chave pode conter apenas os itens da sua respectiva coleção.  
   

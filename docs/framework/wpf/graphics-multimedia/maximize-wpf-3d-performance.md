@@ -1,28 +1,14 @@
 ---
 title: Maximizar desempenho 3D do WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6677ee3a6d17ea38636d49327d7af22b53bc900e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximizar desempenho 3D do WPF
 Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para compilar controles 3D e incluir cenas 3D em seus aplicativos, é importante considerar a otimização de desempenho. Este tópico fornece uma lista de classes 3D e propriedades que têm implicações de desempenho para o seu aplicativo, juntamente com recomendações para otimizar o desempenho ao usá-las.  
@@ -33,15 +19,15 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
   
 |Propriedade|Recomendação|  
 |-|-|  
-|<xref:System.Windows.Media.Brush>|Velocidade do pincel (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(em cache)<br /><br /> <xref:System.Windows.Media.VisualBrush>(em cache)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(sem cache)<br /><br /> <xref:System.Windows.Media.VisualBrush>(sem cache)|  
-|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Definir `Viewport3D.ClipToBounds` como false sempre que você não precisa ter [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] explicitamente corte o conteúdo de um <xref:System.Windows.Controls.Viewport3D> retângulo do Viewport3D. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]o recorte com antialiasing pode ser muito lento, e `ClipToBounds` é ativado (lento) por padrão em <xref:System.Windows.Controls.Viewport3D>.|  
-|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Definir `Viewport3D.IsHitTestVisible` como false sempre que você não precisa [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] considere o conteúdo de um <xref:System.Windows.Controls.Viewport3D> quando o mouse executando testes de clique.  O conteúdo em 3D do teste de clique é feito em software e pode ser lento com grandes malhas. <xref:System.Windows.UIElement.IsHitTestVisible%2A>ativado (lento) por padrão no <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.Media.Brush>|Velocidade do pincel (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (em cache)<br /><br /> <xref:System.Windows.Media.VisualBrush> (em cache)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (sem cache)<br /><br /> <xref:System.Windows.Media.VisualBrush> (sem cache)|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Definir `Viewport3D.ClipToBounds` como false sempre que você não precisa ter [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] explicitamente corte o conteúdo de um <xref:System.Windows.Controls.Viewport3D> retângulo do Viewport3D. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o recorte com antialiasing pode ser muito lento, e `ClipToBounds` é ativado (lento) por padrão em <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Definir `Viewport3D.IsHitTestVisible` como false sempre que você não precisa [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] considere o conteúdo de um <xref:System.Windows.Controls.Viewport3D> quando o mouse executando testes de clique.  O conteúdo em 3D do teste de clique é feito em software e pode ser lento com grandes malhas. <xref:System.Windows.UIElement.IsHitTestVisible%2A> ativado (lento) por padrão no <xref:System.Windows.Controls.Viewport3D>.|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|Crie modelos diferentes somente quando eles exigirem materiais ou transformações diferentes.  Caso contrário, tente agregar muitas <xref:System.Windows.Media.Media3D.GeometryModel3D> instâncias com os mesmos materiais e transformações em algumas maior <xref:System.Windows.Media.Media3D.GeometryModel3D> e <xref:System.Windows.Media.Media3D.MeshGeometry3D> instâncias.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|A animação de malha (que altera os vértices individuais de uma malha por quadro) não é sempre eficiente no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Para minimizar o impacto no desempenho de notificações de alteração quando cada vértice é modificado, desanexe a malha da árvore visual antes de executar a modificação por vértice.  Quando a malha tiver sido modificada, reanexe-a à árvore visual.  Além disso, tente minimizar o tamanho das malhas que serão animadas dessa maneira.|  
 |Suavização 3D|Para aumentar a velocidade de processamento, desabilitar multi-amostras em um <xref:System.Windows.Controls.Viewport3D> , definindo a propriedade anexada <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> para `Aliased`.  Por padrão, a suavização 3D é desabilitada em [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] e habilitada em [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] com quatro amostras por pixel.|  
 |Texto|Live texto em uma cena 3D (live porque ele está em um <xref:System.Windows.Media.DrawingBrush> ou <xref:System.Windows.Media.VisualBrush>) pode ser lenta. Tente usar imagens do texto em vez disso (via <xref:System.Windows.Media.Imaging.RenderTargetBitmap>), a menos que o texto será alterado.|  
 |<xref:System.Windows.Media.TileBrush>|Se você deve usar um <xref:System.Windows.Media.VisualBrush> ou um <xref:System.Windows.Media.DrawingBrush> em uma cena 3D pois o conteúdo do pincel não é estático, tente fazer cache do pincel (Configurando a propriedade anexada <xref:System.Windows.Media.RenderOptions.CachingHint%2A> para `Cache`).  Definir limites de invalidação de escala mínima e máxima (com as propriedades anexadas <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> e <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>) para que os pincéis armazenados em cache não sejam regenerados com muita frequência, mantendo ainda o nível desejado de qualidade.  Por padrão, <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush> não estão em cache, que significa que sempre que algo pintado com o pincel tem que ser re-renderizado, todo o conteúdo do pincel deve primeiro ser re-renderizado para uma superfície intermediária.|  
-|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>força todo o conteúdo afetado a ser renderizado sem aceleração de hardware.  Para obter melhor desempenho, não use <xref:System.Windows.Media.Effects.BitmapEffect>.|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> força todo o conteúdo afetado a ser renderizado sem aceleração de hardware.  Para obter melhor desempenho, não use <xref:System.Windows.Media.Effects.BitmapEffect>.|  
   
 ## <a name="performance-impact-medium"></a>Impacto de desempenho: médio  
   

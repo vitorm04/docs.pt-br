@@ -1,13 +1,6 @@
 ---
 title: Tipos inseridos para primitivos de linguagem XML comuns
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML language primitives [XAML Services]
 - XAML [XAML Services], built-in types
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c359a9a7f9797fc03ce20c453905af01f925d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Tipos inseridos para primitivos de linguagem XML comuns
-XAML 2009 introduz o suporte ao nível de linguagem XAML vários tipos de dados que são usados com frequência primitivos no common language runtime (CLR) e em outras linguagens de programação. XAML 2009 adiciona suporte para esses primitivos: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, e`x:Array`  
+XAML 2009 introduz o suporte ao nível de linguagem XAML vários tipos de dados que são usados com frequência primitivos no common language runtime (CLR) e em outras linguagens de programação. XAML 2009 adiciona suporte para esses primitivos: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, e `x:Array`  
   
 <a name="previous_techniques_for_language_primitives_in_xaml_markup"></a>   
 ## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>Técnicas anteriores para primitivos de linguagem de marcação XAML  
@@ -86,7 +74,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Além de valores numéricos, sintaxe de texto para `x:Single` também permite que os tokens `Infinity`, `-Infinity`, e `NaN`. Esses tokens são tratados como maiusculas e minúsculas.  
   
- `x:Single`pode dar suporte a valores no formulário de notação científica, se o primeiro caractere na sintaxe do texto é `e` ou `E`.  
+ `x:Single` pode dar suporte a valores no formulário de notação científica, se o primeiro caractere na sintaxe do texto é `e` ou `E`.  
   
  Para a definição de especificação de linguagem XAML, consulte [ \[XAML MS\] seções 5.2.8 e 5.4.2](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -95,7 +83,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Além de valores numéricos, sintaxe de texto para `x:Double` permite que os tokens `Infinity`, `-Infinity`, e `NaN`. Esses tokens são tratados como maiusculas e minúsculas.  
   
- `x:Double`pode dar suporte a valores no formulário de notação científica. Use o caractere `e` ou `E` para apresentar a parte expoente.  
+ `x:Double` pode dar suporte a valores no formulário de notação científica. Use o caractere `e` ou `E` para apresentar a parte expoente.  
   
  Para a definição de especificação de linguagem XAML, consulte [ \[XAML MS\] seções 5.2.9 e 5.4.3](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -105,12 +93,12 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
  Para a definição de especificação de linguagem XAML, consulte [ \[XAML MS\] seções 5.2.11 e 5.4.5](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint32"></a>x:Int32  
- Para backups de CLR, o `x:Int32` primitivo corresponde ao <xref:System.Int32>. `x:Int32`é tratado como assinado. Em XAML, a ausência de um sinal de mais (`+`) entrada na sintaxe de texto indicada como um valor de sinal positivo.  
+ Para backups de CLR, o `x:Int32` primitivo corresponde ao <xref:System.Int32>. `x:Int32` é tratado como assinado. Em XAML, a ausência de um sinal de mais (`+`) entrada na sintaxe de texto indicada como um valor de sinal positivo.  
   
  Para a definição de especificação de linguagem XAML, consulte [ \[XAML MS\] seções 5.2.12 e 5.4.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint64"></a>x: Int64  
- Para backups de CLR, o `x:Int64` primitivo corresponde ao <xref:System.Int64>. `x:Int64`é tratado como assinado. Em XAML, a ausência de um sinal de mais (`+`) entrada na sintaxe de texto indicada como um valor de sinal positivo.  
+ Para backups de CLR, o `x:Int64` primitivo corresponde ao <xref:System.Int64>. `x:Int64` é tratado como assinado. Em XAML, a ausência de um sinal de mais (`+`) entrada na sintaxe de texto indicada como um valor de sinal positivo.  
   
  Para a definição de especificação de linguagem XAML, consulte [ \[XAML MS\] seções 5.2.13 e 5.4.7](http://go.microsoft.com/fwlink/?LinkId=114525).  
   

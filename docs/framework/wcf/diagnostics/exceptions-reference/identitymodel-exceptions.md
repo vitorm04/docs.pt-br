@@ -1,24 +1,12 @@
 ---
-title: "Exceções de IdentityModel"
-ms.custom: 
+title: Exceções de IdentityModel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>Exceções de IdentityModel
 Este tópico lista todas as exceções geradas pelo IdentityModel.  
@@ -91,8 +79,8 @@ Este tópico lista todas as exceções geradas pelo IdentityModel.
 |SAMLSignatureAlreadyRead|A assinatura já foi lido na asserção SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|O algoritmo especificado e a chave privada não coincidem.|  
 |EmptyTransformChainNotSupported|Não há suporte para a cadeia de transformação vazia.|  
-|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper &#124;' offset' está fora do intervalo.|  
-|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper &#124;' Tamanho ' está fora do intervalo. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = a segurança Gerenciador de token não é possível criar um autenticador de token para o requisito específico.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;'offset' está fora do intervalo.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;'Tamanho' está fora do intervalo. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = a segurança Gerenciador de token não é possível criar um autenticador de token para o requisito específico.|  
 |UnableToCreateKeyedHashAlgorithm|Não é possível criar KeyedHashAlgorithm do valor específico para o algoritmo de assinatura específica.|  
 |SAMLUnableToLoadAssertion|O \<saml:assertion > elemento falhou ao carregar.|  
 |X509FindValueMismatchMulti|O X509FindType específicos requer que o tipo de findValue o argumento para ser um dos valores de 2. O argumento findValue é de outro tipo.|  

@@ -1,24 +1,14 @@
 ---
-title: "Método ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod"
-ms.custom: 
+title: Método ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e11dd1c24001c764c82ed3f11336873ee57b2e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 564f3b1cdfab2a3020b6bb5ac8d9af03c6532c8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>Método ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
 [Com suporte no .NET Framework 4.6 e versões posteriores]  
@@ -54,7 +44,7 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
  [out] Um ponteiro para o endereço de um enumerador  
   
 ## <a name="remarks"></a>Comentários  
- `inlineeModuleId`e `inlineeMethodId` juntos, formam o identificador completo para o método que pode ser embutido. Por exemplo, suponha que o módulo `A` define um método `Simple.Add`:  
+ `inlineeModuleId` e `inlineeMethodId` juntos, formam o identificador completo para o método que pode ser embutido. Por exemplo, suponha que o módulo `A` define um método `Simple.Add`:  
   
 ```csharp  
 Simple.Add(int a, int b)   
@@ -68,7 +58,7 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }  
 ```  
   
- Suponha também que `Fancy.AddTwice` linhas internas a chamada para `SimpleAdd`. Um criador de perfil pode usar esse enumerador para localizar todos os métodos definidos no módulo B quais embutido `Simple.Add`, e o resultado seria enumerar `AddTwice`.  `inlineeModuleId`é o identificador de módulo `A`, e `inlineeeMethodId` é o identificador de `Simple.Add(int a, int b)`.  
+ Suponha também que `Fancy.AddTwice` linhas internas a chamada para `SimpleAdd`. Um criador de perfil pode usar esse enumerador para localizar todos os métodos definidos no módulo B quais embutido `Simple.Add`, e o resultado seria enumerar `AddTwice`.  `inlineeModuleId` é o identificador de módulo `A`, e `inlineeeMethodId` é o identificador de `Simple.Add(int a, int b)`.  
   
  Se `incompleteData` ocorre após a função retornar, o enumerador não contém todos os métodos de inlining um determinado método. Isso pode acontecer quando um ou mais diretas ou indiretas dependências do módulo inliners ainda não foi carregadas ainda. Se precisar de um criador de perfil dados precisos, ele deve novamente mais tarde quando mais de módulos são carregados, preferencialmente em cada carga de módulo.  
   
@@ -88,7 +78,7 @@ Simple.Add(int a, int b)
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)

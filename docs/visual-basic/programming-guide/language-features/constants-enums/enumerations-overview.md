@@ -1,24 +1,15 @@
 ---
-title: "Visão geral de enumerações (Visual Basic)"
-ms.custom: 
+title: Visão geral de enumerações (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5d50e6bae880e5dc4dcde203708c6b07c05bb4e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 67f1dda7031eb00f3198f15b3f79d5e513de2a91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumerations-overview-visual-basic"></a>Visão geral de enumerações (Visual Basic)
 Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante com nomes. Por exemplo, é possível declarar uma enumeração de um conjunto de constantes de inteiros associados aos dias da semana e, em seguida, usar os nomes de dias em vez de seus valores de inteiros em seu código.  
@@ -26,7 +17,7 @@ Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de c
 ## <a name="tasks-involving-enumerations"></a>Tarefas que envolvem enumerações  
  A tabela a seguir lista as tarefas comuns que envolvem enumerações.  
   
-|Para fazer isso|Consulte|  
+|Para fazer isso|Veja|  
 |----------------|---------|  
 |Localizar uma enumeração predefinida|[Constantes e Enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
 |Declara uma enumeração|[Como: declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  

@@ -1,10 +1,6 @@
 ---
 title: Resumo do tipo de dados (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>Resumo do tipo de dados (Visual Basic)
 A tabela a seguir mostra os tipos de dados do Visual Basic, seus tipos common language runtime suporte, a alocação de armazenamento nominal e os intervalos de valor.  
@@ -63,11 +56,11 @@ A tabela a seguir mostra os tipos de dados do Visual Basic, seus tipos common la
 |[Duplo](../../../visual-basic/language-reference/data-types/double-data-type.md) (precisão dupla ponto flutuante)|<xref:System.Double>|8 bytes|-1, 79769313486231570E + 308 a - 4.94065645841246544 e-324 <sup>†</sup> para valores negativos;<br /><br /> 4.94065645841246544 e-324 1.79769313486231570 e + 308 <sup>†</sup> para valores positivos|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 bytes|-2.147.483.648 a 2.147.483.647 (assinado)|  
 |[Longo](../../../visual-basic/language-reference/data-types/long-data-type.md) (inteiro longo)|<xref:System.Int64>|8 bytes|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 (9.2 … E + 18 <sup>†</sup>) (assinado)|  
-|[Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(classe)|4 bytes na plataforma de 32 bits<br /><br /> 8 bytes na plataforma de 64 bits|Qualquer tipo pode ser armazenado em uma variável de tipo`Object`|  
+|[Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (classe)|4 bytes na plataforma de 32 bits<br /><br /> 8 bytes na plataforma de 64 bits|Qualquer tipo pode ser armazenado em uma variável de tipo `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 byte|-128 a 127 (assinado)|  
 |[Curto](../../../visual-basic/language-reference/data-types/short-data-type.md) (inteiro curto)|<xref:System.Int16>|2 bytes|-32.768 a 32.767 (assinado)|  
 |[Único](../../../visual-basic/language-reference/data-types/single-data-type.md) (único ponto flutuante de precisão)|<xref:System.Single>|4 bytes|-3, 4028235E + 38 a - 1, 401298E-45 <sup>†</sup> para valores negativos;<br /><br /> 1, 401298E-45 a 3, 4028235E + 38 <sup>†</sup> para valores positivos|  
-|[Cadeia de caracteres](../../../visual-basic/language-reference/data-types/string-data-type.md) (comprimento variável)|<xref:System.String>(classe)|Depende da implementação de plataforma|0 a aproximadamente 2 bilhões de caracteres Unicode|  
+|[Cadeia de caracteres](../../../visual-basic/language-reference/data-types/string-data-type.md) (comprimento variável)|<xref:System.String> (classe)|Depende da implementação de plataforma|0 a aproximadamente 2 bilhões de caracteres Unicode|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 bytes|0 e 4.294.967.295 (não assinado)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 bytes|0 e 18.446.744.073.709.551.615 (1.8... E + 19 <sup>†</sup>) (não assinado)|  
 |[Definido pelo usuário](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (estrutura)|(herdado de <xref:System.ValueType>)|Depende da implementação de plataforma|Cada membro da estrutura tem um intervalo determinado por seu tipo de dados e independentes de intervalos de outros membros|  

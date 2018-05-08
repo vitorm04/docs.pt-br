@@ -1,13 +1,6 @@
 ---
 title: Como renderizar em um intervalo por quadro usando CompositionTarget
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Como renderizar em um intervalo por quadro usando CompositionTarget
 O mecanismo de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece vários recursos para criar animações baseadas em quadros. No entanto, há cenários de aplicativo em que é necessário um controle mais refinado da renderização por quadro. O <xref:System.Windows.Media.CompositionTarget> fornece a capacidade de criar animações personalizadas com base em um retorno de chamada por quadro.  
   
- <xref:System.Windows.Media.CompositionTarget>é uma classe estática que representa a superfície de exibição em que seu aplicativo está sendo desenhado. O <xref:System.Windows.Media.CompositionTarget.Rendering> é gerado sempre que cena do aplicativo é desenhada. A taxa de quadros de renderização é o número de vezes que a cena é desenhada por segundo.  
+ <xref:System.Windows.Media.CompositionTarget> é uma classe estática que representa a superfície de exibição em que seu aplicativo está sendo desenhado. O <xref:System.Windows.Media.CompositionTarget.Rendering> é gerado sempre que cena do aplicativo é desenhada. A taxa de quadros de renderização é o número de vezes que a cena é desenhada por segundo.  
   
 > [!NOTE]
 >  Para um exemplo de código completo usando <xref:System.Windows.Media.CompositionTarget>, consulte [usando o exemplo CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  

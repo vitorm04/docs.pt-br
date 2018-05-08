@@ -1,11 +1,6 @@
 ---
 title: Operador TypeOf (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - TypeOf
 - vb.TypeOf
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-operator-visual-basic"></a>Operador TypeOf (Visual Basic)
 Compara uma variável de referência de objeto para um tipo de dados.  
@@ -52,15 +44,15 @@ result = TypeOf objectexpression IsNot typename
 ## <a name="remarks"></a>Comentários  
  O `TypeOf` operador determina se o tempo de execução do tipo de `objectexpression` é compatível com `typename`. A compatibilidade depende da categoria de tipo de `typename`. A tabela a seguir mostra como compatibilidade é determinada.  
   
-|Categoria de tipo de`typename`|Critério de compatibilidade|  
+|Categoria de tipo de `typename`|Critério de compatibilidade|  
 |---------------------------------|-----------------------------|  
-|Classe|`objectexpression`é do tipo `typename` ou herda de`typename`|  
-|Estrutura|`objectexpression`é do tipo`typename`|  
-|Interface|`objectexpression`implementa `typename` ou herda de uma classe que implementa`typename`|  
+|Classe|`objectexpression` é do tipo `typename` ou herda de `typename`|  
+|Estrutura|`objectexpression` é do tipo `typename`|  
+|Interface|`objectexpression` implementa `typename` ou herda de uma classe que implementa `typename`|  
   
  Se o tipo de tempo de execução de `objectexpression` satisfaz o critério de compatibilidade, `result` é `True`. Caso contrário, `result` é `False`.  Se `objectexpression` for nulo, `TypeOf`... `Is` retorna `False`, e... `IsNot` retorna `True`.  
   
- `TypeOf`sempre é usado com o `Is` palavra-chave para construir um `TypeOf`... `Is` expressão, ou com o `IsNot` palavra-chave para construir um `TypeOf`... `IsNot` expressão.  
+ `TypeOf` sempre é usado com o `Is` palavra-chave para construir um `TypeOf`... `Is` expressão, ou com o `IsNot` palavra-chave para construir um `TypeOf`... `IsNot` expressão.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa `TypeOf`... `Is` para testar a compatibilidade das duas variáveis de referência com vários tipos de dados do objeto.  

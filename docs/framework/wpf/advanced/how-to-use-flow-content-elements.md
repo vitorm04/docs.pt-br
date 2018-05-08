@@ -1,27 +1,15 @@
 ---
-title: "Como usar elementos de conteúdo de fluxo"
-ms.custom: 
+title: Como usar elementos de conteúdo de fluxo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - flow content elements [WPF]
 - documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e637e114187d0864afe4211a45c346c1e5a449b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 146a785ef4f6da650144ed6fc47633670304bde6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-flow-content-elements"></a>Como usar elementos de conteúdo de fluxo
 O exemplo a seguir demonstra o uso declarativo de vários elementos de fluxo de conteúdo e atributos associados.  Elementos e atributos demonstrados incluem:  
@@ -48,7 +36,7 @@ O exemplo a seguir demonstra o uso declarativo de vários elementos de fluxo de 
   
 -   Elemento <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Typography.Variants%2A>atributo (sobrescrito e subscrito)  
+-   <xref:System.Windows.Documents.Typography.Variants%2A> atributo (sobrescrito e subscrito)  
   
 -   Elemento <xref:System.Windows.Documents.Underline>  
   

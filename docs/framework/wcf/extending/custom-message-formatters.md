@@ -1,27 +1,15 @@
 ---
 title: Custom Message Formatters
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 301c508a0c639985e226dc55f62431ad8bb9c12b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
-O conteúdo em uma mensagem é geralmente na forma de XML, geralmente que não é um formato conveniente para um aplicativo. Aplicativos manipulam objetos, obtendo e definindo suas propriedades. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]usa o *contrato de dados* para converter um <xref:System.ServiceModel.Channels.Message> objeto em um objeto facilmente manipulado por um aplicativo. Esses processos são chamados de serialização e desserialização. Observe que esses mesmos termos são usados para descrever a serialização e desserialização feito pela camada de transporte de e para o formato de transmissão de mensagem, que é um processo relacionado.  
+O conteúdo em uma mensagem é geralmente na forma de XML, geralmente que não é um formato conveniente para um aplicativo. Aplicativos manipulam objetos, obtendo e definindo suas propriedades. Windows Communication Foundation (WCF) usa o *contrato de dados* para converter um <xref:System.ServiceModel.Channels.Message> objeto em um objeto facilmente manipulado por um aplicativo. Esses processos são chamados de serialização e desserialização. Observe que esses mesmos termos são usados para descrever a serialização e desserialização feito pela camada de transporte de e para o formato de transmissão de mensagem, que é um processo relacionado.  
   
  Você pode usar um formatador de mensagem personalizada se você precisa implementar uma conversão especializada entre as mensagens e os objetos que não podem ser realizadas por meio de um contrato de dados. Fazer isso, modificar ou estender o comportamento de execução de uma operação em um cliente ou um serviço.  
   

@@ -1,25 +1,18 @@
 ---
-title: -noconfig
+title: -/noconfig
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - noconfig compiler option [Visual Basic]
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2cebc617aea9ebbb16197f27841794b2e6ad46ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: bce2d98a8915e80cdecd7b67029b0c872cf70140
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-noconfig"></a>-noconfig
+# <a name="-noconfig"></a>-/noconfig
 Especifica que o compilador não deve automaticamente referenciar comumente usados [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies ou importação de `System` e `Microsoft.VisualBasic` namespaces.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,7 +35,7 @@ Especifica que o compilador não deve automaticamente referenciar comumente usad
 >  O `-noconfig` opção não está disponível no ambiente de desenvolvimento do Visual Studio; está disponível somente quando estiver compilando na linha de comando.  
   
 ## <a name="see-also"></a>Consulte também  
- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)  
+ [-/nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)  
  [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Em (Especificar arquivo de resposta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)  
  [-referência (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

@@ -1,11 +1,7 @@
 ---
-title: "Função GetObjectText (referência de API não gerenciada)"
-description: "A função GetObjectText retorna um processamento textual de um objeto na sintaxe MOF."
+title: Função GetObjectText (referência de API não gerenciada)
+description: A função GetObjectText retorna um processamento textual de um objeto na sintaxe MOF.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>Função GetObjectText
 Retorna um processamento textual do objeto na sintaxe de formato MOF (Managed Object).
@@ -67,7 +60,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
@@ -81,14 +74,14 @@ O seguinte algoritmo é usado para reconstruir o texto dos parâmetros de um mé
 1. O colocado no parâmetros são sequência na ordem de seus valores de identificador seguintes novamente.
 1. Os parâmetros são especificados como `[in]` e `[out]` são combinados em um único parâmetro.
  
-`pstrObjectText`deve ser um ponteiro para um `null` quando a função é chamada; ela não deve apontar para uma cadeia de caracteres que é válida antes da chamada de método, porque o ponteiro não será desalocado.
+`pstrObjectText` deve ser um ponteiro para um `null` quando a função é chamada; ela não deve apontar para uma cadeia de caracteres que é válida antes da chamada de método, porque o ponteiro não será desalocado.
 
 ## <a name="requirements"></a>Requisitos  
 **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

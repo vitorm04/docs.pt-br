@@ -1,24 +1,12 @@
 ---
-title: "Extensibilidade de sindicalização"
-ms.custom: 
+title: Extensibilidade de sindicalização
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Extensibilidade de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravado para a transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  
@@ -35,7 +23,7 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
  Essas classes mapeiam com precisão para as construções definidas na especificação do Atom 1.0, embora alguns dos nomes são diferentes.  
   
- Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e 2.0 de RSS, adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação de distribuição fornece as seguintes maneiras de trabalhar com atributos personalizados e extensões, acesso tipadas vagamente e derivar uma nova classe.  
+ Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e 2.0 de RSS, adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O modelo de programação de distribuição do Windows Communication Foundation (WCF) fornece as seguintes maneiras de trabalhar com atributos personalizados e extensões, acesso tipadas vagamente e derivar uma nova classe.  
   
 ## <a name="loosely-typed-access"></a>Acesso sem rigidez de tipos  
  Adicionando extensões derivando uma classe nova requer a criação de código adicional. Outra opção é acessando extensões de forma menos tipada. Todos os tipos definidos no modelo de dados abstrato de distribuição contêm propriedades chamadas `AttributeExtensions` e `ElementExtensions` (com uma exceção, <xref:System.ServiceModel.Syndication.SyndicationContent> tem um `AttributeExtensions` propriedade, mas não `ElementExtensions` propriedade). Essas propriedades são coleções de extensões não processadas pelo `TryParseAttribute` e `TryParseElement` métodos respectivamente. Você pode acessar essas extensões não processados chamando <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> no `ElementExtensions` propriedade <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson>, e <xref:System.ServiceModel.Syndication.SyndicationCategory>. Esse conjunto de métodos localiza todas as extensões com o nome especificado e o namespace, desserializa-las separadamente em instâncias do `TExtension` e os retorna como uma coleção de `TExtension` objetos.  

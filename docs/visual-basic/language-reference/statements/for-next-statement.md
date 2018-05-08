@@ -1,11 +1,6 @@
 ---
-title: "Instrução For...Next (Visual Basic)"
+title: Instrução For...Next (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrução For...Next (Visual Basic)
 Repete um grupo de instruções um número especificado de vezes.  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  Você pode colocar qualquer número de `Exit For` instruções em um `For`...`Next` Loop. Quando usado dentro aninhados `For`...`Next` loops, `Exit For` sai do loop interno e transfere o controle para o próximo nível mais alto de aninhamento.  
   
- `Exit For`é frequentemente usado após avaliar alguma condição (por exemplo, em um `If`... `Then`... `Else` estrutura). Talvez você queira usar `Exit For` para as seguintes condições:  
+ `Exit For` é frequentemente usado após avaliar alguma condição (por exemplo, em um `If`... `Then`... `Else` estrutura). Talvez você queira usar `Exit For` para as seguintes condições:  
   
 -   Continuando a iteração é desnecessária ou impossível. Um valor errado ou uma solicitação de encerramento pode criar essa condição.  
   
@@ -132,7 +124,7 @@ Next [ counter ]
   
  O valor padrão de `step` é 1.  
   
-###  <a name="BKMK_Counter"></a>Argumento de contador  
+###  <a name="BKMK_Counter"></a> Argumento de contador  
  A tabela a seguir indica se `counter` define uma nova variável local que tem o escopo para todo o `For…Next` loop. Essa decisão depende se `datatype` está presente e se `counter` já está definido.  
   
 |É `datatype` presente?|É `counter` já definido?|Resultado (se `counter` define uma nova variável local que tem o escopo para todo o `For...Next` loop)|  

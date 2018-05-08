@@ -1,28 +1,14 @@
 ---
 title: Associações fornecidas pelo sistema
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema
 Associações de especificar o mecanismo de comunicação para usar ao conversar com um ponto de extremidade e indicar como se conectar a um ponto de extremidade. Uma associação contém os seguintes elementos:  
@@ -33,7 +19,7 @@ Associações de especificar o mecanismo de comunicação para usar ao conversar
   
 -   A codificação determina a codificação a ser usada para mensagens que são enviadas ao ponto de extremidade, por exemplo, text/XML, binário ou mecanismo de otimização de transmissão mensagem (MTOM) durante a transmissão.  
   
- Este tópico apresenta todos os fornecidos pelo sistema [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] associações. Se nenhuma delas atende aos critérios exatos para seu aplicativo, você pode criar uma associação personalizada. Para obter mais informações sobre como criar associações personalizadas, consulte [associações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Este tópico apresenta todas as associações fornecidas pelo sistema do Windows Communication Foundation (WCF). Se nenhuma delas atende aos critérios exatos para seu aplicativo, você pode criar uma associação personalizada. Para obter mais informações sobre como criar associações personalizadas, consulte [associações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Uma associação segura e interoperável que oferece suporte ao protocolo WS-Federation permite que as organizações que estão em uma federação para autenticar e autorizar usuários com eficiência.  
   

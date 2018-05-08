@@ -1,28 +1,16 @@
 ---
 title: Programação do Windows Workflow Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], programming
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b704357d914f72049d0639c402bf2ae64975d00
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e60a98492947a5ce21652cff1ca7dda7993e8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-programming"></a>Programação do Windows Workflow Foundation
 Esta seção contém um conjunto de tópicos do livro de instruções que você deve compreender para se tornar um programador proficientes do Windows Workflow Foundation (WF).  
@@ -62,7 +50,7 @@ Esta seção contém um conjunto de tópicos do livro de instruções que você 
  Os tópicos que descrevem o rastreamento de fluxo de trabalho e como esses recursos são usados para monitorar aplicativos de fluxo de trabalho.  
   
  [Segurança de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
- Discute como manter seu fluxo de trabalho seguro ao usar o SQL e o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+ Descreve como proteger seu fluxo de trabalho ao usar o SQL e o Windows Communication Foundation (WCF).  
   
  [Desempenho do Windows Workflow Foundation 4](../../../docs/framework/windows-workflow-foundation/performance.md)  
  Discute o desempenho do Windows Workflow Foundation 4 e o compara a versão anterior do WF.

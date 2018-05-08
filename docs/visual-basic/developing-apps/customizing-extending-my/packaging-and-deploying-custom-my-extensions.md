@@ -1,23 +1,16 @@
 ---
-title: "Empacotando e implantando personalizadas extensões do My (Visual Basic)"
+title: Empacotando e implantando personalizadas extensões do My (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Empacotando e implantando personalizadas extensões do My (Visual Basic)
 Visual Basic oferece uma maneira fácil para você implantar personalizados `My` extensões do namespace usando modelos do Visual Studio. Se você estiver criando um modelo de projeto para o qual o `My` extensões são uma parte integrante do novo tipo de projeto, você pode apenas incluir personalizados `My` código de extensão com o projeto quando você exportar o modelo. Para obter mais informações sobre como exportar modelos de projeto, consulte [como: criar modelos de projeto](/visualstudio/ide/how-to-create-project-templates).  
@@ -61,8 +54,8 @@ Visual Basic oferece uma maneira fácil para você implantar personalizados `My`
   
 |Atributo|Descrição|  
 |---|---|  
-|`ID`|Necessário. Um identificador exclusivo para a extensão. Se a extensão que tem essa ID já foi adicionada ao projeto, o usuário não precisará adicioná-lo novamente.|  
-|`Version`|Necessário. Um número de versão para o modelo de item.|  
+|`ID`|Obrigatório. Um identificador exclusivo para a extensão. Se a extensão que tem essa ID já foi adicionada ao projeto, o usuário não precisará adicioná-lo novamente.|  
+|`Version`|Obrigatório. Um número de versão para o modelo de item.|  
 |`AssemblyFullName`|Opcional. Um nome de assembly. Quando uma referência a esse assembly é adicionada ao projeto, o usuário será solicitado a adicionar o `My` extensão com base neste modelo de item.|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Adicionar o \<CustomDataSignature > elemento no arquivo. vstemplate  
@@ -101,7 +94,7 @@ Visual Basic oferece uma maneira fácil para você implantar personalizados `My`
  Para instalar o modelo, você pode copiar a pasta compactada (arquivo. zip) para a pasta de modelos de item Visual Basic (por exemplo, Meus Documentos\Visual Studio 2008\Templates\Item Templates\Visual Basic). Como alternativa, você pode publicar o modelo como um arquivo do instalador do Visual Studio (VSI).  
   
 ## <a name="see-also"></a>Consulte também  
- [Extensão do My Namespace no Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Estendendo o Meu Namespace em Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [Estendendo o modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [Personalizando quais objetos estão disponíveis em My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [Página Minhas extensões, Designer de projeto](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

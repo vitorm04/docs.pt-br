@@ -1,13 +1,6 @@
 ---
-title: "Instruções passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o designer"
-ms.custom: 
+title: 'Instruções passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o designer'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Instruções passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o designer
 Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Windows Forms com aparência profissional em pouco tempo. Um cenário comum é criar uma interface do usuário (UI) com <xref:System.Windows.Forms.ListView> e <xref:System.Windows.Forms.TreeView> controles que se parece com o recurso do Windows Explorer dos sistemas operacionais Windows. O Windows Explorer exibe uma estrutura hierárquica de arquivos e pastas no computador do usuário.  
@@ -65,7 +53,7 @@ Um dos benefícios do Visual Studio é a capacidade de criar aplicativos dos Win
   
     2.  Defina a propriedade <xref:System.Windows.Forms.ListView.View%2A> como <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Abra o Editor de coleção ColumnHeader clicando nas reticências (![de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) no <xref:System.Windows.Forms.ListView.Columns%2A> propriedade**.** Adicione três colunas e defina seus <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriedade `Name`, `Type`, e `Last Modified`, respectivamente. Clique em **OK** para fechar a caixa de diálogo.  
+    3.  Abra o Editor de coleção ColumnHeader clicando nas reticências (![de tela de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) no <xref:System.Windows.Forms.ListView.Columns%2A> propriedade **.** Adicione três colunas e defina seus <xref:System.Windows.Forms.ColumnHeader.Text%2A> propriedade `Name`, `Type`, e `Last Modified`, respectivamente. Clique em **OK** para fechar a caixa de diálogo.  
   
     4.  Defina a propriedade <xref:System.Windows.Forms.ListView.SmallImageList%2A> como `imageList1.`  
   

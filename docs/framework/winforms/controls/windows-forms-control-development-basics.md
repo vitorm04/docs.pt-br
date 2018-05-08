@@ -1,28 +1,16 @@
 ---
-title: "Noções básicas sobre o desenvolvimento de controle dos Windows Forms"
-ms.custom: 
+title: Noções básicas sobre o desenvolvimento de controle dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], derivation types
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-control-development-basics"></a>Noções básicas sobre o desenvolvimento de controle dos Windows Forms
 Um controle de formulários do Windows é uma classe que deriva diretamente ou indiretamente de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. A lista a seguir descreve os cenários comuns para o desenvolvimento de controles do Windows Forms:  
@@ -39,7 +27,7 @@ Um controle de formulários do Windows é uma classe que deriva diretamente ou i
   
      Nesse cenário, o controle é derivado da classe base <xref:System.Windows.Forms.Control>. Você pode adicionar e substituir propriedades, métodos e eventos da classe base. Para começar, consulte [Como desenvolver um controle simples do Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
- A classe base para controles de formulários do Windows, <xref:System.Windows.Forms.Control>, fornece os detalhes necessários para a exibição visual em aplicativos do lado do cliente Windows. <xref:System.Windows.Forms.Control>Fornece um identificador de janela, manipula o roteamento de mensagens e fornece eventos de mouse e teclado, assim como muitos outros usuário eventos de interface. Ele fornece o layout avançado e tem propriedades específicas para a exibição visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e muitos outros. Além disso, ele fornece segurança, suporte a threading e interoperabilidade com controles ActiveX. Como grande parte da infraestrutura é fornecida pela classe base, é relativamente fácil desenvolver seus próprios controles do Windows Forms.  
+ A classe base para controles de formulários do Windows, <xref:System.Windows.Forms.Control>, fornece os detalhes necessários para a exibição visual em aplicativos do lado do cliente Windows. <xref:System.Windows.Forms.Control> Fornece um identificador de janela, manipula o roteamento de mensagens e fornece eventos de mouse e teclado, assim como muitos outros usuário eventos de interface. Ele fornece o layout avançado e tem propriedades específicas para a exibição visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e muitos outros. Além disso, ele fornece segurança, suporte a threading e interoperabilidade com controles ActiveX. Como grande parte da infraestrutura é fornecida pela classe base, é relativamente fácil desenvolver seus próprios controles do Windows Forms.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como desenvolver um controle simples dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

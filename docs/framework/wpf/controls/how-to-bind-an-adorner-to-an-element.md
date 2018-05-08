@@ -1,13 +1,6 @@
 ---
 title: Como associar um adorno a um elemento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb419ee5a57e81e7e3bc72ae04fd200703b80cd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Como associar um adorno a um elemento
 Este exemplo mostra como programaticamente associar um adorno a determinado <xref:System.Windows.UIElement>.  
@@ -32,7 +20,7 @@ Este exemplo mostra como programaticamente associar um adorno a determinado <xre
 ## <a name="example"></a>Exemplo  
  Para associar um adorno a um determinado <xref:System.Windows.UIElement>, siga estas etapas:  
   
-1.  Chamar o `static` método <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para obter um <xref:System.Windows.Documents.AdornerLayer> de objeto para o <xref:System.Windows.UIElement> adornados. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>percorre a árvore visual, iniciando no elemento **UIElement**e retorna a primeira camada de adorno que encontrar. (Se nenhuma camada de adorno for encontrada, o método retornará nulo.)  
+1.  Chamar o `static` método <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para obter um <xref:System.Windows.Documents.AdornerLayer> de objeto para o <xref:System.Windows.UIElement> adornados. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> percorre a árvore visual, iniciando no elemento **UIElement**e retorna a primeira camada de adorno que encontrar. (Se nenhuma camada de adorno for encontrada, o método retornará nulo.)  
   
 2.  Chamar o <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para associar o adorno ao destino **UIElement**.  
   

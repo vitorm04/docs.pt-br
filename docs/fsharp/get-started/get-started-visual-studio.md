@@ -1,17 +1,12 @@
 ---
 title: 'Introdução à linguagem F # no Visual Studio'
 description: 'Saiba como usar o F # com o Visual Studio.'
-author: cartermp
-ms.author: phcart
 ms.date: 02/13/2017
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 29e24f755e6d97c4b31c0d01b254bf90cf77bf17
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introdução à linguagem F # no Visual Studio
 

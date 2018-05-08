@@ -1,34 +1,20 @@
 ---
 title: Configuração do cliente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>Configuração do cliente
-Você pode usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] configuração do cliente para especificar o endereço, associação de comportamento e de contrato, as propriedades de "ABC" do ponto de extremidade de cliente, que os clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cujos atributos são usados para configurar o ponto de extremidade ABC. Esses atributos são discutidos na seção "Configurando pontos de extremidade" deste tópico.  
+Você pode usar a configuração do cliente Windows Communication Foundation (WCF) para especificar o endereço, associação, comportamento e contrato, as propriedades de "ABC" do ponto de extremidade de cliente, que os clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cujos atributos são usados para configurar o ponto de extremidade ABC. Esses atributos são discutidos na seção "Configurando pontos de extremidade" deste tópico.  
   
  O [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) também contém um [ \<metadados >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento que é usado para especificar configurações de importação e exportação de metadados, um [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) elemento que contém uma coleção de cabeçalhos de endereço personalizado, e um [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento que permite a autenticação de um ponto de extremidade por outros pontos de extremidade troca de mensagens com ele. O [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) e [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementos fazem parte do <xref:System.ServiceModel.EndpointAddress> e são discutidas no [endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tópico. Links para tópicos que explicam o uso de extensões de metadados são fornecidos na seção Configuração de metadados sub deste tópico.  
   
 ## <a name="configuring-endpoints"></a>Configurando pontos de extremidade  
- A configuração do cliente é projetada para permitir que o cliente especificar um ou mais pontos de extremidade, cada um com seu próprio nome, endereço e contrato, com cada referência a [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) e [ \< comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementos na configuração do cliente a ser usado para configurar o ponto de extremidade. O arquivo de configuração do cliente deve ser nomeado "App. config" porque esse é o nome que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espera de tempo de execução. O exemplo a seguir mostra o arquivo de configuração de um cliente.  
+ A configuração do cliente é projetada para permitir que o cliente especificar um ou mais pontos de extremidade, cada um com seu próprio nome, endereço e contrato, com cada referência a [ \<associações >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) e [ \< comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementos na configuração do cliente a ser usado para configurar o ponto de extremidade. O arquivo de configuração do cliente deve ser nomeado "App. config" porque esse é o nome que espera que o tempo de execução do WCF. O exemplo a seguir mostra o arquivo de configuração de um cliente.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

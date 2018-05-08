@@ -1,33 +1,21 @@
 ---
 title: Controle StatusBar (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusbar-control-windows-forms"></a>Controle StatusBar (Windows Forms)
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.ToolStripStatusLabel> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.StatusBar>, no entanto, o controle <xref:System.Windows.Forms.StatusBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
- Windows Forms <xref:System.Windows.Forms.StatusBar> controle é usado em formulários como uma área, normalmente exibida na parte inferior de uma janela, no qual um aplicativo pode exibir vários tipos de informações de status. <xref:System.Windows.Forms.StatusBar>controles podem ter painéis da barra de status neles que exibem ícones para indicar o estado ou uma série de ícones em uma animação que indicam que um processo está funcionando; Por exemplo, Microsoft Word indicando que o documento está sendo salvo.  
+ Windows Forms <xref:System.Windows.Forms.StatusBar> controle é usado em formulários como uma área, normalmente exibida na parte inferior de uma janela, no qual um aplicativo pode exibir vários tipos de informações de status. <xref:System.Windows.Forms.StatusBar> controles podem ter painéis da barra de status neles que exibem ícones para indicar o estado ou uma série de ícones em uma animação que indicam que um processo está funcionando; Por exemplo, Microsoft Word indicando que o documento está sendo salvo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do controle StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  

@@ -1,47 +1,35 @@
 ---
-title: "Como pintar uma área com um pincel de sistema"
-ms.custom: 
+title: Como pintar uma área com um pincel de sistema
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - system brushes [WPF], painting with
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8a66ffc283016d65a17b33e98ce28fe4cd1c242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Como pintar uma área com um pincel de sistema
 O <xref:System.Windows.SystemColors> classe fornece acesso a sistema pincéis e cores, como <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, e <xref:System.Windows.SystemColors.DesktopBrush%2A>. Um pincel de sistema é um <xref:System.Windows.Media.SolidColorBrush> objeto que pinta uma área com a cor de sistema especificado. Um pincel do sistema sempre produz um preenchimento sólido; ele não pode ser usado para criar um gradiente.  
   
  Você pode usar pincéis do sistema como um recurso dinâmico ou estático. Use um recurso dinâmico se desejar que o pincel seja atualizado automaticamente se o usuário alterar o pincel do sistema enquanto o aplicativo está em execução; caso contrário, use um recurso estático. A classe SystemColors contém uma variedade de propriedades estáticas que seguem uma convenção de nomenclatura estrita:  
   
--   *\<SystemColor>*Pincel  
+-   *\<SystemColor>* Pincel  
   
      Obtém uma referência estática a uma <xref:System.Windows.Media.SolidColorBrush> de cor do sistema especificada.  
   
--   *\<SystemColor>*BrushKey  
+-   *\<SystemColor>* BrushKey  
   
      Obtém uma referência dinâmica para um <xref:System.Windows.Media.SolidColorBrush> de cor do sistema especificada.  
   
--   *\<SystemColor>*Cor  
+-   *\<SystemColor>* Cor  
   
      Obtém uma referência estática a uma <xref:System.Windows.Media.Color> estrutura de cor do sistema especificada.  
   
--   *\<SystemColor>*ColorKey  
+-   *\<SystemColor>* ColorKey  
   
      Obtém uma referência dinâmica para o <xref:System.Windows.Media.Color> estrutura de cor do sistema especificada.  
   

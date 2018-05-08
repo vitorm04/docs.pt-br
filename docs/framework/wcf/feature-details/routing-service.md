@@ -1,31 +1,17 @@
 ---
 title: Serviço de roteamento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Serviço de roteamento
 O serviço de roteamento é um intermediário SOAP genérico que atua como um roteador de mensagem. A funcionalidade básica do serviço de roteamento é a capacidade para rotear mensagens com base no conteúdo da mensagem, que permite que uma mensagem a serem encaminhados para um ponto de extremidade do cliente com base em um valor dentro da mensagem, no cabeçalho ou no corpo da mensagem.  
   
- O <xref:System.ServiceModel.Routing.RoutingService> é implementado como um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço o <xref:System.ServiceModel.Routing> namespace. O serviço de roteamento expõe um ou mais pontos de extremidade que recebem mensagens e, em seguida, rotas de cada mensagem para um ou mais pontos de extremidade de cliente com base no conteúdo da mensagem. O serviço fornece os seguintes recursos:  
+ O <xref:System.ServiceModel.Routing.RoutingService> é implementado como um serviço do Windows Communication Foundation (WCF) no <xref:System.ServiceModel.Routing> namespace. O serviço de roteamento expõe um ou mais pontos de extremidade que recebem mensagens e, em seguida, rotas de cada mensagem para um ou mais pontos de extremidade de cliente com base no conteúdo da mensagem. O serviço fornece os seguintes recursos:  
   
 -   Roteamento baseado em conteúdo  
   
@@ -47,10 +33,10 @@ O serviço de roteamento é um intermediário SOAP genérico que atua como um ro
   
  Embora seja possível criar um serviço intermediário que realiza um ou mais dessas metas, geralmente essa implementação estiver associada a um cenário específico ou uma solução e não pode ser aplicada prontamente para novos aplicativos.  
   
- O serviço de roteamento fornece um intermediário SOAP genérico, podem ser configurado dinamicamente, conectável que é compatível com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço e canal de modelos e permite que você execute roteamento baseado em conteúdo de mensagens de baseado em SOAP.  
+ O serviço de roteamento fornece um intermediário SOAP genérico, podem ser configurado dinamicamente, conectável que é compatível com os modelos de serviço do WCF e o canal e permite que você execute roteamento baseado em conteúdo de mensagens de baseado em SOAP.  
   
 > [!NOTE]
->  O serviço de roteamento não atualmente suporte a roteamento de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços REST.  Para encaminhar chamadas REST, considere o uso de <xref:System.Web.Routing> ou [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  O serviço de roteamento não no momento oferecer suporte ao roteamento de serviços WCF REST.  Para encaminhar chamadas REST, considere o uso de <xref:System.Web.Routing> ou [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Roteamento baseado em conteúdo  
  Roteamento baseado em conteúdo é a capacidade de encaminhar uma mensagem com base em um ou mais valores contidos na mensagem. O serviço de roteamento verifica se cada mensagem e a roteia para o ponto de extremidade de destino com base no conteúdo da mensagem e a lógica de roteamento que você criar. Roteamento baseado em conteúdo fornece a base para agregação de serviço, controle de versão de serviço e roteamento de prioridade.  

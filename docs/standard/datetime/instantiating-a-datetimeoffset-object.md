@@ -1,13 +1,7 @@
 ---
-title: "Criando uma instância de um objeto DateTimeOffset"
-ms.custom: 
+title: Criando uma instância de um objeto DateTimeOffset
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 39095d3534de746008fd4710ffdb69db64c8cc86
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a48ea87bb5eb1e302ae6a1169c22ea30bd4bc7ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Criando uma instância de um objeto DateTimeOffset
 
@@ -50,7 +39,7 @@ Para idiomas que dão suporte a ele, uma das maneiras mais comuns para instancia
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]
 
-<xref:System.DateTimeOffset>os valores também podem ser inicializados usando literais de data e hora ao usar linguagens com suporte para <xref:System.DateTime> literais. Por exemplo, o código do Visual Basic a seguir cria um <xref:System.DateTimeOffset> objeto.
+<xref:System.DateTimeOffset> os valores também podem ser inicializados usando literais de data e hora ao usar linguagens com suporte para <xref:System.DateTime> literais. Por exemplo, o código do Visual Basic a seguir cria um <xref:System.DateTimeOffset> objeto.
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]
 

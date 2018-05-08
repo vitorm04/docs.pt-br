@@ -1,28 +1,14 @@
 ---
 title: Filtros de mensagem
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-filters"></a>Filtros de mensagem
 Para implementar roteamento baseado em conteúdo, o serviço de roteamento usa <xref:System.ServiceModel.Dispatcher.MessageFilter> implementações que inspecionam seções específicas de uma mensagem, como o endereço, nome do ponto de extremidade ou uma instrução XPath específica. Se nenhum dos filtros de mensagem fornecido com [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] atender às suas necessidades, você pode criar um filtro personalizado, criando uma nova implementação de base de <xref:System.ServiceModel.Dispatcher.MessageFilter> classe.  
@@ -39,8 +25,8 @@ Para implementar roteamento baseado em conteúdo, o serviço de roteamento usa <
 |Tipo de filtro|Descrição|Filtrar dados|Filtro de exemplo|  
 |------------------|-----------------|-------------------------|--------------------|  
 |Ação|Usa o <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> classe para corresponder as mensagens que contém uma ação específica.|A ação de filtro após.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Usa o <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> classe com <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` para corresponder as mensagens que contém um endereço específico.|O endereço para filtrar após (no cabeçalho para).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Usa o <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> classe com <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` para corresponder as mensagens que contêm um prefixo de endereço específico.|O endereço para filtrar usando a correspondência de prefixo mais longo.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|EndpointAddress|Usa o <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> classe com <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` para corresponder as mensagens que contém um endereço específico.|O endereço para filtrar após (no cabeçalho para).|\<nome do filtro = filterType "endereço1" = "EndpointAddress" filterData = "http://host/vdir/s.svc/b" / >|  
+|EndpointAddressPrefix|Usa o <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> classe com <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` para corresponder as mensagens que contêm um prefixo de endereço específico.|O endereço para filtrar usando a correspondência de prefixo mais longo.|\<nome do filtro = filterType "prefix1" = "EndpointAddressPrefix" filterData = "http://host/" / >|  
 |And|Usa o <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> classe que sempre é avaliada duas condições antes de retornar.|filterData não é usado; em vez disso, filter1 e filter2 têm os nomes dos filtros de mensagem correspondente (também na tabela), que deve ser **AND**ed juntos.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Personalizado|Um tipo definido pelo usuário que estende o <xref:System.ServiceModel.Dispatcher.MessageFilter> classe e tem um construtor que recebe uma cadeia de caracteres.|O atributo customType é o nome de tipo totalmente qualificado da classe para criar; filterData é a cadeia de caracteres passados para o construtor ao criar o filtro.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|Usa o <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> classe para corresponder as mensagens com base no nome do ponto de extremidade de serviço que eles chegaram no.|O nome do ponto de extremidade de serviço, por exemplo: "serviceEndpoint1".  Isso deve ser um dos pontos de extremidade expostos no serviço de roteamento.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
@@ -80,7 +66,7 @@ Para implementar roteamento baseado em conteúdo, o serviço de roteamento usa <
 |s12|http://www.w3.org/2003/05/soap-envelope|  
 |wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
 |wsa10|http://www.w3.org/2005/08/addressing|  
-|sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
+|SM|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
 |tempuri|http://tempuri.org|  
 |ser|http://schemas.microsoft.com/2003/10/Serialization|  
   

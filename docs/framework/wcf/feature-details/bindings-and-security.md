@@ -1,45 +1,33 @@
 ---
 title: Associações e segurança
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Associações e segurança
-As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferecem uma maneira rápida de programa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos. Com uma exceção, todas as associações de tem um esquema de segurança padrão habilitado. Este tópico ajuda você a selecionar a associação certa para suas necessidades de segurança.  
+As associações fornecidas pelo sistema incluídas com o Windows Communication Foundation (WCF) oferecem uma maneira rápida de aplicativos do WCF de programa. Com uma exceção, todas as associações de tem um esquema de segurança padrão habilitado. Este tópico ajuda você a selecionar a associação certa para suas necessidades de segurança.  
   
- Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando associações, consulte [de programação WCF segurança](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Para obter uma visão geral de segurança do WCF, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre como programar usando associações do WCF, consulte [de programação WCF segurança](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Se você já tiver selecionado uma associação, você pode encontrar mais informações sobre os comportamentos de tempo de execução que estão associados com a segurança em [comportamentos de segurança](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Algumas funções de segurança não são programáveis usando as associações fornecidas pelo sistema. Para obter mais controle utilizando uma associação personalizada, consulte [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funções de segurança de associações  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui um número de associações fornecidas pelo sistema que atendem a maioria das necessidades. Se uma associação específica não é suficiente, você também pode criar uma associação personalizada. Para obter uma lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ O WCF inclui um número de associações fornecidas pelo sistema que atendem a maioria das necessidades. Se uma associação específica não é suficiente, você também pode criar uma associação personalizada. Para obter uma lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Todas as associações de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem duas formas: como uma API e um elemento XML usados em um arquivo de configuração. Por exemplo, o `WSHttpBinding` (API) tem um equivalente [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Todas as associações do WCF tem duas formas: como uma API e um elemento XML usados em um arquivo de configuração. Por exemplo, o `WSHttpBinding` (API) tem um equivalente [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  A seção a seguir lista as duas formas para cada associação e resume os recursos de segurança.  
   
@@ -149,7 +137,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  No código, use o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe; na configuração, use o [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Essa associação é otimizada para a criação de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e serviços que interoperam com não[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade do serviço de enfileiramento de mensagens da Microsoft (MSMQ).  
+ Essa associação é otimizada para a criação de clientes e serviços que interoperam WCF com pontos de extremidade não - WCF Microsoft Message Queuing MSMQ.  
   
  Por padrão, esta associação usa segurança de transporte e fornece as seguintes características de segurança:  
   
@@ -162,7 +150,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  No código, use o <xref:System.ServiceModel.NetMsmqBinding> classe; na configuração, use o [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Essa associação é destinada para uso ao criar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suporte a mensagens na fila de serviços que exigem MSMQ.  
+ Essa associação destina para uso quando criando serviços WCF que exigem MSMQ enfileirados suporte de mensagem.  
   
  Por padrão, esta associação usa segurança de transporte e fornece as seguintes características de segurança:  
   
@@ -232,7 +220,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
 |----------|-----------------|  
 |Nenhum|Permite que o serviço interaja com clientes anônimos.|  
 |Windows|Permite que as trocas de mensagens SOAP a serem feitas sob o contexto autenticado de uma credencial do Windows.|  
-|UserName|Permite que o serviço exigir que o cliente seja autenticado usando uma credencial de nome de usuário. Observe que, quando o modo de segurança é definido como `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte para enviar uma senha digest ou derivação de chaves usando a senha e essas chaves para segurança de modo de mensagem. Como tal, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] impõe que o transporte é protegido ao usar as credenciais de nome de usuário.|  
+|UserName|Permite que o serviço exigir que o cliente seja autenticado usando uma credencial de nome de usuário. Observe que, quando o modo de segurança é definido como `TransportWithMessageCredential`, WCF não oferece suporte para enviar uma senha digest ou derivação de chaves usando a senha e essas chaves para segurança de modo de mensagem. Como tal, o WCF impõe que o transporte é protegido ao usar as credenciais de nome de usuário.|  
 |certificado|Permite que o serviço exigir que o cliente seja autenticado usando um certificado.|  
 |IssuedToken|Permite que o serviço usar um serviço de token de segurança para fornecer um token personalizado.|  
   

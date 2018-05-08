@@ -1,41 +1,29 @@
 ---
 title: Descoberta de WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], discovery
 - Windows Communication Foundation [WCF], discovery
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c11daa14a3897b05947dd6f8c3f3be99eb69c377
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 175f79096d2bbda81a602d38e027d5a6d871fa12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-discovery"></a>Descoberta de WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece suporte para habilitar o serviço seja detectável em tempo de execução de uma maneira interoperável usando o protocolo WS-Discovery. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]serviços podem anunciar a disponibilidade de rede usando uma mensagem de multicast ou em um servidor de proxy de descoberta. Aplicativos cliente podem pesquisar a rede ou um servidor de proxy de descoberta para localizar os serviços que atendem a um conjunto de critérios. Os tópicos nesta seção fornecem uma visão geral e descrevem o modelo de programação para esse recurso em detalhes.  
+Windows Communication Foundation (WCF) oferece suporte para habilitar o serviço seja detectável em tempo de execução de uma maneira interoperável usando o protocolo WS-Discovery. Serviços WCF podem anunciar a disponibilidade de rede usando uma mensagem de multicast ou em um servidor de proxy de descoberta. Aplicativos cliente podem pesquisar a rede ou um servidor de proxy de descoberta para localizar os serviços que atendem a um conjunto de critérios. Os tópicos nesta seção fornecem uma visão geral e descrevem o modelo de programação para esse recurso em detalhes.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- Fornece uma visão geral do suporte do WS-Discovery fornecido por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Fornece uma visão geral do suporte do WS-Discovery fornecida pelo WCF.  
   
  [Modelo de objeto de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)  
  Descreve as classes no modelo de objeto de extensibilidade de suporte do WS-Discovery.  
   
  [Como adicionar programaticamente a capacidade de descoberta a um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
- Mostra como fazer um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço detectável.  
+ Mostra como criar um serviço do Windows Communication Foundation (WCF) podem ser descobertos.  
   
  [Implementando um proxy de descoberta](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
  Descreve as etapas necessárias para implementar um proxy de descoberta, um serviço de descoberta que registra com o proxy de descoberta e um cliente que usa o proxy de descoberta para localizar o serviço de descoberta.  
@@ -47,4 +35,4 @@ ms.lasthandoff: 12/22/2017
  Mostra como configurar a descoberta na configuração.  
   
  [Usando o canal de cliente de descoberta](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- Mostra como usar um canal de cliente de descoberta ao escrever um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo cliente.
+ Mostra como usar um canal de cliente de descoberta ao escrever um aplicativo de cliente do WCF.

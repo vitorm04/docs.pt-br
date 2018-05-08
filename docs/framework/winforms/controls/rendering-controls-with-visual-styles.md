@@ -1,13 +1,6 @@
 ---
 title: Renderizando controles com estilos visuais
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - professional appearance [Windows Forms], rendering Windows Forms controls
 - themes [Windows Forms], XP visual styles in Window Forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7f2d810567d37021d5d4473204d9950d6834b9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderizando controles com estilos visuais
 O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à renderização de controles e outros elementos da interface do usuário do Windows usando estilos visuais em sistemas operacionais que dão suporte a eles. Este tópico discute os vários níveis de suporte no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para renderizar controles e outros elementos da interface do usuário com o estilo visual atual do sistema operacional.  
@@ -65,9 +53,9 @@ O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à
 ## <a name="visual-style-element-and-rendering-classes"></a>Elemento de estilo visual e classes de renderização  
  O <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace inclui classes que podem ser usadas para desenhar e obter informações sobre qualquer controle ou um elemento de interface do usuário que é compatível com estilos visuais. Controles com suporte incluem controles comuns que têm uma classe de renderização no <xref:System.Windows.Forms?displayProperty=nameWithType> namespace (consulte a seção anterior), bem como outros controles, como controles de guia e controles rebar. Outros elementos de interface do usuário com suporte incluem as partes do menu **Iniciar**, a barra de tarefas e a área não cliente do Windows.  
   
- As principais classes do <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace são <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>é uma classe base para identificar qualquer elemento de interface do usuário ou controle estilos visuais com suporte. Além <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> em si, o <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace inclui muitas classes aninhadas de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> com `static` propriedades que retornam um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para cada estado de um controle, parte do controle ou outro elemento de interface do usuário com suporte estilos visuais.  
+ As principais classes do <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace são <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> e <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> é uma classe base para identificar qualquer elemento de interface do usuário ou controle estilos visuais com suporte. Além <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> em si, o <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace inclui muitas classes aninhadas de <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> com `static` propriedades que retornam um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para cada estado de um controle, parte do controle ou outro elemento de interface do usuário com suporte estilos visuais.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>fornece os métodos que desenhar e obtém informações sobre cada <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> definida pelo estilo visual atual do sistema operacional. Informações que podem ser recuperadas sobre um elemento incluem seu tamanho padrão, o tipo de tela de fundo e definições de cores. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>encapsula a funcionalidade dos estilos visuais (UxTheme) API da parte do Shell do Windows do SDK da plataforma Windows. Para obter mais informações, consulte [usando o Windows XP Visual estilos](https://msdn.microsoft.com/library/ms997649.aspx).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> fornece os métodos que desenhar e obtém informações sobre cada <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> definida pelo estilo visual atual do sistema operacional. Informações que podem ser recuperadas sobre um elemento incluem seu tamanho padrão, o tipo de tela de fundo e definições de cores. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> encapsula a funcionalidade dos estilos visuais (UxTheme) API da parte do Shell do Windows do SDK da plataforma Windows. Para obter mais informações, consulte [usando o Windows XP Visual estilos](https://msdn.microsoft.com/library/ms997649.aspx).  
   
  Para obter mais informações sobre como usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> e <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, consulte [como: renderizar um elemento de estilo Visual](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   

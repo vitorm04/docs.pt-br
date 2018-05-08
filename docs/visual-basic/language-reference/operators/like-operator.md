@@ -1,11 +1,6 @@
 ---
 title: Operador Like (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Operador Like (Visual Basic)
 Compara uma cadeia de caracteres com um padrão.  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Partes  
  `result`  
- Necessário. Qualquer `Boolean` variável. O resultado é um `Boolean` valor que indica se o `string` satisfaz o `pattern`.  
+ Obrigatório. Qualquer `Boolean` variável. O resultado é um `Boolean` valor que indica se o `string` satisfaz o `pattern`.  
   
  `string`  
- Necessário. Qualquer expressão de `String` .  
+ Obrigatório. Qualquer expressão de `String` .  
   
  `pattern`  
- Necessário. Qualquer `String` expressão de acordo com as convenções de correspondência de padrão descritas em "Comentários".  
+ Obrigatório. Qualquer `String` expressão de acordo com as convenções de correspondência de padrão descritas em "Comentários".  
   
 ## <a name="remarks"></a>Comentários  
  Se o valor em `string` satisfizer o padrão contido em `pattern`, `result` é `True`. Se a cadeia de caracteres não satisfaz o padrão, `result` é `False`. Se ambos os `string` e `pattern` são cadeias de caracteres vazias, o resultado é `True`.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Opções padrão  
  Correspondência de padrões interna fornece uma ferramenta versátil para comparações de cadeia de caracteres. Os recursos de correspondência permitem que você coincida cada caractere em `string` em relação a um caractere específico, um caractere curinga, uma lista de caracteres ou um intervalo de caracteres. A tabela a seguir mostra os caracteres permitidos em `pattern` e o que eles correspondem.  
   
-|Caracteres em`pattern`|Faz a correspondência em`string`|  
+|Caracteres em `pattern`|Faz a correspondência em `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Qualquer caractere único|  
 |`*`|Zero ou mais caracteres|  
 |`#`|Qualquer dígito único (0 – 9)|  
-|`[charlist]`|Qualquer caractere único no`charlist`|  
-|`[!charlist]`|Qualquer caractere único que não está em`charlist`|  
+|`[charlist]`|Qualquer caractere único no `charlist`|  
+|`[!charlist]`|Qualquer caractere único que não está em `charlist`|  
   
 ## <a name="character-lists"></a>Listas de caractere  
  Um grupo de um ou mais caracteres (`charlist`) entre colchetes (`[ ]`) pode ser usado para corresponder a qualquer caractere único no `string` e pode incluir qualquer código de caractere, inclusive dígitos.  

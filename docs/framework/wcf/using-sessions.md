@@ -1,34 +1,20 @@
 ---
 title: Utilizando sessões
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>Utilizando sessões
-Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, um *sessão* correlaciona a um grupo de mensagens em uma conversa. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] as sessões são diferentes do objeto de sessão disponível no [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativos, suporte a comportamentos diferentes e são controlados de maneiras diferentes. Este tópico descreve os recursos que permitem que as sessões no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos e como usá-los.  
+Em aplicativos do Windows Communication Foundation (WCF), um *sessão* correlaciona a um grupo de mensagens em uma conversa. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] as sessões são diferentes do objeto de sessão disponível no [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativos, suporte a comportamentos diferentes e são controlados de maneiras diferentes. Este tópico descreve os recursos que permitem que as sessões no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos e como usá-los.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sessões em aplicativos do Windows Communication Foundation  
  Quando um contrato de serviço Especifica que ele requer uma sessão, esse contrato é Especifica que todas as chamadas (ou seja, as subjacente trocas de mensagens que oferecem suporte as chamadas) devem ser parte da mesma conversa. Se um contrato especifica que permite que as sessões, mas não requer um, os clientes podem se conectar e a estabelecer uma sessão ou não estabelecer uma sessão. Se a sessão é encerrada e uma mensagem é enviada por meio do canal mesmo que uma exceção será lançada.  

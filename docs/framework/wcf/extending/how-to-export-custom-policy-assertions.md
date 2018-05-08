@@ -1,30 +1,18 @@
 ---
-title: "Como exportar declarações de política personalizadas"
-ms.custom: 
+title: Como exportar declarações de política personalizadas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4182007d32ea857aa333542b4df29da18b8062df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Como exportar declarações de política personalizadas
-Declarações de política descrevem os recursos e requisitos de um ponto de extremidade de serviço. Aplicativos de serviço podem usar declarações de política personalizada nos metadados de serviço para comunicar-se o ponto de extremidade, informações de personalização de associação ou o contrato para o aplicativo cliente. Você pode usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para exportar declarações em expressões de política anexadas em associações de WSDL no ponto de extremidade, operação ou entidades de mensagem, dependendo do modo como os recursos ou os requisitos que você está se comunicando.  
+Declarações de política descrevem os recursos e requisitos de um ponto de extremidade de serviço. Aplicativos de serviço podem usar declarações de política personalizada nos metadados de serviço para comunicar-se o ponto de extremidade, informações de personalização de associação ou o contrato para o aplicativo cliente. Você pode usar o Windows Communication Foundation (WCF) para exportar declarações em expressões de política anexadas em associações de WSDL no ponto de extremidade, operação ou entidades de mensagem, dependendo do modo como os recursos ou os requisitos que você está se comunicando.  
   
  Declarações de política personalizadas são exportadas Implementando o <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface em um <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e inserindo o elemento de associação diretamente para a associação do ponto de extremidade de serviço ou registrando o elemento de associação em seu aplicativo arquivo de configuração. A implementação de exportação de política deve adicionar a declaração de política personalizada como um <xref:System.Xml.XmlElement?displayProperty=nameWithType> instância apropriada <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> no <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passado para o <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> método.  
   

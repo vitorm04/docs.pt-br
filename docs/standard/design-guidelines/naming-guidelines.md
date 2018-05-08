@@ -1,13 +1,7 @@
 ---
 title: Diretrizes de nomenclatura
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], about naming guidelines
 - naming guidelines [.NET Framework]
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 91b392c2fe895499b9da83cfd773edb1128a429b
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
 Um conjunto de convenções de nomenclatura no desenvolvimento de uma estrutura consistente a seguir pode ser uma contribuição principais a usabilidade do framework. Ele permite que a estrutura a ser usada por muitos desenvolvedores em projetos amplamente separados. Além da consistência do formulário, nomes de elementos do framework devem ser facilmente compreendidos e devem transmitir a função de cada elemento.  

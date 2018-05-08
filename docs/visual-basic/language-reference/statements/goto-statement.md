@@ -1,12 +1,6 @@
 ---
 title: Instrução GoTo
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>Instrução GoTo
 Branch incondicionalmente para uma linha especificada em um procedimento.  
@@ -45,7 +36,7 @@ GoTo line
  O `GoTo` instrução pode ramificar somente para linhas no procedimento no qual ele aparece. A linha deve ter uma linha de rótulo que `GoTo` pode consultar. Para obter mais informações, consulte [como: instruções de rótulo](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo`instruções podem tornar o código difíceis de ler e manter. Sempre que possível, use uma estrutura de controle. Para obter mais informações, consulte [fluxo de controle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` instruções podem tornar o código difíceis de ler e manter. Sempre que possível, use uma estrutura de controle. Para obter mais informações, consulte [fluxo de controle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
  Não é possível usar um `GoTo` instrução para ramificar de fora de um `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, ou `Using`... `End Using` construção para um rótulo dentro.  
   
@@ -54,9 +45,9 @@ GoTo line
   
 |Bloco ou região|Ramificação de fora|Ramificação fora de dentro de|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`bloco|Somente de um `Catch` blocos de construção mesmo <sup>1</sup>|Somente para fora da construção inteira|  
-|`Catch`bloco|Nunca permitidos|Somente para fora da construção inteira ou para o `Try` blocos de construção mesmo <sup>1</sup>|  
-|`Finally`bloco|Nunca permitidos|Nunca permitidos|  
+|`Try` Bloco|Somente de um `Catch` blocos de construção mesmo <sup>1</sup>|Somente para fora da construção inteira|  
+|`Catch` Bloco|Nunca permitidos|Somente para fora da construção inteira ou para o `Try` blocos de construção mesmo <sup>1</sup>|  
+|`Finally` Bloco|Nunca permitidos|Nunca permitidos|  
   
  <sup>1</sup> se `Try`... `Catch`... `Finally` estiver aninhada dentro de outra, uma `Catch` bloco pode ramificar para o `Try` bloco no seu próprio nível de aninhamento, mas não para qualquer outro `Try` bloco. Uma construção `Try`... `Catch`... `Finally` construção deve estar contida completamente em uma `Try` ou `Catch` bloco de construção no qual ele está aninhado.  
   

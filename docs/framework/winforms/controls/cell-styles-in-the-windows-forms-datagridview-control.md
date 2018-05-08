@@ -1,28 +1,16 @@
 ---
-title: "Estilos de célula no controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Estilos de célula no controle DataGridView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463fbbffe1e88991934f08fbe7e7445b2e233081
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Estilos de célula no controle DataGridView dos Windows Forms
 Cada célula dentro de <xref:System.Windows.Forms.DataGridView> controle pode ter seu próprio estilo, como fonte, cor do plano de fundo, cor de primeiro plano e formato de texto. Normalmente, no entanto, várias células compartilharão características de determinado estilo.  
@@ -66,7 +54,7 @@ Cada célula dentro de <xref:System.Windows.Forms.DataGridView> controle pode te
 |<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Obtém ou define os estilos de célula padrão, alternando as linhas no controle. Usado para criar um efeito semelhante a livro-razão.|  
 |<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Obtém ou define os estilos de célula padrão usados por cabeçalhos de linha do controle. Substituídos pelo tema atual se os estilos visuais estiverem habilitados.|  
 |<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Obtém ou define os estilos de célula padrão usados por cabeçalhos de coluna do controle. Substituídos pelo tema atual se os estilos visuais estiverem habilitados.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>e classes derivadas|Obtém ou define estilos especificados no nível da célula. Esses estilos substituem aqueles herdados de níveis superiores.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> e classes derivadas|Obtém ou define estilos especificados no nível da célula. Esses estilos substituem aqueles herdados de níveis superiores.|  
 |`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>e classes derivadas|Obtém todos os estilos atualmente aplicados à célula, linha ou coluna, inclusive estilos herdados de níveis superiores.|  
   
  Conforme mencionado acima, obter o valor de uma propriedade de estilo automaticamente cria um novo <xref:System.Windows.Forms.DataGridViewCellStyle> objeto se a propriedade não foi definida anteriormente. Para evitar criar estes objetos desnecessariamente, as classes de linha e coluna têm um <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> propriedade que você pode verificar para determinar se o <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> propriedade foi definida. Da mesma forma, as classes de célula têm um <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> propriedade que indica se o <xref:System.Windows.Forms.DataGridViewCell.Style%2A> propriedade foi definida.  
@@ -80,7 +68,7 @@ Cada célula dentro de <xref:System.Windows.Forms.DataGridView> controle pode te
   
 2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(somente para as células das linhas com números de índice ímpares)  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (somente para as células das linhas com números de índice ímpares)  
   
 4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -110,7 +98,7 @@ Cada célula dentro de <xref:System.Windows.Forms.DataGridView> controle pode te
   
 1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(somente para as células das linhas com números de índice ímpares)  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (somente para as células das linhas com números de índice ímpares)  
   
 3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   

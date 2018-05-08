@@ -1,13 +1,6 @@
 ---
-title: "Como renderizar elementos gráficos em buffer manualmente"
-ms.custom: 
+title: Como renderizar elementos gráficos em buffer manualmente
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a5d06da3a398782b0285fb55807df5832cf771
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab0868e31ac8b010c662c04a7670e1ead19cebe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Como renderizar elementos gráficos em buffer manualmente
 Se você gerenciar seus próprios elementos gráficos em buffer, precisará ser capaz de criar e renderizar buffers gráficos. Você pode criar instâncias da <xref:System.Drawing.BufferedGraphics> classe associada com superfícies de desenho na tela chamando o <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método. Esse método cria um <xref:System.Drawing.BufferedGraphics> instância que está associada uma superfície de renderização específico, como um formulário ou controle. Depois de ter criado um <xref:System.Drawing.BufferedGraphics> instância, você pode desenhar gráficos ao buffer representa por meio de <xref:System.Drawing.BufferedGraphics.Graphics%2A> propriedade. Depois que você executou todas as operações de gráficos, você pode copiar o conteúdo do buffer para a tela chamando o <xref:System.Drawing.BufferedGraphics.Render%2A> método.  

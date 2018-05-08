@@ -1,24 +1,12 @@
 ---
 title: Unidirecional
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a781963205f260c82d3db316680c9e8c33045434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cb3619d56720333f23d933a8f356e8b0268c4d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way"></a>Unidirecional
 Este exemplo demonstra um contato de serviço com operações de serviço unidirecional. O cliente não aguarda a conclusão como é o caso com operações de serviço bidirecional das operações de serviço. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e usa o `wsHttpBinding` associação. O serviço neste exemplo é um aplicativo de console auto-hospedado para que você possa observar o serviço que recebe e processa as solicitações. O cliente também é um aplicativo de console.  
@@ -95,7 +83,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP é, por definição, um protocolo de solicitação/resposta; Quando uma solicitação é feita, uma resposta é retornada. Isso é verdadeiro mesmo para uma operação de serviço unidirecional que é exposta por meio de HTTP. Quando a operação é chamada, o serviço retorna um código de status HTTP de 202 antes que executou a operação de serviço. Esse código de status significa que a solicitação foi aceita para processamento, mas o processamento ainda não foi concluído. O cliente que chamou a operação bloqueia até receber a resposta 202 do serviço. Isso pode causar um comportamento inesperado quando várias mensagens unidirecionais são enviadas usando uma associação que está configurada para usar sessões. O `wsHttpBinding` associação usada neste exemplo é configurada para usar sessões por padrão para estabelecer um contexto de segurança. Por padrão, as mensagens em uma sessão são garantidas de chegar na ordem em que são enviados. Por isso, quando a segunda mensagem em uma sessão é enviada, ele não é processado até que a primeira mensagem foi processada. O resultado disso é que o cliente não recebe a resposta para uma mensagem de 202 até que o processamento da mensagem anterior foi concluído. O cliente, portanto, é exibida para o bloco em cada chamada de operação subsequente. Para evitar esse comportamento, este exemplo configura o tempo de execução para enviar mensagens para instâncias distintas para processamento ao mesmo tempo. Conjuntos de exemplo <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> para `PerCall` para que cada mensagem pode ser processada por uma instância diferente. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>é definido como `Multiple` para permitir que mais de um thread enviar mensagens de cada vez.  
+>  HTTP é, por definição, um protocolo de solicitação/resposta; Quando uma solicitação é feita, uma resposta é retornada. Isso é verdadeiro mesmo para uma operação de serviço unidirecional que é exposta por meio de HTTP. Quando a operação é chamada, o serviço retorna um código de status HTTP de 202 antes que executou a operação de serviço. Esse código de status significa que a solicitação foi aceita para processamento, mas o processamento ainda não foi concluído. O cliente que chamou a operação bloqueia até receber a resposta 202 do serviço. Isso pode causar um comportamento inesperado quando várias mensagens unidirecionais são enviadas usando uma associação que está configurada para usar sessões. O `wsHttpBinding` associação usada neste exemplo é configurada para usar sessões por padrão para estabelecer um contexto de segurança. Por padrão, as mensagens em uma sessão são garantidas de chegar na ordem em que são enviados. Por isso, quando a segunda mensagem em uma sessão é enviada, ele não é processado até que a primeira mensagem foi processada. O resultado disso é que o cliente não recebe a resposta para uma mensagem de 202 até que o processamento da mensagem anterior foi concluído. O cliente, portanto, é exibida para o bloco em cada chamada de operação subsequente. Para evitar esse comportamento, este exemplo configura o tempo de execução para enviar mensagens para instâncias distintas para processamento ao mesmo tempo. Conjuntos de exemplo <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> para `PerCall` para que cada mensagem pode ser processada por uma instância diferente. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> é definido como `Multiple` para permitir que mais de um thread enviar mensagens de cada vez.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -113,7 +101,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   

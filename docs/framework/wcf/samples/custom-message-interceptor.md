@@ -1,24 +1,12 @@
 ---
 title: Interceptor de mensagem personalizado
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>Interceptor de mensagem personalizado
 Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de associação personalizada que cria fábricas de canais e ouvintes de canais para interceptar todas as mensagens de entrada e saídas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e servidor que demonstram o uso dessas fábricas personalizado.  
@@ -33,11 +21,11 @@ Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particula
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- O exemplo descreve o procedimento recomendado para criar um canal personalizado em camadas em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], usando a estrutura de canal e seguindo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] práticas recomendadas. As etapas para criar um canal em camadas personalizado são da seguinte maneira:  
+ O exemplo descreve o procedimento recomendado para criar um canal em camadas personalizado no Windows Communication Foundation (WCF), usando a estrutura de canal e seguindo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] práticas recomendadas. As etapas para criar um canal em camadas personalizado são da seguinte maneira:  
   
 1.  Decida quais das formas de canal dará suporte a sua fábrica de canal e ouvinte de canal.  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adicionando um elemento de associação  
- O exemplo define um elemento de associação personalizada: `InterceptingBindingElement`. `InterceptingBindingElement`leva um `ChannelMessageInterceptor` como uma entrada e usa esse `ChannelMessageInterceptor` para manipular as mensagens que passam por ele. Essa é a única classe que deve ser público. A fábrica, ouvinte e canais podem ser internas implementações das interfaces públicas do tempo de execução.  
+ O exemplo define um elemento de associação personalizada: `InterceptingBindingElement`. `InterceptingBindingElement` leva um `ChannelMessageInterceptor` como uma entrada e usa esse `ChannelMessageInterceptor` para manipular as mensagens que passam por ele. Essa é a única classe que deve ser público. A fábrica, ouvinte e canais podem ser internas implementações das interfaces públicas do tempo de execução.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  

@@ -1,27 +1,15 @@
 ---
 title: Extensibilidade
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>Extensibilidade
-Esta seção contém exemplos que lidam com extensibilidade personalizada e outros recursos do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta seção contém exemplos que lidam com extensibilidade personalizada e outros recursos do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Extensibilidade de canais](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ Esta seção contém exemplos que lidam com extensibilidade personalizada e outr
  Demonstra como pontos de extensibilidade podem consumir os formatos de dados da mensagem personalizada.  
   
  [Filtro de mensagem personalizado](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Demonstra como substituir a mensagem de filtros que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa para enviar mensagens a pontos de extremidade.  
+ Demonstra como substituir os filtros de mensagem que usa o Windows Communication Foundation (WCF) para enviar mensagens a pontos de extremidade.  
   
  [Host de serviço personalizado](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Demonstra como usar um personalizado derivado do <xref:System.ServiceModel.ServiceHost> classe para alterar o comportamento de tempo de execução de um serviço.  

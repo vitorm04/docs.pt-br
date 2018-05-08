@@ -1,11 +1,6 @@
 ---
 title: -linkresource (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /linkresource compiler option [Visual Basic]
 - -linkresource compiler option [Visual Basic]
@@ -14,13 +9,11 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 33b84631e0c09521a6f4ff9e06b2a80e0885862e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 38740ed7ab7904feb2ca95eb70c916fbdbaef71e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Cria um link a um recurso gerenciado.  
@@ -35,7 +28,7 @@ Cria um link a um recurso gerenciado.
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Necessário. O arquivo de recurso para vincular ao assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas ("").  
+ Obrigatório. O arquivo de recurso para vincular ao assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas ("").  
   
  `identifier`  
  Opcional. O nome lógico para o recurso. O nome que é usado para carregar o recurso. O padrão é o nome do arquivo. Opcionalmente, você pode especificar se o arquivo é pública ou privada no manifesto do assembly, por exemplo: `-linkres:filename.res,myname.res,public`. Por padrão, `filename` é público no assembly.  

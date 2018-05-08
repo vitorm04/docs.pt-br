@@ -1,28 +1,14 @@
 ---
 title: Negação de serviço
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>Negação de serviço
 Negação de serviço ocorre quando um sistema está sobrecarregado de forma que as mensagens não podem ser processadas ou eles são processados muito lentamente.  
@@ -62,15 +48,15 @@ Negação de serviço ocorre quando um sistema está sobrecarregado de forma que
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Implementações inválidas de IAuthorizationPolicy pode causa serviço trava  
  Chamando o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método em uma implementação falha do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface pode fazer com que o serviço desligar.  
   
- Mitigação: Use somente o código confiável. Ou seja, use somente o código que você tiver gravado e testado ou que vêm de um fornecedor confiável. Não permitir extensões não confiáveis do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> devem ser inseridos em seu código sem a devida consideração. Isso se aplica a todas as extensões usadas em uma implementação de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não faz qualquer diferença entre o código do aplicativo e o código externo que é conectado usando pontos de extensibilidade.  
+ Mitigação: Use somente o código confiável. Ou seja, use somente o código que você tiver gravado e testado ou que vêm de um fornecedor confiável. Não permitir extensões não confiáveis do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> devem ser inseridos em seu código sem a devida consideração. Isso se aplica a todas as extensões usadas em uma implementação de serviço. O WCF não faz qualquer diferença entre o código do aplicativo e o código externo que é conectado usando pontos de extensibilidade.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Tamanho de Token Kerberos máximo pode ser necessário redimensionar  
- Se um cliente pertence a um grande número de grupos (aproximadamente 900, embora o número real varia dependendo dos grupos), um problema pode ocorrer quando o bloco do cabeçalho da mensagem excede 64 kilobytes. Nesse caso, você pode aumentar o tamanho de token Kerberos máximo, conforme descrito no artigo do Microsoft Support "[a autenticação Kerberos do Internet Explorer não funciona devido a um buffer insuficiente se conectam ao IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Você também pode precisar aumentar o máximo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para acomodar o maior token Kerberos da mensagem.  
+ Se um cliente pertence a um grande número de grupos (aproximadamente 900, embora o número real varia dependendo dos grupos), um problema pode ocorrer quando o bloco do cabeçalho da mensagem excede 64 kilobytes. Nesse caso, você pode aumentar o tamanho de token Kerberos máximo, conforme descrito no artigo do Microsoft Support "[a autenticação Kerberos do Internet Explorer não funciona devido a um buffer insuficiente se conectam ao IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Talvez você precise aumentar o tamanho máximo da mensagem WCF para acomodar o maior token Kerberos.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>O registro automático resultados em vários certificados com o mesmo nome de assunto para a máquina  
  *O registro automático* é a capacidade de [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] para registrar automaticamente os usuários e computadores para certificados. Quando um computador estiver em um domínio com o recurso habilitado, um certificado x. 509 com a finalidade de autenticação de cliente é criado e inserido no repositório de certificados pessoais do computador local sempre que uma nova máquina é unida à automaticamente a rede. No entanto, o registro automático usa o mesmo nome de assunto para todos os certificados que ele cria no cache.  
   
- O impacto é que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços podem falhar ao abrir em domínios com o registro automático. Isso ocorre porque os critérios de pesquisa padrão serviço x. 509 credencial podem ser ambíguos porque existem vários certificados com o nome de sistema de nome de domínio (DNS) totalmente qualificado do computador. Um certificado se origina de registro automático; a outra pode ser um certificado emitido por conta própria.  
+ O impacto é que os serviços WCF podem falhar ao abrir em domínios com o registro automático. Isso ocorre porque os critérios de pesquisa padrão serviço x. 509 credencial podem ser ambíguos porque existem vários certificados com o nome de sistema de nome de domínio (DNS) totalmente qualificado do computador. Um certificado se origina de registro automático; a outra pode ser um certificado emitido por conta própria.  
   
  Para atenuar isso, referenciar o certificado exato para usar usando um critério de pesquisa mais preciso sobre o [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Por exemplo, use o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> opção e especifique o certificado por sua impressão digital exclusiva (hash).  
   
@@ -82,7 +68,7 @@ Negação de serviço ocorre quando um sistema está sobrecarregado de forma que
 ## <a name="protect-configuration-files-with-acls"></a>Proteger os arquivos de configuração com ACLs  
  Você pode especificar declarações obrigatórias e opcionais em arquivos de código e configuração para [!INCLUDE[infocard](../../../../includes/infocard-md.md)] tokens emitidos. Isso resulta em elementos correspondentes que está sendo emitidos em `RequestSecurityToken` serviço de token de mensagens que são enviadas para a segurança. Um invasor pode modificar código ou configuração para remover as declarações necessárias ou opcionais, potencialmente obter o serviço de token de segurança para emitir um token que não permite o acesso ao serviço de destino.  
   
- Para atenuar: exigem acesso ao computador para modificar o arquivo de configuração. Controle de acesso de arquivo de uso de ACLs para proteger os arquivos de configuração. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requer que o código seja no cache de assembly global ou de diretório do aplicativo antes de permitir esse tipo de código a ser carregado de configuração. Use as ACLs do diretório para proteger diretórios.  
+ Para atenuar: exigem acesso ao computador para modificar o arquivo de configuração. Controle de acesso de arquivo de uso de ACLs para proteger os arquivos de configuração. WCF requer código ser no diretório do aplicativo ou o cache de assembly global antes de permitir esse tipo de código a ser carregado de configuração. Use as ACLs do diretório para proteger diretórios.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Número máximo de sessões seguras para um serviço é atingido  
  Quando um cliente é autenticado com êxito por um serviço e uma sessão segura é estabelecida com o serviço, o serviço mantém o controle de sessão até que o cliente cancele ou a sessão expira. Cada sessão estabelecida conta em relação ao limite para o número máximo de sessões simultâneas ativas com um serviço. Quando esse limite for atingido, clientes que tentam criar uma nova sessão com esse serviço serão rejeitados até que um ou mais ativas sessões expirarem ou são canceladas por um cliente. Um cliente pode ter várias sessões com um serviço, e cada um dessas sessões contado o limite.  

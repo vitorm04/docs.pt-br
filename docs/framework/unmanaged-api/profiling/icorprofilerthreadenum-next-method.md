@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerThreadEnum::Next"
-ms.custom: 
+title: Método ICorProfilerThreadEnum::Next
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerThreadEnum.Next
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfefb140b49a606487f1fe2bbdfb8c6a3b5c6fc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed01b2f59c46d1dcedd62846ea663c9aa7213b37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>Método ICorProfilerThreadEnum::Next
 Obtém o número especificado de threads de contíguas de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.  
@@ -63,7 +51,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt`elementos foram retornados.|  
+|S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Menos de `celt` elementos foram retornados, que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -73,7 +61,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  

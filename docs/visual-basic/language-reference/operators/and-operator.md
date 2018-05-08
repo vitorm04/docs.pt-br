@@ -1,12 +1,6 @@
 ---
 title: Operador And (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.And
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e1f9df11152f88ef0db24a794026d6f5888a2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e14dfd8ba200598084cad04d1faa05f3561f8dab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="and-operator-visual-basic"></a>Operador And (Visual Basic)
 Executa uma conjunção lógica em duas `Boolean` expressões ou uma conjunção bit a bit em duas expressões numéricas.  
@@ -39,13 +30,13 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>Partes  
  `result`  
- Necessário. Qualquer `Boolean` ou expressão numérica. Para comparação Boolean, `result` é a conjunção lógica de dois `Boolean` valores. Para operações bit a bit, `result` é um valor numérico que representa a conjunção bit a bit de dois padrões numéricos de bits.  
+ Obrigatório. Qualquer `Boolean` ou expressão numérica. Para comparação Boolean, `result` é a conjunção lógica de dois `Boolean` valores. Para operações bit a bit, `result` é um valor numérico que representa a conjunção bit a bit de dois padrões numéricos de bits.  
   
  `expression1`  
- Necessário. Qualquer `Boolean` ou expressão numérica.  
+ Obrigatório. Qualquer `Boolean` ou expressão numérica.  
   
  `expression2`  
- Necessário. Qualquer `Boolean` ou expressão numérica.  
+ Obrigatório. Qualquer `Boolean` ou expressão numérica.  
   
 ## <a name="remarks"></a>Comentários  
  Para comparação Boolean, `result` é `True` se e somente se ambos os `expression1` e `expression2` são avaliadas como `True`. A tabela a seguir ilustra como `result` é determinado.  
@@ -72,7 +63,7 @@ result = expression1 And expression2
 > [!NOTE]
 >  Como os operadores lógicos e bit a bit possuem uma precedência inferior que outros operadores aritméticos e relacionais, quaisquer operações bit a bit devem ser incluídas entre parênteses para garantir resultados precisos.  
   
-## <a name="data-types"></a>Tipos de Dados  
+## <a name="data-types"></a>Tipos de dados  
  Se os operandos consistem em uma `Boolean` expressão e uma expressão numérica, Visual Basic converte o `Boolean` expressão para um valor numérico (-1 para `True` e 0 para `False`) e executa uma operação bit a bit.  
   
  Para obter uma comparação booliana, o tipo de dados do resultado é `Boolean`. Para obter uma comparação bit a bit, o tipo de dados do resultado é um tipo numérico apropriado para os tipos de dados de `expression1` e `expression2`. Consulte a tabela "Comparações relacionais e bit a bit" [tipos de dados de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  

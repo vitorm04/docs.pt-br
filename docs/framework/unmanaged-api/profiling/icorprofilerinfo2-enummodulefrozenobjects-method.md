@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo2::EnumModuleFrozenObjects"
-ms.custom: 
+title: Método ICorProfilerInfo2::EnumModuleFrozenObjects
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.EnumModuleFrozenObjects
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3866d91d28258eaee78e6025175628796a369f88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77b07dae5b53db58b3628f677be1714e66ac18ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>Método ICorProfilerInfo2::EnumModuleFrozenObjects
 Obtém um enumerador que permite iteração sobre os objetos congelados no módulo especificado. Este método é obsoleto.  

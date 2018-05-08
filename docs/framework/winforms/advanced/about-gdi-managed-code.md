@@ -1,28 +1,16 @@
 ---
-title: "Sobre código gerenciado no GDI+"
-ms.custom: 
+title: Sobre código gerenciado no GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, about GDI+
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-gdi-managed-code"></a>Sobre código gerenciado no GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] é a parte do sistema operacional Windows que fornece gráficos vetoriais bidimensionais, imagens e tipografia. O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] melhora a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (a Graphics Device Interface incluída em versões anteriores do Windows) adicionando novos recursos e otimizando os recursos existentes.  

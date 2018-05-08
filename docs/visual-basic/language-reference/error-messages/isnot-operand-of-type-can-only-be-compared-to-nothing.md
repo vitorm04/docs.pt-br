@@ -1,28 +1,19 @@
 ---
-title: '&#39; IsNot &#39; operando do tipo &#39; typename &#39; só pode ser comparado a &#39; Nada &#39; pois &#39; typename &#39; é um tipo anulável'
+title: '&#39;IsNot&#39; operando do tipo &#39;typename&#39; só pode ser comparado a &#39;nada&#39;, pois &#39;typename&#39; é um tipo anulável'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32128
 - vbc32128
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ec0ae1561bfbee998e7c65f6023012c0f982a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44cc17c73b476e5e322b9b58b021bc7bcd63167f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39; IsNot &#39; operando do tipo &#39; typename &#39; só pode ser comparado a &#39; Nada &#39; pois &#39; typename &#39; é um tipo anulável
+# <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39; operando do tipo &#39;typename&#39; só pode ser comparado a &#39;nada&#39;, pois &#39;typename&#39; é um tipo anulável
 Uma variável declarada como anulável foi comparada com uma expressão diferente de `Nothing` usando o `IsNot` operador.  
   
  **ID do erro:** BC32128  

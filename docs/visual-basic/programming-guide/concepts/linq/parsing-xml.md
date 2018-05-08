@@ -1,22 +1,12 @@
 ---
-title: "Análise de XML (Visual Basic)"
-ms.custom: 
+title: Análise de XML (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6eed674ff6168690e627abf8c5c13665c07c35aa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3701592fd6160e8f0f858aed15618a6dbcfb3c22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parsing-xml-visual-basic"></a>Análise de XML (Visual Basic)
 Os tópicos nesta seção descrevem como analisar documentos XML.  

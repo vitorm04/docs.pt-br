@@ -1,23 +1,12 @@
 ---
-title: "Inspeção da árvore de atividade"
-ms.custom: 
+title: Inspeção da árvore de atividade
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f2ca6bff27cfe0e3362e2a3b95cd08a0f8d5297
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-tree-inspection"></a>Inspeção da árvore de atividade
 A inspeção da árvore de atividade é usada por autores de aplicativo de fluxo de trabalho para inspecionar os fluxos de trabalho hospedados pelo aplicativo. Usando <xref:System.Activities.WorkflowInspectionServices>, os fluxos de trabalho podem ser pesquisados para atividades filhos específicas, as atividades individuais e suas propriedades podem ser enumeradas, e os metadados de tempo de execução das atividades podem ser armazenados em cachê em um horário específico. Este tópico fornece uma visão geral de <xref:System.Activities.WorkflowInspectionServices> e como usá-la para inspecionar uma árvore de atividade.  
@@ -39,7 +28,7 @@ A inspeção da árvore de atividade é usada por autores de aplicativo de fluxo
 **Item de lista 4**   
 **Item de lista 5**   
 **Itens adicionados à coleção.**   
-**Sequência**   
+**sequência**   
  **Literal < lista\<cadeia de caracteres >>**  
  **While**  
  **AddToCollection\<cadeia de caracteres >**  
@@ -52,7 +41,7 @@ A inspeção da árvore de atividade é usada por autores de aplicativo de fluxo
  **VariableValue < IEnumerable\<cadeia de caracteres >>**  
  **WriteLine**  
  **DelegateArgumentValue\<cadeia de caracteres >**  
- **Sequência**  
+ **sequência**  
  **WriteLine**  
  **Literal\<cadeia de caracteres >** para recuperar uma atividade específica, em vez de enumerar todas as atividades, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> é usado. <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> e <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> executam o cachê de metadados `WorkflowInspectionServices.CacheMetadata` se não tiver sido chamado anteriormente. Se <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> tiver sido chamado em <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> é baseado nos metadados existentes. Portanto, se as alterações de árvore foram feitas desde a última chamada a <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> pode dar resultados inesperados. Se as alterações foram feitas ao fluxo de trabalho depois de chamar <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, metadados podem ser novamente armazenada em cache chamando o <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> método. Armazenando em cachê metadados é abordado na seção a seguir.  
   

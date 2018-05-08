@@ -1,31 +1,17 @@
 ---
 title: Weakly-typed JSON Serialization Sample
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization Sample
 Ao serializar um tipo definido pelo usuário em um formato de determinado durante a transmissão ou desserialização de um formato com fio volta para um tipo definido pelo usuário, o determinado tipo definido pelo usuário deve estar disponível no serviço e no cliente. Geralmente, para fazer isso, o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a esses tipos definidos pelo usuário e o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é aplicado a seus membros. Esse mecanismo também se aplica ao trabalhar com objetos de JSON JavaScript Object Notation (), conforme descrito no tópico [como: serializar e desserializar dados de JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- Em alguns cenários, um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço ou cliente deve acessar objetos JSON gerados por um serviço ou cliente que está fora do controle do desenvolvedor. Como os serviços da Web mais publicamente expõem APIs de JSON, ele pode se tornar impraticável para a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desenvolvedor para construir locais tipos definidos pelo usuário no qual desserializar objetos do JSON arbitrários. Este exemplo fornece um mecanismo que permite [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desenvolvedores para trabalhar com objetos JSON desserializados, arbitrários, sem criar tipos definidos pelo usuário. Isso é conhecido como *serialização do tipo fraco* de objetos JSON, como o tipo no qual desserializa um objeto JSON não é conhecido em tempo de compilação.  
+ Em alguns cenários, um serviço do Windows Communication Foundation (WCF) ou o cliente deve acessar objetos JSON gerados por um serviço ou cliente que está fora do controle do desenvolvedor. Como os serviços da Web mais publicamente expõem APIs de JSON, ele pode se tornar impraticável para a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desenvolvedor para construir locais tipos definidos pelo usuário no qual desserializar objetos do JSON arbitrários. Este exemplo fornece um mecanismo que permite [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desenvolvedores para trabalhar com objetos JSON desserializados, arbitrários, sem criar tipos definidos pelo usuário. Isso é conhecido como *serialização do tipo fraco* de objetos JSON, como o tipo no qual desserializa um objeto JSON não é conhecido em tempo de compilação.  
   
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

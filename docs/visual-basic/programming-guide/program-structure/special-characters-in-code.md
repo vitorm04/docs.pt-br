@@ -1,13 +1,6 @@
 ---
 title: Caracteres especiais no código (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.)
 - vb.(
@@ -37,14 +30,11 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 932b38d97b36292e66bfad91a9a3799459d3b73c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caracteres especiais no código (Visual Basic)
 Às vezes, você precisa usar caracteres especiais em seu código, ou seja, caracteres não alfabéticos ou numéricos. A pontuação e caracteres especiais no conjunto de caracteres do Visual Basic tem vários usos da organização de texto de programa para definir as tarefas que executa o compilador ou o programa compilado. Eles não especificam uma operação a ser executada.  

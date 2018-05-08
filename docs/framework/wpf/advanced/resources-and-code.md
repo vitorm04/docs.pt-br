@@ -1,13 +1,6 @@
 ---
-title: "Recursos e código"
-ms.custom: 
+title: Recursos e código
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27b72d4be9012caf388c90d52a61d9837713c71f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-and-code"></a>Recursos e código
 Esta visão geral se concentra em como recursos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] podem ser acessados ou criados usando o código em vez da sintaxe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obter mais informações sobre o uso geral de recursos e sobre os recursos da perspectiva da sintaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -36,7 +24,7 @@ Esta visão geral se concentra em como recursos de [!INCLUDE[TLA#tla_winclient](
   
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Acessando recursos do código  
- As chaves que identificam os recursos se eles forem definidos pelo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] também serão usadas para recuperar recursos específicos se você solicitá-los no código. É a maneira mais simples para recuperar um recurso de código chamar o <xref:System.Windows.FrameworkElement.FindResource%2A> ou o <xref:System.Windows.FrameworkElement.TryFindResource%2A> método do nível da estrutura de objetos em seu aplicativo. A diferença comportamental entre esses métodos é o que acontece caso a chave solicitada não seja encontrada. <xref:System.Windows.FrameworkElement.FindResource%2A>gera uma exceção; <xref:System.Windows.FrameworkElement.TryFindResource%2A> não gerará uma exceção, mas retorna `null`. Cada método usa a chave do recurso como um parâmetro de entrada e retorna um objeto que não é fortemente tipado. Normalmente, uma chave de recurso é uma cadeia de caracteres, mas há usos ocasionais em que esse não é o caso. Consulte a seção [Usando objetos como chaves](#objectaskey) para obter detalhes. Normalmente, você converteria o objeto retornado para o tipo exigido pela propriedade que você está definindo ao solicitar o recurso. A lógica de pesquisa para resolução de recurso do código é a mesma que no caso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] da referência de recurso dinâmico. A pesquisa por recursos é iniciada do elemento de chamada e continua para os elementos pai sucessivos na árvore lógica. A pesquisa segue adiante para os recursos de aplicativo, temas e recursos de sistema, se necessário. Uma solicitação de código para um recurso considerará as alterações em tempo de execução nos dicionários de recursos que podem ter sido feitos após o dicionário de recursos ter sido carregado do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], e também alterações de recursos de sistema em tempo real.  
+ As chaves que identificam os recursos se eles forem definidos pelo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] também serão usadas para recuperar recursos específicos se você solicitá-los no código. É a maneira mais simples para recuperar um recurso de código chamar o <xref:System.Windows.FrameworkElement.FindResource%2A> ou o <xref:System.Windows.FrameworkElement.TryFindResource%2A> método do nível da estrutura de objetos em seu aplicativo. A diferença comportamental entre esses métodos é o que acontece caso a chave solicitada não seja encontrada. <xref:System.Windows.FrameworkElement.FindResource%2A> gera uma exceção; <xref:System.Windows.FrameworkElement.TryFindResource%2A> não gerará uma exceção, mas retorna `null`. Cada método usa a chave do recurso como um parâmetro de entrada e retorna um objeto que não é fortemente tipado. Normalmente, uma chave de recurso é uma cadeia de caracteres, mas há usos ocasionais em que esse não é o caso. Consulte a seção [Usando objetos como chaves](#objectaskey) para obter detalhes. Normalmente, você converteria o objeto retornado para o tipo exigido pela propriedade que você está definindo ao solicitar o recurso. A lógica de pesquisa para resolução de recurso do código é a mesma que no caso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] da referência de recurso dinâmico. A pesquisa por recursos é iniciada do elemento de chamada e continua para os elementos pai sucessivos na árvore lógica. A pesquisa segue adiante para os recursos de aplicativo, temas e recursos de sistema, se necessário. Uma solicitação de código para um recurso considerará as alterações em tempo de execução nos dicionários de recursos que podem ter sido feitos após o dicionário de recursos ter sido carregado do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], e também alterações de recursos de sistema em tempo real.  
   
  A seguir está um exemplo de código breve que encontra um recurso por chave e usa o valor retornado para definir uma propriedade, implementada como um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos.  
   

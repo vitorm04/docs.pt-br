@@ -1,27 +1,15 @@
 ---
 title: Compatibilidade ASP.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidade ASP.NET
-Este exemplo demonstra como habilitar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Serviços em execução [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participar de modo de compatibilidade totalmente no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo pipeline e fazer uso de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos, como a autorização de URL do arquivo, estado de sessão e o <xref:System.Web.HttpContext> classe. O <xref:System.Web.HttpContext> classe permite o acesso a cookies, sessões e outros [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos. Esse modo exige que as associações de usam o transporte HTTP e o próprio serviço deve ser hospedado no IIS.  
+Este exemplo demonstra como habilitar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade do Windows Communication Foundation (WCF). Serviços em execução [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participar de modo de compatibilidade totalmente no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo pipeline e fazer uso de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos, como a autorização de URL do arquivo, estado de sessão e o <xref:System.Web.HttpContext> classe. O <xref:System.Web.HttpContext> classe permite o acesso a cookies, sessões e outros [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos. Esse modo exige que as associações de usam o transporte HTTP e o próprio serviço deve ser hospedado no IIS.  
   
  Neste exemplo, o cliente é um aplicativo de console (um executável) e o serviço é hospedado no Internet Information Services (IIS).  
   
@@ -41,7 +29,7 @@ Este exemplo demonstra como habilitar [!INCLUDE[vstecasp](../../../../includes/v
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
@@ -71,7 +59,7 @@ public interface ICalculatorSession
  O serviço usa a [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sessão para armazenar o resultado para cada sessão de cliente. Isso permite que o serviço manter o resultado de execução para cada cliente em várias chamadas para o serviço.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]estado da sessão e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessões são coisas muito diferentes.  Consulte o [sessão](../../../../docs/framework/wcf/samples/session.md) para obter detalhes sobre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessões.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] estado da sessão e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessões são coisas muito diferentes.  Consulte o [sessão](../../../../docs/framework/wcf/samples/session.md) para obter detalhes sobre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessões.  
   
  O serviço tem uma dependência profunda na [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] estado de sessão e requer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade para funcionar corretamente. Esses requisitos são expressos declarativamente, aplicando o `AspNetCompatibilityRequirements` atributo.  
   

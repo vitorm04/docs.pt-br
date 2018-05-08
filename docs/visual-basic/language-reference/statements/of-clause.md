@@ -1,11 +1,6 @@
 ---
-title: "Cláusula Of (Visual Basic)"
+title: Cláusula Of (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="of-clause-visual-basic"></a>Cláusula Of (Visual Basic)
 Apresenta um `Of` cláusula que identifica um *parâmetro de tipo* em uma *genérico* classe, estrutura, interface, delegado ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
@@ -51,7 +43,7 @@ End Class
   
  Se você concluir a definição de classe anterior, você pode construir uma variedade de `dictionary` classes dele. Os tipos que você fornece para `entryType` e `keyType` determinar que tipo de entrada a classe contém e o tipo de chave que ela associa a cada entrada. Por causa da restrição, você deve fornecer a `keyType` um tipo que implementa <xref:System.IComparable>.  
   
- O exemplo de código a seguir cria um objeto que contém `String` entradas e associa um `Integer` chave com cada um deles. `Integer`implementa <xref:System.IComparable> e portanto satisfaz a restrição em `keyType`.  
+ O exemplo de código a seguir cria um objeto que contém `String` entradas e associa um `Integer` chave com cada um deles. `Integer` implementa <xref:System.IComparable> e portanto satisfaz a restrição em `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  

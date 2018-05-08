@@ -1,33 +1,19 @@
 ---
 title: Pontos de extremidade de serviço e endereçamento de fila
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a2f4807e447482ee790f2ca9a2ab4dbde531b1c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
-Este tópico discute como os clientes atendem serviços leem de filas e como pontos de extremidade de serviço são mapeados para filas. Como um lembrete, a ilustração a seguir mostra o clássico [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] na fila de implantação do aplicativo.  
+Este tópico discute como os clientes atendem serviços leem de filas e como pontos de extremidade de serviço são mapeados para filas. Como um lembrete, a ilustração a seguir mostra clássica, implantação de aplicativo na fila do Windows Communication Foundation (WCF).  
   
  ![Na fila de diagrama do aplicativo](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figura distribuídas de fila")  
   
- Para o cliente enviar a mensagem para o serviço, o cliente trata a mensagem à fila de destino. Para o serviço ler mensagens da fila, ele define o endereço de escuta para a fila de destino. Endereçamento na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é baseada no URI Uniform Resource Identifier enquanto nomes de filas do enfileiramento de mensagens (MSMQ) não são baseados no URI. Portanto, é essencial compreender como tratar filas criadas MSMQ usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Para o cliente enviar a mensagem para o serviço, o cliente trata a mensagem à fila de destino. Para o serviço ler mensagens da fila, ele define o endereço de escuta para a fila de destino. Endereçamento no WCF é baseado no URI Uniform Resource Identifier enquanto nomes de filas do enfileiramento de mensagens (MSMQ) não são baseados no URI. Portanto, é essencial compreender como tratar filas criadas no MSMQ usando o WCF.  
   
 ## <a name="msmq-addressing"></a>Endereçamento de MSMQ  
  MSMQ usa caminhos e nomes de formato para identificar uma fila. Caminhos de especificar um nome de host e um `QueueName`. Opcionalmente, pode haver um `Private$` entre o nome do host e o `QueueName` para indicar uma fila particular que não é publicada no serviço de diretório do Active Directory.  
@@ -37,11 +23,11 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
  Para obter mais informações sobre nomes de caminho e o formato do MSMQ, consulte [sobre enfileiramento](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding e endereçamento de serviço  
- Ao endereçar uma mensagem para um serviço, o esquema de URI é escolhido com base no transporte usado para comunicação. Cada transporte em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem um esquema exclusivo. O esquema deve refletir a natureza de transporte usado para comunicação. Por exemplo, net.tcp, NET. pipe, HTTP e assim por diante.  
+ Ao endereçar uma mensagem para um serviço, o esquema de URI é escolhido com base no transporte usado para comunicação. Cada transporte do WCF tem um esquema exclusivo. O esquema deve refletir a natureza de transporte usado para comunicação. Por exemplo, net.tcp, NET. pipe, HTTP e assim por diante.  
   
- O MSMQ em fila de transporte no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expõe um esquema NET. MSMQ. Qualquer mensagem endereçada usando o esquema NET. MSMQ é enviada usando o `NetMsmqBinding` no canal de transporte em fila do MSMQ.  
+ O MSMQ em fila transporte em WCF expõe um esquema NET. MSMQ. Qualquer mensagem endereçada usando o esquema NET. MSMQ é enviada usando o `NetMsmqBinding` no canal de transporte em fila do MSMQ.  
   
- O endereçamento de uma fila no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] baseia-se no seguinte padrão:  
+ O endereçamento de uma fila no WCF com base no seguinte padrão:  
   
  NET. MSMQ: / / \< *nome de host*> / [privada /] \< *nome da fila*>  
   
@@ -49,7 +35,7 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
 -   \<*nome do host*> é o nome do computador que hospeda a fila de destino.  
   
--   [privada] é opcional. Ele é usado ao endereçar uma fila de destino é uma fila particular. Para resolver uma fila pública, você não deve especificar privada. Observe que, ao contrário dos caminhos MSMQ, não há nenhum "$" no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] forma de URI.  
+-   [privada] é opcional. Ele é usado ao endereçar uma fila de destino é uma fila particular. Para resolver uma fila pública, você não deve especificar privada. Observe que, ao contrário dos caminhos MSMQ, não há nenhum "$" no formato URI WCF.  
   
 -   \<*nome da fila*> é o nome da fila. O nome da fila também pode referir-se para uma subfila de mensagens. Portanto, \< *nome de fila*> = \< *nome-da-fila*> [; *nome de queue sub*].  
   
@@ -102,10 +88,10 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
  NET. MSMQ: //localhost/ [privada /] \< *personalizado-mortas-letra--nome de fila*>.  
   
- Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço verifica que todas as mensagens recebidas foram resolvidas para a fila particular está escutando nas. Se a fila de destino da mensagem não coincide com a fila que for localizado no, o serviço não processa a mensagem. Este é um problema que serviços de escuta em uma fila de mensagens mortas devem tratar porque qualquer mensagem na fila de mensagens mortas deveria ser entregue em outro lugar. Para ler mensagens de uma fila de mensagens mortas ou de uma fila suspeita, um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro deve ser usado. Para obter um exemplo, consulte [filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Um serviço WCF verifica que todas as mensagens recebidas foram resolvidas para a fila particular está escutando nas. Se a fila de destino da mensagem não coincide com a fila que for localizado no, o serviço não processa a mensagem. Este é um problema que serviços de escuta em uma fila de mensagens mortas devem tratar porque qualquer mensagem na fila de mensagens mortas deveria ser entregue em outro lugar. Para ler mensagens de uma fila de mensagens mortas ou de uma fila suspeita, um `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro deve ser usado. Para obter um exemplo, consulte [filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding e endereçamento de serviço  
- O `MsmqIntegrationBinding` é usado para comunicação com aplicativos tradicionais do MSMQ. Para facilitar a interoperação com um aplicativo existente do MSMQ, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dá suporte a formatar somente o nome de endereçamento. Assim, as mensagens enviadas usando essa associação devem estar de acordo com o esquema de URI:  
+ O `MsmqIntegrationBinding` é usado para comunicação com aplicativos tradicionais do MSMQ. Para facilitar a interoperação com um aplicativo de MSMQ existente, o WCF dá suporte a endereçamento de nome de formato somente. Assim, as mensagens enviadas usando essa associação devem estar de acordo com o esquema de URI:  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
@@ -115,7 +101,7 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
   
  Ao abordar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito de adicionar /msmq/ no nome de formato direto para ajudar a serviços de informações da Internet (IIS) com a distribuição. Por exemplo: quando uma fila de protocolo abc usando o SRMP, em vez de direta de endereçamento =http://adatum.com/msmq/private$/ abc, você deve usar DIRECT =http://adatum.com/private$/ abc.  
   
- Observe que você não pode usar o endereçamento net.msmq:// com `MsmqIntegrationBinding`. Porque `MsmqIntegrationBinding` dá suporte a forma livre MSMQ formato nome de endereçamento, você pode usar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que usa esta associação para usar os recursos da lista de distribuição e multicast em MSMQ. Especificação de uma exceção `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve estar net.msmq:// a forma, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
+ Observe que você não pode usar o endereçamento net.msmq:// com `MsmqIntegrationBinding`. Como `MsmqIntegrationBinding` oferece suporte a forma livre MSMQ formato nome de endereçamento, você pode usar um serviço WCF que usa esta associação para usar recursos da lista de distribuição e de multicast no MSMQ. Especificação de uma exceção `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve estar net.msmq:// a forma, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

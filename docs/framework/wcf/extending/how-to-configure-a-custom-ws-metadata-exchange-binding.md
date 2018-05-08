@@ -1,30 +1,18 @@
 ---
-title: "Como configurar uma associação de intercâmbio de WS-Metadata"
-ms.custom: 
+title: Como configurar uma associação de intercâmbio de WS-Metadata
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0596e91204a2a9dbaed2fdbe85387ec3785fd3db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como configurar uma associação de intercâmbio de WS-Metadata
-Este tópico explicará como configurar um personalizado WS-Metadata exchange associação. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]inclui quatro associações de metadados definidos pelo sistema, mas você pode publicar metadados usando a associação que você deseja. Neste tópico mostram como publicar metadados usando o `wsHttpBinding`. Essa associação oferece a opção de exposição de metadados de forma segura. O código neste artigo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Este tópico explicará como configurar um personalizado WS-Metadata exchange associação. Windows Communication Foundation (WCF) inclui quatro associações de metadados definidos pelo sistema, mas você pode publicar metadados usando a associação que você deseja. Neste tópico mostram como publicar metadados usando o `wsHttpBinding`. Essa associação oferece a opção de exposição de metadados de forma segura. O código neste artigo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Usando um arquivo de configuração  
   

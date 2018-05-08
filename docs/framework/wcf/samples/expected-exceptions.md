@@ -1,26 +1,12 @@
 ---
 title: Exceções esperadas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>Exceções esperadas
 Este exemplo demonstra como capturar exceções esperadas, ao usar um cliente tipado. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado por serviços de informações da Internet (IIS).  
@@ -30,7 +16,7 @@ Este exemplo demonstra como capturar exceções esperadas, ao usar um cliente ti
   
  Este exemplo demonstra capturando e manipular os dois tipos de exceção esperada que corrigir programas deve lidar com: `TimeoutException` e `CommunicationException`.  
   
- Exceções que são geradas de métodos de comunicação em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente são esperado ou inesperado. Exceções inesperadas incluem falhas catastróficas como `OutOfMemoryException` e erros de programação, como `ArgumentNullException` ou `InvalidOperationException`. Normalmente, não é possível útil para lidar com erros inesperados, normalmente você não deve capturá-los ao chamar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] método de comunicação de cliente.  
+ Exceções geradas de métodos de comunicação em um cliente Windows Communication Foundation (WCF) são esperado ou inesperado. Exceções inesperadas incluem falhas catastróficas como `OutOfMemoryException` e erros de programação, como `ArgumentNullException` ou `InvalidOperationException`. Normalmente, não é possível útil para lidar com erros inesperados, normalmente você não deve capturá-los ao chamar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] método de comunicação de cliente.  
   
  Esperado exceções de métodos de comunicação em uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente incluem `TimeoutException`, `CommunicationException`, e qualquer classe derivada de `CommunicationException`. Eles indicam um problema durante a comunicação que pode ser tratada com segurança, anulando a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e relatórios a uma falha de comunicação. Como fatores externos podem causar esses erros em qualquer aplicativo, aplicativos corretos devem capturar essas exceções e recuperar quando eles ocorrerem.  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

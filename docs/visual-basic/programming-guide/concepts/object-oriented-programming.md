@@ -1,21 +1,12 @@
 ---
-title: "Programação orientada a objeto (Visual Basic)"
-ms.custom: 
+title: Programação orientada a objeto (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programação orientada a objeto (Visual Basic)
 Visual Basic oferece suporte completo para programação orientada a objeto, como encapsulamento, herança e polimorfismo.  
@@ -278,7 +269,7 @@ Para obter mais informações, consulte:
 
 - [Inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>Classes compartilhadas e membros  
+###  <a name="Static"></a> Classes compartilhadas e membros  
  Um membro compartilhado da classe é uma propriedade, um procedimento ou um campo que é compartilhado por todas as instâncias de uma classe.  
   
  Para definir um membro compartilhado:  
@@ -421,7 +412,7 @@ Para obter mais informações, consulte:
 
 - [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
-## <a name="delegates"></a>Delegados
+## <a name="delegates"></a>Representantes
  Um *delegado* é um tipo que define uma assinatura de método e pode fornecer uma referência a qualquer método com uma assinatura compatível. Você pode invocar (ou chamar) o método através do delegado. Delegados são usados para passar métodos como argumentos a outros métodos.
 
 > [!NOTE]

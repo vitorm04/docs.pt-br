@@ -1,26 +1,17 @@
 ---
 title: 'Não é possível vincular ao arquivo de recurso &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30144
 - vbc30144
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f3ba2b4ebe8bea851776d21b7752434b9db84b62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5fe61d88c862a951b394e393b7389cc397c7f8a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Não é possível vincular ao arquivo de recurso &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;
 O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto. O vinculador relatou um erro ao vincular a um arquivo de recurso COM+ nativo do assembly.  

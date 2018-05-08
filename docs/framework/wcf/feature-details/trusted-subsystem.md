@@ -1,27 +1,15 @@
 ---
-title: "Subsistema de confiança"
-ms.custom: 
+title: Subsistema de confiança
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confiança
 Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web são projetados para que o acesso aos recursos adicionais (como bancos de dados ou outros serviços da Web) é encapsulado na lógica de negócios do serviço Web. Esses recursos devem ser protegidos contra acesso não autorizado. A ilustração a seguir mostra um processo de subsistema confiável.  
@@ -43,13 +31,13 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]somente.|  
+|Interoperabilidade|O Windows Communication Foundation (WCF) apenas.|  
 |Autenticação (serviço)|Serviço de token de segurança autentica e autoriza os clientes.|  
 |Autenticação (cliente)|Subsistema confiável autentica o cliente e o recurso autentica o serviço do subsistema confiável.|  
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
 |Transporte|HTTP entre o cliente e o serviço do subsistema confiável.<br /><br /> NET. TCP entre o serviço do subsistema confiável e o recurso (serviço de back-end).|  
-|Associação|<xref:System.ServiceModel.WSHttpBinding>e <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Associação|<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Recursos (serviço de Back-End)  
   

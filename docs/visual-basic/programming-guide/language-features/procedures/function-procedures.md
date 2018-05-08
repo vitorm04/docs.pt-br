@@ -1,13 +1,6 @@
 ---
 title: Procedimentos de função (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Function procedures
 - return values [Visual Basic], function procedures
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 887c930cb757b012542c97d64a57a62882a2eed3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimentos de função (Visual Basic)
 Um `Function` procedimento é uma série de instruções do Visual Basic entre o `Function` e `End Function` instruções. O `Function` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada. Quando ele retorna o controle, ele também retorna um valor para o código de chamada.  
@@ -92,9 +82,9 @@ End Function
   
  A sintaxe para chamar um `Function` procedimento é o seguinte:  
   
- *lvalue*`=`*functionname* `[(` *argumentlist*  `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *nomedafunção* `[(` *argumentlist* `)] / 3) <=` *expressão*  `) Then`  
+ `If ((` *nomedafunção* `[(` *argumentlist* `)] / 3) <=` *expressão* `) Then`  
   
  Quando você chama um `Function` procedimento, você não precisa usar o valor de retorno. Se você não fizer isso, todas as ações da função são executadas, mas o valor de retorno será ignorado. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> é geralmente chamado dessa maneira.  
   

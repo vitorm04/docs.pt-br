@@ -1,38 +1,24 @@
 ---
-title: "Integração com visão geral de aplicativos COM"
-ms.custom: 
+title: Integração com visão geral de aplicativos COM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece ao desenvolvedor de código gerenciado com um ambiente rico para criar aplicativos conectados. No entanto, se você tem um investimento significativo em código não gerenciado COM base em e não deseja migrar, você pode ainda integrar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços da Web diretamente no seu código existente usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker de serviço. O moniker de serviço pode ser usado em ambientes de desenvolvimento todo com base no intervalo de COM, como Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
+Windows Communication Foundation (WCF) fornece um ambiente rico para criar aplicativos conectados ao desenvolvedor de código gerenciado. No entanto, se você tem um investimento significativo em código não gerenciado COM base em e não deseja migrar, você pode ainda integrar serviços Web WCF diretamente em seu código existente usando o moniker de serviço do WCF. O moniker de serviço pode ser usado em ambientes de desenvolvimento todo com base no intervalo de COM, como Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
   
 > [!NOTE]
->  O moniker de serviço usa um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal de comunicação para todas as comunicações. Os mecanismos de segurança e identidade para esse canal diferem daqueles usados no padrão proxies COM e DCOM. Além disso, como o moniker de serviço usa um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal de comunicação, o período de tempo limite padrão é um minuto para todas as chamadas.  
+>  O moniker de serviço usa um canal de comunicação WCF para todas as comunicações. Os mecanismos de segurança e identidade para esse canal diferem daqueles usados no padrão proxies COM e DCOM. Além disso, como o moniker de serviço usa um canal de comunicação WCF o período de tempo limite padrão é um minuto para todas as chamadas.  
   
- O moniker de serviço é usado com o `GetObject` função para fornecer o desenvolvedor não gerenciado com uma abordagem fortemente tipada COM específicas para chamar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços Web. Isso requer uma definição de local, COM visível do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web contrato de serviço e a associação a ser usado. Assim como outros [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes, o moniker de serviço devem criar um canal inserido para o serviço, embora essa construção de canal ocorre de forma transparente para o programador COM na primeira chamada do método.  
+ O moniker de serviço é usado com o `GetObject` função para fornecer o desenvolvedor não gerenciado com uma abordagem fortemente tipada COM específicas para chamar os serviços Web WCF. Isso requer um local, visível em COM definição de contrato de serviço Web WCF e a associação a ser usado. Como outros clientes do WCF, o moniker de serviço deve construir um canal inserido para o serviço, embora essa construção de canal ocorre de forma transparente para o programador COM na primeira chamada do método.  
   
- Em comum com outros [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes, ao usar o moniker o aplicativos especificam o endereço, associação e contrato para se comunicar com um serviço. O contrato pode ser especificado em uma das seguintes maneiras:  
+ Em comum com outros clientes do WCF, ao usar o identificador de origem, os aplicativos especificar o endereço, associação e contrato para se comunicar com um serviço. O contrato pode ser especificado em uma das seguintes maneiras:  
   
 -   Contrato com tipo – o contrato é registrado como um tipo visível COM no computador cliente.  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |`serializer`|Especifique o uso do serializador de um "datacontract" ou "xml".|  
   
 > [!NOTE]
->  Mesmo quando usado com clientes inteiramente baseados em COM, o moniker de serviço requer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e suporte do .NET Framework 2.0 para ser instalado no computador cliente. Também é importante que os aplicativos cliente que usam o moniker de serviço carregar a versão apropriada do tempo de execução do .NET Framework. Ao usar o moniker em aplicativos do Office, um arquivo de configuração pode ser necessário para garantir que a versão do framework correto seja carregada. Por exemplo, com o Excel, o texto a seguir deve ser colocado em um arquivo chamado Excel.exe.config no mesmo diretório que o arquivo Excel.exe:  
+>  Mesmo quando usado com clientes inteiramente baseados em COM, o moniker de serviço requer WCF e o suporte do .NET Framework 2.0 ser instalado no computador cliente. Também é importante que os aplicativos cliente que usam o moniker de serviço carregar a versão apropriada do tempo de execução do .NET Framework. Ao usar o moniker em aplicativos do Office, um arquivo de configuração pode ser necessário para garantir que a versão do framework correto seja carregada. Por exemplo, com o Excel, o texto a seguir deve ser colocado em um arquivo chamado Excel.exe.config no mesmo diretório que o arquivo Excel.exe:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   

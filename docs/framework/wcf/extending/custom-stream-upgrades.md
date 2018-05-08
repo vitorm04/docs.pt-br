@@ -1,24 +1,12 @@
 ---
-title: "Atualizações de fluxo personalizadas"
-ms.custom: 
+title: Atualizações de fluxo personalizadas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>Atualizações de fluxo personalizadas
 Transportes orientado por fluxo, como TCP e Pipes nomeados operam em um fluxo contínuo de bytes entre o cliente e servidor. Esse fluxo é realizado por um <xref:System.IO.Stream> objeto. Em uma atualização de fluxo, o cliente deseja adicionar uma camada de protocolo opcional para a pilha de canais e solicita que a outra extremidade do canal de comunicação para fazer isso. A atualização de fluxo consiste na substituição original <xref:System.IO.Stream> objeto com um atualizado.  
@@ -41,7 +29,7 @@ Transportes orientado por fluxo, como TCP e Pipes nomeados operam em um fluxo co
  Observe que no caso de várias atualizações, o iniciador e Aceitante encapsulam máquinas de estado para impor as transições de atualização são válidas para cada inicialização.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Como implementar uma atualização de fluxo  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece quatro `abstract` classes que você pode implementar:  
+ Windows Communication Foundation (WCF) fornece quatro `abstract` classes que você pode implementar:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -78,7 +66,7 @@ Transportes orientado por fluxo, como TCP e Pipes nomeados operam em um fluxo co
 ## <a name="security-upgrades"></a>Atualizações de segurança  
  Adicionar uma atualização de segurança é uma versão especializada do processo de atualização de fluxo geral.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]já fornece dois elementos de associação para a atualização de segurança de fluxo. A configuração de segurança em nível de transporte é encapsulada pelo <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> que pode ser configurado e adicionado a uma associação personalizada. Esses elementos de associação estendem o <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> classe que cria o fluxo de cliente e servidor de atualização de provedores. Esses elementos de associação tem métodos que criam o fluxo de segurança especializados classes de provedor de atualização, que não são `public`, portanto, para esses dois casos tudo o que você precisa fazer é adicionar o elemento de associação para a associação.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] já fornece dois elementos de associação para a atualização de segurança de fluxo. A configuração de segurança em nível de transporte é encapsulada pelo <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> que pode ser configurado e adicionado a uma associação personalizada. Esses elementos de associação estendem o <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> classe que cria o fluxo de cliente e servidor de atualização de provedores. Esses elementos de associação tem métodos que criam o fluxo de segurança especializados classes de provedor de atualização, que não são `public`, portanto, para esses dois casos tudo o que você precisa fazer é adicionar o elemento de associação para a associação.  
   
  Para cenários de segurança não é atendidos com os elementos de associação de dois acima, três relacionadas à segurança `abstract` classes derivam as classes base iniciador, aceitante e provedor acima:  
   

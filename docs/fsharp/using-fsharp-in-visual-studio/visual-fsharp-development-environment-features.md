@@ -1,17 +1,12 @@
 ---
-title: Funcionalidades do ambiente de desenvolvimento em F#
+title: Recursos do ambiente de desenvolvimento em F#
 description: 'Saiba quais recursos do Visual Studio 2012 têm suporte em F #.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ea2bfa439692045647efa29b2a051eb11f9f1dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Recursos do Ambiente de Desenvolvimento em Visual F#
 
@@ -26,14 +21,14 @@ A tabela a seguir resume os modelos que estão disponíveis para uso em projetos
 |Tipo de modelo|Descrição|Modelos com suporte|
 |-------------|-----------|-------------------|
 |Modelos de projeto|Tipos de projetos disponíveis no **novo projeto** caixa de diálogo.|<ul><li>Aplicativo de F #<br /></li><li>Biblioteca F #<br /></li><li>F # Tutorial<br /></li><li>Biblioteca do F # portátil<br /></li><ul/>|
-|Modelos de item|Tipos disponíveis em arquivos de **Adicionar Novo Item** caixa de diálogo.|<ul><li>Arquivo de origem F # (. FS)<br /></li><li>F # script (. fsx)<br /></li><li>Arquivo de assinatura de F # (. FSI)<br /></li><li>Arquivo de configuração (. config)<br /></li><li>Conexão de banco de dados SQL (provedor de tipos do LINQ to SQL)<br /></li><li>Conexão de banco de dados SQL (provedor LINQ to Entities tipo)<br /></li><li>Conexão de serviço OData (provedor de tipo LINQ)<br /></li><li>Conexão de serviço WSDL (provedor de tipo)<br /></li><li>Arquivo XML (. xml)<br /></li><li>Arquivo de texto<br /></li><ul/>|
+|Modelos de itens|Tipos disponíveis em arquivos de **Adicionar Novo Item** caixa de diálogo.|<ul><li>Arquivo de origem F # (. FS)<br /></li><li>F # script (. fsx)<br /></li><li>Arquivo de assinatura de F # (. FSI)<br /></li><li>Arquivo de configuração (. config)<br /></li><li>Conexão de banco de dados SQL (provedor de tipos do LINQ to SQL)<br /></li><li>Conexão de banco de dados SQL (provedor LINQ to Entities tipo)<br /></li><li>Conexão de serviço OData (provedor de tipo LINQ)<br /></li><li>Conexão de serviço WSDL (provedor de tipo)<br /></li><li>Arquivo XML (. xml)<br /></li><li>Arquivo de texto<br /></li><ul/>|
 Para criar um aplicativo que pode ser executado como um executável autônomo, escolha o tipo de projeto de aplicativo do F #. Para criar uma biblioteca (ou seja, um assembly gerenciado ou. Arquivo DLL) para uso na plataforma de área de trabalho do Windows, escolha biblioteca F #. Para criar uma biblioteca portátil que pode ser usada em qualquer plataforma com suporte, escolha biblioteca F # portátil. Projetos de biblioteca F # portátil referenciam uma versão do FSharp.Core.dll é apropriada para criar uma biblioteca F # que pode ser usada com aplicativos que são executados em plataformas, como aplicativos da Windows Store, o .NET Framework 4.5, xamarin e xamarin.
 
 Para obter mais informações sobre os modelos de item para acesso a dados, consulte [provedores de tipos](../tutorials/type-providers/index.md).
 
 A tabela a seguir resume os recursos de propriedades do projeto ou não suporte em F #. Para obter mais informações, consulte [Configurando projetos](configuring-projects.md) e [Introdução ao Project Designer](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7).
 
-|Configuração de projeto|Com suporte em F #?|Observações|
+|Configuração de projeto|Com suporte em F #?|Notas|
 |---------------|----------------|-----|
 |Arquivos de recurso|Sim||
 |Compilação, depuração e configurações de referência|Sim||

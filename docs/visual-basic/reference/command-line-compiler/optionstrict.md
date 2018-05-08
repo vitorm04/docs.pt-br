@@ -1,12 +1,6 @@
 ---
 title: -optionstrict
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - -optionstrict
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2ff7d13fcb3e224ee76cdb42f3974a4eddb042f5
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da1bd6d3b6746561655a82cd49aa0014563a1d40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Impõe a semântica de tipo estrito para restringir a conversões de tipo implícito.  
@@ -38,7 +29,7 @@ Impõe a semântica de tipo estrito para restringir a conversões de tipo implí
  Opcional. O `-optionstrict+` opção restringe a conversão implícita de tipo. O padrão para essa opção é `-optionstrict-`. O `-optionstrict+` opção é o mesmo que `-optionstrict`. Você pode usar para a semântica de tipo permissivo.  
   
  `custom`  
- Necessário. Avise quando a semântica de linguagem estrita não for respeitada.  
+ Obrigatório. Avise quando a semântica de linguagem estrita não for respeitada.  
   
 ## <a name="remarks"></a>Comentários  
  Quando `-optionstrict+` está em vigor, conversões de tipo de expansão somente pode ser feito implicitamente. Implícita de conversões de tipo, como a atribuição entre um `Decimal` tipo de objeto para um objeto de tipo inteiro, são relatados como erros.  

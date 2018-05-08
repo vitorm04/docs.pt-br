@@ -1,27 +1,15 @@
 ---
 title: HttpCookieSession
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços e clientes ASMX ou entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e serviços ASMX.  
+Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre clientes ASMX e serviços do Windows Communication Foundation (WCF) ou [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e serviços ASMX.  
   
  Quando um cliente chama um método da Web em um serviço Web ASMX que é baseada em sessão, o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mecanismo faz o seguinte:  
   
@@ -40,7 +28,7 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -94,7 +82,7 @@ InputQueue<RequestContext> requestQueue;
  O canal de cliente correspondente está no `HttpCookieSessionChannelFactory` classe. Durante a criação do canal, a fábrica de canais encapsula o canal de solicitação interna com um `HttpCookieRequestSessionChannel`. O `HttpCookieRequestSessionChannel` classe encaminha as chamadas para o canal de solicitação subjacente. Quando o cliente fecha o proxy, `HttpCookieRequestSessionChannel` envia uma mensagem para o serviço que indica que o canal está sendo fechado. Portanto, a pilha de canais de serviço normalmente pode encerrar o canal de sessão que está em uso.  
   
 ## <a name="binding-and-binding-element"></a>Associação e o elemento de associação  
- Depois de criar o serviço e o cliente canais, a próxima etapa é integrá-los para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução. Canais são expostos para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] por meio de associações e elementos de associação. Uma associação consiste em um ou vários elementos de associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece várias associações definidas pelo sistema; Por exemplo, BasicHttpBinding ou WSHttpBinding. O `HttpCookieSessionBindingElement` classe contém a implementação para o elemento de associação. Ela substitui a escuta de canal e métodos de criação de fábrica de canal para fazer o canal necessário instanciações de fábrica de canal ou de escuta.  
+ Depois de criar o serviço e o cliente canais, a próxima etapa é integrá-los para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução. Canais são expostos para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] por meio de associações e elementos de associação. Uma associação consiste em um ou vários elementos de associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece várias associações definidas pelo sistema; Por exemplo, BasicHttpBinding ou WSHttpBinding. O `HttpCookieSessionBindingElement` classe contém a implementação para o elemento de associação. Ela substitui a escuta de canal e métodos de criação de fábrica de canal para fazer o canal necessário instanciações de fábrica de canal ou de escuta.  
   
  O exemplo usa declarações de política para a descrição do serviço. Isso permite que o exemplo publicar seus requisitos de canal para outros clientes que podem consumir o serviço. Por exemplo, esse elemento de associação publica declarações de política para informar os clientes potenciais que ele oferece suporte a sessões. Como o exemplo permite que o `ExchangeTerminateMessage` propriedade na configuração de elemento de associação, ele adiciona as declarações necessárias para mostrar que o serviço oferece suporte a uma ação de troca extras de mensagem para terminar a conversa da sessão. Os clientes podem, em seguida, usar essa ação. O código a seguir WSDL mostra as declarações de política criadas a partir de `HttpCookieSessionBindingElement`.  
   

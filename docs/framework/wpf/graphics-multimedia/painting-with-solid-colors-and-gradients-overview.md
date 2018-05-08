@@ -1,13 +1,6 @@
 ---
-title: "Visão geral da pintura com cores sólidas e gradientes"
-ms.custom: 
+title: Visão geral da pintura com cores sólidas e gradientes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Visão geral da pintura com cores sólidas e gradientes
 Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, e <xref:System.Windows.Media.RadialGradientBrush> objetos para pintar com cores sólidas, gradientes lineares e radiais gradientes.  
@@ -74,7 +62,7 @@ Este tópico descreve como usar <xref:System.Windows.Media.SolidColorBrush>, <xr
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>Pintando uma área com um gradiente  
- Um pincel de gradiente pinta uma área com várias cores que se mesclam ao longo de um eixo. Você pode usá-los para criar impressões de luz e sombra, dando uma aparência tridimensional aos seus controles. Você também pode usá-los para simular vidro, cromado, água e outras superfícies suaves.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornece dois tipos de pincéis de gradiente: <xref:System.Windows.Media.LinearGradientBrush> e <xref:System.Windows.Media.RadialGradientBrush>.  
+ Um pincel de gradiente pinta uma área com várias cores que se mesclam ao longo de um eixo. Você pode usá-los para criar impressões de luz e sombra, dando uma aparência tridimensional aos seus controles. Você também pode usá-los para simular vidro, cromado, água e outras superfícies suaves.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece dois tipos de pincéis de gradiente: <xref:System.Windows.Media.LinearGradientBrush> e <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>Gradientes lineares  

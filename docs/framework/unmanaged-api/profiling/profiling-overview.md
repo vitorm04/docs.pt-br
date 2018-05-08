@@ -1,13 +1,6 @@
 ---
-title: "Visão geral da criação de perfil"
-ms.custom: 
+title: Visão geral da criação de perfil
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
-<a name="top"></a>Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de tempo de execução (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens e enviam mensagens para o CLR usando a API de criação de perfil. O criador de perfil DLL é carregado pelo CLR em tempo de execução.  
+<a name="top"></a> Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de tempo de execução (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens e enviam mensagens para o CLR usando a API de criação de perfil. O criador de perfil DLL é carregado pelo CLR em tempo de execução.  
   
  Ferramentas de criação de perfil tradicionais se concentram em avaliar a execução do aplicativo. Ou seja, eles medem o tempo gasto em cada função ou o uso de memória do aplicativo ao longo do tempo. A API de criação de perfil tem como alvo uma classe mais ampla de ferramentas de diagnóstico como utilitários de cobertura de código e até mesmo avançados recursos de depuração. Esses usos são todos os diagnóstico por natureza. A API de criação de perfil não mede apenas também monitora a execução de um aplicativo. Por esse motivo, a API de criação de perfil nunca deve ser usada pelo próprio aplicativo, e a execução do aplicativo não deve depender (ou ser afetado por) o criador de perfil.  
   

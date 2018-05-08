@@ -1,38 +1,24 @@
 ---
 title: Compatibilidade da funcionalidade de confiança parcial
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidade da funcionalidade de confiança parcial
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferece suporte a um subconjunto limitado de funcionalidade quando executados em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados para um conjunto de cenários específicos, conforme descrito no [suporte para cenários de implantação](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tópico.  
+Windows Communication Foundation (WCF) oferece suporte a um subconjunto limitado de funcionalidade quando executados em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados para um conjunto de cenários específicos, conforme descrito no [suporte para cenários de implantação](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tópico.  
   
 ## <a name="minimum-permission-requirements"></a>Requisitos de permissão mínima  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dá suporte a um subconjunto de recursos em aplicativos em execução em qualquer um dos seguintes conjuntos de permissões nomeadas padrão:  
+ O WCF dá suporte a um subconjunto de recursos em aplicativos em execução em qualquer um dos seguintes conjuntos de permissões nomeadas padrão:  
   
 -   Permissões de confiança médio  
   
 -   Permissões de zona da Internet  
   
- Tentativa de usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em aplicativos parcialmente confiáveis com permissões mais restritivas pode resultar em exceções de segurança em tempo de execução.  
+ Tentativa de usar o WCF em aplicativos parcialmente confiáveis com permissões mais restritivas pode resultar em exceções de segurança em tempo de execução.  
   
 ## <a name="contracts"></a>Contratos  
  Contratos estão sujeitas às seguintes restrições ao executar em confiança parcial:  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/27/2018
  Não há suporte para os codificadores de mecanismo de otimização de transmissão da mensagem (MTOM).  
   
 ### <a name="security"></a>Segurança  
- Aplicativos parcialmente confiáveis podem usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]de recursos de segurança para proteger suas comunicações de nível de transporte. Não há suporte para a segurança em nível de mensagem. Configurando uma associação para usar a segurança de nível de mensagem resulta em uma exceção em tempo de execução.  
+ Aplicativos parcialmente confiáveis podem usar recursos de segurança de nível de transporte do WCF para proteger suas comunicações. Não há suporte para a segurança em nível de mensagem. Configurando uma associação para usar a segurança de nível de mensagem resulta em uma exceção em tempo de execução.  
   
 ### <a name="unsupported-bindings"></a>Não há suporte para associações  
  Não há suporte para associações que usam o sistema de mensagens confiável, transações ou segurança em nível de mensagem.  
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Todos os serializável `[DataContract]` tipos devem ser `public`.  
   
--   Todos os serializável `[DataMember]` campos ou propriedades em um `[DataContract]` tipo deve ser público e leitura/gravação. A serialização e desserialização de [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) campos não é suportado quando executando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em um aplicativo parcialmente confiável.  
+-   Todos os serializável `[DataMember]` campos ou propriedades em um `[DataContract]` tipo deve ser público e leitura/gravação. A serialização e desserialização de [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) campos não tem suporte durante a execução do WCF em um aplicativo parcialmente confiável.  
   
 -   O  `[Serializable]` /modelo de programação ISerializable não tem suporte em um ambiente de confiança parcial.  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 04/27/2018
 ### <a name="collection-types"></a>Tipos de coleção  
  Alguns tipos de coleção implementam <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.Collections.IEnumerable>. Exemplos incluem os tipos que implementam <xref:System.Collections.Generic.ICollection%601>. Esses tipos podem implementar uma `public` implementação de `GetEnumerator()`e uma implementação explícita de `GetEnumerator()`. Nesse caso, <xref:System.Runtime.Serialization.DataContractSerializer> invoca o `public` implementação de `GetEnumerator()`e não a implementação explícita de `GetEnumerator()`. Se nenhuma a `GetEnumerator()` são implementações `public` e todas as implementações explícitas, em seguida, <xref:System.Runtime.Serialization.DataContractSerializer> invoca `IEnumerable.GetEnumerator()`.  
   
- Para a coleção de tipos quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está em execução em um ambiente de confiança parcial, se nenhuma do `GetEnumerator()` são implementações `public`, ou nenhum deles são implementações de interface explícita e é gerada uma exceção de segurança.  
+ Para tipos de coleção quando o WCF está em execução em um ambiente de confiança parcial, se nenhuma a `GetEnumerator()` são implementações `public`, ou nenhum deles são implementações de interface explícita e é gerada uma exceção de segurança.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  Muitos tipos de coleção do .NET Framework, como <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Hashtable> não oferece suporte a <xref:System.Runtime.Serialization.NetDataContractSerializer> em confiança parcial. Esses tipos têm o `[Serializable]` atributo definido e, conforme mencionado anteriormente na seção de serialização, esse atributo não tem suporte em confiança parcial. O <xref:System.Runtime.Serialization.DataContractSerializer> trata coleções de uma forma especial e, portanto, é possível contornar essa restrição, mas o <xref:System.Runtime.Serialization.NetDataContractSerializer> não tem nenhum esse mecanismo para contornar essa restrição.  
@@ -108,7 +94,7 @@ ms.lasthandoff: 04/27/2018
  Para obter um exemplo de um comportamento comum, consulte [como: bloqueio para pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuração  
- Com uma exceção, o código parcialmente confiável somente pode carregar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções de configuração no local `app.config` arquivo. Para carregar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções de configuração que fazem referência [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções em Machine. config ou em um arquivo Web. config de raiz requer ConfigurationPermission(Unrestricted). Sem essa permissão, as referências a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções de configuração (comportamentos, associações) fora os resultados do arquivo de configuração local em uma exceção quando a configuração é carregada.  
+ Com uma exceção, o código parcialmente confiável somente pode carregar a seções de configuração do WCF no local `app.config` arquivo. Para carregar as seções de configuração do WCF que fazem referência a seções WCF em Machine. config ou em uma raiz de arquivo Web. config requer ConfigurationPermission(Unrestricted). Sem essa permissão, referências a WCF seções de configuração (comportamentos, associações) fora os resultados do arquivo de configuração local em uma exceção quando a configuração é carregada.  
   
  A única exceção é a configuração de tipo conhecido para a serialização, conforme descrito na seção serialização deste tópico.  
   
@@ -121,7 +107,7 @@ ms.lasthandoff: 04/27/2018
  O log de eventos limitado tem suporte em confiança parcial. Apenas as falhas de ativação de serviço e falhas de registro em log de rastreamento de mensagens são registradas no log de eventos. O número máximo de eventos que podem ser registrados por um processo é 5, para evitar a escrita de mensagens excessivas no log de eventos.  
   
 ### <a name="message-logging"></a>Registro em log de mensagens  
- Mensagem de log não funciona quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é executado em um ambiente de confiança parcial. Se habilitada em confiança parcial, ela não falhará ativação do serviço, mas nenhuma mensagem é registrada.  
+ O log de mensagem não funciona quando o WCF é executado em um ambiente de confiança parcial. Se habilitada em confiança parcial, ela não falhará ativação do serviço, mas nenhuma mensagem é registrada.  
   
 ### <a name="tracing"></a>Rastreamento  
  Funcionalidade de rastreamento restrito está disponível quando executado em um ambiente de confiança parcial. No <`listeners`> elemento no arquivo de configuração, os únicos tipos que você pode adicionar são <xref:System.Diagnostics.TextWriterTraceListener> e o novo <xref:System.Diagnostics.EventSchemaTraceListener>. Uso do padrão <xref:System.Diagnostics.XmlWriterTraceListener> pode resultar em logs incompletas ou incorretas.  
@@ -151,13 +137,13 @@ ms.lasthandoff: 04/27/2018
  Ao usar o rastreamento em um ambiente de confiança parcial, certifique-se de que o aplicativo tem permissões suficientes para armazenar a saída do ouvinte de rastreamento. Por exemplo, ao usar o <xref:System.Diagnostics.TextWriterTraceListener> para gravar a saída de rastreamento em um arquivo de texto, certifique-se de que o aplicativo tem FileIOPermission necessário necessária para gravar no arquivo de rastreamento com êxito.  
   
 > [!NOTE]
->  Para evitar a saturação com erros duplicados, os arquivos de rastreamento [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que é feita uma tentativa de acessar o recurso ou executar a ação.  
+>  Para evitar a saturação os arquivos de rastreamento com erros duplicados, WCF desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que é feita uma tentativa de acessar o recurso ou executar a ação.  
   
 ## <a name="wcf-service-host"></a>Host de serviço do WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] host de serviço não dá suporte a confiança parcial. Se você quiser usar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço em confiança parcial, não use o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de projeto de biblioteca de serviço no Visual Studio para criar seu serviço. Em vez disso, crie um novo site da Web no Visual Studio escolhendo o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de site da Web do serviço, que pode hospedar o serviço em um servidor Web no qual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] há suporte para a relação de confiança parcial.  
+ Host de serviço do WCF não oferece suporte a confiança parcial. Se você quiser usar um serviço WCF em confiança parcial, não use o modelo de projeto de biblioteca de serviço WCF no Visual Studio para criar seu serviço. Em vez disso, crie um novo site da Web no Visual Studio escolhendo o modelo de site da Web do serviço WCF, que pode hospedar o serviço em um servidor Web no qual há suporte para confiança parcial do WCF.  
   
 ## <a name="other-limitations"></a>Outras limitações  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é geralmente limitado para as considerações de segurança que imponham pelo aplicativo host. Por exemplo, se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está hospedado em um aplicativo de navegador de XAML (XBAP), ele está sujeito a limitações XBAP, conforme descrito na [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ O WCF é geralmente limitado às considerações de segurança que imponham pelo aplicativo host. Por exemplo, se o WCF é hospedado em um aplicativo de navegador de XAML (XBAP), é sujeito a limitações XBAP, conforme descrito em [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Os seguintes recursos adicionais não são habilitados quando executar indigo2 em um ambiente de confiança parcial:  
   
@@ -167,10 +153,10 @@ ms.lasthandoff: 04/27/2018
   
 -   Contadores de desempenho  
   
- O uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recursos que não são suportados em um ambiente de confiança parcial podem resultar em exceções em tempo de execução.  
+ Uso de recursos do WCF que não são suportados em um ambiente de confiança parcial pode resultar em exceções em tempo de execução.  
   
 ## <a name="unlisted-features"></a>Recursos não listados  
- A melhor maneira de descobrir que uma parte das informações ou ação não está disponível quando executados em um ambiente de confiança parcial é tentar acessar o recurso ou executar a ação dentro de um `try` bloco e, em seguida, `catch` a falha. Para evitar a saturação com erros duplicados, os arquivos de rastreamento [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que é feita uma tentativa de acessar o recurso ou executar a ação.  
+ A melhor maneira de descobrir que uma parte das informações ou ação não está disponível quando executados em um ambiente de confiança parcial é tentar acessar o recurso ou executar a ação dentro de um `try` bloco e, em seguida, `catch` a falha. Para evitar a saturação os arquivos de rastreamento com erros duplicados, WCF desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que é feita uma tentativa de acessar o recurso ou executar a ação.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

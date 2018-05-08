@@ -1,24 +1,14 @@
 ---
-title: "Problemas de segurança de registro em log de mensagens"
-ms.custom: 
+title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais de serem expostas em logs de mensagem, bem como os eventos gerados pelo log de mensagens.  
@@ -26,7 +16,7 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 ## <a name="security-concerns"></a>Problemas de segurança  
   
 ### <a name="logging-sensitive-information"></a>O log de informações confidenciais  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]não modificar dados em cabeçalhos específicos do aplicativo e corpo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também não rastreia informações pessoais em cabeçalhos específicos do aplicativo ou o corpo de dados.  
+ Windows Communication Foundation (WCF) não modifica os dados no cabeçalhos específicos do aplicativo e corpo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também não rastreia informações pessoais em cabeçalhos específicos do aplicativo ou o corpo de dados.  
   
  Quando o log de mensagens está habilitado, as informações pessoais em cabeçalhos específicos do aplicativo, como uma cadeia de caracteres de consulta; e corpo informações, como um número de cartão de crédito, pode se tornar visíveis nos logs. O implantador de aplicativo é responsável por impor o controle de acesso nos arquivos de configuração e de log. Se você não deseja que esse tipo de informação fique visível, você deve desabilitar o log ou filtrar a parte dos dados se você quiser compartilhar os logs.  
   

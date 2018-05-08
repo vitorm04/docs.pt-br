@@ -1,32 +1,18 @@
 ---
 title: Práticas recomendadas para comunicação em fila
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Práticas recomendadas para comunicação em fila
-Este tópico fornece as práticas recomendadas para comunicação em fila em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. As seções a seguir discutem práticas recomendadas de uma perspectiva de cenário.  
+Este tópico fornece as práticas recomendadas para comunicação em fila no Windows Communication Foundation (WCF). As seções a seguir discutem práticas recomendadas de uma perspectiva de cenário.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Rápido e melhor esforço enfileiradas mensagens  
  Para cenários que exigem a separação na fila de mensagens fornece e rápida, alto desempenho mensagens com garantia de melhor esforço, use uma fila não transacional e configure o <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> propriedade `false`.  
@@ -69,7 +55,7 @@ Este tópico fornece as práticas recomendadas para comunicação em fila em [!I
   
  Ao usar o envio em lote, lembre-se de limitação e simultaneidade traduzam a lotes simultâneos.  
   
- Para obter maior taxa de transferência e disponibilidade, use um farm de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços leem da fila. Isso exige que todos esses serviços de exponham o mesmo contrato no mesmo ponto de extremidade. A abordagem de farm funciona melhor para aplicativos com taxas de produção alto de mensagens porque ela permite que um número de serviços para todos os leiam a mesma fila.  
+ Para obter maior taxa de transferência e disponibilidade, use um farm de serviços WCF que ler da fila. Isso exige que todos esses serviços de exponham o mesmo contrato no mesmo ponto de extremidade. A abordagem de farm funciona melhor para aplicativos com taxas de produção alto de mensagens porque ela permite que um número de serviços para todos os leiam a mesma fila.  
   
  Ao usar farms de servidores, lembre-se de que o MSMQ 3.0 não oferece suporte remotas leituras transacionadas. MSMQ 4.0 oferece suporte remotas leituras transacionadas.  
   
@@ -84,11 +70,11 @@ Este tópico fornece as práticas recomendadas para comunicação em fila em [!I
  Embora as filas são normalmente unidirecionais, em alguns cenários, que talvez você queira correlacionar uma resposta recebida para uma solicitação enviada anteriormente. Se você precisar de correlação, é recomendável que você aplique seu próprio cabeçalho de mensagem SOAP que contém informações de correlação com a mensagem. Normalmente, o remetente anexa esse cabeçalho com a mensagem e o destinatário, ao processar a mensagem e resposta com uma nova mensagem em uma fila de resposta, anexa o cabeçalho da mensagem do remetente que contém as informações de correlação para que o remetente pode identificar a mensagem de resposta com a mensagem de solicitação.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integração com aplicativos não WCF  
- Use `MsmqIntegrationBinding` ao integrar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços ou clientes com não[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços ou clientes. Não[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo pode ser um aplicativo de MSMQ escrito usando System. Messaging, COM+, Visual Basic ou C++.  
+ Use `MsmqIntegrationBinding` ao integrar serviços WCF ou clientes com os serviços WCF não ou clientes. O aplicativo WCF não pode ser um aplicativo de MSMQ escrito usando System. Messaging, COM+, Visual Basic ou C++.  
   
  Ao usar `MsmqIntegrationBinding`, lembre-se das seguintes opções:  
   
--   Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] corpo da mensagem não é igual um corpo de mensagem do MSMQ. Ao enviar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando uma associação enfileirada, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] corpo da mensagem é colocado dentro de uma mensagem MSMQ. A infraestrutura do MSMQ é indiferente a esta informação adicional. ele vê apenas a mensagem do MSMQ.  
+-   Um corpo de mensagem WCF não é igual um corpo de mensagem do MSMQ. Ao enviar uma mensagem WCF usando uma associação enfileirada, o corpo da mensagem WCF é colocado dentro de uma mensagem MSMQ. A infraestrutura do MSMQ é indiferente a esta informação adicional. ele vê apenas a mensagem do MSMQ.  
   
 -   `MsmqIntegrationBinding` oferece suporte a tipos de serialização populares. Com base no tipo de serialização, o tipo do corpo da mensagem genérica, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, usa os parâmetros de tipo diferente. Por exemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requer `MsmqMessage\<byte[]>` e <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requer `MsmqMessage<Stream>`.  
   

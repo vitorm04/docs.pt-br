@@ -1,28 +1,16 @@
 ---
 title: Como a entrada do teclado funciona
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], about keyboard input
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0b814a18f4a8b25fba9fa0b36da44954590f056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-keyboard-input-works"></a>Como a entrada do teclado funciona
 O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em resposta às mensagens do Windows. A maioria dos aplicativos Windows Forms processa a entrada do teclado exclusivamente ao manipular eventos de teclado. No entanto, você precisa entender como as mensagens do teclado funcionam para que você possa implementar cenários mais avançados de entrada do teclado, como interceptar teclas antes que elas atinjam um controle. Este tópico descreve os tipos de dados da chave que o Windows Forms reconhece e fornece uma visão geral de como as mensagens do teclado são roteadas. Para obter informações sobre eventos de teclado, consulte [Usando eventos do teclado](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -74,9 +62,9 @@ O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em res
 |Tarefa|Método|  
 |----------|------------|  
 |Interceptar uma tecla de navegação e gerar um <xref:System.Windows.Forms.Control.KeyDown> eventos. Por exemplo, você deseja que as teclas TAB e Enter sejam identificadas em uma caixa de texto.|Substitua <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Observação:** como alternativa, você pode manipular o <xref:System.Windows.Forms.Control.PreviewKeyDown> evento e defina <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> do <xref:System.Windows.Forms.PreviewKeyDownEventArgs> para `true` para a chave ou teclas que você deseja.|  
-|Execute tratamento de navegação ou entrada especial em um controle. Por exemplo, você deseja usar as teclas de seta no controle de lista para alterar o item selecionado.|Substituir<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Execute tratamento de navegação ou entrada especial em um controle. Por exemplo, você deseja usar as teclas de seta no controle de lista para alterar o item selecionado.|Substituir <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Interceptar uma tecla de navegação e gerar um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em um controle de caixa de rotação você deseja o pressionamento de várias teclas de seta para acelerar a progressão pelos itens.|Substitua <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Executar tratamento especial de entrada ou de navegação durante um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em uma controle de lista, manter pressionada a tecla "r" ignora os itens que começam com a letra r.|Substituir<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Executar tratamento especial de entrada ou de navegação durante um <xref:System.Windows.Forms.Control.KeyPress> eventos. Por exemplo, em uma controle de lista, manter pressionada a tecla "r" ignora os itens que começam com a letra r.|Substituir <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Execute o tratamento mnemônico personalizado. Por exemplo, você deseja manipular mnemônicos em botões desenhados pelo proprietário contidos em uma barra de ferramentas.|Substitua <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Consulte também  

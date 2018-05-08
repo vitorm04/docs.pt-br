@@ -1,11 +1,6 @@
 ---
-title: "Instrução While...End While (Visual Basic)"
+title: Instrução While...End While (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Instrução While...End While (Visual Basic)
 Executa uma série de instruções desde que uma determinada condição é `True`.  
@@ -63,7 +55,7 @@ End While
  Você pode aninhar `While` loops colocando um loop dentro de outra. Você também pode aninhar diferentes tipos de estruturas de controle dentro de uma outra. Para obter mais informações, consulte [estruturas de controle aninhadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Saída ao mesmo tempo  
- O [sair enquanto](../../../visual-basic/language-reference/statements/exit-statement.md) instrução pode fornecer a outra forma de sair de um `While` loop. `Exit While`transfere o controle para a instrução que segue imediatamente o `End While` instrução.  
+ O [sair enquanto](../../../visual-basic/language-reference/statements/exit-statement.md) instrução pode fornecer a outra forma de sair de um `While` loop. `Exit While` transfere o controle para a instrução que segue imediatamente o `End While` instrução.  
   
  Você normalmente usa `Exit While` depois que alguma condição é avaliada (por exemplo, em um `If...Then...Else` estrutura). Você talvez queira encerrar um loop se você detectar uma condição que facilita o desnecessária ou impossível continuar iterando, como um valor errado ou uma solicitação de encerramento. Você pode usar `Exit While` quando você testa uma condição que pode causar uma *loop infinito*, que é um loop que pode executar um número muito grande ou mesmo infinito de vezes. Você pode usar `Exit While` para escapar do loop.  
   

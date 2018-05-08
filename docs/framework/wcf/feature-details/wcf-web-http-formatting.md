@@ -1,20 +1,12 @@
 ---
-title: "Formatação HTTP Web do WCF"
+title: Formatação HTTP Web do WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>Formatação HTTP Web do WCF
 O modelo de programação WCF Web HTTP permite que você determinar dinamicamente o melhor formato para uma operação de serviço retornar a resposta em. Há suporte para dois métodos para determinar um formato apropriado: automática e explícitas.  
@@ -30,7 +22,7 @@ O modelo de programação WCF Web HTTP permite que você determinar dinamicament
   
 4.  O formato padrão definindo no WebHttpBehavior.  
   
- Se a mensagem de solicitação contiver um cabeçalho Accept de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pesquisas de infraestrutura para um tipo que oferece suporte a ele. Se o `Accept` cabeçalho Especifica prioridades para seus tipos de mídia, elas são consideradas. Se nenhum formato adequado foi encontrado no `Accept` cabeçalho, o tipo de conteúdo da mensagem de solicitação é usado. Se nenhum tipo de conteúdo adequado for especificado, a configuração para a operação do formato padrão é usado. O formato padrão é definido com o `ResponseFormat` parâmetro o <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos. Se nenhum formato padrão é especificado na operação, o valor de <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> propriedade é usada. Formatação automática depende do <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> propriedade. Quando essa propriedade é definida como `true`, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura determina o melhor formato a ser usado. Seleção automática de formato com versões anteriores é desabilitada por padrão para compatibilidade. Seleção automática de formato pode ser habilitada programaticamente ou por meio da configuração. O exemplo a seguir mostra como habilitar a seleção automática de formato no código.  
+ Se a mensagem de solicitação contiver um cabeçalho Accept a infraestrutura do Windows Communication Foundation (WCF) procura um tipo que oferece suporte a ele. Se o `Accept` cabeçalho Especifica prioridades para seus tipos de mídia, elas são consideradas. Se nenhum formato adequado foi encontrado no `Accept` cabeçalho, o tipo de conteúdo da mensagem de solicitação é usado. Se nenhum tipo de conteúdo adequado for especificado, a configuração para a operação do formato padrão é usado. O formato padrão é definido com o `ResponseFormat` parâmetro o <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos. Se nenhum formato padrão é especificado na operação, o valor de <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> propriedade é usada. Formatação automática depende do <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> propriedade. Quando essa propriedade é definida como `true`, a infraestrutura WCF determina o melhor formato a ser usado. Seleção automática de formato com versões anteriores é desabilitada por padrão para compatibilidade. Seleção automática de formato pode ser habilitada programaticamente ou por meio da configuração. O exemplo a seguir mostra como habilitar a seleção automática de formato no código.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

@@ -1,11 +1,7 @@
 ---
-title: "Função GetPropertyQualifierSet (referência de API não gerenciada)"
-description: "A função GetPropertyQualifierSet recupera o qualificador definido para uma propriedade."
+title: Função GetPropertyQualifierSet (referência de API não gerenciada)
+description: A função GetPropertyQualifierSet recupera o qualificador definido para uma propriedade.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>Função GetPropertyQualifierSet
 Recupera o qualificador definido para uma determinada propriedade.
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
 
 `wszMethod`  
-[in] O nome da propriedade. `wszProperty`deve apontar para um válida `LPCWSTR`. 
+[in] O nome da propriedade. `wszProperty` deve apontar para um válida `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Recebe o ponteiro de interface que permite acessar os qualificadores da propriedade. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é definido para apontar para `null`. 
@@ -67,7 +60,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | O método especificado não existe. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro é `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | A função tenta obter qualificadores de uma propriedade de sistema. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
@@ -87,7 +80,7 @@ Como as propriedades de sistema não ter nenhum qualificador, a função retorna
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

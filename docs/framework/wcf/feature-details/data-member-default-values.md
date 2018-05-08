@@ -1,13 +1,6 @@
 ---
-title: "Valores padrões de membro de dados"
-ms.custom: 
+title: Valores padrões de membro de dados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>Valores padrões de membro de dados
 No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null`, e para um tipo inteiro é zero. É recomendável ocasionalmente para omitir um membro de dados serializados dados quando ele é definido como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  
@@ -61,11 +49,11 @@ No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos têm u
 ### <a name="schema-representation"></a>Representação de esquema  
  Os detalhes da representação de esquema de linguagem XSD de esquema XML definição de membros de dados quando o `EmitDefaultValue` está definida como `false` são discutidos em [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). No entanto, esta é uma breve visão geral:  
   
--   Quando o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> é definido como `false`, ela é representada como uma anotação específica no esquema [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Não há nenhuma maneira interoperável para representar essas informações. Em particular, o atributo "padrão" no esquema não é usado para essa finalidade, o `minOccurs` atributo será afetado somente pelo <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> configuração e o `nillable` atributo é afetado somente pelo tipo de membro de dados.  
+-   Quando o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> é definido como `false`, ela é representada no esquema como uma anotação específica para o Windows Communication Foundation (WCF). Não há nenhuma maneira interoperável para representar essas informações. Em particular, o atributo "padrão" no esquema não é usado para essa finalidade, o `minOccurs` atributo será afetado somente pelo <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> configuração e o `nillable` atributo é afetado somente pelo tipo de membro de dados.  
   
 -   O valor padrão real para usar não está presente no esquema. É até o ponto de extremidade de recebimento interprete corretamente um elemento ausente.  
   
- Na importação de esquema, o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriedade é definida automaticamente como `false` sempre que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-anotação específica mencionado anteriormente é detectado. Ele também é definido como `false` para tipos de referência que têm o `nillable` propriedade definida como `false` para dar suporte a cenários específicos de interoperabilidade que normalmente ocorrem quando o consumo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web.  
+ Na importação de esquema, o <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propriedade é definida automaticamente como `false` sempre que a anotação específicas do WCF mencionada anteriormente é detectada. Ele também é definido como `false` para tipos de referência que têm o `nillable` propriedade definida como `false` para dar suporte a cenários específicos de interoperabilidade que normalmente ocorrem quando o consumo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviços Web.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  

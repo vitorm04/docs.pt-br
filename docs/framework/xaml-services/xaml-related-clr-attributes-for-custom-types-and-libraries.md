@@ -1,28 +1,14 @@
 ---
 title: Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc99ada6a3bc8465d22527a7ef985f9b057bcf77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
 Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns que são definidos pelo serviços XAML do .NET Framework. Ele também descreve outros atributos CLR que são definidos no .NET Framework que tem um cenário relacionados a XAML para aplicativo assemblies ou tipos. Atribuição de assemblies, tipos ou membros com esses atributos CLR fornece relacionadas aos tipos de informações do sistema de tipo XAML. Informações são fornecidas para qualquer consumidor XAML que usa serviços XAML do .NET Framework para processar o fluxo do nó XAML diretamente ou por meio de leitores XAML dedicados e gravadores XAML.  
@@ -39,7 +25,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** None  
   
- <xref:System.Windows.Markup.AmbientAttribute>indica que a propriedade, ou todas as propriedades que usam o tipo de atributo devem ser interpretadas sob o conceito de propriedade de ambiente em XAML. O conceito de ambiente está relacionado a como os processadores XAML determinam os proprietários do tipo dos membros. Uma propriedade de ambiente é uma propriedade em que o valor deve estar disponível no contexto do analisador ao criar um gráfico de objeto, mas em que a pesquisa de membro de tipo típico é suspenso do nó XAML imediata conjunto que está sendo criado.  
+ <xref:System.Windows.Markup.AmbientAttribute> indica que a propriedade, ou todas as propriedades que usam o tipo de atributo devem ser interpretadas sob o conceito de propriedade de ambiente em XAML. O conceito de ambiente está relacionado a como os processadores XAML determinam os proprietários do tipo dos membros. Uma propriedade de ambiente é uma propriedade em que o valor deve estar disponível no contexto do analisador ao criar um gráfico de objeto, mas em que a pesquisa de membro de tipo típico é suspenso do nó XAML imediata conjunto que está sendo criado.  
   
  O conceito de ambiente pode ser aplicado a membros anexáveis, que não são representados como propriedades em termos de como a atribuição de CLR define <xref:System.AttributeTargets>. O uso de atribuição de método deve ser aplicado apenas no caso de um `get` acessador que dá suporte ao uso anexável para XAML.  
   
@@ -50,7 +36,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** uma cadeia de caracteres que especifica o nome da propriedade que corresponda a um argumento de construtor simples.  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute>Especifica que um objeto pode ser inicializado usando uma sintaxe do construtor não padrão e uma propriedade do nome especificado fornece informações de construção. Essas informações são principalmente para serialização XAML. Para obter mais informações, consulte <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute> Especifica que um objeto pode ser inicializado usando uma sintaxe do construtor não padrão e uma propriedade do nome especificado fornece informações de construção. Essas informações são principalmente para serialização XAML. Para obter mais informações, consulte <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
@@ -59,7 +45,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** uma cadeia de caracteres que especifica o nome de um membro de tipo de atributo.  
   
- <xref:System.Windows.Markup.ContentPropertyAttribute>indica que a propriedade, conforme indicado pelo argumento deve servir como a propriedade de conteúdo XAML para esse tipo. A definição de propriedade de conteúdo XAML herda a todos os tipos derivados que são atribuíveis ao tipo de definição. Você pode substituir a definição de um tipo derivado específica aplicando <xref:System.Windows.Markup.ContentPropertyAttribute> em específicos do tipo derivado.  
+ <xref:System.Windows.Markup.ContentPropertyAttribute> indica que a propriedade, conforme indicado pelo argumento deve servir como a propriedade de conteúdo XAML para esse tipo. A definição de propriedade de conteúdo XAML herda a todos os tipos derivados que são atribuíveis ao tipo de definição. Você pode substituir a definição de um tipo derivado específica aplicando <xref:System.Windows.Markup.ContentPropertyAttribute> em específicos do tipo derivado.  
   
  Para a propriedade que serve como a propriedade de conteúdo XAML, o elemento de propriedade marcação para a propriedade pode ser omitido no uso do XAML. Normalmente, você pode designar propriedades de conteúdo XAML que promovem uma marcação XAML simplificada para modelos de conteúdo e a contenção. Porque somente um membro pode ser designado como a propriedade de conteúdo XAML, você às vezes tem opções de design para fazer sobre qual contêiner várias propriedades de um tipo devem ser designadas como a propriedade de conteúdo XAML. As outras propriedades do contêiner devem ser usadas com elementos de propriedade explícita.  
   
@@ -72,7 +58,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** um <xref:System.Type> que especifica o tipo a ser usado como o tipo de conteúdo de wrapper para o conteúdo externo.  
   
- <xref:System.Windows.Markup.ContentWrapperAttribute>Especifica um ou mais tipos no tipo de coleção associada que será usado para encapsular conteúdo externo. Conteúdo externo se refere a casos em que as restrições do sistema de tipo no tipo da propriedade de conteúdo não capturar todos os casos possíveis de conteúdo que seria compatíveis com o uso do XAML para o tipo de propriedade. Por exemplo, o XAML suporte para conteúdo de um tipo específico pode oferecer suporte a cadeias de caracteres em uma genérica fortemente tipada <xref:System.Collections.ObjectModel.Collection%601>. Wrappers de conteúdo são úteis para migrando convenções de marcação preexistentes em concepção do XAML de valores pode ser atribuídos para coleções, como os modelos de conteúdo migração relacionada ao texto.  
+ <xref:System.Windows.Markup.ContentWrapperAttribute> Especifica um ou mais tipos no tipo de coleção associada que será usado para encapsular conteúdo externo. Conteúdo externo se refere a casos em que as restrições do sistema de tipo no tipo da propriedade de conteúdo não capturar todos os casos possíveis de conteúdo que seria compatíveis com o uso do XAML para o tipo de propriedade. Por exemplo, o XAML suporte para conteúdo de um tipo específico pode oferecer suporte a cadeias de caracteres em uma genérica fortemente tipada <xref:System.Collections.ObjectModel.Collection%601>. Wrappers de conteúdo são úteis para migrando convenções de marcação preexistentes em concepção do XAML de valores pode ser atribuídos para coleções, como os modelos de conteúdo migração relacionada ao texto.  
   
  Para especificar mais de um tipo de conteúdo do wrapper, aplique o atributo várias vezes.  
   
@@ -83,7 +69,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** uma cadeia de caracteres que especifica o nome de outro membro do tipo atribuído.  
   
- <xref:System.Windows.Markup.DependsOnAttribute>indica que a propriedade atribuída depende do valor de outra propriedade. Aplicar esse atributo a uma definição de propriedade garante que as propriedades dependentes são processadas primeiro por escrito do objeto XAML. Usos de <xref:System.Windows.Markup.DependsOnAttribute> especificar os casos excepcionais de propriedades em tipos de onde uma ordem específica de análise deve ser seguida para a criação de objeto válido.  
+ <xref:System.Windows.Markup.DependsOnAttribute> indica que a propriedade atribuída depende do valor de outra propriedade. Aplicar esse atributo a uma definição de propriedade garante que as propriedades dependentes são processadas primeiro por escrito do objeto XAML. Usos de <xref:System.Windows.Markup.DependsOnAttribute> especificar os casos excepcionais de propriedades em tipos de onde uma ordem específica de análise deve ser seguida para a criação de objeto válido.  
   
  Você pode aplicar várias <xref:System.Windows.Markup.DependsOnAttribute> casos para uma definição de propriedade.  
   
@@ -107,7 +93,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
 -   Uma cadeia de caracteres que especifica o nome de uma propriedade e um <xref:System.Type> para o tipo que define a propriedade nomeada. Este formulário é para especificar um membro anexável como a propriedade de namescope XAML.  
   
- <xref:System.Windows.Markup.NameScopePropertyAttribute>Especifica uma propriedade que fornece o valor de namescope XAML para a classe atribuída. A propriedade de namescope XAML deve fazer referência a um objeto que implementa <xref:System.Windows.Markup.INameScope> e mantém o namescope XAML real, seu armazenamento e seu comportamento.  
+ <xref:System.Windows.Markup.NameScopePropertyAttribute> Especifica uma propriedade que fornece o valor de namescope XAML para a classe atribuída. A propriedade de namescope XAML deve fazer referência a um objeto que implementa <xref:System.Windows.Markup.INameScope> e mantém o namescope XAML real, seu armazenamento e seu comportamento.  
   
 ### <a name="runtimenamepropertyattribute"></a>RuntimeNamePropertyAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
@@ -116,7 +102,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** uma cadeia de caracteres que especifica o nome da propriedade name de tempo de execução sobre o tipo de atributo.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>relatórios de uma propriedade de tipo de atributo que é mapeado para o XAML [diretiva X:Name](../../../docs/framework/xaml-services/x-name-directive.md). A propriedade deve ser do tipo <xref:System.String> e deve ser leitura/gravação.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> relatórios de uma propriedade de tipo de atributo que é mapeado para o XAML [diretiva X:Name](../../../docs/framework/xaml-services/x-name-directive.md). A propriedade deve ser do tipo <xref:System.String> e deve ser leitura/gravação.  
   
  Herda a definição para todos os tipos derivados que são atribuíveis ao tipo de definição. Você pode substituir a definição de um tipo derivado específica aplicando <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> em específicos do tipo derivado.  
   
@@ -127,7 +113,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** None.  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>é aplicado a tipos específicos que podem ser exibidos como elementos filho dentro do conteúdo de espaço em branco significativo (conteúdo mantido por uma coleção que tem <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>é principalmente relevante para salvar caminho, mas está disponível no sistema de tipo XAML no caminho de carga por meio do exame <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [processamento de espaço em branco em XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> é aplicado a tipos específicos que podem ser exibidos como elementos filho dentro do conteúdo de espaço em branco significativo (conteúdo mantido por uma coleção que tem <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> é principalmente relevante para salvar caminho, mas está disponível no sistema de tipo XAML no caminho de carga por meio do exame <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [processamento de espaço em branco em XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Documentação de referência:**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -136,7 +122,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** o <xref:System.Type> do <xref:System.ComponentModel.TypeConverter>.  
   
- <xref:System.ComponentModel.TypeConverterAttribute>em uma XAML contexto referencia um personalizado <xref:System.ComponentModel.TypeConverter>. Isso <xref:System.ComponentModel.TypeConverter> fornece o comportamento de conversão de tipo para tipos personalizados ou membros do mesmo tipo.  
+ <xref:System.ComponentModel.TypeConverterAttribute> em uma XAML contexto referencia um personalizado <xref:System.ComponentModel.TypeConverter>. Isso <xref:System.ComponentModel.TypeConverter> fornece o comportamento de conversão de tipo para tipos personalizados ou membros do mesmo tipo.  
   
  Aplicar o <xref:System.ComponentModel.TypeConverterAttribute> para o tipo de referência de sua implementação de conversor de tipo de atributo. Você pode definir conversores de tipo para XAML em classes, estruturas ou interfaces. Você não precisa fornecer conversão de tipo para enumerações, que a conversão está ativada nativamente.  
   
@@ -173,7 +159,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** um <xref:System.Type> que especifica a classe de suporte do serializador de valor a ser usado ao serializar todas as propriedades do tipo de atributo ou específico atribuído a propriedade.  
   
- <xref:System.Windows.Markup.ValueSerializer>Especifica uma classe de serialização de valor que requer mais estado e o contexto de um <xref:System.ComponentModel.TypeConverter> does. <xref:System.Windows.Markup.ValueSerializer>pode ser associado um membro anexável aplicando o <xref:System.Windows.Markup.ValueSerializerAttribute> atributo estático `get` método de acessador para o membro anexável. Serialização de valor também é aplicável para enumerações, interfaces e estruturas, mas não para delegados.  
+ <xref:System.Windows.Markup.ValueSerializer> Especifica uma classe de serialização de valor que requer mais estado e o contexto de um <xref:System.ComponentModel.TypeConverter> does. <xref:System.Windows.Markup.ValueSerializer> pode ser associado um membro anexável aplicando o <xref:System.Windows.Markup.ValueSerializerAttribute> atributo estático `get` método de acessador para o membro anexável. Serialização de valor também é aplicável para enumerações, interfaces e estruturas, mas não para delegados.  
   
 ### <a name="whitespacesignificantcollectionattribute"></a>WhitespaceSignificantCollectionAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
@@ -182,7 +168,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** None.  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>indica que um tipo de coleção deve ser processado como espaço em branco significativo por um processador XAML, que influencia a construção de nós de valor do fluxo do nó XAML dentro da coleção. Para obter mais informações, consulte [processamento de espaço em branco em XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> indica que um tipo de coleção deve ser processado como espaço em branco significativo por um processador XAML, que influencia a construção de nós de valor do fluxo do nó XAML dentro da coleção. Para obter mais informações, consulte [processamento de espaço em branco em XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -191,7 +177,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** atribuição oferece suporte a dois tipos como cadeias de caracteres de formulários ou tipos como <xref:System.Type>. Consulte <xref:System.Windows.Markup.XamlDeferLoadAttribute>.  
   
- Indica que uma classe ou propriedade possui um uso de carregamento adiado para XAML (como um comportamento de modelo) e relata a classe que habilita o comportamento adiando e seu tipo de conteúdo/destino.  
+ Indica que uma classe ou propriedade possui um uso de carregamento adiado para XAML (como um comportamento de modelo) e relata a classe que habilita o comportamento de adiamento e seu tipo de conteúdo/destino.  
   
 ### <a name="xamlsetmarkupextensionattribute"></a>XamlSetMarkupExtensionAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
@@ -218,7 +204,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** uma cadeia de caracteres que especifica o nome da propriedade de um alias para `xml:lang` sobre o tipo de atributo.  
   
- <xref:System.Windows.Markup.XmlLangPropertyAttribute>relatórios de uma propriedade de tipo de atributo que é mapeado para o XML `lang` diretiva. A propriedade não é necessariamente do tipo <xref:System.String>, mas deve ser atribuível a partir de uma cadeia de caracteres (Isso pode ser feito pela associação de um conversor de tipo com o tipo da propriedade, ou com a propriedade específica). A propriedade deve ser leitura/gravação.  
+ <xref:System.Windows.Markup.XmlLangPropertyAttribute> relatórios de uma propriedade de tipo de atributo que é mapeado para o XML `lang` diretiva. A propriedade não é necessariamente do tipo <xref:System.String>, mas deve ser atribuível a partir de uma cadeia de caracteres (Isso pode ser feito pela associação de um conversor de tipo com o tipo da propriedade, ou com a propriedade específica). A propriedade deve ser leitura/gravação.  
   
  O cenário para mapeamento `xml:lang` é para um modelo de objeto de tempo de execução tem acesso às informações de idioma especificado XML sem processamento especificamente com uma XMLDOM.  
   
@@ -236,7 +222,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
 -   Uma cadeia de caracteres que especifica o identificador do namespace XAML pode incorporar o namespace XAML no argumento anterior.  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>Especifica que um namespace XAML pode ser incluído em outro namespace XAML. Normalmente, o namespace XAML subsuming é indicado no definido anteriormente <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. Essa técnica pode ser usado para controle de versão de um vocabulário XAML em uma biblioteca e para torná-lo compatível com a marcação definida anteriormente contra o vocabulário com versão anterior.  
+ <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Especifica que um namespace XAML pode ser incluído em outro namespace XAML. Normalmente, o namespace de XAML incluído é indicado em um <xref:System.Windows.Markup.XmlnsDefinitionAttribute> definido anteriormente. Essa técnica pode ser usado para controle de versão de um vocabulário XAML em uma biblioteca e para torná-lo compatível com a marcação definida anteriormente contra o vocabulário com versão anterior.  
   
 ### <a name="xmlnsdefinitionattribute"></a>XmlnsDefinitionAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
@@ -247,7 +233,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
 -   Uma cadeia de caracteres que nomeia um namespace CLR. O namespace CLR deve definir os tipos públicos em seu assembly e pelo menos um dos tipos de namespace CLR deve ser destinado para uso em XAML.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>Especifica um mapeamento em uma base por assembly entre um namespace XAML e um namespace CLR, que é usado para resolução de tipo por um gravador de XAML do objeto ou o contexto do esquema XAML.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Especifica um mapeamento em uma base por assembly entre um namespace XAML e um namespace CLR, que é usado para resolução de tipo por um gravador de XAML do objeto ou o contexto do esquema XAML.  
   
  Mais de um <xref:System.Windows.Markup.XmlnsDefinitionAttribute> pode ser aplicado a um assembly. Isso pode ser feito por qualquer combinação dos seguintes motivos:  
   
@@ -268,7 +254,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
 -   Uma cadeia de caracteres que especifica um prefixo recomendado.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>Especifica um prefixo recomendado para uso para um namespace XAML. O prefixo é útil ao gravar elementos e atributos em um arquivo XAML é serializado pelos serviços de XAML do .NET Framework <xref:System.Xaml.XamlXmlWriter>, ou quando uma biblioteca de implementação de XAML interage com um ambiente de design que tenha XAML recursos de edição.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> Especifica um prefixo recomendado para uso para um namespace XAML. O prefixo é útil ao gravar elementos e atributos em um arquivo XAML é serializado pelos serviços de XAML do .NET Framework <xref:System.Xaml.XamlXmlWriter>, ou quando uma biblioteca de implementação de XAML interage com um ambiente de design que tenha XAML recursos de edição.  
   
  Mais de um <xref:System.Windows.Markup.XmlnsPrefixAttribute> pode ser aplicado a um assembly. Isso pode ser feito por qualquer combinação dos seguintes motivos:  
   

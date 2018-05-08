@@ -1,11 +1,6 @@
 ---
-title: "Instrução Event"
+title: Instrução Event
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Instrução Event
 Declara um evento definido pelo usuário.  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|Necessário. Nome do evento; segue convenções de nomenclatura de variável padrão.|  
 |`parameterlist`|Opcional. Lista de variáveis locais que representam os parâmetros desse evento. Você deve colocar o [lista de parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md) entre parênteses.|  
 |`Implements`|Opcional. Indica que este evento implementa um evento de uma interface.|  
-|`implementslist`|Necessário se `Implements` for fornecido. Lista de `Sub` procedimentos sendo implementados. Vários procedimentos são separados por vírgulas.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Cada `implementedprocedure` tem a seguinte sintaxe e partes:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Necessário. Nome de uma interface que este procedimento do que contém a classe ou estrutura está implementando.<br />-   `Definedname`-Necessário. Nome pelo qual o procedimento é definido em `interface`. Isso não precisa ser o mesmo que `name`, o nome que está usando este procedimento para implementar o procedimento definido.|  
+|`implementslist`|Necessário se `Implements` for fornecido. Lista de `Sub` procedimentos sendo implementados. Vários procedimentos são separados por vírgulas.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Cada `implementedprocedure` tem a seguinte sintaxe e partes:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -Necessário. Nome de uma interface que este procedimento do que contém a classe ou estrutura está implementando.<br />-   `Definedname` -Necessário. Nome pelo qual o procedimento é definido em `interface`. Isso não precisa ser o mesmo que `name`, o nome que está usando este procedimento para implementar o procedimento definido.|  
 |`Custom`|Necessário. Eventos declarados como `Custom` deve definir personalizado `AddHandler`, `RemoveHandler`, e `RaiseEvent` acessadores.|  
 |`delegatename`|Opcional. O nome de um delegado que especifica a assinatura de manipulador de eventos.|  
 |`AddHandler`|Necessário. Declara um `AddHandler` acessador que especifica as instruções para executar quando um manipulador de eventos é adicionado, explicitamente usando o `AddHandler` instrução ou implicitamente, usando o `Handles` cláusula.|  

@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataEmit::MergeEnd"
-ms.custom: 
+title: Método IMetaDataEmit::MergeEnd
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>Método IMetaDataEmit::MergeEnd
 Todos os escopos de metadados especificados por uma ou mais chamadas anteriores para o escopo mesclagens em atual [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      Se as propriedades do módulo já foram definidas para o escopo atual, nenhuma propriedade do módulo é importada. No entanto, se as propriedades do módulo não tem sido definidas no escopo atual, eles serão importados apenas uma vez, quando eles são encontrados pela primeira vez. Se as propriedades do módulo são encontradas novamente, eles são duplicatas. Se os valores de todas as propriedades de módulo (exceto MVID) são comparados e sem duplicatas forem encontradas, um erro será gerado.  
   
--   Para obter definições de tipo (`TypeDef`), não há duplicatas são mescladas no escopo atual. `TypeDef`objetos são verificados para duplicatas em relação a cada *nome totalmente qualificado do objeto* + *GUID* + *o número de versão*. Se houver uma correspondência no nome ou o GUID e qualquer um dos dois elementos é diferente, um erro será gerado. Caso contrário, se corresponderem a todos os três itens, `MergeEnd` faz uma verificação básica para garantir que as entradas são realmente duplicatas; caso contrário, ocorrerá um erro. Essa verificação superficial procura:  
+-   Para obter definições de tipo (`TypeDef`), não há duplicatas são mescladas no escopo atual. `TypeDef` objetos são verificados para duplicatas em relação a cada *nome totalmente qualificado do objeto* + *GUID* + *o número de versão*. Se houver uma correspondência no nome ou o GUID e qualquer um dos dois elementos é diferente, um erro será gerado. Caso contrário, se corresponderem a todos os três itens, `MergeEnd` faz uma verificação básica para garantir que as entradas são realmente duplicatas; caso contrário, ocorrerá um erro. Essa verificação superficial procura:  
   
     -   As declarações de membro mesmo, que ocorrem na mesma ordem. Membros que são sinalizados como `mdPrivateScope` (consulte a [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeração) não estão incluídos nessa verificação; elas são mescladas especialmente.  
   
@@ -79,7 +67,7 @@ HRESULT MergeEnd ();
   
  **Biblioteca:** usado como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

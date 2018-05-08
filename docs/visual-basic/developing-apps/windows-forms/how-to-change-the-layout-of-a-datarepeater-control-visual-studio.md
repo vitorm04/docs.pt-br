@@ -1,10 +1,6 @@
 ---
 title: Como alterar o layout de um controle DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, changing layout style
 - DataRepeater, changing orientation
 ms.assetid: 33aa8fd5-ac63-4bd0-ba13-8c2ab17e7824
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94c5f8f5e83578ca0a82b479ef5ef359738df5f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa780ee40171143c17b5bdbda4a97179ed5f2151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>Como alterar o layout de um controle DataRepeater (Visual Studio)
 O <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle pode ser exibido em um (itens de rolagem vertical) do vertical ou horizontal (itens de rolagem horizontal) orientação. Você pode alterar a orientação em tempo de design ou em tempo de execução alterando o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propriedade. Se você alterar o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propriedade em tempo de execução, você talvez queira redimensionar o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> e reposicionar os controles filho.  

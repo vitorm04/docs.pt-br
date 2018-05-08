@@ -1,27 +1,15 @@
 ---
-title: "Configuração simplificada"
-ms.custom: 
+title: Configuração simplificada
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>Configuração simplificada
-Configurando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Enquanto os arquivos de configuração aumentará a flexibilidade de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços, eles também são a origem para muitos difíceis de encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]trata esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração do serviço.  
+Configurar serviços Windows Communication Foundation (WCF) pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Enquanto os arquivos de configuração aumentará a flexibilidade de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços, eles também são a origem para muitos difíceis de encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] trata esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração do serviço.  
   
 ## <a name="simplified-configuration"></a>Configuração simplificada  
  Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] arquivos de configuração do serviço de <`system.serviceModel`> seção contém um <`service`> elemento para cada serviço hospedado. O <`service`> elemento contém uma coleção de <`endpoint`> elementos que especificam os pontos de extremidade expostos para cada serviço e, opcionalmente, um conjunto de comportamentos de serviço. O <`endpoint`> elementos especificam o endereço, associação, e contrato expostos pelo ponto de extremidade e, opcionalmente, configuração de associação e os comportamentos de ponto de extremidade. O <`system.serviceModel`> seção também contém um <`behaviors`> elemento que permite que você especificar comportamentos de serviço ou o ponto de extremidade. A exemplo a seguir mostra o <`system.serviceModel`> seção de um arquivo de configuração.  
@@ -57,7 +45,7 @@ Configurando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services pode 
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]torna a configuração de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço mais fácil, removendo o requisito para o <`service`> elemento. Se você não adicionar um <`service`> seção ou adicionar pontos de extremidade em um <`service`> seção e o serviço não programaticamente define pontos de extremidade, em seguida, um conjunto de pontos de extremidade padrão são adicionados automaticamente ao seu serviço, um para cada endereço base do serviço e para cada contrato implementado pelo seu serviço. Em cada um desses pontos de extremidade, o endereço do ponto de extremidade corresponde ao endereço base, a associação é determinada pelo esquema de endereço de base e o contrato é a implementados pelo serviço. Se você não precisa especificar pontos de extremidade ou comportamentos de serviço ou faça as alterações de configuração de associação, você não precisa especificar um arquivo de configuração de serviço em todos os. Se um serviço implementa dois contratos e o host de transportes HTTP e TCP permite que o host de serviço cria quatro pontos de extremidade padrão, uma para cada contrato usando cada transporte. Para criar pontos de extremidade padrão que o host de serviço deve saber quais associações para usar. Essas configurações são especificadas em um <`protocolMappings`> seção dentro de <`system.serviceModel`> seção. O <`protocolMappings`> seção contém uma lista de esquemas de protocolo de transporte mapeados para tipos de vinculação. O host de serviço usa os endereços base passados a ele para determinar qual associação a ser usada. O exemplo a seguir usa o <`protocolMappings`> elemento.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] torna a configuração de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço mais fácil, removendo o requisito para o <`service`> elemento. Se você não adicionar um <`service`> seção ou adicionar pontos de extremidade em um <`service`> seção e o serviço não programaticamente define pontos de extremidade, em seguida, um conjunto de pontos de extremidade padrão são adicionados automaticamente ao seu serviço, um para cada endereço base do serviço e para cada contrato implementado pelo seu serviço. Em cada um desses pontos de extremidade, o endereço do ponto de extremidade corresponde ao endereço base, a associação é determinada pelo esquema de endereço de base e o contrato é a implementados pelo serviço. Se você não precisa especificar pontos de extremidade ou comportamentos de serviço ou faça as alterações de configuração de associação, você não precisa especificar um arquivo de configuração de serviço em todos os. Se um serviço implementa dois contratos e o host de transportes HTTP e TCP permite que o host de serviço cria quatro pontos de extremidade padrão, uma para cada contrato usando cada transporte. Para criar pontos de extremidade padrão que o host de serviço deve saber quais associações para usar. Essas configurações são especificadas em um <`protocolMappings`> seção dentro de <`system.serviceModel`> seção. O <`protocolMappings`> seção contém uma lista de esquemas de protocolo de transporte mapeados para tipos de vinculação. O host de serviço usa os endereços base passados a ele para determinar qual associação a ser usada. O exemplo a seguir usa o <`protocolMappings`> elemento.  
   
 > [!WARNING]
 >  Alterar elementos de configuração padrão, como associações ou comportamentos, pode afetar os serviços definidos em níveis inferiores da hierarquia de configuração, desde que estejam usando essas associações padrão e comportamentos. Portanto, quem altera associações padrão e comportamentos precisa estar ciente de que essas alterações podem afetar outros serviços na hierarquia.  

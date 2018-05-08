@@ -1,38 +1,26 @@
 ---
-title: "Modelo de programação WCF Web HTTP"
-ms.custom: 
+title: Modelo de programação WCF Web HTTP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>Modelo de programação WCF Web HTTP
-O modelo de programação do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP que permite aos desenvolvedores expor operações de serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a pontos de extremidade não SOAP. Os tópicos nesta seção examinam o recurso em detalhes.  
+O modelo de programação HTTP do Windows Communication Foundation (WCF) da Web permite aos desenvolvedores expor operações de serviço WCF com pontos de extremidade SOAP não. Os tópicos nesta seção examinam o recurso em detalhes.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Fornece uma visão geral do Modelo de programação do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP.  
+ Fornece uma visão geral do modelo de programação de HTTP de Web do Windows Communication Foundation (WCF).  
   
  [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Discute o Modelo de Programação do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP e como ele funciona.  
+ Discute o modelo de programação HTTP do Windows Communication Foundation (WCF) da Web e como ele funciona.  
   
  [Como criar um serviço Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  Descreve como gravar um serviço básico que expõe um ponto de extremidade de não SOAP.  

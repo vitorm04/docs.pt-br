@@ -1,14 +1,6 @@
 ---
-title: "Ponteiro de função LPTHREAD_START_ROUTINE"
-ms.custom: 
+title: Ponteiro de função LPTHREAD_START_ROUTINE
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LPTHREAD_START_ROUTINE
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d28cdbfa2cb6c2c1f6b730e34b623a621119bc3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5025b75106b2cb0853047a09ca263f795d99633f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>Ponteiro de função LPTHREAD_START_ROUTINE
 Aponta para uma função que notifica o host que um thread começou a executar.  
@@ -61,7 +49,7 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
  **Biblioteca:** arquivo MSCorWks.dll  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

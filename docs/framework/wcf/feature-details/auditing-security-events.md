@@ -1,42 +1,30 @@
 ---
 title: Auditoria de eventos de segurança
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
-Os aplicativos criados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pode registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema e podem ser examinados usando o Visualizador de eventos.  
+Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema e podem ser examinados usando o Visualizador de eventos.  
   
  A auditoria fornece uma maneira de um administrador para detectar um ataque que já ocorreu ou está em andamento. Além disso, a auditoria pode ajudar um desenvolvedor para depurar os problemas relacionados à segurança. Por exemplo, se um erro na configuração da política de verificação ou autorização acidentalmente nega acesso a um usuário autorizado, um desenvolvedor rapidamente pode descobrir e isolar a causa desse erro examinando o log de eventos.  
   
- Para obter mais informações sobre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Para obter mais informações sobre a segurança do WCF, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre programação de WCF, consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Nível de auditoria e comportamento  
  Existem dois níveis de auditorias de segurança:  
   
 -   Nível de autorização de serviço, em que o chamador está autorizado.  
   
--   Mensagem de nível, em que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] verifica a validade da mensagem e autentica o chamador.  
+-   Nível de mensagem, em que o WCF verifica a validade da mensagem e autentica o chamador.  
   
  Você pode verificar os dois níveis de sucesso ou falha, que é conhecida como de auditoria a *auditoria comportamento*.  
   

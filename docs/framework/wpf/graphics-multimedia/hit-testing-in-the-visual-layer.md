@@ -1,13 +1,6 @@
 ---
 title: Teste de clique na camada visual
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Teste de clique na camada visual
 Este tópico fornece uma visão geral da funcionalidade de teste de clique fornecida pela camada visual. Suporte a teste de clique permite que você determine se um valor de geometria ou de ponto está dentro do conteúdo renderizado de um <xref:System.Windows.Media.Visual>, permitindo que você implemente comportamento de interface do usuário, como um retângulo de seleção para selecionar vários objetos.  
@@ -61,7 +49,7 @@ Diagrama de região de teste de clique válida
   
  Na ilustração a seguir, o objeto circular está por cima dos objetos quadrado e triângulo. Se você só está interessado no objeto visual cujo valor de ordem z é o mais alto de teste de clique, você pode definir a enumeração de teste de clique visual para retornar <xref:System.Windows.Media.HitTestResultBehavior.Stop> do <xref:System.Windows.Media.HitTestResultCallback> para parar a passagem de teste de clique após o primeiro item.  
   
- ![Diagrama de z &#45; a ordem de uma árvore visual](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![Diagrama de a z&#45;ordem de uma árvore visual](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 Diagrama da ordem z- de uma árvore visual  
   
  Se você deseja enumerar todos os objetos visuais em um ponto específico ou geometria, retorne <xref:System.Windows.Media.HitTestResultBehavior.Continue> do <xref:System.Windows.Media.HitTestResultCallback>. Isso significa que você pode realizar teste de clique de objetos visuais que estão sob outros objetos, mesmo que eles estejam totalmente encobertos. Consulte o código de exemplo na seção "Usando um retorno de chamada de resultados do teste de clique" para obter mais informações.  

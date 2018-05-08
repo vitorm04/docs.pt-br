@@ -1,27 +1,15 @@
 ---
-title: "Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)"
-ms.custom: 
+title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
-A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ajuda você a analisar os rastreamentos de diagnóstico gerados pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. O Visualizador de Rastreamento de Serviço oferece um modo fácil de mesclar, exibir e filtrar mensagens de rastreamento no log, para que você possa diagnosticar, reparar e verificar problemas de serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. O Visualizador de Rastreamento de Serviço oferece um modo fácil de mesclar, exibir e filtrar mensagens de rastreamento no log, para que você possa diagnosticar, reparar e verificar problemas de serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="configuring-tracing"></a>Configurando o rastreamento  
  Os rastreamentos de diagnóstico fornecem informações que mostram o que está acontecendo em toda a operação do seu aplicativo. Como o nome indica, você pode seguir as operações da origem ao destino, passando pelos pontos intermediários.  
@@ -272,7 +260,7 @@ A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../.
   
 4.  A exibição de árvore à esquerda exibe a estrutura do registro de rastreamento selecionado na etapa 1. Navegue até o elemento para o qual você deseja criar uma condição. Neste exemplo, navegue até o ThreadID a ser localizado no XPath: /E2ETraceEvent/System/Execution/@ThreadID nó. Clique duas vezes no atributo ThreadID na exibição de árvore. Isso cria uma expressão para o atributo no lado direito da caixa de diálogo.  
   
-5.  Altere o campo de parâmetro para a condição ThreadID de Nenhum para ‘{0}’. Esta etapa permite que o valor de ThreadID seja configurado quando o filtro é aplicado. (Consulte a seção Como aplicar um filtro.) Você pode definir até quatro parâmetros. As condições são combinadas com o operador OR.  
+5.  Altere o campo de parâmetro para a condição ThreadID de None para '{0}'. Esta etapa permite que o valor de ThreadID seja configurado quando o filtro é aplicado. (Consulte a seção Como aplicar um filtro.) Você pode definir até quatro parâmetros. As condições são combinadas com o operador OR.  
   
 6.  Clique em **Okey** para criar o filtro.  
   
@@ -297,7 +285,7 @@ A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../.
   
 2.  Clique em **filtro agora**e observar o resultado da operação.  
   
- Se o filtro usa vários parâmetros, digite-os usando ';' como um separador no **localizar** campo. Por exemplo, a cadeia de caracteres a seguir define 3 parâmetros: ‘1;findValue;text’. O visualizador aplica '1' ao parâmetro {0} do filtro. ‘findValue’ e ‘text’ são aplicados a {1} e {2} respectivamente.  
+ Se o filtro usa vários parâmetros, digite-os usando ';' como um separador no **localizar** campo. Por exemplo, a cadeia de caracteres a seguir define 3 parâmetros: ‘1;findValue;text’. O visualizador aplica-se '1' para o {0} parâmetro do filtro. 'findValue' e 'texto' são aplicadas a {1} e {2} respectivamente.  
   
 ###### <a name="sharing-custom-filters"></a>Compartilhando filtros personalizados  
  Os filtros personalizados podem ser compartilhados entre sessões e usuários diferentes. Você pode exportar os filtros para um arquivo de definição e importar esse arquivo em outro local.  
@@ -437,7 +425,7 @@ A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../.
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Atividade: indica que a atividade atual é uma atividade genérica.|  
+|![Atividade](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Atividade: indica que a atividade atual é uma atividade genérica.|  
 |![Atividade de raiz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Atividade raiz: indica a atividade raiz de um processo.|  
   
 ### <a name="wcf-activities"></a>Atividades do WCF  

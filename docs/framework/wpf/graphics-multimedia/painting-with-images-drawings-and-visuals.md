@@ -1,13 +1,6 @@
 ---
 title: Pintando com imagens, desenhos e visuais
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Pintando com imagens, desenhos e visuais
 Este tópico descreve como usar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> objetos para pintar uma área com uma imagem, um <xref:System.Windows.Media.Drawing>, ou um <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ Objetos pintados por um DrawingBrush
   
  Um <xref:System.Windows.Media.DrawingBrush> pinta uma área com um <xref:System.Windows.Media.Drawing> objeto. Um <xref:System.Windows.Media.Drawing> objeto descreve conteúdo visível, como uma forma, bitmap, vídeo ou uma linha de texto. Diferentes tipos de desenhos descrevem diferentes tipos de conteúdo. A seguir está uma lista dos diferentes tipos de objetos de desenho.  
   
--   <xref:System.Windows.Media.GeometryDrawing>--Desenha uma forma.  
+-   <xref:System.Windows.Media.GeometryDrawing> --Desenha uma forma.  
   
--   <xref:System.Windows.Media.ImageDrawing>--Desenha uma imagem.  
+-   <xref:System.Windows.Media.ImageDrawing> --Desenha uma imagem.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>--Desenha texto.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> --Desenha texto.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Executa um arquivo de áudio ou vídeo.  
+-   <xref:System.Windows.Media.VideoDrawing> – Executa um arquivo de áudio ou vídeo.  
   
--   <xref:System.Windows.Media.DrawingGroup>--Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho composto.  
+-   <xref:System.Windows.Media.DrawingGroup> --Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho composto.  
   
  Para obter mais informações sobre <xref:System.Windows.Media.Drawing> objetos, consulte o [visão geral de objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ Um objeto visual refletido
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Recursos do TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> são tipos de <xref:System.Windows.Media.TileBrush> objetos. <xref:System.Windows.Media.TileBrush>objetos oferecem uma grande quantidade de controle sobre como uma área é pintada com uma imagem, desenho ou visual. Por exemplo, em vez de apenas pintar uma área com uma única imagem alongada, você pode pintá-la com uma série de blocos de imagens que criam um padrão.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> são tipos de <xref:System.Windows.Media.TileBrush> objetos. <xref:System.Windows.Media.TileBrush> objetos oferecem uma grande quantidade de controle sobre como uma área é pintada com uma imagem, desenho ou visual. Por exemplo, em vez de apenas pintar uma área com uma única imagem alongada, você pode pintá-la com uma série de blocos de imagens que criam um padrão.  
   
  Um <xref:System.Windows.Media.TileBrush> tem três componentes principais: conteúdo, peças e a área de saída.  
   

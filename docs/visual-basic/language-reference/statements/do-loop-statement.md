@@ -1,17 +1,12 @@
 ---
-title: "Instrução Do...Loop (Visual Basic)"
+title: Instrução Do...Loop (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Instrução Do...Loop (Visual Basic)
 Repete um bloco de instruções enquanto uma `Boolean` condição é `True` ou até que a condição se torne `True`.  
@@ -61,14 +53,14 @@ Loop { While | Until } condition
   
 |Termo|Definição|  
 |---|---|  
-|`Do`|Necessário. Inicia a definição do `Do` loop.|  
+|`Do`|Obrigatório. Inicia a definição do `Do` loop.|  
 |`While`|Necessário a menos que `Until` seja usado. Repita o loop até `condition` é `False`.|  
 |`Until`|Necessário a menos que `While` seja usado. Repita o loop até `condition` é `True`.|  
 |`condition`|Opcional. Expressão `Boolean`. Se `condition` é `Nothing`, Visual Basic trata isso `False`.|  
 |`statements`|Opcional. Uma ou mais instruções que são repetidas enquanto, ou até que, `condition` é `True`.|  
 |`Continue Do`|Opcional. Transfere o controle para a próxima iteração do `Do` loop.|  
 |`Exit Do`|Opcional. Transfere o controle do `Do` loop.|  
-|`Loop`|Necessário. Finaliza a definição do `Do` loop.|  
+|`Loop`|Obrigatório. Finaliza a definição do `Do` loop.|  
   
 ## <a name="remarks"></a>Comentários  
  Use um `Do...Loop` estrutura quando quiser repetir um conjunto de declarações por um número indefinido de vezes, até que uma condição é satisfeita. Se você deseja repetir as instruções de um determinado número de vezes, o [para... Próxima instrução](../../../visual-basic/language-reference/statements/for-next-statement.md) geralmente é uma opção melhor.  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  O `Do...Loop` estrutura oferece maior flexibilidade do que o [enquanto... End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) porque ela permite que você decida se deseja terminar o loop quando `condition` deixa de ser `True` ou quando ela for primeiro `True`. Ele também permite que você teste `condition` ou o início ou o final do loop.  
   
 ## <a name="exit-do"></a>Sair  
- O [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) instrução pode fornecer uma maneira alternativa para sair um `Do…Loop`. `Exit Do`transfere controle imediatamente para a instrução que segue o `Loop` instrução.  
+ O [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) instrução pode fornecer uma maneira alternativa para sair um `Do…Loop`. `Exit Do` transfere controle imediatamente para a instrução que segue o `Loop` instrução.  
   
- `Exit Do`é frequentemente usado após alguma condição é avaliada, por exemplo, em um `If...Then...Else` estrutura. Você talvez queira encerrar um loop se você detectar uma condição que facilita o desnecessária ou impossível continuar iterando, como um valor errado ou uma solicitação de encerramento. Um uso de `Exit Do` é testar uma condição que pode causar uma *loop infinito*, que é um loop que pode executar um número grande ou mesmo infinito de vezes. Você pode usar `Exit Do` para escapar do loop.  
+ `Exit Do` é frequentemente usado após alguma condição é avaliada, por exemplo, em um `If...Then...Else` estrutura. Você talvez queira encerrar um loop se você detectar uma condição que facilita o desnecessária ou impossível continuar iterando, como um valor errado ou uma solicitação de encerramento. Um uso de `Exit Do` é testar uma condição que pode causar uma *loop infinito*, que é um loop que pode executar um número grande ou mesmo infinito de vezes. Você pode usar `Exit Do` para escapar do loop.  
   
  Você pode incluir qualquer número de `Exit Do` instruções em qualquer lugar em um `Do…Loop`.  
   

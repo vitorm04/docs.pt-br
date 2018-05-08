@@ -1,43 +1,31 @@
 ---
 title: Segurança de aplicativos distribuídos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: 32
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d8f34d0c6b0269cc4837313d6613e3cee0eb26c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segurança é dividida em três áreas funcionais principais: transferir a segurança, controle de acesso e auditoria. Segurança de transferência fornece autenticação, integridade e confidencialidade. Transferência de segurança é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
+Segurança do Windows Communication Foundation (WCF) é dividida em três áreas funcionais principais: transferir a segurança, controle de acesso e auditoria. Segurança de transferência fornece autenticação, integridade e confidencialidade. Transferência de segurança é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
   
- Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança de mensagem, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre as outras duas partes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Para obter uma visão geral de segurança de mensagens do WCF, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obter mais informações sobre as outras duas partes de segurança do WCF, consulte [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Cenários de segurança de transferência  
- Cenários comuns que empregam [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transferência segurança incluem o seguinte:  
+ Cenários comuns que utilizam segurança do WCF transferência incluem o seguinte:  
   
--   Transferência segura usando o Windows. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e serviço são implantados em um domínio do Windows (ou uma floresta do Windows). As mensagens de contenham dados pessoais, para que os requisitos incluem a autenticação mútua do cliente e serviço, integridade e confidencialidade da mensagem. Além disso, é necessária uma prova que uma transação específica ocorreu, por exemplo, o receptor da mensagem deve registrar as informações de assinatura.  
+-   Transferência segura usando o Windows. Um cliente WCF e serviço são implantados em um domínio do Windows (ou uma floresta do Windows). As mensagens de contenham dados pessoais, para que os requisitos incluem a autenticação mútua do cliente e serviço, integridade e confidencialidade da mensagem. Além disso, é necessária uma prova que uma transação específica ocorreu, por exemplo, o receptor da mensagem deve registrar as informações de assinatura.  
   
--   Transferência segura usando `UserName` e HTTPS. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e o serviço devem ser desenvolvidos para funcionar com a Internet. Autenticam as credenciais do cliente em relação a um banco de dados de pares de nome/senha do usuário. O serviço é implantado em um endereço HTTPS usando um certificado Secure Sockets Layer (SSL). Como as mensagens passam pela Internet, o cliente e o serviço precisam ser autenticadas mutuamente e confidencialidade e a integridade as mensagens devem ser preservadas durante a transferência.  
+-   Transferência segura usando `UserName` e HTTPS. Um cliente WCF e o serviço precisam ser desenvolvidos para trabalhar com a Internet. Autenticam as credenciais do cliente em relação a um banco de dados de pares de nome/senha do usuário. O serviço é implantado em um endereço HTTPS usando um certificado Secure Sockets Layer (SSL). Como as mensagens passam pela Internet, o cliente e o serviço precisam ser autenticadas mutuamente e confidencialidade e a integridade as mensagens devem ser preservadas durante a transferência.  
   
--   Transferência segura usando certificados. Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e o serviço precisam ser desenvolvidos para trabalhar na Internet pública. O cliente e o serviço têm certificados que podem ser usados para proteger as mensagens. O cliente e o serviço usem a Internet para se comunicar entre si e para executar transações de alto valor que exigem a autenticação mútua, confidencialidade e integridade da mensagem.  
+-   Transferência segura usando certificados. Um cliente WCF e o serviço precisam ser desenvolvidos para trabalhar na Internet pública. O cliente e o serviço têm certificados que podem ser usados para proteger as mensagens. O cliente e o serviço usem a Internet para se comunicar entre si e para executar transações de alto valor que exigem a autenticação mútua, confidencialidade e integridade da mensagem.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Autenticação, integridade e confidencialidade  
  Três funções — confidencialidade, integridade e a autenticação — juntos são chamados de segurança de transferência. Segurança de transferência fornece as funções que ajudam a mitigar as ameaças para um aplicativo distribuído. A tabela a seguir descreve brevemente as três funções que compõem a segurança de transferência.  
@@ -49,7 +37,7 @@ ms.lasthandoff: 04/30/2018
 |Autenticação|*Autenticação* é a verificação de uma identidade reivindicada. Por exemplo, ao usar uma conta bancária, é fundamental que somente o proprietário real da conta poderá retirar fundos. Autenticação pode ser fornecida por vários meios. Um método comum é o sistema de senha do usuário. Um segundo é o uso de um certificado x. 509 que é fornecido por terceiros.|  
   
 ## <a name="security-modes"></a>Modos de segurança  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem vários modos de segurança de transferência, que são descritos na tabela a seguir.  
+ WCF tem vários modos de segurança de transferência, que são descritos na tabela a seguir.  
   
 |Modo|Descrição|  
 |----------|-----------------|  
@@ -60,11 +48,11 @@ ms.lasthandoff: 04/30/2018
 |Ambos|Executa a proteção e a autenticação em ambos os níveis. Esse modo está disponível apenas no [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) elemento.|  
   
 ## <a name="credentials-and-transfer-security"></a>As credenciais e segurança de transferência  
- Um *credencial* são dados que são exibidos para estabelecer uma identidade reivindicada ou recursos. Apresentar uma credencial envolve apresentar os dados e a prova de posse dos dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a uma variedade de tipos de credenciais em níveis de segurança de transporte e de mensagem. Você pode especificar um tipo de credencial para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] associação.  
+ Um *credencial* são dados que são exibidos para estabelecer uma identidade reivindicada ou recursos. Apresentar uma credencial envolve apresentar os dados e a prova de posse dos dados. O WCF dá suporte a uma variedade de tipos de credenciais em níveis de segurança de transporte e de mensagem. Você pode especificar um tipo de credencial para uma associação WCF.  
   
  Em muitos países ou regiões, de motorista uma carteira é um exemplo de uma credencial. Uma licença contém dados que representa uma identidade e recursos. Ele contém uma prova de posse na forma de imagem do detentor. A licença é emitida por uma autoridade confiável, geralmente um departamento de licenciamento governamental. A licença é fechada e pode conter um holograma, mostrando que ele não foi violado ou falsificado.  
   
- Por exemplo, considere dois tipos de credenciais com suporte no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: credenciais de certificado de nome de usuário e (x. 509).  
+ Por exemplo, considere dois tipos de credenciais com suporte no WCF: credenciais de certificado de nome de usuário e (x. 509).  
   
  Para a credencial de nome de usuário, o nome de usuário representa a identidade reivindicada e a senha apresenta a prova de posse. Nesse caso, a autoridade confiável é o sistema valida o nome de usuário e senha.  
   
@@ -91,16 +79,16 @@ ms.lasthandoff: 04/30/2018
 |-------------|-----------------|  
 |Nenhum|Permite que o serviço interaja com clientes anônimos.|  
 |Windows|Permite que as trocas de mensagens SOAP ocorrer sob o contexto autenticado de uma credencial do Windows. Usa o mecanismo de negociação de SSPI para escolher o protocolo Kerberos ou NTLM como um serviço de autenticação.|  
-|Nome de usuário|Permite que o serviço exigir que o cliente seja autenticado com uma credencial de nome de usuário. Observe que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não permite qualquer operações criptográficas com o nome de usuário, como gerar uma assinatura ou criptografia de dados. Como tal, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] impõe que o transporte é protegido ao usar as credenciais de nome de usuário.|  
+|Nome de usuário|Permite que o serviço exigir que o cliente seja autenticado com uma credencial de nome de usuário. Observe que o WCF não permite qualquer operações criptográficas com o nome de usuário, como gerar uma assinatura ou criptografia de dados. Como tal, o WCF impõe que o transporte é protegido ao usar as credenciais de nome de usuário.|  
 |certificado|Permite que o serviço exigir que o cliente seja autenticado usando um certificado.|  
 |[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Permite que o serviço exigir que o cliente seja autenticado usando um [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
   
 ### <a name="programming-credentials"></a>Credenciais de programação  
- Para cada um dos tipos de credencial de cliente, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação permite que você especifique os valores de credencial e validadores de credencial usando comportamentos de serviço e comportamentos do canal.  
+ Para cada um dos tipos de credencial de cliente, o modelo de programação WCF permite que você especifique os valores de credencial e validadores de credencial usando comportamentos de serviço e comportamentos do canal.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a segurança tem dois tipos de credenciais: comportamentos de credencial e comportamentos de credencial do canal de serviço. Credencial comportamentos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especificar os dados reais, ou seja, as credenciais usadas para atender aos requisitos de segurança expressados por meio de associações. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uma classe de cliente é o componente de tempo de execução que converte entre a invocação de operação e mensagens. Todos os clientes herdam o <xref:System.ServiceModel.ClientBase%601> classe. O <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade na classe base permite que você especifique vários valores de credenciais de cliente.  
+ Segurança do WCF tem dois tipos de credenciais: comportamentos de credencial e comportamentos de credencial do canal de serviço. Comportamentos de credencial no WCF especificar os dados reais, ou seja, as credenciais usadas para atender aos requisitos de segurança expressados por meio de associações. No WCF, uma classe de cliente é o componente de tempo de execução que converte entre as mensagens e invocação de operação. Todos os clientes herdam o <xref:System.ServiceModel.ClientBase%601> classe. O <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade na classe base permite que você especifique vários valores de credenciais de cliente.  
   
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], comportamentos de serviço são atributos aplicados para a classe que implementa um contrato de serviço (interface) para controlar programaticamente o serviço. O <xref:System.ServiceModel.Description.ServiceCredentials> classe permite que você especifique certificados para configurações de validação de cliente e a credencial de serviço para vários tipos de credencial de cliente.  
+ No WCF, comportamentos de serviço são atributos aplicados para a classe que implementa um contrato de serviço (interface) para controlar programaticamente o serviço. O <xref:System.ServiceModel.Description.ServiceCredentials> classe permite que você especifique certificados para configurações de validação de cliente e a credencial de serviço para vários tipos de credencial de cliente.  
   
 ### <a name="negotiation-model-for-message-security"></a>Modelo de negociação de segurança de mensagem  
  O modo de segurança de mensagem permite que você execute a segurança de transferência para que a credencial de serviço é configurada no cliente fora da banda. Por exemplo, se você estiver usando um certificado armazenado no repositório de certificados do Windows, você deve usar uma ferramenta como um snap-in do Console de gerenciamento Microsoft (MMC).  

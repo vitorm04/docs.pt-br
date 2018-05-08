@@ -1,9 +1,6 @@
 ---
 title: Nada (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Nothing
 - vb.Nothing
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nothing-visual-basic"></a>Nada (Visual Basic)
 Representa o valor padrão de qualquer tipo de dados. Para tipos de referência, o valor padrão é o `null` referência. Para tipos de valor, o valor padrão depende se o tipo de valor é anulável.  
@@ -27,7 +21,7 @@ Representa o valor padrão de qualquer tipo de dados. Para tipos de referência,
 >  Para tipos de valor não nulo, `Nothing` no Visual Basic difere `null` em c#. No Visual Basic, se você definir uma variável de um tipo de valor não nulo para `Nothing`, a variável é definida como o valor padrão para seu tipo declarado. No c#, se você atribuir uma variável de um tipo de valor não nulo para `null`, ocorre um erro de tempo de compilação.  
   
 ## <a name="remarks"></a>Comentários  
- `Nothing`representa o valor padrão de um tipo de dados. O valor padrão depende se a variável é de um tipo de valor ou de um tipo de referência.  
+ `Nothing` representa o valor padrão de um tipo de dados. O valor padrão depende se a variável é de um tipo de valor ou de um tipo de referência.  
   
  Uma variável de um *tipo de valor* contém diretamente de seu valor. Tipos de valor incluem todos os tipos de dados numéricos, `Boolean`, `Char`, `Date`, todas as estruturas e todas as enumerações. Uma variável de um *fazem referência a tipo* armazena uma referência a uma instância do objeto na memória. Tipos de referência incluem classes, matrizes, representantes e cadeias de caracteres. Para obter mais informações, consulte [tipos de valor e tipos de referência](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
@@ -53,7 +47,7 @@ Representa o valor padrão de qualquer tipo de dados. Para tipos de referência,
   
  Quando você atribui `Nothing` para uma variável de objeto, não se refere a qualquer instância do objeto. Se a variável tivesse anteriormente referenciado para uma instância, defini-la como `Nothing` não encerra a própria instância. A instância será encerrada e os recursos de memória e do sistema associados a ela são liberados somente depois que o coletor de lixo (GC) detecta que há referências ativas restantes.  
   
- `Nothing`difere de <xref:System.DBNull> objeto que representa uma variant não inicializada ou uma coluna de banco de dados que não existe.  
+ `Nothing` difere de <xref:System.DBNull> objeto que representa uma variant não inicializada ou uma coluna de banco de dados que não existe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução Dim](../../visual-basic/language-reference/statements/dim-statement.md)  

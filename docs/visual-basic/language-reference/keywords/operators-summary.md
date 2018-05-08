@@ -1,30 +1,23 @@
 ---
 title: Resumo de operadores (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic], about operators [Visual Basic]
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 30f1204d3aff244725f5200d59c4da32a5530615
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8663b327c76f7d0782bc6c56f7f66b595927652e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operators-summary-visual-basic"></a>Resumo de operadores (Visual Basic)
 Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.  
   
 |Ação|Elemento de linguagem|  
 |------------|----------------------|  
-|Aritmética|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [ * ](../../../visual-basic/language-reference/operators/multiplication-operator.md), [ / ](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [ \\ ](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [ +](../../../visual-basic/language-reference/operators/addition-operator.md),[=](../../../visual-basic/language-reference/operators/assignment-operator.md)|  
+|Aritmética|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [ * ](../../../visual-basic/language-reference/operators/multiplication-operator.md), [ / ](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [ \\ ](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md), [=](../../../visual-basic/language-reference/operators/assignment-operator.md)|  
 |Atribuição|[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)|  
 |Comparação|[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [ >= ](../../../visual-basic/language-reference/operators/comparison-operators.md), [Como](../../../visual-basic/language-reference/operators/like-operator.md), [é](../../../visual-basic/language-reference/operators/is-operator.md)|  
 |Concatenação|[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)|  

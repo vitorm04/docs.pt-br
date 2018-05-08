@@ -1,27 +1,15 @@
 ---
-title: "Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)"
-ms.custom: 
+title: Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)
-Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Este tópico discute o uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB para criar um serviço. Esse serviço tem uma operação que retorna um fluxo.  
+Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute como usar o modelo de programação WCF WEB HTTP para criar um serviço. Esse serviço tem uma operação que retorna um fluxo.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
   
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-     Como o método retorna um <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pressupõe que a operação tem controle total sobre os bytes retornados da operação de serviço e se aplica a nenhuma formatação para os dados que são retornados.  
+     Como o método retorna um <xref:System.IO.Stream>, WCF presume que a operação tem controle total sobre os bytes retornados da operação de serviço e se aplica a nenhuma formatação para os dados que são retornados.  
   
 2.  Implemente o contrato de serviço. O contrato tem apenas uma operação (`GetImage`). Este método gera um bitmap e, em seguida, salvá-lo para um <xref:System.IO.MemoryStream> no formato. jpg. A operação, em seguida, retorna o fluxo ao chamador.  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     Observe que a segunda à última linha de código:`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Observe que a segunda à última linha de código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Isso define o cabeçalho de tipo de conteúdo para `"image/jpeg"`. Embora este exemplo mostra como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados que é necessários, em qualquer formato. A operação deve recuperar ou gerar os dados e, em seguida, gravá-la em um fluxo.  
   

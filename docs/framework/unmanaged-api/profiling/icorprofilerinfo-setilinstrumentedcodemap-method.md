@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo::SetILInstrumentedCodeMap"
-ms.custom: 
+title: Método ICorProfilerInfo::SetILInstrumentedCodeMap
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.SetILInstrumentedCodeMap
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127f6d76e85ed30f1407d16f8d81c93dd2941960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>Método ICorProfilerInfo::SetILInstrumentedCodeMap
 Define um mapa de código para a função especificada usando entradas do mapa especificadas Microsoft intermediate language (MSIL).  
@@ -65,7 +53,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Uma matriz de estruturas COR_IL_MAP, cada uma delas Especifica um deslocamento MSIL.  
   
 ## <a name="remarks"></a>Comentários  
- Um criador de perfil geralmente insere instruções no código-fonte de um método para instrumentar o método (por exemplo, para notificar quando uma linha de origem especificado é atingida). `SetILInstrumentedCodeMap`permite que um criador de perfil mapear as instruções da MSIL originais para seus novos locais. Um criador de perfil pode usar o [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método para obter o deslocamento MSIL original para um determinado deslocamento nativo.  
+ Um criador de perfil geralmente insere instruções no código-fonte de um método para instrumentar o método (por exemplo, para notificar quando uma linha de origem especificado é atingida). `SetILInstrumentedCodeMap` permite que um criador de perfil mapear as instruções da MSIL originais para seus novos locais. Um criador de perfil pode usar o [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método para obter o deslocamento MSIL original para um determinado deslocamento nativo.  
   
  O depurador pressupõem que cada deslocamento antigo se refere a um MSIL deslocamento dentro do código MSIL original, sem modificações, e cada novo deslocamento refere-se para o deslocamento MSIL dentro do código instrumentado, novo. O mapa deve ser classificado em ordem crescente. Para passar para funcionar corretamente, siga estas diretrizes:  
   
@@ -100,7 +88,7 @@ HRESULT SetILInstrumentedCodeMap(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

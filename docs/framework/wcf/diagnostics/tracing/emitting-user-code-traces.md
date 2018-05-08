@@ -1,27 +1,15 @@
 ---
-title: "Emitindo traços de código de usuário"
-ms.custom: 
+title: Emitindo traços de código de usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>Emitindo traços de código de usuário
-Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente dados de instrumentação que você pode examinar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.  
+Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados pelo Windows Communication Foundation (WCF), você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente dados de instrumentação que você pode examinar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.  
   
  Além disso, o [estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md) exemplo inclui todo o código demonstrado nas seções a seguir.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  No diagrama a seguir, podemos também ver rastreamentos de transferência de e para a atividade de cálculo, bem como dois pares de iniciar e parar rastreamentos por atividade de solicitação, um para o cliente e um para o serviço (uma para cada fonte de rastreamento).  
   
- ![Rastreamentos de código do Visualizador de rastreamento: Emitindo usuário &#45;](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Visualizador de rastreamento: Emitindo usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Lista de atividades por hora de criação (painel esquerdo) e suas atividades aninhadas (painel superior direito)  
   
  Se o código de serviço gera uma exceção que faz com que o cliente lançar também (por exemplo, quando o cliente não obteve resposta à sua solicitação), o serviço e cliente de aviso ou mensagens de erro ocorrerem na mesma atividade de correlação direta. No diagrama a seguir, o serviço gera uma exceção indicando "o serviço se recusa a processar essa solicitação no código do usuário." O cliente também gera uma exceção que declara que "o servidor não pôde processar a solicitação devido a um erro interno."  
   
- ![Rastreamentos de código usando o Visualizador de rastreamento para emitir usuário &#45;](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![Usando o Visualizador de rastreamento para emitir usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Erros em pontos de extremidade para uma determinada solicitação serão exibidos na mesma atividade se a id de atividade de solicitação foi propagada  
   
  Clicando duas vezes o multiplicar atividade no painel à esquerda mostra o gráfico a seguir, com os rastreamentos da multiplicação de atividade para cada processo envolvido. Podemos ver que um aviso ocorreu primeiro o serviço (exceção lançada), que é seguido por erros e avisos no cliente porque não foi possível processar a solicitação. Portanto, podemos implica a relação de erro causal entre pontos de extremidade e derivar a causa do erro.  
   
- ![Rastreamentos de código usando o Visualizador de rastreamento para emitir usuário &#45;](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![Usando o Visualizador de rastreamento para emitir usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Modo de exibição de gráfico de correlação de erro  
   
  Para obter os rastreamentos anteriores, definimos `ActivityTracing` para as fontes de rastreamento de usuário e `propagateActivity=true` para o `System.ServiceModel` origem do rastreamento. Nós não definimos `ActivityTracing` para o `System.ServiceModel` origem de rastreamento para habilitar o código de usuário a propagação de atividade de código do usuário. (Ao rastreamento de atividades de ServiceModel está ativado, a ID de atividade definida no cliente não será propagada para o código de usuário do serviço; Transferências de, no entanto, correlacionam as atividades de código do usuário cliente e de serviço para o intermediário [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] atividades.)  

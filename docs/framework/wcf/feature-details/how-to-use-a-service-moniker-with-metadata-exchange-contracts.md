@@ -1,30 +1,18 @@
 ---
-title: "Como usar um Moniker de serviço com contratos de intercâmbio de metadados"
-ms.custom: 
+title: Como usar um Moniker de serviço com contratos de intercâmbio de metadados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6265860c2e1efb2f74a0243157a223a33889629a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Como usar um Moniker de serviço com contratos de intercâmbio de metadados
-Depois de desenvolver algumas novas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, você pode decidir que deseja ser capaz de chamar esses serviços de um script ou um aplicativo do Visual Basic 6.0. Um método seria gerar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly de cliente, registre o assembly com, instalar o assembly no GAC e faça referência os tipos COM o código do Visual Basic. Quando você distribui o aplicativo, você precisa distribuir o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly cliente também. O usuário terá, em seguida, registre o assembly de cliente do WCF com e colocá-lo no GAC. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Interoperabilidade COM também permite que você faça o mesmo serviço chama sem depender de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly cliente. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker permite que você possa chamar qualquer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço em qualquer linguagem compatível COM o com (Visual Basic, VBScript, Visual Basic for Applications (VBA) e assim por diante), especificando um ponto de extremidade do exchange (Mex) de metadados URI que usa o moniker de serviço para extrair informações de tipo sobre o serviço. Este tópico descreve como chamar o guia de Introdução [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de exemplo usando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker que especifica um ponto de extremidade Mex.  
+Depois de desenvolver alguns novos serviços WCF, você pode decidir que deseja ser capaz de chamar esses serviços de um script ou um aplicativo do Visual Basic 6.0. Um método seria gerar um assembly de cliente do WCF, registre o assembly com, instalar o assembly no GAC e faça referência os tipos COM o código do Visual Basic. Quando você distribui o aplicativo, você precisará distribuir o conjunto do cliente do WCF. O usuário terá, em seguida, registre o assembly de cliente do WCF com e colocá-lo no GAC. Interoperabilidade de WCF também permite que você faça o mesmo serviço chama sem depender de um assembly de cliente do WCF. O WCF moniker permite chamar qualquer serviço do WCF em qualquer linguagem compatível COM o com (Visual Basic, VBScript, Visual Basic for Applications (VBA) e assim por diante), especificando um ponto de extremidade do exchange (Mex) de metadados URI que o moniker de serviço usa para extrair o tipo informações sobre o serviço. Este tópico descreve como chamar o exemplo de obter WCF iniciado usando um moniker WCF que especifica um ponto de extremidade Mex.  
   
 > [!NOTE]
->  Os tipos definidos pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly cliente nunca são instanciados. O assembly é usado apenas para metadados.  
+>  Os tipos definidos pelo assembly de cliente do WCF, na verdade, nunca são instanciados. O assembly é usado apenas para metadados.  
   
 ### <a name="using-the-service-moniker-with-a-mex-address"></a>Usando o moniker de serviço com um endereço Mex  
   

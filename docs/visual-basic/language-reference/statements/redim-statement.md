@@ -1,11 +1,6 @@
 ---
-title: "Instrução ReDim (Visual Basic)"
+title: Instrução ReDim (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>Instrução ReDim (Visual Basic)
 Realoca espaço de armazenamento para uma variável de matriz.  
@@ -74,7 +66,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Tipos de dados.** O `ReDim` instrução não é possível alterar o tipo de dados de uma variável de matriz ou seus elementos.  
   
--   **Inicialização.** O `ReDim` instrução não pode fornecer novos valores de inicialização para os elementos da matriz.  
+-   **inicialização.** O `ReDim` instrução não pode fornecer novos valores de inicialização para os elementos da matriz.  
   
 -   **Classificação.** O `ReDim` instrução não é possível alterar a classificação (o número de dimensões) da matriz.  
   
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Substituição de matriz.** `ReDim`libera a matriz existente e cria uma nova matriz com a mesma classificação. Nova matriz substitui a matriz lançada na variável de matriz.  
+-   **Substituição de matriz.** `ReDim` libera a matriz existente e cria uma nova matriz com a mesma classificação. Nova matriz substitui a matriz lançada na variável de matriz.  
   
 -   **Inicialização sem preservar.** Se você não especificar `Preserve`, `ReDim` inicializa os elementos da nova matriz, usando o valor padrão para o tipo de dados.  
   
@@ -99,7 +91,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  O `Dim` instrução cria uma nova matriz com três dimensões. Cada dimensão é declarada com um limite de 10, para que o índice de matriz para cada dimensão pode variar de 0 a 10. A discussão a seguir, três dimensões são referidas como camada, linha e coluna.  
   
- A primeira `ReDim` cria uma nova matriz que substitui a matriz existente na variável `intArray`. `ReDim`copia todos os elementos da matriz existente para a nova matriz. Também adiciona 10 mais colunas ao final de cada linha em cada camada e inicializa os elementos nessas colunas novo como 0 (o valor padrão de `Integer`, que é o tipo de elemento da matriz).  
+ A primeira `ReDim` cria uma nova matriz que substitui a matriz existente na variável `intArray`. `ReDim` copia todos os elementos da matriz existente para a nova matriz. Também adiciona 10 mais colunas ao final de cada linha em cada camada e inicializa os elementos nessas colunas novo como 0 (o valor padrão de `Integer`, que é o tipo de elemento da matriz).  
   
  O segundo `ReDim` cria outra nova matriz e copia todos os elementos que se ajustam. No entanto, cinco colunas são perdidas do final de cada linha em cada camada. Isso não é um problema se você terminar de usar essas colunas. Reduzir o tamanho de uma matriz grande pode liberar memória que não é mais necessário.  
   

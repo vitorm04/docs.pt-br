@@ -1,23 +1,16 @@
 ---
 title: -página de código (Visual Basic)
 ms.date: 03/09/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f098dd04b457b7db008788bcfb141af3f69843f8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 383b6adae94c27efdd236de31ddfa8d16a6d4648
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-codepage-visual-basic"></a>-página de código (Visual Basic)
 Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.  
@@ -32,7 +25,7 @@ Especifica a página de código a ser usada para todos os arquivos de código-fo
   
 |Termo|Definição|  
 |---|---|  
-|`id`|Necessário. O compilador usa a página de código especificada por `id` para interpretar a codificação dos arquivos de origem.|  
+|`id`|Obrigatório. O compilador usa a página de código especificada por `id` para interpretar a codificação dos arquivos de origem.|  
   
 ## <a name="remarks"></a>Comentários  
  Para compilar o código-fonte salvo com uma codificação específica, você pode usar `-codepage` para especificar a página de código deve ser usada. O `-codepage` opção se aplica a todos os arquivos de código-fonte na sua compilação. Para obter mais informações, consulte [codificação de caracteres no .NET Framework](http://msdn.microsoft.com/library/bf6d9823-4c2d-48af-b280-919c5af66ae9).  

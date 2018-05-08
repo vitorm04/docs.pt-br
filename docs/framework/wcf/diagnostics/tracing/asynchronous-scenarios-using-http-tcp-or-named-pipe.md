@@ -1,24 +1,12 @@
 ---
-title: "Cenários assíncronos usando HTTP, TCP ou pipe nomeado"
-ms.custom: 
+title: Cenários assíncronos usando HTTP, TCP ou pipe nomeado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Cenários assíncronos usando HTTP, TCP ou pipe nomeado
 Este tópico descreve as atividades e transferências para cenários diferentes de solicitação/resposta assíncrono, com multithread solicitações usando HTTP, TCP ou pipe nomeado.  
@@ -44,7 +32,7 @@ Este tópico descreve as atividades e transferências para cenários diferentes 
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Propagação está desabilitada nos lados tanto, usando HTTP  
  Se `propagateActivity` = `false` em ambos os lados, ProcessMessage não indica qual atividade ProcessAction para transferir para o. Portanto, uma nova atividade ProcessAction temporária com uma nova ID é invocada. Quando a resposta assíncrona corresponde à solicitação de código de ServiceModel, a ID de atividade podem ser recuperada do contexto local. A atividade ProcessAction real pode ser transferida para com essa ID.  
   
- ![Cenários assíncronos usando HTTP &#47; TCP &#47; Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Cenários assíncronos usando HTTP&#47;TCP&#47;Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Figura 2. Cliente assíncrono, nenhum retorno de chamada, `propagateActivity` = `false` em ambos os lados, HTTP  
   
@@ -53,7 +41,7 @@ Este tópico descreve as atividades e transferências para cenários diferentes 
  Uma atividade de ação de processo é criada em um cliente assíncrono quando `propagateActivity` = `false` no chamador ou receptor e quando a mensagem de resposta não inclui um cabeçalho de ação.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>Propagação está habilitada nos dois lados, usando TCP ou Pipe nomeado  
- ![Cenários assíncronos usando HTTP &#47; TCP &#47; Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Cenários assíncronos usando HTTP&#47;TCP&#47;Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Figura 3. Cliente assíncrono, nenhum retorno de chamada, `propagateActivity` = `true` em ambos os lados, Pipe nomeado/TCP  
   
@@ -66,7 +54,7 @@ Este tópico descreve as atividades e transferências para cenários diferentes 
   
  Semelhante ao Fig.2, se `propagateActivity` = `false` em ambos os lados, ProcessMessage não indica qual atividade ProcessAction para transferir para o. Portanto, uma nova atividade ProcessAction temporária com uma nova ID é invocada. Quando a resposta assíncrona corresponde à solicitação de código de ServiceModel, a ID de atividade podem ser recuperada do contexto local. A atividade ProcessAction real pode ser transferida para com essa ID.  
   
- ![Cenários assíncronos usando HTTP &#47; TCP &#47; Pipes nomeados](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![Cenários assíncronos usando HTTP&#47;TCP&#47; Pipes nomeados](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Figura 4. Cliente assíncrono, nenhum retorno de chamada, `propagateActivity` = `false` em ambos os lados, Pipe nomeado/TCP  
   
@@ -86,7 +74,7 @@ Este tópico descreve as atividades e transferências para cenários diferentes 
  Figura 6. Cliente assíncrono com retorno de chamada, `endCall` fora de retorno de chamada  
   
 ### <a name="asynchronous-server-with-callback"></a>Servidor assíncrono com retorno de chamada  
- ![Cenários assíncronos usando HTTP &#47; TCP &#47; Chamada &#45; Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![Cenários assíncronos usando HTTP&#47;TCP&#47; nomeado&#45;Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Figura 7. Servidor assíncrona, com retorno de chamada  
   

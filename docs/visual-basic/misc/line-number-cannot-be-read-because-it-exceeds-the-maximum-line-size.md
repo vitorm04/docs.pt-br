@@ -1,21 +1,14 @@
 ---
 title: Linha &lt;número&gt; não pode ser lido porque ele excede o tamanho máximo da linha.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d57d1991c3d3ea7f02c7d08cda38fa630393ac8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0611c79ccc30f323ceccf9fbbe30a80f73c6bbb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Linha &lt;número&gt; não pode ser lido porque ele excede o tamanho máximo da linha.
 A linha não pode ser lido porque ele excede o tamanho máximo da linha. Geralmente, isso significa que há uma aspa de abertura do arquivo, mas não há aspas de fechamento.  

@@ -1,14 +1,6 @@
 ---
 title: Interface ICorProfilerFunctionEnum
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerFunctionEnum
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a1d4a38-cd0b-4231-91df-13646218ae72
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1a3014c8b00cb431c2c5b101e17dc51f49bf73f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1e55c7e6deff3928e69861541aa1a924dac263f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>Interface ICorProfilerFunctionEnum
 Fornece métodos para iterar em sequência por meio de uma coleção de funções no common language runtime.  
@@ -50,7 +38,7 @@ Fornece métodos para iterar em sequência por meio de uma coleção de funçõe
 ## <a name="remarks"></a>Comentários  
  O `ICorProfilerFunctionEnum` interface é um enumerador. Ele permite que o destinatário de uma matriz para elementos de pull do remetente a uma taxa que é apropriado para o receptor. Em outras palavras, o destinatário é capaz de controlar explicitamente o fluxo de elementos da matriz, evitando, assim, os problemas associados à transmitindo matrizes grandes como parâmetros de método.  
   
- `ICorProfilerFunctionEnum`Enumera em funções que já tenham sido compilados JIT, mas não incluem funções que são carregadas de imagens nativas geradas com Ngen.exe.  
+ `ICorProfilerFunctionEnum` Enumera em funções que já tenham sido compilados JIT, mas não incluem funções que são carregadas de imagens nativas geradas com Ngen.exe.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,7 +47,7 @@ Fornece métodos para iterar em sequência por meio de uma coleção de funçõe
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  

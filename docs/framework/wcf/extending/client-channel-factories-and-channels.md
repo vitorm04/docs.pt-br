@@ -1,24 +1,12 @@
 ---
-title: "Cliente: fábricas de canais e canais"
-ms.custom: 
+title: 'Cliente: fábricas de canais e canais'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82e42a3dd4fbb29970b8e1a17333b66d85d2887b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>Cliente: fábricas de canais e canais
 Este tópico aborda a criação de canais e fábricas de canais.  
@@ -31,7 +19,7 @@ Uma fábrica de canais cria canais.
   
  Depois de fechada, fábricas de canais são responsáveis por fechar todos os canais criaram que ainda não estão fechados. Observe que o modelo é assimétrico aqui porque quando um ouvinte de canal é fechado, ele apenas para de aceitar novos canais, mas deixa aberta de canais existentes para que eles podem continuar a receber mensagens.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Fornece auxiliares da classe base para esse processo. (Para um diagrama de classes de auxiliar o canal discutidos neste tópico, consulte [visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Fornece auxiliares da classe base para esse processo. (Para um diagrama de classes de auxiliar o canal discutidos neste tópico, consulte [visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   O <xref:System.ServiceModel.Channels.CommunicationObject> classe implementa <xref:System.ServiceModel.ICommunicationObject> e impõe a máquina de estado descrita na etapa 2 do [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

@@ -1,13 +1,6 @@
 ---
 title: Modelo de threading
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +18,16 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15115cc0ed14cb5605100ebe47abd5cd4dc02ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-model"></a>Modelo de threading
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] foi projetado para livrar os desenvolvedores das dificuldades de threading. Como resultado, a maioria dos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os desenvolvedores não terá que escrever uma interface que usa mais de um segmento. Como os programas multi-threaded são complexos e difíceis de serem depurados, deve-se evitá-los quando existem soluções single-threaded.  
   
- Não importa quão bem projetada, no entanto, não [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework será capaz de fornecer uma solução de thread único para cada tipo de problema. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]chega perto, mas ainda há situações em que vários threads melhoram [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] desempenho e capacidade de resposta dos aplicativos. Depois de abordar alguns documentos de suporte, este artigo explora algumas dessas situações e, em seguida, termina com uma discussão de alguns detalhes de nível mais baixo.  
+ Não importa quão bem projetada, no entanto, não [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework será capaz de fornecer uma solução de thread único para cada tipo de problema. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chega perto, mas ainda há situações em que vários threads melhoram [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] desempenho e capacidade de resposta dos aplicativos. Depois de abordar alguns documentos de suporte, este artigo explora algumas dessas situações e, em seguida, termina com uma discussão de alguns detalhes de nível mais baixo.  
   
 
   
@@ -56,11 +44,11 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Como então [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos deveriam para tratar operações grandes? E se o código envolver um cálculo grande ou precisar consultar um banco de dados em algum servidor remoto? Normalmente, a resposta é tratar a operação grande em um thread separado, deixando o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread livre tendem a itens de <xref:System.Windows.Threading.Dispatcher> fila. Quando a operação grande estiver concluída, ela pode relatar seu resultado para o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread para exibição.  
   
- Historicamente, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] permite [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos para ser acessado somente por thread que criou. Isso significa que um thread de segundo plano responsável por uma tarefa de execução longa não pode atualizar uma caixa de texto quando ele é concluído. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]faz isso para garantir a integridade dos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] componentes. Uma caixa de listagem poderá ter uma aparência estranha se seu conteúdo for atualizado por um thread de segundo plano durante a pintura.  
+ Historicamente, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] permite [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos para ser acessado somente por thread que criou. Isso significa que um thread de segundo plano responsável por uma tarefa de execução longa não pode atualizar uma caixa de texto quando ele é concluído. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] faz isso para garantir a integridade dos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] componentes. Uma caixa de listagem poderá ter uma aparência estranha se seu conteúdo for atualizado por um thread de segundo plano durante a pintura.  
   
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem um mecanismo de exclusão mútua interno que garante essa coordenação. A maioria das classes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derivam <xref:System.Windows.Threading.DispatcherObject>. Na construção, um <xref:System.Windows.Threading.DispatcherObject> armazena uma referência para o <xref:System.Windows.Threading.Dispatcher> vinculado para o thread em execução no momento. Na verdade, o <xref:System.Windows.Threading.DispatcherObject> associa a thread que o cria. Durante a execução do programa, um <xref:System.Windows.Threading.DispatcherObject> pode chamar seu público <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> método. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>examina o <xref:System.Windows.Threading.Dispatcher> associado ao segmento atual e o compara a <xref:System.Windows.Threading.Dispatcher> armazenada durante a construção de referência. Se eles não corresponderem, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> lança uma exceção. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>se destina a ser chamado no início de cada método pertencente a um <xref:System.Windows.Threading.DispatcherObject>.  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem um mecanismo de exclusão mútua interno que garante essa coordenação. A maioria das classes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derivam <xref:System.Windows.Threading.DispatcherObject>. Na construção, um <xref:System.Windows.Threading.DispatcherObject> armazena uma referência para o <xref:System.Windows.Threading.Dispatcher> vinculado para o thread em execução no momento. Na verdade, o <xref:System.Windows.Threading.DispatcherObject> associa a thread que o cria. Durante a execução do programa, um <xref:System.Windows.Threading.DispatcherObject> pode chamar seu público <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> método. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> examina o <xref:System.Windows.Threading.Dispatcher> associado ao segmento atual e o compara a <xref:System.Windows.Threading.Dispatcher> armazenada durante a construção de referência. Se eles não corresponderem, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> lança uma exceção. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> se destina a ser chamado no início de cada método pertencente a um <xref:System.Windows.Threading.DispatcherObject>.  
   
- Se apenas um thread pode modificar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como threads de plano de fundo interagem com o usuário? Um thread em segundo plano pode solicitar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread executar uma operação em seu nome. Ele faz isso com o registro de um item de trabalho com o <xref:System.Windows.Threading.Dispatcher> do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. O <xref:System.Windows.Threading.Dispatcher> classe fornece dois métodos para registrar os itens de trabalho: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> e <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Ambos os métodos agendam um delegado para execução. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>é uma chamada síncrona – ou seja, ele não retorna até que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread realmente termine de executar o delegado. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>é assíncrona e retorna imediatamente.  
+ Se apenas um thread pode modificar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como threads de plano de fundo interagem com o usuário? Um thread em segundo plano pode solicitar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread executar uma operação em seu nome. Ele faz isso com o registro de um item de trabalho com o <xref:System.Windows.Threading.Dispatcher> do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. O <xref:System.Windows.Threading.Dispatcher> classe fornece dois métodos para registrar os itens de trabalho: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> e <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Ambos os métodos agendam um delegado para execução. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> é uma chamada síncrona – ou seja, ele não retorna até que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread realmente termine de executar o delegado. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> é assíncrona e retorna imediatamente.  
   
  O <xref:System.Windows.Threading.Dispatcher> ordena os elementos em sua fila por prioridade. Há dez níveis que podem ser especificados ao adicionar um elemento para o <xref:System.Windows.Threading.Dispatcher> fila. Essas prioridades são mantidas no <xref:System.Windows.Threading.DispatcherPriority> enumeração. Informações detalhadas sobre <xref:System.Windows.Threading.DispatcherPriority> níveis podem ser encontrados no [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] documentação.  
   
@@ -143,7 +131,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Quando o atraso for concluído e aleatoriamente selecionamos nossa previsão do tempo, é hora de relatar para o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Podemos fazer isso com o agendamento de uma chamada para `UpdateUserInterface` no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread usando esse thread <xref:System.Windows.Threading.Dispatcher>. Passamos uma cadeia de caracteres que descreve o clima para essa chamada de método agendada.  
   
--   Atualizando o[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+-   Atualizando o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -177,13 +165,13 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- Esse método é o ponto de partida para o novo thread. Criamos uma nova janela sob o controle desse thread. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]automaticamente cria um novo <xref:System.Windows.Threading.Dispatcher> para gerenciar o novo thread. Tudo o que precisamos fazer para tornar a janela funcional é iniciar o <xref:System.Windows.Threading.Dispatcher>.  
+ Esse método é o ponto de partida para o novo thread. Criamos uma nova janela sob o controle desse thread. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] automaticamente cria um novo <xref:System.Windows.Threading.Dispatcher> para gerenciar o novo thread. Tudo o que precisamos fazer para tornar a janela funcional é iniciar o <xref:System.Windows.Threading.Dispatcher>.  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>Detalhes técnicos e obstáculos  
   
 ### <a name="writing-components-using-threading"></a>Escrevendo componentes usando o threading  
- O [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] guia do desenvolvedor descreve um padrão de como um componente pode expor o comportamento assíncrono para seus clientes (consulte [baseado em evento visão geral do padrão assíncrono](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Por exemplo, vamos supor que queremos empacotar o `FetchWeatherFromServer` método em um componente reutilizável, não-gráfico. Seguindo o padrão [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] padrão, isso seria algo semelhante ao seguinte.  
+ Guia do desenvolvedor do Microsoft .NET Framework descreve um padrão de como um componente pode expor o comportamento assíncrono para seus clientes (consulte [baseado em evento visão geral do padrão assíncrono](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Por exemplo, vamos supor que queremos empacotar o `FetchWeatherFromServer` método em um componente reutilizável, não-gráfico. Seguindo o padrão do Microsoft .NET Framework, seria algo semelhante ao seguinte.  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
@@ -198,7 +186,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>Bombeamento aninhado  
- Às vezes, não é viável completamente travar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Vamos considerar o <xref:System.Windows.MessageBox.Show%2A> método o <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox.Show%2A>não retorna até que o usuário clica no botão Okey. No entanto, ele cria uma janela que deve ter um loop de mensagens para ser interativa. Enquanto aguardamos até que o usuário clique em OK, a janela do aplicativo original não responde à entrada do usuário. No entanto, ele continua processando mensagens de pintura. A janela original se redesenha quando é coberta e revelada.  
+ Às vezes, não é viável completamente travar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Vamos considerar o <xref:System.Windows.MessageBox.Show%2A> método o <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox.Show%2A> não retorna até que o usuário clica no botão Okey. No entanto, ele cria uma janela que deve ter um loop de mensagens para ser interativa. Enquanto aguardamos até que o usuário clique em OK, a janela do aplicativo original não responde à entrada do usuário. No entanto, ele continua processando mensagens de pintura. A janela original se redesenha quando é coberta e revelada.  
   
  ![MessageBox com um botão “OK”](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
@@ -213,7 +201,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  Quando o botão esquerdo do mouse é pressionado sobre a elipse `handler2` é executado. Depois de `handler2` for concluída, o evento é passado para o <xref:System.Windows.Controls.Canvas> objeto, que usa `handler1` processá-la. Isso ocorre somente se `handler2` faz não explicitamente marca o objeto de evento que tratadas.  
   
- É possível que `handler2` terá uma grande quantidade de tempo processando esse evento. `handler2`pode usar <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> para iniciar um loop de mensagens aninhado que não retorna por horas. Se `handler2` não marca o evento como manipulado quando este loop de mensagem for concluído, o evento é passado a árvore mesmo que ele seja muito antigo.  
+ É possível que `handler2` terá uma grande quantidade de tempo processando esse evento. `handler2` pode usar <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> para iniciar um loop de mensagens aninhado que não retorna por horas. Se `handler2` não marca o evento como manipulado quando este loop de mensagem for concluído, o evento é passado a árvore mesmo que ele seja muito antigo.  
   
 ### <a name="reentrancy-and-locking"></a>Reentrada e bloqueio  
  O mecanismo de bloqueio da [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] não se comporta exatamente como poderia imaginar; é possível que um thread para interromper a operação completamente quando solicita um bloqueio. Na realidade, o thread continua recebendo e processando mensagens de alta prioridade. Isso ajuda a impedir bloqueios e torna a interface minimamente dinâmica, mas introduz a possibilidade de bugs sutis.  A maioria do tempo, você não precisa saber nada sobre isso, mas em circunstâncias raras (geralmente envolvendo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] mensagens de janela ou componentes COM STA) pode ser a pena saber.  

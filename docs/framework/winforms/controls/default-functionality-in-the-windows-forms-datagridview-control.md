@@ -1,27 +1,15 @@
 ---
-title: "Funcionalidade padrão no controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Funcionalidade padrão no controle DataGridView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a475d8bce388860c88571fbf638d206bfe01223d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funcionalidade padrão no controle DataGridView dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.DataGridView> controle fornece aos usuários uma quantidade significativa de funcionalidade padrão.  
@@ -51,7 +39,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> controle fornece aos usu�
   
 -   Usa automaticamente os nomes das colunas da fonte de dados como o texto do cabeçalho de coluna.  
   
--   É populado com o conteúdo da fonte de dados. <xref:System.Windows.Forms.DataGridView>colunas são criadas automaticamente para cada coluna na fonte de dados.  
+-   É populado com o conteúdo da fonte de dados. <xref:System.Windows.Forms.DataGridView> colunas são criadas automaticamente para cada coluna na fonte de dados.  
   
 -   Cria uma linha para cada linha visível na tabela.  
   

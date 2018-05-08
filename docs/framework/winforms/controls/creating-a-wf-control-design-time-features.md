@@ -1,13 +1,6 @@
 ---
-title: "Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio"
-ms.custom: 
+title: 'Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-caps.latest.revision: "46"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 10905df76f2b638c10b14c1dd8c181b9652ea963
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio
 A experiência de tempo de design para um controle personalizado pode ser aprimorada por meio da criação de um designer personalizado associado.  
@@ -481,7 +469,7 @@ using MarqueeControlLibrary;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#570)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#570)]  
   
-2.  Conecte esses manipuladores de eventos a seus verbos do designer correspondentes. `MarqueeControlRootDesigner`herda um <xref:System.ComponentModel.Design.DesignerVerbCollection> de sua classe base. Você criará duas novas <xref:System.ComponentModel.Design.DesignerVerb> objetos e adicioná-las a esta coleção no <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> método.  
+2.  Conecte esses manipuladores de eventos a seus verbos do designer correspondentes. `MarqueeControlRootDesigner` herda um <xref:System.ComponentModel.Design.DesignerVerbCollection> de sua classe base. Você criará duas novas <xref:System.ComponentModel.Design.DesignerVerb> objetos e adicioná-las a esta coleção no <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> método.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  

@@ -1,13 +1,6 @@
 ---
-title: "Como exibir caixas de diálogo para o Windows Forms"
-ms.custom: 
+title: Como exibir caixas de diálogo para o Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46e4d019bbd586c0ed46794f55c65da7bcc657f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a25fe86c4dde1fed69e192956d77615bf2a70402
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Como exibir caixas de diálogo para o Windows Forms
 Você pode exibir uma caixa de diálogo da mesma maneira que você exibe qualquer outro formulário em um aplicativo. O formulário de inicialização carrega automaticamente quando o aplicativo é executado. Para fazer um segundo formulário ou a caixa de diálogo aparecer no aplicativo, escreva código para carregar e exibi-lo. Da mesma forma, para tornar o formulário ou a caixa de diálogo caixa desaparecer, escrever um código para descarregar ou ocultá-lo.  

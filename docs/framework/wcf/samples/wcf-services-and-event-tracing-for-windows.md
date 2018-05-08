@@ -1,27 +1,15 @@
 ---
-title: "Serviços e rastreamento de eventos WCF para Windows"
-ms.custom: 
+title: Serviços e rastreamento de eventos WCF para Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Serviços e rastreamento de eventos WCF para Windows
-Este exemplo demonstra como usar o rastreamento analítico em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de emissão de eventos no evento de rastreamento para Windows (ETW). Os rastreamentos analíticos são eventos emitidos nos pontos-chave no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha que permitem a solução de problemas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços no ambiente de produção.  
+Este exemplo demonstra como usar o rastreamento analítico no Windows Communication Foundation (WCF) para emissão de eventos no evento de rastreamento para Windows (ETW). Os rastreamentos analíticos são eventos emitidos nos pontos-chave no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha que permitem a solução de problemas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços no ambiente de produção.  
   
  Rastreamento analítico em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é de serviços de rastreamento que pode ser ativado em um ambiente de produção com impacto mínimo no desempenho. Os rastreamentos são emitidos como eventos para uma sessão do ETW.  
   
@@ -94,7 +82,7 @@ Este exemplo demonstra como usar o rastreamento analítico em [!INCLUDE[indigo1]
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

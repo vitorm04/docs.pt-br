@@ -1,27 +1,17 @@
 ---
-title: "Bloqueio de segurança PII"
-ms.custom: 
+title: Bloqueio de segurança PII
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-caps.latest.revision: "25"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 39f805da7570b81ff1f6593e82f5d0a9310ee9c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pii-security-lockdown"></a>Bloqueio de segurança PII
-Este exemplo demonstra como controlar vários recursos relacionados à segurança de um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço por:  
+Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço do Windows Communication Foundation (WCF) por:  
   
 -   Criptografar informações confidenciais no arquivo de configuração do serviço.  
   
@@ -34,7 +24,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
@@ -43,7 +33,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
  Os arquivos de configuração do .NET Framework podem conter informações confidenciais, como cadeias de caracteres de conexão para se conectar aos bancos de dados. Em cenários compartilhados hospedado na Web, pode ser desejável para criptografar essas informações no arquivo de configuração para um serviço de forma que os dados contidos no arquivo de configuração são resistentes a visualização casual. .NET framework 2.0 e posteriores tem a capacidade de criptografar partes do arquivo de configuração usando o DPAPI (interface) ou o provedor de criptografia RSA de programação de aplicativo de proteção de dados do Windows. O aspnet_regiis.exe usando a DPAPI ou RSA pode criptografar partes específicas de um arquivo de configuração.  
   
- Em cenários hospedado na Web, é possível ter serviços em subdiretórios de outros serviços. O padrão a semântico para determinar os valores de configuração permite que os arquivos de configuração nos diretórios aninhados para substituir os valores de configuração no diretório pai. Em determinadas situações, isso pode ser indesejável para uma variedade de razões. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte de configuração de serviço o bloqueio de valores de configuração para que aninhados configuração gera exceções quando um serviço aninhado é executado usando substituído valores de configuração.  
+ Em cenários hospedado na Web, é possível ter serviços em subdiretórios de outros serviços. O padrão a semântico para determinar os valores de configuração permite que os arquivos de configuração nos diretórios aninhados para substituir os valores de configuração no diretório pai. Em determinadas situações, isso pode ser indesejável para uma variedade de razões. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte de configuração de serviço o bloqueio de valores de configuração para que aninhados configuração gera exceções quando um serviço aninhado é executado usando substituído valores de configuração.  
   
  Este exemplo demonstra como controlar o registro em log de conhecidos identificação informações pessoal (PII) em logs de rastreamento e a mensagem, como nome de usuário e senha. Por padrão, o log de PII conhecido está desabilitado no entanto, em certas situações o log de PII pode ser importante na depuração de um aplicativo. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Além disso, este exemplo usa o rastreamento e o registro de mensagem. Para obter mais informações, consulte o [rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemplo.  
   

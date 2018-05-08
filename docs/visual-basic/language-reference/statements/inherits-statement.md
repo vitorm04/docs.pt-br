@@ -1,11 +1,6 @@
 ---
-title: "Instrução Inherits"
+title: Instrução Inherits
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Inherits
 - Inherits
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43a8aa4e9e04ee035cb52e9f829de13e5c022217
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inherits-statement"></a>Instrução Inherits
 Faz com que a classe ou interface atual herde de atributos, variáveis, propriedades, procedimentos e eventos de outra classe ou conjunto de interfaces.  
@@ -35,7 +27,7 @@ Inherits basetypenames
   
 |Termo|Definição|  
 |---|---|  
-|`basetypenames`|Necessário. O nome da classe da qual essa classe deriva.<br /><br /> -ou-<br /><br /> Os nomes das interfaces da qual esta interface derivada. Use vírgulas para separar vários nomes.|  
+|`basetypenames`|Obrigatório. O nome da classe da qual essa classe deriva.<br /><br /> -ou-<br /><br /> Os nomes das interfaces da qual esta interface derivada. Use vírgulas para separar vários nomes.|  
   
 ## <a name="remarks"></a>Comentários  
  Se usado, o `Inherits` instrução deve ser a primeira linha não vazia e que não seja de comentários em uma definição de classe ou interface. Você deve seguir imediatamente a `Class` ou `Interface` instrução.  

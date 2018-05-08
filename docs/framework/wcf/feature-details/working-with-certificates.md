@@ -1,36 +1,22 @@
 ---
 title: Trabalhando com certificados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
-Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente os recursos do certificado digital X.509 e como usá-los no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], e inclui links para tópicos que explicam esses conceitos ainda mais ou que mostram como realizar tarefas comuns usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e certificados.  
+Para programar a segurança do Windows Communication Foundation (WCF), x. 509 os certificados digitais são usados para autenticar clientes e servidores, criptografar e assinar digitalmente as mensagens. Resumidamente, este tópico explica os recursos de certificado digital x. 509 e como usá-los no WCF e inclui links para tópicos que explicam esses conceitos mais ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
   
- Em suma, um certificado digital faz parte de um *infraestrutura de chave pública* (PKI), que é um sistema de certificados digitais, autoridades de certificação e outras autoridades de registro que verificam e autenticam a validade de cada parte envolvida em uma transação eletrônica com o uso de criptografia de chave pública. Uma autoridade de certificação emite certificados e cada certificado tem um conjunto de campos que contêm dados, como *assunto* (a entidade à qual o certificado é emitido), as datas de validade (quando o certificado é válido), (o emissor entidade que emitiu o certificado) e uma chave pública. No [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cada uma dessas propriedades é processada como um <xref:System.IdentityModel.Claims.Claim> e cada afirmação é dividida ainda mais em dois tipos: identidade e direito. Para obter mais informações sobre o x. 509 certificados Consulte [certificados de chave pública x. 509](http://go.microsoft.com/fwlink/?LinkId=209952)para obter mais informações sobre declarações e autorização no consulte WCF [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Para obter mais informações sobre como implementar uma PKI, consulte [Windows Server 2008 R2 - serviços de certificados](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Em suma, um certificado digital faz parte de um *infraestrutura de chave pública* (PKI), que é um sistema de certificados digitais, autoridades de certificação e outras autoridades de registro que verificam e autenticam a validade de cada parte envolvida em uma transação eletrônica com o uso de criptografia de chave pública. Uma autoridade de certificação emite certificados e cada certificado tem um conjunto de campos que contêm dados, como *assunto* (a entidade à qual o certificado é emitido), as datas de validade (quando o certificado é válido), (o emissor entidade que emitiu o certificado) e uma chave pública. No WCF, cada uma dessas propriedades é processada como um <xref:System.IdentityModel.Claims.Claim>, e cada declaração é dividida em dois tipos: identidade e à direita. Para obter mais informações sobre o x. 509 certificados Consulte [certificados de chave pública x. 509](http://go.microsoft.com/fwlink/?LinkId=209952)para obter mais informações sobre declarações e autorização no consulte WCF [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Para obter mais informações sobre como implementar uma PKI, consulte [Windows Server 2008 R2 - serviços de certificados](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Uma função principal do certificado é autenticar a identidade do proprietário do certificado para outros. Um certificado contém a *chave pública* do proprietário, enquanto o proprietário retém a chave privada. A chave pública pode ser usada para criptografar as mensagens enviadas para o proprietário do certificado. Somente o proprietário tem acesso à chave privada; portanto, somente o proprietário pode descriptografar essas mensagens.  
   
@@ -46,7 +32,7 @@ Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
 -   **O armazenamento do usuário atual**. Os aplicativos interativos geralmente colocam certificados aqui para o usuário atual do computador. Se você estiver criando um aplicativo cliente, aqui é onde você normalmente coloca os certificados que autenticam um usuário para um serviço.  
   
- Esses dois repositórios são divididos em sub-repositórios. O mais importante deles ao programar com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui:  
+ Esses dois repositórios são divididos em sub-repositórios. O mais importante quando a programação com o WCF incluem:  
   
 -   **Autoridades de certificação raiz confiáveis**. Você pode usar os certificados nesse repositório para criar uma cadeia de certificados, que podem ser rastreados para um certificado de autoridade de certificação nesse repositório.  
   
@@ -99,7 +85,7 @@ Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Ao criar um autenticador personalizado, o método mais importante para substituição é o método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obter um exemplo de autenticação personalizada, consulte o [validador de certificado x. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) exemplo. Para obter mais informações, consulte [credencial personalizada e validação de credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Usando Makecert.exe para criar uma cadeia de certificado  
- A ferramenta de criação de certificado (Makecert.exe) cria certificados X.509 e pares de chave privada/chave pública. Você pode salvar a chave privada no disco e, em seguida, usá-la para emitir e assinar novos certificados, simulando uma hierarquia de certificados encadeados. A ferramenta é destinada para uso somente como uma ajuda ao desenvolver serviços e nunca deve ser usada para criar certificados para implantação real. Ao desenvolver um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], use as seguintes etapas para criar uma cadeia de confiança com Makecert.exe.  
+ A ferramenta de criação de certificado (Makecert.exe) cria certificados X.509 e pares de chave privada/chave pública. Você pode salvar a chave privada no disco e, em seguida, usá-la para emitir e assinar novos certificados, simulando uma hierarquia de certificados encadeados. A ferramenta é destinada para uso somente como uma ajuda ao desenvolver serviços e nunca deve ser usada para criar certificados para implantação real. Ao desenvolver um serviço WCF, use as etapas a seguir para criar uma cadeia de confiança com Makecert.exe.  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Para criar uma cadeia de confiança com Makecert.exe  
   
@@ -137,7 +123,7 @@ Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Você também pode definir o modo de configuração usando o `revocationMode` atributo de ambos os [ \<autenticação >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (da [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) e o [ \<autenticação >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (da [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
   
 ## <a name="the-setcertificate-method"></a>O método SetCertificate  
- No [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], você deve geralmente especificar um certificado ou conjunto de certificados que um serviço ou cliente deve usar para autenticar, criptografar ou assinar digitalmente uma mensagem. Você pode fazer isso por meio de programação usando o método `SetCertificate` de várias classes que representam certificados X.509. As seguintes classes usam o método `SetCertificate` para especificar um certificado.  
+ No WCF, geralmente você deve especificar um certificado ou conjunto de certificados de um serviço ou cliente é usada para autenticar, criptografar ou assinar digitalmente uma mensagem. Você pode fazer isso por meio de programação usando o método `SetCertificate` de várias classes que representam certificados X.509. As seguintes classes usam o método `SetCertificate` para especificar um certificado.  
   
 |Classe|Método|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
  Mapear um certificado X.509 para o símbolo que representa uma conta de usuário do Windows é considerado uma elevação de privilégio. Assim que for mapeado, o símbolo do Windows poderá ser usado para conceder acesso aos recursos protegidos. Portanto, a política de domínio exige que o certificado X.509 esteja em conformidade com sua política antes do mapeamento. O *SChannel* pacote de segurança impõe esse requisito.  
   
- Ao usar [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou posterior, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o certificado esteja em conformidade com a política de domínio antes de ser mapeado para uma conta do Windows.  
+ Ao usar [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou posterior, WCF garante que o certificado está de acordo com a política de domínio antes que ele é mapeado para uma conta do Windows.  
   
- Na primeira versão do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o mapeamento é feito sem consultar a política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.  
+ Na primeira versão do WCF, o mapeamento é feito sem consultar a política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels>  

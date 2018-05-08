@@ -1,13 +1,6 @@
 ---
-title: "Visão geral de modelagem dos dados"
-ms.custom: 
+title: Visão geral de modelagem dos dados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>Visão geral de modelagem dos dados
 O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir a apresentação dos dados. Os controles do WPF têm uma funcionalidade interna para dar suporte à personalização da apresentação de dados. Este tópico primeiro demonstra como definir um <xref:System.Windows.DataTemplate> e, em seguida, apresenta outros recursos de modelagem de dados, como a seleção de modelos com base em lógica personalizada e o suporte para a exibição de dados hierárquicos.  
@@ -35,7 +23,7 @@ O modelo de modelagem de dados do WPF fornece grande flexibilidade para definir 
 ## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico se concentra nos recursos de modelagem de dados e não é uma introdução dos conceitos de associação de dados. Para obter informações sobre conceitos de associação de dados, consulte [Visão geral de associação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- <xref:System.Windows.DataTemplate>está prestes a apresentação dos dados e é um dos muitos recursos fornecidos pelo modelo de estilos e modelagem de WPF. Para obter uma introdução do WPF estilos e modelagem modelo, por exemplo, como usar um <xref:System.Windows.Style> para definir propriedades em controles, consulte o [estilos e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md) tópico.  
+ <xref:System.Windows.DataTemplate> está prestes a apresentação dos dados e é um dos muitos recursos fornecidos pelo modelo de estilos e modelagem de WPF. Para obter uma introdução do WPF estilos e modelagem modelo, por exemplo, como usar um <xref:System.Windows.Style> para definir propriedades em controles, consulte o [estilos e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md) tópico.  
   
  Além disso, é importante entender `Resources`, que são essencialmente o que permite que objetos como <xref:System.Windows.Style> e <xref:System.Windows.DataTemplate> seja reutilizável. Para obter mais informações sobre recursos, consulte [Recursos de XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   

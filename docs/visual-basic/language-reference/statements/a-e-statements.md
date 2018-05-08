@@ -1,21 +1,12 @@
 ---
 title: Instruções A-E
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a670de2c80d69c97b5ee80768decca747e64efb6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c3ef4c8bd0c09d41134f43692fb1683444b83d3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-e-statements"></a>Instruções A-E
 A tabela a seguir contém uma lista de instruções de linguagem do Visual Basic.  
@@ -24,7 +15,7 @@ A tabela a seguir contém uma lista de instruções de linguagem do Visual Basic
 |---|---|---|---|  
 |[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[Call](../../../visual-basic/language-reference/statements/call-statement.md)|[Class](../../../visual-basic/language-reference/statements/class-statement.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|  
 |[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Delegado](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
-|[Faça... Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[Final](../../../visual-basic/language-reference/statements/end-statement.md)|[End \<palavra-chave>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
+|[Faça... Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[End](../../../visual-basic/language-reference/statements/end-statement.md)|[End \<palavra-chave>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
 |[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|[Erro](../../../visual-basic/language-reference/statements/error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|  
 |[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   

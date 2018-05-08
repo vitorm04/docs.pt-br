@@ -1,34 +1,20 @@
 ---
-title: "Como configurar configurações de serviço de COM+"
-ms.custom: 
+title: Como configurar configurações de serviço de COM+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Como configurar configurações de serviço de COM+
 Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração do serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo de hospedados pelo COM+, o arquivo de config é colocado no diretório raiz do aplicativo (aplicativos de %PROGRAMFILES%\ComPlus\\{appid} é o padrão). Em ambos os modos hospedado na Web, o arquivo Web. config é colocado no diretório raiz virtual especificado.  
   
 > [!NOTE]
->  Assinatura de mensagens deve ser usada para proteger contra falsificação de mensagens entre um cliente e um servidor. Além disso, a criptografia de camada de transporte ou a mensagem deve ser usada para proteger contra a divulgação de informações de mensagens entre um cliente e um servidor. Assim como acontece com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, você deve usar a limitação para limitar o número de chamadas simultâneas, conexões, instâncias e as operações pendentes. Isso ajuda a impedir o consumo excessivo de recursos. Comportamento de limitação é especificado por meio do arquivo de configuração do serviço.  
+>  Assinatura de mensagens deve ser usada para proteger contra falsificação de mensagens entre um cliente e um servidor. Além disso, a criptografia de camada de transporte ou a mensagem deve ser usada para proteger contra a divulgação de informações de mensagens entre um cliente e um servidor. Como com os serviços do Windows Communication Foundation (WCF), você deve usar a limitação para limitar o número de chamadas simultâneas, conexões, instâncias e as operações pendentes. Isso ajuda a impedir o consumo excessivo de recursos. Comportamento de limitação é especificado por meio do arquivo de configuração do serviço.  
   
 ## <a name="example"></a>Exemplo  
  Considere a possibilidade de um componente que implementa a interface a seguir:  
@@ -62,13 +48,13 @@ public interface IFinancesContract : IDisposable
   
  Aplicativos cliente que usam esse serviço precisa estar de acordo com este contrato, além de usar uma associação que é compatível com a especificada na configuração do aplicativo.  
   
- O exemplo de código a seguir mostra um arquivo de configuração padrão. Sendo um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço da Web, isso está em conformidade com o esquema de configuração de modelo de serviço padrão e pode ser editado da mesma maneira que outras [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquivos de configuração de serviços.  
+ O exemplo de código a seguir mostra um arquivo de configuração padrão. Sendo um serviço Web do Windows Communication Foundation (WCF), isso está em conformidade com o esquema de configuração de modelo de serviço padrão e pode ser editado da mesma maneira como outros arquivos de configuração de serviços do WCF.  
   
  Modificações típicas inclui:  
   
 -   Alterando o endereço de ponto de extremidade do formulário ComponentName/ApplicationName/InterfaceName padrão para um formato mais utilizável.  
   
--   Modificando o namespace do serviço do formulário "http://tempuri.org/InterfaceID" padrão a um formulário mais relevante.  
+-   Modificando o namespace do serviço do padrão de "http://tempuri.org/InterfaceID" formulário a um formulário mais relevante.  
   
 -   Alterar o ponto de extremidade para usar uma associação de transporte diferentes.  
   

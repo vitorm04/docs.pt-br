@@ -1,14 +1,6 @@
 ---
-title: "Visão geral do controle ListView (Windows Forms)"
-ms.custom: 
+title: Visão geral do controle ListView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Visão geral do controle ListView (Windows Forms)
 O controle <xref:System.Windows.Forms.ListView> do Windows Forms exibe uma lista de itens com ícones. É possível usar uma exibição de lista para criar uma interface do usuário, como o painel direito do Windows Explorer. O controle tem quatro modos de exibição: LargeIcon, SmallIcon, Lista e Detalhes.  
@@ -50,13 +36,13 @@ O controle <xref:System.Windows.Forms.ListView> do Windows Forms exibe uma lista
 |Método <xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> ou <xref:System.Windows.Forms.View.Tile>|  
 |Método <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.LargeIcon>|  
 |Método <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> ou <xref:System.Windows.Forms.View.Tile>|  
-|Propriedade <xref:System.Windows.Forms.ListView.Groups%2A>|Todos os modos de exibição, exceto<xref:System.Windows.Forms.View.List>|  
+|Propriedade <xref:System.Windows.Forms.ListView.Groups%2A>|Todos os modos de exibição, exceto <xref:System.Windows.Forms.View.List>|  
 |Propriedade <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
 |Propriedade <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.Tile>|  
   
  A propriedade de chave de <xref:System.Windows.Forms.ListView> controle é <xref:System.Windows.Forms.ListView.Items%2A>, que contém os itens exibidos pelo controle. O <xref:System.Windows.Forms.ListView.SelectedItems%2A> propriedade contém uma coleção de itens selecionados no controle. O usuário pode selecionar vários itens, por exemplo, para arrastar e soltar vários itens de cada vez para um outro controle, se o <xref:System.Windows.Forms.ListView.MultiSelect%2A> está definida como `true`. O <xref:System.Windows.Forms.ListView> controle pode exibir caixas de seleção ao lado dos itens, se o <xref:System.Windows.Forms.ListView.CheckBoxes%2A> está definida como `true`.  
   
- O <xref:System.Windows.Forms.ListView.Activation%2A> propriedade determina o tipo de ação que o usuário deve tomar para ativar um item na lista: as opções são <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, e <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>a ativação exige um único clique para ativar o item. <xref:System.Windows.Forms.ItemActivation.TwoClick>ativação exige que o usuário clicar duas vezes para ativar o item; um único clique muda a cor do texto do item. <xref:System.Windows.Forms.ItemActivation.Standard>ativação exige que o usuário clicar duas vezes para ativar um item, mas o item não alteram a aparência.  
+ O <xref:System.Windows.Forms.ListView.Activation%2A> propriedade determina o tipo de ação que o usuário deve tomar para ativar um item na lista: as opções são <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, e <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> a ativação exige um único clique para ativar o item. <xref:System.Windows.Forms.ItemActivation.TwoClick> ativação exige que o usuário clicar duas vezes para ativar o item; um único clique muda a cor do texto do item. <xref:System.Windows.Forms.ItemActivation.Standard> ativação exige que o usuário clicar duas vezes para ativar um item, mas o item não alteram a aparência.  
   
  O <xref:System.Windows.Forms.ListView> controle também suporta os estilos visuais e outros recursos disponíveis na plataforma Windows XP, incluindo o agrupamento, a exibição lado a lado e marcas de inserção. Para obter mais informações, consulte [Recursos do Windows XP e Controles dos Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   

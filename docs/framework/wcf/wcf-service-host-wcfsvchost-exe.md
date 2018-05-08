@@ -1,29 +1,15 @@
 ---
 title: Host de serviço do WCF (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Host de serviço (WcfSvcHost.exe) permite que você iniciar o depurador do Visual Studio (F5) para hospedar e testar um serviço que você implementou automaticamente. Você pode testar, em seguida, o serviço usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe) ou seu próprio cliente, para localizar e corrigir todos os possíveis erros.  
+Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite que você iniciar o depurador do Visual Studio (F5) para hospedar e testar um serviço que você implementou automaticamente. Você pode testar, em seguida, o serviço usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe) ou seu próprio cliente, para localizar e corrigir todos os possíveis erros.  
   
 ## <a name="wcf-service-host"></a>Host de serviço do WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de serviço enumera os serviços em um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projeto de serviço carrega a configuração do projeto e instancia um host para cada serviço que encontrar. A ferramenta é integrada ao Visual Studio por meio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de serviço e é invocado quando você inicia a depuração de seu projeto.  

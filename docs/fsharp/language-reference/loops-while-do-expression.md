@@ -1,17 +1,12 @@
 ---
 title: 'Loops: expressão while...do (F#)'
 description: Veja como o while... Faça expressão é usada para realizar execução iterativa (loop) enquanto uma condição de teste especificado é true.
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 847f99faab42c8805bd788e42e3f24ad6369ba52
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e3198246e44bbb11b226f04da6795f3da22626e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loops-whiledo-expression"></a>Loops: expressão while...do
 

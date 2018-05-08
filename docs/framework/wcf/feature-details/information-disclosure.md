@@ -1,26 +1,12 @@
 ---
 title: Divulgação de informações
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="information-disclosure"></a>Divulgação de informações
 Divulgação de informações permite que um invasor obtenha informações valiosas sobre um sistema. Portanto, sempre considere quais informações são revelar e se ele pode ser usado por um usuário mal-intencionado. A seguir lista os ataques de divulgação de informações possíveis e fornece atenuantes para cada.  
@@ -47,7 +33,7 @@ Divulgação de informações permite que um invasor obtenha informações valio
   
 -   Referências de serviço devem para ser confiável. Lembre-se sempre que a transferência de instâncias de referência de serviço para garantir que eles não foram violados.  
   
--   Alguns aplicativos podem apresentar uma experiência de usuário que permite interativo estabelecimento de confiança com base nos dados os dados de referência e a confiança do serviço comprovados pelo host remoto. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece a extensibilidade pontos para um recurso, mas o usuário devem implementados.  
+-   Alguns aplicativos podem apresentar uma experiência de usuário que permite interativo estabelecimento de confiança com base nos dados os dados de referência e a confiança do serviço comprovados pelo host remoto. O WCF fornece pontos de extensibilidade para um recurso, mas o usuário deve ser implementado-los.  
   
 ## <a name="ntlm"></a>NTLM  
  Por padrão, no ambiente de domínio do Windows, autenticação do Windows usa o protocolo Kerberos para autenticar e autorizar usuários. Se o protocolo Kerberos não pode ser usado por algum motivo, NT LAN Manager (NTLM) será usado como um fallback. Você pode desativar esse comportamento, definindo a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriedade `false`. Questões a serem consideradas ao permitir que o NTLM incluem:  

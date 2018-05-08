@@ -1,29 +1,17 @@
 ---
-title: "Teclado padrão e comportamento do mouse no controle DataGrid"
-ms.custom: 
+title: Teclado padrão e comportamento do mouse no controle DataGrid
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Teclado padrão e comportamento do mouse no controle DataGrid
 Este tópico descreve como os usuários podem interagir com o <xref:System.Windows.Controls.DataGrid> controle usando o teclado e mouse.  
@@ -96,7 +84,7 @@ Este tópico descreve como os usuários podem interagir com o <xref:System.Windo
 |CTRL + clique em uma linha|Se <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> é definido como <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modifica uma seleção de várias linhas não contíguas.<br /><br /> Se a linha já estiver selecionada, desmarcará a linha.|  
 |SHIFT + clique em uma linha|Se <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> é definido como <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modifica uma seleção de várias linhas contígua.|  
 |Clicar em um cabeçalho de grupo de linha|Expande ou recolhe o grupo.|  
-|Clique no botão Selecionar tudo no canto superior esquerdo das<xref:System.Windows.Controls.DataGrid>|Se <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> é definido como <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, seleciona todas as linhas de <xref:System.Windows.Controls.DataGrid>.|  
+|Clique no botão Selecionar tudo no canto superior esquerdo das <xref:System.Windows.Controls.DataGrid>|Se <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> é definido como <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, seleciona todas as linhas de <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="mouse-selection"></a>Seleção com o mouse  
  Se o <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> está definida como <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, clicando em uma linha ao pressionar a tecla CTRL ou SHIFT modificará uma seleção de várias linhas.  

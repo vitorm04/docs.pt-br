@@ -1,13 +1,6 @@
 ---
 title: Subprocedimentos (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Subprocedimentos (Visual Basic)
 Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub` e `End Sub` instruções. O `Sub` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada, mas não retorna um valor para o código de chamada.  
@@ -39,7 +29,7 @@ Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub
 ## <a name="declaration-syntax"></a>Sintaxe da Declaração  
  A sintaxe para declarar um `Sub` procedimento é o seguinte:  
   
- `[` *modificadores de* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *modificadores de* `] Sub` *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -52,11 +42,11 @@ Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub
   
  A sintaxe para cada parâmetro na lista de parâmetros é da seguinte maneira:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *nome do parâmetro*`As`*tipo de dados*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *nome do parâmetro*`As`*tipo de dados*  
   
  Se o parâmetro é opcional, você também deve fornecer um valor padrão como parte de sua declaração. A sintaxe para especificar um valor padrão é da seguinte maneira:  
   
- `Optional [ByVal | ByRef]`  *nome do parâmetro*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *nome do parâmetro*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Parâmetros como variáveis locais  
  Quando o controle passa para o procedimento, cada parâmetro é tratado como uma variável local. Isso significa que seu tempo de vida é o mesmo que o procedimento e seu escopo é todo o procedimento.  

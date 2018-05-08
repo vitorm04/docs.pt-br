@@ -1,34 +1,22 @@
 ---
 title: Como criar uma sessão segura
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-caps.latest.revision: 10
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0316d1120fe5f5b596374594de66e4f48dae84e8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ce351a87e70b09a2f68654af817e28fa3145d79d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-secure-session"></a>Como criar uma sessão segura
-Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associação, as associações fornecidas pelo sistema em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] automaticamente use sessões seguras quando a segurança de mensagens está habilitada.  
+Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associação, as associações fornecidas pelo sistema no Windows Communication Foundation (WCF) automaticamente usam sessões seguras quando a segurança de mensagens está habilitada.  
   
  Por padrão, sessões seguras não sobrevivem a um servidor Web que é reciclado. Quando uma sessão segura é estabelecida, o cliente e o serviço de cache a chave que está associada com a sessão segura. Como as mensagens são trocadas, apenas um identificador para a chave armazenada em cache é trocado. Se o servidor Web for reciclado, o cache é reciclado, também, de modo que o servidor Web não é possível recuperar a chave armazenada em cache para o identificador. Se isso acontecer, uma exceção será devolvida ao cliente. Sessões seguras que usam um token de contexto de segurança com monitoração de estado (SCT) podem sobreviver a um servidor Web que estão sendo reciclado. Para obter mais informações sobre como usar um SCT com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
@@ -36,7 +24,7 @@ Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-ap
   
 -   Configure um serviço para usar uma associação fornecida pelo sistema que dá suporte à segurança de mensagem.  
   
-     Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associação, quando as associações fornecidas pelo sistema são configuradas para usar a segurança de mensagem, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automaticamente usa sessões seguras. A tabela a seguir lista as associações fornecidas pelo sistema que oferecem suporte à segurança de mensagem e se a segurança de mensagem é o mecanismo de segurança padrão.  
+     Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associação, quando as associações fornecidas pelo sistema são configuradas para usar segurança de mensagem WCF automaticamente usa sessões seguras. A tabela a seguir lista as associações fornecidas pelo sistema que oferecem suporte à segurança de mensagem e se a segurança de mensagem é o mecanismo de segurança padrão.  
   
     |Associação fornecida pelo sistema|Elemento de configuração|Segurança de mensagem em por padrão|  
     |------------------------------|---------------------------|------------------------------------|  

@@ -1,31 +1,17 @@
 ---
-title: "Por que a ordem das transformações é importante"
-ms.custom: 
+title: Por que a ordem das transformações é importante
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Por que a ordem das transformações é importante
 Um único <xref:System.Drawing.Drawing2D.Matrix> objeto pode armazenar uma única transformação ou uma sequência de transformações. Essa última é chamada de transformação composta. A matriz de uma transformação composta é obtida pela multiplicação das matrizes de transformações individuais.  
@@ -35,7 +21,7 @@ Um único <xref:System.Drawing.Drawing2D.Matrix> objeto pode armazenar uma únic
   
  Um motivo de a ordem ser importante é que transformações, como rotação e colocação em escala, são feitas em relação a origem do sistema de coordenadas. Dimensionamento de um objeto que é centralizado na origem produz um resultado diferente de dimensionamento de um objeto que foi movido para fora da origem. Da mesma forma, girar um objeto centralizado na origem produz um resultado diferente de girar um objeto movido para fora da origem.  
   
- O exemplo a seguir combina colocação em escala, rotação e translação (nessa ordem) para formar uma transformação composta. O argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passado para o <xref:System.Drawing.Graphics.RotateTransform%2A> método indica que a rotação seguirá o dimensionamento. Da mesma forma, o argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passado para o <xref:System.Drawing.Graphics.TranslateTransform%2A> método indica que a conversão seguirão a rotação. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>e <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> são membros de <xref:System.Drawing.Drawing2D.MatrixOrder> enumeração.  
+ O exemplo a seguir combina colocação em escala, rotação e translação (nessa ordem) para formar uma transformação composta. O argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passado para o <xref:System.Drawing.Graphics.RotateTransform%2A> método indica que a rotação seguirá o dimensionamento. Da mesma forma, o argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passado para o <xref:System.Drawing.Graphics.TranslateTransform%2A> método indica que a conversão seguirão a rotação. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> e <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> são membros de <xref:System.Drawing.Drawing2D.MatrixOrder> enumeração.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

@@ -1,34 +1,22 @@
 ---
 title: Como especificar credenciais de segurança de canal
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Como especificar credenciais de segurança de canal
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Moniker de serviço permite que aplicativos de COM chamar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços. A maioria dos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração do aplicativo. Ao chamar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço de um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico ilustrará várias maneiras de especificar credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
+O Moniker de serviço do Windows Communication Foundation (WCF) permite que aplicativos de COM chamar serviços WCF. A maioria dos serviços WCF requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um serviço WCF de um cliente WCF, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração do aplicativo. Ao chamar um serviço WCF de um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico ilustrará várias maneiras de especificar credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> é uma interface baseada em IDispatch e você não terá a funcionalidade do IntelliSense no ambiente do Visual Studio.  
   
- Este artigo usará o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço definido no [exemplo de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Este artigo usará o serviço WCF definido no [exemplo de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Para especificar um certificado de cliente  
   
@@ -40,7 +28,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Moniker de serviço pe
   
 4.  Adicionar `bindingNamespace=``http://Microsoft.ServiceModel.Samples` à marca de ponto de extremidade no App. config para o serviço.  
   
-5.  Criar o exemplo de segurança de mensagem e executar Service.exe. Use o Internet Explorer e navegue até o URI do serviço (ServiceModelSamples/http://localhost:8000/serviço) para garantir que o serviço está funcionando.  
+5.  Criar o exemplo de segurança de mensagem e executar Service.exe. Use o Internet Explorer e navegue até o URI do serviço (http://localhost:8000/ServiceModelSamples/Service) para garantir que o serviço está funcionando.  
   
 6.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o código a seguir para o manipulador de cliques:  
   

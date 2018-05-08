@@ -1,31 +1,17 @@
 ---
-title: "Visão geral de filas"
-ms.custom: 
+title: Visão geral de filas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Visão geral de filas
-Esta seção apresenta o geral e principais conceitos por trás de comunicação em fila. Seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui são manifestados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta seção apresenta o geral e principais conceitos por trás de comunicação em fila. As seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui são manifestados no Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Conceitos básicos de enfileiramento de mensagens  
  Ao criar um aplicativo distribuído, escolhendo que o transporte à direita para a comunicação entre clientes e serviços é importante. Diversos fatores afetam o tipo de transporte a ser usado. Um fator importante — isolamento entre o serviço, o cliente e o transporte — determina o uso de um transporte em fila ou um transporte direto, como TCP ou HTTP. Devido à natureza de transportes diretas, como TCP e HTTP, comunicação interrompe completamente se o serviço ou cliente pare de funcionar ou se a rede falhar. O serviço, o cliente e a rede devem estar em execução ao mesmo tempo para o aplicativo para trabalhar. Transportes em fila fornecem isolamento, o que significa que se o serviço ou cliente falhar ou se os links de comunicação entre eles falharem, o cliente e o serviço podem continuar a funcionar.  

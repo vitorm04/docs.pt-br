@@ -1,36 +1,24 @@
 ---
 title: Rastreamento ponta a ponta
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 733ea0724fdbaea9c7d28ed2a94aba25f67ef87c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-to-end-tracing"></a>Rastreamento ponta a ponta
-Ponta a ponta (e2e) rastreamento permite que os desenvolvedores acompanhar a execução de código a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] infraestrutura para investigar por que um caminho de código falhou, ou para fornecer rastreamento detalhadas para análise de desempenho e planejamento de capacidade. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]fornece três mecanismos de correlação para ajudar a diagnosticar a causa do erro: atividades, transferência e propagação.  
+Ponta a ponta (e2e) rastreamento permite aos desenvolvedores acompanhar a execução de código na infraestrutura do Windows Communication Foundation (WCF) para investigar por que um caminho de código falhou, ou para fornecer rastreamento detalhadas para análise de desempenho e planejamento de capacidade. Windows Communication Foundation (WCF) fornece três mecanismos de correlação para ajudar a diagnosticar a causa do erro: atividades, transferência e propagação.  
   
  Consulte [cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) para obter uma lista de cenários de rastreamento ponta a ponta e sua respectiva atividade e design de rastreamento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Atividade](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): descreve os rastreamentos de atividade no [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de rastreamento.  
+ [Atividade](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): descreve os rastreamentos de atividades no modelo de rastreamento do Windows Communication Foundation (WCF).  
   
- [Transferência de](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): descreve a transferência de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de rastreamento e usar a transferência para correlacionar atividades dentro de pontos de extremidade.  
+ [Transferência de](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): descreve a transferência do modelo de rastreamento do Windows Communication Foundation (WCF) e usando transferir para correlacionar atividades dentro de pontos de extremidade.  
   
- [Propagação](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): descreve a propagação de atividade no [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de rastreamento e usando a propagação para correlacionar atividades entre pontos de extremidade.  
+ [Propagação](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): descreve a propagação de atividade no Windows Communication Foundation (WCF) modelo de rastreamento e usando a propagação para correlacionar atividades entre pontos de extremidade.  
   
  [Resumo de tipo de rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   

@@ -1,29 +1,17 @@
 ---
 title: Usando buffers duplos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [Windows Forms], double buffering
 - double buffering
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d83846dcded620b74f7d276fd241a302cce1b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b09210eba0ac3a141219a7cdbff15f22c6ed003
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-double-buffering"></a>Usando buffers duplos
 Você pode usar elementos gráficos em buffer duplo para reduzir a cintilação em seus aplicativos que contêm operações complexas de pintura. O .NET Framework contém suporte interno para o buffer duplo ou você pode gerenciar e processar imagens manualmente.  

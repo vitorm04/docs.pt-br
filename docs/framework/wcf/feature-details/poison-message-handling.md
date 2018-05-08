@@ -1,36 +1,22 @@
 ---
 title: Manuseio de mensagem suspeita
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não é possível processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo em fila recebe mensagens em uma transação. Anulando a transação na qual foi recebida uma mensagem na fila deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo receptor pode preso em um loop de recebimento e anule a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
   
  Uma mensagem pode se tornar uma mensagem suspeita por vários motivos. As razões mais comuns são específicos do aplicativo. Por exemplo, se um aplicativo lê uma mensagem de uma fila e executa algum processamento do banco de dados, o aplicativo pode falhar ao obter um bloqueio no banco de dados, fazendo com que ele anular a transação. Como a transação de banco de dados foi anulada, a mensagem permanece na fila, que faz com que o aplicativo reler a mensagem uma segunda vez e fazer outra tentativa para adquirir um bloqueio no banco de dados. As mensagens também podem se tornar suspeitas se eles contêm informações inválidas. Por exemplo, uma ordem de compra pode conter um número inválido de cliente. Nesses casos, o aplicativo pode anular a transação voluntariamente e forçar a mensagem se torne uma mensagem suspeita.  
   
- Em raras ocasiões, as mensagens podem não expedidas para o aplicativo. O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] camada pode encontrar um problema com a mensagem, como se a mensagem tem o quadro errado, as credenciais de mensagem inválido anexado a ele ou um cabeçalho de ação inválida. Nesses casos, o aplicativo nunca recebe a mensagem. No entanto, a mensagem ainda pode se tornar uma mensagem suspeita e ser processada manualmente.  
+ Em raras ocasiões, as mensagens podem não expedidas para o aplicativo. A camada do Windows Communication Foundation (WCF) pode encontrar um problema com a mensagem, como se a mensagem tem o quadro errado, as credenciais de mensagem inválido anexado a ele ou um cabeçalho de ação inválida. Nesses casos, o aplicativo nunca recebe a mensagem. No entanto, a mensagem ainda pode se tornar uma mensagem suspeita e ser processada manualmente.  
   
 ## <a name="handling-poison-messages"></a>Como manipular mensagens suspeitas  
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], suspeitas a manipulação de mensagens fornece um mecanismo para um aplicativo de recebimento lidar com todas as mensagens não podem ser enviadas para o aplicativo ou mensagens que são enviadas para o aplicativo, mas que não consiga ser processado porque razões específicas do aplicativo. Manipulação de mensagens suspeitas está configurada, as propriedades a seguir em cada uma das associações em fila disponíveis:  
+ No WCF, a manipulação de mensagens suspeitas fornece um mecanismo para um aplicativo de recebimento lidar com todas as mensagens não podem ser enviadas para o aplicativo ou mensagens que são enviadas para o aplicativo, mas que não consiga ser processada devido a específicas do aplicativo motivos. Manipulação de mensagens suspeitas está configurada, as propriedades a seguir em cada uma das associações em fila disponíveis:  
   
 -   `ReceiveRetryCount`. Um valor inteiro que indica o número máximo de tentativas de entrega de uma mensagem da fila de aplicativos para o aplicativo. O valor padrão é 5. Isso é suficiente para casos em que uma repetição imediatas corrige o problema, como com um deadlock temporário em um banco de dados.  
   
@@ -46,7 +32,7 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
   
 -   Rejeite. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso instrui o enfileiramento de mensagens (MSMQ) para enviar uma mensagem de confirmação negativa para o Gerenciador de fila de envio que o aplicativo não pode receber a mensagem. A mensagem é colocada na fila de mensagens mortas do Gerenciador de fila envio.  
   
--   Mova. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso move a mensagem suspeita para uma fila de mensagens suspeitas para processamento posterior por um aplicativo de tratamento de mensagens suspeitas. A fila de mensagens suspeitas é uma subfila da fila de aplicativo. Um aplicativo de tratamento de mensagens suspeitas pode ser um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que lê mensagens fora da fila de suspeita. A fila de suspeita é uma subfila da fila de aplicativo e podem ser tratada como net.msmq://\<*nome da máquina*>/*applicationQueue*; suspeitas, onde  *nome da máquina* é o nome do computador no qual reside a fila e o *applicationQueue* é o nome da fila específicas do aplicativo.  
+-   Mova. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso move a mensagem suspeita para uma fila de mensagens suspeitas para processamento posterior por um aplicativo de tratamento de mensagens suspeitas. A fila de mensagens suspeitas é uma subfila da fila de aplicativo. Um aplicativo de tratamento de mensagens suspeitas pode ser um serviço WCF que lê mensagens fora da fila de suspeita. A fila de suspeita é uma subfila da fila de aplicativo e podem ser tratada como net.msmq://\<*nome da máquina*>/*applicationQueue*; suspeitas, onde  *nome da máquina* é o nome do computador no qual reside a fila e o *applicationQueue* é o nome da fila específicas do aplicativo.  
   
  Esses são o número máximo de tentativas de entrega para uma mensagem:  
   
@@ -57,20 +43,20 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
 > [!NOTE]
 >  Nenhuma tentativa é feita para uma mensagem que é entregue com êxito.  
   
- Para controlar o número de vezes que uma mensagem de leitura é tentada, [!INCLUDE[wv](../../../../includes/wv-md.md)] mantém uma propriedade de mensagem durável que conta o número de Anulações e uma propriedade de contagem de movimentação que conta o número de vezes que a mensagem se move entre a fila de aplicativos e subfilas. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal usa para calcular a contagem de repetições de recebimento e a contagem de ciclos de repetição. Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], a contagem de anulação é mantida na memória, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de canal e é redefinido quando o aplicativo falhar. Além disso, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal pode manter a anulação contagens de até 256 mensagens na memória a qualquer momento. Se uma mensagem 257th é lida, contagem de anulação da mensagem mais antigo é redefinida.  
+ Para controlar o número de vezes que uma mensagem de leitura é tentada, [!INCLUDE[wv](../../../../includes/wv-md.md)] mantém uma propriedade de mensagem durável que conta o número de Anulações e uma propriedade de contagem de movimentação que conta o número de vezes que a mensagem se move entre a fila de aplicativos e subfilas. O canal WCF usa para calcular a contagem de repetições de recebimento e a contagem de ciclos de repetição. Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], a contagem de anulação é mantida na memória pelo canal WCF e será redefinida se o aplicativo falhar. Além disso, o canal WCF pode manter que a anulação contagens de até 256 mensagens na memória a qualquer momento. Se uma mensagem 257th é lida, contagem de anulação da mensagem mais antigo é redefinida.  
   
  A anulação contagem e contagem propriedades estão disponíveis para a operação de serviço por meio do contexto de operação de mover. O exemplo de código a seguir mostra como acessá-los.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece duas associações na fila padrão:  
+ O WCF fornece duas associações na fila padrão:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associação adequada para a execução de comunicação baseada em fila com outros [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade.  
+-   <xref:System.ServiceModel.NetMsmqBinding>. Um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associação adequada para a execução de comunicação baseada em fila com outros pontos de extremidade do WCF.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Uma associação adequada para comunicação com aplicativos de enfileiramento de mensagens existentes.  
   
 > [!NOTE]
->  Você pode alterar propriedades nessas associações com base nos requisitos da sua [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço. A mensagem suspeita toda mecanismo de tratamento é local para o aplicativo de recebimento. O processo é invisível para o aplicativo de envio, a menos que o aplicativo de recebimento, por fim, para e envia uma confirmação negativa para o remetente. Nesse caso, a mensagem será movida para a fila de mensagens mortas do remetente.  
+>  Você pode alterar as propriedades nessas associações com base nos requisitos de seu serviço WCF. A mensagem suspeita toda mecanismo de tratamento é local para o aplicativo de recebimento. O processo é invisível para o aplicativo de envio, a menos que o aplicativo de recebimento, por fim, para e envia uma confirmação negativa para o remetente. Nesse caso, a mensagem será movida para a fila de mensagens mortas do remetente.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Prática recomendada: Manipulação MsmqPoisonMessageException  
  Quando o serviço determina que uma mensagem é suspeita, transporte em fila lança um <xref:System.ServiceModel.MsmqPoisonMessageException> que contém o `LookupId` da mensagem suspeita.  
@@ -116,7 +102,7 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
   
 -   Mensagens do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] suporta negativo confirmação, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não. Uma confirmação negativa do Gerenciador de fila de recebimento faz com que o Gerenciador de fila de envio colocar a mensagem rejeitada na fila de mensagens mortas. Como tal, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Mensagens do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor exato quando a mesma mensagem é lida por mais de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço em um farm.  
+-   Mensagens do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor exato quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

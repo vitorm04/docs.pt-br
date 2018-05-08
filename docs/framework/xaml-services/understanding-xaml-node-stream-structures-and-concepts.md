@@ -1,28 +1,16 @@
 ---
-title: "Noções básicas sobre estruturas e conceitos do fluxo de nó XAML"
-ms.custom: 
+title: Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 Os leitores XAML e gravadores XAML, conforme implementado no serviços de XAML do .NET Framework baseiam-se o conceito de design de um fluxo do nó XAML. O fluxo do nó XAML é uma conceituação, passando de um conjunto de nós XAML. Neste conceituação passando, um processador XAML orienta a estrutura das relações no XAML em um nó por vez. A qualquer momento, somente um registro atual ou a posição atual existe em um fluxo do nó XAML aberto e muitos aspectos da API de relatam somente as informações disponíveis da posição. O nó atual em um fluxo do nó XAML pode ser descrito como um objeto, um membro ou um valor. Tratando XAML como um fluxo do nó XAML, leitores XAML podem se comunicar com gravadores XAML e habilitar um programa exibir, interagir com ou alterar o conteúdo de um fluxo do nó XAML durante um caminho de carga ou a gravação de operação de caminho que envolve XAML. Projeto de API de leitor e gravador XAML e o conceito de fluxo do nó XAML são semelhantes às anterior leitor relacionado e designs de gravador e conceitos, como o [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] e <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> classes. Este tópico aborda os conceitos de fluxo do nó XAML e descreve como você pode escrever rotinas que interagem com representações de XAML no nível de nó XAML.  
@@ -31,7 +19,7 @@ Os leitores XAML e gravadores XAML, conforme implementado no serviços de XAML d
 ## <a name="loading-xaml-into-a-xaml-reader"></a>Carregamento XAML em um leitor XAML  
  A base de <xref:System.Xaml.XamlReader> classe não declara uma técnica específica para carregar o XAML inicial em um leitor XAML. Em vez disso, uma classe derivada declara e implementa a técnica de carregamento, incluindo as características gerais e restrições de sua fonte de entrada para XAML. Por exemplo, um <xref:System.Xaml.XamlObjectReader> lê um gráfico de objeto, a partir da fonte de entrada de um único objeto que representa a raiz ou base. O <xref:System.Xaml.XamlObjectReader> , em seguida, gera um fluxo do nó XAML do gráfico de objeto.  
   
- Mais proeminente definidos para serviços XAML do .NET Framework <xref:System.Xaml.XamlReader> subclasse é <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader>carrega o XAML inicial, ao carregar um arquivo de texto diretamente por meio de um caminho de arquivo ou fluxo ou indiretamente por meio de uma classe de leitor relacionados como <xref:System.IO.TextReader>. O <xref:System.Xaml.XamlReader> pode ser pensada como contendo a totalidade da fonte de entrada de XAML depois que ele carregou. No entanto, o <xref:System.Xaml.XamlReader> base API foi projetado para que o leitor está interagindo com um único nó do XAML. Quando carregado pela primeira vez, o primeiro nó único que encontrar é a raiz de XAML e o objeto de início.  
+ Mais proeminente definidos para serviços XAML do .NET Framework <xref:System.Xaml.XamlReader> subclasse é <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> carrega o XAML inicial, ao carregar um arquivo de texto diretamente por meio de um caminho de arquivo ou fluxo ou indiretamente por meio de uma classe de leitor relacionados como <xref:System.IO.TextReader>. O <xref:System.Xaml.XamlReader> pode ser pensada como contendo a totalidade da fonte de entrada de XAML depois que ele carregou. No entanto, o <xref:System.Xaml.XamlReader> base API foi projetado para que o leitor está interagindo com um único nó do XAML. Quando carregado pela primeira vez, o primeiro nó único que encontrar é a raiz de XAML e o objeto de início.  
   
 ### <a name="the-xaml-node-stream-concept"></a>O conceito de fluxo do nó XAML  
  Se você está mais familiarizado com um DOM, metáfora da árvore ou abordagem baseada em consulta para acessar tecnologias baseadas em XML, uma maneira útil de Conceituar um fluxo do nó XAML é da seguinte maneira. Imagine que o XAML carregado é um DOM ou uma árvore onde cada nó possível é expandido completamente e, em seguida, apresentado linearmente. Conforme você avança através de nós, você pode percorrer "in" ou "out" de níveis que seriam relevantes para um DOM, mas o fluxo do nó XAML não explicitamente controlar porque esses conceitos de nível não são relevantes para um fluxo do nó. O fluxo do nó tem uma posição "atual", mas a menos que você tenha armazenado outras partes do fluxo de si mesmo como referência, todos os aspectos do fluxo do nó que não seja a posição do nó atual estão fora do modo de exibição.  
@@ -112,20 +100,20 @@ while (xxr.Read()) {
   
 |Marcação XAML|Fluxo do nó XAML resultante|  
 |-----------------|--------------------------------|  
-|`<Party`|`Namespace`nó`Party`|  
-|`xmlns="PartyXamlNamespace">`|`StartObject`nó`Party`|  
-|`<Party.Favors>`|`StartMember`nó`Party.Favors`|  
-||`StartObject`nó de implícita`FavorCollection`|  
-||`StartMember`nó de implícita `FavorCollection` itens de propriedade.|  
-|`<Balloon`|`StartObject`nó`Balloon`|  
-|`Color="Red"`|`StartMember`nó`Color`<br /><br /> `Value`nó da cadeia de caracteres do valor de atributo`"Red"`<br /><br /> `EndMember`para`Color`|  
-|`HasHelium="True"`|`StartMember`nó`HasHelium`<br /><br /> `Value`nó da cadeia de caracteres do valor de atributo`"True"`<br /><br /> `EndMember`para`HasHelium`|  
-|`>`|`EndObject`para`Balloon`|  
-|`<NoiseMaker>Loudest</NoiseMaker>`|`StartObject`nó`NoiseMaker`<br /><br /> `StartMember`nó`_Initialization`<br /><br /> `Value`nó da cadeia de caracteres do valor de inicialização`"Loudest"`<br /><br /> `EndMember`nó`_Initialization`<br /><br /> `EndObject`para`NoiseMaker`|  
-||`EndMember`nó de implícita `FavorCollection` itens de propriedade.|  
-||`EndObject`nó de implícita`FavorCollection`|  
-|`</Party.Favors>`|`EndMember`para`Favors`|  
-|`</Party>`|`EndObject`para`Party`|  
+|`<Party`|`Namespace` nó `Party`|  
+|`xmlns="PartyXamlNamespace">`|`StartObject` nó `Party`|  
+|`<Party.Favors>`|`StartMember` nó `Party.Favors`|  
+||`StartObject` nó de implícita `FavorCollection`|  
+||`StartMember` nó de implícita `FavorCollection` itens de propriedade.|  
+|`<Balloon`|`StartObject` nó `Balloon`|  
+|`Color="Red"`|`StartMember` nó `Color`<br /><br /> `Value` nó da cadeia de caracteres do valor de atributo `"Red"`<br /><br /> `EndMember` para `Color`|  
+|`HasHelium="True"`|`StartMember` nó `HasHelium`<br /><br /> `Value` nó da cadeia de caracteres do valor de atributo `"True"`<br /><br /> `EndMember` para `HasHelium`|  
+|`>`|`EndObject` para `Balloon`|  
+|`<NoiseMaker>Loudest</NoiseMaker>`|`StartObject` nó `NoiseMaker`<br /><br /> `StartMember` nó `_Initialization`<br /><br /> `Value` nó da cadeia de caracteres do valor de inicialização `"Loudest"`<br /><br /> `EndMember` nó `_Initialization`<br /><br /> `EndObject` para `NoiseMaker`|  
+||`EndMember` nó de implícita `FavorCollection` itens de propriedade.|  
+||`EndObject` nó de implícita `FavorCollection`|  
+|`</Party.Favors>`|`EndMember` para `Favors`|  
+|`</Party>`|`EndObject` para `Party`|  
   
  No fluxo do nó XAML, você pode contar com o seguinte comportamento:  
   
@@ -139,7 +127,7 @@ while (xxr.Read()) {
   
 -   Um `Value` nó representa o valor em si; não há nenhuma "EndValue". Pode ser seguida somente por um `EndMember`.  
   
-    -   Texto de inicialização XAML do objeto que pode ser usado pela construção não resulta em uma estrutura de valor do objeto. Em vez disso, um nó de membro dedicado para um membro chamado `_Initialization` é criado. e esse nó de membro contém a cadeia de caracteres do valor de inicialização. Se ele existir, `_Initialization` é sempre o primeiro `StartMember`. `_Initialization`pode ser qualificado em algumas representações de serviços XAML com o namescope XAML de linguagem XAML, para esclarecer que `_Initialization` não é uma propriedade definida em tipos de backup.  
+    -   Texto de inicialização XAML do objeto que pode ser usado pela construção não resulta em uma estrutura de valor do objeto. Em vez disso, um nó de membro dedicado para um membro chamado `_Initialization` é criado. e esse nó de membro contém a cadeia de caracteres do valor de inicialização. Se ele existir, `_Initialization` é sempre o primeiro `StartMember`. `_Initialization` pode ser qualificado em algumas representações de serviços XAML com o namescope XAML de linguagem XAML, para esclarecer que `_Initialization` não é uma propriedade definida em tipos de backup.  
   
     -   Uma combinação de valores de membro representa uma configuração do valor de atributo. Eventualmente que haja um conversor de valor envolvidos no processamento esse valor e o valor é uma cadeia de caracteres simples. No entanto, que não é avaliada até que um gravador de objeto XAML processa este fluxo do nó. O gravador de objeto XAML possui o contexto do esquema XAML necessário, mapeamento de tipo de sistema e outros suporte necessário para conversões de valor.  
   
@@ -174,20 +162,20 @@ public class GameBoard {
   
  Uma representação de texto de fluxo do nó XAML para este uso pode ser expresso como o seguinte:  
   
- `StartObject`com o <xref:System.Xaml.XamlType> representar`GameBoard`  
+ `StartObject` com o <xref:System.Xaml.XamlType> representar `GameBoard`  
   
- `StartMember`com o <xref:System.Xaml.XamlMember> representar`BoardSize`  
+ `StartMember` com o <xref:System.Xaml.XamlMember> representar `BoardSize`  
   
- `Value`nó com a cadeia de caracteres de texto "`8x8`"  
+ `Value` nó com a cadeia de caracteres de texto "`8x8`"  
   
- `EndMember`correspondências`BoardSize`  
+ `EndMember` Correspondências `BoardSize`  
   
- `EndObject`correspondências`GameBoard`  
+ `EndObject` Correspondências `GameBoard`  
   
  Observe que não há nenhuma instância do conversor de tipo nesse fluxo do nó. Mas você pode obter informações de conversor de tipo chamando <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> no <xref:System.Xaml.XamlMember> para `BoardSize`. Se você tiver um contexto de esquema XAML válido, você também pode chamar os métodos de conversor obtendo uma instância de <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>.  
   
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>Extensões de marcação no fluxo do nó XAML  
- Um uso de extensão de marcação é relatado no fluxo do nó XAML como um nó de objeto dentro de um membro, onde o objeto representa uma instância de extensão de marcação. Assim, um uso de extensão de marcação contido mais explicitamente a representação de fluxo do nó do uso de um conversor de tipo é e traz mais informações. <xref:System.Xaml.XamlMember>informações podem não ter lhe disse nada sobre a extensão de marcação, porque o uso é situacional e varia em cada caso de marcação possíveis; não é dedicada e implícitas por tipo ou membro como é o caso com conversores de tipo.  
+ Um uso de extensão de marcação é relatado no fluxo do nó XAML como um nó de objeto dentro de um membro, onde o objeto representa uma instância de extensão de marcação. Assim, um uso de extensão de marcação contido mais explicitamente a representação de fluxo do nó do uso de um conversor de tipo é e traz mais informações. <xref:System.Xaml.XamlMember> informações podem não ter lhe disse nada sobre a extensão de marcação, porque o uso é situacional e varia em cada caso de marcação possíveis; não é dedicada e implícitas por tipo ou membro como é o caso com conversores de tipo.  
   
  A representação de fluxo do nó de extensões de marcação como nós de objeto é o caso mesmo se o uso da extensão de marcação foi feito na forma de atributo na marcação XAML texto (que é geralmente o caso). Usos de extensão de marcação que é usado um formulário de elemento de objeto explícito são tratados da mesma maneira.  
   
@@ -197,7 +185,7 @@ public class GameBoard {
   
  Para o uso do parâmetro nomeado, cada parâmetro nomeado é representado como um nó de membro esse nome no fluxo do nó. Os valores de membro não são necessariamente cadeias de caracteres, porque pode haver um uso de extensão de marcação aninhadas.  
   
- `ProvideValue`da marcação extensão não é ainda invocada. No entanto, ele é invocado se você se conectar a um leitor XAML e o gravador XAML para que `WriteEndObject` é invocado no nó de extensão de marcação, quando você examiná-lo no fluxo do nó. Por esse motivo, geralmente terá o mesmo contexto do esquema XAML disponível que seriam usadas para formar o gráfico de objeto no caminho de carga. Caso contrário, `ProvideValue` de qualquer marcação extensão pode lançar exceções aqui, porque ele não tem esperados serviços disponíveis.  
+ `ProvideValue` da marcação extensão não é ainda invocada. No entanto, ele é invocado se você se conectar a um leitor XAML e o gravador XAML para que `WriteEndObject` é invocado no nó de extensão de marcação, quando você examiná-lo no fluxo do nó. Por esse motivo, geralmente terá o mesmo contexto do esquema XAML disponível que seriam usadas para formar o gráfico de objeto no caminho de carga. Caso contrário, `ProvideValue` de qualquer marcação extensão pode lançar exceções aqui, porque ele não tem esperados serviços disponíveis.  
   
 <a name="xaml_and_xml_languagedefined_members_in_the_xaml_node_stream"></a>   
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>XAML e XML membros de idioma definido no fluxo do nó XAML  
@@ -211,7 +199,7 @@ public class GameBoard {
   
 -   **Conteúdo desconhecido:** é o nome deste nó de membro `_UnknownContent`. Estritamente falando, é um <xref:System.Xaml.XamlDirective>, e ele é definido no namespace XAML linguagem XAML. Essa diretiva é usada como uma Sentinela casos em que um elemento de objeto XAML contém o conteúdo da fonte de XAML, mas nenhuma propriedade de conteúdo pode ser determinada no contexto de esquema XAML disponível no momento. Você pode detectar esse caso em um fluxo do nó XAML Verificando membros nomeados `_UnknownContent`. Se nenhuma outra ação é executada em um fluxo do nó carga caminho XAML, o padrão <xref:System.Xaml.XamlObjectWriter> lança tentativa `WriteEndObject` quando encontra o `_UnknownContent` membro em qualquer objeto. O padrão <xref:System.Xaml.XamlXmlWriter> não gerará e trata o membro como implícita. Você pode obter uma entidade estática para `_UnknownContent` de <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
--   **Propriedade de coleção de uma coleção:**Embora o tipo de CLR de apoio de uma classe de coleção que é usado geralmente para XAML tem dedicado denominado propriedade que contém os itens de coleção, essa propriedade não é conhecida para um sistema de tipo XAML antes do tipo de backup resolução. Em vez disso, o fluxo do nó XAML apresenta um `Items` espaço reservado como um membro da coleção de tipo XAML. Na implementação de serviços XAML do .NET Framework no nome dessa diretiva é membro no fluxo do nó `_Items`. Uma constante para essa diretiva pode ser obtida <xref:System.Xaml.XamlLanguage.Items%2A>.  
+-   **Propriedade de coleção de uma coleção:** Embora o tipo de CLR de apoio de uma classe de coleção que é usado geralmente para XAML tem dedicado denominado propriedade que contém os itens de coleção, essa propriedade não é conhecida para um sistema de tipo XAML antes do tipo de backup resolução. Em vez disso, o fluxo do nó XAML apresenta um `Items` espaço reservado como um membro da coleção de tipo XAML. Na implementação de serviços XAML do .NET Framework no nome dessa diretiva é membro no fluxo do nó `_Items`. Uma constante para essa diretiva pode ser obtida <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      Observe que um fluxo do nó XAML pode conter uma propriedade de itens com os itens que se tornar não pode ser analisado com base no contexto do esquema XAML e resolução de tipo de backup. Por exemplo,  
   
@@ -223,10 +211,10 @@ public class GameBoard {
  Determinadas diretivas destinam-se especificamente para fornecer mais informações para a criação de um objeto de um elemento de objeto. Essas diretivas são: `Initialization`, `PositionalParameters`, `TypeArguments`, `FactoryMethod`, `Arguments`. Os leitores do .NET Framework XAML serviços XAML tentam colocar essas diretivas como primeiros membros no fluxo do nó após um objeto `StartObject`, por razões que são explicadas na próxima seção.  
   
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Comportamento de XamlObjectWriter e ordem de nó  
- `StartObject`para um <xref:System.Xaml.XamlObjectWriter> não é necessariamente um sinal para o gravador de objeto XAML para construir imediatamente a instância do objeto. XAML inclui vários recursos de linguagem que tornam possível inicializar um objeto com uma entrada adicional e não depender inteiramente chamando um construtor padrão para produzir o objeto inicial e, em seguida, somente propriedades de configuração. Esses recursos incluem: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; texto de inicialização. [X:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); posicional parâmetros de uma extensão de marcação; métodos de fábrica e respectivos [X:arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) nós (XAML 2009). Cada um desses casos atrasar a construção de objeto real, e porque o fluxo do nó é reorganizado, o gravador de objeto XAML pode depender de um comportamento que não seja especificamente uma construção de construção, na verdade, a instância sempre que um membro de início é encontrado diretiva para esse tipo de objeto.  
+ `StartObject` para um <xref:System.Xaml.XamlObjectWriter> não é necessariamente um sinal para o gravador de objeto XAML para construir imediatamente a instância do objeto. XAML inclui vários recursos de linguagem que tornam possível inicializar um objeto com uma entrada adicional e não depender inteiramente chamando um construtor padrão para produzir o objeto inicial e, em seguida, somente propriedades de configuração. Esses recursos incluem: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; texto de inicialização. [X:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); posicional parâmetros de uma extensão de marcação; métodos de fábrica e respectivos [X:arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) nós (XAML 2009). Cada um desses casos atrasar a construção de objeto real, e porque o fluxo do nó é reorganizado, o gravador de objeto XAML pode depender de um comportamento que não seja especificamente uma construção de construção, na verdade, a instância sempre que um membro de início é encontrado diretiva para esse tipo de objeto.  
   
 ### <a name="getobject"></a>GetObject  
- `GetObject`representa um nó XAML onde, em vez de criar um novo objeto, um gravador de objeto XAML deve em vez disso, obter o valor da propriedade recipiente do objeto. Um caso comum onde um `GetObject` nó for encontrado em um nó XAML fluxo é para um objeto de coleção ou um objeto de dicionário, quando a propriedade recipiente é deliberadamente somente leitura no modelo de objeto do tipo de backup. Nesse cenário, a coleção ou dicionário geralmente é criado e inicializado (geralmente vazio) pela lógica de inicialização de um tipo de propriedade.  
+ `GetObject` representa um nó XAML onde, em vez de criar um novo objeto, um gravador de objeto XAML deve em vez disso, obter o valor da propriedade recipiente do objeto. Um caso comum onde um `GetObject` nó for encontrado em um nó XAML fluxo é para um objeto de coleção ou um objeto de dicionário, quando a propriedade recipiente é deliberadamente somente leitura no modelo de objeto do tipo de backup. Nesse cenário, a coleção ou dicionário geralmente é criado e inicializado (geralmente vazio) pela lógica de inicialização de um tipo de propriedade.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xaml.XamlObjectReader>  

@@ -1,35 +1,21 @@
 ---
 title: Controles
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Controles
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]é fornecido com muitos dos componentes comuns de interface do usuário que são usados em quase todos os aplicativos do Windows, como <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.ListBox>. Historicamente, esses objetos são chamados de controles. Enquanto o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK continua a usar o termo "control" significando livremente qualquer classe que representa um objeto visível em um aplicativo, é importante observar que uma classe não precisa herdar o <xref:System.Windows.Controls.Control> classe para ter uma presença visível. Classes que herdam o <xref:System.Windows.Controls.Control> classe contém um <xref:System.Windows.Controls.ControlTemplate>, que permite que o consumidor de um controle alterar radicalmente a aparência do controle sem a necessidade de criar uma nova subclasse.  Este tópico discute como controles (tanto aqueles que herdam o <xref:System.Windows.Controls.Control> classe e os que não) são normalmente usados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é fornecido com muitos dos componentes comuns de interface do usuário que são usados em quase todos os aplicativos do Windows, como <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.ListBox>. Historicamente, esses objetos são chamados de controles. Enquanto o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK continua a usar o termo "control" significando livremente qualquer classe que representa um objeto visível em um aplicativo, é importante observar que uma classe não precisa herdar o <xref:System.Windows.Controls.Control> classe para ter uma presença visível. Classes que herdam o <xref:System.Windows.Controls.Control> classe contém um <xref:System.Windows.Controls.ControlTemplate>, que permite que o consumidor de um controle alterar radicalmente a aparência do controle sem a necessidade de criar uma nova subclasse.  Este tópico discute como controles (tanto aqueles que herdam o <xref:System.Windows.Controls.Control> classe e os que não) são normalmente usados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Criando uma instância de um controle  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- O exemplo a seguir cria o mesmo aplicativo no código. Para resumir, a criação do <xref:System.Windows.Controls.Grid>, `grid1`, foi excluída do exemplo. `grid1`tem as mesmas definições de coluna e linha, conforme mostrado na anterior [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo.  
+ O exemplo a seguir cria o mesmo aplicativo no código. Para resumir, a criação do <xref:System.Windows.Controls.Grid>, `grid1`, foi excluída do exemplo. `grid1` tem as mesmas definições de coluna e linha, conforme mostrado na anterior [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Criando um estilo para um controle  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornece a capacidade de especificar a aparência dos controles de atacado, em vez de definir propriedades em cada instância no aplicativo, criando um <xref:System.Windows.Style>. O exemplo a seguir cria um <xref:System.Windows.Style> que é aplicada a cada <xref:System.Windows.Controls.Button> no aplicativo. <xref:System.Windows.Style>definições geralmente são definidas em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] em uma <xref:System.Windows.ResourceDictionary>, como o <xref:System.Windows.FrameworkElement.Resources%2A> propriedade o <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece a capacidade de especificar a aparência dos controles de atacado, em vez de definir propriedades em cada instância no aplicativo, criando um <xref:System.Windows.Style>. O exemplo a seguir cria um <xref:System.Windows.Style> que é aplicada a cada <xref:System.Windows.Controls.Button> no aplicativo. <xref:System.Windows.Style> definições geralmente são definidas em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] em uma <xref:System.Windows.ResourceDictionary>, como o <xref:System.Windows.FrameworkElement.Resources%2A> propriedade o <xref:System.Windows.FrameworkElement>.  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   

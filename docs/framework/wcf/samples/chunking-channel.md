@@ -1,27 +1,15 @@
 ---
 title: Canal de agrupamento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d55b0085552f0baf826380340aaf9f1117ab3307
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
-Ao enviar mensagens grandes usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. É uma solução possível transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Mensagens confiáveis e segurança são dois exemplos como esse. Outra solução possível é dividir a mensagens grandes em mensagens menores chamado partes, enviar parte de um desses blocos em um momento e reconstituir a mensagem grande no lado de recepção. O próprio aplicativo poderia fazer esse agrupamento e eliminação de agrupamento ou use um canal personalizado para fazer isso. O exemplo de canal agrupamento mostra como um protocolo personalizado ou canal em camadas pode ser usado para fazer o agrupamento e a eliminação de agrupamento de mensagens arbitrariamente grandes.  
+Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. É uma solução possível transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Mensagens confiáveis e segurança são dois exemplos como esse. Outra solução possível é dividir a mensagens grandes em mensagens menores chamado partes, enviar parte de um desses blocos em um momento e reconstituir a mensagem grande no lado de recepção. O próprio aplicativo poderia fazer esse agrupamento e eliminação de agrupamento ou use um canal personalizado para fazer isso. O exemplo de canal agrupamento mostra como um protocolo personalizado ou canal em camadas pode ser usado para fazer o agrupamento e a eliminação de agrupamento de mensagens arbitrariamente grandes.  
   
  Agrupamento sempre deve ser empregado somente após a envio da mensagem inteira foi construída. Um canal de agrupamento deve sempre ser colocadas em camadas abaixo de um canal de segurança e um canal de sessão confiável.  
   
@@ -33,7 +21,7 @@ Ao enviar mensagens grandes usando [!INCLUDE[indigo1](../../../../includes/indig
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
@@ -212,11 +200,11 @@ as the ChunkingStart message.
 ## <a name="chunking-channel-architecture"></a>Arquitetura do canal de agrupamento  
  O canal de agrupamento é um `IDuplexSessionChannel` que, em um nível alto, segue a arquitetura típica do canal. Há um `ChunkingBindingElement` que pode criar um `ChunkingChannelFactory` e um `ChunkingChannelListener`. O `ChunkingChannelFactory` cria instâncias de `ChunkingChannel` quando ele é solicitado. O `ChunkingChannelListener` cria instâncias de `ChunkingChannel` quando um novo canal interno é aceito. O `ChunkingChannel` em si é responsável por enviar e receber mensagens.  
   
- No próximo nível inferior, `ChunkingChannel` depende de vários componentes para implementar o protocolo de agrupamento. No lado de envio, o canal usa um personalizado `XmlDictionaryWriter` chamado `ChunkingWriter` , que faz o agrupamento real. `ChunkingWriter`usa o canal interno diretamente para enviar partes. Usando um personalizado `XmlDictionaryWriter` permite enviar partes como corpo da mensagem original grande está sendo gravado. Isso significa que não armazenar em buffer toda a mensagem original.  
+ No próximo nível inferior, `ChunkingChannel` depende de vários componentes para implementar o protocolo de agrupamento. No lado de envio, o canal usa um personalizado `XmlDictionaryWriter` chamado `ChunkingWriter` , que faz o agrupamento real. `ChunkingWriter` usa o canal interno diretamente para enviar partes. Usando um personalizado `XmlDictionaryWriter` permite enviar partes como corpo da mensagem original grande está sendo gravado. Isso significa que não armazenar em buffer toda a mensagem original.  
   
  ![Canal de agrupamento](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- No lado de recebimento, `ChunkingChannel` recebe mensagens do canal interna e encaminha-os para um personalizado `XmlDictionaryReader` chamado `ChunkingReader`, que reconstitui a mensagem original de partes de entrada. `ChunkingChannel`encapsula isso `ChunkingReader` em um personalizado `Message` implementação chamado `ChunkingMessage` e retorna essa mensagem para a camada acima. Essa combinação de `ChunkingReader` e `ChunkingMessage` permite que a eliminação da parte do corpo da mensagem original que está sendo lido pela camada acima em vez de ter para armazenar em buffer o corpo da mensagem original inteiro. `ChunkingReader`tem uma fila onde ele armazena em buffer partes de entrada até um número configurável máximo das partes do buffer. Quando esse limite máximo for atingido, o leitor aguarda a ser descarregada da fila pela camada acima de mensagens (ou seja, apenas leitura do corpo da mensagem original) ou até que o máximo de receber o tempo limite for atingido.  
+ No lado de recebimento, `ChunkingChannel` recebe mensagens do canal interna e encaminha-os para um personalizado `XmlDictionaryReader` chamado `ChunkingReader`, que reconstitui a mensagem original de partes de entrada. `ChunkingChannel` encapsula isso `ChunkingReader` em um personalizado `Message` implementação chamado `ChunkingMessage` e retorna essa mensagem para a camada acima. Essa combinação de `ChunkingReader` e `ChunkingMessage` permite que a eliminação da parte do corpo da mensagem original que está sendo lido pela camada acima em vez de ter para armazenar em buffer o corpo da mensagem original inteiro. `ChunkingReader` tem uma fila onde ele armazena em buffer partes de entrada até um número configurável máximo das partes do buffer. Quando esse limite máximo for atingido, o leitor aguarda a ser descarregada da fila pela camada acima de mensagens (ou seja, apenas leitura do corpo da mensagem original) ou até que o máximo de receber o tempo limite for atingido.  
   
  ![Canal de agrupamento](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
@@ -279,13 +267,13 @@ interface ITestService
 ## <a name="communicationobject-overrides"></a>Substituições de CommunicationObject  
   
 ### <a name="onopen"></a>AoAbrir  
- `OnOpen`chamadas `innerChannel.Open` para abrir o canal interno.  
+ `OnOpen` chamadas `innerChannel.Open` para abrir o canal interno.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose`primeiro define `stopReceive` para `true` para sinalizar o pendente `ReceiveChunkLoop` para parar. Em seguida, aguarda o `receiveStopped``ManualResetEvent`, que é definido quando `ReceiveChunkLoop` para. Supondo que o `ReceiveChunkLoop` para de dentro do tempo limite especificado, `OnClose` chamadas `innerChannel.Close` com o tempo limite restante.  
+ `OnClose` primeiro define `stopReceive` para `true` para sinalizar o pendente `ReceiveChunkLoop` para parar. Em seguida, aguarda o `receiveStopped``ManualResetEvent`, que é definido quando `ReceiveChunkLoop` para. Supondo que o `ReceiveChunkLoop` para de dentro do tempo limite especificado, `OnClose` chamadas `innerChannel.Close` com o tempo limite restante.  
   
 ### <a name="onabort"></a>OnAbort  
- `OnAbort`chamadas `innerChannel.Abort` para anular o canal interno. Se houver um pendente `ReceiveChunkLoop` obtém uma exceção do pendente `innerChannel.Receive` chamar.  
+ `OnAbort` chamadas `innerChannel.Abort` para anular o canal interno. Se houver um pendente `ReceiveChunkLoop` obtém uma exceção do pendente `innerChannel.Receive` chamar.  
   
 ### <a name="onfaulted"></a>OnFaulted  
  O `ChunkingChannel` não exige um comportamento especial quando o canal está com defeito isso `OnFaulted` não será substituído.  
@@ -293,7 +281,7 @@ interface ITestService
 ## <a name="implementing-channel-factory"></a>Implementação de fábrica de canais  
  O `ChunkingChannelFactory` é responsável por criar instâncias de `ChunkingDuplexSessionChannel` e para as transições de estado em cascata para a fábrica interna de canais.  
   
- `OnCreateChannel`usa a fábrica interna de canais para criar um `IDuplexSessionChannel` interna de canais. Em seguida, cria um novo `ChunkingDuplexSessionChannel` passando esse canal interna junto com a lista de ações de mensagem a ser em partes e o número máximo de blocos para armazenar em buffer após o recebimento. A lista de ações de mensagem a ser em partes e o número máximo de blocos para armazenar em buffer são dois parâmetros passados para `ChunkingChannelFactory` em seu construtor. A seção sobre `ChunkingBindingElement` descreve de onde vêm esses valores.  
+ `OnCreateChannel` usa a fábrica interna de canais para criar um `IDuplexSessionChannel` interna de canais. Em seguida, cria um novo `ChunkingDuplexSessionChannel` passando esse canal interna junto com a lista de ações de mensagem a ser em partes e o número máximo de blocos para armazenar em buffer após o recebimento. A lista de ações de mensagem a ser em partes e o número máximo de blocos para armazenar em buffer são dois parâmetros passados para `ChunkingChannelFactory` em seu construtor. A seção sobre `ChunkingBindingElement` descreve de onde vêm esses valores.  
   
  O `OnOpen`, `OnClose`, `OnAbort` e seus equivalentes assíncronas chamar o método de transição de estado correspondente na fábrica de canais interna.  
   
@@ -301,15 +289,15 @@ interface ITestService
  O `ChunkingChannelListener` é um wrapper em torno de um ouvinte de canal interna. Sua função, além de chamadas de delegado para esse ouvinte de canal interna, é usada incluir novos `ChunkingDuplexSessionChannels` em torno de canais aceitos do ouvinte de canal interna. Isso é feito no `OnAcceptChannel` e `OnEndAcceptChannel`. Recém-criado `ChunkingDuplexSessionChannel` é passado interna de canais junto com os outros parâmetros descrito anteriormente.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Elemento de associação de implementação e associação  
- `ChunkingBindingElement`é responsável pela criação de `ChunkingChannelFactory` e `ChunkingChannelListener`. O `ChunkingBindingElement` verifica se T no `CanBuildChannelFactory` \<T > e `CanBuildChannelListener` \<T > é do tipo `IDuplexSessionChannel` (o canal somente tem suportado pelo canal de agrupamento) e que os outros elementos de associação na associação oferece suporte a isso tipo de canal.  
+ `ChunkingBindingElement` é responsável pela criação de `ChunkingChannelFactory` e `ChunkingChannelListener`. O `ChunkingBindingElement` verifica se T no `CanBuildChannelFactory` \<T > e `CanBuildChannelListener` \<T > é do tipo `IDuplexSessionChannel` (o canal somente tem suportado pelo canal de agrupamento) e que os outros elementos de associação na associação oferece suporte a isso tipo de canal.  
   
  `BuildChannelFactory`\<T > primeiro verifica se o tipo de canal solicitado pode ser criado e, em seguida, obtém uma lista de ações de mensagem a ser em partes. Para obter mais informações, consulte a seção a seguir. Em seguida, cria um novo `ChunkingChannelFactory` passando a fábrica de canais interna (como retornado pelo `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), a lista de ações de mensagem e o número máximo de blocos para armazenar em buffer. O número máximo de partes vem de uma propriedade chamada `MaxBufferedChunks` exposto pelo `ChunkingBindingElement`.  
   
- `BuildChannelListener<T>`tem uma implementação semelhante para a criação de `ChunkingChannelListener` e passá-lo a escuta de canal interna.  
+ `BuildChannelListener<T>` tem uma implementação semelhante para a criação de `ChunkingChannelListener` e passá-lo a escuta de canal interna.  
   
  Há uma associação de exemplo incluída neste exemplo denominada `TcpChunkingBinding`. Essa associação consiste em dois elementos de associação: `TcpTransportBindingElement` e `ChunkingBindingElement`. Além de expor o `MaxBufferedChunks` propriedade, a associação também define alguns do `TcpTransportBindingElement` propriedades como `MaxReceivedMessageSize` (define como `ChunkingUtils.ChunkSize` + 100 KB bytes para cabeçalhos).  
   
- `TcpChunkingBinding`também implementa `IBindingRuntimePreferences` e retorna true do `ReceiveSynchronously` método que indica que apenas as receber chamadas síncronas são implementadas.  
+ `TcpChunkingBinding` também implementa `IBindingRuntimePreferences` e retorna true do `ReceiveSynchronously` método que indica que apenas as receber chamadas síncronas são implementadas.  
   
 ### <a name="determining-which-messages-to-chunk"></a>Determinando quais mensagens serão parte  
  O canal de agrupamento blocos somente as mensagens identificadas por meio de `ChunkingBehavior` atributo. O `ChunkingBehavior` classe implementa `IOperationBehavior` e é implementado por chamar o `AddBindingParameter` método. Nesse método, o `ChunkingBehavior` examina o valor de seu `AppliesTo` propriedade (`InMessage`, `OutMessage` ou ambos) para determinar quais mensagens devem ser em partes. Em seguida, obtém a ação de cada uma dessas mensagens (da coleção de mensagens em `OperationDescription`) e adiciona-o a uma coleção de cadeias de caracteres dentro de uma instância do `ChunkingBindingParameter`. Em seguida, adiciona esses `ChunkingBindingParameter` nas `BindingParameterCollection`.  

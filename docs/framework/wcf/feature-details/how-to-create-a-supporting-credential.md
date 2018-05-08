@@ -1,29 +1,15 @@
 ---
 title: Como criar uma credencial de suporte
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Como criar uma credencial de suporte
-É possível ter um esquema de segurança personalizado que requer mais de uma credencial. Por exemplo, um serviço pode demandar do cliente não apenas um nome de usuário e senha, mas também uma credencial que comprove o cliente é com mais de 18. A credencial de segundo é um *suporte credencial*. Este tópico explica como implementar essas credenciais em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente.  
+É possível ter um esquema de segurança personalizado que requer mais de uma credencial. Por exemplo, um serviço pode demandar do cliente não apenas um nome de usuário e senha, mas também uma credencial que comprove o cliente é com mais de 18. A credencial de segundo é um *suporte credencial*. Este tópico explica como implementar essas credenciais em um cliente Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 >  A especificação para dar suporte a credenciais faz parte da especificação WS-SecurityPolicy. Para obter mais informações, consulte [especificações de segurança de serviços Web](http://go.microsoft.com/fwlink/?LinkId=88537).  

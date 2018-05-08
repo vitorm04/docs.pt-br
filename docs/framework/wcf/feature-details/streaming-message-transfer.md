@@ -1,29 +1,15 @@
 ---
 title: Transmissão de transferência de mensagem
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>Transmissão de transferência de mensagem
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportes oferecem suporte a dois modos de transferência de mensagens:  
+Transportes do Windows Communication Foundation (WCF) oferecem suporte a dois modos de transferência de mensagens:  
   
 -   Transferências em buffer armazenar a mensagem inteira em um buffer de memória até que a transferência for concluída. Uma mensagem em buffer deve ser entregue completamente antes de um destinatário possa lê-lo.  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  As operações que ocorrem em um transporte em fluxo podem ter um contrato com no máximo uma entrada ou saído parâmetro. Esse parâmetro corresponde a todo o corpo da mensagem e deve ser um <xref:System.ServiceModel.Channels.Message>, um derivado do tipo de <xref:System.IO.Stream>, ou um <xref:System.Xml.Serialization.IXmlSerializable> implementação. Ter um valor de retorno para uma operação é equivalente a ter um parâmetro de saída.  
   
- Alguns [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recursos, como mensagens confiáveis, transações e segurança em nível de mensagem SOAP, dependem de mensagens para as transmissões de buffer. Usando esses recursos pode reduzir ou eliminar os benefícios de desempenho obtidos usando streaming. Para proteger um transporte em fluxo, use apenas a segurança de nível de transporte ou usar segurança em nível de transporte e segurança de mensagem somente autenticação.  
+ Alguns recursos do WCF, como mensagens confiáveis, transações e segurança em nível de mensagem SOAP, dependem de mensagens para as transmissões de buffer. Usando esses recursos pode reduzir ou eliminar os benefícios de desempenho obtidos usando streaming. Para proteger um transporte em fluxo, use apenas a segurança de nível de transporte ou usar segurança em nível de transporte e segurança de mensagem somente autenticação.  
   
  Cabeçalhos SOAP são sempre armazenados em buffer, mesmo quando o modo de transferência é definido como em fluxo. Os cabeçalhos para uma mensagem não devem exceder o tamanho do `MaxBufferSize` cota de transporte. Para obter mais informações sobre essa configuração, consulte [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

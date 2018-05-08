@@ -1,30 +1,18 @@
 ---
-title: "Lidando com exceções e falhas"
-ms.custom: 
+title: Lidando com exceções e falhas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>Lidando com exceções e falhas
 Exceções são usadas para comunicar erros localmente dentro do serviço ou a implementação de cliente. Falhas, por outro lado, são usadas para comunicar erros em limites de serviços, como do servidor para o cliente ou vice-versa. Além de falhas, canais de transporte geralmente usam mecanismos de transporte específicos para comunicar erros de nível de transporte. Por exemplo, o transporte HTTP usa códigos de status como 404 para comunicar uma URL de ponto de extremidade não existente (não há nenhum ponto de extremidade para enviar de volta uma falha). Este documento consiste em três seções que fornecem orientação para os autores de canal personalizado. A primeira seção fornece orientações sobre quando e como definir e gerar exceções. A segunda seção fornece orientações sobre como gerar e consumir falhas. A terceira seção explica como fornecer informações de rastreamento para ajudar o usuário do seu canal personalizado na solução de aplicativos em execução.  
   
 ## <a name="exceptions"></a>Exceções  
- Há duas coisas que ter em mente ao lançar uma exceção: primeiro deve ser de um tipo que permite aos usuários escrever código correto que possa reagir corretamente a exceção. Em segundo lugar, ele deve fornecer informações suficientes para o usuário para entender o que deu errado, o impacto da falha e como corrigi-lo. As seções a seguir fornecem orientações sobre tipos de exceção e mensagens para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] canais. Também há orientação geral sobre exceções no .NET nas diretrizes de Design para o documento de exceções.  
+ Há duas coisas que ter em mente ao lançar uma exceção: primeiro deve ser de um tipo que permite aos usuários escrever código correto que possa reagir corretamente a exceção. Em segundo lugar, ele deve fornecer informações suficientes para o usuário para entender o que deu errado, o impacto da falha e como corrigi-lo. As seções a seguir fornecem orientações sobre tipos de exceção e mensagens de canais do Windows Communication Foundation (WCF). Também há orientação geral sobre exceções no .NET nas diretrizes de Design para o documento de exceções.  
   
 ### <a name="exception-types"></a>Tipos de exceção  
  Todas as exceções lançadas pelos canais devem ser um <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, ou um tipo derivado de <xref:System.ServiceModel.CommunicationException>. (Exceções como <xref:System.ObjectDisposedException> também pode ser acionada, mas apenas para indicar que o código de chamada foi usado incorretamente o canal. Se um canal está sendo usado corretamente, ela deve apenas lançar exceções determinadas.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece sete tipos de exceções que derivam de <xref:System.ServiceModel.CommunicationException> e são projetados para ser usados pelos canais. Há outros <xref:System.ServiceModel.CommunicationException>-derivado exceções que são projetadas para ser usado por outras partes do sistema. Esses tipos de exceção são:  
@@ -127,7 +115,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>Gerar falhas  
  Esta seção explica o processo de geração de uma falha em resposta a uma condição de erro detectada em um canal ou em uma propriedade de mensagem criada pelo canal. Um exemplo típico está retornando uma falha em resposta a uma mensagem de solicitação que contém dados inválidos.  
   
- Ao gerar uma falha, o canal personalizado não deve enviar a falha diretamente, em vez disso, ele deve lançar uma exceção e permitir que a camada acima decidir se deve converter essa exceção em uma falha e como enviá-lo. Para ajudar nessa conversão, o canal deve fornecer um `FaultConverter` implementação que pode converter a exceção lançada pelo canal personalizado para a falha apropriada. `FaultConverter`é definido como:  
+ Ao gerar uma falha, o canal personalizado não deve enviar a falha diretamente, em vez disso, ele deve lançar uma exceção e permitir que a camada acima decidir se deve converter essa exceção em uma falha e como enviá-lo. Para ajudar nessa conversão, o canal deve fornecer um `FaultConverter` implementação que pode converter a exceção lançada pelo canal personalizado para a falha apropriada. `FaultConverter` é definido como:  
   
 ```  
 public class FaultConverter  
@@ -313,7 +301,7 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault`Retorna `true` se a falha é um `mustUnderstand` falha. `WasHeaderNotUnderstood`Retorna `true` se o cabeçalho com o nome especificado e o namespace está incluído na falha como um cabeçalho de NotUnderstood.  Caso contrário, retornará `false`.  
+ `IsMustUnderstandFault` Retorna `true` se a falha é um `mustUnderstand` falha. `WasHeaderNotUnderstood` Retorna `true` se o cabeçalho com o nome especificado e o namespace está incluído na falha como um cabeçalho de NotUnderstood.  Caso contrário, retornará `false`.  
   
  Se um canal emite um cabeçalho que está marcado como MustUnderstand = true, essa camada também deve implementar o padrão de API de geração de exceção e deve converter `mustUnderstand` falhas causadas por esse cabeçalho para uma exceção mais úteis, como descrito anteriormente.  
   
@@ -379,7 +367,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Rastreamento de dados estruturados  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>tem um <xref:System.Diagnostics.TraceSource.TraceData%2A> método que usa um ou mais objetos que devem ser incluídas na entrada de rastreamento. Em geral, o <xref:System.Object.ToString%2A?displayProperty=nameWithType> método é chamado em cada objeto e a cadeia de caracteres resultante é gravada como parte da entrada de rastreamento. Ao usar <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> para rastreamentos de saída, você pode passar um <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> como o objeto de dados <xref:System.Diagnostics.TraceSource.TraceData%2A>. A entrada de rastreamento resultante inclui o XML fornecido pelo <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Aqui está um exemplo de entrada com os dados de aplicativo XML:  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> tem um <xref:System.Diagnostics.TraceSource.TraceData%2A> método que usa um ou mais objetos que devem ser incluídas na entrada de rastreamento. Em geral, o <xref:System.Object.ToString%2A?displayProperty=nameWithType> método é chamado em cada objeto e a cadeia de caracteres resultante é gravada como parte da entrada de rastreamento. Ao usar <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> para rastreamentos de saída, você pode passar um <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> como o objeto de dados <xref:System.Diagnostics.TraceSource.TraceData%2A>. A entrada de rastreamento resultante inclui o XML fornecido pelo <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Aqui está um exemplo de entrada com os dados de aplicativo XML:  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

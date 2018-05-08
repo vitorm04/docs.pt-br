@@ -1,11 +1,6 @@
 ---
-title: "Instrução Structure"
+title: Instrução Structure
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Instrução Structure
 Declara o nome de uma estrutura e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a estrutura.  
@@ -74,7 +66,7 @@ End Structure
   
      Você pode declarar zero ou mais variáveis não compartilhadas ou eventos não personalizados não compartilhados em uma estrutura. Você não pode ter apenas constantes, propriedades e procedimentos, mesmo se alguns deles não forem compartilhados.  
   
--   **Inicialização.** Não é possível inicializar o valor de qualquer membro de dados não compartilhado de uma estrutura como parte de sua declaração. Você deve inicializar este membro de dados por meio de um construtor parametrizado na estrutura, ou atribuir um valor para o membro depois de ter criado uma instância da estrutura.  
+-   **inicialização.** Não é possível inicializar o valor de qualquer membro de dados não compartilhado de uma estrutura como parte de sua declaração. Você deve inicializar este membro de dados por meio de um construtor parametrizado na estrutura, ou atribuir um valor para o membro depois de ter criado uma instância da estrutura.  
   
 -   **Herança.** Uma estrutura não pode herdar de qualquer tipo diferente de <xref:System.ValueType>, da qual todas as estruturas herdam. Em particular, uma estrutura não pode herdar de outra.  
   

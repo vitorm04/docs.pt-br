@@ -1,30 +1,18 @@
 ---
-title: "Como criar um serviço Web HTTP WCF básico"
-ms.custom: 
+title: Como criar um serviço Web HTTP WCF básico
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Como criar um serviço Web HTTP WCF básico
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite criar um serviço que expõe um ponto de extremidade Web. Os pontos de extremidade Web enviam dados por XML ou JSON; não há envelope SOAP. Este tópico demonstra como expor um ponto de extremidade desse tipo.  
+Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade da Web. Os pontos de extremidade Web enviam dados por XML ou JSON; não há envelope SOAP. Este tópico demonstra como expor um ponto de extremidade desse tipo.  
   
 > [!NOTE]
 >  A única maneira de proteger um ponto de extremidade Web é exibi-lo via HTTPS, usando segurança de transporte. Quando a segurança baseada em mensagem é usada, as informações de segurança são geralmente colocadas em cabeçalhos SOAP e, como as mensagens enviadas a pontos de extremidade não SOAP não contêm envelopes SOAP, não há lugar para colocar informações de segurança. Assim, é necessário confiar na segurança de transporte.  
@@ -59,7 +47,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite criar um servi
     > [!NOTE]
     >  Se você não adicionar um ponto de extremidade, <xref:System.ServiceModel.Web.WebServiceHost> criará automaticamente um ponto de extremidade padrão. <xref:System.ServiceModel.Web.WebServiceHost> também adiciona <xref:System.ServiceModel.Description.WebHttpBehavior> e desabilita a página da ajuda HTTP e a funcionalidade GET da linguagem WSDL para que o ponto de extremidade de metadados não interfira no ponto de extremidade HTTP padrão.  
     >   
-    >  A adição de um ponto de extremidade não SOAP com uma URL de "" gera um comportamento inesperado quando há uma tentativa de chamar uma operação no ponto de extremidade. Isso decorre porque o URI de escuta do ponto de extremidade é igual ao URI da página de ajuda (a página que é exibida quando você navega até o endereço básico de um serviço [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]).  
+    >  A adição de um ponto de extremidade não SOAP com uma URL de "" gera um comportamento inesperado quando há uma tentativa de chamar uma operação no ponto de extremidade. A razão para isso é a escutar que o URI do ponto de extremidade é o mesmo que o URI para a página de Ajuda (a página é exibida quando você navega para o endereço de base de um serviço WCF).  
   
      Você pode executar uma das seguintes ações para evitar que isso ocorra:  
   
@@ -87,7 +75,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite criar um servi
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para chamar operações de serviço mapeadas para GET no Internet Explorer  
   
-1.  Abra o Internet Explorer e digite "`http://localhost:8000/EchoWithGet?s=Hello, world!`" e pressione ENTER. A URL contém o endereço básico do serviço ("http://localhost:8000/"), o endereço relativo do ponto de extremidade (""), a operação de serviço a ser chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados separados por um E comercial (&).  
+1.  Abra o Internet Explorer e digite "`http://localhost:8000/EchoWithGet?s=Hello, world!`" e pressione ENTER. A URL contém o endereço base do serviço ("http://localhost:8000/"), o endereço relativo do ponto de extremidade (""), a operação de serviço de chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados, separados por um e comercial (&).  
   
 ### <a name="to-call-service-operations-in-code"></a>Para chamar operações de serviço no código  
   
