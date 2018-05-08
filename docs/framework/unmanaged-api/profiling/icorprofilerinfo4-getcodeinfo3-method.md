@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo4::GetCodeInfo3"
-ms.custom: 
+title: Método ICorProfilerInfo4::GetCodeInfo3
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.GetCodeInfo3
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bb8c105e-4d9a-4684-8c05-ed6909cc1b8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b669714774ecfccad436f064350569d27ef13883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cebf5f1101abed29bc325cec2390b4fd13056e4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>Método ICorProfilerInfo4::GetCodeInfo3
 Obtém as extensões de código nativo associado com a versão recompilada JIT da função especificada.  
@@ -70,7 +58,7 @@ HRESULT GetCodeInfo3(
  O `GetCodeInfo3` método é semelhante ao [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md), exceto que ele receberá o ID recompilado JIT da função que contém o endereço IP especificado.  
   
 > [!NOTE]
->  `GetCodeInfo3`pode disparar uma coleta de lixo, enquanto [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) não. Para obter mais informações, consulte o [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
+>  `GetCodeInfo3` pode disparar uma coleta de lixo, enquanto [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) não. Para obter mais informações, consulte o [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
   
  As extensões são classificadas em ordem crescente de deslocamento comuns CIL (Intermediate Language).  
   
@@ -85,7 +73,7 @@ HRESULT GetCodeInfo3(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  

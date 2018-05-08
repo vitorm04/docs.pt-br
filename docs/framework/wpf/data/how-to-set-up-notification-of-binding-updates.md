@@ -1,28 +1,16 @@
 ---
-title: "Como configurar notificação das atualizações de associação"
-ms.custom: 
+title: Como configurar notificação das atualizações de associação
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a07337e99e985bfbc0a5dbc5f2d231ee36cf1422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 896ce103361590dceecccf8534fd330aabe18086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Como configurar notificação das atualizações de associação
 Este exemplo mostra como configurar para ser notificado quando o destino de associação (destino) ou a origem da associação (origem) de uma associação foi atualizada.  

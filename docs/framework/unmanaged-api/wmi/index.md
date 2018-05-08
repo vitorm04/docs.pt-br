@@ -3,18 +3,12 @@ title: WMI e contadores de desempenho (referência de API não gerenciada)
 description: Resume o Framework .NET API não gerenciada para informações do contador de desempenho e de WMI.
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
 ms.date: 11/06/2017
-ms.topic: reference
-ms.prod: .net-framework
-ms.devlang: cpp
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 2007c8aa74e1ccf3c4753343ac633b67a36daeb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) e contadores de desempenho (referência de API não gerenciada)
 

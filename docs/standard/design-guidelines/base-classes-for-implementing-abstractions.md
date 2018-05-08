@@ -1,29 +1,18 @@
 ---
 title: Classes base para implementar abstrações
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70d107d96576b8cafe9e76135c00bd2c635f2d7e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 8c247ed7273687dbd61a6f19923b71e07e9ed960
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classes base para implementar abstrações
 Estritamente falando, uma classe torna-se uma classe base quando outra classe é derivada. Para fins desta seção, no entanto, uma classe base é uma classe projetada principalmente para fornecer uma abstração comum ou para outras classes de reutilizar alguns implementação padrão embora herança. Classes base geralmente ficam no meio de hierarquias de herança entre uma abstração na raiz de uma hierarquia e várias implementações personalizadas na parte inferior.  

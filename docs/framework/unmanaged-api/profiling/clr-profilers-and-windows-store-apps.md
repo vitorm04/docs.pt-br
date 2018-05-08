@@ -1,14 +1,6 @@
 ---
 title: Criadores de perfil CLR e aplicativos da Windows Store
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 Este tópico discute o que você precisa pensar sobre quando gravar ferramentas de diagnóstico que analisam gerenciado código em execução dentro de um aplicativo da Windows Store.  Ele também fornece diretrizes para modificar suas ferramentas de desenvolvimento para que eles continuem a funcionar quando você executá-los nos aplicativos da Windows Store.  Para entender essas informações, é melhor que se você estiver familiarizado com o idioma em tempo de execução de criação de perfil API comum, você já tiver usado essa API em uma ferramenta de diagnóstica que é executado corretamente em relação a aplicativos de área de trabalho do Windows e você agora está interessado em modificando a ferramenta para executar corretamente em aplicativos da Windows Store.  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Escolher um aplicativo da Windows Store ao perfil**  
  Primeiro, você desejará peça ao seu usuário profiler qual aplicativo da Windows Store para iniciar.  Para aplicativos de área de trabalho, talvez você mostra uma caixa de diálogo de procura de arquivo e o usuário deve localizar e selecionar um arquivo .exe.  Mas os aplicativos da Windows Store são diferentes e usar uma caixa de diálogo de procura não faz sentido.  Em vez disso, é melhor Mostrar ao usuário uma lista de aplicativos da Windows Store instalado para que o usuário selecione.  
   
- Você pode usar o [PackageManager classe](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) para gerar essa lista.  `PackageManager`é uma classe de tempo de execução do Windows que está disponível para aplicativos de desktop e, na verdade é *somente* disponível para aplicativos de desktop.  
+ Você pode usar o [PackageManager classe](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) para gerar essa lista.  `PackageManager` é uma classe de tempo de execução do Windows que está disponível para aplicativos de desktop e, na verdade é *somente* disponível para aplicativos de desktop.  
   
  O exemplo a seguir ode de uma interface de usuário de criador de perfil hipotético gravado como um aplicativo de área de trabalho no c# yses a `PackageManager` para gerar uma lista de aplicativos do Windows:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Há dois itens que você precisará obter direita:  
   
--   `packageFullName`pode ser determinado durante a iteração sobre os pacotes e captura `package.Id.FullName`.  
+-   `packageFullName` pode ser determinado durante a iteração sobre os pacotes e captura `package.Id.FullName`.  
   
--   `debuggerCommandLine`é um pouco mais interessante.  Para transmitir o bloco de ambiente personalizado para o aplicativo da Windows Store, você precisa gravar seu próprio simplista depurador fictício.  Cria o Windows, o aplicativo da Windows Store suspenso e, em seguida, anexa o depurador iniciando o depurador com uma linha de comando, como neste exemplo:  
+-   `debuggerCommandLine` é um pouco mais interessante.  Para transmitir o bloco de ambiente personalizado para o aplicativo da Windows Store, você precisa gravar seu próprio simplista depurador fictício.  Cria o Windows, o aplicativo da Windows Store suspenso e, em seguida, anexa o depurador iniciando o depurador com uma linha de comando, como neste exemplo:  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`é o SID do AppContainer do aplicativo da Windows Store.  Uma seção anterior deste tópico mostrou como iterar sobre os pacotes instalados para o usuário atual.  Esse código de exemplo, você pode obter a packageId.  E o packageId, você pode obter o `<acSid>` com o código semelhante ao seguinte:  
+ `<acSid>` é o SID do AppContainer do aplicativo da Windows Store.  Uma seção anterior deste tópico mostrou como iterar sobre os pacotes instalados para o usuário atual.  Esse código de exemplo, você pode obter a packageId.  E o packageId, você pode obter o `<acSid>` com o código semelhante ao seguinte:  
   
 ```csharp  
 IntPtr acPSID;  

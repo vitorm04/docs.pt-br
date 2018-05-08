@@ -1,24 +1,12 @@
 ---
 title: Participantes de rastreamento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0d67924061b5d87bdb2e3229d9bf956501036c30
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 34f807cd8c6c227e5e60b40d1ecc01ef693f31f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-participants"></a>Participantes de rastreamento
 Os participantes de rastreamento são os pontos de extensibilidade que permitem que um desenvolvedor de fluxo de trabalho acessar objetos de <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e processe os. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclui um participante padrão de rastreamento que grava registros de rastreamento como eventos de Rastreamento de Eventos para Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.  

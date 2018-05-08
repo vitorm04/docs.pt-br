@@ -1,14 +1,6 @@
 ---
 title: Como manipular bandas no controle DataGridView dos Windows Forms
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d9fda5e267aae5179c1bd119841ea0e5f7e0d1d0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cf06e213a014a91c9738123f9d799be1669620d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Como manipular bandas no controle DataGridView dos Windows Forms
 O exemplo de código a seguir mostra várias maneiras de manipular <xref:System.Windows.Forms.DataGridView> linhas e colunas, usando as propriedades do <xref:System.Windows.Forms.DataGridViewBand> classe da qual o <xref:System.Windows.Forms.DataGridViewRow> e <xref:System.Windows.Forms.DataGridViewColumn> derivam de classes.  

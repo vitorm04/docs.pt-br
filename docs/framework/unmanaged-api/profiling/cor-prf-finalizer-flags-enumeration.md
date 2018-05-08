@@ -1,14 +1,6 @@
 ---
-title: "Enumeração COR_PRF_FINALIZER_FLAGS"
-ms.custom: 
+title: Enumeração COR_PRF_FINALIZER_FLAGS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_FINALIZER_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae0941e962b2fc1b08f0defb692038bd5fcf885a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9292e7c5908b2e4fd7e2c0ae9412375249f2fdfc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprffinalizerflags-enumeration"></a>Enumeração COR_PRF_FINALIZER_FLAGS
 Descreve o finalizador de um objeto.  
@@ -61,7 +49,7 @@ typedef enum {
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

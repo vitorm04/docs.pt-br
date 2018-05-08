@@ -1,29 +1,15 @@
 ---
 title: 'Compilando os exemplos do Windows Communication Foundation '
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
-O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
+Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
   
 > [!NOTE]
 >  Antes de criar ou executar qualquer uma da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplos, verifique se você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -52,7 +38,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
  Scripts e arquivos de lote de Setup.exe e Cleanup.exe devem ser executados em um prompt de comando do Visual Studio. Vários conjunto de backup e limpar arquivos executam tarefas que exigem privilégios administrativos e devem ser iniciadas com privilégios de administrador.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Informações de segurança importantes sobre pontos de extremidade de metadados  
- Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importa ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade são potencialmente disponíveis para consumidores não autenticados anônimos e deve ter cuidado antes de implantar esses pontos de extremidade para garantir que publicamente destinatária metadados do serviço são apropriado. Para obter mais informações sobre como publicar metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte o [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteção de um ponto de extremidade de metadados.  
+ Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para serviços do Windows Communication Foundation (WCF) desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importa ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade são potencialmente disponíveis para consumidores não autenticados anônimos e deve ter cuidado antes de implantar esses pontos de extremidade para garantir que publicamente destinatária metadados do serviço são apropriado. Para obter mais informações sobre como publicar metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte o [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteção de um ponto de extremidade de metadados.  
   
 ## <a name="exception-handling"></a>Tratamento de Exceção  
  Em termos gerais esses exemplos não incluem o tratamento de exceções para manter o foco no assunto do exemplo de código. Para obter mais informações sobre o tratamento de exceções, consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo.  

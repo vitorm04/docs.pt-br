@@ -1,32 +1,18 @@
 ---
 title: Como publicar metadados utilizando código para um serviço
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bef5421d377bcae6e8c56b0117ebbe22a861de86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Como publicar metadados utilizando código para um serviço
-Este é um dos dois tópicos que abordam os metadados de publicação para um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço. Há duas maneiras de especificar como um serviço deve publicar metadados, usando um arquivo de configuração e código. Este tópico mostra como publicar metadados utilizando um código para um serviço.  
+Isso é um dos dois tópicos que abordam os metadados de publicação para um serviço do Windows Communication Foundation (WCF). Há duas maneiras de especificar como um serviço deve publicar metadados, usando um arquivo de configuração e código. Este tópico mostra como publicar metadados utilizando um código para um serviço.  
   
 > [!CAUTION]
 >  Este tópico mostra como publicar metadados de maneira insegura. Qualquer cliente pode recuperar os metadados do serviço. Se você precisar de seu serviço para publicar metadados de uma maneira segura. consulte [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
@@ -94,7 +80,7 @@ Este é um dos dois tópicos que abordam os metadados de publicação para um [!
 11. Use o Internet Explorer para navegar até o endereço base do serviço (http://localhost:8001/MetadataSample neste exemplo) e verifique se a publicação de metadados está ligada. Você deve ver uma página da Web exibida dizendo "Serviço simples" na parte superior e imediatamente abaixo "Você criou um serviço." Se não, uma mensagem na parte superior da página resultante é exibida: "a publicação de metadados para este serviço está atualmente desabilitada."  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra a implementação de um basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que publica os metadados para o serviço no código.  
+ O exemplo de código a seguir mostra a implementação de um serviço WCF básico que publica os metadados para o serviço no código.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  

@@ -1,31 +1,17 @@
 ---
-title: "Instruções passo a passo: criando conteúdo Direct3D9 para hospedar no WPF"
-ms.custom: 
+title: 'Instruções passo a passo: criando conteúdo Direct3D9 para hospedar no WPF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f279fb1749be9953e6d09d4b1bd4dd8578d42615
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Instruções passo a passo: criando conteúdo Direct3D9 para hospedar no WPF
 Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado para hospedagem em um aplicativo do Windows Presentation Foundation (WPF). Para obter mais informações sobre hospedagem de conteúdo Direct3D9 em aplicativos WPF, consulte [Interoperação Direct3D9 e WPF](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  

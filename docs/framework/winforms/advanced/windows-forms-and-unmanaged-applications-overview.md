@@ -1,13 +1,6 @@
 ---
-title: "Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados"
-ms.custom: 
+title: Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [Windows Forms]
 - Windows Forms, unmanaged
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ad64588727584a9b3de0a95e9bad252a3fb0581
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1f7cfa17ce763ff84eeb052a4ea1a3a900970782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  

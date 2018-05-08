@@ -1,24 +1,12 @@
 ---
 title: Atraso absoluto
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="absolute-delay"></a>Atraso absoluto
 O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> especificado usando temporizadores duráveis em um aplicativo de fluxo de trabalho. Isso é diferente de usar a atividade interno de <xref:System.Activities.Statements.Delay> porque isso permitirá que você atrasar apenas para <xref:System.TimeSpan> determinado (ou o número de minutos/segundos).  
@@ -78,6 +66,6 @@ O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> es
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

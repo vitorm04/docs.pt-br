@@ -1,13 +1,6 @@
 ---
-title: "Visão geral da vinculação de dados"
-ms.custom: 
+title: Visão geral da vinculação de dados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>Visão geral da vinculação de dados
 A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>tais como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> tem uma funcionalidade interna para permitir a estilização flexível de um único item de dados ou coleções de itens de dados. É possível gerar exibições com classificação, filtragem e agrupamento dos dados.  
@@ -94,11 +82,11 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  ![Fluxo de dados de vinculação de dados](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>associação faz com que as alterações da propriedade de origem para atualizar automaticamente a propriedade de destino, mas as alterações para a propriedade de destino não são propagadas de volta para a propriedade de origem. Esse tipo de associação será apropriado se o controle associado for somente leitura de forma implícita. Por exemplo, você pode associar a uma origem como uma cotação da bolsa ou talvez a propriedade de destino não tenha nenhuma interface de controle disponível para fazer alterações, como uma cor da tela de fundo associada a dados de uma tabela. Se não houver necessidade de monitorar as alterações da propriedade de destino, o uso do modo de associação <xref:System.Windows.Data.BindingMode.OneWay> evitará a sobrecarga do modo de associação <xref:System.Windows.Data.BindingMode.TwoWay>.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> associação faz com que as alterações da propriedade de origem para atualizar automaticamente a propriedade de destino, mas as alterações para a propriedade de destino não são propagadas de volta para a propriedade de origem. Esse tipo de associação será apropriado se o controle associado for somente leitura de forma implícita. Por exemplo, você pode associar a uma origem como uma cotação da bolsa ou talvez a propriedade de destino não tenha nenhuma interface de controle disponível para fazer alterações, como uma cor da tela de fundo associada a dados de uma tabela. Se não houver necessidade de monitorar as alterações da propriedade de destino, o uso do modo de associação <xref:System.Windows.Data.BindingMode.OneWay> evitará a sobrecarga do modo de associação <xref:System.Windows.Data.BindingMode.TwoWay>.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>associação faz com que as alterações para a propriedade de origem ou a propriedade de destino para atualizar automaticamente o outro. Esse tipo de associação é apropriado para formulários editáveis ou outros cenários [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] totalmente interativos. A maioria das propriedades padrão para <xref:System.Windows.Data.BindingMode.OneWay> associação, mas algumas propriedades de dependência (normalmente as propriedades de controles editáveis pelo usuário, como o <xref:System.Windows.Controls.TextBox.Text%2A> propriedade de <xref:System.Windows.Controls.TextBox> e o <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade <xref:System.Windows.Controls.CheckBox>) padrão para <xref:System.Windows.Data.BindingMode.TwoWay> associação. Uma maneira programática de determinar se uma propriedade de dependência é associada de forma unidirecional ou bidirecional por padrão é obter os metadados de propriedade da propriedade usando <xref:System.Windows.DependencyProperty.GetMetadata%2A> e verificar o valor booliano da propriedade <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> associação faz com que as alterações para a propriedade de origem ou a propriedade de destino para atualizar automaticamente o outro. Esse tipo de associação é apropriado para formulários editáveis ou outros cenários [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] totalmente interativos. A maioria das propriedades padrão para <xref:System.Windows.Data.BindingMode.OneWay> associação, mas algumas propriedades de dependência (normalmente as propriedades de controles editáveis pelo usuário, como o <xref:System.Windows.Controls.TextBox.Text%2A> propriedade de <xref:System.Windows.Controls.TextBox> e o <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade <xref:System.Windows.Controls.CheckBox>) padrão para <xref:System.Windows.Data.BindingMode.TwoWay> associação. Uma maneira programática de determinar se uma propriedade de dependência é associada de forma unidirecional ou bidirecional por padrão é obter os metadados de propriedade da propriedade usando <xref:System.Windows.DependencyProperty.GetMetadata%2A> e verificar o valor booliano da propriedade <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>é o inverso da <xref:System.Windows.Data.BindingMode.OneWay> associação; atualiza a propriedade de origem quando a propriedade de destino é alterado. Um cenário exemplo é se você só precisa reavaliar o valor da origem da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> é o inverso da <xref:System.Windows.Data.BindingMode.OneWay> associação; atualiza a propriedade de origem quando a propriedade de destino é alterado. Um cenário exemplo é se você só precisa reavaliar o valor da origem da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
 -   Não é ilustrado na figura é <xref:System.Windows.Data.BindingMode.OneTime> associação, que faz com que a propriedade de origem para inicializar a propriedade de destino, mas não se propagam as alterações subsequentes. Isso significa que se o contexto de dados sofrer uma mudança ou o objeto no contexto de dados for alterado, a alteração não será refletida na propriedade de destino. Esse tipo de associação será apropriado se você estiver usando dados em que um instantâneo do estado atual é apropriado para uso ou os dados forem realmente estáticos. Esse tipo de associação também é útil se você deseja inicializar a propriedade de destino com um valor de uma propriedade de origem e o contexto de dados não é conhecido com antecedência. Este é basicamente uma forma mais simples de associação do <xref:System.Windows.Data.BindingMode.OneWay>, que fornece um melhor desempenho em casos em que o valor de origem não é alterado.  
   
@@ -125,8 +113,8 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 |Valor de UpdateSourceTrigger|Quando o valor de origem é atualizado|Cenário de exemplo de caixa de texto|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |LostFocus (padrão para <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|Quando o controle da caixa de texto perde o foco|Um <xref:System.Windows.Controls.TextBox> que está associado com a lógica de validação (consulte a seção de validação de dados)|  
-|PropertyChanged|Conforme você digita do<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>controles em uma janela de sala de chat|  
-|Explícito|Quando o aplicativo chama<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>controles em formulários editáveis (atualiza o valor de origem somente quando o usuário clica no botão Enviar)|  
+|PropertyChanged|Conforme você digita do <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> controles em uma janela de sala de chat|  
+|Explícito|Quando o aplicativo chama <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> controles em formulários editáveis (atualiza o valor de origem somente quando o usuário clica no botão Enviar)|  
   
  Para obter um exemplo, consulte [Controlar quando o texto da caixa de texto atualiza a origem](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
@@ -236,7 +224,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ### <a name="how-to-implement-collections"></a>Como implementar coleções  
  Você pode enumerar sobre qualquer coleção que implementa o <xref:System.Collections.IEnumerable> interface. No entanto, para definir associações dinâmicas para que as inserções ou exclusões na coleção de atualizem o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] automaticamente, a coleção deve implementar a <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Essa interface expõe um evento que deve ser acionado sempre que a coleção subjacente for alterada.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornece o <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, que é uma implementação interna de uma coleção de dados que expõe o <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Observe que para suporte total ao transferir valores de dados de objetos de origem para os destinos, cada objeto em sua coleção que suporta propriedades associáveis também deve implementar o <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Visão geral de origens da associação](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece o <xref:System.Collections.ObjectModel.ObservableCollection%601> classe, que é uma implementação interna de uma coleção de dados que expõe o <xref:System.Collections.Specialized.INotifyCollectionChanged> interface. Observe que para suporte total ao transferir valores de dados de objetos de origem para os destinos, cada objeto em sua coleção que suporta propriedades associáveis também deve implementar o <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Visão geral de origens da associação](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Antes de implementar sua própria coleção, considere o uso de <xref:System.Collections.ObjectModel.ObservableCollection%601> ou uma coleção existente, como classes <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, e <xref:System.ComponentModel.BindingList%601>, entre outros. Se você tiver um cenário avançado e quer implementar sua própria coleção, considere o uso de <xref:System.Collections.IList>, que fornece uma coleção não genérica de objetos que podem ser acessados separadamente por índice e, portanto, o melhor desempenho.  
   
@@ -269,7 +257,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
 |Tipo de coleção de origem|Tipo de exibição de coleção|Observações|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|Um tipo interno com base em<xref:System.Windows.Data.CollectionView>|Não é possível agrupar itens.|  
+|<xref:System.Collections.IEnumerable>|Um tipo interno com base em <xref:System.Windows.Data.CollectionView>|Não é possível agrupar itens.|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Mais rápido.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- Um <xref:System.Windows.Controls.ValidationRule> objeto verifica se o valor de uma propriedade é válido. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tem os seguintes dois tipos internos <xref:System.Windows.Controls.ValidationRule> objetos:  
+ Um <xref:System.Windows.Controls.ValidationRule> objeto verifica se o valor de uma propriedade é válido. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem os seguintes dois tipos internos <xref:System.Windows.Controls.ValidationRule> objetos:  
   
 -   Um <xref:System.Windows.Controls.ExceptionValidationRule> verifica para exceções geradas durante a atualização da propriedade de fonte de associação. No exemplo anterior, `StartPrice` é do tipo inteiro. Quando o usuário insere um valor que não pode ser convertido em um número inteiro, é gerada uma exceção que faz com que a associação seja marcada como inválida. Uma sintaxe alternativa à configuração o <xref:System.Windows.Controls.ExceptionValidationRule> explicitamente é definir o <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> propriedade `true` em seu <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto.  
   

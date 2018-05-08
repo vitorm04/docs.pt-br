@@ -1,31 +1,17 @@
 ---
 title: Usando associações para configurar serviços e clientes
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Usando associações para configurar serviços e clientes
-Associações são objetos que especificam os detalhes de comunicação necessários para conectar a um ponto de extremidade. Mais especificamente, associações contém informações de configuração que são usadas para criar o tempo de execução do cliente ou serviço, definindo as especificações de transportes (codificação de mensagens) para formatos de conexão e protocolos a serem usados para o canal de ponto de extremidade ou cliente respectivo. Para criar um funcionando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service, cada ponto de extremidade no serviço requer uma associação. Este tópico explica as associações são, como elas são definidas e como uma associação específica é especificada para um ponto de extremidade.  
+Associações são objetos que especificam os detalhes de comunicação necessários para conectar a um ponto de extremidade. Mais especificamente, associações contém informações de configuração que são usadas para criar o tempo de execução do cliente ou serviço, definindo as especificações de transportes (codificação de mensagens) para formatos de conexão e protocolos a serem usados para o canal de ponto de extremidade ou cliente respectivo. Para criar um serviço Windows Communication Foundation (WCF) está funcionando, cada ponto de extremidade no serviço requer uma associação. Este tópico explica as associações são, como elas são definidas e como uma associação específica é especificada para um ponto de extremidade.  
   
 ## <a name="what-a-binding-defines"></a>O que define uma associação  
  As informações em uma associação podem ser muito complexa ou muito básica. A associação mais básica especifica somente o protocolo de transporte (como HTTP) que deve ser usado para se conectar ao ponto de extremidade. Geralmente, as informações que contém uma associação sobre como se conectar a um ponto de extremidade se enquadra em uma das categorias na tabela a seguir.  

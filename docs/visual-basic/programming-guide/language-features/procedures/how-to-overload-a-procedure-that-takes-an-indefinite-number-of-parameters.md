@@ -1,13 +1,6 @@
 ---
 title: Como sobrecarregar um procedimento que use um número indefinido de parâmetros (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
 - procedure overloading [Visual Basic], indefinite number of parameters
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 026dd59db135e8b195ae014aaff5e3a6a7846fc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Como sobrecarregar um procedimento que use um número indefinido de parâmetros (Visual Basic)
 Se um procedimento tem um [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parâmetro, você não pode definir uma versão sobrecarregada colocar uma matriz unidimensional para a matriz de parâmetros. Para obter mais informações, consulte "Implícita sobrecargas para um parâmetro ParamArray" em [considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  

@@ -1,24 +1,12 @@
 ---
-title: "Acessando os serviços WCF com um aplicativo cliente da Windows Store"
-ms.custom: 
+title: Acessando os serviços WCF com um aplicativo cliente da Windows Store
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df5e05b1896ee272e286102a6c9433fad51b3c98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aca0c4e4daecc1b7a2474130eb36b9ead1c538bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Acessando os serviços WCF com um aplicativo cliente da Windows Store
 O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Windows Store. Esses aplicativos são criados em torno de uma interface de tela sensível ao toque. O .NET Framework 4.5 permite que aplicativos da Windows Store chamem serviços WCF.  

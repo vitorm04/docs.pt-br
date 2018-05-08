@@ -1,22 +1,12 @@
 ---
-title: "Variação em delegações (Visual Basic)"
-ms.custom: 
+title: Variação em delegações (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Variação em delegações (Visual Basic)
 .NET framework 3.5 introduziu o suporte de variação para assinaturas de método de correspondência com os tipos de delegado em todos os delegados em c# e Visual Basic. Isso significa que você pode atribuir a delegados não apenas os métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genéricos.  
@@ -157,7 +147,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef`parâmetros no Visual Basic não podem ser marcados como variante.  
+>  `ByRef` parâmetros no Visual Basic não podem ser marcados como variante.  
   
  Também é possível dar suporte à variância e à covariância no mesmo delegado, mas para parâmetros de tipo diferente. Isso é mostrado no exemplo a seguir.  
   

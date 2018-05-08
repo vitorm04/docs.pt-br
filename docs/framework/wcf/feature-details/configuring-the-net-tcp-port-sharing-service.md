@@ -1,24 +1,12 @@
 ---
-title: "Configurando o serviço de compartilhamento de porta Net.TCP"
-ms.custom: 
+title: Configurando o serviço de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 942b48ff6887e079beb7c0c24c6542a774eafe33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99585bb05364b6b0b3ee093823dc599519c8a12a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurando o serviço de compartilhamento de porta Net.TCP
 Serviços de hospedagem interna que usam o transporte de NET. TCP podem controlar várias configurações avançadas, como `ListenBacklog` e `MaxPendingAccepts`, que determinam o comportamento de soquete TCP subjacente usado para comunicação de rede. No entanto, essas configurações para cada soquete se aplicam somente no nível de associação se a associação de transporte tiver desabilitado o compartilhamento de porta, que é habilitado por padrão.  

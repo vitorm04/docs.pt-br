@@ -1,13 +1,6 @@
 ---
 title: Como definir estilos de linha alternada para o controle DataGridView dos Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c6e6b8938bfb2595f80ee71146d1de817cc9bcfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7206d2896ad391f8a45e1fbb612cdb49004182d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Como definir estilos de linha alternada para o controle DataGridView dos Windows Forms
 Dados tabulares geralmente são apresentados aos usuários em um formato contábil no qual linhas alternativas têm cores de tela de fundo diferente. Esse formato facilita para os usuários saber quais células estão em cada linha, especialmente com tabelas largas com muitas colunas.  
@@ -47,7 +35,7 @@ Dados tabulares geralmente são apresentados aos usuários em um formato contáb
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um <xref:System.Windows.Forms.DataGridView> controle chamado `dataGridView1`.  
+-   Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
   
 -   Referências a <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, e <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.  
   

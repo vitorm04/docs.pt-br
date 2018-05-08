@@ -1,21 +1,14 @@
 ---
 title: Estendendo o modelo de aplicativo do Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
 Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` membros a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite personalizar o comportamento do modelo de aplicativo e adicione chamadas para seus próprios métodos quando o aplicativo é iniciado e desligado.  

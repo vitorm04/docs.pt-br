@@ -1,29 +1,17 @@
 ---
 title: Processo de aluguer
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
   
- O processo de fluxo de trabalho de `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita a autorização de vários gerentes na organização. Para obter este metas, o fluxo de trabalho outros serviços existentes na organização (em nossos casos, em um serviço de caixa de entrada e um serviço de dados de organização implementado como claramente serviços de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ).  
+ O processo de fluxo de trabalho de `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita a autorização de vários gerentes na organização. Para alcançar essa meta, o fluxo de trabalho usa outros serviços existentes na organização (no nosso caso, um serviço de caixa de entrada e um serviço de dados organizacionais implementados como serviços do Windows Communication Foundation (WCF) simples).  
   
  O fluxo de trabalho `ResumeRequest` (implementado como <xref:System.Activities.Statements.Sequence>) publica um anúncio de emprego externa no site de carreiras de Contoso e gerencia a aquisição de resumos. Um anúncio de emprego está disponível no site externo por um período de tempo fixo (até que um tempo limite expire) ou até que um funcionário de Contoso decida o remover.  
   
@@ -64,7 +52,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 |ContosoHR|Contém contratos de dados, objetos comerciais e classes de armazenamento.|  
 |HiringRequestService|Contém a definição do fluxo de trabalho aluguer do processo de solicitação.<br /><br /> Este projeto é implementado como um aplicativo de console que são host o fluxo de trabalho (arquivo de xaml) como um serviço.|  
 |ResumeRequestService|Um serviço de fluxo de trabalho que coleta resumos dos candidatos até que um tempo limite expire ou alguém decidir que o processo tem que ser interrompido.<br /><br /> Este projeto é implementado como um serviço declarativa de fluxo de trabalho (xamlx).|  
-|OrgService|Um serviço que expõem informações de organização (funcionários, posições, PositionTypes, e departamentos). Você pode pensar esse serviço como o módulo de organização de um plano (ERP) de recurso de empresa.<br /><br /> Este projeto é implementado como um aplicativo de console que expõe um serviço de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .|  
+|OrgService|Um serviço que expõem informações de organização (funcionários, posições, PositionTypes, e departamentos). Você pode pensar esse serviço como o módulo de organização de um plano (ERP) de recurso de empresa.<br /><br /> Este projeto é implementado como um aplicativo de console que expõe um serviço do Windows Communication Foundation (WCF).|  
 |InboxService|Um caixa de entrada que contém tarefas acionáveis para funcionários.<br /><br /> Este projeto é implementado como um aplicativo de console que expõe um serviço windows.|  
 |InternalClient|Um aplicativo da Web para interagir com o processo. Os usuários podem começar, participar, e exibir seus fluxos de trabalho HiringProcess. Usando este aplicativo, também podem iniciar e monitorar processos de ResumeRequest.<br /><br /> Esse site é implementada para ser interna a intranet de Contoso. Este projeto é implementado como uma página web ASP.NET.|  
 |CareersWebSite|Um site externo que expõe as posições abertas em Contoso. Qualquer candidato potencialmente pode navegar para esse site e enviar um resumo.|  

@@ -1,11 +1,6 @@
 ---
 title: Friend (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Friend
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df0e8ad1990fe7a1aa495e1794c942813cffb5bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Especifica que um ou mais elementos de programação declarados são acessíveis somente de dentro do assembly que contém sua declaração.  
@@ -32,7 +24,7 @@ Especifica que um ou mais elementos de programação declarados são acessíveis
   
  Código de outras classes, estruturas e módulos que são compilados para o mesmo assembly pode acessar todos os `Friend` elementos nesse assembly.  
   
- `Friend`acesso geralmente é o nível preferido para elementos de programação do aplicativo, e `Friend` é o acesso padrão em nível de uma interface, um módulo, uma classe ou uma estrutura.  
+ `Friend` acesso geralmente é o nível preferido para elementos de programação do aplicativo, e `Friend` é o acesso padrão em nível de uma interface, um módulo, uma classe ou uma estrutura.  
   
  Você pode usar `Friend` somente no nível de namespace ou módulo. Portanto, o contexto da declaração para um `Friend` elemento deve ser um arquivo de origem, um namespace, uma interface, um módulo, uma classe ou uma estrutura; ele não pode ser um procedimento.  
   

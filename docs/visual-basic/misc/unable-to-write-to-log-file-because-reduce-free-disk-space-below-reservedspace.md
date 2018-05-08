@@ -1,21 +1,14 @@
 ---
-title: "Não é possível gravar no arquivo de log porque a gravação reduziria o espaço livre em disco abaixo do valor de ReservedSpace"
+title: Não é possível gravar no arquivo de log porque a gravação reduziria o espaço livre em disco abaixo do valor de ReservedSpace
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrApplicationLog_ReservedSpaceEncroached
 ms.assetid: 95832e70-4ecc-47aa-90c1-f35c4d468151
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 486f27efe5da0a5d663e7bdae9d5789df4add4e7
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d6efeb6f0a235e2f4d05f070c390aa43699c3e36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unable-to-write-to-log-file-because-writing-to-it-would-reduce-free-disk-space-below-reservedspace-value"></a>Não é possível gravar no arquivo de log porque a gravação reduziria o espaço livre em disco abaixo do valor de ReservedSpace
 O <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> classe não foi possível gravar o arquivo de log porque:  

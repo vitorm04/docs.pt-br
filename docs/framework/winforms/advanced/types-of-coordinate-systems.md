@@ -1,13 +1,6 @@
 ---
 title: Tipos de sistemas de coordenadas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>Tipos de sistemas de coordenadas
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa três espaços de coordenadas: mundo, página e dispositivo. Coordenadas de mundo são as coordenadas usadas para modelar um mundo gráfico específico e são as coordenadas que você passa para métodos no .NET Framework. Coordenadas de página fazem referência ao sistema de coordenadas usado por uma superfície de desenho, como um formulário ou controle. Coordenadas de dispositivo são as coordenadas usadas pelo dispositivo físico em que o desenho está sendo feito, como uma tela ou uma folha de papel. Quando você fizer a chamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, os pontos que você passa para o <xref:System.Drawing.Graphics.DrawLine%2A> método —`(0, 0)` e `(160, 80)`— no espaço de coordenadas do mundo. Antes que [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possa desenhar a linha na tela, as coordenadas passam por uma sequência de transformações. Uma transformação, chamada transformação global, converte coordenadas de mundo em coordenadas de página e outra transformação, chamada transformação de página, converte coordenadas de página em coordenadas de dispositivo.  

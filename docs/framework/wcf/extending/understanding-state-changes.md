@@ -1,24 +1,12 @@
 ---
-title: "Noções básicas de alterações de estado"
-ms.custom: 
+title: Noções básicas de alterações de estado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>Noções básicas de alterações de estado
 Este tópico discute os estados e transições que tem canais, os tipos usados para estados de canal de estrutura e como implementá-los.  
@@ -42,13 +30,13 @@ Este tópico discute os estados e transições que tem canais, os tipos usados p
  ![Canal estado transitition](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figura 1. A máquina de estado de ICommunicationObject.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece uma classe base abstrata denominada <xref:System.ServiceModel.Channels.CommunicationObject> que implementa <xref:System.ServiceModel.ICommunicationObject> e a máquina de estado do canal. O gráfico a seguir é um diagrama de estado modificado é específico para <xref:System.ServiceModel.Channels.CommunicationObject>. Além de <xref:System.ServiceModel.ICommunicationObject> máquina de estado, ele mostra o tempo quando adicionais <xref:System.ServiceModel.Channels.CommunicationObject> métodos forem invocados.  
+ Windows Communication Foundation (WCF) fornece uma classe base abstrata denominada <xref:System.ServiceModel.Channels.CommunicationObject> que implementa <xref:System.ServiceModel.ICommunicationObject> e a máquina de estado do canal. O gráfico a seguir é um diagrama de estado modificado é específico para <xref:System.ServiceModel.Channels.CommunicationObject>. Além de <xref:System.ServiceModel.ICommunicationObject> máquina de estado, ele mostra o tempo quando adicionais <xref:System.ServiceModel.Channels.CommunicationObject> métodos forem invocados.  
   
  ![Alterações de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Figura 2. A implementação de CommunicationObject da máquina de estado ICommunicationObject incluindo chamadas para eventos e métodos protegidos.  
   
 ### <a name="icommunicationobject-events"></a>Eventos de ICommunicationObject  
- <xref:System.ServiceModel.Channels.CommunicationObject>expõe os cinco eventos definidos por <xref:System.ServiceModel.ICommunicationObject>. Esses eventos são criados para o código usando o objeto de comunicação a ser notificado das transições de estado. Conforme mostrado na Figura 2 acima, cada evento é disparado uma vez depois que o estado do objeto faz a transição para o estado de chamada pelo evento. Todos os cinco eventos são do `EventHandler` tipo que está definido como:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> expõe os cinco eventos definidos por <xref:System.ServiceModel.ICommunicationObject>. Esses eventos são criados para o código usando o objeto de comunicação a ser notificado das transições de estado. Conforme mostrado na Figura 2 acima, cada evento é disparado uma vez depois que o estado do objeto faz a transição para o estado de chamada pelo evento. Todos os cinco eventos são do `EventHandler` tipo que está definido como:  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
@@ -63,17 +51,17 @@ Figura 2. A implementação de CommunicationObject da máquina de estado ICommun
   
  Enquanto <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, e <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> não têm nenhuma implementação padrão, os outros retornos de chamada tem uma implementação padrão que é necessária para a correção de máquina de estado. Se você substituir os métodos Certifique-se de chamar a implementação base ou substitua-o corretamente.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> acionar correspondente <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> eventos. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>e <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> definem o estado do objeto aberto e fechado, respectivamente, em seguida, acionar correspondente <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> eventos.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> acionar correspondente <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> eventos. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> definem o estado do objeto aberto e fechado, respectivamente, em seguida, acionar correspondente <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> eventos.  
   
 ### <a name="state-transition-methods"></a>Métodos de transição de estado  
- <xref:System.ServiceModel.Channels.CommunicationObject>fornece implementações de Abort, feche e abra. Ele também fornece um método de falha que faz com que uma transição de estado para o estado com falha. A Figura 2 mostra o <xref:System.ServiceModel.ICommunicationObject> máquina de estado com cada transição rotulada pelo método que faz com que ele (sem rótulo transições acontecer dentro da implementação do método que fez a última transição rotulada).  
+ <xref:System.ServiceModel.Channels.CommunicationObject> fornece implementações de Abort, feche e abra. Ele também fornece um método de falha que faz com que uma transição de estado para o estado com falha. A Figura 2 mostra o <xref:System.ServiceModel.ICommunicationObject> máquina de estado com cada transição rotulada pelo método que faz com que ele (sem rótulo transições acontecer dentro da implementação do método que fez a última transição rotulada).  
   
 > [!NOTE]
 >  Todos os <xref:System.ServiceModel.Channels.CommunicationObject> Obtém/define são sincronizados de thread de estado de implementações de comunicação.  
   
  Construtor  
   
- <xref:System.ServiceModel.Channels.CommunicationObject>fornece três construtores, que deixe o objeto no estado criado. Os construtores são definidos como:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> fornece três construtores, que deixe o objeto no estado criado. Os construtores são definidos como:  
   
  O primeiro construtor é um construtor padrão que delega para a sobrecarga de construtor que usa um objeto:  
   
@@ -138,11 +126,11 @@ Substituir o método OnAbort implementar personalizada de término lógica como 
 ### <a name="throwifxxx-methods"></a>Métodos de ThrowIfXxx  
  CommunicationObject tem três métodos protegidos que podem ser usados para gerar exceções se o objeto está em um estado específico.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A>gera uma exceção se o estado for fechamento, fechado ou com falha.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> gera uma exceção se o estado for fechamento, fechado ou com falha.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A>gera uma exceção se o estado não é criado.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> gera uma exceção se o estado não é criado.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A>gera uma exceção se o estado não estiver aberto.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> gera uma exceção se o estado não estiver aberto.  
   
  As exceções geradas dependem do estado. A tabela a seguir mostra os diferentes estados e o tipo correspondente do exceção gerada ao chamar um ThrowIfXxx que lança nesse estado.  
   
@@ -153,14 +141,14 @@ Substituir o método OnAbort implementar personalizada de término lógica como 
 |Aberto|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Fechando|Sim|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Fechando|Não|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|Sim|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>no caso de que um objeto foi fechado por uma chamada anterior e explícita de anulação. Se você chamar Fechar no objeto e um <xref:System.ObjectDisposedException?displayProperty=nameWithType> é gerada.|  
+|Closed|Sim|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> no caso de que um objeto foi fechado por uma chamada anterior e explícita de anulação. Se você chamar Fechar no objeto e um <xref:System.ObjectDisposedException?displayProperty=nameWithType> é gerada.|  
 |Closed|Não|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Com defeito|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>Tempos limite  
  Vários métodos que discutimos usam parâmetros de tempo limite. Estes são fechar, Open (determinadas sobrecargas e versões assíncronas), OnClose AoAbrir. Esses métodos são projetados para permitir operações longas (por exemplo, bloqueando a entrada/saída ao fechar uma conexão normalmente) para o parâmetro timeout indica por quanto tempo essas operações podem levar antes que está sendo interrompida. Implementações de qualquer um desses métodos devem usar o valor de tempo limite fornecido para garantir que ele retorna ao chamador dentro desse limite. Implementações de outros métodos que não têm um tempo limite não são projetadas para operações demoradas e não devem bloquear na entrada e saída.  
   
- A exceção são as sobrecargas de Open () e Close () que não têm um tempo limite. Esses usam um valor de tempo limite padrão fornecido pela classe derivada. <xref:System.ServiceModel.Channels.CommunicationObject>expõe dois protegido propriedades abstratas denominadas <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> e <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> definido como:  
+ A exceção são as sobrecargas de Open () e Close () que não têm um tempo limite. Esses usam um valor de tempo limite padrão fornecido pela classe derivada. <xref:System.ServiceModel.Channels.CommunicationObject> expõe dois protegido propriedades abstratas denominadas <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> e <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> definido como:  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   

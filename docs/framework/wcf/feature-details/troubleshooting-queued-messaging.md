@@ -1,38 +1,24 @@
 ---
 title: Mensagens em fila da solução de problemas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
-Esta seção contém perguntas comuns e resolução de problemas para usar filas em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta seção contém perguntas comuns e resolução de problemas para usar filas no Windows Communication Foundation (WCF).  
   
 ## <a name="common-questions"></a>Perguntas comuns  
- **P:** usei [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 e instalou o hotfix do MSMQ. É necessário remover o hotfix?  
+ **P:** usei WCF Beta 1 e instalei o hotfix do MSMQ. É necessário remover o hotfix?  
   
- **R:** Sim. Esse hotfix não é mais suportado. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agora funciona com MSMQ sem um requisito de hotfix.  
+ **R:** Sim. Esse hotfix não é mais suportado. WCF agora funciona em MSMQ sem um requisito de hotfix.  
   
  **P:** há duas associações para o MSMQ: <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. O que devo usar e quando?  
   
- **R:** usar o <xref:System.ServiceModel.NetMsmqBinding> quando você quiser usar o MSMQ como um transporte para comunicação em fila entre dois [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos. Use o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> quando quiser usar os aplicativos existentes do MSMQ para se comunicar com o novo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos.  
+ **R:** usar o <xref:System.ServiceModel.NetMsmqBinding> quando você quiser usar o MSMQ como um transporte para comunicação em fila entre dois aplicativos WCF. Use o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> quando quiser usar os aplicativos existentes do MSMQ para se comunicar com os novos aplicativos do WCF.  
   
  **P:** é necessário atualizar o MSMQ para usar o <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration` associações?  
   
@@ -54,7 +40,7 @@ Esta seção contém perguntas comuns e resolução de problemas para usar filas
   
  **R:** Sim.  
   
- **P:** deseja integrar os aplicativos existentes do MSMQ com novos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes ou servidores. É necessário atualizar os dois lados da minha infra-estrutura MSMQ?  
+ **P:** deseja integrar os aplicativos existentes do MSMQ com servidores de novos clientes do WCF. É necessário atualizar os dois lados da minha infra-estrutura MSMQ?  
   
  **R:** não. Você não precisa atualizar para o MSMQ 4.0 em ambos os lados.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **P:** ao uso de um nome de formato público ou privado e abrir o host de serviço no [!INCLUDE[wv](../../../../includes/wv-md.md)], recebo um erro. Por quê?  
   
- **R:** o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal de integração em [!INCLUDE[wv](../../../../includes/wv-md.md)] verifica se uma fila sub pode ser aberta para a fila principal do aplicativo para tratar mensagens suspeitas. O nome de subfila é derivado de um FormatName que URI passado para o ouvinte. O nome de subfila no MSMQ só pode ser um nome de formato direto. Portanto, você verá o erro. Altere o URI da fila para um nome de formato direto.  
+ **R:** canal de integração do WCF em [!INCLUDE[wv](../../../../includes/wv-md.md)] verifica se uma fila sub pode ser aberta para a fila principal do aplicativo para tratar mensagens suspeitas. O nome de subfila é derivado de um FormatName que URI passado para o ouvinte. O nome de subfila no MSMQ só pode ser um nome de formato direto. Portanto, você verá o erro. Altere o URI da fila para um nome de formato direto.  
   
- **P:** quando receber uma mensagem de um aplicativo do MSMQ, a mensagem se encontra na fila e não é lido pelo recebimento [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo. Por quê?  
+ **P:** quando receber uma mensagem de um aplicativo do MSMQ, a mensagem se encontra na fila e não é lido pelo aplicativo de recebimento de WCF. Por quê?  
   
  **R:** Verifique se a mensagem tem um corpo. Se a mensagem não tem nenhum corpo, o canal de integração do MSMQ ignora a mensagem. Implementar `IErrorHandler` para ser notificado de exceções e verificar os rastreamentos.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **R:** Verifique a configuração de associação. A associação padrão foi ativada para a segurança de transporte MSMQ assinou a mensagem. Desativá-lo.  
   
 ### <a name="remote-transacted-receives"></a>Recebe remoto transacionado  
- **P:** que há uma fila em um computador e um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que lê mensagens de uma fila no computador B (cenário de recebimento remoto transacionado), as mensagens não são lidas da fila de serviço. As informações de rastreamento indica o recebimento falhou com a mensagem "transação não pode ser importado." O que fazer para corrigir isso?  
+ **P:** quando tenho uma fila em um computador e um serviço WCF que lê mensagens de uma fila no computador B (cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. As informações de rastreamento indica o recebimento falhou com a mensagem "transação não pode ser importado." O que fazer para corrigir isso?  
   
  **R:** existem três possíveis razões para isso:  
   

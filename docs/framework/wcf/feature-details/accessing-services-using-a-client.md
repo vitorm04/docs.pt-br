@@ -1,32 +1,18 @@
 ---
 title: Usando um cliente para acessar um serviço
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Usando um cliente para acessar um serviço
-Aplicativos cliente devem criar, configurar e usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de canal ou de cliente para se comunicar com os serviços. O [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md) tópico fornece uma visão geral de objetos e as etapas envolvidas na criação de objetos de cliente e o canal básico e usá-los.  
+Aplicativos cliente devem criar, configurar e usar objetos de canal ou de cliente do WCF para se comunicar com os serviços. O [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md) tópico fornece uma visão geral de objetos e as etapas envolvidas na criação de objetos de cliente e o canal básico e usá-los.  
   
  Este tópico fornece informações detalhadas sobre alguns dos problemas com o cliente, aplicativos e objetos de cliente e o canal que podem ser úteis dependendo do cenário.  
   
@@ -42,7 +28,7 @@ Aplicativos cliente devem criar, configurar e usar [!INCLUDE[indigo2](../../../.
 -   Inicializando canais interativamente.  
   
 ### <a name="channel-and-session-lifetimes"></a>Canal e tempos de vida da sessão  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos inclui duas categorias de canais, datagrama e sessão.  
+ Aplicativos do Windows Communication Foundation (WCF) inclui duas categorias de canais, datagrama e sessão.  
   
  Um *datagrama* canal é um canal no qual todas as mensagens são uncorrelated. Com um canal de datagrama, se uma operação de entrada ou saída falhar, a próxima operação é normalmente afetada e o mesmo canal pode ser reutilizado. Por isso, canais de datagrama normalmente não falhará.  
   
@@ -79,11 +65,11 @@ Aplicativos cliente devem criar, configurar e usar [!INCLUDE[indigo2](../../../.
  Para obter informações mais completas sobre como trabalhar com as informações de erro no nível do aplicativo, consulte [especificando e tratamento de falhas em contratos e serviços](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) descreve exceções esperadas e mostra como lidar com eles. Para obter mais informações sobre como manipular erros durante o desenvolvimento de canais, consulte [tratamento de exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Bloqueio de cliente e o desempenho  
- Quando um aplicativo chama sincronicamente uma operação de solicitação-resposta, os blocos de cliente até que um valor de retorno é recebido ou uma exceção (como uma <xref:System.TimeoutException?displayProperty=nameWithType>) é gerada. Esse comportamento é semelhante ao comportamento de local. Quando um aplicativo de forma síncrona chama uma operação em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto do cliente ou canal, o cliente não retorna até que a camada do canal pode gravar os dados na rede ou até que uma exceção será lançada. E ao padrão de troca de mensagem unidirecional (especificado marcando uma operação com <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> definida como `true`) pode fazer alguns clientes também podem bloquear operações unidirecionais e mais ágil na resposta, dependendo da associação e quais mensagens já foram enviado. Operações unidirecionais são apenas sobre a troca de mensagens, não mais, nem menos. Para obter mais informações, consulte [unidirecional serviços](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Quando um aplicativo chama sincronicamente uma operação de solicitação-resposta, os blocos de cliente até que um valor de retorno é recebido ou uma exceção (como uma <xref:System.TimeoutException?displayProperty=nameWithType>) é gerada. Esse comportamento é semelhante ao comportamento de local. Quando um aplicativo de forma síncrona invoca uma operação em um objeto de cliente WCF ou canal, o cliente não retorna até que a camada do canal pode gravar os dados na rede ou até que uma exceção será lançada. E ao padrão de troca de mensagem unidirecional (especificado marcando uma operação com <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> definida como `true`) pode fazer alguns clientes também podem bloquear operações unidirecionais e mais ágil na resposta, dependendo da associação e quais mensagens já foram enviado. Operações unidirecionais são apenas sobre a troca de mensagens, não mais, nem menos. Para obter mais informações, consulte [unidirecional serviços](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
  Blocos de dados grandes podem reduzir a velocidade de processamento não importa qual o padrão de troca de mensagens de cliente. Para entender como lidar com esses problemas, consulte [dados grandes e Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Se seu aplicativo deve fazer mais trabalho, enquanto uma operação é concluída, você deve criar um par de métodos assíncronos na interface de contrato de serviço que sua [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente implementa. A maneira mais fácil de fazer isso é usar o `/async` alternar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter um exemplo, consulte [como: chamar operações de serviço assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Se seu aplicativo deve fazer mais trabalho, enquanto uma operação é concluída, você deve criar um par de métodos assíncronos na interface de contrato de serviço que o cliente WCF implementa. A maneira mais fácil de fazer isso é usar o `/async` alternar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obter um exemplo, consulte [como: chamar operações de serviço assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Para obter mais informações sobre aumentando o desempenho do cliente, consulte [aplicativos de cliente de camada intermediária](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   

@@ -1,11 +1,7 @@
 ---
-title: "Função BeginEnumeration (referência de API não gerenciada)"
-description: "A função BeginEnumeration redefine um enumerador para o início da enumeração"
+title: Função BeginEnumeration (referência de API não gerenciada)
+description: A função BeginEnumeration redefine um enumerador para o início da enumeração
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>Função BeginEnumeration
 Redefine um enumerador para o início da enumeração.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] Esse parâmetro é usado.
 
-`ptr`[in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
+`ptr` [in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
 
 `lEnumFlags`  
 [in] Uma combinação bit a bit de sinalizadores ou valores descritos no [comentários](#remarks) seção que controla as propriedades incluídas na enumeração.
@@ -108,7 +101,7 @@ Constante  |Valor  |Descrição  |
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -1,27 +1,15 @@
 ---
-title: "Importando metadados personalizados para uma extensão do WCF"
-ms.custom: 
+title: Importando metadados personalizados para uma extensão do WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bb7124cbce3fa38d00446b6568c85fc3136ee180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importando metadados personalizados para uma extensão do WCF
-Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], importação de metadados é o processo de geração de uma representação abstrata de um serviço ou seus componentes de seus metadados. Por exemplo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode importar <xref:System.ServiceModel.Description.ServiceEndpoint> instâncias, <xref:System.ServiceModel.Channels.Binding> instâncias ou <xref:System.ServiceModel.Description.ContractDescription> instâncias de um WSDL documentos para um serviço. Para importar os metadados de serviço em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], use uma implementação do <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe abstrata. Tipos que derivam de <xref:System.ServiceModel.Description.MetadataImporter> classe implementa o suporte para formatos de metadados de importação que aproveitam o WS-Policy importar lógica em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+No Windows Communication Foundation (WCF), a importação de metadados é o processo de geração de uma representação abstrata de um serviço ou seus componentes de seus metadados. Por exemplo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode importar <xref:System.ServiceModel.Description.ServiceEndpoint> instâncias, <xref:System.ServiceModel.Channels.Binding> instâncias ou <xref:System.ServiceModel.Description.ContractDescription> instâncias de um WSDL documentos para um serviço. Para importar os metadados de serviço em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], use uma implementação do <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe abstrata. Tipos que derivam de <xref:System.ServiceModel.Description.MetadataImporter> classe implementa o suporte para formatos de metadados de importação que aproveitam o WS-Policy importar lógica em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  Metadados personalizados consistem em elementos XML que não é possível importar os importadores de metadados fornecidos pelo sistema. Normalmente, isso inclui as extensões WSDL e declarações de política personalizada.  
   

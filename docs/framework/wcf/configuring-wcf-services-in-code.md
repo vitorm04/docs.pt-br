@@ -1,29 +1,17 @@
 ---
-title: "Configurando serviços WCF em código"
-ms.custom: 
+title: Configurando serviços WCF em código
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2046ee00bef0f3e84a61151474c777d64005a30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurando serviços WCF em código
-O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite que os desenvolvedores configurem serviços usando arquivos de configuração ou código.  Os arquivos de configuração são úteis quando um serviço precisa ser configurado depois de ser implantado. Ao usar arquivos de configuração, um profissional de TI apenas precisa atualizar o arquivo de configuração, nenhuma recompilação é necessária. Os arquivos de configuração, porém, podem ser complexos e difíceis de manter. Não há suporte para depurar arquivos de configuração e os elementos de configuração são referenciados por nomes, o que torna os arquivos de configuração de criação sujeitos a erros e difíceis. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] também permite configurar serviços no código. Em versões anteriores do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 e anterior) configurar serviços no código era fácil em cenários auto-hospedados, a classe <xref:System.ServiceModel.ServiceHost> permitia que você configurasse pontos de extremidade e comportamentos antes de chamar o ServiceHost.Open. Em cenários de web hospedado, no entanto, você não tem acesso direto para o <xref:System.ServiceModel.ServiceHost> classe. Para configurar um serviço Web hospedado, você precisava criar um `System.ServiceModel.ServiceHostFactory` que criou o <xref:System.ServiceModel.Activation.ServiceHostFactory> e executar qualquer configuração necessária. A partir do .NET 4.5, o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece um modo mais fácil de configurar serviços auto-hospedados e hospedados na Web em código.  
+Windows Communication Foundation (WCF) permite que os desenvolvedores configurem serviços usando arquivos de configuração ou código.  Os arquivos de configuração são úteis quando um serviço precisa ser configurado depois de ser implantado. Ao usar arquivos de configuração, um profissional de TI apenas precisa atualizar o arquivo de configuração, nenhuma recompilação é necessária. Os arquivos de configuração, porém, podem ser complexos e difíceis de manter. Não há suporte para depurar arquivos de configuração e os elementos de configuração são referenciados por nomes, o que torna os arquivos de configuração de criação sujeitos a erros e difíceis. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] também permite configurar serviços no código. Em versões anteriores do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 e anterior) configurar serviços no código era fácil em cenários auto-hospedados, a classe <xref:System.ServiceModel.ServiceHost> permitia que você configurasse pontos de extremidade e comportamentos antes de chamar o ServiceHost.Open. Em cenários de web hospedado, no entanto, você não tem acesso direto para o <xref:System.ServiceModel.ServiceHost> classe. Para configurar um serviço Web hospedado, você precisava criar um `System.ServiceModel.ServiceHostFactory` que criou o <xref:System.ServiceModel.Activation.ServiceHostFactory> e executar qualquer configuração necessária. A partir do .NET 4.5, o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece um modo mais fácil de configurar serviços auto-hospedados e hospedados na Web em código.  
   
-## <a name="the-configure-method"></a>O método de configurar  
+## <a name="the-configure-method"></a>O método Configure  
  Basta definir um método estático público chamado `Configure` com a seguinte assinatura na sua classe de implementação de serviço:  
   
 ```csharp  

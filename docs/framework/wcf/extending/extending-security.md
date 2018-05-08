@@ -1,31 +1,19 @@
 ---
-title: "Segurança estendida"
-ms.custom: 
+title: Segurança estendida
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-security"></a>Segurança estendida
-Para acomodar novos tipos de declaração e tokens personalizados, você pode estender a infraestrutura de segurança de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Os tópicos nesta seção mostram como fazer isso.  
+Para acomodar novos tipos de declaração e tokens personalizados, você pode estender a infraestrutura de segurança do Windows Communication Foundation (WCF). Os tópicos nesta seção mostram como fazer isso.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Arquitetura de segurança](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
@@ -50,7 +38,7 @@ Para acomodar novos tipos de declaração e tokens personalizados, você pode es
  As mensagens são normalmente assinadas e criptografadas com um único certificado. Este tópico explica como dois certificados podem ser usados, quando necessário.  
   
  [Como alterar o provedor criptográfico para a chave privada de um certificado X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Explica como alterar o provedor de criptografia usado para fornecer a chave privada de um certificado x. 509 e como integrar o provedor para o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] framework.  
+ Explica como alterar o provedor de criptografia usado para fornecer a chave privada de um certificado x. 509 e como integrar o provedor a estrutura do Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

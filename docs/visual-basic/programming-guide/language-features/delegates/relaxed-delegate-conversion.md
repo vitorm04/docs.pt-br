@@ -1,25 +1,16 @@
 ---
-title: "Conversão de delegado reduzida (Visual Basic)"
-ms.custom: 
+title: Conversão de delegado reduzida (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - relaxed delegate conversion [Visual Basic]
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0cca3d09b538905714f627c9fa006187b8927383
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c4a41bf74716a6ea7d3c1139651834acccf27657
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversão de delegado reduzida (Visual Basic)
 Conversão de delegado reduzida permite que você atribua sub-rotinas e funções a delegados ou manipuladores mesmo quando as assinaturas não são idênticas. Portanto, ligação a delegados fica consistente com a associação já permitida para invocações de método.  

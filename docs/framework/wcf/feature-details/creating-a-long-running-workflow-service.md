@@ -1,26 +1,12 @@
 ---
 title: Criando um serviço de fluxo de trabalho de execução longa
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ddb995b849a15451c36d5d11c95a4904a3e0496
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Criando um serviço de fluxo de trabalho de execução longa
 Este tópico descreve como criar um serviço de fluxo de trabalho de longa execução. Serviços de fluxo de trabalho de longa execução pode ser executada por longos períodos de tempo. Em algum momento o fluxo de trabalho pode ficar ocioso aguardando algumas informações adicionais. Quando isso ocorre o fluxo de trabalho para um banco de dados SQL é persistente e é removido da memória. Quando as informações adicionais se torna disponíveis a instância de fluxo de trabalho é carregada para a memória e continua executando.  Nesse cenário, você está implementando um sistema de pedidos muito simplificado.  O cliente envia uma mensagem inicial para o serviço de fluxo de trabalho para iniciar a ordem. Ele retorna uma ID de ordem para o cliente. Neste ponto o serviço de fluxo de trabalho está esperando por outra mensagem do cliente e entra no estado ocioso e é mantido para um banco de dados do SQL Server.  Quando o cliente envia a mensagem seguinte para solicitar um item, o serviço de fluxo de trabalho é carregado para a memória e termina de processar o pedido. No exemplo de código, ele retorna uma cadeia de caracteres informando que o item foi adicionado na ordem. O exemplo de código não deve ser um aplicativo do mundo real de tecnologia, mas em vez disso, um exemplo simple que ilustra os serviços de fluxo de trabalho de longa execução. Este tópico pressupõe que você sabe como criar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projetos e soluções.  
@@ -52,7 +38,7 @@ Este tópico descreve como criar um serviço de fluxo de trabalho de longa execu
   
 1.  Criar um vazio [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solução, nomeie-o `OrderProcessing`.  
   
-2.  Adicionar um novo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] projeto de aplicativo de serviço de fluxo de trabalho chamado `OrderService` à solução.  
+2.  Adicionar um novo projeto de aplicativo de serviço de fluxo de trabalho WCF chamado `OrderService` à solução.  
   
 3.  Na caixa de diálogo de propriedades da projeto, selecione o **Web** guia.  
   

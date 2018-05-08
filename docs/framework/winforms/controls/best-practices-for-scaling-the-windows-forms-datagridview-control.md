@@ -1,13 +1,6 @@
 ---
-title: "Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms
 O <xref:System.Windows.Forms.DataGridView> controle foi projetado para fornecer escalabilidade máxima. Se você precisa exibir grandes quantidades de dados, siga as diretrizes descritas neste tópico para evitar o consumo de grandes quantidades de memória ou prejudicar a capacidade de resposta da UI (interface do usuário). Este tópico discute os seguintes problemas:  
@@ -124,7 +112,7 @@ O <xref:System.Windows.Forms.DataGridView> controle foi projetado para fornecer 
   
  Para impedir que as linhas se tornem não compartilhadas, use as seguintes diretrizes:  
   
--   Evitar a indexação de <xref:System.Windows.Forms.DataGridView.Rows%2A> coleção ou iteração com um `foreach` loop. Normalmente não será necessário acessar as linhas diretamente. <xref:System.Windows.Forms.DataGridView>métodos que operam em linhas ter argumentos de índice de linha em vez de instâncias de linha. Além disso, os manipuladores de eventos relacionados à linha recebem objetos de argumento de evento com propriedades de linha que você pode usar para manipular linhas sem fazer com que elas se tornem não compartilhadas.  
+-   Evitar a indexação de <xref:System.Windows.Forms.DataGridView.Rows%2A> coleção ou iteração com um `foreach` loop. Normalmente não será necessário acessar as linhas diretamente. <xref:System.Windows.Forms.DataGridView> métodos que operam em linhas ter argumentos de índice de linha em vez de instâncias de linha. Além disso, os manipuladores de eventos relacionados à linha recebem objetos de argumento de evento com propriedades de linha que você pode usar para manipular linhas sem fazer com que elas se tornem não compartilhadas.  
   
 -   Se você precisar acessar um objeto de linha, use o <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> método e passar em índice real da linha. Observe, entretanto, que modificar um objeto de linha compartilhada recuperado por esse método modificará todas as linhas que compartilham esse objeto. A linha para novos registros não é compartilhada com outras linhas, no entanto, ela não será afetada quando você modificar qualquer outra linha. Observe também que diferentes linhas representadas por uma linha compartilhada podem ter menus de atalho diferentes. Para recuperar o menu de atalho correto da instância de uma linha compartilhada, use o <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> método e passar em índice real da linha. Se você acessar a linha compartilhada <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> propriedade em vez disso, ele usará o índice de linha compartilhada de -1 e não recuperará o menu de atalho correto.  
   

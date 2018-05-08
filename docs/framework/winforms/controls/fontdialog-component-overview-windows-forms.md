@@ -1,14 +1,6 @@
 ---
-title: "Visão geral do componente FontDialog (Windows Forms)"
-ms.custom: 
+title: Visão geral do componente FontDialog (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - FontDialog
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9e3018d024254adb249860f7736399e7f2da72a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a4707ffe471161988d0526ce0908b37299f3e07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>Visão geral do componente FontDialog (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> componente é uma caixa de diálogo pré-configurado, que é o padrão do Windows **fonte** caixa de diálogo usada para expor as fontes que estão atualmente instaladas no sistema. Use-o em seu aplicativo baseado no Windows como uma solução simples para seleção de fonte em vez de configurar sua própria caixa de diálogo.  

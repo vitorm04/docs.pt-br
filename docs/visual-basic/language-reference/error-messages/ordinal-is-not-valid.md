@@ -1,23 +1,14 @@
 ---
 title: O ordinal não é válido
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d31d0fba19cc16004c0b56786af30603d0c509ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 12d73b33e3c025b40c98d84e3507af7be1e1e91a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ordinal-is-not-valid"></a>O ordinal não é válido
 A chamada para uma biblioteca de vínculo dinâmico (DLL) indicado para usar um número em vez de um nome de procedimento, usando o `#num` sintaxe. Esse erro tem as seguintes causas possíveis:  

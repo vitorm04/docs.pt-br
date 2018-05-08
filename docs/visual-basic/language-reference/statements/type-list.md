@@ -1,9 +1,6 @@
 ---
 title: Lista de tipos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 Especifica o *parâmetros de tipo* para um *genérico* elemento de programação. Vários parâmetros são separados por vírgulas. Esta é a sintaxe para um parâmetro de tipo.  

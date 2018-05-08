@@ -1,12 +1,6 @@
 ---
 title: Operador ^ (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>Operador ^ (Visual Basic)
 Eleva um número à potência de outro número.  
@@ -68,23 +59,23 @@ number ^ exponent
   
  O exemplo anterior gera os seguintes resultados:  
   
- `exp1`é definido como 4 (2 quadrado).  
+ `exp1` é definido como 4 (2 quadrado).  
   
- `exp2`é definido como 19683 (3 ao cubo, em seguida, esse valor cúbico).  
+ `exp2` é definido como 19683 (3 ao cubo, em seguida, esse valor cúbico).  
   
- `exp3`é definido como -125 (-5 cúbico).  
+ `exp3` é definido como -125 (-5 cúbico).  
   
- `exp4`é definido como 625 (-5 para o quarto power).  
+ `exp4` é definido como 625 (-5 para o quarto power).  
   
- `exp5`é definido como 2 (raiz cúbica de 8).  
+ `exp5` é definido como 2 (raiz cúbica de 8).  
   
- `exp6`é definido como 0,5 (1.0 dividido pela raiz cúbica de 8).  
+ `exp6` é definido como 0,5 (1.0 dividido pela raiz cúbica de 8).  
   
  Observe a importância de parênteses nas expressões no exemplo anterior. Porque *precedência do operador*, Visual Basic normalmente executa o `^` operador antes de quaisquer outros, até mesmo o operador unário `–` operador. Se `exp4` e `exp6` tinha sido calculada sem parênteses, deve ter produzido os seguintes resultados:  
   
- `exp4 = -5 ^ 4`será calculado como – (5 para o quarto power), que pode resultar em-625.  
+ `exp4 = -5 ^ 4` será calculado como – (5 para o quarto power), que pode resultar em-625.  
   
- `exp6 = 8 ^ -1.0 / 3.0`será calculado como (8 para a potência de-1 ou 0,125) dividido pelo 3.0, o que resultaria em 0.041666666666666666666666666666667.  
+ `exp6 = 8 ^ -1.0 / 3.0` será calculado como (8 para a potência de-1 ou 0,125) dividido pelo 3.0, o que resultaria em 0.041666666666666666666666666666667.  
   
 ## <a name="see-also"></a>Consulte também  
  [Operador ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  

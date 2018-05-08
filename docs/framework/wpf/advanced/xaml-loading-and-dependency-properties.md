@@ -1,13 +1,6 @@
 ---
-title: "Carregamento de XAML e propriedades da dependência"
-ms.custom: 
+title: Carregamento de XAML e propriedades da dependência
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9771aa05d029603a018e041644ff3e2018e26ca4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 28e121e73ad4bd8ab70aed5f651418eb309b0c03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Carregamento de XAML e propriedades da dependência
 A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] atual de seu processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é inerentemente com reconhecimento de propriedade de dependência. O processador [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa métodos de sistema de propriedade de propriedades de dependência ao carregar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] binários e processar atributos que são propriedades de dependência. Isso desvia os wrappers de propriedade de forma efetiva. Quando você implementa propriedades de dependência personalizadas, você deve considerar esse comportamento e evitar colocar qualquer outro código no seu wrapper de propriedade diferente dos métodos de sistema de propriedade <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>.  

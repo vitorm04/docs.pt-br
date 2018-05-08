@@ -1,27 +1,15 @@
 ---
-title: "Serviço de recursos básicos"
-ms.custom: 
+title: Serviço de recursos básicos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3ec743bbbb6d18d972701c3149179d6f615d1884
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-resource-service"></a>Serviço de recursos básicos
-Este exemplo demonstra como implementar um serviço baseado em HTTP usando o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação REST que expõe uma coleção de clientes que dá suporte a recuperar, adicionar, excluir e substituir operações. Este exemplo consiste em 2 componentes – uma auto-hospedado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço HTTP (Service.cs) e um aplicativo de console (program.cs) que cria o serviço e faz chamadas para ele.  
+Este exemplo demonstra como implementar um serviço baseado em HTTP, usando o modelo de programação do Windows Communication Foundation (WCF) REST que expõe uma coleção de clientes que dá suporte a recuperar, adicionar, excluir e substituir operações. Este exemplo consiste em 2 componentes – uma auto-hospedado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço HTTP (Service.cs) e um aplicativo de console (program.cs) que cria o serviço e faz chamadas para ele.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço expõe uma coleção de clientes de uma maneira de recurso-orientado/REST. Em resumo, isso envolve a necessidade de URIs exclusivo para a coleção de clientes e todos os clientes na coleção. O serviço oferece suporte ao envio de um HTTP `GET` na coleção de URI para recuperar a coleção inteira e HTTP `POST` na coleção de URI para adicionar um novo cliente à coleção. Também no URI para um cliente individual, ele oferece suporte a HTTP `GET` para obter detalhes, HTTP de cliente `PUT` para substituir os detalhes do cliente e HTTP `DELETE` para remover o cliente da coleção. Quando um novo cliente é adicionado à coleção, o serviço atribui um URI exclusivo e armazena o URI como parte dos detalhes do cliente. Além disso, ele se comunica o URI para o cliente usando o cabeçalho de local HTTP da resposta.  
@@ -45,7 +33,7 @@ Este exemplo demonstra como implementar um serviço baseado em HTTP usando o [!I
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   

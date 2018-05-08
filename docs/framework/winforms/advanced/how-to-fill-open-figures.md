@@ -1,13 +1,6 @@
 ---
 title: Como preencher figuras abertas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7422ae2a4dc4d59fd337ab2294caa0d65057bae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-fill-open-figures"></a>Como preencher figuras abertas
 Você pode preencher um caminho, passando um <xref:System.Drawing.Drawing2D.GraphicsPath> o objeto para o <xref:System.Drawing.Graphics.FillPath%2A> método. O <xref:System.Drawing.Graphics.FillPath%2A> método preenche o caminho de acordo com o modo de preenchimento (alternativo ou contorno) definido atualmente para o caminho. Se o caminho tiver figuras abertas, ele será preenchido como se essas figuras que foram fechadas. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fecha uma figura desenhando uma linha reta do ponto final para o seu ponto de partida.  

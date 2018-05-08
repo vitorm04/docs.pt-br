@@ -1,38 +1,24 @@
 ---
 title: Estendendo clientes
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>Estendendo clientes
 Em um aplicativo de chamada, a camada de modelo de serviço é responsável pela conversão de invocações do método no código do aplicativo em mensagens de saída, enviar por push para os canais subjacentes, converter resultados de volta para valores de retorno e parâmetros out em código do aplicativo e retornar os resultados de volta ao chamador. Extensões do modelo de serviço modificam ou implementam a execução ou o comportamento de comunicação e recursos que envolvem a funcionalidade de cliente ou o distribuidor, comportamentos personalizados, mensagem e interceptação de parâmetro e outras funcionalidades de extensibilidade.  
   
- Este tópico descreve como usar o <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation> classes em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativo cliente para modificar o comportamento de execução padrão de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente ou para interceptar ou modificar as mensagens, parâmetros ou retornar valores antes ou subsequentes ao envio ou recuperá-los de camada do canal. Para obter mais informações sobre como estender o tempo de execução do serviço, consulte [estendendo Dispatchers](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Para obter mais informações sobre os comportamentos que modificam e inserir objetos de personalização em tempo de execução do cliente, consulte [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Este tópico descreve como usar o <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation> classes em um aplicativo de cliente do Windows Communication Foundation (WCF) para modificar o comportamento de execução padrão de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente ou para interceptar ou modificar as mensagens, parâmetros, ou retorne valores antes ou após o envio ou recuperá-los de camada do canal. Para obter mais informações sobre como estender o tempo de execução do serviço, consulte [estendendo Dispatchers](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Para obter mais informações sobre os comportamentos que modificam e inserir objetos de personalização em tempo de execução do cliente, consulte [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Clientes  
  Em um cliente, um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto do cliente ou canal cliente converte invocações de método em mensagens de saída e as mensagens de entrada para resultados de operação são retornados ao aplicativo de chamada. (Para obter mais informações sobre os tipos de cliente, consulte [arquitetura do cliente WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tipos de cliente têm tipos de tempo de execução que lidar com essa funcionalidade de nível de operação e de ponto de extremidade. Quando um aplicativo chama uma operação, o <xref:System.ServiceModel.Dispatcher.ClientOperation> converte os objetos de saída em uma mensagem, processa interceptadores, confirma que a chamada de saída está em conformidade com o contrato de destino e todas as mensagens de saída para o <xref:System.ServiceModel.Dispatcher.ClientRuntime>, que é responsável por criar e gerenciar canais de saída (e canais de entrada no caso de serviços de duplex), tratamento de mensagens de saída muito processamento (por exemplo, a modificação de cabeçalho), os interceptadores de mensagem em ambas as direções de processamento e roteamento de entrada chamadas duplex ao lado do cliente apropriado <xref:System.ServiceModel.Dispatcher.DispatchRuntime> objeto. Tanto o <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.ClientRuntime> fornecem serviços semelhantes quando mensagens (incluindo falhas) são retornadas ao cliente.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tipos de cliente têm tipos de tempo de execução que lidar com essa funcionalidade de nível de operação e de ponto de extremidade. Quando um aplicativo chama uma operação, o <xref:System.ServiceModel.Dispatcher.ClientOperation> converte os objetos de saída em uma mensagem, processa interceptadores, confirma que a chamada de saída está em conformidade com o contrato de destino e todas as mensagens de saída para o <xref:System.ServiceModel.Dispatcher.ClientRuntime>, que é responsável por criar e gerenciar canais de saída (e canais de entrada no caso de serviços de duplex), tratamento de mensagens de saída muito processamento (por exemplo, a modificação de cabeçalho), os interceptadores de mensagem em ambas as direções de processamento e roteamento de entrada chamadas duplex ao lado do cliente apropriado <xref:System.ServiceModel.Dispatcher.DispatchRuntime> objeto. Tanto o <xref:System.ServiceModel.Dispatcher.ClientOperation> e <xref:System.ServiceModel.Dispatcher.ClientRuntime> fornecem serviços semelhantes quando mensagens (incluindo falhas) são retornadas ao cliente.  
   
  Essas duas classes de tempo de execução são a principal extensão para personalizar o processamento de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente e canais. O <xref:System.ServiceModel.Dispatcher.ClientRuntime> classe permite que os usuários interceptar e estender a execução do cliente em todas as mensagens no contrato. O <xref:System.ServiceModel.Dispatcher.ClientOperation> classe permite que os usuários interceptar e estender a execução do cliente para todas as mensagens em uma determinada operação.  
   

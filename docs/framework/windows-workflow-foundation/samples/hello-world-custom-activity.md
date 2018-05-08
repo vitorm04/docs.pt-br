@@ -1,24 +1,12 @@
 ---
 title: Hello atividade personalizado
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa441a3019b0ef6df31dc0a46be7ea7e8e00a4b8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 35ae5933515b3280b0d8d95157c8dd5f40f7b320
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hello-world-custom-activity"></a>Hello atividade personalizado
 Este exemplo demonstra vários recursos importantes do Windows Workflow Foundation (WF), incluindo como criar uma atividade personalizada simple. Alguns dos recursos demonstrados nesse exemplo são criando uma atividade personalizado em C# e estão usando `in` e argumentos de `out` (<xref:System.Activities.InArgument> e <xref:System.Activities.OutArgument>).  
@@ -28,7 +16,7 @@ Este exemplo demonstra vários recursos importantes do Windows Workflow Foundati
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
   

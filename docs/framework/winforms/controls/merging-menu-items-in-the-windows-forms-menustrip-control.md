@@ -1,27 +1,15 @@
 ---
 title: Mesclando itens de menu no controle MenuStrip dos Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Mesclando itens de menu no controle MenuStrip dos Windows Forms
 Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu ou os menus inteiros do formulário filho com os menus do formulário pai.  
@@ -41,7 +29,7 @@ Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu 
   
  Você pode mesclar itens de menu de forma manual ou automática. Os itens de menu são mesclados da mesma maneira para os dois métodos, mas a mesclagem é ativada de forma diferente, conforme discutido nas seções "Mesclagem manual" e "Mesclagem automática" neste tópico. Tanto na mesclagem manual quanto na automática, cada ação de mesclagem afeta a próxima.  
   
- <xref:System.Windows.Forms.MenuStrip>Mesclando move itens de menu de um <xref:System.Windows.Forms.ToolStrip> para outro, em vez de clonagem, como era o caso com <xref:System.Windows.Forms.MainMenu>.  
+ <xref:System.Windows.Forms.MenuStrip> Mesclando move itens de menu de um <xref:System.Windows.Forms.ToolStrip> para outro, em vez de clonagem, como era o caso com <xref:System.Windows.Forms.MainMenu>.  
   
 ## <a name="mergeaction-values"></a>Valores de MergeAction  
  Definir a ação de mesclagem em itens de menu na fonte de <xref:System.Windows.Forms.MenuStrip> usando o <xref:System.Windows.Forms.MergeAction> propriedade.  
@@ -53,7 +41,7 @@ Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu 
 |<xref:System.Windows.Forms.MergeAction.Append>|(Padrão) Adiciona o item de origem ao final da coleção do item de destino.|Adicionar itens de menu no final do menu quando alguma parte do programa é ativada.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Adiciona o item de origem à coleção do item de destino, no local especificado pelo <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriedade definida no item de origem.|Adicionar itens de menu no início ou no meio do menu quando alguma parte do programa é ativada.<br /><br /> Se o valor de <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> é o mesmo para ambos os itens de menu, eles são adicionados na ordem inversa. Definir <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> adequadamente para preservar a ordem original.|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|Localiza uma correspondência de texto, ou usa o <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor se nenhuma correspondência de texto for encontrada e, em seguida, substitui o item de menu do destino correspondente com o item de menu de origem.|Substituir um item de menu de destino por um item de menu de origem de mesmo nome que faz algo diferente.|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Localiza uma correspondência de texto, ou usa o <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor se nenhuma correspondência de texto for encontrada e, em seguida, adiciona todos os itens de menu suspenso da origem para o destino.|Criar uma estrutura de menu que insere ou adiciona itens de menu em um submenu ou remove itens de menu de um submenu. Por exemplo, você pode adicionar um item de menu de um filho MDI um principal <xref:System.Windows.Forms.MenuStrip> **Salvar como** menu.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>permite navegar pela estrutura de menu sem realizar nenhuma ação. Ele fornece uma maneira de avaliar os itens subsequentes.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Localiza uma correspondência de texto, ou usa o <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor se nenhuma correspondência de texto for encontrada e, em seguida, adiciona todos os itens de menu suspenso da origem para o destino.|Criar uma estrutura de menu que insere ou adiciona itens de menu em um submenu ou remove itens de menu de um submenu. Por exemplo, você pode adicionar um item de menu de um filho MDI um principal <xref:System.Windows.Forms.MenuStrip> **Salvar como** menu.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> permite navegar pela estrutura de menu sem realizar nenhuma ação. Ele fornece uma maneira de avaliar os itens subsequentes.|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|Localiza uma correspondência de texto, ou usa o <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor se nenhuma correspondência de texto for encontrada e, em seguida, remove o item de destino.|Remover um item de menu do destino <xref:System.Windows.Forms.MenuStrip>.|  
   
 ## <a name="manual-merging"></a>Manual de mesclagem  

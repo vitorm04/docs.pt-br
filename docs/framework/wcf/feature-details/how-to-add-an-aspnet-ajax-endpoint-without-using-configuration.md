@@ -1,29 +1,15 @@
 ---
 title: Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b8d9d9b55bbeade5aa337719ba19ea9f386dfd6a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc3cca2ed703c4329b3da7c6fde286c341459fa8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Como adicionar um ponto de extremidade de ASP.NET AJAX sem utilizar a configuração
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite que você crie um serviço que expõe um ponto de extremidade habilitado para AJAX do ASP.NET que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, use um arquivo de configuração, assim como acontece com todos os outros pontos de extremidade do WCF ou usar um método que não requer nenhum elemento de configuração. Este tópico demonstra a segunda abordagem.  
+Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitado para AJAX do ASP.NET que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, use um arquivo de configuração, assim como acontece com todos os outros pontos de extremidade do WCF ou usar um método que não requer nenhum elemento de configuração. Este tópico demonstra a segunda abordagem.  
   
  Para criar serviços com os pontos de extremidade do ASP.NET AJAX sem configuração, os serviços devem ser hospedados por serviços de informações da Internet (IIS). Para ativar um ponto de extremidade do ASP.NET AJAX usando essa abordagem, especifique o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> como o parâmetro de fábrica no [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva no arquivo. svc. Esta fábrica personalizada é o componente que configura automaticamente um ponto de extremidade do ASP.NET AJAX para que ele pode ser chamado do JavaScript em um site do cliente.  
   
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
 ### <a name="to-create-a-basic-wcf-service"></a>Para criar um serviço WCF básico  
   
-1.  Definir um basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contrato de serviço com uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute> atributo. Marcar cada operação com o <xref:System.ServiceModel.OperationContractAttribute>. Certifique-se de definir o <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedade.  
+1.  Definir um contrato de serviço WCF básico com uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute> atributo. Marcar cada operação com o <xref:System.ServiceModel.OperationContractAttribute>. Certifique-se de definir o <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> propriedade.  
   
     ```csharp  
     [ServiceContract(Namespace = "MyService")]]  

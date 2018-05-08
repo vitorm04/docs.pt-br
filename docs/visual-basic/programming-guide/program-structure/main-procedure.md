@@ -1,13 +1,6 @@
 ---
 title: Procedimento principal no Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimento principal no Visual Basic
 Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse procedimento serve como a partir do ponto e controle geral para seu aplicativo. O .NET Framework chama o `Main` procedimento quando ele carregar seu aplicativo e está pronto para passá-lo para controle. A menos que você estiver criando um aplicativo Windows Forms, você deve escrever o `Main` procedimento para aplicativos que são executados em seus próprios.  
   
- `Main`contém o código que é executado primeiro. Em `Main`, determinar qual formulário é carregado pela primeira vez, quando o programa for iniciado, descubra se uma cópia do seu aplicativo já está em execução no sistema, estabelecer um conjunto de variáveis para o seu aplicativo ou abrir um banco de dados que o aplicativo requer.  
+ `Main` contém o código que é executado primeiro. Em `Main`, determinar qual formulário é carregado pela primeira vez, quando o programa for iniciado, descubra se uma cópia do seu aplicativo já está em execução no sistema, estabelecer um conjunto de variáveis para o seu aplicativo ou abrir um banco de dados que o aplicativo requer.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Requisitos para o procedimento principal  
  Um arquivo que é executado em seu próprio (normalmente com extensão .exe) deve conter um `Main` procedimento. Uma biblioteca (por exemplo, com extensão. dll) não é executado em seu próprio e não requer uma `Main` procedimento. Os requisitos para os diferentes tipos de projetos que você pode criar são da seguinte maneira:  
@@ -56,7 +46,7 @@ Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse
     End Module  
     ```  
   
--   `Main`também pode retornar um `Integer` valor, que o sistema operacional usa como o código de saída para o seu programa. Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows. Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de uma `Sub` procedimento.  
+-   `Main` também pode retornar um `Integer` valor, que o sistema operacional usa como o código de saída para o seu programa. Outros programas podem testar esse código, examinando o valor de ERRORLEVEL do Windows. Para retornar um código de saída, você deve declarar `Main` como um `Function` procedimento em vez de uma `Sub` procedimento.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse
     End Module  
     ```  
   
--   `Main`também pode usar um `String` matriz como um argumento. Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o programa. Você pode executar ações diferentes dependendo de seus valores.  
+-   `Main` também pode usar um `String` matriz como um argumento. Cada cadeia de caracteres na matriz contém um dos argumentos de linha de comando usados para invocar o programa. Você pode executar ações diferentes dependendo de seus valores.  
   
     ```  
     Module mainModule  

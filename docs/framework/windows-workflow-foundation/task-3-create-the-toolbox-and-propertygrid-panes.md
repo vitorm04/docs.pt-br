@@ -1,23 +1,12 @@
 ---
-title: "Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid"
-ms.custom: 
+title: 'Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90083692c2415ed6c1117185474d6bbaa9d1963b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid
 Nesta tarefa, você criará o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  

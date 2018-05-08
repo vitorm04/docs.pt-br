@@ -1,14 +1,6 @@
 ---
-title: "Função StrongNameSignatureVerificationFromImage"
-ms.custom: 
+title: Função StrongNameSignatureVerificationFromImage
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureVerificationFromImage
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 178dcbae4f8ec40ac9ef14fc00109c83ab87c21a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 919c746b738246d76e90730c42882bfdd3ac6edc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>Função StrongNameSignatureVerificationFromImage
 Verifica se um assembly que já foi mapeado para a memória é válido para a chave pública associada.  
@@ -60,25 +48,25 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in] Sinalizadores que influenciam o comportamento de verificação. Há suporte para os seguintes valores:  
   
--   `SN_INFLAG_FORCE_VER`(0x00000001) - força a verificação mesmo se for necessário substituir as configurações do registro.  
+-   `SN_INFLAG_FORCE_VER` (0x00000001) - força a verificação mesmo se for necessário substituir as configurações do registro.  
   
--   `SN_INFLAG_INSTALL`(0x00000002) - Especifica que esta é a primeira verificação executada nesta imagem.  
+-   `SN_INFLAG_INSTALL` (0x00000002) - Especifica que esta é a primeira verificação executada nesta imagem.  
   
--   `SN_INFLAG_ADMIN_ACCESS`(0x00000004) - Especifica que o cache permite acesso somente aos usuários que têm privilégios administrativos.  
+-   `SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Especifica que o cache permite acesso somente aos usuários que têm privilégios administrativos.  
   
--   `SN_INFLAG_USER_ACCESS`(0x00000008) - Especifica que o assembly será acessível somente para o usuário atual.  
+-   `SN_INFLAG_USER_ACCESS` (0x00000008) - Especifica que o assembly será acessível somente para o usuário atual.  
   
--   `SN_INFLAG_ALL_ACCESS`(0x00000010) - Especifica que o cache não fornecem nenhuma garantia de restrição de acesso.  
+-   `SN_INFLAG_ALL_ACCESS` (0x00000010) - Especifica que o cache não fornecem nenhuma garantia de restrição de acesso.  
   
--   `SN_INFLAG_RUNTIME`(0x80000000) - reservado para a depuração.  
+-   `SN_INFLAG_RUNTIME` (0x80000000) - reservado para a depuração.  
   
  `pdwOutFlags`  
  [out] Um sinalizador para obter informações de saída adicionais. Há suporte para o seguinte valor:  
   
--   `SN_OUTFLAG_WAS_VERIFIED`(0x00000001) - Este valor é definido como `false` para especificar se a verificação foi bem-sucedida devido às configurações do registro.  
+-   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - Este valor é definido como `false` para especificar se a verificação foi bem-sucedida devido às configurações do registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true`Após a conclusão bem-sucedida; Caso contrário, `false`.  
+ `true` Após a conclusão bem-sucedida; Caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
  Se o `StrongNameSignatureVerificationFromImage` função não concluída com êxito, chame o [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) função para recuperar o último erro gerado.  
@@ -90,7 +78,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método StrongNameSignatureVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)  

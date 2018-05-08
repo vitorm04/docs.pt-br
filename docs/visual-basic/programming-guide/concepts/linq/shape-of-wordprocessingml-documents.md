@@ -1,22 +1,12 @@
 ---
 title: Forma de documentos de WordprocessingML (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 40d1013d5b5c131cc0b83c1b62bff2555ab179a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma de documentos de WordprocessingML (Visual Basic)
 Este tópico apresenta a forma XML de um documento WordprocessingML.  
@@ -24,7 +14,7 @@ Este tópico apresenta a forma XML de um documento WordprocessingML.
 ## <a name="microsoft-office-formats"></a>Formatos do Microsoft Office  
  O formato de arquivo nativo para o sistema do Microsoft Office 2007 é Office Open XML (geralmente chamado de Open XML). O Open XML é um formato baseado em XML que tem um padrão Ecma e está no momento passando por um processo de padrões de ISO-IEC. A linguagem de marcação para arquivos de processamento de texto dentro do Open XML é chamada de WordprocessingML. Este tutorial usa arquivos de origem do WordprocessingML como entrada para os exemplos.  
   
- Se você estiver usando o Microsoft Office 2003, você pode salvar documentos no formato do Office Open XML, se você tiver instalado o pacote de compatibilidade do Microsoft Office para Word, Excel e formatos de arquivo do PowerPoint 2007.  
+ Se você estiver usando o Microsoft Office 2003, pode salvar documentos no formato Office Open XML se instalou os formatos de arquivo do Pacote de compatibilidade do Microsoft Office para Word, Excel e PowerPoint 2007.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>O formato de documentos de WordprocessingML  
  A primeira coisa a entender é a forma dos documentos de WordprocessingML. Um documento de WordprocessingML contém um elemento do corpo (chamado `w:body`) que contém os parágrafos do documento. Cada parágrafo contém uma ou mais execuções de texto (chamado `w:r`). Cada execução de texto contém uma ou mais partes de texto (chamado `w:t`).  

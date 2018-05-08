@@ -1,34 +1,20 @@
 ---
 title: Especificando um endereço de ponto de extremidade
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificando um endereço de ponto de extremidade
-Toda a comunicação com um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço ocorre por meio de seus pontos de extremidade. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contém um <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, um <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>e um <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. O contrato especifica quais operações estão disponíveis. Especifica a associação para se comunicar com o serviço e o endereço Especifica onde encontrar o serviço. Cada ponto de extremidade deve ter um endereço exclusivo. O endereço do ponto de extremidade é representado pelo <xref:System.ServiceModel.EndpointAddress> classe, que contém um identificador de recursos uniforme (URI) que representa o endereço do serviço, um <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa a identidade de segurança do serviço e uma coleção de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Os cabeçalhos opcionais fornecem informações mais detalhadas de endereçamento para identificar ou interagir com o ponto de extremidade. Por exemplo, os cabeçalhos podem indicar como processar uma mensagem de entrada, onde o ponto de extremidade deve enviar uma mensagem de resposta ou qual instância de um serviço para usar para processar uma mensagem de entrada de um determinado usuário quando houver várias instâncias.  
+Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de seus pontos de extremidade. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contém um <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, um <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>e um <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. O contrato especifica quais operações estão disponíveis. Especifica a associação para se comunicar com o serviço e o endereço Especifica onde encontrar o serviço. Cada ponto de extremidade deve ter um endereço exclusivo. O endereço do ponto de extremidade é representado pelo <xref:System.ServiceModel.EndpointAddress> classe, que contém um identificador de recursos uniforme (URI) que representa o endereço do serviço, um <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa a identidade de segurança do serviço e uma coleção de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Os cabeçalhos opcionais fornecem informações mais detalhadas de endereçamento para identificar ou interagir com o ponto de extremidade. Por exemplo, os cabeçalhos podem indicar como processar uma mensagem de entrada, onde o ponto de extremidade deve enviar uma mensagem de resposta ou qual instância de um serviço para usar para processar uma mensagem de entrada de um determinado usuário quando houver várias instâncias.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definição de um endereço de ponto de extremidade  
  Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], um <xref:System.ServiceModel.EndpointAddress> modelos de uma referência de ponto de extremidade (EPR) conforme definido no padrão de WS-Addressing.  

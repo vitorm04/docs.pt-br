@@ -1,33 +1,19 @@
 ---
 title: 'How to: Replace the WCF URL Reservation with a Restricted Reservation'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 823a59f53823a2480655c4f8720504dd4199d0bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>How to: Replace the WCF URL Reservation with a Restricted Reservation
 Uma reserva de URL permite restringir quem pode receber mensagens de uma URL ou um conjunto de URLs. Uma reserva consiste em um modelo de URL, uma lista de controle de acesso (ACL) e um conjunto de sinalizadores. O modelo de URL define qual afeta a reserva de URLs. Para obter mais informações sobre como os modelos de URL são processados, consulte [roteamento de solicitações de entrada](http://go.microsoft.com/fwlink/?LinkId=136764). A ACL controla qual usuário ou grupo de usuários tem permissão para receber mensagens das URLs especificadas. Os sinalizadores indicam se a reserva é para conceder uma permissão de usuário ou grupo para escutar a URL diretamente ou a permissão para escutar algum outro processo.  
   
- Como parte da configuração padrão do sistema operacional, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cria uma reserva globalmente acessível para a porta 80 para habilitar todos os usuários executem aplicativos que usam uma associação HTTP dupla para comunicação duplex. Como a ACL nessa reserva é para todos, os administradores explicitamente não podem permitir ou impedir permissão para escutar em uma URL ou um conjunto de URLs. Este tópico explica como excluir essa reserva e como recriar a reserva com uma ACL restrita.  
+ Como parte da configuração do sistema operacional padrão, o Windows Communication Foundation (WCF) cria uma reserva globalmente acessível para a porta 80 para habilitar todos os usuários executem aplicativos que usam uma associação HTTP dupla para comunicação duplex. Como a ACL nessa reserva é para todos, os administradores explicitamente não podem permitir ou impedir permissão para escutar em uma URL ou um conjunto de URLs. Este tópico explica como excluir essa reserva e como recriar a reserva com uma ACL restrita.  
   
- Em [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)] você pode exibir todas as reservas de URL de HTTP em um prompt de comando com privilégios elevados, digitando `netsh http show urlacl`.  O exemplo a seguir mostra o que um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve ser semelhante a reserva de URL.  
+ Em [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)] você pode exibir todas as reservas de URL de HTTP em um prompt de comando com privilégios elevados, digitando `netsh http show urlacl`.  O exemplo a seguir mostra o que deve se assemelhar uma reserva de URL do WCF.  
   
 ```  
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -37,7 +23,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- A reserva consiste em uma URL de modelo usado quando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo está usando uma associação de dupla de HTTP para comunicação duplex. URLs deste formulário são usados para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço para enviar mensagens de volta para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente ao se comunicar por uma associação de dupla de HTTP. Todos tem permissão para escutar na URL, mas não para delegar a escuta de outro processo. Por fim, a ACL é descrita em segurança descritor SSDL (Definition Language). Para obter mais informações sobre o SSDL, consulte [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ A reserva consiste em um modelo de URL usado quando um aplicativo WCF está usando uma associação de dupla de HTTP para comunicação duplex. URLs deste formulário são usadas para um serviço WCF para enviar mensagens de volta para o cliente do WCF ao se comunicar por uma associação de dupla de HTTP. Todos tem permissão para escutar na URL, mas não para delegar a escuta de outro processo. Por fim, a ACL é descrita em segurança descritor SSDL (Definition Language). Para obter mais informações sobre o SSDL, consulte [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>Para excluir a reserva de URL do WCF  
   
@@ -48,7 +34,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3.  Se a reserva é excluída com êxito, a seguinte mensagem será exibida. **Reserva de URL excluída com êxito**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Criar um novo grupo de segurança e nova reserva de URL restrito  
- Para substituir o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reserva de URL com uma reserva restrita primeiro você deve criar um novo grupo de segurança. Você pode fazer isso de duas maneiras: em um prompt de comando ou do console de gerenciamento do computador. Você tem apenas um.  
+ Para substituir a reserva de URL do WCF com uma reserva restrita, crie primeiro um novo grupo de segurança. Você pode fazer isso de duas maneiras: em um prompt de comando ou do console de gerenciamento do computador. Você tem apenas um.  
   
 #### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>Para criar um novo grupo de segurança em um prompt de comando  
   

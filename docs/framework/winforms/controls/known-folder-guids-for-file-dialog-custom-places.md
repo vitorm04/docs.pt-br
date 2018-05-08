@@ -1,28 +1,16 @@
 ---
-title: "GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo"
-ms.custom: 
+title: GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Known Folder GUIDs [Windows Forms], Custom Places
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
 Você usa um <xref:System.Guid> para especificar um [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pasta conhecidos quando você adicionar pastas para um <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção. GUIDs de pasta conhecida não diferenciam maiúsculas de minúsculas e são definidas no arquivo KnownFolders.h no [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  

@@ -1,13 +1,6 @@
 ---
-title: "Modelo de conteúdo do WPF"
-ms.custom: 
+title: Modelo de conteúdo do WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElement class [WPF], displaying content
 - content model [WPF], controls
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-content-model"></a>Modelo de conteúdo do WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é uma plataforma de apresentação que fornece muitos controles e tipos de controle cujo objetivo principal é exibir diferentes tipos de conteúdo. Para determinar qual controle usar ou de qual controle derivar, você deve compreender os tipos de objetos que um controle específico pode exibir.  
@@ -122,7 +110,7 @@ TabControl que usa diferentes tipos de propriedade de cabeçalho
  Para obter um exemplo de como criar <xref:System.Windows.Controls.TabItem> objetos, consulte <xref:System.Windows.Controls.HeaderedContentControl>.  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>Controles que contêm uma coleção de objetos arbitrários  
- O <xref:System.Windows.Controls.ItemsControl> classe herda de <xref:System.Windows.Controls.Control> e pode conter vários itens, como cadeias de caracteres, objetos ou outros elementos. Suas propriedades de conteúdo são <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> e <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>normalmente é usado para popular o <xref:System.Windows.Controls.ItemsControl> com um conjunto de dados. Se você não deseja usar uma coleção para preencher o <xref:System.Windows.Controls.ItemsControl>, você pode adicionar itens usando o <xref:System.Windows.Controls.ItemsControl.Items%2A> propriedade.  
+ O <xref:System.Windows.Controls.ItemsControl> classe herda de <xref:System.Windows.Controls.Control> e pode conter vários itens, como cadeias de caracteres, objetos ou outros elementos. Suas propriedades de conteúdo são <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> e <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> normalmente é usado para popular o <xref:System.Windows.Controls.ItemsControl> com um conjunto de dados. Se você não deseja usar uma coleção para preencher o <xref:System.Windows.Controls.ItemsControl>, você pode adicionar itens usando o <xref:System.Windows.Controls.ItemsControl.Items%2A> propriedade.  
   
  Os seguintes controles herdam <xref:System.Windows.Controls.ItemsControl> e usar o modelo de conteúdo:  
   
@@ -261,7 +249,7 @@ TextBlock que tem uma borda
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Classes que formatam seu texto  
- <xref:System.Windows.Documents.TextElement>e suas classes relacionadas permitem que você formate o texto. <xref:System.Windows.Documents.TextElement>objetos contêm e formatar o texto em <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument> objetos. Os dois tipos principais de <xref:System.Windows.Documents.TextElement> são objetos <xref:System.Windows.Documents.Block> elementos e <xref:System.Windows.Documents.Inline> elementos. Um <xref:System.Windows.Documents.Block> elemento representa um bloco de texto, como uma lista ou um parágrafo. Um <xref:System.Windows.Documents.Inline> elemento representa uma parte do texto em um bloco. Muitos <xref:System.Windows.Documents.Inline> classes especificam a formatação de texto ao qual elas são aplicadas. Cada <xref:System.Windows.Documents.TextElement> tem seu próprio modelo de conteúdo. Para obter mais informações, consulte [Visão geral do modelo de conteúdo TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> e suas classes relacionadas permitem que você formate o texto. <xref:System.Windows.Documents.TextElement> objetos contêm e formatar o texto em <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument> objetos. Os dois tipos principais de <xref:System.Windows.Documents.TextElement> são objetos <xref:System.Windows.Documents.Block> elementos e <xref:System.Windows.Documents.Inline> elementos. Um <xref:System.Windows.Documents.Block> elemento representa um bloco de texto, como uma lista ou um parágrafo. Um <xref:System.Windows.Documents.Inline> elemento representa uma parte do texto em um bloco. Muitos <xref:System.Windows.Documents.Inline> classes especificam a formatação de texto ao qual elas são aplicadas. Cada <xref:System.Windows.Documents.TextElement> tem seu próprio modelo de conteúdo. Para obter mais informações, consulte [Visão geral do modelo de conteúdo TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Avançado](../../../../docs/framework/wpf/advanced/index.md)
