@@ -1,14 +1,6 @@
 ---
-title: "Método ICLRGCManager2::SetGCStartupLimitsEx"
-ms.custom: 
+title: Método ICLRGCManager2::SetGCStartupLimitsEx
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager2.SetGCStartupLimitsEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 371d6d32b3f9f5da0411234438972a8d2df4cc3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65fbf0bf42f7312ad80b61bf452b62a4d0ff93c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Método ICLRGCManager2::SetGCStartupLimitsEx
 Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração do sistema de coleta de lixo 0.  
@@ -62,7 +50,7 @@ HRESULT SetGCStartupLimitsEx (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx`retornou com êxito.|  
+|S_OK|`SetGCStartupLimitsEx` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -81,7 +69,7 @@ HRESULT SetGCStartupLimitsEx (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)  

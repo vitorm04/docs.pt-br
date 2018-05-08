@@ -1,24 +1,12 @@
 ---
 title: Visão geral de fluxo de trabalho do Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Visão geral de fluxo de trabalho do Windows
 Um fluxo de trabalho é um conjunto de unidades elementares chamado *atividades* que são armazenados como um modelo que descreve um processo do mundo real. Fluxos de trabalho fornecem uma maneira de descrever a ordem de relações de execução e dependentes entre partes de trabalho ou longo tempo. Este trabalho passa pelo modelo do início ao final, e as atividades podem ser executadas por pessoas ou funções do sistema.  
@@ -34,7 +22,7 @@ Um fluxo de trabalho é um conjunto de unidades elementares chamado *atividades*
   
  Cada uma dessas classes envolve o tempo de execução de atividade de núcleo representado como <xref:System.Activities.ActivityInstance> responsável pela atividade de execução. Pode haver vários objetos de <xref:System.Activities.ActivityInstance> dentro de um domínio de aplicativo executando simultaneamente.  
   
- Cada um dos três objetos de precedência de interação host é criado de uma árvore de atividades conhecido como um programa de fluxo de trabalho. Usando esses tipos ou host personalizado que quebra <xref:System.Activities.ActivityInstance>, os fluxos de trabalho podem ser executados em qualquer processo do Windows que inclui aplicativos de console, aplicativos com base em formulários, Serviços do Windows, sites de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , e serviços de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+ Cada um dos três objetos de precedência de interação host é criado de uma árvore de atividades conhecido como um programa de fluxo de trabalho. Usando esses tipos ou um host personalizado que encapsula <xref:System.Activities.ActivityInstance>, fluxos de trabalho podem ser executados em qualquer processo de Windows, incluindo aplicativos de console, aplicativos com base em formulários, serviços do Windows [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sites e (Windows Communication Foundation Serviços do WCF).  
   
  ![Componentes de fluxo de trabalho no processo de host](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Componentes de fluxo de trabalho no processo do host  

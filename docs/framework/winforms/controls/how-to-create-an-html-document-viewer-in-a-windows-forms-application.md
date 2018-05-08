@@ -1,14 +1,6 @@
 ---
 title: Como criar um visualizador de documento HTML em um Aplicativo do Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58f964be53c6ddb8abf0af539b773344ce09d948
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1330e20cc4fe7df86e51bebca28e4a71e3108673
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Como criar um visualizador de documento HTML em um Aplicativo do Windows Forms
 Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir e imprimir documentos HTML sem fornecer a funcionalidade completa do Internet Explorer. Isso é útil quando você quer aproveitar os recursos de formatação de HTML, mas não quer que os usuários carreguem páginas da Web arbitrárias que podem conter controles de Web não confiáveis ou código de script potencialmente mal-intencionado. Talvez você queira restringir a capacidade do <xref:System.Windows.Forms.WebBrowser> controlar dessa maneira, por exemplo, para usá-lo como um visualizador de email HTML ou para fornecer ajuda formatado em HTML em seu aplicativo.  
@@ -47,7 +33,7 @@ Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir e 
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um <xref:System.Windows.Forms.WebBrowser> controle chamado `webBrowser1`.  
+-   Um controle <xref:System.Windows.Forms.WebBrowser> chamado `webBrowser1`.  
   
 -   Referências aos assemblies `System` e `System.Windows.Forms`.  
   

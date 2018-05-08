@@ -1,14 +1,6 @@
 ---
 title: Interface IHostTaskManager
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanager-interface"></a>Interface IHostTaskManager
 Fornece métodos que permitem que o common language runtime (CLR) para trabalhar com tarefas por meio do host em vez de usar as funções de threading ou fibra do sistema operacional padrão.  
@@ -61,7 +49,7 @@ Fornece métodos que permitem que o common language runtime (CLR) para trabalhar
 |[Método SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Notifica o host que ele deve alternar a tarefa atual.|  
   
 ## <a name="remarks"></a>Comentários  
- `IHostTaskManager`permite que o CLR criar e gerenciar tarefas, para fornecer conexões para o host para executar a ação quando transfere o controle de gerenciado para código não gerenciado e vice-versa e para especificar determinadas ações o host pode e não pode tomar durante a execução de código.  
+ `IHostTaskManager` permite que o CLR criar e gerenciar tarefas, para fornecer conexões para o host para executar a ação quando transfere o controle de gerenciado para código não gerenciado e vice-versa e para especificar determinadas ações o host pode e não pode tomar durante a execução de código.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ Fornece métodos que permitem que o common language runtime (CLR) para trabalhar
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

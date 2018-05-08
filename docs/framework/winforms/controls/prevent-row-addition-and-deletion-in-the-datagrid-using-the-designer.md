@@ -1,28 +1,14 @@
 ---
-title: "Como evitar a adição e a exclusão de linha no controle DataGridView dos Windows Forms usando o designer"
-ms.custom: 
+title: Como evitar a adição e a exclusão de linha no controle DataGridView dos Windows Forms usando o designer
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 029eb160545164535b8b5ae058cdc7ad85d69ab9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7479b486a0a130a95aa6dcecd5480e216bc13be2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a>Como evitar a adição e a exclusão de linha no controle DataGridView dos Windows Forms usando o designer
 Às vezes você deseja impedir que usuários inserir novas linhas de dados ou excluir linhas existentes em seu <xref:System.Windows.Forms.DataGridView> controle. Novas linhas são inseridas na linha especial para novos registros na parte inferior do controle. Quando você desabilitar a adição de linha, a linha para novos registros não será exibida. Em seguida, você pode deixar o controle totalmente somente leitura desabilitando a exclusão de linha e a edição de célula.  

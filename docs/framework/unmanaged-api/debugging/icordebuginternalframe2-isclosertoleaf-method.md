@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugInternalFrame2::IsCloserToLeaf"
-ms.custom: 
+title: Método ICorDebugInternalFrame2::IsCloserToLeaf
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugInternalFrame2.IsCloserToLeaf Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b6b769c25e0cd706eb57965b73d0fcfdcf9b9ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Método ICorDebugInternalFrame2::IsCloserToLeaf
 Verifica se o `this` quadro interno é mais próximo a folha que o objeto ICorDebugFrame especificado.  
@@ -62,7 +50,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` ou `pIsCloser` é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- `IsCloserToLeaf`pode ser usado para implementar uma política para a intercalação de quadros internos com outros quadros na pilha.  
+ `IsCloserToLeaf` pode ser usado para implementar uma política para a intercalação de quadros internos com outros quadros na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -71,7 +59,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  

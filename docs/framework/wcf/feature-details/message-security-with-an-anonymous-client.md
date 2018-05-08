@@ -1,32 +1,20 @@
 ---
 title: Mensagem de segurança com um cliente anônimo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Mensagem de segurança com um cliente anônimo
-O cenário a seguir mostra um cliente e o serviço protegido pelo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segurança de mensagem. Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro, ela pode suportar um modelo mais avançado baseado em declarações. Para obter mais informações sobre o uso de declarações avançada para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+O cenário a seguir mostra um cliente e o serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro, ela pode suportar um modelo mais avançado baseado em declarações. Para obter mais informações sobre o uso de declarações avançada para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Para um aplicativo de exemplo, consulte [mensagem segurança anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
@@ -35,7 +23,7 @@ O cenário a seguir mostra um cliente e o serviço protegido pelo [!INCLUDE[indi
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] somente|  
+|Interoperabilidade|Somente o WCF|  
 |Autenticação (servidor)|Negociação inicial requer autenticação de servidor, mas não a autenticação do cliente|  
 |Autenticação (cliente)|Nenhum|  
 |Integridade|Sim, usando o contexto de segurança compartilhada|  

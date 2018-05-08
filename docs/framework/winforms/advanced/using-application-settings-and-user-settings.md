@@ -1,27 +1,15 @@
 ---
-title: "Usando configurações do aplicativo e configurações do usuário"
-ms.custom: 
+title: Usando configurações do aplicativo e configurações do usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-settings-and-user-settings"></a>Usando configurações do aplicativo e configurações do usuário
 Ao começar com o .NET Framework 2.0, é possível criar e acessar valores mantidos entre as sessões de execução do aplicativo. Esses valores são chamados de *configurações*. Configurações podem representar preferências do usuário ou informações valiosas que o aplicativo precisar usar. Por exemplo, é possível criar uma série de configurações que armazenam as preferências do usuário para o esquema de cores de um aplicativo. Ou, então, você pode armazenar a cadeia de conexão que especifica um banco de dados usado pelo aplicativo. As configurações lhe permitem manter informações críticas ao aplicativo fora do código e criar perfis que armazenam as preferências dos usuários individualmente.  

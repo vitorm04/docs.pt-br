@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerCallback::RuntimeSuspendAborted"
-ms.custom: 
+title: Método ICorProfilerCallback::RuntimeSuspendAborted
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.RuntimeSuspendAborted
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d62df6fc90a2601997aeb7ecbe410f1a35d7012
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5726c0a563c8937f6f4fff184b7b924d501fa83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>Método ICorProfilerCallback::RuntimeSuspendAborted
 Notifica o criador de perfil que o tempo de execução foi anulada a suspensão de tempo de execução estava ocorrendo.  
@@ -58,7 +46,7 @@ HRESULT RuntimeSuspendAborted();
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

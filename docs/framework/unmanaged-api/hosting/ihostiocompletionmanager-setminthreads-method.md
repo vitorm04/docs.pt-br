@@ -1,14 +1,6 @@
 ---
-title: "Método IHostIoCompletionManager::SetMinThreads"
-ms.custom: 
+title: Método IHostIoCompletionManager::SetMinThreads
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager.SetMinThreads
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: dea34b81-8d2b-4cc3-8696-0ad4291d8a92
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd64554278fe3c684fadf95f66ce15920827908
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61f1938b114aee6d9084ccc68dce123b4924d1fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>Método IHostIoCompletionManager::SetMinThreads
 Define o número mínimo de threads que o host deve alocar até a conclusão de e/s.  
@@ -54,7 +42,7 @@ HRESULT SetMinThreads (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`retornou com êxito.|  
+|S_OK|`SetMinThreads` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -72,7 +60,7 @@ HRESULT SetMinThreads (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  

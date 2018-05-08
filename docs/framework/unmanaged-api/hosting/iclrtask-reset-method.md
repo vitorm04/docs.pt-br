@@ -1,14 +1,6 @@
 ---
-title: "Método ICLRTask::Reset"
-ms.custom: 
+title: Método ICLRTask::Reset
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.Reset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8dc37f47fc01d73ff499ef974a2e11345a95286a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskreset-method"></a>Método ICLRTask::Reset
 Informa o common language runtime (CLR) que o host concluiu uma tarefa e habilita o CLR reutilizar atual [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância para representar outra tarefa.  
@@ -56,7 +44,7 @@ HRESULT Reset (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Reset`retornou com êxito.|  
+|S_OK|`Reset` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada. com êxito|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -76,7 +64,7 @@ HRESULT Reset (
   
 5.  O host destrói a tarefa chamando `ICLRTask::ExitTask`.  
   
- `Reset`altera esse cenário de duas maneiras. Na etapa 5 acima, as chamadas de host `Reset` para redefinir a tarefa para um estado limpo e, em seguida, separa o `ICLRTask` instância de seus associados [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância. Se desejado, o host também pode armazenar a `IHostTask` instância para reutilização. Na etapa 1 acima, o tempo de execução recebe uma reciclagem `ICLRTask` do cache em vez de criar uma nova instância.  
+ `Reset` altera esse cenário de duas maneiras. Na etapa 5 acima, as chamadas de host `Reset` para redefinir a tarefa para um estado limpo e, em seguida, separa o `ICLRTask` instância de seus associados [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância. Se desejado, o host também pode armazenar a `IHostTask` instância para reutilização. Na etapa 1 acima, o tempo de execução recebe uma reciclagem `ICLRTask` do cache em vez de criar uma nova instância.  
   
  Essa abordagem funciona bem quando o host também tem um conjunto de tarefas de trabalho reutilizáveis. Quando o host destrói um dos seus `IHostTask` instâncias, ele destrói correspondente `ICLRTask` chamando `ExitTask`.  
   
@@ -87,7 +75,7 @@ HRESULT Reset (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

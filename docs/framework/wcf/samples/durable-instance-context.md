@@ -1,29 +1,15 @@
 ---
 title: Contexto de instância durável
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
-Este exemplo demonstra como personalizar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tempo de execução para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  
+Este exemplo demonstra como personalizar o tempo de execução do Windows Communication Foundation (WCF) para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  
   
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
@@ -469,7 +455,7 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

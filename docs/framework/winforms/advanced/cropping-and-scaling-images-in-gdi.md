@@ -1,13 +1,6 @@
 ---
 title: Cortando e dimensionando imagens no GDI+
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bbe7ac4b8c541ea76392f94f538e41816cf5c3f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e2e74e71c13593cb013849c07a6e904a4d2c14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Cortando e dimensionando imagens no GDI+
-Você pode usar o <xref:System.Drawing.Graphics.DrawImage%2A> método o <xref:System.Drawing.Graphics> classe para desenhar e posicionar o vetor de imagens e imagens de varredura. <xref:System.Drawing.Graphics.DrawImage%2A>é um método sobrecarregado, portanto, há várias maneiras que você pode fornecer argumentos.  
+Você pode usar o <xref:System.Drawing.Graphics.DrawImage%2A> método o <xref:System.Drawing.Graphics> classe para desenhar e posicionar o vetor de imagens e imagens de varredura. <xref:System.Drawing.Graphics.DrawImage%2A> é um método sobrecarregado, portanto, há várias maneiras que você pode fornecer argumentos.  
   
 ## <a name="drawimage-variations"></a>Variações de DrawImage  
  Uma variação do <xref:System.Drawing.Graphics.DrawImage%2A> método recebe um <xref:System.Drawing.Bitmap> e um <xref:System.Drawing.Rectangle>. O retângulo especifica o destino da operação de desenho ou seja, especifica o retângulo no qual a imagem será desenhada. Se o tamanho do retângulo de destino for diferente do tamanho da imagem original, a escala dela será ajustada para caber no retângulo de destino. O exemplo de código a seguir mostra como desenhar a mesma imagem três vezes: uma vez sem escala, uma vez expandida e outra compactada:  

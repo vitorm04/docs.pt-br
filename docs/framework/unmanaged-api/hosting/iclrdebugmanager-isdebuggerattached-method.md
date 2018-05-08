@@ -1,14 +1,6 @@
 ---
-title: "Método ICLRDebugManager::IsDebuggerAttached"
-ms.custom: 
+title: Método ICLRDebugManager::IsDebuggerAttached
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.IsDebuggerAttached
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5abd854e224b19efa72100db0163d61b42b0b63c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aaa085d9883f2a94a623f7800278c74a88e6a69a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>Método ICLRDebugManager::IsDebuggerAttached
 Obtém um valor que indica se um depurador está anexado ao processo.  
@@ -54,7 +42,7 @@ HRESULT IsDebuggerAttached (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`IsDebuggerAttached`retornou com êxito.|  
+|S_OK|`IsDebuggerAttached` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -62,7 +50,7 @@ HRESULT IsDebuggerAttached (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `IsDebuggerAttached`permite que o host do CLR para determinar se um depurador é anexado ao processo de consulta.  
+ `IsDebuggerAttached` permite que o host do CLR para determinar se um depurador é anexado ao processo de consulta.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -71,7 +59,7 @@ HRESULT IsDebuggerAttached (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  

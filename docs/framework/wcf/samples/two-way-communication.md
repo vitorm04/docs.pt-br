@@ -1,26 +1,12 @@
 ---
 title: Comunicação bidirecional
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-way-communication"></a>Comunicação bidirecional
 Este exemplo demonstra como executar transacionado uma comunicação bidirecional em fila em relação ao MSMQ. Este exemplo usa o `netMsmqBinding` associação. Nesse caso, o serviço é um aplicativo de console auto-hospedado que permite que você observe o serviço de recebimento de mensagens na fila.  
@@ -86,7 +72,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. ServiceModel do arquivo de configuração.  
   
 > [!NOTE]
->  O endereço de nome e o ponto de extremidade de fila MSMQ usam convenções de endereçamento ligeiramente diferentes. O nome da fila MSMQ usa um ponto (.) para os separadores de máquina e barra invertida locais em seu caminho. O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endereço de ponto de extremidade Especifica um NET. MSMQ: esquema, use "localhost" para a máquina local e usa barras em seu caminho. Para ler de uma fila que está hospedada no computador remoto, substitua o "." e "localhost" como o nome do computador remoto.  
+>  O endereço de nome e o ponto de extremidade de fila MSMQ usam convenções de endereçamento ligeiramente diferentes. O nome da fila MSMQ usa um ponto (.) para os separadores de máquina e barra invertida locais em seu caminho. O endereço de ponto de extremidade do Windows Communication Foundation (WCF) especifica um NET. MSMQ: esquema, use "localhost" para a máquina local e usa barras em seu caminho. Para ler de uma fila que está hospedada no computador remoto, substitua o "." e "localhost" como o nome do computador remoto.  
   
  O serviço é auto-hospedado. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço verifica a existência da fila e cria, se necessário. O nome da fila é lida do arquivo de configuração. O endereço base é usado pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.  
 
@@ -340,7 +326,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

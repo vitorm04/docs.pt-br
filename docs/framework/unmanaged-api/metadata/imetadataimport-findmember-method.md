@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataImport::FindMember"
-ms.custom: 
+title: Método IMetaDataImport::FindMember
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindMember
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a20930688aed210309a719de2c7187f1f5fd1f24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindmember-method"></a>Método IMetaDataImport::FindMember
 Obtém um ponteiro para o MemberDef token para o campo ou método que é incluído por especificado <xref:System.Type> e que tem a assinatura de nome e os metadados especificada.  
@@ -71,10 +59,10 @@ HRESULT FindMember (
   
  A assinatura é passado para `FindMember` deve foram gerados no escopo atual, porque as assinaturas associadas a um determinado escopo. Uma assinatura pode inserir um token que identifica o tipo de valor ou classe delimitador. O token é um índice na tabela de TypeDef local. Você não pode criar uma assinatura de tempo de execução fora do contexto do escopo atual e use essa assinatura como entrada para cada entrada `FindMember`.  
   
- `FindMember`localiza apenas os membros que foram definidos diretamente na classe ou interface. membros herdados não for encontrada.  
+ `FindMember` localiza apenas os membros que foram definidos diretamente na classe ou interface. membros herdados não for encontrada.  
   
 > [!NOTE]
->  `FindMember`é um método auxiliar. Ele chama [: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); se essa chamada não encontrar uma correspondência, `FindMember` , em seguida, chama [: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+>  `FindMember` é um método auxiliar. Ele chama [: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); se essa chamada não encontrar uma correspondência, `FindMember` , em seguida, chama [: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -83,7 +71,7 @@ HRESULT FindMember (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

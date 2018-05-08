@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataImport2::EnumGenericParamConstraints"
-ms.custom: 
+title: Método IMetaDataImport2::EnumGenericParamConstraints
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport2.EnumGenericParamConstraints
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72f863205c0fa7f4c6b4477c9d9143d1923a5d4c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Método IMetaDataImport2::EnumGenericParamConstraints
 Obtém um enumerador para uma matriz de restrições de parâmetro genérico associadas com o parâmetro genérico representado pelo token especificado.  
@@ -70,8 +58,8 @@ HRESULT EnumGenericParamConstraints (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints`retornou com êxito.|  
-|`S_FALSE`|`phEnum`não tem nenhum elemento de membro. Nesse caso, `pcGenericParameterConstraints` é definido como 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` retornou com êxito.|  
+|`S_FALSE`|`phEnum` não tem nenhum elemento de membro. Nesse caso, `pcGenericParameterConstraints` é definido como 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT EnumGenericParamConstraints (
   
  **Biblioteca:** usado como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  

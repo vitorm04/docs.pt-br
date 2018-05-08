@@ -1,34 +1,20 @@
 ---
-title: "Exemplo de introdução"
-ms.custom: 
+title: Exemplo de introdução
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>Exemplo de introdução
-O exemplo de Introdução demonstra como implementar um serviço típico e um cliente típico usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este exemplo é a base para todos os outros exemplos de tecnologia básico.  
+O guia de Introdução demonstra como implementar um serviço típico e um cliente típico usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básico.  
   
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
@@ -38,7 +24,7 @@ O exemplo de Introdução demonstra como implementar um serviço típico e um cl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   

@@ -1,13 +1,6 @@
 ---
-title: "Canetas, linhas e retângulos no GDI+"
-ms.custom: 
+title: Canetas, linhas e retângulos no GDI+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f21564c800dd960a96dfc024fa2cccc6b27780f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86cc51006361d5628dc12999588520e28e62f166
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Canetas, linhas e retângulos no GDI+
 Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] você precisa criar um <xref:System.Drawing.Graphics> objeto e um <xref:System.Drawing.Pen> objeto. O <xref:System.Drawing.Graphics> objeto fornece os métodos que possuem o desenho, e o <xref:System.Drawing.Pen> objeto armazena atributos, como cor da linha, largura e estilo.  
@@ -44,7 +32,7 @@ Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdi
  [!code-csharp[LinesCurvesAndShapes#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#41)]
  [!code-vb[LinesCurvesAndShapes#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#41)]  
   
- <xref:System.Drawing.Graphics.DrawLine%2A>é um método sobrecarregado a <xref:System.Drawing.Graphics> classe, portanto, há várias maneiras que você pode fornecer argumentos. Por exemplo, você pode construir dois <xref:System.Drawing.Point> objetos e passe o <xref:System.Drawing.Point> objetos como argumentos para o <xref:System.Drawing.Graphics.DrawLine%2A> método:  
+ <xref:System.Drawing.Graphics.DrawLine%2A> é um método sobrecarregado a <xref:System.Drawing.Graphics> classe, portanto, há várias maneiras que você pode fornecer argumentos. Por exemplo, você pode construir dois <xref:System.Drawing.Point> objetos e passe o <xref:System.Drawing.Point> objetos como argumentos para o <xref:System.Drawing.Graphics.DrawLine%2A> método:  
   
  [!code-csharp[LinesCurvesAndShapes#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#42)]
  [!code-vb[LinesCurvesAndShapes#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#42)]  
@@ -71,7 +59,7 @@ Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdi
  [!code-csharp[LinesCurvesAndShapes#45](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  
   
- <xref:System.Drawing.Graphics.DrawRectangle%2A>é um método sobrecarregado a <xref:System.Drawing.Graphics> classe, portanto, há várias maneiras que você pode fornecer argumentos. Por exemplo, você pode construir um <xref:System.Drawing.Rectangle> de objeto e passar o <xref:System.Drawing.Rectangle> o objeto para o <xref:System.Drawing.Graphics.DrawRectangle%2A> método como um argumento:  
+ <xref:System.Drawing.Graphics.DrawRectangle%2A> é um método sobrecarregado a <xref:System.Drawing.Graphics> classe, portanto, há várias maneiras que você pode fornecer argumentos. Por exemplo, você pode construir um <xref:System.Drawing.Rectangle> de objeto e passar o <xref:System.Drawing.Rectangle> o objeto para o <xref:System.Drawing.Graphics.DrawRectangle%2A> método como um argumento:  
   
  [!code-csharp[LinesCurvesAndShapes#46](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#46)]
  [!code-vb[LinesCurvesAndShapes#46](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#46)]  

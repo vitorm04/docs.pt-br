@@ -1,28 +1,17 @@
 ---
-title: "Como: Crie um participante personalizado de persistência"
-ms.custom: 
+title: 'Como: Crie um participante personalizado de persistência'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Como: Crie um participante personalizado de persistência
 O seguinte procedimento tem as etapas para criar um participante de persistência. Consulte o [participantes de persistência](http://go.microsoft.com/fwlink/?LinkID=177735) exemplo e [repositório extensibilidade](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tópico para implementações de exemplo de participantes de persistência.  
   
-1.  Crie uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant> ou classe de <xref:System.Activities.Persistence.PersistenceIOParticipant> . A classe de PersistenceIOParticipant oferece os mesmos pontos de extensibilidade que a classe de PersistenceParticipant além de poder participar em operações de E/S. Execute uma ou mais das seguintes etapas.  
+1.  Crie uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant> ou classe de <xref:System.Activities.Persistence.PersistenceIOParticipant> . A classe PersistenceIOParticipant oferece os mesmos pontos de extensibilidade, como a classe PersistenceParticipant além de poder participar das operações de e/s. Execute uma ou mais das seguintes etapas.  
   
 2.  Implementar o método de <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> . O **CollectValues** método tem parâmetros de dicionário de dois, um para armazenar valores de leitura/gravação e o outro para armazenar valores somente gravação (usados posteriormente em consultas). Nesse método, você deve preencher esses dicionários com dados que são específicos para um participante de persistência. Cada dicionário contém o nome do valor como a chave e o valor próprio como um objeto de <xref:System.Runtime.DurableInstancing.InstanceValue> .  
   
@@ -46,13 +35,13 @@ O seguinte procedimento tem as etapas para criar um participante de persistênci
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  Implementar o **BeginOnSave** método se o participante é um participante de e/s de persistência. Este método é chamado durante uma operação de salvar. Nesse método, você deve executar a adjunção de E/S a instâncias definição de fluxo de trabalho (salvar).  Se o host está usando uma transação para o comando correspondente de persistência, a mesma transação é fornecida em Transaction.Current.  Além disso, PersistenceIOParticipants pode anunciar um requisito transacional de consistência, nesse caso o host cria uma transação para o episódio de persistência se não seria usado de outra maneira.  
+5.  Implementar o **BeginOnSave** método se o participante é um participante de persistência e/s. Este método é chamado durante uma operação de salvar. Nesse método, você deve executar o suplemento de e/s para a persistência de (instâncias de fluxo de trabalho Salvar).  Se o host está usando uma transação para o comando correspondente de persistência, a mesma transação é fornecida em Transaction.Current.  Além disso, PersistenceIOParticipants pode anunciar um requisito transacional de consistência, nesse caso o host cria uma transação para o episódio de persistência se não seria usado de outra maneira.  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  Implementar o **BeginOnLoad** método se o participante é um participante de e/s de persistência. Este método é chamado durante uma operação de carregamento. Nesse método, você deve executar a adjunção de E/S a carga de instâncias de fluxo de trabalho. Se o host está usando uma transação para o comando correspondente de persistência, a mesma transação é fornecida em Transaction.Current. Além disso, os participantes de E/S de persistência podem anunciar um requisito transacional de consistência, nesse caso o host cria uma transação para o episódio de persistência se não seria usado de outra maneira.  
+6.  Implementar o **BeginOnLoad** método se o participante é um participante de persistência e/s. Este método é chamado durante uma operação de carregamento. Nesse método, você deve executar o suplemento de e/s para o carregamento de instâncias de fluxo de trabalho. Se o host está usando uma transação para o comando correspondente de persistência, a mesma transação é fornecida em Transaction.Current. Além disso, os participantes de persistência e/s podem anunciar um requisito de consistência transacional, nesse caso o host cria uma transação para o episódio de persistência se um caso contrário, não deve ser usado.  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

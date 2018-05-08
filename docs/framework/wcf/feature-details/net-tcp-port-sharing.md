@@ -1,32 +1,18 @@
 ---
 title: Compartilhamento de porta Net.TCP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d9427d091855a4f658cc971ceca1116cfd74e2ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 37c3d7580b48552b841823933958267cea815fab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing"></a>Compartilhamento de porta Net.TCP
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Fornece um novo protocolo de rede baseada em TCP (net.tcp://) para comunicação de alto desempenho. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também apresenta um novo componente do sistema, o serviço de compartilhamento de porta NET. TCP que permite que portas NET. TCP ser compartilhado entre vários processos de usuário.  
+Windows Communication Foundation (WCF) fornece um novo protocolo de rede baseada em TCP (net.tcp://) para comunicação de alto desempenho. WCF também apresenta um novo componente do sistema, o serviço de compartilhamento de porta NET. TCP que permite que portas NET. TCP ser compartilhado entre vários processos de usuário.  
   
 ## <a name="background-and-motivation"></a>Plano de fundo e motivação  
  Quando o protocolo TCP/IP foi apresentado pela primeira vez, somente um pequeno número de protocolos de aplicativo feita usá-lo. TCP/IP usada números de porta para diferenciar entre os aplicativos, atribuindo um número de porta exclusivo de 16 bits para cada protocolo de aplicativo. Por exemplo, o tráfego HTTP hoje é padronizado para usar a porta TCP 80, SMTP usa a porta TCP 25 e FTP usa as portas TCP 20 e 21. Outros aplicativos usando TCP como um transporte podem escolher outro número de porta disponível, por convenção, ou por meio de padronização formal.  
@@ -38,23 +24,23 @@ ms.lasthandoff: 04/30/2018
  A capacidade de compartilhar portas em vários aplicativos de HTTP foi um recurso de serviços de informações da Internet (IIS). No entanto, é somente com a introdução do HTTP. SYS (o modo de kernel protocolo ouvinte HTTP) com [!INCLUDE[iis601](../../../../includes/iis601-md.md)] que essa infraestrutura totalmente foi generalizada. Na realidade, o HTTP. SYS permite que os processos de usuário arbitrários de compartilhar portas TCP dedicadas ao tráfego HTTP. Esse recurso permite que vários aplicativos HTTP coexistam no mesmo computador físico em processos separados, isolados ao compartilhamento da infraestrutura de rede necessária para enviar e receber o tráfego pela porta TCP 80. O serviço de compartilhamento de porta NET. TCP permite que o mesmo tipo de porta NET. TCP aplicativos de compartilhamento.  
   
 ## <a name="port-sharing-architecture"></a>Arquitetura de compartilhamento de porta  
- A arquitetura de compartilhamento de porta no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem três componentes principais:  
+ A arquitetura de compartilhamento de porta do WCF tem três componentes principais:  
   
 -   Um processo de trabalho: Qualquer processo se comunicar por net.tcp:// usando portas compartilhadas.  
   
--   O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transporte TCP: implementa o protocolo net.tcp://.  
+-   O transporte TCP do WCF: implementa o protocolo net.tcp://.  
   
 -   O serviço de compartilhamento de porta NET. TCP: Permite que vários processos de trabalho compartilhem a mesma porta TCP.  
   
  O serviço de compartilhamento de porta NET. TCP é um serviço do Windows de modo de usuário que aceita conexões de net.tcp:// em nome dos processos de trabalho que se conectam por meio dele. Quando chega uma conexão de soquete, a serviço de compartilhamento de porta inspeciona o fluxo de mensagem de entrada para obter o endereço de destino. Com base nesse endereço, a serviço de compartilhamento de porta pode rotear o fluxo de dados para o aplicativo que, por fim, a processa.  
   
- Quando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que usa a porta net.tcp:// é aberto, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de transporte TCP não abre diretamente um soquete TCP no processo do aplicativo. Em vez disso, a infraestrutura de transporte registra o endereço de base do serviço identificador de recurso uniforme (URI) com o serviço de compartilhamento de porta NET. TCP e aguarda a serviço para escutar mensagens em seu nome de compartilhamento de porta.  A serviço de compartilhamento de porta envia as mensagens destinadas para o serviço de aplicativo assim que elas chegam.  
+ Quando um serviço WCF que usa a porta net.tcp:// é aberto, a infraestrutura de transporte TCP do WCF não abrir diretamente um soquete TCP no processo do aplicativo. Em vez disso, a infraestrutura de transporte registra o endereço de base do serviço identificador de recurso uniforme (URI) com o serviço de compartilhamento de porta NET. TCP e aguarda a serviço para escutar mensagens em seu nome de compartilhamento de porta.  A serviço de compartilhamento de porta envia as mensagens destinadas para o serviço de aplicativo assim que elas chegam.  
   
 ## <a name="installing-port-sharing"></a>Instalando o compartilhamento de porta  
  O serviço de compartilhamento de porta NET. TCP está disponível em todos os sistemas operacionais que oferecem suporte a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], mas o serviço não está habilitado por padrão. Como uma precaução de segurança, um administrador deve habilitar manualmente o serviço de compartilhamento de porta NET. TCP antes do primeiro uso. O serviço de compartilhamento de porta NET. TCP expõe as opções de configuração que permitem que você manipule várias características de soquetes de rede pela porta do serviço de compartilhamento de propriedade. Para obter mais informações, consulte [como: habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Usando em um aplicativo de compartilhamento de porta NET. TCP  
- A maneira mais fácil de usar a porta net.tcp:// compartilhamento em sua [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo é expor um serviço usando o <xref:System.ServiceModel.NetTcpBinding> e, em seguida, habilitar o serviço de compartilhamento de porta NET. TCP usando o <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> propriedade.  
+ É a maneira mais fácil de usar em seu aplicativo WCF de compartilhamento de porta net.tcp:// para expor um serviço usando o <xref:System.ServiceModel.NetTcpBinding> e, em seguida, habilitar o serviço de compartilhamento de porta NET. TCP usando o <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> propriedade.  
   
  Para obter mais informações sobre como fazer isso, consulte [como: configurar um serviço WCF para usar o compartilhamento de porta](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   

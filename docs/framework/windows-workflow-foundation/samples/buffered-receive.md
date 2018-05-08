@@ -1,24 +1,12 @@
 ---
 title: Armazenados em buffer receber
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="buffered-receive"></a>Armazenados em buffer receber
 Este exemplo demonstra como instalar e configurar o recurso de buffer de recebimento no Windows Workflow Foundation (WF). Armazenados em buffer receber permite que o autor de fluxo de trabalho crie um fluxo de trabalho sem ter que se preocupar na ordem em que as mensagens são recebidas. O armazenados em buffer recebe mensagens de buffers de recurso localmente e entrega-as quando o fluxo de trabalho está pronto para as receber.  
@@ -31,12 +19,12 @@ Este exemplo demonstra como instalar e configurar o recurso de buffer de recebim
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>Discussão  
- Nesse exemplo, um serviço de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é implementado usando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e tem uma sequência de atividades de <xref:System.ServiceModel.Activities.Receive> . Este fluxo de trabalho modelos um processo de aprovação simples do empréstimo onde o fluxo de trabalho espere três notificações para um empréstimo é certo. Um aplicativo cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vem com três notificações correlacionadas em ordem inversa do serviço espera. Porque o armazenados em buffer recebe o recurso é ativado no serviço, cada mensagem fora de serviço é armazenada em buffer no serviço e processadas como o fluxo de trabalho se torna pronto para receber.  
+ Neste exemplo, um serviço do Windows Communication Foundation (WCF) é implementado usando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e tem uma sequência de <xref:System.ServiceModel.Activities.Receive> atividades. Este fluxo de trabalho modelos um processo de aprovação simples do empréstimo onde o fluxo de trabalho espere três notificações para um empréstimo é certo. Um aplicativo de cliente do Windows Communication Foundation (WCF) envia notificações de correlacionados três na ordem inversa da espera que o serviço. Porque o armazenados em buffer recebe o recurso é ativado no serviço, cada mensagem fora de serviço é armazenada em buffer no serviço e processadas como o fluxo de trabalho se torna pronto para receber.  
   
  O armazenados em buffer recebe o recurso exige o suporte de <xref:System.ServiceModel.Activities.ReceiveContent> de associação, portanto usos <xref:System.ServiceModel.NetMsmqBinding>de serviço. Qualquer configuração especial é necessária para associação, para que as opções são usadas.  
   
@@ -115,6 +103,6 @@ Este exemplo demonstra como instalar e configurar o recurso de buffer de recebim
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

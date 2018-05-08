@@ -1,28 +1,16 @@
 ---
-title: "Controles dos Windows Forms por função"
-ms.custom: 
+title: Controles dos Windows Forms por função
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], by function
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 058a18878b89991bd8124bd69e18476d4f1479d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-controls-by-function"></a>Controles dos Windows Forms por função
 O Windows Forms oferece controles e componentes que executam várias funções. A tabela a seguir lista os controles e componentes dos Windows Forms de acordo com a função geral. Além disso, quando há vários controles que têm a mesma função, o controle recomendado é listado com uma observação sobre o controle que foi substituído por ele. Em uma tabela separada posterior, os controles substituídos são listados com suas substituições recomendadas.  
@@ -35,7 +23,7 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
 |Função|Controle|Descrição|  
 |--------------|-------------|-----------------|  
 |Exibição de dados|Controle <xref:System.Windows.Forms.DataGridView>|O <xref:System.Windows.Forms.DataGridView> controle fornece uma tabela personalizável para exibir dados. O <xref:System.Windows.Forms.DataGridView> classe permite que a personalização de células, linhas, colunas e bordas. **Observação:** o <xref:System.Windows.Forms.DataGridView> controle fornece vários recursos básicos e avançados que estão faltando no <xref:System.Windows.Forms.DataGrid> controle. Para obter mais informações, consulte [Diferenças entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|Vinculação de dados e navegação|<xref:System.Windows.Forms.BindingSource>componente|Simplifica a associação de controles em um formulário a dados, fornecendo gerenciamento de moeda, notificação de alteração e outros serviços.|  
+|Vinculação de dados e navegação|<xref:System.Windows.Forms.BindingSource> Componente|Simplifica a associação de controles em um formulário a dados, fornecendo gerenciamento de moeda, notificação de alteração e outros serviços.|  
 ||Controle <xref:System.Windows.Forms.BindingNavigator>|Fornece uma interface do tipo de barra de ferramentas para navegar e manipular dados em um formulário.|  
 |Edição de texto|Controle <xref:System.Windows.Forms.TextBox>|Exibe o texto inserido em tempo de design que pode ser editado por usuários em tempo de execução ou ser modificado programaticamente.|  
 ||Controle <xref:System.Windows.Forms.RichTextBox>|Permite que o texto seja exibido formatado em texto sem formatação ou em RTF (Formato Rich Text).|  
@@ -53,7 +41,7 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
 ||Controle <xref:System.Windows.Forms.NumericUpDown>|Exibe uma lista de numerais que os usuários podem percorrer usando os botões para cima e para baixo.|  
 ||Controle <xref:System.Windows.Forms.TreeView>|Exibe uma coleção hierárquica de objetos de nó que podem consistir em texto com caixas de seleção opcionais ou ícones.|  
 |Exibição de gráficos|Controle <xref:System.Windows.Forms.PictureBox>|Exibe arquivos gráficos, como bitmaps e ícones, em um quadro.|  
-|Armazenamento de gráficos|Controle <xref:System.Windows.Forms.ImageList>|Serve como um repositório de imagens. <xref:System.Windows.Forms.ImageList>as imagens que eles contêm e os controles podem ser reutilizadas de um aplicativo para o próximo.|  
+|Armazenamento de gráficos|Controle <xref:System.Windows.Forms.ImageList>|Serve como um repositório de imagens. <xref:System.Windows.Forms.ImageList> as imagens que eles contêm e os controles podem ser reutilizadas de um aplicativo para o próximo.|  
 |Configuração do valor|Controle <xref:System.Windows.Forms.CheckBox>|Exibe uma caixa de seleção e um rótulo de texto. Geralmente, é usado para definir opções.|  
 ||Controle <xref:System.Windows.Forms.CheckedListBox>|Exibe uma lista rolável de itens, cada um deles acompanhado por uma caixa de seleção.|  
 ||Controle <xref:System.Windows.Forms.RadioButton>|Exibe um botão que pode ser ativado ou desativado.|  
@@ -73,8 +61,8 @@ O Windows Forms oferece controles e componentes que executam várias funções. 
 ||Controle <xref:System.Windows.Forms.LinkLabel>|Exibe o texto como um link com estilo da Web e dispara um evento quando o usuário clica no texto especial. Normalmente, o texto é um link para outra janela ou site.|  
 ||Controle <xref:System.Windows.Forms.NotifyIcon>|Exibe um ícone na área de notificação de status da barra de tarefas que representa um aplicativo em execução em segundo plano.|  
 ||Controle <xref:System.Windows.Forms.ToolStrip>|Cria barras de ferramentas que podem ter a aparência do Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer ou uma aparência personalizada, com ou sem temas e com suporte para estouro e reordenação de itens em tempo de execução. **Observação:** o <xref:System.Windows.Forms.ToolStrip> controle foi projetado para substituir o <xref:System.Windows.Forms.ToolBar> controle.|  
-|Ajuda do usuário|<xref:System.Windows.Forms.HelpProvider>componente|Fornece Ajuda pop-up ou online para os controles.|  
-||<xref:System.Windows.Forms.ToolTip>componente|Fornece uma janela pop-up que exibe uma breve descrição da finalidade do controle quando o usuário deixa o ponteiro sobre o controle.|  
+|Ajuda do usuário|<xref:System.Windows.Forms.HelpProvider> Componente|Fornece Ajuda pop-up ou online para os controles.|  
+||<xref:System.Windows.Forms.ToolTip> Componente|Fornece uma janela pop-up que exibe uma breve descrição da finalidade do controle quando o usuário deixa o ponteiro sobre o controle.|  
 |Agrupando outros controles|Controle <xref:System.Windows.Forms.Panel>|Agrupa um conjunto de controles em um quadro rolável sem rótulo.|  
 ||Controle <xref:System.Windows.Forms.GroupBox>|Agrupa um conjunto de controles (como botões de opção) em um quadro não rolável rotulado.|  
 ||Controle <xref:System.Windows.Forms.TabControl>|Fornece uma página com guias para organizar e acessar objetos agrupados com eficiência.|  

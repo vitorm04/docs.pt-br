@@ -1,23 +1,12 @@
 ---
-title: "Como: Consulta para instâncias são persistentes"
-ms.custom: 
+title: 'Como: Consulta para instâncias são persistentes'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 000342013be4380e1a038fb8233050523f6bc758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Como: Consulta para instâncias são persistentes
 Quando uma nova instância de um serviço é criada e o serviço tem o comportamento de Store de instância de fluxo de trabalho do SQL definido, o host serviço cria uma entrada inicial para essa instância do serviço no armazenamento de instância. Posteriormente quando a instância do serviço persiste pela primeira vez, o comportamento de Store de instância de fluxo de trabalho do SQL armazena o estado atual da instância juntamente com os dados adicionais que são necessários para ativação, a recuperação, e o controle.  

@@ -1,27 +1,15 @@
 ---
-title: "Instruções do firewall"
-ms.custom: 
+title: Instruções do firewall
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>Instruções do firewall
-Você deve habilitar várias portas ou programas no firewall para que o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem funcionar. Muitos dos exemplos de se comunicar por meio de portas no intervalo de 8000-8003 e porta 9000. O firewall é ativado por padrão e impede o acesso a essas portas. Para habilitar o firewall para os exemplos, conclua um dos procedimentos a seguir, dependendo dos requisitos e o ambiente de segurança:  
+Você deve habilitar várias portas ou programas no firewall para que os exemplos do Windows Communication Foundation (WCF) podem funcionar. Muitos dos exemplos de se comunicar por meio de portas no intervalo de 8000-8003 e porta 9000. O firewall é ativado por padrão e impede o acesso a essas portas. Para habilitar o firewall para os exemplos, conclua um dos procedimentos a seguir, dependendo dos requisitos e o ambiente de segurança:  
   
 -   Opção 1: Habilite interativamente exemplos durante a execução. Não fizer nenhuma alteração antecipada para sua configuração de firewall e vá para iniciar a criação e executar os exemplos. Quando um exemplo é executado, uma **alerta de segurança do Windows** caixa de diálogo é exibida. O programa de exemplo em questão, em seguida, pode ser adicionado interativamente a uma lista desbloqueada. Com esse procedimento, você precisará reiniciar o exemplo.  
   

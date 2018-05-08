@@ -1,31 +1,19 @@
 ---
-title: "Sistemas de coordenadas e transformações"
-ms.custom: 
+title: Sistemas de coordenadas e transformações
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transformations
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d44805021f0070109ce67f28126d59d36e4175f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b91cbc21abe8cc92a9718a71712c52219ad0174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coordinate-systems-and-transformations"></a>Sistemas de coordenadas e transformações
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Fornece uma transformação do mundo e uma transformação de página para que você pode transformar (girar, dimensionar, traduzir e assim por diante) os itens que você desenhar. As duas transformações também permitem que você trabalhe em uma variedade de sistemas de coordenadas.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece uma transformação do mundo e uma transformação de página para que você pode transformar (girar, dimensionar, traduzir e assim por diante) os itens que você desenhar. As duas transformações também permitem que você trabalhe em uma variedade de sistemas de coordenadas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipos de Sistemas de Coordenadas](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  

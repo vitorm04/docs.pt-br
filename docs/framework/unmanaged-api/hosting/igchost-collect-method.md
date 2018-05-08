@@ -1,14 +1,6 @@
 ---
-title: "Método IGCHost::Collect"
-ms.custom: 
+title: Método IGCHost::Collect
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IGCHost.Collect
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a0ffe759c6c6049baa11dcc00d4cdee8415156f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="igchostcollect-method"></a>Método IGCHost::Collect
 Força uma coleta ocorra para determinada geração, independentemente do estado da coleção atual de lixo.  
@@ -57,7 +45,7 @@ HRESULT Collect (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

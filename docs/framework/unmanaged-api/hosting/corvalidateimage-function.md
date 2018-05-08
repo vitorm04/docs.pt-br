@@ -1,14 +1,6 @@
 ---
-title: "Função _CorValidateImage"
-ms.custom: 
+title: Função _CorValidateImage
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _CorValidateImage
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03deb62a84a1e9c6cee898fe0023c34b8c538ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corvalidateimage-function"></a>Função _CorValidateImage
 Valida as imagens do módulo gerenciado e notifica o carregador do sistema operacional depois de terem sido carregados.  
@@ -74,7 +62,7 @@ STDAPI _CorValidateImage (
   
  Para imagens executáveis, o carregador do sistema operacional, em seguida, chama o [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) função, independentemente do ponto de entrada especificado no executável. Para imagens de assembly DLL, chama o carregador de [cordllmain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) função.  
   
- `_CorExeMain`ou `_CorDllMain` executa as seguintes ações:  
+ `_CorExeMain` ou `_CorDllMain` executa as seguintes ações:  
   
 -   Inicializa o CLR.  
   
@@ -91,7 +79,7 @@ STDAPI _CorValidateImage (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

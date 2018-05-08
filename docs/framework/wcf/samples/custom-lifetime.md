@@ -1,33 +1,21 @@
 ---
 title: tempo de vida personalizado
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1cbe73468e2ce1c8a4fe81a676c819b04d2ef760
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-lifetime"></a>tempo de vida personalizado
-Este exemplo demonstra como gravar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] extensão para fornecer serviços de tempo de vida personalizado para compartilhado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] instâncias de serviço.  
+Este exemplo demonstra como escrever uma extensão do Windows Communication Foundation (WCF) para fornecer serviços de tempo de vida personalizado para compartilhado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] instâncias de serviço.  
   
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 ## <a name="shared-instancing"></a>Compartilhado de instanciação  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece vários modos de instância para suas instâncias de serviço. O modo compartilhado instanciação abordado neste tópico fornece uma maneira de compartilhar uma instância de serviço entre vários canais. Os clientes podem resolver o endereço de ponto de extremidade da instância local ou entre em contato com um método de fábrica no serviço para obter o endereço de ponto de extremidade de uma instância em execução. Depois que ele tem o endereço de ponto de extremidade, ele pode criar um novo canal e iniciar a comunicação. O trecho de código a seguir mostra como um aplicativo cliente cria um novo canal para uma instância de serviço existente.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece vários modos de instância para suas instâncias de serviço. O modo compartilhado instanciação abordado neste tópico fornece uma maneira de compartilhar uma instância de serviço entre vários canais. Os clientes podem resolver o endereço de ponto de extremidade da instância local ou entre em contato com um método de fábrica no serviço para obter o endereço de ponto de extremidade de uma instância em execução. Depois que ele tem o endereço de ponto de extremidade, ele pode criar um novo canal e iniciar a comunicação. O trecho de código a seguir mostra como um aplicativo cliente cria um novo canal para uma instância de serviço existente.  
   
 ```  
 // Create the first channel.  
@@ -51,7 +39,7 @@ IEchoService proxy2 = channelFactory2.CreateChannel();
  Por padrão, o valor de tempo limite de ociosidade de <xref:System.ServiceModel.InstanceContext> é um minuto. No entanto, este exemplo demonstra como você pode estender esse usando uma extensão personalizada.  
   
 ## <a name="extending-the-instancecontext"></a>Estendendo o InstanceContext  
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> é o vínculo entre a instância de serviço e o `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]permite que você estenda a esse componente de tempo de execução, adicionando o novo estado ou comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível: `IExtensibleObject<T>`, `IExtension<T>`, e `IExtensionCollection<T>`.  
+ Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.ServiceModel.InstanceContext> é o vínculo entre a instância de serviço e o `Dispatcher`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que você estenda a esse componente de tempo de execução, adicionando o novo estado ou comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível: `IExtensibleObject<T>`, `IExtension<T>`, e `IExtensionCollection<T>`.  
   
  O `IExtensibleObject<T>` interface é implementada por objetos para permitir extensões que personalizar sua funcionalidade.  
   
@@ -229,7 +217,7 @@ public class EchoService : IEchoService
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`  
   

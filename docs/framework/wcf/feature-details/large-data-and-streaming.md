@@ -1,32 +1,18 @@
 ---
 title: Dados grandes e streaming
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f58e61ef76173030db49d4911875cc40200e53d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infraestrutura de comunicação com base em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
+Windows Communication Foundation (WCF) é uma infra-estrutura de comunicação baseada em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
   
 ## <a name="basic-considerations"></a>Considerações básicas  
- Para fornecer informações de contexto sobre as seguintes informações do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], esta seção realça algumas preocupações e considerações gerais sobre codificações, dados binários e streaming que geralmente se aplicam às infraestruturas dos sistemas conectados.  
+ Para fornecer informações básicas sobre as informações a seguir para o WCF, esta seção destaca algumas questões gerais e considerações para codificações, dados binários, e streaming que geralmente se aplicam a infraestruturas de sistemas conectados.  
   
 ### <a name="encoding-data-text-vs-binary"></a>Dados de codificação: Texto versus Binário  
  As preocupações geralmente expressas pelos desenvolvedores incluem a percepção de que o XML tem uma sobrecarga significativa quando comparado com formatos binários devido à natureza repetitiva das marcas de início e de fim, que a codificação de valores numéricos é considerada como sendo significativamente maior porque são expressos em valores de texto, e que os dados binários não podem ser expressos de modo eficiente porque devem ser especialmente codificados para inserção em um formato de texto.  
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
  Ainda assim, como com a Base64, o MTOM também vem com uma sobrecarga necessária para o formato MIME, de forma que as vantagens de se usar o MTOM são consideradas apenas quando o tamanho de um elemento de dados binários excede aproximadamente 1 KB. Devido à sobrecarga, as mensagens codificadas por MTOM podem ser maiores que as mensagens que usam a codificação de Base64 para dados binários, se a carga de binários permanecer abaixo desse limite. Para obter mais informações, consulte a seção "Codificações" mais adiante neste tópico.  
   
 ### <a name="large-data-content"></a>Grande conteúdo de dados  
- Deixando a superfície eletrônica de lado, a carga de 500 MB mencionada anteriormente também representa um grande desafio local para o serviço e o cliente. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] processa as mensagens em *modo com buffer*. Isso significa que todo o conteúdo de uma mensagem está presente na memória antes de ser enviado ou depois de ser recebido. Embora essa seja uma boa estratégia na maioria dos cenários e seja necessária para recursos de mensagens, como assinaturas digitais e entrega confiável, grandes mensagens podem esgotar os recursos do sistema.  
+ Deixando a superfície eletrônica de lado, a carga de 500 MB mencionada anteriormente também representa um grande desafio local para o serviço e o cliente. Por padrão, o WCF processa as mensagens em *modo com buffer*. Isso significa que todo o conteúdo de uma mensagem está presente na memória antes de ser enviado ou depois de ser recebido. Embora essa seja uma boa estratégia na maioria dos cenários e seja necessária para recursos de mensagens, como assinaturas digitais e entrega confiável, grandes mensagens podem esgotar os recursos do sistema.  
   
  A estratégia para manipular cargas grandes é o streaming. Embora as mensagens, especialmente as expressas em XML, normalmente sejam consideradas como pacotes de dados relativamente compactos, uma mensagem pode ter um tamanho de vários gigabytes e parecer mais um fluxo de dados contínuo do que um pacote de dados. Quando os dados são transferidos no modo de streaming em vez de no modo com buffer, o remetente torna o conteúdo do corpo da mensagem disponível para o destinatário na forma de um fluxo, e a infraestrutura da mensagem encaminha continuamente os dados do remetente para o destinatário conforme eles se tornam disponíveis.  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="encodings"></a>Codificações  
  Um *codificação* define um conjunto de regras sobre como apresentar mensagens na conexão. Um *codificador* implementa tal uma codificação e é responsável, no lado do remetente, para ativar um <xref:System.ServiceModel.Channels.Message> mensagem na memória em um fluxo de bytes ou o buffer de bytes que pode ser enviado pela rede. No lado do destinatário, o codificador transforma uma sequência de bytes em uma mensagem na memória.  
   
- O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui três codificadores e permite que você escreva e conecte seus próprios codificadores, se necessário.  
+ O WCF inclui três codificadores e permite que você escrever e conectar seus próprios codificadores, se necessário.  
   
  Cada uma das associações padrão inclui um codificador pré-configurado, por meio do qual as associações com o prefixo Net* usam o codificador binário (incluindo a classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) enquanto as classes <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WSHttpBinding> usam o codificador de mensagem de texto (por meio da classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>) por padrão.  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|O codificador de mensagem de texto é o codificador padrão para todas as associações baseadas em HTTP e é a escolha apropriada para todas as associações personalizadas onde a interoperabilidade é a maior preocupação. Esse codificador lê e grava mensagens de texto SOAP 1.1/SOAP 1.2 padrão sem tratamento especial para dados binários. Se o <xref:System.ServiceModel.Channels.MessageVersion> de uma mensagem estiver definido como `None`, o wrapper de envelope SOAP será omitido da saída e apenas o conteúdo do corpo da mensagem será serializado.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|O codificador de mensagem MTOM é um codificador de texto que implementa o tratamento especial de dados binários e, por padrão, não é usado em nenhuma associação padrão porque é estritamente um utilitário de otimização caso a caso. Se a mensagem contiver dados binários que excedam um limite onde a codificação MTOM gere um benefício, os dados serão exteriorizados em uma parte MIME seguindo o envelope de mensagem. Consulte Habilitando o MTOM mais adiante nesta seção.|  
-|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|O codificador de mensagem binária é o codificador padrão para as associações Net* e é a escolha apropriada sempre que as duas partes da comunicação são baseadas no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. O codificador de mensagem binária usa o formato XML binário .NET, uma representação binária específica da Microsoft para Infosets (Conjuntos de informações XML) que geralmente geram uma superfície menor do que a representação XML 1.0 equivalente e codifica dados binários como um fluxo de bytes.|  
+|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|O codificador de mensagem binária é o codificador padrão para as associações Net * e a opção apropriada sempre que ambas as partes da comunicação baseiam-se no WCF. O codificador de mensagem binária usa o formato XML binário .NET, uma representação binária específica da Microsoft para Infosets (Conjuntos de informações XML) que geralmente geram uma superfície menor do que a representação XML 1.0 equivalente e codifica dados binários como um fluxo de bytes.|  
   
  A codificação de mensagem de texto normalmente é a melhor escolha para qualquer caminho de comunicação que exija interoperabilidade, enquanto a codificação de mensagem binária é a melhor escolha para qualquer outro caminho de comunicação. A codificação de mensagem binária normalmente gera tamanhos menores de mensagens em comparação com texto para um única mensagem e progressivamente até tamanhos menores de mensagens durante uma sessão de comunicação. Ao contrário da codificação de texto, a codificação binária não precisa usar tratamento especial para dados binários, como o uso da Base64, mas representa bytes como bytes.  
   
@@ -107,10 +93,10 @@ ms.lasthandoff: 04/30/2018
   
  Como o codificador MTOM sempre emite uma mensagem MIME/de várias partes codificada por MTOM independentemente dos dados binários acabarem sendo exteriorizados, geralmente você deve habilitar o MTOM apenas para pontos de extremidade que trocam mensagens com mais de 1 KB de dados binários. Além disso, os contratos de serviço criados para uso com pontos de extremidade habilitados para MTOM devem, quando possível, ser restringidos para especificar essas operações de transferência de dados. A funcionalidade de controle relacionada deve residir em um contrato separado. Essa regra de "apenas MTOM" se aplica apenas a mensagens enviadas por meio de um ponto de extremidade habilitado para MTOM. O codificador MTOM também pode decodificar e analisar mensagens de entrada não MTOM.  
   
- O uso do codificador MTOM está em conformidade com todos os outros recursos do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Observe que talvez não seja possível seguir essa regra em todos os casos, como quando o suporte à sessão for necessário.  
+ Usando o codificador MTOM está em conformidade com todos os outros recursos do WCF. Observe que talvez não seja possível seguir essa regra em todos os casos, como quando o suporte à sessão for necessário.  
   
 ### <a name="programming-model"></a>Modelo de Programação  
- Independentemente de quais dos três codificadores internos você usar em seu aplicativo, a experiência de programação é idêntica no que diz respeito à transferência de dados binários. A diferença está em como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trata os dados com base em seus tipos.  
+ Independentemente de quais dos três codificadores internos você usar em seu aplicativo, a experiência de programação é idêntica no que diz respeito à transferência de dados binários. A diferença é como o WCF trata os dados com base em seus tipos de dados.  
   
 ```  
 [DataContract]  
@@ -135,12 +121,12 @@ class MyData
 >  Você não deve usar tipos derivados de <xref:System.IO.Stream?displayProperty=nameWithType> em contratos de dados. Os dados de fluxo devem ser comunicados usando o modelo de streaming, explicado na seção "Dados de streaming".  
   
 ## <a name="streaming-data"></a>Dados de streaming  
- Quando você tiver uma grande quantidade de dados para transferência, o modo de transferência de streaming do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] será uma alternativa viável para o comportamento padrão de buffer e processamento de mensagens na memória em sua totalidade.  
+ Quando você tiver uma grande quantidade de dados a serem transferidos, o modo de transferência de streaming no WCF é uma alternativa viável para o comportamento padrão do buffer e processamento de mensagens na memória em sua totalidade.  
   
  Conforme mencionado anteriormente, habilite o streaming apenas para mensagens grandes (com conteúdo de texto ou binário), se os dados não puderem ser segmentados, se a mensagem precisar ser entregue em tempo hábil ou se os dados ainda não estiverem totalmente disponíveis quando a transferência for iniciada.  
   
 ### <a name="restrictions"></a>Restrições  
- Você não pode usar um número significativo de recursos do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando o streaming está habilitado:  
+ Quando o fluxo está habilitado, você não pode usar um número significativo de recursos do WCF:  
   
 -   As assinaturas digitais do corpo da mensagem não podem ser executadas porque exigem a computação de um hash sobre o conteúdo da mensagem inteira. No streaming, o conteúdo não está totalmente disponível quando os cabeçalhos da mensagem são construídos e enviados e, portanto, uma assinatura digital não pode ser computada.  
   
@@ -195,7 +181,7 @@ class MyData
   
  Ao criar uma instância de sua associação no código, você deve definir a respectiva propriedade `TransferMode` da associação (ou o elemento de associação de transporte se estiver compondo uma associação personalizada) para um dos valores mencionados anteriormente.  
   
- Você pode ativar o streaming para solicitações e respostas ou para as duas direções independentemente, em qualquer lado das partes da comunicação sem afetar a funcionalidade. No entanto, você deve sempre presumir que o tamanho dos dados transferidos é tão significativo que a habilitação de streaming é justificada nos dois pontos de extremidade de um link de comunicação. Para comunicação entre plataformas, onde um dos pontos de extremidade não está implementado com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], a capacidade de usar o streaming depende dos recursos de streaming da plataforma. Outra rara exceção pode ser um cenário orientado pelo consumo de memória, onde um cliente ou um serviço deve minimizar o conjunto de trabalho e possa suportar apenas tamanhos de buffer pequenos.  
+ Você pode ativar o streaming para solicitações e respostas ou para as duas direções independentemente, em qualquer lado das partes da comunicação sem afetar a funcionalidade. No entanto, você deve sempre presumir que o tamanho dos dados transferidos é tão significativo que a habilitação de streaming é justificada nos dois pontos de extremidade de um link de comunicação. Para comunicação entre plataformas em que um dos pontos de extremidade não é implementado com o WCF, a capacidade de usar o streaming depende de recursos de fluxo contínuo da plataforma. Outra rara exceção pode ser um cenário orientado pelo consumo de memória, onde um cliente ou um serviço deve minimizar o conjunto de trabalho e possa suportar apenas tamanhos de buffer pequenos.  
   
 ### <a name="enabling-asynchronous-streaming"></a>Habilitando o streaming assíncrono  
  Para habilitar o streaming assíncrono, adicione o comportamento do ponto de extremidade <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> ao host de serviço e defina sua propriedade <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> como `true`. Também adicionamos o recurso de streaming assíncrono verdadeiro no lado do envio. Isso melhora a escalabilidade do serviço em cenários onde ele está executando o streaming de mensagens para vários clientes, alguns dos quais estão lendo lentamente, possivelmente devido a congestionamento da rede, ou não estão lendo nada. Nesses cenários, agora não bloqueamos threads individuais no serviço por cliente. Isso garante que o serviço possa processar muito mais clientes, melhorando dessa forma a escalabilidade do serviço.  
@@ -233,23 +219,23 @@ public class UploadStreamMessage
 }   
 ```  
   
- Transferências em streaming são encerradas e a mensagem é fechada quando o fluxo atinge o EOF (final do arquivo). Para enviar uma mensagem (retornando um valor ou invocando uma operação), você pode passar um <xref:System.IO.FileStream>, e, subsequentemente, a infraestrutura do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] efetuará pull de todos os dados desse fluxo até que o fluxo tenha sido totalmente lido e o EOF tenha sido atingido. Para transferir dados em streaming para uma origem onde não existe nenhuma classe derivada <xref:System.IO.Stream> pré-criada, construa essa classe, sobreponha-a sobre a origem do fluxo e use como o argumento ou o valor de retorno.  
+ Transferências em streaming são encerradas e a mensagem é fechada quando o fluxo atinge o EOF (final do arquivo). Ao enviar uma mensagem (retornar um valor ou invocar uma operação), você pode passar um <xref:System.IO.FileStream> e a infraestrutura WCF subsequentemente extrai todos os dados desse fluxo até que o fluxo foi completamente ler e atingido EOF. Para transferir dados em streaming para uma origem onde não existe nenhuma classe derivada <xref:System.IO.Stream> pré-criada, construa essa classe, sobreponha-a sobre a origem do fluxo e use como o argumento ou o valor de retorno.  
   
- Ao receber uma mensagem, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] constrói um fluxo sobre o conteúdo do corpo da mensagem codificada pela Base64 (ou a respectiva parte MIME se estiver usando MTOM) e o fluxo atingirá o EOF quando o conteúdo tiver sido lido.  
+ Ao receber uma mensagem, o WCF constrói um fluxo sobre o conteúdo do corpo de mensagem codificada em Base64 (ou a parte MIME respectiva se usando MTOM) e o fluxo atinge EOF quando o conteúdo foi lido.  
   
  O streaming em nível de transporte também funciona com qualquer outro tipo de contrato de mensagem (listas de parâmetros, argumentos de contratos de dados e contrato de mensagem explícito), mas como a serialização e a desserialização dessas mensagens tipadas exigem buffer pelo serializador, não é aconselhável usar essas variantes de contrato.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Considerações de segurança especial para grandes dados  
  Todas as associações permitem restringir o tamanho das mensagens de entrada para evitar ataques de negação de serviço. O <xref:System.ServiceModel.BasicHttpBinding>, por exemplo, expõe um [System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) propriedade dos limites de tamanho da mensagem de entrada e assim também limites a quantidade máxima de memória que é acessada ao processar a mensagem. Essa unidade é definida em bytes com um valor padrão de 65.536 bytes.  
   
- Uma ameaça de segurança que é específica para o cenário de streaming de dados grandes provoca uma negação de serviço fazendo com que os dados sejam armazenados em buffer quando o receptor espera que os dados sejam enviados por streaming. Por exemplo, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sempre armazena em buffer os cabeçalhos SOAP de uma mensagem e, portanto, um invasor pode construir uma grande mensagem mal-intencionada consistindo inteiramente em cabeçalhos para forçar os dados a serem armazenados em buffer. Quando o streaming está habilitado, `MaxReceivedMessageSize` pode ser definido como um valor extremamente grande, porque o receptor nunca espera que a mensagem inteira seja imediatamente armazenada em buffer na memória. Se o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] for forçado a armazenar a mensagem em buffer, ocorrerá um estouro de memória.  
+ Uma ameaça de segurança que é específica para o cenário de streaming de dados grandes provoca uma negação de serviço fazendo com que os dados sejam armazenados em buffer quando o receptor espera que os dados sejam enviados por streaming. Por exemplo, WCF sempre armazena em buffer os cabeçalhos SOAP de uma mensagem, e então um invasor pode construir uma mensagem grande mal-intencionados que consistam inteiramente cabeçalhos para forçar os dados serem armazenados em buffer. Quando o streaming está habilitado, `MaxReceivedMessageSize` pode ser definido como um valor extremamente grande, porque o receptor nunca espera que a mensagem inteira seja imediatamente armazenada em buffer na memória. Se o WCF é forçado para a mensagem de buffer, ocorre um estouro de memória.  
   
- Portanto, restringir o tamanho máximo de mensagens de entrada não é suficiente nesse caso. A propriedade `MaxBufferSize` é necessária para restringir a memória que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] armazena em buffer. É importante definir isso como um valor seguro (ou manter o valor padrão) ao usar streaming. Por exemplo, suponha que o serviço precise receber arquivos de até 4 GB de tamanho e armazená-los no disco local. Suponha também que sua memória esteja restrita de tal forma que você possa armazenar apenas 64 KB de dados em buffer de cada vez. Portanto, você deve definir `MaxReceivedMessageSize` como 4 GB e `MaxBufferSize` como 64 KB. Além disso, na implementação de seu serviço, garanta que você leia somente o fluxo de entrada em partes de 64 KB e não leia a próxima parte antes que a anterior seja gravada em disco e descartada da memória.  
+ Portanto, restringir o tamanho máximo de mensagens de entrada não é suficiente nesse caso. O `MaxBufferSize` propriedade é necessária para restringir a memória que buffers WCF. É importante definir isso como um valor seguro (ou manter o valor padrão) ao usar streaming. Por exemplo, suponha que o serviço precise receber arquivos de até 4 GB de tamanho e armazená-los no disco local. Suponha também que sua memória esteja restrita de tal forma que você possa armazenar apenas 64 KB de dados em buffer de cada vez. Portanto, você deve definir `MaxReceivedMessageSize` como 4 GB e `MaxBufferSize` como 64 KB. Além disso, na implementação de seu serviço, garanta que você leia somente o fluxo de entrada em partes de 64 KB e não leia a próxima parte antes que a anterior seja gravada em disco e descartada da memória.  
   
- Também é importante compreender que a cota limita somente o buffer feito pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e não pode proteger você contra qualquer armazenamento em buffer que você faça na implementação de seu próprio serviço ou do cliente. Para obter mais informações sobre considerações de segurança adicionais, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Também é importante entender que essa cota só limita o buffer é feito pelo WCF e não pode proteger você contra qualquer buffer que faria em sua própria implementação de serviço ou cliente. Para obter mais informações sobre considerações de segurança adicionais, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
->  A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Após gerar um cliente do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para um serviço, você deve editar o arquivo de configuração dos serviços que pretende usar com transferências em streaming para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  
+>  A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Depois de gerar um cliente WCF para um serviço, você deve editar o arquivo de configuração para serviços que se destina a ser usado com transferências em fluxo para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  
   
 ## <a name="see-also"></a>Consulte também  
  [Como habilitar o streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

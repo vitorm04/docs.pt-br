@@ -1,34 +1,22 @@
 ---
 title: Como proteger um serviço com credenciais Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Como proteger um serviço com credenciais Windows
-Este tópico mostra como habilitar a segurança de transporte em um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço que reside em um domínio do Windows e é chamado pelos clientes no mesmo domínio. Para obter mais informações sobre esse cenário, consulte [segurança de transporte com autenticação do Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para um aplicativo de exemplo, consulte o [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemplo.  
+Este tópico mostra como habilitar a segurança de transporte em um serviço do Windows Communication Foundation (WCF) que reside em um domínio do Windows e é chamado pelos clientes no mesmo domínio. Para obter mais informações sobre esse cenário, consulte [segurança de transporte com autenticação do Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para um aplicativo de exemplo, consulte o [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemplo.  
   
  Este tópico pressupõe que você tem uma interface de contrato existente e implementação já definida e adiciona o logon que. Você também pode modificar um cliente e serviço existente.  
   

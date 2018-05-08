@@ -1,24 +1,12 @@
 ---
 title: Store instância de fluxo de trabalho do SQL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 81f11b9f88fbe425a07e553e64a08761dca3a2b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] com a instância Store de fluxo de trabalho SQL, que permite que fluxos de trabalho persistam informações de estado sobre instâncias de fluxo de trabalho em uma base de dados SQL Server 2005 ou SQL Server 2008. Esse recurso é implementado primeiro na forma da classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , que deriva da classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> a estrutura de persistência. O recurso de Store de instância de fluxo de trabalho do SQL constitui um provedor de persistência SQL, que é uma implementação concreta de persistência API que um host usa para enviar comandos de persistência no armazenamento.  

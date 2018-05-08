@@ -1,27 +1,15 @@
 ---
-title: "Correlação resposta/solicitação"
-ms.custom: 
+title: Correlação resposta/solicitação
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4379bf-2d08-43f3-9584-dfa30ffcb1f6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f4fc436afbcc5922badda22e9a6e565bc19a0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c38854ad42ad4dddce5171482f3ddcfe5bd16b61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="request-reply-correlation"></a>Correlação resposta/solicitação
-Correlação de solicitação-resposta é usada com um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par para implementar uma operação bidirecional em um serviço de fluxo de trabalho e com um <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> par que invoca uma operação bidirecional em outra Web serviço. Ao invocar uma operação bidirecional em uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, o serviço pode ser uma imperativa tradicional baseada em código [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço ou pode ser um serviço de fluxo de trabalho. Para usar uma associação bidirecional forem usada, como de correlação de solicitação-resposta <xref:System.ServiceModel.BasicHttpBinding>. Se chamar ou implementar uma operação bidirecional, as etapas de inicialização de correlação são semelhantes e são abordadas nesta seção.  
+Correlação de solicitação-resposta é usada com um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par para implementar uma operação bidirecional em um serviço de fluxo de trabalho e com um <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> par que invoca uma operação bidirecional em outra Web serviço. Ao invocar uma operação bidirecional em um serviço WCF, o serviço pode ser qualquer um tradicional serviço Windows Communication Foundation (WCF) código obrigatório ou pode ser um serviço de fluxo de trabalho. Para usar uma associação bidirecional forem usada, como de correlação de solicitação-resposta <xref:System.ServiceModel.BasicHttpBinding>. Se chamar ou implementar uma operação bidirecional, as etapas de inicialização de correlação são semelhantes e são abordadas nesta seção.  
   
 ## <a name="using-correlation-in-a-two-way-operation-with-receivesendreply"></a>Uso de correlação em uma operação bidirecional com SendReply/receber  
  Um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par é usado para implementar uma operação bidirecional em um serviço de fluxo de trabalho. O tempo de execução usa correlação de solicitação-resposta para garantir que a resposta será enviada para o chamador correto. Quando um fluxo de trabalho é hospedado usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>, que é o caso para serviços de fluxo de trabalho e, em seguida, a inicialização de correlação padrão é suficiente. Nesse cenário, um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par é usado por um fluxo de trabalho, e nenhuma configuração de correlação específica é necessária.  
@@ -72,7 +60,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.  
 ```  
   
- Em vez de configurar explicitamente a correlação, um <xref:System.ServiceModel.Activities.CorrelationScope> atividade pode ser usada. <xref:System.ServiceModel.Activities.CorrelationScope>Fornece um implícita <xref:System.ServiceModel.Activities.CorrelationHandle> para as atividades de mensagens que ele contém. Neste exemplo, um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par está contido em um <xref:System.ServiceModel.Activities.CorrelationScope>. Nenhuma configuração de correlação explícita é necessária.  
+ Em vez de configurar explicitamente a correlação, um <xref:System.ServiceModel.Activities.CorrelationScope> atividade pode ser usada. <xref:System.ServiceModel.Activities.CorrelationScope> Fornece um implícita <xref:System.ServiceModel.Activities.CorrelationHandle> para as atividades de mensagens que ele contém. Neste exemplo, um <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par está contido em um <xref:System.ServiceModel.Activities.CorrelationScope>. Nenhuma configuração de correlação explícita é necessária.  
   
 ```csharp  
 Receive StartOrder = new Receive  

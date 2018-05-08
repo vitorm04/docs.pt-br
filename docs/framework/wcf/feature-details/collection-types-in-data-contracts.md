@@ -1,14 +1,6 @@
 ---
 title: Tipos de coleção em contratos de dados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
 Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], essas listas podem ser representadas usando matrizes ou em uma variedade de outros tipos (lista genérica, genérico <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um cliente específico. Essas coleções são chamadas *liste coleções*, independentemente de seu tipo real.  
@@ -86,7 +72,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
   
  Durante a serialização, quando o tipo declarado é uma interface, o tipo de instância real usado pode ser qualquer tipo que implementa essa interface. Restrições discutidos anteriormente (ter um construtor padrão e um `Add` método) não se aplicam. Por exemplo, você pode definir endereços em Customer2 a uma instância do genérico <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> do endereço, embora diretamente, você não pode declarar um membro de dados de tipo genérico <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
- Durante a desserialização, quando o tipo declarado é uma interface, o mecanismo de serialização escolhe um tipo que implementa a interface declarada e o tipo é instanciado. De tipos conhecidos mecanismo (descrito na [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) não tem nenhum efeito aqui; a escolha do tipo é criada em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Durante a desserialização, quando o tipo declarado é uma interface, o mecanismo de serialização escolhe um tipo que implementa a interface declarada e o tipo é instanciado. De tipos conhecidos mecanismo (descrito na [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) não tem nenhum efeito aqui; a escolha do tipo é incorporada ao WCF.  
   
 ## <a name="customizing-collection-types"></a>Personalizando tipos de coleção  
  Você pode personalizar os tipos de coleção usando o <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atributo, que tem vários usos.  
@@ -235,7 +221,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
 ## <a name="collections-and-schema"></a>Coleções e esquema  
  Todas as coleções equivalentes possuem a mesma representação no esquema de linguagem XSD de definição de esquema XML. Por isso, você normalmente não obtém o mesmo tipo de coleção no código do cliente gerado como um no servidor. Por exemplo, o servidor pode usar um contrato de dados com um genérico <xref:System.Collections.Generic.List%601> de membro de dados inteiro, mas no código do cliente gerado do mesmo membro de dados pode se tornar uma matriz de inteiros.  
   
- Coleções do dicionário são marcadas com um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-anotação de esquema específico que indicar que eles são dicionários; caso contrário, eles são indistinguíveis de listas simples que contém entradas com uma chave e um valor. Para obter uma descrição exata de como as coleções são representadas no esquema de contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Coleções do dicionário são marcadas com uma anotação de esquema específicas do WCF que indicam que estão dicionários; Caso contrário, eles são indistinguíveis de listas simples que contém entradas com uma chave e um valor. Para obter uma descrição exata de como as coleções são representadas no esquema de contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Por padrão, os tipos não são gerados para coleções não personalizada em código importado. Membros de dados de lista de tipos de coleção são importados como matrizes e membros de dados de dicionário de tipos de coleção são importados como um dicionário genérico.  
   

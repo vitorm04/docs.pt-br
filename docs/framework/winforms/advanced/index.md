@@ -1,29 +1,15 @@
 ---
 title: Aprimorando aplicativos do Windows Forms
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-windows-forms-applications"></a>Aprimorando aplicativos do Windows Forms
 O Windows Forms contém muitos recursos que você pode usar para aprimorar seus aplicativos do Windows para atender às necessidades específicas dos seus usuários. Os tópicos a seguir descrevem esses recursos e como usá-los.  

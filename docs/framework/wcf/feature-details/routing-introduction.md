@@ -1,26 +1,12 @@
 ---
-title: "Introdução ao roteamento"
-ms.custom: 
+title: Introdução ao roteamento
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço de roteamento fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica complexa de roteamento que permite que você implemente cenários como agregação de serviço, controle de versão do serviço, o roteamento de prioridade e roteamento de multicast. O serviço de roteamento também fornece erro tratamento que permite que você configure listas de pontos de extremidade de backup, para que as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Este exemplo configura o serviço de roteamento para expor um ponto de extremidade com um endereço de "http://localhost:8000/routingservice/roteador", que é usado para receber as mensagens sejam roteadas. Como as mensagens são roteadas para os pontos de extremidade de solicitação-resposta, o ponto de extremidade de serviço usa o <xref:System.ServiceModel.Routing.IRequestReplyRouter> contrato. Essa configuração também define um ponto de extremidade do cliente individual de "http://localhost:8000/servicemodelsample/serviço" que as mensagens são roteadas para. A tabela de filtro (não mostrada) denominada "routingTable1" contém a lógica de roteamento usada para rotear mensagens e está associada com o ponto de extremidade de serviço usando o **RoutingBehavior** (para um arquivo de configuração) ou  **RoutingConfiguration** (para a configuração programática).  
+ Este exemplo configura o serviço de roteamento para expor um ponto de extremidade com um endereço de "http://localhost:8000/routingservice/router", que é usado para receber mensagens deve ser roteada. Como as mensagens são roteadas para os pontos de extremidade de solicitação-resposta, o ponto de extremidade de serviço usa o <xref:System.ServiceModel.Routing.IRequestReplyRouter> contrato. Essa configuração também define um ponto de extremidade do cliente individual de "http://localhost:8000/servicemodelsample/service" que mensagens são roteadas. A tabela de filtro (não mostrada) denominada "routingTable1" contém a lógica de roteamento usada para rotear mensagens e está associada com o ponto de extremidade de serviço usando o **RoutingBehavior** (para um arquivo de configuração) ou  **RoutingConfiguration** (para a configuração programática).  
   
 ### <a name="routing-logic"></a>Lógica de roteamento  
  Para definir a lógica de roteamento usada para rotear mensagens, você deve determinar quais dados contidos em mensagens de entrada podem ser tratados com exclusividade. Por exemplo, se todos os pontos de destino você está roteando para compartilhar as mesmas ações de SOAP, o valor da ação contido na mensagem não é um bom indicador de qual ponto de extremidade específico a mensagem deve ser roteada para. Se você exclusivamente deve rotear mensagens para um ponto de extremidade específico, você deve filtrar em dados que identifica exclusivamente o ponto de extremidade de destino que a mensagem é roteada para.  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Vários filtros devem retornar `true` ao avaliar a mensagem.  
   
- Se essas condições forem atendidas, a mensagem é roteada para todos os pontos de extremidade de todos os filtros que são avaliadas como `true`. O exemplo a seguir define uma configuração de roteamento que resulta em mensagens sejam roteadas para os pontos de extremidade, se o endereço de ponto de extremidade na mensagem for http://localhost:8000/routingservice/roteador/arredondamento.  
+ Se essas condições forem atendidas, a mensagem é roteada para todos os pontos de extremidade de todos os filtros que são avaliadas como `true`. O exemplo a seguir define uma configuração de roteamento que resulta em mensagens sejam roteadas para os pontos de extremidade, se o endereço de ponto de extremidade na mensagem é http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

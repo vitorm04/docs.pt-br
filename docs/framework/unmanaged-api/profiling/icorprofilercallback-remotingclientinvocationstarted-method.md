@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerCallback::RemotingClientInvocationStarted"
-ms.custom: 
+title: Método ICorProfilerCallback::RemotingClientInvocationStarted
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.RemotingClientInvocationStarted
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 796b63f3-c809-47f1-89cc-b23ad8eb5e79
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 071e2892202271cac5e0acb226e9bef0e626b134
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1dcb79c4130f6bd163cb807ff92b95db8360a185
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>Método ICorProfilerCallback::RemotingClientInvocationStarted
 Notifica o criador de perfil que uma chamada de comunicação remota foi iniciada.  
@@ -49,7 +37,7 @@ HRESULT RemotingClientInvocationStarted();
   
  Cada um dos seguintes pares de retornos de chamada ocorrerá no mesmo thread:  
   
--   `RemotingClientInvocationStarted`e [: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
+-   `RemotingClientInvocationStarted` e [: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
   
 -   [: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) e [: Remotingclientinvocationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
@@ -68,7 +56,7 @@ HRESULT RemotingClientInvocationStarted();
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

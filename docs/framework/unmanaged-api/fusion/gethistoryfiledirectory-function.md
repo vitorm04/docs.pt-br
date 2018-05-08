@@ -1,14 +1,6 @@
 ---
-title: "Função GetHistoryFileDirectory"
-ms.custom: 
+title: Função GetHistoryFileDirectory
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetHistoryFileDirectory
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5d0ec18a4f95d0d280a66b3b9d9200c560f5f187
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gethistoryfiledirectory-function"></a>Função GetHistoryFileDirectory
 Recupera o caminho do diretório de histórico do aplicativo.  
@@ -59,7 +47,7 @@ HRESULT GetHistoryFileDirectory (
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|E_INVALIDARG|`wzDir`ou `pdwSize` é nulo ou a versão de cadeia de caracteres está incorreta.|  
+|E_INVALIDARG|`wzDir` ou `pdwSize` é nulo ou a versão de cadeia de caracteres está incorreta.|  
   
 ## <a name="remarks"></a>Comentários  
  Após a conclusão bem-sucedida, o `pdwSize` argumento é definido como o comprimento da cadeia de caracteres de caminho.  
@@ -71,7 +59,7 @@ HRESULT GetHistoryFileDirectory (
   
  **Biblioteca:** Fusion e arquivo Mscorwks.dll. Use Fusion em vez do arquivo Mscorwks.dll para garantir que você a versão correta do .NET Framework de destino.  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Função CreateHistoryReader](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  

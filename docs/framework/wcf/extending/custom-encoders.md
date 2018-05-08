@@ -1,31 +1,17 @@
 ---
 title: Decodificadores personalizados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>Decodificadores personalizados
 Este tópico discute como criar decodificadores personalizados.  
   
- Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], você usa um *associação* para especificar como transferir dados através de uma rede entre os pontos de extremidade. Uma associação é composta de uma sequência de *elementos de associação*. Uma associação inclui elementos de associação de protocolo opcional, como segurança, necessário *codificador de mensagem* elemento de associação e um elemento de associação de transporte necessário. Um codificador de mensagem é representado por uma elemento de associação de codificação de mensagem. Três codificadores de mensagem estão incluídos no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: binário, o mecanismo de otimização de transmissão mensagem (MTOM) e o texto.  
+ No Windows Communication Foundation (WCF), use um *associação* para especificar como transferir dados através de uma rede entre os pontos de extremidade. Uma associação é composta de uma sequência de *elementos de associação*. Uma associação inclui elementos de associação de protocolo opcional, como segurança, necessário *codificador de mensagem* elemento de associação e um elemento de associação de transporte necessário. Um codificador de mensagem é representado por uma elemento de associação de codificação de mensagem. Três codificadores de mensagem estão incluídos no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: binário, o mecanismo de otimização de transmissão mensagem (MTOM) e o texto.  
   
  Uma elemento de associação de codificação serializa uma saída de mensagem <xref:System.ServiceModel.Channels.Message> e passa para o transporte ou recebe o formato serializado de uma mensagem do transporte e passa para a camada de protocolo, se presente, ou para o aplicativo, caso ainda não presentes.  
   

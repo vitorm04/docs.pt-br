@@ -1,28 +1,14 @@
 ---
 title: Fluxo de transação WS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transaction-flow"></a>Fluxo de transação WS
 Este exemplo demonstra o uso de uma transação de coordenada de cliente e as opções de cliente e servidor para a transação fluem usando o protocolo WS-AT tanto na OleTransactions. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo, mas as operações são atribuídas para demonstrar o uso do `TransactionFlowAttribute` com o **TransactionFlowOption** enumeração para determinar para qual transação grau fluxo está habilitado. Dentro do escopo da transação que fluiu, um log das operações solicitados é gravado em um banco de dados e persiste até que a transação de cliente coordenada concluída - se a transação do cliente não for concluída, a transação de serviço da Web garante que o as atualizações adequadas para o banco de dados não são confirmadas.  
@@ -77,7 +63,7 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  O netTcpBinding fornecido pelo sistema permite a especificação da transactionProtocol enquanto o wsHttpBinding fornecido pelo sistema usa apenas o protocolo WSAtomicTransactionOctober2004 mais interoperável. O protocolo OleTransactions só está disponível para uso por [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] clientes.  
+>  O netTcpBinding fornecido pelo sistema permite a especificação da transactionProtocol enquanto o wsHttpBinding fornecido pelo sistema usa apenas o protocolo WSAtomicTransactionOctober2004 mais interoperável. OleTransactions protocolo só está disponível para usar pelos clientes do Windows Communication Foundation (WCF).  
   
  Para a classe que implementa o `ICalculator` interface, todos os métodos são atribuídos com <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade definida como `true`. Essa configuração declara que todas as ações executadas no método ocorrem dentro do escopo de uma transação. Nesse caso, as ações tomadas incluem a gravação no banco de dados de log. Se a solicitação de operação inclui uma transação que fluiu as ações que ocorrem dentro do escopo da transação de entrada, ou um novo escopo de transação é gerado automaticamente.  
   
@@ -298,6 +284,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

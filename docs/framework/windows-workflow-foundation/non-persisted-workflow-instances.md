@@ -1,23 +1,12 @@
 ---
-title: "Instâncias são persistentes de fluxo de trabalho"
-ms.custom: 
+title: Instâncias são persistentes de fluxo de trabalho
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 54ed92ee666a55b52db22abbbe46922189b3f8fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="non-persisted-workflow-instances"></a>Instâncias são persistentes de fluxo de trabalho
 Quando uma nova instância de um fluxo de trabalho é criada que persiste seu estado em <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, o host serviço cria uma entrada para o serviço no armazenamento de instância. Posteriormente, quando a instância do fluxo de trabalho é mantida pela primeira vez, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> armazena o estado atual da instância. Se o fluxo de trabalho é hospedado no serviço de ativação de processo do Windows, os dados de implantação de serviço são gravados também para o armazenamento de instância quando a instância é mantida pela primeira vez.  

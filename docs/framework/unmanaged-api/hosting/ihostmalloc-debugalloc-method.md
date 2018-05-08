@@ -1,14 +1,6 @@
 ---
-title: "Método IHostMAlloc::DebugAlloc"
-ms.custom: 
+title: Método IHostMAlloc::DebugAlloc
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMAlloc.DebugAlloc
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63249f6ce64071ddaa2bb9dff221ae40d924bbfe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8447f6fa2771128c1bdf424cb9aac141b2dfd486
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmallocdebugalloc-method"></a>Método IHostMAlloc::DebugAlloc
 Solicita que o host alocar a quantidade especificada de memória de heap e Além disso, controlar em que a memória foi alocada.  
@@ -70,7 +58,7 @@ HRESULT DebugAlloc (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc`retornou com êxito.|  
+|S_OK|`DebugAlloc` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -79,7 +67,7 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para concluir a solicitação de alocação.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR obtém um ponteiro de interface para um [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instância chamando o [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) método. `DebugAlloc`permite que o tempo de execução obter informações do arquivo de código para uso durante a depuração.  
+ O CLR obtém um ponteiro de interface para um [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instância chamando o [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) método. `DebugAlloc` permite que o tempo de execução obter informações do arquivo de código para uso durante a depuração.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -88,7 +76,7 @@ HRESULT DebugAlloc (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  

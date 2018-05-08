@@ -1,11 +1,7 @@
 ---
-title: "Função QualifierSet_GetNames (referência de API não gerenciada)"
-description: "A função QualifierSet_GetNames recupera os nomes de qualificadores de um objeto ou propriedade."
+title: Função QualifierSet_GetNames (referência de API não gerenciada)
+description: A função QualifierSet_GetNames recupera os nomes de qualificadores de um objeto ou propriedade.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6077b448c2644f68d12679cf208ee921c2af119a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetgetnames-function"></a>Função QualifierSet_GetNames
 Recupera os nomes de todos os qualificadores ou de certos qualificadores disponíveis do objeto atual ou propriedade. 
@@ -62,7 +55,7 @@ HRESULT QualifierSet_GetNames (
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retorne apenas os nomes dos qualificadores específica para a propriedade atual ou o objeto. <br/> Para uma propriedade: retornar apenas os qualificadores específica para a propriedade (incluindo substituições), e não os qualificadores propagadas da definição de classe. <br/> Para uma instância: retornar apenas os nomes de qualificador específicos da instância. <br/> Para uma classe: retornar somente qualificadores específico para o beiong de classe derivada.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: retorno apenas os qualificadores propagados para essa propriedade de definição de classe e não os da própria propriedade. <br/> Para uma instância: retornar apenas os qualificadores propagados da definição de classe. <br/> Para uma classe: retornar apenas os nomes de qualificador herdados de classes pai. |
 
-`pstrNames`[out] Um novo `SAFEARRAY` que contém os nomes solicitados. A matriz pode ter elementos 0. Se ocorrer um erro, um novo `SAFEARRAY` não é retornado.
+`pstrNames` [out] Um novo `SAFEARRAY` que contém os nomes solicitados. A matriz pode ter elementos 0. Se ocorrer um erro, um novo `SAFEARRAY` não é retornado.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -87,7 +80,7 @@ Não é um erro para um determinado objeto ter qualificadores de zero, então o 
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

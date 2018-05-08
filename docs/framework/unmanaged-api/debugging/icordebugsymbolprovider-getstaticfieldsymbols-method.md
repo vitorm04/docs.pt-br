@@ -1,24 +1,14 @@
 ---
-title: "Método ICorDebugSymbolProvider::GetStaticFieldSymbols"
-ms.custom: 
+title: Método ICorDebugSymbolProvider::GetStaticFieldSymbols
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3871a74ee2844835c09a6e395fd63536c7442261
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7d5195215762c25b2d7dc2b71fcd53959656303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider::GetStaticFieldSymbols
 Obtém os símbolos de campo estático que correspondem a uma assinatura typespec.  
@@ -63,7 +53,7 @@ HRESULT GetStaticFieldSymbols(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método GetInstanceFieldSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)  

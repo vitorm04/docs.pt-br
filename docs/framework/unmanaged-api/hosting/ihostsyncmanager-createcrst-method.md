@@ -1,14 +1,6 @@
 ---
-title: "Método IHostSyncManager::CreateCrst"
-ms.custom: 
+title: Método IHostSyncManager::CreateCrst
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrst
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f932c91892292c787feecf1768c33fb429334bae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 101a652aa77e587003fb7e773e00ba9b77461a06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>Método IHostSyncManager::CreateCrst
 Cria um objeto de seção crítica para sincronização.  
@@ -54,7 +42,7 @@ HRESULT CreateCrst (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateCrst`retornou com êxito.|  
+|S_OK|`CreateCrst` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -63,7 +51,7 @@ HRESULT CreateCrst (
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para criar a seção crítica solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Objetos de seção crítica fornecem sincronização semelhante àquela fornecida por um objeto mutex, exceto que as seções críticas podem ser usadas somente por segmentos de um único processo. `CreateCrst`reflete o Win32 `InitializeCriticalSection` função.  
+ Objetos de seção crítica fornecem sincronização semelhante àquela fornecida por um objeto mutex, exceto que as seções críticas podem ser usadas somente por segmentos de um único processo. `CreateCrst` reflete o Win32 `InitializeCriticalSection` função.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,7 +60,7 @@ HRESULT CreateCrst (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

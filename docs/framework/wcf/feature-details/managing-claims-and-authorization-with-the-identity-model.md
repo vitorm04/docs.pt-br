@@ -1,13 +1,6 @@
 ---
-title: "Gerenciamento de declarações e autorizações com o modelo de identidade"
-ms.custom: 
+title: Gerenciamento de declarações e autorizações com o modelo de identidade
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
-A autorização é o processo de determinar quais entidades têm permissão para alterar, exibir ou, caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente os gerentes podem permitidos para acessar os arquivos de seus funcionários. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando existente construções de runtime (CLR) de linguagem comum. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidos para dar suporte a novos tipos de declaração para esquemas de autorização personalizada. Este tópico apresenta uma visão geral de como os principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  
+A autorização é o processo de determinar quais entidades têm permissão para alterar, exibir ou, caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente os gerentes podem permitidos para acessar os arquivos de seus funcionários. Windows Communication Foundation (WCF) oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando existente construções de runtime (CLR) de linguagem comum. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. WCF usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidos para dar suporte a novos tipos de declaração para esquemas de autorização personalizada. Este tópico apresenta uma visão geral de como os principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  
   
 ## <a name="identity-model-scenarios"></a>Cenários de modelo de identidade  
  Os cenários a seguir representam o uso do modelo de identidade.  
@@ -83,7 +71,7 @@ A autorização é o processo de determinar quais entidades têm permissão para
  Valor  
  Algo sobre o qual um direito é solicitado.  
   
-## <a name="claims"></a>declarações  
+## <a name="claims"></a>Declarações  
  O modelo de identidade é um sistema baseado em declarações. Declarações descrevem os recursos associados a uma entidade no sistema, geralmente um usuário do sistema. O conjunto de declarações associado a uma determinada entidade pode ser pensado como uma chave. As declarações específicas definem a forma de chave, semelhante a uma chave física usada para abrir um bloqueio em uma porta. Declarações são usadas para obter acesso aos recursos. Acesso a um determinado recurso protegido é determinado comparando as declarações necessárias para acessar o recurso com as declarações associadas ao acesso de tentativa de entidade.  
   
  Uma declaração é a expressão de um direito em relação a um valor específico. Um direito poderia ser algo como "Leitura", "Gravação" ou "Executar". Um valor pode ser um banco de dados, um arquivo, uma caixa de correio ou uma propriedade. Declarações também têm um tipo de declaração. A combinação de tipo de declaração e direita fornece o mecanismo para especificar recursos em relação o valor. Por exemplo, uma declaração do tipo "File", "Leitura" direito sobre o valor "Biography.doc" indica que a entidade à qual essa uma declaração está associada tem acesso de leitura ao arquivo Biography.doc. Uma declaração de tipo "Name", com o direito "PossessProperty" sobre o valor "Martin" indica que a entidade à qual essa uma declaração está associada possui uma propriedade de nome com o valor "Martin".  
@@ -136,7 +124,7 @@ A autorização é o processo de determinar quais entidades têm permissão para
  ![Gerenciando reivindicações e autorização](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF e o modelo de identidade  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa a infra-estrutura do modelo de identidade como base para a execução de autorização. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe permite que você especifique *autorização* políticas como parte de um serviço. Essas diretivas de autorização são conhecidas como *políticas de autorização externa*, e eles podem executar o processamento de solicitações com base na política local ou interação com um serviço remoto. O Gerenciador de autorização, representado pelo <xref:System.ServiceModel.ServiceAuthorizationManager> classe avalia as políticas de autorização externa junto com as políticas de autorização que reconhecem os vários tipos (tokens) de credenciais e preenche o que é chamado de um  *contexto de autorização* com as declarações apropriadas para uma mensagem de entrada. O contexto de autorização é representado pela <xref:System.IdentityModel.Policy.AuthorizationContext> classe.  
+ WCF usa a infraestrutura de identidade modelo como base para a execução de autorização. No WCF, o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe permite que você especifique *autorização* políticas como parte de um serviço. Essas diretivas de autorização são conhecidas como *políticas de autorização externa*, e eles podem executar o processamento de solicitações com base na política local ou interação com um serviço remoto. O Gerenciador de autorização, representado pelo <xref:System.ServiceModel.ServiceAuthorizationManager> classe avalia as políticas de autorização externa junto com as políticas de autorização que reconhecem os vários tipos (tokens) de credenciais e preenche o que é chamado de um  *contexto de autorização* com as declarações apropriadas para uma mensagem de entrada. O contexto de autorização é representado pela <xref:System.IdentityModel.Policy.AuthorizationContext> classe.  
   
 ## <a name="identity-model-programming"></a>Programação de modelo de identidade  
  A tabela a seguir descreve o modelo de objeto usado para extensões de modelo de identidade do programa. Essas classes todas existirem no <xref:System.IdentityModel.Policy> ou <xref:System.IdentityModel.Claims> namespaces.  

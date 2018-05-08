@@ -1,24 +1,12 @@
 ---
 title: Espera para atividades de entrada
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wait-for-input-activity"></a>Espera para atividades de entrada
 Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. Windows Workflow Foundation (WF) não fornece uma atividade para a criação de indicador declarativa. Portanto, quando você deseja criar um indexador no fluxo de trabalho, você deve escrever uma atividade personalizado que o criar. A atividade de `WaitForInput` definida neste exemplo fornece essa funcionalidade, de modo que os usuários podem criar indicadores declarativamente dentro de um fluxo de trabalho.  
@@ -68,6 +56,6 @@ Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

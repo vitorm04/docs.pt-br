@@ -1,29 +1,15 @@
 ---
 title: UriTemplate and UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate and UriTemplateTable
-Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos seus serviços de responder às URIs. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] adicionadas duas novas classes para oferecer aos desenvolvedores controle sobre suas URIs. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Essas classes também podem ser usadas em seus próprios, permitindo que desenvolvedores para tirar proveito dos modelos e o mecanismo de mapeamento de URI sem implementar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
+Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos seus serviços de responder às URIs. Windows Communication Foundation (WCF) adicionado duas novas classes para oferecer aos desenvolvedores controle sobre suas URIs. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> formam a base do mecanismo de distribuição com base no URI do WCF. Essas classes também podem ser usadas em seu próprios, que permite aos desenvolvedores aproveitar os modelos e o URI de mecanismo de mapeamento sem implementar um serviço WCF.  
   
 ## <a name="templates"></a>Modelos  
  Um modelo é uma maneira de descrever um conjunto de URIs relativos. O conjunto de modelos URI na tabela a seguir mostra como um sistema que recupera os vários tipos de informações de tempo pode ser definido.  
@@ -35,7 +21,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 |Previsão de cidade|clima / {estado} / {cidade}|  
 |Previsão de atividade|clima / {estado} / {cidade} / {atividade}|  
   
- Esta tabela descreve um conjunto de URIs estruturalmente semelhantes. Cada entrada é um modelo de URI. Os segmentos entre chaves descrevem variáveis. Os segmentos não entre chaves descrevem cadeias de caracteres literais. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] classes de modelo permitir que os desenvolvedores levar um URI de entrada, por exemplo, "/ clima/wa/seattle/ciclo" e a correspondência em um modelo que descreve, "/weather/ {estado} / {cidade} / {atividade}".  
+ Esta tabela descreve um conjunto de URIs estruturalmente semelhantes. Cada entrada é um modelo de URI. Os segmentos entre chaves descrevem variáveis. Os segmentos não entre chaves descrevem cadeias de caracteres literais. As classes de modelo WCF permitir que os desenvolvedores levar um URI de entrada, por exemplo, "/ clima/wa/seattle/ciclo" e a correspondência em um modelo que descreve, "/weather/ {estado} / {cidade} / {atividade}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> é uma classe que encapsula um modelo de URI. O construtor aceita um parâmetro de cadeia de caracteres que define o modelo. Essa cadeia de caracteres contém o modelo no formato descrito na próxima seção. O <xref:System.UriTemplate> classe fornece métodos que permitem correspondem um URI de entrada para um modelo, gerar um URI de um modelo, recuperar uma coleção de nomes de variáveis usadas no modelo, determinar se dois modelos são equivalentes e retornam o modelo cadeia de caracteres.  

@@ -1,24 +1,12 @@
 ---
 title: Inspetores de mensagem
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ed4f31e004ddeb69a29568b3892ab7379715457
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-inspectors"></a>Inspetores de mensagem
 Este exemplo demonstra como implementar e configurar o cliente e o serviço inspetores de mensagem.  
@@ -52,7 +40,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Inspetor de mensagem qualquer serviço (distribuidor) deve implementar os dois <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> métodos <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>é invocado pelo dispatcher quando uma mensagem foi recebida, processada pela pilha de canais e atribuída a um serviço, mas antes de ser desserializado e enviada para uma operação. Se a mensagem de entrada foi criptografada, a mensagem já é descriptografada quando atingir o Inspetor de mensagem. O método obtém o `request` mensagem passada como um parâmetro de referência, que permite que a mensagem a ser inspecionado, manipulados ou substituído conforme necessário. O valor de retorno pode ser qualquer objeto e é usado como um objeto de estado de correlação que é passado para <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando o serviço retorna uma resposta para a mensagem atual. Neste exemplo, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega a inspeção (validação) da mensagem para o método particular, local `ValidateMessageBody` e não retorna nenhum objeto de estado de correlação. Esse método garante que nenhuma mensagem inválida passa para o serviço.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> é invocado pelo dispatcher quando uma mensagem foi recebida, processada pela pilha de canais e atribuída a um serviço, mas antes de ser desserializado e enviada para uma operação. Se a mensagem de entrada foi criptografada, a mensagem já é descriptografada quando atingir o Inspetor de mensagem. O método obtém o `request` mensagem passada como um parâmetro de referência, que permite que a mensagem a ser inspecionado, manipulados ou substituído conforme necessário. O valor de retorno pode ser qualquer objeto e é usado como um objeto de estado de correlação que é passado para <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando o serviço retorna uma resposta para a mensagem atual. Neste exemplo, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega a inspeção (validação) da mensagem para o método particular, local `ValidateMessageBody` e não retorna nenhum objeto de estado de correlação. Esse método garante que nenhuma mensagem inválida passa para o serviço.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -67,7 +55,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>é invocado sempre que uma resposta está pronta para ser enviado para um cliente ou, no caso de mensagens unidirecionais, quando a mensagem de entrada foi processada. Isso permite que extensões de contagem que está sendo chamado simetricamente, independentemente de MEPS. Assim como acontece com <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, a mensagem é passada como um parâmetro de referência e pode ser inspecionada, modificada ou substituída. A validação da mensagem que é executada neste exemplo é delegada novamente para o `ValidMessageBody` método, mas o tratamento de erros de validação é ligeiramente diferente nesse caso.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> é invocado sempre que uma resposta está pronta para ser enviado para um cliente ou, no caso de mensagens unidirecionais, quando a mensagem de entrada foi processada. Isso permite que extensões de contagem que está sendo chamado simetricamente, independentemente de MEPS. Assim como acontece com <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, a mensagem é passada como um parâmetro de referência e pode ser inspecionada, modificada ou substituída. A validação da mensagem que é executada neste exemplo é delegada novamente para o `ValidMessageBody` método, mas o tratamento de erros de validação é ligeiramente diferente nesse caso.  
   
  Se ocorrer um erro de validação do serviço, o `ValidateMessageBody` método lança <xref:System.ServiceModel.FaultException>-derivado exceções. Em <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, essas exceções podem ser colocadas na infraestrutura do modelo de serviço em que eles são automaticamente transformados em falhas de SOAP e retransmitidos para o cliente. Em <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, <xref:System.ServiceModel.FaultException> exceções não devem ser colocadas em infraestrutura, como a transformação de exceções de falha geradas pelo serviço ocorre antes do Inspetor de mensagem é chamado. Portanto, a implementação a seguir captura o conhecido `ReplyValidationFault` exceção e substitui a resposta de mensagem com uma mensagem de falha explícita. Esse método garante que nenhum mensagens inválidas são retornadas pela implementação de serviço.  
   
@@ -93,7 +81,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  O Inspetor de mensagem do cliente é muito semelhante. Os dois métodos que devem ser implementados de <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> são <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> e <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>é invocado quando a mensagem tiver sido composta pelo aplicativo cliente ou pelo formatador de operação. Como com os inspetores de mensagem do dispatcher, a mensagem pode simplesmente ser inspecionado ou totalmente substituídos. Neste exemplo, o Inspetor de delega para o mesmo local `ValidateMessageBody` método auxiliar que também é usado para os inspetores de mensagem de expedição.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> é invocado quando a mensagem tiver sido composta pelo aplicativo cliente ou pelo formatador de operação. Como com os inspetores de mensagem do dispatcher, a mensagem pode simplesmente ser inspecionado ou totalmente substituídos. Neste exemplo, o Inspetor de delega para o mesmo local `ValidateMessageBody` método auxiliar que também é usado para os inspetores de mensagem de expedição.  
   
  A diferença de comportamento entre a validação de cliente e de serviço (conforme especificado no construtor) é que a validação do cliente gera exceções locais que são colocadas em código de usuário porque eles ocorrem localmente e não devido a uma falha de serviço. Em geral, a regra é inspetores do serviço dispatcher geram falhas e inspetores de cliente lançam exceções.  
   
@@ -420,7 +408,7 @@ catch (Exception e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

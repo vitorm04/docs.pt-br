@@ -1,29 +1,17 @@
 ---
 title: Arquitetura do componente BindingSource
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Arquitetura do componente BindingSource
 Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar universalmente todos os controles de formulários do Windows para fontes de dados.  
@@ -57,13 +45,13 @@ Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar 
   
 -   Fonte de dados como uma lista.  
   
--   <xref:System.Windows.Forms.BindingSource>como um <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> como um <xref:System.ComponentModel.IBindingList>.  
   
 -   Criação de item personalizado.  
   
 -   Criação de item transacional.  
   
--   <xref:System.Collections.IEnumerable>suporte.  
+-   <xref:System.Collections.IEnumerable> suporte.  
   
 -   Suporte a tempo de design.  
   
@@ -120,7 +108,7 @@ Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar 
 |Uma referência nula (`Nothing` no Visual Basic) com <xref:System.Windows.Forms.BindingSource.DataMember%2A> definido|Não há suporte para; gera <xref:System.ArgumentException>.|  
 |Tipo fora da lista ou objeto do tipo "T"|Vazio <xref:System.ComponentModel.IBindingList> do tipo "T".|  
 |Instância de matriz|Um <xref:System.ComponentModel.IBindingList> que contém os elementos da matriz.|  
-|<xref:System.Collections.IEnumerable>instância|Um <xref:System.ComponentModel.IBindingList> que contém o <xref:System.Collections.IEnumerable> itens|  
+|<xref:System.Collections.IEnumerable> Instância|Um <xref:System.ComponentModel.IBindingList> que contém o <xref:System.Collections.IEnumerable> itens|  
 |Instância de lista que contém o tipo "T"|Um <xref:System.ComponentModel.IBindingList> instância que contém o tipo "T".|  
   
  Além disso, <xref:System.Windows.Forms.BindingSource.DataSource%2A> pode ser definido como outros tipos de lista, como <xref:System.ComponentModel.IListSource> e <xref:System.ComponentModel.ITypedList>e o <xref:System.Windows.Forms.BindingSource> manipulará corretamente. Nesse caso, o tipo que está contido na lista deve ter um construtor padrão.  

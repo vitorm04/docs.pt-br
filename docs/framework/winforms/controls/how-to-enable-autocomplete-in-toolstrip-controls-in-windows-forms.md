@@ -1,13 +1,6 @@
 ---
 title: Como habilitar AutoComplete em controles ToolStrip nos Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7bbae29cea265fbc4cd92213066198b3f721c01d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5836b03ad185d4a31a24dfea46db54214ac54b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Como habilitar AutoComplete em controles ToolStrip nos Windows Forms
 O procedimento a seguir combina um <xref:System.Windows.Forms.ToolStripLabel> com um <xref:System.Windows.Forms.ToolStripComboBox> que pode ser removido para baixo mostrar uma lista de itens, como recentemente sites visitados. Se o usuário digita um caractere que corresponde ao primeiro caractere de um dos itens na lista, o item é exibido imediatamente.  

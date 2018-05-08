@@ -1,24 +1,12 @@
 ---
 title: Eventos de rastreamento no rastreamento de evento no Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
 Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um serviço de fluxo de trabalho de controle e emitir os eventos de rastreamento de eventos para Windows ETW (rastreamento). Para emitir registros de acompanhamento de fluxo de trabalho em ETW, o exemplo usa o participante de rastreamento de<xref:System.Activities.Tracking.EtwTrackingParticipant>(ETW).  
@@ -156,7 +144,7 @@ Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um s
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   

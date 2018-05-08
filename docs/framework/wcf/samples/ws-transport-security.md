@@ -1,26 +1,14 @@
 ---
 title: Segurança de transporte WS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a332394877e33f6ab97b4be77da6c3267d85401
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66834a8bd8e783c0795cc65b3b197056b7c8da33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-security"></a>Segurança de transporte WS
 Este exemplo demonstra o uso da segurança de transporte SSL com o <xref:System.ServiceModel.WSHttpBinding> associação. Por padrão, o `wsHttpBinding` associação fornece comunicação HTTP. Quando configurado para segurança de transporte, a associação oferece suporte à comunicação de HTTPS. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. O `wsHttpBinding` é especificado e configurado nos arquivos de configuração do aplicativo para o cliente e o serviço.  
@@ -33,7 +21,7 @@ Este exemplo demonstra o uso da segurança de transporte SSL com o <xref:System.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsTransportSecurity`  
   
@@ -64,7 +52,7 @@ Este exemplo demonstra o uso da segurança de transporte SSL com o <xref:System.
   
  O endereço especificado usa o esquema de https://. A configuração de associação define o modo de segurança `Transport`. O mesmo modo de segurança deve ser especificado no arquivo de Web. config do serviço.  
   
- Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança é exibida quando você tentar acessar um https: endereço, como https://localhost/servicemodelsamples/service.svc, no seu navegador. Para permitir que o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente para trabalhar com um certificado de teste no lugar, foi adicionado um código adicional para o cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanha, não é necessário ao usar certificados de produção.  
+ Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança é exibida quando você tentar acessar um https: endereço, como https://localhost/servicemodelsamples/service.svc, no seu navegador. Para permitir que o cliente do Windows Communication Foundation (WCF) para trabalhar com um certificado de teste no local, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanha, não é necessário ao usar certificados de produção.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugFunction2::GetVersionNumber"
-ms.custom: 
+title: Método ICorDebugFunction2::GetVersionNumber
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFunction2.GetVersionNumber
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 16902d1a50f691ae555fdbc964bb9a1c6bf563c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd2151c4886959647de4f9e27a20a93ffc07429
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>Método ICorDebugFunction2::GetVersionNumber
 Obtém a versão de editar e continuar dessa função.  
@@ -66,4 +54,4 @@ HRESULT GetVersionNumber (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

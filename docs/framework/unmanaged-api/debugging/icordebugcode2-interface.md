@@ -1,14 +1,6 @@
 ---
 title: Interface1 ICorDebugCode2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54cada8e8211b3837e30f3d058d54af1eaf96a83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13803a8cc292da602b1b920a3879120c3e754ca4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcode2-interface1"></a>Interface1 ICorDebugCode2
 Fornece métodos que estendem os recursos do "ICorDebugCode".  
@@ -56,7 +44,7 @@ Fornece métodos que estendem os recursos do "ICorDebugCode".
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
     

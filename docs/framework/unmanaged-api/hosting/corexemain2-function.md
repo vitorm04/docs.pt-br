@@ -1,14 +1,6 @@
 ---
-title: "Função _CorExeMain2"
-ms.custom: 
+title: Função _CorExeMain2
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _CorExeMain2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69e03de14a2a86600b7acbc7ff8ceca4d845f0ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corexemain2-function"></a>Função _CorExeMain2
 Executa o ponto de entrada no código do mapeamento de memória especificado. Essa função é chamada pelo carregador do sistema operacional.  
@@ -72,7 +60,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

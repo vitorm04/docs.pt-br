@@ -1,13 +1,6 @@
 ---
 title: 'Otimizando desempenho: texto'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 177f42dfa1c1be2b12d7e9e5283cf57f14c0880c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-text"></a>Otimizando desempenho: texto
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui suporte para a apresentação do conteúdo de texto com o uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com recursos sofisticados. Em geral, você pode dividir a renderização de texto em três camadas:  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Renderização de texto no nível de glifos  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornece suporte avançado de texto incluindo marcação em nível de glifos com acesso direto a <xref:System.Windows.Documents.Glyphs> para clientes que desejam interceptar e persistir texto após a formatação. Esses recursos dão suporte crítico aos diferentes requisitos de renderização de texto em cada um dos cenários a seguir.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece suporte avançado de texto incluindo marcação em nível de glifos com acesso direto a <xref:System.Windows.Documents.Glyphs> para clientes que desejam interceptar e persistir texto após a formatação. Esses recursos dão suporte crítico aos diferentes requisitos de renderização de texto em cada um dos cenários a seguir.  
   
 -   Exibição em tela de documentos de formato fixo.  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   Representação de documentos de formato fixo, incluindo clientes de versões anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e outros dispositivos de computação.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>e <xref:System.Windows.Media.GlyphRun> são projetados para apresentação do documento de formato fixo e cenários de impressão. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornece vários elementos para layout geral e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] cenários como <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Para mais informações sobre layout e cenários [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
+>  <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> são projetados para apresentação do documento de formato fixo e cenários de impressão. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece vários elementos para layout geral e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] cenários como <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Para mais informações sobre layout e cenários [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
   
  Os exemplos a seguir mostram como definir propriedades para um <xref:System.Windows.Documents.Glyphs> objeto [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. O <xref:System.Windows.Documents.Glyphs> objeto representa a saída de um <xref:System.Windows.Media.GlyphRun> em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Os exemplos assumem que as fontes Arial, Courier New e Times New Roman estão instaladas na pasta **C:\WINDOWS\Fontes** no computador local.  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-drawglyphrun"></a>Usando DrawGlyphRun  
  Se você tiver controle personalizado e desejar renderizar glifos, use o <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> método.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]também fornece serviços de nível inferior para formatação personalizada com o uso do <xref:System.Windows.Media.FormattedText> objeto. A maneira mais eficiente de renderizar texto em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é gerar conteúdo de texto no nível de glifo usando <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun>. No entanto, o custo dessa eficiência é a perda de fácil de usar formato rich text, que são recursos internos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controles, como <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também fornece serviços de nível inferior para formatação personalizada com o uso do <xref:System.Windows.Media.FormattedText> objeto. A maneira mais eficiente de renderizar texto em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é gerar conteúdo de texto no nível de glifo usando <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun>. No entanto, o custo dessa eficiência é a perda de fácil de usar formato rich text, que são recursos internos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controles, como <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument>.  
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>Objeto FormattedText  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclui vários controles para desenhar texto na tela. Cada controle é destinado a um cenário diferente e tem sua própria lista de recursos e limitações.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>O FlowDocument impacta o desempenho mais do que o TextBlock ou o Rótulo  
- Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado ao suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>pode ser usado quando é necessário suporte mínimo de texto. O <xref:System.Windows.Documents.FlowDocument> elemento é um contêiner para documentos re-flowable que suportam apresentação rica do conteúdo e, portanto, tem um impacto de desempenho maior do que usando o <xref:System.Windows.Controls.TextBlock> ou <xref:System.Windows.Controls.Label> controles.  
+ Em geral, o <xref:System.Windows.Controls.TextBlock> elemento deve ser usado ao suporte limitado a texto é necessário, como uma breve frase em um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> pode ser usado quando é necessário suporte mínimo de texto. O <xref:System.Windows.Documents.FlowDocument> elemento é um contêiner para documentos re-flowable que suportam apresentação rica do conteúdo e, portanto, tem um impacto de desempenho maior do que usando o <xref:System.Windows.Controls.TextBlock> ou <xref:System.Windows.Controls.Label> controles.  
   
  Para obter mais informações sobre <xref:System.Windows.Documents.FlowDocument>, consulte [visão geral de fluxo de documento](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   

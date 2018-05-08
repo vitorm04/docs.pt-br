@@ -1,32 +1,18 @@
 ---
 title: Como expor um feed como Atom e RSS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Como expor um feed como Atom e RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite que você crie um serviço que expõe um feed de distribuição. Este tópico discute como criar um serviço de distribuição que expõe um feed usando RSS 2.0 e Atom 1.0 de distribuição. Esse serviço expõe um ponto de extremidade que pode retornar qualquer formato de distribuição. Para simplificar o serviço usado neste exemplo é auto-hospedado. Em um ambiente de produção um serviço desse tipo deve ser hospedado em IIS ou do WAS. Para obter mais informações sobre os diferentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opções de hospedagem, consulte [hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um feed de distribuição. Este tópico discute como criar um serviço de distribuição que expõe um feed usando RSS 2.0 e Atom 1.0 de distribuição. Esse serviço expõe um ponto de extremidade que pode retornar qualquer formato de distribuição. Para simplificar o serviço usado neste exemplo é auto-hospedado. Em um ambiente de produção um serviço desse tipo deve ser hospedado em IIS ou do WAS. Para obter mais informações sobre o WCF diferente opções de hospedagem, consulte [hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Para criar um serviço básico de distribuição  
   

@@ -1,34 +1,22 @@
 ---
-title: "Ativação com base em configuração"
-ms.custom: 
+title: Ativação com base em configuração
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation"></a>Ativação com base em configuração
-Este exemplo demonstra como ativar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços sem a necessidade de um arquivo. svc.  
+Este exemplo demonstra como ativar serviços Windows Communication Foundation (WCF) sem a necessidade de um arquivo. svc.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -41,7 +29,7 @@ Este exemplo demonstra como ativar [!INCLUDE[indigo1](../../../../includes/indig
 ### <a name="activation-of-services-without-requiring-a-svc-file"></a>Ativação de serviços sem a necessidade de um arquivo. svc  
  Em [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], um arquivo. svc foi necessário para um serviço de ativação. Isso causa sobrecarga de gerenciamento adicionais, um arquivo adicional foi necessário para ser implantado e mantido junto com o aplicativo. Com o lançamento do [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], os componentes de ativação podem ser configurados usando o arquivo de configuração do aplicativo.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]apresenta um novo elemento de configuração (<xref:System.ServiceModel.Configuration.ServiceActivationElement>), além de <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> do arquivo de configuração do aplicativo. O <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> coleção aceita uma coleção de serviços para ativar, conforme mostrado no exemplo de código a seguir.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] apresenta um novo elemento de configuração (<xref:System.ServiceModel.Configuration.ServiceActivationElement>), além de <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> do arquivo de configuração do aplicativo. O <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection> coleção aceita uma coleção de serviços para ativar, conforme mostrado no exemplo de código a seguir.  
   
 ```xml  
 <serviceActivations>  
@@ -71,7 +59,7 @@ Este exemplo demonstra como ativar [!INCLUDE[indigo1](../../../../includes/indig
   
 7.  Pressione CTRL + SHIFT + A para definir o endereço do serviço.  
   
-8.  Defina o endereço http://localhost/ServiceModelSamples/Calculator.svc.  
+8.  Definir o endereço http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Executar o `Add` operação. Definir o valor no `n1` parâmetro para o valor 10 e definido no `n2` parâmetro para 15.  
   

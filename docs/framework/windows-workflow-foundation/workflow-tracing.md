@@ -1,23 +1,12 @@
 ---
 title: Rastreamento de fluxo de trabalho
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracing"></a>Rastreamento de fluxo de trabalho
 Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informações de diagnóstico usando os ouvintes de rastreamento do .NET Framework. O rastreamento podem ser ativado se é um problema detectado com o aplicativo e desativado novamente o problema é resolvido uma vez. Há duas maneiras que você pode ativar o rastreamento de depuração para fluxos de trabalho. Você poderá configurá-lo usando o visualizador de rastreamento do evento ou você pode usar <xref:System.Diagnostics> para enviar os eventos de rastreamento em um arquivo.  
@@ -48,7 +37,7 @@ Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informaç
     3.  Execute o seguinte comando no diretório atual do framework (por exemplo, C:\Windows\Microsoft.NET\Framework\v4.0 .21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  Se você estiver usando o .NET Framework 4 Client Profile, você deve primeiro registrar o manifesto ETW executando o seguinte comando do diretório do .NET Framework 4:`ServiceModelReg.exe –i –c:etw`  
+>  Se você estiver usando o .NET Framework 4 Client Profile, você deve primeiro registrar o manifesto ETW executando o seguinte comando do diretório do .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Ativar o rastreamento de depuração usando System.Diagnostics  
  Essas ouvintes podem ser configuradas no arquivo App.config do aplicativo de fluxo de trabalho, ou no Web.config para um serviço de fluxo de trabalho. Neste exemplo, um [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) está configurado para salvar as informações de rastreamento para o arquivo MyTraceLog.txt no diretório atual.  

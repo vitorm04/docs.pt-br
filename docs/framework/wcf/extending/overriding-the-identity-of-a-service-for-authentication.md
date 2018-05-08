@@ -1,29 +1,15 @@
 ---
 title: Substituindo a identidade de um serviço pela autenticação
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Substituindo a identidade de um serviço pela autenticação
 Normalmente, você não precisa definir a identidade de um serviço porque a seleção de um tipo de credencial de cliente determina o tipo de identidade exposto nos metadados do serviço. Por exemplo, o código de configuração a seguir usa o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento e define o `clientCredentialType` de atributo para o Windows.  
@@ -37,7 +23,7 @@ Normalmente, você não precisa definir a identidade de um serviço porque a sel
  Para um aplicativo de exemplo que mostra a configuração de identidade, consulte [exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obter mais informações sobre a identidade de serviço, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Identidade e autenticação Kerberos  
- Por padrão, quando um serviço é configurado para usar uma credencial do Windows, um [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento que contém um [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) ou [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento é gerado no WSDL. Se o serviço está em execução sob o `LocalSystem`, `LocalService`, ou `NetworkService` conta, um serviço (SPN) nome da entidade é gerado por padrão na forma de `host/` \< *hostname*> porque Essas contas têm acesso aos dados SPN do computador. Se o serviço está em execução em uma conta diferente, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] gera um UPN no formato \< *username*>@<*domainName*`>`. Isso ocorre porque a autenticação Kerberos requer que um UPN ou um SPN fornecido ao cliente para autenticar o serviço.  
+ Por padrão, quando um serviço é configurado para usar uma credencial do Windows, um [ \<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento que contém um [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) ou [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento é gerado no WSDL. Se o serviço está em execução sob o `LocalSystem`, `LocalService`, ou `NetworkService` conta, um serviço (SPN) nome da entidade é gerado por padrão na forma de `host/` \< *hostname*> porque Essas contas têm acesso aos dados SPN do computador. Se o serviço está em execução em uma conta diferente, o Windows Communication Foundation (WCF) gera um UPN no formato \< *username*>@<*domainName* `>` . Isso ocorre porque a autenticação Kerberos requer que um UPN ou um SPN fornecido ao cliente para autenticar o serviço.  
   
  Você também pode usar a ferramenta Setspn.exe para registrar um SPN adicional com uma conta de serviço em um domínio. Você pode usar o SPN como a identidade do serviço. Para baixar a ferramenta, consulte [Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Para obter mais informações sobre a ferramenta, consulte [visão geral do Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
   

@@ -1,14 +1,6 @@
 ---
-title: "Método IHostGCManager::ThreadIsBlockingForSuspension"
-ms.custom: 
+title: Método IHostGCManager::ThreadIsBlockingForSuspension
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostGCManager.ThreadIsBlockingForSuspension
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93f17e687ebc3d121db36d8fce8b6bd514867a91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85921156860f52eb2a898e6be356e191c2a4f02d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>Método IHostGCManager::ThreadIsBlockingForSuspension
 Notifica o host que o thread do qual foi feita a chamada do método está prestes a bloquear uma coleta de lixo.  
@@ -48,7 +36,7 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`retornou com êxito.|  
+|S_OK|`ThreadIsBlockingForSuspension` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -68,7 +56,7 @@ HRESULT ThreadIsBlockingForSuspension ();
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

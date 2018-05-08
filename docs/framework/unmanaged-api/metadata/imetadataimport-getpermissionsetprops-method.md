@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataImport::GetPermissionSetProps"
-ms.custom: 
+title: Método IMetaDataImport::GetPermissionSetProps
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.GetPermissionSetProps
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ee2acf350beae6f00ceac05ca79b93993a1c3b85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be9b2fa3037dc00bce52d9ff89291d1c02cffc38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>Método IMetaDataImport::GetPermissionSetProps
 Obtém os metadados associados a <xref:System.Security.PermissionSet?displayProperty=nameWithType> representada pelo token de permissão especificado.  
@@ -69,7 +57,7 @@ HRESULT GetPermissionSetProps (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Security.PermissionSet>  

@@ -1,13 +1,6 @@
 ---
-title: "Como definir paradas de tabulação em um texto desenhado"
-ms.custom: 
+title: Como definir paradas de tabulação em um texto desenhado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2acc46a9a3fa2c84138cd9a168113f88ab08e4a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7f3fe9757db26bcc9dc9735f3d3d854edb7c099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Como definir paradas de tabulação em um texto desenhado
 Você pode definir paradas de tabulação para texto chamando o <xref:System.Drawing.StringFormat.SetTabStops%2A> método de um <xref:System.Drawing.StringFormat> objeto e, em seguida, passando <xref:System.Drawing.StringFormat> objeto para o <xref:System.Drawing.Graphics.DrawString%2A> método o <xref:System.Drawing.Graphics> classe.  

@@ -1,31 +1,17 @@
 ---
 title: Contadores de desempenho do WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-performance-counters"></a>Contadores de desempenho do WCF
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo.  
+Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo.  
   
 ## <a name="enabling-performance-counters"></a>Habilitar contadores de desempenho  
  Você pode habilitar os contadores de desempenho para um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviço por meio do arquivo de configuração App. config do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] de serviço da seguinte maneira:  
@@ -70,7 +56,7 @@ config.Save();
 >  Instâncias do contador de desempenho podem ser liberadas antes das últimas mensagens foram processadas pelo dispatcher do ponto de extremidade. Isso pode resultar em dados de desempenho não são capturados para algumas mensagens.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumentando o tamanho de memória para contadores de desempenho  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]usa separar memória compartilhada para suas categorias de contador de desempenho.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usa separar memória compartilhada para suas categorias de contador de desempenho.  
   
  Por padrão, separado de memória compartilhada é definida como um quarto do tamanho da memória do contador de desempenho global. A memória de contador de desempenho global padrão é 524.288 bytes. Portanto, os três [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] categorias de contador de desempenho têm um tamanho padrão de aproximadamente 128 KB cada. Dependendo das características tempo de execução do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplicativos em um computador, a memória de contador de desempenho podem ser esgotados. Quando isso acontece, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado, e a entrada contém a exceção "System. InvalidOperationException: modo de exibição de arquivo de contadores personalizados está esgotada." Se o rastreamento estiver habilitado no nível de erro, essa falha também é rastreada. Se a memória de contador de desempenho é esgotada, continuando a executar sua [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplicativos com contadores de desempenho ativados podem resultar em degradação do desempenho. Se você for um administrador do computador, você deve configurá-lo para alocar memória suficiente para suportar o número máximo de contadores de desempenho que podem existir a qualquer momento.  
   

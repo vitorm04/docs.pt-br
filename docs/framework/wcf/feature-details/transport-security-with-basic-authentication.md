@@ -1,32 +1,20 @@
 ---
 title: Segurança de transporte com autenticação básica
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7430767c80515d14ae23e17ae2b94e0acc97ff30
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 65d076a9fef716fca4fe87df6bc5c7773e2dda0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-basic-authentication"></a>Segurança de transporte com autenticação básica
-A ilustração a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente e serviço. O servidor precisa de um certificado x. 509 válido que pode ser usado para Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. Além disso, o serviço Web já tem uma implementação de SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Internet Information Services (IIS), consulte [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).  
+A ilustração a seguir mostra um serviço do Windows Communication Foundation (WCF) e o cliente. O servidor precisa de um certificado x. 509 válido que pode ser usado para Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. Além disso, o serviço Web já tem uma implementação de SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Internet Information Services (IIS), consulte [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).  
   
  ![Segurança com a autenticação básica de transporte](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   

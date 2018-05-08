@@ -1,35 +1,23 @@
 ---
 title: Terminologia de segurança do WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada ao abordar a segurança podem não ser conhecidas. Este tópico fornece curtas explicações sobre alguns dos termos de segurança, mas não se destina a fornecer a documentação abrangente para cada item.  
   
- Para obter mais informações sobre termos usados no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentação, consulte [fundamentais conceitos do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Para obter mais informações sobre os termos usados na documentação do Windows Communication Foundation (WCF), consulte [fundamentais conceitos do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de controle de acesso (ACL)  
  Uma lista de proteções de segurança que se aplica a um objeto. (Um objeto pode ser um arquivo, processo, eventos ou qualquer outro com um descritor de segurança). Uma entrada em uma ACL é uma entrada de controle de acesso (ACE). Há dois tipos de ACLs: condicional e do sistema.  
@@ -189,7 +177,7 @@ Parte da terminologia usada ao abordar a segurança podem não ser conhecidas. E
  Um nome de conta de usuário (também conhecido como o *nome de logon do usuário*) e um nome de domínio identificando o domínio no qual a conta de usuário está localizada. Este é o uso padrão para fazer logon em um domínio do Windows. O formato é: someone@example.com (como um endereço de email).  
   
 > [!NOTE]
->  Além de formulário padrão do UPN, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aceita UPNs no formulário de nível inferior, por exemplo, cohowinery.com\someone.  
+>  Além de formato UPN padrão, o WCF aceita UPNs no formulário de nível inferior, por exemplo, cohowinery.com\someone.  
   
  X.509  
  Um padrão reconhecido internacionalmente para certificados que define suas partes necessárias.  

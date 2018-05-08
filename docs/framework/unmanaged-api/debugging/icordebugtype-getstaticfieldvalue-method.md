@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugType::GetStaticFieldValue"
-ms.custom: 
+title: Método ICorDebugType::GetStaticFieldValue
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugType.GetStaticFieldValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2a6a7305017c83b539a3d5ec11fa61ccd2af90a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b136f30b0c1ce9f83228f340ac5e147cc02002b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>Método ICorDebugType::GetStaticFieldValue
 Obtém um ponteiro de interface para um objeto ICorDebugValue que contém o valor do campo estático referenciado pelo campo especificado token no quadro de pilha especificada.  
@@ -66,7 +54,7 @@ HRESULT GetStaticFieldValue (
  Para tipos genéricos, um valor de campo estático será em relação a uma instanciação específica. Além disso, pode ser um campo estático em relação a um thread, um contexto ou um domínio de aplicativo, em seguida, o quadro de pilhas ajuda o depurador determinar o valor correto.  
   
 ## <a name="remarks"></a>Comentários  
- `GetStaticFieldValue`pode ser utilizada somente quando uma chamada para `ICorDebugType::GetType` retorna um valor de ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE.  
+ `GetStaticFieldValue` pode ser utilizada somente quando uma chamada para `ICorDebugType::GetType` retorna um valor de ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,4 +63,4 @@ HRESULT GetStaticFieldValue (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

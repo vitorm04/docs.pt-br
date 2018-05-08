@@ -1,34 +1,20 @@
 ---
 title: Mecanismos de controle de acesso
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>Mecanismos de controle de acesso
-Você pode controlar o acesso de forma várias com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este tópico discute os vários mecanismos rapidamente e fornece sugestões sobre quando usar cada uma delas; destina-se a ajudá-lo a selecionar o mecanismo correto a ser usado. As tecnologias de acesso são listadas em ordem de complexidade. É mais simples de <xref:System.Security.Permissions.PrincipalPermissionAttribute>; as mais complexas são o modelo de identidade.  
+Você pode controlar o acesso de forma vários com o Windows Communication Foundation (WCF). Este tópico discute os vários mecanismos rapidamente e fornece sugestões sobre quando usar cada uma delas; destina-se a ajudá-lo a selecionar o mecanismo correto a ser usado. As tecnologias de acesso são listadas em ordem de complexidade. É mais simples de <xref:System.Security.Permissions.PrincipalPermissionAttribute>; as mais complexas são o modelo de identidade.  
   
- Além desses mecanismos, representação e delegação com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é explicado em [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Além desses mecanismos, a representação e delegação com o WCF é explicado em [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  O <xref:System.Security.Permissions.PrincipalPermissionAttribute> é usado para restringir o acesso a um método de serviço. Quando o atributo é aplicado a um método, ele pode ser usado para solicitar a identidade de um chamador específico ou associação em um grupo do Windows ou [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] função. Se o cliente é autenticado usando um certificado x. 509, ele recebe uma identidade primária consiste do nome da entidade e a impressão digital do certificado.  
@@ -41,16 +27,16 @@ Você pode controlar o acesso de forma várias com [!INCLUDE[indigo1](../../../.
  Um recurso do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é o provedor de associação. Mesmo que o provedor de associação não seja tecnicamente um mecanismo de controle de acesso, ele permite controlar o acesso ao serviço, limitando o conjunto de identidades possíveis que podem acessar o ponto de extremidade do serviço. O recurso de associação inclui um banco de dados que pode ser preenchido com combinações de nome e senha do usuário que permitem aos usuários de um site da Web estabelecer contas com o site. Para acessar um serviço que usa o provedor de associação, um usuário faça logon com seu nome de usuário e senha.  
   
 > [!NOTE]
->  Você primeiro deve preencher o banco de dados usando o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recurso antes de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço pode usá-lo para fins de autorização.  
+>  Você primeiro deve preencher o banco de dados usando o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para um serviço WCF possa ser usado para fins de autorização de recursos.  
   
  Você também pode usar o recurso de associação, se você já tiver um banco de dados de associação de uma já existente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site da Web e você deseja habilitar os mesmos usuários usar o serviço autorizado com os mesmos nomes de usuário e senhas.  
   
- Para obter mais informações sobre como usar o recurso de associação em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço, consulte [como: usar o provedor de associação ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Para obter mais informações sobre como usar o recurso de associação em um serviço WCF, consulte [como: usar o provedor de associação ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Provedor de função do ASP.NET  
- Outro recurso do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é a capacidade de gerenciar o uso de funções de autorização. O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função permite que um desenvolvedor para criar funções para usuários e atribua a cada usuário a uma função ou funções. Como com o provedor de associação, as funções e atribuições são armazenadas em um banco de dados e pode ser preenchidas usando as ferramentas fornecidas por uma implementação específica do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função. Assim como acontece com o recurso de associação, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os desenvolvedores podem usar as informações no banco de dados para autorizar usuários do serviço de funções. Por exemplo, eles podem usar o provedor de função em combinação com o `PrincipalPermissionAttribute` descrito acima do mecanismo de controle de acesso.  
+ Outro recurso do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é a capacidade de gerenciar o uso de funções de autorização. O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função permite que um desenvolvedor para criar funções para usuários e atribua a cada usuário a uma função ou funções. Como com o provedor de associação, as funções e atribuições são armazenadas em um banco de dados e pode ser preenchidas usando as ferramentas fornecidas por uma implementação específica do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função. Como com o recurso de associação WCF os desenvolvedores podem usar as informações no banco de dados para autorizar usuários do serviço de funções. Por exemplo, eles podem usar o provedor de função em combinação com o `PrincipalPermissionAttribute` descrito acima do mecanismo de controle de acesso.  
   
- Você também pode usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função, se você tiver uma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] banco de dados de provedor de função e desejar usar o mesmo conjunto de regras e as atribuições de usuário no seu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
+ Você também pode usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função, se você tiver uma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] banco de dados de provedor de função e desejar usar o mesmo conjunto de regras e as atribuições de usuário em seu serviço WCF.  
   
  Para obter mais informações sobre como usar o recurso de provedor de função, consulte [como: usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -59,7 +45,7 @@ Você pode controlar o acesso de forma várias com [!INCLUDE[indigo1](../../../.
   
  Você também pode usar o AzMan e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função, se você já tiver acesso a uma instalação existente do AzMan e deseja autorizar seus usuários de serviço usando os recursos da combinação de provedor AzMan/função.  
   
- Para obter mais informações sobre o AzMan e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função, consulte [como: Use o Gerenciador de autorização (AzMan) com o ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Para obter mais informações sobre como usar o provedor de função para e de AzMan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços, consulte [como: usar o provedor de função do Gerenciador de autorização ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Para obter mais informações sobre o AzMan e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função, consulte [como: Use o Gerenciador de autorização (AzMan) com o ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Para obter mais informações sobre como usar o AzMan e o provedor de função para serviços WCF, consulte [como: usar o provedor de função do Gerenciador de autorização ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modelo de identidade  
  O modelo de identidade é um conjunto de APIs que permitem gerenciar políticas e declarações para autorizar clientes. Com o modelo de identidade, você pode examinar cada declaração contida nas credenciais que o chamador usado para autenticar para o serviço, compare as declarações para o conjunto de políticas para o serviço e conceder ou negar acesso com base na comparação.  

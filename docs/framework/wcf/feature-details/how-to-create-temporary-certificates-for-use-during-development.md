@@ -1,32 +1,18 @@
 ---
 title: Como criar certificados temporários para uso durante o desenvolvimento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como criar certificados temporários para uso durante o desenvolvimento
-Ao desenvolver um serviço seguro ou o cliente usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], geralmente é necessário fornecer um certificado x. 509 a ser usado como uma credencial. Normalmente, o certificado é parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente a autoridade raiz é de sua organização ou unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no armazenamento pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico descreve as etapas para criar esses dois certificados usando o [ferramenta de criação de certificado (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), que é fornecido pelo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
+Ao desenvolver um serviço seguro ou o cliente usando o Windows Communication Foundation (WCF), geralmente é necessário fornecer um certificado x. 509 a ser usado como uma credencial. Normalmente, o certificado é parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente a autoridade raiz é de sua organização ou unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no armazenamento pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico descreve as etapas para criar esses dois certificados usando o [ferramenta de criação de certificado (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), que é fornecido pelo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
   
 > [!IMPORTANT]
 >  Os certificados que a ferramenta de criação de certificação gera são fornecidos somente para testes. Ao implantar um serviço ou cliente, certifique-se de usar um certificado apropriado fornecido por uma autoridade de certificação. Isso pode ser de um [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] certificado de servidor em sua organização ou de terceiros.  

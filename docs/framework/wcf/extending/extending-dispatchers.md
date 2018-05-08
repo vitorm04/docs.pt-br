@@ -1,33 +1,19 @@
 ---
 title: Estendendo distribuidores
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>Estendendo distribuidores
 Distribuidores são responsáveis por recebendo mensagens de entrada fora dos canais subjacentes, convertendo-os em invocações do método no código do aplicativo e enviar os resultados de volta para o chamador. Extensões de distribuidores permitem que você modifique esse processamento.  Você pode implementar inspetores de mensagem ou parâmetro que inspecionar ou modifiquem o conteúdo de mensagens ou parâmetros.  Você pode alterar o modo como as mensagens são roteadas para operações ou fornecem algumas outras funcionalidades.  
   
- Este tópico descreve como usar o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> classes em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço de aplicativo para modificar o comportamento de execução padrão de um distribuidor ou para interceptar ou modificar as mensagens, parâmetros, ou retornar valores antes ou subsequentes para enviar ou recuperá-los de camada do canal. Para obter mais informações sobre o processamento de mensagem de tempo de execução do cliente equivalente, consulte [estendendo clientes](../../../../docs/framework/wcf/extending/extending-clients.md). Para compreender a função que <xref:System.ServiceModel.IExtensibleObject%601> tipos reproduzir ao acessar o estado compartilhado entre vários objetos de personalização de tempo de execução, consulte [objetos extensíveis](../../../../docs/framework/wcf/extending/extensible-objects.md).  
+ Este tópico descreve como usar o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> aplicativo para modificar o comportamento de execução padrão de um distribuidor ou para interceptar ou modificar as mensagens, parâmetros ou de retorno de serviço de classes em um Windows Communication Foundation (WCF) valores antes ou após o envio ou recuperá-los de camada do canal. Para obter mais informações sobre o processamento de mensagem de tempo de execução do cliente equivalente, consulte [estendendo clientes](../../../../docs/framework/wcf/extending/extending-clients.md). Para compreender a função que <xref:System.ServiceModel.IExtensibleObject%601> tipos reproduzir ao acessar o estado compartilhado entre vários objetos de personalização de tempo de execução, consulte [objetos extensíveis](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Distribuidores  
  A camada de modelo de serviço executará a conversão entre o modelo de programação do desenvolvedor e a troca de mensagens subjacente, comumente chamado de camada do canal. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os distribuidores de canal e o ponto de extremidade (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, respectivamente) são os componentes de serviços responsáveis por aceitar novos canais, recebendo mensagens, despacho de operação e invocação e processamento de resposta. Objetos do distribuidor são objetos de destinatário, mas implementações de contrato de retorno de chamada no serviços de duplex também expõem seus objetos de dispatcher para inspeção, modificação ou extensão.  
@@ -97,17 +83,17 @@ Distribuidores são responsáveis por recebendo mensagens de entrada fora dos ca
   
 4.  Componentes de segurança podem usar as seguintes propriedades:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>indica onde os eventos de auditoria são gravados.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica onde os eventos de auditoria são gravados.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A>Controla se o serviço tenta representar usando as credenciais fornecidas pela mensagem de entrada.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Controla se o serviço tenta representar usando as credenciais fornecidas pela mensagem de entrada.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A>Controla se os eventos de autenticação de mensagem bem-sucedida são gravados no log de eventos especificado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Controla se os eventos de autenticação de mensagem bem-sucedida são gravados no log de eventos especificado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A>Controla como o <xref:System.Threading.Thread.CurrentPrincipal%2A> está definida.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> Controla como o <xref:System.Threading.Thread.CurrentPrincipal%2A> está definida.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A>Especifica como a auditoria de eventos de autorização é executada.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Especifica como a auditoria de eventos de autorização é executada.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A>Especifica se deve ser suprimida não críticos exceções que ocorrem durante o processo de registro em log.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Especifica se deve ser suprimida não críticos exceções que ocorrem durante o processo de registro em log.  
   
  Normalmente, os objetos de extensão personalizada são atribuídos a um <xref:System.ServiceModel.Dispatcher.DispatchRuntime> propriedade ou inseridos em uma coleção por um comportamento de serviço (um objeto que implementa <xref:System.ServiceModel.Description.IServiceBehavior>), um comportamento de contrato (um objeto que implementa <xref:System.ServiceModel.Description.IContractBehavior>), ou um ponto de extremidade comportamento (um objeto que implementa <xref:System.ServiceModel.Description.IEndpointBehavior>). Em seguida, o objeto de comportamento da instalação é adicionado à coleção apropriada de comportamentos programaticamente ou pela implementação de uma <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> objeto para habilitar o comportamento a ser inserido usando um arquivo de configuração do aplicativo.  
   

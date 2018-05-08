@@ -1,30 +1,16 @@
 ---
 title: Serviços unidirecionais
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>Serviços unidirecionais
 O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método. Com uma operação unidirecional, somente uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem o remetente esperado um.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  Para obter um exemplo completo, consulte o [unidirecional](../../../../docs/framework/wcf/samples/one-way.md) exemplo.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Clientes de bloqueio com operações unidirecionais  
- É importante observar que embora alguns aplicativos unidirecionais retornam, assim como os dados de saída são gravados para a conexão de rede, em diversos cenários a implementação de uma associação ou de um serviço pode causar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para bloquear usando unidirecional operações. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos cliente, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objeto de cliente não retorna até que os dados de saída foram gravados para a conexão de rede. Isso é verdadeiro para todos os padrões de troca de mensagens, incluindo operações unidirecionais; Isso significa que qualquer problema ao gravar que os dados para o transporte impede que o cliente retornando. Dependendo do problema, o resultado seria uma exceção ou um atraso no envio de mensagens para o serviço.  
+ É importante observar que embora alguns aplicativos unidirecionais retornam assim que os dados de saída são gravados para a conexão de rede, em diversos cenários de implementação de uma associação ou de um serviço pode causar um cliente WCF bloquear usando operações unidirecionais. Em aplicativos de cliente do WCF, o objeto de cliente do WCF não retorna até que os dados de saída foram gravados para a conexão de rede. Isso é verdadeiro para todos os padrões de troca de mensagens, incluindo operações unidirecionais; Isso significa que qualquer problema ao gravar que os dados para o transporte impede que o cliente retornando. Dependendo do problema, o resultado seria uma exceção ou um atraso no envio de mensagens para o serviço.  
   
  Por exemplo, se o transporte não é possível localizar o ponto de extremidade, um <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> exceção sem muito atraso. No entanto, também é possível que o serviço é não é possível ler os dados na rede por algum motivo, o que impede que o transporte de cliente a operação de envio de retorno. Nesses casos, se o <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> período em que o transporte de cliente associação for excedida, um <xref:System.TimeoutException?displayProperty=nameWithType> é lançada, mas não até que o período de tempo limite foi excedido. Também é possível acionar muitas mensagens em um serviço que o serviço não pode processá-las após um certo ponto. Nesse caso, também, os blocos de cliente unidirecional até que o serviço pode processar as mensagens ou até que uma exceção é lançada.  
   

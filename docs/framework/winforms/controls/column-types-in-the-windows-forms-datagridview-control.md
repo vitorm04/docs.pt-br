@@ -1,28 +1,16 @@
 ---
 title: Tipos de coluna no controle DataGridView dos Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Tipos de coluna no controle DataGridView dos Windows Forms
 O <xref:System.Windows.Forms.DataGridView> controle usa vários tipos de coluna para exibir as informações e permitir que os usuários modificar ou adicionar informações.  
@@ -53,7 +41,7 @@ O <xref:System.Windows.Forms.DataGridView> controle usa vários tipos de coluna 
  O tipo de dados de valor de célula de uma coluna é especificado no <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> propriedade da coluna.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- O <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> é usado com <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState> valores. <xref:System.Boolean>os valores exibidos como caixas de seleção de dois ou três estados, dependendo do valor da <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> propriedade. Quando a coluna é associada a <xref:System.Windows.Forms.CheckState> valores, o <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> é o valor da propriedade `true` por padrão.  
+ O <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> é usado com <xref:System.Boolean> e <xref:System.Windows.Forms.CheckState> valores. <xref:System.Boolean> os valores exibidos como caixas de seleção de dois ou três estados, dependendo do valor da <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> propriedade. Quando a coluna é associada a <xref:System.Windows.Forms.CheckState> valores, o <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> é o valor da propriedade `true` por padrão.  
   
  Normalmente, os valores de célula da caixa de seleção destinam-se para armazenamento, como qualquer outro dado ou para executar operações em massa. Se você deseja responder imediatamente quando os usuários em uma célula de caixa de seleção, você pode manipular o <xref:System.Windows.Forms.DataGridView.CellClick> evento, mas esse evento ocorre antes de atualizar o valor da célula. Se você precisar do novo valor no momento do clique, uma opção será calcular qual será o valor esperado com base no valor atual. Outra abordagem é confirmar a alteração imediatamente e manipular o <xref:System.Windows.Forms.DataGridView.CellValueChanged> evento responder a ele. Para confirmar a alteração, quando a célula é clicada, você deve tratar o <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> evento. No manipulador, se a célula atual for uma célula de caixa de seleção, chame o <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> método e passar o <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> valor.  
   

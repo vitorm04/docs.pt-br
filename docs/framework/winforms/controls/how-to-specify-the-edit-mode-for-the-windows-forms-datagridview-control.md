@@ -1,13 +1,6 @@
 ---
-title: "Como especificar o modo de edição do controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Como especificar o modo de edição do controle DataGridView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42773e29d7071c5bc5f3d5de3660c9891788b422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5117dfe2e017cf4af1d352fdbf23c6599c0e56a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Como especificar o modo de edição do controle DataGridView dos Windows Forms
 Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows.Forms.DataGridView> célula da caixa de texto digitando nele ou pressionando F2. Isso colocará a célula no modo de edição se todas as condições a seguir forem atendidas:  
@@ -33,7 +21,7 @@ Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows
   
 -   O <xref:System.Windows.Forms.DataGridView> controle está habilitado.  
   
--   O <xref:System.Windows.Forms.DataGridView.EditMode%2A> o valor da propriedade não é <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+-   O valor da propriedade <xref:System.Windows.Forms.DataGridView.EditMode%2A> não é <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
 -   As propriedade `ReadOnly` de célula, linha, coluna e controle estiverem definidas como `false`.  
   
@@ -51,7 +39,7 @@ Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um <xref:System.Windows.Forms.DataGridView> controle chamado `dataGridView1`.  
+-   Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
   
 -   Referências aos assemblies <xref:System> e <xref:System.Windows.Forms>.  
   

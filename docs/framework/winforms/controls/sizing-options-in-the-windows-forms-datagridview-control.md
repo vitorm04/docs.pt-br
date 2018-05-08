@@ -1,13 +1,6 @@
 ---
-title: "Dimensionando opções no controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Dimensionando opções no controle DataGridView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sizing
 - data grids [Windows Forms], column sizing
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6cefca8e6856680d509d6166eec4d97855f1babc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6e3a7786970ef536da4ef7628cd33ae067ba90be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Dimensionando opções no controle DataGridView dos Windows Forms
-<xref:System.Windows.Forms.DataGridView>cabeçalhos, colunas e linhas podem alterar o tamanho como resultado de muitas ocorrências diferentes. A tabela a seguir mostra essas ocorrências.  
+<xref:System.Windows.Forms.DataGridView> cabeçalhos, colunas e linhas podem alterar o tamanho como resultado de muitas ocorrências diferentes. A tabela a seguir mostra essas ocorrências.  
   
 |Ocorrência|Descrição|  
 |----------------|-----------------|  

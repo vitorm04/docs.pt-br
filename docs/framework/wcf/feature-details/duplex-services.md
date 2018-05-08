@@ -1,27 +1,15 @@
 ---
-title: "Serviços de duplex"
-ms.custom: 
+title: Serviços de duplex
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="duplex-services"></a>Serviços de duplex
 Um contrato de serviço duplex é um padrão de troca de mensagem no qual os pontos de extremidade podem enviar mensagens para o outro independentemente. Um serviço duplex, portanto, pode enviar mensagens para o ponto de extremidade do cliente, fornecendo o comportamento do tipo de evento. Comunicação duplex ocorre quando um cliente se conecta a um serviço e fornece o serviço com um canal em que o serviço pode enviar mensagens de volta ao cliente. Observe que o comportamento do tipo de evento de serviços duplex só funciona em uma sessão.  
@@ -43,7 +31,7 @@ Um contrato de serviço duplex é um padrão de troca de mensagem no qual os pon
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente que é gerado para um contrato duplex requer um <xref:System.ServiceModel.InstanceContext> classe será fornecido após a construção. Isso <xref:System.ServiceModel.InstanceContext> classe é usada como o site para um objeto que implementa a interface de retorno de chamada e manipula mensagens que são enviadas de volta do serviço. Um <xref:System.ServiceModel.InstanceContext> classe é construída com uma instância do `CallbackHandler` classe. Esse objeto manipula mensagens enviadas do serviço para o cliente na interface de retorno de chamada.  
+ O cliente do WCF que é gerado para um contrato duplex requer um <xref:System.ServiceModel.InstanceContext> classe será fornecido após a construção. Isso <xref:System.ServiceModel.InstanceContext> classe é usada como o site para um objeto que implementa a interface de retorno de chamada e manipula mensagens que são enviadas de volta do serviço. Um <xref:System.ServiceModel.InstanceContext> classe é construída com uma instância do `CallbackHandler` classe. Esse objeto manipula mensagens enviadas do serviço para o cliente na interface de retorno de chamada.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  

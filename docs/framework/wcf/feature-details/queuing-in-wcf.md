@@ -1,49 +1,35 @@
 ---
 title: Enfileiramento no WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>Enfileiramento no WCF
-Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta seção descreve como usar a comunicação em fila no Windows Communication Foundation (WCF).  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Associação de transporte de filas como um WCF  
- Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], os contratos de especificar o que está sendo trocado. Contratos são trocas de mensagens de aplicativo específico ou dependentes de negócios. O mecanismo usado para troca de mensagens (ou "como") é especificado nas associações. Associações em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encapsulam os detalhes de troca de mensagens. Eles expõem os botões de configuração para o usuário controlar vários aspectos do transporte ou o protocolo que representam as associações. Enfileiramento de mensagens em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é tratado como qualquer outra transporte ligação, que é uma grande vantagem para muitos aplicativos de enfileiramento de mensagens. Atualmente, muitos aplicativos de enfileiramento de mensagens são gravados Diferentemente de outras chamadas de procedimento remoto (RPC)-estilo de aplicativos distribuídos, tornando mais difícil de seguir e manter. Com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o estilo de escrever um aplicativo distribuído é semelhante a, tornando mais fácil de seguir e manter. Além disso, Fatorando o mecanismo do exchange separadamente da lógica de negócios, é mais fácil de configurar o transporte ou fazer alterações sem afetar o código específico do aplicativo. A figura a seguir ilustra a estrutura de um serviço WCF e usar o MSMQ como um transporte de cliente.  
+ No WCF, os contratos de especificar o que está sendo trocado. Contratos são trocas de mensagens de aplicativo específico ou dependentes de negócios. O mecanismo usado para troca de mensagens (ou "como") é especificado nas associações. Associações do WCF encapsulam os detalhes de troca de mensagens. Eles expõem os botões de configuração para o usuário controlar vários aspectos do transporte ou o protocolo que representam as associações. Enfileiramento no WCF é tratado como qualquer outra transporte ligação, que é uma grande vantagem para muitos aplicativos de enfileiramento de mensagens. Atualmente, muitos aplicativos de enfileiramento de mensagens são gravados Diferentemente de outras chamadas de procedimento remoto (RPC)-estilo de aplicativos distribuídos, tornando mais difícil de seguir e manter. Com o WCF, o estilo de escrever um aplicativo distribuído é semelhante a, tornando mais fácil de seguir e manter. Além disso, Fatorando o mecanismo do exchange separadamente da lógica de negócios, é mais fácil de configurar o transporte ou fazer alterações sem afetar o código específico do aplicativo. A figura a seguir ilustra a estrutura de um serviço WCF e usar o MSMQ como um transporte de cliente.  
   
  ![Na fila de diagrama do aplicativo](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figura distribuídas de fila")  
   
- Como você pode ver na figura anterior, o cliente e o serviço devem definir apenas a semântica do aplicativo, ou seja, o contrato e a implementação. O serviço define uma associação enfileirada com configurações preferenciais. O cliente usa o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para o serviço e gerar um arquivo de configuração que descreve as associações a ser usado para enviar mensagens para o serviço. Assim, para enviar uma mensagem na fila, o cliente cria um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e chama uma operação sobre ele. Isso faz com que a mensagem ser enviada para a fila de transmissão e transferida para a fila de destino. Todas as complexidades de comunicação em fila estão ocultos do aplicativo que está enviando e recebendo mensagens.  
+ Como você pode ver na figura anterior, o cliente e o serviço devem definir apenas a semântica do aplicativo, ou seja, o contrato e a implementação. O serviço define uma associação enfileirada com configurações preferenciais. O cliente usa o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF para o serviço e gere um arquivo de configuração que descreve as associações a ser usado para enviar mensagens para o serviço. Portanto, para enviar uma mensagem na fila, o cliente cria um cliente WCF e invoca uma operação sobre ele. Isso faz com que a mensagem ser enviada para a fila de transmissão e transferida para a fila de destino. Todas as complexidades de comunicação em fila estão ocultos do aplicativo que está enviando e recebendo mensagens.  
   
- Advertências sobre enfileiradas associação em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluem:  
+ Advertências sobre associação enfileirada no WCF incluem:  
   
--   Todas as operações de serviço devem ser unidirecionais porque o padrão na fila de vinculação em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não suporta o uso de filas de comunicação duplex. Um exemplo de comunicação bidirecional ([comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md)) ilustra como usar dois contratos unidirecionais para implementar o uso de filas de comunicação duplex.  
+-   Serviço todas as operações devem ser unidirecionais porque o padrão na fila de associação no WCF não oferece suporte à comunicação duplex usando filas. Um exemplo de comunicação bidirecional ([comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md)) ilustra como usar dois contratos unidirecionais para implementar o uso de filas de comunicação duplex.  
   
--   Para gerar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente usando uma troca de metadados requer um ponto de extremidade HTTP adicional no serviço de forma que ela possa ser consultada diretamente para gerar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e obter informações de associação para configurar adequadamente em fila comunicação.  
+-   Para gerar um WCF cliente usando uma troca de metadados requer um ponto de extremidade HTTP adicional no serviço de forma que ela possa ser consultada diretamente para gerar o cliente do WCF e obter informações de associação para configurar adequadamente a comunicação em fila.  
   
--   Com base no na fila de associação, configuração adicional fora de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é necessária. Por exemplo, o <xref:System.ServiceModel.NetMsmqBinding> classe que é fornecido com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exige que você configure as ligações, bem como a configuração mínima de enfileiramento de mensagens (MSMQ).  
+-   Configuração adicional fora do WCF com base na associação em fila, é necessária. Por exemplo, a <xref:System.ServiceModel.NetMsmqBinding> classe que é fornecido com o WCF exige que você configure as ligações, bem como a configuração mínima de enfileiramento de mensagens (MSMQ).  
   
- As seções a seguir descrevem as associações na fila específicas acompanha [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], que se baseiam em MSMQ.  
+ As seções a seguir descrevem específicas na fila associações fornecidas com o WCF, que se baseiam em MSMQ.  
   
 ### <a name="msmq"></a>MSMQ  
- O transporte em fila em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa MSMQ para sua comunicação em fila.  
+ O transporte em fila no WCF usa MSMQ para sua comunicação em fila.  
   
  MSMQ é fornecido como um componente opcional do Windows e é executado como um serviço NT. Captura as mensagens de transmissão em uma fila de transmissão e de entrega em uma fila de destino. Os gerenciadores de fila MSMQ implementam um protocolo de transferência de mensagens confiáveis para que as mensagens não serão perdidas durante a transmissão. O protocolo pode ser baseado em SOAP, como o SOAP mensagem protocolo SRMP (confiável) ou nativo.  
   
@@ -54,7 +40,7 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
  Para obter mais informações sobre o MSMQ, consulte [instalar o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- O [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) é a associação em fila [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece para duas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade para se comunicar usando o MSMQ. A associação, portanto, expõe as propriedades que são específicas para o MSMQ. No entanto, nem todos os recursos do MSMQ e propriedades são expostas no `NetMsmqBinding`. O compact `NetMsmqBinding` foi projetado com um conjunto ideal de recursos de que a maioria dos clientes deve ser suficiente.  
+ O [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) é a associação enfileirada WCF fornece para os dois pontos de extremidade do WCF para se comunicar usando o MSMQ. A associação, portanto, expõe as propriedades que são específicas para o MSMQ. No entanto, nem todos os recursos do MSMQ e propriedades são expostas no `NetMsmqBinding`. O compact `NetMsmqBinding` foi projetado com um conjunto ideal de recursos de que a maioria dos clientes deve ser suficiente.  
   
  O `NetMsmqBinding` manifestos os principais conceitos de enfileiramento de mensagens discutidos até agora na forma de propriedades em associações. Essas propriedades, por sua vez, se comunicam com MSMQ como transferir e entregar as mensagens. Uma descrição das categorias de propriedade está nas seções a seguir. Para obter mais informações, consulte os tópicos conceituais que descrevem as propriedades específicas mais completamente.  
   
@@ -75,7 +61,7 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
  Fornecem muitos sistemas de enfileiramento de mensagens para uma fila de mensagens mortas de todo o sistema. MSMQ fornece uma fila de mensagens mortas não transacional todo o sistema para as mensagens com falha de entrega para filas não transacional e uma fila de mensagens mortas transacional todo o sistema de mensagens de falha de entrega para filas transacionais.  
   
- Se vários clientes enviando mensagens para filas de destino diferentes compartilharem o serviço do MSMQ, todas as mensagens enviadas pelos clientes vá para a mesma fila de mensagens mortas. Isso nem sempre é preferível. Para melhor isolamento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] fornecem uma fila de mensagens mortas personalizada (ou a fila de mensagens mortas específicas do aplicativo) que o usuário pode especificar para armazenar as mensagens com falha de entrega. Portanto, clientes diferentes não compartilham a mesma fila de mensagens mortas.  
+ Se vários clientes enviando mensagens para filas de destino diferentes compartilharem o serviço do MSMQ, todas as mensagens enviadas pelos clientes vá para a mesma fila de mensagens mortas. Isso nem sempre é preferível. Para melhor isolamento, WCF e o MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] fornecem uma fila de mensagens mortas personalizada (ou a fila de mensagens mortas específicas do aplicativo) que o usuário pode especificar para armazenar as mensagens com falha de entrega. Portanto, clientes diferentes não compartilham a mesma fila de mensagens mortas.  
   
  A associação tem duas propriedades de interesse:  
   
@@ -105,7 +91,7 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
 -   `UseActiveDirectory`: Um valor booleano para indicar se o Active Directory deve ser usado para resolução de endereço da fila. Por padrão, isso está desativado. Para obter mais informações, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- O `MsmqIntegrationBinding` é usado quando você deseja uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ponto de extremidade para se comunicar com um aplicativo existente do MSMQ escrito em C, C++, COM ou System.Messaging APIs.  
+ O `MsmqIntegrationBinding` é usado quando um ponto de extremidade do WCF para se comunicar com um aplicativo existente do MSMQ escrito em C, C++, COM ou System.Messaging APIs.  
   
  As propriedades de associação são os mesmos para `NetMsmqBinding`. No entanto, as seguintes diferenças se aplicam:  
   

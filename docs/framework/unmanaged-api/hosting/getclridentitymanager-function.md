@@ -1,14 +1,6 @@
 ---
-title: "Função GetCLRIdentityManager"
-ms.custom: 
+title: Função GetCLRIdentityManager
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetCLRIdentityManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 699361bd33a844733427c213c4ef0f3ca4192906
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a0672196ebaea5c91139851b89a7476ff6363b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getclridentitymanager-function"></a>Função GetCLRIdentityManager
 Obtém um ponteiro para uma interface que permite que o common language runtime (CLR) para gerenciar identidades.  
@@ -65,7 +53,7 @@ STDAPI GetCLRIdentityManager(
   
  **Biblioteca:** arquivo MSCorWks.dll  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

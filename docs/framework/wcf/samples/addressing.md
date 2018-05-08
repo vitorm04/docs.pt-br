@@ -1,24 +1,12 @@
 ---
-title: "Endereçando"
-ms.custom: 
+title: Endereçando
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressing"></a>Endereçando
 O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidade relativas e absolutas.  
@@ -51,7 +39,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço base. O endereço do ponto de extremidade real é servicemodelsamples/http://localhost:8000/serviço.  
+ Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço base. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service.  
   
  A segunda definição de ponto de extremidade também especifica um endereço relativo, conforme mostrado no exemplo de configuração.  
   
@@ -64,7 +52,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço relativo, "teste", é acrescentada ao endereço base. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/serviço/teste.  
+ O endereço relativo, "teste", é acrescentada ao endereço base. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service/test.  
   
  A definição de ponto de extremidade terceira Especifica um endereço absoluto, conforme mostrado no exemplo de configuração.  
   
@@ -74,7 +62,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é Olá/http://localhost:8001/servicemodelsamples.  
+ O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é http://localhost:8001/hello/servicemodelsamples.  
   
  O quarto endereço de ponto de extremidade Especifica um endereço absoluto e um transporte diferente — TCP. O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é net.tcp://localhost: servicemodelsamples/9000/serviço.  
   
@@ -143,7 +131,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

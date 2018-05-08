@@ -1,27 +1,15 @@
 ---
-title: "Configuração simplificada para serviços do WCF"
-ms.custom: 
+title: Configuração simplificada para serviços do WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02611dc44b98c1b8b5ef5ae74559f9f370483792
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configuração simplificada para serviços do WCF
-Este exemplo demonstra como implementar e configurar um serviço típico e o cliente usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este exemplo é a base para todos os outros exemplos de tecnologia básico.  
+Este exemplo demonstra como implementar e configurar um serviço típico e o cliente usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básico.  
   
  Esse serviço, que expõe um ponto de extremidade de comunicação com o serviço, usa a configuração simplificada no [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Antes de [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], o ponto de extremidade normalmente é definido em um arquivo de configuração (Web. config), conforme mostrado no código de configuração de exemplo a seguir.  
   
@@ -85,7 +73,7 @@ Este exemplo demonstra como implementar e configurar um serviço típico e o cli
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   

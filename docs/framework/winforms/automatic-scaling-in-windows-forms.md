@@ -1,23 +1,15 @@
 ---
-title: "Dimensionamento automático no Windows Forms"
+title: Dimensionamento automático no Windows Forms
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Dimensionamento automático em Windows Forms
 Dimensionamento automático permite que um formulário e seus controles criados em uma máquina com uma determinada exibição resolução ou sistema de fonte, a ser exibido corretamente em outro computador com uma fonte de sistema ou resolução de exibição diferente. Ela garante que o formulário e seus controles serão inteligentemente redimensionados para ser consistente com nativos do windows e outros aplicativos em computadores dos usuários e outros desenvolvedores. O suporte a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para dimensionamento automático e estilos visuais permite [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicativos para manter uma aparência consistente quando comparado a aplicativos nativos do Windows na máquina de cada usuário.
@@ -92,7 +84,7 @@ Agora, o Windows Forms usa a seguinte lógica para dimensionar automaticamente o
 
 3. Quando o formulário é carregado, se os valores de <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> e <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> forem diferentes, então o <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> método é chamado para dimensionar o controle e seus filhos. Este método suspende o layout e chama o <xref:System.Windows.Forms.Control.Scale%2A> método para executar o dimensionamento real. Posteriormente, o valor de <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> é atualizado para evitar dimensionamento progressivo.
 
-4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>é também chamado automaticamente nas seguintes situações:
+4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> é também chamado automaticamente nas seguintes situações:
 
     - Em resposta ao <xref:System.Windows.Forms.Control.OnFontChanged%2A> evento se o modo de dimensionamento é <xref:System.Windows.Forms.AutoScaleMode.Font>.
   

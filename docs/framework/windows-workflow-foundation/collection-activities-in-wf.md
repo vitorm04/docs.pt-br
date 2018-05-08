@@ -1,26 +1,15 @@
 ---
-title: "Atividades de coleção em WF"
-ms.custom: 
+title: Atividades de coleção em WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-activities-in-wf"></a>Atividades de coleção em WF
-As atividades de coleção são usadas para trabalhar com objetos de coleção em um fluxo de trabalho. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tem sistema forneceu atividades adicionando e removendo itens de uma coleção, testando a existência de um item em uma coleção, e desmarcando uma coleção. `ExistsInCollection`e `RemoveFromCollection` tem um <xref:System.Activities.OutArgument%601> do tipo <xref:System.Boolean>, que indica o resultado.  
+As atividades de coleção são usadas para trabalhar com objetos de coleção em um fluxo de trabalho. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tem sistema forneceu atividades adicionando e removendo itens de uma coleção, testando a existência de um item em uma coleção, e desmarcando uma coleção. `ExistsInCollection` e `RemoveFromCollection` tem um <xref:System.Activities.OutArgument%601> do tipo <xref:System.Boolean>, que indica o resultado.  
   
 > [!IMPORTANT]
 >  Se uma atividade de coleção é executada antes de definir o objeto subjacente da coleção, <xref:System.InvalidOperationException> é lançado e falhas de atividade.  

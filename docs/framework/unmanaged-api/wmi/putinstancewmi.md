@@ -1,11 +1,7 @@
 ---
-title: "Função PutInstanceWmi (referência de API não gerenciada)"
-description: "A função PutInstanceWmi cria ou atualiza uma instância de uma classe existente."
+title: Função PutInstanceWmi (referência de API não gerenciada)
+description: A função PutInstanceWmi cria ou atualiza uma instância de uma classe existente.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutInstanceWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putinstancewmi-function"></a>Função PutInstanceWmi
 Cria ou atualiza uma instância de uma classe existente. A instância é gravada no repositório do WMI. 
@@ -80,8 +73,8 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | A instância especificada é inválida. (Por exemplo, chamar `PutInstanceWmi` com uma classe retorna esse valor.) |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | O `WBEM_FLAG_CREATE_ONLY` sinalizador foi especificado, mas a instância já existe. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`foi especificado em `lFlags`, mas a instância não existe. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` foi especificado em `lFlags`, mas a instância não existe. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chamar [ConnectServerWmi](connectserverwmi.md) novamente. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida. |
@@ -106,7 +99,7 @@ Se a chamada de função falhar, você pode obter informações adicionais sobre
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

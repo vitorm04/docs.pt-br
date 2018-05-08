@@ -1,31 +1,17 @@
 ---
-title: "Visão geral do controle de painel (Windows Forms)"
-ms.custom: 
+title: Visão geral do controle de painel (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Visão geral do controle de painel (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para fornecer um agrupamento de identificação para outros controles. Normalmente, você usa painéis para subdividir um formulário por função. Por exemplo, você pode ter um formulário de pedido que especifica as opções de mala direta, como qual carrier noturna usar. Agrupar todas as opções em um painel fornece ao usuário uma indicação visual lógica. No design de tempo todos os controles podem ser movidos facilmente — quando você move o <xref:System.Windows.Forms.Panel> controlar, todos os seus controles contidos mover, muito. Os controles agrupados em um painel podem ser acessados por meio de seu <xref:System.Windows.Forms.Control.Controls%2A> propriedade. Essa propriedade retorna uma coleção de <xref:System.Windows.Forms.Control> instâncias, portanto, geralmente será necessário converter um controle recuperados dessa maneira ao seu tipo específico.  

@@ -1,31 +1,17 @@
 ---
-title: "Validação da entrada do usuário no Windows Forms"
-ms.custom: 
+title: Validação da entrada do usuário no Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validação da entrada do usuário no Windows Forms
 Quando os usuários inserem dados em seu aplicativo, convém verificar se os dados são válidos antes de seu aplicativo utilizá-los. Você pode exigir que determinados campos de texto não sejam de comprimento zero, que um campo seja formatado como um número de telefone ou outros tipos de dados bem formados ou que uma cadeia de caracteres não contenha caracteres desprotegidos que poderiam ser usados para comprometer a segurança de um banco de dados. O Windows Forms fornece várias maneiras para validar a entrada em seu aplicativo.  
@@ -56,7 +42,7 @@ Quando os usuários inserem dados em seu aplicativo, convém verificar se os dad
  Quando você usa associação de dados, os dados no seu controle são sincronizados com a fonte de dados durante a execução do <xref:System.Windows.Forms.Control.Validating> evento. Se você cancelar o <xref:System.Windows.Forms.Control.Validating> eventos, os dados não serão sincronizados com a fonte de dados.  
   
 > [!IMPORTANT]
->  Se você tiver uma validação personalizada depois que o <xref:System.Windows.Forms.Control.Validating> evento, ele não afeta os associação de dados. Por exemplo, se você tiver código em um <xref:System.Windows.Forms.Control.Validated> evento que tenta cancelar a associação de dados, a associação de dados ainda ocorrerá. Nesse caso, para executar a validação no <xref:System.Windows.Forms.Control.Validated> evento, o controle de alterações **modo de atualização de fonte de dados** propriedade (**em (Databindings)**\\**(Avançado)** ) de **OnValidation** para **nunca**e adicione *controle*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` ao seu código de validação.  
+>  Se você tiver uma validação personalizada depois que o <xref:System.Windows.Forms.Control.Validating> evento, ele não afeta os associação de dados. Por exemplo, se você tiver código em um <xref:System.Windows.Forms.Control.Validated> evento que tenta cancelar a associação de dados, a associação de dados ainda ocorrerá. Nesse caso, para executar a validação no <xref:System.Windows.Forms.Control.Validated> evento, o controle de alterações **modo de atualização de fonte de dados** propriedade (**em (Databindings)**\\ **(Avançado)** ) de **OnValidation** para **nunca**e adicione *controle*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` ao seu código de validação.  
   
 ### <a name="implicit-and-explicit-validation"></a>Validação explícita e implícita  
  Então quando os dados de um controle são validados? Isso cabe a você, o desenvolvedor. Você pode usar a validação implícita ou explícita, dependendo das necessidades do seu aplicativo.  

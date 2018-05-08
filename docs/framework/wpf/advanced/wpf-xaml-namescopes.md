@@ -1,13 +1,6 @@
 ---
 title: Namescopes XAML WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namescopes [WPF]
 - styles [WPF], namescopes in
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c13dba48d21235c57be64d90b6547902e0428a6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-xaml-namescopes"></a>Namescopes XAML WPF
 Os namescopes de XAML são um conceito que identifica objetos que são definidos em XAML. Os nomes em um namescope de XAML podem ser usados para estabelecer relações entre os nomes de objetos definidos por XAML e seus equivalentes de instância em uma árvore de objetos. Normalmente, os namescopes de XAML no código gerenciado do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são criados ao carregar as raízes da página XAML individual de um aplicativo XAML. XAML namescopes como o objeto de programação são definidos pelo <xref:System.Windows.Markup.INameScope> interface e também são implementados pela classe prática <xref:System.Windows.NameScope>.  
@@ -47,7 +35,7 @@ Os namescopes de XAML são um conceito que identifica objetos que são definidos
 ### <a name="adding-objects-to-runtime-object-trees"></a>Adicionando objetos a árvores de objetos de tempo de execução  
  O momento em que o XAML é analisado representa o momento em que um namescope de XAML do WPF é criado e definido. Se você adicionar um objeto a uma árvore de objetos em um ponto no tempo após o momento em que o XAML que produziu a árvore foi analisado, um valor `Name` ou `x:Name` no novo objeto não atualizará automaticamente as informações em um namescope de XAML. Para adicionar um nome de um objeto em um namescope WPF XAML depois XAML é carregado, você deve chamar a implementação apropriada de <xref:System.Windows.Markup.INameScope.RegisterName%2A> no objeto que define o namescope XAML, que normalmente é a raiz da página XAML. Se o nome não estiver registrado, o objeto adicionado não pode ser referenciado pelo nome através de métodos como <xref:System.Windows.FrameworkElement.FindName%2A>, e você não pode usar esse nome para o direcionamento de animação.  
   
- O cenário mais comum para desenvolvedores de aplicativos é que você usará <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar nomes para o namescope XAML na raiz da página atual. <xref:System.Windows.FrameworkElement.RegisterName%2A>é parte de um cenário importante para storyboards que objetos de destino para animações. Para obter mais informações, consulte [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ O cenário mais comum para desenvolvedores de aplicativos é que você usará <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar nomes para o namescope XAML na raiz da página atual. <xref:System.Windows.FrameworkElement.RegisterName%2A> é parte de um cenário importante para storyboards que objetos de destino para animações. Para obter mais informações, consulte [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
  Se você chamar <xref:System.Windows.FrameworkElement.RegisterName%2A> em um objeto que não seja o objeto que define o namescope XAML, o nome ainda está registrado para o namescope XAML que o objeto de chamada é mantido em, como se você tivesse chamado <xref:System.Windows.FrameworkElement.RegisterName%2A> no namescope XAML definindo o objeto.  
   
@@ -82,9 +70,9 @@ Os namescopes de XAML são um conceito que identifica objetos que são definidos
   
 <a name="Namescopes_and_Name_related_APIs"></a>   
 ## <a name="xaml-namescopes-and-name-related-apis"></a>Namescopes de XAML e APIs relacionadas a nomes  
- <xref:System.Windows.FrameworkElement>tem <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> e <xref:System.Windows.FrameworkElement.UnregisterName%2A> métodos. Se o objeto em que você chama esses métodos é proprietário de um namescope de XAML, os métodos chamam nos métodos do namescope de XAML relevante. Caso contrário, o elemento pai é verificado para ver se ele é proprietário de um namescope de XAML e esse processo continua recursivamente até que seja encontrado um namescope de XAML (devido ao comportamento do processador de XAML, é garantido que haverá um namescope de XAML na raiz). <xref:System.Windows.FrameworkContentElement>possui comportamentos análogos, com exceção de que nenhum <xref:System.Windows.FrameworkContentElement> jamais possuirá um namescope XAML. Os métodos existem no <xref:System.Windows.FrameworkContentElement> para que as chamadas podem ser encaminhadas eventualmente para um <xref:System.Windows.FrameworkElement> elemento pai.  
+ <xref:System.Windows.FrameworkElement> tem <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> e <xref:System.Windows.FrameworkElement.UnregisterName%2A> métodos. Se o objeto em que você chama esses métodos é proprietário de um namescope de XAML, os métodos chamam nos métodos do namescope de XAML relevante. Caso contrário, o elemento pai é verificado para ver se ele é proprietário de um namescope de XAML e esse processo continua recursivamente até que seja encontrado um namescope de XAML (devido ao comportamento do processador de XAML, é garantido que haverá um namescope de XAML na raiz). <xref:System.Windows.FrameworkContentElement> possui comportamentos análogos, com exceção de que nenhum <xref:System.Windows.FrameworkContentElement> jamais possuirá um namescope XAML. Os métodos existem no <xref:System.Windows.FrameworkContentElement> para que as chamadas podem ser encaminhadas eventualmente para um <xref:System.Windows.FrameworkElement> elemento pai.  
   
- <xref:System.Windows.NameScope.SetNameScope%2A>é usado para mapear um novo namescope XAML para um objeto existente. Você pode chamar <xref:System.Windows.NameScope.SetNameScope%2A> mais de uma vez para redefinir ou limpar o XAML namescope, mas que não é um uso comum. Além disso, <xref:System.Windows.NameScope.GetNameScope%2A> geralmente não é usado em código.  
+ <xref:System.Windows.NameScope.SetNameScope%2A> é usado para mapear um novo namescope XAML para um objeto existente. Você pode chamar <xref:System.Windows.NameScope.SetNameScope%2A> mais de uma vez para redefinir ou limpar o XAML namescope, mas que não é um uso comum. Além disso, <xref:System.Windows.NameScope.GetNameScope%2A> geralmente não é usado em código.  
   
 ### <a name="xaml-namescope-implementations"></a>Implementações de namescope de XAML  
  As classes a seguir implementam <xref:System.Windows.Markup.INameScope> diretamente:  
@@ -97,9 +85,9 @@ Os namescopes de XAML são um conceito que identifica objetos que são definidos
   
 -   <xref:System.Windows.FrameworkTemplate>  
   
- <xref:System.Windows.ResourceDictionary>Não use nomes XAML ou namescopes; Ele usa chaves em vez disso, porque é uma implementação de dicionário. A única razão <xref:System.Windows.ResourceDictionary> implementa <xref:System.Windows.Markup.INameScope> é para que ele pode lançar exceções para o código do usuário que ajudam a esclarecer a distinção entre um namescope XAML verdadeiro e como um <xref:System.Windows.ResourceDictionary> trata as chaves e também para garantir que namescopes XAML não são aplicadas a um <xref:System.Windows.ResourceDictionary> pelos elementos pai.  
+ <xref:System.Windows.ResourceDictionary> Não use nomes XAML ou namescopes; Ele usa chaves em vez disso, porque é uma implementação de dicionário. A única razão <xref:System.Windows.ResourceDictionary> implementa <xref:System.Windows.Markup.INameScope> é para que ele pode lançar exceções para o código do usuário que ajudam a esclarecer a distinção entre um namescope XAML verdadeiro e como um <xref:System.Windows.ResourceDictionary> trata as chaves e também para garantir que namescopes XAML não são aplicadas a um <xref:System.Windows.ResourceDictionary> pelos elementos pai.  
   
- <xref:System.Windows.FrameworkTemplate>e <xref:System.Windows.Style> implementar <xref:System.Windows.Markup.INameScope> através de definições de interface explícita. As implementações explícitas permitem que esses namescopes XAML se comportam convencionalmente quando eles são acessados por meio de <xref:System.Windows.Markup.INameScope> interface, que é como namescopes XAML são expressos por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] processos internos. Mas as definições de interface explícita não fazem parte da superfície de API convencional de <xref:System.Windows.FrameworkTemplate> e <xref:System.Windows.Style>, porque raramente você precisa chamar o <xref:System.Windows.Markup.INameScope> métodos em <xref:System.Windows.FrameworkTemplate> e <xref:System.Windows.Style> diretamente e, em vez disso, use outra API como <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
+ <xref:System.Windows.FrameworkTemplate> e <xref:System.Windows.Style> implementar <xref:System.Windows.Markup.INameScope> através de definições de interface explícita. As implementações explícitas permitem que esses namescopes XAML se comportam convencionalmente quando eles são acessados por meio de <xref:System.Windows.Markup.INameScope> interface, que é como namescopes XAML são expressos por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] processos internos. Mas as definições de interface explícita não fazem parte da superfície de API convencional de <xref:System.Windows.FrameworkTemplate> e <xref:System.Windows.Style>, porque raramente você precisa chamar o <xref:System.Windows.Markup.INameScope> métodos em <xref:System.Windows.FrameworkTemplate> e <xref:System.Windows.Style> diretamente e, em vez disso, use outra API como <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
   
  As seguintes classes de definem seu próprios namescope XAML, usando o <xref:System.Windows.NameScope?displayProperty=nameWithType> classe auxiliar e conectar-se à sua implementação de namescope XAML por meio de <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> propriedade anexada:  
   

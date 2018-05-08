@@ -1,11 +1,7 @@
 ---
-title: "Função ExecNotificationQueryWmi (referência de API não gerenciada)"
-description: "A função ExecNotificationQueryWmi executa uma consulta para receber eventos."
+title: Função ExecNotificationQueryWmi (referência de API não gerenciada)
+description: A função ExecNotificationQueryWmi executa uma consulta para receber eventos.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>Função ExecNotificationQueryWmi
 Executa uma consulta para receber eventos. A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos assim que elas chegam. Liberar o enumerador retornado cancela a consulta.  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] O nível de autorização.
 
-`impLevel`[in] O nível de representação.
+`impLevel` [in] O nível de representação.
 
 `pCurrentNamespace`   
 [in] Um ponteiro para um [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objeto que representa o namespace atual.
@@ -106,7 +99,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | A consulta teve um erro de sintaxe. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | O idioma de consulta solicitado não tem suporte. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | A consulta é muito complexa. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chamar [ConnectServerWmi](connectserverwmi.md) novamente. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | A consulta não pode ser analisada. |
@@ -127,7 +120,7 @@ Se a chamada de função falhar, você pode obter informações adicionais sobre
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

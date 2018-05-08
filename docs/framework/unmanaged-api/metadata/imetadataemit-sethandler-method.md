@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataEmit::SetHandler"
-ms.custom: 
+title: Método IMetaDataEmit::SetHandler
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.SetHandler
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c6c1aaaf-e2cd-407c-b73e-fbe6ffd83bb3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ccb35c12e1d9c2fade9d8760d0a2e39807c92de9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60c9266806ef6b5d7e2e1c3a219a4485bc22d7f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitsethandler-method"></a>Método IMetaDataEmit::SetHandler
 Define o método referenciado por especificado `IUnknown` ponteiro como um retorno de chamada de notificação para remapeia token.  
@@ -62,7 +50,7 @@ HRESULT SetHandler (
   
  **Biblioteca:** usado como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

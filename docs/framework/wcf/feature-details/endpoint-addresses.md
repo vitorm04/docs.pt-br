@@ -1,44 +1,30 @@
 ---
-title: "Endereços do ponto de extremidade"
-ms.custom: 
+title: Endereços do ponto de extremidade
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
-Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um URI Uniform Resource Identifier (), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação com o <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocam mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP necessários para acessar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
+Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um URI Uniform Resource Identifier (), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no modelo de programação do Windows Communication Foundation (WCF) pelo <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocar mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP necessários para acessar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Estrutura de um endereço de URI  
  O endereço de URI para a maioria dos transportes tem quatro partes. Por exemplo, as quatro partes do URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint podem ser especificados da seguinte maneira:  
   
 -   Esquema: http:  
   
--   Machine: www.fabrikam.com  
+-   Máquina: www.fabrikam.com  
   
 -   (opcional) Porta: 322  
   
--   Path: /mathservice.svc/secureEndpoint  
+-   Caminho: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definir um endereço para um serviço  
  O endereço de ponto de extremidade para um serviço pode ser especificado imperativa usando código ou declarativamente por meio de configuração. Definir pontos de extremidade no código geralmente não é prático porque as associações e os endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Geralmente, é mais prático definir pontos de extremidade de serviço usando a configuração em vez do código. Informações sem o código de endereçamento e manter a associação permite que a alteração sem precisar recompilar ou reimplantar o aplicativo.  
@@ -63,7 +49,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   Informações de associação: Endereço IP, porta, o cabeçalho de Host  
   
- O IIS pode especificar várias associações para cada site, o que resulta em vários endereços de base para cada esquema. Antes de [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferecia suporte a vários endereços para um esquema e, se eles forem especificados, gerou um <xref:System.ArgumentException> durante a ativação.  
+ O IIS pode especificar várias associações para cada site, o que resulta em vários endereços de base para cada esquema. Antes de [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF não oferecia suporte a vários endereços para um esquema e, se eles forem especificados, gerou um <xref:System.ArgumentException> durante a ativação.  
   
  O [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] permite que provedores de serviços de Internet hospedar vários aplicativos com diferentes endereços base para o mesmo esquema no mesmo site.  
   
@@ -111,7 +97,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
  Para obter detalhes e exemplos, consulte [dando suporte a várias associações de Site IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Estendendo o endereçamento nos serviços do WCF  
- O modelo de endereçamento padrão de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services usa o endereço de ponto de extremidade URI para as seguintes finalidades:  
+ O padrão de modelo de serviços do WCF de endereçamento usa o endereço de ponto de extremidade URI para as seguintes finalidades:  
   
 -   Para especificar o endereço de escuta do serviço, o local em que o ponto de extremidade de escuta para mensagens,  
   

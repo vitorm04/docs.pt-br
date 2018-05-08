@@ -1,26 +1,12 @@
 ---
-title: "Exemplo de integração de SystemWebRouting"
-ms.custom: 
+title: Exemplo de integração de SystemWebRouting
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Exemplo de integração de SystemWebRouting
 Este exemplo demonstra a integração da camada de hospedagem com as classes de <xref:System.Web.Routing> namespace. As classes de <xref:System.Web.Routing> namespace permitem que um aplicativo usar URLs não correspondem diretamente a um recurso físico. Usando o roteamento da Web permite ao desenvolvedor criar endereços virtuais para HTTP, em seguida, são mapeados para real [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços. Isso é útil quando um serviço WCF deve ser hospedado sem a necessidade de um arquivo físico ou recurso, ou quando os serviços devem ser acessados com URLs que não contêm arquivos, como HTML ou. aspx. Este exemplo demonstra como utilizar o <xref:System.Web.Routing.RouteTable> classe para criar URIs virtuais que são mapeados para executar serviços definidos em global. asax. 
@@ -39,7 +25,7 @@ Este exemplo pode já estar instalado no seu computador. Verifique o seguinte di
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+ Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ Este exemplo pode já estar instalado no seu computador. Verifique o seguinte di
   
      Uma listagem para o exemplo de diretório é exibida. Observe que não há nenhum arquivo com uma extensão de arquivo. svc.  
   
-3.  Na barra de endereços, adicionar `movies` à URL, para que ele apareça http://localhost: [porta] filmes e pressione ENTER.  
+3.  Na barra de endereços, adicionar `movies` para a URL, para que ele apareça http://localhost:[port] filmes e pressione ENTER.  
   
      O feed de filmes aparece no navegador.  
   
-4.  Na barra de endereços, adicionar `channels` à URL, isso é leituras http://localhost: [porta] / canais e pressione ENTER.  
+4.  Na barra de endereços, adicionar `channels` para a URL, isso é leituras http://localhost:[porta] / canais e pressione ENTER.  
   
      O feed de canais é exibida no navegador.  
   
@@ -81,11 +67,11 @@ Este exemplo pode já estar instalado no seu computador. Verifique o seguinte di
   
 4.  Iniciar o aplicativo, clicando duas vezes o aplicativo Web e selecionando **gerenciar aplicativo** e **procurar**.  
   
-5.  Na barra de endereços, adicionar `movies` à URL, isso é leituras http://localhost: [porta] filmes e pressione ENTER.  
+5.  Na barra de endereços, adicionar `movies` para a URL, isso é leituras http://localhost:[port] filmes e pressione ENTER.  
   
      O feed de filmes aparece no navegador.  
   
-6.  Na barra de endereços, adicionar `channels` à URL, isso é leituras http://localhost: [porta] / canais e pressione ENTER.  
+6.  Na barra de endereços, adicionar `channels` para a URL, isso é leituras http://localhost:[porta] / canais e pressione ENTER.  
   
      O feed de canais é exibida no navegador.  
   

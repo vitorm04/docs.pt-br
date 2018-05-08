@@ -1,13 +1,6 @@
 ---
 title: Como adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms
 Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa de listagem ou caixa de listagem marcada de várias maneiras, porque esses controles podem ser vinculados a uma variedade de fontes de dados. No entanto, este tópico demonstra o método mais simples e não requer nenhuma vinculação de dados. Normalmente, os itens exibidos são cadeias de caracteres; No entanto, qualquer objeto pode ser usado. O texto que é exibido no controle é o valor retornado pelo objeto de `ToString` método.  

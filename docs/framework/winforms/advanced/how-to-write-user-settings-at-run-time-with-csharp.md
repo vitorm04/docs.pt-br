@@ -1,28 +1,16 @@
 ---
-title: "Como gravar configurações do usuário em tempo de execução com C#"
-ms.custom: 
+title: Como gravar configurações do usuário em tempo de execução com C#
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], run time
 - application settings [Windows Forms], writing user settings
 - application settings [Windows Forms], C#
 ms.assetid: 9d061c7d-b33b-470f-a36d-edccb1d6f9a3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 274a104d194c9db13d69d2024dc54595690c2ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f289b6a6a4a726ffa6bb2c9df99c665e2872e8d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-user-settings-at-run-time-with-c"></a>Como gravar configurações do usuário em tempo de execução com C# #
 As configurações que estão no escopo do aplicativo são somente leitura e só podem ser alteradas em tempo de design ou alterando o arquivo. config entre as sessões do aplicativo. Configurações que estão no escopo do usuário, no entanto, podem ser gravadas em tempo de execução assim como qualquer valor de propriedade deve ser alterada. Persiste o novo valor para a duração da sessão do aplicativo. Você pode manter as alterações das configurações entre sessões do aplicativo chamando o método de salvar.  

@@ -1,14 +1,6 @@
 ---
 title: Como personalizar a aparência de linhas no controle DataGridView dos Windows Forms
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - rows [Windows Forms], customizing in DataGridView control
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: d40b53d2-7e7c-48c5-8570-6e79d15c3bbb
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 579d63da8a411e47c649695c0a09d4cf519b4410
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 343e637eb5250ff4d6a1e70660dc76453e632776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>Como personalizar a aparência de linhas no controle DataGridView dos Windows Forms
 Você pode controlar a aparência de <xref:System.Windows.Forms.DataGridView> linhas ao manipular uma ou ambas as <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> eventos. Esses eventos são projetados para que pintar apenas o que você deseja enquanto permitindo que o <xref:System.Windows.Forms.DataGridView> controle pintar o restante. Por exemplo, se você quiser pintar o plano de fundo personalizado, você pode manipular o <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> eventos e permitem que as células individuais de pintura com seus próprio conteúdo de primeiro plano. Como alternativa, você pode deixar as células pintar a mesmos e adicionar o conteúdo do primeiro plano personalizado em um manipulador para o <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> evento. Você também pode desabilitar pintura da célula e pintar tudo por conta própria em um <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> manipulador de eventos.  

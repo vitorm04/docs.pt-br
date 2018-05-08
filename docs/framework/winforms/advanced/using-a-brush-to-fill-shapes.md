@@ -1,31 +1,19 @@
 ---
 title: Usando um pincel para preencher formas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - examples [Windows Forms], brushes
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dad26479a3790f40e50760ac9e9282aa692a4ea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Usando um pincel para preencher formas
-Um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto é usado para preencher o interior de uma forma fechada. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]define vários estilos de preenchimento: cor sólida, o padrão de hachura, textura de imagem e gradiente de cores.  
+Um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto é usado para preencher o interior de uma forma fechada. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] define vários estilos de preenchimento: cor sólida, o padrão de hachura, textura de imagem e gradiente de cores.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como Preencher uma Forma com uma Cor Sólida](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  

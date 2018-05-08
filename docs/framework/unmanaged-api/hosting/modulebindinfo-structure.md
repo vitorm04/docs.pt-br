@@ -1,14 +1,6 @@
 ---
 title: Estrutura ModuleBindInfo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ModuleBindInfo
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 399ba2471b4dc7c5e372a56a9dcab8117068a693
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modulebindinfo-structure"></a>Estrutura ModuleBindInfo
 Fornece informações detalhadas sobre o módulo referenciado e o assembly que o contém.  
@@ -56,7 +44,7 @@ typedef struct _ModuleBindInfo {
 |`lpModuleName`|O nome do módulo referenciado.|  
   
 ## <a name="remarks"></a>Comentários  
- `ModuleBindInfo`é passado como um parâmetro para `IHostAssemblyStore::ProvideModule`. O host fornece o identificador exclusivo `dwAppDomainId` para o common language runtime (CLR). Após uma chamada para o [Ihostassemblystore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) método retorna, o tempo de execução usa o identificador para determinar se o conteúdo do `IStream` foram mapeadas. Nesse caso, o tempo de execução carrega a cópia existente em vez de remapeamento de fluxo. O tempo de execução também usa esse identificador como uma chave de pesquisa para fluxos que são retornados de chamadas para o `IHostAssemblyStore::ProvideAssembly` método. Portanto, o identificador deve ser exclusivo para solicitações do módulo, bem como para solicitações de assembly.  
+ `ModuleBindInfo` é passado como um parâmetro para `IHostAssemblyStore::ProvideModule`. O host fornece o identificador exclusivo `dwAppDomainId` para o common language runtime (CLR). Após uma chamada para o [Ihostassemblystore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) método retorna, o tempo de execução usa o identificador para determinar se o conteúdo do `IStream` foram mapeadas. Nesse caso, o tempo de execução carrega a cópia existente em vez de remapeamento de fluxo. O tempo de execução também usa esse identificador como uma chave de pesquisa para fluxos que são retornados de chamadas para o `IHostAssemblyStore::ProvideAssembly` método. Portanto, o identificador deve ser exclusivo para solicitações do módulo, bem como para solicitações de assembly.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -65,7 +53,7 @@ typedef struct _ModuleBindInfo {
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  

@@ -1,31 +1,17 @@
 ---
 title: Balanceamento de carga
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-balancing"></a>Balanceamento de carga
-Uma maneira de aumentar a capacidade de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos é aumentar a escala-los por implantá-los em um farm de servidores com balanceamento de carga. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
+É uma maneira de aumentar a capacidade de aplicativos do Windows Communication Foundation (WCF) dimensioná-los por implantá-los em um farm de servidores com balanceamento de carga. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
   
  As seções a seguir abordam as considerações para balanceamento de carga [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos criados usando várias associações fornecidas pelo sistema.  
   

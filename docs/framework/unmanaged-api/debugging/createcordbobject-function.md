@@ -1,14 +1,6 @@
 ---
-title: "Função CreateCordbObject"
-ms.custom: 
+title: Função CreateCordbObject
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateCoredbObject
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7007e541e9999e0cb14a83845eb28d71336b3ff6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12898f75d2575e539b018ea367bc870a3dc738a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createcordbobject-function"></a>Função CreateCordbObject
 Cria uma interface do depurador ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) que fornece funcionalidade para criar uma instância de uma sessão de depuração gerenciada em um processo remoto.  
@@ -60,10 +48,10 @@ HRESULT CordbCreateObject (
  O número de CLRs no processo com êxito foi determinado e o identificador correspondente e matrizes de caminho foram preenchidos corretamente.  
   
  E_INVALIDARG  
- `ppCordb`é nulo, ou `iDebuggerVersion` não é CorDebugVersion_2_0.  
+ `ppCordb` é nulo, ou `iDebuggerVersion` não é CorDebugVersion_2_0.  
   
  E_OUTOFMEMORY  
- Não é possível alocar memória suficiente para`ppCordb`  
+ Não é possível alocar memória suficiente para `ppCordb`  
   
  E_FAIL (ou outros códigos de retorno E_)  
  Outras falhas.  

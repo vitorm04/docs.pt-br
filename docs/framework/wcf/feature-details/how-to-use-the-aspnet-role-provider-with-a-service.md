@@ -1,33 +1,19 @@
 ---
 title: Como utilizar o provedor de função do ASP.NET com um serviço
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9180ebe687d61315a66160a6fc95569a0e6b8e72
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 846caf59816ee23166fb382a0c36ac0fed9df151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Como utilizar o provedor de função do ASP.NET com um serviço
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função (em conjunto com o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação) é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permite que os usuários criem uma conta com um site e para serem atribuídos a funções de autorização finalidades. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e faça logon para o acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, que exige que os usuários possuem contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome e senha de usuário) pode usar o site e seus serviços.  
   
  Para um aplicativo de exemplo, consulte [provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obter mais informações sobre o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recurso de provedor de associação, consulte [como: usar o provedor de associação ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
- O recurso de provedor de função usa um banco de dados do SQL Server para armazenar informações do usuário. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] os desenvolvedores podem aproveitar esses recursos para fins de segurança. Quando integrado a um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, os usuários devem fornecer uma combinação de nome e senha de usuário para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo cliente. Para habilitar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para usar o banco de dados, você deve criar uma instância do <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe, defina seu <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriedade <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>e adicionar a instância para a coleção de comportamentos para o <xref:System.ServiceModel.ServiceHost> que está hospedando o serviço.  
+ O recurso de provedor de função usa um banco de dados do SQL Server para armazenar informações do usuário. Os desenvolvedores do Windows Communication Foundation (WCF) podem tirar proveito desses recursos para fins de segurança. Quando integrado em um aplicativo WCF, os usuários devem fornecer uma combinação de nome e senha de usuário para o aplicativo de cliente do WCF. Para ativar o WCF usar o banco de dados, você deve criar uma instância do <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe, defina seu <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriedade <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>e adicionar a instância para a coleção de comportamentos para o <xref:System.ServiceModel.ServiceHost> que está hospedando o serviço.  
   
 ### <a name="to-configure-the-role-provider"></a>Para configurar o provedor de função  
   

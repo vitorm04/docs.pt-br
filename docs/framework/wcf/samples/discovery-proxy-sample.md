@@ -1,29 +1,17 @@
 ---
 title: Exemplo de proxy de descoberta
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-proxy-sample"></a>Exemplo de proxy de descoberta
 Este exemplo mostra como criar uma implementação de um proxy de descoberta para armazenar informações sobre os serviços existentes e como os clientes podem consultar para obter informações de proxy. Este exemplo consiste em três projetos:  
   
--   **Serviço**: um simples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço de cálculo que é registrado com o proxy de descoberta.  
+-   **Serviço**: um serviço de cálculo simples do Windows Communication Foundation (WCF) que é registrado com o proxy de descoberta.  
   
 -   **Proxy de descoberta**: A implementação de um serviço de proxy de descoberta.  
   
@@ -37,7 +25,7 @@ Este exemplo mostra como criar uma implementação de um proxy de descoberta par
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

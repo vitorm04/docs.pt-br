@@ -1,34 +1,22 @@
 ---
 title: Processo de aprovação de documento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45a6a6b2cd3bf790c8170cef6a6111ee7dd0b27b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-approval-process"></a>Processo de aprovação de documento
-Este exemplo demonstra o uso de muitos Windows Workflow Foundation (WF) e [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos juntos. Junto implementam um cenário do processo de aprovação do documento. Um aplicativo cliente pode enviar documentos para a aprovação e aprovar documentos. Um aplicativo do gerenciador de aprovação existe para facilitar comunicação entre clientes e para aplicar as regras do processo de aprovação. O processo de aprovação é um fluxo de trabalho que pode executar vários tipos de aprovação. As atividades existem para obter uma única aprovação, uma aprovação de quorum (uma porcentagem do conjunto de approvers), e um processo de aprovação complexo que consiste em um quorum e em uma única aprovação em uma sequência.  
+Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (WF) e o Windows Communication Foundation (WCF) juntos. Junto implementam um cenário do processo de aprovação do documento. Um aplicativo cliente pode enviar documentos para a aprovação e aprovar documentos. Um aplicativo do gerenciador de aprovação existe para facilitar comunicação entre clientes e para aplicar as regras do processo de aprovação. O processo de aprovação é um fluxo de trabalho que pode executar vários tipos de aprovação. As atividades existem para obter uma única aprovação, uma aprovação de quorum (uma porcentagem do conjunto de approvers), e um processo de aprovação complexo que consiste em um quorum e em uma única aprovação em uma sequência.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   

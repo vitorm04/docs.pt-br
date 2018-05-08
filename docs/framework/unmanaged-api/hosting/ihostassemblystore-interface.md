@@ -1,14 +1,6 @@
 ---
 title: Interface IHostAssemblyStore
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c795d4baa3030817299f23c3dadf4caf7a5edc5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5620df2ab2b2530332df02cf3f11a00d6b6c8fb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystore-interface"></a>Interface IHostAssemblyStore
 Fornece métodos que permitem que um host ao carregar assemblies e módulos independentemente do common language runtime (CLR).  
@@ -45,7 +33,7 @@ Fornece métodos que permitem que um host ao carregar assemblies e módulos inde
 |[Método ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Resolve um módulo dentro de um assembly ou um arquivo de recurso (não inserido) vinculado.|  
   
 ## <a name="remarks"></a>Comentários  
- `IHostAssemblyStore`Fornece uma maneira para um host carregar assemblies com eficiência com base na identidade do assembly. O host carrega assemblies retornando `IStream` instâncias que aponte diretamente para os bytes.  
+ `IHostAssemblyStore` Fornece uma maneira para um host carregar assemblies com eficiência com base na identidade do assembly. O host carrega assemblies retornando `IStream` instâncias que aponte diretamente para os bytes.  
   
  O CLR determina se um host tiver implementado `IHostAssemblyStore` chamando `IHostAssemblyManager::GetNonHostAssemblyStores` na inicialização. Isso permite que o host, por exemplo, para controlar a associação para assemblies de usuário, mas a contar com o tempo de execução para associar a assemblies do .NET Framework.  
   
@@ -62,7 +50,7 @@ Fornece métodos que permitem que um host ao carregar assemblies e módulos inde
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
