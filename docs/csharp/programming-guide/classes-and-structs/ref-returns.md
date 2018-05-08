@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
-Começando com o C# 7, o C# dá suporte a valores retornados por referência (ref returns). Um valor retornado por referência permite que um método retorne uma referência a uma variável, em vez de um valor, de volta para um chamador. O chamador pode optar por tratar a variável retornada como se tivesse sido retornada por valor ou referência. O chamador pode criar uma nova variável que seja uma referência ao valor retornado, chamado de ref local.
+Começando com C# 7.0, C# dá suporte a valores de referência de devolução. Um valor retornado por referência permite que um método retorne uma referência a uma variável, em vez de um valor, de volta para um chamador. O chamador pode optar por tratar a variável retornada como se tivesse sido retornada por valor ou referência. O chamador pode criar uma nova variável que seja uma referência ao valor retornado, chamado de ref local.
 
 ## <a name="what-is-a-reference-return-value"></a>O que é um valor retornado por referência?
 

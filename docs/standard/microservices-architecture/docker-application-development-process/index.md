@@ -1,21 +1,14 @@
 ---
 title: Processo de desenvolvimento de aplicativos baseados no Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Processo de desenvolvimento de aplicativos baseados no Docker
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc91c7d5e2e27602afd6d583bf09adae3caea59e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo de desenvolvimento de aplicativos baseados no Docker
 
@@ -43,7 +36,7 @@ Ao instalar as ferramentas do [Docker CE (Community Edition)](https://www.docker
 -   **Visual Studio Code**. Site oficial.
     [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
 
--   **Docker Community Edition (CE) for Mac and Windows** [Docker CE (Community Edition) para Mac e Windows] 
+-   **Docker Community Edition (CE) para Mac e Windows**
     [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Linguagens e estruturas do .NET para contêineres do Docker

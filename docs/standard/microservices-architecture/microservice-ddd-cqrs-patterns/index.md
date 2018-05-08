@@ -1,21 +1,14 @@
 ---
 title: Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ef8e0b08c7ba4ddb78144df54d407998cd40fc55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
 
@@ -54,7 +47,7 @@ O DDD é um tópico grande com um conjunto avançado de recursos de aprendizagem
 -   **Eric Evans. Referência do design orientado por domínio: definições e resumos de padrão**
     [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
--   **Vaughn Vernon. Implementando um design orientado por domínio**
+-   **Vaughn Vernon. Implementando um design controlado por domínio**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
 -   **Vaughn Vernon. Design orientado por domínio condensado**

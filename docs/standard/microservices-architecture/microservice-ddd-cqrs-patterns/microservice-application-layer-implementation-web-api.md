@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b960636863ae1dcb0c955d96875d499b54b04105
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementando a camada de aplicativos de microsserviço usando a API Web
 
@@ -158,7 +158,7 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
-O processo e os conceitos de registro são muito semelhantes à forma como você registra tipos com o contêiner de iOS interno do ASP.NET Core, mas a sintaxe, ao usar Autofac, é um pouco diferente.
+O processo e os conceitos de registro são muito semelhantes à forma pela qual você registra tipos com o contêiner de IoC interno do ASP.NET Core, mas a sintaxe, ao usar Autofac, é um pouco diferente.
 
 No código de exemplo, a abstração IOrderRepository é registrada juntamente com a classe de implementação OrderRepository. Isso significa que, sempre que um construtor estiver declarando uma dependência por meio da abstração ou interface IOrderRepository, o contêiner de IoC injetará uma instância da classe OrderRepository.
 
