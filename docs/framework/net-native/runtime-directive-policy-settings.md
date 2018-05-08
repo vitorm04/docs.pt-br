@@ -1,24 +1,14 @@
 ---
-title: "Configurações da política da diretiva de tempo de execução"
-ms.custom: 
+title: Configurações da política da diretiva de tempo de execução
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 698e8ef926740f33f8a0a192680b5cebb45c9d79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directive-policy-settings"></a>Configurações da política da diretiva de tempo de execução
 > [!NOTE]

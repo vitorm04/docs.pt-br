@@ -1,31 +1,17 @@
 ---
-title: "Como: definir os cabeçalhos da solicitação do cliente (WCF Data Services)"
-ms.custom: 
+title: 'Como: definir os cabeçalhos da solicitação do cliente (WCF Data Services)'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4e923966e3c2a84ad032e546733f00c7672536a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b9b01f18e8412857a38a8e22fadfa88faf9d24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Como: definir os cabeçalhos da solicitação do cliente (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para acessar um serviço de dados que oferece suporte a [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], a biblioteca de cliente automaticamente define os cabeçalhos HTTP necessários em mensagens de solicitação enviadas para o serviço de dados. No entanto, a biblioteca de cliente não sabe para definir cabeçalhos de mensagens que são necessários em determinados casos, como quando o serviço de dados requer a autenticação baseada em declarações ou cookies. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). Nesses casos, você deve definir manualmente os cabeçalhos de mensagem na mensagem de solicitação antes de ser enviada. O exemplo neste tópico mostra como tratar o <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> evento para adicionar um novo cabeçalho para a mensagem de solicitação antes de serem enviado ao serviço de dados.  

@@ -1,24 +1,12 @@
 ---
-title: "Coleções de esquema do SQL Server"
-ms.custom: 
+title: Coleções de esquema do SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>Coleções de esquema do SQL Server
 O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleções de esquema adicionais além das coleções de esquema comuns. As coleções de esquema variam ligeiramente conforme a versão do SQL Server que você está usando. Para determinar a lista de coleções de esquema com suporte, chame o **GetSchema** método sem argumentos, ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam.  
@@ -28,7 +16,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
 |Database_Name|Cadeia de Caracteres|Nome do banco de dados.|  
-|dbid|Int16|ID do banco de dados.|  
+|DBID|Int16|ID do banco de dados.|  
 |create_date|DateTime|Data de criação do banco de dados.|  
   
 ## <a name="foreign-keys"></a>Chaves estrangeiras  
@@ -74,7 +62,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |table_catalog|Cadeia de Caracteres|Nome da tabela de índice está associado.|  
 |table_schema|Cadeia de Caracteres|Esquema que contém a tabela de índice está associado.|  
 |table_name|Cadeia de Caracteres|Nome da tabela.|  
-|column_name|Cadeia de Caracteres|Nome da coluna de índice está associado.|  
+|nome da coluna|Cadeia de Caracteres|Nome da coluna de índice está associado.|  
 |ordinal_position|Int32|Posição ordinal da coluna.|  
 |KeyType|Byte|O tipo de objeto.|  
 |index_name|Cadeia de Caracteres|Nome do índice.|  

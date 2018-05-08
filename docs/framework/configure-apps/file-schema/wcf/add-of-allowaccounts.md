@@ -2,14 +2,14 @@
 title: '&lt;adicionar&gt; &lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 20e1052a0517bb170cf796dd40d58c298185a958
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 2230b8d22a14c3df5eb3aa10872246febce015e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;adicionar&gt; &lt;allowAccounts&gt;
-Especifica uma conta de usuário para processos que hospedam [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviços e recebem acesso de conexão para o serviço de compartilhamento.  
+Especifica uma conta de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.  
   
  \<system.serviceModel.activation>  
   
@@ -37,7 +37,7 @@ Especifica uma conta de usuário para processos que hospedam [!INCLUDE[indigo2](
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviços e recebem acesso de conexão para o serviço de compartilhamento.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam serviços do WCF e recebem acesso de conexão para o serviço de compartilhamento.|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de configuração a seguir adiciona os identificadores de cinco padrão para as contas de usuário para esta coleção.  

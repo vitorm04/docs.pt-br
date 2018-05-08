@@ -1,27 +1,15 @@
 ---
 title: Atualizando fontes de dados com DataAdapters
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-caps.latest.revision: "8"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e99ff801894149a2324638bfacbc1d32ee937e0a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9d9eeb93cf0360f321c124bb6bce6ed02a9ea253
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Atualizando fontes de dados com DataAdapters
 O método `Update` do <xref:System.Data.Common.DataAdapter> é chamado para resolver alterações de um <xref:System.Data.DataSet> de volta para a fonte de dados. O método `Update`, como o método de `Fill`, utiliza como argumentos uma instância do `DataSet` e um objeto <xref:System.Data.DataTable> opcional ou um nome de `DataTable`. A instância do `DataSet` é o `DataSet` que contém as alterações que foram feitas, e o `DataTable` identifica a tabela da qual recuperar as alterações. Se nenhum `DataTable` for especificado, o primeiro `DataTable` no `DataSet` será usado.  

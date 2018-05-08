@@ -1,28 +1,19 @@
 ---
-title: "Implementando o padrão de controle Invoke de automação de interface de usuário"
-ms.custom: 
+title: Implementando o padrão de controle Invoke de automação de interface de usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-caps.latest.revision: "31"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1d40bc94887df604577c025181ae7f5f2776cdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac28b481dc9e0749762a411502c8f9660cd0cd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementando o padrão de controle Invoke de automação de interface de usuário
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Invocar um controle é geralmente executado clicando duas vezes ou pressionando ENTER, um atalho de teclado predefinido ou alguma combinação alternativa de pressionamentos de teclas.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>é gerado em um controle que tiver sido ativado (como uma resposta a um controle levar a ação associada). Se possível, o evento deve ser gerado depois que o controle tiver concluído a ação e retornado sem bloqueio. O evento Invoked deve ser gerado antes de atender a solicitação Invoke nas seguintes situações:  
+-   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> é gerado em um controle que tiver sido ativado (como uma resposta a um controle levar a ação associada). Se possível, o evento deve ser gerado depois que o controle tiver concluído a ação e retornado sem bloqueio. O evento Invoked deve ser gerado antes de atender a solicitação Invoke nas seguintes situações:  
   
     -   Não é possível ou prático esperar até que a ação seja concluída.  
   
@@ -59,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Um elemento pode desaparecer do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore imediatamente após ser chamado. Solicitar informações do elemento fornecido pelo retorno de chamada do evento pode falhar como resultado. Pré-busca de informações armazenadas em cache é a solução recomendada.  
   
--   Os controles podem implementar vários padrões de controle. Por exemplo, o controle de cor de preenchimento no [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] barra de ferramentas implementa ambos o <xref:System.Windows.Automation.InvokePattern> e <xref:System.Windows.Automation.ExpandCollapsePattern> padrões de controle. <xref:System.Windows.Automation.ExpandCollapsePattern>expõe o menu e a <xref:System.Windows.Automation.InvokePattern> preenche a seleção ativa com a cor escolhida.  
+-   Os controles podem implementar vários padrões de controle. Por exemplo, o controle de cor de preenchimento no [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] barra de ferramentas implementa ambos o <xref:System.Windows.Automation.InvokePattern> e <xref:System.Windows.Automation.ExpandCollapsePattern> padrões de controle. <xref:System.Windows.Automation.ExpandCollapsePattern> expõe o menu e a <xref:System.Windows.Automation.InvokePattern> preenche a seleção ativa com a cor escolhida.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Membros necessários para IInvokeProvider  
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 |Membros necessários|Tipo de membro|Observações|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>é uma chamada assíncrona e deve retornar imediatamente sem bloqueio.<br /><br /> Esse comportamento é particularmente importante para controles que, direta ou indiretamente, iniciam uma caixa de diálogo modal quando invocado. Qualquer cliente de automação de interface do usuário que atraiu o evento permanecerá bloqueado até que a caixa de diálogo modal está fechada.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> é uma chamada assíncrona e deve retornar imediatamente sem bloqueio.<br /><br /> Esse comportamento é particularmente importante para controles que, direta ou indiretamente, iniciam uma caixa de diálogo modal quando invocado. Qualquer cliente de automação de interface do usuário que atraiu o evento permanecerá bloqueado até que a caixa de diálogo modal está fechada.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
