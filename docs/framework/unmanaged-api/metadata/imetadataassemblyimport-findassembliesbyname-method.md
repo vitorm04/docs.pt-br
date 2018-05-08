@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataAssemblyImport::FindAssembliesByName"
-ms.custom: 
+title: Método IMetaDataAssemblyImport::FindAssembliesByName
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.FindAssembliesByName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d6518fdcf1bef8eaea74818f69f46bb6df26e31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>Método IMetaDataAssemblyImport::FindAssembliesByName
 Obtém uma matriz de assemblies com especificado `szAssemblyName` parâmetro, usando as regras padrão usadas pelo common language runtime (CLR) para resolver referências.  
@@ -74,7 +62,7 @@ HRESULT FindAssembliesByName (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName`retornou com êxito.|  
+|`S_OK`|`FindAssembliesByName` retornou com êxito.|  
 |`S_FALSE`|Não há nenhum assembly.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -82,9 +70,9 @@ HRESULT FindAssembliesByName (
   
  O `FindAssembliesByName` método requer que o CLR a ser inicializado no processo para invocar a lógica de resolução de assembly. Portanto, você deve chamar [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passando COINITEE_DEFAULT) antes de chamar `FindAssembliesByName`e, em seguida, execute com uma chamada para [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName`Retorna um [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) ponteiro para o arquivo que contém o manifesto do assembly para o nome do assembly que é transmitido. Se o nome do assembly fornecido não é totalmente especificado (por exemplo, se ele não inclui uma versão), vários assemblies podem ser retornados.  
+ `FindAssembliesByName` Retorna um [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) ponteiro para o arquivo que contém o manifesto do assembly para o nome do assembly que é transmitido. Se o nome do assembly fornecido não é totalmente especificado (por exemplo, se ele não inclui uma versão), vários assemblies podem ser retornados.  
   
- `FindAssembliesByName`é normalmente usado por um compilador que tenta localizar um assembly referenciado em tempo de compilação.  
+ `FindAssembliesByName` é normalmente usado por um compilador que tenta localizar um assembly referenciado em tempo de compilação.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -93,7 +81,7 @@ HRESULT FindAssembliesByName (
   
  **Biblioteca:** usado como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Como o tempo de execução localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

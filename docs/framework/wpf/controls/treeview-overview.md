@@ -1,28 +1,16 @@
 ---
-title: "Visão geral de TreeView"
-ms.custom: 
+title: Visão geral de TreeView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - expanding node [WPF]
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8c49013bc34671ec590f0bd9f84a0f2cf3f9aaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-overview"></a>Visão geral de TreeView
 O <xref:System.Windows.Controls.TreeView> controle fornece uma maneira de exibir informações em uma estrutura hierárquica usando nós recolhíveis. Este tópico apresenta o <xref:System.Windows.Controls.TreeView> e <xref:System.Windows.Controls.TreeViewItem> controla e fornece exemplos simples de seu uso.  
@@ -30,7 +18,7 @@ O <xref:System.Windows.Controls.TreeView> controle fornece uma maneira de exibir
   
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>O que é um TreeView?  
- <xref:System.Windows.Controls.TreeView>é um <xref:System.Windows.Controls.ItemsControl> que aninha os itens usando <xref:System.Windows.Controls.TreeViewItem> controles. O exemplo a seguir cria um <xref:System.Windows.Controls.TreeView>.  
+ <xref:System.Windows.Controls.TreeView> é um <xref:System.Windows.Controls.ItemsControl> que aninha os itens usando <xref:System.Windows.Controls.TreeViewItem> controles. O exemplo a seguir cria um <xref:System.Windows.Controls.TreeView>.  
   
  [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   

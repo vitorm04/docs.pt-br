@@ -1,24 +1,12 @@
 ---
-title: "Práticas recomendadas para sessões confiáveis"
-ms.custom: 
+title: Práticas recomendadas para sessões confiáveis
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Práticas recomendadas para sessões confiáveis
 
@@ -26,7 +14,7 @@ Este tópico discute as práticas recomendadas para sessões confiáveis.
 
 ## <a name="setting-maxtransferwindowsize"></a>Configuração MaxTransferWindowSize
 
-Sessões confiáveis em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usam uma janela de transferência para manter as mensagens no cliente e no serviço. A propriedade configurável <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica quantas mensagens pode manter a janela de transferência.
+Sessões confiáveis no Windows Communication Foundation (WCF) usam uma janela de transferência para armazenar mensagens no cliente e no serviço. A propriedade configurável <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica quantas mensagens pode manter a janela de transferência.
 
 O remetente, isso indica quantas mensagens pode manter a janela de transferência durante a espera por confirmações; no destinatário, ele indica quantas mensagens para armazenar em buffer para o serviço.
 
@@ -56,7 +44,7 @@ Usar um buffer aumenta a disponibilidade do serviço como simultaneamente recebe
 
 *Controle de fluxo* é um mecanismo que garante que o remetente e o destinatário acompanhar entre si, ou seja, as mensagens são consumidas e tratadas tão rápido quanto eles são produzidos. O tamanho da janela de transferência no cliente e serviço garante que o remetente e o destinatário dentro de uma janela razoável de sincronização.
 
-É altamente recomendável que você defina a propriedade <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> para `true` quando você estiver usando uma sessão confiável entre um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.
+É altamente recomendável que você defina a propriedade <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> para `true` quando você estiver usando uma sessão confiável entre um cliente WCF e um serviço WCF.
 
 ## <a name="setting-maxpendingchannels"></a>Configuração MaxPendingChannels
 

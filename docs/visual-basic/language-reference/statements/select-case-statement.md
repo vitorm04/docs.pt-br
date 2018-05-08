@@ -1,11 +1,6 @@
 ---
-title: "Instrução Select...Case (Visual Basic)"
+title: Instrução Select...Case (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Instrução Select...Case (Visual Basic)
 Executa um dos vários grupos de instruções, dependendo do valor de uma expressão.  
@@ -82,7 +74,7 @@ End Select
   
  Se o código dentro de um `Case` ou `Case Else` bloco de instrução não precisa mais executar nenhuma das instruções no bloco, ele pode sair do bloco usando o `Exit Select` instrução. Isso transfere controle imediatamente para a instrução após `End Select`.  
   
- `Select Case`construções podem ser aninhadas. Cada `Select Case` construção deve ter uma correspondência `End Select` instrução e deve estar totalmente contido dentro de um único `Case` ou `Case Else` bloco de instrução de externa `Select Case` construção dentro da qual ele está aninhado.  
+ `Select Case` construções podem ser aninhadas. Cada `Select Case` construção deve ter uma correspondência `End Select` instrução e deve estar totalmente contido dentro de um único `Case` ou `Case Else` bloco de instrução de externa `Select Case` construção dentro da qual ele está aninhado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa uma `Select Case` construção para gravar uma linha correspondente ao valor da variável `number`. A segunda `Case` declaração contém o valor que corresponde ao valor atual da `number`, portanto, a instrução que grava "entre 6 e 8, inclusive" é executada.  

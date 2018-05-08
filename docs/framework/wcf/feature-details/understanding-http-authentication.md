@@ -1,31 +1,17 @@
 ---
 title: Noções básicas de autenticação HTTP
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fa9af58f08fc54126bd055216d377a4e2b24c84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-http-authentication"></a>Noções básicas de autenticação HTTP
 A autenticação é o processo de identificar se um cliente tem permissão para acessar um recurso. O protocolo HTTP oferece suporte à autenticação como um meio de negociação de acesso a um recurso seguro.  
   
- A solicitação inicial de um cliente normalmente é uma solicitação anônima, não contém informações de autenticação. Aplicativos de servidor HTTP podem negar a solicitação anônima ao indicando que a autenticação é necessária. O aplicativo de servidor envia os cabeçalhos de autenticação da Web para indicar os esquemas de autenticação com suporte. Este documento descreve vários esquemas de autenticação para HTTP e discute o suporte em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ A solicitação inicial de um cliente normalmente é uma solicitação anônima, não contém informações de autenticação. Aplicativos de servidor HTTP podem negar a solicitação anônima ao indicando que a autenticação é necessária. O aplicativo de servidor envia os cabeçalhos de autenticação da Web para indicar os esquemas de autenticação com suporte. Este documento descreve vários esquemas de autenticação para HTTP e discute o suporte no Windows Communication Foundation (WCF).  
   
 ## <a name="http-authentication-schemes"></a>Esquemas de autenticação HTTP  
  O servidor pode especificar vários esquemas de autenticação do cliente escolher. A tabela a seguir descreve alguns esquemas de autenticação geralmente encontrados em aplicativos do Windows.  
@@ -37,7 +23,7 @@ A autenticação é o processo de identificar se um cliente tem permissão para 
 |Digest|A autenticação Digest é um esquema de desafio / resposta que substitui a autenticação básica. O servidor envia uma cadeia de caracteres dos dados aleatórios chamados um *nonce* ao cliente como um desafio. O cliente responde com um hash que inclui o nome de usuário, senha e nonce entre informações adicionais. A complexidade que apresenta este exchange e o hash de dados tornar mais difícil roubar e reutilizar as credenciais do usuário com esse esquema de autenticação.<br /><br /> A autenticação Digest requer o uso de contas de domínio do Windows. O resumo de *realm* é o nome de domínio do Windows. Portanto, você não pode usar um servidor em execução em um sistema operacional que não oferece suporte a domínios do Windows, como o Windows XP Home Edition, com a autenticação Digest. Por outro lado, quando o cliente é executado em um sistema operacional que não oferece suporte a domínios do Windows, uma conta de domínio deve ser explicitamente especificada durante a autenticação.|  
 |NTLM|Autenticação NT LAN Manager (NTLM) é um esquema de desafio / resposta que é uma variação protegida da autenticação Digest. NTLM usa as credenciais do Windows para transformar os dados de desafio em vez da senha e nome de usuário sem codificação. A autenticação NTLM exige várias trocas entre o cliente e servidor. O servidor e todos os proxies intermediários devem oferecer suporte a conexões persistentes para concluir com êxito a autenticação.|  
 |Negotiate|Negociar autenticação seleciona automaticamente entre o protocolo Kerberos e a autenticação NTLM, dependendo da disponibilidade. O protocolo Kerberos é usado se estiver disponível; Caso contrário, a tentativa de NTLM. A autenticação Kerberos aprimora significativamente NTLM. A autenticação Kerberos é mais rápido do que NTLM e permite o uso da autenticação mútua e a delegação de credenciais para computadores remotos.|  
-|Windows Live ID|O serviço HTTP do Windows subjacente inclui a autenticação usando protocolos federados. No entanto, os transportes de HTTP padrão em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não suporta o uso de esquemas de autenticação federada, como Microsoft Windows Live ID. Suporte para esse recurso está disponível atualmente com o uso de segurança de mensagem. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|O serviço HTTP do Windows subjacente inclui a autenticação usando protocolos federados. No entanto, os transportes HTTP padrão no WCF não suporta o uso de esquemas de autenticação federada, como Microsoft Windows Live ID. Suporte para esse recurso está disponível atualmente com o uso de segurança de mensagem. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Escolher um esquema de autenticação  
  Ao selecionar os possíveis esquemas de autenticação para um servidor HTTP, alguns itens a serem considerados incluem o seguinte:  

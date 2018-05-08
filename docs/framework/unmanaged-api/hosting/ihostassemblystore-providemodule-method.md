@@ -1,14 +1,6 @@
 ---
-title: "Método IHostAssemblyStore::ProvideModule"
-ms.custom: 
+title: Método IHostAssemblyStore::ProvideModule
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideModule
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b29f19933ae985d15627d1eba2622f350a52e72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b604e1d7fc3d3c8adf7d95bd95843bc0110dbc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>Método IHostAssemblyStore::ProvideModule
 Resolve um arquivo de recurso do módulo dentro de um assembly ou vinculado (mas não inserida).  
@@ -66,14 +54,14 @@ HRESULT ProvideModule (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ProvideModule`retornou com êxito.|  
+|S_OK|`ProvideModule` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
 |HOST_E_ABANDONED|Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.|  
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
 |COR_E_FILENOTFOUND (0X80070002)|O recurso vinculado ou o assembly solicitado não pôde ser localizado.|  
-|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId`não é grande o suficiente para conter o identificador de host deseja retornar.|  
+|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` não é grande o suficiente para conter o identificador de host deseja retornar.|  
   
 ## <a name="remarks"></a>Comentários  
  O valor de identidade é retornado para `pdwModuleId` é especificado pelo host. Identificadores devem ser exclusivos dentro do tempo de vida de um processo. O CLR usa esse valor como o identificador exclusivo para o fluxo associado. Ele verifica que cada valor em relação aos valores de `pAssemblyId` retornado por chamadas para [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) e com os valores para `pdwModuleId` retornado por outras chamadas `ProvideModule`. Se o host retorna o mesmo valor de identificador para outro `IStream`, o CLR verifica se o conteúdo de fluxo já foi mapeado. Nesse caso, o CLR carrega a cópia existente da imagem em vez de mapeamento de um novo. Portanto, o identificador também não deve sobrepor os identificadores de assembly retornados de `ProvideAssembly`.  
@@ -85,7 +73,7 @@ HRESULT ProvideModule (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  

@@ -1,30 +1,18 @@
 ---
 title: Como expor um contrato para clientes SOAP e da Web
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Como expor um contrato para clientes SOAP e da Web
-Por padrão, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disponibiliza pontos de extremidade apenas para clientes SOAP. Em [como: criar um serviço básico do WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), um ponto de extremidade é disponibilizado para clientes SOAP não. Pode haver momentos quando você deseja disponibilizar o mesmo contrato de duas maneiras, como um ponto de extremidade da Web e como um ponto de extremidade SOAP. Este tópico mostra um exemplo de como fazer isso.  
+Por padrão, o Windows Communication Foundation (WCF) torna pontos de extremidade disponíveis somente para clientes SOAP. Em [como: criar um serviço básico do WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), um ponto de extremidade é disponibilizado para clientes SOAP não. Pode haver momentos quando você deseja disponibilizar o mesmo contrato de duas maneiras, como um ponto de extremidade da Web e como um ponto de extremidade SOAP. Este tópico mostra um exemplo de como fazer isso.  
   
 ### <a name="to-define-the-service-contract"></a>Para definir o contrato de serviço  
   
@@ -65,7 +53,7 @@ Por padrão, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disponibili
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para chamar operações de serviço mapeadas para GET no Internet Explorer  
   
-1.  Abra o Internet Explorer e digite "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" e pressione ENTER. A URL contém o endereço básico do serviço ("http://localhost:8000/"), o endereço relativo do ponto de extremidade (""), a operação de serviço a ser chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados separados por um E comercial (&).  
+1.  Abra o Internet Explorer e digite "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" e pressione ENTER. A URL contém o endereço base do serviço ("http://localhost:8000/"), o endereço relativo do ponto de extremidade (""), a operação de serviço de chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados, separados por um e comercial (&).  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Para chamar operações de serviço no ponto de extremidade da Web no código  
   
@@ -75,7 +63,7 @@ Por padrão, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disponibili
      [!code-vb[htSoapWeb#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#6)]  
   
 > [!NOTE]
->  `Close()`é chamado automaticamente no canal no final de `using` bloco.  
+>  `Close()` é chamado automaticamente no canal no final de `using` bloco.  
   
 1.  Criar o canal e chamar o serviço, conforme mostrado no código a seguir.  
   

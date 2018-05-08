@@ -1,37 +1,23 @@
 ---
 title: 'Práticas recomendadas: controle de versão de contrato de dados'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Práticas recomendadas: controle de versão de contrato de dados
 Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo. Para obter mais informações sobre contratos de dados, consulte os tópicos [usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Observação sobre a validação de esquema  
- Discutir sobre o controle de versão de contrato de dados, é importante observar que o contrato de dados esquema exportada por [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] não tem nenhum suporte de controle de versão, que não seja o fato de que os elementos são marcados como opcionais por padrão.  
+ Discutir o controle de versão de contrato de dados, é importante observar que o esquema de contrato de dados exportado pelo Windows Communication Foundation (WCF) não tem nenhum suporte de controle de versão, que não seja o fato de que os elementos são marcados como opcionais por padrão.  
   
  Isso significa que até mesmo o cenário controle de versão mais comuns, como adicionar um novo membro de dados, não pode ser implementado de maneira que seja consistente em relação a um determinado esquema. As versões mais recentes de um contrato de dados (com um novo membro de dados, por exemplo) não validam usando o esquema antigo.  
   

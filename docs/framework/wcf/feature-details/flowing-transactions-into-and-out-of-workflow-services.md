@@ -1,24 +1,12 @@
 ---
-title: "Transações de fluxo de entrada e saída de serviços de fluxo de trabalho"
-ms.custom: 
+title: Transações de fluxo de entrada e saída de serviços de fluxo de trabalho
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transações de fluxo de entrada e saída de serviços de fluxo de trabalho
 Serviços de fluxo de trabalho e os clientes podem participar de transações.  Para uma operação de serviço fazer parte de uma transação de ambiente, coloque uma <xref:System.ServiceModel.Activities.Receive> atividade dentro de um <xref:System.ServiceModel.Activities.TransactedReceiveScope> atividade. Todas as chamadas feitas por um <xref:System.ServiceModel.Activities.Send> ou um <xref:System.ServiceModel.Activities.SendReply> atividade dentro de <xref:System.ServiceModel.Activities.TransactedReceiveScope> também será feita dentro da transação de ambiente. Um aplicativo de cliente de fluxo de trabalho pode criar uma transação de ambiente usando o <xref:System.Activities.Statements.TransactionScope> atividade e chamar operações de serviço usando a transação de ambiente. Este tópico orienta a criação de um serviço de fluxo de trabalho e o cliente de fluxo de trabalho que participam em transações.  
@@ -87,7 +75,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
 ### <a name="implement-the-workflow-service"></a>Implementar o serviço de fluxo de trabalho  
   
-1.  Adicionar um novo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço de fluxo de trabalho, chamado `WorkflowService` para o `Common` projeto. Para isso, clique em direito a `Common` projeto, selecione **adicionar**, **Novo Item...** , Selecione **fluxo de trabalho** em **modelos instalados** e selecione **serviço de fluxo de trabalho WCF**.  
+1.  Adicionar um novo serviço de fluxo de trabalho WCF, chamado `WorkflowService` para o `Common` projeto. Para isso, clique em direito a `Common` projeto, selecione **adicionar**, **Novo Item...** , Selecione **fluxo de trabalho** em **modelos instalados** e selecione **serviço de fluxo de trabalho WCF**.  
   
      ![Adicionando um serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -182,7 +170,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
 5.  Arraste e solte um <xref:System.Activities.Statements.Sequence> atividade no corpo do <xref:System.Activities.Statements.TransactionScope> atividade.  
   
-6.  Arraste e solte um `PrintTransactionInfo` atividade dentro de<xref:System.Activities.Statements.Sequence>  
+6.  Arraste e solte um `PrintTransactionInfo` atividade dentro de <xref:System.Activities.Statements.Sequence>  
   
 7.  Arrastar e soltar uma <xref:System.Activities.Statements.WriteLine> atividade após o `PrintTransactionInfo` atividade e defina seu <xref:System.Activities.Statements.WriteLine.Text%2A> propriedade como "Cliente: início enviar". Agora, o fluxo de trabalho deve ser assim:  
   

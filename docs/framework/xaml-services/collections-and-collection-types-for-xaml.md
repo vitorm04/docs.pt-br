@@ -1,24 +1,12 @@
 ---
-title: "Coleções e tipos de coleção para XAML"
-ms.custom: 
+title: Coleções e tipos de coleção para XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Coleções e tipos de coleção para XAML
 Este tópico descreve como definir propriedades de tipos que se destinam para dar suporte a uma coleção e para dar suporte a sintaxe XAML para criar uma instância de coleção de itens como elementos filho de um elemento do objeto pai ou um elemento de propriedade.  
@@ -34,7 +22,7 @@ Este tópico descreve como definir propriedades de tipos que se destinam para da
   
 2.  O <xref:System.Collections.IDictionary> interface indica uma coleção dicionary.  
   
-3.  <xref:System.Array>representa uma matriz, uma matriz de oferecer suporte a <xref:System.Collections.IList> métodos.  
+3.  <xref:System.Array> representa uma matriz, uma matriz de oferecer suporte a <xref:System.Collections.IList> métodos.  
   
  Em cada um desses conceitos de coleção, um processador de XAML do .NET Framework XAML serviços espera chamar o `Add` método em uma instância específica do tipo da propriedade de coleção. Ou, em um cenário de serialização, um processador XAML produz instâncias de tipo XAML discretas para cada item encontrado na lista, dicionário ou matriz com base em um determinado conceito da cada coleção de "Itens". Esses são: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; explícita <xref:System.Array.System%23Collections%23IList%23Item%2A> para <xref:System.Array>.  
   
@@ -49,8 +37,8 @@ Este tópico descreve como definir propriedades de tipos que se destinam para da
 ## <a name="xaml-type-system-support-and-collections"></a>Coleções e suporte do sistema de tipo XAML  
  Além os mecanismos básicos de analisando o XAML e popular ou serializar as propriedades de coleção, o sistema de tipo XAML conforme implementado no serviços de XAML do .NET Framework inclui vários recursos de design que pertencem às coleções em XAML.  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>Retorna true se o tipo de XAML é apoiado por um tipo que fornece suporte a coleções XAML.  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> Retorna true se o tipo de XAML é apoiado por um tipo que fornece suporte a coleções XAML.  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>e <xref:System.Xaml.XamlType.IsArray%2A> possível identificar o tipo de XAML dá suporte ao modo de coleta. Para XAML personalizada processadores que são baseados em serviços XAML do .NET Framework e o XAML digite sistema mas não com base em existente <xref:System.Xaml.XamlWriter> implementações, saber qual modo de coleta é usado pode ser necessário para saber qual método chamar para processamento de coleção.  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> e <xref:System.Xaml.XamlType.IsArray%2A> possível identificar o tipo de XAML dá suporte ao modo de coleta. Para XAML personalizada processadores que são baseados em serviços XAML do .NET Framework e o XAML digite sistema mas não com base em existente <xref:System.Xaml.XamlWriter> implementações, saber qual modo de coleta é usado pode ser necessário para saber qual método chamar para processamento de coleção.  
   
 3.  Cada um dos valores de propriedade anterior potencialmente são influenciados por substituições de <xref:System.Xaml.XamlType.LookupCollectionKind%2A> em um tipo XAML.

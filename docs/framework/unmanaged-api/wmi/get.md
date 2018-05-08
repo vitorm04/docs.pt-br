@@ -2,10 +2,6 @@
 title: Obter função (referência de API não gerenciada)
 description: A função Get recupera o valor da propriedade especificada.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Função Get
 Recupera o valor da propriedade especificado se ele existir.
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in] O nome da propriedade.
 
-`lFlags`[in] Reservado. Esse parâmetro deve ser 0.
+`lFlags` [in] Reservado. Esse parâmetro deve ser 0.
 
-`pVal`[out] Se a função retornar com êxito, contém o valor de `wszName` propriedade. O `pval` argumento recebe o tipo correto e o valor do qualificador.
+`pVal` [out] Se a função retornar com êxito, contém o valor de `wszName` propriedade. O `pval` argumento recebe o tipo correto e o valor do qualificador.
 
-`pvtType`[out] Se a função retornar com êxito, contém um [constante do tipo CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) que indica o tipo de propriedade. O valor também pode ser `null`. 
+`pvtType` [out] Se a função retornar com êxito, contém um [constante do tipo CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) que indica o tipo de propriedade. O valor também pode ser `null`. 
 
-`plFlavor`[out] Se a função retornar com êxito, recebe informações sobre a origem da propriedade. Seu valor pode ser `null`, ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas no *WbemCli.h* arquivo de cabeçalho: 
+`plFlavor` [out] Se a função retornar com êxito, recebe informações sobre a origem da propriedade. Seu valor pode ser `null`, ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas no *WbemCli.h* arquivo de cabeçalho: 
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -82,7 +75,7 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | A propriedade especificada não foi encontrada. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para concluir a operação. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
@@ -98,7 +91,7 @@ O `pVal` argumento recebe o tipo correto e o valor para o qualificador e o COM [
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

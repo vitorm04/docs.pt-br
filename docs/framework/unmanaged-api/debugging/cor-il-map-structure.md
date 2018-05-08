@@ -1,14 +1,6 @@
 ---
 title: Estrutura COR_IL_MAP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>Estrutura COR_IL_MAP
 Especifica mudanças no deslocamento relativo de uma função.  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|O antigo Microsoft intermediate language (MSIL) deslocamento relativo ao início da função.|  
 |`newOffset`|O deslocamento MSIL novo relativo ao início da função.|  
-|`fAccurate`|`true`Se o mapeamento é conhecido por ser preciso; Caso contrário, `false`.|  
+|`fAccurate`|`true` Se o mapeamento é conhecido por ser preciso; Caso contrário, `false`.|  
   
 ## <a name="remarks"></a>Comentários  
  O formato do mapa é da seguinte maneira: O depurador assumirá que `oldOffset` refere-se a um deslocamento MSIL dentro do código MSIL original, não modificado. O `newOffset` parâmetro refere-se para o deslocamento MSIL correspondente no código instrumentado, novo.  
@@ -99,7 +87,7 @@ typedef struct _COR_IL_MAP {
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

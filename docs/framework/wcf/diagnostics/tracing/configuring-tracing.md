@@ -1,28 +1,14 @@
 ---
 title: Configurando o rastreamento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 53
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, conjunto de rastreamento de atividades e propagação para oferecer suporte a correlação de rastreamento ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -33,7 +19,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 >  No Windows 8, você deve executar o aplicativo com privilégios elevados (Executar como administrador) para seu aplicativo gerar logs de rastreamento.  
   
 ## <a name="enabling-tracing"></a>A habilitação do rastreamento  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] gera os seguintes dados para o rastreamento de diagnóstico:  
+ Windows Communication Foundation (WCF) gera os seguintes dados para o rastreamento de diagnóstico:  
   
 -   Código de rastreamentos para as etapas do processo em todos os componentes de aplicativos, como chamadas de operação, exceções, avisos e outros eventos de processamento significativo.  
   

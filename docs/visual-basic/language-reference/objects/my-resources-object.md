@@ -1,11 +1,6 @@
 ---
 title: Objeto My.Resources
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>Objeto My.Resources
 Fornece classes e propriedades para acessar os recursos do aplicativo.  
@@ -51,7 +43,7 @@ Fornece classes e propriedades para acessar os recursos do aplicativo.
 |**Imagens**|<xref:System.Drawing.Bitmap>|  
 |**Ícones**|<xref:System.Drawing.Icon>|  
 |**Áudio**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> O <xref:System.IO.UnmanagedMemoryStream> classe deriva o <xref:System.IO.Stream> classe, portanto ele pode ser usado com métodos que usam fluxos, como o <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> método.|  
-|**Arquivos**|-   [Cadeia de caracteres](../../../visual-basic/language-reference/data-types/string-data-type.md) para arquivos de texto.<br />-   <xref:System.Drawing.Bitmap>para arquivos de imagem.<br />-   <xref:System.Drawing.Icon>para arquivos de ícone.<br />-   <xref:System.IO.UnmanagedMemoryStream>para arquivos de som.|  
+|**Arquivos**|-   [Cadeia de caracteres](../../../visual-basic/language-reference/data-types/string-data-type.md) para arquivos de texto.<br />-   <xref:System.Drawing.Bitmap> para arquivos de imagem.<br />-   <xref:System.Drawing.Icon> para arquivos de ícone.<br />-   <xref:System.IO.UnmanagedMemoryStream> para arquivos de som.|  
 |**Outros**|Determinadas pelas informações no designer de **tipo** coluna.|  
   
 ## <a name="classes"></a>Classes  

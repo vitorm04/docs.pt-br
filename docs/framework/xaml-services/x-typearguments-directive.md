@@ -1,13 +1,6 @@
 ---
 title: Diretiva x:TypeArguments
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>Diretiva x:TypeArguments
 Passa para a restrição de tipo de argumentos de um genérico para o construtor do tipo genérico.  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>Lista\<cadeia de caracteres >  
- `<scg:List x:TypeArguments="sys:String" ...>`cria um novo <xref:System.Collections.Generic.List%601> com um <xref:System.String> argumento de tipo.  
+ `<scg:List x:TypeArguments="sys:String" ...>` cria um novo <xref:System.Collections.Generic.List%601> com um <xref:System.String> argumento de tipo.  
   
 ### <a name="dictionarystringstring"></a>Dicionário\<String, String >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`cria um novo <xref:System.Collections.Generic.Dictionary%602> com dois <xref:System.String> argumentos de tipo.  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` cria um novo <xref:System.Collections.Generic.Dictionary%602> com dois <xref:System.String> argumentos de tipo.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Fila < KeyValuePair\<cadeia de caracteres, cadeia de caracteres >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`cria um novo <xref:System.Collections.Generic.Queue%601> que tem uma restrição de <xref:System.Collections.Generic.KeyValuePair%602> com os argumentos de tipo de restrição interna <xref:System.String> e <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` cria um novo <xref:System.Collections.Generic.Queue%601> que tem uma restrição de <xref:System.Collections.Generic.KeyValuePair%602> com os argumentos de tipo de restrição interna <xref:System.String> e <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Usos XAML genérico 2006 XAML e WPF  
  Para uso de 2006 XAML e XAML que é usado para aplicativos do WPF, existem as seguintes restrições para `x:TypeArguments` e usos de tipo genérico do XAML em geral:  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   O elemento raiz elemento XAML objeto genérica também deverá declarar uma classe parcial usando `x:Class`. Isso é verdadeiro mesmo se a ação de compilação definindo um WPF.  
   
--   `x:TypeArguments`não é possível fazer referência a restrições genéricas aninhadas.  
+-   `x:TypeArguments` não é possível fazer referência a restrições genéricas aninhadas.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 ou 2006 de XAML sem WPF 3.0 ou 3.5 do WPF dependência  
  Em serviços de XAML .NET Framework para 2006 XAML ou XAML 2009, as restrições relacionadas a WPF no uso XAML genérico são reduzidas. Você pode instanciar um elemento de objeto genérico em qualquer posição na marcação XAML que o modelo de objeto e o sistema de tipo backup pode dar suporte.  

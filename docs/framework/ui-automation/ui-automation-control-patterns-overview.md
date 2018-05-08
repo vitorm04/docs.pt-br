@@ -1,27 +1,18 @@
 ---
-title: "Visão Geral de Padrões de Controle de Automação de Interface de Usuário"
-ms.custom: 
+title: Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e675681d1de3aa46645047da61ae8aac2ea0ba31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b02618676a1162681c67d34a2c6f43def07893c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 > [!NOTE]
@@ -29,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
  Esta visão geral apresenta [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] padrões de controle. Padrões de controle fornecem uma maneira de categorizar e expor a funcionalidade de um controle independente do tipo de controle ou a aparência do controle.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]usa padrões para representar comportamentos de controle comuns de controle. Por exemplo, você deve usar o padrão de controle Invoke para controles que podem ser invocados (como botões) e o padrão de controle Scroll para controles que têm barras de rolagem (como caixas de listagem, exibições de listas ou caixas de combinação). Como cada padrão de controle representa uma funcionalidade separada, eles podem ser combinados para descrever o conjunto completo de funcionalidade com suporte em um determinado controle.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usa padrões para representar comportamentos de controle comuns de controle. Por exemplo, você deve usar o padrão de controle Invoke para controles que podem ser invocados (como botões) e o padrão de controle Scroll para controles que têm barras de rolagem (como caixas de listagem, exibições de listas ou caixas de combinação). Como cada padrão de controle representa uma funcionalidade separada, eles podem ser combinados para descrever o conjunto completo de funcionalidade com suporte em um determinado controle.  
   
 > [!NOTE]
 >  Controles agregados — construídos com controles filhos que fornecem o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] para funcionalidades expostas pelo pai — devem implementar padrões de controle normalmente associados com cada controle filho. Por sua vez, esses mesmos padrões de controle não são necessários para serem implementados pelos controles filhos.  

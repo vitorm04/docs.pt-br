@@ -1,31 +1,19 @@
 ---
 title: Protegendo clientes
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-clients"></a>Protegendo clientes
-Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. Para obter mais informações sobre como criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
+No Windows Communication Foundation (WCF), o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. Para obter mais informações sobre como criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>O serviço Especifica a segurança  
  Por padrão, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] associações têm recursos de segurança habilitados. (A exceção é o <xref:System.ServiceModel.BasicHttpBinding>.) Portanto, se o serviço foi criado usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], há uma possibilidade maior de implementar a segurança para garantir a integridade, confidencialidade e autenticação. Nesse caso, os metadados que de serviço fornece indicará requer para estabelecer um canal de comunicação seguro. Se os metadados de serviço não incluem quaisquer requisitos de segurança, não é possível impor um esquema de segurança, como o protocolo (SSL) sobre HTTP, em um serviço. Se, no entanto, o serviço exigir que o cliente forneça uma credencial, em seguida, o desenvolvedor do cliente, o implantador ou o administrador deve fornecer a credencial real que o cliente usará para se autenticar para o serviço.  

@@ -1,27 +1,15 @@
 ---
-title: "Formatador de operação e seletor de operação"
-ms.custom: 
+title: Formatador de operação e seletor de operação
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formatador de operação e seletor de operação
-Este exemplo demonstra como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pontos de extensibilidade podem ser usados para permitir que os dados de mensagem em um formato diferente daquele que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espera. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formatadores esperam parâmetros do método a ser incluído no `soap:body` elemento. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET em vez disso e invoca métodos usando esses dados.  
+Este exemplo demonstra como pontos de extensibilidade do Windows Communication Foundation (WCF) podem ser usados para permitir que os dados de mensagem em um formato diferente daquele que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espera. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formatadores esperam parâmetros do método a ser incluído no `soap:body` elemento. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET em vez disso e invoca métodos usando esses dados.  
   
  O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Ele mostra como adicionar, subtrair, multiplicar e mensagens de divisão podem ser alteradas para usar o HTTP GET para solicitações de cliente para servidor e HTTP POST com POX mensagens de respostas do servidor para cliente.  
   
@@ -31,7 +19,7 @@ Este exemplo demonstra como [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
 -   `UriOperationSelector`, que implementa <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> no servidor para executar com base no nome de operação em que a solicitação de obtenção de expedição de operação.  
   
--   `EnableHttpGetRequestsBehavior`ponto de extremidade comportamento (e a configuração correspondente), que adiciona o seletor de operação necessária para o tempo de execução.  
+-   `EnableHttpGetRequestsBehavior` ponto de extremidade comportamento (e a configuração correspondente), que adiciona o seletor de operação necessária para o tempo de execução.  
   
 -   Mostra como inserir um novo formatador de operação no tempo de execução.  
   
@@ -41,7 +29,7 @@ Este exemplo demonstra como [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 ## <a name="key-concepts"></a>Conceitos Principais  
- `QueryStringFormatter`-O formatador de operação é o componente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que é responsável por converter uma mensagem em uma matriz de objetos de parâmetro e uma matriz de objetos de parâmetro em uma mensagem. Isso é feito no cliente usando o <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface e no servidor com o <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface. Essas interfaces permitem que os usuários obtenham as mensagens de solicitação e resposta do `Serialize` e `Deserialize` métodos.  
+ `QueryStringFormatter` -O formatador de operação é o componente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que é responsável por converter uma mensagem em uma matriz de objetos de parâmetro e uma matriz de objetos de parâmetro em uma mensagem. Isso é feito no cliente usando o <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface e no servidor com o <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface. Essas interfaces permitem que os usuários obtenham as mensagens de solicitação e resposta do `Serialize` e `Deserialize` métodos.  
   
  Neste exemplo, `QueryStringFormatter` implementa duas interfaces e é implementado no cliente e no servidor.  
   
@@ -49,7 +37,7 @@ Este exemplo demonstra como [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
 -   O exemplo usa o <xref:System.ComponentModel.TypeConverter> classe para converter dados de parâmetro na mensagem de solicitação de e para cadeias de caracteres. Se um <xref:System.ComponentModel.TypeConverter> não está disponível para um tipo específico, o lance formatador de exemplo uma exceção.  
   
--   No `IClientMessageFormatter.SerializeRequest` método no cliente, o formatador cria um URI com o endereço apropriado e anexa o nome da operação como um sufixo. Esse nome é usado para o qual expedir a operação apropriada no servidor. Em seguida, usa a matriz de objetos de parâmetro e serializa os dados de parâmetro para a cadeia de caracteres de consulta URI usando nomes de parâmetro e os valores convertidos pelo <xref:System.ComponentModel.TypeConverter> classe. O <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> e <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> propriedades são definidas para esse URI. <xref:System.ServiceModel.Channels.MessageProperties>é acessada por meio de <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade.  
+-   No `IClientMessageFormatter.SerializeRequest` método no cliente, o formatador cria um URI com o endereço apropriado e anexa o nome da operação como um sufixo. Esse nome é usado para o qual expedir a operação apropriada no servidor. Em seguida, usa a matriz de objetos de parâmetro e serializa os dados de parâmetro para a cadeia de caracteres de consulta URI usando nomes de parâmetro e os valores convertidos pelo <xref:System.ComponentModel.TypeConverter> classe. O <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> e <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> propriedades são definidas para esse URI. <xref:System.ServiceModel.Channels.MessageProperties> é acessada por meio de <xref:System.ServiceModel.Channels.Message.Properties%2A> propriedade.  
   
 -   No `IDispatchMessageFormatter.DeserializeRequest` método no servidor, o formatador recupera o `Via` URI nas propriedades de mensagem de solicitação de entrada. Ele analisa os pares nome-valor na cadeia de caracteres de consulta URI em valores e nomes de parâmetro e usa os nomes de parâmetro e valores para preencher a matriz de parâmetros passados para o método. Observe que a expedição de operação já ocorreu, portanto, o sufixo de nome de operação é ignorado nesse método.  
   
@@ -177,7 +165,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
   

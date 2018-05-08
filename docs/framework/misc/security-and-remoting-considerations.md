@@ -1,29 +1,19 @@
 ---
-title: "Considerações sobre segurança e comunicação remota"
-ms.custom: 
+title: Considerações sobre segurança e comunicação remota
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, remoting
 - remoting, security
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38b4f61b334a41cedf812a900265af95f1f52e61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4a5ee5673ef96c9fb7f39798ab32dd8c910f43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
 Comunicação remota permite que você configure transparente chamadas entre domínios de aplicativo, processos ou computadores. No entanto, a movimentação da pilha código acesso segurança não pode ultrapassar os limites de processo ou máquinas (Aplicar entre domínios de aplicativos do mesmo processo).  

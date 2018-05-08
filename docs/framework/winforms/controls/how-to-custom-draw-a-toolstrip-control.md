@@ -1,13 +1,6 @@
 ---
 title: Como personalizar o desenho de um controle ToolStrip
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,25 +16,20 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40a0d683a6b9b91233cf9a5c1d133540e47192cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09d9654bf1a2670c77a4a3db2eae2ed7ab6dbfec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Como personalizar o desenho de um controle ToolStrip
 O <xref:System.Windows.Forms.ToolStrip> controles tem o seguinte associados a renderização de classes (pintura):  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer>fornece a aparência e o estilo do seu sistema operacional.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> fornece a aparência e o estilo do seu sistema operacional.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer>fornece a aparência e o estilo do Microsoft Office.  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> fornece a aparência e o estilo do Microsoft Office.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>é a classe base abstrata para as outras classes de renderização de dois.  
+-   <xref:System.Windows.Forms.ToolStripRenderer> é a classe base abstrata para as outras classes de renderização de dois.  
   
  Para desenhar personalizada (também conhecido como desenho proprietário) um <xref:System.Windows.Forms.ToolStrip>, você pode substituir uma das classes de processador e alterar um aspecto da lógica de processamento.  
   

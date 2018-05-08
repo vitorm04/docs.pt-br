@@ -1,29 +1,17 @@
 ---
 title: Resumo da tecnologia de ToolStrip
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], technology summary
 - status bars [Windows Forms], technology summary
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4777a6cb30f641faf2305bc6d8bca55d243c94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-technology-summary"></a>Resumo da tecnologia de ToolStrip
 Este tópico resume as informações sobre o controle `ToolStrip` e as classes que dão suporte ao seu uso.  
@@ -101,7 +89,7 @@ Este tópico resume as informações sobre o controle `ToolStrip` e as classes q
  Para um exemplo de hospedagem de controle, consulte [Como encapsular um controle dos Windows Forms com ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Renderização  
- <xref:System.Windows.Forms.ToolStrip>classes de implementar um esquema de renderização é significativamente diferente de outros controles de formulários do Windows. Com esse esquema, você pode facilmente aplicar estilos e temas.  
+ <xref:System.Windows.Forms.ToolStrip> classes de implementar um esquema de renderização é significativamente diferente de outros controles de formulários do Windows. Com esse esquema, você pode facilmente aplicar estilos e temas.  
   
  Para aplicar um estilo para um <xref:System.Windows.Forms.ToolStrip> e todos os a <xref:System.Windows.Forms.ToolStripItem> objetos que ela contém, você não precisa lidar com o <xref:System.Windows.Forms.ToolStripItem.Paint> evento para cada item. Em vez disso, você pode definir o <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> propriedade para um do <xref:System.Windows.Forms.ToolStripRenderMode> valores diferentes de <xref:System.Windows.Forms.ToolStripRenderMode.Custom>. Como alternativa, você pode definir o <xref:System.Windows.Forms.ToolStrip.Renderer%2A> diretamente a qualquer classe que herda de <xref:System.Windows.Forms.ToolStripRenderer> classe. Configuração para essa propriedade define automaticamente o <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>.  
   
@@ -110,10 +98,10 @@ Este tópico resume as informações sobre o controle `ToolStrip` e as classes q
  Para exemplos de renderização, consulte [Como criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Estilos e temas  
- <xref:System.Windows.Forms.ToolStrip>e classes associadas fornecem uma maneira fácil de dar suporte a estilos visuais e aparência personalizada que não exigem substituindo o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> métodos para cada item. Use o <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> e <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> e <xref:System.Windows.Forms.ToolStrip.Renderer%2A> propriedades.  
+ <xref:System.Windows.Forms.ToolStrip> e classes associadas fornecem uma maneira fácil de dar suporte a estilos visuais e aparência personalizada que não exigem substituindo o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> métodos para cada item. Use o <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> e <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> e <xref:System.Windows.Forms.ToolStrip.Renderer%2A> propriedades.  
   
 ## <a name="rafting-and-docking"></a>Reposicionamento e encaixe  
- Você pode reposicionamento, encaixar ou posicionar absolutamente <xref:System.Windows.Forms.ToolStrip> controles. <xref:System.Windows.Forms.ToolStrip>os itens são apresentados <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> do contêiner.  
+ Você pode reposicionamento, encaixar ou posicionar absolutamente <xref:System.Windows.Forms.ToolStrip> controles. <xref:System.Windows.Forms.ToolStrip> os itens são apresentados <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> do contêiner.  
   
  O *reposicionamento* é a capacidade das barras de ferramenta de compartilhar espaço horizontal ou vertical. Um formulário do Windows pode ter um <xref:System.Windows.Forms.ToolStripContainer> que por sua vez tem painéis do formulário esquerda, direita, superior e lados da parte inferior para posicionamento e rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles de pilha verticalmente se colocá-los na esquerda ou direita <xref:System.Windows.Forms.ToolStripContainer>. Horizontalmente pilha se colocá-los na parte superior ou inferior <xref:System.Windows.Forms.ToolStripContainer>. Você pode usar o centro <xref:System.Windows.Forms.ToolStripContentPanel> do <xref:System.Windows.Forms.ToolStripContainer> para posicionar tradicionais controles no formulário.  
   

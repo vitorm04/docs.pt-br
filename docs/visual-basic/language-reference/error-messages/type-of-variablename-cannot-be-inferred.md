@@ -1,28 +1,19 @@
 ---
-title: Tipo de &#39; &lt;variablename&gt;&#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
+title: Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30982
 - vbc30982
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 022e29e38a93d2880bbfa250e65a8b95b39ff140
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de &#39; &lt;variablename&gt;&#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
 Você escreveu uma `For...Next` loop no qual o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:  
   
 -   O tipo de dados da variável de controle de loop não é especificado com um `As` cláusula.  

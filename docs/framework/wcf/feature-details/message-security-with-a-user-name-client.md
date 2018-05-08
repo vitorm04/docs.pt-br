@@ -1,30 +1,20 @@
 ---
-title: "Segurança de mensagem com um nome de usuário cliente"
-ms.custom: 
+title: Segurança de mensagem com um nome de usuário cliente
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
-A ilustração a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegida com segurança em nível de mensagem do cliente e serviço. O serviço é autenticado com um certificado x. 509. O cliente é autenticado usando um nome de usuário e senha.  
+A ilustração a seguir mostra um serviço do Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado x. 509. O cliente é autenticado usando um nome de usuário e senha.  
   
  Para um aplicativo de exemplo, consulte [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
@@ -33,7 +23,7 @@ A ilustração a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]somente|  
+|Interoperabilidade|O Windows Communication Foundation (WCF) somente|  
 |Autenticação (servidor)|Negociação inicial requer autenticação de servidor|  
 |Autenticação (cliente)|Nome de usuário/senha|  
 |Integridade|Sim, usando o contexto de segurança compartilhada|  
@@ -140,5 +130,5 @@ A ilustração a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

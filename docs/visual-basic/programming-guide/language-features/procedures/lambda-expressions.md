@@ -1,13 +1,6 @@
 ---
 title: Expressões lambda (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 52
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressões lambda (Visual Basic)
 Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser usado sempre que um delegado é válido. Expressões lambda podem ser funções ou sub-rotinas e podem ser de linha única ou multilinha. Você pode passar valores do escopo atual para uma expressão lambda.  
@@ -70,7 +60,7 @@ Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser us
   
 -   Você pode especificar o tipo de dados de um parâmetro de expressão lambda usando o `As` palavra-chave ou o tipo de dados do parâmetro pode ser inferido. Todos os parâmetros devem especificar os tipos de dados ou todos devem ser inferidos.  
   
--   `Optional`e `Paramarray` parâmetros não são permitidos.  
+-   `Optional` e `Paramarray` parâmetros não são permitidos.  
   
 -   Parâmetros genéricos não são permitidos.  
   
@@ -118,7 +108,7 @@ End Class
   
  Para obter mais informações sobre como criar e usar os métodos assíncronos, consulte [programação assíncrona com Async e Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a>Contexto  
+##  <a name="context"></a> Contexto  
  Uma expressão lambda compartilha seu contexto com o escopo dentro do qual ela está definida. Ele tem os mesmos direitos de acesso que qualquer código escrito no escopo de contenção. Isso inclui acesso a variáveis de membro, funções e sub-rotinas, `Me`e parâmetros e variáveis locais no escopo de contenção.  
   
  Acesso a variáveis locais e parâmetros no escopo de contenção pode ultrapassar o tempo de vida desse escopo. Como um delegado que faz referência a uma expressão lambda não está disponível para coleta de lixo, o acesso às variáveis no ambiente original é mantido. No exemplo a seguir, a variável `target` é local para `makeTheGame`, o método no qual a expressão lambda `playTheGame` está definido. Observe que a expressão lambda retornada, atribuída a `takeAGuess` na `Main`, ainda tem acesso à variável local `target`.  
@@ -127,15 +117,15 @@ End Class
   
  O exemplo a seguir demonstra uma ampla variedade de direitos de acesso da expressão lambda aninhada. Quando a expressão lambda retornado é executada de `Main` como `aDel`, ela acessa estes elementos:  
   
--   Um campo da classe na qual ela está definida:`aField`  
+-   Um campo da classe na qual ela está definida: `aField`  
   
--   Uma propriedade da classe na qual ela está definida:`aProp`  
+-   Uma propriedade da classe na qual ela está definida: `aProp`  
   
--   Um parâmetro de método `functionWithNestedLambda`, no qual ela está definida:`level1`  
+-   Um parâmetro de método `functionWithNestedLambda`, no qual ela está definida: `level1`  
   
--   Uma variável local de `functionWithNestedLambda`:`localVar`  
+-   Uma variável local de `functionWithNestedLambda`: `localVar`  
   
--   Um parâmetro da expressão lambda na qual ele está aninhado:`level2`  
+-   Um parâmetro da expressão lambda na qual ele está aninhado: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   

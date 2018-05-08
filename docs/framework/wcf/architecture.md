@@ -1,31 +1,19 @@
 ---
 title: Arquitetura do Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitetura do Windows Communication Foundation
-O gráfico a seguir ilustra as camadas principais do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquitetura.  
+O gráfico a seguir ilustra as camadas principais da arquitetura do Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-architecture"></a>Arquitetura do WCF  
  ![A arquitetura do WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  

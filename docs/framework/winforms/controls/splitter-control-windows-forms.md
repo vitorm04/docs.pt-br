@@ -1,28 +1,16 @@
 ---
 title: Controle de separador (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multiple views
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2069d419d185cde366b463c5682f9d1395e551a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4340c4647ffda79bcd919e9bd778dcabab0fc511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="splitter-control-windows-forms"></a>Controle de separador (Windows Forms)
 Windows Forms `Splitter` controles são usados para redimensionar controles encaixados em tempo de execução. O `Splitter` controle é geralmente usado em formulários com controles que têm vários comprimentos de dados para apresentar, como o Windows Explorer, painéis cujos dados contêm informações de larguras diferentes em momentos diferentes.  
