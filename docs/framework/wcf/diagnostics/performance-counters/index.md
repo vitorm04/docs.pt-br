@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d9e6b83a78967193c4cb0343f6c77560354a837
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-performance-counters"></a>Contadores de desempenho do WCF
 Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo.  
   
 ## <a name="enabling-performance-counters"></a>Habilitar contadores de desempenho  
- Você pode habilitar os contadores de desempenho para um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviço por meio do arquivo de configuração App. config do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] de serviço da seguinte maneira:  
+ Você pode habilitar os contadores de desempenho para um serviço WCF por meio do arquivo de configuração App. config do serviço WCF da seguinte maneira:  
   
 ```xml  
 <configuration>  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) inclui um grande conjunto de contadores d
   
 -   Off: Os contadores de desempenho do ServiceModel * são desabilitados.  
   
- Se você deseja habilitar os contadores de desempenho para todos os [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplicativos, você pode colocar as definições de configuração no arquivo Machine. config.  Consulte o **aumentando o tamanho de memória para contadores de desempenho** seção abaixo para obter mais informações sobre como configurar a memória suficiente para contadores de desempenho em seu computador.  
+ Se você deseja habilitar os contadores de desempenho para todos os aplicativos do WCF, você pode colocar as definições de configuração no arquivo Machine. config.  Consulte o **aumentando o tamanho de memória para contadores de desempenho** seção abaixo para obter mais informações sobre como configurar a memória suficiente para contadores de desempenho em seu computador.  
   
- Se você usar [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pontos de extensibilidade, como chamadores de operação personalizado, você deve também emitir seus próprios contadores de desempenho. Isso ocorre porque se você implementar um ponto de extensibilidade, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] não pode emitir os dados do contador de desempenho padrão no caminho padrão. Se você não implementa o suporte de contador de desempenho manual, você não verá os dados de contador de desempenho esperados.  
+ Se você usar pontos de extensibilidade do WCF como chamadores de operação personalizado, você também deve emitir seus próprios contadores de desempenho. Isso ocorre porque, se você implementar um ponto de extensibilidade, o WCF não pode emitir os dados do contador de desempenho padrão no caminho padrão. Se você não implementa o suporte de contador de desempenho manual, você não verá os dados de contador de desempenho esperados.  
   
  Você também pode habilitar os contadores de desempenho no seu código seguinte:  
   
@@ -56,11 +56,11 @@ config.Save();
 >  Instâncias do contador de desempenho podem ser liberadas antes das últimas mensagens foram processadas pelo dispatcher do ponto de extremidade. Isso pode resultar em dados de desempenho não são capturados para algumas mensagens.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumentando o tamanho de memória para contadores de desempenho  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usa separar memória compartilhada para suas categorias de contador de desempenho.  
+ WCF usa a memória compartilhada separada para suas categorias de contador de desempenho.  
   
- Por padrão, separado de memória compartilhada é definida como um quarto do tamanho da memória do contador de desempenho global. A memória de contador de desempenho global padrão é 524.288 bytes. Portanto, os três [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] categorias de contador de desempenho têm um tamanho padrão de aproximadamente 128 KB cada. Dependendo das características tempo de execução do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplicativos em um computador, a memória de contador de desempenho podem ser esgotados. Quando isso acontece, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado, e a entrada contém a exceção "System. InvalidOperationException: modo de exibição de arquivo de contadores personalizados está esgotada." Se o rastreamento estiver habilitado no nível de erro, essa falha também é rastreada. Se a memória de contador de desempenho é esgotada, continuando a executar sua [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] aplicativos com contadores de desempenho ativados podem resultar em degradação do desempenho. Se você for um administrador do computador, você deve configurá-lo para alocar memória suficiente para suportar o número máximo de contadores de desempenho que podem existir a qualquer momento.  
+ Por padrão, separado de memória compartilhada é definida como um quarto do tamanho da memória do contador de desempenho global. A memória de contador de desempenho global padrão é 524.288 bytes. Portanto, as três categorias de contador de desempenho do WCF tem um tamanho padrão de aproximadamente 128KB cada. Dependendo das características de tempo de execução dos aplicativos WCF em um computador, memória de contador de desempenho pode ser esgotada. Quando isso acontece, o WCF grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado, e a entrada contém a exceção "System. InvalidOperationException: modo de exibição de arquivo de contadores personalizados está esgotada." Se o rastreamento estiver habilitado no nível de erro, essa falha também é rastreada. Se a memória de contador de desempenho é esgotada, continuando a executar seus aplicativos do WCF com contadores de desempenho ativados pode resultar em degradação do desempenho. Se você for um administrador do computador, você deve configurá-lo para alocar memória suficiente para suportar o número máximo de contadores de desempenho que podem existir a qualquer momento.  
   
- Você pode alterar a quantidade de memória do contador de desempenho para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] categorias no registro. Para fazer isso, você precisa adicionar um novo valor DWORD chamado `FileMappingSize` para três locais a seguir e defina-o como o valor desejado em bytes. Reinicialize o computador para que essas alterações são levadas em vigor.  
+ Você pode alterar a quantidade de memória do contador de desempenho para categorias WCF no registro. Para fazer isso, você precisa adicionar um novo valor DWORD chamado `FileMappingSize` para três locais a seguir e defina-o como o valor desejado em bytes. Reinicialize o computador para que essas alterações são levadas em vigor.  
   
 -   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
@@ -123,7 +123,7 @@ ServiceName@ServiceBaseAddress
 >  Se você tiver nomes de operação duplicado em um contrato, você somente obtém instâncias de um contador para as duas operações.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Os contadores de desempenho do WCF de programação  
- Vários arquivos são instalados na pasta de instalação do SDK para que você pode acessar o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] programaticamente os contadores de desempenho. Esses arquivos estão listados a seguir.  
+ Vários arquivos são instalados na pasta de instalação do SDK para que você pode acessar programaticamente os contadores de desempenho do WCF. Esses arquivos estão listados a seguir.  
   
 -   _ServiceModelEndpointPerfCounters.vrg  
   

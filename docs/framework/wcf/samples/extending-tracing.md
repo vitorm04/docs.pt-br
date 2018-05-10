@@ -2,11 +2,11 @@
 title: Estendendo rastreamento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>Estendendo rastreamento
 Este exemplo demonstra como estender o recurso de rastreamento do Windows Communication Foundation (WCF), escrevendo rastreamentos de atividade definida pelo usuário no código de cliente e de serviço. Isso permite que o usuário criar atividades de rastreamento e o grupo de rastreamentos em unidades lógicas de trabalho. Também é possível correlacionar atividades por meio das transferências (dentro do mesmo ponto de extremidade) e propagação (através de pontos de extremidade). Neste exemplo, o rastreamento está habilitado para o cliente e o serviço. Para obter mais informações sobre como habilitar o rastreamento em arquivos de configuração de cliente e de serviço, consulte [rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ Este exemplo demonstra como estender o recurso de rastreamento do Windows Commun
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Rastreamento e a propagação de atividade  
- Rastreamento de atividade definida pelo usuário permite que o usuário criar suas próprias atividades de rastreamento para rastreamentos de grupo em unidades lógicas de trabalhos, correlacionar atividades por meio de transferências e propagação e reduzir o custo de desempenho de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rastreamento (por exemplo, o disco espaço custo de um arquivo de log).  
+ Rastreamento de atividade definida pelo usuário permite que o usuário criar suas próprias atividades de rastreamento para rastreamentos de grupo em unidades lógicas de trabalho, correlacionar atividades por meio de transferências e propagação e reduzir o custo de desempenho de rastreamento do WCF (por exemplo, o espaço em disco de custo de um arquivo de log).  
   
 ### <a name="adding-custom-sources"></a>Adicionando fontes personalizadas  
  Rastreamentos definidos pelo usuário podem ser adicionados ao código de cliente e de serviço. Adicionando fontes de rastreamento para os arquivos de configuração de cliente ou serviço permitem esses rastreamentos personalizados a ser registrado e exibido no [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). O código a seguir mostra como adicionar uma origem de rastreamento definido pelo usuário chamada `ServerCalculatorTraceSource` para o arquivo de configuração.  
@@ -67,7 +67,7 @@ Este exemplo demonstra como estender o recurso de rastreamento do Windows Commun
 ```  
   
 ### <a name="correlating-activities"></a>Correlacionar atividades  
- Para correlacionar atividades diretamente através de pontos de extremidade, o `propagateActivity` atributo deve ser definido como `true` no `System.ServiceModel` origem do rastreamento. Além disso, para propagar rastreamentos sem passar pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] atividades, rastreamento de atividade de ServiceModel devem ser desativadas. Isso pode ser visto no exemplo de código a seguir.  
+ Para correlacionar atividades diretamente através de pontos de extremidade, o `propagateActivity` atributo deve ser definido como `true` no `System.ServiceModel` origem do rastreamento. Além disso, para propagar rastreamentos sem passar por meio de atividades WCF, rastreamento de atividade de ServiceModel deve ser desativada. Isso pode ser visto no exemplo de código a seguir.  
   
 > [!NOTE]
 >  Desativar o rastreamento de atividade de ServiceModel não é o mesmo como tendo o nível de rastreamento, indicado pelo `switchValue` propriedade, definida como off.  
@@ -85,7 +85,7 @@ Este exemplo demonstra como estender o recurso de rastreamento do Windows Commun
 ```  
   
 ### <a name="lessening-performance-cost"></a>Reduzindo o custo de desempenho  
- Configuração `ActivityTracing` desativada no `System.ServiceModel` Rastrear origem gera um arquivo de rastreamento que contém somente os rastreamentos atividade definida pelo usuário, sem qualquer um dos rastreamentos de atividade de ServiceModel incluídos. Isso resulta em um arquivo de log de tamanho muito menor. No entanto, a oportunidade de correlacionar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rastreamentos de processamento é perdida.  
+ Configuração `ActivityTracing` desativada no `System.ServiceModel` Rastrear origem gera um arquivo de rastreamento que contém somente os rastreamentos atividade definida pelo usuário, sem qualquer um dos rastreamentos de atividade de ServiceModel incluídos. Isso resulta em um arquivo de log de tamanho muito menor. No entanto, a oportunidade de correlacionar processar os rastreamentos do WCF é perdida.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   

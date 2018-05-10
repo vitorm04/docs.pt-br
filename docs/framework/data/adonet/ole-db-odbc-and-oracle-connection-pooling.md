@@ -2,11 +2,11 @@
 title: OLE DB, ODBC e pool de conexões Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC e pool de conexões Oracle
 O pooling de conexões pode melhorar significativamente o desempenho e a escalabilidade do aplicativo. Esta seção discute o pooling de conexões para provedores de dados .NET Framework para OLE DB, ODBC e Oracle.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  O pooling de conexões para o provedor de dados .NET Framework para ODBC é gerenciado pelo ODBC Driver Manager que é usado para a conexão, e não é afetado pelo provedor de dados .NET Framework para ODBC.  
   
  Para habilitar ou desabilitar o pooling de conexão, abra **administrador de fonte de dados ODBC** na pasta Ferramentas administrativas do painel de controle. O **Pooling de Conexão** guia permite que você especifique parâmetros para cada driver ODBC instalado do pool de conexão. Observe que as alterações do pooling de conexões para um driver ODBC específico afetam todos os aplicativos que usam o driver ODBC.  
-  
- Para obter mais informações sobre o pooling de conexão ODBC, consulte [INFO: perguntas frequentes perguntas sobre Conexão pool ODBC](http://support.microsoft.com/kb/169470).  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Pooling de conexões para OracleClient  
  O provedor de dados .NET Framework para Oracle fornece o pooling de conexões automaticamente para o aplicativo cliente do ADO.NET. Você também pode fornecer vários modificadores de cadeia de conexão para controlar o comportamento do pooling de conexões (consulte "Controlando o pooling de conexões com palavras-chave de cadeia de conexão", posteriormente neste tópico).  

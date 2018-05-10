@@ -2,16 +2,16 @@
 title: Exemplo de feed de diagnóstico independente
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Exemplo de feed de diagnóstico independente
 Este exemplo demonstra como criar um RSS/Atom feed de distribuição com o Windows Communication Foundation (WCF). É um programa "Hello World" básico que mostra os fundamentos do modelo de objeto e como configurá-lo em um serviço do Windows Communication Foundation (WCF).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelos de feeds de agregação como operações de serviço que retornam um tipo de dados especial <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Instâncias do <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pode serializar um feed em formatos de RSS 2.0 e Atom 1.0. O código de exemplo a seguir mostra o contrato usado.  
+ WCF modelos de feeds de agregação como operações de serviço que retornam um tipo de dados especial <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Instâncias do <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pode serializar um feed em formatos de RSS 2.0 e Atom 1.0. O código de exemplo a seguir mostra o contrato usado.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ Este exemplo demonstra como criar um RSS/Atom feed de distribuição com o Windo
     }  
 ```  
   
- O `GetProcesses` operação é anotada com a <xref:System.ServiceModel.Web.WebGetAttribute> atributo que permite que você controle como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] envia solicitações HTTP GET para operações de serviço e especificar o formato das mensagens enviadas.  
+ O `GetProcesses` operação é anotada com a <xref:System.ServiceModel.Web.WebGetAttribute> solicitações de atributo que permite que você controle como WCF despacha HTTP GET para operações de serviço e especificar o formato das mensagens enviadas.  
   
- Como qualquer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço, feeds de agregação podem ser próprio hospedados em qualquer aplicativo gerenciado. Serviços de distribuição exigem uma associação específica (o <xref:System.ServiceModel.WebHttpBinding>) e um comportamento de ponto de extremidade específico (o <xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar corretamente. O novo <xref:System.ServiceModel.Web.WebServiceHost> classe fornece uma API conveniente para a criação de tais pontos de extremidade sem configuração específica.  
+ Como qualquer serviço WCF, feeds de agregação podem ser auto-hospedado em qualquer aplicativo gerenciado. Serviços de distribuição exigem uma associação específica (o <xref:System.ServiceModel.WebHttpBinding>) e um comportamento de ponto de extremidade específico (o <xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar corretamente. O novo <xref:System.ServiceModel.Web.WebServiceHost> classe fornece uma API conveniente para a criação de tais pontos de extremidade sem configuração específica.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

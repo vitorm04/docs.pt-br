@@ -2,18 +2,18 @@
 title: Serviços e rastreamento de eventos WCF para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Serviços e rastreamento de eventos WCF para Windows
-Este exemplo demonstra como usar o rastreamento analítico no Windows Communication Foundation (WCF) para emissão de eventos no evento de rastreamento para Windows (ETW). Os rastreamentos analíticos são eventos emitidos nos pontos-chave no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha que permitem a solução de problemas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços no ambiente de produção.  
+Este exemplo demonstra como usar o rastreamento analítico no Windows Communication Foundation (WCF) para emissão de eventos no evento de rastreamento para Windows (ETW). Os rastreamentos analíticos são emitidos nos pontos-chave na pilha do WCF que permitem a solução de problemas de serviços WCF no ambiente de produção de eventos.  
   
- Rastreamento analítico em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é de serviços de rastreamento que pode ser ativado em um ambiente de produção com impacto mínimo no desempenho. Os rastreamentos são emitidos como eventos para uma sessão do ETW.  
+ Rastreamento analítico nos serviços do WCF é aquele que pode ser ativado em um ambiente de produção com impacto mínimo no desempenho. Os rastreamentos são emitidos como eventos para uma sessão do ETW.  
   
- Este exemplo inclui um basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço em quais eventos são emitidos do serviço de log de eventos, que podem ser exibidos usando o Visualizador de eventos. Também é possível iniciar uma sessão ETW dedicada que escuta eventos a partir de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service. O exemplo inclui um script para criar uma sessão ETW dedicada que armazena os eventos em um arquivo binário que pode ser lida usando o Visualizador de eventos.  
+ Este exemplo inclui um serviço WCF básico no qual eventos são emitidos do serviço de log de eventos, que podem ser exibido usando o Visualizador de eventos. Também é possível iniciar uma sessão ETW dedicada que escuta eventos do serviço WCF. O exemplo inclui um script para criar uma sessão ETW dedicada que armazena os eventos em um arquivo binário que pode ser lida usando o Visualizador de eventos.  
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
@@ -27,17 +27,17 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
   
      Por padrão, o serviço começa a escuta de solicitações na porta 1378 (http://localhost:1378/Calculator.svc).  
   
-4.  Execute o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe).  
+4.  Execute o cliente de teste do WCF (WcfTestClient.exe).  
   
-     O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe) está localizado no \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] instalar Dir > \Common7\IDE\ WcfTestClient.exe (padrão [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] dir de instalação é C:\Program Files\Microsoft Visual Studio 10.0).  
+     O cliente de teste do WCF (WcfTestClient.exe) está localizado no \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] instalar Dir > \Common7\IDE\ WcfTestClient.exe (padrão [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] dir de instalação é C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  Dentro de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.  
+5.  No cliente de teste de WCF, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.  
   
      Adicione o endereço do ponto de extremidade na caixa de entrada. O padrão é http://localhost:1378/Calculator.svc.  
   
 6.  Abra o aplicativo visualizador de eventos.  
   
-     Antes de chamar o serviço, iniciar o Visualizador de eventos e certifique-se de que o log de eventos está escutando para rastreamento de eventos emitidas a partir de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+     Antes de chamar o serviço, inicie o Visualizador de eventos e certifique-se de que o log de eventos está escutando para rastreamento de eventos emitidos do serviço WCF.  
   
 7.  Do **iniciar** menu, selecione **ferramentas administrativas**e, em seguida, **Visualizador de eventos**.  Habilitar o **analítico** e **depurar** logs.  
   
@@ -51,7 +51,7 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
   
 #### <a name="to-test-the-service"></a>Para testar o serviço  
   
-1.  Voltar ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste e clique duas vezes em `Divide` e mantenha os valores padrão, que especificam um denominador igual a 0.  
+1.  Retorne ao cliente de teste do WCF e clique duas vezes em `Divide` e mantenha os valores padrão, que especificam um denominador igual a 0.  
   
      Se o denominador é 0, o serviço gera uma falha.  
   

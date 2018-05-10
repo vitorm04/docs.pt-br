@@ -2,11 +2,11 @@
 title: Controlar usando um arquivo de texto
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Controlar usando um arquivo de texto
 Este exemplo demonstra como estender o controle no Windows Workflow Foundation (WF), criando um participante personalizado de controle. Os participantes de rastreamento são as classes do.NET Framework que recebem registros de rastreamento em tempo de execução que são emitidas. Você pode criar um participante de controle para transmitir os eventos de rastreamento a qualquer destino é necessário para sua situação. Por exemplo, o participante de rastreamento (ETW de rastreamento do Windows) é fornecido como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. O participante de rastreamento neste exemplo grava os registros no formato XML para um arquivo de texto.  
@@ -17,7 +17,7 @@ Este exemplo demonstra como estender o controle no Windows Workflow Foundation (
 |Classe|Descrição|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|<xref:System.ServiceModel.Configuration.BehaviorExtensionElement> é usado para definir a seção de configuração usada para configurar o participante de rastreamento do arquivo de texto. Isso permite que os usuários especifiquem o destino do arquivo de log usando arquivos de configuração padrão do .NET Framework.|  
-|`TextFileTrackingBehavior`|Os comportamentos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permitem que os usuários injetem extensões em tempo de execução. Esse comportamento adicionar o participante de rastreamento para o serviço quando inicia o serviço.|  
+|`TextFileTrackingBehavior`|Comportamentos no WCF permitem aos usuários inserir extensões no tempo de execução. Esse comportamento adicionar o participante de rastreamento para o serviço quando inicia o serviço.|  
 |`TextFileTrackingParticipant`|O participante de rastreamento que recebe participantes de rastreamento em tempo de execução e os armazena em um arquivo de log como XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Configuração de elementos de extensão do comportamento  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Como utilizar o cliente do Windows Communication Foundation
 Este é o último dos seis tarefas necessárias para criar um aplicativo básico do Windows Communication Foundation (WCF). Para obter uma visão geral de todos os seis das tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.  
   
- Depois que um proxy do Windows Communication Foundation (WCF) foi criado e configurado, pode ser criada uma instância do cliente e o aplicativo cliente pode ser compilado e usado para se comunicar com o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service. Este tópico descreve procedimentos para criar uma instância e usar um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente. Este procedimento faz três coisas:  
+ Quando um proxy do Windows Communication Foundation (WCF) foi criado e configurado, pode ser criada uma instância do cliente e o aplicativo cliente pode ser compilado e usado para se comunicar com o serviço WCF. Este tópico descreve procedimentos para criar uma instância e usar um cliente do WCF. Este procedimento faz três coisas:  
   
-1.  Cria um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente.  
+1.  Cria um cliente do WCF.  
   
 2.  Chama as operações de serviço do proxy gerado.  
   

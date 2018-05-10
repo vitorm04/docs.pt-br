@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Como utilizar certificados X.509 separados para assinatura e criptografia
 Este tópico mostra como configurar o Windows Communication Foundation (WCF) para usar certificados diferentes para assinatura e criptografia no cliente e no serviço.  
   
- Para habilitar certificados separados a ser usado para assinatura e criptografia, um cliente personalizado ou serviço credenciais (ou ambos) devem ser criados porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não fornece uma API para definir vários certificados de cliente ou serviço. Além disso, um segurança do Gerenciador de token deve ser fornecido para utilizar as informações de vários certificados e criar um provedor de token de segurança apropriado para especificado direção de mensagem e de uso de chave.  
+ Para habilitar certificados separados a ser usado para assinatura e criptografia, um cliente personalizado ou serviço credenciais (ou ambos) devem ser criados porque o WCF não fornece uma API para definir vários certificados de cliente ou serviço. Além disso, um segurança do Gerenciador de token deve ser fornecido para utilizar as informações de vários certificados e criar um provedor de token de segurança apropriado para especificado direção de mensagem e de uso de chave.  
   
  O diagrama a seguir mostra as classes principais usadas, as classes herdam (mostrada por uma seta apontando para cima) e os tipos de retorno de certos métodos e propriedades.  
   

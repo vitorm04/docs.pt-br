@@ -1,31 +1,19 @@
 ---
-title: "Associação personalizado"
-ms.custom: 
+title: Associação personalizado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3c9537ea-9708-4ebc-b861-219f2e2db53d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a5206887c154292194f790f8cf9c49798cf57c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f28aa83aa22a87f76e955d6b4eb7cfa9f6d7fcdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-binding"></a>Associação personalizado
 Esta seção contém exemplos que demonstram o uso de um atributo de associação personalizada de um elemento de ponto de extremidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Associação personalizada obrigatória](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  
- Demonstra como gravar código obrigatório para definir e usar associações personalizadas sem usar um arquivo de configuração ou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerado de cliente.  
+ Demonstra como gravar código obrigatório para definir e usar associações personalizadas sem usar um arquivo de configuração ou um cliente WCF gerado.  
   
  [Codificação e transporte de associação personalizado](../../../../docs/framework/wcf/samples/custom-binding-transport-and-encoding.md)  
  Demonstra como configurar uma associação personalizada com vários transporte e elementos de codificação de mensagem.  

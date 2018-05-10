@@ -2,24 +2,24 @@
 title: Pontos de extremidade SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>Pontos de extremidade SOAP e HTTP
-Este exemplo demonstra como implementar um serviço baseado no RPC e expô-lo no formato SOAP e o "Plain Old XML" (POX) Formatar usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação da Web. Consulte o [serviço básico de HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo para obter mais detalhes sobre a associação HTTP para o serviço. Este exemplo enfoca os detalhes que pertencem ao expor o mesmo serviço via SOAP e HTTP usando ligações diferentes.  
+Este exemplo demonstra como implementar um serviço baseado no RPC e expô-lo no formato SOAP e o formato "Plain Old XML" (POX) usando o modelo de programação de Web do WCF. Consulte o [serviço básico de HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo para obter mais detalhes sobre a associação HTTP para o serviço. Este exemplo enfoca os detalhes que pertencem ao expor o mesmo serviço via SOAP e HTTP usando ligações diferentes.  
   
 ## <a name="demonstrates"></a>Demonstra  
- Expor um serviço RPC sobre HTTP e SOAP usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Expor um serviço RPC via SOAP e HTTP usando o WCF.  
   
 ## <a name="discussion"></a>Discussão  
- Este exemplo consiste em dois componentes: um projeto de aplicativo Web (serviço) que contém um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço e um aplicativo de console (cliente) que invoca as operações de serviço usando associações HTTP e SOAP.  
+ Este exemplo consiste em dois componentes: um projeto de aplicativo Web (serviço) que contém um serviço WCF e um aplicativo de console (cliente) que invoca as operações de serviço usando associações HTTP e SOAP.  
   
- O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço expõe 2 operações –`GetData` e `PutData` – que a cadeia de caracteres que foi passada como entrada de eco. As operações de serviço são anotadas com <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Esses atributos controlam a projeção de HTTP dessas operações. Além disso, eles são anotados com <xref:System.ServiceModel.OperationContractAttribute>, que permite que eles sejam expostos por associações de SOAP. O serviço `PutData` método lança um <xref:System.ServiceModel.Web.WebFaultException>, que é enviado de volta via HTTP usando o código de status HTTP e é enviado pela SOAP como uma falha de SOAP.  
+ O serviço WCF expõe 2 operações –`GetData` e `PutData` – que a cadeia de caracteres que foi passada como entrada de eco. As operações de serviço são anotadas com <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Esses atributos controlam a projeção de HTTP dessas operações. Além disso, eles são anotados com <xref:System.ServiceModel.OperationContractAttribute>, que permite que eles sejam expostos por associações de SOAP. O serviço `PutData` método lança um <xref:System.ServiceModel.Web.WebFaultException>, que é enviado de volta via HTTP usando o código de status HTTP e é enviado pela SOAP como uma falha de SOAP.  
   
- O arquivo Web. config configura o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço com 3 pontos de extremidade:  
+ O arquivo Web. config configura o serviço WCF com pontos de 3 extremidade:  
   
 -   O ponto de extremidade de ~/service.svc/mex que expõe os metadados de serviço para acesso por clientes baseados em SOAP.  
   

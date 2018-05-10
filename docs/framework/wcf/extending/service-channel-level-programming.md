@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Programação de nível por canal de serviço
 Este tópico descreve como escrever um aplicativo de serviço do Windows Communication Foundation (WCF) sem usar o <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e seu modelo de objeto associado.  
@@ -28,7 +28,7 @@ Este tópico descreve como escrever um aplicativo de serviço do Windows Communi
 5.  Feche todos os objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Criar uma associação  
- A primeira etapa na escutando e recebimento de mensagens está criando uma associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é fornecido com várias ligações internas ou fornecido pelo sistema que podem ser usados diretamente, criando um deles. Além disso, você também pode criar sua própria associação personalizada criando uma instância de uma classe CustomBinding que é o que faz o código na listagem 1.  
+ A primeira etapa na escutando e recebimento de mensagens está criando uma associação. WCF fornecido com várias ligações internas ou fornecido pelo sistema que podem ser usadas diretamente, criando um deles. Além disso, você também pode criar sua própria associação personalizada criando uma instância de uma classe CustomBinding que é o que faz o código na listagem 1.  
   
  O exemplo de código a seguir cria uma instância de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> e adiciona um <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> à sua coleção de elementos que é uma coleção de elementos que são usados para criar a pilha de canais de associação. Neste exemplo, porque a coleção de elementos tem apenas o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, a pilha de canais resultante tem o canal de transporte HTTP.  
   

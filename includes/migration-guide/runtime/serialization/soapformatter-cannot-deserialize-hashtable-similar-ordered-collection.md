@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Detalhes|O <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> não garante que objetos serializados em uma versão do .NET Framework serão desserializados com êxito em uma versão diferente. Especificamente, algumas coleções ordenadas (como <xref:System.Collections.Hashtable?displayProperty=name>) adicionaram membros entre 4.0 e 4.5, de modo que tais objetos desses tipos não podem ser desserializados com o .NET 4.0 se tiverem sido serializados com o .NET 4.5. Observe que se os dados serializados forem serializados e desserializados com a mesma versão do .NET Framework, nenhum problema ocorrerá.|
+|Detalhes|O <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> não garante que objetos serializados em uma versão do .NET Framework serão desserializados com êxito em uma versão diferente. Especificamente, algumas coleções ordenadas (como <xref:System.Collections.Hashtable?displayProperty=name>) tiveram membros adicionados entre a 4.0 e a 4.5, portanto, os objetos desses tipos não poderão ser desserializados com o .NET Framework 4.0 se tiverem sido serializados com o .NET Framework 4.5. Observe que se os dados serializados forem serializados e desserializados com a mesma versão do .NET Framework, nenhum problema ocorrerá.|
 |Sugestão|A serialização <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> deve ser substituída pela serialização <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> ou <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> para resistir às alterações do .NET Framework.|
 |Escopo|Secundário|
 |Versão|4.5|

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Como: alterar o provedor criptográfico para um certificado x. 509&#39;chave privada s
 Este tópico mostra como alterar o provedor de criptografia usado para fornecer a chave privada de um certificado x. 509 e como integrar o provedor a estrutura de segurança do Windows Communication Foundation (WCF). Para obter mais informações sobre como usar certificados, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança fornece uma maneira de introduzir novos tipos de token de segurança, conforme descrito em [como: criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Também é possível usar um token personalizado para substituir tipos de token fornecido pelo sistema existentes.  
+ A estrutura de segurança do WCF fornece uma maneira de introduzir novos tipos de token de segurança, conforme descrito em [como: criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Também é possível usar um token personalizado para substituir tipos de token fornecido pelo sistema existentes.  
   
  Neste tópico, o token de segurança x. 509 fornecido pelo sistema é substituído por um símbolo x. 509 personalizado que fornece uma implementação diferente para a chave privada do certificado. Isso é útil em cenários onde a chave privada real é fornecida por um provedor criptográfico diferente o provedor criptográfico do Windows padrão. Um exemplo de um provedor criptográfico alternativo é um módulo de segurança de hardware que executa todas as privada chave relacionadas operações criptográficas e não armazena as chaves privadas na memória, o que melhora a segurança do sistema.  
   
@@ -32,9 +32,9 @@ Este tópico mostra como alterar o provedor de criptografia usado para fornecer 
   
 2.  Substituir o <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> propriedade somente leitura. Essa propriedade retorna o tamanho real da chave pública/privada do certificado par de chaves.  
   
-3.  Substituir o método <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Este método é chamado pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança para descriptografar uma chave simétrica com a chave privada do certificado. (A chave foi previamente criptografada com a chave pública do certificado.)  
+3.  Substituir o método <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Este método é chamado pela estrutura de segurança do WCF para descriptografar uma chave simétrica com a chave privada do certificado. (A chave foi previamente criptografada com a chave pública do certificado.)  
   
-4.  Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Este método é chamado pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança para obter uma instância do <xref:System.Security.Cryptography.AsymmetricAlgorithm> a classe que representa o provedor criptográfico para obter as chave do certificado público ou privado, dependendo dos parâmetros passados para o método.  
+4.  Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Este método é chamado pela estrutura de segurança do WCF para obter uma instância de <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe que representa o provedor criptográfico para obter as chave do certificado público ou privado, dependendo dos parâmetros passados para o método.  
   
 5.  Opcional. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Substitua este método se uma implementação diferente do <xref:System.Security.Cryptography.HashAlgorithm> classe é necessária.  
   
@@ -45,7 +45,7 @@ Este tópico mostra como alterar o provedor de criptografia usado para fornecer 
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- O procedimento a seguir mostra como integrar a x. 509 segurança assimétrica chave implementação personalizada criada no procedimento anterior com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança para substituir o token de segurança x. 509 fornecido pelo sistema.  
+ O procedimento a seguir mostra como integrar a x. 509 segurança assimétrica chave implementação personalizada criada no procedimento anterior com a estrutura de segurança do WCF para substituir a segurança de x. 509 fornecido pelo sistema token.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Para substituir o token de segurança x. 509 fornecido pelo sistema com um token de chave de segurança assimétrica de x. 509  
   

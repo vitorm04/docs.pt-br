@@ -1,24 +1,12 @@
 ---
-title: "Política de autorização"
-ms.custom: 
+title: Política de autorização
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3744afb20c06e1ca85b91dadde6549d87ac89337
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="authorization-policy"></a>Política de autorização
 Este exemplo demonstra como implementar uma política de autorização de declaração personalizada e um Gerenciador de autorização de serviço personalizado associado. Isso é útil quando a verificações de acesso baseado em declarações para operações de serviço e antes das verificações de acesso, você torna serviço concede o chamador certos direitos. Este exemplo mostra o processo de adição de declarações, bem como o processo para fazer uma verificação de acesso em relação ao finalizadas conjunto de declarações. Todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Por padrão, com o `wsHttpBinding` ligação, um nome de usuário e senha fornecidos pelo cliente são usados para fazer logon para uma conta válida do Windows NT. Este exemplo demonstra como utilizar um personalizado <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` para autenticar o cliente. Além disso, este exemplo mostra o cliente autenticar para o serviço usando um certificado x. 509. Este exemplo mostra uma implementação de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre eles conceder acesso aos métodos específicos do serviço para usuários específicos. Este exemplo é baseado no [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md), mas demonstra como executar uma transformação de declaração antes do <xref:System.ServiceModel.ServiceAuthorizationManager> que está sendo chamado.  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um modelo de baseada em declarações avançado para executar verificações de acesso. O <xref:System.ServiceModel.ServiceAuthorizationManager> objeto é usado para realizar a verificação de acesso e determinar se as declarações associadas ao cliente satisfazem os requisitos necessários para acessar o método de serviço.  
+ Windows Communication Foundation (WCF) fornece um modelo de baseada em declarações avançado para executar verificações de acesso. O <xref:System.ServiceModel.ServiceAuthorizationManager> objeto é usado para realizar a verificação de acesso e determinar se as declarações associadas ao cliente satisfazem os requisitos necessários para acessar o método de serviço.  
   
- Para fins de demonstração, este exemplo mostra uma implementação de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir o acesso do usuário aos métodos com base em declarações de tipo http://example.com/claims/allowedoperation cujo valor é a ação URI da operação que pode ser chamado.  
+ Para fins de demonstração, este exemplo mostra uma implementação de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir o acesso do usuário aos métodos com base em declarações de tipo http://example.com/claims/allowedoperation cujo valor é o URI de ação da operação que é pode ser chamado.  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  
@@ -508,6 +496,6 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 1.  Execute Cleanup.bat na pasta exemplos depois de terminar a execução do exemplo. Isso remove os certificados de servidor e cliente do repositório de certificados.  
   
 > [!NOTE]
->  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você tiver executado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplos que usam certificados em computadores, certifique-se de desmarcar os certificados de serviço que foram instalados em CurrentUser - TrustedPeople repositório. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do WCF que usam certificados em computadores, certifique-se de desmarcar os certificados de serviço que foram instalados em CurrentUser - TrustedPeople armazenar. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Consulte também

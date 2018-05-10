@@ -1,27 +1,15 @@
 ---
-title: "Serviço de fachada confiável"
-ms.custom: 
+title: Serviço de fachada confiável
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0d1d0473a821510ee70e386058a2b3249221dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>Serviço de fachada confiável
-Este exemplo de cenário demonstra como fluxo de informações de identidade do chamador, de um serviço para outro usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infraestrutura de segurança.  
+Este cenário demonstra como fluxo de informações de identidade do chamador, de um serviço para outro usando o Windows Communication Foundation (WCF) a infraestrutura de segurança.  
   
  É um padrão de design comum para expor a funcionalidade fornecida por um serviço de rede pública usando um serviço de fachada. O serviço de fachada geralmente reside na rede de perímetro (também conhecida como DMZ, zona desmilitarizada e sub-rede filtrada) e se comunica com um serviço de back-end que implementa a lógica de negócios e tem acesso aos dados internos. O canal de comunicação entre o serviço de fachada e o serviço de back-end passa por um firewall e geralmente é limitado para uma única finalidade.  
   
@@ -33,7 +21,7 @@ Este exemplo de cenário demonstra como fluxo de informações de identidade do 
   
 -   Serviço de back-end de cálculo  
   
- O serviço de fachada é responsável por validar a solicitação e autenticar o chamador. Após a autenticação bem-sucedida e validação, ele encaminha a solicitação para o serviço de back-end usando o canal de comunicação controlado de rede de perímetro com a rede interna. Como parte da solicitação encaminhada, o serviço de fachada inclui informações sobre a identidade do chamador, para que o serviço de back-end pode usar essas informações no seu processamento. A identidade do chamador é transmitida usando um `Username` token de segurança de mensagem `Security` cabeçalho. O exemplo usa o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança para transmitir e extrair essas informações do `Security` cabeçalho.  
+ O serviço de fachada é responsável por validar a solicitação e autenticar o chamador. Após a autenticação bem-sucedida e validação, ele encaminha a solicitação para o serviço de back-end usando o canal de comunicação controlado de rede de perímetro com a rede interna. Como parte da solicitação encaminhada, o serviço de fachada inclui informações sobre a identidade do chamador, para que o serviço de back-end pode usar essas informações no seu processamento. A identidade do chamador é transmitida usando um `Username` token de segurança de mensagem `Security` cabeçalho. O exemplo usa a infraestrutura de segurança do WCF para transmitir e extrair essas informações do `Security` cabeçalho.  
   
 > [!IMPORTANT]
 >  O serviço de back-end confia que o serviço de fachada para autenticar o chamador. Por isso, o serviço de back-end não autentica o chamador novamente. Ele usa as informações de identidade fornecidas pelo serviço de fachada na solicitação encaminhada. Devido a essa relação de confiança, o serviço de back-end deve autenticar o serviço de fachada para garantir que a mensagem encaminhada vem de uma fonte confiável - nesse caso, o serviço de fachada.  
@@ -122,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  O [ \<segurança >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento de associação cuida da transmissão de nome de usuário e a extração inicial do chamador. O [ \<windowsstreamsecurity está >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) e [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) cuidar da autenticação de serviços de back-end e de fachada e proteção de mensagem.  
   
- Para encaminhar a solicitação, a implementação do serviço de fachada deve fornecer o nome de usuário do chamador inicial para que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança pode colocar isso em da mensagem encaminhada. Nome de usuário do chamador inicial é fornecido na implementação do serviço de fachada definindo- `ClientCredentials` desse serviço de fachada de propriedade na instância do proxy do cliente usa para se comunicar com o serviço de back-end.  
+ Para encaminhar a solicitação, a implementação do serviço de fachada deve fornecer o nome de usuário do chamador inicial para que essa infraestrutura de segurança do WCF pode colocar isso em da mensagem encaminhada. Nome de usuário do chamador inicial é fornecido na implementação do serviço de fachada definindo- `ClientCredentials` desse serviço de fachada de propriedade na instância do proxy do cliente usa para se comunicar com o serviço de back-end.  
   
  O código a seguir mostra como `GetCallerIdentity` método é implementado no serviço de fachada. Outros métodos usam o mesmo padrão.  
   
@@ -137,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Conforme mostrado no código anterior, a senha não está definida no `ClientCredentials` , somente o nome de usuário está definida. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]infraestrutura de segurança cria um token de segurança do nome de usuário sem uma senha nesse caso, o que é exatamente o que é necessário neste cenário.  
+ Conforme mostrado no código anterior, a senha não está definida no `ClientCredentials` , somente o nome de usuário está definida. Infraestrutura de segurança do WCF cria um token de segurança do nome de usuário sem uma senha nesse caso, o que é exatamente o que é necessário neste cenário.  
   
- O serviço de back-end, as informações contidas no token de segurança de nome de usuário devem ser autenticadas. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança tenta mapear o usuário para uma conta do Windows usando a senha fornecida. Nesse caso, não há nenhuma senha fornecida e o serviço de back-end não é necessário para autenticar o nome de usuário porque a autenticação já foi executada pelo serviço de fachada. Para implementar essa funcionalidade no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], um personalizado `UserNamePasswordValidator` for fornecido, que impõe somente se um nome de usuário é especificada no token e não realiza nenhuma autenticação adicional.  
+ O serviço de back-end, as informações contidas no token de segurança de nome de usuário devem ser autenticadas. Por padrão, a segurança do WCF tenta mapear o usuário para uma conta do Windows usando a senha fornecida. Nesse caso, não há nenhuma senha fornecida e o serviço de back-end não é necessário para autenticar o nome de usuário porque a autenticação já foi executada pelo serviço de fachada. Para implementar essa funcionalidade no WCF, um personalizado `UserNamePasswordValidator` for fornecido, que impõe somente se um nome de usuário é especificada no token e não realiza nenhuma autenticação adicional.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -220,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- As informações de conta de serviço de fachada são extraídas usando a `ServiceSecurityContext.Current.WindowsIdentity` propriedade. Para acessar as informações sobre o chamador inicial do serviço de back-end usa o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` propriedade. Ele procura um `Identity` com um tipo de declaração `Name`. Esta declaração é automaticamente gerada pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança das informações contidas no `Username` token de segurança.  
+ As informações de conta de serviço de fachada são extraídas usando a `ServiceSecurityContext.Current.WindowsIdentity` propriedade. Para acessar as informações sobre o chamador inicial do serviço de back-end usa o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` propriedade. Ele procura um `Identity` com um tipo de declaração `Name`. Esta declaração é gerada automaticamente pela infraestrutura de segurança do WCF das informações contidas no `Username` token de segurança.  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente. Você pode pressionar ENTER nas janelas do console de serviço back-end e de fachada para interromper os serviços.  
@@ -298,7 +286,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   

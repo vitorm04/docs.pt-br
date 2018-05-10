@@ -2,14 +2,14 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre clientes ASMX e serviços do Windows Communication Foundation (WCF) ou [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e serviços ASMX.  
+Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre serviços Windows Communication Foundation (WCF) e clientes ASMX ou entre clientes e serviços ASMX WCF.  
   
  Quando um cliente chama um método da Web em um serviço Web ASMX que é baseada em sessão, o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mecanismo faz o seguinte:  
   
@@ -74,7 +74,7 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- No caso de quando alguém chama o <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> método e não existem mensagens na fila de mensagens, o canal espera por um certo período de tempo antes de desligar em si. Isso limpa os canais de sessão criados para não -[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes.  
+ No caso de quando alguém chama o <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> método e não existem mensagens na fila de mensagens, o canal espera por um certo período de tempo antes de desligar em si. Isso limpa os canais de sessão criados para clientes não WCF.  
   
  Usamos o `channelMapping` para controlar a `ReplySessionChannels`, e não podemos fechar nosso subjacente `innerChannel` até que todos os canais aceitos foram fechados. Dessa forma `HttpCookieReplySessionChannel` pode existir além do tempo de vida de `HttpCookieReplySessionChannelListener`. Também não temos se preocupar com o ouvinte obtendo limpos sob nos porque os canais aceitos manter uma referência ao seu ouvinte por meio de `OnClosed` retorno de chamada.  
   
@@ -82,7 +82,7 @@ InputQueue<RequestContext> requestQueue;
  O canal de cliente correspondente está no `HttpCookieSessionChannelFactory` classe. Durante a criação do canal, a fábrica de canais encapsula o canal de solicitação interna com um `HttpCookieRequestSessionChannel`. O `HttpCookieRequestSessionChannel` classe encaminha as chamadas para o canal de solicitação subjacente. Quando o cliente fecha o proxy, `HttpCookieRequestSessionChannel` envia uma mensagem para o serviço que indica que o canal está sendo fechado. Portanto, a pilha de canais de serviço normalmente pode encerrar o canal de sessão que está em uso.  
   
 ## <a name="binding-and-binding-element"></a>Associação e o elemento de associação  
- Depois de criar o serviço e o cliente canais, a próxima etapa é integrá-los para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução. Canais são expostos para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] por meio de associações e elementos de associação. Uma associação consiste em um ou vários elementos de associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece várias associações definidas pelo sistema; Por exemplo, BasicHttpBinding ou WSHttpBinding. O `HttpCookieSessionBindingElement` classe contém a implementação para o elemento de associação. Ela substitui a escuta de canal e métodos de criação de fábrica de canal para fazer o canal necessário instanciações de fábrica de canal ou de escuta.  
+ Depois de criar os canais de cliente e de serviço, a próxima etapa é para integrá-las em tempo de execução WCF. Canais são expostos para o WCF por meio de associações e elementos de associação. Uma associação consiste em um ou vários elementos de associação. O WCF oferece várias associações definidas pelo sistema; Por exemplo, BasicHttpBinding ou WSHttpBinding. O `HttpCookieSessionBindingElement` classe contém a implementação para o elemento de associação. Ela substitui a escuta de canal e métodos de criação de fábrica de canal para fazer o canal necessário instanciações de fábrica de canal ou de escuta.  
   
  O exemplo usa declarações de política para a descrição do serviço. Isso permite que o exemplo publicar seus requisitos de canal para outros clientes que podem consumir o serviço. Por exemplo, esse elemento de associação publica declarações de política para informar os clientes potenciais que ele oferece suporte a sessões. Como o exemplo permite que o `ExchangeTerminateMessage` propriedade na configuração de elemento de associação, ele adiciona as declarações necessárias para mostrar que o serviço oferece suporte a uma ação de troca extras de mensagem para terminar a conversa da sessão. Os clientes podem, em seguida, usar essa ação. O código a seguir WSDL mostra as declarações de política criadas a partir de `HttpCookieSessionBindingElement`.  
   

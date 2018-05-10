@@ -2,14 +2,14 @@
 title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
-Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. O Visualizador de Rastreamento de Serviço oferece um modo fácil de mesclar, exibir e filtrar mensagens de rastreamento no log, para que você possa diagnosticar, reparar e verificar problemas de serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclagem, exibir e filtrar mensagens de rastreamento no log de forma que você pode diagnosticar, reparar e verificar os problemas do serviço WCF facilmente.  
   
 ## <a name="configuring-tracing"></a>Configurando o rastreamento  
  Os rastreamentos de diagnóstico fornecem informações que mostram o que está acontecendo em toda a operação do seu aplicativo. Como o nome indica, você pode seguir as operações da origem ao destino, passando pelos pontos intermediários.  
@@ -55,7 +55,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Abrindo e exibindo arquivos de rastreamento do WCF  
  O Visualizador de Rastreamento de Serviço oferece suporte a três tipos de arquivos:  
   
--   Arquivo de rastreamento do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (.svcLog)  
+-   (.SvcLog) o arquivo de rastreamento do WCF  
   
 -   Arquivo de rastreamento de eventos (.etl)  
   
@@ -65,7 +65,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 ##### <a name="to-open-a-trace-file"></a>Para abrir um arquivo de rastreamento  
   
-1.  Iniciar o Visualizador de rastreamento de serviço usando uma janela de comando para navegar até o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] local de instalação (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e digite `SvcTraceViewer.exe`.  
+1.  Iniciar o Visualizador de rastreamento de serviço usando uma janela de comando, navegue até o local de instalação do WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e, em seguida, digite `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  A ferramenta Visualizador de Rastreamento de Serviço pode se associar a dois tipos de arquivos: .svclog e .stvproj. Você pode usar dois parâmetros na linha de comando para registrar e cancelar o registro das extensões de arquivo.  
@@ -87,7 +87,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 >  Não é recomendável carregar um arquivo de log de rastreamento maior que 200 MB. Se você tentar carregar um arquivo maior do que esse limite, o processo de carregamento poderá levar muito tempo, dependendo do recurso do computador. A ferramenta Visualizador de Rastreamento de Serviço talvez não responda por um longo tempo, ou poderá esgotar a memória do computador. Para evitar esse problema, é recomendável configurar um carregamento parcial. Para obter mais informações sobre como fazer isso, consulte a seção "Carregando arquivos de rastreamento grandes".  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Rastreamento de eventos e rastreamento Crimson  
- O formato nativo do visualizador é o formato de rastreamento de atividade que o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emite. Os rastreamentos emitidos em um formato diferente devem ser convertidos antes que o visualizador os exiba. Atualmente, além do formato de rastreamento de atividade, o visualizador oferece suporte ao rastreamento de eventos e ao rastreamento crimson.  
+ O formato nativo do Visualizador é o formato de rastreamento de atividade que emite WCF. Os rastreamentos emitidos em um formato diferente devem ser convertidos antes que o visualizador os exiba. Atualmente, além do formato de rastreamento de atividade, o visualizador oferece suporte ao rastreamento de eventos e ao rastreamento crimson.  
   
  Quando você abre um arquivo que não contém rastreamentos de atividade, o visualizador tenta converter o arquivo. Você deve especificar o nome e o local do arquivo que conterá os dados de rastreamento convertidos. Uma vez que os dados tenham sido convertidos, o visualizador exibirá o conteúdo do novo arquivo.  
   
@@ -104,7 +104,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 -   No **projeto** guia, você pode adicionar arquivos a um projeto.  
   
 ### <a name="viewing-wcf-traces"></a>Exibindo rastreamentos do WCF  
- O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emite rastreamentos usando o formato de rastreamento de atividade. No modelo de rastreamento de atividade, os rastreamentos individuais são agrupados em atividades de acordo com sua finalidade. O fluxo de controle lógico é transferido entre atividades. Por exemplo, durante o tempo de vida de um aplicativo, muitas "atividades de envio de mensagens" aparecem e desaparecem. Para obter mais informações sobre como exibir a interface do usuário do Visualizador de rastreamento de serviço e atividades e rastreamentos muito, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e solução de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ WCF emite rastreamentos usando o formato de rastreamento de atividade. No modelo de rastreamento de atividade, os rastreamentos individuais são agrupados em atividades de acordo com sua finalidade. O fluxo de controle lógico é transferido entre atividades. Por exemplo, durante o tempo de vida de um aplicativo, muitas "atividades de envio de mensagens" aparecem e desaparecem. Para obter mais informações sobre como exibir a interface do usuário do Visualizador de rastreamento de serviço e atividades e rastreamentos muito, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e solução de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Alternando entre diferentes exibições  
  O Visualizador de Rastreamento de Serviço fornece as exibições a seguir. Eles são exibidos como guias no painel esquerdo do visualizador e também pode ser acessados pelo **exibição** menu.  
@@ -217,7 +217,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 -   A barra de ferramentas de filtro fornece acesso a filtros predefinidos e personalizados. Ele pode ser habilitado por meio de **exibição** menu.  
   
--   O filtro predefinido do visualizador pode ser usado para filtrar seletivamente partes dos rastreamentos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Por padrão, ele é definido para permitir a passagem de todos os rastreamentos de infraestrutura. As configurações desse filtro são definidas de **opções de filtro** submenu em **exibição** menu.  
+-   O filtro predefinido do visualizador pode ser usado para filtrar seletivamente partes dos rastreamentos do WCF. Por padrão, ele é definido para permitir a passagem de todos os rastreamentos de infraestrutura. As configurações desse filtro são definidas de **opções de filtro** submenu em **exibição** menu.  
   
 -   Os filtros XPath personalizados oferecem aos usuários controle total sobre a filtragem. Eles podem ser definidos no **filtro personalizado** em **exibição** menu.  
   
@@ -237,7 +237,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
  O **limpar** botão redefine filtros predefinidos e personalizados para permitir que todos os rastreamentos de passagem.  
   
 #### <a name="filter-options"></a>Opções de filtro  
- O visualizador pode automaticamente remover os rastreamentos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] da exibição. Ele pode remover seletivamente os rastreamentos emitidos por áreas específicas do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], por exemplo, remover os rastreamentos relacionados a transações da exibição.  
+ O visualizador pode remove automaticamente os rastreamentos do WCF do modo de exibição. Ele pode remover seletivamente rastreamentos emitidos por áreas específicas do WCF, por exemplo, a remoção de transação relacionado rastreamentos do modo de exibição.  
   
  As configurações desse filtro são definidas de **opções de filtro** submenu em **exibição** menu.  
   
@@ -347,7 +347,7 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
 -   Voltar a etapa: Usar o **atividade** menu ou pressione "F9". Você também pode usar a tecla de seta "backup" no painel de rastreamento.  
   
 > [!NOTE]
->  Isso pode levar você a uma atividade que ocorre em um processo diferente ou até em um computador diferente, pois as mensagens do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] podem transportar IDs de atividade que abrangem computadores.  
+>  Isso pode levar você a uma atividade que ocorrem em um processo diferente ou mesmo em um computador diferente, porque as mensagens do WCF podem realizar IDs que abrangem máquinas de atividade.  
   
 #### <a name="follow-transfer"></a>Seguir transferência  
  Os rastreamentos de transferência são rastreamentos especiais no arquivo de rastreamento. Uma atividade pode fazer a transferência para outra atividade por um rastreamento de transferência. Por exemplo, "A atividade" pode transferir para "Atividade B". Nesse caso, há um rastreamento de transferência no ícone de "Atividade um" com o nome "Para atividade de:" e a transferência. Esse rastreamento de transferência é um link entre os dois rastreamentos. Em "Atividade B", também pode haver um rastreamento de transferência ao final da atividade para transferir de volta para "A atividade". Isso é semelhante às chamadas de função em programas: A chama B e, em seguida, B retorna.  
@@ -417,9 +417,9 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Rastreamento de log de mensagens: um rastreamento que é emitido quando uma mensagem do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é registrada em log pelo recurso de log de mensagens quando a origem de rastreamento `System.ServiceModel.MessageLogging` está habilitada. Clicar nesse rastreamento exibe a mensagem. Há quatro pontos de log configuráveis para uma mensagem: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest, o que também pode ser especificado pelo atributo `messageSource` no rastreamento de log de mensagens.|  
-|![Rastreamento de mensagem recebida](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Rastreamento de mensagem recebida: um rastreamento que é emitido quando uma mensagem do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é recebida, caso a origem de rastreamento `System.ServiceModel` esteja habilitada no nível Informações ou Detalhado. Este rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **gráfico** exibição.|  
-|![Rastreamento de mensagem enviada](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Rastreamento de mensagem enviada: um rastreamento que é emitido quando uma mensagem do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é enviada, caso a origem de rastreamento `System.ServiceModel` esteja habilitada no nível Informações ou Detalhado. Este rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **gráfico** exibição.|  
+|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Log de rastreamento de mensagem: um rastreamento que é emitido quando uma mensagem WCF é registrada pelo recurso de log de mensagens, quando o `System.ServiceModel.MessageLogging` origem de rastreamento está habilitada. Clicar nesse rastreamento exibe a mensagem. Há quatro pontos de log configuráveis para uma mensagem: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest, o que também pode ser especificado pelo atributo `messageSource` no rastreamento de log de mensagens.|  
+|![Rastreamento de mensagem recebida](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Rastreamento de mensagem recebida: um rastreamento que é emitido quando é recebida uma mensagem WCF, se o `System.ServiceModel` origem de rastreamento está habilitada no nível de informações ou detalhado. Este rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **gráfico** exibição.|  
+|![Rastreamento de mensagem enviada](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Rastreamento de mensagem enviada: um rastreamento que é emitido quando uma mensagem WCF é enviada se o `System.ServiceModel` origem de rastreamento está habilitada no nível de informações ou detalhado. Este rastreamento é essencial para exibir a seta de correlação da mensagem na atividade de **gráfico** exibição.|  
   
 ### <a name="activities"></a>Atividades  
   
@@ -432,11 +432,11 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Atividade de ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Atividade de ambiente: uma atividade que cria, abre ou fecha um host ou um cliente do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Os erros que tiverem ocorrido durante essas fases aparecerão nesta atividade.|  
+|![Atividade de ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Atividade de ambiente: uma atividade que cria, abre ou fecha um cliente ou host do WCF. Os erros que tiverem ocorrido durante essas fases aparecerão nesta atividade.|  
 |![Atividade de escuta](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Atividade de escuta: uma atividade que registra em log os rastreamentos relacionados a um ouvinte. Dentro desta atividade, é possível exibir informações e solicitações de conexão do ouvinte.|  
 |![Bytes de atividade de recebimento](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Atividade de recepção de bytes: uma atividade que agrupa todos os rastreamentos relacionados à recepção de bytes de entrada em uma conexão entre dois pontos de extremidade. Esta atividade é essencial na correlação com as atividades de transporte que propagam sua ID de atividade, como http.sys. Erros de conexão, como anulações, aparecerão nesta atividade.|  
-|![Processar a atividade de mensagens](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Atividade de processamento de mensagem: uma atividade que agrupa rastreamentos que estão relacionados à criação de uma mensagem do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Os erros devido a um envelope incorreto ou uma mensagem malformada aparecerão nesta atividade. Dentro desta atividade, podemos inspecionar cabeçalhos de mensagens para ver se uma ID de atividade foi propagada do chamador. Se isso acontecer, ao transferirmos para a atividade de processamento de ação (o próximo ícone), poderemos também atribuir a esta atividade a ID de atividade propagada para a correlação entre os rastreamentos do chamador e do receptor.|  
-|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Atividade de processamento de ação: uma atividade que agrupa todos os rastreamentos relacionados a uma solicitação do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] entre dois pontos de extremidade. Se `propagateActivity` estiver definido como `true` em ambos os pontos de extremidade na configuração, todos os rastreamentos de ambos os pontos de extremidade serão mesclados em uma única atividade para correlação direta. Tal atividade conterá erros devido ao processamento de segurança ou transporte, estendendo-se ao limite do código do usuário e à volta (se houver uma resposta).|  
+|![Processar a atividade de mensagens](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Processar a atividade de mensagens: uma atividade que agrupa rastreamentos relacionadas à criação de uma mensagem WCF. Os erros devido a um envelope incorreto ou uma mensagem malformada aparecerão nesta atividade. Dentro desta atividade, podemos inspecionar cabeçalhos de mensagens para ver se uma ID de atividade foi propagada do chamador. Se isso acontecer, ao transferirmos para a atividade de processamento de ação (o próximo ícone), poderemos também atribuir a esta atividade a ID de atividade propagada para a correlação entre os rastreamentos do chamador e do receptor.|  
+|![Log de rastreamento de mensagem](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Processar a atividade de ação: uma atividade que agrupa todos os rastreamentos relacionadas a uma solicitação do WCF em dois pontos de extremidade. Se `propagateActivity` estiver definido como `true` em ambos os pontos de extremidade na configuração, todos os rastreamentos de ambos os pontos de extremidade serão mesclados em uma única atividade para correlação direta. Tal atividade conterá erros devido ao processamento de segurança ou transporte, estendendo-se ao limite do código do usuário e à volta (se houver uma resposta).|  
 |![Processar a atividade de mensagens](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Atividade de execução de código de usuário: uma atividade que agrupa rastreamentos de código de usuário para processar uma solicitação.|  
   
 ## <a name="troubleshooting"></a>Solução de problemas  

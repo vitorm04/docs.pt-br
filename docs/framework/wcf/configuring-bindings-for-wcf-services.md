@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
 Ao criar um aplicativo, você geralmente deseja adiar decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou identificador de recurso uniforme (URI) será. Em vez de codificar um endereço, é preferível para permitir que um administrador fazer isso depois de criar um serviço. Essa flexibilidade é feita por meio da configuração.  
@@ -39,9 +39,9 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
   
  Por exemplo, especificando o [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento indica para usar HTTP como o transporte de um ponto de extremidade. Isso é usado para conectar o ponto de extremidade em tempo de execução quando o serviço usando esse ponto de extremidade é aberto.  
   
- Há dois tipos de associações: predefinidos e personalizados. Associações predefinidas contêm útil combinações de elementos que são usados em cenários comuns. Para tipos de uma lista de associação predefinida [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). Se nenhuma coleção de associação predefinidas a combinação correta de recursos que precisa de um aplicativo de serviço, você pode construir associações personalizadas para atender aos requisitos do aplicativo. Para obter mais informações sobre associações personalizadas, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Há dois tipos de associações: predefinidos e personalizados. Associações predefinidas contêm útil combinações de elementos que são usados em cenários comuns. Para obter uma lista de tipos de associação predefinido que fornece WCF, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). Se nenhuma coleção de associação predefinidas a combinação correta de recursos que precisa de um aplicativo de serviço, você pode construir associações personalizadas para atender aos requisitos do aplicativo. Para obter mais informações sobre associações personalizadas, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
- Os quatro exemplos a seguir ilustram as configurações mais comuns de associação usadas para configurar um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço.  
+ Os quatro exemplos a seguir ilustram as configurações mais comuns de associação usadas para configurar um serviço WCF.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Especificando um ponto de extremidade para usar um tipo de associação  
  O primeiro exemplo ilustra como especificar um ponto de extremidade configurado com um endereço, um contrato e uma associação.  

@@ -2,17 +2,17 @@
 title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Transferir
 Este tópico descreve a transferência do modelo de rastreamento de atividade do Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definição de transferência  
- As transferências entre atividades representam causais relações entre eventos em que as atividades relacionadas em pontos de extremidade. Duas atividades estão relacionadas com transferências quando fluxos de controle entre essas atividades, por exemplo, uma chamada de método Cruzando os limites de atividade. Em [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], quando os bytes são recebidos do serviço, a escuta na atividade é transferida para a atividade receber Bytes em que o objeto de mensagem é criado. Para obter uma lista de cenários de rastreamento ponta a ponta e sua respectiva atividade e design de rastreamento, consulte [cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ As transferências entre atividades representam causais relações entre eventos em que as atividades relacionadas em pontos de extremidade. Duas atividades estão relacionadas com transferências quando fluxos de controle entre essas atividades, por exemplo, uma chamada de método Cruzando os limites de atividade. No WCF, quando os bytes são recebidos do serviço, a atividade escutar no é transferida para a atividade receber Bytes onde o objeto de mensagem é criado. Para obter uma lista de cenários de rastreamento ponta a ponta e sua respectiva atividade e design de rastreamento, consulte [cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Para emitir rastreamentos de transferência, use o `ActivityTracing` configuração da origem de rastreamento, conforme demonstrado pelo código de configuração a seguir.  
   

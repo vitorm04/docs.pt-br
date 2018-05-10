@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Práticas recomendadas: controle de versão de contrato de dados
 Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo. Para obter mais informações sobre contratos de dados, consulte os tópicos [usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
   
  Isso significa que até mesmo o cenário controle de versão mais comuns, como adicionar um novo membro de dados, não pode ser implementado de maneira que seja consistente em relação a um determinado esquema. As versões mais recentes de um contrato de dados (com um novo membro de dados, por exemplo) não validam usando o esquema antigo.  
   
- No entanto, há muitos cenários em que a compatibilidade de esquema estrita não é necessária. Serviços de Web muitas plataformas, incluindo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e XML Web services criados usando ASP.NET, não executar a validação de esquema por padrão e, portanto, tolerar elementos adicionais que não são descritos no esquema. Ao trabalhar com essas plataformas, muitos cenários de controle de versão são mais fáceis de implementar.  
+ No entanto, há muitos cenários em que a compatibilidade de esquema estrita não é necessária. Muitas plataformas de serviços Web, incluindo o WCF e XML Web services criado usando ASP.NET, não executar a validação de esquema por padrão e, portanto, tolerar elementos adicionais que não são descritos no esquema. Ao trabalhar com essas plataformas, muitos cenários de controle de versão são mais fáceis de implementar.  
   
  Assim, há diretrizes de controle de versão de contrato de dois conjuntos de dados: um conjunto para cenários em que a validade de esquema estrita é importante e outro conjunto para cenários quando não for.  
   
@@ -36,7 +36,7 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
   
  Para obter mais informações, consulte as práticas recomendadas: [controle de versão do serviço](../../../docs/framework/wcf/service-versioning.md).  
   
- Ocasionalmente, você deve garantir a conformidade de esquema estrita para mensagens enviadas pelo seu aplicativo, mas não pode depender de mensagens de entrada para ser estritamente compatíveis com o esquema. Nesse caso, há um risco de que uma mensagem de entrada pode conter dados incorretos. Os valores incorretos são armazenados e retornados por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e, portanto, resulta em esquema inválido mensagens sendo enviadas. Para evitar esse problema, o recurso do ciclo deve ser desativado. Há duas formas de fazer isso.  
+ Ocasionalmente, você deve garantir a conformidade de esquema estrita para mensagens enviadas pelo seu aplicativo, mas não pode depender de mensagens de entrada para ser estritamente compatíveis com o esquema. Nesse caso, há um risco de que uma mensagem de entrada pode conter dados incorretos. Os valores incorretos são armazenados e retornados pelo WCF e, portanto, resulta em esquema inválido mensagens sendo enviadas. Para evitar esse problema, o recurso do ciclo deve ser desativado. Há duas formas de fazer isso.  
   
 -   Não implementam a <xref:System.Runtime.Serialization.IExtensibleDataObject> interface em qualquer um dos seus tipos.  
   

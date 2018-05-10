@@ -2,11 +2,11 @@
 title: Exemplos do Windows Communication Foundation (WCF)
 ms.date: 03/30/2017
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-ms.openlocfilehash: 519f8e844fa26db32d91705af3db2eda81e8b993
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86aade0a626db09313ef96c5e18b7b2a52939144
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Exemplos do Windows Communication Foundation (WCF)
 Esses exemplos de fornecem instruções sobre vários aspectos do Windows Communication Foundation (WCF).  
@@ -15,13 +15,13 @@ Esses exemplos de fornecem instruções sobre vários aspectos do Windows Commun
   
 -   Para versões do Visual Basic dos exemplos, acesse [amostras do Visual Basic 2010](http://go.microsoft.com/fwlink/?LinkID=193373) e clique em **WF HYPERLINK "javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$ FileNameLink', ') "_WCF_Samples.zip**.  
   
- O Windows Workflow Foundation (WF) [aplicativo](../../../../docs/framework/windows-workflow-foundation/samples/application.md) exemplos demonstram vários [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]recursos.  
+ O Windows Workflow Foundation (WF) [aplicativo](../../../../docs/framework/windows-workflow-foundation/samples/application.md) exemplos também demonstram vários WCFfeatures.  
   
  Para instalar uma versão autônoma de um visualizador de Ajuda e a documentação, baixe o [v do Microsoft Windows SDK 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Básico](../../../../docs/framework/wcf/samples/basic.md)  
- Mostra exemplos que ilustram básico [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funcionalidade.  
+ Mostra exemplos que ilustram a funcionalidade básica do WCF.  
   
  Extensibilidade  
  Mostra exemplos relacionados para o recurso de descoberta.  

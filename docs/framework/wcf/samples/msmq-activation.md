@@ -2,11 +2,11 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processo para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo Web hospedado e o cliente é auto-hospedado e saídas para o console para observar o status das ordens de compra enviada.  
@@ -19,11 +19,11 @@ Este exemplo demonstra como hospedar aplicativos no serviço de ativação de pr
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Se este diretório não existir, vá para o Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e o Windows Workflow Foundation (WF) exemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para baixar todos os [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para o Windows Communication Foundation (WCF) HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e o Windows Workflow Foundation (WF) exemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para baixar todos os WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Processo de ativação do WAS (serviço Windows), o novo mecanismo de ativação de processo para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornece recursos como IIS que estavam anteriormente disponíveis somente para aplicativos baseados em HTTP para aplicativos que usam protocolos não HTTP. Windows Communication Foundation (WCF) usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, Pipes nomeados e MSMQ. A funcionalidade para receber solicitações por meio de protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost.exe.  
+ Processo de ativação do WAS (serviço Windows), o novo mecanismo de ativação de processo para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornece recursos como IIS que estavam anteriormente disponíveis somente para aplicativos baseados em HTTP para aplicativos que usam protocolos não HTTP. Windows Communication Foundation (WCF) usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas pelos protocolos não HTTP com suporte do WCF, como TCP, Pipes nomeados e MSMQ. A funcionalidade para receber solicitações por meio de protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost.exe.  
   
  O serviço de adaptador de escuta NET. MSMQ (NetMsmqActivator) ativa aplicativos na fila com base em mensagens na fila.  
   
@@ -83,7 +83,7 @@ public class OrderProcessorService : IOrderProcessor
  O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. ServiceModel do arquivo de configuração.  
   
 > [!NOTE]
->  O endereço de nome e o ponto de extremidade de fila MSMQ usam convenções de endereçamento ligeiramente diferentes. O nome da fila MSMQ usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endereço de ponto de extremidade Especifica um NET. MSMQ: esquema, use "localhost" para o computador local e usa barras em seu caminho. Para ler de uma fila que está hospedada no computador remoto, substitua o "." e "localhost" como nome do computador remoto.  
+>  O endereço de nome e o ponto de extremidade de fila MSMQ usam convenções de endereçamento ligeiramente diferentes. O nome da fila MSMQ usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O endereço de ponto de extremidade do WCF Especifica um NET. MSMQ: esquema, use "localhost" para o computador local e usa barras em seu caminho. Para ler de uma fila que está hospedada no computador remoto, substitua o "." e "localhost" como nome do computador remoto.  
   
  Um arquivo. svc com o nome da classe é usado para hospedar o código de serviço no WAS.  
   
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  Certifique-se de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] está instalado, como ele é necessário para a ativação do WAS.  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] componentes de ativação não HTTP:  
+2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Além disso, você deve instalar os componentes de ativação não HTTP do WCF:  
   
     1.  Do **iniciar** menu, escolha **painel de controle**.  
   

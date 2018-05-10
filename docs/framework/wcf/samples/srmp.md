@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 Este exemplo demonstra como executar transacionada comunicação em fila por meio do serviço de enfileiramento de mensagens (MSMQ) em HTTP.  
@@ -37,7 +37,7 @@ Este exemplo demonstra como executar transacionada comunicação em fila por mei
  Para executar este exemplo, o IIS deve ser instalado sobre o serviço e as máquinas cliente além do MSMQ.  
   
 ## <a name="demonstrates"></a>Demonstra  
- O exemplo demonstra como enviar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] na fila de mensagens usando o MSMQ via HTTP. Isso também é chamado de mensagens SRMP. Quando uma mensagem na fila foi enviada, MSMQ em transferências de máquina as mensagens de envio para o Gerenciador de filas de recebimento pelo transporte TCP ou HTTP. Escolhendo SRMP, o usuário indica a opção de HTTP como transporte para transferência de fila. Proteger SRMP permite o uso de HTTPS.  
+ O exemplo demonstra como enviar WCF na fila de mensagens usando o MSMQ via HTTP. Isso também é chamado de mensagens SRMP. Quando uma mensagem na fila foi enviada, MSMQ em transferências de máquina as mensagens de envio para o Gerenciador de filas de recebimento pelo transporte TCP ou HTTP. Escolhendo SRMP, o usuário indica a opção de HTTP como transporte para transferência de fila. Proteger SRMP permite o uso de HTTPS.  
   
 ## <a name="example"></a>Exemplo  
  O código de exemplo é baseado na amostra transacionada. Como enviar uma mensagem para a fila e receber uma mensagem da fila usando SRMP é o mesmo que o envio e recebimento de mensagens usando um protocolo nativo.  

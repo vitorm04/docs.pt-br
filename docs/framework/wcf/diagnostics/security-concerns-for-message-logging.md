@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais de serem expostas em logs de mensagem, bem como os eventos gerados pelo log de mensagens.  
@@ -16,7 +16,7 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 ## <a name="security-concerns"></a>Problemas de segurança  
   
 ### <a name="logging-sensitive-information"></a>O log de informações confidenciais  
- Windows Communication Foundation (WCF) não modifica os dados no cabeçalhos específicos do aplicativo e corpo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também não rastreia informações pessoais em cabeçalhos específicos do aplicativo ou o corpo de dados.  
+ Windows Communication Foundation (WCF) não modifica os dados no cabeçalhos específicos do aplicativo e corpo. WCF também não rastreia informações pessoais em cabeçalhos específicos do aplicativo ou o corpo de dados.  
   
  Quando o log de mensagens está habilitado, as informações pessoais em cabeçalhos específicos do aplicativo, como uma cadeia de caracteres de consulta; e corpo informações, como um número de cartão de crédito, pode se tornar visíveis nos logs. O implantador de aplicativo é responsável por impor o controle de acesso nos arquivos de configuração e de log. Se você não deseja que esse tipo de informação fique visível, você deve desabilitar o log ou filtrar a parte dos dados se você quiser compartilhar os logs.  
   

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos em log no WCF
 Windows Communication Foundation (WCF) rastreia eventos internos no log de eventos do Windows.  
   
 ## <a name="viewing-event-logs"></a>Exibindo Logs de eventos  
- O log de eventos é habilitado automaticamente por padrão, e não há nenhum mecanismo para desabilitá-lo. Eventos registrados pelo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] podem ser exibidos usando o Visualizador de eventos. Para iniciar essa ferramenta, clique em **iniciar**, clique em **painel de controle**, clique duas vezes em **ferramentas administrativas**e, em seguida, clique duas vezes em **Visualizador de eventos**.  
+ O log de eventos é habilitado automaticamente por padrão, e não há nenhum mecanismo para desabilitá-lo. Eventos registrados pelo WCF podem ser exibidos usando o Visualizador de eventos. Para iniciar essa ferramenta, clique em **iniciar**, clique em **painel de controle**, clique duas vezes em **ferramentas administrativas**e, em seguida, clique duas vezes em **Visualizador de eventos**.  
   
 ### <a name="application-event-log"></a>Log de eventos do aplicativo  
- O **Log de eventos do aplicativo** contém a maioria dos eventos gerados pelo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. A maioria das entradas de indica que um determinado recurso não foi inicializado para um aplicativo. Os exemplos incluem:  
+ O **Log de eventos do aplicativo** contém a maioria dos eventos gerados pelo WCF. A maioria das entradas de indica que um determinado recurso não foi inicializado para um aplicativo. Os exemplos incluem:  
   
--   Log de mensagem/rastreamento: [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] grava um evento no log de eventos ao rastreamento e registro de mensagem falhar. No entanto, não cada falha de rastreamento dispara um evento. Para impedir que o log de eventos que estão sendo completamente preenchido com falhas de rastreamentos, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] implementa um período de indisponibilidade de 10 minutos para um evento. Isso significa que se [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] grava uma falha de rastreamento para o log de eventos, ele não executará novamente pelo menos 10 minutos.  
+-   Log de mensagem/rastreamento: WCF grava um evento no log de eventos quando a falha de rastreamento e registro em log de mensagem. No entanto, não cada falha de rastreamento dispara um evento. Para impedir que o log de eventos que estão sendo completamente preenchido com falhas de rastreamentos, o WCF implementa um período de indisponibilidade de 10 minutos para um evento. Isso significa que se WCF grava uma falha de rastreamento para o log de eventos, ele não executará novamente pelo menos 10 minutos.  
   
 -   Compartilhado ouvinte: O serviço de compartilhamento de porta de TCP do WCF registra um evento quando ele não for iniciado.  
   

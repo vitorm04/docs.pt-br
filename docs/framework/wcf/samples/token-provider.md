@@ -1,31 +1,21 @@
 ---
 title: Fornecedor de token
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-caps.latest.revision: "22"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bd6b0983dcb4a0f7cdbabc5b391cca2000f9d16d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>Fornecedor de token
-Este exemplo demonstra como implementar um provedor do token. Um provedor de token em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriada credenciais para que a infraestrutura de segurança possa proteger a mensagem. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]é fornecido com o provedor de Token do Gerenciador de credenciais padrão. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também é fornecida com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
+Este exemplo demonstra como implementar um provedor do token. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriada credenciais para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também apresenta um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
   
 -   Se você tiver um repositório de credenciais que esses provedores de token não podem operar com.  
   
--   Se desejar fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura do cliente usa as credenciais.  
+-   Se desejar fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando a estrutura do cliente WCF usa as credenciais.  
   
 -   Se você estiver criando um token personalizado.  
   
@@ -118,7 +108,7 @@ Este exemplo demonstra como implementar um provedor do token. Um provedor de tok
 </system.serviceModel>  
 ```  
   
- As etapas a seguir mostram como desenvolver um provedor do token e integrá-lo com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança:  
+ As etapas a seguir mostram como desenvolver um provedor do token e integrá-lo com a estrutura de segurança do WCF:  
   
 1.  Grave um provedor do token.  
   

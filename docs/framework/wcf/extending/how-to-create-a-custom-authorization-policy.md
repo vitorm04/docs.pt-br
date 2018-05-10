@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Como criar uma diretiva de autorização personalizada
-A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização baseada em declarações. Declarações são extraídas de tokens, opcionalmente processadas pela diretiva de autorização personalizada e, em seguida, são colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext> que podem ser examinadas para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser isolada dos detalhes sobre as diferentes declarações apresentados pelo token de diferentes tipos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico mostra como implementar uma política de autorização personalizada e adicionar essa política para a coleção de políticas usado por um serviço.  
+A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização baseada em declarações. Declarações são extraídas de tokens, opcionalmente processadas pela diretiva de autorização personalizada e, em seguida, são colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext> que podem ser examinadas para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser separada dos detalhes sobre as declarações diferentes servidos pelos diferentes tipos de token que dá suporte ao WCF. Este tópico mostra como implementar uma política de autorização personalizada e adicionar essa política para a coleção de políticas usado por um serviço.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Para implementar uma política de autorização personalizada  
   

@@ -2,14 +2,14 @@
 title: Formatador de operação e seletor de operação
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formatador de operação e seletor de operação
-Este exemplo demonstra como pontos de extensibilidade do Windows Communication Foundation (WCF) podem ser usados para permitir que os dados de mensagem em um formato diferente daquele que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espera. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] formatadores esperam parâmetros do método a ser incluído no `soap:body` elemento. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET em vez disso e invoca métodos usando esses dados.  
+Este exemplo demonstra como pontos de extensibilidade do Windows Communication Foundation (WCF) podem ser usados para permitir que os dados de mensagem em um formato diferente de espera que o WCF. Por padrão, os formatadores WCF esperam parâmetros do método a ser incluído no `soap:body` elemento. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET em vez disso e invoca métodos usando esses dados.  
   
  O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Ele mostra como adicionar, subtrair, multiplicar e mensagens de divisão podem ser alteradas para usar o HTTP GET para solicitações de cliente para servidor e HTTP POST com POX mensagens de respostas do servidor para cliente.  
   
@@ -29,7 +29,7 @@ Este exemplo demonstra como pontos de extensibilidade do Windows Communication F
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 ## <a name="key-concepts"></a>Conceitos Principais  
- `QueryStringFormatter` -O formatador de operação é o componente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que é responsável por converter uma mensagem em uma matriz de objetos de parâmetro e uma matriz de objetos de parâmetro em uma mensagem. Isso é feito no cliente usando o <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface e no servidor com o <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface. Essas interfaces permitem que os usuários obtenham as mensagens de solicitação e resposta do `Serialize` e `Deserialize` métodos.  
+ `QueryStringFormatter` -O formatador de operação é o componente no WCF que é responsável por converter uma mensagem em uma matriz de objetos de parâmetro e uma matriz de objetos de parâmetro em uma mensagem. Isso é feito no cliente usando o <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface e no servidor com o <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface. Essas interfaces permitem que os usuários obtenham as mensagens de solicitação e resposta do `Serialize` e `Deserialize` métodos.  
   
  Neste exemplo, `QueryStringFormatter` implementa duas interfaces e é implementado no cliente e no servidor.  
   
@@ -59,10 +59,10 @@ Este exemplo demonstra como pontos de extensibilidade do Windows Communication F
   
  O <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> é definido como o <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> implementação.  
   
- Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa um filtro de endereço de correspondência exata. O URI na mensagem de entrada contém um sufixo de nome de operação seguido por uma cadeia de caracteres de consulta que contém os dados de parâmetro, portanto o comportamento de ponto de extremidade também altera o filtro de endereço para ser um prefixo correspondem ao filtro. Ele usa o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> para essa finalidade.  
+ Por padrão, o WCF usa um filtro de endereço de correspondência exata. O URI na mensagem de entrada contém um sufixo de nome de operação seguido por uma cadeia de caracteres de consulta que contém os dados de parâmetro, portanto o comportamento de ponto de extremidade também altera o filtro de endereço para ser um prefixo correspondem ao filtro. Ele usa o WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> para essa finalidade.  
   
 ### <a name="installing-operation-formatters"></a>Instalando os formatadores de operação  
- Comportamentos de operação que especificam os formatadores são exclusivos. Um tal comportamento sempre é implementado por padrão para cada operação para criar o formatador de operação necessária. No entanto, esses comportamentos se parecer com o comportamento de qualquer outra operação; eles não são identificados por qualquer outro atributo. Para instalar um comportamento de substituição, a implementação deve procurar comportamentos de formatador específicos que são instalados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] carregador de tipo por padrão e substituí-lo ou adicionar um comportamento compatível para ser executada após o comportamento padrão.  
+ Comportamentos de operação que especificam os formatadores são exclusivos. Um tal comportamento sempre é implementado por padrão para cada operação para criar o formatador de operação necessária. No entanto, esses comportamentos se parecer com o comportamento de qualquer outra operação; eles não são identificados por qualquer outro atributo. Para instalar um comportamento de substituição, a implementação deve procurar por comportamentos de formatador específicos que são instalados pelo carregador de tipo de WCF, por padrão e ou substituí-lo ou adicionar um comportamento compatível para ser executada após o comportamento padrão.  
   
  Esses comportamentos de formatadores de operação podem ser configurados por meio de programação antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> ou especificando um comportamento de operação que é executado após o padrão. No entanto, ele não pode ser facilmente configurado por um comportamento de ponto de extremidade (e, portanto, pela configuração) porque o modelo de comportamento não permite um comportamento substituir outros comportamentos ou modificar a árvore de descrição.  
   

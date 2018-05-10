@@ -2,11 +2,11 @@
 title: Emitindo traços de código de usuário
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Emitindo traços de código de usuário
 Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados pelo Windows Communication Foundation (WCF), você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente dados de instrumentação que você pode examinar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Se você definir o `propagateActivity` atributo `true` para o `System.ServiceModel` arquivos de origem do rastreamento na configuração de serviço e o cliente, o serviço de processamento de solicitação para adicionar ocorre na mesma atividade como definido no cliente. Se o serviço define suas próprias atividades e transferências, os rastreamentos de serviço não aparecem na atividade propagadas pelo cliente. Em vez disso, eles aparecem em uma atividade correlacionada por rastreamentos de transferência para a atividade cuja ID é propagada pelo cliente.  
   
 > [!NOTE]
->  Se o `propagateActivity` atributo é definido como `true` no cliente e no serviço, a atividade de ambiente no escopo de operação do serviço é definida por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+>  Se o `propagateActivity` atributo é definido como `true` no cliente e no serviço, a atividade de ambiente no escopo de operação do serviço é definida pelo WCF.  
   
- Você pode usar o código a seguir para verificar se uma atividade foi definida no escopo por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Você pode usar o código a seguir para verificar se uma atividade foi definida no escopo pelo WCF.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ Erros em pontos de extremidade para uma determinada solicitação serão exibido
  ![Usando o Visualizador de rastreamento para emitir usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Modo de exibição de gráfico de correlação de erro  
   
- Para obter os rastreamentos anteriores, definimos `ActivityTracing` para as fontes de rastreamento de usuário e `propagateActivity=true` para o `System.ServiceModel` origem do rastreamento. Nós não definimos `ActivityTracing` para o `System.ServiceModel` origem de rastreamento para habilitar o código de usuário a propagação de atividade de código do usuário. (Ao rastreamento de atividades de ServiceModel está ativado, a ID de atividade definida no cliente não será propagada para o código de usuário do serviço; Transferências de, no entanto, correlacionam as atividades de código do usuário cliente e de serviço para o intermediário [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] atividades.)  
+ Para obter os rastreamentos anteriores, definimos `ActivityTracing` para as fontes de rastreamento de usuário e `propagateActivity=true` para o `System.ServiceModel` origem do rastreamento. Nós não definimos `ActivityTracing` para o `System.ServiceModel` origem de rastreamento para habilitar o código de usuário a propagação de atividade de código do usuário. (Ao rastreamento de atividades de ServiceModel está ativado, a ID de atividade definida no cliente não será propagada para o código de usuário do serviço; No entanto, transferências, correlacionam as atividades de código de usuário cliente e de serviço para as atividades do WCF intermediárias.)  
   
  Definir atividades e propagação a ID de atividade nos permitem realizar correlação erro direto entre pontos de extremidade. Dessa forma, pode localizar a causa de um erro mais rapidamente.  
   

@@ -2,17 +2,17 @@
 title: Visualizando logs de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="viewing-message-logs"></a>Visualizando logs de mensagem
 Este tópico descreve como você pode exibir os logs de mensagem.  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Exibindo a mensagem de Logs no Visualizador de rastreamento de serviço  
- Uma mensagem será transformada conforme ela é processada pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Portanto, uma mensagem que está sendo registrada reflete somente a conteúdo da mensagem no ponto em que foi registrado, não o conteúdo na conexão.  
+ Uma mensagem será transformada conforme ela é processada pelo WCF. Portanto, uma mensagem que está sendo registrada reflete somente a conteúdo da mensagem no ponto em que foi registrado, não o conteúdo na conexão.  
   
  Desde que a saída de log de mensagens não tem relação com o formato de transferência da mensagem, o log de mensagens sempre gera a mensagem decodificada. Se você tiver configurado adequadamente o log de mensagem, qualquer mensagem registrada deve ser em texto sem formatação. Por exemplo, o formato (texto sem formatação) das mensagens de log não é afetado pelo uso de um codificador de mensagem binária.  
   

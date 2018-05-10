@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ba6d2016a36809910561543a531dd4d44aac9b9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Passo a passo de criação de credenciais de serviço e cliente personalizados
 Este tópico mostra como implementar o cliente personalizadas e as credenciais de serviço e como usar credenciais personalizadas do código do aplicativo.  
@@ -23,12 +23,12 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
   
  Tanto o <xref:System.ServiceModel.Description.ClientCredentials> e <xref:System.ServiceModel.Description.ServiceCredentials> classes herdadas de abstrata <xref:System.ServiceModel.Security.SecurityCredentialsManager> classe que define o contrato para retornar o <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- Para obter mais informações sobre as classes de credenciais e como eles se encaixam o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitetura de segurança, consulte [arquitetura de segurança](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Para obter mais informações sobre as classes de credenciais e como eles se encaixam na arquitetura de segurança do WCF, consulte [arquitetura de segurança](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
- As implementações padrão fornecidas no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dar suporte aos tipos de credencial fornecidos pelo sistema e criar Gerenciador de token é capaz de manipular esses tipos de credenciais de segurança.  
+ As implementações padrão fornecidas no WCF suportam os tipos de credencial fornecidos pelo sistema e criar Gerenciador de token é capaz de manipular esses tipos de credenciais de segurança.  
   
 ## <a name="reasons-to-customize"></a>Motivos para personalizar  
- Há vários motivos para personalizar classes de credencial de cliente ou serviço. O principal é a necessidade de alterar o padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comportamento de segurança em relação a manipulação de tipos de credencial fornecidos pelo sistema, especialmente pelos seguintes motivos:  
+ Há vários motivos para personalizar classes de credencial de cliente ou serviço. Mais importante é a necessidade de alterar o comportamento padrão de segurança do WCF com relação ao tratamento de tipos de credencial fornecidos pelo sistema, especialmente pelos seguintes motivos:  
   
 -   Alterações que não serão possíveis usar outros pontos de extensibilidade.  
   
@@ -39,7 +39,7 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
  Este tópico descreve como implementar o cliente personalizadas e as credenciais de serviço e como usá-las do código do aplicativo.  
   
 ## <a name="first-in-a-series"></a>Primeiro em uma série  
- Criando uma classe de credenciais personalizado é apenas a primeira etapa, porque é o motivo para personalizar as credenciais alterar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comportamento sobre o provisionamento de credenciais, a serialização de token de segurança ou a autenticação. Outros tópicos nesta seção descrevem como criar autenticadores e serializadores personalizados. Nesse sentido, criando a classe de credenciais personalizado é o primeiro tópico na série. As ações subsequentes (Criando autenticadores e serializadores personalizados) podem ser feitas somente depois de criar credenciais personalizadas. Tópicos adicionais que são criados com base neste tópico incluem:  
+ Criando uma classe de credenciais personalizado é apenas a primeira etapa, porque é o motivo para personalizar as credenciais alterar o comportamento do WCF sobre o provisionamento de credenciais, a serialização de token de segurança ou a autenticação. Outros tópicos nesta seção descrevem como criar autenticadores e serializadores personalizados. Nesse sentido, criando a classe de credenciais personalizado é o primeiro tópico na série. As ações subsequentes (Criando autenticadores e serializadores personalizados) podem ser feitas somente depois de criar credenciais personalizadas. Tópicos adicionais que são criados com base neste tópico incluem:  
   
 -   [Como criar um provedor de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
@@ -55,7 +55,7 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
   
 2.  Opcional. Adicione novos métodos ou propriedades novos tipos de credencial. Se você não adicionar novos tipos de credenciais, ignore esta etapa. O exemplo a seguir adiciona um `CreditCardNumber` propriedade.  
   
-3.  Substituir o método <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>. Esse método é chamado automaticamente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança quando a credencial do cliente personalizado é usada. Esse método é responsável por criar e retornar uma instância de uma implementação de <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe.  
+3.  Substituir o método <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>. Esse método é chamado automaticamente pela infraestrutura de segurança do WCF quando a credencial do cliente personalizado é usada. Esse método é responsável por criar e retornar uma instância de uma implementação de <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe.  
   
     > [!IMPORTANT]
     >  É importante observar que o <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> método é substituído para criar Gerenciador de token de segurança personalizado. O Gerenciador de token de segurança, é derivada de <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, deve retornar um provedor de token de segurança personalizada, derivado de <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, para criar o token de segurança. Se você não seguir esse padrão para a criação de tokens de segurança, seu aplicativo pode funcionar incorretamente quando <xref:System.ServiceModel.ChannelFactory> objetos são armazenados em cache (que é o comportamento padrão de proxies de cliente do WCF), possivelmente resultando em um ataque de elevação de privilégio. O objeto de credencial personalizada é armazenado em cache como parte do <xref:System.ServiceModel.ChannelFactory>. No entanto, personalizado <xref:System.IdentityModel.Selectors.SecurityTokenManager> é criado em cada invocação, o que reduz a ameaça de segurança como a lógica de criação de token é colocada no <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
@@ -89,7 +89,7 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- O procedimento anterior mostra como usar as credenciais do cliente do código do aplicativo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] credenciais também podem ser configuradas usando o arquivo de configuração do aplicativo. Usando a configuração de aplicativo geralmente é preferível para codificar porque ele permite a modificação de parâmetros do aplicativo sem precisar modificar a fonte, recompilação e reimplantação.  
+ O procedimento anterior mostra como usar as credenciais do cliente do código do aplicativo. As credenciais do WCF também podem ser configuradas usando o arquivo de configuração do aplicativo. Usando a configuração de aplicativo geralmente é preferível para codificar porque ele permite a modificação de parâmetros do aplicativo sem precisar modificar a fonte, recompilação e reimplantação.  
   
  O procedimento a seguir descreve como oferecer suporte à configuração de credenciais personalizadas.  
   
@@ -108,7 +108,7 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- Uma vez que a classe do manipulador de configuração, ele pode ser integrado a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] framework configuration. Isso permite que as credenciais de cliente personalizadas a serem usados em elementos de comportamento de ponto de extremidade do cliente, conforme mostrado no próximo procedimento.  
+ Uma vez que a classe do manipulador de configuração, ele pode ser integrado na estrutura de configuração do WCF. Isso permite que as credenciais de cliente personalizadas a serem usados em elementos de comportamento de ponto de extremidade do cliente, conforme mostrado no próximo procedimento.  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Para registrar e usar um manipulador de configuração de credenciais de cliente personalizado na configuração do aplicativo  
   
@@ -146,7 +146,7 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
   
 2.  Opcional. Adicione novas propriedades para fornecer APIs para novos valores de credencial que estão sendo adicionados. Se você não adicionar novos valores de credencial, ignore esta etapa. O exemplo a seguir adiciona um `AdditionalCertificate` propriedade.  
   
-3.  Substituir o método <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>. Esse método é chamado automaticamente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura quando a credencial do cliente personalizado é usada. O método é responsável por criar e retornar uma instância de uma implementação de <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe (descrito no próximo procedimento).  
+3.  Substituir o método <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>. Esse método é chamado automaticamente pela infraestrutura do WCF quando a credencial do cliente personalizado é usada. O método é responsável por criar e retornar uma instância de uma implementação de <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe (descrito no próximo procedimento).  
   
 4.  Opcional. Substituir o método <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A>. Isso é necessário apenas se adicionar novas propriedades ou campos internos para a implementação de credenciais de cliente personalizadas.  
   

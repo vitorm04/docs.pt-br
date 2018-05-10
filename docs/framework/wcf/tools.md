@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Ferramentas do Windows Communication Foundation
-Ferramentas do Microsoft Windows Communication Foundation (WCF) foram projetadas para tornar mais fácil para você criar, implantar e gerenciar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos. Esta seção contém informações detalhadas sobre as ferramentas. Observe que as ferramentas não são suportadas.  
+Ferramentas do Microsoft Windows Communication Foundation (WCF) são projetadas para tornar mais fácil para você criar, implantar e gerenciar aplicativos WCF. Esta seção contém informações detalhadas sobre as ferramentas. Observe que as ferramentas não são suportadas.  
   
  Você pode executar todas as ferramentas da linha de comando.  
   
@@ -29,7 +29,7 @@ Ferramentas do Microsoft Windows Communication Foundation (WCF) foram projetadas
 |[Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Define configurações de suporte básico do WS-AtomicTransaction usando uma ferramenta de linha de comando.|  
 |[Snap-in do MMC de configuração de WS-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Configura definições de suporte de WS-AtomicTransaction básicas usando um snap-in do MMC.|  
 |[Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Registra um serviço de fluxo de trabalho do Windows.|  
-|[Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Hosts [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços contidos nos arquivos de bibliotecas (*. dll)|  
+|[Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Serviços do WCF de hosts contidos em bibliotecas de arquivos (*. dll)|  
 |[Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Uma ferramenta de interface gráfica do usuário que permite que os parâmetros de entrada de tipos arbitrários, envio de entrada para o serviço e o modo de exibição envia a resposta do serviço.|  
 |[Ferramenta de primeiro contrato](../../../docs/framework/wcf/contract-first-tool.md)|Tarefa que cria classes de código de contratos de dados XSD de compilação de um Visual Studio.|  
   

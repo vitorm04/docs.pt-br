@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Como criar um cliente do Windows Communication Foundation
 Este é o quarto de seis tarefas necessárias para criar um aplicativo do Windows Communication Foundation (WCF). Para obter uma visão geral de todos os seis das tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.  
   
- Este tópico descreve como recuperar metadados de um serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e usá-los para criar um proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que possa acessar o serviço. Essa tarefa é concluída usando a funcionalidade Adicionar Referência de Serviço fornecida pelo Visual Studio. Essa ferramenta obtém os metadados do ponto de extremidade de MEX do serviço e gera um arquivo de código-fonte gerenciado para um proxy de cliente na linguagem escolhida (por padrão, C#). Além de criar o proxy de cliente, a ferramenta também cria ou atualiza o arquivo de configuração do cliente, o que permite que o aplicativo cliente se conecte ao serviço em um de seus pontos de extremidade.  
+ Este tópico descreve como recuperar metadados de um serviço WCF e usá-lo para criar um proxy do WCF que pode acessar o serviço. Essa tarefa é concluída usando a funcionalidade Adicionar Referência de Serviço fornecida pelo Visual Studio. Essa ferramenta obtém os metadados do ponto de extremidade de MEX do serviço e gera um arquivo de código-fonte gerenciado para um proxy de cliente na linguagem escolhida (por padrão, C#). Além de criar o proxy de cliente, a ferramenta também cria ou atualiza o arquivo de configuração do cliente, o que permite que o aplicativo cliente se conecte ao serviço em um de seus pontos de extremidade.  
   
 > [!NOTE]
 >  Você também pode usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ferramenta para gerar a classe proxy e a configuração em vez de usar Adicionar referência de serviço dentro do Visual Studio.  
   
 > [!WARNING]
->  Ao chamar um serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de um projeto de biblioteca de classes no [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] você pode usar o recurso de Adicionar Referência de Serviço para gerar automaticamente um proxy e um arquivo de configuração associado.  O arquivo de configuração não será usado pelo projeto de biblioteca de classes. Você precisará adicionar as configurações no arquivo de configuração gerado para o arquivo app.config do executável que chamará a biblioteca de classes.  
+>  Ao chamar um serviço WCF de um projeto de biblioteca de classe no [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] você pode usar o recurso Adicionar referência de serviço para gerar automaticamente um proxy e um arquivo de configuração associado.  O arquivo de configuração não será usado pelo projeto de biblioteca de classes. Você precisará adicionar as configurações no arquivo de configuração gerado para o arquivo app.config do executável que chamará a biblioteca de classes.  
   
  O aplicativo cliente usa a classe proxy gerada para se comunicar com o serviço. Este procedimento é descrito em [como: usar um cliente](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

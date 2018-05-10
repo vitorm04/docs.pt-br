@@ -2,11 +2,11 @@
 title: Frente e verso durável
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Frente e verso durável
 Este exemplo demonstra como instalar e configurar o exchange mensagem duplex durável usando as atividades de mensagens no Windows Workflow Foundation (WF). Uma troca frente e verso durável de mensagem é uma troca bidirecional de mensagem que ocorra um longo período de tempo. O tempo de vida de troca de mensagem pode ser maior que o tempo de vida do canal de comunicação e o tempo de vida de memória das instâncias de serviço.  
@@ -41,7 +41,7 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
 >  A associação usada por este exemplo não é seguro. Para implantar seu aplicativo você deve configurar a associação com base nos requisitos de segurança do seu aplicativo.  
   
 > [!NOTE]
->  Filas usadas neste exemplo não são transacionais. Para obter um exemplo que mostra como configurar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando filas de transação de trocas de mensagens, consulte o [ativação MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) exemplo.  
+>  Filas usadas neste exemplo não são transacionais. Para obter um exemplo que mostra como configurar o uso de filas de transação trocas de mensagens do WCF, consulte o [ativação MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) exemplo.  
   
  A mensagem enviada por Service1.xamlx a Service2.xamlx é enviada usando um ponto final do cliente configurado com o endereço de Service2.xamlx e associação personalizado definido anteriormente. O retorno de chamada de Service2.xamlx a Service1.xamlx é enviado usando um ponto final do cliente sem o endereço explicitamente configurado como o endereço é tirado de contexto de retorno de chamada enviado por Service1.xamlx. O exemplo de código a seguir define os pontos de extremidade de cliente.  
   

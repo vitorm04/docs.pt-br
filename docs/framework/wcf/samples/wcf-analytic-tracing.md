@@ -2,21 +2,21 @@
 title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
-Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava Windows Communication Foundation (WCF) para o ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos analíticos destinam-se para tornar mais fácil obter visibilidade em seus serviços sem pagar uma penalidade de desempenho alto. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  
+Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava Windows Communication Foundation (WCF) para o ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos analíticos destinam-se para tornar mais fácil obter visibilidade em seus serviços sem pagar uma penalidade de desempenho alto. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram com os serviços WCF.  
   
  Para obter mais informações sobre o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Para saber mais sobre o rastreamento de eventos do Windows, consulte [melhorar a depuração e ajuste de desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Descartando EventProvider  
- Este exemplo usa o <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> de classe que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço, é provável que você pode usar o <xref:System.Diagnostics.Eventing.EventProvider>de recursos para o tempo de vida do serviço. Por esse motivo e para facilitar a leitura, este exemplo nunca descarta o encapsulado <xref:System.Diagnostics.Eventing.EventProvider>. Se por algum motivo, o serviço tem diferentes requisitos de rastreamento e você devem descartar este recurso, você deve modificar esse exemplo de acordo com as práticas recomendadas para o descarte de recursos não gerenciados. Para obter mais informações sobre como descartar os recursos não gerenciados, consulte [implementar um método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ Este exemplo usa o <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> de classe que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para um serviço WCF, é provável que você pode usar o <xref:System.Diagnostics.Eventing.EventProvider>de recursos para o tempo de vida do serviço. Por esse motivo e para facilitar a leitura, este exemplo nunca descarta o encapsulado <xref:System.Diagnostics.Eventing.EventProvider>. Se por algum motivo, o serviço tem diferentes requisitos de rastreamento e você devem descartar este recurso, você deve modificar esse exemplo de acordo com as práticas recomendadas para o descarte de recursos não gerenciados. Para obter mais informações sobre como descartar os recursos não gerenciados, consulte [implementar um método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Auto-hospedagem vs. Hospedagem na Web  
  Para serviços Web hospedados, rastreamentos analíticos do WCF fornecem um campo chamado "HostReference", que é usado para identificar o serviço que está emitindo rastreamentos. Os rastreamentos do usuário extensíveis podem participar neste modelo e demonstra práticas recomendadas para fazer isso. O formato de um host da Web referência quando o pipe '&#124;' caractere será exibida na resultante cadeia de caracteres pode ser qualquer um dos seguintes:  
@@ -29,10 +29,10 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
      \<Nome do site >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- Para serviços de hospedagem interna, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]do rastreamentos analíticos não preenchem o campo "HostReference". O `WCFUserEventProvider` classe neste exemplo se comporta de forma consistente quando usado por um serviço auto-hospedado.  
+ Para serviços de hospedagem interna, os rastreamentos analíticos do WCF não preencher o campo de "HostReference". O `WCFUserEventProvider` classe neste exemplo se comporta de forma consistente quando usado por um serviço auto-hospedado.  
   
 ## <a name="custom-event-details"></a>Detalhes do evento personalizado  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]do manifesto do provedor de eventos ETW define três eventos que são projetados para ser emitida por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autores de dentro do código de serviço do serviço. A tabela a seguir mostra uma divisão dos três eventos.  
+ Manifesto do provedor de eventos ETW do WCF define três eventos que são projetados para ser emitida por autores de serviço do WCF de dentro do código de serviço. A tabela a seguir mostra uma divisão dos três eventos.  
   
 |evento|Descrição|ID do evento|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
      No navegador da Web, clique em **Calculator.svc**. O URI do documento WSDL para o serviço deve aparecer no navegador. Copie esse URI.  
   
-4.  Execute o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe).  
+4.  Execute o cliente de teste do WCF (WcfTestClient.exe).  
   
-     O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe) está localizado no \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] instalar Dir > \Common7\IDE\ WcfTestClient.exe (padrão [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] dir de instalação é C:\Program Files\Microsoft Visual Studio 10.0).  
+     O cliente de teste do WCF (WcfTestClient.exe) está localizado no \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] instalar Dir > \Common7\IDE\ WcfTestClient.exe (padrão [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] dir de instalação é C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  Dentro de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de teste, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.  
+5.  No cliente de teste de WCF, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.  
   
      Adicione o endereço do ponto de extremidade na caixa de entrada.  
   
@@ -64,7 +64,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 7.  Abra o aplicativo visualizador de eventos.  
   
-     Antes de chamar o serviço, iniciar o Visualizador de eventos e certifique-se de que o log de eventos está escutando para rastreamento de eventos emitidas a partir de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+     Antes de chamar o serviço, inicie o Visualizador de eventos e certifique-se de que o log de eventos está escutando para rastreamento de eventos emitidos do serviço WCF.  
   
 8.  Do **iniciar** menu, selecione **ferramentas administrativas**e, em seguida, **Visualizador de eventos**. Habilitar o **analítico** e **depurar** logs.  
   

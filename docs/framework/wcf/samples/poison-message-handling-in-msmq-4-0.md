@@ -2,11 +2,11 @@
 title: Tratamento de mensagens suspeitas no MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Tratamento de mensagens suspeitas no MSMQ 4.0
 Este exemplo demonstra como executar manipulação em um serviço de mensagens suspeitas. Este exemplo se baseia o [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Processamento de mensagens da fila de mensagens suspeitas  
  O serviço de mensagens suspeitas lê mensagens da fila de mensagens suspeitas final e processá-las.  
   
- Mensagens na fila de mensagens suspeitas são mensagens que são endereçadas para o serviço que está processando a mensagem, o que pode ser diferente do ponto de extremidade de serviço de mensagens suspeitas. Portanto, quando o serviço de mensagens suspeitas lê mensagens da fila, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] camada do canal localiza a incompatibilidade nos pontos de extremidade e não enviar a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas está sendo recebida pelo serviço de mensagens suspeitas. Para continuar a receber a mensagem, mesmo se a mensagem é resolvida para um ponto de extremidade diferente, devemos adicionar um `ServiceBehavior` para endereços de filtro em que o critério de correspondência é para corresponder a qualquer ponto de extremidade de serviço a mensagem está endereçada. Isso é necessário para processar mensagens ler da fila de mensagens suspeitas.  
+ Mensagens na fila de mensagens suspeitas são mensagens que são endereçadas para o serviço que está processando a mensagem, o que pode ser diferente do ponto de extremidade de serviço de mensagens suspeitas. Portanto, quando o serviço de mensagens suspeitas lê mensagens da fila, a camada de canal WCF localiza a incompatibilidade nos pontos de extremidade e não enviar a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas está sendo recebida pelo serviço de mensagens suspeitas. Para continuar a receber a mensagem, mesmo se a mensagem é resolvida para um ponto de extremidade diferente, devemos adicionar um `ServiceBehavior` para endereços de filtro em que o critério de correspondência é para corresponder a qualquer ponto de extremidade de serviço a mensagem está endereçada. Isso é necessário para processar mensagens ler da fila de mensagens suspeitas.  
   
  A implementação do serviço de mensagens suspeitas em si é muito semelhante para a implementação do serviço. Ele implementa o contrato e processa os pedidos. O exemplo de código é o seguinte.  
 

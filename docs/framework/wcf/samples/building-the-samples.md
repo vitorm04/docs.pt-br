@@ -2,17 +2,17 @@
 title: 'Compilando os exemplos do Windows Communication Foundation '
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 637b862d81ce4eeddc56acb24a527e6937f33f64
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
   
 > [!NOTE]
->  Antes de criar ou executar qualquer uma da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplos, verifique se você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  Antes de criar ou executar qualquer um dos exemplos de WCF, verifique se você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 ### <a name="to-build-the-sample-using-a-command-prompt"></a>Para criar o exemplo usando um prompt de comando  
   

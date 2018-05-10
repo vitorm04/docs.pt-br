@@ -2,17 +2,17 @@
 title: Modelo de configuração hierárquica
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Modelo de configuração hierárquica
 Este exemplo demonstra como implementar uma hierarquia de arquivos de configuração para serviços. Ele também mostra como as associações, comportamentos de serviço e comportamentos de ponto de extremidade são herdados de níveis mais altos na hierarquia.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Um dos recursos desenvolvidos para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] é o aperfeiçoamento no modelo de configuração hierárquica. Um exemplo de um modelo de configuração hierárquica seria definida por Machine. config -> Rootweb.config -> Web. config. Em [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], essas associações e comportamentos que são definidos em níveis superiores na hierarquia de configuração são adicionados aos serviços sem nenhuma configuração explícita. Este exemplo mostra como é possível simplificar sua configuração de serviço confiando em elementos de configuração definidos no computador ou no nível do aplicativo.  
+ Um dos recursos desenvolvidos para o WCF no [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] é o aperfeiçoamento no modelo de configuração hierárquica. Um exemplo de um modelo de configuração hierárquica seria definida por Machine. config -> Rootweb.config -> Web. config. Em [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], essas associações e comportamentos que são definidos em níveis superiores na hierarquia de configuração são adicionados aos serviços sem nenhuma configuração explícita. Este exemplo mostra como é possível simplificar sua configuração de serviço confiando em elementos de configuração definidos no computador ou no nível do aplicativo.  
   
  Este exemplo consiste em nove serviços, definidos em três níveis de hierarquia. `Service1` está na raiz. `Service2` e `Service3` herdam os elementos de padrão de `Service1`. `Service4`, `Service5`, `Service6` e `Service7` são definidos em um terceiro nível da hierarquia de herança os elementos de padrão de `Service3`. Por fim `Service10` e `Service11` estão em um quarto nível da hierarquia.  
   

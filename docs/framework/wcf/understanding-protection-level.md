@@ -1,14 +1,6 @@
 ---
 title: Noções básicas de nível de proteção
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>Noções básicas de nível de proteção
-O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> classes. A propriedade controla como uma parte (ou inteiro) de uma mensagem é protegido. Este tópico explica o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] recurso e como ele funciona.  
+O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> classes. A propriedade controla como uma parte (ou inteiro) de uma mensagem é protegido. Este tópico explica o recurso do Windows Communication Foundation (WCF) e como ele funciona.  
   
  Para obter instruções sobre como definir o nível de proteção, consulte [como: definir a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
@@ -53,7 +39,7 @@ O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como
   
 -   O `ProtectionLevel` é uma maneira para que o desenvolvedor definir o *nível mínimo* que deve estar de acordo com uma associação. Quando um serviço é implantado, a associação real especificada na configuração pode não dar suporte ou o nível mínimo. Por exemplo, por padrão, o <xref:System.ServiceModel.BasicHttpBinding> classe não oferece segurança (embora ela pode ser habilitada). Portanto, o uso com um contrato com qualquer configuração diferente de `None` fará com que uma exceção seja lançada.  
   
--   Se o serviço exigir que o mínimo `ProtectionLevel` para todas as mensagens é `Sign`, um cliente (talvez criado por uma não -[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tecnologia) pode criptografar e assinar todas as mensagens (que é maior que o mínimo necessário). Nesse caso, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não gerará uma exceção porque o cliente fez mais do que o mínimo. No entanto, observe que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos (serviços ou clientes) não excesso protege uma parte da mensagem se possível, mas estejam em conformidade com o nível mínimo. Observe também que, ao usar `Transport` como o modo de segurança, o transporte excesso pode o proteger o fluxo de mensagem porque ele é inerentemente não é possível proteger em um nível mais granular.  
+-   Se o serviço exigir que o mínimo `ProtectionLevel` para todas as mensagens é `Sign`, um cliente (talvez criado por uma tecnologia de WCF não) pode criptografar e assinar todas as mensagens (que é mais do que o mínimo necessário). Nesse caso, o WCF não lançará uma exceção porque o cliente fez mais do que o mínimo. No entanto, observe que os aplicativos do WCF (serviços ou clientes) não excesso protege uma parte da mensagem se possível mas estejam em conformidade com o nível mínimo. Observe também que, ao usar `Transport` como o modo de segurança, o transporte excesso pode o proteger o fluxo de mensagem porque ele é inerentemente não é possível proteger em um nível mais granular.  
   
 -   Se você definir o `ProtectionLevel` explicitamente como `Sign` ou `EncryptAndSign`, em seguida, você deve usar uma associação com segurança habilitada ou uma exceção será lançada.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista alguns problemas conhecidos que os clientes têm executado até ao desenvolver clientes do WCF e serviços. Se o problema que você está executando em não estiver nesta lista, recomendamos que você configurar o rastreamento para o serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador de arquivo de rastreamento e obter informações detalhadas sobre exceções que pode estar ocorrendo no serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Parece que unidirecional e operações de solicitação-resposta retornam aproximadamente a mesma velocidade quando a resposta não contém dados. O que está acontecendo?  
- Especifica que uma operação é uma maneira significa apenas que o contrato da operação aceita uma mensagem de entrada e não retorna uma mensagem de saída. Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], todas as invocações do cliente retornam quando os dados de saída foram gravados para a transmissão ou uma exceção será lançada. Operações unidirecionais funcionam da mesma forma, e eles podem gerar se o serviço não pode ser localizado ou bloquear se o serviço não está preparado para aceitar os dados da rede. Normalmente em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], isso resulta em unidirecionais chamadas de retorno ao cliente mais rapidamente do que a solicitação-resposta; mas qualquer condição que reduz o envio de dados de saída pela rede diminui operações unidirecionais, bem como as operações de solicitação-resposta. Para obter mais informações, consulte [unidirecional serviços](../../../docs/framework/wcf/feature-details/one-way-services.md) e [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Especifica que uma operação é uma maneira significa apenas que o contrato da operação aceita uma mensagem de entrada e não retorna uma mensagem de saída. No WCF, todas as invocações do cliente retornam quando os dados de saída foram gravados para a transmissão ou uma exceção será lançada. Operações unidirecionais funcionam da mesma forma, e eles podem gerar se o serviço não pode ser localizado ou bloquear se o serviço não está preparado para aceitar os dados da rede. Normalmente no WCF, isso resulta em chamadas unidirecionais retornando para o cliente mais rapidamente do que a solicitação-resposta; mas qualquer condição que reduz o envio de dados de saída pela rede diminui operações unidirecionais, bem como as operações de solicitação-resposta. Para obter mais informações, consulte [unidirecional serviços](../../../docs/framework/wcf/feature-details/one-way-services.md) e [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Estou usando um certificado x. 509 com o serviço e obter um System.Security.Cryptography.CryptographicException. O que está acontecendo?  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Estou usando uma das Minhas ferramentas de rastreamento e obter um EndpointNotFoundException. O que está acontecendo?  
- Se você estiver usando uma ferramenta de rastreamento que não seja o fornecida pelo sistema [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mecanismo de rastreamento e você receberá um <xref:System.ServiceModel.EndpointNotFoundException> que indica que houve uma incompatibilidade de filtro de endereço, você precisa usar o <xref:System.ServiceModel.Description.ClientViaBehavior> classe para direcionar as mensagens de rastreamento utilitário e ter o utilitário redirecionar essas mensagens para o endereço do serviço. O <xref:System.ServiceModel.Description.ClientViaBehavior> classe altera o `Via` cabeçalho de endereçamento para especificar o endereço de rede próximo separadamente do receptor ultimate, indicado pelo `To` cabeçalho de endereçamento. Ao fazer isso, no entanto, não altere o endereço de ponto de extremidade, que é usado para estabelecer o `To` valor.  
+ Se você estiver usando uma ferramenta de rastreamento não é o mecanismo de rastreamento fornecidas pelo sistema do WCF e receber um <xref:System.ServiceModel.EndpointNotFoundException> que indica que houve uma incompatibilidade de filtro de endereço, você precisa usar o <xref:System.ServiceModel.Description.ClientViaBehavior> classe para direcionar as mensagens para o utilitário de rastreamento e ter o utilitário redirecionar essas mensagens para o endereço do serviço. O <xref:System.ServiceModel.Description.ClientViaBehavior> classe altera o `Via` cabeçalho de endereçamento para especificar o endereço de rede próximo separadamente do receptor ultimate, indicado pelo `To` cabeçalho de endereçamento. Ao fazer isso, no entanto, não altere o endereço de ponto de extremidade, que é usado para estabelecer o `To` valor.  
   
  O exemplo de código a seguir mostra um cliente de exemplo de arquivo de configuração.  
   

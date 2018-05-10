@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>Objetos extensíveis
 O padrão de objeto extensível é usado para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar o novo estado para um objeto. Extensões, anexadas a um dos objetos extensíveis, habilitar comportamentos em diferentes estágios de processamento para acessar o estado compartilhado e anexado a um objeto extensível comum que eles possam acessar a funcionalidade.  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> – Essa classe representa as informações de operação que coleta o tempo de execução para cada operação.  Isso inclui informações como os cabeçalhos de mensagem de entrada, as propriedades de mensagem de entrada, a identidade de segurança de entrada e outras informações.  Extensões dessa classe podem estender o comportamento de <xref:System.ServiceModel.OperationContext> ou armazenar o estado de cada operação.  
   
--   <xref:System.ServiceModel.IContextChannel> – Essa interface permite a inspeção de cada estado para os canais e proxies compilados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução.  Extensões dessa classe podem estender o comportamento de <xref:System.ServiceModel.IClientChannel> ou pode ser usado para armazenar o estado de cada canal.  
+-   <xref:System.ServiceModel.IContextChannel> – Essa interface permite a inspeção de cada estado para os canais e proxies criados pelo tempo de execução WCF.  Extensões dessa classe podem estender o comportamento de <xref:System.ServiceModel.IClientChannel> ou pode ser usado para armazenar o estado de cada canal.  
   
 -  
   

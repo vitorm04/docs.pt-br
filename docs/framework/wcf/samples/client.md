@@ -2,21 +2,21 @@
 title: Cliente
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 4c44ed4be9a3598ea79355737db678dd7a80a56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd172aefa640853c7ace1d9d7ad3fada73714642
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client"></a>Cliente
 Esta seção contém exemplos que demonstram os aplicativos de cliente do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interoperabilidade do cliente](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- Demonstra a interoperabilidade entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e outras tecnologias.  
+ Demonstra a interoperabilidade entre o WCF e outras tecnologias.  
   
  [Cabeçalhos de endereço](../../../../docs/framework/wcf/samples/address-headers.md)  
- Demonstra como os clientes podem passar parâmetros de referência para um serviço usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Demonstra como os clientes podem passar parâmetros de referência para um serviço usando o WCF.  
   
  [Fábrica de canais](../../../../docs/framework/wcf/samples/channel-factory.md)  
  Demonstra como um aplicativo cliente pode criar um canal com o <xref:System.ServiceModel.ChannelFactory> classe em vez de um cliente gerada.  

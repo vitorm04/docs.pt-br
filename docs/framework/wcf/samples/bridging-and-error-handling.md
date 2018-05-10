@@ -2,14 +2,14 @@
 title: Tratamento de erro e ponte
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>Tratamento de erro e ponte
-Este exemplo demonstra como o serviço de roteamento do Windows Communication Foundation (WCF) é usado para a ponte de comunicação entre um cliente e um serviço que usam ligações diferentes. Este exemplo também mostra como usar um serviço de backup para cenários de failover. O serviço de roteamento é um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] componente que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta o padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculadora de exemplo para se comunicar usando o serviço de roteamento.  
+Este exemplo demonstra como o serviço de roteamento do Windows Communication Foundation (WCF) é usado para a ponte de comunicação entre um cliente e um serviço que usam ligações diferentes. Este exemplo também mostra como usar um serviço de backup para cenários de failover. O serviço de roteamento é um componente WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta a amostragem padrão de Calculadora de WCF para se comunicar usando o serviço de roteamento.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

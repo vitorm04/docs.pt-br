@@ -2,14 +2,14 @@
 title: Estendendo a hospedagem com ServiceHostFactory
 ms.date: 03/30/2017
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e553fe161ffc5b50850d916cf1cef6b38dd5c1a9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Estendendo a hospedagem com ServiceHostFactory
-O padrão <xref:System.ServiceModel.ServiceHost> API para hospedar os serviços no Windows Communication Foundation (WCF) é um ponto de extensibilidade no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitetura. Os usuários podem derivar suas próprias classes de host do <xref:System.ServiceModel.ServiceHost>, geralmente para substituir <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> usar <xref:System.ServiceModel.Description.ServiceDescription> para adicionar pontos de extremidade padrão imperativa ou modificar comportamentos, antes de abrir o serviço.  
+O padrão <xref:System.ServiceModel.ServiceHost> API para hospedar os serviços no Windows Communication Foundation (WCF) é um ponto de extensibilidade da arquitetura do WCF. Os usuários podem derivar suas próprias classes de host do <xref:System.ServiceModel.ServiceHost>, geralmente para substituir <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> usar <xref:System.ServiceModel.Description.ServiceDescription> para adicionar pontos de extremidade padrão imperativa ou modificar comportamentos, antes de abrir o serviço.  
   
  No ambiente de hospedagem interna, você não precisa criar um personalizado <xref:System.ServiceModel.ServiceHost> porque você escrever o código que instancia o host e, em seguida, chamar <xref:System.ServiceModel.ICommunicationObject.Open> nele após você instanciá-la. Entre essas duas etapas, você pode fazer tudo o que você quiser. Você pode, por exemplo, adicionar um novo <xref:System.ServiceModel.Description.IServiceBehavior>:  
   
@@ -57,7 +57,7 @@ public static void Main()
   
  Não é imediatamente óbvia como usar esse personalizado <xref:System.ServiceModel.ServiceHost> de dentro de serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS). Nesses ambientes são diferentes do ambiente de hospedagem interna, como o ambiente de hospedagem é a instanciação de um a <xref:System.ServiceModel.ServiceHost> em nome do aplicativo. A infraestrutura de hospedagem do IIS e WAS não sabe nada sobre seu personalizado <xref:System.ServiceModel.ServiceHost> derivado.  
   
- O <xref:System.ServiceModel.Activation.ServiceHostFactory> foi projetado para resolver esse problema de acesso personalizados <xref:System.ServiceModel.ServiceHost> de dentro do IIS ou do WAS. Porque o host de um personalizado que é derivado de <xref:System.ServiceModel.ServiceHost> é configurado dinamicamente e potencialmente de vários tipos, o ambiente de hospedagem nunca instancia-o diretamente. Em vez disso, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa um padrão de fábrica para fornecer uma camada de indireção entre o ambiente de hospedagem e o tipo concreto do serviço. A menos que você informe caso contrário, ele usa uma implementação padrão de <xref:System.ServiceModel.Activation.ServiceHostFactory> que retorna uma instância de <xref:System.ServiceModel.ServiceHost>. Mas você também pode fornecer sua própria fábrica que retorna seu host derivada, especificando o nome de tipo CLR da sua implementação de fábrica no @ServiceHost diretiva.  
+ O <xref:System.ServiceModel.Activation.ServiceHostFactory> foi projetado para resolver esse problema de acesso personalizados <xref:System.ServiceModel.ServiceHost> de dentro do IIS ou do WAS. Porque o host de um personalizado que é derivado de <xref:System.ServiceModel.ServiceHost> é configurado dinamicamente e potencialmente de vários tipos, o ambiente de hospedagem nunca instancia-o diretamente. Em vez disso, o WCF usa um padrão de fábrica para fornecer uma camada de indireção entre o ambiente de hospedagem e o tipo concreto do serviço. A menos que você informe caso contrário, ele usa uma implementação padrão de <xref:System.ServiceModel.Activation.ServiceHostFactory> que retorna uma instância de <xref:System.ServiceModel.ServiceHost>. Mas você também pode fornecer sua própria fábrica que retorna seu host derivada, especificando o nome de tipo CLR da sua implementação de fábrica no @ServiceHost diretiva.  
   
  A intenção é que para casos básicos, implementar sua própria fábrica deve ser um exercício direto. Por exemplo, aqui está um personalizado <xref:System.ServiceModel.Activation.ServiceHostFactory> que retorna um derivado <xref:System.ServiceModel.ServiceHost>:  
   
@@ -79,4 +79,4 @@ public class DerivedFactory : ServiceHostFactory
   
  Embora não haja nenhum limite técnica fazendo o que você deseja o <xref:System.ServiceModel.ServiceHost> retornar de <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, sugerimos que você mantenha suas implementações de fábrica mais simples possível. Se você tiver muita lógica personalizada, é melhor colocar essa lógica dentro de host para você, em vez de dentro de fábrica para que ele possa ser reutilizável.  
   
- Há uma camada a mais para a API de hospedagem que deve ser mencionada aqui. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também tem <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, do qual <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.Activation.ServiceHostFactory> respectivamente derivar. Aqueles existem em cenários mais avançados em que você deve alternar grande parte do sistema de metadados com suas próprias criações personalizadas.
+ Há uma camada a mais para a API de hospedagem que deve ser mencionada aqui. O WCF também possui <xref:System.ServiceModel.ServiceHostBase> e <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, do qual <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.Activation.ServiceHostFactory> respectivamente derivar. Aqueles existem em cenários mais avançados em que você deve alternar grande parte do sistema de metadados com suas próprias criações personalizadas.

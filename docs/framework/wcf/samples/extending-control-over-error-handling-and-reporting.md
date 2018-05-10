@@ -1,27 +1,15 @@
 ---
-title: "Controle estendido através de relatórios e tratamento de erro"
-ms.custom: 
+title: Controle estendido através de relatórios e tratamento de erro
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ab2e105c9055760bbeaeef5e56a8cb18c538306
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 83df5ffb790ee69ab290ad703c46b421cd6a02e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Controle estendido através de relatórios e tratamento de erro
-Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de serviço usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) com um código adicional adicionado ao serviço para manipular erros. O cliente força várias condições de erro. O serviço intercepta os erros e registra em log em um arquivo.  
+Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um serviço do Windows Communication Foundation (WCF) usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) com um código adicional adicionado ao serviço para manipular erros. O cliente força várias condições de erro. O serviço intercepta os erros e registra em log em um arquivo.  
   
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
@@ -30,7 +18,7 @@ Este exemplo demonstra como estender o controle sobre o tratamento de erros e o 
   
  Neste exemplo, o `CalculatorErrorHandler` tipo implementa o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. No  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>método, o `CalculatorErrorHandler` grava um log do erro para um arquivo de texto txt em c:\Logs. Observe que o exemplo faz a falha e não suprime, permitindo que ele ser relatados de volta ao cliente.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> método, o `CalculatorErrorHandler` grava um log do erro para um arquivo de texto txt em c:\Logs. Observe que o exemplo faz a falha e não suprime, permitindo que ele ser relatados de volta ao cliente.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -165,7 +153,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   

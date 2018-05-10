@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 653b22adb5ed53c9c3eb44db598ad5d1c50ff1a9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-dispatchers"></a>Estendendo distribuidores
 Distribuidores são responsáveis por recebendo mensagens de entrada fora dos canais subjacentes, convertendo-os em invocações do método no código do aplicativo e enviar os resultados de volta para o chamador. Extensões de distribuidores permitem que você modifique esse processamento.  Você pode implementar inspetores de mensagem ou parâmetro que inspecionar ou modifiquem o conteúdo de mensagens ou parâmetros.  Você pode alterar o modo como as mensagens são roteadas para operações ou fornecem algumas outras funcionalidades.  
@@ -16,7 +16,7 @@ Distribuidores são responsáveis por recebendo mensagens de entrada fora dos ca
  Este tópico descreve como usar o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation> aplicativo para modificar o comportamento de execução padrão de um distribuidor ou para interceptar ou modificar as mensagens, parâmetros ou de retorno de serviço de classes em um Windows Communication Foundation (WCF) valores antes ou após o envio ou recuperá-los de camada do canal. Para obter mais informações sobre o processamento de mensagem de tempo de execução do cliente equivalente, consulte [estendendo clientes](../../../../docs/framework/wcf/extending/extending-clients.md). Para compreender a função que <xref:System.ServiceModel.IExtensibleObject%601> tipos reproduzir ao acessar o estado compartilhado entre vários objetos de personalização de tempo de execução, consulte [objetos extensíveis](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Distribuidores  
- A camada de modelo de serviço executará a conversão entre o modelo de programação do desenvolvedor e a troca de mensagens subjacente, comumente chamado de camada do canal. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os distribuidores de canal e o ponto de extremidade (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, respectivamente) são os componentes de serviços responsáveis por aceitar novos canais, recebendo mensagens, despacho de operação e invocação e processamento de resposta. Objetos do distribuidor são objetos de destinatário, mas implementações de contrato de retorno de chamada no serviços de duplex também expõem seus objetos de dispatcher para inspeção, modificação ou extensão.  
+ A camada de modelo de serviço executará a conversão entre o modelo de programação do desenvolvedor e a troca de mensagens subjacente, comumente chamado de camada do canal. O canal WCF e distribuidores de ponto de extremidade (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, respectivamente) são os componentes de serviços responsáveis por aceitar novos canais, recebendo mensagens, despacho de operação e invocação e processamento de resposta. Objetos do distribuidor são objetos de destinatário, mas implementações de contrato de retorno de chamada no serviços de duplex também expõem seus objetos de dispatcher para inspeção, modificação ou extensão.  
   
  O dispatcher do canal (e complementar <xref:System.ServiceModel.Channels.IChannelListener>) recebe mensagens fora do canal subjacente e transmite as mensagens para seus distribuidores do respectivos do ponto de extremidade. O dispatcher de cada ponto de extremidade tem um <xref:System.ServiceModel.Dispatcher.DispatchRuntime> que encaminha mensagens ao apropriado <xref:System.ServiceModel.Dispatcher.DispatchOperation>, que é responsável por chamar o método que implementa a operação. Várias classes de extensão necessários e opcionais é invocado ao longo do caminho. Este tópico explica como essas partes se encaixam e como você pode modificar as propriedades e conecte seu próprio código para estender a funcionalidade de base.  
   
@@ -45,7 +45,7 @@ Distribuidores são responsáveis por recebendo mensagens de entrada fora dos ca
   
 -   Transformações de mensagem personalizada. Os usuários podem aplicar determinadas transformações para a mensagem no tempo de execução (por exemplo, para controle de versão). Isso pode ser feito, novamente, com as interfaces de interceptor de mensagem.  
   
--   Modelo de dados personalizados. Os usuários podem ter um modelo de serialização de dados não suportados por padrão em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (ou seja, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>e mensagens brutas). Isso pode ser feito por implementar as interfaces de formatador de mensagem. Para obter um exemplo, consulte [formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+-   Modelo de dados personalizados. Os usuários podem ter um modelo de serialização de dados não suportados por padrão no WCF (isto é, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>e mensagens brutas). Isso pode ser feito por implementar as interfaces de formatador de mensagem. Para obter um exemplo, consulte [formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
 -   Validação de parâmetro personalizado. Os usuários podem impor que parâmetros de tipo são válidos (em vez de XML). Isso pode ser feito usando as interfaces do Inspetor de parâmetro.  
   
@@ -60,9 +60,9 @@ Distribuidores são responsáveis por recebendo mensagens de entrada fora dos ca
 -   Comportamentos de autorização personalizada. Os usuários podem implementar o controle de acesso personalizadas estendendo as partes de tempo de execução de contrato ou de operação e adicionando as verificações de segurança com base em tokens presentes na mensagem. Isso pode ser feito usando o interceptor de mensagem ou interfaces de interceptador de parâmetro. Para obter exemplos, consulte [extensibilidade de segurança](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
-    >  Como alterar as propriedades de segurança tem o potencial de comprometer a segurança de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos, é altamente recomendável que você realizar modificações relacionadas à segurança com cuidado e teste cuidadosamente antes da implantação.  
+    >  Como alterar as propriedades de segurança tem o potencial para comprometer a segurança de aplicativos WCF, é altamente recomendável que você realizar modificações relacionadas à segurança com cuidado e teste cuidadosamente antes da implantação.  
   
--   Validadores de tempo de execução do WCF personalizado. Você pode instalar validadores personalizados que examinam os serviços, contratos e associações para impor as políticas de nível empresarial com relação ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos. (Por exemplo, consulte [como: bloqueio para pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+-   Validadores de tempo de execução do WCF personalizado. Você pode instalar validadores personalizados que examinam os serviços, contratos e associações para impor as políticas de nível corporativo em relação a aplicativos WCF. (Por exemplo, consulte [como: bloqueio para pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Usando a classe DispatchRuntime  
  Use o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> classe para modificar o comportamento padrão de um serviço ou um ponto de extremidade individual ou para inserir objetos que implementam modificações personalizadas para um ou ambos os seguintes processos de serviço (ou processos de cliente no caso de um cliente duplex):  

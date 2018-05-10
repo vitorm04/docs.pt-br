@@ -2,11 +2,11 @@
 title: Propagação
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>Propagação
 Este tópico descreve a propagação de atividade no modelo de rastreamento do Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ Este tópico descreve a propagação de atividade no modelo de rastreamento do W
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Propagação de atividade é uma funcionalidade configurável que faz com que [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] para adicionar um cabeçalho para as mensagens de saída, que inclui a ID de atividade no TLS. Incluindo isso em rastreamentos subsequentes no lado do servidor, podemos pode correlacionar atividades do cliente e servidor.  
+ Propagação de atividade é um recurso configurável que faz com que o WCF adicionar um cabeçalho para as mensagens de saída, que inclui a ID de atividade no TLS. Incluindo isso em rastreamentos subsequentes no lado do servidor, podemos pode correlacionar atividades do cliente e servidor.  
   
 ## <a name="propagation-definition"></a>Definição de propagação  
  GAId da atividade M é propagada para a atividade N se todas as seguintes condições se aplicarem.  

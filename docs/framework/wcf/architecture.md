@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitetura do Windows Communication Foundation
 O gráfico a seguir ilustra as camadas principais da arquitetura do Windows Communication Foundation (WCF).  
@@ -24,7 +24,7 @@ O gráfico a seguir ilustra as camadas principais da arquitetura do Windows Comm
  As políticas e associações estipulam as condições necessárias para se comunicar com um serviço.  Por exemplo, a associação (no mínimo) Especifique o transporte usado (por exemplo, HTTP ou TCP) e uma codificação. As políticas incluem requisitos de segurança e outras condições que devem ser atendidas para se comunicar com um serviço.  
   
 ### <a name="service-runtime"></a>Tempo de execução do serviço  
- A camada de serviço em tempo de execução contém os comportamentos que ocorrem apenas durante a operação real do serviço, ou seja, os comportamentos de tempo de execução do serviço. Limitação controla quantas mensagens são processadas, que podem ser variado se aumenta a demanda para o serviço para um limite predefinido. Um comportamento de erro Especifica o que acontece quando ocorre um erro interno no serviço, por exemplo, controlando quais informações são comunicadas ao cliente. (Muitas informações podem dar a um usuário mal-intencionado uma vantagem de um ataque de montagem.) Controla o comportamento de metadados como e se os metadados é disponibilizado para o mundo exterior. Comportamento da instância Especifica quantas instâncias do serviço podem ser executadas (por exemplo, um singleton especifica apenas uma instância para processar todas as mensagens). Comportamento de transação permite a reversão de operações realizadas se ocorrer uma falha. Comportamento de distribuição é o controle de como uma mensagem é processada pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infraestrutura.  
+ A camada de serviço em tempo de execução contém os comportamentos que ocorrem apenas durante a operação real do serviço, ou seja, os comportamentos de tempo de execução do serviço. Limitação controla quantas mensagens são processadas, que podem ser variado se aumenta a demanda para o serviço para um limite predefinido. Um comportamento de erro Especifica o que acontece quando ocorre um erro interno no serviço, por exemplo, controlando quais informações são comunicadas ao cliente. (Muitas informações podem dar a um usuário mal-intencionado uma vantagem de um ataque de montagem.) Controla o comportamento de metadados como e se os metadados é disponibilizado para o mundo exterior. Comportamento da instância Especifica quantas instâncias do serviço podem ser executadas (por exemplo, um singleton especifica apenas uma instância para processar todas as mensagens). Comportamento de transação permite a reversão de operações realizadas se ocorrer uma falha. Comportamento de distribuição é o controle de como uma mensagem é processada pela infraestrutura do WCF.  
   
  Extensibilidade permite personalização de processos de tempo de execução. Por exemplo, inspeção de mensagem é a facilidade de inspecionar as partes de uma mensagem e a filtragem de parâmetro permite que a predefinição ações que devem ocorrer com base em filtros atuando em cabeçalhos de mensagem.  
   
@@ -42,7 +42,7 @@ O gráfico a seguir ilustra as camadas principais da arquitetura do Windows Comm
 ### <a name="hosting-and-activation"></a>Ativação e hospedagem  
  Em sua forma final, um serviço é um programa. Como outros programas, um serviço deve ser executado em um executável. Isso é conhecido como um *auto-hospedado* serviço.  
   
- Serviços também podem ser *hospedado*, ou executar um executável gerenciado por um agente externo, como o IIS ou o serviço de ativação do Windows (WAS). Permite que o WAS [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos seja ativada automaticamente quando implantado em um computador executando o WAS. Os serviços também podem ser executados manualmente como executáveis (arquivos .exe). Um serviço também pode ser executado automaticamente como um serviço do Windows. Componentes COM+ também podem ser hospedados como [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços.  
+ Serviços também podem ser *hospedado*, ou executar um executável gerenciado por um agente externo, como o IIS ou o serviço de ativação do Windows (WAS). ERA permite que os aplicativos WCF seja ativada automaticamente quando implantado em um computador que está executando. Os serviços também podem ser executados manualmente como executáveis (arquivos .exe). Um serviço também pode ser executado automaticamente como um serviço do Windows. Componentes COM+ também podem ser hospedados como serviços WCF.  
   
 ## <a name="see-also"></a>Consulte também  
  [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

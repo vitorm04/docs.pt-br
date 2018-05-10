@@ -2,18 +2,18 @@
 title: Provedor de WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>Provedor de WMI
-Este exemplo demonstra como coletar dados dos serviços do Windows Communication Foundation (WCF) em tempo de execução usando o provedor do Windows Management Instrumentation (WMI) que é criado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
+Este exemplo demonstra como coletar dados dos serviços do Windows Communication Foundation (WCF) em tempo de execução usando o provedor do Windows Management Instrumentation (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
   
  O WMI é a implementação da Microsoft a Web-Based Enterprise Management (WBEM) padrão. Para obter mais informações sobre o SDK do WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). O WBEM é um padrão da indústria para como aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa um provedor WMI, um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
+ O WCF implementa um provedor WMI, um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. WCF expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
   
  O provedor WMI interno está ativado no arquivo de configuração do aplicativo. Isso é feito por meio de `wmiProviderEnabled` atributo do [ \<diagnóstico >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) no [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) seção, conforme mostrado no exemplo a seguir configuração:  
   
@@ -35,7 +35,7 @@ Este exemplo demonstra como coletar dados dos serviços do Windows Communication
   
  Este exemplo usa dois scripts Java: uma para enumerar os serviços em execução no computador junto com algumas de suas propriedades e a segunda para exibir dados WMI definido pelo usuário. O script abre uma conexão para o provedor WMI, analisa os dados e exibe os dados coletados.  
   
- Iniciar o exemplo para criar uma instância em execução de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço. Enquanto o serviço está em execução, execute cada script de Java usando o seguinte comando no prompt de comando:  
+ Inicie o exemplo para criar uma instância em execução de um serviço WCF. Enquanto o serviço está em execução, execute cada script de Java usando o seguinte comando no prompt de comando:  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  A saída mostra que há um único serviço em execução no computador. O serviço expõe um ponto de extremidade que implementa o `ICalculator` contrato. As configurações do comportamento e associação são implementadas pelo ponto de extremidade são listadas como a soma dos elementos individuais da pilha de mensagens.  
   
- WMI não está limitado a exposição a instrumentação de gerenciamento do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura. O aplicativo pode expor seus próprios itens de dados específicos de domínio por meio do mesmo mecanismo. O WMI é um mecanismo unificado para inspeção e controle de um serviço Web.  
+ WMI não está limitado a exposição a instrumentação de gerenciamento da infraestrutura do WCF. O aplicativo pode expor seus próprios itens de dados específicos de domínio por meio do mesmo mecanismo. O WMI é um mecanismo unificado para inspeção e controle de um serviço Web.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Se você instalou [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] após a instalação do ASP.NET, talvez seja necessário executar "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows comunicação Foundation\servicemodelreg.exe "- r - x para dar permissão à conta ASPNET para publicar objetos WMI.  
+    >  Se você instalou o WCF após a instalação do ASP.NET, talvez seja necessário executar "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows comunicação Foundation\servicemodelreg.exe "- r - x para dar permissão à conta ASPNET para publicar objetos WMI.  
   
 5.  Exibir dados de exemplo exposto por meio do WMI usando os comandos: `cscript EnumerateServices.js` ou `cscript EnumerateCustomObjects.js`.  
   

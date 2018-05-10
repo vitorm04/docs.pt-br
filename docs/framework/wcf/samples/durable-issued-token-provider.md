@@ -2,21 +2,21 @@
 title: Provedor de tokens emitidos duráveis
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Provedor de tokens emitidos duráveis
 Este exemplo demonstra como implementar uma provedor de tokens emitida personalizada do cliente.  
   
 ## <a name="discussion"></a>Discussão  
- Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriada credenciais para que a infraestrutura de segurança possa proteger a mensagem. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
+ Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriada credenciais para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
   
 -   Se você tiver um repositório de credenciais que o provedor de token interno não pode operar com.  
   
--   Se desejar fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente usa as credenciais.  
+-   Se desejar fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando o cliente WCF usa as credenciais.  
   
 -   Se você estiver criando um token personalizado.  
   
@@ -26,7 +26,7 @@ Este exemplo demonstra como implementar uma provedor de tokens emitida personali
   
 -   Como um cliente pode ser configurado com um provedor do token.  
   
--   Como os tokens emitidos podem ser armazenados em cache e fornecidos para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente.  
+-   Como os tokens emitidos podem ser armazenados em cache e fornecidos ao cliente WCF.  
   
 -   Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.  
   
@@ -109,7 +109,7 @@ Este exemplo demonstra como implementar uma provedor de tokens emitida personali
  O serviço de Token de segurança expõe um ponto de extremidade usando o wsHttpBinding padrão. O serviço de Token de segurança responde à solicitação de clientes para tokens e, desde que o cliente é autenticado usando uma conta de Windows emite um token que contém o nome de usuário do cliente como uma declaração no token emitido. Como parte da criação de token, os sinais de serviço de Token de segurança o token usando a chave privada associada com o CN = certificado STS. Além disso, ele cria uma chave simétrica e criptografá-la usando a chave pública associada com o CN = localhost certificate. Retornar o token para o cliente, o serviço de Token de segurança também retorna a chave simétrica. O cliente apresenta o token emitido para o serviço de cálculo e prova que ele tenha a chave simétrica inscrevendo-se a mensagem com essa chave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>As credenciais do cliente personalizado e o provedor de Token  
- As etapas a seguir mostram como desenvolver um provedor de token personalizado que tokens emitidos caches e integrá-lo ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: segurança.  
+ As etapas a seguir mostram como desenvolver um provedor de token personalizado que tokens emitidos caches e integrá-lo com o WCF: segurança.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Para desenvolver um provedor de token personalizado  
   

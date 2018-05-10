@@ -2,11 +2,11 @@
 title: Solução de problemas do tutorial de introdução
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Solução de problemas do tutorial de introdução
 Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutorial de Introdução e como resolvê-los.  
@@ -31,7 +31,7 @@ Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutor
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Ao tentar executar o aplicativo de serviço: HTTP não pôde registrar a URL http://+:8000/ServiceModelSamples/Service/. O processo não tem direitos de acesso a esse namespace.  
- O processo que hospeda um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço deve ser executado com privilégios administrativos. Se você estiver executando o serviço de dentro de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] você deve executar [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] como um administrador. Para fazer assim, clique em **iniciar**, clique com botão direito [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e selecione **executar como administrador**. Se você estiver executando o serviço em um prompt de linha de comando, você deve iniciar o prompt de linha de comando como um administrador de maneira semelhante. Clique em **iniciar**, clique com botão direito **Prompt de comando** e selecione **executar como administrador**.  
+ O processo que hospeda um serviço WCF deve ser executado com privilégios administrativos. Se você estiver executando o serviço de dentro de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] você deve executar [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] como um administrador. Para fazer assim, clique em **iniciar**, clique com botão direito [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e selecione **executar como administrador**. Se você estiver executando o serviço em um prompt de linha de comando, você deve iniciar o prompt de linha de comando como um administrador de maneira semelhante. Clique em **iniciar**, clique com botão direito **Prompt de comando** e selecione **executar como administrador**.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Tentativa de usar a ferramenta Svcutil.exe: 'svcutil' não é reconhecido como um comando interno ou externo, um programa operável ou arquivo em lotes.  

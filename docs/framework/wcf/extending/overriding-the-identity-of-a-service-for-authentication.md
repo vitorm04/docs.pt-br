@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Substituindo a identidade de um serviço pela autenticação
 Normalmente, você não precisa definir a identidade de um serviço porque a seleção de um tipo de credencial de cliente determina o tipo de identidade exposto nos metadados do serviço. Por exemplo, o código de configuração a seguir usa o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento e define o `clientCredentialType` de atributo para o Windows.  
@@ -30,9 +30,9 @@ Normalmente, você não precisa definir a identidade de um serviço porque a sel
 > [!NOTE]
 >  Para usar o tipo de credencial do Windows sem negociação, a conta de usuário do serviço deve ter acesso para o SPN está registrado com o domínio do Active Directory. Você pode fazer isso das seguintes maneiras:  
   
--   Use a conta NetworkService ou LocalSystem para executar o serviço. Como essas contas têm acesso à máquina SPN é estabelecida quando o computador ingressa no domínio do Active Directory, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gera automaticamente o elemento SPN apropriado dentro do ponto de extremidade do serviço nos metadados do serviço (WSDL).  
+-   Use a conta NetworkService ou LocalSystem para executar o serviço. Como essas contas têm acesso à máquina SPN é estabelecida quando o computador ingressa no domínio do Active Directory, o WCF gera automaticamente o elemento SPN apropriado dentro do ponto de extremidade do serviço nos metadados do serviço (WSDL).  
   
--   Use uma conta de domínio do Active Directory arbitrária para executar o serviço. Nesse caso, estabeleça um SPN para essa conta de domínio, que pode ser feito usando a ferramenta Setspn.exe. Depois de criar o SPN para a conta de serviço, configurar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para publicar esse SPN para clientes do serviço por meio de seus metadados (WSDL). Isso é feito definindo-se a identidade do ponto de extremidade para o ponto de extremidade exposto, por meio de um arquivo de configuração do aplicativo ou código.  
+-   Use uma conta de domínio do Active Directory arbitrária para executar o serviço. Nesse caso, estabeleça um SPN para essa conta de domínio, que pode ser feito usando a ferramenta Setspn.exe. Depois de criar o SPN para a conta de serviço, configure WCF para publicar esse SPN para clientes do serviço por meio de seus metadados (WSDL). Isso é feito definindo-se a identidade do ponto de extremidade para o ponto de extremidade exposto, por meio de um arquivo de configuração do aplicativo ou código.  
   
  Para obter mais informações sobre SPNs, o protocolo Kerberos e o Active Directory, consulte [Kerberos suplemento técnico para Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -59,7 +59,7 @@ Normalmente, você não precisa definir a identidade de um serviço porque a sel
   
   
 ### <a name="setting-identity-programmatically"></a>Definir a identidade por meio de programação  
- O serviço não precisa especificar explicitamente uma identidade, porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina automaticamente. No entanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que você especifique uma identidade em um ponto de extremidade, se necessário. O código a seguir adiciona um novo ponto de extremidade de serviço com uma identidade específica de DNS.  
+ Seu serviço não precisa especificar explicitamente uma identidade, pois WCF determina automaticamente. No entanto, o WCF permite que você especifique uma identidade em um ponto de extremidade, se necessário. O código a seguir adiciona um novo ponto de extremidade de serviço com uma identidade específica de DNS.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

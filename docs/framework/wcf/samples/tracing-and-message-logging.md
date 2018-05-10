@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>Registro de mensagem e rastreamento
 Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. Os rastreamentos resultantes e os logs de mensagem são exibidos usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. O
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 ## <a name="tracing"></a>Rastreamento  
- Windows Communication Foundation (WCF) usa o mecanismo de rastreamento definido no <xref:System.Diagnostics> namespace. Nesse modelo de rastreamento, dados de rastreamento são produzidos por fontes de rastreamento que implementam aplicativos. Cada origem é identificada por um nome. Os consumidores de rastreamento criar ouvintes de rastreamento para as fontes de rastreamento para o qual deseja recuperar informações. Para receber dados de rastreamento, você deve criar um ouvinte para a origem de rastreamento. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], isso pode ser feito adicionando o código a seguir do serviço ou o arquivo de configuração do cliente, definindo a origem de rastreamento de modelo de serviço `switchValue`:  
+ Windows Communication Foundation (WCF) usa o mecanismo de rastreamento definido no <xref:System.Diagnostics> namespace. Nesse modelo de rastreamento, dados de rastreamento são produzidos por fontes de rastreamento que implementam aplicativos. Cada origem é identificada por um nome. Os consumidores de rastreamento criar ouvintes de rastreamento para as fontes de rastreamento para o qual deseja recuperar informações. Para receber dados de rastreamento, você deve criar um ouvinte para a origem de rastreamento. No WCF, isso pode ser feito adicionando o seguinte código ao arquivo de configuração do serviço ou do cliente, definindo a origem de rastreamento de modelo de serviço `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem. O
   
 -   Correlacione atividades por meio de transferências e propagação.  
   
--   Reduzir o custo de desempenho de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rastreamento (por exemplo, o disco espaço custo de um arquivo de log).  
+-   Reduza o custo de desempenho de rastreamento do WCF (por exemplo, o custo de espaço em disco de um arquivo de log).  
   
  Para obter mais informações sobre o rastreamento de atividade definida pelo usuário, consulte o [estendendo rastreamento](../../../../docs/framework/wcf/samples/extending-tracing.md) exemplo.  
   
 ## <a name="message-logging"></a>Registro em log de mensagens  
- Registro de mensagem pode ser habilitado tanto no cliente e no serviço de qualquer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo. Para habilitar o log de mensagem, você deve adicionar o código a seguir ao cliente ou serviço:  
+ Registro de mensagem pode ser habilitado tanto no cliente e no serviço de qualquer aplicativo WCF. Para habilitar o log de mensagem, você deve adicionar o código a seguir ao cliente ou serviço:  
   
 ```xml  
 <configuration>  

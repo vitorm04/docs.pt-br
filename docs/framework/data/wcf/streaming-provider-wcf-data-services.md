@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Como carregar e serializar os dados binários longos dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ela pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -79,12 +79,12 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
  Para obter informações gerais sobre como criar um serviço de dados, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Ativando os fluxos de binário grandes no ambiente de hospedagem  
- Quando você cria um serviço de dados em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Web, o Windows Communication Foundation (WCF) é usado para fornecer a implementação do protocolo HTTP. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limita o tamanho de mensagens HTTP para apenas 65 mil bytes. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:  
+ Quando você cria um serviço de dados em um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Web, o Windows Communication Foundation (WCF) é usado para fornecer a implementação do protocolo HTTP. Por padrão, o WCF limita o tamanho de mensagens HTTP para apenas 65 mil bytes. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:  
   
   
   
 > [!NOTE]
->  Você deve usar um modo de transferência <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> para garantir que os dados binários nas mensagens de resposta e de solicitação sejam transmitidos e não armazenados em buffer pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  Você deve usar um <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferência para garantir que os dados binários em mensagens de solicitação e resposta são transmitidos e WCF não armazenado em buffer.  
   
  Para obter mais informações, consulte [Streaming de transferência de mensagens](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

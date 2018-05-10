@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definindo e especificando falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de forma interoperável. Este tópico discute quando e como definir o conteúdo de falhas personalizado e especificar quais operações podem retorná-los. Para obter mais informações sobre como um serviço ou cliente duplex, pode enviar as falhas e como um cliente ou aplicativo de serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em aplicativos do Windows Communication Foundation (WCF), consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -27,7 +27,7 @@ Falhas de SOAP transmitem condição informações de erro de um serviço para u
 3.  Marca as operações para que as falhas SOAP específicas que elas geram são expostas aos clientes em WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definir condições de erro que os clientes devem saber sobre  
- Falhas de SOAP são publicamente descritas mensagens que contêm informações de falha de uma determinada operação. Porque eles são descritos junto com outras mensagens de operação em WSDL, os clientes saberem e, portanto, esperam lidar com tais falhas ao invocar uma operação. Mas porque [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços são escritos em código gerenciado, decidir qual erro condições em código gerenciado devem ser convertidos em falhas e retornada ao cliente fornece a oportunidade para separar as condições de erro e os bugs no seu serviço a partir de conversa de erro formal com um cliente.  
+ Falhas de SOAP são publicamente descritas mensagens que contêm informações de falha de uma determinada operação. Porque eles são descritos junto com outras mensagens de operação em WSDL, os clientes saberem e, portanto, esperam lidar com tais falhas ao invocar uma operação. Mas, como serviços WCF são escritos em código gerenciado, decidir qual erro condições em código gerenciado devem ser convertidos em falhas e retornada ao cliente fornece a oportunidade para separar as condições de erro e os bugs em seu serviço de erro formal conversa com um cliente.  
   
  Por exemplo, o exemplo de código a seguir mostra uma operação que utiliza dois inteiros e retorna outro inteiro. Várias exceções podem ser geradas aqui, portanto ao criar o contrato de falha, você deve determinar quais condições de erro são importantes para seu cliente. Nesse caso, o serviço deve detectar o <xref:System.DivideByZeroException?displayProperty=nameWithType> exceção.  
   
@@ -84,7 +84,7 @@ End Class
   
  Acordo com o padrão SOAP, uma falha pode ter um `Action`, um `Code`e um `Reason`. O `Action` é controlado pelo <xref:System.ServiceModel.FaultContractAttribute.Action%2A> propriedade. O <xref:System.ServiceModel.FaultException.Code%2A> propriedade e <xref:System.ServiceModel.FaultException.Reason%2A> propriedade são ambas as propriedades do <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> classe, que é a classe pai de genérica <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. O `Code` propriedade inclui um <xref:System.ServiceModel.FaultCode.SubCode%2A> membro.  
   
- Ao acessar não serviços que geram falhas, existem certas limitações. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dá suporte a falhas somente com tipos de detalhe que descreve o esquema e que são compatíveis com os contratos de dados. Por exemplo, como mencionado acima, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não oferece suporte a falhas que usam atributos XML em seus tipos de detalhes, ou falhas com mais de um elemento de nível superior na seção de detalhes.  
+ Ao acessar não serviços que geram falhas, existem certas limitações. O WCF suporta apenas falhas com tipos de detalhe que descreve o esquema e que são compatíveis com contratos de dados. Por exemplo, conforme mencionado acima, o WCF não suporta falhas que usam atributos XML em seus tipos de detalhes, ou falhas com mais de um elemento de nível superior na seção de detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.FaultContractAttribute>  

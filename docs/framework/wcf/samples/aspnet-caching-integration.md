@@ -2,11 +2,11 @@
 title: Integração de cache ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-caching-integration"></a>Integração de cache ASP.NET
 Este exemplo demonstra como utilizar o cache de saída do ASP.NET com o modelo de programação WCF WEB HTTP. Consulte o [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo para uma versão auto-hospedado deste cenário que aborda a implementação de serviço em camadas. Este tópico enfoca o recurso de integração de cache de saída do ASP.NET.  
@@ -28,7 +28,7 @@ Este exemplo demonstra como utilizar o cache de saída do ASP.NET com o modelo d
   
  No arquivo Service.cs do projeto de serviço de exemplo, tanto o `GetCustomer` e `GetCustomers` operações são marcadas com o <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, que fornece o nome do perfil de cache "CacheFor60Seconds". No arquivo Web. config do projeto de serviço, o perfil de cache "CacheFor60Seconds" é fornecido com o <`caching`> elemento <`system.web`>. Para este perfil de cache, o valor de `duration` atributo é "60", que as respostas associadas ao perfil são armazenados em cache no cache de saída ASP.NET por 60 segundos. Além disso, para este perfil de cache, o `varmByParam` atributo é definido como "formato" caso solicitações com valores diferentes para o `format` consulta parâmetro de cadeia de caracteres, suas respostas em cache separadamente. Por fim, o perfil de cache `varyByHeader` atributo é definido como "Aceitar", para solicitações com diferentes valores de cabeçalho Accept tenham suas respostas em cache separadamente.  
   
- Program.cs no projeto do cliente demonstra como o cliente pode ser criados usando <xref:System.Net.HttpWebRequest>. Observe que isso é apenas uma maneira de acessar um serviço WCF. Também é possível acessar o serviço usando outras classes do .NET Framework, como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fábrica de canais e <xref:System.Net.WebClient>. Outros exemplos no SDK (como o [serviço básico de HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo e o [seleção automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) exemplo) ilustram como usar essas classes para se comunicar com um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
+ Program.cs no projeto do cliente demonstra como o cliente pode ser criados usando <xref:System.Net.HttpWebRequest>. Observe que isso é apenas uma maneira de acessar um serviço WCF. Também é possível acessar o serviço usando outras classes do .NET Framework como a fábrica de canais do WCF e <xref:System.Net.WebClient>. Outros exemplos no SDK (como o [serviço básico de HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo e o [seleção automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) exemplo) ilustram como usar essas classes para se comunicar com um serviço WCF.  
   
 ## <a name="to-run-the-sample"></a>Para executar a amostra  
  O exemplo consiste em três projetos:  

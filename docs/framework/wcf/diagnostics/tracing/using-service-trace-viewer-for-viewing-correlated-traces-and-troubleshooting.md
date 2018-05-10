@@ -1,30 +1,18 @@
 ---
-title: "Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas"
-ms.custom: 
+title: Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 Este tópico descreve o formato dos dados de rastreamento, como exibir e abordagens que usam o Visualizador de rastreamento de serviço para solucionar problemas de seu aplicativo.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Usando a ferramenta Visualizador de Rastreamento de Serviço  
- O [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ferramenta do Visualizador de rastreamento de serviço ajuda a correlacionar rastreamentos de diagnóstico produzidos por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ouvintes para localizar a raiz causam um erro. A ferramenta fornece uma maneira de exibir facilmente, grupo, e rastreamentos de filtro para que você pode diagnosticar, reparar e verificar problemas com [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviços. Para obter mais informações sobre como usar essa ferramenta, consulte [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ A ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a correlacionar rastreamentos de diagnóstico produzidos por ouvintes WCF para localizar a causa do erro. A ferramenta fornece uma maneira de exibir, grupo, facilmente e filtrar os rastreamentos para que possa diagnosticar, reparar e verificar os problemas com os serviços do WCF. Para obter mais informações sobre como usar essa ferramenta, consulte [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Este tópico contém as capturas de tela de gerado pela execução de rastreamentos a [rastreamento e registro em log de mensagem](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) de exemplo, quando exibido usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este tópico demonstra como compreender o conteúdo de rastreamento, atividades e correlação e como analisar grandes números de rastreamentos ao solucionar o problema.  
   
@@ -116,11 +104,11 @@ Este tópico descreve o formato dos dados de rastreamento, como exibir e abordag
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>Rastreamento de ServiceModel E2E  
- Quando o `System.ServiceModel` origem de rastreamento é definida com um `switchValue` diferente de desativado, e `ActivityTracing`, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] cria atividades e transfere para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] de processamento.  
+ Quando o `System.ServiceModel` origem de rastreamento é definida com um `switchValue` diferente de desativado, e `ActivityTracing`, o WCF cria atividades e transfere para o processamento do WCF.  
   
  Uma atividade é uma unidade lógica de processamento que grupos de todos os rastreamentos relacionam a essa unidade de processamento. Por exemplo, você pode definir uma atividade para cada solicitação. Transferências de criar uma relação causal entre as atividades dentro de pontos de extremidade. Propagando a ID de atividade permite relacionar as atividades em pontos de extremidade. Isso pode ser feito definindo `propagateActivity` = `true` na configuração em cada ponto de extremidade. Atividades, transferência e propagação permitem executar a correlação de erro. Dessa forma, você pode encontrar a causa raiz de um erro mais rapidamente.  
   
- No cliente, um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] atividade é criada para cada chamada de modelo de objeto (por exemplo, abrir ChannelFactory, adicionar, divisão e assim por diante.) Cada uma das chamadas de operação é processada em uma atividade de "Processo ação".  
+ No cliente, uma atividade WCF é criada para cada chamada de modelo de objeto (por exemplo, abrir ChannelFactory, adicionar, divisão e assim por diante.) Cada uma das chamadas de operação é processada em uma atividade de "Processo ação".  
   
  Captura de tela a seguir, extraído do [rastreamento e registro em log de mensagem](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemplo o painel esquerdo exibe a lista de atividades criadas no processo de cliente, classificado por hora de criação. A seguir está uma lista cronológica de atividades:  
   
@@ -139,14 +127,14 @@ Este tópico descreve o formato dos dados de rastreamento, como exibir e abordag
  Podemos ver as mensagens de infraestrutura de segurança devido o wsHttpBinding.  
   
 > [!NOTE]
->  Em [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], mostramos processadas inicialmente em uma atividade separada (mensagem de processo) de mensagens de resposta antes de correlacionamos para a atividade de ação do processo correspondente que inclui a mensagem de solicitação, por meio de uma transferência. Isso acontece para mensagens de infraestrutura e solicitações assíncronas e se deve ao fato de que podemos deve inspecionar a mensagem, ler o cabeçalho activityId e identificar a atividade de ação de processo existente com essa id para correlacionar a ele. Para solicitações síncronas, podemos estão bloqueando para a resposta e, portanto, saber qual ação de processo, a resposta está relacionado ao.  
+>  No WCF, vamos mostrar mensagens de resposta sendo processadas inicialmente em uma atividade separada (mensagem de processo) antes de correlacionamos para a atividade de ação do processo correspondente que inclui a mensagem de solicitação, por meio de uma transferência. Isso acontece para mensagens de infraestrutura e solicitações assíncronas e se deve ao fato de que podemos deve inspecionar a mensagem, ler o cabeçalho activityId e identificar a atividade de ação de processo existente com essa id para correlacionar a ele. Para solicitações síncronas, podemos estão bloqueando para a resposta e, portanto, saber qual ação de processo, a resposta está relacionado ao.  
   
  ![Usando o Visualizador de rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 Atividades do cliente WCF listadas por hora de criação (painel esquerdo) e suas atividades aninhadas e rastreamentos (painel direito superior)  
   
  Quando selecionamos uma atividade no painel esquerdo, podemos ver atividades aninhadas e rastreamentos no painel superior direito. Portanto, essa é uma redução exibição hierárquica da lista de atividades do lado esquerdo, com base na atividade pai selecionado. Como a ação selecionada do processo adicionar é a primeira solicitação feita, essa atividade contém a atividade definir segurança de sessão (transferência de transferência do) e rastreamentos para o processamento real da ação Adicionar.  
   
- Clique duas vezes em que a ação de processo Adicionar atividade no painel esquerdo, podemos ver uma representação gráfica do cliente [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] as atividades relacionadas a adicionar. A primeira atividade à esquerda é a atividade raiz (0000), que é a atividade padrão. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]transferências de fora da atividade de ambiente. Se não for definido, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transferências fora 0000. Aqui, a segunda atividade adicionar da ação de processo, transfere fora de 0. Em seguida, podemos ver a sessão de segurança de instalação.  
+ Se, clique duas vezes em que a ação de processo Adicionar atividade no painel esquerdo, podemos ver uma representação gráfica das atividades do cliente WCF relacionados a adicionar. A primeira atividade à esquerda é a atividade raiz (0000), que é a atividade padrão. Transferências WCF fora da atividade de ambiente. Se não for definido, o WCF transfere fora 0000. Aqui, a segunda atividade adicionar da ação de processo, transfere fora de 0. Em seguida, podemos ver a sessão de segurança de instalação.  
   
  ![Usando o Visualizador de rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Gráfico de modo de exibição de atividades do cliente WCF: atividade de ambiente (0 aqui), ação de processo e definir a sessão segura  
@@ -158,7 +146,7 @@ Lista de rastreamentos para a atividade de ação do processo: podemos enviar a 
   
  Aqui, podemos carregar rastreamentos de cliente apenas para fins de esclarecimento, mas rastreamentos de serviço (mensagem de solicitação recebida e mensagem de resposta enviada) aparecem na mesma atividade se elas também são carregadas na ferramenta de e `propagateActivity` foi definida como `true.` isso é mostrado na ilustração posterior.  
   
- Sobre o serviço, o modelo de atividade é mapeado para o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] conceitos da seguinte maneira:  
+ Sobre o serviço, o modelo de atividade mapeia os conceitos de WCF da seguinte maneira:  
   
 1.  Vamos construir e abrir um ServiceHost (Isso pode criar várias atividades relacionadas ao host, por exemplo, no caso de segurança).  
   
@@ -166,11 +154,11 @@ Lista de rastreamentos para a atividade de ação do processo: podemos enviar a 
   
 3.  Quando o ouvinte detecta uma solicitação de comunicação iniciada pelo cliente, ele transfere para a atividade de "Bytes de recebimento", em que todos os bytes enviados do cliente são processados. Nesta atividade, podemos ver os erros de conexão que ocorreram durante a interação do serviço de cliente.  
   
-4.  Para cada conjunto de bytes recebidos que corresponde a uma mensagem, podemos processar esses bytes em uma atividade de "Mensagem de processo", em que criamos o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] objeto de mensagem. Nesta atividade, podemos ver erros relacionados a um envelope incorreto ou uma mensagem malformada.  
+4.  Para cada conjunto de bytes recebidos que corresponde a uma mensagem, podemos processar esses bytes em uma atividade de "Mensagem de processo", onde podemos criar o objeto de mensagem WCF. Nesta atividade, podemos ver erros relacionados a um envelope incorreto ou uma mensagem malformada.  
   
-5.  Depois que a mensagem é formada, podemos transferir a uma atividade de ação de processo. Se `propagateActivity` é definido como `true` no cliente e no serviço, essa atividade tem a mesma id que aquele definido no cliente e descritos anteriormente. Nesta fase começar a se beneficiar da correlação direta entre pontos de extremidade, porque todos os rastreamentos emitido em [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] que estão relacionados à solicitação são essa mesma atividade, incluindo o processamento de mensagem de resposta.  
+5.  Depois que a mensagem é formada, podemos transferir a uma atividade de ação de processo. Se `propagateActivity` é definido como `true` no cliente e no serviço, essa atividade tem a mesma id que aquele definido no cliente e descritos anteriormente. Nesta fase começar a se beneficiar da correlação direta entre pontos de extremidade, porque todos os rastreamentos emitidos no WCF que estão relacionados à solicitação essa mesma atividade, incluindo o processamento de mensagem de resposta.  
   
-6.  Para a ação de fora do processo, podemos criar uma atividade de "Executar o código do usuário" para isolar os rastreamentos emitidos no código do usuário daquelas emitido em [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. No exemplo anterior, o rastreamento do "Serviço envia a resposta de adicionar" é emitido na atividade de "Código de usuário Execute", não na atividade propagada pelo cliente, se aplicável.  
+6.  Para a ação de fora do processo, podemos criar uma atividade de "Código de usuário Execute" para isolar os rastreamentos emitidos no código do usuário daquelas emitido no WCF. No exemplo anterior, o rastreamento do "Serviço envia a resposta de adicionar" é emitido na atividade de "Código de usuário Execute", não na atividade propagada pelo cliente, se aplicável.  
   
  Na ilustração a seguir, a primeira atividade à esquerda é a atividade raiz (0000), que é a atividade padrão. As próximas três atividades são abrir o ServiceHost. A atividade na coluna 5 é o ouvinte e as atividades restantes (6 to 8) descrevem o processamento do WCF de uma mensagem, de bytes de processamento para ativação de código do usuário.  
   

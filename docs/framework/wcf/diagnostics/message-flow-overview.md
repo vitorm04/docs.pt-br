@@ -2,11 +2,11 @@
 title: Visão geral de fluxo de mensagens
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>Visão geral de fluxo de mensagens
 Em um sistema distribuído que contêm serviços interconectados, é necessário determinar relações causais entre os serviços. É importante entender os vários componentes que fazem parte de um fluxo de solicitação para dar suporte a cenários críticos como monitoramento, solução de problemas de integridade e análise da causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:  
@@ -25,7 +25,7 @@ Em um sistema distribuído que contêm serviços interconectados, é necessário
   
 2.  Se você ainda não ativou o rastreamento analítico, expanda **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativos de servidor de aplicativo** . Selecione **exibição**, **Mostrar analítica e Logs de depuração**. Clique com botão direito **analítico** e selecione **Habilitar Log**. Deixe o Visualizador de eventos aberto para que os rastreamentos podem ser exibidos.  
   
-3.  Abra o exemplo criado o [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) em [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Observe que você deve executar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] como um administrador para que o serviço pode ser criado. Se você tiver o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplos instalados, você pode abrir o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto completo criado no tutorial.  
+3.  Abra o exemplo criado o [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) em [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Observe que você deve executar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] como um administrador para que o serviço pode ser criado. Se você tiver instalados os exemplos de WCF, você pode abrir o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto completo criado no tutorial.  
   
 4.  Clique com botão direito do **Service** do projeto e selecione **adicionar**, **Novo Item**. Selecione **arquivo de configuração do aplicativo** e clique em **Okey**.  
   

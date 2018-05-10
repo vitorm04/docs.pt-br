@@ -10,20 +10,20 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2198d5548b09ba05eeb11466a6fd2d3a1262de94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Como criar um token personalizado
 Este tópico mostra como criar um token de segurança personalizada usando o <xref:System.IdentityModel.Tokens.SecurityToken> classe e como integrá-lo com um provedor de token de segurança personalizada e um autenticador. Para obter um exemplo de código completo, consulte o [personalizado Token](../../../../docs/framework/wcf/samples/custom-token.md) exemplo.  
   
- Um *token de segurança* é essencialmente um elemento XML que é usado pela estrutura de segurança do Windows Communication Foundation (WCF) para representar declarações sobre um remetente da mensagem SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a segurança fornece vários tokens para modos de autenticação fornecidos pelo sistema. Os exemplos incluem um token de segurança de certificado x. 509 representado pelo <xref:System.IdentityModel.Tokens.X509SecurityToken> classe ou um token de segurança do nome de usuário representado pelo <xref:System.IdentityModel.Tokens.UserNameSecurityToken> classe.  
+ Um *token de segurança* é essencialmente um elemento XML que é usado pela estrutura de segurança do Windows Communication Foundation (WCF) para representar declarações sobre um remetente da mensagem SOAP. Segurança do WCF fornece vários tokens para modos de autenticação fornecidos pelo sistema. Os exemplos incluem um token de segurança de certificado x. 509 representado pelo <xref:System.IdentityModel.Tokens.X509SecurityToken> classe ou um token de segurança do nome de usuário representado pelo <xref:System.IdentityModel.Tokens.UserNameSecurityToken> classe.  
   
  Às vezes, um modo de autenticação ou credenciais não é suportado pelos tipos de fornecido. Nesse caso, é necessário criar um token de segurança personalizadas para fornecer uma representação XML da credencial personalizada dentro da mensagem SOAP.  
   
- Os procedimentos a seguir mostram como criar um token de segurança personalizado e como integrá-lo com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança. Este tópico cria um token de cartão de crédito que é usado para transmitir informações sobre cartão de crédito do cliente para o servidor.  
+ Os procedimentos a seguir mostram como criar um token de segurança personalizado e como integrá-lo com a infraestrutura de segurança do WCF. Este tópico cria um token de cartão de crédito que é usado para transmitir informações sobre cartão de crédito do cliente para o servidor.  
   
  Para obter mais informações sobre credenciais personalizadas e Gerenciador de token de segurança, consulte [passo a passo: criação de cliente personalizadas e as credenciais de serviço](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
@@ -43,7 +43,7 @@ Este tópico mostra como criar um token de segurança personalizada usando o <xr
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- Em seguida, uma classe que representa o token de segurança personalizada deve ser criada. Essa classe é usada, as classes de provedor, o autenticador e o serializador de token do segurança para passar informações sobre o token de segurança de e para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura de segurança.  
+ Em seguida, uma classe que representa o token de segurança personalizada deve ser criada. Essa classe é usada pelo provedor de token de segurança, autenticador e classes do serializador para passar informações sobre o token de segurança de e para a infraestrutura de segurança do WCF.  
   
 #### <a name="to-create-a-custom-security-token-class"></a>Para criar uma classe de token de segurança personalizadas  
   
@@ -51,14 +51,14 @@ Este tópico mostra como criar um token de segurança personalizada usando o <xr
   
 2.  Substituir o <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> propriedade. Essa propriedade é usada para obter o identificador do token de segurança que é usado para apontar para a representação de XML de token de segurança de outros elementos dentro da mensagem SOAP. Neste exemplo, um identificador de token pode ser passado a ele como um parâmetro de construtor ou um novo aleatório é gerado sempre que uma instância de token de segurança é criada.  
   
-3.  Implemente a propriedade <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A>. Essa propriedade retorna uma coleção de chaves de segurança que representa a instância de token de segurança. Essas chaves podem ser usados por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para assinar ou criptografar as partes da mensagem SOAP. Neste exemplo, o token de segurança do cartão de crédito não pode conter quaisquer chaves de segurança; Portanto, a implementação sempre retorna uma coleção vazia.  
+3.  Implemente a propriedade <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A>. Essa propriedade retorna uma coleção de chaves de segurança que representa a instância de token de segurança. Essas chaves podem ser usadas pelo WCF para assinar ou criptografar as partes da mensagem SOAP. Neste exemplo, o token de segurança do cartão de crédito não pode conter quaisquer chaves de segurança; Portanto, a implementação sempre retorna uma coleção vazia.  
   
-4.  Substituir o <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> propriedades. Essas propriedades são usadas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para determinar a validade da instância de token de segurança. Neste exemplo, o token de segurança do cartão de crédito tem apenas uma data de validade, portanto, o `ValidFrom` propriedade retorna um <xref:System.DateTime> que representa a data e hora da criação de instância.  
+4.  Substituir o <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> propriedades. Essas propriedades são usadas pelo WCF para determinar a validade da instância de token de segurança. Neste exemplo, o token de segurança do cartão de crédito tem apenas uma data de validade, portanto, o `ValidFrom` propriedade retorna um <xref:System.DateTime> que representa a data e hora da criação de instância.  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- Quando um segurança novo tipo de token é criado, ele requer uma implementação do <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> classe. A implementação é usada na configuração de elemento de associação de segurança para representar o novo tipo de token. A classe de parâmetros de token de segurança serve como um modelo que é usado para corresponder a instância de token de segurança para quando uma mensagem é processada. O modelo fornece propriedades adicionais que um aplicativo pode usar para especificar critérios que o token de segurança deve corresponder para ser usado ou autenticado. O exemplo a seguir não adicionar quaisquer propriedades adicionais, para que somente a segurança de tipo de token é comparado quando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pesquisas de infraestrutura para uma instância de token de segurança para usar ou para validar.  
+ Quando um segurança novo tipo de token é criado, ele requer uma implementação do <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> classe. A implementação é usada na configuração de elemento de associação de segurança para representar o novo tipo de token. A classe de parâmetros de token de segurança serve como um modelo que é usado para corresponder a instância de token de segurança para quando uma mensagem é processada. O modelo fornece propriedades adicionais que um aplicativo pode usar para especificar critérios que o token de segurança deve corresponder para ser usado ou autenticado. O exemplo a seguir não adicione quaisquer propriedades adicionais, portanto, somente a segurança de tipo de token é correspondido quando a infraestrutura WCF procura por uma instância de token de segurança para usar ou para validar.  
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>Para criar uma classe de parâmetros de token de segurança personalizadas  
   
@@ -72,17 +72,17 @@ Este tópico mostra como criar um token de segurança personalizada usando o <xr
   
 5.  Implementar o <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> propriedade somente leitura. Essa propriedade retorna `true` se o tipo de token de segurança representado por essa classe pode ser mapeado para uma conta do Windows. Se assim, o resultado da autenticação é representado por um <xref:System.Security.Principal.WindowsIdentity> instância da classe. Neste exemplo, o token não pode ser mapeado para uma conta do Windows.  
   
-6.  Implementar o método de <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> . Este método é chamado pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança quando ele exige uma referência para a instância de token de segurança representada por essa classe de parâmetros de token de segurança. A instância token de segurança e <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> que especifica o tipo de referência que está sendo solicitada são passados para este método como argumentos. Neste exemplo, somente referências internas são suportadas pelo token de segurança do cartão de crédito. O <xref:System.IdentityModel.Tokens.SecurityToken> classe possui a funcionalidade para criar referências internas; portanto, a implementação não requer código adicional.  
+6.  Implementar o método de <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> . Esse método é chamado pela estrutura de segurança do WCF quando ele exige uma referência para a instância de token de segurança representada por essa classe de parâmetros de token de segurança. A instância token de segurança e <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> que especifica o tipo de referência que está sendo solicitada são passados para este método como argumentos. Neste exemplo, somente referências internas são suportadas pelo token de segurança do cartão de crédito. O <xref:System.IdentityModel.Tokens.SecurityToken> classe possui a funcionalidade para criar referências internas; portanto, a implementação não requer código adicional.  
   
-7.  Implementar o método de <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> . Este método é chamado pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para converter a segurança parâmetros de token de classe de instância em uma instância do <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> classe. O resultado é usado por provedores de token de segurança para criar a instância de token de segurança apropriado.  
+7.  Implementar o método de <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> . Este método é chamado pelo WCF para converter a instância de classe de parâmetros de token de segurança em uma instância de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> classe. O resultado é usado por provedores de token de segurança para criar a instância de token de segurança apropriado.  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- Tokens de segurança são transmitidos em mensagens SOAP, que requer um mecanismo de conversão entre a representação de token de segurança na memória e a representação durante a transmissão. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa um serializador de token de segurança para realizar essa tarefa. Cada token personalizado deve ser acompanhado por um serializador de token de segurança personalizada que pode serializar e desserializar o token de segurança personalizada da mensagem SOAP.  
+ Tokens de segurança são transmitidos em mensagens SOAP, que requer um mecanismo de conversão entre a representação de token de segurança na memória e a representação durante a transmissão. Para realizar essa tarefa, o WCF usa um serializador de token de segurança. Cada token personalizado deve ser acompanhado por um serializador de token de segurança personalizada que pode serializar e desserializar o token de segurança personalizada da mensagem SOAP.  
   
 > [!NOTE]
->  Chaves derivadas são habilitadas por padrão. Se você criar um token de segurança personalizado e usá-lo como o token primário, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uma chave dele derivado. Ao fazer isso, ele chama o serializador de token de segurança personalizadas para gravar o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> para o token de segurança personalizada ao serializar o `DerivedKeyToken` para a transmissão. Na extremidade receptora, ao desserializar o token fora da conexão, o `DerivedKeyToken` serializador espera um `SecurityTokenReference` elemento como o filho de nível superior em si mesmo. Se o serializador de token de segurança personalizada não adicionou um `SecurityTokenReference` elemento durante a serialização de seu tipo de cláusula, uma exceção será lançada.  
+>  Chaves derivadas são habilitadas por padrão. Se você criar um token de segurança personalizado e usá-lo como o token primário, WCF uma chave dele derivado. Ao fazer isso, ele chama o serializador de token de segurança personalizadas para gravar o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> para o token de segurança personalizada ao serializar o `DerivedKeyToken` para a transmissão. Na extremidade receptora, ao desserializar o token fora da conexão, o `DerivedKeyToken` serializador espera um `SecurityTokenReference` elemento como o filho de nível superior em si mesmo. Se o serializador de token de segurança personalizada não adicionou um `SecurityTokenReference` elemento durante a serialização de seu tipo de cláusula, uma exceção será lançada.  
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>Para criar um serializador de token de segurança personalizadas  
   
@@ -138,7 +138,7 @@ Este tópico mostra como criar um token de segurança personalizada usando o <xr
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- A classe de parâmetros de token de segurança personalizada criada anteriormente é usada para informar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança que um token de segurança personalizada deve ser usado ao se comunicar com um serviço. O procedimento a seguir mostra como isso pode ser feito.  
+ A classe de parâmetros de token de segurança personalizada criada anteriormente é usada para informar a estrutura de segurança do WCF que um token de segurança personalizada deve ser usado ao se comunicar com um serviço. O procedimento a seguir mostra como isso pode ser feito.  
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>Para integrar o token de segurança personalizado com a associação  
   

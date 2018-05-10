@@ -2,11 +2,11 @@
 title: Correlação de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>Correlação de mensagem
 Este exemplo demonstra como um aplicativo de serviço de enfileiramento de mensagens (MSMQ) pode enviar uma mensagem MSMQ a um serviço do Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre remetente e destinatário aplicativos em um cenário de solicitação/resposta. Este exemplo usa a associação de msmqIntegrationBinding. Nesse caso, o serviço é um aplicativo de console auto-hospedado para permitir que você observar o serviço que recebe as mensagens em fila. K  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- O serviço usa um cliente personalizado `OrderResponseClient` para enviar a mensagem do MSMQ para a fila. Como o aplicativo que recebe e processa a mensagem é um aplicativo do MSMQ e não um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo, não há nenhum contrato de serviço implícita entre os dois aplicativos. Portanto, não é possível criar um proxy usando a ferramenta Svcutil.exe neste cenário.  
+ O serviço usa um cliente personalizado `OrderResponseClient` para enviar a mensagem do MSMQ para a fila. Como o aplicativo que recebe e processa a mensagem é um aplicativo do MSMQ e não é um aplicativo WCF, não há nenhum contrato de serviço implícita entre os dois aplicativos. Portanto, não é possível criar um proxy usando a ferramenta Svcutil.exe neste cenário.  
   
- O proxy personalizado é essencialmente o mesmo para todos os [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos que usam o `msmqIntegrationBinding` associação para enviar mensagens. Ao contrário de outros proxies, ele não inclui uma variedade de operações de serviço. É uma operação de enviar mensagem somente.  
+ O proxy personalizado é essencialmente o mesmo para todos os aplicativos do WCF que usam o `msmqIntegrationBinding` associação para enviar mensagens. Ao contrário de outros proxies, ele não inclui uma variedade de operações de serviço. É uma operação de enviar mensagem somente.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  A fila MSMQ recebidas do qual as respostas de ordem for especificada em uma seção appSettings do arquivo de configuração, conforme mostrado no exemplo de configuração.  
   
 > [!NOTE]
->  O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endereço de ponto de extremidade Especifica um esquema FormatName e usa "localhost" para o computador local. Um nome de formato formado corretamente segue FormatName no URI de acordo com as diretrizes MSMQ.  
+>  O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O endereço de ponto de extremidade do WCF Especifica um esquema FormatName e usa "localhost" para o computador local. Um nome de formato formado corretamente segue FormatName no URI de acordo com as diretrizes MSMQ.  
   
 ```xml  
 <appSettings>  

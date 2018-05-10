@@ -2,16 +2,16 @@
 title: Serviço de AJAX com exemplo de JSON e XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1973be48457d3164bec6b8df236c07f5bfa6b897
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Serviço de AJAX com exemplo de JSON e XML
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um serviço assíncrona AJAX JavaScript and XML () que retorna dados JSON JavaScript Object Notation () ou XML. Você pode acessar um serviço de AJAX usando código JavaScript de um cliente de navegador da Web. Este exemplo se baseia o [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo.  
   
- Ao contrário de outros exemplos de AJAX, este exemplo não usa o ASP.NET AJAX e o <xref:System.Web.UI.ScriptManager> controle. Com alguma configuração adicional, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX serviços podem ser acessados de qualquer página HTML por meio de JavaScript, e esse cenário é mostrado aqui. Para obter um exemplo do uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] com o ASP.NET AJAX, consulte [AJAX exemplos](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Ao contrário de outros exemplos de AJAX, este exemplo não usa o ASP.NET AJAX e o <xref:System.Web.UI.ScriptManager> controle. Com alguma configuração adicional, os serviços WCF AJAX podem ser acessados de qualquer página HTML por meio de JavaScript e este cenário é mostrado aqui. Para obter um exemplo de como usar o WCF com o ASP.NET AJAX, consulte [AJAX exemplos](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
  Este exemplo mostra como alternar o tipo de resposta de uma operação entre JSON e XML. Essa funcionalidade está disponível, independentemente se o serviço está configurado para ser acessado por ASP.NET AJAX ou por uma página de cliente HTML/JavaScript.  
   
@@ -39,7 +39,7 @@ Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para c
   
  Os dados padrão de formato para <xref:System.ServiceModel.Description.WebHttpEndpoint> for XML, enquanto o formato de dados padrão para <xref:System.ServiceModel.Description.WebScriptEndpoint> é JSON. Para obter mais informações, consulte [criar serviços do WCF AJAX sem ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
   
- O serviço no exemplo a seguir é um padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço com duas operações. Ambas as operações requerem o <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> estilo de corpo de <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos, que é específico para o `webHttp` comportamento e não possui a opção de formato de dados JSON/XML.  
+ O serviço no exemplo a seguir é um serviço WCF padrão com duas operações. Ambas as operações requerem o <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> estilo de corpo de <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos, que é específico para o `webHttp` comportamento e não possui a opção de formato de dados JSON/XML.  
 
 ```csharp
 [OperationContract]  
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- Observe que, em ambos os casos, as operações retornam um tipo complexo, `MathResult`, que é um padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tipo de contrato de dados.  
+ Observe que, em ambos os casos, as operações retornam um tipo complexo, `MathResult`, que é um tipo de contrato de dados padrão do WCF.  
   
  O cliente XmlAjaxClientPage.htm de página da Web contém código JavaScript que invoca uma das duas operações anteriores quando o usuário clica o **cálculos (retorno JSON)** ou **cálculos (retorno XML)**  botões na página. O código para chamar o serviço constrói um corpo JSON e a envia usando HTTP POST. A solicitação é criada manualmente em JavaScript, ao contrário de [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo e os outros exemplos usando ASP.NET AJAX.  
 

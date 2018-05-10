@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificando um endereço de ponto de extremidade
 Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de seus pontos de extremidade. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contém um <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, um <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>e um <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. O contrato especifica quais operações estão disponíveis. Especifica a associação para se comunicar com o serviço e o endereço Especifica onde encontrar o serviço. Cada ponto de extremidade deve ter um endereço exclusivo. O endereço do ponto de extremidade é representado pelo <xref:System.ServiceModel.EndpointAddress> classe, que contém um identificador de recursos uniforme (URI) que representa o endereço do serviço, um <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa a identidade de segurança do serviço e uma coleção de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Os cabeçalhos opcionais fornecem informações mais detalhadas de endereçamento para identificar ou interagir com o ponto de extremidade. Por exemplo, os cabeçalhos podem indicar como processar uma mensagem de entrada, onde o ponto de extremidade deve enviar uma mensagem de resposta ou qual instância de um serviço para usar para processar uma mensagem de entrada de um determinado usuário quando houver várias instâncias.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Definição de um endereço de ponto de extremidade  
- Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], um <xref:System.ServiceModel.EndpointAddress> modelos de uma referência de ponto de extremidade (EPR) conforme definido no padrão de WS-Addressing.  
+ No WCF, um <xref:System.ServiceModel.EndpointAddress> modelos de uma referência de ponto de extremidade (EPR) conforme definido no padrão de WS-Addressing.  
   
  O endereço de URI para a maioria dos transportes tem quatro partes. Por exemplo, esse URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" tem as seguintes quatro partes:  
   
@@ -29,11 +29,11 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
   
 -   Caminho: /mathservice.svc/secureEndpoint  
   
- Parte do modelo EPR é que cada referência de ponto de extremidade pode executar alguns parâmetros de referência que adicionar informações de identificação extra. Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], esses parâmetros de referência são modelados como instâncias de <xref:System.ServiceModel.Channels.AddressHeader> classe.  
+ Parte do modelo EPR é que cada referência de ponto de extremidade pode executar alguns parâmetros de referência que adicionar informações de identificação extra. No WCF, esses parâmetros de referência são modelados como instâncias de <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   
  O endereço de ponto de extremidade para um serviço pode ser especificado imperativa por meio de código ou declarativamente por meio da configuração. Definir pontos de extremidade no código geralmente não é prático porque as associações e os endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Geralmente, é mais prático definir pontos de extremidade de serviço usando a configuração em vez do código. Informações sem o código de endereçamento e manter a associação permite que a alteração sem ter que recompilar e reimplantar o aplicativo. Se nenhum ponto de extremidade está especificados no código ou na configuração, o tempo de execução adiciona um ponto de extremidade padrão em cada endereço base para cada contrato implementado pelo serviço.  
   
- Há duas maneiras de especificar endereços de ponto de extremidade para um serviço em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Você pode especificar um endereço absoluto para cada ponto de extremidade associado ao serviço ou você pode fornecer um endereço base para o <xref:System.ServiceModel.ServiceHost> de um serviço e, em seguida, especifique um endereço para cada ponto de extremidade associado a esse serviço que é definido em relação a essa base endereço. Você pode usar cada um dos procedimentos a seguir para especificar os endereços de ponto de extremidade para um serviço na configuração ou código. Se você não especificar um endereço relativo, o serviço usa o endereço base. Você também pode ter vários endereços de base para um serviço, mas cada serviço é permitido somente um endereço base para cada transporte. Se você tiver vários pontos de extremidade, cada um deles é configurada com uma associação diferente, seus endereços devem ser exclusivos. Pontos de extremidade que usam a mesma associação contratos mas diferentes pode usar o mesmo endereço.  
+ Há duas maneiras de especificar endereços de ponto de extremidade para um serviço do WCF. Você pode especificar um endereço absoluto para cada ponto de extremidade associado ao serviço ou você pode fornecer um endereço base para o <xref:System.ServiceModel.ServiceHost> de um serviço e, em seguida, especifique um endereço para cada ponto de extremidade associado a esse serviço que é definido em relação a essa base endereço. Você pode usar cada um dos procedimentos a seguir para especificar os endereços de ponto de extremidade para um serviço na configuração ou código. Se você não especificar um endereço relativo, o serviço usa o endereço base. Você também pode ter vários endereços de base para um serviço, mas cada serviço é permitido somente um endereço base para cada transporte. Se você tiver vários pontos de extremidade, cada um deles é configurada com uma associação diferente, seus endereços devem ser exclusivos. Pontos de extremidade que usam a mesma associação contratos mas diferentes pode usar o mesmo endereço.  
   
  Ao hospedar no IIS, você não gerencia o <xref:System.ServiceModel.ServiceHost> instância por conta própria. O endereço base sempre é o endereço especificado no arquivo. svc para o serviço ao hospedar no IIS. Portanto, você deve usar endereços de ponto de extremidade relativa para pontos de extremidade do serviço hospedado no IIS. Fornecendo um endereço de ponto de extremidade totalmente qualificado pode resultar em erros na implantação do serviço. Para obter mais informações, consulte [Implantando um serviço WCF de Internet Information Services-Hosted](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

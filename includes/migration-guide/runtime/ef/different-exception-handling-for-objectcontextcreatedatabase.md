@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Detalhes|A partir do .NET 4.5, se houver falha na criação do banco de dados, os métodos <code>CreateDatabase</code> tentarão remover o banco de dados vazio. Se essa operação for bem-sucedida, a <xref:System.Data.SqlClient.SqlException?displayProperty=name> original será propagada (em vez da <xref:System.InvalidOperationException?displayProperty=name> que sempre era gerada no .NET 4.0)|
+|Detalhes|Começando com o .NET Framework 4.5, se houver falha na criação do banco de dados, os métodos <code>CreateDatabase</code> tentarão remover o banco de dados vazio. Se essa operação for bem-sucedida, a <xref:System.Data.SqlClient.SqlException?displayProperty=name> original será propagada (em vez da <xref:System.InvalidOperationException?displayProperty=name> que sempre era gerada no .NET Framework 4.0)|
 |Sugestão|Ao capturar um <xref:System.InvalidOperationException?displayProperty=name> durante a execução de <xref:System.Data.Objects.ObjectContext.CreateDatabase> ou <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)>, agora, SQLExceptions também devem ser capturadas.|
 |Escopo|Secundário|
 |Versão|4.5|

@@ -1,27 +1,15 @@
 ---
 title: Autenticador de token
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Autenticador de token
-Este exemplo demonstra como implementar um autenticador de token personalizado. Um autenticador de token em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é usado para validar o token usado com a mensagem, verificar se ele é consistente e autenticar a identidade associada ao token.  
+Este exemplo demonstra como implementar um autenticador de token personalizado. Um autenticador de token no Windows Communication Foundation (WCF) é usado para validar o token usado com a mensagem de verificação que é consistente e autenticar a identidade associada ao token.  
   
  Autenticadores de token personalizados são úteis em uma variedade de casos, como:  
   
@@ -35,11 +23,11 @@ Este exemplo demonstra como implementar um autenticador de token personalizado. 
   
 -   Como o servidor pode validar as credenciais do cliente usando um autenticador de token personalizado.  
   
--   Como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] código de serviço está associado com o autenticador de token personalizado.  
+-   Como o código de serviço WCF está associado com o autenticador de token personalizado.  
   
 -   Como o servidor pode ser autenticado usando o certificado do servidor x. 509.  
   
- Este exemplo também mostra como a identidade do chamador é acessível de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] após o processo de autenticação de token personalizado.  
+ Este exemplo também mostra como a identidade do chamador é acessível do WCF após o processo de autenticação de token personalizado.  
   
  O serviço expõe um ponto de extremidade de comunicação com o serviço, definido usando o arquivo de configuração App. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding`, com o modo de segurança definido para a mensagem - o modo padrão da `wsHttpBinding`. Este exemplo define o padrão de `wsHttpBinding` para usar a autenticação de nome de usuário do cliente. O serviço também configura o certificado de serviço usando `serviceCredentials` comportamento. O `securityCredentials` comportamento permite que você especifique um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir faz referência ao certificado de localhost instalado durante a configuração de exemplo, conforme descrito nas instruções de instalação a seguir.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Usando o método Assert"
-ms.custom: 
+title: Usando o método Assert
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,21 +16,18 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90e5d910e0d6e6f55234255ac378fa58ebf7f307
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea8be23eb6fd2500e59527890b874b8f19ec06d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-assert-method"></a>Usando o método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A>é um método que pode ser chamado em classes de permissão de acesso do código e na <xref:System.Security.PermissionSet> classe. Você pode usar **Assert** permitir que seu código (e chamadores downstream) executar ações que seu código tem permissão para fazer, mas seus chamadores talvez não tenha permissão para fazer. Uma asserção de segurança altera o processo normal que o tempo de execução executa durante uma verificação de segurança. Quando você declara uma permissão, ele informa ao sistema de segurança para não verificar os chamadores do seu código para a permissão declarada.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> é um método que pode ser chamado em classes de permissão de acesso do código e na <xref:System.Security.PermissionSet> classe. Você pode usar **Assert** permitir que seu código (e chamadores downstream) executar ações que seu código tem permissão para fazer, mas seus chamadores talvez não tenha permissão para fazer. Uma asserção de segurança altera o processo normal que o tempo de execução executa durante uma verificação de segurança. Quando você declara uma permissão, ele informa ao sistema de segurança para não verificar os chamadores do seu código para a permissão declarada.  
   
 > [!CAUTION]
 >  Use asserções com cuidado porque eles podem abrir vulnerabilidades de segurança e prejudicar o mecanismo de tempo de execução para impor restrições de segurança.  

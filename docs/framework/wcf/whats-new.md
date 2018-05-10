@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>O que&#39;novo no Windows Communication Foundation 4.5
 Este tópico aborda os recursos novos para o Windows Communication Foundation (WCF).  
@@ -73,7 +73,7 @@ Este tópico aborda os recursos novos para o Windows Communication Foundation (W
  Para ajudar os desenvolvedores novos e existentes do serviço WCF a configurarem os serviços, o editor de XML do Visual Studio agora fornece dicas de ferramenta para cada elemento de configuração e suas propriedades que fazem parte do arquivo de configuração do serviço.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Configurando serviços WCF em código  
- Windows Communication Foundation (WCF) permite que os desenvolvedores configurem serviços usando arquivos de configuração ou código.  Os arquivos de configuração são úteis quando um serviço precisa ser configurado depois de ser implantado. Ao usar arquivos de configuração, um profissional de TI apenas precisa atualizar o arquivo de configuração, nenhuma recompilação é necessária. Os arquivos de configuração, porém, podem ser complexos e difíceis de manter. Não há suporte para depurar arquivos de configuração e os elementos de configuração são referenciados por nomes, o que torna os arquivos de configuração de criação sujeitos a erros e difíceis. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] também permite configurar serviços no código. Em versões anteriores do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 e anterior) configurar serviços no código era fácil em cenários auto-hospedados, a classe <xref:System.ServiceModel.ServiceHost> permitia que você configurasse pontos de extremidade e comportamentos antes de chamar o ServiceHost.Open. Em cenários hospedados na Web, porém, você não tem acesso à classe <xref:System.ServiceModel.ServiceHost>. Para configurar um serviço Web hospedado, você precisava criar um `System.ServiceModel.ServiceHostFactory` que criou o <xref:System.ServiceModel.Activation.ServiceHostFactory> e executar qualquer configuração necessária. A partir do .NET 4.5, o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornece um modo mais fácil de configurar serviços auto-hospedados e hospedados na Web em código. Para obter mais informações, consulte [Configurando serviços WCF em código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) permite que os desenvolvedores configurem serviços usando arquivos de configuração ou código.  Os arquivos de configuração são úteis quando um serviço precisa ser configurado depois de ser implantado. Ao usar arquivos de configuração, um profissional de TI apenas precisa atualizar o arquivo de configuração, nenhuma recompilação é necessária. Os arquivos de configuração, porém, podem ser complexos e difíceis de manter. Não há suporte para depurar arquivos de configuração e os elementos de configuração são referenciados por nomes, o que torna os arquivos de configuração de criação sujeitos a erros e difíceis. O WCF também permite que você configure os serviços no código. Em versões anteriores de configuração dos serviços do WCF (4.0 e versões anteriores) no código era muito fácil em cenários de hospedagem interna de <xref:System.ServiceModel.ServiceHost> classe permitido configurar pontos de extremidade e comportamentos antes de chamar ServiceHost. Em cenários hospedados na Web, porém, você não tem acesso à classe <xref:System.ServiceModel.ServiceHost>. Para configurar um serviço Web hospedado, você precisava criar um `System.ServiceModel.ServiceHostFactory` que criou o <xref:System.ServiceModel.Activation.ServiceHostFactory> e executar qualquer configuração necessária. Começando com o .NET 4.5, o WCF fornece uma maneira fácil de configurar os auto-hospedado e web serviços hospedados em código. Para obter mais informações, consulte [Configurando serviços WCF em código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Cache de ChannelFactory  
  Os aplicativos cliente do WCF usam a classe <xref:System.ServiceModel.ChannelFactory%601> para criar um canal de comunicação com um serviço WCF.  Criar instâncias de <xref:System.ServiceModel.ChannelFactory%601> resulta em alguma sobrecarga porque envolve as seguintes operações:  
@@ -107,7 +107,7 @@ Este tópico aborda os recursos novos para o Windows Communication Foundation (W
  Os valores de atributo nos arquivos de configuração para os atributos personalizados definidos no projeto agora dão suporte ao intellisense para facilitar o trabalho com configurações de maneira rápida e precisa.  
   
 ## <a name="configuration-tooltips"></a>Dicas de ferramenta de configuração  
- Os elementos e os atributos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] têm agora dicas de ferramentas no editor de XML, para identificar de maneira mais fácil e precisa a finalidade do elemento ou atributo.  
+ Atributos e elementos WCF agora precisam dicas de ferramenta no editor de XML, mais facilmente e identificam com precisão a finalidade de um elemento ou atributo.  
   
 ## <a name="paste-data-as-classes"></a>Colar dados como classes  
  Em um projeto WCF, os tipos de dados definidos no XML (como são expostos em um serviço) podem ser colados diretamente em uma página de código. O tipo de XML será colado como um tipo CLR. Consulte [gerar Classes de tipo de dados do XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) para obter mais detalhes.  

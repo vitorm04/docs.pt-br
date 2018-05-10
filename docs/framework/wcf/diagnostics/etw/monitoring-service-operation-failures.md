@@ -2,11 +2,11 @@
 title: Monitorando operações de serviços com falha
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Monitorando operações de serviços com falha
 Se o rastreamento analítico é habilitado para um aplicativo, falhas de serviço podem facilmente ser monitoradas no Visualizador de eventos.  Este tópico demonstra como determinar quando uma operação de serviço falha e como determinar o que causou a falha.  
@@ -17,7 +17,7 @@ Se o rastreamento analítico é habilitado para um aplicativo, falhas de serviç
   
 2.  Se você ainda não ativou o rastreamento analítico, expanda **Applications and Services Logs**, **Microsoft**, **Windows**, **aplicativos de servidor de aplicativo** . Selecione **exibição**, **Mostrar analítica e Logs de depuração**. Clique com botão direito **analítico** e selecione **Habilitar Log**. Visualizador de eventos deixe aberto para que os rastreamentos podem ser exibidos depois que a operação de serviço falhará.  
   
-3.  Em seguida, abra o exemplo criado o [Tutorial de Introdução](../../../../../docs/framework/wcf/getting-started-tutorial.md) na [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Observe que você deve executar [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] como um administrador para que o serviço pode ser criado. Se você tiver o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] exemplos instalados, você pode abrir o [Introdução](../../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto completo criado no tutorial.  
+3.  Em seguida, abra o exemplo criado o [Tutorial de Introdução](../../../../../docs/framework/wcf/getting-started-tutorial.md) na [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Observe que você deve executar [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] como um administrador para que o serviço pode ser criado. Se você tiver instalados os exemplos de WCF, você pode abrir o [Introdução](../../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto completo criado no tutorial.  
   
 4.  No arquivo Program.cs no projeto de servidor, adicione a seguinte linha de código para o início do `Divide` método o `CalculatorService` classe:  
   

@@ -1,27 +1,15 @@
 ---
 title: Configurando rastreamento de fluxo de mensagem
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>Configurando rastreamento de fluxo de mensagem
-Quando [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] atividade de rastreamento está habilitada, IDs de atividade de ponta a ponta são atribuídos às atividades lógicas em todo o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pilha. Em [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], agora há uma versão de desempenho superior desse recurso que funciona com evento rastreamento do Windows (ETW) chamado de rastreamento de fluxo de mensagem. Quando habilitada, IDs de atividade de ponta a ponta são obtidas (ou atribuídos ao se vazia) mensagens de entrada e são propagadas para todos os eventos de rastreamento que são emitidos depois que a mensagem tem sido decodificada pelo canal. Os clientes podem usar esse recurso para reconstruir os fluxos de mensagens com logs de rastreamento de serviços diferentes após a decodificação.  
+Quando o rastreamento de atividades do Windows Communication Foundation (WCF) estiver habilitado, as IDs de atividade de ponta a ponta são atribuídas a lógicas atividades em toda a pilha do WCF. Em [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], agora há uma versão de desempenho superior desse recurso que funciona com evento rastreamento do Windows (ETW) chamado de rastreamento de fluxo de mensagem. Quando habilitada, IDs de atividade de ponta a ponta são obtidas (ou atribuídos ao se vazia) mensagens de entrada e são propagadas para todos os eventos de rastreamento que são emitidos depois que a mensagem tem sido decodificada pelo canal. Os clientes podem usar esse recurso para reconstruir os fluxos de mensagens com logs de rastreamento de serviços diferentes após a decodificação.  
   
  O rastreamento pode ser ativado depois que for detectado um problema com o aplicativo e, em seguida, desabilitado quando o problema for resolvido.  
   

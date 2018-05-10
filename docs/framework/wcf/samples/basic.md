@@ -2,18 +2,18 @@
 title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: 295303dac471d06e3c2f7ccfba9abf683ccd0df6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic"></a>Basic
 Esta seção inclui as seções de exemplos que demonstram a funcionalidade básica do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- Demonstra como implementar um serviço típico e um cliente típico usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Demonstra como implementar um serviço típico e um cliente típico usando o WCF.  
   
  [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
  Demonstra como XML e JavaScript assíncrona.  
@@ -22,28 +22,28 @@ Esta seção inclui as seções de exemplos que demonstram a funcionalidade bás
  Demonstra como usar o atributo de associação de um elemento de ponto de extremidade.  
   
  [Cliente](../../../../docs/framework/wcf/samples/client.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos cliente.  
+ Demonstra aplicativos de cliente do WCF.  
   
  [Contrato](../../../../docs/framework/wcf/samples/contract.md)  
  Demonstra os contratos de dados.  
   
  [Descoberta](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] descoberta.  
+ Demonstra a descoberta do WCF.  
   
  [Gerenciamento](../../../../docs/framework/wcf/samples/management.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerenciamento.  
+ Demonstra o gerenciamento de WCF.  
   
  [Serviços de roteamento](../../../../docs/framework/wcf/samples/routing-services.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços de roteamento.  
+ Demonstra os serviços de roteamento do WCF.  
   
  [Segurança](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança.  
+ Demonstra a segurança do WCF.  
   
  [Serviços](../../../../docs/framework/wcf/samples/services.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  
+ Demonstra os serviços do WCF.  
   
  [Sindicalização](../../../../docs/framework/wcf/samples/syndication.md)  
- Demonstra[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] syndication.  
+ Distribuição de DemonstratesWCF.  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  
- Demonstra a hospedagem na Web em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].
+ Demonstra a hospedagem na Web no WCF.

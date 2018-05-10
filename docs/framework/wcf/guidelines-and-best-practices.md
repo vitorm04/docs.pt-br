@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas
 Esta seção contém tópicos que fornecem diretrizes para criação de aplicativos do Windows Communication Foundation (WCF).  
@@ -22,7 +22,7 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
  Explica como e quando criar contratos de dados que não são interrompidas quando são criadas versões futuras.  
   
  [Controle de versão de serviço](../../../docs/framework/wcf/service-versioning.md)  
- Explica como considerar o controle de versão no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Após a implantação, serviços (e os pontos de extremidade expõem) talvez precisem ser alterados, por exemplo, para atender a requisitos de negócios ou requisitos de TI, a alteração ou corrigir problemas. Cada alteração introduz uma nova versão do serviço.  
+ Explica como considerar o controle de versão no WCF. Após a implantação, serviços (e os pontos de extremidade expõem) talvez precisem ser alterados, por exemplo, para atender a requisitos de negócios ou requisitos de TI, a alteração ou corrigir problemas. Cada alteração introduz uma nova versão do serviço.  
   
  [Balanceamento de carga](../../../docs/framework/wcf/load-balancing.md)  
  Lista as diretrizes para balanceamento de carga com uma Web farm.  

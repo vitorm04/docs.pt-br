@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>Serviços
 Esta seção contém exemplos que demonstram os serviços Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Demonstra a hospedagem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  
+ Demonstra os serviços de hospedagem de WCF.  
   
  [Interoperabilidade de serviço](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- Demonstra a interação entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e outras tecnologias de serviço.  
+ Demonstra a interação entre o WCF e outras tecnologias de serviço.  
   
  [Comportamentos](../../../../docs/framework/wcf/samples/behaviors.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comportamentos de serviço.  
+ Demonstra os comportamentos de serviço do WCF.  
   
  [Segurança do serviço](../../../../docs/framework/wcf/samples/service-security.md)  
- Demonstra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança de serviço.  
+ Demonstra a segurança do serviço WCF.  
   
  [Configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Demonstra como implementar e configurar um serviço típico e o cliente usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Demonstra como implementar e configurar um serviço típico e o cliente usando o WCF.  
   
  [Uso de pontos de extremidade padrão](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Demonstra como usar pontos de extremidade padrão em arquivos de configuração de serviço.  
@@ -55,7 +55,7 @@ Esta seção contém exemplos que demonstram os serviços Windows Communication 
  Demonstra um serviço que hospeda vários pontos de extremidade em um único `ListenUri`.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Demonstra como enviar informações extras uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] chamar usando cabeçalhos.  
+ Demonstra como enviar informações extras em uma chamada WCF usando cabeçalhos.  
   
  [Descrição do serviço](../../../../docs/framework/wcf/samples/service-description.md)  
  Demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução.  

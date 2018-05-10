@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>Configurando registros de mensagens em log
 Este tópico descreve como você pode configurar o log de mensagens para diferentes cenários.  
@@ -66,7 +66,7 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
   
  Mensagens de saída, log ocorre imediatamente após a mensagem sair do código do usuário e imediatamente antes que a mensagem entre na conexão.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] registra mensagens em dois níveis diferentes, serviço e transporte. As mensagens malformadas também são registradas. As três categorias são independentes umas das outras e podem ser ativadas separadamente na configuração.  
+ WCF registra mensagens em dois níveis diferentes, serviço e transporte. As mensagens malformadas também são registradas. As três categorias são independentes umas das outras e podem ser ativadas separadamente na configuração.  
   
  Você pode controlar o nível de log definindo o `logMessagesAtServiceLevel`, `logMalformedMessages`, e `logMessagesAtTransportLevel` atributos do `messageLogging` elemento.  
   
@@ -77,7 +77,7 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
  As mensagens registradas nesta camada estão prontas para ser codificada ou decodificada para ou depois de transporte na conexão. Se os filtros tiverem sido definidos, apenas as mensagens que correspondem aos filtros são registradas. Caso contrário, todas as mensagens na camada de transporte são registradas. Todas as mensagens de infraestrutura são registradas nesta camada, incluindo mensagens confiáveis. Em mensagens em fluxo, somente os cabeçalhos são registrados. Além disso, mensagens seguras são registradas como criptografados nesse nível, exceto se um transporte seguro, como HTTPS é usado.  
   
 ### <a name="malformed-level"></a>Nível malformado  
- As mensagens malformadas são mensagens que foram rejeitadas pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha em qualquer estágio do processamento. As mensagens malformadas são registradas como-é: criptografados se eles são, com o próprio não XML e assim por diante. `maxSizeOfMessageToLog` definido o tamanho da mensagem a ser registrado como CDATA. Por padrão, `maxSizeOfMessageToLog` é igual a 256 K. Para obter mais informações sobre esse atributo, consulte a seção de outras opções.  
+ As mensagens malformadas são mensagens que são rejeitadas pela pilha do WCF em qualquer estágio do processamento. As mensagens malformadas são registradas como-é: criptografados se eles são, com o próprio não XML e assim por diante. `maxSizeOfMessageToLog` definido o tamanho da mensagem a ser registrado como CDATA. Por padrão, `maxSizeOfMessageToLog` é igual a 256 K. Para obter mais informações sobre esse atributo, consulte a seção de outras opções.  
   
 ### <a name="other-options"></a>Outras opções  
  Além dos níveis de log, o usuário pode especificar as seguintes opções:  

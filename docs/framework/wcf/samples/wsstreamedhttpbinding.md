@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 O exemplo demonstra como criar uma associação que foi projetada para oferecer suporte a cenários de streaming quando o transporte HTTP é usado.  
@@ -51,7 +51,7 @@ O exemplo demonstra como criar uma associação que foi projetada para oferecer 
   
 2.  Adicionar suporte de configuração  
   
-     Para expor o transporte por meio da configuração de exemplo implementa duas classes mais —`WSStreamedHttpBindingConfigurationElement` e `WSStreamedHttpBindingSection`. A classe `WSStreamedHttpBindingSection` é um <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expõe `WSStreamedHttpBinding` para o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistema de configuração. A maior parte da implementação é delegada ao `WSStreamedHttpBindingConfigurationElement`, que é derivado de <xref:System.ServiceModel.Configuration.StandardBindingElement>. A classe `WSStreamedHttpBindingConfigurationElement` tem propriedades que correspondem às propriedades de `WSStreamedHttpBinding`e as funções para mapear cada elemento de configuração para uma associação.  
+     Para expor o transporte por meio da configuração de exemplo implementa duas classes mais —`WSStreamedHttpBindingConfigurationElement` e `WSStreamedHttpBindingSection`. A classe `WSStreamedHttpBindingSection` é um <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expõe `WSStreamedHttpBinding` para o sistema de configuração do WCF. A maior parte da implementação é delegada ao `WSStreamedHttpBindingConfigurationElement`, que é derivado de <xref:System.ServiceModel.Configuration.StandardBindingElement>. A classe `WSStreamedHttpBindingConfigurationElement` tem propriedades que correspondem às propriedades de `WSStreamedHttpBinding`e as funções para mapear cada elemento de configuração para uma associação.  
   
      Registre o manipulador com o sistema de configuração, adicionando a seguinte seção ao arquivo de configuração do serviço.  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>O cliente de exemplo WSStreamedHttpBinding  
- O cliente que é usado para interagir com o serviço usando `WSStreamedHttpBinding` está localizado no subdiretório de cliente. Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança exibe quando você tenta acessar um endereço HTTPS em seu navegador, como https://localhost/servicemodelsamples/service.svc. Para permitir que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para trabalhar com um certificado de teste no lugar, foi adicionado um código adicional para o cliente para suprimir o alerta de segurança. O código e a classe associada não são necessárias ao usar certificados de produção.  
+ O cliente que é usado para interagir com o serviço usando `WSStreamedHttpBinding` está localizado no subdiretório de cliente. Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança exibe quando você tenta acessar um endereço HTTPS em seu navegador, como https://localhost/servicemodelsamples/service.svc. Para permitir que o cliente do WCF para trabalhar com um certificado de teste no local, um código adicional foi adicionado ao cliente para suprimir o alerta de segurança. O código e a classe associada não são necessárias ao usar certificados de produção.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

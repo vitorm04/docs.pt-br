@@ -2,19 +2,19 @@
 title: Atividade
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>Atividade
 Este tópico descreve os rastreamentos de atividades no modelo de rastreamento do Windows Communication Foundation (WCF). Atividades são unidades que ajudam o usuário a restringir o escopo de uma falha de processamento. Erros que ocorrem na mesma atividade estão diretamente relacionados. Por exemplo, uma operação falha porque a descriptografia da mensagem falhou. Os rastreamentos de operação e Falha na descriptografia mensagem aparecem na mesma atividade, mostrando uma correlação direta entre o erro de descriptografia e o erro de solicitação.  
   
 ## <a name="configuring-activity-tracing"></a>Configurando o rastreamento de atividade  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oferece atividades predefinidas para aplicativos de processamento (consulte [lista de atividades](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Você também pode definir atividades programaticamente para rastreamentos de usuário do grupo. Para obter mais informações, consulte [emitindo rastreamentos de código de usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ O WCF fornece atividades predefinidas para aplicativos de processamento (consulte [lista de atividades](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Você também pode definir atividades programaticamente para rastreamentos de usuário do grupo. Para obter mais informações, consulte [emitindo rastreamentos de código de usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Para emitir rastreamentos de atividade em tempo de execução, use o `ActivityTracing` configuração para o `System.ServiceModel` rastreamento fonte ou outros [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ou fontes de rastreamento personalizada, conforme demonstrado pelo código de configuração a seguir.  
+ Para emitir rastreamentos de atividade em tempo de execução, use o `ActivityTracing` configuração para o `System.ServiceModel` Rastrear origem, ou outros WCF ou fontes de rastreamento personalizada, conforme demonstrado pelo código de configuração a seguir.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Uma atividade denota um limite de processamento que pode ser significativo para o administrador do sistema ou a capacidade de suporte.  
   
--   Cada [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] método, tanto no cliente e no servidor, é limitado pela partir de uma nova atividade, depois (depois que o trabalho é realizado) terminando a nova atividade e retornar para a atividade de ambiente.  
+-   Cada método WCF, tanto no cliente e no servidor, é limitado pela partir de uma nova atividade, depois (depois que o trabalho é realizado) terminando a nova atividade e retornar para a atividade de ambiente.  
   
 -   Longa em execução (em andamento) atividades como escutando conexões ou aguardando as mensagens são representadas por marcadores de início/parada correspondente.  
   

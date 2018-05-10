@@ -2,11 +2,11 @@
 title: Contexto de instância durável
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 Este exemplo demonstra como personalizar o tempo de execução do Windows Communication Foundation (WCF) para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  
@@ -14,7 +14,7 @@ Este exemplo demonstra como personalizar o tempo de execução do Windows Commun
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Este exemplo envolve estendendo a camada do canal e a camada de modelo de serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Portanto, é necessário entender os conceitos subjacentes antes de continuar com os detalhes de implementação.  
+ Este exemplo envolve estendendo a camada do canal e a camada de modelo de serviço do WCF. Portanto, é necessário entender os conceitos subjacentes antes de continuar com os detalhes de implementação.  
   
  Contextos de instância durável com muita frequência, podem ser encontrados em cenários do mundo real. Um aplicativo de carrinho de compras, por exemplo, tem a capacidade de pausar a metade de compras por meio e continuá-lo em outro dia. Para que quando visitar o carrinho de compras no dia seguinte, nosso contexto original é restaurado. É importante observar que o aplicativo de carrinho de compras (no servidor) não mantém a instância de carrinho de compras enquanto estamos estiver desconectados. Em vez disso, ele mantém seu estado em uma mídia de armazenamento durável e usa-o ao construir uma nova instância para o contexto restaurado. Portanto, a instância de serviço que pode atender para o mesmo contexto não é o mesmo que a instância anterior (ou seja, ele não tem o mesmo endereço de memória).  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Essas implementações de canal são adicionadas ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução de canal, o `DurableInstanceContextBindingElement` classe e `DurableInstanceContextBindingElementSection` classe adequadamente. Consulte o [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) documentação de exemplo para obter mais detalhes sobre seções de elemento de associação e elementos de associação de canal.  
+ Essas implementações de canal são adicionadas no tempo de execução de canal WCF, o `DurableInstanceContextBindingElement` classe e `DurableInstanceContextBindingElementSection` classe adequadamente. Consulte o [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) documentação de exemplo para obter mais detalhes sobre seções de elemento de associação e elementos de associação de canal.  
   
 ## <a name="service-model-layer-extensions"></a>Extensões de modelo de camada de serviço  
  Agora que a ID do contexto tem percorrida por meio da camada de canal, o comportamento de serviço pode ser implementado para personalizar a instanciação. Neste exemplo, um Gerenciador de armazenamento é usado para carregar e salvar o estado de ou para o armazenamento persistente. Conforme explicado anteriormente, este exemplo fornece um Gerenciador de armazenamento que usa o SQL Server 2005 como seu armazenamento de backup. No entanto, também é possível adicionar os mecanismos de armazenamento personalizado para essa extensão. Para fazer isso em uma interface pública for declarado, que deve ser implementado por todos os gerenciadores de armazenamento.  
@@ -228,9 +228,9 @@ else
   
  A infraestrutura necessária para ler e gravar instâncias do armazenamento persistente é implementada. Agora, as etapas necessárias para alterar o comportamento de serviço devem ser executados.  
   
- Como a primeira etapa desse processo, precisamos salvar a identificação de contexto fornecido por meio da camada do canal para o InstanceContext atual. InstanceContext é um componente de tempo de execução que atua como o link entre a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dispatcher e a instância do serviço. Ele pode ser usado para fornecer estado adicionais e o comportamento para a instância do serviço. Isso é essencial porque na comunicação da sessão, a ID do contexto é enviada somente com a primeira mensagem.  
+ Como a primeira etapa desse processo, precisamos salvar a identificação de contexto fornecido por meio da camada do canal para o InstanceContext atual. InstanceContext é um componente de tempo de execução que atua como o link entre o dispatcher do WCF e a instância de serviço. Ele pode ser usado para fornecer estado adicionais e o comportamento para a instância do serviço. Isso é essencial porque na comunicação da sessão, a ID do contexto é enviada somente com a primeira mensagem.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite estender seu componente de tempo de execução InstanceContext adicionando um novo estado e o comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
+ WCF permite estender seu componente de tempo de execução InstanceContext adicionando um novo estado e o comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado no WCF para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
   
 -   O IExtensibleObject\<T > interface é implementada por objetos que permitem a extensões que personalizar sua funcionalidade.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Conforme descrito anteriormente a ID de contexto é lido a partir de `Properties` coleção do `Message` classe e transmitido ao construtor da classe de extensão. Isso demonstra como as informações podem ser trocadas entre as camadas de maneira consistente.  
   
- A próxima etapa importante está substituindo o processo de criação de instância de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a implementação de comportamentos personalizados instanciação e capturando-los até o tempo de execução usando a interface IInstanceProvider. O novo `InstanceProvider` classe é implementada para fazer esse trabalho. No construtor no tipo de serviço esperado do provedor de instância é aceita. Posteriormente, isso é usado para criar novas instâncias. No `GetInstance` implementação de uma instância de um Gerenciador de armazenamento é criada procurando uma instância persistente. Se ele retorna `null` , em seguida, uma nova instância do tipo de serviço é instanciada e retornada ao chamador.  
+ A próxima etapa importante está substituindo o processo de criação de instância de serviço. WCF permite implementar comportamentos personalizados instanciação e capturando-los até o tempo de execução usando a interface IInstanceProvider. O novo `InstanceProvider` classe é implementada para fazer esse trabalho. No construtor no tipo de serviço esperado do provedor de instância é aceita. Posteriormente, isso é usado para criar novas instâncias. No `GetInstance` implementação de uma instância de um Gerenciador de armazenamento é criada procurando uma instância persistente. Se ele retorna `null` , em seguida, uma nova instância do tipo de serviço é instanciada e retornada ao chamador.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  Em resumo até agora, este exemplo produziu um canal que habilitado o protocolo personalizado para o exchange de ID de contexto personalizado e ele também substitui o padrão de comportamento para carregar as instâncias do armazenamento persistente de instâncias.  
   
- O restante é uma maneira de salvar a instância de serviço para o armazenamento persistente. Como discutido anteriormente, já existe a funcionalidade necessária para salvar o estado em um `IStorageManager` implementação. Estamos agora deve se integrar com o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução. Outro atributo é necessário que é aplicável para os métodos na classe de implementação de serviço. Esse atributo deve ser aplicado a métodos que alteram o estado da instância do serviço.  
+ O restante é uma maneira de salvar a instância de serviço para o armazenamento persistente. Como discutido anteriormente, já existe a funcionalidade necessária para salvar o estado em um `IStorageManager` implementação. Estamos agora deve integrar isso com o tempo de execução do WCF. Outro atributo é necessário que é aplicável para os métodos na classe de implementação de serviço. Esse atributo deve ser aplicado a métodos que alteram o estado da instância do serviço.  
   
- O `SaveStateAttribute` classe implementa essa funcionalidade. Ele também implementa `IOperationBehavior` classe para modificar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução para cada operação. Quando um método é marcado com esse atributo, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tempo de execução chama o `ApplyBehavior` método apropriada `DispatchOperation` está sendo construído. Nessa implementação de método há uma única linha de código:  
+ O `SaveStateAttribute` classe implementa essa funcionalidade. Ele também implementa `IOperationBehavior` classe para modificar o tempo de execução do WCF para cada operação. Quando um método é marcado com esse atributo, o tempo de execução WCF chama o `ApplyBehavior` método apropriada `DispatchOperation` está sendo construído. Nessa implementação de método há uma única linha de código:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -373,7 +373,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Usando a extensão  
- As extensões de camada do modelo de canal camada e de serviço são feitas e agora podem ser usados em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos. Serviços precisam adicionar o canal a pilha de canais usando uma associação personalizada e, em seguida, marcar as classes de implementação de serviço com os atributos apropriados.  
+ A camada de canais e extensões de modelo de camada de serviço são feitas tanto agora pode ser usados em aplicativos do WCF. Serviços precisam adicionar o canal a pilha de canais usando uma associação personalizada e, em seguida, marcar as classes de implementação de serviço com os atributos apropriados.  
   
 ```  
 [DurableInstanceContext]  

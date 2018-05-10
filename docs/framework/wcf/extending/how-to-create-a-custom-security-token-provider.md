@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16bdbf3aa2403a3af603b24df90391d36660dbd4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Como criar um fornecedor de token de segurança personalizado
 Este tópico mostra como criar novos tipos de token com um provedor de token de segurança personalizada e como integrar o provedor de um Gerenciador de token de segurança personalizada.  
@@ -42,7 +42,7 @@ Este tópico mostra como criar novos tipos de token com um provedor de token de 
   
 2.  Substituir o <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> método se já não é substituída.  
   
-     O <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> método é responsável por retornar uma instância do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe apropriado para o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro passado para o método pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estrutura de segurança. Modifique o método para retornar a implementação de provedor de token de segurança personalizado (criada no procedimento anterior) quando o método é chamado com um parâmetro de token de segurança apropriado. Para obter mais informações sobre o Gerenciador de token de segurança, consulte o [passo a passo: Criando personalizado cliente e credenciais de serviço](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     O <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> método é responsável por retornar uma instância do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe apropriado para o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro passado para o método pela estrutura de segurança do WCF. Modifique o método para retornar a implementação de provedor de token de segurança personalizado (criada no procedimento anterior) quando o método é chamado com um parâmetro de token de segurança apropriado. Para obter mais informações sobre o Gerenciador de token de segurança, consulte o [passo a passo: Criando personalizado cliente e credenciais de serviço](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
 3.  Adicionar lógica personalizada para o método para habilitá-lo retornar o provedor de token de segurança personalizada com base no <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro. O exemplo a seguir retorna o provedor de token de segurança personalizada, se o token requisitos forem atendidos. Os requisitos incluem um token de segurança x. 509 e a direção da mensagem (que o token é usado para a saída de mensagem). Para todos os outros casos, o código chama a classe base para manter o comportamento fornecido pelo sistema para outros requisitos de token de segurança.  
   

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>Balanceamento de carga
-É uma maneira de aumentar a capacidade de aplicativos do Windows Communication Foundation (WCF) dimensioná-los por implantá-los em um farm de servidores com balanceamento de carga. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
+É uma maneira de aumentar a capacidade de aplicativos do Windows Communication Foundation (WCF) dimensioná-los por implantá-los em um farm de servidores com balanceamento de carga. Aplicativos WCF podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  
   
- As seções a seguir abordam as considerações para balanceamento de carga [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos criados usando várias associações fornecidas pelo sistema.  
+ As seções a seguir abordam as considerações para aplicativos WCF criados usando várias associações fornecidas pelo sistema de balanceamento de carga.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Balanceamento de carga com a associação HTTP básica  
- Da perspectiva do balanceamento de carga, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos que se comunicam usando o <xref:System.ServiceModel.BasicHttpBinding> não são diferentes de outros tipos comuns de HTTP (estático conteúdo HTML, páginas ASP.NET ou serviços Web ASMX) o tráfego de rede. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] canais que utilizam esta associação são inerentemente sem monitoração de estado e encerram as conexões quando fecha o canal. Como tal, o <xref:System.ServiceModel.BasicHttpBinding> funciona perfeitamente com técnicas de balanceamento de carga HTTP existente.  
+ Da perspectiva do balanceamento de carga, os aplicativos do WCF que se comunicam usando o <xref:System.ServiceModel.BasicHttpBinding> não são diferentes de outros tipos comuns de HTTP (estático conteúdo HTML, páginas ASP.NET ou serviços Web ASMX) o tráfego de rede. Canais WCF que utilizam esta associação são inerentemente sem monitoração de estado e encerram as conexões quando fecha o canal. Como tal, o <xref:System.ServiceModel.BasicHttpBinding> funciona perfeitamente com técnicas de balanceamento de carga HTTP existente.  
   
  Por padrão, o <xref:System.ServiceModel.BasicHttpBinding> envia um cabeçalho de conexão HTTP de mensagens com um `Keep-Alive` valor, que permite que os clientes estabelecer conexões persistentes com os serviços que dão suporte a eles. Essa configuração oferece aprimorada de taxa de transferência porque estabelecida anteriormente conexões podem ser reutilizados para enviar mensagens subsequentes para o mesmo servidor. No entanto, a reutilização da conexão pode causar clientes para se tornar altamente associado a um servidor específico dentro do farm com balanceamento de carga, o que reduz a eficácia de balanceamento de carga de round-robin. Se esse comportamento é desejável, HTTP `Keep-Alive` pode ser desabilitado no servidor usando o <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> propriedade com um <xref:System.ServiceModel.Channels.CustomBinding> ou definido pelo usuário <xref:System.ServiceModel.Channels.Binding>. O exemplo a seguir mostra como fazer isso usando a configuração.  
   

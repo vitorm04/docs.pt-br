@@ -2,16 +2,16 @@
 title: Weakly-typed JSON Serialization Sample
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 294c00bd18b5fabba5baa20770fd593031a98994
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization Sample
 Ao serializar um tipo definido pelo usuário em um formato de determinado durante a transmissão ou desserialização de um formato com fio volta para um tipo definido pelo usuário, o determinado tipo definido pelo usuário deve estar disponível no serviço e no cliente. Geralmente, para fazer isso, o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a esses tipos definidos pelo usuário e o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo é aplicado a seus membros. Esse mecanismo também se aplica ao trabalhar com objetos de JSON JavaScript Object Notation (), conforme descrito no tópico [como: serializar e desserializar dados de JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- Em alguns cenários, um serviço do Windows Communication Foundation (WCF) ou o cliente deve acessar objetos JSON gerados por um serviço ou cliente que está fora do controle do desenvolvedor. Como os serviços da Web mais publicamente expõem APIs de JSON, ele pode se tornar impraticável para a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desenvolvedor para construir locais tipos definidos pelo usuário no qual desserializar objetos do JSON arbitrários. Este exemplo fornece um mecanismo que permite [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desenvolvedores para trabalhar com objetos JSON desserializados, arbitrários, sem criar tipos definidos pelo usuário. Isso é conhecido como *serialização do tipo fraco* de objetos JSON, como o tipo no qual desserializa um objeto JSON não é conhecido em tempo de compilação.  
+ Em alguns cenários, um serviço do Windows Communication Foundation (WCF) ou o cliente deve acessar objetos JSON gerados por um serviço ou cliente que está fora do controle do desenvolvedor. Como mais serviços Web publicamente expõem APIs de JSON, ele pode se tornar impraticável para o desenvolvedor do WCF construir locais tipos definidos pelo usuário no qual desserializar objetos do JSON arbitrários. Este exemplo fornece um mecanismo que permite que os desenvolvedores do WCF trabalhar com objetos JSON desserializados, arbitrários, sem criar tipos definidos pelo usuário. Isso é conhecido como *serialização do tipo fraco* de objetos JSON, como o tipo no qual desserializa um objeto JSON não é conhecido em tempo de compilação.  
   
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
@@ -22,7 +22,7 @@ Ao serializar um tipo definido pelo usuário em um formato de determinado durant
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- Para desserializar esse objeto, um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente deve implementar os seguintes tipos definidos pelo usuário.  
+ Para desserializar esse objeto, um cliente WCF deve implementar os seguintes tipos definidos pelo usuário.  
   
 ```  
 [DataContract]  

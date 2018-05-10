@@ -1,30 +1,19 @@
 ---
-title: "Protegendo serviços de fluxo de trabalho"
-ms.custom: 
+title: Protegendo serviços de fluxo de trabalho
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba98ac3e64d7dcbf52ed6363d44487af54128437
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>Protegendo serviços de fluxo de trabalho
 O exemplo protegido de Serviço de Fluxo de Trabalho mostra os seguintes procedimentos:  
   
 -   Criando um fluxo de trabalho básico serviço de aplicativos usando as atividades de <xref:System.ServiceModel.Activities.Receive> e de <xref:System.ServiceModel.Activities.SendReply> .  
   
--   Usando a configuração de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proteger definir pontos de extremidade para o uso de serviço de fluxo de trabalho.  
+-   Usando a configuração do Windows Communication Foundation (WCF) para definir pontos de extremidade seguros para uso pelo serviço de fluxo de trabalho.  
   
 -   Criando reivindicações em uma diretiva personalizado e usar <xref:System.ServiceModel.ServiceAuthorizationManager> validar reivindicações.  
   
@@ -32,7 +21,7 @@ O exemplo protegido de Serviço de Fluxo de Trabalho mostra os seguintes procedi
  Usando a segurança do windows para proteger a comunicação entre o cliente e o serviço de fluxo de trabalho, as reivindicações com autorização  
   
 ## <a name="discussion"></a>Discussão  
- Este exemplo demonstra o uso da infraestrutura de segurança de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proteger um serviço de fluxo de trabalho exatamente como você faria com um serviço de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal. Especificamente, usa uma afirmação personalizado para autorização. Nesse caso, usa <xref:System.ServiceModel.WSHttpBinding> e segurança de mensagem com credenciais do Windows.  
+ Este exemplo demonstra o uso da infraestrutura de segurança do WCF para proteger um serviço de fluxo de trabalho, assim como faria com um serviço WCF normal. Especificamente, usa uma afirmação personalizado para autorização. Nesse caso, usa <xref:System.ServiceModel.WSHttpBinding> e segurança de mensagem com credenciais do Windows.  
   
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy> personalizado (`CustomNameCheckerPolicy`) verifica o nome de usuário do Windows do cliente e para um caractere específico. Se esse caractere estiver presente, cria e adiciona à afirmação a <xref:System.IdentityModel.Policy.EvaluationContext>. Fazendo isto, a diretiva personalizado está fazendo a declaração que o cliente tem esse caractere no nome de usuário. Esta afirmação pode ser consultada em todo o tempo de vida de chamada. Você pode encontrar esse caractere em `Constants.cs`.  
   
@@ -59,6 +48,6 @@ O exemplo protegido de Serviço de Fluxo de Trabalho mostra os seguintes procedi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\SecuringWorkflowServices`

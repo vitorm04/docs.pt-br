@@ -2,11 +2,11 @@
 title: Cenários síncronos utilizando HTTP, TCP ou pipe nomeado
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Cenários síncronos utilizando HTTP, TCP ou pipe nomeado
 Este tópico descreve as atividades e transferências para cenários diferentes de solicitação/resposta síncrona, com um cliente de thread único, usando HTTP, TCP ou pipe nomeado. Consulte [cenários assíncronos usando HTTP, TCP ou Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) para obter mais informações sobre solicitações de multi-threads.  
@@ -54,7 +54,7 @@ Este tópico descreve as atividades e transferências para cenários diferentes 
  A única diferença com o cenário anterior é que uma mensagem de falha SOAP é retornada como uma mensagem de resposta. Se `propagateActivity` = `true`, a ID de atividade da mensagem de solicitação é adicionada à mensagem de falha de SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Síncrona unidirecional sem erros  
- A única diferença com o primeiro cenário é que nenhuma mensagem será retornada para o servidor. Para protocolos baseados em HTTP, um status (válido ou erro) ainda será retornado ao cliente. Isso ocorre porque o HTTP é o único protocolo com uma semântica de solicitação-resposta que faz parte do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pilha de protocolos. Como o processamento de TCP é oculta [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], nenhuma confirmação é enviada ao cliente.  
+ A única diferença com o primeiro cenário é que nenhuma mensagem será retornada para o servidor. Para protocolos baseados em HTTP, um status (válido ou erro) ainda será retornado ao cliente. Isso ocorre porque o HTTP é o único protocolo com uma semântica de solicitação-resposta que faz parte da pilha de protocolos WCF. Como o processamento de TCP é oculta de WCF, nenhuma confirmação é enviada ao cliente.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Síncrona unidirecional com erros  
  Se ocorrer um erro ao processar a mensagem (P ou posterior), nenhuma notificação será retornada ao cliente. Isso é idêntico ao cenário de "Síncrono unidirecional sem erros". Você não deve usar um cenário unidirecional, se você quiser receber uma mensagem de erro.  

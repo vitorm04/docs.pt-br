@@ -2,11 +2,11 @@
 title: Ferramenta Contract-First
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>Ferramenta Contract-First
 Contratos de serviço geralmente precisam ser criado a partir de serviços existentes. Em [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], classes de contrato de dados podem ser criadas automaticamente, de serviços existentes usando a ferramenta de contrato, primeiro. Para usar a ferramenta de contrato, primeiro, o arquivo de definição de esquema XML (XSD) deve ser baixado localmente; a ferramenta não é possível importar os contratos de dados remotos por meio de HTTP.  
@@ -58,7 +58,7 @@ Contratos de serviço geralmente precisam ser criado a partir de serviços exist
  Para adicionar o contrato de serviço acima para o projeto, clique com o botão direito e selecione **adicionar novo...** . Selecione a definição de esquema do painel WCF da caixa de diálogo modelos e nomeie o novo arquivo SampleContract.xsd. Copie e cole o código acima para o modo de exibição de código do novo arquivo.  
   
 ## <a name="configuring-contract-first-options"></a>Configurando opções de primeiro contrato  
- Opções de contrato, primeiro podem ser configuradas no menu de propriedades de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projeto. Para habilitar o desenvolvimento de contrato, primeiro, selecione o **habilitar XSD como linguagem de definição de tipo** caixa de seleção na página de WCF da janela de propriedades do projeto.  
+ Opções de contrato, primeiro podem ser configuradas no menu de propriedades de um projeto do WCF. Para habilitar o desenvolvimento de contrato, primeiro, selecione o **habilitar XSD como linguagem de definição de tipo** caixa de seleção na página de WCF da janela de propriedades do projeto.  
   
  ![Mostrando opções de projeto do WCF contrato&#45;primeiro](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

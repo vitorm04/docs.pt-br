@@ -1,29 +1,15 @@
 ---
 title: Solucionando problemas de instalação
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Solucionando problemas de instalação
-Este tópico descreve como solucionar problemas de configuração do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+Este tópico descreve como solucionar problemas de Windows Communication Foundation (WCF) configurar problemas.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Algumas chaves do Registro do Windows Communication Foundation não são reparadas executando uma operação de reparo do MSI no .NET Framework 3.0  
  Se você excluir algumas das seguintes chaves do Registro:  
@@ -75,12 +61,12 @@ Este tópico descreve como solucionar problemas de configuração do [!INCLUDE[i
  [Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) pode ser encontrado em %windir%\Microsoft.NET\framework\v3.5\ ou %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configure o IIS corretamente para WCF/WF Webhost após instalar o .NET Framework 3.5  
- Quando a instalação de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] não configurar parâmetros de configuração adicionais do IIS relacionados ao [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ela registrará um erro no log de instalação e continuará. Qualquer tentativa de executar aplicativos do WorkflowServices falhará, porque os parâmetros de configuração necessários estão faltando. Por exemplo, carregar xoml ou o serviço de regras pode falhar.  
+ Quando [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] instalação falha ao definir configurações adicionais de configuração de IIS relacionada ao WCF, ele registrará um erro no log de instalação e continua. Qualquer tentativa de executar aplicativos do WorkflowServices falhará, porque os parâmetros de configuração necessários estão faltando. Por exemplo, carregar xoml ou o serviço de regras pode falhar.  
   
  Para solucionar esse problema, use o [ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) com o `/c` switch para configurar corretamente os mapas de script do IIS no computador. [Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) pode ser encontrado em %windir%\Microsoft.NET\framework\v3.5\ ou %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Não foi possível carregar o tipo ‘System.ServiceModel.Activation.HttpModule’ do assembly ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- Este erro ocorre se [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] estiver instalado e, em seguida, a Ativação de HTTP do [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] for habilitada. Para resolver o problema, executar a seguinte linha de comando de dentro do prompt de comando do [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  
+ Esse erro ocorre se [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] está instalado e, em seguida, a ativação WCF HTTP está habilitada. Para resolver o problema, executar a seguinte linha de comando de dentro do prompt de comando do [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

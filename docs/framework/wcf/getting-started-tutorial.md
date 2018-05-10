@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
-Os tópicos contidos nesta seção destinam-se a dar exposição rápida para o Windows Communication Foundation (WCF) experiência em programação. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhe com este tutorial para adquirir uma compreensão introdutória das etapas necessárias para criar serviços e aplicativos de cliente do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço onde o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecido pelo serviço para seus clientes.  
+Os tópicos contidos nesta seção destinam-se a dar exposição rápida para o Windows Communication Foundation (WCF) experiência em programação. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhando com este tutorial fornece um entendimento introdutório das etapas necessárias para criar o cliente e o serviço WCF aplicativos. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço onde o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecido pelo serviço para seus clientes.  
   
  Após concluir a sequência de tópicos neste tutorial, você terá um serviço em execução e um cliente que chama o serviço. Os três primeiros tópicos descrevem como definir um contrato de serviço, como implementá-lo e como hospedar o serviço. O serviço criado é auto-hospedado em um aplicativo de console. Os serviços também podem ser hospedados no IIS (Serviços de Informações da Internet). Para obter mais informações sobre como fazer isso, consulte [como: hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). O serviço está configurado no código; no entanto, os serviços também podem ser configurados em um arquivo de configuração. Para obter mais informações sobre como usar um arquivo de configuração, consulte [Configurando serviços usando arquivos de configuração](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
@@ -30,7 +30,7 @@ Os tópicos contidos nesta seção destinam-se a dar exposição rápida para o 
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Descreve como criar um contrato de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usando uma interface definida pelo usuário. O contrato define a funcionalidade exposta pelo serviço.  
+ Descreve como criar um contrato WCF usando uma interface definida pelo usuário. O contrato define a funcionalidade exposta pelo serviço.  
   
  [Como implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Descreve como implementar um contrato de serviço. Após ser definido, um contrato deve ser implementado com uma classe de serviço.  
@@ -39,13 +39,13 @@ Os tópicos contidos nesta seção destinam-se a dar exposição rápida para o 
  Descreve como configurar um ponto de extremidade para o serviço no código e como hospedar o serviço em um aplicativo de console. Para se tornar ativo, um serviço deve ser configurado e hospedado em um ambiente de tempo de execução. Esse ambiente cria o serviço e controla seu contexto e tempo de vida.  
   
  [Como criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Descreve como recuperar metadados usados para criar um proxy do cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de um serviço de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esse processo usa a funcionalidade de Adicionar Referência de Serviço no Visual Studio 2011.  
+ Descreve como recuperar os metadados usados para criar um proxy de cliente do WCF do serviço WCF. Esse processo usa a funcionalidade de Adicionar Referência de Serviço no Visual Studio 2011.  
   
  [Como configurar um cliente](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Descreve como configurar um cliente WCF. A configuração do cliente requer a especificação do ponto de extremidade que o cliente usa para acessar o serviço.  
   
  [Como usar um cliente](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- Descreve como usar o proxy do cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para chamar operações de serviço.  
+ Descreve como usar o proxy do cliente WCF para chamar operações de serviço.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel.ServiceContractAttribute>  

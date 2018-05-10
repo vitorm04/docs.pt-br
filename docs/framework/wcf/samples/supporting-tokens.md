@@ -1,24 +1,12 @@
 ---
 title: Tokens com suporte
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6838f6914ed7430fc420705af2ff461ccde8e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>Tokens com suporte
 O suporte a Tokens demonstra como adicionar tokens adicionais para uma mensagem que usa o WS-Security. O exemplo adiciona um token de segurança binário x. 509 além de um token de segurança do nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e a parte da mensagem está assinado com a chave privada associada com o token de segurança x. 509 para provar a posse do certificado x. 509 para o receptor. Isso é útil no caso, quando há uma necessidade de ter várias declarações associadas a uma mensagem para autenticar ou autorizar o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -294,7 +282,7 @@ public class EchoService : IEchoService
 ```  
   
 ## <a name="displaying-callers-information"></a>Exibindo informações dos chamadores  
- Para exibir informações do chamador, você pode usar o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` conforme mostrado no código a seguir. O `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contém declarações de autorização associadas ao chamador atual. Essas declarações são fornecidas automaticamente pelo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para cada token recebido na mensagem.  
+ Para exibir informações do chamador, você pode usar o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` conforme mostrado no código a seguir. O `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contém declarações de autorização associadas ao chamador atual. Essas declarações são fornecidas automaticamente pelo Windows Communication Foundation (WCF) para cada token recebido na mensagem.  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
@@ -357,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
- Quando você executar o exemplo, o cliente primeiro solicita que você forneça o nome de usuário e senha para o token de nome de usuário. Certifique-se fornecer valores corretos para sua conta do sistema, como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no serviço mapeia os valores fornecidos no token de nome de usuário para a identidade fornecida pelo sistema. Depois disso, o cliente exibe a resposta do serviço. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, o cliente primeiro solicita que você forneça o nome de usuário e senha para o token de nome de usuário. Certifique-se de fornecer valores corretos para sua conta do sistema, como WCF no serviço mapeia os valores fornecidos no token de nome de usuário para a identidade fornecida pelo sistema. Depois disso, o cliente exibe a resposta do serviço. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ## <a name="setup-batch-file"></a>Arquivo de lote  
  Arquivo em lotes bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar o aplicativo de serviços de informações da Internet (IIS) hospedado que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre máquinas ou trabalhar em um caso não hospedado.  
@@ -476,6 +464,6 @@ iisreset
 -   Execute Cleanup.bat na pasta exemplos depois de terminar a execução do exemplo.  
   
 > [!NOTE]
->  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre máquinas. Se você tiver executado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplos que usam certificados em computadores, certifique-se de desmarcar os certificados de serviço que foram instalados em CurrentUser - TrustedPeople repositório. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre máquinas. Se você executou os exemplos do WCF que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados em CurrentUser - TrustedPeople repositório. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Consulte também

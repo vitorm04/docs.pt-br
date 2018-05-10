@@ -2,11 +2,11 @@
 title: Controle de versão de serviço
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e potencialmente várias vezes durante a vida útil, serviços (e os pontos de extremidade expõem) podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou aborda outros problemas. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no Windows Communication Foundation (WCF).  
@@ -34,7 +34,7 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
   
  Para contratos de serviço, compatibilidade significa novas operações expostas pelo serviço podem ser adicionadas, mas as operações existentes não podem ser removidas ou alteradas semanticamente.  
   
- Para contratos de dados, compatibilidade significa novo tipo de esquema definições podem ser adicionadas, mas as definições de tipo de esquema existente não podem ser alteradas em maneiras de quebra. Alterações recentes podem incluir remover membros de dados ou alterar o tipo de dados incompatíveis. Esse recurso permite que o serviço alguns latitude na alteração da versão de seus contratos sem interromper os clientes. As duas próximas seções explicam incondicional e alterações significativas que podem ser feitas para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contratos de serviço e de dados.  
+ Para contratos de dados, compatibilidade significa novo tipo de esquema definições podem ser adicionadas, mas as definições de tipo de esquema existente não podem ser alteradas em maneiras de quebra. Alterações recentes podem incluir remover membros de dados ou alterar o tipo de dados incompatíveis. Esse recurso permite que o serviço alguns latitude na alteração da versão de seus contratos sem interromper os clientes. As próximas duas seções explicam incondicionais e mais recentes alterações que podem ser feitas nos dados do WCF e contratos de serviço.  
   
 ## <a name="data-contract-versioning"></a>Controle de versão de contrato de dados  
  Esta seção lida com controle de versão de dados ao usar o <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.DataContractAttribute> classes.  
@@ -53,7 +53,7 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
 ### <a name="lax-versioning"></a>Controle de versão incerta  
  Em muitos cenários, o desenvolvedor de serviço pode assumir que a adição de um novo membro opcional para o contrato de dados não afetarão os clientes existentes. Isso exige que o desenvolvedor de serviço investigar se os clientes existentes não estão executando a validação de esquema e que eles ignoram a membros de dados desconhecido. Nesses cenários, é possível tirar proveito dos recursos de contrato de dados para adicionar novos membros de forma incondicional. O desenvolvedor de serviço pode fazer essa suposição com confiança se os recursos de contrato de dados para controle de versão já foram usados para a primeira versão do serviço.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Serviços Web ASP.NET e muitos outros suporte de pilhas de serviço Web *versão lax*: ou seja, elas não lançam exceções para novos membros de dados desconhecido em dados recebidos.  
+ Suporte de pilhas de serviço WCF, serviços Web ASP.NET e muitos outros Web *versão lax*: ou seja, elas não lançam exceções para novos membros de dados desconhecido em dados recebidos.  
   
  É fácil por engano acredita que adicionar um novo membro não será interrompido clientes existentes. Se você não tiver certeza de que todos os clientes podem tratar incerta controle de versão, a recomendação é usar as diretrizes rígidas de controle de versão e tratar os dados contratos como imutável.  
   
@@ -92,7 +92,7 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
 ## <a name="message-contract-versioning"></a>Controle de versão de contrato de mensagem  
  As diretrizes de controle de versão de contrato de mensagem são muito semelhantes aos contratos de dados de controle de versão. Se estrito versão for necessária, você deve não altere o corpo da mensagem, mas em vez disso, crie um novo contrato de mensagem com um nome qualificado exclusivo. Se você souber que você pode usar o controle de versão incerta, você pode adicionar novas partes de corpo de mensagem, mas não alterar ou remover as existentes. Este guia se aplica ao bare e encapsulado contratos de mensagem.  
   
- Cabeçalhos de mensagem sempre podem ser adicionados, mesmo se o controle de versão estrito está em uso. O sinalizador MustUnderstand pode afetar o controle de versão. Em geral, o controle de versão de modelo para cabeçalhos no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é conforme descrito na especificação de SOAP.  
+ Cabeçalhos de mensagem sempre podem ser adicionados, mesmo se o controle de versão estrito está em uso. O sinalizador MustUnderstand pode afetar o controle de versão. Em geral, o modelo de controle de versão para cabeçalhos no WCF é conforme descrito na especificação de SOAP.  
   
 ## <a name="service-contract-versioning"></a>Controle de versão de contrato de serviço  
  Semelhante ao controle de versão de contrato de dados, controle de versão de contrato de serviço também envolve adicionando, alterando e removendo operações.  
@@ -118,7 +118,7 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
  Na lista de falhas descrito no contrato de serviço não é exaustiva. A qualquer momento, uma operação pode retornar falhas que não são descritas no seu contrato. Alterando, portanto, o conjunto de falhas descrita no contrato não é considerado recentes. Por exemplo, adicionando uma nova falha para o contrato usando o <xref:System.ServiceModel.FaultContractAttribute> ou remoção de uma falha existente do contrato.  
   
 ### <a name="service-contract-libraries"></a>Bibliotecas de contrato de serviço  
- As organizações podem ter bibliotecas de contratos onde um contrato é publicado em um repositório central e implementadores de serviço implementam contratos desse repositório. Nesse caso, quando você publica um contrato de serviço para o repositório é não têm controle sobre quem cria serviços que implementação-la. Portanto, você não pode modificar o contrato de serviço, uma vez publicado, renderizá-lo efetivamente imutável. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferece suporte ao contrato de herança, que pode ser usada para criar um novo contrato que estende os contratos existentes. Para usar esse recurso, defina uma nova interface de contrato de serviço que herda da interface de contrato de serviço antiga e adicionar métodos para a nova interface. Você, em seguida, alterar o serviço que implementa o contrato antigo para implementar o novo contrato e altere a definição de ponto de extremidade de "versionOld" para usar o novo contrato. Para clientes de "versionOld", que o ponto de extremidade continuarão a aparecer como expondo o contrato de "versionOld"; para clientes de "versionNew", o ponto de extremidade será exibido para expor o contrato "versionNew".  
+ As organizações podem ter bibliotecas de contratos onde um contrato é publicado em um repositório central e implementadores de serviço implementam contratos desse repositório. Nesse caso, quando você publica um contrato de serviço para o repositório é não têm controle sobre quem cria serviços que implementação-la. Portanto, você não pode modificar o contrato de serviço, uma vez publicado, renderizá-lo efetivamente imutável. O WCF dá suporte a herança de contrato, que pode ser usada para criar um novo contrato que estende os contratos existentes. Para usar esse recurso, defina uma nova interface de contrato de serviço que herda da interface de contrato de serviço antiga e adicionar métodos para a nova interface. Você, em seguida, alterar o serviço que implementa o contrato antigo para implementar o novo contrato e altere a definição de ponto de extremidade de "versionOld" para usar o novo contrato. Para clientes de "versionOld", que o ponto de extremidade continuarão a aparecer como expondo o contrato de "versionOld"; para clientes de "versionNew", o ponto de extremidade será exibido para expor o contrato "versionNew".  
   
 ## <a name="address-and-binding-versioning"></a>Endereço e associação de controle de versão  
  As alterações para o endereço de ponto de extremidade e associação são as alterações recentes, a menos que os clientes são capazes de descobrir dinamicamente o novo endereço de ponto de extremidade ou associação. É um mecanismo para implementar essa funcionalidade usando um registro de descrição de descoberta Universal e integração (UDDI) e o padrão de invocação UDDI onde um cliente tenta se comunicar com um ponto de extremidade e, em caso de falha, consulta um UDDI conhecido Registro para os metadados do ponto de extremidade atual. O cliente usa o endereço e associação de metadados para se comunicar com o ponto de extremidade. Se essa comunicação for bem-sucedida, o cliente armazena em cache as informações de endereço e associação para uso futuro.  

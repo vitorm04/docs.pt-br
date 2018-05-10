@@ -2,11 +2,11 @@
 title: Demux personalizado
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este exemplo demonstra como cabeçalhos de mensagens MSMQ podem ser mapeados para operações de serviço diferentes, para que o Windows Communication Foundation (WCF) serviços que usam <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> não está limitado a usar uma operação de serviço, conforme demonstrado no [ Mensagens do enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation para enfileiramento](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemplos.  
@@ -108,7 +108,7 @@ public static void Main()
  O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração.  
   
 > [!NOTE]
->  O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endereço de ponto de extremidade Especifica um esquema FormatName e usa localhost para o computador local. O que segue o esquema é um endereço de fila corretamente formatado de acordo com o nome do formato de MSMQ diretrizes de endereçamento.  
+>  O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O endereço de ponto de extremidade do WCF Especifica um esquema FormatName e usa localhost para o computador local. O que segue o esquema é um endereço de fila corretamente formatado de acordo com o nome do formato de MSMQ diretrizes de endereçamento.  
   
 ```xml  
 <appSettings>  

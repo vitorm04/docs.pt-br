@@ -2,17 +2,17 @@
 title: Criando um BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>Criando um BindingElement
-Associações e elementos de associação (objetos que estendem <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) são o local onde o modelo de aplicativo do Windows Communication Foundation (WCF) é associado fábricas de canais e ouvintes de canais. Sem associações, usar os canais personalizados exige a programação no nível do canal como descrito em [programação de nível de serviço de canal](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) e [programação de nível de canal cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tópico discute o requisito mínimo para habilitar o uso do seu canal em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o desenvolvimento de um <xref:System.ServiceModel.Channels.BindingElement> de canal e habilitar o uso do aplicativo conforme descrito na etapa 4 do [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Associações e elementos de associação (objetos que estendem <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) são o local onde o modelo de aplicativo do Windows Communication Foundation (WCF) é associado fábricas de canais e ouvintes de canais. Sem associações, usar os canais personalizados exige a programação no nível do canal como descrito em [programação de nível de serviço de canal](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) e [programação de nível de canal cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tópico discute o requisito mínimo para habilitar o uso do seu canal no WCF, o desenvolvimento de um <xref:System.ServiceModel.Channels.BindingElement> de canal e habilitar o uso do aplicativo conforme descrito na etapa 4 do [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Visão geral  
- Criando um <xref:System.ServiceModel.Channels.BindingElement> para seu canal permite que os desenvolvedores para usá-lo em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo. <xref:System.ServiceModel.Channels.BindingElement> objetos podem ser usados do <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> classe para conectar-se um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo para o canal sem a necessidade das informações de tipo exato do seu canal.  
+ Criando um <xref:System.ServiceModel.Channels.BindingElement> para seu canal permite que os desenvolvedores a usá-lo em um aplicativo WCF. <xref:System.ServiceModel.Channels.BindingElement> objetos podem ser usados do <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> classe para se conectar a um aplicativo WCF para o canal sem a necessidade das informações de tipo exato do seu canal.  
   
  Uma vez um <xref:System.ServiceModel.Channels.BindingElement> tiver sido criado, você pode habilitar a funcionalidade mais, dependendo das suas necessidades, seguindo as etapas restantes de desenvolvimento de canal descritas em [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

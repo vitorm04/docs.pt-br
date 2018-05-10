@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Detalhes|A partir do .NET Framework 4.6, a mensagem de exceção gerada se a serialização ou desserialização de <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> ou <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> falhar por causa de "tipos conhecidos" ausentes foi esclarecida.|
-|Sugestão|Os aplicativos não devem depender de mensagens de exceção específicas. Se um aplicativo depender dessa mensagem, atualize-o para que espere a nova mensagem ou, preferencialmente, altere-o para depender somente do tipo de exceção.|
+|Sugestão|Os aplicativos não devem depender de mensagens de exceção específicas. Se um aplicativo depender dessa mensagem, atualize-o para que ele espere a nova mensagem ou, preferencialmente, altere-o para depender somente do tipo de exceção.|
 |Escopo|Microsoft Edge|
 |Versão|4.6|
 |Tipo|Tempo de execução|

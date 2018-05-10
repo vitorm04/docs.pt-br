@@ -2,14 +2,14 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-udp"></a>Transporte: UDP
-O transporte UDP demonstra como implementar UDP unicast e multicast como um transporte personalizado do Windows Communication Foundation (WCF). O exemplo descreve o procedimento recomendado para a criação de um transporte personalizado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], usando a estrutura de canal e seguindo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] práticas recomendadas. As etapas para criar um transporte personalizado são da seguinte maneira:  
+O transporte UDP demonstra como implementar UDP unicast e multicast como um transporte personalizado do Windows Communication Foundation (WCF). O exemplo descreve o procedimento recomendado para a criação de um transporte personalizado no WCF, usando a estrutura de canais e seguir as práticas recomendadas do WCF. As etapas para criar um transporte personalizado são da seguinte maneira:  
   
 1.  Decidir qual o canal [padrões de troca de mensagem](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel ou IReplyChannel) a ChannelFactory e ChannelListener oferecerá suporte. Em seguida, decida se você oferecer suporte as sessão variações dessas interfaces.  
   
@@ -49,7 +49,7 @@ O transporte UDP demonstra como implementar UDP unicast e multicast como um tran
 >  Para o transporte UDP, a MEPS somente com suporte é datagrama, como UDP inerentemente é um protocolo de "disparar e esquecer".  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Ciclo de vida do objeto de ICommunicationObject e o WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem uma máquina de estado comum que é usada para gerenciar o ciclo de vida de objetos, como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, e <xref:System.ServiceModel.Channels.IChannelListener> que são usados para comunicação. Há cinco estados em que esses objetos de comunicação podem existir. Esses estados são representados pelo <xref:System.ServiceModel.CommunicationState> enumeração e são da seguinte maneira:  
+ O WCF possui uma máquina de estado comum que é usada para gerenciar o ciclo de vida de objetos, como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, e <xref:System.ServiceModel.Channels.IChannelListener> que são usados para comunicação. Há cinco estados em que esses objetos de comunicação podem existir. Esses estados são representados pelo <xref:System.ServiceModel.CommunicationState> enumeração e são da seguinte maneira:  
   
 -   Criado: Esse é o estado de um <xref:System.ServiceModel.ICommunicationObject> quando ele é instanciado pela primeira vez. Nenhuma entrada/saída (e/s) ocorre nesse estado.  
   
@@ -67,7 +67,7 @@ O transporte UDP demonstra como implementar UDP unicast e multicast como um tran
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Fábrica de canal e ouvinte de canal  
- A próxima etapa na gravação de um transporte personalizado é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelFactory> de canais de cliente e de <xref:System.ServiceModel.Channels.IChannelListener> para canais de serviço. A camada do canal usa um padrão de fábrica para a construção de canais. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Fornece auxiliares da classe base para esse processo.  
+ A próxima etapa na gravação de um transporte personalizado é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelFactory> de canais de cliente e de <xref:System.ServiceModel.Channels.IChannelListener> para canais de serviço. A camada do canal usa um padrão de fábrica para a construção de canais. O WCF fornece auxiliares da classe base para esse processo.  
   
 -   O <xref:System.ServiceModel.Channels.CommunicationObject> classe implementa <xref:System.ServiceModel.ICommunicationObject> e impõe a máquina de estado descrita anteriormente na etapa 2. 
 
@@ -256,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   Por meio de uma associação personalizada: uma associação personalizada permite que o usuário criar seu próprios associação com base em um conjunto arbitrário de elementos de associação.  
   
--   Usando uma associação fornecida pelo sistema que inclui o nosso elemento de associação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Fornece um número dessas associações definidas pelo sistema, como `BasicHttpBinding`, `NetTcpBinding`, e `WsHttpBinding`. Cada uma dessas vinculações está associada um perfil bem definido.  
+-   Usando uma associação fornecida pelo sistema que inclui o nosso elemento de associação. O WCF fornece inúmeras essas associações definidas pelo sistema, como `BasicHttpBinding`, `NetTcpBinding`, e `WsHttpBinding`. Cada uma dessas vinculações está associada um perfil bem definido.  
   
  O exemplo implementa a associação de perfil em `SampleProfileUdpBinding`, que é derivado de <xref:System.ServiceModel.Channels.Binding>. O `SampleProfileUdpBinding` contém até quatro elementos de associação nele: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, e `ReliableSessionBindingElement`.  
   

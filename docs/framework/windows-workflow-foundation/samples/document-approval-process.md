@@ -2,11 +2,11 @@
 title: Processo de aprovação de documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Processo de aprovação de documento
 Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (WF) e o Windows Communication Foundation (WCF) juntos. Junto implementam um cenário do processo de aprovação do documento. Um aplicativo cliente pode enviar documentos para a aprovação e aprovar documentos. Um aplicativo do gerenciador de aprovação existe para facilitar comunicação entre clientes e para aplicar as regras do processo de aprovação. O processo de aprovação é um fluxo de trabalho que pode executar vários tipos de aprovação. As atividades existem para obter uma única aprovação, uma aprovação de quorum (uma porcentagem do conjunto de approvers), e um processo de aprovação complexo que consiste em um quorum e em uma única aprovação em uma sequência.  
@@ -29,7 +29,7 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 1.  Um cliente assina para ser um usuário no sistema do processo de aprovação.  
   
-2.  Envia de um cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a um serviço de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedado pelo aplicativo gerenciador da aprovação.  
+2.  Envia um cliente WCF para um serviço WCF hospedado pelo aplicativo do Gerenciador de aprovação.  
   
 3.  Um usuário exclusivo - a identificação é retornada para o cliente. O cliente agora pode participar em processos de aprovação.  
   
@@ -47,19 +47,19 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 10. Um cliente pode receber uma solicitação de aprovação e responder à solicitação em qualquer ponto no tempo.  
   
-11. Um serviço de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedado no cliente pode receber uma solicitação de aprovação de aplicativo do gerenciador de aprovação.  
+11. Um serviço WCF hospedado no cliente pode receber uma solicitação de aprovação de aplicativo do Gerenciador de aprovação.  
   
 12. Informações de documento é apresentada no cliente para revisão.  
   
 13. O usuário pode aprovar ou descartar o documento.  
   
-14. Um cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é usado para enviar uma resposta da aprovação de volta para o aplicativo gerenciador da aprovação.  
+14. Um cliente do WCF é usado para enviar uma resposta de aprovação para o aplicativo do Gerenciador de aprovação.  
   
  Do ponto de vista de aplicativo do gerenciador de aprovação, o processo de aprovação funciona como segue:  
   
 1.  Solicitações de cliente participar do sistema do processo de aprovação.  
   
-2.  Um serviço de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no gerenciador de aprovação recebe uma solicitação ser parte do sistema do processo de aprovação.  
+2.  Um serviço WCF no Gerenciador de aprovação recebe uma solicitação para fazer parte do sistema de processo de aprovação.  
   
 3.  Uma identificação exclusiva é gerada para o cliente. Informações de usuário é armazenado em uma base de dados.  
   
