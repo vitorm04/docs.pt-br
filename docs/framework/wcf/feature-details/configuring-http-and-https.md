@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>Configurando HTTP e HTTPS
 Os serviços e os clientes WCF podem se comunicar por HTTP e HTTPS. As configurações de HTTP/HTTPS são definidas usando o IIS (Serviços de Informações da Internet) ou uma ferramenta de linha de comando. Quando um serviço WCF é hospedado no IIS HTTP ou HTTPS, as configurações podem ser definidas no IIS (usando a ferramenta inetmgr.exe). Se um serviço WCF for auto-hospedado, as configurações de HTTP ou HTTPS serão definidas usando uma ferramenta de linha de comando.  
@@ -19,7 +19,7 @@ Os serviços e os clientes WCF podem se comunicar por HTTP e HTTPS. As configura
   
  Ao executar [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use a ferramenta HttpCfg.exe. O [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] instala essa ferramenta automaticamente. Ao executar [!INCLUDE[wxp](../../../../includes/wxp-md.md)], você pode baixar a ferramenta em [ferramentas de suporte do Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Para obter mais informações, consulte [visão geral de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- Ao executar o [!INCLUDE[wv](../../../../includes/wv-md.md)]ou o Windows 7, você define essas configurações com a ferramenta de Netsh.exe.  
+ Ao executar [!INCLUDE[wv](../../../../includes/wv-md.md)] ou Windows 7, essas configurações são definidas com a ferramenta Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Configurando reservas de namespace  
  A reserva de namespace atribui os direitos para uma parte do namespace da URL HTTP para um determinado grupo de usuários. Uma reserva dá a esses usuários o direito de criar serviços que escutam naquela parte do namespace. As reservas são prefixos de URL, o que significa que a reserva cobre todos os subcaminhos do caminho de reserva. As reservas de namespace permitem usar caracteres curinga de duas maneiras. A documentação da API de servidor HTTP descreve o [ordem de resolução entre declarações de namespace que envolvem curingas](http://go.microsoft.com/fwlink/?LinkId=94841).  

@@ -1,22 +1,22 @@
 ---
-title: Comparar e deslocar aplicativos existentes do Azure IaaS
+title: Comparar e deslocar aplicativos existentes do .NET para Azure IaaS (infraestrutura de nuvem-pronto)
 description: Modernize aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b844373d4ea995b553d9a32ea51997fd664064bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.date: 04/28/2018
+ms.openlocfilehash: 458b1bd1fc9fc24ce43d0926655fe0767aabc43c
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="lift-and-shift-existing-apps-azure-iaas"></a>Comparar e deslocar aplicativos existentes do Azure IaaS
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Comparar e deslocar aplicativos existentes do .NET para Azure IaaS (infraestrutura de nuvem-pronto)
 
 > Visão: como uma primeira etapa, para reduzir o custo de investimento e total de local de hardware e rede de manutenção, simplesmente novo host seus aplicativos existentes na nuvem.
 
 Antes de entrar em *como* para migrar seus aplicativos existentes para a infraestrutura do Azure como uma plataforma de serviço (IaaS), é importante analisar as razões *por* você deseja migrar diretamente para o IaaS no Azure. O cenário neste nível de maturidade modernização é essencialmente começar a usar máquinas virtuais na nuvem, em vez de continuar a usar sua infraestrutura local.
 
-Outro ponto para analisar é *por* deseja migrar para a nuvem de IaaS puro, em vez de apenas adicionar mais avançados de serviços gerenciados no Azure. Você precisa determinar quais casos podem exigir IaaS em primeiro lugar.
+Outro ponto para analisar é *por* deseja migrar para a nuvem de IaaS puro, em vez de apenas adicionar mais avançados de serviços gerenciados no Azure. Determinar quais casos podem exigir IaaS em primeiro lugar.
 
 Figura 2-1 posiciona aplicativos prontos para nuvem infraestrutura nos níveis de maturidade modernização:
 
@@ -30,17 +30,17 @@ Figura 2-1 posiciona aplicativos prontos para nuvem infraestrutura nos níveis d
 
 Depois de tomar a decisão de mover seus aplicativos para a nuvem, o principal motivo por que você pode escolher o IaaS, em vez de opções mais avançadas, como PaaS é simplesmente que o ambiente de IaaS será mais familiar. Mover para um ambiente que é semelhante a sua atual, o ambiente local oferece uma curva de aprendizagem inferior, o que torna o caminho mais rápido para a nuvem.
 
-No entanto, o colocando o caminho mais rápido para a nuvem não significa que você obterá o máximo benefício de ter os aplicativos em execução na nuvem. Qualquer organização obterá os benefícios mais importantes de uma migração para a nuvem nos níveis de maturidade (otimização de nuvem) introduzidas já pronta para a nuvem DevOps e PaaS.
+No entanto, o colocando o caminho mais rápido para a nuvem não significa que você obterá o máximo benefício de ter os aplicativos em execução na nuvem. Qualquer organização obterá os benefícios mais importantes de uma migração para a nuvem nos níveis de maturidade otimizada para a nuvem e nativo de nuvem já introduzido.
 
-Ele também se tornou evidente que os aplicativos são mais fáceis de modernizar e refazer a arquitetura no futuro quando eles já estão em execução na nuvem, mesmo em IaaS. Isso é verdadeiro em parte porque já foi obtida a migração de dados do aplicativo. Além disso, sua organização terá adquirido habilidades necessárias para trabalhar na nuvem e feita a mudança de operando em uma "cultura de nuvem".
+Ele também se tornou evidente que os aplicativos são mais fáceis de modernizar e refaça a arquitetura no futuro quando eles já estão em execução na nuvem, mesmo em IaaS. Migração de dados de aplicativo já foi atingida. Além disso, sua organização terá adquirido habilidades necessárias para trabalhar na nuvem e feita a mudança de operando em uma "cultura de nuvem".
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Quando a migração para o IaaS, em vez de para PaaS
 
-As seções a seguir discutem aplicativos prontos para nuvem DevOps principalmente com base nas plataformas de PaaS e serviços. Esses aplicativos oferecem os maioria dos benefícios da migração para a nuvem.
+As seções a seguir discutem aplicativos otimizada para a nuvem se baseiam-se principalmente em serviços e plataformas de PaaS. Esses aplicativos oferecem os maioria dos benefícios da migração para a nuvem. 
 
-Se seu objetivo é simplesmente mover os aplicativos existentes para a nuvem, primeiro, identifique os aplicativos existentes que exigirão modificação significativa para serem executados no serviço de aplicativo do Azure. Esses aplicativos devem ser as primeiras candidatas.
+Se seu objetivo é simplesmente mover os aplicativos existentes para a nuvem, primeiro, identifique os aplicativos existentes que não requer modificação significativa para serem executados no serviço de aplicativo do Azure. Esses aplicativos devem ser as primeiras candidatas para otimização de nuvem. 
 
-Em seguida, se você não quiser ou ainda não é possível mover a contêineres do Windows e ou orchestrators como o Azure Service Fabric ou Kubernetes, ainda, em seguida, é quando você deseja usar VMs simples (IaaS).
+Em seguida, para os aplicativos que ainda não é possível mover a contêineres do Windows e PaaS, como o serviço de aplicativo ou orchestrators como o Azure Service Fabric, migrar máquinas virtuais sem formatação simples (IaaS). 
 
 Porém, tenha em mente que corretamente configurar, proteger e manter as VMs requer muito mais tempo e conhecimento de TI comparado a usar os serviços de PaaS no Azure. Se você estiver pensando em máquinas virtuais do Azure, certifique-se de que leva em conta o esforço de manutenção contínua necessário para o patch, atualizar e gerenciar seu ambiente de VM. Máquinas virtuais do Azure é IaaS.
 
@@ -54,7 +54,7 @@ Migrar para a nuvem não tem que ser difícil. Mas, muitas organizações têm d
 
 - Mapeamento de dependência embutidas para descoberta de alta confiabilidade dos aplicativos de várias camadas
 
-- Rightsizing inteligente para máquinas virtuais do Azure
+- Inteligente o dimensionamento correto para máquinas virtuais do Azure
 
 - Relatórios com diretrizes para correção de problemas de compatibilidade
 
