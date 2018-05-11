@@ -99,7 +99,7 @@ Este documento mostra como habilitar o cancelamento em seu aplicativo. Este exem
   
  A ilustração a seguir mostra o aplicativo em execução.  
   
- (../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation") do ![Aplicativo do Windows Forms]  
+ ![Aplicativo do Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
