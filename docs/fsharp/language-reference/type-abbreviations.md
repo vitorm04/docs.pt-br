@@ -4,7 +4,7 @@ description: 'Saiba mais sobre F # abreviações de tipo para dar um nome mais s
 ms.date: 05/16/2016
 ms.openlocfilehash: cd0b2365aecc5d5b73df95a4b94ae4dd8327446d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
 ---
