@@ -1,14 +1,6 @@
 ---
-title: "Método IMetaDataImport::GetMethodProps"
-ms.custom: 
+title: Método IMetaDataImport::GetMethodProps
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.GetMethodProps
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e4e0ae7dfed4b13ea83e16d6380443c9d1b72b06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="6ffa4-102">Método IMetaDataImport::GetMethodProps</span><span class="sxs-lookup"><span data-stu-id="6ffa4-102">IMetaDataImport::GetMethodProps Method</span></span>
-<span data-ttu-id="6ffa4-103">Obtém os metadados associados com o método referenciado pelo MethodDef especificado token.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  
+# <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="e7216-102">Método IMetaDataImport::GetMethodProps</span><span class="sxs-lookup"><span data-stu-id="e7216-102">IMetaDataImport::GetMethodProps Method</span></span>
+<span data-ttu-id="e7216-103">Obtém os metadados associados com o método referenciado pelo MethodDef especificado token.</span><span class="sxs-lookup"><span data-stu-id="e7216-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ffa4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6ffa4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7216-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e7216-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodProps (  
@@ -55,46 +43,46 @@ HRESULT GetMethodProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6ffa4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6ffa4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e7216-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e7216-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="6ffa4-106">[in] O token MethodDef que representa o método para retornar metadados.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-106">[in] The MethodDef token that represents the method to return metadata for.</span></span>  
+ <span data-ttu-id="e7216-106">[in] O token MethodDef que representa o método para retornar metadados.</span><span class="sxs-lookup"><span data-stu-id="e7216-106">[in] The MethodDef token that represents the method to return metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="6ffa4-107">[out] Um ponteiro para um token de TypeDef que representa o tipo que implementa o método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span></span>  
+ <span data-ttu-id="e7216-107">[out] Um ponteiro para um token de TypeDef que representa o tipo que implementa o método.</span><span class="sxs-lookup"><span data-stu-id="e7216-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span></span>  
   
  `szMethod`  
- <span data-ttu-id="6ffa4-108">[out] Um ponteiro para um buffer que tem o nome do método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-108">[out] A Pointer to a buffer that has the method's name.</span></span>  
+ <span data-ttu-id="e7216-108">[out] Um ponteiro para um buffer que tem o nome do método.</span><span class="sxs-lookup"><span data-stu-id="e7216-108">[out] A Pointer to a buffer that has the method's name.</span></span>  
   
  `cchMethod`  
- <span data-ttu-id="6ffa4-109">[in] O tamanho solicitado de `szMethod`.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-109">[in] The requested size of `szMethod`.</span></span>  
+ <span data-ttu-id="e7216-109">[in] O tamanho solicitado de `szMethod`.</span><span class="sxs-lookup"><span data-stu-id="e7216-109">[in] The requested size of `szMethod`.</span></span>  
   
  `pchMethod`  
- <span data-ttu-id="6ffa4-110">[out] Um ponteiro para o tamanho em caracteres largos de `szMethod`, ou, no caso de truncamento, o número real de caracteres largos no nome do método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span></span>  
+ <span data-ttu-id="e7216-110">[out] Um ponteiro para o tamanho em caracteres largos de `szMethod`, ou, no caso de truncamento, o número real de caracteres largos no nome do método.</span><span class="sxs-lookup"><span data-stu-id="e7216-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="6ffa4-111">[out] Um ponteiro para os sinalizadores associados ao método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-111">[out] A pointer to any flags associated with the method.</span></span>  
+ <span data-ttu-id="e7216-111">[out] Um ponteiro para os sinalizadores associados ao método.</span><span class="sxs-lookup"><span data-stu-id="e7216-111">[out] A pointer to any flags associated with the method.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="6ffa4-112">[out] Um ponteiro para a assinatura de metadados de binários do método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-112">[out] A pointer to the binary metadata signature of the method.</span></span>  
+ <span data-ttu-id="e7216-112">[out] Um ponteiro para a assinatura de metadados de binários do método.</span><span class="sxs-lookup"><span data-stu-id="e7216-112">[out] A pointer to the binary metadata signature of the method.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="6ffa4-113">[out] Um ponteiro para o tamanho em bytes do `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="e7216-113">[out] Um ponteiro para o tamanho em bytes do `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="e7216-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="6ffa4-114">[out] Um ponteiro para o endereço virtual relativo do método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-114">[out] A pointer to the relative virtual address of the method.</span></span>  
+ <span data-ttu-id="e7216-114">[out] Um ponteiro para o endereço virtual relativo do método.</span><span class="sxs-lookup"><span data-stu-id="e7216-114">[out] A pointer to the relative virtual address of the method.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="6ffa4-115">[out] Um ponteiro para os sinalizadores de implementação para o método.</span><span class="sxs-lookup"><span data-stu-id="6ffa4-115">[out] A pointer to any implementation flags for the method.</span></span>  
+ <span data-ttu-id="e7216-115">[out] Um ponteiro para os sinalizadores de implementação para o método.</span><span class="sxs-lookup"><span data-stu-id="e7216-115">[out] A pointer to any implementation flags for the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ffa4-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6ffa4-116">Requirements</span></span>  
- <span data-ttu-id="6ffa4-117">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ffa4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7216-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e7216-116">Requirements</span></span>  
+ <span data-ttu-id="e7216-117">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7216-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ffa4-118">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6ffa4-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e7216-118">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e7216-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6ffa4-119">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="6ffa4-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e7216-119">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="e7216-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6ffa4-120">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ffa4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e7216-120">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7216-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ffa4-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6ffa4-121">See Also</span></span>  
- [<span data-ttu-id="6ffa4-122">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="6ffa4-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="6ffa4-123">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="6ffa4-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e7216-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e7216-121">See Also</span></span>  
+ [<span data-ttu-id="e7216-122">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="e7216-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [<span data-ttu-id="e7216-123">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="e7216-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

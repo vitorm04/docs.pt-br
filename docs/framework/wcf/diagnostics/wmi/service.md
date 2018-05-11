@@ -1,29 +1,17 @@
 ---
-title: "Serviço"
-ms.custom: 
+title: Serviço
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f7b631ede7bd011a92003dc5f6083c1c427d990e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cfeb178e26f6c93e29210accf5d7866cc1fca02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="service"></a><span data-ttu-id="e88fc-102">Serviço</span><span class="sxs-lookup"><span data-stu-id="e88fc-102">Service</span></span>
-<span data-ttu-id="e88fc-103">Serviço</span><span class="sxs-lookup"><span data-stu-id="e88fc-103">Service</span></span>  
+# <a name="service"></a><span data-ttu-id="c3532-102">Serviço</span><span class="sxs-lookup"><span data-stu-id="c3532-102">Service</span></span>
+<span data-ttu-id="c3532-103">Serviço</span><span class="sxs-lookup"><span data-stu-id="c3532-103">Service</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e88fc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e88fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3532-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c3532-104">Syntax</span></span>  
   
 ```  
 class Service  
@@ -43,98 +31,98 @@ class Service
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="e88fc-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="e88fc-105">Methods</span></span>  
- <span data-ttu-id="e88fc-106">A classe de serviço não define nenhum método.</span><span class="sxs-lookup"><span data-stu-id="e88fc-106">The Service class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="c3532-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="c3532-105">Methods</span></span>  
+ <span data-ttu-id="c3532-106">A classe de serviço não define nenhum método.</span><span class="sxs-lookup"><span data-stu-id="c3532-106">The Service class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="e88fc-107">Propriedades</span><span class="sxs-lookup"><span data-stu-id="e88fc-107">Properties</span></span>  
- <span data-ttu-id="e88fc-108">A classe de serviço tem as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="e88fc-108">The Service class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="c3532-107">Propriedades</span><span class="sxs-lookup"><span data-stu-id="c3532-107">Properties</span></span>  
+ <span data-ttu-id="c3532-108">A classe de serviço tem as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="c3532-108">The Service class has the following properties:</span></span>  
   
-### <a name="baseaddresses"></a><span data-ttu-id="e88fc-109">BaseAddresses</span><span class="sxs-lookup"><span data-stu-id="e88fc-109">BaseAddresses</span></span>  
- <span data-ttu-id="e88fc-110">Tipo de dados: matriz de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-110">Data type: string array</span></span>  
+### <a name="baseaddresses"></a><span data-ttu-id="c3532-109">BaseAddresses</span><span class="sxs-lookup"><span data-stu-id="c3532-109">BaseAddresses</span></span>  
+ <span data-ttu-id="c3532-110">Tipo de dados: matriz de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-110">Data type: string array</span></span>  
   
- <span data-ttu-id="e88fc-111">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-111">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-112">Os endereços base usados pelo serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-112">The base addresses used by the service.</span></span>  
+ <span data-ttu-id="c3532-112">Os endereços base usados pelo serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-112">The base addresses used by the service.</span></span>  
   
-### <a name="behaviors"></a><span data-ttu-id="e88fc-113">Comportamentos</span><span class="sxs-lookup"><span data-stu-id="e88fc-113">Behaviors</span></span>  
- <span data-ttu-id="e88fc-114">Tipo de dados: matriz de comportamento</span><span class="sxs-lookup"><span data-stu-id="e88fc-114">Data type: Behavior array</span></span>  
+### <a name="behaviors"></a><span data-ttu-id="c3532-113">Comportamentos</span><span class="sxs-lookup"><span data-stu-id="c3532-113">Behaviors</span></span>  
+ <span data-ttu-id="c3532-114">Tipo de dados: matriz de comportamento</span><span class="sxs-lookup"><span data-stu-id="c3532-114">Data type: Behavior array</span></span>  
   
- <span data-ttu-id="e88fc-115">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-115">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-116">Os comportamentos associados a esse serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-116">The behaviors associated with this service.</span></span>  
+ <span data-ttu-id="c3532-116">Os comportamentos associados a esse serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-116">The behaviors associated with this service.</span></span>  
   
-### <a name="configurationname"></a><span data-ttu-id="e88fc-117">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="e88fc-117">ConfigurationName</span></span>  
- <span data-ttu-id="e88fc-118">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-118">Data type: string</span></span>  
+### <a name="configurationname"></a><span data-ttu-id="c3532-117">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="c3532-117">ConfigurationName</span></span>  
+ <span data-ttu-id="c3532-118">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-118">Data type: string</span></span>  
   
- <span data-ttu-id="e88fc-119">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-119">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-120">ServiceElement_BehaviorConfiguration</span><span class="sxs-lookup"><span data-stu-id="e88fc-120">ServiceElement_BehaviorConfiguration</span></span>  
+ <span data-ttu-id="c3532-120">ServiceElement_BehaviorConfiguration</span><span class="sxs-lookup"><span data-stu-id="c3532-120">ServiceElement_BehaviorConfiguration</span></span>  
   
-### <a name="counterinstancename"></a><span data-ttu-id="e88fc-121">CounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="e88fc-121">CounterInstanceName</span></span>  
- <span data-ttu-id="e88fc-122">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-122">Data type: string</span></span>  
+### <a name="counterinstancename"></a><span data-ttu-id="c3532-121">CounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="c3532-121">CounterInstanceName</span></span>  
+ <span data-ttu-id="c3532-122">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-122">Data type: string</span></span>  
   
- <span data-ttu-id="e88fc-123">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-123">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-124">Nome da instância da instância dos contadores de desempenho do serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-124">Instance name of the instance of the performance counters of the service.</span></span>  
+ <span data-ttu-id="c3532-124">Nome da instância da instância dos contadores de desempenho do serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-124">Instance name of the instance of the performance counters of the service.</span></span>  
   
-### <a name="distinguishedname"></a><span data-ttu-id="e88fc-125">DistinguishedName</span><span class="sxs-lookup"><span data-stu-id="e88fc-125">DistinguishedName</span></span>  
- <span data-ttu-id="e88fc-126">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-126">Data type: string</span></span>  
+### <a name="distinguishedname"></a><span data-ttu-id="c3532-125">DistinguishedName</span><span class="sxs-lookup"><span data-stu-id="c3532-125">DistinguishedName</span></span>  
+ <span data-ttu-id="c3532-126">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-126">Data type: string</span></span>  
   
- <span data-ttu-id="e88fc-127">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-127">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-128">Nome do serviço no endereço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-128">Service name at the address.</span></span>  
+ <span data-ttu-id="c3532-128">Nome do serviço no endereço.</span><span class="sxs-lookup"><span data-stu-id="c3532-128">Service name at the address.</span></span>  
   
-### <a name="extensions"></a><span data-ttu-id="e88fc-129">Extensões</span><span class="sxs-lookup"><span data-stu-id="e88fc-129">Extensions</span></span>  
- <span data-ttu-id="e88fc-130">Tipo de dados: matriz de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-130">Data type: string array</span></span>  
+### <a name="extensions"></a><span data-ttu-id="c3532-129">Extensões</span><span class="sxs-lookup"><span data-stu-id="c3532-129">Extensions</span></span>  
+ <span data-ttu-id="c3532-130">Tipo de dados: matriz de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-130">Data type: string array</span></span>  
   
- <span data-ttu-id="e88fc-131">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-131">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-132">Os contextos da instância para as extensões da instância do serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-132">The instance contexts for the extensions of the service instance.</span></span>  
+ <span data-ttu-id="c3532-132">Os contextos da instância para as extensões da instância do serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-132">The instance contexts for the extensions of the service instance.</span></span>  
   
-### <a name="metadata"></a><span data-ttu-id="e88fc-133">Metadados</span><span class="sxs-lookup"><span data-stu-id="e88fc-133">Metadata</span></span>  
- <span data-ttu-id="e88fc-134">Tipo de dados: matriz de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-134">Data type: string array</span></span>  
+### <a name="metadata"></a><span data-ttu-id="c3532-133">Metadados</span><span class="sxs-lookup"><span data-stu-id="c3532-133">Metadata</span></span>  
+ <span data-ttu-id="c3532-134">Tipo de dados: matriz de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-134">Data type: string array</span></span>  
   
- <span data-ttu-id="e88fc-135">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-135">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-136">As definições de metadados de serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-136">The service metadata settings.</span></span>  
+ <span data-ttu-id="c3532-136">As definições de metadados de serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-136">The service metadata settings.</span></span>  
   
-### <a name="name"></a><span data-ttu-id="e88fc-137">Nome</span><span class="sxs-lookup"><span data-stu-id="e88fc-137">Name</span></span>  
- <span data-ttu-id="e88fc-138">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-138">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="c3532-137">Nome</span><span class="sxs-lookup"><span data-stu-id="c3532-137">Name</span></span>  
+ <span data-ttu-id="c3532-138">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-138">Data type: string</span></span>  
   
- <span data-ttu-id="e88fc-139">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-139">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-140">O nome exclusivo desse serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-140">The unique name of this service.</span></span>  
+ <span data-ttu-id="c3532-140">O nome exclusivo desse serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-140">The unique name of this service.</span></span>  
   
-### <a name="namespace"></a><span data-ttu-id="e88fc-141">Namespace</span><span class="sxs-lookup"><span data-stu-id="e88fc-141">Namespace</span></span>  
- <span data-ttu-id="e88fc-142">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="e88fc-142">Data type: string</span></span>  
+### <a name="namespace"></a><span data-ttu-id="c3532-141">Namespace</span><span class="sxs-lookup"><span data-stu-id="c3532-141">Namespace</span></span>  
+ <span data-ttu-id="c3532-142">Tipo de dados: cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c3532-142">Data type: string</span></span>  
   
- <span data-ttu-id="e88fc-143">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-143">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-144">O namespace do serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-144">The namespace of the service.</span></span>  
+ <span data-ttu-id="c3532-144">O namespace do serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-144">The namespace of the service.</span></span>  
   
-### <a name="opened"></a><span data-ttu-id="e88fc-145">Aberto</span><span class="sxs-lookup"><span data-stu-id="e88fc-145">Opened</span></span>  
- <span data-ttu-id="e88fc-146">Tipo de dados: datetime</span><span class="sxs-lookup"><span data-stu-id="e88fc-146">Data type: datetime</span></span>  
+### <a name="opened"></a><span data-ttu-id="c3532-145">Aberto</span><span class="sxs-lookup"><span data-stu-id="c3532-145">Opened</span></span>  
+ <span data-ttu-id="c3532-146">Tipo de dados: datetime</span><span class="sxs-lookup"><span data-stu-id="c3532-146">Data type: datetime</span></span>  
   
- <span data-ttu-id="e88fc-147">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-147">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-148">A hora em que o serviço foi aberto.</span><span class="sxs-lookup"><span data-stu-id="e88fc-148">The time the service was opened.</span></span>  
+ <span data-ttu-id="c3532-148">A hora em que o serviço foi aberto.</span><span class="sxs-lookup"><span data-stu-id="c3532-148">The time the service was opened.</span></span>  
   
-### <a name="outgoingchannels"></a><span data-ttu-id="e88fc-149">OutgoingChannels</span><span class="sxs-lookup"><span data-stu-id="e88fc-149">OutgoingChannels</span></span>  
- <span data-ttu-id="e88fc-150">Tipo de dados: matriz de canal</span><span class="sxs-lookup"><span data-stu-id="e88fc-150">Data type: Channel array</span></span>  
+### <a name="outgoingchannels"></a><span data-ttu-id="c3532-149">OutgoingChannels</span><span class="sxs-lookup"><span data-stu-id="c3532-149">OutgoingChannels</span></span>  
+ <span data-ttu-id="c3532-150">Tipo de dados: matriz de canal</span><span class="sxs-lookup"><span data-stu-id="c3532-150">Data type: Channel array</span></span>  
   
- <span data-ttu-id="e88fc-151">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-151">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-152">Os canais que estão saindo da instância do serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-152">The channels that are outgoing from the service instance.</span></span>  
+ <span data-ttu-id="c3532-152">Os canais que estão saindo da instância do serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-152">The channels that are outgoing from the service instance.</span></span>  
   
-### <a name="processid"></a><span data-ttu-id="e88fc-153">ProcessId</span><span class="sxs-lookup"><span data-stu-id="e88fc-153">ProcessId</span></span>  
- <span data-ttu-id="e88fc-154">Tipo de dados: sint32</span><span class="sxs-lookup"><span data-stu-id="e88fc-154">Data type: sint32</span></span>  
+### <a name="processid"></a><span data-ttu-id="c3532-153">ProcessId</span><span class="sxs-lookup"><span data-stu-id="c3532-153">ProcessId</span></span>  
+ <span data-ttu-id="c3532-154">Tipo de dados: sint32</span><span class="sxs-lookup"><span data-stu-id="c3532-154">Data type: sint32</span></span>  
   
- <span data-ttu-id="e88fc-155">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="e88fc-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="c3532-155">Tipo de acesso: somente leitura</span><span class="sxs-lookup"><span data-stu-id="c3532-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="e88fc-156">A id de processo do processo que hospeda o serviço.</span><span class="sxs-lookup"><span data-stu-id="e88fc-156">The process id of the process that hosts the service.</span></span>  
+ <span data-ttu-id="c3532-156">A id de processo do processo que hospeda o serviço.</span><span class="sxs-lookup"><span data-stu-id="c3532-156">The process id of the process that hosts the service.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e88fc-157">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e88fc-157">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3532-157">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c3532-157">Requirements</span></span>  
   
-|<span data-ttu-id="e88fc-158">MOF</span><span class="sxs-lookup"><span data-stu-id="e88fc-158">MOF</span></span>|<span data-ttu-id="e88fc-159">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="e88fc-159">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="c3532-158">MOF</span><span class="sxs-lookup"><span data-stu-id="c3532-158">MOF</span></span>|<span data-ttu-id="c3532-159">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="c3532-159">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="e88fc-160">Namespace</span><span class="sxs-lookup"><span data-stu-id="e88fc-160">Namespace</span></span>|<span data-ttu-id="e88fc-161">Definido em root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e88fc-161">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="c3532-160">Namespace</span><span class="sxs-lookup"><span data-stu-id="c3532-160">Namespace</span></span>|<span data-ttu-id="c3532-161">Definido em root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c3532-161">Defined in root\ServiceModel</span></span>|

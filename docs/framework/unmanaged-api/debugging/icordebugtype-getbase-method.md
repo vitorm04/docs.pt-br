@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugType::GetBase"
-ms.custom: 
+title: Método ICorDebugType::GetBase
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugType.GetBase
 api_location:
@@ -23,22 +15,18 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c28c88988155cf5e00897858d4306e4cb2ea78a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b96c6ab8fb9065e1a08ad45a7f4482ef0b32788b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugtypegetbase-method"></a><span data-ttu-id="c996e-102">Método ICorDebugType::GetBase</span><span class="sxs-lookup"><span data-stu-id="c996e-102">ICorDebugType::GetBase Method</span></span>
-<span data-ttu-id="c996e-103">Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver, do tipo representado por esse `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="c996e-103">Gets an interface pointer to an ICorDebugType that represents the base type, if one exists, of the type represented by this `ICorDebugType`.</span></span>  
+# <a name="icordebugtypegetbase-method"></a><span data-ttu-id="d62b1-102">Método ICorDebugType::GetBase</span><span class="sxs-lookup"><span data-stu-id="d62b1-102">ICorDebugType::GetBase Method</span></span>
+<span data-ttu-id="d62b1-103">Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver, do tipo representado por esse `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="d62b1-103">Gets an interface pointer to an ICorDebugType that represents the base type, if one exists, of the type represented by this `ICorDebugType`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c996e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c996e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d62b1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d62b1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBase (  
@@ -46,18 +34,18 @@ HRESULT GetBase (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c996e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c996e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d62b1-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d62b1-105">Parameters</span></span>  
  `pBase`  
- <span data-ttu-id="c996e-106">[out] Um ponteiro para o endereço de uma `ICorDebugType` objeto que representa o tipo base.</span><span class="sxs-lookup"><span data-stu-id="c996e-106">[out] A pointer to the address of an `ICorDebugType` object that represents the base type.</span></span>  
+ <span data-ttu-id="d62b1-106">[out] Um ponteiro para o endereço de uma `ICorDebugType` objeto que representa o tipo base.</span><span class="sxs-lookup"><span data-stu-id="d62b1-106">[out] A pointer to the address of an `ICorDebugType` object that represents the base type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c996e-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="c996e-107">Remarks</span></span>  
- <span data-ttu-id="c996e-108">Pesquisar o tipo base para um tipo é útil para implementar a funcionalidade comum do depurador, como na impressão de todos os campos de um objeto ou suas classes pai.</span><span class="sxs-lookup"><span data-stu-id="c996e-108">Looking up the base type for a type is useful to implement common debugger functionality, such as printing out all the fields of an object or its parent classes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d62b1-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d62b1-107">Remarks</span></span>  
+ <span data-ttu-id="d62b1-108">Pesquisar o tipo base para um tipo é útil para implementar a funcionalidade comum do depurador, como na impressão de todos os campos de um objeto ou suas classes pai.</span><span class="sxs-lookup"><span data-stu-id="d62b1-108">Looking up the base type for a type is useful to implement common debugger functionality, such as printing out all the fields of an object or its parent classes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c996e-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c996e-109">Requirements</span></span>  
- <span data-ttu-id="c996e-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c996e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d62b1-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d62b1-109">Requirements</span></span>  
+ <span data-ttu-id="d62b1-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d62b1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c996e-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c996e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d62b1-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d62b1-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c996e-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c996e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d62b1-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d62b1-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c996e-113">**Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c996e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="d62b1-113">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d62b1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

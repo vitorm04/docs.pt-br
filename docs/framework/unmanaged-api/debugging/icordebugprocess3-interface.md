@@ -1,14 +1,6 @@
 ---
 title: Interface ICorDebugProcess3
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess3
 api_location:
@@ -22,42 +14,38 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 894d3295b83a1971792e6da845f276be486a4ea5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95c2218aadd62902ff9bc7f2e6a190aa2ce241ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugprocess3-interface"></a><span data-ttu-id="89151-102">Interface ICorDebugProcess3</span><span class="sxs-lookup"><span data-stu-id="89151-102">ICorDebugProcess3 Interface</span></span>
-<span data-ttu-id="89151-103">Controla as notificações personalizadas do depurador.</span><span class="sxs-lookup"><span data-stu-id="89151-103">Controls custom debugger notifications.</span></span>  
+# <a name="icordebugprocess3-interface"></a><span data-ttu-id="55979-102">Interface ICorDebugProcess3</span><span class="sxs-lookup"><span data-stu-id="55979-102">ICorDebugProcess3 Interface</span></span>
+<span data-ttu-id="55979-103">Controla as notificações personalizadas do depurador.</span><span class="sxs-lookup"><span data-stu-id="55979-103">Controls custom debugger notifications.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="89151-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="89151-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="55979-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="55979-104">Methods</span></span>  
   
-|<span data-ttu-id="89151-105">Método</span><span class="sxs-lookup"><span data-stu-id="89151-105">Method</span></span>|<span data-ttu-id="89151-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="89151-106">Description</span></span>|  
+|<span data-ttu-id="55979-105">Método</span><span class="sxs-lookup"><span data-stu-id="55979-105">Method</span></span>|<span data-ttu-id="55979-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="55979-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="89151-107">Método SetEnableCustomNotification</span><span class="sxs-lookup"><span data-stu-id="89151-107">SetEnableCustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|<span data-ttu-id="89151-108">Ativa e desativa as notificações do depurador personalizados do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="89151-108">Enables and disables custom debugger notifications of the specified type.</span></span>|  
+|[<span data-ttu-id="55979-107">Método SetEnableCustomNotification</span><span class="sxs-lookup"><span data-stu-id="55979-107">SetEnableCustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|<span data-ttu-id="55979-108">Ativa e desativa as notificações do depurador personalizados do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="55979-108">Enables and disables custom debugger notifications of the specified type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="89151-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="89151-109">Remarks</span></span>  
- <span data-ttu-id="89151-110">Essa interface logicamente estende as interfaces ICorDebugProcess e ICorDebugProcess2.</span><span class="sxs-lookup"><span data-stu-id="89151-110">This interface logically extends the ICorDebugProcess and ICorDebugProcess2 interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="55979-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="55979-109">Remarks</span></span>  
+ <span data-ttu-id="55979-110">Essa interface logicamente estende as interfaces ICorDebugProcess e ICorDebugProcess2.</span><span class="sxs-lookup"><span data-stu-id="55979-110">This interface logically extends the ICorDebugProcess and ICorDebugProcess2 interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="89151-111">Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="89151-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="55979-111">Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="55979-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89151-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="89151-112">Requirements</span></span>  
- <span data-ttu-id="89151-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89151-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55979-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="55979-112">Requirements</span></span>  
+ <span data-ttu-id="55979-113">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55979-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89151-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89151-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="55979-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="55979-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="89151-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89151-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55979-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55979-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="89151-116">**Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89151-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="55979-116">**Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55979-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89151-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="89151-117">See Also</span></span>  
- [<span data-ttu-id="89151-118">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="89151-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="89151-119">Depuração</span><span class="sxs-lookup"><span data-stu-id="89151-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="55979-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="55979-117">See Also</span></span>  
+ [<span data-ttu-id="55979-118">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="55979-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="55979-119">Depuração</span><span class="sxs-lookup"><span data-stu-id="55979-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

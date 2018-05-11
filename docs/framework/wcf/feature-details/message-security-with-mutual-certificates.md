@@ -1,63 +1,53 @@
 ---
-title: "Segurança de mensagem com certificados mútuos"
-ms.custom: 
+title: Segurança de mensagem com certificados mútuos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: "18"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="e2491-102">Segurança de mensagem com certificados mútuos</span><span class="sxs-lookup"><span data-stu-id="e2491-102">Message Security with Mutual Certificates</span></span>
-<span data-ttu-id="e2491-103">O cenário a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente protegido usando o modo de segurança de mensagem e serviço.</span><span class="sxs-lookup"><span data-stu-id="e2491-103">The following scenario shows a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client secured using message security mode.</span></span> <span data-ttu-id="e2491-104">O cliente e o serviço são autenticadas com certificados.</span><span class="sxs-lookup"><span data-stu-id="e2491-104">The client and the service are authenticated with certificates.</span></span>  
+# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="cd8eb-102">Segurança de mensagem com certificados mútuos</span><span class="sxs-lookup"><span data-stu-id="cd8eb-102">Message Security with Mutual Certificates</span></span>
+<span data-ttu-id="cd8eb-103">O cenário a seguir mostra um serviço Windows Communication Foundation (WCF) e um cliente protegido usando o modo de segurança de mensagem.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="cd8eb-104">O cliente e o serviço são autenticadas com certificados.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-104">The client and the service are authenticated with certificates.</span></span>  
   
- <span data-ttu-id="e2491-105">Esse cenário é interoperável porque ele usa o WS-Security com o perfil de token do certificado x. 509.</span><span class="sxs-lookup"><span data-stu-id="e2491-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
+ <span data-ttu-id="cd8eb-105">Esse cenário é interoperável porque ele usa o WS-Security com o perfil de token do certificado x. 509.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e2491-106">Esse cenário não realiza a negociação do certificado de serviço.</span><span class="sxs-lookup"><span data-stu-id="e2491-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="e2491-107">O certificado de serviço deve ser fornecido ao cliente antes de qualquer comunicação.</span><span class="sxs-lookup"><span data-stu-id="e2491-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="e2491-108">O certificado do servidor pode ser distribuído com o aplicativo ou fornecido em uma comunicação de fora da banda.</span><span class="sxs-lookup"><span data-stu-id="e2491-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
+>  <span data-ttu-id="cd8eb-106">Esse cenário não realiza a negociação do certificado de serviço.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="cd8eb-107">O certificado de serviço deve ser fornecido ao cliente antes de qualquer comunicação.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="cd8eb-108">O certificado do servidor pode ser distribuído com o aplicativo ou fornecido em uma comunicação de fora da banda.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
   
- <span data-ttu-id="e2491-109">![Segurança com certificados mútuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="e2491-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
+ <span data-ttu-id="cd8eb-109">![Segurança com certificados mútuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="cd8eb-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
   
-|<span data-ttu-id="e2491-110">Característica</span><span class="sxs-lookup"><span data-stu-id="e2491-110">Characteristic</span></span>|<span data-ttu-id="e2491-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="e2491-111">Description</span></span>|  
+|<span data-ttu-id="cd8eb-110">Característica</span><span class="sxs-lookup"><span data-stu-id="cd8eb-110">Characteristic</span></span>|<span data-ttu-id="cd8eb-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="cd8eb-111">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="e2491-112">Modo de segurança</span><span class="sxs-lookup"><span data-stu-id="e2491-112">Security Mode</span></span>|<span data-ttu-id="e2491-113">Mensagem</span><span class="sxs-lookup"><span data-stu-id="e2491-113">Message</span></span>|  
-|<span data-ttu-id="e2491-114">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="e2491-114">Interoperability</span></span>|<span data-ttu-id="e2491-115">Sim, com serviços e clientes do compatíveis de perfil de token do certificado x. 509 e WS-Security.</span><span class="sxs-lookup"><span data-stu-id="e2491-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
-|<span data-ttu-id="e2491-116">Autenticação</span><span class="sxs-lookup"><span data-stu-id="e2491-116">Authentication</span></span>|<span data-ttu-id="e2491-117">Autenticação mútua do cliente e servidor.</span><span class="sxs-lookup"><span data-stu-id="e2491-117">Mutual authentication of the server and client.</span></span>|  
-|<span data-ttu-id="e2491-118">Integridade</span><span class="sxs-lookup"><span data-stu-id="e2491-118">Integrity</span></span>|<span data-ttu-id="e2491-119">Sim</span><span class="sxs-lookup"><span data-stu-id="e2491-119">Yes</span></span>|  
-|<span data-ttu-id="e2491-120">Confidencialidade</span><span class="sxs-lookup"><span data-stu-id="e2491-120">Confidentiality</span></span>|<span data-ttu-id="e2491-121">Sim</span><span class="sxs-lookup"><span data-stu-id="e2491-121">Yes</span></span>|  
-|<span data-ttu-id="e2491-122">Transporte</span><span class="sxs-lookup"><span data-stu-id="e2491-122">Transport</span></span>|<span data-ttu-id="e2491-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="e2491-123">HTTP</span></span>|  
-|<span data-ttu-id="e2491-124">Associação</span><span class="sxs-lookup"><span data-stu-id="e2491-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="cd8eb-112">Modo de segurança</span><span class="sxs-lookup"><span data-stu-id="cd8eb-112">Security Mode</span></span>|<span data-ttu-id="cd8eb-113">Mensagem</span><span class="sxs-lookup"><span data-stu-id="cd8eb-113">Message</span></span>|  
+|<span data-ttu-id="cd8eb-114">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="cd8eb-114">Interoperability</span></span>|<span data-ttu-id="cd8eb-115">Sim, com serviços e clientes do compatíveis de perfil de token do certificado x. 509 e WS-Security.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
+|<span data-ttu-id="cd8eb-116">Autenticação</span><span class="sxs-lookup"><span data-stu-id="cd8eb-116">Authentication</span></span>|<span data-ttu-id="cd8eb-117">Autenticação mútua do cliente e servidor.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-117">Mutual authentication of the server and client.</span></span>|  
+|<span data-ttu-id="cd8eb-118">Integridade</span><span class="sxs-lookup"><span data-stu-id="cd8eb-118">Integrity</span></span>|<span data-ttu-id="cd8eb-119">Sim</span><span class="sxs-lookup"><span data-stu-id="cd8eb-119">Yes</span></span>|  
+|<span data-ttu-id="cd8eb-120">Confidencialidade</span><span class="sxs-lookup"><span data-stu-id="cd8eb-120">Confidentiality</span></span>|<span data-ttu-id="cd8eb-121">Sim</span><span class="sxs-lookup"><span data-stu-id="cd8eb-121">Yes</span></span>|  
+|<span data-ttu-id="cd8eb-122">Transporte</span><span class="sxs-lookup"><span data-stu-id="cd8eb-122">Transport</span></span>|<span data-ttu-id="cd8eb-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="cd8eb-123">HTTP</span></span>|  
+|<span data-ttu-id="cd8eb-124">Associação</span><span class="sxs-lookup"><span data-stu-id="cd8eb-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="e2491-125">Serviço</span><span class="sxs-lookup"><span data-stu-id="e2491-125">Service</span></span>  
- <span data-ttu-id="e2491-126">O código e a configuração a seguir destinam-se para executar de forma independente.</span><span class="sxs-lookup"><span data-stu-id="e2491-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e2491-127">Realize um dos seguintes procedimentos:</span><span class="sxs-lookup"><span data-stu-id="e2491-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="cd8eb-125">Serviço</span><span class="sxs-lookup"><span data-stu-id="cd8eb-125">Service</span></span>  
+ <span data-ttu-id="cd8eb-126">O código e a configuração a seguir destinam-se para executar de forma independente.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="cd8eb-127">Realize um dos seguintes procedimentos:</span><span class="sxs-lookup"><span data-stu-id="cd8eb-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="e2491-128">Crie um serviço autônomo usando o código sem nenhuma configuração.</span><span class="sxs-lookup"><span data-stu-id="e2491-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="cd8eb-128">Crie um serviço autônomo usando o código sem nenhuma configuração.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="e2491-129">Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.</span><span class="sxs-lookup"><span data-stu-id="e2491-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="cd8eb-129">Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="e2491-130">Código</span><span class="sxs-lookup"><span data-stu-id="e2491-130">Code</span></span>  
- <span data-ttu-id="e2491-131">Mostra o seguinte código cria um ponto de extremidade de serviço que usa segurança de mensagem.</span><span class="sxs-lookup"><span data-stu-id="e2491-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="e2491-132">O serviço requer um certificado para se autenticar.</span><span class="sxs-lookup"><span data-stu-id="e2491-132">The service requires a certificate to authenticate itself.</span></span>  
+### <a name="code"></a><span data-ttu-id="cd8eb-130">Código</span><span class="sxs-lookup"><span data-stu-id="cd8eb-130">Code</span></span>  
+ <span data-ttu-id="cd8eb-131">Mostra o seguinte código cria um ponto de extremidade de serviço que usa segurança de mensagem.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="cd8eb-132">O serviço requer um certificado para se autenticar.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-132">The service requires a certificate to authenticate itself.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a><span data-ttu-id="e2491-133">Configuração</span><span class="sxs-lookup"><span data-stu-id="e2491-133">Configuration</span></span>  
- <span data-ttu-id="e2491-134">A configuração a seguir pode ser usada em vez do código para criar o mesmo serviço.</span><span class="sxs-lookup"><span data-stu-id="e2491-134">The following configuration can be used instead of the code to create the same service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="cd8eb-133">Configuração</span><span class="sxs-lookup"><span data-stu-id="cd8eb-133">Configuration</span></span>  
+ <span data-ttu-id="cd8eb-134">A configuração a seguir pode ser usada em vez do código para criar o mesmo serviço.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-134">The following configuration can be used instead of the code to create the same service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -101,24 +91,24 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="e2491-135">Cliente</span><span class="sxs-lookup"><span data-stu-id="e2491-135">Client</span></span>  
- <span data-ttu-id="e2491-136">O código e a configuração a seguir destinam-se para executar de forma independente.</span><span class="sxs-lookup"><span data-stu-id="e2491-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e2491-137">Realize um dos seguintes procedimentos:</span><span class="sxs-lookup"><span data-stu-id="e2491-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="cd8eb-135">Cliente</span><span class="sxs-lookup"><span data-stu-id="cd8eb-135">Client</span></span>  
+ <span data-ttu-id="cd8eb-136">O código e a configuração a seguir destinam-se para executar de forma independente.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="cd8eb-137">Realize um dos seguintes procedimentos:</span><span class="sxs-lookup"><span data-stu-id="cd8eb-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="e2491-138">Crie um cliente autônomo usando o código (e o código do cliente).</span><span class="sxs-lookup"><span data-stu-id="e2491-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="cd8eb-138">Crie um cliente autônomo usando o código (e o código do cliente).</span><span class="sxs-lookup"><span data-stu-id="cd8eb-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="e2491-139">Crie um cliente que não define os endereços de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="e2491-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="e2491-140">Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento.</span><span class="sxs-lookup"><span data-stu-id="e2491-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="e2491-141">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="e2491-141">For example:</span></span>  
+-   <span data-ttu-id="cd8eb-139">Crie um cliente que não define os endereços de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="cd8eb-140">Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="cd8eb-141">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="cd8eb-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="e2491-142">Código</span><span class="sxs-lookup"><span data-stu-id="e2491-142">Code</span></span>  
- <span data-ttu-id="e2491-143">O código a seguir cria o cliente.</span><span class="sxs-lookup"><span data-stu-id="e2491-143">The following code creates the client.</span></span> <span data-ttu-id="e2491-144">O modo de segurança é definido como mensagem e o tipo de credencial de cliente está definido como Certificate.</span><span class="sxs-lookup"><span data-stu-id="e2491-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
+### <a name="code"></a><span data-ttu-id="cd8eb-142">Código</span><span class="sxs-lookup"><span data-stu-id="cd8eb-142">Code</span></span>  
+ <span data-ttu-id="cd8eb-143">O código a seguir cria o cliente.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-143">The following code creates the client.</span></span> <span data-ttu-id="cd8eb-144">O modo de segurança é definido como mensagem e o tipo de credencial de cliente está definido como Certificate.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a><span data-ttu-id="e2491-145">Configuração</span><span class="sxs-lookup"><span data-stu-id="e2491-145">Configuration</span></span>  
- <span data-ttu-id="e2491-146">O exemplo a seguir configura o cliente.</span><span class="sxs-lookup"><span data-stu-id="e2491-146">The following configures the client.</span></span> <span data-ttu-id="e2491-147">Um certificado de cliente deve ser especificado usando o [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span><span class="sxs-lookup"><span data-stu-id="e2491-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="e2491-148">Além disso, o certificado de serviço é especificado usando o [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span><span class="sxs-lookup"><span data-stu-id="e2491-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="cd8eb-145">Configuração</span><span class="sxs-lookup"><span data-stu-id="cd8eb-145">Configuration</span></span>  
+ <span data-ttu-id="cd8eb-146">O exemplo a seguir configura o cliente.</span><span class="sxs-lookup"><span data-stu-id="cd8eb-146">The following configures the client.</span></span> <span data-ttu-id="cd8eb-147">Um certificado de cliente deve ser especificado usando o [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span><span class="sxs-lookup"><span data-stu-id="cd8eb-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="cd8eb-148">Além disso, o certificado de serviço é especificado usando o [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span><span class="sxs-lookup"><span data-stu-id="cd8eb-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -169,7 +159,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e2491-149">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e2491-149">See Also</span></span>  
- [<span data-ttu-id="e2491-150">Visão geral de segurança</span><span class="sxs-lookup"><span data-stu-id="e2491-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="e2491-151">Modelo de segurança para o Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="e2491-151">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [<span data-ttu-id="e2491-152">Como: criar e instalar certificados temporários no WCF para segurança de transporte durante o desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="e2491-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](http://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a><span data-ttu-id="cd8eb-149">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cd8eb-149">See Also</span></span>  
+ [<span data-ttu-id="cd8eb-150">Visão geral de segurança</span><span class="sxs-lookup"><span data-stu-id="cd8eb-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="cd8eb-151">Modelo de segurança para o Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="cd8eb-151">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [<span data-ttu-id="cd8eb-152">Como: criar e instalar certificados temporários no WCF para segurança de transporte durante o desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="cd8eb-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](http://go.microsoft.com/fwlink/?LinkId=244264)

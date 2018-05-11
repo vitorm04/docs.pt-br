@@ -1,51 +1,39 @@
 ---
-title: "Expressões em consultas LINQ to Entities"
-ms.custom: 
+title: Expressões em consultas LINQ to Entities
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2f429a354c4042f0e85b9ef078bbc57ebe510d0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f9230e9b5ac0c906652c03111b82df5147267143
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="expressions-in-linq-to-entities-queries"></a><span data-ttu-id="b6d86-102">Expressões em consultas LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="b6d86-102">Expressions in LINQ to Entities Queries</span></span>
-<span data-ttu-id="b6d86-103">Uma expressão é um fragmento de código que pode ser avaliado como um único valor, objeto, método ou namespace.</span><span class="sxs-lookup"><span data-stu-id="b6d86-103">An expression is a fragment of code that can be evaluated to a single value, object, method, or namespace.</span></span> <span data-ttu-id="b6d86-104">As expressões podem conter um valor literal, uma chamada de método, um operador e seus operandos ou um nome simples.</span><span class="sxs-lookup"><span data-stu-id="b6d86-104">Expressions can contain a literal value, a method call, an operator and its operands, or a simple name.</span></span> <span data-ttu-id="b6d86-105">Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo.</span><span class="sxs-lookup"><span data-stu-id="b6d86-105">Simple names can be the name of a variable, type member, method parameter, namespace or type.</span></span> <span data-ttu-id="b6d86-106">As expressões podem usar operadores que, por sua vez, usam outras expressões como parâmetros ou chamadas de métodos cujos parâmetros são, por sua vez, outras chamadas de métodos.</span><span class="sxs-lookup"><span data-stu-id="b6d86-106">Expressions can use operators that in turn use other expressions as parameters, or method calls whose parameters are in turn other method calls.</span></span> <span data-ttu-id="b6d86-107">Portanto, as expressões podem variar de simples a muito complexas.</span><span class="sxs-lookup"><span data-stu-id="b6d86-107">Therefore, expressions can range from simple to very complex.</span></span>  
+# <a name="expressions-in-linq-to-entities-queries"></a><span data-ttu-id="b3a9f-102">Expressões em consultas LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="b3a9f-102">Expressions in LINQ to Entities Queries</span></span>
+<span data-ttu-id="b3a9f-103">Uma expressão é um fragmento de código que pode ser avaliado como um único valor, objeto, método ou namespace.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-103">An expression is a fragment of code that can be evaluated to a single value, object, method, or namespace.</span></span> <span data-ttu-id="b3a9f-104">As expressões podem conter um valor literal, uma chamada de método, um operador e seus operandos ou um nome simples.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-104">Expressions can contain a literal value, a method call, an operator and its operands, or a simple name.</span></span> <span data-ttu-id="b3a9f-105">Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-105">Simple names can be the name of a variable, type member, method parameter, namespace or type.</span></span> <span data-ttu-id="b3a9f-106">As expressões podem usar operadores que, por sua vez, usam outras expressões como parâmetros ou chamadas de métodos cujos parâmetros são, por sua vez, outras chamadas de métodos.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-106">Expressions can use operators that in turn use other expressions as parameters, or method calls whose parameters are in turn other method calls.</span></span> <span data-ttu-id="b3a9f-107">Portanto, as expressões podem variar de simples a muito complexas.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-107">Therefore, expressions can range from simple to very complex.</span></span>  
   
- <span data-ttu-id="b6d86-108">Em [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, as expressões podem conter qualquer coisa permitido pelos tipos de dentro do <xref:System.Linq.Expressions> namespace, incluindo expressões lambda.</span><span class="sxs-lookup"><span data-stu-id="b6d86-108">In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries, expressions can contain anything allowed by the types within the <xref:System.Linq.Expressions> namespace, including lambda expressions.</span></span> <span data-ttu-id="b6d86-109">A expressões que podem ser usadas em consultas [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] são um superconjunto das expressões que podem ser usadas para consultar o [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b6d86-109">The expressions that can be used in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries are a superset of the expressions that can be used to query the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  <span data-ttu-id="b6d86-110">Expressões que fazem parte de consultas em relação a [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] são limitados a operações com suporte pelo `ObjectQuery<T>` e fonte de dados subjacente.</span><span class="sxs-lookup"><span data-stu-id="b6d86-110">Expressions that are part of queries against the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] are limited to operations supported by `ObjectQuery<T>` and the underlying data source.</span></span>  
+ <span data-ttu-id="b3a9f-108">Em [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, as expressões podem conter qualquer coisa permitido pelos tipos de dentro do <xref:System.Linq.Expressions> namespace, incluindo expressões lambda.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-108">In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries, expressions can contain anything allowed by the types within the <xref:System.Linq.Expressions> namespace, including lambda expressions.</span></span> <span data-ttu-id="b3a9f-109">A expressões que podem ser usadas em consultas [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] são um superconjunto das expressões que podem ser usadas para consultar o [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b3a9f-109">The expressions that can be used in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries are a superset of the expressions that can be used to query the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span>  <span data-ttu-id="b3a9f-110">Expressões que fazem parte de consultas em relação a [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] são limitados a operações com suporte pelo `ObjectQuery<T>` e fonte de dados subjacente.</span><span class="sxs-lookup"><span data-stu-id="b3a9f-110">Expressions that are part of queries against the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] are limited to operations supported by `ObjectQuery<T>` and the underlying data source.</span></span>  
   
- <span data-ttu-id="b6d86-111">No exemplo a seguir, a comparação na cláusula `Where` é uma expressão:</span><span class="sxs-lookup"><span data-stu-id="b6d86-111">In the following example, the comparison in the `Where` clause is an expression:</span></span>  
+ <span data-ttu-id="b3a9f-111">No exemplo a seguir, a comparação na cláusula `Where` é uma expressão:</span><span class="sxs-lookup"><span data-stu-id="b3a9f-111">In the following example, the comparison in the `Where` clause is an expression:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#whereexpression)]
  [!code-vb[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#whereexpression)]  
   
 > [!NOTE]
->  <span data-ttu-id="b6d86-112">Os constructos de linguagens específicos, como `unchecked` do C#, não têm significado no [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b6d86-112">Specific language constructs, such as C# `unchecked`, have no meaning in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].</span></span>  
+>  <span data-ttu-id="b3a9f-112">Os constructos de linguagens específicos, como `unchecked` do C#, não têm significado no [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b3a9f-112">Specific language constructs, such as C# `unchecked`, have no meaning in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b6d86-113">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="b6d86-113">In This Section</span></span>  
- [<span data-ttu-id="b6d86-114">Expressões constantes</span><span class="sxs-lookup"><span data-stu-id="b6d86-114">Constant Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b3a9f-113">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="b3a9f-113">In This Section</span></span>  
+ [<span data-ttu-id="b3a9f-114">Expressões constantes</span><span class="sxs-lookup"><span data-stu-id="b3a9f-114">Constant Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
   
- [<span data-ttu-id="b6d86-115">Expressões de comparação</span><span class="sxs-lookup"><span data-stu-id="b6d86-115">Comparison Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
+ [<span data-ttu-id="b3a9f-115">Expressões de comparação</span><span class="sxs-lookup"><span data-stu-id="b3a9f-115">Comparison Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
   
- [<span data-ttu-id="b6d86-116">Comparações nulas</span><span class="sxs-lookup"><span data-stu-id="b6d86-116">Null Comparisons</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [<span data-ttu-id="b3a9f-116">Comparações nulas</span><span class="sxs-lookup"><span data-stu-id="b3a9f-116">Null Comparisons</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
   
- [<span data-ttu-id="b6d86-117">Expressões de inicialização</span><span class="sxs-lookup"><span data-stu-id="b6d86-117">Initialization Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
+ [<span data-ttu-id="b3a9f-117">Expressões de inicialização</span><span class="sxs-lookup"><span data-stu-id="b3a9f-117">Initialization Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [<span data-ttu-id="b6d86-118">Propriedades de navegação</span><span class="sxs-lookup"><span data-stu-id="b6d86-118">Navigation Properties</span></span>](http://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [<span data-ttu-id="b3a9f-118">Propriedades de navegação</span><span class="sxs-lookup"><span data-stu-id="b3a9f-118">Navigation Properties</span></span>](http://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
   
-## <a name="see-also"></a><span data-ttu-id="b6d86-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b6d86-119">See Also</span></span>  
- [<span data-ttu-id="b6d86-120">Entity Framework do ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b6d86-120">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3a9f-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b3a9f-119">See Also</span></span>  
+ [<span data-ttu-id="b3a9f-120">Entity Framework do ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b3a9f-120">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)

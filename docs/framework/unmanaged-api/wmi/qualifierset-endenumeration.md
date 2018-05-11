@@ -1,11 +1,7 @@
 ---
-title: "Função QualifierSet_EndEnumeration (referência de API não gerenciada)"
-description: "A função QualifierSet_EndEnumeration encerra uma enumeração."
+title: Função QualifierSet_EndEnumeration (referência de API não gerenciada)
+description: A função QualifierSet_EndEnumeration encerra uma enumeração.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_EndEnumeration
 api_location:
@@ -20,21 +16,18 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d8e6bb24eb471d807af2493f82b6be4f644124f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="48c6b-103">Função QualifierSet_EndEnumeration</span><span class="sxs-lookup"><span data-stu-id="48c6b-103">QualifierSet_EndEnumeration function</span></span>
-<span data-ttu-id="48c6b-104">Finaliza a enumeração iniciada com uma chamada para o [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) função.</span><span class="sxs-lookup"><span data-stu-id="48c6b-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  
+# <a name="qualifiersetendenumeration-function"></a><span data-ttu-id="7e994-103">Função QualifierSet_EndEnumeration</span><span class="sxs-lookup"><span data-stu-id="7e994-103">QualifierSet_EndEnumeration function</span></span>
+<span data-ttu-id="7e994-104">Finaliza a enumeração iniciada com uma chamada para o [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) função.</span><span class="sxs-lookup"><span data-stu-id="7e994-104">Terminates the enumeration begun with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="48c6b-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="48c6b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e994-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7e994-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_EndEnumeration (
@@ -43,35 +36,35 @@ HRESULT QualifierSet_EndEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="48c6b-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="48c6b-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="7e994-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7e994-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="48c6b-107">[in] Esse parâmetro é usado.</span><span class="sxs-lookup"><span data-stu-id="48c6b-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="7e994-107">[in] Esse parâmetro é usado.</span><span class="sxs-lookup"><span data-stu-id="7e994-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="48c6b-108">[in] Um ponteiro para um [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instância.</span><span class="sxs-lookup"><span data-stu-id="48c6b-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="7e994-108">[in] Um ponteiro para um [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instância.</span><span class="sxs-lookup"><span data-stu-id="7e994-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="48c6b-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="48c6b-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="7e994-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="7e994-109">Return value</span></span>
 
-<span data-ttu-id="48c6b-110">O seguinte valor retornado por essa função é definido no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-la como uma constante em seu código:</span><span class="sxs-lookup"><span data-stu-id="48c6b-110">The following value returned by this function is defined in the *WbemCli.h* header file, or you can define it as a constant in your code:</span></span>
+<span data-ttu-id="7e994-110">O seguinte valor retornado por essa função é definido no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-la como uma constante em seu código:</span><span class="sxs-lookup"><span data-stu-id="7e994-110">The following value returned by this function is defined in the *WbemCli.h* header file, or you can define it as a constant in your code:</span></span>
 
-|<span data-ttu-id="48c6b-111">Constante</span><span class="sxs-lookup"><span data-stu-id="48c6b-111">Constant</span></span>  |<span data-ttu-id="48c6b-112">Valor</span><span class="sxs-lookup"><span data-stu-id="48c6b-112">Value</span></span>  |<span data-ttu-id="48c6b-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="48c6b-113">Description</span></span>  |
+|<span data-ttu-id="7e994-111">Constante</span><span class="sxs-lookup"><span data-stu-id="7e994-111">Constant</span></span>  |<span data-ttu-id="7e994-112">Valor</span><span class="sxs-lookup"><span data-stu-id="7e994-112">Value</span></span>  |<span data-ttu-id="7e994-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="7e994-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="48c6b-114">0</span><span class="sxs-lookup"><span data-stu-id="48c6b-114">0</span></span> | <span data-ttu-id="48c6b-115">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="48c6b-115">The function call was successful.</span></span>  |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="7e994-114">0</span><span class="sxs-lookup"><span data-stu-id="7e994-114">0</span></span> | <span data-ttu-id="7e994-115">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="7e994-115">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="48c6b-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="48c6b-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7e994-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="7e994-116">Remarks</span></span>
 
-<span data-ttu-id="48c6b-117">Essa função encapsula uma chamada para o [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) método.</span><span class="sxs-lookup"><span data-stu-id="48c6b-117">This function wraps a call to the [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="7e994-117">Essa função encapsula uma chamada para o [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) método.</span><span class="sxs-lookup"><span data-stu-id="7e994-117">This function wraps a call to the [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="48c6b-118">Esta chamada é recomendada, mas não é necessário.</span><span class="sxs-lookup"><span data-stu-id="48c6b-118">This call is recommended, but not required.</span></span> <span data-ttu-id="48c6b-119">Imediatamente, ele libera recursos associados com a enumeração.</span><span class="sxs-lookup"><span data-stu-id="48c6b-119">It immediately releases resources associated with the enumeration.</span></span>
+<span data-ttu-id="7e994-118">Esta chamada é recomendada, mas não é necessário.</span><span class="sxs-lookup"><span data-stu-id="7e994-118">This call is recommended, but not required.</span></span> <span data-ttu-id="7e994-119">Imediatamente, ele libera recursos associados com a enumeração.</span><span class="sxs-lookup"><span data-stu-id="7e994-119">It immediately releases resources associated with the enumeration.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="48c6b-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="48c6b-120">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e994-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7e994-120">Requirements</span></span>  
 
-<span data-ttu-id="48c6b-121">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48c6b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="7e994-121">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e994-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
-<span data-ttu-id="48c6b-122">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="48c6b-122">**Header:** WMINet_Utils.idl</span></span>  
+<span data-ttu-id="7e994-122">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7e994-122">**Header:** WMINet_Utils.idl</span></span>  
   
-<span data-ttu-id="48c6b-123">**Versões do .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="48c6b-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+<span data-ttu-id="7e994-123">**Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7e994-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48c6b-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="48c6b-124">See also</span></span>  
-[<span data-ttu-id="48c6b-125">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="48c6b-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="7e994-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7e994-124">See also</span></span>  
+[<span data-ttu-id="7e994-125">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="7e994-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

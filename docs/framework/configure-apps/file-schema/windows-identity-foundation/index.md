@@ -1,29 +1,17 @@
 ---
 title: Esquema de configuração do Windows Identity Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
-caps.latest.revision: 6
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1345df57799f9c0959fd18fbbe41db149d0895a5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8e813383f68644315d59aa58f87cea7532a1d4c9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="802bc-102">Esquema de configuração do Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="802bc-102">Windows Identity Foundation Configuration Schema</span></span>
-<span data-ttu-id="802bc-103">Os tópicos nesta seção fornecem informações sobre o esquema de configuração do WIF (Windows Identity Foundation).</span><span class="sxs-lookup"><span data-stu-id="802bc-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="802bc-104">Você também pode configurar um aplicativo para usar o WIF por meio de classes expostas pela estrutura.</span><span class="sxs-lookup"><span data-stu-id="802bc-104">You can also configure an application to use WIF through classes exposed by the framework,.</span></span> <span data-ttu-id="802bc-105">Essas classes são indicadas nas seções que tratam os elementos relevantes no esquema.</span><span class="sxs-lookup"><span data-stu-id="802bc-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="802bc-106">A seguir é mostrada a estrutura de marca XML básica exposta pelo esquema de configuração do WIF.</span><span class="sxs-lookup"><span data-stu-id="802bc-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="802bc-107">Os atributos são omitidos.</span><span class="sxs-lookup"><span data-stu-id="802bc-107">Attributes are omitted.</span></span> <span data-ttu-id="802bc-108">Os comentários realçados indicam os componentes principais do esquema.</span><span class="sxs-lookup"><span data-stu-id="802bc-108">Highlighted comments indicate major components of the schema.</span></span>  
+# <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="25525-102">Esquema de configuração do Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="25525-102">Windows Identity Foundation Configuration Schema</span></span>
+<span data-ttu-id="25525-103">Os tópicos nesta seção fornecem informações sobre o esquema de configuração do WIF (Windows Identity Foundation).</span><span class="sxs-lookup"><span data-stu-id="25525-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="25525-104">Você também pode configurar um aplicativo para usar o WIF por meio de classes expostas pela estrutura.</span><span class="sxs-lookup"><span data-stu-id="25525-104">You can also configure an application to use WIF through classes exposed by the framework,.</span></span> <span data-ttu-id="25525-105">Essas classes são indicadas nas seções que tratam os elementos relevantes no esquema.</span><span class="sxs-lookup"><span data-stu-id="25525-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="25525-106">A seguir é mostrada a estrutura de marca XML básica exposta pelo esquema de configuração do WIF.</span><span class="sxs-lookup"><span data-stu-id="25525-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="25525-107">Os atributos são omitidos.</span><span class="sxs-lookup"><span data-stu-id="25525-107">Attributes are omitted.</span></span> <span data-ttu-id="25525-108">Os comentários realçados indicam os componentes principais do esquema.</span><span class="sxs-lookup"><span data-stu-id="25525-108">Highlighted comments indicate major components of the schema.</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -118,10 +106,10 @@ ms.lasthandoff: 01/19/2018
 </system.identityModel.services>  
 ```  
   
-## <a name="in-this-section"></a><span data-ttu-id="802bc-109">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="802bc-109">In This Section</span></span>  
- <span data-ttu-id="802bc-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Fornece configuração para habilitar as opções do WIF nos aplicativos.</span><span class="sxs-lookup"><span data-stu-id="802bc-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Provides configuration for enabling WIF options in applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="25525-109">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="25525-109">In This Section</span></span>  
+ <span data-ttu-id="25525-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Fornece configuração para habilitar as opções do WIF nos aplicativos.</span><span class="sxs-lookup"><span data-stu-id="25525-110">[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Provides configuration for enabling WIF options in applications.</span></span>  
   
- <span data-ttu-id="802bc-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Fornece a configuração para federação passiva usando o WIF.</span><span class="sxs-lookup"><span data-stu-id="802bc-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Provides configuration for passive federation using WIF.</span></span> <span data-ttu-id="802bc-112">Configura o SAM (Módulo de Autenticação de Sessão) e o WSFAM (Módulo de Autenticação Federada).</span><span class="sxs-lookup"><span data-stu-id="802bc-112">Configures the Session Authentication Module (SAM) and the Federated Authentication Module (WSFAM).</span></span>  
+ <span data-ttu-id="25525-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Fornece a configuração para federação passiva usando o WIF.</span><span class="sxs-lookup"><span data-stu-id="25525-111">[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Provides configuration for passive federation using WIF.</span></span> <span data-ttu-id="25525-112">Configura o SAM (Módulo de Autenticação de Sessão) e o WSFAM (Módulo de Autenticação Federada).</span><span class="sxs-lookup"><span data-stu-id="25525-112">Configures the Session Authentication Module (SAM) and the Federated Authentication Module (WSFAM).</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="802bc-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="802bc-113">Related Sections</span></span>  
- <span data-ttu-id="802bc-114">[Configuração, administração e gerenciamento](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Descreve como configurar e gerenciar serviços e aplicativos do WIF.</span><span class="sxs-lookup"><span data-stu-id="802bc-114">[Configuration, Administration, And Management](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Describes how to configure and manage WIF applications and services.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="25525-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="25525-113">Related Sections</span></span>  
+ <span data-ttu-id="25525-114">[Configuração, administração e gerenciamento](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Descreve como configurar e gerenciar serviços e aplicativos do WIF.</span><span class="sxs-lookup"><span data-stu-id="25525-114">[Configuration, Administration, And Management](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Describes how to configure and manage WIF applications and services.</span></span>

@@ -1,29 +1,17 @@
 ---
-title: "Mapear relações definidas para elementos aninhados"
-ms.custom: 
+title: Mapear relações definidas para elementos aninhados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c23e951ee2fd6f5956ab41d4425c9e8af8f12b95
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e1fde0ef585621a6821838613a7e77dedf7042b1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="12aec-102">Mapear relações definidas para elementos aninhados</span><span class="sxs-lookup"><span data-stu-id="12aec-102">Map Relations Specified for Nested Elements</span></span>
-<span data-ttu-id="12aec-103">Um esquema pode incluir um **msdata:Relationship** anotação para especificar explicitamente o mapeamento entre quaisquer dois elementos no esquema.</span><span class="sxs-lookup"><span data-stu-id="12aec-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="12aec-104">Os dois elementos especificados na **msdata:Relationship** podem ser aninhados no esquema, mas não precisa ser.</span><span class="sxs-lookup"><span data-stu-id="12aec-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="12aec-105">O processo de mapeamento usa **msdata:Relationship** no esquema para gerar a primária/chave relação de chave estrangeira entre as duas colunas.</span><span class="sxs-lookup"><span data-stu-id="12aec-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
+# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="378ad-102">Mapear relações definidas para elementos aninhados</span><span class="sxs-lookup"><span data-stu-id="378ad-102">Map Relations Specified for Nested Elements</span></span>
+<span data-ttu-id="378ad-103">Um esquema pode incluir um **msdata:Relationship** anotação para especificar explicitamente o mapeamento entre quaisquer dois elementos no esquema.</span><span class="sxs-lookup"><span data-stu-id="378ad-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="378ad-104">Os dois elementos especificados na **msdata:Relationship** podem ser aninhados no esquema, mas não precisa ser.</span><span class="sxs-lookup"><span data-stu-id="378ad-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="378ad-105">O processo de mapeamento usa **msdata:Relationship** no esquema para gerar a primária/chave relação de chave estrangeira entre as duas colunas.</span><span class="sxs-lookup"><span data-stu-id="378ad-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
   
- <span data-ttu-id="12aec-106">O exemplo a seguir mostra um esquema XML no qual o **OrderDetail** é um elemento filho do **ordem**.</span><span class="sxs-lookup"><span data-stu-id="12aec-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="12aec-107">O **msdata:Relationship** identifica essa relação pai-filho e especifica que o **OrderNumber** coluna resultante **ordem** tabela está relacionada com o **OrderNo** coluna resultante **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="12aec-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
+ <span data-ttu-id="378ad-106">O exemplo a seguir mostra um esquema XML no qual o **OrderDetail** é um elemento filho do **ordem**.</span><span class="sxs-lookup"><span data-stu-id="378ad-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="378ad-107">O **msdata:Relationship** identifica essa relação pai-filho e especifica que o **OrderNumber** coluna resultante **ordem** tabela está relacionada com o **OrderNo** coluna resultante **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="378ad-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -63,16 +51,16 @@ ms.lasthandoff: 01/17/2018
 </xs:schema>  
 ```  
   
- <span data-ttu-id="12aec-108">O processo de mapeamento de esquema XML cria o seguinte o <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="12aec-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
+ <span data-ttu-id="378ad-108">O processo de mapeamento de esquema XML cria o seguinte o <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="378ad-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="12aec-109">Um **ordem** e um **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="12aec-109">An **Order** and an **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="378ad-109">Um **ordem** e um **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="378ad-109">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   <span data-ttu-id="12aec-110">Uma relação entre o **ordem** e **OrderDetail** tabelas.</span><span class="sxs-lookup"><span data-stu-id="12aec-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="12aec-111">O **aninhadas** para essa relação é definida como **True** porque o **ordem** e **OrderDetail** elementos estão aninhados no esquema .</span><span class="sxs-lookup"><span data-stu-id="12aec-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+-   <span data-ttu-id="378ad-110">Uma relação entre o **ordem** e **OrderDetail** tabelas.</span><span class="sxs-lookup"><span data-stu-id="378ad-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="378ad-111">O **aninhadas** para essa relação é definida como **True** porque o **ordem** e **OrderDetail** elementos estão aninhados no esquema .</span><span class="sxs-lookup"><span data-stu-id="378ad-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -83,9 +71,9 @@ ms.lasthandoff: 01/17/2018
     Nested: True  
     ```  
   
- <span data-ttu-id="12aec-112">O processo de mapeamento não cria quaisquer restrições.</span><span class="sxs-lookup"><span data-stu-id="12aec-112">The mapping process does not create any constraints.</span></span>  
+ <span data-ttu-id="378ad-112">O processo de mapeamento não cria quaisquer restrições.</span><span class="sxs-lookup"><span data-stu-id="378ad-112">The mapping process does not create any constraints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12aec-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="12aec-113">See Also</span></span>  
- [<span data-ttu-id="12aec-114">Gerando relações de conjunto de dados do esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="12aec-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="12aec-115">Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="12aec-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- <span data-ttu-id="12aec-116">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="12aec-116">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="378ad-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="378ad-113">See Also</span></span>  
+ [<span data-ttu-id="378ad-114">Gerando relações de conjunto de dados do esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="378ad-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="378ad-115">Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="378ad-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="378ad-116">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="378ad-116">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
