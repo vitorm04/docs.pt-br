@@ -2,11 +2,11 @@
 title: Valores (F#)
 description: 'Saiba como os valores em F # são quantidades que têm um tipo específico.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>Valores
 
@@ -20,6 +20,7 @@ O termo *associação* significa associar um nome a uma definição. A palavra-c
 
 O tipo de um valor é inferido da definição. Para um tipo primitivo, como um número de ponto flutuante ou integral, o tipo é determinado pelo tipo do literal. Portanto, no exemplo anterior, o compilador infere o tipo de `b` como `unsigned int`, enquanto o compilador infere o tipo de `a` como `int`. O tipo de valor de uma função é determinado pelo valor de retorno no corpo da função. Para saber mais sobre tipos de valor de função, veja [Funções](../functions/index.md). Para saber mais sobre tipos de literal, veja [Literais](../literals.md).
 
+O compilador não execute diagnósticos sobre associações não utilizados por padrão. Para receber essas mensagens, habilite aviso 1182 em seu arquivo de projeto ou ao invocar o compilador (consulte `--warnon` em [opções do compilador](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Por que imutável?
 Valores imutáveis são valores que não podem ser alterados durante a execução de um programa. Se você estiver acostumado com linguagens como C++, Visual Basic ou X#, talvez se surpreenda por F# dar prioridade para valores imutáveis em vez de variáveis que podem receber novos valores durante a execução de um programa. Dados imutáveis são um elemento importante da programação funcional. Em um ambiente multithread, é difícil gerenciar variáveis mutáveis compartilhadas que podem ser alteradas por muitos threads diferentes. Além disso, com as variáveis mutáveis, às vezes pode ser difícil dizer se uma variável pode ser alterada quando ela é passada para outra função.
@@ -35,6 +36,8 @@ Você pode usar a palavra-chave `mutable` para especificar uma variável que pod
 Você pode atribuir um valor inicial para uma variável mutável usando a palavra-chave `let` da mesma maneira que você definira um valor. No entanto, a diferença é que você pode atribuir posteriormente novos valores a variáveis mutáveis usando o operador `<-`, como no exemplo a seguir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+Os valores marcados `mutable` pode ser elevada automaticamente a `'a ref` se capturadas por um fechamento, inclusive formulários que criam feriados, como `seq` construtores. Se você quiser ser notificado quando isso ocorre, habilitar o aviso 3180 no arquivo de projeto ou ao invocar o compilador.
     
 ## <a name="related-topics"></a>Tópicos relacionados
 

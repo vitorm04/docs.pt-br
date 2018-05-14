@@ -2,11 +2,11 @@
 title: Células de referência (F#)
 description: 'Saiba como células de referência do F # são locais de armazenamento permitem criar valores mutáveis com semântica de referência.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>Células de referência
 
@@ -81,6 +81,9 @@ Para obter mais informações sobre como passar por referência, consulte [parâ
 >[!NOTE]
 Os programadores c# devem saber que ref funciona de forma diferente em F # do que no c#. Por exemplo, o uso de ref quando você passar um argumento não tem o mesmo efeito em F # como faz em c#.
 
+>[!NOTE]
+`mutable` variáveis podem ser promovidas automaticamente a `'a ref` se capturados por um fechamento; consulte [valores](values/index.md).
+
 ## <a name="consuming-c-ref-returns"></a>Consumindo c# `ref` retorna
 
 A partir do F # 4.1, você pode consumir `ref` retorna gerado em c#.  O resultado de tal chamada é um `byref<_>` ponteiro.
@@ -132,3 +135,5 @@ Atualmente, não há nenhuma maneira de gerar um `ref` retorno em F #, que pode 
 [Parâmetros e Argumentos](parameters-and-arguments.md)
 
 [Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)
+
+[Valores](values/index.md)

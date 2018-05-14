@@ -2,11 +2,11 @@
 title: Assinaturas (F#)
 description: 'Saiba como usar um arquivo de assinatura do F # para manter informações sobre as assinaturas públicas de um conjunto de F # elementos do programa, como módulos, tipos e namespaces.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>Assinaturas
 
@@ -64,6 +64,9 @@ As regras para assinaturas de valor são da seguinte maneira:
 
 
 - O padrão de parâmetros (também conhecido como o *arity*) de assinaturas e implementações devem ser consistentes.
+
+
+- Se forem diferentes nomes de parâmetro em um arquivo de assinatura do arquivo de implementação correspondente, o nome no arquivo de assinatura será usado em vez disso, que pode causar problemas quando a depuração ou a criação de perfil. Se você deseja ser notificado de tais incompatibilidades, habilitar aviso 3218 no arquivo de projeto ou ao invocar o compilador (consulte `--warnon` em [opções do compilador](compiler-options.md)).
 
 
 O exemplo de código a seguir mostra um exemplo de um arquivo de assinatura que tem o namespace, módulo, valor da função e as assinaturas de tipo junto com os atributos apropriados. Ele também mostra o arquivo de implementação correspondente.
