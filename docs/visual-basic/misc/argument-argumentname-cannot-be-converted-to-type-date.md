@@ -1,29 +1,21 @@
 ---
-title: Argumento &#39; &lt;argumentname&gt;&#39; não pode ser convertido em tipo de &#39; Data &#39;
+title: Argumento &#39; &lt;argumentname&gt; &#39; não pode ser convertido no tipo &#39;data&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_InvalidDateValue1
 ms.assetid: 928b8d75-f523-40c3-819a-03a1eb596ccc
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 305c6fdd26522bc46bc171b9b334de8d357950fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 86572d019d30d8e033c8364310c1641e7dd7e1cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39date39"></a><span data-ttu-id="37b3c-102">Argumento &#39; &lt;argumentname&gt;&#39; não pode ser convertido em tipo de &#39; Data &#39;</span><span class="sxs-lookup"><span data-stu-id="37b3c-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to type &#39;Date&#39;</span></span>
-<span data-ttu-id="37b3c-103">Uma conversão tentou alterar uma variável para o tipo `Date`, mas o valor não é reconhecido como uma data válida.</span><span class="sxs-lookup"><span data-stu-id="37b3c-103">A conversion attempted to change a variable to type `Date`, but the value is not recognized as a valid date.</span></span>  
+# <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39date39"></a><span data-ttu-id="544c8-102">Argumento &#39; &lt;argumentname&gt; &#39; não pode ser convertido no tipo &#39;data&#39;</span><span class="sxs-lookup"><span data-stu-id="544c8-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be converted to type &#39;Date&#39;</span></span>
+<span data-ttu-id="544c8-103">Uma conversão tentou alterar uma variável para o tipo `Date`, mas o valor não é reconhecido como uma data válida.</span><span class="sxs-lookup"><span data-stu-id="544c8-103">A conversion attempted to change a variable to type `Date`, but the value is not recognized as a valid date.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="37b3c-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="37b3c-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="544c8-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="544c8-104">To correct this error</span></span>  
   
--   <span data-ttu-id="37b3c-105">Localize uma conversão que é significativa.</span><span class="sxs-lookup"><span data-stu-id="37b3c-105">Find a conversion that is meaningful.</span></span>  
+-   <span data-ttu-id="544c8-105">Localize uma conversão que é significativa.</span><span class="sxs-lookup"><span data-stu-id="544c8-105">Find a conversion that is meaningful.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37b3c-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37b3c-106">See Also</span></span>  
- [<span data-ttu-id="37b3c-107">Conversões de tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37b3c-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [<span data-ttu-id="37b3c-108">Tipo de Dados de Data</span><span class="sxs-lookup"><span data-stu-id="37b3c-108">Date Data Type</span></span>](../../visual-basic/language-reference/data-types/date-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="544c8-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="544c8-106">See Also</span></span>  
+ [<span data-ttu-id="544c8-107">Conversões de tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="544c8-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="544c8-108">Tipo de Dados de Data</span><span class="sxs-lookup"><span data-stu-id="544c8-108">Date Data Type</span></span>](../../visual-basic/language-reference/data-types/date-data-type.md)
