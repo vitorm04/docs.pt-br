@@ -1,30 +1,19 @@
 ---
 title: 'Como: recuperar o valor de um elemento (LINQ para XML) (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e688872ea514e822a81b4b3e285ad0d0aa8a0f17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: ff2a1712a79bdedd74fe51391f01dd900ae585e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a><span data-ttu-id="30d95-102">Como: recuperar o valor de um elemento (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30d95-102">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="30d95-103">Este tópico mostra como obter o valor de elementos.</span><span class="sxs-lookup"><span data-stu-id="30d95-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="30d95-104">Há duas maneiras principais de fazer isso.</span><span class="sxs-lookup"><span data-stu-id="30d95-104">There are two main ways to do this.</span></span> <span data-ttu-id="30d95-105">Uma maneira é converter <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute> para o tipo desejado.</span><span class="sxs-lookup"><span data-stu-id="30d95-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="30d95-106">O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável.</span><span class="sxs-lookup"><span data-stu-id="30d95-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="30d95-107">Outra opção é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> ou a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="30d95-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a><span data-ttu-id="943fd-102">Como: recuperar o valor de um elemento (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="943fd-102">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="943fd-103">Este tópico mostra como obter o valor de elementos.</span><span class="sxs-lookup"><span data-stu-id="943fd-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="943fd-104">Há duas maneiras principais de fazer isso.</span><span class="sxs-lookup"><span data-stu-id="943fd-104">There are two main ways to do this.</span></span> <span data-ttu-id="943fd-105">Uma maneira é converter <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute> para o tipo desejado.</span><span class="sxs-lookup"><span data-stu-id="943fd-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="943fd-106">O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável.</span><span class="sxs-lookup"><span data-stu-id="943fd-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="943fd-107">Outra opção é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> ou a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="943fd-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
- <span data-ttu-id="30d95-108">Com Visual Basic, a melhor abordagem é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="30d95-108">With Visual Basic, the best approach is to use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="943fd-108">Com Visual Basic, a melhor abordagem é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="943fd-108">With Visual Basic, the best approach is to use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30d95-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="30d95-109">Example</span></span>  
- <span data-ttu-id="30d95-110">Para recuperar o valor de um elemento, basta converter o objeto <xref:System.Xml.Linq.XElement> no tipo desejado.</span><span class="sxs-lookup"><span data-stu-id="30d95-110">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="30d95-111">Você sempre pode converter um elemento em uma cadeia de caracteres, como a seguir:</span><span class="sxs-lookup"><span data-stu-id="30d95-111">You can always cast an element to a string, as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="943fd-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="943fd-109">Example</span></span>  
+ <span data-ttu-id="943fd-110">Para recuperar o valor de um elemento, basta converter o objeto <xref:System.Xml.Linq.XElement> no tipo desejado.</span><span class="sxs-lookup"><span data-stu-id="943fd-110">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="943fd-111">Você sempre pode converter um elemento em uma cadeia de caracteres, como a seguir:</span><span class="sxs-lookup"><span data-stu-id="943fd-111">You can always cast an element to a string, as follows:</span></span>  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -32,15 +21,15 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- <span data-ttu-id="30d95-112">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="30d95-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="943fd-112">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="943fd-112">This example produces the following output:</span></span>  
   
 ```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="30d95-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="30d95-113">Example</span></span>  
- <span data-ttu-id="30d95-114">Você também pode converter elementos em tipos que não sejam cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="30d95-114">You can also cast elements to types other than string.</span></span> <span data-ttu-id="30d95-115">Por exemplo, se você tiver um elemento que contenha um número inteiro, poderá convertê-lo em `int`, como mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="30d95-115">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
+## <a name="example"></a><span data-ttu-id="943fd-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="943fd-113">Example</span></span>  
+ <span data-ttu-id="943fd-114">Você também pode converter elementos em tipos que não sejam cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="943fd-114">You can also cast elements to types other than string.</span></span> <span data-ttu-id="943fd-115">Por exemplo, se você tiver um elemento que contenha um número inteiro, poderá convertê-lo em `int`, como mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="943fd-115">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
   
 ```vb  
 Dim e As XElement = <Age>44</Age>  
@@ -48,19 +37,19 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & CInt(e))  
 ```  
   
- <span data-ttu-id="30d95-116">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="30d95-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="943fd-116">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="943fd-116">This example produces the following output:</span></span>  
   
 ```xml  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="30d95-117"> fornece operadores de conversão explícita para os seguintes tipos de dados: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` e `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="30d95-117"> provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="943fd-117"> fornece operadores de conversão explícita para os seguintes tipos de dados: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` e `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="943fd-117"> provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
- <span data-ttu-id="30d95-118">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornece os mesmos operadores de conversão para objetos <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="30d95-118">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
+ <span data-ttu-id="943fd-118">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornece os mesmos operadores de conversão para objetos <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="943fd-118">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30d95-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="30d95-119">Example</span></span>  
- <span data-ttu-id="30d95-120">É possível usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A> para recuperar o conteúdo de um elemento:</span><span class="sxs-lookup"><span data-stu-id="30d95-120">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
+## <a name="example"></a><span data-ttu-id="943fd-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="943fd-119">Example</span></span>  
+ <span data-ttu-id="943fd-120">É possível usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A> para recuperar o conteúdo de um elemento:</span><span class="sxs-lookup"><span data-stu-id="943fd-120">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -68,15 +57,15 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- <span data-ttu-id="30d95-121">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="30d95-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="943fd-121">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="943fd-121">This example produces the following output:</span></span>  
   
 ```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="30d95-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="30d95-122">Example</span></span>  
- <span data-ttu-id="30d95-123">Às vezes, você tenta recuperar o valor de um elemento mesmo quando não tem certeza de que ele existe.</span><span class="sxs-lookup"><span data-stu-id="30d95-123">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="30d95-124">Nesse caso, quando você atribuir o elemento convertido a um tipo que permite valor nulo (`string` ou um elemento dos tipos que permitem valor nulo no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), se o elemento não existir, a variável atribuída será definida como `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="30d95-124">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), if the element does not exist the assigned variable is just set to `Nothing`.</span></span> <span data-ttu-id="30d95-125">O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="30d95-125">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="943fd-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="943fd-122">Example</span></span>  
+ <span data-ttu-id="943fd-123">Às vezes, você tenta recuperar o valor de um elemento mesmo quando não tem certeza de que ele existe.</span><span class="sxs-lookup"><span data-stu-id="943fd-123">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="943fd-124">Nesse caso, quando você atribuir o elemento convertido a um tipo que permite valor nulo (`string` ou um elemento dos tipos que permitem valor nulo no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), se o elemento não existir, a variável atribuída será definida como `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="943fd-124">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), if the element does not exist the assigned variable is just set to `Nothing`.</span></span> <span data-ttu-id="943fd-125">O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="943fd-125">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -142,7 +131,7 @@ End If
 Console.WriteLine("v4:{0}", IIf(Not (v4.HasValue), "element does not exist", v4))  
 ```  
   
- <span data-ttu-id="30d95-126">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="30d95-126">This code produces the following output:</span></span>  
+ <span data-ttu-id="943fd-126">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="943fd-126">This code produces the following output:</span></span>  
   
 ```  
 c1:child 1 content  
@@ -156,7 +145,7 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- <span data-ttu-id="30d95-127">Em geral, você pode criar um código mais simples ao usar a conversão para recuperar o conteúdo de elementos e atributos.</span><span class="sxs-lookup"><span data-stu-id="30d95-127">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
+ <span data-ttu-id="943fd-127">Em geral, você pode criar um código mais simples ao usar a conversão para recuperar o conteúdo de elementos e atributos.</span><span class="sxs-lookup"><span data-stu-id="943fd-127">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30d95-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="30d95-128">See Also</span></span>  
- [<span data-ttu-id="30d95-129">Eixos LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30d95-129">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="943fd-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="943fd-128">See Also</span></span>  
+ [<span data-ttu-id="943fd-129">Eixos LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="943fd-129">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

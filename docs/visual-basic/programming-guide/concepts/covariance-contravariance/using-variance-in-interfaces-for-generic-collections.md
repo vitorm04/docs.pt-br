@@ -1,32 +1,21 @@
 ---
-title: "Usando variação em Interfaces para coleções genéricas (Visual Basic)"
-ms.custom: 
+title: Usando variação em Interfaces para coleções genéricas (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8944bf8f6377ddc633f81dccd9f379bf176d9f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="abdfa-102">Usando variação em Interfaces para coleções genéricas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abdfa-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
-<span data-ttu-id="abdfa-103">Uma interface de covariante permite que seus métodos retornem mais tipos derivados daquelas especificadas na interface.</span><span class="sxs-lookup"><span data-stu-id="abdfa-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="abdfa-104">Uma interface de contravariante permite que seus métodos aceitem parâmetros de tipos menos derivados do que os especificados na interface.</span><span class="sxs-lookup"><span data-stu-id="abdfa-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="b656b-102">Usando variação em Interfaces para coleções genéricas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b656b-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
+<span data-ttu-id="b656b-103">Uma interface de covariante permite que seus métodos retornem mais tipos derivados daquelas especificadas na interface.</span><span class="sxs-lookup"><span data-stu-id="b656b-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="b656b-104">Uma interface de contravariante permite que seus métodos aceitem parâmetros de tipos menos derivados do que os especificados na interface.</span><span class="sxs-lookup"><span data-stu-id="b656b-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
   
- <span data-ttu-id="abdfa-105">No .NET Framework 4, várias interfaces existentes se tornaram covariantes e contravariantes.</span><span class="sxs-lookup"><span data-stu-id="abdfa-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="abdfa-106">Eles incluem <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="abdfa-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="abdfa-107">Isso permite que você reutilize métodos que operam com coleções genéricas de tipos base para coleções de tipos derivados.</span><span class="sxs-lookup"><span data-stu-id="abdfa-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
+ <span data-ttu-id="b656b-105">No .NET Framework 4, várias interfaces existentes se tornaram covariantes e contravariantes.</span><span class="sxs-lookup"><span data-stu-id="b656b-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="b656b-106">Eles incluem <xref:System.Collections.Generic.IEnumerable%601> e <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="b656b-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="b656b-107">Isso permite que você reutilize métodos que operam com coleções genéricas de tipos base para coleções de tipos derivados.</span><span class="sxs-lookup"><span data-stu-id="b656b-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
   
- <span data-ttu-id="abdfa-108">Para obter uma lista de interfaces variantes no .NET Framework, consulte [variação em Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="abdfa-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
+ <span data-ttu-id="b656b-108">Para obter uma lista de interfaces variantes no .NET Framework, consulte [variação em Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="b656b-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
   
-## <a name="converting-generic-collections"></a><span data-ttu-id="abdfa-109">Convertendo coleções genéricas</span><span class="sxs-lookup"><span data-stu-id="abdfa-109">Converting Generic Collections</span></span>  
- <span data-ttu-id="abdfa-110">O exemplo a seguir ilustra os benefícios do suporte à covariância na interface <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="abdfa-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="abdfa-111">O método `PrintFullName` aceita uma coleção do tipo `IEnumerable(Of Person)` como um parâmetro.</span><span class="sxs-lookup"><span data-stu-id="abdfa-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="abdfa-112">No entanto, você pode reutilizá-lo para uma coleção do tipo `IEnumerable(Of Person)` porque `Employee` herda `Person`.</span><span class="sxs-lookup"><span data-stu-id="abdfa-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>  
+## <a name="converting-generic-collections"></a><span data-ttu-id="b656b-109">Convertendo coleções genéricas</span><span class="sxs-lookup"><span data-stu-id="b656b-109">Converting Generic Collections</span></span>  
+ <span data-ttu-id="b656b-110">O exemplo a seguir ilustra os benefícios do suporte à covariância na interface <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="b656b-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="b656b-111">O método `PrintFullName` aceita uma coleção do tipo `IEnumerable(Of Person)` como um parâmetro.</span><span class="sxs-lookup"><span data-stu-id="b656b-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="b656b-112">No entanto, você pode reutilizá-lo para uma coleção do tipo `IEnumerable(Of Person)` porque `Employee` herda `Person`.</span><span class="sxs-lookup"><span data-stu-id="b656b-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -58,8 +47,8 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="comparing-generic-collections"></a><span data-ttu-id="abdfa-113">Comparando coleções genéricas</span><span class="sxs-lookup"><span data-stu-id="abdfa-113">Comparing Generic Collections</span></span>  
- <span data-ttu-id="abdfa-114">O exemplo a seguir ilustra os benefícios do suporte à contravariância na interface <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="abdfa-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="abdfa-115">A classe `PersonComparer` implementa a interface `IComparer(Of Person)`.</span><span class="sxs-lookup"><span data-stu-id="abdfa-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="abdfa-116">No entanto, você pode reutilizar essa classe para comparar uma sequência de objetos do tipo `Employee` porque `Employee` herda `Person`.</span><span class="sxs-lookup"><span data-stu-id="abdfa-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
+## <a name="comparing-generic-collections"></a><span data-ttu-id="b656b-113">Comparando coleções genéricas</span><span class="sxs-lookup"><span data-stu-id="b656b-113">Comparing Generic Collections</span></span>  
+ <span data-ttu-id="b656b-114">O exemplo a seguir ilustra os benefícios do suporte à contravariância na interface <xref:System.Collections.Generic.IComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="b656b-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="b656b-115">A classe `PersonComparer` implementa a interface `IComparer(Of Person)`.</span><span class="sxs-lookup"><span data-stu-id="b656b-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="b656b-116">No entanto, você pode reutilizar essa classe para comparar uma sequência de objetos do tipo `Employee` porque `Employee` herda `Person`.</span><span class="sxs-lookup"><span data-stu-id="b656b-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
   
 ```vb  
 ' Simple hierarhcy of classes.  
@@ -118,5 +107,5 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="abdfa-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="abdfa-117">See Also</span></span>  
- [<span data-ttu-id="abdfa-118">Variação em interfaces genéricas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abdfa-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b656b-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b656b-117">See Also</span></span>  
+ [<span data-ttu-id="b656b-118">Variação em interfaces genéricas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b656b-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
