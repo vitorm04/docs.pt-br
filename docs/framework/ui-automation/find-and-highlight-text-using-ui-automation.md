@@ -1,13 +1,6 @@
 ---
-title: "Encontre e destaque texto usando automação de interface de usuário"
-ms.custom: 
+title: Encontre e destaque texto usando automação de interface de usuário
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,25 +12,22 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b6b734c6f6b033d7c327e94926584184ed8a76d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2fe7ecd84c6b88e6ccc81188235a6735b926a04b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="find-and-highlight-text-using-ui-automation"></a><span data-ttu-id="37f01-102">Encontre e destaque texto usando automação de interface de usuário</span><span class="sxs-lookup"><span data-stu-id="37f01-102">Find and Highlight Text Using UI Automation</span></span>
+# <a name="find-and-highlight-text-using-ui-automation"></a><span data-ttu-id="a8975-102">Encontre e destaque texto usando automação de interface de usuário</span><span class="sxs-lookup"><span data-stu-id="a8975-102">Find and Highlight Text Using UI Automation</span></span>
 > [!NOTE]
->  <span data-ttu-id="37f01-103">Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="37f01-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="37f01-104">Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).</span><span class="sxs-lookup"><span data-stu-id="37f01-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="a8975-103">Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="a8975-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a8975-104">Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).</span><span class="sxs-lookup"><span data-stu-id="a8975-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="37f01-105">Este tópico demonstra como procurar sequencialmente e destacar cada ocorrência de uma cadeia de caracteres dentro do conteúdo de um controle de texto usando [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37f01-105">This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
+ <span data-ttu-id="a8975-105">Este tópico demonstra como procurar sequencialmente e destacar cada ocorrência de uma cadeia de caracteres dentro do conteúdo de um controle de texto usando [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a8975-105">This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="37f01-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="37f01-106">Example</span></span>  
- <span data-ttu-id="37f01-107">O exemplo a seguir obtém um <xref:System.Windows.Automation.TextPattern> objeto a partir de um controle de texto.</span><span class="sxs-lookup"><span data-stu-id="37f01-107">The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control.</span></span> <span data-ttu-id="37f01-108">Um <xref:System.Windows.Automation.Text.TextPatternRange> objeto representando o conteúdo textual do documento inteiro, em seguida, é criado usando o <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> propriedade deste <xref:System.Windows.Automation.TextPattern>.</span><span class="sxs-lookup"><span data-stu-id="37f01-108">A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>.</span></span> <span data-ttu-id="37f01-109">Dois adicionais <xref:System.Windows.Automation.Text.TextPatternRange> , em seguida, são criados para a pesquisa sequencial de objetos e funcionalidade de realce.</span><span class="sxs-lookup"><span data-stu-id="37f01-109">Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.</span></span>  
+## <a name="example"></a><span data-ttu-id="a8975-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a8975-106">Example</span></span>  
+ <span data-ttu-id="a8975-107">O exemplo a seguir obtém um <xref:System.Windows.Automation.TextPattern> objeto a partir de um controle de texto.</span><span class="sxs-lookup"><span data-stu-id="a8975-107">The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control.</span></span> <span data-ttu-id="a8975-108">Um <xref:System.Windows.Automation.Text.TextPatternRange> objeto representando o conteúdo textual do documento inteiro, em seguida, é criado usando o <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> propriedade deste <xref:System.Windows.Automation.TextPattern>.</span><span class="sxs-lookup"><span data-stu-id="a8975-108">A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>.</span></span> <span data-ttu-id="a8975-109">Dois adicionais <xref:System.Windows.Automation.Text.TextPatternRange> , em seguida, são criados para a pesquisa sequencial de objetos e funcionalidade de realce.</span><span class="sxs-lookup"><span data-stu-id="a8975-109">Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.</span></span>  
   
  [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
  [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -46,5 +36,5 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[FindText#SearchTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#searchtarget)]
 [!code-vb[FindText#SearchTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#searchtarget)]  
   
-## <a name="see-also"></a><span data-ttu-id="37f01-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37f01-110">See Also</span></span>  
- [<span data-ttu-id="37f01-111">Localizar e destacar texto usando automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="37f01-111">Find and Highlight Text Using UI Automation</span></span>](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="a8975-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a8975-110">See Also</span></span>  
+ [<span data-ttu-id="a8975-111">Localizar e destacar texto usando automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="a8975-111">Find and Highlight Text Using UI Automation</span></span>](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)

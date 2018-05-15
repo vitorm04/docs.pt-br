@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugObjectValue::GetContext"
-ms.custom: 
+title: Método ICorDebugObjectValue::GetContext
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.GetContext
 api_location:
@@ -23,22 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40594774-5105-4187-a06b-4e7f50bada3c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6c3802cd300204ca52a261a4e88aaf0ab242a456
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 61e8a8d1a923a52b678771f79122e5ab36a99706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="38a0e-102">Método ICorDebugObjectValue::GetContext</span><span class="sxs-lookup"><span data-stu-id="38a0e-102">ICorDebugObjectValue::GetContext Method</span></span>
-<span data-ttu-id="38a0e-103">`GetContext`não está implementado nesta versão do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="38a0e-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="e93e7-102">Método ICorDebugObjectValue::GetContext</span><span class="sxs-lookup"><span data-stu-id="e93e7-102">ICorDebugObjectValue::GetContext Method</span></span>
+<span data-ttu-id="e93e7-103">`GetContext` não está implementado nesta versão do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e93e7-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38a0e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="38a0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e93e7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e93e7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
@@ -46,9 +33,9 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="38a0e-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="38a0e-105">Requirements</span></span>  
- <span data-ttu-id="38a0e-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38a0e-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e93e7-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e93e7-105">Requirements</span></span>  
+ <span data-ttu-id="e93e7-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e93e7-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38a0e-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="38a0e-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e93e7-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e93e7-107">See Also</span></span>  
     
  

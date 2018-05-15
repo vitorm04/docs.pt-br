@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugILFrame::GetStackDepth"
-ms.custom: 
+title: Método ICorDebugILFrame::GetStackDepth
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILFrame.GetStackDepth
 api_location:
@@ -23,22 +15,17 @@ helpviewer_keywords:
 ms.assetid: da6a1123-871d-4492-9d35-3bdb49f94c93
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ea3f20ea99ce53c65ac65c833109c19293b645e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 670c6af66802c8badc5dba9d414427a13a1b815c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="dbd08-102">Método ICorDebugILFrame::GetStackDepth</span><span class="sxs-lookup"><span data-stu-id="dbd08-102">ICorDebugILFrame::GetStackDepth Method</span></span>
-<span data-ttu-id="dbd08-103">Esse método não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="dbd08-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="416f7-102">Método ICorDebugILFrame::GetStackDepth</span><span class="sxs-lookup"><span data-stu-id="416f7-102">ICorDebugILFrame::GetStackDepth Method</span></span>
+<span data-ttu-id="416f7-103">Esse método não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="416f7-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbd08-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dbd08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="416f7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="416f7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackDepth (  
@@ -46,5 +33,5 @@ HRESULT GetStackDepth (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dbd08-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dbd08-105">Requirements</span></span>  
- <span data-ttu-id="dbd08-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dbd08-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="416f7-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="416f7-105">Requirements</span></span>  
+ <span data-ttu-id="416f7-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="416f7-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

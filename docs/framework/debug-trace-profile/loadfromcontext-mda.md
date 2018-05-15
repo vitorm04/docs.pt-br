@@ -1,57 +1,46 @@
 ---
 title: MDA loadFromContext
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
 - managed debugging assistants (MDAs), LoadFrom context
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0910e4bdd2cc9c99afc55c5f70f4d225a87deb5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="loadfromcontext-mda"></a><span data-ttu-id="5d225-102">MDA loadFromContext</span><span class="sxs-lookup"><span data-stu-id="5d225-102">loadFromContext MDA</span></span>
-<span data-ttu-id="5d225-103">O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="5d225-103">The `loadFromContext` managed debugging assistant (MDA) is activated if an assembly is loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="5d225-104">Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.</span><span class="sxs-lookup"><span data-stu-id="5d225-104">This situation can occur as a result of calling <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or other similar methods.</span></span>  
+# <a name="loadfromcontext-mda"></a><span data-ttu-id="a5bde-102">MDA loadFromContext</span><span class="sxs-lookup"><span data-stu-id="a5bde-102">loadFromContext MDA</span></span>
+<span data-ttu-id="a5bde-103">O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="a5bde-103">The `loadFromContext` managed debugging assistant (MDA) is activated if an assembly is loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="a5bde-104">Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.</span><span class="sxs-lookup"><span data-stu-id="a5bde-104">This situation can occur as a result of calling <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or other similar methods.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="5d225-105">Sintomas</span><span class="sxs-lookup"><span data-stu-id="5d225-105">Symptoms</span></span>  
- <span data-ttu-id="5d225-106">O uso de alguns métodos de carregador pode resultar em assemblies que estão sendo carregados no contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="5d225-106">The use of some loader methods can result in assemblies being loaded in the `LoadFrom` context.</span></span> <span data-ttu-id="5d225-107">O uso desse contexto pode resultar em comportamento inesperado para serialização, conversão e resolução de dependência.</span><span class="sxs-lookup"><span data-stu-id="5d225-107">The use of this context can result in unexpected behavior for serialization, casting, and dependency resolution.</span></span> <span data-ttu-id="5d225-108">Em geral, é recomendável que os assemblies sejam carregados no contexto `Load` para evitar esses problemas.</span><span class="sxs-lookup"><span data-stu-id="5d225-108">In general, it is recommended that assemblies be loaded into the `Load` context to avoid these problems.</span></span> <span data-ttu-id="5d225-109">É difícil determinar qual contexto de um assembly foi carregado sem esse MDA.</span><span class="sxs-lookup"><span data-stu-id="5d225-109">It is difficult to determine which context an assembly has been loaded into without this MDA.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="a5bde-105">Sintomas</span><span class="sxs-lookup"><span data-stu-id="a5bde-105">Symptoms</span></span>  
+ <span data-ttu-id="a5bde-106">O uso de alguns métodos de carregador pode resultar em assemblies que estão sendo carregados no contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="a5bde-106">The use of some loader methods can result in assemblies being loaded in the `LoadFrom` context.</span></span> <span data-ttu-id="a5bde-107">O uso desse contexto pode resultar em comportamento inesperado para serialização, conversão e resolução de dependência.</span><span class="sxs-lookup"><span data-stu-id="a5bde-107">The use of this context can result in unexpected behavior for serialization, casting, and dependency resolution.</span></span> <span data-ttu-id="a5bde-108">Em geral, é recomendável que os assemblies sejam carregados no contexto `Load` para evitar esses problemas.</span><span class="sxs-lookup"><span data-stu-id="a5bde-108">In general, it is recommended that assemblies be loaded into the `Load` context to avoid these problems.</span></span> <span data-ttu-id="a5bde-109">É difícil determinar qual contexto de um assembly foi carregado sem esse MDA.</span><span class="sxs-lookup"><span data-stu-id="a5bde-109">It is difficult to determine which context an assembly has been loaded into without this MDA.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="5d225-110">Causa</span><span class="sxs-lookup"><span data-stu-id="5d225-110">Cause</span></span>  
- <span data-ttu-id="5d225-111">Em geral, um assembly foi carregado para o contexto de `LoadFrom` se ele foi carregado de um caminho fora do contexto `Load`, tal como o cache de assembly global ou a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5d225-111">Generally, an assembly was loaded into the `LoadFrom` context if it was loaded from a path outside the `Load` context, such as the global assembly cache or the <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> property.</span></span>  
+## <a name="cause"></a><span data-ttu-id="a5bde-110">Causa</span><span class="sxs-lookup"><span data-stu-id="a5bde-110">Cause</span></span>  
+ <span data-ttu-id="a5bde-111">Em geral, um assembly foi carregado para o contexto de `LoadFrom` se ele foi carregado de um caminho fora do contexto `Load`, tal como o cache de assembly global ou a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a5bde-111">Generally, an assembly was loaded into the `LoadFrom` context if it was loaded from a path outside the `Load` context, such as the global assembly cache or the <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="5d225-112">Resolução</span><span class="sxs-lookup"><span data-stu-id="5d225-112">Resolution</span></span>  
- <span data-ttu-id="5d225-113">Configure os aplicativos de modo que as chamadas <xref:System.Reflection.Assembly.LoadFrom%2A> não sejam mais necessárias.</span><span class="sxs-lookup"><span data-stu-id="5d225-113">Configure applications such that <xref:System.Reflection.Assembly.LoadFrom%2A> calls are no longer needed.</span></span> <span data-ttu-id="5d225-114">Você pode usar as seguintes técnicas para fazer isso:</span><span class="sxs-lookup"><span data-stu-id="5d225-114">You can use the following techniques for doing so:</span></span>  
+## <a name="resolution"></a><span data-ttu-id="a5bde-112">Resolução</span><span class="sxs-lookup"><span data-stu-id="a5bde-112">Resolution</span></span>  
+ <span data-ttu-id="a5bde-113">Configure os aplicativos de modo que as chamadas <xref:System.Reflection.Assembly.LoadFrom%2A> não sejam mais necessárias.</span><span class="sxs-lookup"><span data-stu-id="a5bde-113">Configure applications such that <xref:System.Reflection.Assembly.LoadFrom%2A> calls are no longer needed.</span></span> <span data-ttu-id="a5bde-114">Você pode usar as seguintes técnicas para fazer isso:</span><span class="sxs-lookup"><span data-stu-id="a5bde-114">You can use the following techniques for doing so:</span></span>  
   
--   <span data-ttu-id="5d225-115">Instale assemblies no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="5d225-115">Install assemblies in the global assembly cache.</span></span>  
+-   <span data-ttu-id="a5bde-115">Instale assemblies no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="a5bde-115">Install assemblies in the global assembly cache.</span></span>  
   
--   <span data-ttu-id="5d225-116">Coloque os assemblies no diretório <xref:System.AppDomainSetup.ApplicationBase%2A> para o <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="5d225-116">Place assemblies in the <xref:System.AppDomainSetup.ApplicationBase%2A> directory for the <xref:System.AppDomain>.</span></span> <span data-ttu-id="5d225-117">No caso do domínio padrão, o diretório <xref:System.AppDomainSetup.ApplicationBase%2A> é aquele que contém o arquivo executável que iniciou o processo.</span><span class="sxs-lookup"><span data-stu-id="5d225-117">In the case of the default domain, the <xref:System.AppDomainSetup.ApplicationBase%2A> directory is the one that contains the executable file that started the process.</span></span> <span data-ttu-id="5d225-118">Isso também poderá exigir a criação de um novo <xref:System.AppDomain>, se não for conveniente mover o assembly.</span><span class="sxs-lookup"><span data-stu-id="5d225-118">This might also require creating a new <xref:System.AppDomain> if it is not convenient to move the assembly.</span></span>  
+-   <span data-ttu-id="a5bde-116">Coloque os assemblies no diretório <xref:System.AppDomainSetup.ApplicationBase%2A> para o <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="a5bde-116">Place assemblies in the <xref:System.AppDomainSetup.ApplicationBase%2A> directory for the <xref:System.AppDomain>.</span></span> <span data-ttu-id="a5bde-117">No caso do domínio padrão, o diretório <xref:System.AppDomainSetup.ApplicationBase%2A> é aquele que contém o arquivo executável que iniciou o processo.</span><span class="sxs-lookup"><span data-stu-id="a5bde-117">In the case of the default domain, the <xref:System.AppDomainSetup.ApplicationBase%2A> directory is the one that contains the executable file that started the process.</span></span> <span data-ttu-id="a5bde-118">Isso também poderá exigir a criação de um novo <xref:System.AppDomain>, se não for conveniente mover o assembly.</span><span class="sxs-lookup"><span data-stu-id="a5bde-118">This might also require creating a new <xref:System.AppDomain> if it is not convenient to move the assembly.</span></span>  
   
--   <span data-ttu-id="5d225-119">Adicione um caminho de sondagem para o arquivo (.config) de configuração do aplicativo ou para domínios de aplicativo secundários se assemblies dependentes estão em diretórios filhos em relação ao executável.</span><span class="sxs-lookup"><span data-stu-id="5d225-119">Add a probing path to your application configuration (.config) file or to secondary  application domains if dependent assemblies are in child directories relative to the executable.</span></span>  
+-   <span data-ttu-id="a5bde-119">Adicione um caminho de sondagem para o arquivo (.config) de configuração do aplicativo ou para domínios de aplicativo secundários se assemblies dependentes estão em diretórios filhos em relação ao executável.</span><span class="sxs-lookup"><span data-stu-id="a5bde-119">Add a probing path to your application configuration (.config) file or to secondary  application domains if dependent assemblies are in child directories relative to the executable.</span></span>  
   
- <span data-ttu-id="5d225-120">Em cada caso, o código pode ser alterado para usar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5d225-120">In each case, the code can be changed to use the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="a5bde-120">Em cada caso, o código pode ser alterado para usar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a5bde-120">In each case, the code can be changed to use the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="5d225-121">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="5d225-121">Effect on the Runtime</span></span>  
- <span data-ttu-id="5d225-122">O MDA não tem nenhum efeito no CLR.</span><span class="sxs-lookup"><span data-stu-id="5d225-122">The MDA does not have any effect on the CLR.</span></span> <span data-ttu-id="5d225-123">Informa o contexto que foi usado como resultado de uma solicitação de carregamento.</span><span class="sxs-lookup"><span data-stu-id="5d225-123">It reports the context that was used as a result of a load request.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="a5bde-121">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="a5bde-121">Effect on the Runtime</span></span>  
+ <span data-ttu-id="a5bde-122">O MDA não tem nenhum efeito no CLR.</span><span class="sxs-lookup"><span data-stu-id="a5bde-122">The MDA does not have any effect on the CLR.</span></span> <span data-ttu-id="a5bde-123">Informa o contexto que foi usado como resultado de uma solicitação de carregamento.</span><span class="sxs-lookup"><span data-stu-id="a5bde-123">It reports the context that was used as a result of a load request.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="5d225-124">Saída</span><span class="sxs-lookup"><span data-stu-id="5d225-124">Output</span></span>  
- <span data-ttu-id="5d225-125">O MDA informa que o assembly foi carregado para o contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="5d225-125">The MDA reports that the assembly was loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="5d225-126">Especifica o nome simples do assembly e o caminho.</span><span class="sxs-lookup"><span data-stu-id="5d225-126">It specifies the simple name of the assembly and the path.</span></span> <span data-ttu-id="5d225-127">Também sugere atenuantes para evitar o uso do contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="5d225-127">It also suggests mitigations to avoid using the `LoadFrom` context.</span></span>  
+## <a name="output"></a><span data-ttu-id="a5bde-124">Saída</span><span class="sxs-lookup"><span data-stu-id="a5bde-124">Output</span></span>  
+ <span data-ttu-id="a5bde-125">O MDA informa que o assembly foi carregado para o contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="a5bde-125">The MDA reports that the assembly was loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="a5bde-126">Especifica o nome simples do assembly e o caminho.</span><span class="sxs-lookup"><span data-stu-id="a5bde-126">It specifies the simple name of the assembly and the path.</span></span> <span data-ttu-id="a5bde-127">Também sugere atenuantes para evitar o uso do contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="a5bde-127">It also suggests mitigations to avoid using the `LoadFrom` context.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="5d225-128">Configuração</span><span class="sxs-lookup"><span data-stu-id="5d225-128">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="a5bde-128">Configuração</span><span class="sxs-lookup"><span data-stu-id="a5bde-128">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -61,8 +50,8 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="5d225-129">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5d225-129">Example</span></span>  
- <span data-ttu-id="5d225-130">O seguinte exemplo de código demonstra uma situação que pode ativar esse MDA:</span><span class="sxs-lookup"><span data-stu-id="5d225-130">The following code example demonstrates a situation that can activate this MDA:</span></span>  
+## <a name="example"></a><span data-ttu-id="a5bde-129">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a5bde-129">Example</span></span>  
+ <span data-ttu-id="a5bde-130">O seguinte exemplo de código demonstra uma situação que pode ativar esse MDA:</span><span class="sxs-lookup"><span data-stu-id="a5bde-130">The following code example demonstrates a situation that can activate this MDA:</span></span>  
   
 ```  
 using System.Reflection;  
@@ -81,5 +70,5 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5d225-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5d225-131">See Also</span></span>  
- [<span data-ttu-id="5d225-132">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="5d225-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="a5bde-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a5bde-131">See Also</span></span>  
+ [<span data-ttu-id="a5bde-132">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="a5bde-132">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

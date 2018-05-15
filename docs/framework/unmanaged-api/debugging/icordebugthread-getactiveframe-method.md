@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugThread::GetActiveFrame"
-ms.custom: 
+title: Método ICorDebugThread::GetActiveFrame
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread.GetActiveFrame
 api_location:
@@ -23,22 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 441f97ebbaf95a8b6b6e14c8372893a83f6299a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="f5e35-102">Método ICorDebugThread::GetActiveFrame</span><span class="sxs-lookup"><span data-stu-id="f5e35-102">ICorDebugThread::GetActiveFrame Method</span></span>
-<span data-ttu-id="f5e35-103">Obtém um ponteiro de interface para o quadro ativo (mais recente) no objeto ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="f5e35-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="99a27-102">Método ICorDebugThread::GetActiveFrame</span><span class="sxs-lookup"><span data-stu-id="99a27-102">ICorDebugThread::GetActiveFrame Method</span></span>
+<span data-ttu-id="99a27-103">Obtém um ponteiro de interface para o quadro ativo (mais recente) no objeto ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="99a27-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5e35-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f5e35-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99a27-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="99a27-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -46,18 +33,18 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f5e35-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f5e35-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="99a27-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="99a27-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="f5e35-106">[out] Um ponteiro para o endereço de um objeto de interface ICorDebugFrame que representa um quadro.</span><span class="sxs-lookup"><span data-stu-id="f5e35-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
+ <span data-ttu-id="99a27-106">[out] Um ponteiro para o endereço de um objeto de interface ICorDebugFrame que representa um quadro.</span><span class="sxs-lookup"><span data-stu-id="99a27-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f5e35-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="f5e35-107">Remarks</span></span>  
- <span data-ttu-id="f5e35-108">O `ppFrame` parâmetro será nulo se nenhum quadro estiver ativo no momento.</span><span class="sxs-lookup"><span data-stu-id="f5e35-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="99a27-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="99a27-107">Remarks</span></span>  
+ <span data-ttu-id="99a27-108">O `ppFrame` parâmetro será nulo se nenhum quadro estiver ativo no momento.</span><span class="sxs-lookup"><span data-stu-id="99a27-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5e35-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f5e35-109">Requirements</span></span>  
- <span data-ttu-id="f5e35-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5e35-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99a27-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="99a27-109">Requirements</span></span>  
+ <span data-ttu-id="99a27-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99a27-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f5e35-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f5e35-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="99a27-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="99a27-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f5e35-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f5e35-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99a27-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99a27-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f5e35-113">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5e35-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="99a27-113">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99a27-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

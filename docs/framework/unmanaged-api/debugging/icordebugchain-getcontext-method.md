@@ -1,14 +1,6 @@
 ---
-title: "Método ICorDebugChain::GetContext"
-ms.custom: 
+title: Método ICorDebugChain::GetContext
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugChain.GetContext
 api_location:
@@ -23,22 +15,17 @@ helpviewer_keywords:
 ms.assetid: 26abe7ee-e578-4228-affa-01bed0dfce1b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ec212bb0de60c0cdff6b3fe26d6d4f6261d78fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0fd80cb16466d95f443b098fe20f2d407ba2aed8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="b841c-102">Método ICorDebugChain::GetContext</span><span class="sxs-lookup"><span data-stu-id="b841c-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="b841c-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b841c-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="d47c5-102">Método ICorDebugChain::GetContext</span><span class="sxs-lookup"><span data-stu-id="d47c5-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="d47c5-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d47c5-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b841c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b841c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d47c5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d47c5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
