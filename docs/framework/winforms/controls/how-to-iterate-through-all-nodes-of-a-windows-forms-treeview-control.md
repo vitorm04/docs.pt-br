@@ -1,13 +1,6 @@
 ---
-title: "Como iterar em todos os nós de um controle TreeView dos Windows Forms"
-ms.custom: 
+title: Como iterar em todos os nós de um controle TreeView dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,29 +10,24 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02dfe1cb494df91a2a3ef3a6bba533306d61edef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89a2c1411ab64b4a20ad291165cfa6d83511c4c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="23b57-102">Como iterar em todos os nós de um controle TreeView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="23b57-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
-<span data-ttu-id="23b57-103">Às vezes é útil para examinar todos os nós em um Windows Forms <xref:System.Windows.Forms.TreeView> controle para cálculos nos valores de nó.</span><span class="sxs-lookup"><span data-stu-id="23b57-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="23b57-104">Essa operação pode ser feita usando um procedimento recursivo (método recursivo em c# e C++) que itera em cada nó em cada coleção da árvore.</span><span class="sxs-lookup"><span data-stu-id="23b57-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="41c54-102">Como iterar em todos os nós de um controle TreeView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41c54-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
+<span data-ttu-id="41c54-103">Às vezes é útil para examinar todos os nós em um Windows Forms <xref:System.Windows.Forms.TreeView> controle para cálculos nos valores de nó.</span><span class="sxs-lookup"><span data-stu-id="41c54-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="41c54-104">Essa operação pode ser feita usando um procedimento recursivo (método recursivo em c# e C++) que itera em cada nó em cada coleção da árvore.</span><span class="sxs-lookup"><span data-stu-id="41c54-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
   
- <span data-ttu-id="23b57-105">Cada <xref:System.Windows.Forms.TreeNode> objeto em uma exibição de árvore tem propriedades que você pode usar para navegar o modo de exibição de árvore: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span><span class="sxs-lookup"><span data-stu-id="23b57-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="23b57-106">O valor de <xref:System.Windows.Forms.TreeNode.Parent%2A> propriedade é o nó pai do nó atual.</span><span class="sxs-lookup"><span data-stu-id="23b57-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="23b57-107">Os nós filho do nó atual, se houver, são listados no seu <xref:System.Windows.Forms.TreeNode.Nodes%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="23b57-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="23b57-108">O <xref:System.Windows.Forms.TreeView> controle em si tem o <xref:System.Windows.Forms.TreeView.TopNode%2A> propriedade, que é o nó raiz da exibição de árvore inteira.</span><span class="sxs-lookup"><span data-stu-id="23b57-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
+ <span data-ttu-id="41c54-105">Cada <xref:System.Windows.Forms.TreeNode> objeto em uma exibição de árvore tem propriedades que você pode usar para navegar o modo de exibição de árvore: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span><span class="sxs-lookup"><span data-stu-id="41c54-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="41c54-106">O valor de <xref:System.Windows.Forms.TreeNode.Parent%2A> propriedade é o nó pai do nó atual.</span><span class="sxs-lookup"><span data-stu-id="41c54-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="41c54-107">Os nós filho do nó atual, se houver, são listados no seu <xref:System.Windows.Forms.TreeNode.Nodes%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="41c54-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="41c54-108">O <xref:System.Windows.Forms.TreeView> controle em si tem o <xref:System.Windows.Forms.TreeView.TopNode%2A> propriedade, que é o nó raiz da exibição de árvore inteira.</span><span class="sxs-lookup"><span data-stu-id="41c54-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
   
-### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="23b57-109">Como iterar em todos os nós do controle TreeView</span><span class="sxs-lookup"><span data-stu-id="23b57-109">To iterate through all nodes of the TreeView control</span></span>  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="41c54-109">Como iterar em todos os nós do controle TreeView</span><span class="sxs-lookup"><span data-stu-id="41c54-109">To iterate through all nodes of the TreeView control</span></span>  
   
-1.  <span data-ttu-id="23b57-110">Crie um procedimento recursivo (método recursivo em c# e C++) que testa cada nó.</span><span class="sxs-lookup"><span data-stu-id="23b57-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
+1.  <span data-ttu-id="41c54-110">Crie um procedimento recursivo (método recursivo em c# e C++) que testa cada nó.</span><span class="sxs-lookup"><span data-stu-id="41c54-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
   
-2.  <span data-ttu-id="23b57-111">Chame o procedimento.</span><span class="sxs-lookup"><span data-stu-id="23b57-111">Call the procedure.</span></span>  
+2.  <span data-ttu-id="41c54-111">Chame o procedimento.</span><span class="sxs-lookup"><span data-stu-id="41c54-111">Call the procedure.</span></span>  
   
-     <span data-ttu-id="23b57-112">O exemplo a seguir mostra como imprimir cada <xref:System.Windows.Forms.TreeNode> do objeto <xref:System.Windows.Forms.TreeNode.Text%2A> propriedade:</span><span class="sxs-lookup"><span data-stu-id="23b57-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
+     <span data-ttu-id="41c54-112">O exemplo a seguir mostra como imprimir cada <xref:System.Windows.Forms.TreeNode> do objeto <xref:System.Windows.Forms.TreeNode.Text%2A> propriedade:</span><span class="sxs-lookup"><span data-stu-id="41c54-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -134,6 +122,6 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="23b57-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23b57-113">See Also</span></span>  
- [<span data-ttu-id="23b57-114">Controle TreeView</span><span class="sxs-lookup"><span data-stu-id="23b57-114">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [<span data-ttu-id="23b57-115">Procedimentos Recursivos</span><span class="sxs-lookup"><span data-stu-id="23b57-115">Recursive Procedures</span></span>](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="41c54-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="41c54-113">See Also</span></span>  
+ [<span data-ttu-id="41c54-114">Controle TreeView</span><span class="sxs-lookup"><span data-stu-id="41c54-114">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="41c54-115">Procedimentos Recursivos</span><span class="sxs-lookup"><span data-stu-id="41c54-115">Recursive Procedures</span></span>](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

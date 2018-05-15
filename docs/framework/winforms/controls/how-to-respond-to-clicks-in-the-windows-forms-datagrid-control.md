@@ -1,13 +1,6 @@
 ---
 title: Como responder a cliques no controle DataGrid dos Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,26 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9eb984e18f2126664344639335fd786b4f325468
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b89bab9370039e4089ad834c6ea1f528d7b6575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="5e5bf-102">Como responder a cliques no controle DataGrid dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5e5bf-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="1cb3f-102">Como responder a cliques no controle DataGrid dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1cb3f-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="5e5bf-103">O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="5e5bf-104">Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="5e5bf-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+>  <span data-ttu-id="1cb3f-103">O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="1cb3f-104">Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="1cb3f-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="5e5bf-105">Depois de Windows Forms <xref:System.Windows.Forms.DataGrid> está conectado a um banco de dados, você pode monitorar o que o usuário clicado da célula.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
+ <span data-ttu-id="1cb3f-105">Depois de Windows Forms <xref:System.Windows.Forms.DataGrid> está conectado a um banco de dados, você pode monitorar o que o usuário clicado da célula.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="5e5bf-106">Para detectar quando o usuário da grade de dados seleciona uma célula diferente</span><span class="sxs-lookup"><span data-stu-id="5e5bf-106">To detect when the user of the DataGrid selects a different cell</span></span>  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="1cb3f-106">Para detectar quando o usuário da grade de dados seleciona uma célula diferente</span><span class="sxs-lookup"><span data-stu-id="1cb3f-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
--   <span data-ttu-id="5e5bf-107">No <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> manipulador de eventos, escrever um código para responder adequadamente.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
+-   <span data-ttu-id="1cb3f-107">No <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> manipulador de eventos, escrever um código para responder adequadamente.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -58,18 +46,18 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     <span data-ttu-id="5e5bf-108">(Visual c#) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="1cb3f-108">(Visual c#) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="5e5bf-109">Para determinar o usuário clicou em qual parte da grade de dados</span><span class="sxs-lookup"><span data-stu-id="5e5bf-109">To determine which part of the DataGrid the user clicked</span></span>  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="1cb3f-109">Para determinar o usuário clicou em qual parte da grade de dados</span><span class="sxs-lookup"><span data-stu-id="1cb3f-109">To determine which part of the DataGrid the user clicked</span></span>  
   
--   <span data-ttu-id="5e5bf-110">Chamar o <xref:System.Windows.Forms.DataGrid.HitTest%2A> método em um manipulador de eventos apropriado, para o <xref:System.Windows.Forms.Control.MouseDown> ou <xref:System.Windows.Forms.Control.Click> eventos.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
+-   <span data-ttu-id="1cb3f-110">Chamar o <xref:System.Windows.Forms.DataGrid.HitTest%2A> método em um manipulador de eventos apropriado, para o <xref:System.Windows.Forms.Control.MouseDown> ou <xref:System.Windows.Forms.Control.Click> eventos.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     <span data-ttu-id="5e5bf-111">O <xref:System.Windows.Forms.DataGrid.HitTest%2A> método retorna um <xref:System.Windows.Forms.DataGrid.HitTestInfo> objeto que contém a linha e coluna de uma área clicada.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
+     <span data-ttu-id="1cb3f-111">O <xref:System.Windows.Forms.DataGrid.HitTest%2A> método retorna um <xref:System.Windows.Forms.DataGrid.HitTestInfo> objeto que contém a linha e coluna de uma área clicada.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -143,7 +131,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     <span data-ttu-id="5e5bf-112">(Visual c#) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="1cb3f-112">(Visual c#) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="1cb3f-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -151,6 +139,6 @@ ms.lasthandoff: 12/22/2017
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="5e5bf-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5e5bf-113">See Also</span></span>  
- [<span data-ttu-id="5e5bf-114">Controle DataGrid</span><span class="sxs-lookup"><span data-stu-id="5e5bf-114">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [<span data-ttu-id="5e5bf-115">Como alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5e5bf-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a><span data-ttu-id="1cb3f-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1cb3f-113">See Also</span></span>  
+ [<span data-ttu-id="1cb3f-114">Controle DataGrid</span><span class="sxs-lookup"><span data-stu-id="1cb3f-114">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="1cb3f-115">Como alterar os dados exibidos em tempo de execução no controle DataGrid dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1cb3f-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

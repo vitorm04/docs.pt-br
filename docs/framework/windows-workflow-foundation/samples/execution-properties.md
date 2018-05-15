@@ -1,41 +1,30 @@
 ---
-title: "Propriedades de execução"
-ms.custom: 
+title: Propriedades de execução
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 539335f86718d19f9dd2c7e8cc3cd068807ef7de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 201fe222de1cb2029696a1694ae97815db5f913d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="execution-properties"></a><span data-ttu-id="78fd7-102">Propriedades de execução</span><span class="sxs-lookup"><span data-stu-id="78fd7-102">Execution Properties</span></span>
-<span data-ttu-id="78fd7-103">Este exemplo mostra como definir e usar uma propriedade de execução em uma atividade personalizado.</span><span class="sxs-lookup"><span data-stu-id="78fd7-103">This sample shows how to define and use an execution property in a custom activity.</span></span> <span data-ttu-id="78fd7-104">Nesse exemplo, a propriedade de execução determina a cor do console de primeiro plano.</span><span class="sxs-lookup"><span data-stu-id="78fd7-104">In this example, the execution property determines the console's foreground color.</span></span> <span data-ttu-id="78fd7-105">Um fluxo de trabalho do exemplo mostra como caminhos lógicos diferentes de execução (ramificações de uma atividade de <xref:System.Activities.Statements.Parallel> ) podem manter diferentes cores de console independentemente de execução intercalada de atividades (através das ramificações de atividade de <xref:System.Activities.Statements.Parallel> ).</span><span class="sxs-lookup"><span data-stu-id="78fd7-105">An example workflow shows how different logical paths of execution (branches of a <xref:System.Activities.Statements.Parallel> activity) can maintain different console colors despite interleaved execution of activities (across the branches of the <xref:System.Activities.Statements.Parallel> activity).</span></span>  
+# <a name="execution-properties"></a><span data-ttu-id="2ce6c-102">Propriedades de execução</span><span class="sxs-lookup"><span data-stu-id="2ce6c-102">Execution Properties</span></span>
+<span data-ttu-id="2ce6c-103">Este exemplo mostra como definir e usar uma propriedade de execução em uma atividade personalizado.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-103">This sample shows how to define and use an execution property in a custom activity.</span></span> <span data-ttu-id="2ce6c-104">Nesse exemplo, a propriedade de execução determina a cor do console de primeiro plano.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-104">In this example, the execution property determines the console's foreground color.</span></span> <span data-ttu-id="2ce6c-105">Um fluxo de trabalho do exemplo mostra como caminhos lógicos diferentes de execução (ramificações de uma atividade de <xref:System.Activities.Statements.Parallel> ) podem manter diferentes cores de console independentemente de execução intercalada de atividades (através das ramificações de atividade de <xref:System.Activities.Statements.Parallel> ).</span><span class="sxs-lookup"><span data-stu-id="2ce6c-105">An example workflow shows how different logical paths of execution (branches of a <xref:System.Activities.Statements.Parallel> activity) can maintain different console colors despite interleaved execution of activities (across the branches of the <xref:System.Activities.Statements.Parallel> activity).</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="78fd7-106">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="78fd7-106">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2ce6c-106">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="2ce6c-106">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="78fd7-107">Abra a solução de exemplo de ExecutionProperties.sln em [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="78fd7-107">Open the ExecutionProperties.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="2ce6c-107">Abra a solução de exemplo de ExecutionProperties.sln em [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2ce6c-107">Open the ExecutionProperties.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="78fd7-108">Exibir ThreeColors.xaml antes de criar a solução exibe um erro, porque as atividades personalizados usadas devem ser compiladas ao mesmo tempo que a solução.</span><span class="sxs-lookup"><span data-stu-id="78fd7-108">Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.</span></span>  
+    >  <span data-ttu-id="2ce6c-108">Exibir ThreeColors.xaml antes de criar a solução exibe um erro, porque as atividades personalizados usadas devem ser compiladas ao mesmo tempo que a solução.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-108">Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.</span></span>  
   
-2.  <span data-ttu-id="78fd7-109">Criar e executar a solução.</span><span class="sxs-lookup"><span data-stu-id="78fd7-109">Build and run the solution.</span></span>  
+2.  <span data-ttu-id="2ce6c-109">Criar e executar a solução.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-109">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="78fd7-110">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="78fd7-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="78fd7-111">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="78fd7-111">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2ce6c-110">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2ce6c-111">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-111">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="78fd7-112">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="78fd7-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="78fd7-113">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="78fd7-113">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2ce6c-112">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2ce6c-113">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="2ce6c-113">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\ExecutionProperties`

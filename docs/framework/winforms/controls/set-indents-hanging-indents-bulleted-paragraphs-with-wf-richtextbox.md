@@ -1,13 +1,6 @@
 ---
-title: "Como definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox dos Windows Forms"
-ms.custom: 
+title: Como definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,23 +13,18 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1349e86ecd04c0d4e394e7939996c3e717e841e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95ba276f3b2682d5b5bcaaa49916e856eb580632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="c90ab-102">Como definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c90ab-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="c90ab-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> controle tem várias opções para formatar o texto é exibido.</span><span class="sxs-lookup"><span data-stu-id="c90ab-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="c90ab-104">Você pode formatar parágrafos selecionados como listas de marcadores, definindo o <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="c90ab-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="c90ab-105">Você também pode usar o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, e <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedades para definir o recuo de parágrafos em relação à esquerda e direita bordas do controle e a borda esquerda de outras linhas de texto.</span><span class="sxs-lookup"><span data-stu-id="c90ab-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="431f7-102">Como definir recuos definidos, recuos deslocados e parágrafos com marcadores com o controle RichTextBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="431f7-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="431f7-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> controle tem várias opções para formatar o texto é exibido.</span><span class="sxs-lookup"><span data-stu-id="431f7-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="431f7-104">Você pode formatar parágrafos selecionados como listas de marcadores, definindo o <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="431f7-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="431f7-105">Você também pode usar o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, e <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedades para definir o recuo de parágrafos em relação à esquerda e direita bordas do controle e a borda esquerda de outras linhas de texto.</span><span class="sxs-lookup"><span data-stu-id="431f7-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="c90ab-106">Formatar um parágrafo como uma lista com marcadores</span><span class="sxs-lookup"><span data-stu-id="c90ab-106">To format a paragraph as a bulleted list</span></span>  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="431f7-106">Formatar um parágrafo como uma lista com marcadores</span><span class="sxs-lookup"><span data-stu-id="431f7-106">To format a paragraph as a bulleted list</span></span>  
   
-1.  <span data-ttu-id="c90ab-107">Defina a propriedade <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> como `true`.</span><span class="sxs-lookup"><span data-stu-id="c90ab-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
+1.  <span data-ttu-id="431f7-107">Defina a propriedade <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> como `true`.</span><span class="sxs-lookup"><span data-stu-id="431f7-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -50,13 +38,13 @@ ms.lasthandoff: 12/22/2017
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a><span data-ttu-id="c90ab-108">Para recuar um parágrafo</span><span class="sxs-lookup"><span data-stu-id="c90ab-108">To indent a paragraph</span></span>  
+### <a name="to-indent-a-paragraph"></a><span data-ttu-id="431f7-108">Para recuar um parágrafo</span><span class="sxs-lookup"><span data-stu-id="431f7-108">To indent a paragraph</span></span>  
   
-1.  <span data-ttu-id="c90ab-109">Definir o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propriedade como um inteiro que representa a distância em pixels entre a borda esquerda do controle e a borda esquerda do texto.</span><span class="sxs-lookup"><span data-stu-id="c90ab-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
+1.  <span data-ttu-id="431f7-109">Definir o <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propriedade como um inteiro que representa a distância em pixels entre a borda esquerda do controle e a borda esquerda do texto.</span><span class="sxs-lookup"><span data-stu-id="431f7-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
   
-2.  <span data-ttu-id="c90ab-110">Definir o <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade como um inteiro que representa a distância em pixels entre a borda esquerda da primeira linha do texto no parágrafo e a borda esquerda das linhas subsequentes no mesmo paragraph.</span><span class="sxs-lookup"><span data-stu-id="c90ab-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="c90ab-111">O valor de <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade só se aplica a linhas em um parágrafo que encapsulados abaixo da primeira linha.</span><span class="sxs-lookup"><span data-stu-id="c90ab-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
+2.  <span data-ttu-id="431f7-110">Definir o <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade como um inteiro que representa a distância em pixels entre a borda esquerda da primeira linha do texto no parágrafo e a borda esquerda das linhas subsequentes no mesmo paragraph.</span><span class="sxs-lookup"><span data-stu-id="431f7-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="431f7-111">O valor de <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propriedade só se aplica a linhas em um parágrafo que encapsulados abaixo da primeira linha.</span><span class="sxs-lookup"><span data-stu-id="431f7-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
   
-3.  <span data-ttu-id="c90ab-112">Definir o <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propriedade como um inteiro que representa a distância em pixels entre a borda direita do controle e a borda direita do texto.</span><span class="sxs-lookup"><span data-stu-id="c90ab-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
+3.  <span data-ttu-id="431f7-112">Definir o <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propriedade como um inteiro que representa a distância em pixels entre a borda direita do controle e a borda direita do texto.</span><span class="sxs-lookup"><span data-stu-id="431f7-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -77,9 +65,9 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="c90ab-113">Todas essas propriedades afetam todos os parágrafos que contêm o texto selecionado, bem como o texto digitado após o ponto de inserção atual.</span><span class="sxs-lookup"><span data-stu-id="c90ab-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="c90ab-114">Por exemplo, quando um usuário seleciona uma palavra em um parágrafo e ajusta o recuo, as novas configurações serão aplicadas a todo o parágrafo que contém a palavra, bem como aos parágrafos subsequentemente inseridos depois do parágrafo selecionado.</span><span class="sxs-lookup"><span data-stu-id="c90ab-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="c90ab-115">Para obter informações sobre como selecionar texto programaticamente, consulte <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="c90ab-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
+    >  <span data-ttu-id="431f7-113">Todas essas propriedades afetam todos os parágrafos que contêm o texto selecionado, bem como o texto digitado após o ponto de inserção atual.</span><span class="sxs-lookup"><span data-stu-id="431f7-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="431f7-114">Por exemplo, quando um usuário seleciona uma palavra em um parágrafo e ajusta o recuo, as novas configurações serão aplicadas a todo o parágrafo que contém a palavra, bem como aos parágrafos subsequentemente inseridos depois do parágrafo selecionado.</span><span class="sxs-lookup"><span data-stu-id="431f7-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="431f7-115">Para obter informações sobre como selecionar texto programaticamente, consulte <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="431f7-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c90ab-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c90ab-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="431f7-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="431f7-116">See Also</span></span>  
  <xref:System.Windows.Forms.RichTextBox>  
- [<span data-ttu-id="c90ab-117">Controle RichTextBox</span><span class="sxs-lookup"><span data-stu-id="c90ab-117">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [<span data-ttu-id="c90ab-118">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c90ab-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [<span data-ttu-id="431f7-117">Controle RichTextBox</span><span class="sxs-lookup"><span data-stu-id="431f7-117">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="431f7-118">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="431f7-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

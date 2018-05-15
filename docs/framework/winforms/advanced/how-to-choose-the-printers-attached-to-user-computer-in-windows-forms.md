@@ -1,14 +1,6 @@
 ---
 title: Como escolher as impressoras conectadas ao computador de um usuário nos Windows Forms
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,30 +9,24 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90feca3e1efeeae45b26a747e97ad8b5b945ec56
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f54a74dc8118d2ebcb2df7e91f229c1807b0297
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a><span data-ttu-id="76a68-102">Como escolher as impressoras conectadas ao computador de um usuário nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="76a68-102">How to: Choose the Printers Attached to a User&#39;s Computer in Windows Forms</span></span>
-<span data-ttu-id="76a68-103">Geralmente, os usuários escolhem uma impressora diferente da impressora padrão para imprimir.</span><span class="sxs-lookup"><span data-stu-id="76a68-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="76a68-104">Você pode habilitar os usuários podem escolher uma impressora entre as instaladas no momento usando o <xref:System.Windows.Forms.PrintDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="76a68-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="76a68-105">Por meio de <xref:System.Windows.Forms.PrintDialog> componente, o <xref:System.Windows.Forms.DialogResult> do <xref:System.Windows.Forms.PrintDialog> componente é capturado e usado para selecionar a impressora.</span><span class="sxs-lookup"><span data-stu-id="76a68-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a><span data-ttu-id="a6c1d-102">Como escolher as impressoras conectadas ao computador de um usuário nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a6c1d-102">How to: Choose the Printers Attached to a User&#39;s Computer in Windows Forms</span></span>
+<span data-ttu-id="a6c1d-103">Geralmente, os usuários escolhem uma impressora diferente da impressora padrão para imprimir.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="a6c1d-104">Você pode habilitar os usuários podem escolher uma impressora entre as instaladas no momento usando o <xref:System.Windows.Forms.PrintDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="a6c1d-105">Por meio de <xref:System.Windows.Forms.PrintDialog> componente, o <xref:System.Windows.Forms.DialogResult> do <xref:System.Windows.Forms.PrintDialog> componente é capturado e usado para selecionar a impressora.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
   
- <span data-ttu-id="76a68-106">No procedimento a seguir, um arquivo de texto é selecionado para ser impresso na impressora padrão.</span><span class="sxs-lookup"><span data-stu-id="76a68-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="76a68-107">O <xref:System.Windows.Forms.PrintDialog> classe, em seguida, é instanciada.</span><span class="sxs-lookup"><span data-stu-id="76a68-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
+ <span data-ttu-id="a6c1d-106">No procedimento a seguir, um arquivo de texto é selecionado para ser impresso na impressora padrão.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="a6c1d-107">O <xref:System.Windows.Forms.PrintDialog> classe, em seguida, é instanciada.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="76a68-108">Para escolher uma impressora e imprimir um arquivo</span><span class="sxs-lookup"><span data-stu-id="76a68-108">To choose a printer and then print a file</span></span>  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="a6c1d-108">Para escolher uma impressora e imprimir um arquivo</span><span class="sxs-lookup"><span data-stu-id="a6c1d-108">To choose a printer and then print a file</span></span>  
   
-1.  <span data-ttu-id="76a68-109">Selecione a impressora a ser usada com a <xref:System.Windows.Forms.PrintDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="76a68-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
+1.  <span data-ttu-id="a6c1d-109">Selecione a impressora a ser usada com a <xref:System.Windows.Forms.PrintDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-     <span data-ttu-id="76a68-110">No exemplo de código a seguir, há dois eventos que estão sendo manipulados.</span><span class="sxs-lookup"><span data-stu-id="76a68-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="76a68-111">No primeiro, um <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> evento, o <xref:System.Windows.Forms.PrintDialog> classe é instanciada e a impressora selecionada pelo usuário é capturada no <xref:System.Windows.Forms.DialogResult> propriedade.</span><span class="sxs-lookup"><span data-stu-id="76a68-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
+     <span data-ttu-id="a6c1d-110">No exemplo de código a seguir, há dois eventos que estão sendo manipulados.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="a6c1d-111">No primeiro, um <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> evento, o <xref:System.Windows.Forms.PrintDialog> classe é instanciada e a impressora selecionada pelo usuário é capturada no <xref:System.Windows.Forms.DialogResult> propriedade.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
   
-     <span data-ttu-id="76a68-112">No segundo caso, o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento o <xref:System.Drawing.Printing.PrintDocument> componente, um documento de exemplo é impresso na impressora especificada.</span><span class="sxs-lookup"><span data-stu-id="76a68-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
+     <span data-ttu-id="a6c1d-112">No segundo caso, o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento o <xref:System.Drawing.Printing.PrintDocument> componente, um documento de exemplo é impresso na impressora especificada.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -102,7 +88,7 @@ ms.lasthandoff: 04/26/2018
        }  
     ```  
   
-     <span data-ttu-id="76a68-113">(Visual c# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="76a68-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="a6c1d-113">(Visual c# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="a6c1d-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -119,5 +105,5 @@ ms.lasthandoff: 04/26/2018
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="76a68-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="76a68-114">See Also</span></span>  
- [<span data-ttu-id="76a68-115">Suporte à impressão nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="76a68-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="a6c1d-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a6c1d-114">See Also</span></span>  
+ [<span data-ttu-id="a6c1d-115">Suporte à impressão nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a6c1d-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

@@ -1,13 +1,6 @@
 ---
-title: "Como alterar a aparência do controle LinkLabel dos Windows Forms"
-ms.custom: 
+title: Como alterar a aparência do controle LinkLabel dos Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,25 +12,20 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dc3963ab1b242ce8dce53d9bba996f52347679b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1bb0ecba6fd8ddf66c6debb90ef4dd94641a97e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a><span data-ttu-id="789b8-102">Como alterar a aparência do controle LinkLabel dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="789b8-102">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>
-<span data-ttu-id="789b8-103">Você pode alterar o texto exibido, o <xref:System.Windows.Forms.LinkLabel> controle de acordo com uma variedade de propósitos.</span><span class="sxs-lookup"><span data-stu-id="789b8-103">You can change the text displayed by the <xref:System.Windows.Forms.LinkLabel> control to suit a variety of purposes.</span></span> <span data-ttu-id="789b8-104">Por exemplo, é uma prática comum para indicar ao usuário que o texto é clicável configurando o texto a ser exibido em uma cor específica com um sublinhado.</span><span class="sxs-lookup"><span data-stu-id="789b8-104">For example, it is common practice to indicate to the user that text can be clicked by setting the text to appear in a specific color with an underline.</span></span> <span data-ttu-id="789b8-105">Depois que o usuário clica no texto, a cor é alterada para uma cor diferente.</span><span class="sxs-lookup"><span data-stu-id="789b8-105">After the user clicks the text, the color changes to a different color.</span></span> <span data-ttu-id="789b8-106">Para controlar esse comportamento, você pode definir propriedades diferentes cinco: o <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedades.</span><span class="sxs-lookup"><span data-stu-id="789b8-106">To control this behavior, you can set five different properties: the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, and <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> properties.</span></span>  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a><span data-ttu-id="6aaa9-102">Como alterar a aparência do controle LinkLabel dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6aaa9-102">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>
+<span data-ttu-id="6aaa9-103">Você pode alterar o texto exibido, o <xref:System.Windows.Forms.LinkLabel> controle de acordo com uma variedade de propósitos.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-103">You can change the text displayed by the <xref:System.Windows.Forms.LinkLabel> control to suit a variety of purposes.</span></span> <span data-ttu-id="6aaa9-104">Por exemplo, é uma prática comum para indicar ao usuário que o texto é clicável configurando o texto a ser exibido em uma cor específica com um sublinhado.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-104">For example, it is common practice to indicate to the user that text can be clicked by setting the text to appear in a specific color with an underline.</span></span> <span data-ttu-id="6aaa9-105">Depois que o usuário clica no texto, a cor é alterada para uma cor diferente.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-105">After the user clicks the text, the color changes to a different color.</span></span> <span data-ttu-id="6aaa9-106">Para controlar esse comportamento, você pode definir propriedades diferentes cinco: o <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedades.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-106">To control this behavior, you can set five different properties: the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, and <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> properties.</span></span>  
   
-### <a name="to-change-the-appearance-of-a-linklabel-control"></a><span data-ttu-id="789b8-107">Alterar a aparência de um controle LinkLabel</span><span class="sxs-lookup"><span data-stu-id="789b8-107">To change the appearance of a LinkLabel control</span></span>  
+### <a name="to-change-the-appearance-of-a-linklabel-control"></a><span data-ttu-id="6aaa9-107">Alterar a aparência de um controle LinkLabel</span><span class="sxs-lookup"><span data-stu-id="6aaa9-107">To change the appearance of a LinkLabel control</span></span>  
   
-1.  <span data-ttu-id="789b8-108">Definir o <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> e <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedades para as cores que você deseja.</span><span class="sxs-lookup"><span data-stu-id="789b8-108">Set the <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> and <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> properties to the colors you want.</span></span>  
+1.  <span data-ttu-id="6aaa9-108">Definir o <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> e <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedades para as cores que você deseja.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-108">Set the <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> and <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> properties to the colors you want.</span></span>  
   
-     <span data-ttu-id="789b8-109">Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="789b8-109">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
+     <span data-ttu-id="6aaa9-109">Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-109">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     ' You can set the color using decimal values for red, green, and blue  
@@ -60,9 +48,9 @@ ms.lasthandoff: 12/22/2017
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2.  <span data-ttu-id="789b8-110">Definir o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade como uma legenda apropriada.</span><span class="sxs-lookup"><span data-stu-id="789b8-110">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
+2.  <span data-ttu-id="6aaa9-110">Definir o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade como uma legenda apropriada.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-110">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-     <span data-ttu-id="789b8-111">Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="789b8-111">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
+     <span data-ttu-id="6aaa9-111">Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-111">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     LinkLabel1.Text = "Click here to see more."  
@@ -76,9 +64,9 @@ ms.lasthandoff: 12/22/2017
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3.  <span data-ttu-id="789b8-112">Definir o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicado como um link.</span><span class="sxs-lookup"><span data-stu-id="789b8-112">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
+3.  <span data-ttu-id="6aaa9-112">Definir o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicado como um link.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-112">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
   
-     <span data-ttu-id="789b8-113">O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor é representado com uma <xref:System.Windows.Forms.LinkArea> que contém dois números, a posição do caractere inicial e o número de caracteres.</span><span class="sxs-lookup"><span data-stu-id="789b8-113">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented with a <xref:System.Windows.Forms.LinkArea> containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="789b8-114">Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="789b8-114">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
+     <span data-ttu-id="6aaa9-113">O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor é representado com uma <xref:System.Windows.Forms.LinkArea> que contém dois números, a posição do caractere inicial e o número de caracteres.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-113">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented with a <xref:System.Windows.Forms.LinkArea> containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="6aaa9-114">Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-114">This can be done either programmatically or at design time in the **Properties** window.</span></span>  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
@@ -92,13 +80,13 @@ ms.lasthandoff: 12/22/2017
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4.  <span data-ttu-id="789b8-115">Definir o <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> propriedade <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, ou <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span><span class="sxs-lookup"><span data-stu-id="789b8-115">Set the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> property to <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, or <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span></span>  
+4.  <span data-ttu-id="6aaa9-115">Definir o <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> propriedade <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, ou <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-115">Set the <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> property to <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, or <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.</span></span>  
   
-     <span data-ttu-id="789b8-116">Se for definido como <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, a parte da legenda determinada pelo <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> será sublinhada somente quando o ponteiro permanece nele.</span><span class="sxs-lookup"><span data-stu-id="789b8-116">If it is set to <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, the part of the caption determined by <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> will only be underlined when the pointer rests on it.</span></span>  
+     <span data-ttu-id="6aaa9-116">Se for definido como <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, a parte da legenda determinada pelo <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> será sublinhada somente quando o ponteiro permanece nele.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-116">If it is set to <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, the part of the caption determined by <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> will only be underlined when the pointer rests on it.</span></span>  
   
-5.  <span data-ttu-id="789b8-117">No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, defina o <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade `true`.</span><span class="sxs-lookup"><span data-stu-id="789b8-117">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
+5.  <span data-ttu-id="6aaa9-117">No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, defina o <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade `true`.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-117">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
   
-     <span data-ttu-id="789b8-118">Quando um link foi visitado, é uma prática comum alterar sua aparência de alguma maneira, geralmente a cor.</span><span class="sxs-lookup"><span data-stu-id="789b8-118">When a link has been visited, it is common practice to change its appearance in some way, usually by color.</span></span> <span data-ttu-id="789b8-119">O texto será alterado para a cor especificada pelo <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="789b8-119">The text will change to the color specified by the <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> property.</span></span>  
+     <span data-ttu-id="6aaa9-118">Quando um link foi visitado, é uma prática comum alterar sua aparência de alguma maneira, geralmente a cor.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-118">When a link has been visited, it is common practice to change its appearance in some way, usually by color.</span></span> <span data-ttu-id="6aaa9-119">O texto será alterado para a cor especificada pelo <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="6aaa9-119">The text will change to the color specified by the <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> property.</span></span>  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -132,11 +120,11 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="789b8-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="789b8-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6aaa9-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6aaa9-120">See Also</span></span>  
  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
  <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>  
  <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>  
  <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>  
- [<span data-ttu-id="789b8-121">Visão geral do controle LinkLabel</span><span class="sxs-lookup"><span data-stu-id="789b8-121">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- [<span data-ttu-id="789b8-122">Como vincular a um objeto ou página da Web com o controle LinkLabel dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="789b8-122">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- [<span data-ttu-id="789b8-123">Controle LinkLabel</span><span class="sxs-lookup"><span data-stu-id="789b8-123">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+ [<span data-ttu-id="6aaa9-121">Visão geral do controle LinkLabel</span><span class="sxs-lookup"><span data-stu-id="6aaa9-121">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6aaa9-122">Como vincular a um objeto ou página da Web com o controle LinkLabel dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6aaa9-122">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ [<span data-ttu-id="6aaa9-123">Controle LinkLabel</span><span class="sxs-lookup"><span data-stu-id="6aaa9-123">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

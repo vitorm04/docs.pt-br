@@ -1,30 +1,19 @@
 ---
 title: Extensibilidade de Store
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="store-extensibility"></a><span data-ttu-id="02bad-102">Extensibilidade de Store</span><span class="sxs-lookup"><span data-stu-id="02bad-102">Store Extensibility</span></span>
-<span data-ttu-id="02bad-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> permite que os usuários elevem o personalizado, as propriedades específicas do aplicativo que podem ser usadas para consultar instâncias na base de dados de persistência.</span><span class="sxs-lookup"><span data-stu-id="02bad-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> allows users to promote custom, application-specific properties that can be used to query for instances in the persistence database.</span></span> <span data-ttu-id="02bad-104">O ato de elevar uma propriedade faz com que o valor esteja disponível em uma exibição especial na base de dados.</span><span class="sxs-lookup"><span data-stu-id="02bad-104">The act of promoting a property causes the value to be available within a special view in the database.</span></span> <span data-ttu-id="02bad-105">Essas propriedades elevadas (propriedades que podem ser usadas em consultas de usuário) podem ser de tipos simples como Int64, GUID, cadeia de caracteres, e DateTime ou tipo binário serializado (byte []).</span><span class="sxs-lookup"><span data-stu-id="02bad-105">These promoted properties (properties that can be used in user queries) can be of simple types such as Int64, Guid, String, and DateTime or of a serialized binary type (byte[]).</span></span>  
+# <a name="store-extensibility"></a><span data-ttu-id="716fe-102">Extensibilidade de Store</span><span class="sxs-lookup"><span data-stu-id="716fe-102">Store Extensibility</span></span>
+<span data-ttu-id="716fe-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> permite que os usuários elevem o personalizado, as propriedades específicas do aplicativo que podem ser usadas para consultar instâncias na base de dados de persistência.</span><span class="sxs-lookup"><span data-stu-id="716fe-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> allows users to promote custom, application-specific properties that can be used to query for instances in the persistence database.</span></span> <span data-ttu-id="716fe-104">O ato de elevar uma propriedade faz com que o valor esteja disponível em uma exibição especial na base de dados.</span><span class="sxs-lookup"><span data-stu-id="716fe-104">The act of promoting a property causes the value to be available within a special view in the database.</span></span> <span data-ttu-id="716fe-105">Essas propriedades elevadas (propriedades que podem ser usadas em consultas de usuário) podem ser de tipos simples como Int64, GUID, cadeia de caracteres, e DateTime ou tipo binário serializado (byte []).</span><span class="sxs-lookup"><span data-stu-id="716fe-105">These promoted properties (properties that can be used in user queries) can be of simple types such as Int64, Guid, String, and DateTime or of a serialized binary type (byte[]).</span></span>  
   
- <span data-ttu-id="02bad-106">A classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tem o método de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> que você pode usar para elevar uma propriedade como uma propriedade que pode ser usada em consultas.</span><span class="sxs-lookup"><span data-stu-id="02bad-106">The <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class has the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> method that you can use to promote a property as a property that can be used in queries.</span></span> <span data-ttu-id="02bad-107">O exemplo a seguir é um exemplo de ponta a ponta de extensibilidade de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="02bad-107">The following example is an end-to-end example of store extensibility.</span></span>  
+ <span data-ttu-id="716fe-106">A classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tem o método de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> que você pode usar para elevar uma propriedade como uma propriedade que pode ser usada em consultas.</span><span class="sxs-lookup"><span data-stu-id="716fe-106">The <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class has the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> method that you can use to promote a property as a property that can be used in queries.</span></span> <span data-ttu-id="716fe-107">O exemplo a seguir é um exemplo de ponta a ponta de extensibilidade de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="716fe-107">The following example is an end-to-end example of store extensibility.</span></span>  
   
-1.  <span data-ttu-id="02bad-108">Neste cenário exemplo, um aplicativo de (DP) de processamento de documento tem fluxos de trabalho, cada um deless use atividades personalizadas para processamento de documento.</span><span class="sxs-lookup"><span data-stu-id="02bad-108">In this example scenario, a document processing (DP) application has workflows, each of which uses custom activities for document processing.</span></span> <span data-ttu-id="02bad-109">Esses fluxos de trabalho têm um conjunto de variáveis de estado que precisam ser feitos visíveis para o usuário final.</span><span class="sxs-lookup"><span data-stu-id="02bad-109">These workflows have a set of state variables that need to be made visible to the end user.</span></span> <span data-ttu-id="02bad-110">Para obter isso, o aplicativo de DP fornece uma extensão da instância do tipo <xref:System.Activities.Persistence.PersistenceParticipant>, que é usado por atividades para fornecer variáveis de estado.</span><span class="sxs-lookup"><span data-stu-id="02bad-110">To achieve this, the DP application provides an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span>  
+1.  <span data-ttu-id="716fe-108">Neste cenário exemplo, um aplicativo de (DP) de processamento de documento tem fluxos de trabalho, cada um deless use atividades personalizadas para processamento de documento.</span><span class="sxs-lookup"><span data-stu-id="716fe-108">In this example scenario, a document processing (DP) application has workflows, each of which uses custom activities for document processing.</span></span> <span data-ttu-id="716fe-109">Esses fluxos de trabalho têm um conjunto de variáveis de estado que precisam ser feitos visíveis para o usuário final.</span><span class="sxs-lookup"><span data-stu-id="716fe-109">These workflows have a set of state variables that need to be made visible to the end user.</span></span> <span data-ttu-id="716fe-110">Para obter isso, o aplicativo de DP fornece uma extensão da instância do tipo <xref:System.Activities.Persistence.PersistenceParticipant>, que é usado por atividades para fornecer variáveis de estado.</span><span class="sxs-lookup"><span data-stu-id="716fe-110">To achieve this, the DP application provides an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span>  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -36,7 +25,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-2.  <span data-ttu-id="02bad-111">A nova extensão é adicionada para o host.</span><span class="sxs-lookup"><span data-stu-id="02bad-111">The new extension is then added to the host.</span></span>  
+2.  <span data-ttu-id="716fe-111">A nova extensão é adicionada para o host.</span><span class="sxs-lookup"><span data-stu-id="716fe-111">The new extension is then added to the host.</span></span>  
   
     ```  
     static Activity workflow = CreateWorkflow();  
@@ -45,9 +34,9 @@ ms.lasthandoff: 12/22/2017
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     <span data-ttu-id="02bad-112">Para obter mais detalhes sobre como adicionar um participante de persistência personalizado, consulte o [participantes de persistência](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="02bad-112">For more details about adding a custom persistence participant, see the [Persistence Participants](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) sample.</span></span>  
+     <span data-ttu-id="716fe-112">Para obter mais detalhes sobre como adicionar um participante de persistência personalizado, consulte o [participantes de persistência](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="716fe-112">For more details about adding a custom persistence participant, see the [Persistence Participants](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) sample.</span></span>  
   
-3.  <span data-ttu-id="02bad-113">As atividades personalizadas no aplicativo DP popular vários campos de status no **Execute** método.</span><span class="sxs-lookup"><span data-stu-id="02bad-113">The custom activities in the DP application populate various status fields in the **Execute** method.</span></span>  
+3.  <span data-ttu-id="716fe-113">As atividades personalizadas no aplicativo DP popular vários campos de status no **Execute** método.</span><span class="sxs-lookup"><span data-stu-id="716fe-113">The custom activities in the DP application populate various status fields in the **Execute** method.</span></span>  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -61,7 +50,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-4.  <span data-ttu-id="02bad-114">Quando uma instância de fluxo de trabalho atinge um ponto de persistência, o **CollectValues** método o **DocumentStatusExtension** participante de persistência salva essas propriedades para os dados de persistência coleção.</span><span class="sxs-lookup"><span data-stu-id="02bad-114">When a workflow instance reaches a persistence point, the **CollectValues** method of the **DocumentStatusExtension** persistence participant saves these properties into the persistence data collection.</span></span>  
+4.  <span data-ttu-id="716fe-114">Quando uma instância de fluxo de trabalho atinge um ponto de persistência, o **CollectValues** método o **DocumentStatusExtension** participante de persistência salva essas propriedades para os dados de persistência coleção.</span><span class="sxs-lookup"><span data-stu-id="716fe-114">When a workflow instance reaches a persistence point, the **CollectValues** method of the **DocumentStatusExtension** persistence participant saves these properties into the persistence data collection.</span></span>  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -83,9 +72,9 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="02bad-115">Todas essas propriedades são passadas para **SqlWorkflowInstanceStore** pela estrutura de persistência por meio de **SaveWorkflowCommand.InstanceData** coleção.</span><span class="sxs-lookup"><span data-stu-id="02bad-115">All these properties are passed to **SqlWorkflowInstanceStore** by the persistence framework through the **SaveWorkflowCommand.InstanceData** collection.</span></span>  
+    >  <span data-ttu-id="716fe-115">Todas essas propriedades são passadas para **SqlWorkflowInstanceStore** pela estrutura de persistência por meio de **SaveWorkflowCommand.InstanceData** coleção.</span><span class="sxs-lookup"><span data-stu-id="716fe-115">All these properties are passed to **SqlWorkflowInstanceStore** by the persistence framework through the **SaveWorkflowCommand.InstanceData** collection.</span></span>  
   
-5.  <span data-ttu-id="02bad-116">O aplicativo DP inicializa o armazenamento de instância de fluxo de trabalho do SQL e invoca o **promover** método para promover a esses dados.</span><span class="sxs-lookup"><span data-stu-id="02bad-116">The DP application initializes the SQL Workflow Instance Store and invokes the **Promote** method to promote this data.</span></span>  
+5.  <span data-ttu-id="716fe-116">O aplicativo DP inicializa o armazenamento de instância de fluxo de trabalho do SQL e invoca o **promover** método para promover a esses dados.</span><span class="sxs-lookup"><span data-stu-id="716fe-116">The DP application initializes the SQL Workflow Instance Store and invokes the **Promote** method to promote this data.</span></span>  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -101,9 +90,9 @@ ms.lasthandoff: 12/22/2017
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     <span data-ttu-id="02bad-117">Com base nessas informações de promoção, **SqlWorkflowInstanceStore** coloca as propriedades de dados em colunas da [InstancePromotedProperties](#InstancePromotedProperties) exibição.</span><span class="sxs-lookup"><span data-stu-id="02bad-117">Based on this promotion information, **SqlWorkflowInstanceStore** places the data properties in the columns of the [InstancePromotedProperties](#InstancePromotedProperties) view.</span></span>
+     <span data-ttu-id="716fe-117">Com base nessas informações de promoção, **SqlWorkflowInstanceStore** coloca as propriedades de dados em colunas da [InstancePromotedProperties](#InstancePromotedProperties) exibição.</span><span class="sxs-lookup"><span data-stu-id="716fe-117">Based on this promotion information, **SqlWorkflowInstanceStore** places the data properties in the columns of the [InstancePromotedProperties](#InstancePromotedProperties) view.</span></span>
   
-6.  <span data-ttu-id="02bad-118">Para ver um subconjunto dos dados da tabela da promoção, o aplicativo de DP adiciona um modo de exibição personalizado no modo da promoção.</span><span class="sxs-lookup"><span data-stu-id="02bad-118">To query a subset of the data from the promotion table, the DP application adds a customized view on top of the promotion view.</span></span>  
+6.  <span data-ttu-id="716fe-118">Para ver um subconjunto dos dados da tabela da promoção, o aplicativo de DP adiciona um modo de exibição personalizado no modo da promoção.</span><span class="sxs-lookup"><span data-stu-id="716fe-118">To query a subset of the data from the promotion table, the DP application adds a customized view on top of the promotion view.</span></span>  
   
     ```  
     create view [dbo].[DocumentStatus] with schemabinding  
@@ -118,11 +107,11 @@ ms.lasthandoff: 12/22/2017
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a><span data-ttu-id="02bad-119">Exibição [System.Activities.DurableInstancing.InstancePromotedProperties]</span><span class="sxs-lookup"><span data-stu-id="02bad-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
+##  <a name="InstancePromotedProperties"></a> <span data-ttu-id="716fe-119">Exibição [System.Activities.DurableInstancing.InstancePromotedProperties]</span><span class="sxs-lookup"><span data-stu-id="716fe-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
   
-|<span data-ttu-id="02bad-120">Nome da coluna</span><span class="sxs-lookup"><span data-stu-id="02bad-120">Column Name</span></span>|<span data-ttu-id="02bad-121">Tipo de coluna</span><span class="sxs-lookup"><span data-stu-id="02bad-121">Column Type</span></span>|<span data-ttu-id="02bad-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="02bad-122">Description</span></span>|  
+|<span data-ttu-id="716fe-120">Nome da coluna</span><span class="sxs-lookup"><span data-stu-id="716fe-120">Column Name</span></span>|<span data-ttu-id="716fe-121">Tipo de coluna</span><span class="sxs-lookup"><span data-stu-id="716fe-121">Column Type</span></span>|<span data-ttu-id="716fe-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="716fe-122">Description</span></span>|  
 |-----------------|-----------------|-----------------|  
-|<span data-ttu-id="02bad-123">InstanceId</span><span class="sxs-lookup"><span data-stu-id="02bad-123">InstanceId</span></span>|<span data-ttu-id="02bad-124">GUID</span><span class="sxs-lookup"><span data-stu-id="02bad-124">GUID</span></span>|<span data-ttu-id="02bad-125">A instância de fluxo de trabalho que essa promoção pertence.</span><span class="sxs-lookup"><span data-stu-id="02bad-125">The workflow instance that this promotion belongs to.</span></span>|  
-|<span data-ttu-id="02bad-126">PromotionName</span><span class="sxs-lookup"><span data-stu-id="02bad-126">PromotionName</span></span>|<span data-ttu-id="02bad-127">nvarchar (400)</span><span class="sxs-lookup"><span data-stu-id="02bad-127">nvarchar(400)</span></span>|<span data-ttu-id="02bad-128">O nome da promoção próprio.</span><span class="sxs-lookup"><span data-stu-id="02bad-128">The name of the promotion itself.</span></span>|  
-|<span data-ttu-id="02bad-129">Valor1, valor2, Value3. , Value32</span><span class="sxs-lookup"><span data-stu-id="02bad-129">Value1, Value2, Value3,..,Value32</span></span>|<span data-ttu-id="02bad-130">sql_variant</span><span class="sxs-lookup"><span data-stu-id="02bad-130">sql_variant</span></span>|<span data-ttu-id="02bad-131">O valor da propriedade promovida próprio.</span><span class="sxs-lookup"><span data-stu-id="02bad-131">The value of the promoted property itself.</span></span> <span data-ttu-id="02bad-132">A maioria dos tipos de dados primitivos SQL exceto gotas binários e cadeias de caracteres sobre 8000 bytes de comprimento podem caber em sql_variant.</span><span class="sxs-lookup"><span data-stu-id="02bad-132">Most SQL primitive data types except binary blobs and strings over 8000 bytes in length can fit in sql_variant.</span></span>|  
-|<span data-ttu-id="02bad-133">Value33, Value34, Value35,…, Value64</span><span class="sxs-lookup"><span data-stu-id="02bad-133">Value33, Value34, Value35, …, Value64</span></span>|<span data-ttu-id="02bad-134">varbinary (máximo)</span><span class="sxs-lookup"><span data-stu-id="02bad-134">varbinary(max)</span></span>|<span data-ttu-id="02bad-135">O valor das propriedades elevadas que são explicitamente declaradas como varbinary (máximo).</span><span class="sxs-lookup"><span data-stu-id="02bad-135">The value of promoted properties that are explicitly declared as varbinary(max).</span></span>|
+|<span data-ttu-id="716fe-123">InstanceId</span><span class="sxs-lookup"><span data-stu-id="716fe-123">InstanceId</span></span>|<span data-ttu-id="716fe-124">GUID</span><span class="sxs-lookup"><span data-stu-id="716fe-124">GUID</span></span>|<span data-ttu-id="716fe-125">A instância de fluxo de trabalho que essa promoção pertence.</span><span class="sxs-lookup"><span data-stu-id="716fe-125">The workflow instance that this promotion belongs to.</span></span>|  
+|<span data-ttu-id="716fe-126">PromotionName</span><span class="sxs-lookup"><span data-stu-id="716fe-126">PromotionName</span></span>|<span data-ttu-id="716fe-127">nvarchar (400)</span><span class="sxs-lookup"><span data-stu-id="716fe-127">nvarchar(400)</span></span>|<span data-ttu-id="716fe-128">O nome da promoção próprio.</span><span class="sxs-lookup"><span data-stu-id="716fe-128">The name of the promotion itself.</span></span>|  
+|<span data-ttu-id="716fe-129">Valor1, valor2, Value3. , Value32</span><span class="sxs-lookup"><span data-stu-id="716fe-129">Value1, Value2, Value3,..,Value32</span></span>|<span data-ttu-id="716fe-130">sql_variant</span><span class="sxs-lookup"><span data-stu-id="716fe-130">sql_variant</span></span>|<span data-ttu-id="716fe-131">O valor da propriedade promovida próprio.</span><span class="sxs-lookup"><span data-stu-id="716fe-131">The value of the promoted property itself.</span></span> <span data-ttu-id="716fe-132">A maioria dos tipos de dados primitivos SQL exceto gotas binários e cadeias de caracteres sobre 8000 bytes de comprimento podem caber em sql_variant.</span><span class="sxs-lookup"><span data-stu-id="716fe-132">Most SQL primitive data types except binary blobs and strings over 8000 bytes in length can fit in sql_variant.</span></span>|  
+|<span data-ttu-id="716fe-133">Value33, Value34, Value35,…, Value64</span><span class="sxs-lookup"><span data-stu-id="716fe-133">Value33, Value34, Value35, …, Value64</span></span>|<span data-ttu-id="716fe-134">varbinary (máximo)</span><span class="sxs-lookup"><span data-stu-id="716fe-134">varbinary(max)</span></span>|<span data-ttu-id="716fe-135">O valor das propriedades elevadas que são explicitamente declaradas como varbinary (máximo).</span><span class="sxs-lookup"><span data-stu-id="716fe-135">The value of promoted properties that are explicitly declared as varbinary(max).</span></span>|
