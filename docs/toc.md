@@ -1109,4 +1109,15 @@
 
 <!-- End of VB Content -->
 
+<!-- ML.NET Content -->
+# [Guia do ML.NET](machine-learning/index.md)
+## [Tutoriais](machine-learning/tutorials/index.md)
+### [Análise de Sentimento (classificação)](machine-learning/tutorials/sentiment-analysis.md)
+### [Previsão do horário do táxi (regressão)](machine-learning/tutorials/taxi-fare.md)
+## [Recursos](machine-learning/resources/index.md)
+### [Glossário do Machine Learning](machine-learning/resources/glossary.md)
+### [Noções básicas do Machine Learning](machine-learning/resources/basics.md)
+
+<!-- End ML.NET Content -->
+
 # [Exemplos e Tutoriais](samples-and-tutorials/index.md)
