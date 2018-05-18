@@ -1,13 +1,7 @@
 ---
-title: "Executando comparações de cadeias de caracteres que não levam em conta a cultura"
-ms.custom: 
+title: Executando comparações de cadeias de caracteres que não levam em conta a cultura
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 35805d1760b0e06d33498efeeb3104979da26bc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Executando comparações de cadeias de caracteres que não levam em conta a cultura
 Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithType> executa comparações sensíveis à cultura e com diferenciação de maiúsculas e minúsculas. Esse método também inclui várias sobrecargas que fornecem um parâmetro `culture` que permite especificar a cultura a ser usada e um parâmetro `comparisonType` que permite especificar as regras de comparação que serão usadas. Chamar esses métodos em vez da sobrecarga padrão remove qualquer ambiguidade sobre as regras usadas em uma chamada de método específico e a torna claro se uma comparação é sensível à cultura ou não.  

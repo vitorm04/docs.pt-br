@@ -1,9 +1,6 @@
 ---
-title: "delegate (Referência de C#)"
+title: delegate (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - delegate_CSharpKeyword
 - delegate
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 179e89cea0e683b72e57536d4e4d86b019493aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 923d746927063490236a721e8d2600889084dac0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegate-c-reference"></a>delegate (Referência de C#)
 A declaração de um tipo de delegado é semelhante a uma assinatura de método. Ela tem um valor retornado e parâmetros de qualquer tipo:  

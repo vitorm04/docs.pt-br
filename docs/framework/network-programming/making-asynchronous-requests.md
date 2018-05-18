@@ -1,12 +1,6 @@
 ---
-title: "Fazer solicitações assíncronas"
-ms.custom: 
+title: Fazer solicitações assíncronas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +11,14 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3bd739a4d8fd5995855b51902a9f101546745dd3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 27860feed5fbb33fb007120d082599c8f80b240d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="making-asynchronous-requests"></a>Fazer solicitações assíncronas
 As classes <xref:System.Net> usam o modelo de programação assíncrona padrão do .NET Framework para acesso assíncrono aos recursos de Internet. Os métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> e <xref:System.Net.WebRequest.EndGetResponse%2A> da classe <xref:System.Net.WebRequest> iniciam e concluem solicitações assíncronas para um recurso de Internet.  

@@ -1,31 +1,20 @@
 ---
 title: CountdownEvent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 144bcde6c4c8fb227773fe613da8445f100ce66d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f98e2388cb31e62d974c8b0bae0bdf833f5963a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> é um primitivo de sincronização que desbloqueia seus threads em espera após ser sinalizado um determinado número de vezes. <xref:System.Threading.CountdownEvent> foi projetado para cenários em que, caso contrário, seria necessário usar um <xref:System.Threading.ManualResetEvent> ou um <xref:System.Threading.ManualResetEventSlim> e diminuir manualmente uma variável antes de sinalizar o evento. Por exemplo, em um cenário de bifurcação/junção, basta criar um <xref:System.Threading.CountdownEvent> que tenha uma contagem de sinal de 5 e, em seguida, iniciar cinco itens de trabalho no pool de threads e fazer com que cada item de trabalho chame <xref:System.Threading.CountdownEvent.Signal%2A> quando ele for concluído. Cada chamada para <xref:System.Threading.CountdownEvent.Signal%2A> diminui a contagem de sinal em 1. No thread principal, a chamada para <xref:System.Threading.CountdownEvent.Wait%2A> será bloqueada até que a contagem de sinal seja zero.  

@@ -1,29 +1,18 @@
 ---
-title: "Comparação de objeto usando XmlNameTable"
-ms.custom: 
+title: Comparação de objeto usando XmlNameTable
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f6c65581437bfb22cf771d66716b3dbb62dbafae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Comparação de objeto usando XmlNameTable
 **XmlDocuments**, quando criado, possui uma tabela de nome especificamente projetada para esse documento. Quando XML é carregado no documento, ou novos elementos ou atributos são criados, os nomes de atributo e de elemento são colocados em **XmlNameTable**. Você também pode criar **XmlDocument** usando **NameTable** existente de outro documento. Quando **XmlDocuments** é criado com o constructo que aceita um parâmetro **XmlNameTable**, o documento tem acesso aos nomes de nó, namespaces e prefixos já armazenados em **XmlNameTable**. Independentemente de como a tabela de nome é carregada com nomes, uma vez que os nomes são armazenados na tabela, os nomes podem ser comparados rapidamente usando a comparação de objeto em vez de comparação de cadeia de caracteres. As cadeias de caracteres também podem ser adicionadas à tabela de nome usando o <xref:System.Xml.NameTable.Add%2A>. O exemplo de código a seguir mostra uma tabela de nome que está sendo criada e a cadeia de caracteres **MyString** sendo adicionada à tabela. Em seguida, um **XmlDocument** é criado usando a tabela e os nomes de elementos e atributos de **Myfile.xml** serão adicionados à tabela de nome existente.  

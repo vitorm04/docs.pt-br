@@ -1,20 +1,13 @@
 ---
 title: Escrever consultas LINQ em C#
 description: Como gravar consultas.
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: f3efbfd232bd7e19d3db56289f57724c71dca064
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9683dbf3c4101829054477824ccc7135f20f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="write-linq-queries-in-c"></a>Escrever consultas LINQ em C#
 

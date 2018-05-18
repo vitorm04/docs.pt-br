@@ -1,28 +1,17 @@
 ---
-title: "Como implementar um particionador para particionamento estático"
-ms.custom: 
+title: Como implementar um particionador para particionamento estático
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 125bef8d43e16c120e88250a4d9d5a4ff3f63dba
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8de4884c43b99c50313d33f683d8634d12043c59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>Como implementar um particionador para particionamento estático
 O exemplo a seguir mostra uma maneira de implementar um particionador personalizado simples para PLINQ que executa o particionamento estático. Como o particionador não oferece suporte a partições dinâmicas, não é consumido de <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Esse particionador específico pode fornecer a agilização sobre o particionador de intervalo padrão para fontes de dados para as quais cada elemento requer um volume crescente de tempo de processamento.  

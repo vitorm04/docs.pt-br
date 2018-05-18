@@ -1,29 +1,18 @@
 ---
-title: "XPathNodeIterator nas transformações"
-ms.custom: 
+title: XPathNodeIterator nas transformações
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d30760ef018c9b2d1264b323b57172417e4ef0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator nas transformações
 <xref:System.Xml.XPath.XPathNodeIterator> fornece métodos para iterar sobre um conjunto de nós criados como resultado de uma consulta de idioma do caminho de XML (XPath) ou de um fragmento da árvore de resultado convertida em um nó definido por meio do método nó- definido. <xref:System.Xml.XPath.XPathNodeIterator> permite que você para iterar sobre os nós dentro desse conjunto de nó. Uma vez que um conjunto de nó é recuperado, a classe de <xref:System.Xml.XPath.XPathNodeIterator> fornece um cursor somente leitura, e somente para frente ao dataset selecionado de nós. O nó é criado na ordem de documento, o que move em chamar esse método para o nó seguir na ordem de documento. <xref:System.Xml.XPath.XPathNodeIterator> não cria uma árvore de nós de todos os nós no dataset. Em vez disso, fornece uma janela de único nó nos dados, expõe o nó subjacente que aponta para a medida que você se move ao redor de árvore. Os métodos e propriedades disponíveis de classe de <xref:System.Xml.XPath.XPathNodeIterator> permite que você obtenha informações do nó atual. Para obter uma lista de métodos e propriedades disponíveis, consulte <xref:System.Windows.Forms.ToolBar>.  

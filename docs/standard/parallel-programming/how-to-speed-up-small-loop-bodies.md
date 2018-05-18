@@ -1,31 +1,20 @@
 ---
 title: Como agilizar corpos de loop pequenos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to speed up
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 856c2a60150cb7a376afb291e6806d7fc91f3d2b
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: bff41416dd2263c185cc94de045b2c8a26ea194d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Como agilizar corpos de loop pequenos
 Quando um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> tem um corpo pequeno, ele pode executar mais lentamente do que o loop sequencial equivalente, como o loop [para](~/docs/csharp/language-reference/keywords/for.md) em c# e o loop [Para](http://msdn.microsoft.com/library/c470a263-9b49-4308-8fd6-8592b84a7980) no Visual Basic. O desempenho mais lento é causado pela sobrecarga envolvida no particionamento dos dados e do custo de invocação de um representante em cada iteração do loop. Para resolver esses cenários, a classe <xref:System.Collections.Concurrent.Partitioner> fornece o método <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType>, que permite que você forneça um loop sequencial do corpo do representante, de modo que o representante seja chamado apenas uma vez por partição, em vez de uma vez por iteração. Para saber mais, veja [Particionadores personalizados para PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  

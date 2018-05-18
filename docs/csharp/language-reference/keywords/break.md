@@ -1,24 +1,17 @@
 ---
 title: break (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - break
 - break_CSharpKeyword
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b533d325be41683ed6f56e9e63b3c11ddde9cb17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0cfe722bfefc1befd8a453f4454b05b3e4a0da76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="break-c-reference"></a>break (Referência de C#)
 A instrução `break` termina o loop delimitador mais próximo ou a instrução [switch](../../../csharp/language-reference/keywords/switch.md) na qual ele aparece. Controle é passado para a instrução que segue a instrução encerrada, se houver.  

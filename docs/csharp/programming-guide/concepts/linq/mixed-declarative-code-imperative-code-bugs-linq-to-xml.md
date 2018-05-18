@@ -1,21 +1,12 @@
 ---
-title: "Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)"
-ms.custom: 
+title: Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 328a266d910e57dc089991ead5fe09a87e722688
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: efc58aac69c53cda724e5fe348560a99311e8d4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  

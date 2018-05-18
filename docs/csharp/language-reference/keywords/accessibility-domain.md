@@ -1,21 +1,14 @@
 ---
 title: Domínio de acessibilidade (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 127bacda4bf8363fccff3dd3ef6770ad50984cfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20489f399dd2baa9c30c7277adc9fe4b7e7fce19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessibility-domain-c-reference"></a>Domínio de acessibilidade (Referência de C#)
 O domínio de acessibilidade de um membro especifica em que seções do programa um membro pode ser referenciado. Se o membro estiver aninhado dentro de outro tipo, seu domínio de acessibilidade será determinado pelo [nível de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md) do membro e pelo domínio de acessibilidade do tipo imediatamente contido.  

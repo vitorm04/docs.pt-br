@@ -1,21 +1,14 @@
 ---
 title: Diferenças entre modelos C++ e genéricos C# (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: aea1b51c26a8f3de56ea66b9cf89e75bfeb59d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db3311c7fa81d48137c542f320d0abef791e5116
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Diferenças entre modelos C++ e genéricos C# (Guia de Programação em C#)
 Os modelos C++ e genéricos C# são recursos de linguagem que fornecem o suporte aos tipos parametrizados. No entanto, há várias diferenças entre os dois. No nível de sintaxe, os genéricos C# são uma abordagem mais simples para os tipos parametrizados sem a complexidade de modelos C++. Além disso, o C# não tenta fornecer toda a funcionalidade que os modelos C++ fornecem. No nível da implementação, a principal diferença é que as substituições do tipo genérico do C# são realizadas em tempo de execução e as informações do tipo genérico são preservadas para objetos instanciados. Para obter mais informações, consulte [Genéricos em tempo de execução](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  

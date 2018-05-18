@@ -1,28 +1,14 @@
 ---
 title: Como configurar serviços de aplicativo cliente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 004798ce8cf429f2a94d856e6b3a55447c2ad5fa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Como configurar serviços de aplicativo cliente
 Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para habilitar e configurar serviços do aplicativo cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  

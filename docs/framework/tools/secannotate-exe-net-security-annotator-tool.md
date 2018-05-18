@@ -1,27 +1,17 @@
 ---
-title: "SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)"
-ms.custom: 
+title: SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e68679464db3875a79d6aa07a6e10240ada13365
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f4712970b2d3ebecf12cbb7b8f9b7fcdb317986
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)
 A ferramenta Anotador de Segurança do .NET (SecAnnotate.exe) é um aplicativo de linha de comando que identifica as partes `SecurityCritical` e `SecuritySafeCritical` de um ou mais assemblies.  

@@ -1,31 +1,20 @@
 ---
 title: Programação assíncrona baseada em tarefas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-caps.latest.revision: 51
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tarefa*, que representa uma operação assíncrona. De certa forma, uma tarefa é semelhante a um thread ou a um item de trabalho <xref:System.Threading.ThreadPool>, mas em um nível mais alto de abstração. O termo *paralelismo de tarefas* refere-se a uma ou mais tarefas independentes que são executadas simultaneamente. As tarefas fornecem dois benefícios principais:  

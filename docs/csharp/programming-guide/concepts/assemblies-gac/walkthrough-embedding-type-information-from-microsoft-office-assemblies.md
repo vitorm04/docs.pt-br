@@ -1,21 +1,12 @@
 ---
-title: "Passo a passo: inserindo informações de tipo de assemblies do Microsoft Office no Visual Studio (C#)"
-ms.custom: 
+title: 'Passo a passo: inserindo informações de tipo de assemblies do Microsoft Office no Visual Studio (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 45ec4521da08a9a1f4bdc3b433d3f8d765960526
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8e7eb5c797ca87f87950d530112ec64f1327ae0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Passo a passo: inserindo informações de tipo de assemblies do Microsoft Office no Visual Studio (C#)
 Se inserir informações de tipo em um aplicativo que faz referência a objetos COM, você poderá eliminar a necessidade de um PIA (assembly de interoperabilidade primário). Além disso, as informações de tipo inseridas permitem que você conquiste a independência de versão para seu aplicativo. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca COM sem precisar especificar um PIA específico para cada versão. Esse é um cenário comum para aplicativos que usam objetos de bibliotecas do Microsoft Office. Inserir informações de tipo possibilita que a mesma build de um programa funcione com diferentes versões do Microsoft Office em diferentes computadores sem precisar reimplantar o programa ou o PIA para cada versão do Microsoft Office.  
@@ -39,7 +30,7 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho para a pasta **Referências** e escolha **Adicionar Referência**.  
   
-5.  Na guia **.NET**, escolha a versão mais recente de `Microsoft.Office.Interop.Excel`. Por exemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Selecione o botão **OK**.  
+5.  Na guia **.NET**, escolha a versão mais recente de `Microsoft.Office.Interop.Excel`. Por exemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Escolha o botão **OK**.  
   
 6.  Na lista de referências para o projeto **CreateExcelWorkbook**, selecione a referência para `Microsoft.Office.Interop.Excel` que você adicionou na etapa anterior. Na janela **Propriedades**, verifique se a propriedade `Embed Interop Types` está definida como `True`.  
   
@@ -133,5 +124,5 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
 5.  Verifique se uma pasta de trabalho do Excel foi criada no local especificado no código de amostra: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>Consulte também  
- [Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+ [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

@@ -1,13 +1,7 @@
 ---
 title: Visão geral do padrão assíncrono baseado em evento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,11 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 0f78ae4b6abacea6fd1240a1472e1de0e625a8e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  

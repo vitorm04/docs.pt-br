@@ -1,21 +1,14 @@
 ---
 title: Usando delegados (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cef62448388299f310fa26ecb632485b6538c032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-delegates-c-programming-guide"></a>Usando delegados (Guia de Programação em C#)
 Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que encapsula com segurança um método, semelhante a um ponteiro de função em C e C++. No entanto, ao contrário dos ponteiros de função de C, delegados são orientados a objeto, fortemente tipados e seguros. O tipo de um delegado é definido pelo nome do delegado. O exemplo a seguir declara um delegado chamado `Del` que pode encapsular um método que usa uma [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md) como um argumento e retorna [nulo](../../../csharp/language-reference/keywords/void.md):  

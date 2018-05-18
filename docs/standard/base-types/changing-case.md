@@ -1,13 +1,7 @@
 ---
-title: "Alterando a capitalização no .NET Framework"
-ms.custom: 
+title: Alterando a definição de maiúsculas e minúsculas no .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,21 +13,16 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-case-in-net"></a>Como alterar a capitalização no .NET
-Se você gravar um aplicativo que aceita a inserção de informações por um usuário, talvez você nunca tenha certeza se ele ou ela usará maiúsculas ou minúsculas para inserir os dados. Muitas vezes, você quer que as cadeias de caracteres tenham a grafia consistente de capitalização, especialmente se as estiver exibindo na interface do usuário. A tabela seguinte descreve três métodos de alteração de capitalização. Os primeiros dois métodos fornecem uma sobrecarga que aceita uma cultura.  
+Se você gravar um aplicativo que aceita a inserção de informações por um usuário, talvez você nunca tenha certeza se ele ou ela usará maiúsculas ou minúsculas para inserir os dados. Muitas vezes, você quer que as cadeias de caracteres tenham a grafia de maiúsculas e minúsculas consistente, especialmente se você estiver exibindo-as na interface do usuário. A tabela seguinte descreve três métodos de alteração de capitalização. Os primeiros dois métodos fornecem uma sobrecarga que aceita uma cultura.  
   
 |Nome do método|Use|  
 |-----------------|---------|  
@@ -45,7 +34,7 @@ Se você gravar um aplicativo que aceita a inserção de informações por um us
 >  Observe que os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> não devem ser usados para converter cadeias de caracteres a fim de compará-las ou testá-las quanto à igualdade. Confira mais informações na seção [Comparação de cadeias de caracteres em maiúsculas e minúsculas](#Comparing).  
   
 <a name="Comparing"></a>   
-## <a name="comparing-strings-of-mixed-case"></a>Comparação de cadeias de caracteres em maiúsculas e minúsculas  
+## <a name="comparing-strings-of-mixed-case"></a>Comparando cadeias de caracteres em maiúsculas e minúsculas  
  Para comparar cadeias de caracteres em maiúsculas e minúsculas e determinar a ordem delas, chame uma das sobrecargas do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> com um parâmetro `comparisonType` e forneça um valor de <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para o argumento `comparisonType`. Para fazer uma comparação usando uma cultura específica que não seja a atual, chame uma sobrecarga do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> com um parâmetro `culture` e um `options` e forneça um valor de <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> como o argumento `options`.  
   
  Para comparar cadeias de caracteres em maiúsculas e minúsculas e determinar se são iguais, chame uma das sobrecargas do método <xref:System.String.Equals%2A?displayProperty=nameWithType> com um parâmetro `comparisonType` e forneça um valor de <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para o argumento `comparisonType`.  

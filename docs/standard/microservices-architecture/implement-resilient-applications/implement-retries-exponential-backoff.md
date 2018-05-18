@@ -1,21 +1,14 @@
 ---
 title: Implementando novas tentativas com retirada exponencial
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando novas tentativas com retirada exponencial"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando novas tentativas com retirada exponencial
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ed97b750d6e3f2aa5def72e90e070a49a7c0e63
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7f909c6f81abce80bfdf118112271f1f87254793
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a>Implementando novas tentativas com retirada exponencial
 

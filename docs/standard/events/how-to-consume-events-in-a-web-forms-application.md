@@ -1,13 +1,7 @@
 ---
 title: Como consumir eventos em um aplicativo Web Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d0fec2ed34968bfa8c296f08739dec28e6a6eab9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4b8af7b3894c010d5a7a4c712efe2458a6bb2a50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Como consumir eventos em um aplicativo Web Forms
 Um cenário comum em aplicativos de Formulários Web do ASP.NET é popular uma página da Web com controles e executar uma ação específica com base no controle em que o usuário clica. Por exemplo, um controle <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> gera um evento quando o usuário clica na página da Web. Ao manipular o evento, o aplicativo pode executar a lógica de aplicativo apropriada para esse clique do botão.  

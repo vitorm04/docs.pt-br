@@ -1,13 +1,6 @@
 ---
 title: Assemblies no Common Language Runtime
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dynamic assemblies
 - security [.NET Framework], boundaries
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Assemblies no Common Language Runtime
 Assemblies são os blocos de construção de aplicativos .NET Framework; eles formam a unidade fundamental de implantação, controle de versão, reutilização, ativação de escopo e permissões de segurança. Um assembly é uma coleção de tipos e recursos compilados para funcionar juntos e formar uma unidade lógica de funcionalidade. Um assembly oferece ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Para o tempo de execução, um tipo não existe fora do contexto de um assembly.  

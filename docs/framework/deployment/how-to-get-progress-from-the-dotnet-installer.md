@@ -1,31 +1,19 @@
 ---
 title: Como acompanhar o progresso do Instalador do .NET Framework 4.5
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
 O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e acompanhar seu progresso enquanto mostra o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o inspetor ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

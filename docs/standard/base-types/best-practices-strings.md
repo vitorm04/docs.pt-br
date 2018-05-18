@@ -1,13 +1,7 @@
 ---
-title: "Práticas recomendadas para o uso de cadeias de caracteres no .NET"
-ms.custom: 
+title: Práticas recomendadas para o uso de cadeias de caracteres no .NET
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,18 +17,13 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  

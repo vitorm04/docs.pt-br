@@ -1,24 +1,15 @@
 ---
 title: Como analisar demarcadores de arquivo no Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 913fe45cf6fc7afdc6e0f31e028bc18808cecf89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7479f368558a8a8a07c1e6ed588bdfef21a0b1de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Como analisar demarcadores de arquivo no Visual Basic
 O objeto <xref:Microsoft.VisualBasic.FileIO.FileSystem> oferece uma série de métodos úteis ao analisar os caminhos de arquivo.  

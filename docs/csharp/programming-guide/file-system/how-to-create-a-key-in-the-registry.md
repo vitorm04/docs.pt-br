@@ -1,22 +1,16 @@
 ---
 title: Como criar uma chave no Registro (Visual C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a1643310740a472ad0a1df978fa41f674f3dbcb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Como criar uma chave no Registro (Visual C#)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
@@ -56,7 +50,7 @@ key.Close();
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  É mais seguro gravar dados na pasta do usuário — `Microsoft.Win32.Registry.CurrentUser` — em vez de no computador local — `Microsoft.Win32.Registry.LocalMachine`.  
   
- Ao criar um valor de Registro, é necessário decidir o que fazer se esse valor já existir. Outro processo, talvez um mal-intencionado, pode já ter criado o valor e tem acesso a ele. Ao colocar dados no valor de Registro, os dados estarão disponíveis para o outro processo. Para impedir isso, use o método `Overload:Microsoft.Win32.RegistryKey.GetValue`. ProcessOnStatus... Ele retornará null se a chave ainda não existir.  
+ Ao criar um valor de Registro, é necessário decidir o que fazer se esse valor já existir. Outro processo, talvez um mal-intencionado, pode já ter criado o valor e tem acesso a ele. Ao colocar dados no valor de Registro, os dados estarão disponíveis para o outro processo. Para impedir isso, use o método `Overload:Microsoft.Win32.RegistryKey.GetValue`. método. Ele retornará null se a chave ainda não existir.  
   
  Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACL (listas de controle de acesso).  
   

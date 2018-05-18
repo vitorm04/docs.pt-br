@@ -1,28 +1,20 @@
 ---
-title: "Tópicos explicativos de programação de rede"
-ms.custom: 
+title: Tópicos explicativos de programação de rede
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - network resources
 - networks [.NET Framework], programming how-tos
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 712daba98667381650066b7a719dbfdd5224c143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ed8de7c4271483a878ee422aac188adbf4700985
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="network-programming-how-to-topics"></a>Tópicos explicativos de programação de rede
 A lista a seguir inclui links para os tópicos Como fazer encontrados na documentação conceitual para programação de rede.  

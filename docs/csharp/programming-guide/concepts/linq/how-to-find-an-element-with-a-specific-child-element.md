@@ -1,21 +1,12 @@
 ---
-title: "Como localizar um elemento com um elemento filho específico (C#)"
-ms.custom: 
+title: Como localizar um elemento com um elemento filho específico (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7d4d865b6e412f6f039df3578340db046ca59fa6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e7528784f898f0f9ba84095b080eb82f8458424e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Como localizar um elemento com um elemento filho específico (C#)
 Este tópico mostra como localizar determinado elemento que tem um elemento filho com um valor específico.  

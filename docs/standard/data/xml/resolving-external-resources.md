@@ -1,26 +1,15 @@
 ---
 title: Resolvendo recursos externos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c711cbd7b563bf647d7b4fb90873a396ddfaefdf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resolving-external-resources"></a>Resolvendo recursos externos
 A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocument** para localizar os recursos que não são embutidos nos dados XML, como definições de tipo de documento (DTDs), entidades e esquemas externos. Esses itens podem ser localizados em uma rede ou em uma unidade local, e são identificáveis por Uniform Resource Identifier (URI). Isso permite que o **XmlDocument** resolva os nós de **EntityReference** presentes no documento e valide o documento de acordo com DTDs ou esquema externos.  
@@ -32,7 +21,7 @@ A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocum
 |--------------------------|--------------|-----------|  
 |A propriedade é definida como classe **XmlResolver** criada previamente e com as propriedades já definidas nela pelo usuário.|O **XmlDocument** usa o **XmlResolver** fornecido para resolver nomes de arquivo e referências a recursos externos, como DTDs, entidades e esquemas.<br /><br /> O **XmlResolver** também é usado para resolver recursos externos necessários ao adicionar ou editar nós no **XmlDocument**.|O **XmlResolver** dado ao **XmlDocument** é o resolvedor usado sempre que recursos externos precisam ser localizados e resolvidos.|  
 |A propriedade é definida como **nula** (**Nothing** no Microsoft Visual Basic .NET).|Os recursos que exigem um recurso externo não são suportados, como localizar um esquema externo, ou o DTD. Nem as entidades externos serão resolvidas, e executar funções de edição, como inserir os nós de entidade que exigem resolução, não é suportado.|O **XmlDocument** carrega arquivos como anônimos e não tenta resolver qualquer outro recurso.|  
-|A propriedade não está definida, mas deixada em seu estado padrão.|Um **XmlUrlResolver** com credenciais NULAS será instanciado e usado pelo **XmlDocument** ao resolver nomes de arquivos e localizar DTDs, entidades e esquemas externos, e as credenciais **nulas** serão usadas ao editar nós.||  
+|A propriedade não está definida, mas esquerda em seu estado padrão.|Um **XmlUrlResolver** com credenciais NULAS será instanciado e usado pelo **XmlDocument** ao resolver nomes de arquivos e localizar DTDs, entidades e esquemas externos, e as credenciais **nulas** serão usadas ao editar nós.||  
   
  A tabela a seguir mostra o método **XmlDocument.Load** quando a entrada à **Carga** é um **XmlReader** e o **XmlDocument** é totalmente confiável.  
   

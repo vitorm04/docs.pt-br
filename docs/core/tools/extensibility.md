@@ -4,17 +4,11 @@ description: Saiba como você pode estender as ferramentas da CLI (interface de 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidade das ferramentas da CLI do .NET Core
 
@@ -26,15 +20,15 @@ As ferramentas da CLI podem ser estendidas de três maneiras principais:
 
 1. [Por meio de pacotes NuGet por projeto](#per-project-based-extensibility)
 
-  As ferramentas por projeto estão contidas no contexto do projeto, mas permitem uma fácil instalação por meio da restauração.
+   As ferramentas por projeto estão contidas no contexto do projeto, mas permitem uma fácil instalação por meio da restauração.
 
 2. [Por meio de pacotes NuGet com destinos personalizados](#custom-targets)
 
-  Destinos personalizados permitem que você amplie facilmente o processo de build com tarefas personalizadas.
+   Destinos personalizados permitem que você amplie facilmente o processo de build com tarefas personalizadas.
 
 3. [Por meio do PATH do sistema](#path-based-extensibility)
 
-  Ferramentas baseadas em PATH são boas para ferramentas gerais de vários projetos que são usadas em um único computador.
+   Ferramentas baseadas em PATH são boas para ferramentas gerais de vários projetos que são usadas em um único computador.
 
 Os três mecanismos de extensibilidade descritos acima não são exclusivos. Você pode usar um, todos ou uma combinação deles. Qual deles escolher depende muito da meta que você está tentando alcançar com a extensão.
 

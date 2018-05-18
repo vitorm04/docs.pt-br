@@ -1,9 +1,6 @@
 ---
-title: "Herança (Guia de Programação em C#)"
+title: Herança (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>Herança (Guia de Programação em C#)
 
@@ -42,7 +36,7 @@ Herança de classe
  [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Métodos abstratos e virtuais  
- Quando uma classe base declara um método como [virtual](../../../csharp/language-reference/keywords/virtual.md), uma classe derivada pode [substituir](../../../csharp/language-reference/keywords/override.md) o método por sua própria implementação. Se uma classe base declarar um membro como [abstrato](../../../csharp/language-reference/keywords/abstract.md), esse método deve ser substituído em qualquer classe não abstrata que herdar diretamente da classe. Se uma classe derivada for abstrata, ele herdará membros abstratos sem implementá-los. Membros abstratos e virtuais são a base do polimorfismo, que é a segunda característica principal da programação orientada a objetos. Para obter mais informações, consulte [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Quando uma classe base declara um método como [virtual](../../../csharp/language-reference/keywords/virtual.md), uma classe derivada pode [substituir](../../../csharp/language-reference/keywords/override.md) o método por sua própria implementação. Se uma classe base declarar um membro como [abstrato](../../../csharp/language-reference/keywords/abstract.md), esse método deve ser substituído em qualquer classe não abstrata que herdar diretamente da classe. Se uma classe derivada for abstrato, ele herdará membros abstratos sem implementá-los. Membros abstratos e virtuais são a base do polimorfismo, que é a segunda característica principal da programação orientada a objetos. Para obter mais informações, consulte [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Classes base abstratas  
  Você pode declarar uma classe como [abstrata](../../../csharp/language-reference/keywords/abstract.md) se quiser impedir a instanciação direta usando a palavra-chave [new](../../../csharp/language-reference/keywords/new.md). Se você fizer isso, a classe poderá ser usada somente se uma nova classe for derivada dela. Uma classe abstrata pode conter uma ou mais assinaturas de método que também são declaradas como abstratas. Essas assinaturas especificam os parâmetros e o valor retornado, mas não têm nenhuma implementação (corpo do método). Uma classe abstrata não precisa conter membros abstratos. No entanto, se uma classe contiver um membro abstrato, a própria classe deverá ser declarada como abstrata. Classes derivadas que não são abstratas devem fornecer a implementação para qualquer método abstrato de uma classe base abstrata. Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  

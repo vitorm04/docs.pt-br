@@ -1,13 +1,6 @@
 ---
 title: Ilasm.exe (IL Assembler)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Assembler)
 
@@ -74,7 +64,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Desabilita a herança padrão de <xref:System.Object> quando nenhuma classe de base está especificada.|
 |**/nocorstub**|Suprime a geração do stub CORExeMain.|
 |**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|
-|**/output:** `file.ext`|Especifica o nome e a extensão do arquivo de saída. Por padrão, o nome do arquivo de saída é igual ao nome do primeiro arquivo de origem. A extensão padrão é *.exe*. Se você especificar a opção **/dll**, a extensão padrão será *.dll*. **Observação:** a especificação de **/output:**myfile.dll não define a opção **/dll**. Se você não especificar **/dll**, o resultado será um arquivo executável chamado *myfile.dll*.|
+|**/output:** `file.ext`|Especifica o nome e a extensão do arquivo de saída. Por padrão, o nome do arquivo de saída é igual ao nome do primeiro arquivo de origem. A extensão padrão é *.exe*. Se você especificar a opção **/dll**, a extensão padrão será *.dll*. **Observação:** a especificação de **/output:** myfile.dll não define a opção **/dll**. Se você não especificar **/dll**, o resultado será um arquivo executável chamado *myfile.dll*.|
 |**/optimize**|Otimiza instruções longas para curtas. Por exemplo, `br` para `br.s`.|
 |**/pe64**|Cria uma imagem de 64 bits (PE32+).<br /><br /> Se nenhum processador de destino for especificado, o padrão será `/itanium`.|
 |**/pdb**|Cria um arquivo PDB sem habilitar o acompanhamento das informações de depuração.|

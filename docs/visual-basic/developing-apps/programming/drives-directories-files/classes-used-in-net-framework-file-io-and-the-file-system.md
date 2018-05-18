@@ -1,24 +1,14 @@
 ---
 title: Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .NET Framework, categorizadas em classes de E/S de arquivos, classes usadas para criar fluxos e classes usadas para ler e gravar em fluxos.  

@@ -1,18 +1,12 @@
 ---
 title: Novidades no C# 7.2
-description: "Uma visão geral dos novos recursos no C# 7.2."
-keywords: Design de linguagem do C#, 7.2, Visual Studio 2017,
-author: billwagner
-ms.author: wiwagn
+description: Uma visão geral dos novos recursos no C# 7.2.
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: db22c9251fa5e9f5a9cb66af6ec8b193b88e0eb3
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-c-72"></a>Novidades no C# 7.2
 

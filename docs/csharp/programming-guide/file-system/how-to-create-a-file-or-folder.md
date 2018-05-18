@@ -1,23 +1,17 @@
 ---
-title: "Como criar um arquivo ou uma pasta (Guia de Programação em C#)"
+title: Como criar um arquivo ou uma pasta (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - folders [C#]
 - creating files [C#]
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-caps.latest.revision: "22"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7eb2c6386a8433c025a9f2abea4b03f6ab271d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou uma pasta (Guia de Programação em C#)
 Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arquivo na subpasta e gravar dados no arquivo programaticamente.  

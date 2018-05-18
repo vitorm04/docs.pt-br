@@ -1,9 +1,6 @@
 ---
-title: "Cláusula from (Referência de C#)"
+title: Cláusula from (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - from_CSharpKeyword
 - from
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-caps.latest.revision: "27"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f718f50d2b8d6f5c612113414a2106fed37fe0fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21f7cf15de621bf862dedb82e87177900506a728
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
 Uma expressão de consulta deve começar com uma cláusula `from`. Além disso, uma expressão de consulta pode conter subconsultas, que também começam com uma cláusula `from`. A cláusula `from` especifica o seguinte:  

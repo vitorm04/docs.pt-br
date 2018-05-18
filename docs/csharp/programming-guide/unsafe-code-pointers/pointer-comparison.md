@@ -1,21 +1,14 @@
 ---
 title: Comparação de ponteiros (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0b45b9152272244b9a0c9d0fa3787973f8f8182a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: af264cd1572faafe25ee170b35cbeb48ed0fb2aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>Comparação de ponteiros (Guia de Programação em C#)
 É possível aplicar os seguintes operadores para comparar ponteiros de qualquer tipo:  

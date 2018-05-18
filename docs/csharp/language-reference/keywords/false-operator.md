@@ -1,21 +1,14 @@
 ---
 title: Operador false (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6f9761fb49e2c7f6e4a7615e64cec9fed88318c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2001d92e99476131d6f03e13f0bc12104f638b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="false-operator-c-reference"></a>Operador false (Referência de C#)
 Retorna o valor [bool](../../../csharp/language-reference/keywords/bool.md) `true` para indicar que um operando é `false`, caso contrário, retorna `false`.  

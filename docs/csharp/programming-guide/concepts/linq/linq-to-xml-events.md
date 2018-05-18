@@ -1,21 +1,12 @@
 ---
 title: Eventos LINQ to XML (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 90e868c7de8c4eb8f252a914acf4bffe2fd8a6ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3dd4eaa0261ae7d878e188572d260b34b64fc031
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-events-c"></a>Eventos LINQ to XML (C#)
 Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que você seja notificado quando uma árvore XML é modificada.  
@@ -34,7 +25,7 @@ Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que voc�
   
  Os seguintes eventos são gerados quando você altera uma árvore XML:  
   
-|Evento|Descrição|  
+|evento|Descrição|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Ocorre antes deste <xref:System.Xml.Linq.XObject> ou alguns dos seus descendentes são indo alterar.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Ocorre quando <xref:System.Xml.Linq.XObject> alterar ou alguns dos seus descendentes alterado.|  

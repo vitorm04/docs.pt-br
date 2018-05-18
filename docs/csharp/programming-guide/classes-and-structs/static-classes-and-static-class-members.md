@@ -1,9 +1,6 @@
 ---
-title: "Classes static e membros de classes static (Guia de Programação em C#)"
+title: Classes static e membros de classes static (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: "49"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b1e7366d8d82ca99a8d779dda1e194dcc8c2ab6e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f3e64d975d2845d8317b37f43c3811af6be03b55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes static e membros de classes static (Guia de Programação em C#)
 Uma classe [static](../../../csharp/language-reference/keywords/static.md) é basicamente o mesmo que uma classe não estática, mas há uma diferença: uma classe estática não pode ser instanciada. Em outras palavras, você não pode usar a palavra-chave [new](../../../csharp/language-reference/keywords/new.md) para criar uma variável do tipo de classe. Como não há nenhuma variável de instância, você acessa os membros de uma classe estática usando o próprio nome de classe. Por exemplo, se você tiver uma classe estática denominada `UtilityClass` que tem um método público chamado `MethodA`, chame o método, conforme mostrado no exemplo a seguir:  

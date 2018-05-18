@@ -1,13 +1,7 @@
 ---
 title: Selecionando uma classe de coleção
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
 - first-in-first-out collections
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 9d51f6c8e7dc03edb2823f61ab638fc669847dd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
 Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. Em geral, evite usar os tipos no namespace <xref:System.Collections>, a menos que o seu foco seja especificamente o .NET Framework versão 1.1. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias.  

@@ -1,13 +1,6 @@
 ---
 title: Carregando e usando tipos dinamicamente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
 A reflexão fornece a infraestrutura usada pelos compiladores de linguagem como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  

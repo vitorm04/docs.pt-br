@@ -1,20 +1,13 @@
 ---
-title: "Expressões C# - um tour pela linguagem C#"
-description: "expressões, operandos e operadores são blocos de compilação da linguagem C#"
-keywords: ".NET, csharp, expressão, operador, operando"
-author: BillWagner
-ms.author: wiwagn
+title: Expressões C# - um tour pela linguagem C#
+description: expressões, operandos e operadores são blocos de compilação da linguagem C#
 ms.date: 11/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expressions"></a>Expressões
 

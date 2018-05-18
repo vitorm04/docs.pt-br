@@ -1,26 +1,14 @@
 ---
-title: "O .NET Framework e lançamentos fora da banda"
-ms.custom: 
+title: O .NET Framework e lançamentos fora da banda
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 83c3688afb3fe509d9a57eba8765cbd13bf581c8
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 6c0ea6590a53748c9ed85a6d13f67b260ce23af5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>O .NET Framework e lançamentos fora da banda
 O .NET Framework está evoluindo para acomodar diferentes plataformas, como o Windows Phone e a Windows Store, bem como a área de trabalho e aplicativos Web tradicionais, e maximizar a reutilização de código. Além de nossas versões regulares do .NET Framework, lançamos também novos recursos fora de faixa (OOB) para melhorar o desenvolvimento interplataforma ou para introduzir novas funcionalidades. Este tópico discute a direção futura do .NET Framework e suas versões OOB.  

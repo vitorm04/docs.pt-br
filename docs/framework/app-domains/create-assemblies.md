@@ -1,29 +1,19 @@
 ---
 title: Criando assemblies
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - single-file assemblies
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2168cbcd19437c1e275da7a01aa0c75ab47600eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8490351b4ab1bb115e4bd7277f43ad22b144a2df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-assemblies"></a>Criando assemblies
 Você pode criar assemblies de vários arquivos ou um único arquivo usando um IDE, como [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] ou outros compiladores e ferramentas fornecidas pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. O assembly mais simples é um único arquivo que tem um nome simples e é carregado em um único domínio de aplicativo. Esse assembly não pode ser referenciado por outros assemblies fora do diretório do aplicativo e não é submetido à verificação de versão. Para desinstalar o aplicativo composto do assembly, você simplesmente exclui o diretório em que ele reside. Para muitos desenvolvedores, um assembly com esses recursos é tudo o que é necessário para implantar um aplicativo.  

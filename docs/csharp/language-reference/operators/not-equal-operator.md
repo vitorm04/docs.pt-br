@@ -1,10 +1,6 @@
 ---
 title: Operador != (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b69d0b12734e690f0ba0209ccbbc7627ff92fe8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e409e2a80886fd5f7f4cdbeaa9b4e3325f8a967b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>Operador != (Referência de C#)
 O operador de desigualdade (`!=`) retornará false se seus operandos forem iguais; caso contrário, true. Os operadores de desigualdade são predefinidos para todos os tipos, incluindo cadeia de caracteres e objeto. Os tipos definidos pelo usuário podem sobrecarregar o operador `!=`.  

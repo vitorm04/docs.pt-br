@@ -1,18 +1,13 @@
 ---
 title: Usar o modelo de sintaxe do SDK do .NET Compiler Platform
 description: Esta visão geral fornece uma compreensão dos tipos usados para entender e manipular nós de sintaxe.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/15/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-syntax"></a>Trabalhar com sintaxe
 

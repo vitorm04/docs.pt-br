@@ -1,21 +1,12 @@
 ---
 title: Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ccc48745918081663317e746953be6e0f09cdd8a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc541d7cc8a4fb5978fb2ed9cc43a548e8f8b253
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)
 O exemplo a seguir mostra como classificar linhas de texto estruturado, como valores separados por vírgulas, por qualquer campo na linha. O campo pode ser especificado dinamicamente em tempo de execução. Suponha que os campos em scores.csv representam o número de ID do aluno, seguido por uma série de quatro resultados de teste.  

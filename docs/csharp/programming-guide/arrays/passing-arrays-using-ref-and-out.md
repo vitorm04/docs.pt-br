@@ -1,21 +1,14 @@
 ---
-title: "Passando matrizes com o uso de ref e out (Guia de Programação em C#)"
+title: Passando matrizes com o uso de ref e out (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], passing using ref and out
 ms.assetid: 6a2b261e-a1cc-49a6-b4f0-6cacae385a1e
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f76f63aee0100c6af6bde73c8543b4e7136b1954
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: a186399125e01bb2535f3a8b488c6fbd85932246
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>Passando matrizes com o uso de ref e out (Guia de Programação em C#)
 Como todos os parâmetros [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), um parâmetro `out` de um tipo de matriz deve ser atribuído antes que seja usado; ou seja, deve ser atribuído pelo computador chamado. Por exemplo:  

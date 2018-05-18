@@ -1,9 +1,6 @@
 ---
-title: "Usando operadores de conversão (Guia de Programação em C#)"
+title: Usando operadores de conversão (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], operators
 - conversion operators [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - implicit conversion operators [C#]
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
-caps.latest.revision: "20"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5a43332df795d853c3060a604360adeaea5e3fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e03fb12200bc15de9c1686edd40921201598621f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Usando operadores de conversão (Guia de Programação em C#)
 É possível usar operadores de conversão `implicit`, que são mais fáceis de usar ou operadores de conversão `explicit`, que indicam claramente para alguém que lê o código que você está convertendo um tipo. Este tópico demonstra os dois os tipos de operador de conversão.  

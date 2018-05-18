@@ -1,21 +1,12 @@
 ---
-title: "Como gravar um método do eixo LINQ to XML (C#)"
-ms.custom: 
+title: Como gravar um método do eixo LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f66dd689e31fa7688055721b52b30380327a4977
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 51adbc9f0771f8925e5e16c61f48bbb5f8bedf05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Como gravar um método do eixo LINQ to XML (C#)
 Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML. Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos. Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.  

@@ -1,13 +1,6 @@
 ---
 title: Determinar o local em que My.Application.Log grava informações (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Log object, output location
 - output, application log location
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d15dc02f9b5c2728ea447b5a1969ea40753258f9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fa177fa1f07c52d900f57e5bf61c967f06203c4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: determinando onde My.Application.Log grava informações (Visual Basic)
 O objeto `My.Application.Log` pode gravar informações em vários ouvintes de log. Os ouvintes de log são configurados pelo arquivo de configuração do computador e podem ser substituídos pelo arquivo de configuração do aplicativo. Este tópico descreve as configurações padrão e como determinar as configurações para seu aplicativo.  

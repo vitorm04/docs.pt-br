@@ -1,13 +1,7 @@
 ---
-title: "Limpando recursos não gerenciados"
-ms.custom: 
+title: Limpando recursos não gerenciados
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Close method
 - Dispose method
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
 Para a maioria dos objetos criados pelo aplicativo, você pode contar com o coletor de lixo do .NET Framework para lidar com o gerenciamento de memória. No entanto, ao criar objetos que incluem recursos não gerenciados, você deverá liberar os recursos explicitamente assim que terminar de usá-los no aplicativo. Os tipos mais comuns de recursos não gerenciados são objetos que encapsulam recursos do sistema operacional, como arquivos, janelas, conexões de rede ou conexões de bancos de dados. Embora o coletor de lixo consiga controlar o tempo de vida de um objeto que encapsula um recurso não gerenciado, ele não sabe como liberar e limpar o recurso não gerenciado.  

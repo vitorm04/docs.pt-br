@@ -1,21 +1,12 @@
 ---
-title: "Como executar a transformação de streaming de grandes documentos XML (C#)"
-ms.custom: 
+title: Como executar a transformação de streaming de grandes documentos XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1f3bc1876097474eae6f329711139a2f3797db97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1a12e8c0ae98be37599b05e5d63469336247d915
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Como executar a transformação de streaming de grandes documentos XML (C#)
 Às vezes você precisa transformar grandes arquivos XML e escrever seu aplicativo de modo que os requisitos de memória do aplicativo sejam previsíveis. Se você tentar preencher uma árvore XML com um arquivo XML muito grande, seu uso de memória será proporcional ao tamanho do arquivo (isto é, excessivo). Portanto, você deve usar uma técnica de streaming em vez disso.  

@@ -1,24 +1,15 @@
 ---
-title: "Alterar o local em que My.Application.Log grava informações (Visual Basic)"
-ms.custom: 
+title: Alterar o local em que My.Application.Log grava informações (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab46f192f2e9549d0568737236742a366ce7b3a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: alterando onde My.Application.Log grava informações (Visual Basic)
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo. Este passo a passo mostra como substituir as configurações padrão e fazer com que o objeto `Log` grave em outros ouvintes de log.  

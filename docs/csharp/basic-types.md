@@ -1,20 +1,13 @@
 ---
-title: "Tipos básicos – Guia de C#"
-description: "Saiba mais sobre os tipos principais (numéricos, cadeias de caracteres e objetos) em todos os programas em C#"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+title: Tipos básicos – Guia de C#
+description: Saiba mais sobre os tipos principais (numéricos, cadeias de caracteres e objetos) em todos os programas em C#
 ms.date: 10/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e62a461e41f4172bd6dd512a71babb998924978
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-variables-and-values"></a>Tipos, variáveis e valores  
 O C# é uma linguagem fortemente tipada. Todas as variáveis e constantes têm um tipo, assim como cada expressão que é avaliada como um valor. Cada assinatura de método especifica um tipo para cada parâmetro de entrada e para o valor retornado. A biblioteca de classes .NET Framework define um conjunto de tipos numéricos internos, bem como tipos mais complexos que representam uma ampla variedade de constructos lógicos, como o sistema de arquivos, as conexões de rede, as coleções e as matrizes de objetos e as datas. Um programa em C# típico usa tipos da biblioteca de classes, bem como tipos definidos pelo usuário que modelam os conceitos que são específicos para o domínio do problema do programa.  

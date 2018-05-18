@@ -1,13 +1,7 @@
 ---
-title: "Globalização"
-ms.custom: 
+title: Globalização
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="globalization"></a>Globalização
 A globalização envolve projetar e desenvolver um aplicativo preparado para o mundo que dá suporte a interfaces localizadas e dados regionais para usuários em várias culturas. Antes de iniciar a fase de design, você deve determinar a quais culturas seu aplicativo dará suporte. Embora um aplicativo seja direcionado para uma única cultura ou região por padrão, você pode projetá-lo e gravá-lo para que ele possa ser facilmente estendido para usuários em outras culturas ou regiões.  

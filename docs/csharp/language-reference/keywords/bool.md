@@ -1,30 +1,23 @@
 ---
-title: "bool (Referência de C#)"
+title: bool (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - bool_CSharpKeyword
 - bool
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1d52955d64a6c8063e4ea93ceb096459c1c5e984
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1045a459491b0d0d6a84c60f6e820297b47efd5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bool-c-reference"></a>bool (Referência de C#)
 A palavra-chave `bool` é um alias de <xref:System.Boolean?displayProperty=nameWithType>. Ela é usada para declarar variáveis para armazenar os valores boolianos [true](../../../csharp/language-reference/keywords/true.md) e [false](../../../csharp/language-reference/keywords/false.md).  
   
 > [!NOTE]
->  Se você precisar de uma variável booliana que também pode ter um valor de `null`, use `bool?`. Para obter mais informações, consulte [Nullable Types (Tipos que permitem valores nulos)](../../../csharp/programming-guide/nullable-types/index.md).  
+>  Se você precisar de uma variável booliana que também pode ter um valor de `null`, use `bool?`. Para obter mais informações, consulte [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md).  
   
 ## <a name="literals"></a>Literais  
  Você pode atribuir um valor booliano a uma variável `bool`. Você também pode atribuir uma expressão que é calculada como `bool` para um variável `bool`.  

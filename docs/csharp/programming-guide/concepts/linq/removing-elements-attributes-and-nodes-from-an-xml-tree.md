@@ -1,18 +1,12 @@
 ---
-title: "Removendo elementos, atributos e nós de uma árvore XML (C#)"
+title: Removendo elementos, atributos e nós de uma árvore XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Removendo elementos, atributos e nós de uma árvore XML (C#)
 Você pode modificar uma árvore XML, remover elementos, atributos e outros tipos de nós.  

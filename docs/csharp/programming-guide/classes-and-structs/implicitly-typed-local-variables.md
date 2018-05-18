@@ -1,21 +1,15 @@
 ---
-title: "Variáveis locais de tipo implícito (Guia de Programação em C#)"
+title: Variáveis locais de tipo implícito (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-caps.latest.revision: "23"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 26a4460acf70ff3748f12d74442f0ca568a587b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variáveis locais de tipo implícito (Guia de Programação em C#)
 Variáveis locais podem ser declaradas sem fornecer um tipo explícito. A palavra-chave `var` instrui o compilador a inferir o tipo da variável da expressão no lado direito da instrução de inicialização. O tipo inferido pode ser um tipo interno, um tipo anônimo, um tipo definido pelo usuário ou um tipo definido na biblioteca de classes .NET Framework. Para obter mais informações sobre como inicializar matrizes com `var`, consulte [Matrizes de tipo implícito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  

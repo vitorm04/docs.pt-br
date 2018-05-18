@@ -1,21 +1,15 @@
 ---
-title: "Palavras-chave de instrução (Referência de C#)"
+title: Palavras-chave de instrução (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0a882d7c0e88f325d4a0bf471b5b38844b2b13f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statement-keywords-c-reference"></a>Palavras-chave de instrução (Referência de C#)
 As instruções são instruções do programa. Exceto conforme descrito nos tópicos referenciados na tabela a seguir, as instruções são executadas em sequência. A tabela a seguir lista as palavras-chave da instrução C#. Para obter mais informações sobre instruções que não são expressos com qualquer palavra-chave, consulte [Instruções](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

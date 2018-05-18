@@ -1,26 +1,17 @@
 ---
-title: "Como criar grades de propriedades para configurações de usuário no Visual Basic"
-ms.custom: 
+title: Como criar grades de propriedades para configurações de usuário no Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
 - user settings [Visual Basic], creating property grids
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 81a79945dfc0b1501134bc1b0197c18093a5dfae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c03e7c6138633287506ff01128a1e2acb321b02d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Como criar grades de propriedades para configurações de usuário no Visual Basic
 Você pode criar uma grade de propriedades para configurações de usuário, preenchendo um controle <xref:System.Windows.Forms.PropertyGrid> com as propriedades da configuração de usuário do objeto `My.Settings`.  

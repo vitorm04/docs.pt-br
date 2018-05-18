@@ -1,13 +1,7 @@
 ---
 title: Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
 O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de expor o comportamento assíncrono nas classes, com evento familiar e semântica de representante. Para implementá-lo, você deve seguir alguns requisitos de comportamento específicos. As seções a seguir descrevem os requisitos e as diretrizes a serem considerados ao implementar uma classe que segue o padrão assíncrono baseado em eventos.  

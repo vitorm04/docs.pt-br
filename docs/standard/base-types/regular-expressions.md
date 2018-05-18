@@ -1,13 +1,7 @@
 ---
 title: Expressões regulares do .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,18 +20,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-regular-expressions"></a>Expressões regulares do .NET
 Expressões regulares oferecem um método poderoso, flexível e eficiente de processamento de texto. A extensiva notação de correspondência de padrões de expressões regulares permite que você analise rapidamente grandes quantidades de texto para encontrar padrões de caracteres específicos; para validar o texto e garantir que ele corresponda a um padrão predefinido (como um endereço de email); para extrair, editar, substituir ou excluir subcadeias de caracteres de texto; e para adicionar as cadeias de caracteres extraídas para uma coleção a fim de gerar um relatório. Para vários aplicativos que lidam com cadeias de caracteres ou que analisam grandes blocos de texto, as expressões regulares são uma ferramenta indispensável.  

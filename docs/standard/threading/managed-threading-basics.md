@@ -1,31 +1,20 @@
 ---
-title: "Noções básicas de threading gerenciado"
-ms.custom: 
+title: Noções básicas de threading gerenciado
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework], multiple threads
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 035834959aa5f9340727327b22cae93b3f21b056
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-threading-basics"></a>Noções básicas de threading gerenciado
 Os cinco primeiros tópicos desta seção foram projetados para ajudá-lo a determinar quando usar threading gerenciado e explicar alguns recursos básicos. Para obter informações sobre as classes que fornecem recursos adicionais, confira [Recursos e objetos de threading](../../../docs/standard/threading/threading-objects-and-features.md) e [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

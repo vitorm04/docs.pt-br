@@ -1,21 +1,14 @@
 ---
-title: "Benefícios dos genéricos (Guia de Programação em C#)"
+title: Benefícios dos genéricos (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2eb4aad3d23e459af738045b37ae3f1e8f33da06
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Benefícios dos genéricos (Guia de Programação em C#)
 Os genéricos oferecem a solução para uma limitação em versões anteriores do Common Language Runtime da linguagem C# em que a generalização é realizada por tipos de conversão de e para o tipo base universal <xref:System.Object>. Ao criar uma classe genérica, é possível criar uma coleção fortemente tipada em tempo de compilação.  

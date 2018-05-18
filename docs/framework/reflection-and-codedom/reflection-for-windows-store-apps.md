@@ -1,13 +1,6 @@
 ---
-title: "Reflexão no .NET Framework para aplicativos da Windows Store"
-ms.custom: 
+title: Reflexão no .NET Framework para aplicativos da Windows Store
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f015a8323079b4c63cc217826769316c44fa986d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 598acd746949369ffec7d153b6870bebeeafe532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexão no .NET Framework para aplicativos da Windows Store
 Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](http://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  

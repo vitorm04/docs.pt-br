@@ -1,24 +1,17 @@
 ---
-title: "dynamic (Referência de C#)"
+title: dynamic (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - dynamic_CSharpKeyword
 helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e3bf51ab62e195f7a5d1f0641f62380977c731ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59957ce6b2a26c1d24dc1178630eef8551db3340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Referência de C#)
 O tipo `dynamic` habilita operações nas quais ele ocorre para ignorar a verificação de tipo em tempo de compilação. Em vez disso, essas operações são resolvidas em tempo de execução. O tipo `dynamic` simplifica o acesso a APIs COM, como as APIs de Automação do Office e também às APIs dinâmicas, como bibliotecas do IronPython e ao Modelo de Objeto do Documento (DOM) do HTML.  

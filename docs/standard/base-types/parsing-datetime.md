@@ -2,9 +2,7 @@
 title: 'Como: converter cadeias de caracteres em DateTime'
 description: Aprenda técnicas para analisar cadeias de caracteres que representam datas e horas a fim de criar um DateTime com base na cadeia de caracteres de data e hora.
 ms.date: 02/15/2018
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,15 +16,11 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisando Cadeias de Caracteres de Data e Hora no .NET
 

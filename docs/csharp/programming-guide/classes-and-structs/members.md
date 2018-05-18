@@ -1,21 +1,15 @@
 ---
-title: "Membros (Guia de Programação em C#)"
+title: Membros (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: "20"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
 Classes e structs têm membros que representam seus dados e comportamento. Os membros de uma classe incluem todos os membros declarados na classe, juntamente com todos os membros (exceto construtores e finalizadores) declarados em todas as classes em sua hierarquia de herança. Os membros privados em classes base são herdados, mas não podem ser acessados de classes derivadas.  

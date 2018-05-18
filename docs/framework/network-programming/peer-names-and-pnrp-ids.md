@@ -1,23 +1,15 @@
 ---
 title: Nomes de par e IDs de PNRP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 02f3f7585babd54c9d807afb308bccb7d67e2f88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 02e6d65baac0a0eab9bfde545a117d3636239c17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomes de par e IDs de PNRP
 Um nome de par representa um ponto de extremidade para comunicação, que pode ser um computador, um usuário, um grupo, um serviço ou qualquer elemento associado a um par que pode ser resolvido para um endereço IPv6. O protocolo PNRP usa o nome do par estatisticamente exclusivo para a criação de uma ID de PNRP, que é usado para identificar membros de nuvem.  

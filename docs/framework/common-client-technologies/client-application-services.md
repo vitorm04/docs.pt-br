@@ -1,14 +1,6 @@
 ---
 title: Serviços de aplicativo cliente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - role-based security [.NET Framework], client application services
 - client application services
@@ -25,17 +17,11 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9532594f5f243faed28229388b9a6d597be57a7d
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d67b7467bdacdfca054d0ecd11a81c7d25b158f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-application-services"></a>Serviços de aplicativo cliente
 Os serviços de aplicativos cliente facilitam a criação de aplicativos baseados em Windows que usam os serviços de aplicativo de perfil, funções e logon [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor. Por exemplo, você pode usar esses serviços para executar as seguintes tarefas:  

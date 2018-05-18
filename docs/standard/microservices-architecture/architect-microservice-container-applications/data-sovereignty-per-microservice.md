@@ -1,21 +1,14 @@
 ---
 title: Soberania de dados por microsserviço
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Soberania de dados por microsserviço
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f5d782a70123a66c1579a64a37bc612ccda9c1a4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: d739cc33dec372f6bd9569c05d034dcd25be8395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 

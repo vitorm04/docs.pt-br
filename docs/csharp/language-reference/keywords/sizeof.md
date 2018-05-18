@@ -1,24 +1,17 @@
 ---
 title: sizeof (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - sizeof_CSharpKeyword
 - sizeof
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0148ae8381804ca9286315251582c8ab40778369
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83038255160ec778c71120566cf8f99092761add
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sizeof-c-reference"></a>sizeof (Referência de C#)
 Usado para obter o tamanho, em bytes, de um tipo não gerenciado. Tipos não gerenciados incluem os tipos internos listados na tabela a seguir e também o seguinte:  

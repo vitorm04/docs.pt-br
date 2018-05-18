@@ -1,21 +1,15 @@
 ---
-title: "Como implementar uma classe leve com propriedades autoimplementadas (Guia de Programação em C#)"
+title: Como implementar uma classe leve com propriedades autoimplementadas (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Como implementar uma classe leve com propriedades autoimplementadas (Guia de Programação em C#)
 Este exemplo mostra como criar uma classe leve imutável que serve apenas para encapsular um conjunto de propriedades autoimplementadas. Use esse tipo de constructo em vez de um struct quando for necessário usar a semântica do tipo de referência.  

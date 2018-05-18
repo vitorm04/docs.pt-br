@@ -1,21 +1,12 @@
 ---
 title: Parte de estilo de um documento de WordprocessingML1
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c3b2a7d520752612697755996e8bde463ff290fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e55e9ea8a2e8e35c5de7ee7442d3e8eec261906b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte de estilo de um documento de WordprocessingML
 Este tópico mostra um exemplo de parte de estilo de documento do Office Open XML WordprocessingML.  

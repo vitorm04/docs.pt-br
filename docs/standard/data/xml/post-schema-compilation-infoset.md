@@ -1,30 +1,19 @@
 ---
-title: "Compilação Infoset de pré esquema"
-ms.custom: 
+title: Compilação Infoset de pré esquema
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Compilação Infoset de pré esquema
 A [Recomendação de esquema XML World Wide Web Consortium (W3C)](https://www.w3.org/XML/Schema) discute as informações definidas (infoset) que devem ser expostas para a validação de pré-esquema e a compilação de pré-esquema. O modelo de objeto (SOM) de esquema XML exibe essa exposição antes e após o método de <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> é chamado.  

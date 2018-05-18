@@ -1,23 +1,16 @@
 ---
-title: "Como usar propriedades indexadas na programação para interoperabilidade COM (Guia de Programação em C#)"
+title: Como usar propriedades indexadas na programação para interoperabilidade COM (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - indexed properties [C#]
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2538dae8f02b17a77cc1eb2798b8b38a7f1d7db2
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 5856ef871f865b2af0ab9ea637c26242cf99fb34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Como usar propriedades indexadas na programação para interoperabilidade COM (Guia de Programação em C#)
 As *propriedades indexadas* melhoram a maneira na qual as propriedades COM que têm parâmetros são consumidas na programação em C#. As propriedades indexadas trabalham juntamente com outras funcionalidades no Visual C#, como [argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), um novo tipo ([dinâmico](../../../csharp/language-reference/keywords/dynamic.md)) e [informações de tipo inseridas](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) para melhorar a programação do Microsoft Office.  

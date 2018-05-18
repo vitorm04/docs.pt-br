@@ -1,27 +1,18 @@
 ---
 title: this (Referência de C#)
 description: Palavra-chave this (Referência de C#)
-keywords: this (C#), palavra-chave this (C#), palavra-chave this (referência de C#), palavra-chave this (referência da linguagem C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - this
 - this_CSharpKeyword
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f159967707061481a34e72a97ec8cc8316d982ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d26ad1565dc6faf8aba6c971b3a0023bac886775
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="this-c-reference"></a>this (Referência de C#)
 A palavra-chave `this` refere-se à instância atual da classe e também é usada como um modificador do primeiro parâmetro de um método de extensão.  

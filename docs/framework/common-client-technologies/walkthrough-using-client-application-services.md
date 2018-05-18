@@ -1,14 +1,6 @@
 ---
 title: 'Instruções passo a passo: usando serviços de aplicativo cliente'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Instruções passo a passo: usando serviços de aplicativo cliente
 Este tópico descreve como criar um aplicativo do Windows que usa serviços de aplicativo cliente para autenticar usuários e recuperar funções de usuário e configurações.  
@@ -235,7 +221,7 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 19. Clique em **Editar funções** para o usuário **Gerente** e selecione a função **Gerente**.  
   
-20. Feche a janela do browser que hospeda a **ferramenta de Administração de Site**.  
+20. Feche a janela do navegador que hospeda a **ferramenta de Administração de Site**.  
   
 21. Se uma caixa de mensagem é exibida perguntando se você deseja recarregar o arquivo Web.config modificado, clique em **Sim**.  
   

@@ -1,21 +1,14 @@
 ---
-title: "Usando indexadores (Guia de Programação em C#)"
+title: Usando indexadores (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>Usando indexadores (Guia de Programação em C#)
 Os indexadores são uma conveniência sintática que permitem criar uma [classe](../../../csharp/language-reference/keywords/class.md), [struct](../../../csharp/language-reference/keywords/struct.md) ou [interface](../../../csharp/language-reference/keywords/interface.md) que os aplicativos clientes podem acessar como uma matriz. Os indexadores são implementados em tipos cuja principal finalidade é encapsular uma coleção ou matriz interna. Por exemplo, suponha que você tem uma classe nomeada TempRecord que representa a temperatura em Farenheit conforme registrada 10 vezes diferentes durante um período de 24 horas. A classe contém uma matriz nomeada “temps” de flutuação de tipo para representar as temperaturas e uma <xref:System.DateTime> que representa as datas em que as temperaturas foram registradas. Ao implementar um indexador nessa classe, os clientes podem acessar as temperaturas em uma instância TempRecord como `float temp = tr[4]` em vez de `float temp = tr.temps[4]`. A notação do indexador não simplifica somente a sintaxe para aplicativos clientes; ela também torna a classe e sua finalidade mais intuitivas para que os outros desenvolvedores entendam.  

@@ -2,11 +2,11 @@
 title: Estruturas (F#)
 description: 'Saiba mais sobre a estrutura F #, um tipo de objeto compact geralmente mais eficiente do que uma classe para tipos com uma pequena quantidade de dados e comportamento simple.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>Estruturas
 
@@ -18,13 +18,13 @@ Um *estrutura* é um tipo de objeto compact que pode ser mais eficiente do que u
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>Comentários
@@ -32,7 +32,7 @@ Estruturas são *os tipos de valor*, o que significa que eles são armazenados d
 
 Na sintaxe anterior, duas formas são mostradas. A primeira não é a sintaxe leve, mas ela é usada com frequência, pois quando você usa as palavras-chave `struct` e `end`, é possível omitir o atributo `StructAttribute`, que aparece na segunda forma. É possível abreviar `StructAttribute` como apenas `Struct`.
 
-O *elementos de definição do tipo* na sintaxe anterior representa definições e declarações de membro. As estruturas podem ter construtores e campos mutáveis e imutáveis e podem declarar membros e implementações de interface. Para obter mais informações, consulte [membros](members/index.md).
+O *-definição-elementos-e-membros de tipo* na sintaxe anterior representa definições e declarações de membro. As estruturas podem ter construtores e campos mutáveis e imutáveis e podem declarar membros e implementações de interface. Para obter mais informações, consulte [membros](members/index.md).
 
 As estruturas não podem participar da herança, não podem conter associações `let` ou `do` e não podem conter recursivamente campos de seu próprio tipo (embora possam conter células de referência que fazem referência ao seu próprio tipo).
 

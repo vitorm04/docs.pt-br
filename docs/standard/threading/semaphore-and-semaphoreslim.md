@@ -1,13 +1,7 @@
 ---
 title: Semaphore e SemaphoreSlim
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - counting semaphores
 - semaphores
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa um sinal com nome (em todo o sistema) ou local. É um wrapper fino em torno do objeto de sinal Win32. Sinais do Win32 são contagem de sinais que podem ser usadas para controlar o acesso a um pool de recursos.  

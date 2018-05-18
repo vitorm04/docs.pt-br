@@ -1,9 +1,6 @@
 ---
-title: "try-catch-finally (Referência de C#)"
+title: try-catch-finally (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - catch-finally_CSharpKeyword
 - catch-finally
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - finally blocks [C#]
 - try-catch statement [C#]
 ms.assetid: a1b443b0-ff7a-43ab-b835-0cc9bfbd15ca
-caps.latest.revision: "21"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0861cdb6a08c9ada9c6903be536b1fd5eef16579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc37201ccc3040266c04e3ee208f50690006304a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (Referência de C#)
 Um uso comum de `catch` e `finally` juntos é obter e usar recursos em um bloco `try`, lidar com circunstâncias excepcionais em um bloco `catch` e liberar os recursos no bloco `finally`.  

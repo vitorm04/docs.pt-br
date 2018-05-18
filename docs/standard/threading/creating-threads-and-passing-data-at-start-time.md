@@ -1,13 +1,7 @@
 ---
-title: "Criando threads e passando dados na hora de início"
-ms.custom: 
+title: Criando threads e passando dados na hora de início
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d17ef8a199061f56f00e39fa887e2e64f64427ec
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 96c0c898f103c058c370a0d108568056b1ff8196
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Criando threads e passando dados na hora de início
 Quando um processo do sistema operacional é criado, o sistema operacional injeta um thread para executar o código nesse processo, incluindo qualquer domínio de aplicativo original. Desse ponto em diante, os domínios de aplicativo podem ser criados e destruídos sem qualquer criação ou destruição de threads do sistema operacional. Se o código que estiver sendo executado for um código gerenciado, um objeto <xref:System.Threading.Thread> para o thread em execução no domínio do aplicativo atual poderá ser obtido recuperando a propriedade <xref:System.Threading.Thread.CurrentThread%2A> estática do tipo <xref:System.Threading.Thread>. Este tópico descreve a criação de thread e aborda alternativas para passar dados para o procedimento do thread.  

@@ -1,9 +1,6 @@
 ---
-title: "try-finally (Referência de C#)"
+title: try-finally (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - finally
 - finally_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-caps.latest.revision: "25"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 927b851419f2c5245518ee39bf847cb1f1664917
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 696eb531fe3e340f7fe0ae12483648119cf5a7eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="try-finally-c-reference"></a>try-finally (Referência de C#)
 Usando um bloco `finally`, você pode limpar todos os recursos alocados em um bloco [try](../../../csharp/language-reference/keywords/try-catch.md) e pode executar código mesmo se uma exceção ocorrer no bloco `try`. Normalmente, as instruções de um bloco `finally` são executadas quando o controle deixa uma instrução `try`. A transferência de controle pode ocorrer como resultado da execução normal, da execução de uma instrução `break`, `continue`, `goto` ou `return`, ou da propagação de uma exceção para fora da instrução `try`.  

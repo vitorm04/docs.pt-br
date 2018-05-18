@@ -1,31 +1,20 @@
 ---
-title: "Tratamento de exceções (biblioteca de tarefas paralelas)"
-ms.custom: 
+title: Tratamento de exceções (biblioteca de tarefas paralelas)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de tarefas paralelas)
 As exceções sem tratamento que são lançadas pelo código de usuário que está sendo executado dentro de uma tarefa são propagadas de volta para o thread de chamada, exceto em certos cenários que são descritos mais adiante neste tópico. As exceções são propagadas quando você usa um dos métodos estáticos ou de instância de <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, e você lida com eles ao incluir a chamada em uma instrução `try` / `catch`. Se uma tarefa é o pai das tarefas filho anexadas, ou se você está esperando várias tarefas, várias exceções podem ser lançadas.  

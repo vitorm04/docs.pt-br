@@ -1,22 +1,15 @@
 ---
 title: Modificadores de acesso (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acesso (Guia de Programação em C#)
 Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla se podem ser usados de outro código no seu assembly ou outros assemblies. Você pode usar os modificadores de acesso a seguir para especificar a acessibilidade de um tipo ou membro quando você o declarar:  

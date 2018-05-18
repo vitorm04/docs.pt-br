@@ -1,10 +1,6 @@
 ---
 title: Conversões boxing e unboxing (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.boxing
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-caps.latest.revision: 34
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 893ef47c5e7522581b5d02489100942e47023a63
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4cf6a81a2738d4aff94089c89fcc39e785127a82
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversões boxing e unboxing (Guia de Programação em C#)
 Conversão boxing é o processo de conversão de um [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. Quando o CLR realiza a conversão boxing de um tipo de valor, ele encapsula o valor dentro de System.Object e o armazena no heap gerenciado. A conversão unboxing extrai o tipo de valor do objeto. A conversão boxing é implícita, a conversão unboxing é explícita. O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.  

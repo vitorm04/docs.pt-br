@@ -1,27 +1,17 @@
 ---
-title: "Configurando o redirecionamento de associações de assemblies"
-ms.custom: 
+title: Configurando o redirecionamento de associações de assemblies
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b53673d1ddb1de7fed087b4c5cb125e50f11b918
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04743dc7a0fc821f2e3b94929e2384eb25c69f2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurando o redirecionamento de associações de assemblies
 Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que acompanha a versão do tempo de execução usada para compilar o aplicativo. Você pode usar o atributo **appliesTo** no elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.  

@@ -1,13 +1,7 @@
 ---
-title: "Tipos de coleção Sorted"
-ms.custom: 
+title: Tipos de coleção Sorted
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SortedDictionary collection type
 - SortedList class, grouping data in collections
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7efe53d472e1789d49acc3973acdf190c8ff6662
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 31b40167be4f2760eb7c88155e1733266e34d11d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorted-collection-types"></a>Tipos de coleção Sorted
 A classe <xref:System.Collections.SortedList?displayProperty=nameWithType>, a classe genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> e a classe genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> são semelhantes à classe <xref:System.Collections.Hashtable> e à classe genérica <xref:System.Collections.Generic.Dictionary%602>, pois elas implementam a interface <xref:System.Collections.IDictionary>, mas mantêm seus elementos em ordem de classificação por chave e não têm a inserção de O(1) nem a característica de recuperação das tabelas de hash. As três classes têm várias funcionalidades em comum:  

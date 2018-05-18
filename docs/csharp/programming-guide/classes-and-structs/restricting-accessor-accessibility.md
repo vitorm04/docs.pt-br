@@ -1,9 +1,6 @@
 ---
-title: "Restringindo a acessibilidade ao acessador (Guia de Programação em C#)"
+title: Restringindo a acessibilidade ao acessador (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bf9ead7934630d3974657107ca38e08bbd3bed85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restringindo a acessibilidade ao acessador (Guia de Programação em C#)
 As partes [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) de uma propriedade ou de um indexador são chamadas *acessadores*. Por padrão, esses acessadores têm a mesma visibilidade ou nível de acesso: a da propriedade ou do indexador aos quais eles pertencem. Para obter mais informações, consulte [níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md). No entanto, às vezes é útil restringir o acesso a um desses acessadores. Normalmente, isso envolve restringir a acessibilidade do acessador `set` e manter o acessador `get` publicamente acessível. Por exemplo:  

@@ -1,9 +1,7 @@
 ---
 title: Cadeias de caracteres de formato numérico padrão
 ms.date: 09/10/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,15 +18,11 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 34fe406dac4cbbc0c25e43f479154fd3e398ffc2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: b1cad76c234ce73772d3b65b11596ab0e4e0ae3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 As cadeias de caracteres de formato numérico padrão são usadas para formatar tipos numéricos comuns. Uma cadeia de caracteres de formato numérico padrão assume o formato `Axx`, em que:  

@@ -1,9 +1,7 @@
 ---
 title: Fluxo de dados (Task Parallel Library)
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 386d7a4ce7168fbe70d9037254a1540b7bf00478
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Fluxo de dados (Task Parallel Library)
 <a name="top"></a> A TPL (biblioteca de paralelismo de tarefas) fornece componentes de fluxo de dados para ajudar a aumentar a robustez de aplicativos habilitados para simultaneidade. Esses componentes de fluxo de dados são coletivamente chamados de *biblioteca de fluxos de dados TPL*. Esse modelo de fluxo de dados promove programação baseada em ator que fornece transmissão de mensagem no processo para fluxo de dados de alta granularidade e tarefas de pipelining. Os componentes de fluxo de dados baseiam-se nos tipos e na infraestrutura de agendamento da TPL e integram-se ao suporte às linguagens C#, Visual Basic e F# para programação assíncrona. Esses componentes do fluxo de dados são úteis quando você tem várias operações que devem se comunicar umas com as outras de modo assíncrono ou quando você deseja processar dados à medida que são disponibilizados. Por exemplo, considere um aplicativo que processa dados de imagem de uma webcam. Usando o modelo de fluxo de dados, o aplicativo pode processar quadros de imagem assim que eles se tornarem disponíveis. Se o aplicativo aprimora os quadros de imagem, por exemplo, executando a redução de olhos vermelhos ou correção de luz, você pode criar um *pipeline* dos componentes de fluxo de dados. Cada estágio do pipeline pode usar mais funcionalidade de paralelismo de alta granularidade, assim como a funcionalidade fornecida pela TPL, para transformar a imagem.  

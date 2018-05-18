@@ -1,13 +1,7 @@
 ---
-title: "Notificações sobre a coleta de lixo"
-ms.custom: 
+title: Notificações sobre a coleta de lixo
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
 Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema, especialmente com servidores que processam grandes volumes de solicitações. Nesse caso, uma coleta de lixo longa pode fazer com que o tempo limite de uma solicitação seja atingido. Para impedir que uma coleta completa ocorra durante um período crítico, você pode ser notificado que uma coleta de lixo completa está se aproximando e, em seguida, tomar medidas para redirecionar a carga de trabalho para outra instância do servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  

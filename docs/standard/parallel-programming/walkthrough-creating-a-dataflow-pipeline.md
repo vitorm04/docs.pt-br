@@ -1,9 +1,7 @@
 ---
 title: 'Explicação passo a passo: Criando um pipeline de fluxo de dados'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,15 +12,11 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ce5af6f31a10f23703b761e041b21f08b71952b9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: e55d902971c5cea64cf14458f09e58fb47e2d0aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Explicação passo a passo: Criando um pipeline de fluxo de dados
 Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para receber mensagens dos blocos de origem, você também pode conectar blocos de mensagens para formar um *pipeline de fluxo de dados*. Um pipeline de fluxo de dados é uma série de componentes, ou *blocos de fluxo de dados*, e cada uma série executa uma tarefa específica que contribui para um objetivo maior. Todos os blocos de fluxo de dados em um pipeline de fluxo de dados realizam trabalhos ao receber uma mensagem de outro bloco de fluxo de dados. Como analogia, podemos usar uma linha de montagem de automóveis. À medida que os veículos passam por ela, uma estação monta a carroceria, a seguinte instala o motor e assim por diante. Como a linha de montagem permite que vários veículos sejam montados ao mesmo tempo, seu desempenho é superior se comparado com a montagem de um veículo completo por vez.

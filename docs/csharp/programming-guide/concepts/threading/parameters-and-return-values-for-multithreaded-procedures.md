@@ -1,21 +1,12 @@
 ---
-title: "Parâmetros e valores retornados para procedimentos multi-threaded (C#)"
-ms.custom: 
+title: Parâmetros e valores retornados para procedimentos multi-threaded (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ba63c30c-d9f0-4962-b5c7-9d83ba851e6a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fec0ad955439f0cd683ad56c8d6433eed2417304
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e27f8e67ff03260e1d13fa633064efc2059e6bdf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parâmetros e valores retornados para procedimentos multi-threaded (C#)
 Fornecer e retornar valores em um aplicativo multithread é complicado porque o construtor para a classe thread deve ser passado como uma referência para um procedimento que não leva argumentos e não retorna nenhum valor. As seções a seguir mostram algumas maneiras simples de fornecer parâmetros e retornar valores de procedimentos em threads separados.  

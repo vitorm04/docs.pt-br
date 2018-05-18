@@ -1,13 +1,7 @@
 ---
-title: "Arquivos mapeados na memória"
-ms.custom: 
+title: Arquivos mapeados na memória
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
 Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória](https://msdn.microsoft.com/library/ms810613.aspx).  

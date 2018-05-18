@@ -1,9 +1,6 @@
 ---
-title: "Cláusula join (Referência de C#)"
+title: Cláusula join (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a868c52cf753b1e4285586ec41c1993f519299d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
 A cláusula `join` é útil para associar elementos de sequências de origem diferentes que não têm nenhuma relação direta no modelo de objeto. O único requisito é que os elementos em cada fonte compartilhem algum valor que possa ser comparado pela igualdade. Por exemplo, um distribuidor de alimentos pode ter uma lista de fornecedores de um determinado produto e uma lista de compradores. Uma cláusula `join` pode ser usada, por exemplo, para criar uma lista de fornecedores e compradores daquele produto, que estejam na mesma região especificada.  

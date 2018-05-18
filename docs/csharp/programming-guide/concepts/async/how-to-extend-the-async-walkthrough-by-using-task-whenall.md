@@ -1,22 +1,12 @@
 ---
-title: "Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)"
-ms.custom: 
+title: Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e074874a539d1dd52901ff6a5841b5a501b5b5af
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 4bdd3f32d2fa502de8ada352c522198a89a17f97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)
 Você pode melhorar o desempenho da solução assíncrona em [Passo a passo: acessando a Web usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md), usando o método <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Esse método aguarda de maneira assíncrona várias operações assíncronas, que são representadas como uma coleção de tarefas.  

@@ -1,13 +1,7 @@
 ---
-title: "O modelo de objeto de expressão regular"
-ms.custom: 
+title: O modelo de objeto de expressão regular
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -41,18 +35,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 14402b56a765fc8fe57f40e9c5c44f500267e266
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
 <a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seguintes seções:  

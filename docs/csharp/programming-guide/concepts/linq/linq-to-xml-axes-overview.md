@@ -1,21 +1,12 @@
 ---
-title: "Visão geral dos eixos do LINQ to XML (C#)"
-ms.custom: 
+title: Visão geral dos eixos do LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3472a6deefd8d4c3cafec2c538c8d0a8b9f2e470
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Visão geral dos eixos do LINQ to XML (C#)
 Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, você poderá consultá-la para localizar elementos e atributos, e recuperar seus valores. Você recupera coleções por meio dos *métodos de eixo*, também denominados *eixos*. Alguns eixos são métodos nas classes <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> que retornam coleções <xref:System.Collections.Generic.IEnumerable%601>. Alguns eixos são métodos de extensão na classe <xref:System.Xml.Linq.Extensions>. Os eixos implementados como métodos de extensão operam em coleções e retornam coleções.  

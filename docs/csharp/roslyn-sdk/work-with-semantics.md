@@ -1,18 +1,13 @@
 ---
-title: "Trabalhar com o modelo semântico do SDK do .NET Compiler Platform"
-description: "Esta visão geral fornece uma compreensão do tipo que pode ser usado para entender e manipular o modelo semântico do código."
-author: billwagner
-ms.author: wiwagn
+title: Trabalhar com o modelo semântico do SDK do .NET Compiler Platform
+description: Esta visão geral fornece uma compreensão do tipo que pode ser usado para entender e manipular o modelo semântico do código.
 ms.date: 10/15/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 28366093c516f5367d82c0bdfc53749e764361ef
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-semantics"></a>Trabalhar com semântica
 

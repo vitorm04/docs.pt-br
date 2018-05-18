@@ -1,14 +1,6 @@
 ---
 title: Especificando nomes de tipo totalmente qualificados
-ms.custom: 
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -22,23 +14,19 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 437bbb7a1645c0ab13da33e57c1e70b5ec98984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificando nomes de tipo totalmente qualificados
 Você deve especificar nomes de tipo para ter uma entrada válida para várias operações de reflexão. Um nome de tipo totalmente qualificado consiste em uma especificação de nome de assembly, uma especificação de namespace e um nome de tipo. Especificações de nome de tipo são usadas por métodos como <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> e <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
 ## <a name="grammar-for-type-names"></a>Gramática para nomes de tipo  
- A gramática define a sintaxe de linguagens formais. A tabela a seguir lista as regras lexicais que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (&#124;) indica que as regras que têm sub-regras.  
+ A gramática define a sintaxe de linguagens formais. A tabela a seguir lista as regras lexicais que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (& #124;) indica que as regras que têm sub-regras.  
 
 ```antlr
 TypeSpec

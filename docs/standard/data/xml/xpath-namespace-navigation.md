@@ -1,26 +1,15 @@
 ---
-title: "Navegação do namespace XPath"
-ms.custom: 
+title: Navegação do namespace XPath
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8cc8d1f031b3f00cdf2b698514220c25c9fec7be
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: fed73c0a9c9bb4fba2644d76f470a8bdcace2b83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpath-namespace-navigation"></a>Navegação do namespace XPath
 Para usar consultas XPath com documentos XML, você precisará endereçar corretamente namespaces XML e os elementos contidos por espaços. Namespaces impedem ambiguidades que podem ocorrer quando os nomes são usados em mais de um contexto; por exemplo, o nome `ID` pode referir-se a mais de um identificador associado com os diferentes elementos de um documento XML. A sintaxe do namespace especifica URIs, nomes, e prefixos que distinguiem os elementos de um documento XML.  

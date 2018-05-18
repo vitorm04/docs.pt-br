@@ -1,31 +1,20 @@
 ---
-title: "Noções básicas sobre agilização em PLINQ"
-ms.custom: 
+title: Noções básicas sobre agilização em PLINQ
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-speedup-in-plinq"></a>Noções básicas sobre agilização em PLINQ
 O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to Objects executando os delegados da consulta em paralelo em computadores com vários núcleos. O PLINQ funciona melhor quando o processamento de cada elemento em uma coleção de origem é independente, sem nenhum estado compartilhado envolvido entre os delegados individuais. Tais operações são comuns em LINQ to Objects e PLINQ, e muitas vezes são chamadas de "*fantasticamente paralelas*", pois elas se prestam facilmente ao agendamento em múltiplos segmentos. No entanto, nem todas as consultas consistem por completo em operações fantasticamente paralelas; na maioria dos casos, uma consulta envolve alguns operadores que não podem ser paralelizados ou que retardam a execução paralela. E mesmo com consultas que são fantasticamente paralelas por completo, o PLINQ ainda deve particionar a fonte de dados e agendar o trabalho nos threads e, normalmente, mesclar os resultados quando a consulta for concluída. Todas essas operações aumentam o custo computacional da paralelização; esses custos de adição de paralelização são chamados de *sobrecarga*. Para obter o melhor desempenho em uma consulta PLINQ, o objetivo é maximizar as partes que são fantasticamente paralelas e minimizar as partes que exigem sobrecarga. Este artigo fornece informações que ajudarão você a gravar consultas PLINQ que sejam tão eficientes quanto possível, enquanto ainda produzem resultados corretos.  

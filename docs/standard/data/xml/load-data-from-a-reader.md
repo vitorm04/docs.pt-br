@@ -1,26 +1,15 @@
 ---
 title: Carregando dados de um leitor
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-data-from-a-reader"></a>Carregando dados de um leitor
 Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.Load%2A> e um parâmetro de <xref:System.Xml.XmlReader>, existem diferenças no comportamento que ocorre quando comparado ao comportamento de dados de carregamento de outro formata. Se o leitor está no estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consome todo o conteúdo do leitor e compila o modelo de objeto (DOM) de documento de todos os dados no leitor.  

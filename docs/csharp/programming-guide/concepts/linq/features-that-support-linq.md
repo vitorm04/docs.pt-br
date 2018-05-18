@@ -1,24 +1,14 @@
 ---
 title: funcionalidades do C# que dão suporte a LINQ
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-features-that-support-linq"></a>funcionalidades do C# que dão suporte a LINQ
 A seção a seguir apresenta os novos constructos de linguagem introduzidos no C# 3.0. Embora esses novos recursos tenham algum grau de utilização com consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], eles não estão limitados a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e podem ser usados em qualquer contexto em que sejam úteis.  
@@ -48,7 +38,7 @@ var query = from str in stringArray
   
  As variáveis declaradas como `var` são tão fortemente tipadas quanto as variáveis cujo tipo você especifica explicitamente. O uso de `var` possibilita a criação de tipos anônimos, mas ele pode ser usado para qualquer variável local. As matrizes também podem ser declaradas com tipagem implícita.  
   
- Para obter mais informações, consulte [Variáveis Locais de Tipo Implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Para obter mais informações, consulte [Variáveis locais de tipo implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="object-and-collection-initializers"></a>Inicializadores de objeto e coleção  
  Os inicializadores de objeto e de coleção possibilitam a inicialização de objetos sem chamar explicitamente um construtor para o objeto. Os inicializadores normalmente são usados em expressões de consulta quando projetam os dados de origem em um novo tipo de dados. Supondo uma classe chamada `Customer` com propriedades públicas `Name` e `Phone`, o inicializador de objeto pode ser usado como no código a seguir:  
@@ -66,7 +56,7 @@ Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
- Para obter mais informações, consulte [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Para obter mais informações, consulte [Tipos anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Métodos de extensão  
  Um método de extensão é um método estático que pode ser associado a um tipo, para que ele possa ser chamado como se fosse um método de instância no tipo. Esse recurso permite que você, na verdade, "adicione" novos métodos a tipos existentes sem realmente modificá-los. Os operadores de consulta padrão são um conjunto de métodos de extensão que fornecem a funcionalidade de consulta da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para qualquer tipo que implementa a <xref:System.Collections.Generic.IEnumerable%601>.  

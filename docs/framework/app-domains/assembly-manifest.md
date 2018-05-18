@@ -1,13 +1,6 @@
 ---
 title: Manifesto de um assembly
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assembly manifest
 - dynamic assemblies, assembly manifest
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41dc27798e9d39d391e5958b86f691e3a0062582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0f5d8e2e465e9dfa64a57c5ec7b99001f768492
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-manifest"></a>Manifesto de um assembly
 Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que descreve como os elementos do assembly se relacionam. O manifesto do assembly contém esses metadados do assembly. O manifesto de um assembly contém todos os metadados necessários para especificar os requisitos de versão e a identidade de segurança, além de todos os metadados necessários para definir o escopo do assembly e resolver referências a recursos e classes. O manifesto do assembly pode ser armazenado em um arquivo PE (.exe ou .dll) com código MSIL (Microsoft Intermediate Language) ou em um arquivo PE autônomo que contém somente informações do manifesto do assembly.  

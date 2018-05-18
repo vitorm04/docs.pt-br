@@ -1,26 +1,17 @@
 ---
-title: "Codificações de arquivo (Visual Basic)"
-ms.custom: 
+title: Codificações de arquivo (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - character encodings
 - files [Visual Basic], encoding
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: deaab4371ab0d5d15c627bfd6352a7090bf08024
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-encodings-visual-basic"></a>Codificações de arquivo (Visual Basic)
 As codificações de arquivo, também conhecidas como codificações de caracteres, especificam como representar caracteres no processamento de texto. Uma codificação pode ser preferível em relação a outra em termos de quais caracteres de idioma podem ou não ser manipulados, embora o Unicode geralmente seja o ideal.  

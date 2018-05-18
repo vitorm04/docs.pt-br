@@ -1,27 +1,19 @@
 ---
 title: Gerenciamento de cache para aplicativos de rede
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - cache [.NET Framework], network applications
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 458a1e67e9ca4ff3a36f1b0c69fcc4bdc00be3e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c2b27f3516169ee7b90eaa27fbf22ec02fb638fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cache-management-for-network-applications"></a>Gerenciamento de cache para aplicativos de rede
 Este tópico e seus subtópicos relacionados descrevem o cache para recursos obtidos usando as classes <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> e <xref:System.Net.FtpWebRequest>.  

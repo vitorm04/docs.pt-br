@@ -1,21 +1,14 @@
 ---
 title: Pacotes, metapacotes e estruturas
 description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
-keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 

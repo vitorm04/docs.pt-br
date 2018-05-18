@@ -1,26 +1,17 @@
 ---
 title: Como gravar em um log de eventos do aplicativo (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Computer.EventLog element
 - WriteEntry method [Visual Basic]
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8225deaac92b4f375f57501875e13216b35a120d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a62e1e8f6112a96935ce165e42d34c57b223cd95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Como gravar em um log de eventos do aplicativo (Visual Basic)
 É possível usar os objetos `My.Application.Log` e `My.Log` para gravar informações sobre eventos que ocorrem em seu aplicativo. Este exemplo mostra como configurar um ouvinte de log de eventos. Assim, `My.Application.Log` grava informações de rastreamento no log de eventos do aplicativo.  

@@ -1,25 +1,19 @@
 ---
-title: "Matrizes de tipo implícito (Guia de Programação em C#)"
+title: Matrizes de tipo implícito (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], implicity-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6e60ff600a04dab47e8b0ed52dda00441e17f25
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60d320b233986154c3c51c409bade24d0862dedd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrizes de tipo implícito (Guia de Programação em C#)
-É possível criar uma matriz de tipo implícito na qual o tipo da instância da matriz é inferido com base nos elementos especificados no inicializador de matriz. As regras para qualquer variável de tipo implícito também se aplicam a matrizes de tipo implícito. Para obter mais informações, consulte [Variáveis Locais de Tipo Implícito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+É possível criar uma matriz de tipo implícito na qual o tipo da instância da matriz é inferido com base nos elementos especificados no inicializador de matriz. As regras para qualquer variável de tipo implícito também se aplicam a matrizes de tipo implícito. Para obter mais informações, consulte [Variáveis locais de tipo implícito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
  Geralmente, as matrizes de tipo implícito são usadas em expressões de consulta juntamente com objetos e tipos anônimos e inicializadores de coleção.  
   

@@ -1,14 +1,6 @@
 ---
 title: Criando assemblies satélite para aplicativos de área de trabalho
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 Arquivos de recurso desempenham um papel central em aplicativos localizados. Eles permitem que um aplicativo exiba cadeias de caracteres, imagens e outros dados no idioma e na cultura do usuário e forneça dados alternativos se esses recursos não estiverem disponíveis. O .NET Framework usa um modelo de hub e spoke para localizar e recuperar os recursos localizados. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, que é chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; ela é usada quando não há recursos localizados disponíveis. Você usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para designar a cultura da cultura padrão do aplicativo. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura localizada, mas não contém nenhum código. Como os assemblies satélite não fazem parte do assembly principal, você pode facilmente atualizar ou substituir recursos que correspondem a uma cultura específica sem substituir o assembly principal do aplicativo.  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**-target:**lib|Especifica que o seu assembly satélite é compilado em um arquivo de biblioteca (. dll). Como um assembly satélite não contém código executável e não é um assembly principal do aplicativo, você deve salvar assemblies satélites como DLLs.|  
-|**-embed:**strings.de.resources|Especifica o nome do arquivo de recurso incorporado quando o Al.exe compila o assembly. Você pode incorporar vários arquivos .resources em um assembly satélite, mas se estiver seguindo o modelo hub e spoke, compile um assembly satélite para cada cultura. No entanto, você pode criar arquivos .resources separados para cadeias de caracteres e objetos.|  
-|**-culture:**de|Especifica a cultura do recurso para compilar. O Common Language Runtime usa essas informações ao procurar os recursos de uma cultura específica. Se você omitir esta opção, o Al.exe ainda compilará o recurso, mas o tempo de execução não será capaz de localizá-lo quando um usuário solicitá-lo.|  
-|**-out:**Example.resources.dll|Especifica o nome do arquivo de saída. O nome deve seguir o padrão de nomeação *baseName*.resources. *extensão*, onde *baseName* é o nome do assembly principal, e *extension* é uma extensão de nome de arquivo válido (como .dll). Observe que o tempo de execução não é capaz de determinar a cultura de um assembly satélite com base em seu nome de arquivo de saída; você deve usar a opção **/culture** para especificá-lo.|  
-|**-template:**Example.dll|Especifica o assembly do qual todos os metadados de assembly devem ser herdados, exceto o campo de cultura. Esta opção afetará assemblies satélites somente se você especificar um assembly com um [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-target:** lib|Especifica que o seu assembly satélite é compilado em um arquivo de biblioteca (. dll). Como um assembly satélite não contém código executável e não é um assembly principal do aplicativo, você deve salvar assemblies satélites como DLLs.|  
+|**-embed:** strings.de.resources|Especifica o nome do arquivo de recurso incorporado quando o Al.exe compila o assembly. Você pode incorporar vários arquivos .resources em um assembly satélite, mas se estiver seguindo o modelo hub e spoke, compile um assembly satélite para cada cultura. No entanto, você pode criar arquivos .resources separados para cadeias de caracteres e objetos.|  
+|**-culture:** de|Especifica a cultura do recurso para compilar. O Common Language Runtime usa essas informações ao procurar os recursos de uma cultura específica. Se você omitir esta opção, o Al.exe ainda compilará o recurso, mas o tempo de execução não será capaz de localizá-lo quando um usuário solicitá-lo.|  
+|**-out:** Example.resources.dll|Especifica o nome do arquivo de saída. O nome deve seguir o padrão de nomeação *baseName*.resources. *extensão*, onde *baseName* é o nome do assembly principal, e *extension* é uma extensão de nome de arquivo válido (como .dll). Observe que o tempo de execução não é capaz de determinar a cultura de um assembly satélite com base em seu nome de arquivo de saída; você deve usar a opção **/culture** para especificá-lo.|  
+|**-template:** Example.dll|Especifica o assembly do qual todos os metadados de assembly devem ser herdados, exceto o campo de cultura. Esta opção afetará assemblies satélites somente se você especificar um assembly com um [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Para obter uma lista completa das opções disponíveis com Al.exe, consulte [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   

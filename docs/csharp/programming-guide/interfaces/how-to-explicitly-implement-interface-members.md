@@ -1,21 +1,14 @@
 ---
 title: Como implementar membros de interface explicitamente (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e02ae26000057e4e7323a777a6a0e1ca6fd8871b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f7ae6bae46cdf6596b206abbdeeb94b5c21a13f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Como implementar membros de interface explicitamente (Guia de Programação em C#)
 Este exemplo declara uma [interface](../../../csharp/language-reference/keywords/interface.md), `IDimensions` e uma classe, `Box`, que implementa explicitamente os membros de interface `getLength` e `getWidth`. Os membros são acessados por meio da instância `dimensions` da interface.  

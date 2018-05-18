@@ -1,13 +1,7 @@
 ---
 title: Codificação de caracteres no .NET
-ms.custom: ''
 ms.date: 12/22/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 357f380a7103f186f7a66ea92a1a8b7930adead8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 Os caracteres são entidades abstratas que podem ser representadas de muitas maneiras diferentes. Uma codificação de caracteres é um sistema que emparelha cada caractere em um conjunto de caracteres com suporte com algum valor que representa esse caractere. Por exemplo, o código Morse é uma codificação de caracteres que emparelha cada caractere do alfabeto romano com um padrão de pontos e traços adequados para transmissão por linhas telegráficas. Uma codificação de caracteres para computadores emparelha cada caractere em um conjunto de caracteres com suporte com um valor numérico que representa esse caractere. Uma codificação de caracteres tem dois componentes distintos:  

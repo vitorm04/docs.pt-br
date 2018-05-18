@@ -1,28 +1,16 @@
 ---
-title: "Como depurar problemas de ativação do CLR"
-ms.custom: 
+title: Como depurar problemas de ativação do CLR
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa8153fe680a8848ad19f32a2246d0f350c73c66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b78d917b95e06a14b74c812bf92107476ad17212
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Como depurar problemas de ativação do CLR
 Se você encontrar problemas em fazer com que seu aplicativo seja executado com a versão correta do CLR (Common Language Runtime), poderá exibir e depurar os logs de ativação do CLR. Esses logs podem ser muito úteis para determinar a causa raiz de um problema de ativação, quando o aplicativo carrega uma versão do CLR diferente da esperada ou não carrega o CLR de forma alguma. O [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Erros de inicialização do .NET Framework: gerenciando a experiência do usuário) discute a experiência quando nenhum CLR é encontrado para o aplicativo.  

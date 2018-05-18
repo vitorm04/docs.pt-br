@@ -1,21 +1,15 @@
 ---
-title: "Palavras-chave de operador (Referência de C#)"
+title: Palavras-chave de operador (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: "10"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-keywords-c-reference"></a>Palavras-chave de operador (Referência de C#)
 Utilizada para executar diversas ações, como a criação de objetos, a verificação do tipo de tempo de execução de um objeto, a obtenção do tamanho de um tipo e outras ações. Esta seção apresenta as seguintes palavras-chave:  

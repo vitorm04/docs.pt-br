@@ -1,22 +1,12 @@
 ---
-title: "Como fazer várias solicitações da Web em paralelo, usando async e await (C#)"
-ms.custom: 
+title: Como fazer várias solicitações da Web em paralelo, usando async e await (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 509f9e690a5157c2d80ba9726354ce57a9d7ff26
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: e3e94c6ba475a56b5a2b7069eac1f1bbe45498c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Como fazer várias solicitações da Web em paralelo, usando async e await (C#)
 Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. O operador [await](../../../../csharp/language-reference/keywords/await.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.  

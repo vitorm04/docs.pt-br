@@ -1,13 +1,7 @@
 ---
 title: Como abrir um arquivo de log e acrescentar dados a ele
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cd2d13a49d9b696541ac278b9f1847c8e4a48cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Como abrir um arquivo de log e acrescentar dados a ele
 <xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> gravam caracteres e leem caracteres de fluxos. O código a seguir exemplo abre o arquivo `log.txt` para a entrada ou cria o arquivo, se ele ainda não existe, e acrescenta informações ao fim do arquivo. O conteúdo do arquivo é gravado para a saída padrão para exibição. Como alternativa para esse exemplo, as informações podem ser armazenadas como uma única cadeia de caracteres ou uma matriz de cadeia de caracteres, e o método <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> pode ser usado para obter a mesma funcionalidade.  

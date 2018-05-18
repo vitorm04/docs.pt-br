@@ -1,12 +1,6 @@
 ---
-title: "Endereçamento IPv6"
-ms.custom: 
+title: Endereçamento IPv6
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -32,16 +26,14 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 01d4fd0fbeeb0f111505fde0f8154c54b2bdcc38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
 No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um motivo para um espaço de endereço tão grande é subdividir os endereços disponíveis em uma hierarquia de domínios de roteamento que reflitam a topologia da Internet. Outro motivo é mapear os endereços de adaptadores de rede (ou interfaces) que conectam dispositivos à rede. O IPv6 tem uma capacidade inerente de resolver endereços no nível mais baixo deles, que é o nível de adaptador de rede e também tem capacidades de configuração automática.  

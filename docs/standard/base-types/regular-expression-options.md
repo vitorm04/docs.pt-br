@@ -1,13 +1,7 @@
 ---
-title: "Opções de expressões regulares"
-ms.custom: 
+title: Opções de expressões regulares
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 <a name="Top"></a> Por padrão, a comparação de uma cadeia de caracteres de entrada com quaisquer caracteres literais em um padrão de expressão regular diferencia maiúsculas e minúsculas; o espaço em branco em um padrão de expressão regular é interpretado como caracteres de espaço em branco literais e os grupos de captura em uma expressão regular são nomeados implícita e explicitamente. É possível modificar esses e vários outros aspectos do comportamento de expressão regular especificando opções de expressões regulares. Essas opções, que estão listadas na tabela a seguir, podem ser incluídas embutidas como parte do padrão de expressão regular, ou podem ser fornecidas a um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método de correspondência padrão estático como um valor de enumeração <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  

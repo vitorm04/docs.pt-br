@@ -1,28 +1,17 @@
 ---
-title: "Quando usar uma coleção thread-safe"
-ms.custom: 
+title: Quando usar uma coleção thread-safe
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 61444afd5afe52cbcb0f64074ec4479bd6252358
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando usar uma coleção thread-safe
 O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] apresenta cinco novos tipos de coleção especialmente projetados para dar suporte a operações multithread de adicionar e remover. Para obter o acesso thread-safe, esses novos tipos usam vários tipos de mecanismos de sincronização de bloqueio e sem bloqueio. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  

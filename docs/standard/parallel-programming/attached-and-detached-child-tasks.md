@@ -1,31 +1,20 @@
 ---
 title: Tarefas filho anexadas e desanexadas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tarefas filho anexadas e desanexadas
 Uma *tarefa filho* (ou *tarefa aninhada*) é uma instância <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que é criada no representante do usuário de outra tarefa, conhecida como a *tarefa pai*. Uma tarefa filho pode ser desanexada ou anexada. Um *tarefa filho desanexada* é uma tarefa que é executada de forma independente de sua tarefa pai. Uma *tarefa filho anexada* é uma tarefa aninhada criada com a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> cuja tarefa pai não explicitamente ou por padrão proíbe-a de ser anexada. Uma tarefa pode criar qualquer número de tarefas filho anexadas e desanexadas que só são limitadas pelos recursos do sistema.  

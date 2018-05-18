@@ -1,13 +1,7 @@
 ---
-title: "Como excluir arquivos e diretórios no armazenamento isolado"
-ms.custom: 
+title: Como excluir arquivos e diretórios no armazenamento isolado
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,18 +17,13 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cd17b85dbdc9315654d042e18d28fbfd0e2dcc52
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9e8de7a1b5de580ca768ec0dfbcbfab2d8cb6271
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Como excluir arquivos e diretórios no armazenamento isolado
 Você pode excluir pastas e arquivos em um arquivo de armazenamento isolado. Em um repositório, nomes de arquivo e diretório são dependentes do sistema operacional e são especificados como relativos à raiz do sistema de arquivos virtual. Eles não diferenciam maiúsculas de minúsculas em sistemas operacionais Windows.  

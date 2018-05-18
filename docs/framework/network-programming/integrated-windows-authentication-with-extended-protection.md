@@ -1,23 +1,15 @@
 ---
-title: "Autenticação Integrada do Windows com proteção estendida"
-ms.custom: 
+title: Autenticação Integrada do Windows com proteção estendida
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a453a2142ee8c3d1ab8d8d00e84e1ead60c46d91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 88170162e4149580d532129666348d226540aced
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticação Integrada do Windows com proteção estendida
 Foram feitas melhorias que afetam a maneira como a autenticação integrada do Windows é controlada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no <xref:System.Net> e por namespaces relacionados. Foi adicionado suporte à proteção estendida a fim de aprimorar a segurança.  

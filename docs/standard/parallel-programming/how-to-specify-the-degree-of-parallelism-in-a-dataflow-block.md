@@ -1,9 +1,7 @@
 ---
 title: 'Como: Especificar o grau de paralelismo em um bloco de fluxo de dados'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,15 +12,11 @@ helpviewer_keywords:
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0631603e3426a08cc1f3abb07bc0f9ecc73adb21
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4239e57087cc6eb3b644dbcd8d25a0e1adb1ed0d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Como: Especificar o grau de paralelismo em um bloco de fluxo de dados
 Este documento descreve como definir a propriedade <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> para habilitar um bloco de fluxo de execução a processar mais de uma mensagem por vez. Fazer isso é útil quando você possui um bloco de fluxo de dados que executa uma computação de longa duração e pode se beneficiar do processamento de mensagens em paralelo. Este exemplo usa a classe <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> para executar várias operações de fluxo de dados simultaneamente; no entanto, você pode especificar o grau máximo de paralelismo em qualquer um dos tipos de bloco de execução predefinidos que a biblioteca de dados TPL fornece, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>.

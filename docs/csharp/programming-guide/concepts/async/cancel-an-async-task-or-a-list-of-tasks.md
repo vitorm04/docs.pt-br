@@ -1,22 +1,12 @@
 ---
-title: "Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)"
-ms.custom: 
+title: Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3003c7b4a10890ddf7faa098ed672ef40b591b30
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: f24571fe6b80ea7ba0f69422cf51f5c8785df172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
 Você pode configurar um botão que pode ser usado para cancelar um aplicativo assíncrono se não desejar aguardar sua conclusão. Seguindo os exemplos neste tópico, você pode adicionar um botão de cancelamento a um aplicativo que baixa o conteúdo de um site ou uma lista de sites.  
@@ -40,7 +30,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelATask** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
-5.  Escolha a tecla F5 para executar o projeto.  
+5.  Pressione a tecla F5 para executar o projeto.  
   
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.  
   
@@ -161,7 +151,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAListOfTasks** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
-5.  Escolha a tecla F5 para executar o projeto.  
+5.  Pressione a tecla F5 para executar o projeto.  
   
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.  
   

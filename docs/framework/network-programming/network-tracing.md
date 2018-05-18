@@ -1,12 +1,6 @@
 ---
 title: Rastreamento de rede no .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - debugging [.NET Framework], network tracing
 - methods, network tracing
@@ -24,16 +18,14 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7ef5698300d7d3cb333bc7d58a782c02823718d8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 505c5f39890f7f362c5f5d8525a65f8c3d05624a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Rastreamento de rede no .NET Framework
 O rastreamento de rede no .NET Framework fornece acesso a informações sobre invocações de método e tráfego de rede geradas por um aplicativo gerenciado. Esse recurso é útil para a depuração de aplicativos em desenvolvimento e para analisar aplicativos implantados. A saída fornecida pelo rastreamento de rede é personalizável para oferecer suporte a diferentes cenários de uso em tempo de desenvolvimento e em um ambiente de produção.  

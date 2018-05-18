@@ -1,24 +1,17 @@
 ---
-title: "decimal (Referência de C#)"
+title: decimal (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0da001851c681fe4d698b920d9668b2f6b731e3a
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 590bd3c6347271f9c4e2c6fd6223db608e010b69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-c-reference"></a>decimal (Referência de C#)
 A palavra-chave `decimal` indica um tipo de dados de 128 bits. Comparado a outros tipos de pontos flutuantes, o tipo `decimal` tem mais precisão e um intervalo menor que o torna apropriado para cálculos financeiros e monetários. O intervalo e a precisão aproximados para o tipo `decimal` são mostrados na tabela a seguir.  

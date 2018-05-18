@@ -1,21 +1,14 @@
 ---
 title: Criando e usando componentes no Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5b7b145d777ba7ec3250904ad4879dd21926e0e3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b48fb59f0927056c8dba75211b4fffa6f25c5c52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Criando e usando componentes no Visual Basic
 Um *componente* é uma classe que implementa a interface <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> ou que deriva direta ou indiretamente de uma classe que implementa <xref:System.ComponentModel.IComponent>. Um componente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] é um objeto que é reutilizável, pode interagir com outros objetos e fornece controle sobre recursos externos e suporte ao tempo de design.  

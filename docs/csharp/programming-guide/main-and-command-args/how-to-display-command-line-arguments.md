@@ -1,21 +1,14 @@
 ---
 title: Como exibir argumentos de linha de comando (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f6ae495eef227c6e4d9fb9ca0d4d0c031163fd52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b9e488e84c78c8fdbf64431f42ea5797fdca916
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Como exibir argumentos de linha de comando (Guia de Programação em C#)
 Os argumentos fornecidos a um executável na linha de comando são acessíveis por meio de um parâmetro opcional para `Main`. Os argumentos são fornecidos na forma de uma matriz de cadeias de caracteres. Cada elemento da matriz contém um argumento. O espaço em branco entre os argumentos é removido. Por exemplo, considere essas invocações de linha de comando de um executável fictício:  

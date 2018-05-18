@@ -1,13 +1,7 @@
 ---
-title: "Como ler e gravar em um arquivo de dados recém-criado"
-ms.custom: 
+title: Como ler e gravar em um arquivo de dados recém-criado
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b854495a32755b2cbbd0421b1a45458fd2b7863
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Como ler e gravar em um arquivo de dados recém-criado
 As classes <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader?displayProperty=nameWithType> são usadas para gravar e ler dados em vez de cadeias de caracteres. O exemplo a seguir demonstra como gravar e ler dados de um fluxo de arquivo novo e vazio chamado `Test.data`. Depois de criar o arquivo de dados no diretório atual, os objetos <xref:System.IO.BinaryWriter> e <xref:System.IO.BinaryReader> associados são criados e o objeto <xref:System.IO.BinaryWriter> é usado para gravar os inteiros de 0 a 10 para `Test.data`, que deixa o ponteiro de arquivo no final do arquivo. Depois de definir o ponteiro de arquivo de volta para a origem, o objeto <xref:System.IO.BinaryReader> lê o conteúdo especificado.  

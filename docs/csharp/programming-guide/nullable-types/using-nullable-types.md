@@ -1,21 +1,14 @@
 ---
 title: Usando tipos anuláveis (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Usando tipos anuláveis (Guia de Programação em C#)
 Os tipos que permitem valor nulo podem representar todos os valores de um tipo subjacente e um valor adicional [null](../../../csharp/language-reference/keywords/null.md) . Os tipos que permitem valor nulo são declarados em uma das duas maneiras:  

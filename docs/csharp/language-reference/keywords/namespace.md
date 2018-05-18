@@ -1,9 +1,6 @@
 ---
-title: "namespace (Referência de C#)"
+title: namespace (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - namespace_CSharpKeyword
 - namespace
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 76cc1adc21f6cfadc93da58250336705e43e333a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 343cce85dd235532fbe3fc90af0a785f48518db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-c-reference"></a>namespace (Referência de C#)
 A palavra-chave `namespace` é usada para declarar um escopo que contém um conjunto de objetos relacionados. Você pode usar um namespace para organizar elementos de código e criar tipos globalmente exclusivos.  

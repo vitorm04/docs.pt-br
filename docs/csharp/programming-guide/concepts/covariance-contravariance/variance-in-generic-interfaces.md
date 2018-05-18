@@ -1,21 +1,12 @@
 ---
-title: "Variância em interfaces genéricas (C#)"
-ms.custom: 
+title: Variância em interfaces genéricas (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: cc3fe009e89d5d8f6619b406c8c08f47620a881d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fdcfd13a645ffc9b596beed65b74f8e593c642f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Variância em interfaces genéricas (C#)
 O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. O suporte à variação possibilita a conversão implícita de classes que implementam essas interfaces. As seguintes interfaces agora são variantes:  

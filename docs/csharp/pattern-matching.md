@@ -1,19 +1,13 @@
 ---
 title: Correspondência de padrões – Guia de C#
 description: Saiba mais sobre expressões de correspondência de padrões em C#
-keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>Correspondência padrão #
 
@@ -51,7 +45,7 @@ Nesta versão atualizadas, a expressão `is` testa a variável e a atribui a uma
 
 As regras da linguagem para expressões de correspondência de padrões ajudam a evitar usar incorretamente os resultados de uma expressão de correspondência. No exemplo acima, as variáveis `s`, `c` e `r` estão somente no escopo e são atribuídas definitivamente quando as expressões de correspondência de padrão têm resultados `true`. Se você tentar usar qualquer variável em outro local, seu código gerará erros de compilador.
 
-Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeArea`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as variáveis declaradas na instrução `if` estão no mesmo escopo da instrução `if` (o método nesse caso). Esse comportamento não é específico para correspondência de padrões, mas é o comportamento definido para escopos de variável e instruções `if` e `else`.
+Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeAreaModernIs`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as variáveis declaradas na instrução `if` estão no mesmo escopo da instrução `if` (o método nesse caso). Esse comportamento não é específico para correspondência de padrões, mas é o comportamento definido para escopos de variável e instruções `if` e `else`.
 
 As variáveis `c` e `s` são atribuídas quando as respectivas instruções `if` são verdadeiras por causa do mecanismo atribuído definitivamente quando elas são verdadeiras.
 

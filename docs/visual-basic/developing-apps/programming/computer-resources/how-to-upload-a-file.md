@@ -1,12 +1,6 @@
 ---
 title: Como carregar um arquivo no Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - networks, uploading files
 - files [Visual Basic], uploading
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a0fab9b812ddff1f56e9fa203bd297fd70bc47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 769c04430f8323dfde680fca45cfcd67809bdab0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Como carregar um arquivo no Visual Basic
 O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser usado para carregar um arquivo e armazená-lo em um local remoto. Se o parâmetro `ShowUI` for definido como `True`, uma caixa de diálogo será exibida mostrando o andamento do upload e permitirá que os usuários cancelem a operação.  

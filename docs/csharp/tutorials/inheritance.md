@@ -1,20 +1,15 @@
 ---
-title: "Herança em C#"
-description: "Aprenda a usar a herança em bibliotecas e aplicativos em C#."
-keywords: "herança (C#), classes base, classes derivadas, classes base abstratas"
+title: Herança em C#
+description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 author: rpetrusha
-manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 

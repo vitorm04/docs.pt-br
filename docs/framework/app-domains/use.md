@@ -1,28 +1,18 @@
 ---
-title: "Usando domínios do aplicativo"
-ms.custom: 
+title: Usando domínios do aplicativo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eade3728c8a51785214cf3d8de53d8a64a668f1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-application-domains"></a>Usando domínios do aplicativo
 Os domínios do aplicativos fornecem uma unidade de isolamento para o Common Language Runtime. Eles são criados e executados dentro de um processo. Domínios do aplicativo geralmente são criados por um host de tempo de execução, que é um aplicativo responsável por carregar o tempo de execução para um processo e executar o código do usuário em um domínio do aplicativo. O host de tempo de execução cria um processo e um domínio de aplicativo padrão e executa o código gerenciado dentro dele. Hosts de tempo de execução incluem ASP.NET, Microsoft Internet Explorer e o shell do Windows.  

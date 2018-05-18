@@ -1,13 +1,7 @@
 ---
 title: Decidindo quando implementar o padrão assíncrono baseado em evento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidindo quando implementar o padrão assíncrono baseado em evento
 O Padrão assíncrono baseado em evento oferece um padrão para expor o comportamento assíncrono de uma classe. Com a introdução deste padrão, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dois padrões para expor o comportamento assíncrono: o Padrão assíncrono baseado na interface de <xref:System.IAsyncResult?displayProperty=nameWithType> e o padrão baseado no evento. Este tópico descreve quando é apropriado implementar os dois padrões.  

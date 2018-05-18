@@ -1,21 +1,14 @@
 ---
 title: Hospedando o .NET Core
 description: Hospedando o tempo de execução do .NET Core com base no código nativo
-keywords: .NET, .NET Core, Hospedagem, Hospedando o .NET Core
 author: mjrousos
-ms.author: mikerou
+ms.author: mairaw
 ms.date: 2/3/2017
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-net-core"></a>Hospedando o .NET Core
 

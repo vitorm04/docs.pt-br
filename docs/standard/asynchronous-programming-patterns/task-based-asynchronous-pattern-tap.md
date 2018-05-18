@@ -1,13 +1,7 @@
 ---
-title: "Padrão assíncrono baseado em tarefa (TAP)"
-ms.custom: 
+title: Padrão assíncrono baseado em tarefa (TAP)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3c3d768414a5cd8a8a9fd4a7e120f74d70827729
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Padrão assíncrono baseado em tarefa (TAP)
 O TAP (Padrão Assíncrono Baseado em Tarefa) baseia-se nos tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType>, os quais são usados para representar operações assíncronas arbitrárias. O TAP é o padrão de design assíncrono recomendado para novos desenvolvimentos.  

@@ -1,21 +1,12 @@
 ---
-title: "Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)"
-ms.custom: 
+title: 'Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc334261dbea7759d1bb571cc61a5f00f84531a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)
 Este passo a passo demonstra como criar um aplicativo Windows Forms com multithread que pesquisa um arquivo de texto para ocorrências de uma palavra. Ele demonstra:  
@@ -36,7 +27,7 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
   
 3.  Nomeie os objetos como mostrado na tabela a seguir.  
   
-    |Objeto|Propriedade|Configuração|  
+    |Objeto|propriedade|Configuração|  
     |------------|--------------|-------------|  
     |Primeiro botão|`Name`, `Text`|Iniciar, Iniciar|  
     |Segundo botão|`Name`, `Text`|Cancelar, Cancelar|  
@@ -47,7 +38,7 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
   
 4.  Adicione um rótulo ao lado de cada caixa de texto. Defina a propriedade `Text` para cada rótulo conforme mostrado na tabela a seguir.  
   
-    |Objeto|Propriedade|Configuração|  
+    |Objeto|propriedade|Configuração|  
     |------------|--------------|-------------|  
     |Primeiro rótulo|`Text`|Arquivo de Origem|  
     |Segundo rótulo|`Text`|Comparar cadeia de caracteres|  
@@ -60,7 +51,7 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
   
 2.  Defina as propriedades a seguir ao objeto backgroundWorker1.  
   
-    |Propriedade|Configuração|  
+    |propriedade|Configuração|  
     |--------------|-------------|  
     |`WorkerReportsProgress`|verdadeiro|  
     |`WorkerSupportsCancellation`|verdadeiro|  

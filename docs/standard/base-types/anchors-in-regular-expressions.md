@@ -1,13 +1,7 @@
 ---
-title: "Âncoras em expressões regulares"
-ms.custom: 
+title: Âncoras em expressões regulares
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 <a name="top"></a> Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  

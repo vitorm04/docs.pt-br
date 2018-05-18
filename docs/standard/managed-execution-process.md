@@ -1,13 +1,7 @@
 ---
-title: "Processo de execução gerenciada"
-ms.custom: 
+title: Processo de execução gerenciada
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - source code language
 - code, managed execution process
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 702ed3e73117fe01769ec9d7bf939ae8df523793
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4901a81e318efe8371dc72cd9c1d511d55b0c65b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
@@ -118,7 +107,7 @@ ms.lasthandoff: 12/23/2017
  [Voltar ao início](#introduction)  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão Geral](../../docs/framework/get-started/overview.md)  
+ [Visão geral](../../docs/framework/get-started/overview.md)  
  [Componentes de independência de linguagem e componentes independentes da linguagem](../../docs/standard/language-independence-and-language-independent-components.md)  
  [Metadados e componentes autodescritivos](../../docs/standard/metadata-and-self-describing-components.md)  
  [Ilasm.exe (IL Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  

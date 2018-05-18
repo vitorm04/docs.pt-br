@@ -1,26 +1,17 @@
 ---
-title: "Como copiar um diretório para outro diretório no Visual Basic"
-ms.custom: 
+title: Como copiar um diretório para outro diretório no Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
 - I/O [Visual Basic], copying folders
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f20ee767902395439f420f14fc2e352297ad31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Como copiar um diretório para outro diretório no Visual Basic
 Use o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> para copiar um diretório para outro diretório. Esse método copia o conteúdo do diretório, bem como o próprio diretório. Se o diretório de destino não existir, ele será criado. Se existir um diretório com o mesmo nome no local de destino e `overwrite` estiver definido como `False`, o conteúdo dos dois diretórios será mesclado. Você pode especificar um novo nome para o diretório durante a operação.  

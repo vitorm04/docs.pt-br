@@ -1,13 +1,7 @@
 ---
-title: "Como antecipar condições de espaço insuficiente com o armazenamento isolado"
-ms.custom: 
+title: Como antecipar condições de espaço insuficiente com o armazenamento isolado
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,18 +22,13 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Como antecipar condições de espaço insuficiente com o armazenamento isolado
 O código que usa armazenamento isolado é restrito por uma [cota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica o tamanho máximo do compartimento de dados no qual arquivos de armazenamento e diretórios isolados existem. A cota é definida pela política de segurança e é configurável por administradores. Se o tamanho máximo permitido for ultrapassado ao tentar gravar dados, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada e a operação falhará. Isso ajuda a evitar ataques de negação de serviço que podem fazer com que o aplicativo recuse solicitações porque o armazenamento de dados está cheio.  

@@ -1,12 +1,6 @@
 ---
-title: "Usando um soquete de servidor síncrono"
-ms.custom: 
+title: Usando um soquete de servidor síncrono
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +17,14 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 03f6dc6ea517aba410430fea69113b64dccc6ff6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4f04255edf9533612dd6b0733331fb18587ff3f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-synchronous-server-socket"></a>Usando um soquete de servidor síncrono
 Os soquetes de servidor síncrono suspendem a execução do aplicativo até que uma solicitação de conexão seja recebida no soquete. Os soquetes de servidor síncrono não são adequados para aplicativos que fazem uso intenso da rede em sua operação, mas podem ser adequados para aplicativos de rede simples.  

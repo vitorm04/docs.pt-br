@@ -1,31 +1,20 @@
 ---
 title: Opções de mesclagem em PLINQ
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e155ee8de2846fc3c8c767a77f365127923f757
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merge-options-in-plinq"></a>Opções de mesclagem em PLINQ
 Quando uma consulta está sendo executada como paralela, o PLINQ faz a partição da sequência de origem para que várias threads possam funcionar em diferentes partes simultaneamente, normalmente em threads separados. Se os resultados forem consumidos em um thread, por exemplo, em um loop `foreach` (`For Each` em Visual Basic), os resultados de cada thread precisarão ser mesclados novamente em uma sequência. O tipo de mesclagem executado pelo PLINQ depende dos operadores que estão presentes na consulta. Por exemplo, os operadores que impõem uma nova ordem aos resultados devem armazenar em buffer todos os elementos em todos os threads. Do ponto de vista do thread de consumo (que também é o thread do usuário do aplicativo), uma consulta totalmente armazenada em buffer pode ser executada por um período significativo de tempo antes de produzir seu primeiro resultado. Por padrão, outros operadores são parcialmente armazenados em buffer e geram seus resultados em lotes. Um operador <xref:System.Linq.ParallelEnumerable.ForAll%2A> não é armazenado em buffer por padrão. Ele gera todos os elementos de todos os threads imediatamente.  

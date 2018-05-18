@@ -1,13 +1,7 @@
 ---
-title: "Executando operações de cadeia de caracteres que não levam em conta a cultura"
-ms.custom: 
+title: Executando operações de cadeia de caracteres que não levam em conta a cultura
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - case mappings
 - custom case mappings
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 62aa839d2dae2f6dc84d529a8abf5061367f221f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9500550fe415d77bacb44011622ddd83ffc8a9ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Executando operações de cadeia de caracteres que não levam em conta a cultura
 A maioria dos métodos do .NET Framework que executam operações de cadeia de caracteres sensíveis à cultura fornece, por padrão, sobrecargas de método que permitem que você especifique explicitamente a cultura a ser usada passando um parâmetro <xref:System.Globalization.CultureInfo>. Essas sobrecargas permitem que você elimine variações culturais em mapeamentos de caso e em regras de classificação, e garante resultados insensíveis à cultura.  

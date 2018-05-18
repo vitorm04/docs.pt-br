@@ -1,9 +1,6 @@
 ---
-title: "Cláusula orderby (Referência de C#)"
+title: Cláusula orderby (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - orderby
 - orderby_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-caps.latest.revision: "17"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc688e7ba164dcca71d13b2d79d30f1373c4778e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1fd0036e8bd3c838fe92ca27635cd7638d59ef1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="orderby-clause-c-reference"></a>Cláusula orderby (Referência de C#)
 Em uma expressão de consulta, a cláusula `orderby` faz com que a sequência ou subsequência (grupo) retornada seja classificada em ordem crescente ou decrescente. Várias chaves podem ser especificadas para executar uma ou mais operações de classificação secundárias. A classificação é executada pelo comparador padrão para o tipo do elemento. A ordem de classificação crescente é padrão. Também é possível especificar um comparador personalizado. No entanto, está disponível somente por meio da sintaxe baseada em método. Para obter mais informações, consulte [Classificando dados](../../programming-guide/concepts/linq/sorting-data.md).  

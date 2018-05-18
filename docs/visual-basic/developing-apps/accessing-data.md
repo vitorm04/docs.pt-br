@@ -1,22 +1,15 @@
 ---
 title: Acessando dados em aplicativos do Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Acessando dados em aplicativos do Visual Basic
 O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de aplicativos que acessam dados. Formulários de associação de dados para aplicativos do Windows são criados arrastando itens da janela [Fontes de Dados](/visualstudio/data-tools/add-new-data-sources) para um formulário. Associe controles a dados arrastando itens da janela **Fontes de Dados** para os controles existentes.  

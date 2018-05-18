@@ -1,23 +1,16 @@
 ---
 title: Visão geral da assincronia
 description: Saiba como a programação assíncrona é uma técnica chave que torna fácil lidar com o bloqueio de E/S e operações simultâneas em vários núcleos.
-keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: b9d612186e1051644e8d4ae9476b8fafd811deb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-overview"></a>Visão geral da assincronia
 

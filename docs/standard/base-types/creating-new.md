@@ -1,13 +1,7 @@
 ---
-title: "Criação de novas cadeias de caracteres no .NET"
-ms.custom: 
+title: Criação de novas cadeias de caracteres no .NET
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3ba91b42bc9815b1b12fdc761882741b11790060
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-new-strings-in-net"></a>Criação de novas cadeias de caracteres no .NET
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que cadeias de caracteres sejam criadas usando uma atribuição simples e também sobrecarrega um constructo de classe para dar suporte à criação de cadeias de caracteres usando um número de parâmetros diferentes. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] também fornece vários métodos na classe <xref:System.String?displayProperty=nameWithType> que criam novos objetos de cadeia de caracteres combinando várias cadeias de caracteres, matrizes de cadeias de caracteres ou objetos.  

@@ -1,13 +1,7 @@
 ---
-title: "Gerenciamento automático de memória"
-ms.custom: 
+title: Gerenciamento automático de memória
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - garbage collection, automatic memory management
 - memory, allocating
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5405b6fc080696b7e507e70dd8b04f8ddcc4bbb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-memory-management"></a>Gerenciamento automático de memória
 O gerenciamento automático de memória é um dos serviços que o Common Language Runtime fornece durante a [Execução gerenciada](../../docs/standard/managed-execution-process.md). O coletor de lixo do Common Language Runtime gerencia a alocação e a liberação de memória para um aplicativo. Para desenvolvedores, isso significa que você não tem que escrever código para executar tarefas de gerenciamento de memória quando desenvolver aplicativos gerenciados. O gerenciamento automático de memória pode eliminar problemas comuns, como esquecer de liberar um objeto e causar um vazamento de memória ou tentar acessar a memória de um objeto que já tinha sido liberado. Esta seção descreve como o coletor de lixo aloca e libera memória.  

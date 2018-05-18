@@ -1,12 +1,6 @@
 ---
-title: "Detecção automática de proxy"
-ms.custom: 
+title: Detecção automática de proxy
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +14,14 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bbfdb16e284fcd266bcc8ebf41a197733e92ca23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: acb14d8785a01d98d56233b8eb942f9bc4675f63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-proxy-detection"></a>Detecção automática de proxy
 A detecção automática de proxy é um processo pelo qual um servidor proxy Web é identificado pelo sistema e usado para enviar solicitações em nome do cliente. Esse recurso também é conhecido como WPAD (Descoberta Automática de Proxy Web). Quando a detecção automática de proxy está habilitada, o sistema tenta localizar um script de configuração de proxy que é responsável por retornar o conjunto de proxies que pode ser usado para a solicitação. Se o script de configuração de proxy for encontrado, o script será baixado, compilado e executado no computador local quando as informações de proxy, o fluxo da solicitação ou a resposta for obtida de uma solicitação que usa uma instância <xref:System.Net.WebProxy>.  

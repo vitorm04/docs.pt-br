@@ -1,14 +1,6 @@
 ---
 title: Empacotando e implantando recursos em aplicativos de área de trabalho
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -34,17 +26,13 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  

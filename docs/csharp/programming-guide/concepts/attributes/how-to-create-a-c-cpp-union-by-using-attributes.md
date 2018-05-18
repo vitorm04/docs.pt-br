@@ -1,21 +1,12 @@
 ---
-title: "Como criar uma união do C/C++ usando atributos (C#)"
-ms.custom: 
+title: Como criar uma união do C/C++ usando atributos (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9274b585c2fecf53b94d94f9bdfdaf4a47f1041
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Como criar uma união do C-C++ usando atributos (C#)
 Usando atributos, você pode personalizar como structs são dispostos na memória. Por exemplo, você pode criar o que é conhecido como uma união no C/C++ usando os atributos `StructLayout(LayoutKind.Explicit)` e `FieldOffset`.  

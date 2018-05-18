@@ -1,29 +1,18 @@
 ---
-title: "Compilação do esquema de XmlSchemaCollection"
-ms.custom: 
+title: Compilação do esquema de XmlSchemaCollection
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c891736534741d1d3d3edb93d75d9f191c2dd573
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d64443f213603b1f5db9c256acc88e998e3f009a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilação do esquema de XmlSchemaCollection
 **XmlSchemaCollection** é um cache ou uma biblioteca em que esquemas XDR (XML-Data Reduced) e XSD (XML Schema definition language) podem ser armazenados e validados. **XmlSchemaCollection** melhora o desempenho armazenando em cache esquemas na memória em vez de acessá-los de um arquivo ou de uma URL.  

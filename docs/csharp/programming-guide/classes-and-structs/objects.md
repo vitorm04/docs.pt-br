@@ -1,27 +1,21 @@
 ---
-title: "Objetos (Guia de Programação em C#)"
+title: Objetos (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f8a8e283b42b27a40780068be42c03fc5047a511
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guia de Programação em C#)
 Uma definição de classe ou struct é como um esquema que especifica o que o tipo pode fazer. Um objeto é basicamente um bloco de memória que foi alocado e configurado de acordo com o esquema. Um programa pode criar vários objetos da mesma classe. Objetos também são chamados de instâncias e podem ser armazenados em uma variável nomeada ou em uma matriz ou coleção. O código de cliente é o código que usa essas variáveis para chamar os métodos e acessar as propriedades públicas do objeto. Em uma linguagem orientada a objetos, como o C#, um programa típico consiste em vários objetos que interagem dinamicamente.  
   
 > [!NOTE]
->  Tipos estáticos se comportam de modo diferente do que está descrito aqui. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+>  Tipos estáticos se comportam de modo diferente do que está descrito aqui. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
 ## <a name="struct-instances-vs-class-instances"></a>Instâncias de struct versus Instâncias de Classe  
  Como as classes são tipos de referência, uma variável de um objeto de classe contém uma referência ao endereço do objeto no heap gerenciado. Se um segundo objeto do mesmo tipo for atribuído ao primeiro objeto, as duas variáveis farão referência ao objeto nesse endereço. Esse ponto é abordado com mais detalhes posteriormente neste tópico.  

@@ -1,13 +1,7 @@
 ---
-title: "Como exibir informações localizadas de data e hora para usuários da Web"
-ms.custom: 
+title: Como exibir informações localizadas de data e hora para usuários da Web
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como exibir informações localizadas de data e hora para usuários da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações que analisam e formatam valores de data e hora não devem depender de um formato padrão (que geralmente é o formato da cultura local do servidor Web) ao interagir com o usuário. Em vez disso, formulários da Web que lidam com cadeias de caracteres de data e hora inseridas pelo usuário devem analisar as cadeias de caracteres usando a cultura preferencial do usuário. Da mesma forma, os dados de data e hora devem ser exibidos para o usuário em um formato compatível com a respectiva cultura. Este tópico mostra como fazer isso.  

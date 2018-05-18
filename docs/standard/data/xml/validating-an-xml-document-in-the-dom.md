@@ -1,30 +1,19 @@
 ---
 title: Validando um documento XML no DOM
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 716e9baca52e9f5b7f4f24821e50b6a16aef9136
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b77d26a79796a9de87c07e366929cb516169907b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validando um documento XML no DOM
 A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objeto de Documento) em um esquema da linguagem XSD ou uma DTD (definição de tipo de documento) por padrão; o XML é verificado somente se está bem-formado.  

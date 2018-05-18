@@ -1,26 +1,15 @@
 ---
 title: Trabalhando com esquemas XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 83fddd00f44b184fa066f6c47b90b01fac7ef7bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-xml-schemas"></a>Trabalhando com esquemas XML
 Para definir a estrutura de um documento XML, bem como os relacionamentos de seus elementos, tipos de dados e restrições de conteúdo, você usa uma DTD (definição de tipo de documento) ou um esquema XSD (linguagem de definição de esquema XML). Embora um documento XML seja considerado bem-formado se atender a todos os requisitos sintáticos definidos pela Recomendação da linguagem XML 1.0 do W3C (World Wide Web Consortium), ele não é considerado válido a menos que seja bem-formado e esteja de acordo com as restrições definidas pela DTD ou o esquema. Portanto, embora todos os documentos XML válidos sejam bem-formados, nem todos os documentos XML bem-formados são válidos.  

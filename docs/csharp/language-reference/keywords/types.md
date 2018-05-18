@@ -1,21 +1,15 @@
 ---
-title: "Tipos (Referência de C#)"
+title: Tipos (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2c7285e237b04c1290391c4bba3e62886dceb83c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-c-reference"></a>Tipos (Referência de C#)
 O sistema de digitação do C# contém as seguintes categorias:  
@@ -32,7 +26,7 @@ O sistema de digitação do C# contém as seguintes categorias:
   
  Esta seção também apresenta [nulo](../../../csharp/language-reference/keywords/void.md).  
   
- Os tipos de valor também são anuláveis, o que significa que eles podem armazenar um estado sem valor adicional. Para obter mais informações, consulte [Nullable Types (Tipos que permitem valores nulos)](../../../csharp/programming-guide/nullable-types/index.md).  
+ Os tipos de valor também são anuláveis, o que significa que eles podem armazenar um estado sem valor adicional. Para obter mais informações, consulte [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)  

@@ -1,21 +1,15 @@
 ---
-title: "Construtores de instâncias (Guia de Programação em C#)"
+title: Construtores de instâncias (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: efb82128ffc27a7c065d2ba12bfc08396d3b5cf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5864511e6323ca1508494abfe2350e8eaffb6a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Construtores de instâncias (Guia de Programação em C#)
 Os construtores de instância são usados para criar e inicializar quaisquer variáveis de membro de instância quando você usa a expressão [new](../../../csharp/language-reference/keywords/new.md) para criar um objeto de uma [classe](../../../csharp/language-reference/keywords/class.md). Para inicializar uma classe [estática](../../../csharp/language-reference/keywords/static.md) ou variáveis estáticas em uma classe não estática, é necessário definir um construtor estático. Para obter mais informações, consulte [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

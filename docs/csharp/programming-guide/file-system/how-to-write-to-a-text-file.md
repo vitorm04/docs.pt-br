@@ -1,10 +1,6 @@
 ---
 title: Como escrever em um arquivo de texto (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - TextWriter.WriteLine
 - StreamWriter.Close
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fa6de76e3981e0f05b5b192045043422a8a912aa
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 6d3f1bc238bd3129a25d4af29341c27d52b71ed8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Como escrever em um arquivo de texto (Guia de Programação em C#)
 Estes exemplos mostram várias maneiras de gravar textos em um arquivo. Os dois primeiros exemplos usam métodos de conveniência estáticos na classe <xref:System.IO.File?displayProperty=nameWithType> para gravar cada elemento de qualquer `IEnumerable<string>` e uma cadeia de caracteres em um arquivo de texto. O exemplo 3 mostra como adicionar texto a um arquivo quando você precisa processar cada linha individualmente enquanto escreve no arquivo. Os exemplos de 1 a 3 substituem todo o conteúdo existente no arquivo, mas o exemplo 4 mostra como adicionar texto em um arquivo existente.  

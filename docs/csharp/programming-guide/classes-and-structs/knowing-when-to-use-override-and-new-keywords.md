@@ -1,23 +1,16 @@
 ---
 title: Quando usar as palavras-chave override e new (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-caps.latest.revision: ''
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b4d53f16f046839d56bc1dc37f7b2d8816c5956f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Quando usar as palavras-chave override e new (Guia de Programação em C#)
 No C#, um método em uma classe derivada pode ter o mesmo nome que um método na classe base. É possível especificar a maneira como os métodos interagem usando as palavras-chave [new](../../../csharp/language-reference/keywords/new.md) e [override](../../../csharp/language-reference/keywords/override.md). O modificador `override` *estende* o método da classe base e o modificador `new` o *oculta*. A diferença é ilustrada nos exemplos deste tópico.  
@@ -50,7 +43,7 @@ class DerivedClass : BaseClass
   
 -   `bcdc` é do tipo `BaseClass` e seu valor é do tipo `DerivedClass`. Essa é a variável à qual você deve prestar atenção.  
   
- Como `bc` e `bcdc` têm o tipo `BaseClass`, eles podem ter acesso direto a `Method1`, a menos que você use a conversão. A variável `dc` pode acessar `Method1` e `Method2`. Essas relações são mostradas no código a seguir.  
+ Como `bc` e `bcdc` têm o tipo `BaseClass`, eles podem ter acesso direto a `Method1`, a menos que você usa a conversão. A variável `dc` pode acessar `Method1` e `Method2`. Essas relações são mostradas no código a seguir.  
   
 ```csharp  
 class Program  
@@ -293,7 +286,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1` produz a saída a seguir. Observe principalmente os resultados para `car2`, que provavelmente não são o que você espera. O tipo do objeto é `ConvertibleCar`, mas `DescribeCar` não acessa a versão de `ShowDetails` definida na classe `ConvertibleCar`, porque esse método é declarado com o modificador `new`, e não com o modificador `override`. Em decorrência disso, um objeto `ConvertibleCar` exibe a mesma descrição que um objeto `Car`. Compare os resultados de `car3`, que é um objeto `Minivan`. Nesse caso, o método `ShowDetails` declarado na classe `Minivan` substitui o método `ShowDetails` declarado na classe `Car` e a descrição exibida descreve uma minivan.   
+ `TestCars1` produz a saída a seguir. Observe principalmente os resultados para `car2`, que provavelmente não são o que você espera. O tipo do objeto é `ConvertibleCar`, mas `DescribeCar` não acessa a versão de `ShowDetails` definida na classe `ConvertibleCar`, porque esse método é declarado com o modificador `new`, e não com o modificador `override`. Em decorrência disso, um objeto `ConvertibleCar` exibe a mesma descrição que um objeto `Car`. Compare os resultados de `car3`, que é um objeto `Minivan`. Nesse caso, o método `ShowDetails` declarado na classe `Minivan` substitui o método `ShowDetails` declarado na classe `Car` e a descrição exibida descreve uma minivan.  
   
 ```csharp  
 // TestCars1  

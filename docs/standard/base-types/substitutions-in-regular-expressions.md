@@ -1,13 +1,7 @@
 ---
-title: "Substituições em expressões regulares"
-ms.custom: 
+title: Substituições em expressões regulares
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 <a name="Top"></a> As substituições são elementos de linguagem que são reconhecidos apenas em padrões de substituição. Eles usam um padrão de expressão regular para definir o todo ou parte do texto que substitui o texto correspondente na cadeia de caracteres de entrada. O padrão de substituição pode consistir em uma ou mais substituições junto com caracteres literais. Padrões de substituição são fornecidos para sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que têm um parâmetro `replacement` e para o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Os métodos substituem o padrão correspondente pelo padrão que é definido pelo parâmetro `replacement`.  

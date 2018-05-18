@@ -1,21 +1,12 @@
 ---
-title: "Conceitos e terminologia (transformação funcional) (C#)"
-ms.custom: 
+title: Conceitos e terminologia (transformação funcional) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c62aadc84f9c62429ffe59b78de386aac0f5cf63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceitos e terminologia (transformação funcional) (C#)
 Este tópico apresenta os conceitos e a terminologia de transformações e puras. A abordagem funcional de transformação a transformação passa de dados codificação que geralmente é mais rápido, mais programar completo expressive, e mais fácil depurar e manter que a programação mais tradicional, mais imperativa.  
@@ -65,7 +56,7 @@ Este tópico apresenta os conceitos e a terminologia de transformações e puras
  tuple (tipos anônimos)  
  Um conceito matemático, um tuple é uma sequência finito rotuladas de objetos, cada um de um tipo específico. Um tuple também é conhecido como uma lista ordenada. Tipos anônimos são uma implementação de linguagem desse conceito, que permitem que um tipo sem nome da classe ser declarados e um objeto do tipo a ser instanciada ao mesmo tempo.  
   
- Para obter mais informações, consulte [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Para obter mais informações, consulte [Tipos anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
  inferência de tipos (digite implícito)  
  A capacidade de um compilador de determinar o tipo de uma variável na ausência de uma declaração de tipo explícita.  

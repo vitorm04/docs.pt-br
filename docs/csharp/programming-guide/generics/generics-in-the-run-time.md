@@ -1,21 +1,14 @@
 ---
 title: Genéricos em tempo de execução (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5ef0b63b293ec277ebf9331e8f282ce2c1692d31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c7cc0580398eeb5c70422cba3569340133107b12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Genéricos em tempo de execução (Guia de Programação em C#)
 Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL) conterá metadados que o identificarão como possuidor de parâmetros de tipo. O uso de MSIL em um tipo genérico será diferente de acordo com o parâmetro de tipo fornecido, ou seja, se ele é um tipo de valor ou um tipo de referência.  

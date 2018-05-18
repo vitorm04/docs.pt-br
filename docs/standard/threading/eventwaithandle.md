@@ -1,31 +1,20 @@
 ---
 title: EventWaitHandle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], EventWaitHandle class
 - EventWaitHandle class
 - event wait handles [.NET Framework]
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 665676a25aea48388ba01b8028af00049b113f2b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 697820b01bd629baa306d96002a98d92e44dab51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 A classe <xref:System.Threading.EventWaitHandle> permite que os threads se comuniquem entre si por meio da sinalização e aguardando sinais. Identificadores de espera de eventos (conhecidos simplesmente como eventos) são identificadores de espera que podem ser sinalizados a fim de liberar um ou mais threads de espera. Após a sinalização, um identificador de espera de eventos é redefinido manualmente ou automaticamente. A classe <xref:System.Threading.EventWaitHandle> pode representar um identificador de espera de evento local (evento local) ou um identificador de espera evento de evento do sistema nomeado (evento nomeado ou evento do sistema, visível a todos os processos).  

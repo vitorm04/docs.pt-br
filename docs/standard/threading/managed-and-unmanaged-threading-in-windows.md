@@ -1,30 +1,19 @@
 ---
 title: Threading gerenciado e não gerenciado no Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O tempo de execução monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) e da invocação de plataforma.  
