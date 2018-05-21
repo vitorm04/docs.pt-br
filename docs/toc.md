@@ -285,7 +285,12 @@
 ### [Introdução ao Visual Studio para Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Introdução ao Visual Studio Code e Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Introdução à CLI do .NET Core](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [Guia de estilo do F#](fsharp/style-guide/index.md)
+### [F# diretrizes de Formatação de Código](fsharp/style-guide/formatting.md)
+### [Convenções de codificação do F#](fsharp/style-guide/conventions.md)
+### [Diretrizes de design de componente do F#](fsharp/style-guide/component-design-guidelines.md)
+
 ## Tutoriais
 ### [F# Interativo](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Provedores de Tipos](fsharp/tutorials/type-providers/index.md)
@@ -1113,7 +1118,7 @@
 # [Guia do ML.NET](machine-learning/index.md)
 ## [Tutoriais](machine-learning/tutorials/index.md)
 ### [Análise de Sentimento (classificação)](machine-learning/tutorials/sentiment-analysis.md)
-### [Previsão do horário do táxi (regressão)](machine-learning/tutorials/taxi-fare.md)
+### [Previsão do valor da corrida do táxi (regressão)](machine-learning/tutorials/taxi-fare.md)
 ## [Recursos](machine-learning/resources/index.md)
 ### [Glossário do Machine Learning](machine-learning/resources/glossary.md)
 ### [Noções básicas do Machine Learning](machine-learning/resources/basics.md)
