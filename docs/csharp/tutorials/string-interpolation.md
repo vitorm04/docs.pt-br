@@ -1,125 +1,113 @@
 ---
-title: Interpolação de cadeia de caracteres - C#
-description: Saiba como funciona o interpolação de cadeia de caracteres no C# 6
-keywords: .NET, .NET Core, C#, cadeia de caracteres
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: Interpolação de cadeias de caracteres em C#
+description: Saiba como incluir resultados de expressão formatada em uma cadeia de caracteres de resultado em C# com a interpolação de cadeia de caracteres.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="string-interpolation-in-c"></a><span data-ttu-id="95db7-104">Interpolação de cadeia de caracteres no C#</span><span class="sxs-lookup"><span data-stu-id="95db7-104">String Interpolation in C#</span></span> #
+# <a name="string-interpolation-in-c"></a><span data-ttu-id="03285-103">Interpolação de cadeias de caracteres em C#</span><span class="sxs-lookup"><span data-stu-id="03285-103">String interpolation in C#</span></span> #
 
-<span data-ttu-id="95db7-105">A interpolação de cadeia de caracteres é a maneira que os espaços reservados em uma cadeia de caracteres são substituídos pelo valor de uma variável de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="95db7-105">String Interpolation is the way that placeholders in a string are replaced by the value of a string variable.</span></span> <span data-ttu-id="95db7-106">Antes do C# 6, a maneira de fazer isso era com <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="95db7-106">Before C# 6, the way to do this is with <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="95db7-107">Isso funciona, mas como ele usa espaços reservados numerados, pode ser mais difícil de ler e ser mais detalhado.</span><span class="sxs-lookup"><span data-stu-id="95db7-107">This works okay, but since it uses numbered placeholders, it can be harder to read and more verbose.</span></span>
+<span data-ttu-id="03285-104">Este tutorial mostra como usar a [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) para formatar e incluir resultados de expressão em uma cadeia de caracteres de resultado.</span><span class="sxs-lookup"><span data-stu-id="03285-104">This tutorial shows you how to use [string interpolation](../language-reference/tokens/interpolated.md) to format and include expression results in a result string.</span></span> <span data-ttu-id="03285-105">Os exemplos pressupõem que você esteja familiarizado com os conceitos básicos do C# e a formatação de tipos do .NET.</span><span class="sxs-lookup"><span data-stu-id="03285-105">The examples assume that you are familiar with basic C# concepts and .NET type formatting.</span></span> <span data-ttu-id="03285-106">Se você não estiver familiarizado com a interpolação de cadeia de caracteres ou com a formatação de tipos do .NET, confira primeiro o [início rápido interativo sobre a interpolação de cadeia de caracteres](../quick-starts/interpolated-strings.yml).</span><span class="sxs-lookup"><span data-stu-id="03285-106">If you are new to string interpolation or .NET type formatting, check out the [interactive string interpolation quickstart](../quick-starts/interpolated-strings.yml) first.</span></span> <span data-ttu-id="03285-107">Para obter mais informações sobre como formatar tipos no .NET, confira o tópico [Formatando tipos no .NET](../../standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="03285-107">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) topic.</span></span>
 
-<span data-ttu-id="95db7-108">Outras linguagens de programação tiveram interpolação de cadeia de caracteres integradas à linguagem por algum tempo.</span><span class="sxs-lookup"><span data-stu-id="95db7-108">Other programming languages have had string interpolation built into the language for a while.</span></span> <span data-ttu-id="95db7-109">Por exemplo, em PHP:</span><span class="sxs-lookup"><span data-stu-id="95db7-109">For instance, in PHP:</span></span>
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a><span data-ttu-id="03285-108">Introdução</span><span class="sxs-lookup"><span data-stu-id="03285-108">Introduction</span></span>
 
-<span data-ttu-id="95db7-110">No C# 6, finalmente temos esse estilo de interpolação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="95db7-110">In C# 6, we finally have that style of string interpolation.</span></span> <span data-ttu-id="95db7-111">Você pode usar um `$` antes de uma cadeia de caracteres para indicar que ele deve substituir variáveis/expressões para seus valores.</span><span class="sxs-lookup"><span data-stu-id="95db7-111">You can use a `$` before a string to indicate that it should substitute variables/expressions for their values.</span></span>
+<span data-ttu-id="03285-109">O recurso [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) baseia-se no recurso [formatação composta](../../standard/base-types/composite-formatting.md) e fornece uma sintaxe mais legível e conveniente para incluir resultados de expressão formatada em uma cadeia de caracteres de resultado.</span><span class="sxs-lookup"><span data-stu-id="03285-109">The [string interpolation](../language-reference/tokens/interpolated.md) feature is built on top of the [composite formatting](../../standard/base-types/composite-formatting.md) feature and provides a more readable and convenient syntax to include formatted expression results in a result string.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="95db7-112">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="95db7-112">Prerequisites</span></span>
-<span data-ttu-id="95db7-113">Você precisará configurar seu computador para executar o .NET Core.</span><span class="sxs-lookup"><span data-stu-id="95db7-113">You’ll need to set up your machine to run .NET core.</span></span> <span data-ttu-id="95db7-114">Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="95db7-114">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
-<span data-ttu-id="95db7-115">Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker.</span><span class="sxs-lookup"><span data-stu-id="95db7-115">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="95db7-116">Será necessário instalar o editor de código de sua preferência.</span><span class="sxs-lookup"><span data-stu-id="95db7-116">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="95db7-117">As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma.</span><span class="sxs-lookup"><span data-stu-id="95db7-117">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="95db7-118">No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.</span><span class="sxs-lookup"><span data-stu-id="95db7-118">However, you can use whatever tools you are comfortable with.</span></span>
+<span data-ttu-id="03285-110">Para identificar uma literal de cadeia de caracteres como uma cadeia de caracteres interpolada, preceda-o com o símbolo `$`.</span><span class="sxs-lookup"><span data-stu-id="03285-110">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="03285-111">Você pode inserir qualquer expressão C# válida que retorna um valor em uma cadeia de caracteres interpolada.</span><span class="sxs-lookup"><span data-stu-id="03285-111">You can embed any valid C# expression that returns a value in an interpolated string.</span></span> <span data-ttu-id="03285-112">No seguinte exemplo, assim que uma expressão é avaliada, o resultado é convertido em uma cadeia de caracteres e incluído em uma cadeia de caracteres de resultado:</span><span class="sxs-lookup"><span data-stu-id="03285-112">In the following example, as soon as an expression is evaluated, its result is converted into a string and included in a result string:</span></span>
 
-## <a name="create-the-application"></a><span data-ttu-id="95db7-119">Criar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="95db7-119">Create the Application</span></span>
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-<span data-ttu-id="95db7-120">Agora que você instalou todas as ferramentas, crie um novo aplicativo do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="95db7-120">Now that you've installed all the tools, create a new .NET Core application.</span></span> <span data-ttu-id="95db7-121">Para usar o gerador de linha de comando, crie um diretório para seu projeto, como `interpolated`e execute o seguinte comando no shell de sua preferência:</span><span class="sxs-lookup"><span data-stu-id="95db7-121">To use the command line generator, create a directory for your project, such as `interpolated`, and execute the following command in your favorite shell:</span></span>
+<span data-ttu-id="03285-113">Como mostra o exemplo, você inclui uma expressão em uma cadeia de caracteres interpolada colocando-a com chaves:</span><span class="sxs-lookup"><span data-stu-id="03285-113">As the example shows, you include an expression in an interpolated string by enclosing it with braces:</span></span>
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-<span data-ttu-id="95db7-122">Esse comando cria um projeto do .NET Core barebones com um arquivo de projeto, *interpolated.csproj*, e um arquivo de código-fonte, *Program.cs*.</span><span class="sxs-lookup"><span data-stu-id="95db7-122">This command creates a barebones .NET Core project with a project file, *interpolated.csproj*, and a source code file, *Program.cs*.</span></span> <span data-ttu-id="95db7-123">Você precisará executar `dotnet restore` para restaurar as dependências necessárias para compilar esse projeto.</span><span class="sxs-lookup"><span data-stu-id="95db7-123">You will need to execute `dotnet restore` to restore the dependencies needed to compile this project.</span></span>
+<span data-ttu-id="03285-114">No tempo de compilação, normalmente uma cadeia de caracteres interpolada é transformada em uma chamada de método <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="03285-114">At compile time, an interpolated string is typically transformed into a <xref:System.String.Format%2A?displayProperty=nameWithType> method call.</span></span> <span data-ttu-id="03285-115">Isso disponibiliza todas as funcionalidades do recurso [formatação composta de cadeia de caracteres](../../standard/base-types/composite-formatting.md) para uso com cadeias de caracteres interpoladas também.</span><span class="sxs-lookup"><span data-stu-id="03285-115">That makes all the capabilities of the [string composite formatting](../../standard/base-types/composite-formatting.md) feature available to you to use with interpolated strings as well.</span></span>
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a><span data-ttu-id="03285-116">Como especificar uma cadeia de caracteres de formato para uma expressão interpolada</span><span class="sxs-lookup"><span data-stu-id="03285-116">How to specify a format string for an interpolated expression</span></span>
 
-<span data-ttu-id="95db7-124">Para executar o programa, use `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="95db7-124">To execute the program, use `dotnet run`.</span></span> <span data-ttu-id="95db7-125">Você deve ver a saída do "Olá, Mundo" no console.</span><span class="sxs-lookup"><span data-stu-id="95db7-125">You should see "Hello, World" output to the console.</span></span>
-
-
-
-## <a name="intro-to-string-interpolation"></a><span data-ttu-id="95db7-126">Introdução à interpolação de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="95db7-126">Intro to String Interpolation</span></span>
-
-<span data-ttu-id="95db7-127">Com <xref:System.String.Format%2A?displayProperty=nameWithType>, especifique "espaços reservados" em uma cadeia de caracteres que são substituídos pelos argumentos após a cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="95db7-127">With <xref:System.String.Format%2A?displayProperty=nameWithType>, you specify "placeholders" in a string that are replaced by the arguments following the string.</span></span> <span data-ttu-id="95db7-128">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="95db7-128">For instance:</span></span>
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-<span data-ttu-id="95db7-129">Isso produzirá "Meu nome é Matt Groves".</span><span class="sxs-lookup"><span data-stu-id="95db7-129">That will output "My name is Matt Groves".</span></span>
-
-<span data-ttu-id="95db7-130">No C# 6, em vez de usar `String.Format`, você define uma cadeia de caracteres interpolada acrescentando-a com o símbolo `$` e, em seguida, usando as variáveis diretamente na cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="95db7-130">In C# 6, instead of using `String.Format`, you define an interpolated string by prepending it with the `$` symbol, and then using the variables directly in the string.</span></span> <span data-ttu-id="95db7-131">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="95db7-131">For instance:</span></span>
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-<span data-ttu-id="95db7-132">Você não precisa usar apenas variáveis.</span><span class="sxs-lookup"><span data-stu-id="95db7-132">You don't have to use just variables.</span></span> <span data-ttu-id="95db7-133">Você pode usar qualquer expressão entre colchetes.</span><span class="sxs-lookup"><span data-stu-id="95db7-133">You can use any expression within the brackets.</span></span> <span data-ttu-id="95db7-134">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="95db7-134">For instance:</span></span>
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-<span data-ttu-id="95db7-135">O que resultaria:</span><span class="sxs-lookup"><span data-stu-id="95db7-135">Which would output:</span></span>
+<span data-ttu-id="03285-117">Especifique uma cadeia de caracteres de formato compatível com o tipo do resultado de expressão seguindo a expressão interpolada com dois-pontos (":") e a cadeia de caracteres de formato:</span><span class="sxs-lookup"><span data-stu-id="03285-117">You specify a format string that is supported by the type of the expression result by following the interpolated expression with a colon (":") and the format string:</span></span>
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a><span data-ttu-id="95db7-136">Como funciona o interpolação de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="95db7-136">How string interpolation works</span></span>
+<span data-ttu-id="03285-118">O seguinte exemplo mostra como especificar cadeias de caracteres de formato padrão e personalizadas para expressões que produzem resultados numéricos ou de data e hora:</span><span class="sxs-lookup"><span data-stu-id="03285-118">The following example shows how to specify standard and custom format strings for expressions that produce date and time or numeric results:</span></span>
 
-<span data-ttu-id="95db7-137">Nos bastidores, essa sintaxe de interpolação de cadeia de caracteres é convertida em `String.Format` pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="95db7-137">Behind the scenes, this string interpolation syntax is translated into `String.Format` by the compiler.</span></span> <span data-ttu-id="95db7-138">Portanto, você pode fazer o [mesmo que já fez antes com `String.Format`](../../standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="95db7-138">So, you can do the [same type of stuff you've done before with `String.Format`](../../standard/base-types/formatting-types.md).</span></span>
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-<span data-ttu-id="95db7-139">Por exemplo, você pode adicionar preenchimento e formatação numérica:</span><span class="sxs-lookup"><span data-stu-id="95db7-139">For instance, you can add padding and numeric formatting:</span></span>
+<span data-ttu-id="03285-119">Para obter mais informações, consulte a seção [Componente de cadeia de caracteres de formato](../../standard/base-types/composite-formatting.md#format-string-component) do tópico [Formatação composta](../../standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="03285-119">For more information, see the [Format String Component](../../standard/base-types/composite-formatting.md#format-string-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span> <span data-ttu-id="03285-120">Esta seção fornece links para tópicos que descrevem cadeias de caracteres de formatos padrão e personalizado compatíveis com os tipos base do .NET.</span><span class="sxs-lookup"><span data-stu-id="03285-120">That section provides links to the topics that describe standard and custom format strings supported by .NET base types.</span></span>
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a><span data-ttu-id="03285-121">Como controlar a largura do campo e o alinhamento da expressão interpolada formatada</span><span class="sxs-lookup"><span data-stu-id="03285-121">How to control the field width and alignment of the formatted interpolated expression</span></span>
 
-<span data-ttu-id="95db7-140">O item acima resultaria em:</span><span class="sxs-lookup"><span data-stu-id="95db7-140">The above would output something like:</span></span>
+<span data-ttu-id="03285-122">Especifique a largura mínima do campo e o alinhamento do resultado de expressão formatada seguindo a expressão interpolada com uma vírgula (",") e a expressão de constante:</span><span class="sxs-lookup"><span data-stu-id="03285-122">You specify the minimum field width and the alignment of the formatted expression result by following the interpolated expression with a comma (",") and the constant expression:</span></span>
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-<span data-ttu-id="95db7-141">Quando um nome de variável não é encontrado, gera-se um erro em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="95db7-141">If a variable name is not found, then a compile-time error is generated.</span></span>
+<span data-ttu-id="03285-123">Se o valor *alignment* for positivo, o resultado da expressão formatada será alinhado à direita; se for negativo, ele será alinhado à esquerda.</span><span class="sxs-lookup"><span data-stu-id="03285-123">If the *alignment* value is positive, the formatted expression result is right-aligned; if negative, it's left-aligned.</span></span>
 
-<span data-ttu-id="95db7-142">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="95db7-142">For instance:</span></span>
+<span data-ttu-id="03285-124">Caso precise especificar o alinhamento e uma cadeia de caracteres de formato, comece com o componente de alinhamento:</span><span class="sxs-lookup"><span data-stu-id="03285-124">If you need to specify both alignment and a format string, start with the alignment component:</span></span>
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-<span data-ttu-id="95db7-143">Se compilar isso, você obterá erros:</span><span class="sxs-lookup"><span data-stu-id="95db7-143">If you compile this, you get errors:</span></span>
- 
-* <span data-ttu-id="95db7-144">`Cannot use local variable 'adj' before it is declared` – a variável `adj` não foi declarada até *depois* da cadeia de caracteres interpolada.</span><span class="sxs-lookup"><span data-stu-id="95db7-144">`Cannot use local variable 'adj' before it is declared` - the `adj` variable wasn't declared until *after* the interpolated string.</span></span>
-* <span data-ttu-id="95db7-145">`The name 'otheranimal' does not exist in the current context` – uma variável chamada `otheranimal` nunca foi declarada</span><span class="sxs-lookup"><span data-stu-id="95db7-145">`The name 'otheranimal' does not exist in the current context` - a variable called `otheranimal` was never even declared</span></span>
+<span data-ttu-id="03285-125">O seguinte exemplo mostra como especificar o alinhamento e usa caracteres de barra vertical ("|") para delimitar campos de texto:</span><span class="sxs-lookup"><span data-stu-id="03285-125">The following example shows how to specify alignment and uses pipe characters ("|") to delimit text fields:</span></span>
 
-## <a name="localization-and-internationalization"></a><span data-ttu-id="95db7-146">Internacionalização e localização</span><span class="sxs-lookup"><span data-stu-id="95db7-146">Localization and Internationalization</span></span>
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-<span data-ttu-id="95db7-147">Uma cadeia de caracteres interpolada dá suporte a <xref:System.IFormattable?displayProperty=nameWithType> e <xref:System.FormattableString?displayProperty=nameWithType>, o que pode ser útil para internacionalização.</span><span class="sxs-lookup"><span data-stu-id="95db7-147">An interpolated string supports <xref:System.IFormattable?displayProperty=nameWithType> and <xref:System.FormattableString?displayProperty=nameWithType>, which can be useful for internationalization.</span></span>
+<span data-ttu-id="03285-126">Como mostra a saída de exemplo, se o tamanho do resultado da expressão formatada exceder a largura de campo especificada, o valor *alignment* será ignorado.</span><span class="sxs-lookup"><span data-stu-id="03285-126">As the example output shows, if the length of the formatted expression result exceeds specified field width, the *alignment* value is ignored.</span></span>
 
-<span data-ttu-id="95db7-148">Por padrão, uma cadeia de caracteres interpolada usa a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="95db7-148">By default, an interpolated string uses the current culture.</span></span> <span data-ttu-id="95db7-149">Para usar uma cultura diferente, converta uma cadeia de caracteres interpolada como `IFormattable`.</span><span class="sxs-lookup"><span data-stu-id="95db7-149">To use a different culture, cast an interpolated string as `IFormattable`.</span></span> <span data-ttu-id="95db7-150">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="95db7-150">For instance:</span></span>
+<span data-ttu-id="03285-127">Para obter mais informações, consulte a seção [Componente de alinhamento](../../standard/base-types/composite-formatting.md#alignment-component) do tópico [Formatação composta](../../standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="03285-127">For more information, see the [Alignment Component](../../standard/base-types/composite-formatting.md#alignment-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a><span data-ttu-id="03285-128">Como usar sequências de escape em uma cadeia de caracteres interpolada</span><span class="sxs-lookup"><span data-stu-id="03285-128">How to use escape sequences in an interpolated string</span></span>
 
-## <a name="conclusion"></a><span data-ttu-id="95db7-151">Conclusão</span><span class="sxs-lookup"><span data-stu-id="95db7-151">Conclusion</span></span> 
+<span data-ttu-id="03285-129">Cadeias de caracteres interpoladas dão suporte a todas as sequências de escape que podem ser usadas em literais de cadeia de caracteres comuns.</span><span class="sxs-lookup"><span data-stu-id="03285-129">Interpolated strings support all escape sequences that can be used in ordinary string literals.</span></span> <span data-ttu-id="03285-130">Para obter mais informações, consulte [Sequências de escape de cadeia de caracteres](../programming-guide/strings/index.md#string-escape-sequences).</span><span class="sxs-lookup"><span data-stu-id="03285-130">For more information, see [String escape sequences](../programming-guide/strings/index.md#string-escape-sequences).</span></span>
 
-<span data-ttu-id="95db7-152">Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6.</span><span class="sxs-lookup"><span data-stu-id="95db7-152">In this tutorial, you learned how to use string interpolation features of C# 6.</span></span> <span data-ttu-id="95db7-153">Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados.</span><span class="sxs-lookup"><span data-stu-id="95db7-153">It's basically a more concise way of writing simple `String.Format` statements, with some caveats for more advanced uses.</span></span> <span data-ttu-id="95db7-154">Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../../csharp//language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="95db7-154">For more information, see the [String interpolation](../../csharp//language-reference/tokens/interpolated.md) topic.</span></span>
+<span data-ttu-id="03285-131">Para interpretar sequências de escape literalmente, use um literal de cadeia de caracteres [textual](../language-reference/tokens/verbatim.md).</span><span class="sxs-lookup"><span data-stu-id="03285-131">To interpret escape sequences literally, use a [verbatim](../language-reference/tokens/verbatim.md) string literal.</span></span> <span data-ttu-id="03285-132">Uma cadeia de caracteres interpolada textual começa com o caractere `$` seguido pelo caractere `@`.</span><span class="sxs-lookup"><span data-stu-id="03285-132">A verbatim interpolated string starts with the `$` character followed by the `@` character.</span></span>
+
+<span data-ttu-id="03285-133">Para incluir uma chave, "{" ou "}", em uma cadeia de caracteres de resultado, use duas chaves, "{{" ou "}}".</span><span class="sxs-lookup"><span data-stu-id="03285-133">To include a brace, "{" or "}", in a result string, use two braces, "{{" or "}}".</span></span> <span data-ttu-id="03285-134">Para obter mais informações, consulte a seção [Chaves de escape](../../standard/base-types/composite-formatting.md#escaping-braces) do tópico [Formatação composta](../../standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="03285-134">For more information, see the [Escaping Braces](../../standard/base-types/composite-formatting.md#escaping-braces) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
+
+<span data-ttu-id="03285-135">O seguinte exemplo mostra como incluir chaves em uma cadeia de caracteres de resultado e construir uma cadeia de caracteres interpolada textual:</span><span class="sxs-lookup"><span data-stu-id="03285-135">The following example shows how to include braces in a result string and construct a verbatim interpolated string:</span></span>
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a><span data-ttu-id="03285-136">Como usar um operador condicional ternário `?:` em uma expressão interpolada</span><span class="sxs-lookup"><span data-stu-id="03285-136">How to use a ternary conditional operator `?:` in an interpolated expression</span></span>
+
+<span data-ttu-id="03285-137">Como os dois-pontos (:) têm um significado especial em um item com uma expressão interpolada, para usar um [operador condicional](../language-reference/operators/conditional-operator.md) em uma expressão, coloque-a entre parênteses, como mostra o seguinte exemplo:</span><span class="sxs-lookup"><span data-stu-id="03285-137">As the colon (":") has special meaning in an item with an interpolated expression, in order to use a [conditional operator](../language-reference/operators/conditional-operator.md) in an expression, enclose it in parentheses, as the following example shows:</span></span>
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a><span data-ttu-id="03285-138">Como criar uma cadeia de caracteres de resultado específica a uma cultura com a interpolação de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="03285-138">How to create a culture-specific result string with string interpolation</span></span>
+
+<span data-ttu-id="03285-139">Por padrão, uma cadeia de caracteres interpolada usa a cultura atual definida pela propriedade <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> para todas as operações de formatação.</span><span class="sxs-lookup"><span data-stu-id="03285-139">By default, an interpolated string uses the current culture defined by the <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> property for all formatting operations.</span></span> <span data-ttu-id="03285-140">Use uma conversão implícita de uma cadeia de caracteres interpolada em uma instância <xref:System.FormattableString?displayProperty=nameWithType> e chame seu método <xref:System.FormattableString.ToString(System.IFormatProvider)> para criar uma cadeia de caracteres de resultado específica a uma cultura.</span><span class="sxs-lookup"><span data-stu-id="03285-140">Use implicit conversion of an interpolated string to a <xref:System.FormattableString?displayProperty=nameWithType> instance and call its <xref:System.FormattableString.ToString(System.IFormatProvider)> method to create a culture-specific result string.</span></span> <span data-ttu-id="03285-141">O seguinte exemplo mostra como fazer isso:</span><span class="sxs-lookup"><span data-stu-id="03285-141">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+<span data-ttu-id="03285-142">Como mostra o exemplo, você pode usar uma instância <xref:System.FormattableString> para gerar várias cadeias de caracteres de resultado para várias culturas.</span><span class="sxs-lookup"><span data-stu-id="03285-142">As the example shows, you can use one <xref:System.FormattableString> instance to generate multiple result strings for various cultures.</span></span>
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a><span data-ttu-id="03285-143">Como criar uma cadeia de caracteres de resultado usando a cultura invariável</span><span class="sxs-lookup"><span data-stu-id="03285-143">How to create a result string using the invariant culture</span></span>
+
+<span data-ttu-id="03285-144">Juntamente com o método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType>, você pode usar o método <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> estático para resolver uma cadeia de caracteres interpolada em uma cadeia de caracteres de resultado para a <xref:System.Globalization.CultureInfo.InvariantCulture>.</span><span class="sxs-lookup"><span data-stu-id="03285-144">Along with the <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> method, you can use the static <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> method to resolve an interpolated string to a result string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.</span></span> <span data-ttu-id="03285-145">O seguinte exemplo mostra como fazer isso:</span><span class="sxs-lookup"><span data-stu-id="03285-145">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a><span data-ttu-id="03285-146">Conclusão</span><span class="sxs-lookup"><span data-stu-id="03285-146">Conclusion</span></span>
+
+<span data-ttu-id="03285-147">Este tutorial descreve cenários comuns de uso da interpolação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="03285-147">This tutorial describes common scenarios of string interpolation usage.</span></span> <span data-ttu-id="03285-148">Para obter mais informações sobre a interpolação de cadeia de caracteres, consulte o tópico [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="03285-148">For more information about string interpolation, see the [String interpolation](../language-reference/tokens/interpolated.md) topic.</span></span> <span data-ttu-id="03285-149">Para obter mais informações sobre como formatar tipos no .NET, confira os tópicos [Formatando tipos no .NET](../../standard/base-types/formatting-types.md) e [Formatação composta](../../standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="03285-149">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) and [Composite formatting](../../standard/base-types/composite-formatting.md) topics.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="03285-150">Consulte também</span><span class="sxs-lookup"><span data-stu-id="03285-150">See also</span></span>
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[<span data-ttu-id="03285-151">Cadeias de Caracteres</span><span class="sxs-lookup"><span data-stu-id="03285-151">Strings</span></span>](../programming-guide/strings/index.md)  
