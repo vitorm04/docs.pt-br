@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variáveis locais de tipo implícito (Guia de Programação em C#)
 Variáveis locais podem ser declaradas sem fornecer um tipo explícito. A palavra-chave `var` instrui o compilador a inferir o tipo da variável da expressão no lado direito da instrução de inicialização. O tipo inferido pode ser um tipo interno, um tipo anônimo, um tipo definido pelo usuário ou um tipo definido na biblioteca de classes .NET Framework. Para obter mais informações sobre como inicializar matrizes com `var`, consulte [Matrizes de tipo implícito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -26,19 +26,19 @@ Variáveis locais podem ser declaradas sem fornecer um tipo explícito. A palavr
   
 -   Em uma instrução de inicialização [for](../../../csharp/language-reference/keywords/for.md).  
   
-    ```  
+    ```csharp  
     for(var x = 1; x < 10; x++)  
     ```  
   
 -   Em uma instrução de inicialização [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
   
-    ```  
+    ```csharp  
     foreach(var item in list){...}  
     ```  
   
 -   Em uma instrução [using](../../../csharp/language-reference/keywords/using-statement.md).  
   
-    ```  
+    ```csharp  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   

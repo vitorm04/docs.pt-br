@@ -1,21 +1,14 @@
 ---
 title: Diretrizes gerais
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Diretrizes gerais"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Diretrizes gerais
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Diretrizes gerais
 
@@ -45,10 +38,10 @@ Usar o .NET Framework no Docker pode melhorar suas experiências de implantaçã
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Livro eletrônico: modernizar aplicativos existentes do .NET Framework com o Azure e os contêineres do Windows**
+-   **Livro eletrônico: Modernizar aplicativos .NET Framework existentes com o Azure e Contêineres do Windows**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Aplicativos de exemplo: modernização de aplicativos Web ASP.NET herdados usando contêineres do Windows**
+-   **Aplicativos de exemplo: modernização de aplicativos Web ASP.NET herdados usando Contêineres do Windows**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 

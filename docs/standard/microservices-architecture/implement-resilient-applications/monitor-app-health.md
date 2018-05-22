@@ -1,21 +1,14 @@
 ---
 title: Monitoramento de integridade
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Monitoramento de integridade"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Monitoramento de integridade
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>Monitoramento de integridade
 
@@ -27,7 +20,7 @@ No modelo comum, serviços enviam relatórios sobre o status, e essas informaç�
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementação de verificações de integridade nos serviços do ASP.NET Core
 
-Ao desenvolver um aplicativo Web ou de microsserviço do ASP.NET Core, pode usar uma biblioteca chamada `HealthChecks` da equipe do ASP.NET. A liberação inicial está disponível no [repositório do GitHub](https://github.com/dotnet-architecture/HealthChecks).
+Ao desenvolver um aplicativo Web ou um microsserviço ASP.NET Core, use uma biblioteca fora de banda (não oficial como parte do ASP.NETCore) chamada `HealthChecks` da equipe do ASP.NET. Ela está disponível neste [repositório GitHub](https://github.com/dotnet-architecture/HealthChecks).
 
 Essa biblioteca é fácil de usar e fornece recursos que permitem que você valide se qualquer recurso externo específico necessário para o seu aplicativo (como um banco de dados do SQL Server ou a API remota) está funcionando corretamente. Quando você usa essa biblioteca, também pode decidir o que significa o recurso estar íntegro, como explicaremos mais adiante.
 
@@ -37,7 +30,7 @@ Para usar essa biblioteca, você precisa primeiro usar a biblioteca em seus micr
 
 Você pode ver como a biblioteca HealthChecks é usada no aplicativo de exemplo eShopOnContainers. Para começar, você precisa definir o que constitui o status íntegro para cada microsserviço. No aplicativo de exemplo, os microsserviços estão íntegros se a API de microsserviços está acessível por meio de HTTP e se o banco de dados do SQL Server relacionado também está disponível.
 
-No futuro, você poderá instalar a biblioteca de HealthChecks como um pacote do NuGet. Porém, no momento da redação deste artigo, você precisa baixar e compilar o código como parte da sua solução. Clone de código disponível em https://github.com/dotnet-architecture/HealthChecks e copie as seguintes pastas para sua solução:
+No futuro, você poderá instalar a biblioteca de HealthChecks como um pacote do NuGet. Porém, no momento da redação deste artigo, você precisa baixar e compilar o código como parte da sua solução. Clone o código disponível em https://github.com/dotnet-architecture/HealthChecks e copie as seguintes pastas para sua solução:
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -192,10 +185,10 @@ Por fim, se você estava armazenando todos os fluxos de eventos, pode usar Micro
 
 -   **ASP.NET Core HealthChecks** (versão inicial) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Introdução ao monitoramento de integridade da malha do serviço**
+-   **Introdução ao monitoramento de integridade do Service Fabric**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Aplicativo do Azure Insights**
+-   **Azure Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

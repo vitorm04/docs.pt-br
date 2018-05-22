@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>Introdução ao .NET Framework
 
@@ -70,7 +70,7 @@ Para desenvolver aplicativos ou componentes do .NET Framework, faça o seguinte:
 
 2. Selecione a linguagem ou linguagens com suporte do .NET Framework que você pretende usar para desenvolver seus aplicativos. Um grande número de linguagens está disponível, incluindo [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e C++/CLI da Microsoft. (Uma linguagem de programação que permite que você desenvolva aplicativos para o .NET Framework adere à [especificação de CLI [Common Language Infrastructure]](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Para criar seus aplicativos , selecione e instale o ambiente de desenvolvimento a ser usado que dê suporte à linguagem ou às linguagens de programação selecionadas. O IDE (ambiente de desenvolvimento integrado) da Microsoft para aplicativos .NET Framework é o [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). Está disponível em várias edições.
+3. Para criar seus aplicativos , selecione e instale o ambiente de desenvolvimento a ser usado que dê suporte à linguagem ou às linguagens de programação selecionadas. O IDE (ambiente de desenvolvimento integrado) da Microsoft para aplicativos .NET Framework é o [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Está disponível em várias edições.
 
 Para obter mais informações sobre o desenvolvimento de aplicativos direcionados ao .NET Framework, consulte o [Guia de desenvolvimento](../../../docs/framework/development-guide.md).
 

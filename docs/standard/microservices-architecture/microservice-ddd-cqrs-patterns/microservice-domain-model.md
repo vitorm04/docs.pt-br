@@ -1,21 +1,14 @@
 ---
 title: Criando um modelo de domínio de microsserviço
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Criando um modelo de domínio de microsserviço
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Criando um modelo de domínio de microsserviço
 
@@ -87,14 +80,14 @@ Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Martin Fowler. Valor padrão de objeto**
+-   **Martin Fowler. Padrão de objeto de valor**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **Objeto de valor**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Valor de objetos no Driven Development**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-objetos de valor*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Objetos de valor no Desenvolvimento Orientado por Testes**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 -   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -139,19 +132,19 @@ Para identificar e trabalhar com agregações é necessário fazer pesquisas e t
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Vaughn Vernon. Design de agregação eficaz - parte i: uma única agregação de modelagem**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ensaio\_AGREGAÇÕES\_parte \_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Design de agregação eficaz – parte I: modelando uma única agregação**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Design de agregação eficaz - parte II: Fazendo agregações funcionam em conjunto**
+-   **Vaughn Vernon. Design de agregação eficaz – parte II: fazendo agregações trabalharem juntas**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. Design de agregação eficaz - parte III: Obtenção de informações por meio da descoberta**
+-   **Vaughn Vernon. Design de agregação eficaz – parte III: obtendo insights por meio da descoberta**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak. Padrões de Design táticas DDD**
+-   **Sergey Grybniak. Padrões de design tático em DDD**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. Desenvolvendo Microservices transacional usando agregações**
+-   **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ. O padrão de agregação**

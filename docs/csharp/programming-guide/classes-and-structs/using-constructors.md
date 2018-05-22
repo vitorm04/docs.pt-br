@@ -1,21 +1,14 @@
 ---
 title: Usando construtores (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb9fcd1e4090da300de17c7fd808669ba51767c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 80400cc1eae697c931833a5444969a231e23c06e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-constructors-c-programming-guide"></a>Usando construtores (Guia de Programação em C#)
 Quando uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criado, seu construtor é chamado. Os construtores têm o mesmo nome que a classe ou struct e eles geralmente inicializam os membros de dados do novo objeto.  
@@ -26,7 +19,7 @@ Quando uma [classe](../../../csharp/language-reference/keywords/class.md) ou [st
   
  Um construtor sem parâmetros é chamado de um *construtor padrão*. Os construtores padrão são invocados sempre que um objeto é instanciado usando o operador `new` e nenhum argumento é fornecido para `new`. Para obter mais informações, consulte [Construtores de instâncias](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
- A menos que a classe seja [static](../../../csharp/language-reference/keywords/static.md), as classes sem construtores recebem um construtor padrão público pelo compilador C# para habilitar a instanciação de classe. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ A menos que a classe seja [static](../../../csharp/language-reference/keywords/static.md), as classes sem construtores recebem um construtor padrão público pelo compilador C# para habilitar a instanciação de classe. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  Você pode impedir que uma classe seja instanciada tornando o construtor privado, da seguinte maneira:  
   
@@ -89,7 +82,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- Construtores podem ser marcados como [pública](../../../csharp/language-reference/keywords/public.md), [privada](../../../csharp/language-reference/keywords/private.md), [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protegido interno](../../../csharp/language-reference/keywords/protected-internal.md)ou [privado protegido](../../../csharp/language-reference/keywords/private-protected.md). Esses modificadores de acesso definem como os usuários da classe podem construir a classe. Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Os construtores podem ser marcados como [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) ou [private protected](../../../csharp/language-reference/keywords/private-protected.md). Esses modificadores de acesso definem como os usuários da classe podem construir a classe. Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Um construtor pode ser declarado estático usando a palavra-chave [static](../../../csharp/language-reference/keywords/static.md). Os construtores estáticos são chamados automaticamente, imediatamente antes de qualquer campo estático ser acessado e geralmente são usados para inicializar membros da classe estática. Para obter mais informações, consulte [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   

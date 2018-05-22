@@ -1,19 +1,15 @@
 ---
 title: Instalar o .NET Framework no Windows XP
 description: Saiba como instalar o .NET Framework no Windows XP.
+ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-keywords: ".Net Framework, Instalação"
-ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 8ac695353e36466f05bae129ff1c37ba3d8cbb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Instalar o .NET Framework no Windows XP e Windows Server 2003
 
@@ -24,7 +20,7 @@ O .NET Framework é necessário para executar muitos aplicativos no Windows. Use
 
 ![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) é a última versão. Não há suporte para ele no Windows XP e Windows Server 2003. Ele está incluído no [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) e [Windows Server 2016 Versão 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Não há suporte para ele no Windows XP e Windows Server 2003. Ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

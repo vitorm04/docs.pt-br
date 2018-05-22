@@ -1,6 +1,6 @@
 ---
 title: Instrução Class (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d81ce148e237df6997934f70c294630f6cc7b8d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="class-statement-visual-basic"></a>Instrução Class (Visual Basic)
 Declara o nome de uma classe e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a classe.  
@@ -38,7 +38,7 @@ End Class
 |Termo|Definição|  
 |---|---|  
 |`attributelist`|Opcional. Consulte [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional. Pode ser um dos seguintes:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Opcional. Pode ser um dos seguintes:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Friend protegido](../../language-reference/modifiers/protected-friend.md)<br />- [Privado protegido](../../language-reference/modifiers/private-protected.md)<br/><br/> Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Opcional. Consulte [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|Opcional. Consulte [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  

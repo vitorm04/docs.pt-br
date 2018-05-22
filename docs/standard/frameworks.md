@@ -3,19 +3,14 @@ title: Frameworks de destino
 description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
 author: richlander
 ms.author: mairaw
-ms.date: 09/22/2017
-ms.topic: article
+ms.date: 04/16/2018
 ms.custom: updateeachrelease
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="target-frameworks"></a>Frameworks de destino
 
@@ -31,13 +26,13 @@ Para estruturas de destino com base em pacote (por exemplo, .NET Standard e .NET
 
 ## <a name="latest-target-framework-versions"></a>Versões mais recentes de estrutura de destino
 
-A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](~/docs/standard/net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um TFM (Moniker da Estrutura de Destino) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou uma biblioteca do .NET. 
+A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](~/docs/standard/net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um TFM (Moniker da Estrutura de Destino) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou uma biblioteca do .NET.
 
-| Estrutura de Destino      | Última Versão | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
-| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0            | netstandard2.0                 | N/D                                     |
-| .NET Core Application | 2.0            | netcoreapp2.0                  | 2.0                                     |
-| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
+| Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
+| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| .NET Standard         | 2.0                         | netstandard2.0                 | N/D                                     |
+| .NET Core Application | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versões de estrutura de destino com suporte
 
@@ -46,8 +41,8 @@ Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seg
 | Estrutura de Destino           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -135,10 +130,10 @@ As seguintes estruturas de destino estão preteridas. Os pacotes direcionados a 
 
 ## <a name="see-also"></a>Consulte também
 
-[Pacotes, Metapacotes e Estruturas](~/docs/core/packages.md)  
-[Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](~/docs/core/tutorials/libraries.md)  
-[.NET Standard](~/docs/standard/net-standard.md)  
-[Controle de versão do .NET Core](~/docs/core/versions/index.md)  
+[Pacotes, Metapacotes e Estruturas](../core/packages.md)  
+[Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](../core/tutorials/libraries.md)  
+[.NET Standard](net-standard.md)  
+[Controle de versão do .NET Core](../core/versions/index.md)  
 [Repositório GitHub dotnet/standard](https://github.com/dotnet/standard)  
 [Repositório GitHub de Ferramentas NuGet](https://github.com/joelverhagen/NuGetTools)  
 [Perfis de estrutura no .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

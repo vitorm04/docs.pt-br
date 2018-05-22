@@ -1,9 +1,6 @@
 ---
-title: "foreach, in (Referência de C#)"
+title: foreach, in (Referência de C#)
 ms.date: 10/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d5601682d53a01ff07aba7e416aa81ded4c03e4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referência de C#)
 Uma instrução `foreach` repete um grupo de instruções inseridas para cada elemento em uma matriz ou coleção que implementa a interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. A instrução `foreach` é usada para iterar na coleção para obter as informações que você deseja, mas não pode ser usada para adicionar ou remover itens da coleção de origem para evitar efeitos colaterais imprevisíveis. Se você precisar adicionar ou remover itens da coleção de origem, use um loop [for](for.md).
@@ -28,7 +22,7 @@ Uma instrução `foreach` repete um grupo de instruções inseridas para cada el
   
  Em qualquer ponto dentro do bloco `foreach`, você pode sair do loop usando a palavra-chave [break](break.md) ou seguir para a próxima iteração no loop, usando a palavra-chave [continue](continue.md).
 
- Um loop `foreach` também pode ser encerrado pelas instruções [goto](goto.md), [return](return.md) ou [throw](throw.md).
+ Um loop `foreach` também pode ser encerrado pelas instruções [goto](goto.md), [retorn](return.md) ou [throw](throw.md).
 
  Para obter mais informações sobre a palavra-chave `foreach` e exemplos de códigos, consulte os seguintes tópicos:  
 
@@ -40,7 +34,7 @@ Uma instrução `foreach` repete um grupo de instruções inseridas para cada el
  O código a seguir mostra três exemplos.
 
 > [!TIP]
-> Você pode modificar os exemplos para fazer experiências com a sintaxe e tente usos diferentes que são mais semelhantes ao seu caso de uso. Pressione "Executar" para executar o código, em seguida, editar e pressione "Executar" novamente.
+> Você pode modificar os exemplos para fazer experimentos com a sintaxe e tentar usos diferentes que são mais semelhantes ao seu caso de uso. Pressione "Executar" para executar o código e, em seguida, edite-o e pressione "Executar" novamente.
 
 -   um típico loop `foreach` que exibe o conteúdo de uma matriz de inteiros
 

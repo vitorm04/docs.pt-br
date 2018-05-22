@@ -4,17 +4,12 @@ ms.custom: updateeachrelease
 description: Saiba como instalar o .NET Framework no Windows 8.1
 author: rlander
 ms.author: mairaw
-keywords: ".Net Framework, Instalação"
 ms.date: 10/22/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 7bfdd0c4ac28873647a119d5446373fee98c345f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 761441798ff1f8261b573aa734580aec5849489b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Instalar o .NET Framework no Windows 8.1 e Windows Server 2012 R2
 
@@ -22,13 +17,17 @@ O .NET Framework é necessário para executar muitos aplicativos no Windows. Use
 
 ![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) é a última versão. Há suporte para ele no Windows 8.1 e Windows Server 2012 R2 e ele está incluído no [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) e [Windows Server 2016 Versão 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Há suporte para ele no Windows 8.1 e Windows Server 2012 R2 e ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-* [Baixar o .NET Framework 4.7.1](https://www.microsoft.com/net/framework/versions/net471?utm_source=ms-docs&utm_medium=referral)
+> [!div class="button"]
+[Baixe o .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-O [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
+
+<!-- (https://www.microsoft.com/net/framework/versions/net472?utm_source=ms-docs&utm_medium=referral) -->
+
+O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 

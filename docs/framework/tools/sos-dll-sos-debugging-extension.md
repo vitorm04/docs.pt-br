@@ -1,28 +1,18 @@
 ---
-title: "SOS.dll (Extensão de Depuração SOS)"
-ms.custom: 
+title: SOS.dll (Extensão de Depuração SOS)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - debugging extensions
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e000d0efbd999d228e10a5df8e6368cbf22c5088
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 608211221d0f6f6a24b85561cd16fb21e15c336b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extensão de Depuração SOS)
 A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados no Visual Studio e no depurador do Windows (WinDbg.exe) fornecendo informações sobre o ambiente interno do CLR (Common Language Runtime). Essa ferramenta exige que o projeto tenha depuração não gerenciada habilitada. SOS.dll é instalado automaticamente com o .NET Framework. Para usar SOS.dll no Visual Studio, instale o [WDK (Kit de Driver do Windows)](http://msdn.microsoft.com/windows/hardware/hh852362).  
@@ -99,7 +89,7 @@ A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados n
 |**Threads** [**-live**] [**-special**]|Exibe todos os threads gerenciados no processo.<br /><br /> O comando **Threads** exibe a ID abreviada do depurador, a ID do thread do CLR e a ID do thread do sistema operacional.  Além disso, o comando **Threads** exibe uma coluna Domain que indica o domínio do aplicativo no qual um thread está em execução, uma coluna APT que exibe o modo apartment COM e uma coluna Exception que exibe a última exceção gerada no thread.<br /><br /> A opção **-live** exibe threads associados a um thread dinâmico.<br /><br /> A opção **-special** exibe todos os threads especiais criados pelo CLR. Entre os threads especiais estão threads de coleta de lixo (em coleta de lixo simultânea e de servidor), threads auxiliares de depurador, threads finalizadores, threads de descarregamento <xref:System.AppDomain> e threads de timer do pool de threads.|  
 |**ThreadState \<** *Campo do valor State* **>**|Exibe o estado do thread. O parâmetro `value` é o valor do campo `State` na saída de relatório **Threads**.<br /><br /> Exemplo:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|  
 |**TraverseHeap** [**-xml**] \<*filename*>|Grava informações do heap no arquivo especificado em um formato compreendido pelo do criador de perfil do CLR. A opção **-xml** faz o comando **TraverseHeap** formatar o arquivo como XML.<br /><br /> Baixe o Criador de Perfil do CLR no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkID=67325).|  
-|**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*endereço de MethodDesc*> &#124; \<*endereço de Code*>|Exibe uma desmontagem anotada de um método gerenciado especificado por um ponteiro de estrutura `MethodDesc` para o método ou por um endereço de código dentro do corpo do método. O comando **U** exibe todo o método do começo ao fim, com anotações que convertem tokens de metadados em nomes.<br /><br /> A opção **-gcinfo** faz o comando **U** exibir a estrutura `GCInfo` do método.<br /><br /> A opção **-ehinfo** exibe informações sobre exceção do método. Também é possível pode obter essas informações com o comando **EHInfo**.<br /><br /> A opção **-n** desabilita a exibição dos nomes de arquivo de origem e dos números de linha. Se o depurador tiver a opção SYMOPT_LOAD_LINES especificada, o SOS pesquisará os símbolos de cada quadro gerenciado e, se bem-sucedido, exibirá o nome do arquivo de origem e o número da linha correspondentes. É possível especificar a opção **-n** para desabilitar esse comportamento.|  
+|**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*endereço de MethodDesc*> &#124; \<*endereço de Code*>|Exibe uma desmontagem anotada de um método gerenciado especificado por um ponteiro de estrutura `MethodDesc` para o método ou por um endereço de código dentro do corpo do método. O comando **U** exibe todo o método do começo ao fim, com anotações que convertem tokens de metadados em nomes.<br /><br /> A opção **-gcinfo** faz o comando **U** exibir a estrutura `GCInfo` do método.<br /><br /> A opção **-ehinfo** exibe informações sobre exceção do método. Também é possível pode obter essas informações com o comando **EHInfo**.<br /><br /> A opção **-n** desabilita a exibição dos nomes de arquivo de origem e dos números de linha. Se o depurador tiver a opção SYMOPT_LOAD_LINES especificada, o SOS pesquisará os símbolos de cada quadro gerenciado e, se bem-sucedido, exibirá o nome do arquivo de origem e o número da linha correspondentes. Especifique a opção **-n** para desabilitar esse comportamento.|  
 |**VerifyHeap**|Verifica o heap do coletor de lixo em busca de sinais de corrupção e exibe todos os erros encontrados.<br /><br /> As corrupções de heap podem ser causadas por chamadas de invocação da plataforma construídas incorretamente.|  
 |**VerifyObj** \<*endereço do objeto*>|Verifica o objeto passado como um argumento em busca de sinais de corrupção.|  
 |**VMMap**|Atravessa o espaço do endereço virtual e exibe o tipo de proteção aplicado a cada região.|  

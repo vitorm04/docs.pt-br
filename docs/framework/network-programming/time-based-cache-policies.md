@@ -1,12 +1,6 @@
 ---
-title: "Políticas de cache baseadas em tempo"
-ms.custom: 
+title: Políticas de cache baseadas em tempo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - cache synchronization date policy
@@ -23,16 +17,14 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f712f223ef5787e50ef6a0c26949ff99c13dee33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f25f04a144fa806297b018bf3548b8feb506f67d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="time-based-cache-policies"></a>Políticas de cache baseadas em tempo
 Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. Ao definir uma política de cache baseada em tempo, é possível usar a política baseada em tempo de <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou criar uma política baseada em tempo personalizada. Ao usar a política baseada em tempo padrão para os recursos obtidos com o uso do protocolo HTTP, o comportamento de cache exato é determinado pelos cabeçalhos incluídos na resposta armazenada em cache e pelos comportamentos especificados nas seções 13 e 14 do RFC 2616, disponível em [http://www.ietf.org](http://www.ietf.org/). Para obter um exemplo de código que demonstra a configuração da política baseada em tempo padrão para recursos HTTP, consulte [Como definir a política de cache baseada em tempo padrão de um aplicativo](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  

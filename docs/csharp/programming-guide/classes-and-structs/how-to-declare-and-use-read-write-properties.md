@@ -8,11 +8,11 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 1930d6c50c176ae1765bdb41af2c7484fb908328
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6a7083e1c0cf0dc5c076a69dee15fc39e234d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como Declarar e Usar Propriedades de Leitura e Gravação (Guia de Programação em C#)
 As propriedades oferecem a conveniência de membros de dados públicos sem os riscos associados ao acesso sem proteção, sem controle e não verificado aos dados de um objeto. Isso é feito por meio de *acessadores*: métodos especiais que atribuem e recuperam valores do membro de dados subjacente. O acessador [set](../../../csharp/language-reference/keywords/set.md) habilita a atribuição de membros de dados e o acessador [get](../../../csharp/language-reference/keywords/get.md) recupera valores do membro de dados.  
@@ -43,7 +43,7 @@ As propriedades oferecem a conveniência de membros de dados públicos sem os ri
   
  Se métodos `set` e `get` separados fossem usados para modelar propriedades, o código equivalente se pareceria com isto:  
   
-```  
+```csharp  
 person.SetAge(person.GetAge() + 1);   
 ```  
   

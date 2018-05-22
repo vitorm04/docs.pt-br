@@ -2,11 +2,11 @@
 title: 'Convenções de codificação do F #'
 description: 'Saiba mais idiomas e as diretrizes gerais ao escrever código F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-coding-conventions"></a>Convenções de codificação do F #
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Observe que uma quebra de linha separa topológicas camadas, com cada camada que estão sendo classificada ordem alfanumérica posteriormente. Isso organiza corretamente código sem sombreamento acidentalmente valores.
@@ -154,7 +152,9 @@ Há muitas vezes quando a inicialização de um valor pode ter efeitos colaterai
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -162,7 +162,9 @@ module MyApi =
 
 Isso geralmente é uma boa ideia por alguns motivos:
 
-Primeiro, ele faz a própria API depende do estado compartilhado. Por exemplo, vários threads de chamada podem estar tentando acessar o `dep3` valor (e não é thread-safe). Em segundo lugar, ele envia a configuração do aplicativo para a base de código em si. Isso é difícil de manter para maior as bases de código.
+Primeiro, a configuração de aplicativo é empurrada para a base de código com `dep1` e `dep2`. Isso é difícil de manter em bases de código maior.
+
+Dados estaticamente inicializados segundo não devem incluir valores que não são thread-safe se o componente se usar vários threads. Isso é claramente violado por `dep3`.
 
 Por fim, inicialização do módulo compila em um construtor estático para a unidade de compilação inteira. Se ocorrer algum erro na inicialização do valor de limite permitem em que o módulo, ele se manifesta como um `TypeInitializationException` , em seguida, que é armazenado em cache para todo o tempo de vida do aplicativo. Isso pode ser difícil diagnosticar. Normalmente, não há uma exceção interna que você pode tentar argumentar sobre, mas se não houver, em seguida, não há nenhum informando o que é a causa raiz.
 
@@ -318,7 +320,7 @@ Tipos, como `Result<'Success, 'Error>` são apropriadas para operações básica
 
 ## <a name="partial-application-and-point-free-programming"></a>Aplicativo parcial e livre de ponto de programação
 
-F # oferece suporte a aplicativo parcial e, assim, várias formas de programa em um estilo livre de ponto. Isso pode ser útil para reutilização de código dentro de um módulo ou a implementação de algo, mas geralmente não é algo para expor publicamente. Em geral, livre de ponto de programação não é um porque, por si só e pode adicionar uma barreira cognitiva significativa para as pessoas que não tenha o estilo. Libere o ponto de programação em F # é básica para um matemático bem treinado, mas pode ser difícil para as pessoas que não estão familiarizadas com o cálculo de lambda.
+F # oferece suporte a aplicativo parcial e, assim, várias formas de programa em um estilo livre de ponto. Isso pode ser útil para reutilização de código dentro de um módulo ou a implementação de algo, mas geralmente não é algo para expor publicamente. Em geral, livre de ponto de programação não é um porque, por si só e pode adicionar uma barreira cognitiva significativa para as pessoas que não tenha o estilo.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Não usar o aplicativo parcial e currying em APIs públicas
 

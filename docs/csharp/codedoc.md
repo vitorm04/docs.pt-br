@@ -1,20 +1,13 @@
 ---
-title: "Documentando seu código com comentários em XML"
-description: "Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Documentando seu código com comentários em XML
+description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -25,7 +18,7 @@ Comentários de documentação XML, como todos os outros comentários, são igno
 
 É possível gerar o arquivo XML em tempo de compilação seguindo um destes procedimentos:
 
-- Se estiver desenvolvendo um aplicativo com .NET Core da linha de comando, você poderá adicionar um [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) à seção `<PropertyGroup>` do arquivo de projeto .csproj. O exemplo a seguir gera um arquivo XML no diretório do projeto com o mesmo nome raiz do assembly:
+- Se estiver desenvolvendo um aplicativo com .NET Core da linha de comando, você poderá adicionar um [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) à seção `<PropertyGroup>` do arquivo de projeto .csproj. O seguinte exemplo gera um arquivo XML no diretório do projeto com o mesmo nome de arquivo raiz do assembly:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>

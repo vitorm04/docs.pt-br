@@ -7,16 +7,16 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 5a4863bc93a115d14e791509f99b7b13bee9f68f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ddea59e76835ccccd07c299f819796336cddada8
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="struct-c-reference"></a>struct (Referência de C#)
 O tipo `struct` é um tipo de valor normalmente usado para encapsular pequenos grupos de variáveis relacionadas, tais como coordenadas de um retângulo ou as características de um item em um inventário. O seguinte exemplo mostra uma declaração simples de struct:  
   
-```  
+```csharp  
 public struct Book  
 {  
     public decimal price;  

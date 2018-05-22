@@ -1,6 +1,6 @@
 ---
 title: Instrução Dim (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Dim
 - Dim
@@ -29,11 +29,11 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: c051572e83b915346d48ec12fb5d97f77b47e4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3384b771748a1f2c9e841407042f81ce6ebe76d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Instrução Dim (Visual Basic)
 Declara e aloca espaço de armazenamento para uma ou mais variáveis.  
@@ -63,8 +63,10 @@ Dim [ WithEvents ] variablelist
   
     -   [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   `Protected Friend`  
-  
+    -   [Friend protegido](../../language-reference/modifiers/protected-friend.md)
+    
+    - [Privado protegido](../../language-reference/modifiers/private-protected.md)
+
      Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `Shared`  

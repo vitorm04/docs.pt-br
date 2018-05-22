@@ -1,21 +1,14 @@
 ---
 title: Tipos aninhados (Guia de Programação em C#)
 ms.date: 07/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab13c68b638062ab89c90dbfc51b51b8d72d3bde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 57356fbf4bff218932d1f1b4c62532f10c175757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipos aninhados (Guia de Programação em C#)
 Um tipo definido em uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é denominado tipo aninhado. Por exemplo:  
@@ -26,9 +19,9 @@ Independentemente de o tipo externo ser uma classe ou uma estrutura, tipos aninh
 
 Você também pode especificar um [modificador de acesso](../../language-reference/keywords/access-modifiers.md) para definir a acessibilidade de um tipo aninhado, da seguinte maneira:
 
-- Aninhados de tipos de um **classe** pode ser [pública](../../../csharp/language-reference/keywords/public.md), [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protegidos internos](../../../csharp/language-reference/keywords/protected-internal.md), [privada](../../../csharp/language-reference/keywords/private.md) ou [privado protegido](../../../csharp/language-reference/keywords/private-protected.md). 
+- Os tipos aninhados de uma **classe** podem ser [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) ou [private protected](../../../csharp/language-reference/keywords/private-protected.md). 
 
-   No entanto, definindo um `protected`, `protected internal` ou `private protected` aninhados classe dentro de um [lacrado classe](../../language-reference/keywords/sealed.md) gera um aviso do compilador [CS0628](../../misc/cs0628.md), "novo membro protegido declarado na classe sealed."
+   No entanto, a definição de uma classe aninhada `protected`, `protected internal` ou `private protected` dentro de uma [classe selada](../../language-reference/keywords/sealed.md) gera um aviso do compilador [CS0628](../../misc/cs0628.md), "novo membro protegido declarado na classe selada".
   
 - Tipos aninhados de um **struct** podem ser [públicos](../../../csharp/language-reference/keywords/public.md), [internos](../../../csharp/language-reference/keywords/internal.md) ou [particulares](../../../csharp/language-reference/keywords/private.md).
   

@@ -1,17 +1,17 @@
 ---
 title: Instrução Interface (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ff9211034438e225494b916045acd07c37810f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Instrução Interface (Visual Basic)
 Declara o nome de uma interface e apresenta as definições dos membros que compreende a interface.  
@@ -37,7 +37,7 @@ End Interface
 |Termo|Definição|  
 |---|---|  
 |`attributelist`|Opcional. Consulte [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional. Pode ser um dos seguintes:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Opcional. Pode ser um dos seguintes:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Friend protegido](../../language-reference/modifiers/protected-friend.md)<br/>- [Privado protegido](../../language-reference/modifiers/private-protected.md)<br /><br /> Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`name`|Necessário. Nome desta interface. Consulte [declarado nomes de elemento](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que esta é uma interface genérica.|  

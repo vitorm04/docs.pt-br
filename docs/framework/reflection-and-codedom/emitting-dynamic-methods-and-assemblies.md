@@ -1,13 +1,6 @@
 ---
-title: "Emitindo métodos e assemblies dinâmicos"
-ms.custom: 
+title: Emitindo métodos e assemblies dinâmicos
 ms.date: 08/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reflection emit
 - dynamic assemblies
@@ -16,13 +9,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitindo métodos e assemblies dinâmicos
 Esta seção descreve um conjunto de tipos gerenciados no namespace <xref:System.Reflection.Emit> que permite que um compilador ou ferramenta emita metadados e o MSIL (Microsoft Intermediate Language) no tempo de execução e, opcionalmente, gere um arquivo executável portátil (PE) no disco. Mecanismos de script e compiladores são os principais usuários desse namespace. Nesta seção, a funcionalidade fornecida pelo namespace <xref:System.Reflection.Emit> é conhecida como emissão de reflexão.  
@@ -54,7 +45,7 @@ Descreve os problemas de segurança relacionados à criação de assemblies din�
 Mostra como executar um método dinâmico simples e um método dinâmico vinculado a uma instância de uma classe.
 
 [Como definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)   
-Mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, de interface e especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.
+Mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições especiais, de classe e de interface aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.
 
 [Como definir um método genérico com a emissão de reflexão](how-to-define-a-generic-method-with-reflection-emit.md)   
 Mostra como criar, emitir e invocar um método genérico simples.

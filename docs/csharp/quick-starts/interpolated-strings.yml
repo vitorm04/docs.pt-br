@@ -9,13 +9,13 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: list-collection
+  nextTutorialHref: list-collection.yml
   nextTutorialTitle: Coleções em C#
-  ms.openlocfilehash: 03d46a90033d480046b63bdec3c4c83ab39c2f56
-  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+  ms.openlocfilehash: ac9c8488c787b1dc9b4fb60b18834d328faa4e83
+  ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/18/2018
+  ms.lasthandoff: 05/10/2018
 items:
 - durationInMinutes: 2
   content: >
@@ -95,4 +95,4 @@ items:
     > [!NOTE]
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Você concluiu o guia de início rápido de interpolação de cadeias de caracteres. \n\nVocê pode continuar esses guias de início rápido em seu próprio ambiente de desenvolvimento local. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e selecione um início rápido. Você pode experimentar este guia de início rápido, ir diretamente ao próximo guia de início rápido ou começar novamente com o guia início rápido sobre [Números em C#](numbers-in-csharp-local.md).\n\nSaiba mais sobre a interpolação de cadeias de caracteres no tópico [Interpolação de cadeias de caracteres](../language-reference/tokens/interpolated.md) na Referência do C#."
+- content: "Você concluiu o guia de início rápido de interpolação de cadeias de caracteres. \n\nVocê pode continuar esses guias de início rápido em seu próprio ambiente de desenvolvimento local. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e selecione um início rápido. Você pode experimentar este guia de início rápido, ir diretamente ao próximo guia de início rápido ou começar novamente com o guia início rápido sobre [Números em C#](numbers-in-csharp-local.md).\n\nPara obter mais informações, confira o tópico [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres no C#](../tutorials/string-interpolation.md)."

@@ -1,21 +1,14 @@
 ---
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Definindo o aplicativo de vários contêineres com o docker-compose.yml
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml 
 
@@ -434,11 +427,11 @@ Observe que os valores definidos no ambiente do tempo de execução sempre subst
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Visão geral do Docker compor**
+-   **Visão geral do Docker Compose**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Vários arquivos de redação**
-    [*https://docs.docker.com/compose/extends/\#arquivos compor vários*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **Vários arquivos do Compose**
+    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Criando imagens do Docker do ASP.NET Core otimizadas
 
@@ -468,7 +461,7 @@ A equipe do .NET está realizando um trabalho importante para tornar o .NET Core
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Criando imagens do Docker com o ASP.NET Core de otimização**
+-   **Criando imagens otimizadas do Docker com o ASP.NET Core**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>Compilando o aplicativo em um contêiner de build (CI)
@@ -549,8 +542,8 @@ A conclusão geral aqui é que você pode compilar seu aplicativo da mesma manei
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Criação de bits de um contêiner: Configurando a solução eShopOnContainers em um ambiente Windows CLI (dotnet CLI, CLI do Docker e o código do VS)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- e -VS-código)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **Criando bits com base em um contêiner: configurando a solução eShopOnContainers em um ambiente da CLI do Windows (CLI do dotnet, CLI do Docker e VS Code)**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

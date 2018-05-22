@@ -1,34 +1,27 @@
 ---
 title: Usando structs (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 94181c42ce913dc76c9a074e4bcbb8240764c896
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553a6d1d2e922d1683cb5dbe2fa0b525c9b1e37a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (Guia de Programação em C#)
 O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectangle` e `Color`. Embora seja conveniente representar um ponto como uma [classe](../../../csharp/language-reference/keywords/class.md) com [Propriedades Auto-implementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), um [struct](../../../csharp/language-reference/keywords/struct.md) pode ser mais eficiente em alguns cenários. Por exemplo, se você declarar uma matriz de 1000 objetos `Point`, alocará memória adicional para referenciar cada objeto, nesse caso, um struct será mais barato. Como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contém um objeto chamado <xref:System.Drawing.Point>, o struct neste exemplo é chamado “CoOrds”.  
   
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- É um erro ao definir um construtor (sem parâmetros) padrão para um struct. Também é um erro ao inicializar um campo de instância em um corpo de struct. Você pode inicializar os membros de struct externamente acessível somente por meio de um construtor com parâmetros, implícito, o construtor padrão, um [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), ou acessar os membros individualmente depois que a estrutura é declarada. Todos os membros particulares ou inacessíveis requerem o uso de construtores exclusivamente.
+ É um erro ao definir um construtor (sem parâmetros) padrão para um struct. Também é um erro ao inicializar um campo de instância em um corpo de struct. Você pode inicializar membros de struct externamente acessíveis somente por meio de um construtor com parâmetros, do construtor padrão implícito, de um [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) ou acessando os membros individualmente depois que o struct é declarado. Todos os membros particulares ou, de outro modo, inacessíveis exigem o uso de construtores exclusivamente.
   
- Quando você cria um objeto de estrutura usando o [novo](../../../csharp/language-reference/keywords/new.md) operador, ele é criado e o construtor apropriado é chamado de acordo com o [assinatura do construtor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio das propriedades implementadas automaticamente.
+ Quando você cria um objeto de struct usando o operador [new](../../../csharp/language-reference/keywords/new.md), ele é criado e o construtor apropriado é chamado de acordo com a [assinatura do construtor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio de propriedades autoimplementadas.
  
- Se você criar um objeto de estrutura usando o padrão, o construtor sem parâmetros, todos os membros são atribuídos de acordo com seus [valores padrão](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
+ Se você criar uma instância de um objeto de struct usando o construtor sem parâmetros padrão, todos os membros serão atribuídos de acordo com seus [valores padrão](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
   
- Ao escrever um construtor com parâmetros para um struct, você deverá inicializar explicitamente todos os membros; Caso contrário, um ou mais membros permanecem não atribuídos e struct não pode ser usado, produzindo o erro do compilador CS0171.  
+ Ao escrever um construtor com parâmetros para um struct, é necessário inicializar explicitamente todos os membros; caso contrário, um ou mais membros permanecerão não atribuídos e o struct não poderá ser usado, produzindo o erro do compilador CS0171.  
   
  Não há nenhuma herança para structs como há para classes. Um struct não pode herdar de outra estrutura ou classe e ele não pode ser a base de uma classe. No entanto, os structs herdam da classe base <xref:System.Object>. Um struct pode implementar interfaces e ele faz isso exatamente como as classes.  
   

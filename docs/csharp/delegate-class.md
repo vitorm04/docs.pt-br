@@ -1,20 +1,13 @@
 ---
-title: "System.Delegate e a palavra-chave “delegado”"
-description: "Aprenda sobre as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave “delegado”."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate e a palavra-chave `delegate`
+description: Aprenda sobre as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave “delegado”.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
@@ -120,7 +113,7 @@ O exemplo de Sort() normalmente anexa um único método de destino ao delegado. 
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Classes Delegate e MulticastDelegate
 
-O suporte de linguagem descrito acima fornece os recursos e o suporte que você normalmente precisará para trabalhar com delegados. Esses recursos são criados em duas classes do framework .NET Core: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
+O suporte de linguagem descrito acima fornece os recursos e o suporte que você normalmente precisará para trabalhar com delegados. Esses recursos são criados com base em duas classes no .NET Core Framework: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
 A classe `System.Delegate` e sua única subclasse direta, `System.MulticastDelegate`, fornecem o suporte de estrutura para criar delegados, registrar métodos como destinos de delegado e invocar todos os métodos que são registrados como um destino de delegado. 
 

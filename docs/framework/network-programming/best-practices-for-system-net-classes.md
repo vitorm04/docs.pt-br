@@ -1,12 +1,6 @@
 ---
-title: "Melhores práticas para classes System.Net"
-ms.custom: 
+title: Melhores práticas para classes System.Net
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - sending data, best practices
 - requesting data from Internet, best practices
@@ -16,22 +10,19 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90722abbdb4568be115c0ac77007d5f18984df6f
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
-ms.translationtype: MT
+ms.openlocfilehash: c74f9d0534675d07c87d3edbcf8434cd98f6c621
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Melhores práticas para classes System.Net
 As seguintes recomendações ajudarão você a usar as classes contidas em <xref:System.Net> para seu melhor proveito:  
   
--   Para práticas recomendadas de segurança de camada de transporte (TLS), consulte [segurança de camada de transporte (TLS) práticas recomendadas com o .NET Framework](tls.md).
+-   Para obter as melhores práticas do protocolo TLS, confira [Melhores práticas do protocolo TLS com o .NET Framework](tls.md).
 
 -   Use <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> sempre que possível, em vez da conversão de tipo para classes descendentes. Os aplicativos que usam **WebRequest** e **WebResponse** podem aproveitar os novos protocolos da Internet sem a necessidade de alterações de código extensas.  
   

@@ -1,21 +1,12 @@
 ---
-title: "Aplicabilidade da transformação funcional (C#)"
-ms.custom: 
+title: Aplicabilidade da transformação funcional (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c7196e128a6d61b2b28e955a79561db2b9a5e51b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b913c8e43c5e7a9ede6cb693ff6d3c34f3631607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Aplicabilidade da transformação funcional (C#)
 Transformações e puras são aplicáveis em uma variedade de situações.  
@@ -42,5 +33,5 @@ Transformações e puras são aplicáveis em uma variedade de situações.
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Transformação funcional XML (c#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+ [Transformação funcional de XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
  [Refatoração em funções puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela de tipos internos (Referência de C#)
 A tabela a seguir mostra as palavras-chave para tipos internos do C#, que são aliases de tipos predefinidos no namespace <xref:System>.  
@@ -37,14 +37,14 @@ A tabela a seguir mostra as palavras-chave para tipos internos do C#, que são a
   
  As palavras-chave de tipo C# e seus aliases são intercambiáveis. Por exemplo, é possível declarar uma variável de inteiro usando uma das seguintes declarações:  
   
-```  
+```csharp  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
  Para exibir o tipo real para qualquer tipo de C#, use o método do sistema `GetType()`. Por exemplo, a instrução a seguir exibe o alias do sistema que representa o tipo de `myVariable`:  
   
-```  
+```csharp  
 Console.WriteLine(myVariable.GetType());  
 ```  
   

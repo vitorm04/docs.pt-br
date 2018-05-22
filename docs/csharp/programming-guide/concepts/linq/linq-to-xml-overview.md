@@ -1,21 +1,12 @@
 ---
-title: "Visão geral do LINQ to XML (C#)"
-ms.custom: 
+title: Visão geral do LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1c66e87ecc72bf711dfda33cd7c0ea35f126c1e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 318c5494134fd1dd3ac2adbf538d693ad4a5dbf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-overview-c"></a>Visão geral do LINQ to XML (C#)
 O XML tem sido amplamente adotado como um modo de formatar dados em muitos contextos. Por exemplo, você pode encontrar XML na Web, em arquivos de configuração, em arquivos do Microsoft Office Word e em bancos de dados.  
@@ -72,7 +63,7 @@ select item;
 -   Usar uma combinação desses recursos para transformar árvores XML de uma forma em outra.  
   
 ## <a name="creating-xml-trees"></a>Criando árvores XML  
- Uma das principais vantagens de programação com [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é que é fácil criar árvores XML. Por exemplo, para criar uma árvore XML pequena, você pode escrever código da seguinte forma:  
+ Uma das vantagens mais significativas da programação com [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é que é fácil criar árvores XML. Por exemplo, para criar uma árvore XML pequena, você pode escrever código da seguinte forma:  
   
 ```csharp  
 XElement contacts =  

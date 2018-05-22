@@ -1,26 +1,15 @@
 ---
 title: Regras para inferir tipos simples
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
@@ -75,7 +64,7 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
   
  Quando o primeiro valor de `attr2` é encontrado, o tipo de `attr2` será inferida como `unsignedByte` com base no valor `0`. Quando segundo `attr2` é encontrado, o tipo é promovido a `string` com base no tipo atualmente inferido de `unsignedByte` e o valor atual `true` porque a classe de <xref:System.Xml.Schema.XmlSchemaInference> considera valores anteriores para elevar o tipo inferido. No entanto, se ambas as instâncias de `attr2` foram encontrados no mesmo documento XML e não em dois documentos XML diferentes que ilustradas anterior, `attr2` seria inferido como `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorado os atributos de http://www.w3.org/2001/XMLSchema-instance Namespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Atributos ignorados do namespace http://www.w3.org/2001/XMLSchema-instance  
  Os seguintes esquema- está definindo os atributos que são ignorados durante a inferência de esquema.  
   
 |Atributo|Descrição|  

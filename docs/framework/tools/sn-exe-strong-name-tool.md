@@ -1,13 +1,6 @@
 ---
 title: Sn.exe (Ferramenta de Nome Forte)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - public keys, signing files
 - Strong Name tool
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7e58d14eb29939ea1b91b5bdb75f691f5233d8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -59,7 +49,7 @@ sn [-quiet][option [parameter(s)]]
 |**-h**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**-i** *infile container*|Instala o par de chaves do *infile* no contêiner de chave especificado. O contêiner de chave reside no CSP de nome forte.|  
 |**-k** [*keysize*] *outfile*|Gera uma nova chave <xref:System.Security.Cryptography.RSACryptoServiceProvider> com o tamanho especificado e a grava no arquivo especificado.  As chaves pública e privada são gravadas no arquivo.<br /><br /> Se não especificar um tamanho de chave, uma chave 1.024 bits será gerada por padrão se você tiver o provedor criptográfico aprimorado da Microsoft instalado; do contrário, uma chave de 512 bits será gerada.<br /><br /> O parâmetro *keysize* dá suporte a tamanhos de chave de 384 a 16.384 bits em incrementos de 8 bits se você tiver o provedor criptográfico aprimorado da Microsoft instalado.  Ele dá suporte a tamanhos de chave de 384 a 512 bits em incrementos de 8 bits se você tiver o provedor criptográfico de base da Microsoft instalado.|  
-|**-m** [**y** *&#124;* **n**]|Especifica se os contêineres de chave são específicos do computador ou do usuário. Se você definir *y*, os contêineres de chave serão específicos do computador. Se você especificar *n*, os contêineres de chave serão específicos do usuário.<br /><br /> Se nem y nem n for especificado, essa opção exibirá a configuração atual.|  
+|**-m** [**y** *&#124;* **n**]|Especifica se os contêineres de chave são específicos do computador ou do usuário. Se você definir *y*, os contêineres de chave serão específicos do computador. Se você especificar *n*, os contêineres de chave serão específicos ao usuário.<br /><br /> Se nem y nem n for especificado, essa opção exibirá a configuração atual.|  
 |**-o**  *infile* [*outfile*]|Extrai a chave pública do *infile* e a armazena em um arquivo .csv. Uma vírgula separa cada byte da chave pública. Esse formato é útil para referências codificadas para chaves como matrizes inicializadas no código-fonte. Se você não especificar um *outfile*, essa opção colocará a saída na Área de Transferência. **Observação:** essa opção não verifica se a entrada é somente uma chave pública. Se o `infile` contiver um par de chaves com uma chave privada, a chave privada também será extraída.|  
 |**-p** *infile outfile* [*hashalg*]|Extrai a chave pública do par de chaves em *infile* e a armazena em *outfile*. Outra opção é usar o algoritmo RSA especificado por *hashalg*. Essa chave pública pode ser usada para assinar com atraso um assembly usando as opções **/delaysign+** e **/keyfile** do [Vinculador de Assembly (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Quando um assembly é assinado com atraso, somente a chave pública é definida no tempo de compilação e o espaço é reservado no arquivo para a assinatura a ser adicionada posteriormente, quando o chave privada será conhecida.|  
 |**-pc**  *container* *outfile* [*hashalg*]|Extrai a chave pública do par de chaves no *contêiner* e a armazena em *outfile*. Se você usar a opção *hashalg*, o algoritmo RSA será usado para extrair a chave pública.|  

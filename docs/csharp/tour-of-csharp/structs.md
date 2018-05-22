@@ -1,20 +1,13 @@
 ---
 title: Structs em C# - um tour pela linguagem C#
-description: "Aprenda os conceitos básicos dos tipos de valor C#, chamados de structs"
-keywords: .NET, C#, struct, tipo de valor
-author: BillWagner
-ms.author: wiwagn
+description: Aprenda os conceitos básicos dos tipos de valor C#, chamados de structs
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>Structs
 
@@ -30,7 +23,7 @@ Uma alternativa é tornar um struct um Ponto.
 
 Agora, somente um objeto é instanciado — um para a matriz — e as instâncias `Point` são armazenadas em linha na matriz.
 
-Construtores de struct são invocados com o novo operador, mas isso não significa que a memória está sendo alocada. Em vez de alocar dinamicamente um objeto e retornar uma referência a ele, um construtor de struct simplesmente retorna o valor do struct (normalmente em um local temporário na pilha), e esse valor é, então, copiado conforme necessário.
+Construtores de struct são invocados com o operador `new`, mas isso não significa que a memória está sendo alocada. Em vez de alocar dinamicamente um objeto e retornar uma referência a ele, um construtor de struct simplesmente retorna o valor do struct (normalmente em um local temporário na pilha), e esse valor é, então, copiado conforme necessário.
 
 Com classes, é possível que duas variáveis referenciem o mesmo objeto e, portanto, é possível que operações em uma variável afetem o objeto referenciado por outra variável. Com structs, as variáveis têm sua própria cópia dos dados e não é possível que as operações em um afetem o outro. Por exemplo, a saída produzida pelo seguinte fragmento de código depende de o ponto ser uma classe ou um struct.
 

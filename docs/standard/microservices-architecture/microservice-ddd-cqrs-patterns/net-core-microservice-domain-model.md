@@ -1,21 +1,14 @@
 ---
-title: "Implementando um modelo de domínio de microsserviço com o .NET Core"
-description: "Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Implementação de um modelo de domínio de microsserviço com .NET Core"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Implementando um modelo de domínio de microsserviço com o .NET Core
+description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Implementação de um modelo de domínio de microsserviço com .NET Core
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementando um modelo de domínio de microsserviço com o .NET Core 
 
@@ -178,10 +171,10 @@ Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos 
 -   **Vaughn Vernon. Modelagem de agregações com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Codificação para o design controlado por domínio: dicas para desenvolvedores com foco em dados**
+-   **Julie Lerman. Codificação para o Design Controlado por Domínio: dicas para desenvolvedores centrados em dados**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models (Como criar Modelos de Domínio totalmente encapsulados)**
+-   **Udi Dahan. Como criar modelos de domínio totalmente encapsulados**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 

@@ -1,29 +1,22 @@
 ---
 title: virtual (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5a188e9a7cbb7a1c497d577039c2b2578eaa7526
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="virtual-c-reference"></a>virtual (Referência de C#)
 A palavra-chave `virtual` é usada para modificar uma declaração de método, propriedade, indexador ou evento e permitir que ela seja substituída em uma classe derivada. Por exemplo, esse método pode ser substituído por qualquer classe que o herde:  
   
-```  
+```csharp  
 public virtual double Area()   
 {  
     return x * y;  
@@ -37,7 +30,7 @@ public virtual double Area()
   
  Por padrão, os métodos não são virtuais. Você não pode substituir um método não virtual.  
   
- Não é possível usar o `virtual` modificador com o `static`, `abstract`, `private`, ou `override` modificadores. O exemplo a seguir mostra uma propriedade virtual:  
+ Não é possível usar o modificador `virtual` com os modificadores `static`, `abstract`, `private` ou `override`. O exemplo a seguir mostra uma propriedade virtual:  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
@@ -52,7 +45,7 @@ public virtual double Area()
   
  Observe que as classes herdadas `Circle`, `Sphere` e `Cylinder` usam construtores que inicializam a classe base, conforme mostrado na declaração a seguir.  
   
-```  
+```csharp  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   

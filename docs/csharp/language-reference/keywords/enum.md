@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9714277f87095b709e37b582cd3435374d9a1555
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="enum-c-reference"></a>enum (Referência de C#)
 A palavra-chave `enum` é usada para declarar uma enumeração, um tipo distinto que consiste em um conjunto de constantes nomeadas denominado lista de enumeradores.  
@@ -20,13 +20,13 @@ A palavra-chave `enum` é usada para declarar uma enumeração, um tipo distinto
   
  Por padrão, o primeiro enumerador tem o valor 0 e o valor de cada enumerador seguinte é aumentado em 1. Por exemplo, na seguinte enumeração, `Sat` é `0`, `Sun` é `1`, `Mon` é `2` e assim por diante.  
   
-```  
+```csharp  
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Enumeradores podem usar inicializadores para substituir os valores padrão, conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp  
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -34,7 +34,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer tipo integral exceto por [char](../../../csharp/language-reference/keywords/char.md). O tipo subjacente padrão dos elementos de enumeração é [int](../../../csharp/language-reference/keywords/int.md). Para declarar um enum de outro tipo integral, como [bytes](../../../csharp/language-reference/keywords/byte.md), use uma vírgula após o identificador seguida pelo tipo, conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp  
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -49,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  O tipo subjacente especifica quanto armazenamento é alocado para cada enumerador. No entanto, uma conversão explícita é necessária para converter de um tipo `enum` em um tipo integral. Por exemplo, a instrução a seguir atribui o enumerador `Sun` a uma variável do tipo [int](../../../csharp/language-reference/keywords/int.md) usando uma conversão para converter de `enum` em `int`.  
   
-```  
+```csharp  
 int x = (int)Day.Sun;  
 ```  
   

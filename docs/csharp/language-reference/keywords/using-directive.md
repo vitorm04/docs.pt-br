@@ -1,21 +1,14 @@
 ---
 title: Diretiva using (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>Diretiva using (Referência de C#)
 A diretiva `using` tem três usos:  
@@ -64,9 +57,9 @@ class Program
   
  Crie uma diretiva `using` para usar os tipos em um namespace sem precisar especificar o namespace. Uma diretiva `using` não fornece acesso a nenhum namespace aninhado no namespace especificado.  
   
- Os namespaces vêm em duas categorias: definidos pelo usuário e definidos pelo sistema. Os namespaces definidos pelo usuário são namespaces definidos em seu código. Para obter uma lista de namespaces definidos pelo sistema, consulte [visão geral da biblioteca de classes .NET Framework](../../../standard/class-library-overview.md).  
+ Os namespaces vêm em duas categorias: definidos pelo usuário e definidos pelo sistema. Os namespaces definidos pelo usuário são namespaces definidos em seu código. Para obter uma lista dos namespaces definidos pelo sistema, confira [Visão geral da biblioteca de classes .NET Framework](../../../standard/class-library-overview.md).  
   
- Para obter exemplos em métodos em outros assemblies de referência, consulte [criar e usar Assemblies usando a linha de comando](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Para obter exemplos sobre como referenciar métodos em outros assemblies, confira [Criar e usar assemblies usando a linha de comando](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="example-1"></a>Exemplo 1  
   

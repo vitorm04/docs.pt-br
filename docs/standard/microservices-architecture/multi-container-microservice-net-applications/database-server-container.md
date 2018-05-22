@@ -1,21 +1,14 @@
 ---
-title: "Usando um servidor de banco de dados em execução como contêiner"
-description: "Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Usando um servidor de banco de dados em execução como um contêiner"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Usando um servidor de banco de dados em execução como contêiner
+description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Usando um servidor de banco de dados em execução como um contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Usando um servidor de banco de dados em execução como contêiner
 
@@ -54,10 +47,10 @@ Ter o SQL Server em execução como um contêiner não é apenas útil para uma 
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Executar a imagem do Docker do SQL Server em Linux, Mac ou Windows**
+-   **Executar a imagem do Docker do SQL Server no Linux, Mac ou Windows**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Conectar e consultar o SQL Server em Linux com sqlcmd**
+-   **Conectar e consultar o SQL Server em Linux com SQLCMD**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Propagação com os dados de teste na inicialização do aplicativo Web

@@ -4,15 +4,11 @@ description: Saiba quais dependências você precisa em seu computador Windows p
 author: JRAlexander
 ms.author: johalex
 ms.date: 04/24/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 6f2ba8540a38f8e30d3d968f5e2c891c850053aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
 
@@ -50,7 +46,7 @@ A [Atualização 3 dos Pacotes Redistribuíveis do Microsoft Visual C++ 2015](ht
 * Instalar o .NET Core por meio de um arquivo *.zip*. Isso pode incluir servidores de build/CI/CD.
 
 > [!NOTE]
-> *Para o Windows 8.1 e as versões anteriores, ou o Windows Server 2012 R2 e as versões anteriores:* verifique se a instalação do Windows está atualizada e inclui o [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) que pode ser instalado por meio do Windows Update. Se essa atualização não estiver instalada, será exibido um erro quando você iniciar um aplicativo .NET Core, como o seguinte: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
+> *Para o Windows 8.1 e as versões anteriores, ou o Windows Server 2012 R2 e as versões anteriores:* verifique se a instalação do Windows está atualizada e inclui o [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) que pode ser instalado por meio do Windows Update. Se você não tiver essa atualização instalada, verá um erro ao iniciar um aplicativo .NET Core como o seguinte: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Pré-requisitos do Visual Studio 2017
 

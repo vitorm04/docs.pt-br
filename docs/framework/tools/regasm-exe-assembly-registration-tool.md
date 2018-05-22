@@ -1,29 +1,19 @@
 ---
 title: Regasm.exe (Ferramenta de Registro de Assembly)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Ferramenta de Registro de Assembly)
 A ferramenta de Registro do Assembly lê os metadados dentro de um assembly e adiciona as entradas necessárias ao Registro, que permite que clientes COM para criar classes do .NET Framework de maneira transparente. Depois de uma classe ser registrada, qualquer cliente COM poderá usá-la, mesmo que a classe seja uma classe COM. A classe é registrada apenas uma vez, quando o assembly é instalado. As instâncias de classes dentro do assembly não poderão ser criadas com base em COM até serem efetivamente registradas.  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** ou **/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 > [!NOTE]
->  As opções de linha de comando de Regasm.exe não diferenciam maiúsculas de minúsculas. Você só precisa fornecer o suficiente da opção para identificá-la com exclusividade. Por exemplo, **/n** é equivalente a **/nologo** e **/t:** *outfile.tlb* é equivalente a **/tlb:** *outfile.tlb*.  
+>  As opções de linha de comando de Regasm.exe não diferenciam maiúsculas de minúsculas. Você só precisa fornecer o suficiente da opção para identificá-la com exclusividade. Por exemplo, **/n** equivale a **/nologo** e **/t:** *outfile.tlb* equivale a **/tlb:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Comentários  
  É possível usar a opção **/regfile** para gerar um arquivo .reg que contém as entradas do Registro em vez de fazer as alterações diretamente no Registro. É possível atualizar o Registro em um computador importando-se o arquivo .reg com a ferramenta Editor do Registro (Regedit.exe). O arquivo .reg não contém atualizações do Registro que possam ser feitas por funções do Registro definidas pelo usuário.  Observe que a opção **/regfile** emite apenas entradas do Registro para classes gerenciadas.  Essa opção não emite entradas para `TypeLibID`s ou `InterfaceID`S.  

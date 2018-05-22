@@ -1,21 +1,14 @@
 ---
-title: "Implementando leituras/consultas em um microsserviço CQRS"
-description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Implementando leituras/consultas em um microsserviço CQRS"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Implementando leituras/consultas em um microsserviço CQRS
+description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Implementando leituras/consultas em um microsserviço CQRS
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca9bcefb317d2b3c7c225b773918ca4a2484cb8f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
 

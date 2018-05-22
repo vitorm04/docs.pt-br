@@ -1,13 +1,6 @@
 ---
 title: Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
 A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gerar rapidamente uma classe gerenciada Early Bound para uma classe WMI (Instrumentação de Gerenciamento do Windows) especificada. A classe gerada simplifica o código que você deve gravar para acessar uma instância da classe WMI.  
@@ -47,7 +37,7 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l**  *language*|Especifica a linguagem na qual gerar a classe gerenciada Early Bound. É possível especificar **CS** (C#, padrão), **VB** (Visual Basic), **MC** (C++) ou **JS** (JScript) como o argumento da linguagem.|  
 |**/m**  *machine*|Especifica o computador ao qual se conectar, em que a classe WMI reside. O padrão é o computador local.|  
-|**/n**  *path*|Especifica o caminho para o namespace WMI que contém a classe WMI. Se você não especificar essa opção, a ferramenta gerará o código para *WMIClass* no namespace **Root\cimv2** padrão.|  
+|**/n** *path*|Especifica o caminho para o namespace WMI que contém a classe WMI. Se você não especificar essa opção, a ferramenta gerará o código para *WMIClass* no namespace **Root\cimv2** padrão.|  
 |**/o**  *classnamespace*|Especifica o namespace do .NET no qual gerar a classe de código gerenciada. Se você não especificar essa opção, a ferramenta gerará o namespace usando o namespace WMI e o prefixo do esquema. O prefixo do esquema é a parte do nome da classe que antecede o caractere de sublinhado. Por exemplo, para a classe **Win32_OperatingSystem** no namespace **Root\cimv2**, a ferramenta geraria a classe em **ROOT.CIMV2.Win32**.|  
 |**/p**  *filepath*|Especifica o caminho para o arquivo no qual o código gerado deve ser salvo. Se você não especificar essa opção, a ferramenta criará o arquivo no diretório atual. Ela nomeia a classe e o arquivo em que gera a classe que usa o argumento *WMIClass*. O nome da classe e do arquivo são iguais ao de *WMIClass.* Se *WMIClass* contiver um caractere de sublinhado, a ferramenta usará a parte do nome de classe depois do caractere de sublinhado. Por exemplo, se o nome *WMIClass* estiver no formato **Win32_LogicalDisk**, a classe e o arquivo gerados serão chamados de "logicaldisk". Se já existir um arquivo, a ferramenta substituirá o arquivo existente.|  
 |**/pw**  *password*|Especifica a senha a ser usada durante o logon em um computador especificado pela opção **/m**.|  

@@ -1,31 +1,25 @@
 ---
 title: Operador =&gt; (Referência de C#)
 ms.date: 10/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44cb0485aefa8b0ab10a00ae0525180020ce436d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gt-operator-c-reference"></a>Operador =&gt; (Referência de C#)
 
-O `=>` operador pode ser usado de duas maneiras em c#:
+O operador `=>` pode ser usado de duas maneiras no C#:
 
-- Como o [operador lambda](#lamba-operator) em uma [expressão lambda](../../lambda-expressions.md), separa as variáveis de entrada do corpo lambda.
+- Assim como o [operador lambda](#lamba-operator) em uma [expressão lambda](../../lambda-expressions.md), ele separa as variáveis de entrada do corpo lambda.
  
-- Em um [definição de corpo da expressão](#expression-body-definition), ele separa um nome de membro da implementação do membro. 
+- Em uma [definição de corpo da expressão](#expression-body-definition), ele separa um nome de membro da implementação do membro. 
 
 ## <a name="lambda-operator"></a>Operador lambda
 
@@ -88,24 +82,24 @@ static void Main(string[] args)
     // nine  
 }  
 ```  
-## <a name="expression-body-definition"></a>Definição de corpo de expressão
+## <a name="expression-body-definition"></a>Definição de corpo da expressão
 
-Uma definição de corpo da expressão fornece uma implementação de um membro em um formato legível, altamente condensado. Ele tem a seguinte sintaxe geral:
+Uma definição de corpo da expressão fornece uma implementação de um membro em um formato legível e altamente condensado. Ela tem a seguinte sintaxe geral:
 
 ```csharp
 member => expression;
 ```
-em que *expression* é uma expressão válida. Observe que *expressão* pode ser um *expressão de instrução* apenas se o membro de retorno do tipo `void`, ou se o membro é um construtor ou um finalizador.
+em que *expression* é uma expressão válida. Observe que *expression* pode ser uma *expressão de instrução* apenas se o tipo de retorno do membro é `void` ou se o membro é um construtor ou um finalizador.
 
-Definições de corpo da expressão de instruções de get de propriedade e métodos têm suporte, começando com o c# 6. Definições de corpo de expressão para construtores, finalizadores, instruções de propriedade set e indexadores têm suporte com o c# 7.
+Há suporte para definições de corpo da expressão para métodos e instruções get da propriedade do C# 6 em diante. Há suporte para definições de corpo da expressão para construtores, finalizadores, instruções de set da propriedade e indexadores do C# 7 em diante.
 
-A seguir está uma definição de corpo de expressão para um `Person.ToString` método:
+Veja abaixo uma definição de corpo da expressão para um método `Person.ToString`:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-É uma versão abreviada de definição de método a seguir:
+É uma versão abreviada da seguinte definição de método:
 
 ```csharp
 public override string ToString()
@@ -113,10 +107,10 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-Para obter mais informações sobre definições de corpo da expressão, consulte [bodied expressão membros](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+Para obter informações mais detalhadas sobre definições de corpo da expressão, confira [Membros com corpo da expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
 ## <a name="see-also"></a>Consulte também  
 [Referência de C#](../../../csharp/language-reference/index.md)   
 [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
 [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[Membros bodied expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+[Membros com corpo da expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).

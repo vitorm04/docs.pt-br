@@ -1,13 +1,6 @@
 ---
 title: Tlbexp.exe (Exportador de Biblioteca de Tipos)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
@@ -63,7 +53,7 @@ tlbexp assemblyName [options]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 > [!NOTE]
->  As opções de linha de comando para Tlbexp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Por exemplo, **/n** é equivalente a **/nologo**, enquanto **/o:** *outfile.tlb* é equivalente a **/out:** *outfile.tlb*.  
+>  As opções de linha de comando para Tlbexp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Por exemplo, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Comentários  
  Tlbexp.exe gera uma biblioteca de tipos que contém definições dos tipos definidos no assembly. Aplicativos como o Visual Basic 6.0 podem usar a biblioteca de tipos gerada na associação com os tipos do .NET definidos no assembly.  

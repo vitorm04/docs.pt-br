@@ -1,27 +1,18 @@
 ---
-title: "Colaboração ponto a ponto"
-ms.custom: 
+title: Colaboração ponto a ponto
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboração ponto a ponto
-A rede ponto a ponto é a utilização dos computadores relativamente poderosos (computadores pessoais) que existem na borda da Internet para mais do que apenas tarefas de computação baseadas no cliente. O PC moderno (PC) tem um processador muito rápido, ampla memória e um disco rígido grande, que estão sendo totalmente utilizados ao executar tarefas comuns de computação, como email e navegação na Web. O PC moderno pode facilmente atuar como um cliente e um servidor (um par) para vários tipos de aplicativos.  
+A rede ponto a ponto é a utilização dos computadores relativamente poderosos (computadores pessoais) que existem na borda da Internet para mais do que apenas tarefas de computação baseadas no cliente. O PC moderno tem um processador muito rápido, ampla memória e um disco rígido grande, nenhum dos quais está sendo totalmente utilizado ao executar tarefas comuns de computação, como email e navegação na Web. O PC moderno pode facilmente atuar como um cliente e um servidor (um par) para vários tipos de aplicativos.  
   
 -   A infraestrutura de colaboração ponto a ponto é uma implementação simplificada da infraestrutura de ponto a ponto do Microsoft Windows que aproveita o serviço Pessoas ao meu Redor no Windows Vista e em plataformas posteriores. Ele é mais adequado para aplicativos habilitados para par dentro de uma sub-rede para a qual o serviço Pessoas ao meu Redor opera, embora ele também possa atender a pontos de extremidade de Internet ou contatos. Ele incorpora o Gerenciador de Contatos comum que é usado pelo Live Messenger e outros aplicativos que reconhecem o Live para determinar pontos de extremidade de contato, presença e disponibilidade.  
   

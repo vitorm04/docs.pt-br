@@ -1,21 +1,14 @@
 ---
-title: "Usando o Azure Key Vault para proteger segredos no momento da produção"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando o Azure Key Vault para proteger segredos no momento da produção"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Usando o Azure Key Vault para proteger segredos no momento da produção
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando o Azure Key Vault para proteger segredos no momento da produção
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usando o Azure Key Vault para proteger segredos no momento da produção
 
@@ -68,13 +61,13 @@ Neste exemplo, a chamada a AddAzureKeyVault vem no final do registro do provedor
 -   **Usando o Azure Key Vault para proteger segredos do aplicativo**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **Armazenamento seguro de segredos do aplicativo durante o desenvolvimento**
+-   **Armazenamento seguro dos segredos do aplicativo durante o desenvolvimento**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
 -   **Configurando a proteção de dados**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Tempo de vida e gerenciamento de chaves**
+-   **Gerenciamento de chaves e tempo de vida**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Repositório do GitHub.

@@ -2,11 +2,11 @@
 title: 'Guia de estilo do F #'
 description: 'Aprenda os cinco princípios de BOM código F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Guia de estilo do F #
 
@@ -40,8 +40,8 @@ Você deve ter os seguintes princípios em mente que sempre que você escrever c
 
 ## <a name="next-steps"></a>Próximas etapas
 
-O [diretrizes de formatação do F #](formatting.md) fornecem orientação sobre como formatar o código para que seja fácil de ler.
+O [código F # diretrizes de formatação](formatting.md) fornecem orientação sobre como formatar o código para que seja fácil de ler.
 
 O [convenções de codificação do F #](conventions.md) fornecem orientação para ajudar a manutenção de longo prazo de maior F # linguagens de programação do F # bases de código.
 
-O [diretrizes de Design do componente de F #](component-design-guidelines.md) é um conjunto abrangente de diretrizes para criação de F # componentes, como bibliotecas.
+O [diretrizes de design do componente F #](component-design-guidelines.md) fornecem diretrizes para criação de F # componentes, como bibliotecas.

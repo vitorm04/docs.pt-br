@@ -2,11 +2,11 @@
 title: Parâmetros de tipo resolvidos estaticamente (F#)
 description: 'Saiba como usar uma linguagem F # parâmetro de tipo resolvidos estaticamente, que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 30a7de0a3bc523ef17c1f89d6f88549069f752f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="statically-resolved-type-parameters"></a>Parâmetros de tipo resolvidos estaticamente
 
@@ -59,23 +59,25 @@ A saída é a seguinte.
 A partir do F # 4.1, você pode também especificar nomes de tipo concreto em assinaturas de parâmetro de tipo resolvidos estaticamente.  Nas versões anteriores do idioma, o nome do tipo, na verdade, pode ser inferido pelo compilador, mas, na verdade, não pôde ser especificado na assinatura.  A partir do F # 4.1, você também pode especificar nomes de tipo concreto em assinaturas de parâmetro de tipo resolvidos estaticamente. Veja um exemplo:
 
 ```fsharp
+let inline konst x _ = x
+
 type CFunctor() = 
-      static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
-      static member inline fmap (f: ^a -> ^b, a: ^a option) =
+    static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
+    static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with
         | None -> None
         | Some x -> Some (f x)
 
-      // default implementation of replace
-      static member inline replace< ^a, ^b, ^c, ^d, ^e when ^a :> CFunctor and (^a or ^d): (static member fmap: (^b -> ^c) * ^d -> ^e) > (a, f) =
+    // default implementation of replace
+    static member inline replace< ^a, ^b, ^c, ^d, ^e when ^a :> CFunctor and (^a or ^d): (static member fmap: (^b -> ^c) * ^d -> ^e) > (a, f) =
         ((^a or ^d) : (static member fmap : (^b -> ^c) * ^d -> ^e) (konst a, f))
 
-      // call overridden replace if present
-      static member inline replace< ^a, ^b, ^c when ^b: (static member replace: ^a * ^b -> ^c)>(a: ^a, f: ^b) =
+    // call overridden replace if present
+    static member inline replace< ^a, ^b, ^c when ^b: (static member replace: ^a * ^b -> ^c)>(a: ^a, f: ^b) =
         (^b : (static member replace: ^a * ^b -> ^c) (a, f))
 
 let inline replace_instance< ^a, ^b, ^c, ^d when (^a or ^c): (static member replace: ^b * ^c -> ^d)> (a: ^b, f: ^c) =
-      ((^a or ^c): (static member replace: ^b * ^c -> ^d) (a, f))
+        ((^a or ^c): (static member replace: ^b * ^c -> ^d) (a, f))
 
 // Note the concrete type 'CFunctor' specified in the signature
 let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member replace: ^a *  ^b ->  ^a0) =

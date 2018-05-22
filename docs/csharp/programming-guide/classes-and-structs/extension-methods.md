@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: bf25ddda2c7e381f0b43798b28179b18338d71cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original. Os métodos de extensão são um tipo especial de método estático, mas são chamados como se fossem métodos de instância no tipo estendido. No caso do código cliente gravado em C#, F# e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos realmente definidos em um tipo.  
@@ -29,13 +29,13 @@ Os métodos de extensão permitem que você "adicione" tipos existentes sem cria
   
  O método de extensão `WordCount` pode ser colocado no escopo com esta diretiva `using`:  
   
-```  
+```csharp  
 using ExtensionMethods;  
 ```  
   
  E pode ser chamado a partir de um aplicativo usando esta sintaxe:  
   
-```  
+```csharp  
 string s = "Hello Extension Methods";  
 int i = s.WordCount();  
 ```  
@@ -46,7 +46,7 @@ int i = s.WordCount();
   
  Em geral, provavelmente você chamará métodos de extensão com muito mais frequência do que implementará os seus próprios. Como os métodos de extensão são chamados com a sintaxe do método de instância, nenhum conhecimento especial é necessário para usá-los no código do cliente. Para habilitar métodos de extensão para um tipo específico, apenas adicione uma diretiva `using` para o namespace no qual os métodos estão definidos. Por exemplo, para usar os operadores de consulta padrão, adicione esta diretiva `using` ao seu código:  
   
-```  
+```csharp  
 using System.Linq;  
 ```  
   

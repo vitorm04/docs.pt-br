@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c6071e7a3c3bfcc96c57ecb34632a911835685fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 A palavra-chave `readonly` é um modificador que pode ser usado nos campos. Quando uma declaração de campo incluir um modificador `readonly`, atribuições aos campos introduzidas pela declaração podem ocorrer apenas como parte da declaração ou em um construtor na mesma classe.  
@@ -25,7 +25,7 @@ A palavra-chave `readonly` é um modificador que pode ser usado nos campos. Quan
   
 -   Quando a variável é inicializada na declaração, por exemplo:  
   
-    ```  
+    ```csharp  
     public readonly int y = 5;  
     ```  
   
@@ -34,7 +34,7 @@ A palavra-chave `readonly` é um modificador que pode ser usado nos campos. Quan
 > [!NOTE]
 >  A palavra-chave `readonly` é diferente da palavra-chave [const](../../../csharp/language-reference/keywords/const.md). O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser inicializado na declaração ou em um construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, enquanto um campo `const` é uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de tempo de execução, como no exemplo a seguir:  
   
-```  
+```csharp  
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
 ```  
   

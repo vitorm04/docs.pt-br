@@ -1,12 +1,6 @@
 ---
-title: "Protocolo IP versão 6"
-ms.custom: 
+title: Protocolo IP versão 6
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -14,16 +8,14 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 995bc2075a7df5c9a37cc68e812f62c9de2e53c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo IP versão 6
 O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet. O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros. O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto. Estes são os principais problemas do protocolo IPv4 atual:  
@@ -55,7 +47,7 @@ O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a c
  Para obter mais informações, consulte [Endereçamento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Roteamento IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Configuração automática de IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Habilitando e desabilitando o IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) e [Como modificar o arquivo de configuração do computador para habilitar o suporte a IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## <a name="references"></a>Referências  
- A seguir, documentos RFC selecionados que podem ser encontrados no site da Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
+ Veja a seguir documentos do RFC selecionados que podem ser encontrados no site da Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
   
 -   RFC 1287, voltado a arquitetura de Internet futura.  
   

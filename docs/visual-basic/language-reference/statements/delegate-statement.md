@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Instrução Delegate
 Usado para declarar um delegado. Um delegado é um tipo de referência que se refere a um `Shared` método de um tipo ou a um método de instância de um objeto. Qualquer procedimento com parâmetro e retornar os tipos de correspondência pode ser usado para criar uma instância desta classe delegate. O procedimento posteriormente, em seguida, pode ser chamado por meio da instância delegada.  
@@ -28,7 +28,7 @@ Usado para declarar um delegado. Um delegado é um tipo de referência que se re
 |Termo|Definição|  
 |---|---|  
 |`attrlist`|Opcional. Lista de atributos que se aplicam a este delegado. Vários atributos são separados por vírgulas. Você deve colocar o [a lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre colchetes angulares ("`<`"e"`>`").|  
-|`accessmodifier`|Opcional. Especifica o código pode acessar o delegado. Pode ser um dos seguintes:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md). Qualquer código que pode acessar o elemento que declara o representante pode acessá-lo.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md). Somente o código dentro da classe do representante ou uma classe derivada pode acessá-lo.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Somente o código dentro do mesmo assembly pode acessar o delegado.<br />-   [Particular](../../../visual-basic/language-reference/modifiers/private.md). Somente o código dentro do elemento que declara o representante pode acessá-lo.<br /><br /> Você pode especificar `Protected Friend` para habilitar o acesso do código na classe do representante, uma classe derivada ou do mesmo assembly.|  
+|`accessmodifier`|Opcional. Especifica o código pode acessar o delegado. Pode ser um dos seguintes:<br /><br /> - [Público](../../../visual-basic/language-reference/modifiers/public.md). Qualquer código que pode acessar o elemento que declara o representante pode acessá-lo.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md). Somente o código dentro da classe do representante ou uma classe derivada pode acessá-lo.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Somente o código dentro do mesmo assembly pode acessar o delegado.<br />- [Particular](../../../visual-basic/language-reference/modifiers/private.md). Somente o código dentro do elemento que declara o representante pode acessá-lo.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) somente o código dentro da classe do representante, uma classe derivada ou do mesmo assembly pode acessar o delegado. <br />- [Privado protegido](../../language-reference/modifiers/private-protected.md) somente o código na classe do representante ou em uma classe derivada no mesmo assembly pode acessar o delegado. |  
 |`Shadows`|Opcional. Indica que este delegado redeclara e oculta um elemento de programação com o mesmo nome, ou um conjunto de elementos sobrecarregados, em uma classe base. Você pode sombrear qualquer tipo de elemento declarado com qualquer outro tipo.<br /><br /> Um elemento sombreado não está disponível dentro da classe derivada que sombreia, com exceção de onde o elemento sombreamento é inacessível. Por exemplo, se um `Private` elemento sombreia um elemento de classe base, o código que não tem permissão para acessar o `Private` elemento acessa o elemento de classe base em vez disso.|  
 |`Sub`|Opcional, mas o `Sub` ou `Function` devem aparecer. Declara a esse procedimento como um delegado `Sub` procedimento que não retorna um valor.|  
 |`Function`|Opcional, mas o `Sub` ou `Function` devem aparecer. Declara a esse procedimento como um delegado `Function` procedimento que retorna um valor.|  

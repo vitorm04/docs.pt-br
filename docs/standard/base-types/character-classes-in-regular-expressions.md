@@ -1,13 +1,7 @@
 ---
 title: Classes de caracteres em expressões regulares
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 <a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
@@ -58,7 +47,7 @@ ms.lasthandoff: 04/18/2018
  O .NET dá suporte a expressões de subtração de classes de caracteres, o que permite a você definir um conjunto de caracteres como resultado da exclusão de uma classe de caracteres de outra classe de caracteres. Para obter mais informações, consulte [Subtração de classe de caracteres](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Classes de caractere que reúnem caracteres por categoria, como [\w](#WordCharacter) para caracteres de texto, ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere.  A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], as categorias de caracteres se baseiam no [Padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] até o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], eles se baseiam no [Padrão Unicode, versão 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Classes de caractere que fazem a correspondência de caracteres por categoria, como [\w](#WordCharacter) para a correspondência de caracteres de palavra ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere.  A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], as categorias de caracteres se baseiam no [Padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] até o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], eles se baseiam no [Padrão Unicode, versão 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupo de Caracteres Positivo: [ ]  

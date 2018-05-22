@@ -1,21 +1,12 @@
 ---
-title: "Classificação de operadores de consulta padrão pelo modo de execução (C#)"
-ms.custom: 
+title: Classificação de operadores de consulta padrão pelo modo de execução (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ad1ad72526b7293cd81528bf1880b2326289f177
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40b5859631b37f8d5e810de3c999742bafe9f6ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Classificação de operadores de consulta padrão pelo modo de execução (C#)
 As implementações de LINQ to Objects dos métodos de operador de consulta padrão em uma das duas maneiras principais: imediata ou adiada. Os operadores de consulta que usam a execução adiada podem ser divididos em mais duas categorias: streaming e não streaming. Se você souber como os operadores de consulta diferentes são executados, isso poderá ajudá-lo a entender os resultados que serão obtidos de uma determinada consulta. Isso é especialmente verdadeiro se a fonte de dados está sendo alterada ou se você estiver criando uma consulta sobre outra consulta. Este tópico classifica os operadores de consulta padrão de acordo com o modo de execução.  
@@ -98,5 +89,5 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq.Enumerable>  
  [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Sintaxe de expressão de consulta para operadores de consulta padrão (c#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [Sintaxe de expressão de consulta para operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

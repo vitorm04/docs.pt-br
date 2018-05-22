@@ -1,20 +1,13 @@
 ---
 title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos que virão na futura versão 7 da linguagem C#.
-keywords: C#, .NET, .NET Core, Últimos recursos, Novidades
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/21/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -91,7 +84,7 @@ Os campos não são validados e você não pode definir seus próprios métodos
 > As tuplas estavam disponíveis antes do C# 7.0, mas elas eram ineficientes e não tinham nenhum suporte de linguagem.
 > Isso significava que os elementos de tupla só podiam ser referenciados como `Item1`, `Item2` e assim por diante. O C# 7.0 introduz o suporte de linguagem para tuplas, que permite nomes semânticos para os campos de uma tupla, usando tipos de tupla novos e mais eficientes.
 
-Você pode criar uma tupla atribuindo cada membro a um valor:
+Crie uma tupla atribuindo um valor a cada membro:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -136,7 +129,7 @@ Você também pode fornecer uma desconstrução semelhante para qualquer tipo no
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-Você pode extrair os campos individuais atribuindo uma tupla a um `Point`:
+Extraia os campos individuais atribuindo um `Point` a uma tupla:
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

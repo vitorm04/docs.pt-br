@@ -1,13 +1,7 @@
 ---
-title: "Como verificar se cadeias de caracteres estão em um formato de email válido"
-ms.custom: 
+title: Como verificar se cadeias de caracteres estão em um formato de email válido
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se cadeias de caracteres estão em um formato de email válido
 O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de caracteres está no formato de email válido.  
@@ -69,7 +58,7 @@ O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de ca
 |`(?("")("".+?(?<!\\)""@)`|Se o primeiro caractere for aspas, coincida as aspas iniciais seguidas de pelo menos uma ocorrência de qualquer caractere, seguido de uma marca de aspas finais. As aspas finais não devem ser precedidas por um caractere de barra invertida (\\). `(?<!` é o início de uma asserção lookbehind negativa de largura zero. A cadeia de caracteres deve terminar com um sinal de arroba (@).|  
 |<code>&#124;(([0-9a-z]</code>|Se o primeiro caractere não for aspas, coincida qualquer caractere alfabético de a até z ou de A até Z (a comparação não diferencia maiúsculas de minúsculas) ou qualquer caractere numérico entre 0 e 9.|  
 |`(\.(?!\.))`|Se o próximo caractere for um ponto final, coincida com ele. Se ele não for um ponto final, observe o próximo caractere e continue a correspondência. `(?!\.)` é uma asserção lookahead negativa de largura zero que impede dois pontos finais consecutivos de serem exibidos na parte local de um endereço de email.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Se o próximo caractere não for um ponto final, corresponda qualquer caractere da palavra ou um dos seguintes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Se o próximo caractere não for um ponto final, corresponda qualquer caractere de palavra ou um dos seguintes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Coincida o padrão de alternância (um ponto final seguido de um não ponto final ou um de um número de caracteres) zero ou mais vezes.|  
 |`@`|Coincida o caractere @.|  
 |`(?<=[0-9a-z])`|Continue a correspondência se o caractere que precede o caractere @ for de A a Z, de a até z ou de 0 a 9. O constructo `(?<=[0-9a-z])` define uma asserção lookbehind positiva de largura zero.|  

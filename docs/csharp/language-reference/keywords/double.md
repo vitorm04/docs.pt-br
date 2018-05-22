@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: e2524c907781bd3ce618acb0bdd087acb4b10f75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3683b51dfd0ef653ab8bfff6705b96a37e21a10a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="double-c-reference"></a>double (Referência de C#)
 A palavra-chave `double` indica um tipo simples que armazena valores de ponto flutuante de 64 bits. A tabela a seguir mostra a precisão e o intervalo aproximado do tipo `double`.  
@@ -23,7 +23,7 @@ A palavra-chave `double` indica um tipo simples que armazena valores de ponto fl
 ## <a name="literals"></a>Literais  
  Por padrão, um literal numérico real no lado direito do operador de atribuição é tratado como `double`. No entanto, se você quiser que um número inteiro seja tratado como `double`, use o sufixo d ou D, por exemplo:  
   
-```  
+```csharp  
 double x = 3D;  
 ```  
   

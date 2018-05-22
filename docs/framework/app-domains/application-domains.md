@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>Domínios do aplicativo
 Sistemas operacionais e ambientes em tempo de execução normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  
@@ -74,11 +74,11 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  Existem três opções para carregar assemblies de domínio neutro:  
   
--   <xref:System.LoaderOptimization> não carrega assemblies como neutros em relação ao domínio, exceto Mscorlib, que é sempre carregado como neutro em relação ao domínio. Essa configuração é chamada de domínio único, porque ela normalmente é usada quando o host está executando apenas um único aplicativo no processo.  
-  
--   <xref:System.LoaderOptimization> carrega todos os assemblies como neutros em relação ao domínio. Use essa configuração quando houver vários domínios de aplicativo no processo, todos executando o mesmo código.  
-  
--   <xref:System.LoaderOptimization> carrega assemblies de nome forte como neutros em relação ao domínio, se eles e todas as suas dependências foram instalados na cache de assembly global. Outros assemblies são carregados e compilados por JIT separadamente para cada domínio de aplicativo em que são carregados e, assim, podem ser descarregados do processo. Use essa configuração ao executar mais de um aplicativo no mesmo processo, ou se você tiver uma combinação de assemblies compartilhados por vários domínios de aplicativos e assemblies que precisam ser descarregados do processo.  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> não carrega assemblies como neutros em relação ao domínio, exceto Mscorlib, que é sempre carregado como neutro em relação ao domínio. Essa configuração é chamada de domínio único, porque ela normalmente é usada quando o host está executando apenas um único aplicativo no processo.
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> carrega todos os assemblies como neutros em relação ao domínio. Use essa configuração quando houver vários domínios de aplicativo no processo, todos executando o mesmo código.
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> carrega assemblies de nome forte como neutros em relação ao domínio, se eles e todas as suas dependências foram instalados na cache de assembly global. Outros assemblies são carregados e compilados por JIT separadamente para cada domínio de aplicativo em que são carregados e, assim, podem ser descarregados do processo. Use essa configuração ao executar mais de um aplicativo no mesmo processo, ou se você tiver uma combinação de assemblies compartilhados por vários domínios de aplicativos e assemblies que precisam ser descarregados do processo.
   
  Códigos compilados por JIT não podem ser compartilhados por assemblies carregados no contexto de carga, usando o método <xref:System.Reflection.Assembly.LoadFrom%2A> da classe <xref:System.Reflection.Assembly>, ou carregados com base em imagens usando sobrecargas do método <xref:System.Reflection.Assembly.Load%2A> que especificam matrizes de bytes.  
   

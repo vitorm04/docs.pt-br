@@ -3,11 +3,11 @@ title: Padrões Comuns para Delegados
 description: Saiba mais sobre os padrões comuns para usar delegados em seu código para evitar acoplamento forte entre os componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Padrões Comuns para Delegados
 
@@ -27,7 +27,7 @@ O método `Where` usa um delegado que determina quais elementos de uma sequênci
 O protótipo para o método Where é:
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 Este exemplo é repetido com todos os métodos que fazem parte do LINQ. Todos eles contam com delegados para o código que gerencia a consulta específica. Trata-se de um padrão de design de API muito eficiente para se aprender e entender.

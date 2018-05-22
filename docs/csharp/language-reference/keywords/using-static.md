@@ -1,20 +1,16 @@
 ---
 title: Diretiva using static (Referência de C#)
 ms.date: 03/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5838bede475cf2ad1b72518770241e86206a06bb
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-static-directive-c-reference"></a>Diretiva using static (Referência de C#)
 
@@ -52,7 +48,7 @@ O exemplo a seguir usa a diretiva `using static` para tornar os membros estátic
 
 [!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-No exemplo, a diretiva `using static` também poderia ter sido aplicada ao tipo <xref:System.Double>. Isso tornaria possível chamar o <xref:System.Double.TryParse(System.String,System.Double@)> método sem especificar um nome de tipo. No entanto, isso cria código menos legível, uma vez que se torna necessário verificar as instruções `using static` para determinar qual método `TryParse` do tipo numérico é chamado.
+No exemplo, a diretiva `using static` também poderia ter sido aplicada ao tipo <xref:System.Double>. Isso tornaria possível chamar o método <xref:System.Double.TryParse(System.String,System.Double@)> sem especificar um nome de tipo. No entanto, isso cria código menos legível, uma vez que se torna necessário verificar as instruções `using static` para determinar qual método `TryParse` do tipo numérico é chamado.
 
 ## <a name="see-also"></a>Consulte também
 

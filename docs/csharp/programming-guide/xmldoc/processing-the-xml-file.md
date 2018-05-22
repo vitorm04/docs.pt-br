@@ -1,22 +1,15 @@
 ---
 title: Processando o arquivo XML (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Processando o arquivo XML (Guia de Programação em C#)
 O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [Marcas recomendadas para comentários da documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo XML podem usar a cadeia de identificação para identificar o item de metadados/reflexão do .NET Framework correspondente ao qual a documentação se aplica.  
@@ -77,7 +70,7 @@ O compilador gera uma cadeia de identificação para cada constructo no seu cód
   
 -   Para tipos genéricos, o nome do tipo será seguido por um backtick e, em seguida, um número que indica o número de parâmetros de tipo genérico.  Por exemplo,  
   
-     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `classe pública SampleClass\<T, U>`.  
+     ``<member name="T:SampleClass`2">`` é a marcação de um tipo definido como `public class SampleClass<T, U>`.  
   
      Para métodos que aceitam tipos genéricos como parâmetros, os parâmetros de tipo genérico são especificados como números precedidos por backticks (por exemplo \`0,`1).  Cada número que representa uma notação de matriz com base em zero para parâmetros genéricos do tipo.  
   

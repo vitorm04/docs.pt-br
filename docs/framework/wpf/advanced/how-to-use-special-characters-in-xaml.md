@@ -8,23 +8,23 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: d60f9e94fd93c95e573bb52847c717821abdd9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c593ca094487e8f7016b02870026321fbcb9a7c3
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Como usar caracteres especiais em XAML
-Arquivos de marcação que são criados no [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] são salvas automaticamente no [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] formato de arquivo UTF-8, o que significa que a maioria dos caracteres especiais, como marcas de ênfase são codificados corretamente. No entanto, há um conjunto de caracteres especiais comumente usados que são tratados de maneira diferente. Esses caracteres especiais seguem o [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] padrão de codificação.  
+Arquivos de marcação que são criados no [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] são salvas automaticamente no [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] formato de arquivo UTF-8, o que significa que a maioria dos caracteres especiais, como marcas de ênfase são codificados corretamente. No entanto, há um conjunto de caracteres especiais comumente usados que são tratados de maneira diferente. Esses caracteres especiais seguem o [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] padrão de codificação.  
   
  A tabela a seguir mostra a sintaxe para a codificação deste conjunto de caracteres especiais:  
   
 |Caractere|Sintaxe|Descrição|  
 |---------------|------------|-----------------|  
-|<|`<`|Menor que o símbolo.|  
-|>|`>`|Sinal de maior que.|  
-|&|`&`|Símbolo de e comercial.|  
-|"|`"`|Símbolo de aspas duplas.|  
+|<|`&lt;`|Menor que o símbolo.|  
+|>|`&gt;`|Sinal de maior que.|  
+|&|`&amp;`|Símbolo de e comercial.|  
+|"|`&quot;`|Símbolo de aspas duplas.|  
   
 > [!NOTE]
 >  Se você criar um arquivo de marcação usando um texto de editor, como [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] bloco de notas, você deve salvar o arquivo no [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] codificado de formato de arquivo UTF-8 para preservar os caracteres especiais.  

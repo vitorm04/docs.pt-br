@@ -1,21 +1,12 @@
 ---
-title: "Assemblies amigáveis (C#)"
-ms.custom: 
+title: Assemblies amigáveis (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 20b8d4f2d58af510a28160d28e6ef740d293d835
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9265a6ce53d97f1d0b8aaeb0f1aae3b7b75f2cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C#)
 Um *assembly amigável* é um assembly que pode acessar os membros e tipos [internos](../../../../csharp/language-reference/keywords/internal.md) de outro assembly. Se você identificar um assembly como um assembly amigável, não precisará marcar os tipos e membros como públicos para que eles sejam acessados por outros assemblies. Isso é especialmente conveniente nos seguintes cenários:  
@@ -81,7 +72,7 @@ public class ClassWithFriendMethod
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [Como: Criar Assemblies amigáveis não assinados (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [Como: Criar Assemblies amigáveis assinados (c#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [Como criar assemblies amigáveis não assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [Como criar assemblies amigáveis assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
  [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)

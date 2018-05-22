@@ -1,13 +1,7 @@
 ---
 title: Formatação composta
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>Formatação composta
 O recurso de formatação de composição do .NET utiliza uma lista de objetos e uma cadeia de caracteres de formato de composição como entrada. Uma cadeia de formato de composição consiste em um texto fixo intercalado com espaços reservados indexados, chamados de itens de formato, que correspondem aos objetos na lista. A operação de formatação produz uma cadeia de caracteres de resultado que consiste no texto fixo original intercalado com a representação de cadeia de caracteres dos objetos na lista.  
@@ -123,19 +112,19 @@ O recurso de formatação de composição do .NET utiliza uma lista de objetos e
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Ordem de processamento  
- Se a chamada ao método de formatação composto inclui um argumento <xref:System.IFormatProvider> cujo valor não é `null`, o tempo de execução chama seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> para solicitar uma implementação de <xref:System.ICustomFormatter>. Se o método puder retornar uma implementação de <xref:System.ICustomFormatter>, ele será armazenado no cache para uso posterior.  
+ Se a chamada ao método de formatação composto inclui um argumento <xref:System.IFormatProvider> cujo valor não é `null`, o tempo de execução chama seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> para solicitar uma implementação de <xref:System.ICustomFormatter>. Se o método conseguir retornar uma implementação de <xref:System.ICustomFormatter>, ela será armazenada em cache durante a chamada do método de formatação composta.
   
- Cada valor na lista de parâmetros que corresponder a um item de formato será convertido em uma cadeia de caracteres por meio da execução das etapas a seguir. Se qualquer condição nas três primeiras etapas for verdadeira, a representação de cadeia de caracteres do valor será retornada nessa etapa e as etapas subsequentes não serão executadas.  
+ Cada valor na lista de parâmetros que corresponde a um item de formato é convertido em uma cadeia de caracteres da seguinte maneira:  
   
-1.  Se o valor a ser formatado for `null`, uma cadeia de caracteres vazia ("") será retornada.  
+1.  Se o valor a ser formatado for `null`, uma cadeia de caracteres vazia <xref:System.String.Empty?displayProperty=nameWithType> será retornada.  
   
-2.  Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Passa ao método o valor *formatString* do item de formato, se há algum presente, ou `null` quando não há, junto com a implementação de <xref:System.IFormatProvider>.  
+2.  Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Ele passará ao método o valor *formatString* do item de formato, se houver ou `null` se não houver, junto com a implementação de <xref:System.IFormatProvider>. Se a chamada ao método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retorna `null`, a execução continua para a próxima etapa; caso contrário, o resultado da chamada <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> é retornado.
   
-3.  Se o valor implementa a interface <xref:System.IFormattable>, o método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> da interface é chamado. O método recebe o valor *formatString*, se houver um presente no item de formato ou `null`, se não houver. O argumento <xref:System.IFormatProvider> é determinado da seguinte forma:  
+3.  Se o valor implementa a interface <xref:System.IFormattable>, o método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> da interface é chamado. O método receberá o valor *formatString* se houver um no item de formato, ou `null` se não houver. O argumento <xref:System.IFormatProvider> é determinado da seguinte forma:  
   
-    -   Para um valor numérico, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.NumberFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não for capaz de fornecer um, se o valor do argumento for `null` ou se o método de formatação composto não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.NumberFormatInfo> para a cultura do thread atual será usado.  
+    -   Para um valor numérico, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.NumberFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.NumberFormatInfo> para a cultura do thread atual será usado.  
   
-    -   Para um valor de data e hora, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.DateTimeFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não for capaz de fornecer um, se o valor do argumento for `null` ou se o método de formatação composto não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura do thread atual será usado.  
+    -   Para um valor de data e hora, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.DateTimeFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura do thread atual será usado.  
   
     -   Para objetos de outros tipos, se um método de formatação de composição for chamado com um argumento <xref:System.IFormatProvider>, seu valor é passado diretamente para a implementação <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. Caso contrário, `null` é passado para a implementação <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   

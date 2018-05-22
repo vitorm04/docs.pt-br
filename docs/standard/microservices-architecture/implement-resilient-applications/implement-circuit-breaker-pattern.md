@@ -1,21 +1,14 @@
 ---
-title: "Implementando o padrão de Disjuntor"
-description: "Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Implementando o padrão de Disjuntor"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Implementando o padrão de Disjuntor
+description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Implementando o padrão de Disjuntor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implementando o padrão de Disjuntor
 
@@ -173,7 +166,7 @@ Por exemplo, quando o aplicativo estiver em execução, você poderá habilitar 
 
 http://localhost:5103/failing?enable
 
-Em seguida, você pode verificar o status usando o URI [http://localhost:5103/failing](http://localhost:5103/failing), conforme mostra a Figura 10-4.
+Em seguida, verifique o status usando o URI [http://localhost:5103/failing](http://localhost:5103/failing), conforme mostrado na Figura 10-4.
 
 ![](./media/image4.png)
 
@@ -238,14 +231,14 @@ Policy.Handle<HttpResponseException>() // etc
 -   **Padrão de repetição**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Resiliência de Conexão** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Resiliência de conexão** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
 -   **Polly** (biblioteca de tratamento de falhas transitórias e resiliência do .NET) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Padrão de Disjuntor**
+-   **Padrão de disjuntor**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Brooker. Variação: melhorando as coisas com aleatoriedade** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Tremulação: melhorando as coisas com aleatoriedade** https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]

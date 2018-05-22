@@ -1,13 +1,7 @@
 ---
-title: "Como preencher um número com zeros à esquerda"
-ms.custom: 
+title: Como preencher um número com zeros à esquerda
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Como preencher um número com zeros à esquerda
 É possível adicionar zeros à esquerda de um inteiro usando a [cadeia de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md) “D” com um especificador de precisão. Você pode adicionar zeros à esquerda de inteiros e pontos flutuantes usando uma [cadeia de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md). Este tópico mostra como usar os dois métodos para acrescentar um número com zeros à esquerda.  
@@ -39,9 +28,9 @@ ms.lasthandoff: 12/23/2017
   
 2.  Determine se quer exibir o inteiro como valor decimal ou hexadecimal.  
   
-    -   Para exibir o número inteiro como decimal, chame seu método `ToString(String)` e informe a cadeia de caracteres "D*n*" como valor do parâmetro `format`, em que *n* representa o comprimento mínimo da cadeia de caracteres.  
+    -   Para exibir o inteiro como um valor decimal, chame seu método `ToString(String)` e passe a cadeia de caracteres "D*n*" como o valor do parâmetro `format`, em que *n* representa o tamanho mínimo da cadeia de caracteres.  
   
-    -   Para exibir o número inteiro como hexadecimal, chame seu método `ToString(String)` e informe a cadeia de caracteres "X*n*" como valor do parâmetro `format`, em que *n* representa o comprimento mínimo da cadeia de caracteres.  
+    -   Para exibir o inteiro como um valor hexadecimal, chame seu método `ToString(String)` e passe a cadeia de caracteres "X*n*" como o valor do parâmetro `format`, em que *n* representa o tamanho mínimo da cadeia de caracteres.  
   
      Você também pode usar uma cadeia de caracteres de formato, como <xref:System.String.Format%2A> ou <xref:System.Console.WriteLine%2A>, em um método que usa [formatação composta](../../../docs/standard/base-types/composite-formatting.md).  
   
@@ -60,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
 4.  Adicione quantos dígitos zero à esquerda quer incluir na cadeia de caracteres formatada com comprimento da cadeia de caracteres numérica não acrescentada. Isso define o comprimento total da cadeia de caracteres acrescentada.  
   
-5.  Chame o método `ToString(String)` do valor inteiro e informe a cadeia de caracteres "D*n*" para cadeias de caracteres decimais e "X*n*" para cadeias de caracteres hexadecimais, em que *n* representa o comprimento total da cadeia de caracteres acrescentada. Você também pode usar uma cadeia de caracteres de formato "D*n*" ou "X*n*" em um método com suporte para formatação de composição.  
+5.  Chame o método `ToString(String)` do valor inteiro e informe a cadeia de caracteres “D*n*” para cadeias de caracteres decimais e “X*n*” para cadeias de caracteres hexadecimais, em que *n* representa o comprimento total da cadeia de caracteres acrescentada. Você também pode usar uma cadeia de caracteres de formato “D*n*” ou “X*n*” em um método com suporte para formatação de composição.  
   
  O exemplo a seguir acrescenta um valor inteiro com cinco dígitos zero à esquerda.  
   

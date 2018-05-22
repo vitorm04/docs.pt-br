@@ -1,10 +1,6 @@
 ---
-title: "Implementando o padrão assíncrono baseado em tarefa"
+title: Implementando o padrão assíncrono baseado em tarefa
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em tarefa
 Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação dos métodos de compilador e manual. As seções a seguir discutem cada método em detalhes. Você pode usar o padrão TAP para implementar operações assíncronas associadas ao cálculo e associadas à E/S. A seção [Cargas de trabalho](#workloads) descreve cada tipo de operação.
@@ -51,7 +42,7 @@ Você pode implementar o padrão TAP manualmente para obter maior controle sobre
  Outro caso em que tal delegação é útil é quando você está implementando a otimização de caminho rápido e deseja retornar uma tarefa armazenada em cache.
 
 ## <a name="workloads"></a>Cargas de trabalho
-Você pode implementar operações assíncronas associadas ao cálculo e associadas à E/S como métodos do TAP. No entanto, quando os métodos do TAP forem expostos publicamente de uma biblioteca, eles deverão receber somente cargas de trabalho que envolvem operações associadas à E/S (eles também podem envolver cálculos, mas não devem ser puramente computacionais). Se um método for puramente vinculado à computação, ele deverá ser exposto apenas como uma implementação síncrona. O código que o consome pode então escolher se deseja encapsular uma invocação desse método síncrono em uma tarefa para descarregar o trabalho em outro thread ou para obter paralelismo. E, se um método for puramente vinculado à E/S, ele deverá ser exposto apenas como uma implementação assíncrona.
+Você pode implementar operações assíncronas associadas ao cálculo e associadas à E/S como métodos do TAP. No entanto, quando os métodos do TAP forem expostos publicamente de uma biblioteca, eles deverão receber somente cargas de trabalho que envolvem operações associadas à E/S (eles também podem envolver cálculos, mas não devem ser puramente computacionais). Se um método for puramente vinculado à computação, ele deverá ser exposto apenas como uma implementação síncrona. O código que o consome pode então escolher se deseja encapsular uma invocação desse método síncrono em uma tarefa para descarregar o trabalho em outro thread ou para obter paralelismo. Além disso, se um método for associado à E/S, ele deverá ser exposto apenas como uma implementação assíncrona.
 
 ### <a name="compute-bound-tasks"></a>Tarefas associadas ao cálculo
 A classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> é totalmente adequada para representar operações que exigem vários recursos computacionais. Por padrão, ela aproveita o suporte especial dentro da classe <xref:System.Threading.ThreadPool> para fornecer execução eficiente e fornece também controle significativo sobre quando, onde e como executar cálculos assíncronos.

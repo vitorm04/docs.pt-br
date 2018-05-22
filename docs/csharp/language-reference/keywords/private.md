@@ -1,29 +1,22 @@
 ---
 title: private (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - private_CSharpKeyword
 - private
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9cc8f86166888b47a758e200182d319c68ca6d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26eab2912923c9fcae1ce930bd5b59a2740d500e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="private-c-reference"></a>private (Referência de C#)
 A palavra-chave `private` é um modificador de acesso de membro. 
    
- > Esta página aborda `private` acesso. O `private` palavra-chave também é parte do [ `private protected` ](./private-protected.md) modificador de acesso.
+ > Esta página aborda o acesso `private`. A palavra-chave `private` também faz parte do modificador de acesso [`private protected`](./private-protected.md).
   
 Acesso particular é o nível de acesso menos permissivo. Membros particulares são acessíveis somente dentro do corpo da classe ou do struct em que são declarados, como neste exemplo:  
   

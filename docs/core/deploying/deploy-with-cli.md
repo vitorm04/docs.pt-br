@@ -4,16 +4,11 @@ description: Aprenda a implantação de aplicativos .NET Core com ferramentas da
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implantando aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
 
@@ -61,13 +56,17 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
       ```console
       dotnet publish -f netcoreapp1.1 -c Release
       ```
-   Isso cria uma versão de Lançamento (em vez de Depuração) de seu aplicativo. Os arquivos resultantes são colocados em um diretório chamado *publish* que está em um subdiretório do diretório *bin* do seu projeto.
+   Isso cria uma versão de Lançamento (em vez de Depuração) de seu aplicativo. Os arquivos resultantes são colocados em um diretório chamado *publish*, que está em um subdiretório do diretório *bin* do projeto.
 
-Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não distribui-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
+   Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não distribui-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
-Você pode implantar o conjunto completo de arquivos de aplicativo da maneira que desejar. Por exemplo, você pode empacotá-los em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. Uma vez instalado, os usuários podem executar seu aplicativo usando o comando `dotnet` e fornecendo o nome de arquivo de aplicativo, como `dotnet fdd.dll`.
+   Você pode implantar o conjunto completo de arquivos de aplicativo da maneira que desejar. Por exemplo, você pode empacotá-los em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha.
 
-Além dos binários do aplicativo, o instalador deverá também agrupar o instalador da estrutura compartilhada ou procurar por ele como um pré-requisito como parte da instalação do aplicativo.  A instalação da estrutura compartilhada requer acesso de Administrador/raiz.
+1. Executar seu aplicativo
+
+   Uma vez instalado, os usuários podem executar seu aplicativo usando o comando `dotnet` e fornecendo o nome de arquivo de aplicativo, como `dotnet fdd.dll`.
+
+   Além dos binários do aplicativo, o instalador deverá também agrupar o instalador da estrutura compartilhada ou procurar por ele como um pré-requisito como parte da instalação do aplicativo.  A instalação da estrutura compartilhada requer acesso de Administrador/raiz.
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Implantação dependente de estrutura com dependências de terceiros
 

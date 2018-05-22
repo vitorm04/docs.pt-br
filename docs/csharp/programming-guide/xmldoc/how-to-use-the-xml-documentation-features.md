@@ -1,21 +1,15 @@
 ---
-title: "Como usar as Funcionalidades da Documentação XML (Guia de Programação em C#)"
+title: Como usar as Funcionalidades da Documentação XML (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Como usar as Funcionalidades da Documentação XML (Guia de Programação em C#)
 O exemplo a seguir fornece uma visão geral básica de um tipo que foi documentado.  
@@ -34,7 +28,7 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
  **\<summary>**  
  **A documentação de resumo de nível fica aqui. \</summary>**  
  **\<remarks>**  
- **Mais comentários podem ser associados um tipo ou membro**  
+ **Comentários mais longos podem ser associados a um tipo ou membro**  
  **por meio da marca de comentário\</remarks>**  
  **\</member>**  
  **\<nome do membro="F:SomeClass.m_Name">**  
@@ -42,14 +36,14 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
  **Repositório para a propriedade de nome\</summary>**  
  **\</member>**  
  **\<nome do membro="M:SomeClass.#ctor">**  
- **\<Resumo > o construtor da classe.  \< /summary >**  
+ **\<summary>O construtor de classe.\</summary>**  
  **\</member>**  
  **\<nome do membro="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Descrição de SomeMethod.\</summary>**  
  **\<nome do parâmetro="s"> A descrição do parâmetro para s fica aqui\</param>**  
  **\<seealso cref="T:System.String">**  
- **Você pode usar o atributo cref em qualquer marca para fazer referência a um tipo ou membro**  
+ **Use o atributo cref em qualquer marcação para referenciar um tipo ou membro**  
  **e o compilador verificará se a referência existe. \</seealso>**  
  **\</member>**  
  **\<nome do membro="M:SomeClass.SomeOtherMethod">**  
@@ -99,5 +93,5 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [/doc (opções do compilador c#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [-doc (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

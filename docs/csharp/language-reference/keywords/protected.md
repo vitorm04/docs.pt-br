@@ -1,29 +1,22 @@
 ---
 title: protected (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - protected
 - protected_CSharpKeyword
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 18278ed28f899d9030d6056eca9bbe83ebec04c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-c-reference"></a>protected (Referência de C#)
 A palavra-chave `protected` é um modificador de acesso de membro. 
 
- > Esta página aborda `protected` acesso. O `protected` palavra-chave também é parte do [ `protected internal` ](./protected-internal.md) e [ `private protected` ](./private-protected.md) modificadores de acesso. 
+ > Esta página aborda o acesso `protected`. A palavra-chave `protected` também faz parte dos modificadores de acesso [`protected internal`](./protected-internal.md) e [`private protected`](./private-protected.md). 
 
 Um membro protegido é acessível dentro de sua classe e por instâncias da classe derivada. 
 
@@ -62,4 +55,4 @@ Para obter uma comparação de `protected` com os outros modificadores de acesso
  [public](../../../csharp/language-reference/keywords/public.md)  
  [private](../../../csharp/language-reference/keywords/private.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
- [Questões de segurança para palavras-chave virtual internas](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [Questões de segurança de palavras-chave virtuais internas](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

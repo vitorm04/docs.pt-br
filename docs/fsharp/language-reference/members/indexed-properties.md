@@ -2,46 +2,52 @@
 title: Propriedades indexadas (F#)
 description: 'Saiba mais sobre F # indexada propriedades, que são propriedades que fornecem acesso de matriz aos dados ordenados.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b3945c7fc22977373b601856036178e890abc13e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="indexed-properties"></a>Propriedades indexadas
 
-*Propriedades indexadas* são ordenadas de propriedades que fornecem acesso de matriz aos dados.
+*Propriedades indexadas* são ordenadas de propriedades que fornecem acesso de matriz aos dados. Eles vêm em três formas:
+
+* `Item`
+* `Ordinal`
+* `Cardinal`
+
+Um membro de F # deve ser nomeado um desses três nomes para fornecer acesso de matriz. `IndexerName` é usado para representar qualquer uma das três opções abaixo:
 
 
 ## <a name="syntax"></a>Sintaxe
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variable) =
         get-function-body
     and set index-variablesvalue-variables =
         set-function-body
 
 // Indexed property that has get only.
-member self-identifier.PropertyName(index-variable) =
+member self-identifier.IndexerName(index-variable) =
     get-function-body
 
 // Alternative syntax for indexed property with get only
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with get(index-variables) =
         get-function-body
 
 // Indexed property that has set only.
-member self-identifier.PropertyName
+member self-identifier.IndexerName
     with set index-variablesvalue-variables = 
         set-function-body
 ```
 
 ## <a name="remarks"></a>Comentários
-Três formas de sintaxe anterior mostram como definir propriedades indexadas que têm ambos um `get` e um `set` método, ter um `get` método apenas, ou ter um `set` método apenas. Você também pode combinar as duas opções a sintaxe mostrada para somente get e a sintaxe mostrada apenas o conjunto de e produzir uma propriedade que tem get e set. Este último formulário permite que você coloque modificadores de acessibilidade diferentes e os atributos em get e definir métodos.
+Os formulários de sintaxe anterior mostram como definir propriedades indexadas que têm ambos um `get` e um `set` método, ter um `get` método apenas, ou tem um `set` método apenas. Você também pode combinar as duas opções a sintaxe mostrada para somente get e a sintaxe mostrada apenas o conjunto de e produzir uma propriedade que tem get e set. Este último formulário permite que você coloque modificadores de acessibilidade diferentes e os atributos em get e definir métodos.
 
-Quando o *PropertyName* é `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Um *propriedade default indexada* é uma propriedade que você pode acessar usando a sintaxe de matriz na instância do objeto. Por exemplo, se `obj` é um objeto do tipo que define essa propriedade, a sintaxe `obj.[index]` é usada para acessar a propriedade.
+Quando o *IndexerName* é `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Um *propriedade default indexada* é uma propriedade que você pode acessar usando a sintaxe de matriz na instância do objeto. Por exemplo, se `obj` é um objeto do tipo que define essa propriedade, a sintaxe `obj.[index]` é usada para acessar a propriedade.
 
 A sintaxe para acessar uma propriedade indexada de não-padrão é fornecer o nome da propriedade e o índice entre parênteses. Por exemplo, se a propriedade é `Ordinal`, você escreve `obj.Ordinal(index)` para acessá-lo.
 

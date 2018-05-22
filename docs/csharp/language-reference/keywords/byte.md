@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="byte-c-reference"></a>byte (Referência de C#)
 
@@ -45,27 +45,27 @@ Alguns exemplos são mostrados abaixo.
   
  Você não pode converter implicitamente para `byte` os tipos numéricos não literais de tamanho de armazenamento maior. Para obter mais informações sobre os tamanhos de armazenamento de tipos integrais, consulte [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md). Considere, por exemplo, as duas variáveis `byte` `x` e `y` a seguir:  
   
-```  
+```csharp  
 byte x = 10, y = 20;  
 ```  
   
  A seguinte instrução de atribuição produzirá um erro de compilação, porque a expressão aritmética no lado direito do operador de atribuição é avaliada como `int` por padrão.  
   
-```  
+```csharp  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
  Para corrigir esse problema, use uma conversão:  
   
-```  
+```csharp  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
  No entanto, é possível usar as instruções a seguir, em que a variável de destino tem o mesmo tamanho de armazenamento ou um tamanho de armazenamento maior:  
   
-```  
+```csharp  
 int x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
@@ -73,7 +73,7 @@ long n = x + y;
   
  Além disso, não há conversão implícita de tipos de ponto flutuante em `byte`. Por exemplo, a instrução a seguir gerará um erro de compilador, a menos que uma conversão explícita seja usada:  
   
-```  
+```csharp  
 // Error: no implicit conversion from double:  
 byte x = 3.0;   
 // OK: explicit conversion:  
@@ -82,14 +82,14 @@ byte y = (byte)3.0;
   
  Ao chamar métodos sobrecarregados, uma conversão deve ser usada. Considere, por exemplo, os seguintes métodos sobrecarregados que usam os parâmetros `byte` e [int](../../../csharp/language-reference/keywords/int.md):  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
  O uso da conversão `byte` garante que o tipo correto será chamado, por exemplo:  
   
-```  
+```csharp  
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the byte parameter:  
