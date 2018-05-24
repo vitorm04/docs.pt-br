@@ -10,7 +10,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
 ---

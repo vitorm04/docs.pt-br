@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -18,7 +18,7 @@ Restrições informam o compilador sobre as funcionalidades que um argumento de 
 
 |Restrição|Descrição|
 |----------------|-----------------|
-|`where T: struct`|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable> pode ser especificado. Para obter mais informações, veja [Usando tipos anuláveis](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable> pode ser especificado. Para obter mais informações, veja [Usando tipos anuláveis](../nullable-types/using-nullable-types.md).|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : unmanaged`|O argumento de tipo não deve ser um tipo de referência e não deve conter nenhum membro de tipo de referência em nenhum nível de aninhamento.|
 |`where T : new()`|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada.|

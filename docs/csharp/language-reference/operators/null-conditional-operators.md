@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 28cf2633d74f047a751ffdad11f1e1db8328cd6f
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operadores condicionais nulos ?. e ?[] (C# e Visual Basic)
 Testa o valor do operando esquerdo para nulo antes de executar um acesso de membro (`?.`) ou uma operação de índice (`?[]`); retorna `null` se o operando esquerdo é avaliado como `null`. 
@@ -79,7 +79,7 @@ PropertyChanged?.Invoke(…)
  Para obter mais informações, consulte [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [?? (operador de união nula)](null-conditional-operator.md)  
+ [?? (operador de união nula)](null-coalescing-operator.md)  
  [Referência de C#](../../../csharp/language-reference/index.md)  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Guia de programação do Visual Basic](../../../visual-basic/programming-guide/index.md)

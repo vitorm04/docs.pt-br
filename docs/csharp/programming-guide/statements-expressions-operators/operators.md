@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
 Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos* em uma expressão ou instrução. Os operadores que usam um operando, como o operador de incremento (`++`) ou `new`, são referidos como operadores *unários*. Os operadores que usam dois operandos, como operadores aritméticos (`+`,`-`,`*`,`/`), são referidos como operadores *binários*. Um operador, o operador condicional (`?:`), usa três operandos e é o único operador ternário em C#.  
@@ -114,7 +114,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |OR lógico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR bit a bit inteiro, OR lógico booliano|  
 |AND condicional|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Avalia y somente se x for true|  
 |OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Avalia y somente se x for false|  
-|Coalescência nula|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|Avalia como y se x for nulo, caso contrário, como x|  
+|Coalescência nula|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|Avalia como y se x for nulo, caso contrário, como x|  
 |Condicional|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Avalia como y se x for true, z se x for false|  
   
  **Operadores de atribuição e anônimos**  

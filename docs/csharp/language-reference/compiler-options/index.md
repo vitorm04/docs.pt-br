@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: a305daee2349341527b529c7556cc6fa84cc9fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-compiler-options"></a>Opções do compilador de C#
 O compilador produz arquivos executáveis (.exe), bibliotecas de vínculo dinâmico (.dll) ou módulos de código (.netmodule).  
@@ -24,16 +24,16 @@ O compilador produz arquivos executáveis (.exe), bibliotecas de vínculo dinâm
  No Visual Studio, é possível definir opções do compilador no arquivo web.config. Para obter mais informações, consulte [\<compilador> Elemento](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [Build pela linha de comando com csc.exe](command-line-building-with-csc-exe.md)  
  Informações sobre como compilar um aplicativo do Visual em C# na linha de comando.  
   
- [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Fornece etapas para executar vsvars32.bat para habilitar compilações de linha de comando.  
   
- [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Opções do compilador de C# listadas por categoria](listed-by-category.md)  
  Uma lista categórica de opções do compilador.  
   
- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [Opções do compilador de C# listadas em ordem alfabética](listed-alphabetically.md)  
  Uma lista alfabética de opções do compilador.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
