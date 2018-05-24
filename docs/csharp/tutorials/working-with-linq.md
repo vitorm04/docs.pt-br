@@ -3,11 +3,11 @@ title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -200,7 +200,7 @@ Execute o exemplo e veja como o baralho é reorganizado em cada embaralhamento a
 
 ## <a name="optimizations"></a>Otimizações
 
-O exemplo que você compilou até agora executa um *embaralhamento*, no qual as cartas superiores e inferiores permanecem as mesmas em cada execução. Vamos fazer uma alteração e executar um *embaralhamento completo*, no qual todas as 52 cartas trocam de posição. Para um embaralhamento completo, intercale o baralho para que a primeira carta da metade inferior metade se torna a primeira carta do baralho. Isso significa que a última carta na metade superior torna-se a carta inferior. Isso é apenas uma alteração de uma linha. Atualize a chamada de embaralhamento para alterar a ordem das metades superior e inferior do baralho:
+O exemplo que você compilou até agora executa um *embaralhamento externo*, no qual as cartas superiores e inferiores permanecem as mesmas em cada execução. Vamos fazer uma alteração e executar um *embaralhamento interno*, no qual todas as 52 cartas trocam de posição. Para um embaralhamento interno, intercale o baralho para que a primeira carta da metade inferior torne-se a primeira carta do baralho. Isso significa que a última carta na metade superior torna-se a carta inferior. Isso é apenas uma alteração de uma linha. Atualize a chamada de embaralhamento para alterar a ordem das metades superior e inferior do baralho:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Observe que você não precisa fazer o registro sempre que acessar uma consulta. Você faz o registro ao criar a consulta original. O programa ainda leva muito tempo para ser executado, mas agora você pode ver o motivo. Se você cansar de embaralhar externamente com o log ativado, mude de volta para o embaralhamento interno. Você ainda verá os efeitos da avaliação lenta. Em uma execução, ele faz 2592 consultas, incluindo a geração de todos os valores e naipes.
+Observe que você não precisa fazer o registro sempre que acessar uma consulta. Você faz o registro ao criar a consulta original. O programa ainda leva muito tempo para ser executado, mas agora você pode ver o motivo. Se você não tiver paciência para executar o embaralhamento interno com o registro em log ativado, volte para o embaralhamento externo. Você ainda verá os efeitos da avaliação lenta. Em uma execução, ele faz 2592 consultas, incluindo a geração de todos os valores e naipes.
 
 Há uma maneira fácil de atualizar este programa para evitar todas essas execuções. Há métodos LINQ `ToArray()` e `ToList()` que causam a execução da consulta e armazenam os resultados em uma matriz ou lista, respectivamente. Você pode usar estes métodos para armazenar em cache os resultados de dados de uma consulta em vez de executar a consulta de origem novamente.  Acrescente as consultas que geram os baralhos com uma chamada para `ToArray()` e execute a consulta novamente:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Execute novamente e o embaralhamento interno será de até 30 consultas. Execute novamente com o embaralhamento externo e você verá melhorias semelhantes. (Ele agora executa 162 consultas).
+Execute novamente, e o embaralhamento externo será de até 30 consultas. Execute novamente com o embaralhamento interno e você verá melhorias semelhantes. (Ele agora executa 162 consultas).
 
 Não interprete incorretamente esse exemplo pensando que todas as consultas devem ser executadas cuidadosamente. Este exemplo é projetado para realçar os casos de uso em que a avaliação lenta pode causar problemas de desempenho. Isso ocorre porque cada nova disposição do baralho de cartas é criada com base na disposição anterior. Usar a avaliação lenta significa que cada nova disposição do baralho é criada do baralho original, até mesmo a execução do código que criou o `startingDeck`. Isso causa uma grande quantidade de trabalho extra. 
 
@@ -324,4 +324,4 @@ Compile e execute novamente. A saída é um pouco mais limpa e o código é um p
 
 Esta amostra mostrou alguns dos métodos usados em LINQ e como criar seus próprios métodos que serão usados com facilidade com o código habilitado para LINQ. Ele também mostrou as diferenças entre a avaliação lenta e a rápida e o impacto que a decisão pode ter no desempenho.
 
-Você aprendeu um pouco sobre uma técnica dos mágicos. Os mágicos usam o embaralhamento porque eles podem controlar onde cada carta fica no baralho. Em alguns truques, o mágico escolha uma pessoa para colocar a carta no topo do baralho e embaralha as cartas algumas vezes, sabendo onde a carta escolhida está. Outras ilusões exigem que o baralho esteja disposto de uma determinada maneira. Um mágico fará a disposição do baralho antes de realizar o truque. Em seguida, ele embaralhará as cartas 5 vezes usando uma ordem aleatória interna. No palco, ele pode mostrar como é o embaralhamento e embaralhar mais três vezes e ter o baralho definido exatamente como deseja.
+Você aprendeu um pouco sobre uma técnica dos mágicos. Os mágicos usam o embaralhamento porque eles podem controlar onde cada carta fica no baralho. Em alguns truques, o mágico escolha uma pessoa para colocar a carta no topo do baralho e embaralha as cartas algumas vezes, sabendo onde a carta escolhida está. Outras ilusões exigem que o baralho esteja disposto de uma determinada maneira. Um mágico fará a disposição do baralho antes de realizar o truque. Em seguida, ela embaralhará as cartas 5 vezes usando o embaralhamento externo. No palco, ele pode mostrar como é o embaralhamento e embaralhar mais três vezes e ter o baralho definido exatamente como deseja.

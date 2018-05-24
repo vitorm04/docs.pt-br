@@ -2,11 +2,11 @@
 title: 'Convenções de codificação do F #'
 description: 'Saiba mais idiomas e as diretrizes gerais ao escrever código F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>Convenções de codificação do F #
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 Em F #, a ordem das declarações é importante, inclusive com `open` instruções. Isso é diferente de c#, onde o efeito de `using` e `using static` é independente da ordenação dessas instruções em um arquivo.
 
-Em F #, porque podem ser sombra de elementos abertos em um escopo de outras pessoas já está presente. Isso significa que a reordenação `open` instruções podem alterar o significado do código. Como resultado, a classificação de ordem alfanumérica (ou pseudorandomly) geralmente não é recomendada, fim de que você gerar um comportamento diferente que você esperava.
+Em F #, elementos abertos em um escopo podem sombrear outros já está presente. Isso significa que a reordenação `open` instruções podem alterar o significado do código. Como resultado, qualquer arbitrário de classificação de todos os `open` instruções (por exemplo, ordem alfanumérica) geralmente não é recomendado, fim de que você gerar um comportamento diferente que você esperava.
 
 Em vez disso, recomendamos que você classificar [topologicamente](https://en.wikipedia.org/wiki/Topological_sorting); ou seja, solicitar sua `open` instruções na ordem em que _camadas_ do sistema são definidos. Fazendo alfanumérico de classificação em diferentes camadas topológicas também pode ser considerado.
 

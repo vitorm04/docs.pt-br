@@ -1,6 +1,6 @@
 ---
 title: Contexto verificado e não verificado (Referência de C#)
-ms.date: 07/20/2015
+ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
 - exceptions [C#], overflow checking
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 26ea8a7864d93b8d64661db2b0dc1df6634f989a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8e292a67fab49b5fc3616e438d063eca2617274
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Contexto verificado e não verificado (Referência de C#)
-Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um contexto marcado, o estouro aritmético gera uma exceção. Em um contexto desmarcado, o estouro aritmético é ignorado e o resultado é truncado.  
+Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um contexto marcado, o estouro aritmético gera uma exceção. Em um contexto não verificado, o estouro aritmético é ignorado, e o resultado é truncado descartando todos os bits de ordem superior que não se encaixam no tipo de destino.  
   
--   [verificado](../../../csharp/language-reference/keywords/checked.md) Especificar o contexto verificado.  
+-   [verificado](checked.md) Especificar o contexto verificado.  
   
--   [não verificado](../../../csharp/language-reference/keywords/unchecked.md) Especificar o contexto não verificado.  
-  
- Se nem `checked` nem `unchecked` forem especificados, o contexto padrão dependerá de fatores externos, tais como as opções do compilador.  
+-   [não verificado](unchecked.md) Especificar o contexto não verificado.  
   
  As seguintes operações são afetadas pela verificação de estouro:  
   
 -   Expressões que usam os seguintes operadores predefinidos em tipos integrais:  
   
-     `++` `--` – (unário)   `+` -   `*` `/`  
+     `++`, `--`, unário `-`, `+`, `-`, `*`, `/`  
   
--   Conversões numéricas explícitas entre tipos integrais.  
+-   Conversões numéricas explícitas entre tipos integrais ou de `float` ou `double` para um tipo integral.  
   
- A opção do compilador [/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md) permite especificar contexto verificado ou não verificado para todas as instruções aritméticas de inteiros que não estão explicitamente no escopo de uma palavra-chave `checked` ou `unchecked`.  
+ Se nem `checked` ou `unchecked` for especificado, o contexto padrão de expressões de não constante (expressões que são avaliadas no tempo de execução) é definido pelo valor da opção do compilador [-checked](../compiler-options/checked-compiler-option.md). Por padrão, o valor dessa opção é removido e as operações aritméticas são executadas em um contexto não verificado.
+ 
+ Para expressões de constante (expressões que podem ser totalmente avaliadas no tempo de compilação), o contexto padrão sempre é verificado. A menos que uma expressão de constante seja explicitamente colocada em um contexto não verificado, estouros que ocorrem durante a avaliação do tempo de compilação da expressão causam erros de tempo de compilação.
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Palavras-chave de instrução](../../../csharp/language-reference/keywords/statement-keywords.md)
+ [Referência de C#](../index.md)  
+ [Guia de Programação em C#](../../programming-guide/index.md)  
+ [Palavras-chave do C#](index.md)  
+ [Palavras-chave de instrução](statement-keywords.md)

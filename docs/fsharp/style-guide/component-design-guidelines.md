@@ -2,11 +2,11 @@
 title: 'Diretrizes de design do componente F #'
 description: 'Aprenda as diretrizes para escrever componentes F # destinados ao consumo por outros chamadores.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>Diretrizes de design do componente F #
 
@@ -483,7 +483,7 @@ No entanto, as operações lógicas de notação de ponto neste tipo não são a
 
 Durante a criação de bibliotecas para uso em outras linguagens .NET, é importante seguir o [diretrizes de Design de biblioteca do .NET](../../standard/design-guidelines/index.md). Neste documento, essas bibliotecas são rotuladas como baunilha bibliotecas .NET, em vez de F #-voltada para bibliotecas que usam F # constrói sem restrição. Criar bibliotecas do .NET baunilha significa fornecendo familiar e idiomática APIs consistentes com o restante do .NET Framework, reduzindo o uso da linguagem F #-construções específicas na API pública. As regras são explicadas nas seções a seguir.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Namespace e tipo sesign (para bibliotecas para uso em outras linguagens .NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace e o tipo de projeto (para bibliotecas para uso em outras linguagens .NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Aplicar as convenções de nomenclatura do .NET para a API pública de seus componentes
 

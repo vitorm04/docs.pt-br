@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se cadeias de caracteres estão em um formato de email válido
 O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de caracteres está no formato de email válido.  
+
+> [!NOTE]
+>  É recomendável usar a classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> para verificar se uma cadeia de caracteres está no formato de endereço de email válido. Para fazer isso, passe a cadeia de caracteres de endereço de email no construtor de classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>, que gera uma <xref:System.FormatException> caso a cadeia de caracteres tenha um formato não reconhecido.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo define um método `IsValidEmail`, que retornará `true` se a cadeia de caracteres contiver um endereço de email válido e `false` se não contiver, mas não realiza outra ação.  
@@ -66,10 +69,7 @@ O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de ca
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Se ele for um colchete de abertura, coincida o colchete de abertura seguido de um endereço IP (quatro conjuntos de um a três dígitos, com cada conjunto separado por um ponto final) e um colchete de fechamento.|  
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Se o caractere depois de @ não for um colchete de abertura, coincida um caractere alfanumérico com um valor de A até Z, de a até z ou entre 0 e 9, seguido de zero ou mais ocorrências de um hífen, seguido de zero ou um caractere alfanumérico com um valor de A até Z, de a até z ou entre 0 e 9, seguido de um ponto final. Esse padrão pode ser repetido uma ou mais vezes e deve ser seguido pelo nome de domínio primário.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|O nome de domínio primário deve começar e terminar com um caractere alfanumérico (a-z, A-Z e 0-9). Ele também pode incluir de zero a 22 caracteres ASCII que são alfanuméricos ou hifens.|  
-|`$`|Encerre a correspondência ao final da cadeia de caracteres.|  
-  
-> [!NOTE]
->  Em vez de usar uma expressão regular para validar um endereço de email, você pode usar a classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType>. Para determinar se um endereço de email é válido, passe-o para o construtor de classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>.  
+|`$`|Encerrar a correspondência ao final da cadeia de caracteres.|  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Os métodos `IsValidEmail` e `DomainMapper` podem ser incluídos em uma biblioteca de métodos de utilitário de expressão regular ou como métodos estáticos privados ou de instância na classe do aplicativo.  

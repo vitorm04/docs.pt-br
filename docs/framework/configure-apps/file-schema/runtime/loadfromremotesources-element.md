@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
 Especifica se assemblies de fontes remotas devem receber confiança total.  
@@ -69,7 +69,7 @@ Especifica se assemblies de fontes remotas devem receber confiança total.
   
  O `enabled` atributo para este elemento é eficaz apenas quando a segurança de acesso ao código (CAS) está desabilitada. Por padrão, a política de CAS está desabilitada no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] e versões posteriores. Se você definir `enabled` para `true`, aplicativos remotos recebem confiança total.  
   
- Se `<loadFromRemoteSources>``enabled` não está definido como `true`, uma exceção é lançada sob as seguintes condições:  
+ Se `<loadFromRemoteSources>` `enabled` não está definido como `true`, uma exceção é lançada sob as seguintes condições:  
   
 -   O comportamento de modo seguro do domínio atual é diferente de seu comportamento no [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Isso requer a política de CAS será desabilitada e o domínio atual não deve ser em modo seguro.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opções do compilador de C# listadas por categoria
 As opções do compilador a seguir são classificadas por categoria. Para obter uma lista alfabética, consulte [Opções do compilador C# listadas em ordem alfabética](listed-alphabetically.md).  
@@ -30,12 +30,12 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-doc](doc-compiler-option.md)|Especifica um arquivo XML em que os comentários da documentação processados devem ser gravados.|  
 |[-out](out-compiler-option.md)|Especifica o arquivo de saída.|  
 |[/pdb](pdb-compiler-option.md)|Especifica o nome de arquivo e a localização do arquivo .pdb.|  
-|[-platform](platform-compiler-option.md)|Especifique a plataforma de saída.|  
-|[/preferreduilang](preferreduilang-compiler-option.md)|Especifique uma linguagem para a saída do compilador.|  
+|[-platform](platform-compiler-option.md)|Especifica a plataforma de saída.|  
+|[/preferreduilang](preferreduilang-compiler-option.md)|Especifica uma linguagem para a saída do compilador.|  
 |[/refout](refout-compiler-option.md)|Gere um assembly de referência além de um assembly principal.|  
 |[/refonly](refonly-compiler-option.md)|Gere um assembly de referência em vez de um assembly principal.|  
 |[-target](target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das cinco opções: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) ou [-target:winmdobj](target-winmdobj-compiler-option.md).|  
-|/modulename:\<string>|Especificar o nome do módulo de origem|  
+|/modulename:\<string>|Especifica o nome do módulo de origem|  
   
 ### <a name="net-framework-assemblies"></a>Assemblies do .NET Framework  
   
@@ -91,7 +91,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[-codepage](codepage-compiler-option.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|  
 |[ajuda](help-compiler-option.md)|Lista as opções de compilador para stdout.|  
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que o arquivo executável dá suporte a uma ASLR (Address Space Layout Randomization).|  
-|[-langversion](langversion-compiler-option.md)|Especifique o modo de versão da linguagem: Padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 ou Mais recente |  
+|[-langversion](langversion-compiler-option.md)|Especifica a versão da linguagem: Padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, ou mais recente |  
 |[-main](main-compiler-option.md)|Especifica a localização do método **Principal**.|  
 |[-noconfig](noconfig-compiler-option.md)|Instrui o compilador a não compilar com o csc.rsp.|  
 |[-nologo](nologo-compiler-option.md)|Suprime as informações da faixa do compilador.|  
@@ -100,7 +100,7 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[/unsafe](unsafe-compiler-option.md)|Habilita a compilação de código que usa a palavra-chave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|  
 |[-utf8output](utf8output-compiler-option.md)|Exibe a saída do compilador usando a codificação UTF-8.|  
 |-parallel[+&#124;-]|Especifica se deve o build simultâneo deve ser usado (+).|  
-|-checksumalgorithm:\<alg>|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA1 (padrão) ou SHA256.|  
+|-checksumalgorithm:\<alg>|Especifica o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA1 (padrão) ou SHA256.|  
   
 ## <a name="obsolete-options"></a>Opções obsoletas  
   

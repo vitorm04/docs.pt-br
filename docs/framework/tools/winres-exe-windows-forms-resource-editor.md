@@ -1,6 +1,6 @@
 ---
 title: Winres.exe (Editor de Recursos do Windows Forms)
-ms.date: 03/30/2017
+ms.date: 05/21/2018
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -12,17 +12,20 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14e90916261250452c1f07e66a46bee400da0428
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Editor de Recursos do Windows Forms)
 O Editor de Recurso do Windows Forms, Winres.exe, é uma ferramenta de layout visual que ajuda especialistas na localização de recursos de interface do usuário do Windows Forms usados por formulários. Os arquivos .resx ou .resources usados como entrada em Winres.exe podem ser criados usando-se um ambiente de design visual como, por exemplo, Microsoft Visual Studio. Para obter informações sobre como implantar recursos em aplicativos do .NET Framework, consulte [Recursos nos aplicativos de área de trabalho](../../../docs/framework/resources/index.md).  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
+> [!IMPORTANT]
+> Você deve carregar e usar arquivos. resx apenas de fontes confiáveis. Arquivos ResX podem conter código executável e devem ser tratados como arquivos executáveis (.exe) do ponto de vista da segurança.
+
  No prompt de comando, digite o seguinte:  
   
 ## <a name="syntax"></a>Sintaxe  

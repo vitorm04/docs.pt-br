@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>Estilo e modelagem
 O estilo e a modelagem do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se refere a um conjunto de recursos (estilos, modelos, gatilhos e storyboards) que permitem que os desenvolvedores e designers criem efeitos visualmente atraentes, além de uma aparência consistente para o produto. Embora os desenvolvedores e/ou designers possam personalizar a aparência de forma ampla conforme o aplicativo, é necessário um forte modelo de estilo e modelagem para permitir a manutenção e o compartilhamento da aparência dentro dos aplicativos e entre eles. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece esse modelo.  
@@ -28,10 +28,8 @@ O estilo e a modelagem do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
  Esta visão geral enfoca os aspectos de estilo e modelagem do aplicativo e não aborda conceitos de vinculação de dados. Para obter informações sobre associação de dados, consulte [Visão geral de vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Além disso, é importante compreender os recursos, que são o que permite a reutilização dos estilos e modelos. Para obter mais informações sobre recursos, consulte [Recursos de XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
-  
- 
-  
+ Além disso, é importante compreender os recursos, que são o que permite a reutilização dos estilos e modelos. Para obter mais informações sobre recursos, consulte [Recursos de XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Amostra de estilo e modelagem  
  Os exemplos de código usados nesta visão geral baseiam-se em uma amostra de foto simples, mostrada na ilustração a seguir:  
@@ -183,9 +181,9 @@ O estilo e a modelagem do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
  É possível definir os dicionários de recursos como arquivos individuais que permitem reutilizar um tema em vários aplicativos. Você também pode criar temas permutáveis definindo vários dicionários de recursos que fornecem os mesmos tipos de recursos, mas com valores diferentes. Redefinir esses estilos ou outros recursos no nível do aplicativo é a abordagem recomendada para aplicar capa em um aplicativo.  
   
- Para compartilhar um conjunto de recursos, incluindo estilos e modelos, entre aplicativos, você pode criar um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de arquivo e definir um <xref:System.Windows.ResourceDictionary>. Por exemplo, dê uma olhada na ilustração a seguir que mostra parte da [Amostra de estilo com ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041):  
-  
- ![Exemplos de ControlTemplate](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ Para compartilhar um conjunto de recursos, incluindo estilos e modelos, entre aplicativos, você pode criar um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de arquivo e definir um <xref:System.Windows.ResourceDictionary>. Por exemplo, dê uma olhada na ilustração a seguir que mostra parte da [Amostra de estilo com ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating):
+
+![Exemplos de ControlTemplate](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Se você examinar os arquivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na amostra, perceberá que todos têm o seguinte:  
   

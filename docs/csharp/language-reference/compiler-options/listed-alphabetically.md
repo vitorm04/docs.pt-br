@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opções do compilador de C# listadas em ordem alfabética
 As opções do compilador a seguir estão em ordem alfabética. Para obter uma lista categórica, consulte [Opções de Compilador de C# Listadas por Categoria](listed-by-category.md).  
@@ -27,7 +27,7 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica o endereço básico para a biblioteca a ser criada.|  
 |[-bugreport](bugreport-compiler-option.md)|Cria um arquivo 'Bug Report'. Esse arquivo será enviado junto com informações de falha se for usado com -errorreport:prompt ou -errorreport:send.|  
 |[/checked](checked-compiler-option.md)|Faz com que o compilador gere verificações de estouro.|  
-|-checksumalgorithm:\<alg>|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA1 (padrão) ou SHA256.|  
+|-checksumalgorithm:\<alg>|Especifica o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA1 (padrão) ou SHA256.|  
 |[-codepage](codepage-compiler-option.md)|Especifica a página de código a ser usada ao abrir arquivos de origem.|  
 |[-debug](debug-compiler-option.md)|Emite informações de depuração.|  
 |[-define](define-compiler-option.md)|Define símbolos de compilação condicional.|  
@@ -42,13 +42,13 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |-incremental|Habilita a compilação incremental [obsoleta].|  
 |[-keycontainer](keycontainer-compiler-option.md)|Especifica um contêiner de chave de nome forte.|  
 |[-keyfile](keyfile-compiler-option.md)|Especifica um arquivo de chave de nome forte.|  
-|[/langversion:\<string>](langversion-compiler-option.md)|Especifique o modo de versão da linguagem: Padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 ou Mais recente |  
+|[/langversion:\<string>](langversion-compiler-option.md)|Especifica a versão da linguagem: Padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, ou mais recente |  
 |[/lib](lib-compiler-option.md)|Especifica diretórios adicionais para pesquisar referências.|  
 |[-link](link-compiler-option.md)|Disponibiliza informações de tipo COM em assemblies especificados para o projeto.|  
 |[-linkresource](linkresource-compiler-option.md)|Vincula o recurso especificado a esse assembly.|  
 |[-main](main-compiler-option.md)|Especifica o tipo que contém o ponto de entrada (ignorar todos os outros pontos de entrada possíveis).|  
 |[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.|  
-|/modulename:\<string>|Especificar o nome do módulo de origem|  
+|/modulename:\<string>|Especifica o nome do módulo de origem|  
 |[-noconfig](noconfig-compiler-option.md)|Instrui o compilador a não incluir automaticamente o arquivo CSC.RSP.|  
 |[-nologo](nologo-compiler-option.md)|Suprime a mensagem de direitos autorais do compilador.|  
 |[-nostdlib](nostdlib-compiler-option.md)|Instrui o compilador a não referenciar a biblioteca padrão (mscorlib.dll).|  
@@ -65,7 +65,7 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |[/refout](refout-compiler-option.md)|Gere um assembly de referência além de um assembly principal.|  
 |[/refonly](refonly-compiler-option.md)|Gere um assembly de referência em vez de um assembly principal.|  
 |[-resource](resource-compiler-option.md)|Insere o recurso especificado.|  
-|-ruleset:\<file>|Especifique um arquivo de conjunto de regras que desabilita o diagnóstico específico.|  
+|-ruleset:\<file>|Especifica um arquivo de conjunto de regras que desabilita o diagnóstico específico.|  
 |[-subsystemversion](subsystemversion-compiler-option.md)|Especifica a versão mínima do subsistema que o arquivo executável pode usar.|  
 |[-target](target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das quatro opções: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md).|  
 |[/unsafe](unsafe-compiler-option.md)|Permite o código [não seguro](../../../csharp/language-reference/keywords/unsafe.md).|  

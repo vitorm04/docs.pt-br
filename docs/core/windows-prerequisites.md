@@ -3,12 +3,12 @@ title: Pré-requisitos para .NET Core no Windows
 description: Saiba quais dependências você precisa em seu computador Windows para desenvolver e executar aplicativos .NET Core.
 author: JRAlexander
 ms.author: johalex
-ms.date: 04/24/2018
-ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.date: 05/18/2018
+ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
 
@@ -28,11 +28,13 @@ O .NET Core é compatível com as seguintes versões de:
 * Windows Server 2008 R2 SP1 (Servidor Completo ou Server Core)
 * Windows Server 2012 SP1 (Servidor Completo ou Server Core)
 * Windows Server 2012 R2 (servidor completo ou Server Core)
-* Windows Server 2016 (Servidor completo, Servidor Core ou Nano Server)
+* Windows Server 2016 ou versões posteriores (Servidor completo, Servidor Core ou Nano Server)
 
-Consulte [.NET Core 2.x – Versões de sistema operacional com suporte](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) para obter a lista completa de sistemas operacionais com suporte pelo .NET Core 2.x.
+Os artigos a seguir têm uma lista completa dos sistemas operacionais compatíveis do .NET Core por versão:
 
-Consulte [Versões de sistema operacional com suporte pelo .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) para obter a lista completa de sistemas operacionais com suporte pelo .NET Core 1.x.
+* [.NET Core 2.1 – Versões compatíveis do sistema operacional](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET Core 2.0 – Versões compatíveis do sistema operacional](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
+* [.NET Core 1.x – Versões compatíveis do sistema operacional](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 ## <a name="net-core-dependencies"></a>Dependências do .NET Core
 
@@ -46,7 +48,13 @@ A [Atualização 3 dos Pacotes Redistribuíveis do Microsoft Visual C++ 2015](ht
 * Instalar o .NET Core por meio de um arquivo *.zip*. Isso pode incluir servidores de build/CI/CD.
 
 > [!NOTE]
-> *Para o Windows 8.1 e as versões anteriores, ou o Windows Server 2012 R2 e as versões anteriores:* verifique se a instalação do Windows está atualizada e inclui o [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) que pode ser instalado por meio do Windows Update. Se você não tiver essa atualização instalada, verá um erro ao iniciar um aplicativo .NET Core como o seguinte: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> **Para Windows 8.1 e versões anteriores, ou Windows Server 2012 R2 e versões anteriores:**
+>
+> Verifique se a instalação do Windows está atualizada e inclui o [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), que pode ser instalado por meio do Windows Update. Se você não tiver essa atualização instalada, verá um erro como o seguinte ao iniciar um aplicativo .NET Core: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **Para Windows 7 ou Windows Server 2008 R2:**
+>
+> Além do KB2999226, verifique se você também tem o [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) instalado. Se você não tiver essa atualização instalada, verá um erro semelhante ao seguinte ao iniciar um aplicativo .NET Core: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Pré-requisitos do Visual Studio 2017
 
@@ -96,6 +104,6 @@ Para desenvolver aplicativos .NET Core 1.x no Visual Studio, [baixe e instale o 
 >
 > * No menu **Ajuda**, escolha **sobre o Microsoft Visual Studio**.
 > * Na caixa de diálogo **Sobre o Microsoft Visual Studio**, verifique o número de versão.
->   * Para aplicativos .NET Core 2.1 Preview 1, o Visual Studio 2017 versão 15.6 Preview 6 ou posterior.
+>   * Para aplicativos .NET Core 2.1 RC, o Visual Studio 2017 versão 15.7 ou superior.
 >   * Para aplicativos .NET Core 2.0, o Visual Studio 2017 versão 15.3 ou superior.
 >   * Para aplicativos .NET Core 1.x, o Visual Studio 2017 versão 15.0 ou superior.

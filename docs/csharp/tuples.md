@@ -1,19 +1,19 @@
 ---
-title: Tuplas – Guia de C#
+title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
-ms.date: 11/23/2016
+ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: a5240c47dce695759c6e9b76b506077772b58aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef8d89f62a30d3d64f7377972e31d9c4d93d41e
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C# #
 
-As tuplas do C# são tipos definidos usando uma sintaxe simples. As vantagens incluem uma sintaxe mais simples, regras para conversões baseadas no número (conhecidas como cardinalidade) e nos tipos de elementos, além de regras consistentes para cópias e atribuições. Como uma compensação, as tuplas não dão suporte a algumas das expressões orientadas a objeto associados à herança. Você pode obter uma visão geral da seção sobre [Tuplas no tópico Novidades no C# 7.0](whats-new/csharp-7.md#tuples).
+As tuplas do C# são tipos que você define usando uma sintaxe leve. As vantagens incluem sintaxe mais simples, regras para conversões baseadas em números (conhecidas como cardinalidade) e em tipos de elementos, além de regras compatíveis para cópias, testes de igualdade e atribuições. Em contrapartida, as tuplas não oferecem suporte a algumas das expressões orientadas a objeto associadas à herança. Você pode obter uma visão geral na seção sobre [tuplas no artigo Novidades no C# 7.0](whats-new/csharp-7.md#tuples).
 
-Neste tópico, você aprenderá as regras de linguagem que regem as tuplas no C# 7.0 e posteriores, diferentes maneiras de usá-las e diretrizes iniciais de como trabalhar com tuplas.
+Neste artigo, você aprenderá as regras de linguagem que regem as tuplas no C# 7.0 e em versões posteriores, além de diferentes maneiras de usá-las e as diretrizes iniciais para trabalhar com tuplas.
 
 > [!NOTE]
 > Os novos recursos de tuplas exigem os tipos <xref:System.ValueTuple>.
@@ -25,7 +25,7 @@ Vamos começar com os motivos para adicionar o novo suporte de tupla. Métodos r
 
 O .NET Framework já tem classes `Tuple` genéricas. Essas classes, no entanto, têm duas limitações importantes. Por exemplo, as classes `Tuple` nomearam suas propriedades como `Item1`, `Item2` e assim por diante. Esses nomes não carregam informações semânticas. O uso desses tipos `Tuple` não permite comunicar o significado de cada uma das propriedades. Os novos recursos de linguagem permitem que você declare e use nomes semanticamente significativos para os elementos em uma tupla.
 
-Outra preocupação é que as classes `Tuple` são tipos de referência. O uso de um dos tipos `Tuple` significa alocar objetos. Em caminhos de acesso, isso pode ter um impacto mensurável no desempenho do aplicativo. Portanto, o suporte de linguagem para tuplas aproveita os novos structs `ValueTuple`.
+As classes de `Tuple` causam mais problemas de desempenho porque elas são tipos de referência. O uso de um dos tipos `Tuple` significa alocar objetos. Em afunilamentos, alocar muitos objetos pequenos pode ter um impacto mensurável no desempenho do aplicativo. Portanto, o suporte de linguagem para tuplas aproveita os novos structs `ValueTuple`.
 
 Para evitar essas deficiências, você pode criar uma `class` ou um `struct` para carregar vários elementos. Infelizmente, isso significa mais trabalho para você e obscurece a intenção do design. Fazer uma `struct` ou `class` significa que você está definindo um tipo com os dados e comportamento. Muitas vezes, você simplesmente deseja armazenar diversos valores em um único objeto.
 
@@ -36,12 +36,12 @@ As tuplas são contêineres de dados mais simples e mais flexíveis do que os ti
 
 ## <a name="named-and-unnamed-tuples"></a>Tuplas nomeadas e sem nome
 
-O struct `ValueTuple` tem campos chamados `Item1`, `Item2`, `Item3` e assim por diante, semelhante às propriedades definidas nos tipos `Tuple` existentes.
+O struct `ValueTuple` tem campos nomeados `Item1`, `Item2`, `Item3` e assim por diante, semelhante às propriedades definidas nos tipos de `Tuple` existentes.
 Esses nomes são os únicos nomes que você pode usar para *tuplas sem nome*. Quando você não fornece nomes de campo alternativos para uma tupla, cria uma tupla sem nome:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-A tupla no exemplo anterior foi inicializada usando constantes de literal e não terá nomes de elemento criados usando as *Projeções de nome de campo de tupla* no C# 7.1.
+A tupla no exemplo anterior foi inicializada usando constantes literais e não terá nomes de elemento criados usando as *projeções de nome de campo de tupla* no C# 7.1.
 
 No entanto, quando você inicializa uma tupla, pode usar novos recursos de linguagem que fornecem nomes melhores para cada campo. Fazer isso cria uma *tupla nomeada*.
 As tuplas nomeadas ainda têm elementos chamados `Item1`, `Item2`, `Item3` e assim por diante.
@@ -50,13 +50,13 @@ Você cria uma tupla nomeada especificando os nomes de cada elemento. Uma maneir
 
 [!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
-Esses sinônimos são manipulados pelo compilador e pela linguagem para que você possa usar as tuplas nomeadas de forma eficaz. Os editores e IDEs podem ler esses nomes semânticos usando APIs Roslyn. Isso permite que você faça referência aos elementos de uma tupla nomeada por esses nomes semânticos em qualquer lugar no mesmo assembly. O compilador substitui os nomes que você definiu com equivalentes `Item*` ao gerar a saída compilada. A MSIL (Microsoft Intermediate Language) compilada não inclui os nomes que você atribuiu a esses elementos.
+Esses sinônimos são manipulados pelo compilador e pela linguagem para que você possa usar as tuplas nomeadas de forma eficaz. Os editores e IDEs podem ler esses nomes semânticos usando APIs Roslyn. É possível fazer referência aos elementos de uma tupla nomeada com nomes semânticos em qualquer lugar no mesmo assembly. O compilador substitui os nomes que você definiu com equivalentes `Item*` ao gerar a saída compilada. A MSIL (Microsoft Intermediate Language) compilada não inclui os nomes que você atribuiu a esses elementos.
 
 Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)**. O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
-O compilador deve comunicar esses nomes que você criou para tuplas retornadas de métodos públicos ou propriedades. Nesses casos, o compilador adiciona um atributo <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> no método. Esse atributo contém uma propriedade de lista <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> que contém os nomes fornecidos para cada um dos elementos na Tupla.
+O compilador deve comunicar esses nomes que você criou para tuplas retornadas de métodos públicos ou propriedades. Nesses casos, o compilador adiciona um atributo <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> no método. Esse atributo contém uma propriedade de lista <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> que inclui os nomes dados a cada um desses elementos na tupla.
 
 > [!NOTE]
 > Ferramentas de desenvolvimento, como o Visual Studio, também leem esses metadados e fornecem IntelliSense e outros recursos usando os nomes de campo de metadados.
@@ -70,13 +70,13 @@ Se for fornecido um nome explícito, ele terá precedência sobre qualquer nome 
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Para qualquer campo em que um nome explícito não for fornecido, um nome implícito aplicável será projetado. Observe que não há nenhum requisito para fornecer nomes semânticos, explícita ou implicitamente. O inicializador a seguir terá nomes de campo `Item1`, cujo valor é `42` e `StringContent`, cujo valor é "A resposta para tudo":
+Para qualquer campo em que um nome explícito não for fornecido, será projetado um nome implícito aplicável. Não há nenhum requisito para fornecer nomes semânticos, explícita ou implicitamente. O inicializador a seguir terá nomes de campo `Item1`, cujo valor é `42` e `StringContent`, cujo valor é "A resposta para tudo":
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
 Há duas condições nas quais os possíveis nomes de campos não são projetados no campo da tupla:
 
-1. Quando o possível nome é um nome de tupla reservado. Os exemplos incluem `Item3`, `ToString` ou `Rest`.
+1. Quando o possível nome é um nome de tupla reservado. Os exemplos incluem `Item3`, `ToString`. ou `Rest`.
 1. Quando o possível nome é uma duplicata de outro nome de campo de tupla, seja explícito ou implícito.
 
 Essas condições evitam a ambiguidade. Esses nomes causariam ambiguidade se fossem usados como nomes de campo em uma tupla. Nenhuma dessas condições causa erros de tempo de compilação. Em vez disso, os elementos sem nomes projetados não terão nomes semânticos projetados para eles.  Os exemplos a seguir demonstram essas condições:
@@ -85,16 +85,39 @@ Essas condições evitam a ambiguidade. Esses nomes causariam ambiguidade se fos
 
 Essas situações não causam erros de compilador porque essa seria uma alteração significativa nos códigos escritos com C# 7.0, em que as projeções de nome de campo de tupla não estavam disponíveis.
 
+## <a name="equality-and-tuples"></a>Igualdade e tuplas
+
+Começando com o C# 7.3, os tipos de tupla oferecem suporte aos operadores `==` e `!=`. Esses operadores comparam cada membro do argumento da esquerda com cada membro do argumento da direita na ordem. Essas comparações são de curto-circuito. O operador `==` interromperá a avaliação de membros assim que um par não for igual. O operador `!=` interromperá a avaliação de membros assim que um par for igual. O código a seguir exemplifica o uso de `==`, mas todas as regras de comparação se aplicam a `!=`. O exemplo de código a seguir mostra uma comparação de igualdade de dois pares de inteiros:
+
+[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+
+Há várias regras que tornam os testes de igualdade de tuplas mais convenientes. A igualdade de tupla executa [conversões lifted](/dotnet/csharp/language-reference/language-specification/conversions.md#lifted-conversion-operators) se uma das tuplas for uma tupla que permite valor nulo, conforme mostrado no código a seguir:
+
+[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+
+A igualdade de tupla também executa conversões implícitas em cada membro de ambas as tuplas. Esses incluem conversões lifted, conversões widening ou outras conversões implícitas. Os exemplos a seguir mostram que um inteiro de uma tupla 2 pode ser comparado a um longo de tupla 2 devido à conversão implícita do inteiro para um longo:
+
+[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+
+Os nomes dos membros da tupla não participam em testes de igualdade. No entanto, se um dos operandos for uma tupla literal com nomes explícitos, o compilador gera o aviso CS8383 caso os nomes não correspondam aos nomes do outro operando.
+No caso em que ambos os operandos são literais de tupla, o aviso é no operando à direita, conforme mostrado no exemplo a seguir:
+
+[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+
+Por fim, as tuplas podem conter tuplas aninhadas. A igualdade de tupla compara a "forma" de cada operando por meio de tuplas aninhadas, conforme mostrado no exemplo a seguir:
+
+[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
 ## <a name="assignment-and-tuples"></a>Atribuição e tuplas
 
-A linguagem dá suporte à atribuição entre tipos de tupla que têm o mesmo número de elementos e conversões implícitas para os tipos de cada um desses elementos. Outras conversões não são consideradas para atribuições. Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
+A linguagem oferece suporte à atribuição entre tipos de tuplas que têm o mesmo número de elementos, em que cada elemento do lado direito pode ser convertido implicitamente em seu elemento correspondente do lado esquerdo. Outras conversões não são consideradas para atribuições. Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
 
 Considere estas variáveis usadas nos exemplos a seguir:
 
 [!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 As primeiras duas variáveis, `unnamed` e `anonymous`, não têm nomes semânticos fornecidos para os elementos. Os nomes de campo são `Item1` e `Item2`.
-As duas últimas variáveis, `named` e `differentName`, têm nomes semânticos fornecidos para os elementos. Observe que essas duas tuplas têm nomes diferentes para os elementos.
+As duas últimas variáveis, `named` e `differentName`, têm nomes semânticos fornecidos para os elementos. Estas duas tuplas têm nomes diferentes para os elementos.
 
 Todas essas quatro tuplas têm o mesmo número de elementos (chamados de "cardinalidade") e os tipos desses elementos são idênticos. Portanto, todas essas atribuições funcionam:
 
@@ -121,16 +144,14 @@ Um dos usos mais comuns de tuplas é como um valor retornado do método. Vamos e
 > Esses exemplos calculam o desvio padrão de exemplo não corrigido.
 > A fórmula do desvio padrão de exemplo corrigida dividiria a soma das diferenças da média ao quadrado por (N-1) em vez de N, como o método de extensão `Average` faz. Consulte um texto sobre estatísticas para obter mais detalhes sobre as diferenças entre essas fórmulas para desvio padrão.
 
-Isso segue a fórmula típica para o desvio padrão. Ela produz a resposta correta, mas é uma implementação muito ineficiente. Esse método enumera a sequência de duas vezes: uma vez para produzir a média e uma vez para produzir a média do quadrado da diferença da média.
+O código anterior segue a fórmula típica para o desvio padrão. Ele produz a resposta correta, mas é uma implementação ineficiente. Esse método enumera a sequência de duas vezes: uma vez para produzir a média e uma vez para produzir a média do quadrado da diferença da média.
 (Lembre-se de que consultas LINQ são avaliadas lentamente, então o cálculo das diferenças da média e a média dessas diferenças compõem apenas uma enumeração.)
 
 Há uma alternativa fórmula que calcula o desvio padrão usando apenas uma enumeração da sequência.  Esse cálculo produz dois valores conforme enumera a sequência: a soma de todos os itens na sequência e a soma de cada valor ao quadrado:
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
-Essa versão enumera a sequência exatamente uma vez. Mas, não é um código muito reutilizável. Conforme você continua a trabalhar, descobrirá que muitos cálculos estatísticos diferentes usam o número de itens na sequência, a soma da sequência e a soma dos quadrados da sequência. Vamos refatorar esse método e escrever um método utilitário que produz todos esses três valores.
-
-É aqui que as tuplas são muito úteis. 
+Essa versão enumera a sequência exatamente uma vez. Mas não é um código reutilizável. Conforme você continua a trabalhar, descobrirá que muitos cálculos estatísticos diferentes usam o número de itens na sequência, a soma da sequência e a soma dos quadrados da sequência. Vamos refatorar esse método e escrever um método utilitário que produz todos esses três valores. Todos os três valores podem retornar como uma tupla.
 
 Vamos atualizar esse método para que os três valores calculados durante a enumeração sejam armazenados em uma tupla. Isso cria essa versão:
 
@@ -140,7 +161,7 @@ O suporte à refatoração do Visual Studio facilita a extração da funcionalid
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
-A linguagem permite algumas opções adicionais que podem ser usadas se você desejar fazer algumas edições rápidas manualmente. Primeiro, você pode usar a declaração `var` para inicializar o resultado da tupla da chamada do método `ComputeSumAndSumOfSquares`. Você também pode criar três variáveis discretas dentro do método `ComputeSumAndSumOfSquares`. A versão final está abaixo:
+A linguagem permite algumas opções adicionais que podem ser usadas se você desejar fazer algumas edições rápidas manualmente. Primeiro, você pode usar a declaração `var` para inicializar o resultado da tupla da chamada do método `ComputeSumAndSumOfSquares`. Você também pode criar três variáveis discretas dentro do método `ComputeSumAndSumOfSquares`. A versão final é mostrada no código a seguir:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
@@ -168,10 +189,10 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 }
 ```
 
-Você deve tratar os campos dessa tupla como `Item1`, `Item2` e `Item3`.
+Os campos nesta tupla são nomeados `Item1`, `Item2` e `Item3`.
 É recomendável que você forneça nomes semânticos para os elementos de tuplas retornados dos métodos.
 
-Outra expressão em que as tuplas podem ser muito úteis é quando você estiver criando consultas LINQ em que o resultado final é uma projeção que contém algumas, mas não todas, das propriedades dos objetos sendo selecionados.
+Outra linguagem em que as tuplas podem ser úteis é quando você estiver criando consultas LINQ. O resultado final projetado geralmente contém algumas, mas não todas, propriedades dos objetos que estão sendo selecionados.
 
 Tradicionalmente, você poderia projetar os resultados da consulta em uma sequência de objetos que eram um tipo anônimo. Isso apresentava muitas limitações, principalmente porque os tipos anônimos não poderiam ser nomeados de forma conveniente no tipo de retorno de um método. Alternativas usando `object` ou `dynamic` como o tipo de resultado acompanham os custos de desempenho significativos.
 
@@ -180,7 +201,7 @@ Por exemplo, imagine um aplicativo de tarefas. Você pode definir uma classe sem
 
 [!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
-Seus aplicativos móveis podem dar suporte a um formato compacto dos itens de tarefas atuais que exibem apenas o título. Essa consulta LINQ faria uma projeção que inclui somente a ID e o título. Um método que retorna uma sequência de tuplas expressa esse design muito bem:
+Seus aplicativos móveis podem dar suporte a um formato compacto dos itens de tarefas atuais que exibem apenas o título. Essa consulta LINQ faria uma projeção que inclui somente a ID e o título. Um método que retorna uma sequência de tuplas expressa bem esse design:
 
 [!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
@@ -205,7 +226,7 @@ Também é válido usar a palavra-chave `var` com qualquer uma ou todas as decla
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
 ```
 
-Observe que você não pode usar um tipo específico fora dos parênteses, mesmo se todos os campos na tupla tiverem o mesmo tipo.
+Você não poderá usar um tipo específico fora dos parênteses, mesmo se todos os campos na tupla tiverem o mesmo tipo.
 
 Você também pode desconstruir tuplas com declarações existentes:
 
@@ -244,10 +265,20 @@ Se você atribuir um aluno a três variáveis, o nome, o sobrenome e a GPA serã
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
-Você deve tomar muito cuidado ao definir vários métodos `Deconstruct` em uma classe ou hierarquia de classes. Vários métodos `Deconstruct` que têm o mesmo número de parâmetros `out` podem causar ambiguidades rapidamente. Os chamadores podem não conseguir chamar facilmente o método `Deconstruct` desejado.
+Você deve tomar cuidado ao definir vários métodos `Deconstruct` em uma classe ou hierarquia de classes. Vários métodos `Deconstruct` que têm o mesmo número de parâmetros `out` podem causar ambiguidades rapidamente. Os chamadores podem não conseguir chamar facilmente o método `Deconstruct` desejado.
 
 Neste exemplo, há uma chance mínima de uma chamada ambígua porque o método `Deconstruct` para `Person` tem dois parâmetros de saída e o método `Deconstruct` para `Student` tem três.
 
+Os operadores de desconstrução não participam do teste de igualdade. O exemplo a seguir gera o erro do compilador CS0019:
+
+```csharp
+Person p = new Person("Althea", "Goodwin");
+if (("Althea", "Goodwin") == p)
+    Console.WriteLine(p);
+```
+
+O método `Deconstruct` pôde converter o objeto`Person` `p` em uma tupla que contém duas cadeias de caracteres, mas não é aplicável no contexto de testes de igualdade.
+
 ## <a name="conclusion"></a>Conclusão 
 
-O novo suporte de linguagem e biblioteca para tuplas nomeadas torna muito mais fácil trabalhar com designs que usam estruturas de dados que armazenam vários elementos, mas não definem comportamento, como as classes e os structs fazem. É fácil e sucinto usar tuplas para esses tipos. Você obtém todos os benefícios da verificação de tipo estático, sem precisar criar tipos usando a sintaxe de `class` ou de `struct` mais detalhada. Mesmo assim, elas são mais úteis para métodos utilitários que são `private` ou `internal`. Crie tipos definidos pelo usuário, tipos `class` ou `struct`, quando seus métodos públicos retornam um valor que tenha vários elementos.
+O novo suporte de linguagem e biblioteca para tuplas nomeadas torna muito mais fácil trabalhar com designs que usam estruturas de dados que armazenam vários elementos, mas não definem comportamento, como as classes e os structs fazem. É fácil e sucinto usar tuplas para esses tipos. Você obtém todos os benefícios da verificação de tipo estático, sem precisar criar tipos usando a sintaxe de `class` ou de `struct` mais detalhada. Mesmo assim, elas são mais úteis para métodos utilitários que são `private` ou `internal`. Cria tipos definidos pelo usuário, tipos `class` ou `struct`, quando seus métodos públicos retornam um valor que tem vários elementos.

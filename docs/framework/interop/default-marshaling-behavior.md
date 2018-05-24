@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- As mesmas regras usadas para realizar marshaling de valores e de referências para chamadas de invocação de plataforma são usadas durante o marshaling por meio de interfaces COM. Por exemplo, quando uma instância do tipo de valor `Point` é passada do .NET Framework para o COM, o `Point` é passado por valor. Se o tipo de valor `Point` é passado por referência, um ponteiro para um `Point` é passado na pilha. O marshaler de interoperabilidade não dá suporte a níveis mais altos de indireção (**Point \*\***) em qualquer direção.  
+ As mesmas regras usadas para realizar marshaling de valores e de referências para chamadas de invocação de plataforma são usadas durante o marshaling por meio de interfaces COM. Por exemplo, quando uma instância do tipo de valor `Point` é passada do .NET Framework para o COM, o `Point` é passado por valor. Se o tipo de valor `Point` é passado por referência, um ponteiro para um `Point` é passado na pilha. O empacotador de interoperabilidade não oferece suporte a níveis mais altos de inversão de controle (**ponto** \* \*) em qualquer direção.  
   
 > [!NOTE]
 >  Estruturas que têm o valor de enumeração <xref:System.Runtime.InteropServices.LayoutKind> definido como **Explicit** não podem ser usadas na interoperabilidade COM porque a biblioteca de tipos exportada não pode expressar um layout explícito.  
