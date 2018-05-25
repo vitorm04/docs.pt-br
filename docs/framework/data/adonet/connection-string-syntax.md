@@ -1,12 +1,12 @@
 ---
 title: Sintaxe da cadeia de conexão
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Sintaxe da cadeia de conexão
 Cada provedor de dados .NET Framework tem um objeto de `Connection` que herda de <xref:System.Data.Common.DbConnection> bem como de uma propriedade <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica do provedor. A sintaxe específica da cadeia de conexão para cada provedor está documentada em sua propriedade `ConnectionString`. A tabela a seguir lista os quatro provedores de dados que estão incluídos no .NET Framework.  
@@ -112,11 +112,11 @@ Você também pode definir a propriedade <xref:System.Data.SqlClient.SqlConnecti
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Não|N/D|Não (padrão)|Ignorado|Não ocorre criptografia.|  
 |Não|N/D|Sim|Não (padrão)|A criptografia ocorrerá somente se houver um certificado de servidor verificável; caso contrário, a tentativa de conexão falhará.|  
-|Não|N/D|Sim|Sim|A criptografia ocorrerá somente se houver um certificado de servidor verificável; caso contrário, a tentativa de conexão falhará.|  
-|Sim|Não|Ignorado|Ignorado|A criptografia ocorrerá somente se houver um certificado de servidor verificável; caso contrário, a tentativa de conexão falhará.|  
-|Sim|Sim|Não (padrão)|Ignorado|A criptografia ocorrerá somente se houver um certificado de servidor verificável; caso contrário, a tentativa de conexão falhará.|  
-|Sim|Sim|Sim|Não (padrão)|A criptografia ocorrerá somente se houver um certificado de servidor verificável; caso contrário, a tentativa de conexão falhará.|  
-|Sim|Sim|Sim|Sim|A criptografia ocorrerá somente se houver um certificado de servidor verificável; caso contrário, a tentativa de conexão falhará.|  
+|Não|N/D|Sim|Sim|Criptografia sempre ocorre, mas pode usar um certificado autoassinado do servidor.|  
+|Sim|Não|Ignorado|Ignorado|A criptografia ocorre somente se houver um certificado de servidor verificável; Caso contrário, a tentativa de conexão falhará.|  
+|Sim|Sim|Não (padrão)|Ignorado|Criptografia sempre ocorre, mas pode usar um certificado autoassinado do servidor.|  
+|Sim|Sim|Sim|Não (padrão)|A criptografia ocorre somente se houver um certificado de servidor verificável; Caso contrário, a tentativa de conexão falhará.|  
+|Sim|Sim|Sim|Sim|Criptografia sempre ocorre, mas pode usar um certificado autoassinado do servidor.|  
   
  Para obter mais informações, consulte [usando criptografia sem validação](http://go.microsoft.com/fwlink/?LinkId=120500) nos Manuais Online do SQL Server.  
   

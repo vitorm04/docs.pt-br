@@ -1,12 +1,12 @@
 ---
 title: Autenticação no SQL Server
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8fc6f17cd008fe24e041c52b4e5ee8fd4d261f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.  
@@ -16,7 +16,7 @@ SQL Server dá suporte a dois modos de autenticação, o modo de autenticação 
 -   Modo misto dá suporte à autenticação pelo Windows e pelo SQL Server. Os pares de nome e senha do usuário são mantidos dentro do SQL Server.  
   
 > [!IMPORTANT]
->  Recomendamos usar a autenticação do Windows sempre que for possível. Autenticação do Windows usa uma série de mensagens criptografadas para autenticar usuários no SQL Server. Quando são usados logons do SQL Server, senhas e nomes de logon do SQL Server são transmitidas pela rede, que os torna menos segura.  
+>  Recomendamos usar a autenticação do Windows sempre que for possível. Autenticação do Windows usa uma série de mensagens criptografadas para autenticar usuários no SQL Server. Quando são usados logons do SQL Server, nomes de logon do SQL Server e senhas criptografadas são transmitidas pela rede, que os torna menos segura.  
   
  Com a autenticação do Windows, os usuários já estão conectados ao Windows e não precisam fazer logon separadamente para o SQL Server. O `SqlConnection.ConnectionString` a seguir especifica a autenticação do Windows sem exigir nome de usuário ou senha.  
   
