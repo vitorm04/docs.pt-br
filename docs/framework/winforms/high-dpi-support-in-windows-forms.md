@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a085658579c8cd3ba43fd07a7816581e03c3d64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbf2d7b61b34a2cd4641a77ee1f2fcdff7f3c3fe
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Suporte a alto DPI no Windows Forms
 
@@ -38,7 +38,7 @@ Além disso, para configurar o suporte DPI alto em seu aplicativo de formulário
   Para fazer isso, adicione o seguinte arquivo de manifesto:
 
   ```xml
-  <compatibility xmlns="urn:schemas-microsoft.comn:compatibility.v1">
+  <compatibility xmlns="urn:schemas-microsoft.com:compatibility.v1">
     <application>
       <!-- Windows 10 compatibility -->
       <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
