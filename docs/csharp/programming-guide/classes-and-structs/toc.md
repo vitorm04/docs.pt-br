@@ -47,7 +47,6 @@
 ## [Inicializadores de objeto e coleção](object-and-collection-initializers.md)
 ### [Como inicializar objetos usando um inicializador de objeto](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Como inicializar um dicionário com um inicializador de coleção](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [Como acessar uma classe de coleção com foreach](how-to-access-a-collection-class-with-foreach.md)
 ## [Tipos aninhados](nested-types.md)
 ## [Classes e métodos parciais](partial-classes-and-methods.md)
 ## [Tipos Anônimos](anonymous-types.md)
