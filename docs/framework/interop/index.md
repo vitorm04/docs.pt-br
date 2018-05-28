@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
 ---
@@ -42,19 +42,19 @@ Descreve o marshaling para invocação de plataforma e interoperabilidade COM.
 Descreve o mapeamento entre exceções e HRESULTs.
 
 [Wrappers COM](com-wrappers.md)  
-Descreve os wrappers fornecidos pelo interoperabilidade COM.
+Descreve os wrappers fornecidos pela interoperabilidade COM.
 
 [Equivalência de tipos e tipos de interoperabilidade inseridos](type-equivalence-and-embedded-interop-types.md)  
-Descreve como as informações de tipo para tipos COM são inseridas em assemblies e como o common language runtime determina a equivalência de tipos COM inseridos.
+Descreve como as informações de tipo para tipos COM são inseridas em assemblies e como o Common Language Runtime determina a equivalência de tipos COM inseridos.
 
 [Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Descreve como gerar assemblies de interoperabilidade primários usando *Tlbimp.exe* (importador da biblioteca).
+Descreve como gerar assemblies de interoperabilidade primários usando *Tlbimp.exe* (Importador da Biblioteca de Tipos).
 
 [Como registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)  
-Descreve como registrar assemblies de interoperabilidade primários antes de referenciá-las em seus projetos.
+Descreve como registrar os assemblies de interoperabilidade primários antes de referenciá-los em seus projetos.
 
 [Interoperabilidade COM sem registro](registration-free-com-interop.md)  
-Descreve como interoperabilidade ativar componentes sem usar o registro do Windows.
+Descreve como a interoperabilidade COM pode ativar componentes sem usar o Registro do Windows.
 
 [Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)  
-Descreve como criar um manifesto de aplicativo e como criar e inserir um manifesto do componente.
+Descreve como criar um manifesto do aplicativo e como criar e inserir um manifesto do componente.

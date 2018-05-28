@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 15c10d8891e87ab241104e6aa760c221e8b9e249
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-guide"></a>Guia de C#
 
@@ -61,7 +61,7 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
   * Esta seção contém o material de referência sobre a linguagem C#. Este material ajudar a entender a sintaxe e a semântica do C#. Ele também inclui um material de referência sobre tipos, operadores, atributos, diretivas de pré-processador, opções de compilador, erros de compilador e avisos de compilador do C#.
 
 * [C# Language Specification](../csharp/language-reference/language-specification/index.md) (Especificação da linguagem C#)
-  * Links para a versão mais recente das Especificações de C# em formato Microsoft Word.
+  * Links para as versões mais recentes da especificação da linguagem C#.
 
 ## <a name="see-also"></a>Consulte também
 
