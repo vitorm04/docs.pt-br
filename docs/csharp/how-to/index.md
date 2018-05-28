@@ -2,11 +2,11 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -43,9 +43,8 @@ As classes e os structs são criados para implementar seu programa. Essas técni
 Esses artigos ajudam você a trabalhar com coleções de dados.
 
 - [Inicialize um dicionário com um inicializador de coleção](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [Acesse todos os elementos em uma coleção usando `foreach`](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>cadeias de caracteres
+## <a name="working-with-strings"></a>Trabalhando com cadeias de caracteres
 
 As cadeias de caracteres são o tipo de dados fundamental usado para exibir ou manipular texto. Esses artigos demonstram práticas comuns com cadeias de caracteres.
 
