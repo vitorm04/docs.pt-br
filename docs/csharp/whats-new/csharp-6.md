@@ -3,11 +3,12 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457999"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -351,7 +352,7 @@ Agora, você também pode usá-los com coleções <xref:System.Collections.Gener
 
 Esse recurso significa que os contêineres associativos podem ser inicializados usando uma sintaxe semelhante à que está em vigor para contêineres de sequência de várias versões.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Métodos `Add` de extensão em inicializadores de coleção
+## <a name="extension-add-methods-in-collection-initializers"></a>Métodos `Add` de extensão em inicializadores de coleção
 
 Outro recurso que facilita a inicialização de coleção é a capacidade de usar um *método de extensão* para o método `Add`. Esse recurso foi adicionado para a paridade com o Visual Basic. 
 
@@ -370,10 +371,7 @@ Agora você pode, mas apenas se você criar um método de extensão que mapeia `
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-O que você está fazendo com esse recurso é mapear qualquer método que adiciona itens a uma coleção, em um método chamado `Add`, criando um método de extensão: 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+O que você está fazendo com esse recurso é mapear qualquer método que adicione itens a uma coleção a um método chamado `Add` criando um método de extensão.
 
 ## <a name="improved-overload-resolution"></a>Resolução de sobrecarga aprimorada
 

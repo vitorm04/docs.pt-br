@@ -9,12 +9,13 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517856"
 ---
 # <a name="how-to-create-windows-services"></a>Como criar Serviços Windows
-Quando você cria um serviço, você pode usar um modelo de projeto do Visual Studio chamado **serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
+Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
   
 > [!WARNING]
 >  O modelo de projeto do serviço Windows não está disponível na edição Express do Visual Studio.  
@@ -29,43 +30,43 @@ Quando você cria um serviço, você pode usar um modelo de projeto do Visual St
   
 ### <a name="to-create-a-windows-service-application"></a>Para criar um aplicativo de serviço Windows  
   
-1.  Criar um **Windows Service** projeto.  
+1.  Crie um projeto de **Serviço Windows**.  
   
     > [!NOTE]
-    >  Para obter instruções sobre como escrever um serviço sem usar o modelo, consulte [como: escrever serviços programaticamente](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  Para obter instruções de como escrever um serviço sem usar o modelo, confira [Como escrever serviços de forma programática](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
-2.  No **propriedades** janela, defina o <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> propriedade para o serviço.  
+2.  Na janela **Propriedades**, configure a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para seu serviço.  
   
-     ![Defina a propriedade ServiceName. ] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+     ![Defina a propriedade ServiceName.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
     >  O valor da propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> sempre deve corresponder ao nome registrado nas classes do instalador. Se você alterar essa propriedade, também deverá atualizar a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> das classes do instalador.  
   
 3.  Defina qualquer uma das propriedades a seguir para determinar como seu serviço funcionará.  
   
-    |Propriedade|Configuração|  
+    |propriedade|Configuração|  
     |--------------|-------------|  
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` para indicar que o serviço aceitará solicitações para parar a execução; `false` para impedir que o serviço seja interrompido.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` para indicar que o serviço deseja receber uma notificação quando o computador no qual ele está for desligado, permitindo que a ele chamar o procedimento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` para indicar que o serviço aceitará solicitações para pausar ou continuar executando; `false` para impedir que o serviço seja pausado e retomado.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` para indicar que o serviço pode manipular a notificação de alterações de status de energia do computador; `false` para impedir que o serviço seja notificado dessas alterações.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para gravar entradas informativas no log de eventos do aplicativo quando seu serviço executa uma ação; `false` para desabilitar essa funcionalidade. Para obter mais informações, consulte [como: obter informações sobre serviços de Log](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Observação:** por padrão, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é definido como `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` para indicar que o serviço pode manipular notificações de alterações de status de energia do computador; `false` para impedir que o serviço seja notificado sobre alterações.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para gravar entradas informativas no log de eventos do aplicativo quando seu serviço executa uma ação; `false` para desabilitar essa funcionalidade. Para obter mais informações, confira [Como registrar informações em log sobre serviços](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Observação:** por padrão, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é definido como `true`.|  
   
     > [!NOTE]
-    >  Quando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> são definidos como `false`, o **Service Control Manager** desabilitará as opções de menu correspondente para parar, pausar ou continuar o serviço.  
+    >  Quando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> forem definidos como `false`, o **Gerenciador de Controle de Serviço** desabilitará as opções de menu correspondentes para parar, pausar ou continuar o serviço.  
   
 4.  Acesse o Editor de código e preencha o processamento que você deseja para os procedimentos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
 5.  Substitua quaisquer outros métodos para os quais você deseja definir a funcionalidade.  
   
-6.  Adicionar os instaladores necessários para seu aplicativo de serviço. Para obter mais informações, consulte [como: adicionar instaladores ao seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+6.  Adicionar os instaladores necessários para seu aplicativo de serviço. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-7.  Compilar o projeto selecionando **compilar solução** do **criar** menu.  
+7.  Compile o projeto selecionando **Compilar Solução** no menu **Compilar**.  
   
     > [!NOTE]
     >  Pressione F5 para executar seu projeto. Você não pode executar um projeto de serviço dessa maneira.  
   
-8.  Instale o serviço. Para obter mais informações, consulte [como: instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+8.  Instale o serviço. Para obter mais informações, confira [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

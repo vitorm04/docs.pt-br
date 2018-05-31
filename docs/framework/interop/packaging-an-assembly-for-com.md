@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392390"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empacotando um assembly para o COM
 Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos gerenciados que pretendem incorporar em seus aplicativos:  
@@ -37,7 +38,7 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
   
      Classes gerenciadas que implementam a interface de classe (uma interface gerada por interoperabilidade COM) estão sujeitas a restrições de controle de versão.  
   
-     Para obter diretrizes sobre como usar a interface de classe, consulte [introduzindo a interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Para obter diretrizes de como usar a interface de classe, consulte [Introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 -   Instruções de implantação  
   
@@ -84,7 +85,7 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)  
  [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)  
- [Introduzindo a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)  
+ [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)  
  [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)  
  [Registrando assemblies usando COM](registering-assemblies-with-com.md)  

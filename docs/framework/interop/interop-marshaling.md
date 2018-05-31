@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395363"
 ---
 # <a name="interop-marshaling"></a>marshaling de interoperabilidade
 <a name="top"></a> O marshaling de interoperabilidade controla como os dados são passados em argumentos de método e valores retornados entre memória gerenciada e não gerenciada e durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.  
@@ -135,7 +136,7 @@ Referência passando entre limites de processo e de host
  ![SOAP ou TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Chamadas remotas através de firewalls usando SOAP ou a classe TcpChannel  
   
- Algumas chamadas não gerenciadas podem ser encapsuladas SOAP, como as chamadas entre os componentes de serviço e COM.  
+ Algumas chamadas não gerenciadas podem ser canalizadas por SOAP, assim como as chamadas entre os componentes de serviço e o COM.  
   
  [Voltar ao início](#top)  
   

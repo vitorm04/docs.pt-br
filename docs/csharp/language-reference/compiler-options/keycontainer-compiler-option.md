@@ -1,6 +1,6 @@
 ---
 title: -keycontainer (opções do compilador C#)
-ms.date: 07/20/2015
+ms.date: 05/16/2018
 f1_keywords:
 - /keycontainer
 helpviewer_keywords:
@@ -8,11 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: edb50dafa376abe55fbeeb312ca5bb8f34c83e7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a7b378cad7a1df9249fcbefa28bb9aa9a6a3da4
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472562"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (opções do compilador C#)
 Especifica o nome do contêiner da chave de criptografia.  
@@ -28,7 +29,7 @@ Especifica o nome do contêiner da chave de criptografia.
  O nome do contêiner de chave de nome forte.  
   
 ## <a name="remarks"></a>Comentários  
- Quando a opção **-keycontainer** é usada, o compilador cria um componente compartilhável inserindo uma chave pública do contêiner especificado no manifesto do assembly e assinando o assembly definitivo com a chave privada. Para gerar um arquivo de chave, digite sn -k `file` na linha de comando. O sn -i instala o par de chaves no contêiner.  
+ Quando a opção **-keycontainer** for usada, o compilador criará um componente compartilhável. O compilador insere uma chave pública do contêiner especificado no manifesto do assembly e assina o assembly final com a chave privada. Para gerar um arquivo de chave, digite `sn -k file` na linha de comando. `sn -i` instala o par de chaves no contêiner. Não há suporte para essa opção quando o compilador é executado no CoreCLR. Para assinar um assembly ao compilar no CoreCLR, use a opção [-keyfile](keyfile-compiler-option.md).
   
  Se você compilar com [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), o nome do arquivo de chave será mantido no módulo e incorporado no assembly quando você compilar esse módulo em um assembly com [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
@@ -45,5 +46,5 @@ Especifica o nome do contêiner da chave de criptografia.
  Você pode acessar programaticamente essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [Opção -keyfile do compilador C#](keyfile-compiler-option.md) [Opções do compilador C#](index.md)  
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

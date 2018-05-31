@@ -17,14 +17,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388372"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
 A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Win32. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
   
- Esta seção apresenta as tarefas associadas a funções DLL não gerenciadas de consumo e fornece mais informações sobre a plataforma de invocação. Além das tarefas a seguir, há considerações gerais e um link que fornece exemplos e informações adicionais.  
+ Esta seção apresenta as tarefas associadas às funções DLL não gerenciadas de consumo e fornece mais informações sobre invocação de plataforma. Além das tarefas a seguir, há considerações gerais e um link que fornece exemplos e informações adicionais.  
   
 #### <a name="to-consume-exported-dll-functions"></a>Para consumir funções de DLL exportadas  
   

@@ -4,11 +4,12 @@ description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472796"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 
@@ -96,9 +97,10 @@ Há uma relação bidirecional entre estruturas e pacotes. A primeira parte é d
 
 A segunda parte da relação é a seleção de ativo. Pacotes podem conter ativos para várias estruturas. Dada uma referência a um conjunto de pacotes e/ou metapacotes, a estrutura é necessária para determinar qual ativo será selecionado, por exemplo `net46` ou `netstandard1.3`. É importante selecionar o ativo correto. Por exemplo, um ativo `net46` provavelmente não é compatível com .NET Framework 4.0 ou .NET Core 1.0.
 
-![Composição de estrutura baseada em pacote](./media/packages/package-framework.png)
 
-Você pode ver essa relação na imagem acima. A *API* é voltada para a *estrutura* e a define. A *estrutura* é usada para *seleção de ativo*. O *ativo* fornece a API.
+Veja essa relação na imagem a seguir. A *API* é voltada para a *estrutura* e a define. A *estrutura* é usada para *seleção de ativo*. O *ativo* fornece a API.
+
+![Composição de estrutura baseada em pacote](./media/packages/package-framework.png)
 
 As duas principais estruturas baseadas em pacote usadas com o .NET Core são:
 

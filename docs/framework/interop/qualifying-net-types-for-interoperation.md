@@ -13,18 +13,19 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389038"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificando tipos do .NET para interoperação
 Se você pretende expor os tipos em um assembly para aplicativos COM, considere os requisitos de interoperabilidade COM em tempo de design. Tipos gerenciados (classe, interface, estrutura e enumeração) se integram perfeitamente com tipos COM quando você obedece às seguintes diretrizes:  
   
 -   As classes devem implementar interfaces explicitamente.  
   
-     Embora a interoperabilidade COM forneça um mecanismo para gerar automaticamente uma interface contendo todos os membros da classe e os membros da respectiva classe base, é muito melhor fornecer interfaces explícitas. A interface gerada automaticamente é chamada de interface de classe. Para obter diretrizes, consulte [introduzindo a interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Embora a interoperabilidade COM forneça um mecanismo para gerar automaticamente uma interface contendo todos os membros da classe e os membros da respectiva classe base, é muito melhor fornecer interfaces explícitas. A interface gerada automaticamente é chamada de interface de classe. Para obter diretrizes, confira [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     Você pode usar o Visual Basic, C++ e c# para incorporar as definições de interface no seu código, em vez de usar a Interface Definition Language (IDL) ou seu equivalente. Para obter detalhes da sintaxe, consulte a documentação da linguagem.  
+     Você pode usar Visual Basic, C# e C++ para incorporar as definições de interface no código, em vez de usar a linguagem IDL ou uma equivalente. Para obter detalhes da sintaxe, consulte a documentação da linguagem.  
   
 -   Os tipos gerenciados devem ser públicos.  
   
@@ -49,6 +50,6 @@ Se você pretende expor os tipos em um assembly para aplicativos COM, considere 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Introduzindo a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)  
+ [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)  
  [Aplicando atributos de interoperabilidade](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Empacotando um assembly para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

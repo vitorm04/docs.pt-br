@@ -3,11 +3,12 @@ title: Tutorial de introdução a classes ‒ guias de início rápido locais de
 description: Crie seu primeiro programa em C# e explore os conceitos de orientado a objeto
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5d3363a34fb684985b3b060dce2784090f25a1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457327"
 ---
 # <a name="introduction-to-classes"></a>Introdução às classes
 
@@ -72,7 +73,7 @@ namespace classes
 
 Antes de continuar, vamos dar uma olhada no que você compilou.  A declaração `namespace` fornece uma maneira de organizar logicamente seu código. Esse início rápido é relativamente pequeno, portanto, você colocará todo o código em um namespace. 
 
-`public class BankAccount` define a classe ou o tipo que você está criando. Tudo dentro de `{` e `}` logo após a declaração da classe define o comportamento da classe. Há cinco ***membros*** na classe `BankAccount`. As três primeiras são ***propriedades***. Propriedades são elementos de dados que podem ter um código que impõe a validação ou outras regras. Os últimos dois são ***métodos***. Métodos são blocos de código que executam uma única função. A leitura dos nomes de cada um dos membros deve fornecer informações suficientes para você, ou outro desenvolvedor, entender o que a classe faz.
+`public class BankAccount` define a classe ou o tipo que você está criando. Tudo dentro de `{` e `}` logo após a declaração da classe define o comportamento da classe. Há cinco ***membros*** na classe `BankAccount`. As três primeiras são ***propriedades***. Propriedades são elementos de dados que podem ter um código que impõe a validação ou outras regras. Os últimos dois são ***métodos***. Os métodos são blocos de código que executam uma única função. A leitura dos nomes de cada um dos membros deve fornecer informações suficientes para você, ou outro desenvolvedor, entender o que a classe faz.
 
 ## <a name="open-a-new-account"></a>Abrir uma nova conta
 

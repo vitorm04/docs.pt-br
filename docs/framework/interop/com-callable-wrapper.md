@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394960"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando um cliente COM chama um objeto .NET, o Common Language Runtime cria o objeto gerenciado e um CCW (COM Callable Wrapper) para o objeto. Se não é possível referenciar um objeto .NET diretamente, os clientes COM usam o CCW como um proxy do objeto gerenciado.  
@@ -38,12 +39,12 @@ Acessando objetos .NET por meio do COM Callable Wrapper
   
 ## <a name="simulating-com-interfaces"></a>Simulando Interfaces COM
 
-CCW expõe todos os públicos, interfaces COM visíveis, tipos de dados e valores de retorno para clientes COM de uma maneira consistente com a imposição do COM de interação baseada em interface. Para um cliente COM, a invocação de métodos em um objeto .NET Framework é idêntica à invocação de métodos em um objeto COM.  
+O CCW expõe todas as interfaces públicas visíveis para o COM, os tipos de dados e os valores retornados para clientes COM de uma maneira consistente com a exigência do COM em relação à interação baseada em interface. Para um cliente COM, a invocação de métodos em um objeto .NET Framework é idêntica à invocação de métodos em um objeto COM.  
   
  Para criar essa abordagem direta, o CCW fabrica interfaces COM tradicionais, como **IUnknown** e **IDispatch**. Como mostra a ilustração a seguir, o CCW mantém uma única referência no objeto .NET encapsulado por ele. O cliente COM e o objeto .NET interagem mutuamente por meio do proxy e da construção de stub do CCW.  
   
  ![Interfaces COM](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-Interfaces COM e COM callable wrapper  
+Interfaces COM e COM Callable Wrapper  
   
  Além de expor as interfaces que são implementadas explicitamente por uma classe no ambiente gerenciado, o .NET Framework fornece implementações das interfaces COM listadas na tabela a seguir em nome do objeto. Uma classe .NET pode substituir o comportamento padrão fornecendo sua própria implementação dessas interfaces. No entanto, o tempo de execução sempre fornece a implementação para as interfaces **IUnknown** e **IDispatch**.  
   
@@ -60,15 +61,15 @@ Interfaces COM e COM callable wrapper
   
 |Interface|Descrição|  
 |---------------|-----------------|  
-|A (\_*classname*) interface de classe|Interface, exposta pelo tempo de execução e não definida explicitamente, que expõe todas as interfaces públicas, métodos, propriedades e campos que são expostos explicitamente em um objeto gerenciado.|  
+|A interface de classe (\_*classname*)|Interface, exposta pelo tempo de execução e não definida explicitamente, que expõe todas as interfaces públicas, métodos, propriedades e campos que são expostos explicitamente em um objeto gerenciado.|  
 |**IConnectionPoint** e **IconnectionPointContainer**|Interface para objetos que dão origem a eventos baseados em representante (uma interface para o registro de assinantes do evento).|  
 |**IdispatchEx**|Interface fornecida pelo tempo de execução se a classe implementa **IExpando**. A interface **IDispatchEx** é uma extensão da interface **IDispatch** que, ao contrário de **IDispatch**, permite a enumeração, adição, exclusão e chamada de membros que diferencia maiúsculas de minúsculas.|  
 |**IEnumVARIANT**|Interface para classes de tipo de coleção, que enumera os objetos na coleção, se a classe implementa **IEnumerable**.|  
   
 ## <a name="introducing-the-class-interface"></a>Introdução à interface de classe  
- A interface de classe, que não é definida explicitamente no código gerenciado, é uma interface que expõe todos os métodos públicos, propriedades, campos e eventos que são expostos explicitamente no objeto .NET. Essa interface pode ser uma interface dupla ou somente de expedição. A interface de classe recebe o nome da própria classe do .NET, precedido por um sublinhado. Por exemplo, para a classe mamífero, a interface de classe é \_mamífero.  
+ A interface de classe, que não é definida explicitamente no código gerenciado, é uma interface que expõe todos os métodos públicos, propriedades, campos e eventos que são expostos explicitamente no objeto .NET. Essa interface pode ser uma interface dupla ou somente de expedição. A interface de classe recebe o nome da própria classe do .NET, precedido por um sublinhado. Por exemplo, para a classe Mammal, a interface de classe é \_Mammal.  
   
- Para classes derivadas, a interface de classe também expõe todos os métodos públicos, propriedades e campos da classe base. A classe derivada também expõe uma interface de classe para cada classe base. Por exemplo, se a classe mamífero estende a classe MammalSuperclass, que por si só estende System. Object, o expõe de objeto do .NET para clientes COM três interfaces de chamada de classe \_mamífero, \_MammalSuperclass, e \_objeto.  
+ Para classes derivadas, a interface de classe também expõe todos os métodos públicos, propriedades e campos da classe base. A classe derivada também expõe uma interface de classe para cada classe base. Por exemplo, se a classe Mammal estende a classe MammalSuperclass, que, por sua vez, estende System.Object, o objeto do .NET expõe para os clientes COM três interfaces de classe chamadas \_Mammal, \_MammalSuperclass e \_Object.  
   
  Por exemplo, considere a seguinte classe do .NET:  
   
@@ -147,7 +148,7 @@ public class LoanApp : IExplicit {
   
  O valor **ClassInterfaceType.None** impede que a interface de classe seja gerada quando os metadados da classe são exportados para uma biblioteca de tipos. No exemplo anterior, os clientes COM podem acessar a classe `LoanApp` somente pela interface `IExplicit`.  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Evitar o cache de identificadores de despacho (DispIds)
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Evitar o cache de identificadores de expedição (DispIds)
  O uso da interface de classe é uma opção aceitável para os clientes com script, os clientes do Microsoft Visual Basic 6.0 ou qualquer cliente de associação tardia que não armazena em cache os DispIds dos membros da interface. Os DispIds identificam os membros da interface para habilitar a associação tardia.  
   
  Para a interface de classe, a geração dos DispIds se baseia na posição do membro na interface. Se você alterar a ordem do membro e exportar a classe para uma biblioteca de tipos, você alterará os DispIds gerados na interface de classe.  

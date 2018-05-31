@@ -3,11 +3,12 @@ title: Tutorial de loops e branches – guias de início rápido locais de C#
 description: Neste início rápido sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457898"
 ---
 # <a name="branches-and-loops"></a>Loops e branches
 
@@ -39,7 +40,7 @@ int b = 3;
 Digite `dotnet run` novamente. Como a resposta é inferior a 10, nada é impresso. A **condição** que você está testando é falsa. Não há qualquer código para execução, porque você escreveu apenas uma das ramificações possíveis para uma instrução `if`: a ramificação verdadeira.
 
 > [!TIP]
-> À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O compilador encontrará e reportará esses erros. Verifique atentamente a saída do erro e o código que gerou o erro. Normalmente, o erro do compilador pode ajudar você a localizar o problema.
+> À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O compilador encontrará e reportará esses erros. Verifique atentamente a saída do erro e o código que gerou o erro. O erro do compilador geralmente pode ajudá-lo a localizar o problema.
 
 Este primeiro exemplo mostra o poder dos tipos `if` e Booliano. Um *Booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis Boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada.
 

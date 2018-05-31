@@ -9,73 +9,74 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516211"
 ---
 # <a name="how-to-start-services"></a>Como iniciar serviços
-Depois que um serviço é instalado, ele deve ser iniciado. Iniciando chamadas de <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método na classe de serviço. Normalmente, o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método define o trabalho útil que o serviço irá executar. Depois que um serviço é iniciado, ele permanece ativo até que seja pausado ou interrompido manualmente.  
+Depois que um serviço for instalado, ele precisará ser iniciado. O início chama o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> na classe de serviço. Normalmente, o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> define o trabalho útil que o serviço executará. Depois que um serviço é iniciado, ele permanece ativo até que ser colocado em pausa ou ser interrompido manualmente.  
   
- Services pode ser configurado para iniciar automaticamente ou manualmente. Um serviço que inicia automaticamente será iniciado quando o computador no qual ele está instalado é reinicializado ou é ligado pela primeira vez. Um usuário deve iniciar um serviço que inicia manualmente.  
+ Os serviços podem ser configurados para serem iniciados automaticamente ou manualmente. Um serviço que é iniciado automaticamente será iniciado quando o computador no qual ele estiver instalado for reiniciado ou ligado pela primeira vez. Um serviço que é iniciado manualmente precisa ser iniciado por um usuário.  
   
 > [!NOTE]
->  Por padrão, os serviços criados com o Visual Studio são definidos para iniciar manualmente.  
+>  Por padrão, os serviços criados com o Visual Studio são definidos para serem iniciados manualmente.  
   
- Há várias maneiras que você pode iniciar manualmente um serviço — de **Server Explorer**, do **Gerenciador de controle de serviços**, ou do código usando um componente denominado o <xref:System.ServiceProcess.ServiceController>.  
+ Há várias maneiras de iniciar um serviço manualmente, por meio do **Gerenciador de Servidores**, do **Gerenciador de Controle de Serviços** ou do código usando um componente chamado <xref:System.ServiceProcess.ServiceController>.  
   
- Definir o <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propriedade o <xref:System.ServiceProcess.ServiceInstaller> classe para determinar se um serviço deve ser iniciado manualmente ou automaticamente.  
+ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> na classe <xref:System.ServiceProcess.ServiceInstaller> para determinar se um serviço deve ser iniciado manualmente ou automaticamente.  
   
 ### <a name="to-specify-how-a-service-should-start"></a>Para especificar como um serviço deve ser iniciado  
   
-1.  Depois de criar seu serviço, adicione os instaladores necessários para ele. Para obter mais informações, consulte [como: adicionar instaladores ao seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  No designer, clique o instalador de serviço para o serviço que você está trabalhando.  
+2.  No designer, clique no instalador do serviço com o qual você está trabalhando.  
   
-3.  No **propriedades** janela, defina o <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propriedade para um dos seguintes:  
+3.  Na janela **Propriedades**, defina a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> para uma das opções a seguir:  
   
-    |Para ter seu serviço instalado|Definir esse valor|  
+    |Para que o serviço seja instalado|Defina esse valor|  
     |----------------------------------|--------------------|  
     |Quando o computador é reiniciado|**Automático**|  
     |Quando uma ação explícita do usuário inicia o serviço|**Manual**|  
   
     > [!TIP]
-    >  Para impedir que seu serviço seja iniciado, você pode definir o <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propriedade **desabilitado**. Você pode fazer isso se você vai reiniciar um servidor várias vezes e deseja economizar tempo, impedindo que os serviços que normalmente seriam iniciados seja iniciado.  
+    >  Para impedir que o serviço seja iniciado, você pode definir a propriedade<xref:System.ServiceProcess.ServiceInstaller.StartType%2A> **Desabilitado**. Você poderá fazer isso quando pretender reiniciar um servidor várias vezes e desejar economizar tempo impedindo que sejam iniciados os serviços que normalmente seriam.  
   
     > [!NOTE]
-    >  Essas e outras propriedades podem ser alteradas depois que o serviço está instalado.  
+    >  Essas e outras propriedades poderão ser alteradas depois que o serviço estiver instalado.  
   
-     Há várias maneiras que você pode iniciar um serviço que tem seu <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> processo definido como **Manual** — de **Server Explorer**, do **Gerenciador de controle de serviços do Windows**, ou de código. É importante observar que nem todos os métodos realmente iniciam o serviço no contexto do **Gerenciador de controle de serviços**; **Server Explorer** e métodos programáticos de iniciar o serviço realmente manipulam o controlador.  
+     Há várias maneiras de iniciar um serviço que tenha o processo <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> definido como **Manual**, usando o **Gerenciador de Servidores**, o **Gerenciador de Controle de Serviços Windows** ou o código. É importante observar que nem todos esses métodos realmente iniciam o serviço no contexto do **Gerenciador de Controle de Serviços**. O **Gerenciador de Servidores** e os métodos programáticos de iniciar o serviço realmente manipulam o controlador.  
   
-### <a name="to-manually-start-a-service-from-server-explorer"></a>Para iniciar manualmente um serviço do Gerenciador de servidores  
+### <a name="to-manually-start-a-service-from-server-explorer"></a>Para iniciar um serviço manualmente usando o Gerenciador de Servidores  
   
-1.  Em **Server Explorer**, adicione o servidor que você deseja se ele não ainda esteja listado. Para obter mais informações, consulte como: acesso e inicializar o Gerenciador de banco de dados do Gerenciador de servidores.  
+1.  No **Gerenciador de Servidores**, adicione o servidor desejado caso ele ainda não esteja listado. Para obter mais informações, consulte Como acessar e inicializar o Gerenciador de Servidores/Gerenciador de Banco de Dados.  
   
-2.  Expanda o **serviços** nó e, em seguida, localize o serviço que você deseja iniciar.  
+2.  Expanda o nó **Serviços** e, em seguida, localize o serviço que você deseja iniciar.  
   
-3.  Clique no nome do serviço e, em seguida, clique em **iniciar**.  
+3.  Clique com o botão direito do mouse no nome do serviço e, em seguida, clique em **Iniciar**.  
   
-### <a name="to-manually-start-a-service-from-services-control-manager"></a>Para iniciar manualmente um serviço do Gerenciador de controle de serviços  
+### <a name="to-manually-start-a-service-from-services-control-manager"></a>Para iniciar um serviço manualmente usando o Gerenciador de Controle de Serviços  
   
-1.  Abra o **Gerenciador de controle de serviços** seguindo um destes procedimentos:  
+1.  Abra o **Gerenciador de Controle de Serviços** seguindo um destes procedimentos:  
   
-    -   No Windows XP e 2000 Professional, clique com botão direito **meu computador** na área de trabalho e, em seguida, clique **gerenciar**. Na caixa de diálogo que aparece, expanda o **serviços e aplicativos** nó.  
+    -   No Windows XP e no 2000 Professional, clique com botão direito do mouse em **Meu Computador** na área de trabalho e, em seguida, clique em **Gerenciar**. Na caixa de diálogo que aparece, expanda o nó **Serviços e Aplicativos**.  
   
          \- ou -  
   
-    -   No Windows Server 2003 e Windows 2000 Server, clique em **iniciar**, aponte para **programas**, clique em **ferramentas administrativas**e, em seguida, clique em **serviços**.  
+    -   No Windows Server 2003 e no Windows 2000 Server, clique em **Iniciar**, aponte para **Programas**, clique em **Ferramentas Administrativas** e, em seguida, clique em **Serviços**.  
   
         > [!NOTE]
-        >  No Windows NT versão 4.0, você pode abrir essa caixa de diálogo de **painel de controle**.  
+        >  No Windows NT versão 4.0, você pode abrir essa caixa de diálogo do **Painel de Controle**.  
   
-     Agora você deve ver seu serviço listado no **serviços** seção da janela.  
+     Agora o serviço deverá listado na seção **Serviços** da janela.  
   
-2.  Selecione o serviço na lista, clique duas vezes e, em seguida, clique em **iniciar**.  
+2.  Selecione o serviço na lista, clique nele com o botão direito do mouse e, em seguida, clique em **Iniciar**.  
   
-### <a name="to-manually-start-a-service-from-code"></a>Para iniciar manualmente um serviço de código  
+### <a name="to-manually-start-a-service-from-code"></a>Para iniciar um serviço manualmente usando código  
   
-1.  Criar uma instância do <xref:System.ServiceProcess.ServiceController> classe e configurá-lo para interagir com o serviço que você deseja administrar.  
+1.  Crie uma instância da classe <xref:System.ServiceProcess.ServiceController> e configure-a para interagir com o serviço que você deseja administrar.  
   
-2.  Chamar o <xref:System.ServiceProcess.ServiceController.Start%2A> método para iniciar o serviço.  
+2.  Chame o método <xref:System.ServiceProcess.ServiceController.Start%2A> para iniciar o serviço.  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

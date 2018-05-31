@@ -12,20 +12,21 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392501"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Visão geral do modelo de programação atribuído (MEF)
-No Managed Extensibility Framework (MEF), um *modelo de programação* é um método específico de definir o conjunto de objetos conceituais opera MEF. Esses objetos conceituais incluem partes, importações e exportações. O MEF usa esses objetos, mas não especifica como eles devem ser representados. Portanto, uma grande variedade de modelos de programação são possíveis, incluindo modelos de programação personalizados.  
+No MEF (Managed Extensibility Framework), um *modelo de programação* é um método específico para definir o conjunto de objetos conceituais no qual o MEF opera. Esses objetos conceituais incluem partes, importações e exportações. O MEF usa esses objetos, mas não especifica como eles devem ser representados. Portanto, uma grande variedade de modelos de programação são possíveis, incluindo modelos de programação personalizados.  
   
- O padrão é de modelo de programação usado no MEF o *modelo de programação atribuído*. No modelo de programação atribuída, partes, importações, exportações e outros objetos são definidos com atributos que decoram classes comuns do .NET Framework. Este tópico explica como usar os atributos fornecidos pelo modelo de programação atribuída para criar um aplicativo MEF.  
+ O modelo de programação padrão usado no MEF é o *modelo de programação atribuído*. No modelo de programação atribuída, partes, importações, exportações e outros objetos são definidos com atributos que decoram classes comuns do .NET Framework. Este tópico explica como usar os atributos fornecidos pelo modelo de programação atribuída para criar um aplicativo MEF.  
   
 <a name="import_and_export_basics"></a>   
 ## <a name="import-and-export-basics"></a>Fundamentos sobre importações e exportações  
- Um *exportar* é um valor que fornece uma parte de outras partes no contêiner, e um *importar* é um requisito que uma parte expressa para o contêiner, a ser preenchida as exportações disponíveis. No modelo de programação atribuída, importações e exportações são declaradas decorando classes ou membros com os atributos `Import` e `Export`. O atributo `Export` pode decorar uma classe, um campo, propriedade ou método, enquanto o atributo `Import` pode decorar um parâmetro de campo, propriedade ou construtor.  
+ Uma *exportação* é um valor que uma parte fornece a outras partes no contêiner, e uma *importação* é um requisito que uma parte expressa ao contêiner, a ser preenchido com as exportações disponíveis. No modelo de programação atribuída, importações e exportações são declaradas decorando classes ou membros com os atributos `Import` e `Export`. O atributo `Export` pode decorar uma classe, um campo, propriedade ou método, enquanto o atributo `Import` pode decorar um parâmetro de campo, propriedade ou construtor.  
   
- Para uma importação a ser correspondido com uma exportação, importação e exportação devem ter o mesmo *contrato*. O contrato consiste em uma cadeia de caracteres chamada o *nome do contrato*e o tipo de objeto exportado ou importado, chamada de *tipo de contrato*. Somente se o nome do contrato e o tipo de contrato corresponderem, uma exportação é considerada para atender uma importação específica.  
+ Para que uma importação seja correspondida a uma exportação, a importação e a exportação devem ter o mesmo *contrato*. O contrato é formado por uma cadeia de caracteres, chamada *nome do contrato*, e pelo tipo de objeto exportado ou importado, chamado de *tipo de contrato*. Somente se o nome do contrato e o tipo de contrato corresponderem, uma exportação é considerada para atender uma importação específica.  
   
  Um ou os dois parâmetros do contrato podem ser implícitos ou explícitos. O código a seguir mostra uma classe que declara uma importação básica.  
   
@@ -81,7 +82,7 @@ End Class
 public class MyLogger : IMyAddin { }  
 ```  
   
- Nessa exportação, o tipo de contrato é `MyLogger` ao invés de `IMyAddin`. Embora `MyLogger` implementa `IMyAddin`e, portanto, pode ser convertido em um `IMyAddin` do objeto, exportar não corresponderá a importação anterior porque os tipos de contrato não são iguais.  
+ Nessa exportação, o tipo de contrato é `MyLogger` ao invés de `IMyAddin`. Embora `MyLogger` implemente `IMyAddin` e, portanto, possa ser convertido em um objeto `IMyAddin`, essa exportação não corresponderá à importação anterior porque os tipos de contrato não são iguais.  
   
  Em geral, não é necessário especificar o nome do contrato, e a maioria dos contratos deve ser definida em relação ao tipo de contrato e metadados. No entanto, em determinadas circunstâncias, é importante especificar o nome do contrato diretamente. O caso mais comum é quando uma classe exporta vários valores que compartilham um tipo em comum, como primitivos. O nome do contrato pode ser especificado como primeiro parâmetro do atributo `Import` ou `Export`. O código a seguir mostra uma importação e uma exportação com um nome de contrato especificado de `MajorRevision`.  
   
@@ -219,7 +220,7 @@ public class MyToolbar { }
  Obviamente, a classe de importação deve ser preparada para lidar com um objeto de tipo arbitrário.  
   
 ### <a name="lazy-imports"></a>Importações lentas  
- Em alguns casos, a classe de importação pode exigir uma referência indireta ao objeto importado, de modo que o objeto não seja instanciado imediatamente. Nesse cenário, a classe pode declarar uma *importação lenta* usando um tipo de contrato de `Lazy<T>`. A propriedade de importação a seguir declara uma importação lenta.  
+ Em alguns casos, a classe de importação pode exigir uma referência indireta ao objeto importado, de modo que o objeto não seja instanciado imediatamente. Nesse cenário, a classe pode declarar uma *importação lenta* usando o tipo de contrato `Lazy<T>`. A propriedade de importação a seguir declara uma importação lenta.  
   
 ```vb  
 Public Class MyClass1  
@@ -325,14 +326,14 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
   
  Em particular, você deve tomar cuidado com parâmetros de coleção. Por exemplo, se você especificar `ImportingConstructor` em um construtor com o parâmetro do tipo `IEnumerable<int>`, a importação corresponderá a uma única exportação do tipo `IEnumerable<int>`, ao invés de a um conjunto de exportações do tipo `int`. Para corresponder a um conjunto de exportações do tipo `int`, você precisa decorar o parâmetro com o atributo `ImportMany`.  
   
- Parâmetros declarados como importações pelo `ImportingConstructor` atributo também serão marcados como *pré-requisito importa*. MEF normalmente permite que exporta e importa para formar um *ciclo*. Por exemplo, um ciclo é onde as importações de objeto A objeto B, que por sua vez importa a objeto. Sob nenhuma circunstância, um ciclo não é um problema e o contêiner de composição constrói os dois objetos normalmente.  
+ Os parâmetros declarados como importações pelo atributo `ImportingConstructor` também são marcados como *importações de pré-requisito*. O MEF normalmente permite exportações e importações para formar um *ciclo*. Por exemplo, um ciclo é quando o objeto A importa o objeto B, que por sua vez importa o objeto A. Em circunstância normais, um ciclo não é um problema e o contêiner de composição constrói os dois objetos normalmente.  
   
  Quando um valor importado é solicitado pelo construtor de uma parte, esse objeto não pode participar de um ciclo. Se o objeto A exigir que o objeto B seja construído antes que ele próprio possa ser construído, e o objeto B importar o objeto A, então será impossível resolver o ciclo e um erro de composição ocorrerá. Importações declaradas nos parâmetros do construtor são, portanto, importações obrigatórias, que devem ser preenchidas antes que qualquer exportação do objeto que as requer possa ser usada.  
   
 ### <a name="optional-imports"></a>Importações opcionais  
  O atributo `Import` especifica um requisito para a parte funcionar. Se uma importação não puder ser atendida, a composição dessa parte falhará e a parte não estará disponível.  
   
- Você pode especificar que uma importação *opcional* usando o `AllowDefault` propriedade. Nesse caso, a composição será bem-sucedida mesmo se a importação não corresponder a nenhuma exportação disponível, e a propriedade de importação será definida como o padrão em relação ao seu tipo de propriedade (`null` para propriedades de objeto, `false` para Booleanos ou zero para propriedades numéricas.) A classe a seguir usa uma importação opcional.  
+ Você pode especificar que uma importação é *optional* usando a propriedade `AllowDefault`. Nesse caso, a composição será bem-sucedida mesmo se a importação não corresponder a nenhuma exportação disponível, e a propriedade de importação será definida como o padrão em relação ao seu tipo de propriedade (`null` para propriedades de objeto, `false` para Booleanos ou zero para propriedades numéricas.) A classe a seguir usa uma importação opcional.  
   
 ```vb  
 Public Class MyClass1  
@@ -401,7 +402,7 @@ public class MyClass
 ## <a name="avoiding-discovery"></a>Evitando descobertas  
  Em alguns casos, talvez você queira impedir que uma parte seja descoberta como parte de um catálogo. Por exemplo, a parte pode ser uma classe base para fins de herança, mas não para ser usada. Há duas maneiras de fazer isso. Primeiramente, você pode usar a palavra-chave `abstract` na classe da parte. Classes abstratas nunca oferecem exportações, embora possam fornecer exportações herdadas a classes derivadas.  
   
- Se a classe não puder se tornar abstrata, você poderá decorá-la com o atributo `PartNotDiscoverable`. Uma parte decorada com esse atributo não será incluída em nenhum catálogo. O exemplo a seguir demonstra esses padrões. `DataOne` serão descobertos pelo catálogo. Uma vez que `DataTwo` é abstrato, ele não será descoberto. Uma vez que `DataThree` usou o atributo `PartNotDiscoverable`, ele não será descoberto.  
+ Se a classe não puder se tornar abstrata, você poderá decorá-la com o atributo `PartNotDiscoverable`. Uma parte decorada com esse atributo não será incluída em nenhum catálogo. O exemplo a seguir demonstra esses padrões. `DataOne` será descoberto pelo catálogo. Uma vez que `DataTwo` é abstrato, ele não será descoberto. Uma vez que `DataThree` usou o atributo `PartNotDiscoverable`, ele não será descoberto.  
   
 ```vb  
 <Export()>  
@@ -450,9 +451,9 @@ public class DataThree
   
 <a name="metadata_and_metadata_views"></a>   
 ## <a name="metadata-and-metadata-views"></a>Metadados e exibições de metadados  
- Exportações podem fornecer informações adicionais sobre si conhecido como *metadados*. Metadados podem ser usados para transmitir propriedades do objeto exportado à parte que realizará a importação. A parte que realizará a importação pode usar esses dados para decidir quais exportações utilizar, ou coletar informações sobre uma exportação sem precisar construí-la. Por esse motivo, uma importação deve ser lenta para usar metadados.  
+ As exportações podem fornecer informações adicionais sobre elas mesmas, conhecidas como *metadados*. Metadados podem ser usados para transmitir propriedades do objeto exportado à parte que realizará a importação. A parte que realizará a importação pode usar esses dados para decidir quais exportações utilizar, ou coletar informações sobre uma exportação sem precisar construí-la. Por esse motivo, uma importação deve ser lenta para usar metadados.  
   
- Para usar os metadados, você normalmente declarar uma interface conhecida como uma *exibição de metadados*, que declara que metadados estarão disponíveis. A interface de exibição de metadados deve conter somente propriedades, e essas propriedades devem ter acessadores `get`. A interface a seguir é um exemplo de exibição de metadados.  
+ Para usar metadados, geralmente você declara uma interface conhecida como *exibição de metadados*, que declara quais metadados estarão disponíveis. A interface de exibição de metadados deve conter somente propriedades, e essas propriedades devem ter acessadores `get`. A interface a seguir é um exemplo de exibição de metadados.  
   
 ```vb  
 Public Interface IPluginMetadata  
@@ -582,7 +583,7 @@ public class User
   
  Exportações declaradas usando o atributo `Export` não são herdadas por subclasses. Entretanto, uma parte pode exportar a si mesma usando o atributo `InheritedExport`. Subclasses da parte herdarão e fornecerão a mesma exportação, incluindo o nome e o tipo do contrato. Diferentemente de um atributo `Export`, `InheritedExport` pode ser aplicado somente no nível da classe e não no nível do membro. Portanto, exportações no nível do membro nunca podem ser herdadas.  
   
- As quatro classes a seguir demonstram os princípios da herança de importação e exportação. `NumTwo` herda de `NumOne`, portanto `NumTwo` importará `IMyData`. Exportações comuns não são herdadas, por isso, `NumTwo` não exportará nada. `NumFour` herda de `NumThree`. Como `NumThree` usou `InheritedExport`, `NumFour` tem uma exportação com o tipo de contrato `NumThree`. Exportações no nível do membro nunca são herdadas, portanto, `IMyData` não é exportado.  
+ As quatro classes a seguir demonstram os princípios da herança de importação e exportação. A `NumTwo` é herdada da `NumOne`, portanto a `NumTwo` importará a `IMyData`. Exportações comuns não são herdadas, por isso, `NumTwo` não exportará nada. `NumFour` herda de `NumThree`. Como `NumThree` usou `InheritedExport`, `NumFour` tem uma exportação com o tipo de contrato `NumThree`. Exportações no nível do membro nunca são herdadas, portanto, `IMyData` não é exportado.  
   
 ```vb  
 <Export()>  
@@ -798,15 +799,15 @@ public MyAddin myAddin { get; set; }
   
 <a name="creation_policies"></a>   
 ## <a name="creation-policies"></a>Políticas de criação  
- Quando uma parte especifica uma importação e a composição é realizada, o contêiner da composição tenta encontrar uma exportação correspondente. Se a importação for correspondida a uma exportação com êxito, o membro da importação é definido como uma instância do objeto exportado. Onde esta instância vêm é controlado pela parte de exportação *política de criação de*.  
+ Quando uma parte especifica uma importação e a composição é realizada, o contêiner da composição tenta encontrar uma exportação correspondente. Se a importação for correspondida a uma exportação com êxito, o membro da importação é definido como uma instância do objeto exportado. O lugar de origem dessa instância é controlado pela *política de criação* da parte exportadora.  
   
- As duas políticas de criação possíveis são *compartilhado* e *não compartilhado*. Uma parte com uma política de criação compartilhada será compartilhada entre cada importação no contêiner para uma parte com esse contrato. Quando o mecanismo de composição encontra uma correspondência e precisa definir uma propriedade de importação, ele instanciará uma nova cópia da parte somente se ainda não existir uma; caso contrário, a cópia existente será fornecida. Isso significa que vários objetos possuem referências para a mesma parte. Essas partes não devem depender do estado interno que pode ser alterado a partir de diversos locais. Essa política é adequada para partes estáticas, partes que oferecem serviços e partes que consomem muita memória ou outros recursos.  
+ As duas políticas de criação possíveis são *compartilhada* e *não compartilhada*. Uma parte com uma política de criação compartilhada será compartilhada entre cada importação no contêiner para uma parte com esse contrato. Quando o mecanismo de composição encontra uma correspondência e precisa definir uma propriedade de importação, ele instanciará uma nova cópia da parte somente se ainda não existir uma; caso contrário, a cópia existente será fornecida. Isso significa que vários objetos possuem referências para a mesma parte. Essas partes não devem depender do estado interno que pode ser alterado a partir de diversos locais. Essa política é adequada para partes estáticas, partes que oferecem serviços e partes que consomem muita memória ou outros recursos.  
   
  Uma parte com a política de criação não compartilhada será criada toda vez que uma importação correspondente para uma das exportações for encontrada. Uma nova cópia será, portanto, instanciada para cada importação no contêiner que corresponder a um dos contratos exportados da parte. O estado interno dessas cópias não será compartilhado. Essa política é adequada para partes em que cada importação exigir seu próprio estado interno.  
   
  A importação e a exportação podem especificar a política de criação de uma parte, dentre os valores `Shared`, `NonShared` ou `Any`. O padrão é `Any` para importações e exportações. Uma exportação que especifica `Shared` ou `NonShared` será correspondente somente a uma importação com a mesma especificação, ou que especificar `Any`. Da mesma forma, uma importação que especifica `Shared` ou `NonShared` será correspondente somente a uma exportação com a mesma especificação, ou que especificar `Any`. Importações e exportações com políticas de criação incompatíveis não são consideradas correspondentes, da mesma maneira que uma importação e uma exportação cujo nome ou tipo de contrato não são correspondentes. Se a importação e a exportação especificarem `Any`, ou não especificarem uma política de criação e o padrão for definido como `Any`, a política de criação será definida como compartilhada por padrão.  
   
- O exemplo a seguir mostra importações e exportações que especificam políticas de criação. `PartOne` não especifique uma política de criação, portanto, o padrão é `Any`. `PartTwo` não especifique uma política de criação, portanto, o padrão é `Any`. Como o padrão da importação e da exportação é `Any`, `PartOne` será compartilhada. `PartThree` Especifica um `Shared` política de criação, de modo `PartTwo` e `PartThree` compartilharão a mesma cópia de `PartOne`. `PartFour` Especifica um `NonShared` política de criação, de modo `PartFour` será compartilhado não em `PartFive`. `PartSix` Especifica um `NonShared` política de criação. `PartFive` e `PartSix` cada receberão cópias separadas dos `PartFour`. `PartSeven` Especifica um `Shared` política de criação. Como não há `PartFour` exportado com uma política de criação de `Shared`, a importação `PartSeven` não é correspondente a nada e não será preenchida.  
+ O exemplo a seguir mostra importações e exportações que especificam políticas de criação. `PartOne` não especifica uma política de criação, portanto, o padrão é `Any`. `PartTwo` não especifica uma política de criação, portanto, o padrão é `Any`. Como o padrão da importação e da exportação é `Any`, `PartOne` será compartilhada. `PartThree` especifica uma política de criação `Shared`, portanto, `PartTwo` e `PartThree` compartilharão a mesma cópia de `PartOne`. `PartFour` especifica uma política de criação `NonShared`, portanto, `PartFour` não será compartilhada em `PartFive`. `PartSix` especifica uma política de criação `NonShared`. `PartFive` e `PartSix` receberão cópias separadas de `PartFour`. `PartSeven` especifica uma política de criação `Shared`. Como não há `PartFour` exportado com uma política de criação de `Shared`, a importação `PartSeven` não é correspondente a nada e não será preenchida.  
   
 ```vb  
 <Export()>  
@@ -947,7 +948,7 @@ public class PartSeven
   
 <a name="life_cycle_and_disposing"></a>   
 ## <a name="life-cycle-and-disposing"></a>Ciclo de vida e descarte  
- Uma vez que as partes estão hospedadas no contêiner de composição, seu ciclo de vida pode ser mais complexo do que objetos comuns. Partes podem implementar duas interfaces importantes relacionados ao ciclo de vida: `IDisposable` e `IPartImportsSatisfiedNotification`.  
+ Uma vez que as partes estão hospedadas no contêiner de composição, seu ciclo de vida pode ser mais complexo do que objetos comuns. As partes podem implementar duas interfaces importantes relacionadas ao ciclo de vida: `IDisposable` e `IPartImportsSatisfiedNotification`.  
   
  Partes que precisam que um trabalho seja realizado no desligamento ou que precisam ter recursos liberados devem implementar `IDisposable`, como é comum para objetos do .NET Framework. No entanto, uma vez que o contêiner cria e mantém referências a partes, somente o contêiner que possui uma parte deve chamar o método `Dispose` em si. O contêiner em si implementa `IDisposable` e, como parte de sua limpeza em `Dispose`, ele chamará `Dispose` em todas as partes que possui. Por esse motivo, você deve sempre descartar o contêiner de composição quando ele, e qualquer uma de suas partes, não for mais necessário.  
   
@@ -956,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` contém um método chamado `OnImportsSatisfied`. Esse método é chamado pelo contêiner de composição em qualquer parte que implementar a interface quando a composição tiver sido concluída e as importações da parte estiverem prontas para uso. As partes são criadas pelo mecanismo de composição para preencher as importações de outras partes. Antes de as importações de uma parte terem sido definidas, você não pode realizar nenhuma inicialização que dependa de ou manipule valores importados no construtor da parte, a menos que esses valores tenham sido especificados como pré-requisitos usando o atributo `ImportingConstructor`. Normalmente, esse é o método preferido, mas, em alguns casos, a injeção do construtor pode não estar disponível. Na maioria dos casos, a inicialização pode ser realizada em `OnImportsSatisfied`, e a parte deve implementar `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Vídeo do Channel 9: Abrir os seus aplicativos com o Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Vídeo do Channel 9: Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Vídeo do Channel 9: Open Up Your Applications with the Managed Extensibility Framework (Abra seus aplicativos com o Managed Extensibility Framework)](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Vídeo do Channel 9: Managed Extensibility Framework (MEF) 2.0 [MEF (Managed Extensibility Framework) 2.0]](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393504"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW (Runtime Callable Wrapper)
 O common language runtime expõe objetos COM através de um proxy chamado RCW (Runtime Callable Wrapper). Embora o RCW pareça ser um objeto comum para clientes .NET, a função principal dele é realizar marshaling de chamadas entre um cliente .NET e um objeto COM.  
@@ -57,7 +58,7 @@ Interfaces COM e o Runtime Callable Wrapper
   
 ## <a name="see-also"></a>Consulte também  
  [Wrappers COM](com-wrappers.md)  
- [Marshaling de Interfaces selecionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
+ [Marshaling de interfaces selecionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
  [COM Callable Wrapper](com-callable-wrapper.md)  
  [Resumo da conversão de bibliotecas de tipos em assemblies](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)

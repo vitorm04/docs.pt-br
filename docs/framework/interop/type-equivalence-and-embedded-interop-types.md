@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390927"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalência de tipo e tipos de interoperabilidade inseridos
 
@@ -32,7 +33,7 @@ Equivalência de tipo significa que um objeto COM que é passado de um assembly 
 
 - Os tipos têm a mesma identidade, conforme descrito na próxima seção.
 
-- Ambos os tipos são elegíveis para equivalência de tipo, conforme descrito no [tipos de marcação COM equivalência de tipo](#marking-com-types-for-type-equivalence) seção.
+- Ambos os tipos são elegíveis para equivalência de tipo, conforme descrito na seção [Marcando tipos COM para a equivalência de tipo](#marking-com-types-for-type-equivalence).
 
 ### <a name="type-identity"></a>Tipo de identidade
 
@@ -44,7 +45,7 @@ Se um tipo não tiver o atributo <xref:System.Runtime.InteropServices.TypeIdenti
 
 - Para estruturas, enumerações e representantes, o <xref:System.Runtime.InteropServices.GuidAttribute> do assembly de contenção é usado em vez da propriedade <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> e a propriedade <xref:System.Type.FullName%2A?displayProperty=nameWithType> é usada em vez da propriedade <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.
 
-### <a name="marking-com-types-for-type-equivalence"></a>Tipos COM equivalência de tipo de marcação
+### <a name="marking-com-types-for-type-equivalence"></a>Marcando tipos COM para a equivalência de tipo
 
  É possível marcar um tipo como qualificado para a equivalência de tipo de duas maneiras:
 
@@ -55,5 +56,5 @@ Se um tipo não tiver o atributo <xref:System.Runtime.InteropServices.TypeIdenti
 ## <a name="see-also"></a>Consulte também
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[Usando tipos COM em código gerenciado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[Usando tipos COM no código gerenciado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
 [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)  

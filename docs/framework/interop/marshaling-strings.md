@@ -15,9 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391115"
 ---
 # <a name="marshaling-strings"></a>Realizando marshaling de cadeias de caracteres
 A invocação de plataforma copia parâmetros de cadeia de caracteres, convertendo-os do formato do .NET Framework (Unicode) para o formato não gerenciado (ANSI), se necessário. Já que as cadeias de caracteres gerenciadas são imutáveis, a invocação de plataforma não as copia de volta da memória não gerenciada para a memória gerenciada quando a função retorna.  

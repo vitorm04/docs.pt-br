@@ -4,11 +4,12 @@ description: O comando dotnet publish publica seu projeto .NET Core em um diret�
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472624"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -89,8 +90,8 @@ Não executa uma restauração implícita ao executar o comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuração]/[estrutura]/* para uma implantação dependente da estrutura, ou *./bin/[configuração]/[estrutura]/[tempo de execução]* para implantações autocontidas.
-Se um caminho relativo for fornecido, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
+Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuration]/[framework]/publish/* para uma implantação dependente da estrutura ou *./bin/[configuration]/[framework]/[runtime]/publish/* para implantações autocontidas.
+Se o caminho for relativo, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
 
 `--self-contained`
 
@@ -128,8 +129,8 @@ Especifica um ou vários [manifestos de destino](../deploying/runtime-store.md) 
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuração]/[estrutura]/* para uma implantação dependente da estrutura, ou *./bin/[configuração]/[estrutura]/[tempo de execução]* para implantações autocontidas.
-Se um caminho relativo for fornecido, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
+Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuration]/[framework]/publish/* para uma implantação dependente da estrutura ou *./bin/[configuration]/[framework]/[runtime]/publish/* para implantações autocontidas.
+Se o caminho for relativo, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

@@ -1,6 +1,6 @@
 ---
 title: foreach, in (Referência de C#)
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,44 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549368"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referência de C#)
 
-Uma instrução `foreach` repete um grupo de instruções inseridas para cada elemento em uma matriz ou coleção que implementa a interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. A [instrução foreach](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) é usada para iterar na coleção para obter as informações que você deseja, mas não pode ser usada para adicionar ou remover itens da coleção de origem para evitar efeitos colaterais imprevisíveis. Se você precisar adicionar ou remover itens da coleção de origem, use um loop [for](for.md).
-  
- As instruções inseridas continuam em execução para cada elemento da matriz ou coleção. Após a iteração ter sido concluída para todos os elementos na coleção, o controle é transferido para a próxima instrução que segue o bloco `foreach`.
-  
- Em qualquer ponto dentro do bloco `foreach`, você pode sair do loop usando a palavra-chave [break](break.md) ou seguir para a próxima iteração no loop, usando a palavra-chave [continue](continue.md).
+A instrução `foreach` executa uma instrução ou um bloco de instruções para cada elemento em uma instância do tipo que implementa a interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. A instrução `foreach` não está limitada a esses tipos e pode ser aplicada a uma instância de qualquer tipo que satisfaça as seguintes condições:
 
- Um loop `foreach` também pode ser encerrado pelas instruções [goto](goto.md), [retorn](return.md) ou [throw](throw.md).
+- incluir um método `GetEnumerator` público sem parâmetros, cujo tipo de retorno é um tipo de classe, estrutura ou interface,
+- o tipo de retorno do método `GetEnumerator` tem a propriedade `Current` pública e o método `MoveNext` público sem parâmetros, cujo tipo de retorno é <xref:System.Boolean>.
 
- Para obter mais informações sobre a palavra-chave `foreach` e exemplos de códigos, consulte os seguintes tópicos:  
+Em qualquer ponto dentro do bloco de instrução `foreach`, você pode sair do loop usando a palavra-chave [break](break.md) ou seguir para a próxima iteração no loop usando a palavra-chave [continue](continue.md). Você também pode sair de um loop `foreach` com a instrução [goto](goto.md), [return](return.md) ou [throw](throw.md).
 
- [Usando foreach com matrizes](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a>Exemplos
 
- [Como acessar uma classe de coleção com foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a>Exemplo
+O exemplo a seguir mostra o uso da instrução `foreach` com uma instância do tipo <xref:System.Collections.Generic.List%601> que implementa a interface <xref:System.Collections.Generic.IEnumerable%601>:
 
-O código a seguir mostra três exemplos:
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> Você pode modificar os exemplos para fazer experimentos com a sintaxe e tentar usos diferentes que são mais semelhantes ao seu caso de uso. Pressione "Executar" para executar o código e, em seguida, edite-o e pressione "Executar" novamente.
+O exemplo a seguir usa a instrução `foreach` com uma instância do tipo <xref:System.Span%601?displayProperty=nameWithType>, que não implementa nenhuma interface:
 
--   um típico loop `foreach` que exibe o conteúdo de uma matriz de inteiros
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   um loop [for](../../../csharp/language-reference/keywords/for.md), que faz a mesma coisa
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   um loop `foreach` que mantém uma contagem do número de elementos na matriz
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-[A instrução foreach (especificação da linguagem C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[Referência de C#](../index.md)
-
-[Guia de Programação em C#](../../programming-guide/index.md)
-
-[Palavras-chave do C#](index.md)
-
-[Instruções de iteração](iteration-statements.md)
-
-[for](for.md)
+[A instrução foreach (especificação da linguagem C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[Usando foreach com matrizes](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[for](for.md)  
+[Instruções de iteração](iteration-statements.md)  
+[Palavras-chave do C#](index.md)  
+[Referência de C#](../index.md)  
+[Guia de Programação em C#](../../programming-guide/index.md)  

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393144"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
 Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  
@@ -41,9 +42,9 @@ Em um aplicativo que consiste inteiramente em um código gerenciado, o Common La
   
 |Tipo de matriz gerenciada|Tipo de elemento|Classificação|Limite inferior|Notação de assinatura|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Especificado pelo tipo.|Especificado pela classificação.|Opcionalmente, especificado pelos limites.|*tipo* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Especificado pelo tipo.|Especificado pela classificação.|Opcionalmente, especificado pelos limites.|*type* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Especificado pelo tipo.|1|0|*tipo* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Especificado pelo tipo.|1|0|*type* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrizes não gerenciadas  

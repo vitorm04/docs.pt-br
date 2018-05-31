@@ -5,69 +5,73 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f1f51040033cf25f7f1aefb04d249e6e028ca3
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472770"
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Como usar as Funcionalidades da Documentação XML (Guia de Programação em C#)
 O exemplo a seguir fornece uma visão geral básica de um tipo que foi documentado.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
-  
- **// Este arquivo .xml foi gerado com o exemplo de código anterior.**  
-**\<?xml version="1.0"?>**  
-**\<doc>**  
- **\<assembly>**  
- **\<name>xmlsample\</name>**  
- **\</assembly>**  
- **\<members>**  
- **\<nome do membro="T:SomeClass">**  
- **\<summary>**  
- **A documentação de resumo de nível fica aqui. \</summary>**  
- **\<remarks>**  
- **Comentários mais longos podem ser associados a um tipo ou membro**  
- **por meio da marca de comentário\</remarks>**  
- **\</member>**  
- **\<nome do membro="F:SomeClass.m_Name">**  
- **\<summary>**  
- **Repositório para a propriedade de nome\</summary>**  
- **\</member>**  
- **\<nome do membro="M:SomeClass.#ctor">**  
- **\<summary>O construtor de classe.\</summary>**  
- **\</member>**  
- **\<nome do membro="M:SomeClass.SomeMethod(System.String)">**  
- **\<summary>**  
- **Descrição de SomeMethod.\</summary>**  
- **\<nome do parâmetro="s"> A descrição do parâmetro para s fica aqui\</param>**  
- **\<seealso cref="T:System.String">**  
- **Use o atributo cref em qualquer marcação para referenciar um tipo ou membro**  
- **e o compilador verificará se a referência existe. \</seealso>**  
- **\</member>**  
- **\<nome do membro="M:SomeClass.SomeOtherMethod">**  
- **\<summary>**  
- **Algum outro método. \</summary>**  
- **\<returns>**  
- **Resultados retornados são descritos por meio da marca returns. \</returns>**  
- **\<seealso cref="M:SomeClass.SomeMethod(System.String)">**  
- **Observe o uso do atributo cref para fazer referência a um método específico \</seealso>**  
- **\</member>**  
- **\<nome do membro="M:SomeClass.Main(System.String[])">**  
- **\<summary>**  
- **O ponto de entrada do aplicativo.**  
- **\</summary>**  
- **\<nome do parâmetro ="args"> Uma lista de argumentos de linha de comando\</param>**  
- **\</member>**  
- **\<nome do membro="P:SomeClass.Name">**  
- **\<summary>**  
- **Propriedade de nome \</summary>**  
- **\<value>**  
- **Uma marca value é usada para descrever o valor da propriedade \</value>**  
- **\</member>**  
- **\</members>**  
-**\</doc>**   
+
+O exemplo gera um arquivo .xml com o seguinte conteúdo:
+
+```xml  
+<?xml version="1.0"?>  
+<doc>  
+ <assembly>  
+ <name>xmlsample</name>  
+ </assembly>  
+ <members>  
+ <member name="T:SomeClass">  
+ <summary>  
+ Class level summary documentation goes here.</summary>  
+ <remarks>  
+ Longer comments can be associated with a type or member  
+ through the remarks tag</remarks>  
+ </member>  
+ <member name="F:SomeClass.m_Name">  
+ <summary>  
+ Store for the name property</summary>  
+ </member>  
+ <member name="M:SomeClass.#ctor">  
+ <summary>The class constructor.</summary>  
+ </member>  
+ <member name="M:SomeClass.SomeMethod(System.String)">  
+ <summary>  
+ Description for SomeMethod.</summary>  
+ <param name="s"> Parameter description for s goes here</param>  
+ <seealso cref="T:System.String">  
+ You can use the cref attribute on any tag to reference a type or member  
+ and the compiler will check that the reference exists. </seealso>  
+ </member>  
+ <member name="M:SomeClass.SomeOtherMethod">  
+ <summary>  
+ Some other method. </summary>  
+ <returns>  
+ Return results are described through the returns tag.</returns>  
+ <seealso cref="M:SomeClass.SomeMethod(System.String)">  
+ Notice the use of the cref attribute to reference a specific method </seealso>  
+ </member>  
+ <member name="M:SomeClass.Main(System.String[])">  
+ <summary>  
+ The entry point for the application.  
+ </summary>  
+ <param name="args"> A list of command line arguments</param>  
+ </member>  
+ <member name="P:SomeClass.Name">  
+ <summary>  
+ Name property </summary>  
+ <value>A value tag is used to describe the property value</value>  
+ </member>  
+ </members>  
+</doc>   
+```
+
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para compilar o exemplo, digite a seguinte linha de comando:  
   
@@ -80,7 +84,7 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
   
 -   A documentação deve ser em XML bem formado. Se o XML não estiver bem formado, um aviso será gerado e o arquivo de documentação conterá um comentário que diz que foi encontrado um erro.  
   
--   Os desenvolvedores são livres para criar seu próprio conjunto de marcas. Há um conjunto de marcas recomendado (consulte a seção de Leituras complementares). Algumas das marcas recomendadas têm significado especial:  
+-   Os desenvolvedores são livres para criar seu próprio conjunto de marcas. Há um conjunto de marcas recomendadas (confira [Marcas recomendadas para comentários da documentação](recommended-tags-for-documentation-comments.md)). Algumas das marcas recomendadas têm significado especial:  
   
     -   A marca \<param> é usada para descrever parâmetros. Se ela for usada, o compilador verificará se o parâmetro existe e se todos os parâmetros são descritos na documentação. Se a verificação falhar, o compilador emitirá um aviso.  
   

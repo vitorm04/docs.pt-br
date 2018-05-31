@@ -8,9 +8,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388349"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Realizando marshaling em dados com interoperabilidade COM
 Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado e à exposição de objetos gerenciados para COM. O suporte a marshaling dos dados de e para o COM é abrangente e quase sempre proporciona o comportamento de marshaling correto.  
@@ -21,21 +22,21 @@ Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado 
   
 -   [Digite o exportador da biblioteca (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), que produz uma biblioteca de tipos COM de um assembly e gera um wrapper que realiza marshaling durante as chamadas de método.  
   
- As seções a seguir links para tópicos que descrevem os processos para personalizar os wrappers de interoperabilidade quando você pode (ou deve) fornece o empacotador com informações de tipo adicionais.  
+ As seções a seguir são vinculadas a tópicos que descrevem os processos para personalizar os wrappers de interoperabilidade quando você pode (ou precisa) fornecer informações de tipo adicionais ao marshaler.  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Como: criar Wrappers manualmente](how-to-create-wrappers-manually.md)   
-Descreve como criar um wrapper COM manualmente no código gerenciado. 
+[Como criar wappers manualmente](how-to-create-wrappers-manually.md)   
+Descreve como criar um wrapper COM manualmente no código-fonte gerenciado. 
  
  [Como: migrar código DCOM gerenciado para o WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
- Descreve como migrar o código gerenciado do DCOM para o WCF para a solução mais segura.  
+ Descreve como migrar o código DCOM gerenciado para o WCF para obter a solução mais segura possível.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Tipos de dados COM](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  Fornece tipos de dados gerenciados e não gerenciados correspondentes.  
   
  [Personalizando COM Callable Wrappers](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
- Descreve como realizar marshaling explicitamente os tipos de dados usando o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo em tempo de design.  
+ Descreve como realizar marshaling nos tipos de dados explicitamente usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> em tempo de design.  
   
  [Personalizando RCWs (Runtime Callable Wrappers)](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  Descreve como ajustar o comportamento de marshaling de tipos em um assembly de interoperabilidade e como definir tipos COM manualmente.  

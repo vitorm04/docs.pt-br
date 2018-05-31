@@ -9,9 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f54d77be130d57c39319e81d58ad5af7815e548
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390855"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Como registrar assemblies de interoperabilidade primários
 As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, consulte [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md).  
@@ -49,5 +50,5 @@ regasm CompanyA.UtilLib.dll
   
 ## <a name="see-also"></a>Consulte também  
  [Programando com assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))  
- [Localizando os Assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
+ [Localizando assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
  [Redistribuindo assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))
