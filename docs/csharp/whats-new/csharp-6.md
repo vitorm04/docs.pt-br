@@ -3,12 +3,12 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457999"
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483483"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -342,11 +342,11 @@ Os detalhes de implementação para adicionar suporte ao `await` dentro de cláu
 
 ## <a name="index-initializers"></a>Inicializadores de índice
 
-Os *inicializadores de índice* são um dos dois recursos que tornam os inicializadores de coleção mais consistentes. Em versões anteriores do C#, você podia usar *inicializadores de coleção* apenas com coleções de estilo de sequência:
+Os *inicializadores de índice* são um dos dois recursos que deixam os inicializadores de coleção mais consistentes com o uso do índice. Nas versões anteriores do C#, era possível usar *inicializadores de coleção* apenas com coleções de estilo de sequência, incluindo <xref:System.Collections.Generic.Dictionary%602>, colocando os pares chave-valor entre chaves:
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-Agora, você também pode usá-los com coleções <xref:System.Collections.Generic.Dictionary%602> e tipos semelhantes:
+Agora, você também pode usá-los com coleções <xref:System.Collections.Generic.Dictionary%602> e tipos semelhantes. A nova sintaxe permite a atribuição usando um índice na coleção:
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
