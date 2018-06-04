@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728674"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
 O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os valores href="…" e suas localizações na cadeia de caracteres.  
@@ -43,9 +44,9 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
 |`=`|Corresponder ao sinal de igual.|  
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
 |`(?<1>[^"']*)`|Atribuir zero ou mais ocorrências de qualquer caractere diferente de aspas simples ou apóstrofe ao grupo de captura chamado `1`.|  
-|`"(?<1>\S+)`|Atribuir um ou mais caracteres diferentes de espaço em branco ao grupo de captura chamado `1`.|  
+|`(?<1>\S+)`|Atribuir um ou mais caracteres diferentes de espaço em branco ao grupo de captura chamado `1`.|  
   
 ## <a name="match-result-class"></a>Classe de resultado de correspondência  
  Os resultados de uma pesquisa são armazenados na classe <xref:System.Text.RegularExpressions.Match>, que fornece acesso a todas as subcadeias de caracteres extraídas pela pesquisa. Também lembra a cadeia de caracteres que está sendo pesquisada e a expressão regular que está sendo usada para poder chamar o método <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> para executar outra pesquisa iniciando onde a última terminou.  
