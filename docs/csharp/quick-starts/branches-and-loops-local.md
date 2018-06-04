@@ -3,12 +3,12 @@ title: Tutorial de loops e branches – guias de início rápido locais de C#
 description: Neste início rápido sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 4324e8b4704682f128e3122661fb6a0eddfe158b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457898"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566131"
 ---
 # <a name="branches-and-loops"></a>Loops e branches
 
@@ -29,7 +29,7 @@ if (a + b > 10)
     Console.WriteLine("The answer is greater than 10.");
 ```
 
-Tente este código digitando `dotnet run` na janela de seu console. Você deve ver a mensagem "A resposta é maior do que 10." impressa no console.
+Experimente este código digitando `dotnet run` na sua janela do console. Você deve ver a mensagem "A resposta é maior do que 10." impressa no console.
 
 Modifique a declaração de `b` para que a soma seja inferior a 10: 
 

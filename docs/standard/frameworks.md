@@ -3,14 +3,15 @@ title: Frameworks de destino
 description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
 author: richlander
 ms.author: mairaw
-ms.date: 04/16/2018
+ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728310"
 ---
 # <a name="target-frameworks"></a>Frameworks de destino
 
@@ -31,7 +32,7 @@ A tabela a seguir define as estruturas de destino mais comuns, como elas são re
 | Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/D                                     |
-| .NET Core Application | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versões de estrutura de destino com suporte

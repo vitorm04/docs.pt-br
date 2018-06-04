@@ -12,11 +12,12 @@ ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 9a8b7d4ef356c5d763f3ed90763bf74702938056
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728395"
 ---
 # <a name="asynchronous-server-socket-example"></a>Exemplo de soquete de servidor assíncrono
 O programa de exemplo a seguir cria um servidor que recebe solicitações de conexão de clientes. O servidor é criado com um soquete assíncrono e, portanto, a execução do aplicativo para servidores não é suspensa enquanto ele aguarda uma conexão de um cliente. O aplicativo recebe uma cadeia de caracteres do cliente, exibe a cadeia de caracteres no console e, em seguida, retorna-a ao cliente. A cadeia de caracteres do cliente deve conter a cadeia de caracteres “\<EOF>” para sinalizar o final da mensagem.  
@@ -51,9 +52,6 @@ Public Class AsynchronousSocketListener
     ' echo that data back to the connected client.  
     ' It then disconnects from the client and waits for another client.   
     Public Shared Sub Main()  
-        ' Data buffer for incoming data.  
-        Dim bytes() As Byte = New [Byte](1023) {}  
-  
         ' Establish the local endpoint for the socket.  
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
@@ -173,9 +171,6 @@ public class AsynchronousSocketListener {
     }  
   
     public static void StartListening() {  
-        // Data buffer for incoming data.  
-        byte[] bytes = new Byte[1024];  
-  
         // Establish the local endpoint for the socket.  
         // The DNS name of the computer  
         // running the listener is "host.contoso.com".  
@@ -244,7 +239,7 @@ public class AsynchronousSocketListener {
         if (bytesRead > 0) {  
             // There  might be more data, so store the data received so far.  
             state.sb.Append(Encoding.ASCII.GetString(  
-                state.buffer,0,bytesRead));  
+                state.buffer, 0, bytesRead));  
   
             // Check for end-of-file tag. If it is not there, read   
             // more data.  

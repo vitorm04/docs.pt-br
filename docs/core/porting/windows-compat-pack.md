@@ -4,17 +4,18 @@ description: Saiba mais sobre o Pacote de Compatibilidade do Windows e como voc�
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 6b25a2d5c197a6c9b0a7ead18370870ddc091e1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566167"
 ---
 # <a name="using-the-windows-compatibility-pack"></a>Usando o Pacote de Compatibilidade do Windows
 
 Um dos problemas mais comuns que os desenvolvedores enfrentam ao portar seus códigos existentes para o .NET Core é que eles dependem de APIs e tecnologias que existem somente no .NET Framework. O *Pacote de Compatibilidade do Windows* fornece muitas dessas tecnologias, de modo que a criação de aplicativos .NET Core, bem como bibliotecas .NET Standard, seja muito mais viável para o código existente.
 
-Esse pacote é uma [extensão lógica do .NET Standard 2.0](../whats-new/index.md#api-changes-and-library-support) que aumenta consideravelmente o conjunto de APIs e o código existente é compilado quase sem modificações. No entanto, para manter a promessa do .NET Standard (“é o conjunto de APIs fornecido por todas as implementações do .NET”), isso não inclui tecnologias que não funcionam em todas as plataformas, como o Registro, o WMI (Instrumentação de Gerenciamento do Windows) ou as APIs de emissão de reflexão.
+Esse pacote é uma [extensão lógica do .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) que aumenta consideravelmente o conjunto de APIs e o código existente é compilado quase sem modificações. No entanto, para manter a promessa do .NET Standard (“é o conjunto de APIs fornecido por todas as implementações do .NET”), isso não inclui tecnologias que não funcionam em todas as plataformas, como o Registro, o WMI (Instrumentação de Gerenciamento do Windows) ou as APIs de emissão de reflexão.
 
 O *Pacote de Compatibilidade do Windows* se baseia no .NET Standard e fornece acesso às tecnologias somente Windows. É especialmente útil para os clientes que desejam migrar para o .NET Core, mas pretendem permanecer no Windows como uma primeira etapa. Nesse cenário, não conseguir usar as tecnologias somente Windows é apenas um obstáculo de migração sem nenhum benefício de arquitetura.
 
