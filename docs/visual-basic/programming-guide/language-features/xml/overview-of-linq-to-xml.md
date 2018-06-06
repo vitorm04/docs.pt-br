@@ -5,11 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 1ac9c7749cb054857715fd670f1510697c18f0e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65df48112834be04dc8d3b62b8b163316b06c4a6
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753403"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visão geral de LINQ to XML no Visual Basic
 Visual Basic oferece suporte para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] por meio de literais XML e propriedades de eixo XML. Isso permite que você use uma sintaxe familiar e conveniente para trabalhar com XML no código do Visual Basic. *Literais XML* permitem que você inclua XML diretamente no seu código. *Propriedades do eixo XML* permitem acessar os nós filho, nós descendentes e atributos de uma literal XML. Para obter mais informações, consulte [visão geral dos literais de XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) e [acessando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
@@ -19,7 +20,7 @@ Visual Basic oferece suporte para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-
 > [!NOTE]
 >  Não há suporte para literais XML e propriedades de eixo XML no código declarativo em uma página ASP.NET. Para usar os recursos de XML do Visual Basic, coloque o código em uma página code-behind em seu aplicativo ASP.NET.  
   
- ![link para vídeo](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") para demonstrações em vídeo relacionadas, consulte [como fazer começar com LINQ to XML?](http://go.microsoft.com/fwlink/?LinkId=143034) e [como faço para criar planilhas do Excel usando o LINQ to XML?](http://go.microsoft.com/fwlink/?LinkId=143536).  
+ ![link para vídeo](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") para demonstrações em vídeo relacionadas, consulte [como fazer começar com LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) e [como faço para criar planilhas do Excel usando o LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).  
   
 ## <a name="creating-xml"></a>Criando XML  
  Há duas maneiras para criar árvores XML no Visual Basic. Você pode declarar um literal XML diretamente no código, ou você pode usar o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs para criar a árvore. Os dois processos permitem que o código refletir a estrutura final da árvore XML. Por exemplo, o exemplo de código a seguir cria um elemento XML:  

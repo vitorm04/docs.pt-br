@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 829128ff39c0c5e4f6cb140852228a028e39e69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753338"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 O `Async` modificador indica que o método ou [expressão lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) que ela modifica é assíncrona. Esses métodos são chamados de *métodos assíncronos*.  
@@ -55,7 +56,7 @@ End Function
  Para obter mais informações e exemplos, consulte [Tipos de retorno assíncronos](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Exemplo  
- Os exemplos a seguir mostram um manipulador de eventos assíncrono, uma expressão de lambda async e um método assíncrono. Para obter um exemplo completo que usa esses elementos, consulte [passo a passo: acessando a Web, usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). É possível baixar o código do passo a passo em [Exemplos de código do desenvolvedor](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Os exemplos a seguir mostram um manipulador de eventos assíncrono, uma expressão de lambda async e um método assíncrono. Para obter um exemplo completo que usa esses elementos, consulte [passo a passo: acessando a Web, usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). É possível baixar o código do passo a passo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
 ```vb  
 ' An event handler must be a Sub procedure.  

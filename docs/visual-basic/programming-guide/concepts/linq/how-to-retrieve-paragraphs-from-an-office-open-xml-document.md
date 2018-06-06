@@ -2,16 +2,17 @@
 title: 'Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753306"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, e retorna uma coleção de todos os parágrafos no documento.  
   
- Para obter mais informações sobre o Office Open XML, consulte [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Para obter mais informações sobre o Office Open XML, consulte [Blog de Eric White](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo abre um pacote do Office Open XML, usa os relacionamentos de pacote em Open XML para localizar o documento e partes de estilo. Consulta no documento, projetando uma coleção de um tipo anônimo que contém o nó de <xref:System.Xml.Linq.XElement> de parágrafo, o nome do estilo de cada parágrafo, e o texto de cada parágrafo.  
