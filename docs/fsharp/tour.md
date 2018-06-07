@@ -2,11 +2,12 @@
 title: 'Tour do F #'
 description: 'Examine alguns dos principais recursos do F # linguagem em que este tour com exemplos de código de programação.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753481"
 ---
 # <a name="tour-of-f"></a>Tour do F # #
 
@@ -54,11 +55,11 @@ A partir do F # 4.1, você também pode criar `struct` tuplas.  Eles também int
 
 ## <a name="pipelines-and-composition"></a>Pipelines e composição
 
-Redirecionar operadores (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) e os operadores de composição (`>>` e `<<`) forem usados extensivamente durante o processamento de dados em F #.  Esses operadores são funções que permitem que você estabeleça "pipelines" das funções de forma flexível.  O exemplo a seguir explica como você pode tirar proveito desses operadores para criar um pipeline funcional simple.
+Redirecionar operadores como `|>` forem usados extensivamente durante o processamento de dados em F #. Esses operadores são funções que permitem que você estabeleça "pipelines" das funções de forma flexível. O exemplo a seguir percorre como você pode tirar proveito desses operadores para criar um pipeline funcional simple:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-O exemplo acima feito usar muitos recursos do F #, incluindo funções de processamento de lista, funções de primeira classe, e [aplicativo parcial](language-reference/functions/index.md#partial-application-of-arguments).  Embora uma profunda compreensão de cada um desses conceitos pode ficar um pouco avançada, deve estar claro como facilmente as funções podem ser usadas para processar dados durante a criação de pipelines.
+O exemplo anterior feito usar muitos recursos do F #, incluindo funções de processamento de lista, funções de primeira classe, e [aplicativo parcial](language-reference/functions/index.md#partial-application-of-arguments). Embora uma profunda compreensão de cada um desses conceitos pode ficar um pouco avançada, deve estar claro como facilmente as funções podem ser usadas para processar dados durante a criação de pipelines.
 
 ## <a name="lists-arrays-and-sequences"></a>Listas, matrizes e sequências
 
