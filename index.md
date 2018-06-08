@@ -5,11 +5,12 @@ hide_bc: true
 title: Documentação .NET
 description: Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais.
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7fbafb9a5ca939b4ca8bb78d38b66767e3cf6ab9
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826978"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -231,7 +232,7 @@ ms.lasthandoff: 05/08/2018
                                                 <p><a href="/dotnet/machine-learning/tutorials">Tutoriais</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">Recursos</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossário</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">APIs do ML.NET</a></p>
+                                                <p><a href="/dotnet/api?view=ml-dotnet">Referência de API do ML.NET</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -392,13 +393,13 @@ ms.lasthandoff: 05/08/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
-                                                    <h3>Serviços de Nuvem do Azure e ASP.NET</h3>
-                                                    <p>Aprenda a configurar, monitorar e dimensionar os serviços de nuvem no Azure.</p>
+                                                <a href="/azure/storage/">
+                                                    <h3>Armazenamento do Azure</h3>
+                                                    <p>Saiba mais sobre o Armazenamento do Azure e como criar aplicativos que usam blobs, tabelas, filas e arquivos do Azure.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -418,25 +419,6 @@ ms.lasthandoff: 05/08/2018
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Usando F# no Azure</h3>
                                                     <p>Saiba como usar vários serviços do Azure em F # como o Armazenamento do Azure, Serviços de Nuvem e o Azure Functions.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/storage/">
-                                                    <h3>Armazenamento do Azure</h3>
-                                                    <p>Saiba mais sobre o Armazenamento do Azure e como criar aplicativos que usam blobs, tabelas, filas e arquivos do Azure.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -643,7 +625,7 @@ ms.lasthandoff: 05/08/2018
                                             <div class="cardText">
                                                 <a href="http://www.monogame.net/documentation/?page=main">
                                                     <h3>MonoGame</h3>
-                                                    <p>Crie jogos com o C# por meio tutoriais e instruções de instalação no hub da biblioteca de documentação do MonoGame.</p>
+                                                    <p>Crie jogos com C# por meio de tutoriais e instruções de instalação no hub da documentação da biblioteca do MonoGame.</p>
                                                 </a>
                                             </div>
                                         </div>
