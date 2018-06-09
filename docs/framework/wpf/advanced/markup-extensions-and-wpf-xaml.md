@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251162"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -88,7 +89,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 -   Se os tokens individuais separados não contiverem nenhum sinal de igual, cada token será tratado como um argumento do construtor. Cada parâmetro de construtor deve ser fornecido como o tipo esperado por essa assinatura e na ordem correta esperada por ela.  
   
     > [!NOTE]
-    >  Um processador XAML deve chamar o construtor que corresponde à contagem de argumento do número de pares. Por esse motivo, se você estiver implementando uma extensão de marcação personalizada, não forneça vários parâmetros com a mesma contagem de argumentos. O comportamento de um processador XAML se existir mais de um caminho do construtor de extensão de marcação com a mesma contagem de parâmetros não é definido, mas você deverá prever que um processador XAML está autorizado a lançar uma exceção em uso caso tal situação exista nas definições do tipo de extensão de marcação.  
+    >  Um processador XAML deve chamar o construtor que corresponde à contagem de argumento do número de pares. Por esse motivo, se você estiver implementando uma extensão de marcação personalizada, não fornecem vários construtores com a mesma contagem de argumento. O comportamento de um processador XAML se existir mais de um caminho do construtor de extensão de marcação com a mesma contagem de parâmetros não é definido, mas você deverá prever que um processador XAML está autorizado a lançar uma exceção em uso caso tal situação exista nas definições do tipo de extensão de marcação.  
   
 -   Se os tokens individuais separados contiverem sinais de igual, um processador XAML chamará primeiramente o construtor padrão para a extensão de marcação. A seguir, cada par name=value será interpretado como um nome de propriedade que existe na extensão de marcação e um valor para designar à propriedade.  
   
