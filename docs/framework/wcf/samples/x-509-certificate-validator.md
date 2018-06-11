@@ -2,11 +2,12 @@
 title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 3d9aa14af3ded11bcd373f38656763036e83b0bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 911b6db28f89f7a4266ef1b23246020cd0381ada
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231522"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
 Este exemplo demonstra como implementar um validador personalizado de certificado x. 509. Isso é útil em casos em que nenhum dos modos de validação do certificado x. 509 internos é adequado para os requisitos do aplicativo. Este exemplo mostra um serviço que tenha um validador personalizado que aceita os certificados emitidos por conta própria. O cliente usa esse certificado para autenticar no serviço.  
@@ -148,7 +149,7 @@ Este exemplo demonstra como implementar um validador personalizado de certificad
   
  A implementação de cliente define o certificado de cliente para usar.  
   
-```  
+```csharp
 // Create a client with Certificate endpoint configuration  
 CalculatorClient client = new CalculatorClient("Certificate");  
 try  
@@ -199,7 +200,7 @@ catch (Exception e)
   
  Este exemplo usa um X509CertificateValidator personalizado para validar certificados. O exemplo implementa CustomX509CertificateValidator, derivada de <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Consulte a documentação <xref:System.IdentityModel.Selectors.X509CertificateValidator> para obter mais informações. Este exemplo de validador personalizado específico implementa o método Validate para aceitar qualquer certificado x. 509 que é emitido por conta própria como mostrado no código a seguir.  
   
-```  
+```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator  
 {  
   public override void Validate ( X509Certificate2 certificate )  
@@ -213,7 +214,7 @@ public class CustomX509CertificateValidator : X509CertificateValidator
   
  Depois que o validador é implementado no código de serviço, o host de serviço deve ser informado sobre a instância de validação a ser usado. Isso é feito usando o código a seguir.  
   
-```  
+```csharp
 serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.Custom;  
 serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new CustomX509CertificateValidator();  
 ```  
@@ -257,7 +258,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. A variável % SERVER_NAME % Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão é localhost.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -271,7 +272,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Armazenam as linhas a seguir na cópia de arquivo de lote o certificado do servidor bat para as pessoas confiáveis do cliente. Esta etapa é necessária porque os certificados gerados pela Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preenchimento do repositório de certificados de cliente com o certificado do servidor não é necessária.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -281,7 +282,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      O certificado é armazenado no repositório My (pessoal) no local de armazenamento CurrentUser.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Client cert setup starting  
     echo %USER_NAME%  
@@ -295,7 +296,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      As seguintes linhas no arquivo em lotes bat copie o certificado do cliente para o armazenamento de pessoas confiáveis. Esta etapa é necessária porque os certificados gerados pela Makecert.exe não são implicitamente confiáveis pelo sistema do servidor. Se você já tiver um certificado que está enraizado em um certificado raiz confiável — por exemplo, um certificado da Microsoft emitido — essa etapa de preenchimento do repositório de certificados do servidor com o certificado de cliente não é necessária.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
