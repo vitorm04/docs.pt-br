@@ -3,11 +3,12 @@ title: System.Delegate e a palavra-chave `delegate`
 description: Aprenda sobre as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave “delegado”.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827294"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
@@ -77,10 +78,8 @@ Os desenvolvedores que desejam usar o método `List.Sort()` precisa definir um m
 Suponha que você queira classificar uma lista de cadeias de caracteres pelo seu comprimento. A função de comparação pode ser a seguinte:
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 O método é declarado como um método particular. Tudo bem. Você pode não desejar que esse método seja parte da sua interface pública. Ele ainda pode ser usado como o método de comparação ao anexar a um delegado. O código de chamada terá esse método anexado à lista de destino do objeto de delegado e pode acessá-lo por meio do delegado.
