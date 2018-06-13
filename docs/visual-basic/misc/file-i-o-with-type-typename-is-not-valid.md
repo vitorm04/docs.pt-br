@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636481"
 ---
 # <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>E/s de arquivo com o tipo &#39; &lt;typename&gt; &#39; não é válido
 Você está tentando gravar um tipo sem suporte em um arquivo.  

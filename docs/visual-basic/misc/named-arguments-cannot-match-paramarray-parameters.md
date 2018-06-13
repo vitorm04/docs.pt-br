@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636611"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>Argumentos nomeados não correspondem aos parâmetros ParamArray
 Matrizes de parâmetros devem ser transmitidos por valor.  

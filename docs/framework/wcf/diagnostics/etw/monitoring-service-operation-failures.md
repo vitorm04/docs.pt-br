@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803761"
 ---
 # <a name="monitoring-service-operation-failures"></a>Monitorando operações de serviços com falha
 Se o rastreamento analítico é habilitado para um aplicativo, falhas de serviço podem facilmente ser monitoradas no Visualizador de eventos.  Este tópico demonstra como determinar quando uma operação de serviço falha e como determinar o que causou a falha.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472783"
 ---
 # <a name="c-60-draft-language-specification"></a>Especificação da linguagem de rascunho de C# 6.0
 

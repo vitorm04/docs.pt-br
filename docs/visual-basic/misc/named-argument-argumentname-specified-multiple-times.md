@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635753"
 ---
 # <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a>Argumento nomeado &#39; &lt;argumentname&gt; &#39; especificado várias vezes
 Você especificou um argumento nomeado mais de uma vez.  

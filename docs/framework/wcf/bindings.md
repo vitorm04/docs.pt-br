@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803589"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associações do Windows Communication Foundation
 Associações de especificam como um ponto de extremidade de serviço do Windows Communication Foundation (WCF) se comunica com outros pontos de extremidade. Basicamente, uma associação deve especificar o transporte (por exemplo, HTTP ou TCP) a ser usado. Você também pode definir outras características, como segurança e suportem, por meio de associações.  

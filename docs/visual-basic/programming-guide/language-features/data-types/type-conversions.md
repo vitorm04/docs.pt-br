@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647167"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Conversões de tipo no Visual Basic
 O processo de alteração de um valor de um tipo de dados para outro tipo é chamado *conversão*. Conversões são *widening* ou *narrowing*, dependendo das capacidades de dados dos tipos envolvidos. Eles também são *implícita* ou *explícita*, dependendo da sintaxe no código-fonte.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643855"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Instruções passo a passo: criando objetos COM com o Visual Basic
 Ao criar novos aplicativos ou componentes, é melhor criar assemblies do .NET Framework. No entanto, Visual Basic também facilita a expor um componente do .NET Framework para COM. Isso permite que você fornecer novos componentes anteriores aplicativo conjuntos que requerem componentes COM. Este passo a passo demonstra como usar o Visual Basic para expor [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] objetos como objetos COM, com e sem o modelo de classe COM.  

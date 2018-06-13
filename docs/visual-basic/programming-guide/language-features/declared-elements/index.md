@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647690"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementos declarados no Visual Basic
 Um *elemento declarado* é um elemento de programação que está definido em uma instrução de declaração. Elementos declarados incluem variáveis, constantes, enumerações, classes, estruturas, módulos, interfaces, procedimentos, parâmetros de procedimento, retornos de função, referências a procedimentos externos, operadores, propriedades, eventos e delegados.  

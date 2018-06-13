@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641047"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Não é possível ler campos de largura fixa porque FieldWidths é Nothing ou vazio
 O `TextFieldParser` é não é possível ler campos de largura fixa porque o `FieldWidths` está definida como `Nothing` ou está vazia.  

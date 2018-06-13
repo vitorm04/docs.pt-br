@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651590"
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciais (Visual Basic)
 Métodos parciais permitem aos desenvolvedores inserir a lógica personalizada em código. Normalmente, o código é parte de uma classe gerado pelo designer. Métodos parciais são definidos em uma classe parcial que é criada por um gerador de código, e eles são usados para fornecer notificação de que algo foi alterado. Elas permitem que o desenvolvedor especificar o comportamento personalizado em resposta a alterações.  

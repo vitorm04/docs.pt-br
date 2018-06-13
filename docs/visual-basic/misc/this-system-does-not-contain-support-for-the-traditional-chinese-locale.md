@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641731"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>Este sistema não tem suporte para localidade chinês tradicional
 Você tentou usar o `VbStrConv.TraditionalChinese` membro de enumeração, mas o sistema não dá suporte para localidade chinês tradicional.  

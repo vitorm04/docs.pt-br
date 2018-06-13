@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647755"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Uso eficiente de tipos de dados (Visual Basic)
 Variáveis não declaradas e declaradas sem um tipo de dados são atribuídas a `Object` tipo de dados. Isso facilita escrever programas rapidamente, mas isso pode causar a execução mais lenta.  

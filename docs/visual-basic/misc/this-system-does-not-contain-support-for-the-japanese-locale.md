@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639846"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>Este sistema não tem suporte para localidade japonês
 Você está tentando usar o `VbStrConv.Japanese` membro de enumeração, mas o sistema não dá suporte para localidade japonês.  
