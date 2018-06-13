@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534961"
 ---
 # <a name="radiobutton-control-windows-forms"></a><span data-ttu-id="a3590-102">Controle RadioButton (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="a3590-102">RadioButton Control (Windows Forms)</span></span>
 <span data-ttu-id="a3590-103">Windows Forms `RadioButton` controles apresentam um conjunto de duas ou mais opções mutuamente exclusivas para o usuário.</span><span class="sxs-lookup"><span data-stu-id="a3590-103">Windows Forms `RadioButton` controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="a3590-104">Embora os botões de opção e caixas de seleção pareçam funcionar da mesma forma, há uma diferença importante: quando um usuário seleciona um botão de opção, os outros botões de opção no mesmo grupo não podem ser selecionados juntamente.</span><span class="sxs-lookup"><span data-stu-id="a3590-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span>  

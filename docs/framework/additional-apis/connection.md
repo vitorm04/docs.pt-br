@@ -14,8 +14,10 @@ author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349627"
 ---
 # <a name="connection-class"></a><span data-ttu-id="64c94-102">Classe de Conexão</span><span class="sxs-lookup"><span data-stu-id="64c94-102">Connection Class</span></span>
 

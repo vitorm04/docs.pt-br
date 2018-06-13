@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533121"
 ---
 # <a name="how-to-split-a-window-horizontally"></a><span data-ttu-id="ac24d-102">Como dividir uma janela horizontalmente</span><span class="sxs-lookup"><span data-stu-id="ac24d-102">How to: Split a Window Horizontally</span></span>
 <span data-ttu-id="ac24d-103">O exemplo de código a seguir torna a divisão que divide o <xref:System.Windows.Forms.SplitContainer> horizontal do controle.</span><span class="sxs-lookup"><span data-stu-id="ac24d-103">The following code example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  

@@ -1,33 +1,27 @@
 ---
 title: remove (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-caps.latest.revision: 8
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 66647dee0c4cc728ae5e19457a4a5ef0e7f72248
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 16a169ce1a0ef5dbc29739b2d808acb19737669e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269113"
 ---
-# <a name="remove-c-reference"></a><span data-ttu-id="bafe0-102">remove (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="bafe0-102">remove (C# Reference)</span></span>
-<span data-ttu-id="bafe0-103">A palavra-chave contextual `remove` é usada para definir um acessador de eventos personalizado invocado quando o código cliente cancela a assinatura do seu [evento](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="bafe0-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="bafe0-104">Se você fornecer um acessador `remove` personalizado, também será necessário fornecer um acessador [add](../../../csharp/language-reference/keywords/add.md).</span><span class="sxs-lookup"><span data-stu-id="bafe0-104">If you supply a custom `remove` accessor, you must also supply an [add](../../../csharp/language-reference/keywords/add.md) accessor.</span></span>  
+# <a name="remove-c-reference"></a><span data-ttu-id="2b155-102">remove (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="2b155-102">remove (C# Reference)</span></span>
+<span data-ttu-id="2b155-103">A palavra-chave contextual `remove` é usada para definir um acessador de eventos personalizado invocado quando o código cliente cancela a assinatura do seu [evento](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="2b155-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="2b155-104">Se você fornecer um acessador `remove` personalizado, também será necessário fornecer um acessador [add](../../../csharp/language-reference/keywords/add.md).</span><span class="sxs-lookup"><span data-stu-id="2b155-104">If you supply a custom `remove` accessor, you must also supply an [add](../../../csharp/language-reference/keywords/add.md) accessor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bafe0-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bafe0-105">Example</span></span>  
- <span data-ttu-id="bafe0-106">O exemplo a seguir mostra um evento com os acessadores [add](../../../csharp/language-reference/keywords/add.md) e `remove` personalizados.</span><span class="sxs-lookup"><span data-stu-id="bafe0-106">The following example shows an event with custom [add](../../../csharp/language-reference/keywords/add.md) and `remove` accessors.</span></span> <span data-ttu-id="bafe0-107">Para obter o exemplo completo, consulte [Como implementar eventos de interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="bafe0-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="2b155-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2b155-105">Example</span></span>  
+ <span data-ttu-id="2b155-106">O exemplo a seguir mostra um evento com os acessadores [add](../../../csharp/language-reference/keywords/add.md) e `remove` personalizados.</span><span class="sxs-lookup"><span data-stu-id="2b155-106">The following example shows an event with custom [add](../../../csharp/language-reference/keywords/add.md) and `remove` accessors.</span></span> <span data-ttu-id="2b155-107">Para obter o exemplo completo, consulte [Como implementar eventos de interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="2b155-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
  [!code-csharp[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
   
- <span data-ttu-id="bafe0-108">Normalmente, não é necessário fornecer seus próprios acessadores de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="bafe0-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="bafe0-109">Os acessadores que são gerados automaticamente pelo compilador quando você declara um evento são suficientes para a maioria dos cenários.</span><span class="sxs-lookup"><span data-stu-id="bafe0-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
+ <span data-ttu-id="2b155-108">Normalmente, não é necessário fornecer seus próprios acessadores de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="2b155-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="2b155-109">Os acessadores que são gerados automaticamente pelo compilador quando você declara um evento são suficientes para a maioria dos cenários.</span><span class="sxs-lookup"><span data-stu-id="2b155-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bafe0-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bafe0-110">See Also</span></span>  
- [<span data-ttu-id="bafe0-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="bafe0-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="2b155-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2b155-110">See Also</span></span>  
+ [<span data-ttu-id="2b155-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="2b155-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)

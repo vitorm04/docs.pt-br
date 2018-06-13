@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530449"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a><span data-ttu-id="790e5-102">Como criar um formulário MDI com controles ToolStripPanel</span><span class="sxs-lookup"><span data-stu-id="790e5-102">How to: Create an MDI Form with ToolStripPanel Controls</span></span>
 <span data-ttu-id="790e5-103">Você pode criar um formulário de interface MDI vários documentos que tenha <xref:System.Windows.Forms.ToolStrip> controles de enquadramento-lo em todos os quatro lados.</span><span class="sxs-lookup"><span data-stu-id="790e5-103">You can create a multiple document interface (MDI) form that has <xref:System.Windows.Forms.ToolStrip> controls framing it on all four sides.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541746"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="e0b83-102">Dimensionando opções no controle DataGridView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e0b83-102">Sizing Options in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="e0b83-103"><xref:System.Windows.Forms.DataGridView> cabeçalhos, colunas e linhas podem alterar o tamanho como resultado de muitas ocorrências diferentes.</span><span class="sxs-lookup"><span data-stu-id="e0b83-103"><xref:System.Windows.Forms.DataGridView> rows, columns, and headers can change size as a result of many different occurrences.</span></span> <span data-ttu-id="e0b83-104">A tabela a seguir mostra essas ocorrências.</span><span class="sxs-lookup"><span data-stu-id="e0b83-104">The following table shows these occurrences.</span></span>  

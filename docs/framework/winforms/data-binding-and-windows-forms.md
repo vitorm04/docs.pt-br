@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541655"
 ---
 # <a name="data-binding-and-windows-forms"></a><span data-ttu-id="d83f4-102">Associação de dados e o Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d83f4-102">Data Binding and Windows Forms</span></span>
 <span data-ttu-id="d83f4-103">No Windows Forms, você pode vincular não apenas a fontes de dados tradicionais, mas também a praticamente qualquer estrutura que contenha dados.</span><span class="sxs-lookup"><span data-stu-id="d83f4-103">In Windows Forms, you can bind to not just traditional data sources, but also to almost any structure that contains data.</span></span> <span data-ttu-id="d83f4-104">Você pode vincular a uma matriz de valores que você calcula no tempo de execução, lê de um arquivo ou deriva dos valores de outros controles.</span><span class="sxs-lookup"><span data-stu-id="d83f4-104">You can bind to an array of values that you calculate at run time, read from a file, or derive from the values of other controls.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339236"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a><span data-ttu-id="d356f-102">Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="d356f-102">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (C#)</span></span>
 <span data-ttu-id="d356f-103">Se você inserir informações de um assembly gerenciado de nome forte, você poderá acoplar vagamente tipos em um aplicativo para atingir a independência de versão.</span><span class="sxs-lookup"><span data-stu-id="d356f-103">If you embed type information from a strong-named managed assembly, you can loosely couple types in an application to achieve version independence.</span></span> <span data-ttu-id="d356f-104">Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca gerenciada sem precisar ser recompilado para cada versão.</span><span class="sxs-lookup"><span data-stu-id="d356f-104">That is, your program can be written to use types from multiple versions of a managed library without having to be recompiled for each version.</span></span>  
