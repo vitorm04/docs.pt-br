@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: c3a9062d-9d51-4a8e-bac6-071d16a7d9ea
 ms.openlocfilehash: 90b949a4e263cf02859af7470ca01a71a1e58d58
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642393"
 ---
 # <a name="getting-started-linq-to-xml"></a><span data-ttu-id="342e3-102">Guia de introdução (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="342e3-102">Getting Started (LINQ to XML)</span></span>
 <span data-ttu-id="342e3-103">Os tópicos a seguir apresentam o LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="342e3-103">The following topics introduce LINQ to XML.</span></span>  

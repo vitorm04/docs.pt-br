@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
 ms.openlocfilehash: 1110a4b89158e0230401c449aa95d74be72eccc7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646127"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a><span data-ttu-id="9c493-102">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9c493-102">Sample XML Documents (LINQ to XML)</span></span>
 <span data-ttu-id="9c493-103">Os arquivos de exemplo a seguir são usados nos exemplos de código e nos trechos de código em toda a documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9c493-103">The following example files are used in the code samples and code snippets throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span>  

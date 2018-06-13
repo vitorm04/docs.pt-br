@@ -1,29 +1,23 @@
 ---
-title: "Caminho &#39; &lt;pathname&gt;&#39; não encontrado"
+title: Caminho &#39; &lt;pathname&gt; &#39; não encontrado
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e4cca19f60a495c5f108b0e5674f69780ad6c79b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 11cf78fa2b1de72403fb7a8061cb2340943f2f57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641351"
 ---
-# <a name="path-39ltpathnamegt39-not-found"></a><span data-ttu-id="064fe-102">Caminho &#39; &lt;pathname&gt;&#39; não encontrado</span><span class="sxs-lookup"><span data-stu-id="064fe-102">Path &#39;&lt;pathname&gt;&#39; not found</span></span>
-<span data-ttu-id="064fe-103">O sistema operacional é não é possível localizar o caminho especificado durante uma operação de acesso a arquivos ou o acesso ao disco.</span><span class="sxs-lookup"><span data-stu-id="064fe-103">The operating system is unable to find the path specified path during a file-access or disk-access operation.</span></span> <span data-ttu-id="064fe-104">O caminho para um arquivo deve incluir a especificação da unidade e os diretórios e subdiretórios que devem ser percorridos para localizar o arquivo.</span><span class="sxs-lookup"><span data-stu-id="064fe-104">The path to a file must include the drive specification and the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="064fe-105">Um caminho pode ser relativo ou absoluto.</span><span class="sxs-lookup"><span data-stu-id="064fe-105">A path can be relative or absolute.</span></span>  
+# <a name="path-39ltpathnamegt39-not-found"></a><span data-ttu-id="af2dc-102">Caminho &#39; &lt;pathname&gt; &#39; não encontrado</span><span class="sxs-lookup"><span data-stu-id="af2dc-102">Path &#39;&lt;pathname&gt;&#39; not found</span></span>
+<span data-ttu-id="af2dc-103">O sistema operacional é não é possível localizar o caminho especificado durante uma operação de acesso a arquivos ou o acesso ao disco.</span><span class="sxs-lookup"><span data-stu-id="af2dc-103">The operating system is unable to find the path specified path during a file-access or disk-access operation.</span></span> <span data-ttu-id="af2dc-104">O caminho para um arquivo deve incluir a especificação da unidade e os diretórios e subdiretórios que devem ser percorridos para localizar o arquivo.</span><span class="sxs-lookup"><span data-stu-id="af2dc-104">The path to a file must include the drive specification and the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="af2dc-105">Um caminho pode ser relativo ou absoluto.</span><span class="sxs-lookup"><span data-stu-id="af2dc-105">A path can be relative or absolute.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="064fe-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="064fe-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="af2dc-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="af2dc-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="064fe-107">Certifique-se de que o caminho inclui os elementos necessários.</span><span class="sxs-lookup"><span data-stu-id="064fe-107">Ensure that the path includes the required elements.</span></span>  
+1.  <span data-ttu-id="af2dc-107">Certifique-se de que o caminho inclui os elementos necessários.</span><span class="sxs-lookup"><span data-stu-id="af2dc-107">Ensure that the path includes the required elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="064fe-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="064fe-108">See Also</span></span>  
- [<span data-ttu-id="064fe-109">FileSystem</span><span class="sxs-lookup"><span data-stu-id="064fe-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
- [<span data-ttu-id="064fe-110">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="064fe-110">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a><span data-ttu-id="af2dc-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="af2dc-108">See Also</span></span>  
+ [<span data-ttu-id="af2dc-109">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="af2dc-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
+ [<span data-ttu-id="af2dc-110">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="af2dc-110">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

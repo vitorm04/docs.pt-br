@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
 ms.openlocfilehash: 8c382363c757887802ed54b565b24422d0ac7db7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645251"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a><span data-ttu-id="7fb41-102">Introdução às transformações e puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7fb41-102">Introduction to Pure Functional Transformations (Visual Basic)</span></span>
 <span data-ttu-id="7fb41-103">Esta seção apresenta transformações funcionais, incluindo os conceitos fundamentais e as compilações de linguagem de suporte.</span><span class="sxs-lookup"><span data-stu-id="7fb41-103">This section introduces functional transformations, including the underlying concepts and supporting language constructs.</span></span> <span data-ttu-id="7fb41-104">Contrasta as abordagens orientados a objeto e funcionais de transformação para programação, incluindo conselhos sobre como fazer a transição para último.</span><span class="sxs-lookup"><span data-stu-id="7fb41-104">It contrasts the object-oriented and functional transformation approaches to programming, including advice on how to transition to the latter.</span></span> <span data-ttu-id="7fb41-105">Embora as transformações e podem ser usadas em muitos cenários de programação, a transformação XML é usado aqui como um exemplo concrete.</span><span class="sxs-lookup"><span data-stu-id="7fb41-105">Although functional transformations can be used in many programming scenarios, XML transformation is used here as a concrete example.</span></span>  

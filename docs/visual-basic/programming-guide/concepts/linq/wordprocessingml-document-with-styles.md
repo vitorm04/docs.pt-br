@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
 ms.openlocfilehash: 0f6ca610d67418582e3426bb911b26eb846070da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648815"
 ---
 # <a name="wordprocessingml-document-with-styles"></a><span data-ttu-id="d1617-102">Documento de WordprocessingML com estilos</span><span class="sxs-lookup"><span data-stu-id="d1617-102">WordprocessingML Document with Styles</span></span>
 <span data-ttu-id="d1617-103">Um documentos mais complicados de WordprocessingML têm os parágrafos que são formatados com estilos.</span><span class="sxs-lookup"><span data-stu-id="d1617-103">More complicated WordprocessingML documents have paragraphs that are formatted with styles.</span></span>  

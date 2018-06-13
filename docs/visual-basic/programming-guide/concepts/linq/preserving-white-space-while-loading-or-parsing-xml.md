@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
 ms.openlocfilehash: 3341bfae8ff9de5e17ba18273c60b525f77bff16
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645636"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a><span data-ttu-id="23db1-102">Preservar espaço em branco para carregar ou ao analisar XML</span><span class="sxs-lookup"><span data-stu-id="23db1-102">Preserving White Space while Loading or Parsing XML</span></span>
 <span data-ttu-id="23db1-103">Este tópico descreve como controlar o comportamento de espaço em branco de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23db1-103">This topic describes how to control the white space behavior of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  

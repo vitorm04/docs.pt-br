@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
 ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640577"
 ---
 # <a name="on-visual-basic"></a><span data-ttu-id="7ce03-102">On (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ce03-102">On (Visual Basic)</span></span>
 <span data-ttu-id="7ce03-103">Apresenta uma resposta a um erro de tempo de execução ou ativa uma opção do compilador.</span><span class="sxs-lookup"><span data-stu-id="7ce03-103">Introduces a response to a run-time error or turns a compiler option on.</span></span>  

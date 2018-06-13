@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809271"
 ---
 # <a name="custom-encoders"></a><span data-ttu-id="78a65-102">Decodificadores personalizados</span><span class="sxs-lookup"><span data-stu-id="78a65-102">Custom Encoders</span></span>
 <span data-ttu-id="78a65-103">Este tópico discute como criar decodificadores personalizados.</span><span class="sxs-lookup"><span data-stu-id="78a65-103">This topic discusses how to create custom encoders.</span></span>  

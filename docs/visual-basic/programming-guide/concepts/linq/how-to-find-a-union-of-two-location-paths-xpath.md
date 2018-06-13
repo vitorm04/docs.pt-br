@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
 ms.openlocfilehash: 3f67ac24d12e7d2fcbd74e2f27a75d982c1cf00b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642634"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="2ef6c-102">Como: localizar uma união de dois demarcadores de local (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ef6c-102">How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="2ef6c-103">O XPath permite que você localize a união de resultados de dois caminhos de local XPath.</span><span class="sxs-lookup"><span data-stu-id="2ef6c-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635071"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="852f7-102">Não foi possível obter o nome do sistema completo de operação devido a erro interno</span><span class="sxs-lookup"><span data-stu-id="852f7-102">Could not obtain full operation system name due to internal error</span></span>
 <span data-ttu-id="852f7-103">Não foi possível obter o nome do sistema completo de operação devido a erro interno.</span><span class="sxs-lookup"><span data-stu-id="852f7-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="852f7-104">Isso pode ser causado pelo WMI não existentes no computador atual.</span><span class="sxs-lookup"><span data-stu-id="852f7-104">This might be caused by WMI not existing on the current machine.</span></span>  

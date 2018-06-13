@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: fa8623abeebfa413677b4b68d6ab6b7a0547ccd6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646052"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a><span data-ttu-id="9d0bd-102">Como: ler dados de objeto de um arquivo XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d0bd-102">How to: Read Object Data from an XML File (Visual Basic)</span></span>
 <span data-ttu-id="9d0bd-103">Este exemplo lê dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="9d0bd-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  

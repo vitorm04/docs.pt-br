@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809921"
 ---
 # <a name="designing-service-contracts"></a><span data-ttu-id="ba6fc-102">Criando contratos de serviço</span><span class="sxs-lookup"><span data-stu-id="ba6fc-102">Designing Service Contracts</span></span>
 <span data-ttu-id="ba6fc-103">Este tópico descreve qual serviço os contratos são, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudarão a criar operações que atendem a requisitos do seu cenário.</span><span class="sxs-lookup"><span data-stu-id="ba6fc-103">This topic describes what service contracts are, how they are defined, what operations are available (and the implications for the underlying message exchanges), what data types are used, and other issues that help you design operations that satisfy the requirements of your scenario.</span></span>  

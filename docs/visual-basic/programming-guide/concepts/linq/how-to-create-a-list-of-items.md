@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
 ms.openlocfilehash: 3887d556c025fc667de9089f7a3bc90da8ef3f20
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642802"
 ---
 # <a name="how-to-create-a-list-of-items"></a><span data-ttu-id="5c27a-102">Como criar uma lista de itens</span><span class="sxs-lookup"><span data-stu-id="5c27a-102">How to: Create a List of Items</span></span>
 <span data-ttu-id="5c27a-103">O código neste tópico define um `Student` classe e cria uma lista de instâncias da classe.</span><span class="sxs-lookup"><span data-stu-id="5c27a-103">The code in this topic defines a `Student` class and creates a list of instances of the class.</span></span> <span data-ttu-id="5c27a-104">A lista é projetada para suportar o tópico [passo a passo: escrever consultas em Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span><span class="sxs-lookup"><span data-stu-id="5c27a-104">The list is designed to support the topic [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span> <span data-ttu-id="5c27a-105">Ele também pode ser usado para qualquer aplicativo que requer uma lista de objetos.</span><span class="sxs-lookup"><span data-stu-id="5c27a-105">It also can be used for any application that requires a list of objects.</span></span> <span data-ttu-id="5c27a-106">O código define os itens na lista de alunos por meio de inicializadores de objeto.</span><span class="sxs-lookup"><span data-stu-id="5c27a-106">The code defines the items in the list of students by using object initializers.</span></span>  

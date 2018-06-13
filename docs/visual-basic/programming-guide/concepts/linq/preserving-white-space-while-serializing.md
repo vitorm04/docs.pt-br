@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
 ms.openlocfilehash: a08d69a817c3e493e571d1b3b98f6f2a144ad995
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644973"
 ---
 # <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="7a1e6-102">Preservar espaço em branco para serializar</span><span class="sxs-lookup"><span data-stu-id="7a1e6-102">Preserving White Space While Serializing</span></span>
 <span data-ttu-id="7a1e6-103">Este tópico descreve como controlar o espaço em branco para serializar uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="7a1e6-103">This topic describes how to control white space when serializing an XML tree.</span></span>  

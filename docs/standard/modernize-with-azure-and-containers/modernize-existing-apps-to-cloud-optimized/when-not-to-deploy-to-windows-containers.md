@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 819f32955ff019414bef8820d17d272eddc11bf8
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957956"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a><span data-ttu-id="ccfb0-103">Quando não implantar contêineres do Windows</span><span class="sxs-lookup"><span data-stu-id="ccfb0-103">When not to deploy to Windows Containers</span></span>
 

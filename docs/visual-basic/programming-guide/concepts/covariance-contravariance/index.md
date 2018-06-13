@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
 ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644037"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a><span data-ttu-id="b4e0d-102">Covariância e contravariância (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4e0d-102">Covariance and Contravariance (Visual Basic)</span></span>
 <span data-ttu-id="b4e0d-103">No Visual Basic, a covariância e a contravariância habilitam a conversão de referência implícita para tipos de matriz, tipos delegados e argumentos de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="b4e0d-103">In Visual Basic, covariance and contravariance enable implicit reference conversion for array types, delegate types, and generic type arguments.</span></span> <span data-ttu-id="b4e0d-104">A covariância preserva a compatibilidade de atribuição, e a contravariância reverte.</span><span class="sxs-lookup"><span data-stu-id="b4e0d-104">Covariance preserves assignment compatibility and contravariance reverses it.</span></span>  

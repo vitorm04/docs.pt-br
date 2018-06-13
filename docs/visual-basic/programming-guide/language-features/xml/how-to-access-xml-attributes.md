@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649026"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="d2807-102">Como acessar atributos XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2807-102">How to: Access XML Attributes (Visual Basic)</span></span>
 <span data-ttu-id="d2807-103">Este exemplo mostra como usar uma propriedade de eixo de atributo para acessar atributos XML em um elemento XML por nome.</span><span class="sxs-lookup"><span data-stu-id="d2807-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="d2807-104">Em particular, ele usa o `type` propriedade de eixo para acessar o atributo chamado de atributo `type` no `phone` objeto.</span><span class="sxs-lookup"><span data-stu-id="d2807-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
 ms.openlocfilehash: 4ec7743a30b8101d813ac414a8f5164aeb6c593d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649198"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a><span data-ttu-id="2f189-102">Como acessar elementos filho XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f189-102">How to: Access XML Child Elements (Visual Basic)</span></span>
 <span data-ttu-id="2f189-103">Este exemplo mostra como usar um filho de propriedade de eixo para acessar todos os elementos filho XML que têm um nome especificado em um elemento XML.</span><span class="sxs-lookup"><span data-stu-id="2f189-103">This example shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.</span></span> <span data-ttu-id="2f189-104">Em particular, ele usa o <xref:System.Xml.Linq.XElement.Value%2A> propriedade para obter o valor do primeiro elemento na coleção de `name` retorna de propriedade de eixo filho.</span><span class="sxs-lookup"><span data-stu-id="2f189-104">In particular, it uses the <xref:System.Xml.Linq.XElement.Value%2A> property to get the value of the first element in the collection that the `name` child axis property returns.</span></span> <span data-ttu-id="2f189-105">O `name` propriedade de eixo filho obtém todos os elementos filho denominados `phone` no `contact` objeto.</span><span class="sxs-lookup"><span data-stu-id="2f189-105">The `name` child axis property gets all child elements named `phone` in the `contact` object.</span></span> <span data-ttu-id="2f189-106">Este exemplo também usa o `phone` propriedade de eixo filho para acessar todos os elementos filho denominados `phone` que estão contidos no `contact` objeto.</span><span class="sxs-lookup"><span data-stu-id="2f189-106">This example also uses the `phone` child axis property to access all child elements named `phone` that are contained in the `contact` object.</span></span>  

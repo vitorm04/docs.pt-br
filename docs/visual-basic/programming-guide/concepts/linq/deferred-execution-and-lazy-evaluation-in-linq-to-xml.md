@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
 ms.openlocfilehash: eade2fe987ecbc399c2e2a8a65e74e3beab5e123
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643118"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a><span data-ttu-id="9b1c5-102">Execução adiada e avaliação lenta em LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b1c5-102">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>
 <span data-ttu-id="9b1c5-103">As operações de consulta e eixo são geralmente implementadas para usar a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="9b1c5-103">Query and axis operations are often implemented to use deferred execution.</span></span> <span data-ttu-id="9b1c5-104">Este tópico explica os requisitos e as vantagens da execução adiada, além de algumas considerações sobre a implementação.</span><span class="sxs-lookup"><span data-stu-id="9b1c5-104">This topic explains the requirements and advantages of deferred execution, and some implementation considerations.</span></span>  

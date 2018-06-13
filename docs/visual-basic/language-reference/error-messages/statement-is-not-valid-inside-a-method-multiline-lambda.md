@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
 ms.openlocfilehash: cef5beea16c8589a884b7d3533e0543454783999
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598849"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="3b75e-102">A instrução não é válida dentro de um método/lambda de várias linhas</span><span class="sxs-lookup"><span data-stu-id="3b75e-102">Statement is not valid inside a method/multiline lambda</span></span>
 <span data-ttu-id="3b75e-103">A instrução não é válida dentro de um `Sub`, `Function`, propriedade `Get`, ou a propriedade `Set` procedimento.</span><span class="sxs-lookup"><span data-stu-id="3b75e-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="3b75e-104">Algumas instruções podem ser colocadas no nível de módulo ou classe.</span><span class="sxs-lookup"><span data-stu-id="3b75e-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="3b75e-105">Outras, como `Option Strict`, deve estar no nível de namespace e preceder todas as outras declarações.</span><span class="sxs-lookup"><span data-stu-id="3b75e-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  

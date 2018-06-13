@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
 ms.openlocfilehash: 71b8799d4da2f8f4fb10bdec6ca7cfcec76e036a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646598"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a><span data-ttu-id="1cf85-102">Modificação de árvore XML na memória versus Construção funcional (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cf85-102">In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="1cf85-103">Modificar uma árvore XML no local é uma abordagem tradicional para alterar a forma de um documento XML.</span><span class="sxs-lookup"><span data-stu-id="1cf85-103">Modifying an XML tree in place is a traditional approach to changing the shape of an XML document.</span></span> <span data-ttu-id="1cf85-104">Um aplicativo típico carregar um documento em um armazenamento de dados como os DOM ou [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; usa uma interface de programação para inserir nós, nós, excluir ou modificar o conteúdo dos nós; e então salva XML para um arquivo ou fluxo em uma rede.</span><span class="sxs-lookup"><span data-stu-id="1cf85-104">A typical application loads a document into a data store such as DOM or [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; uses a programming interface to insert nodes, delete nodes, or change the content of nodes; and then saves the XML to a file or transmits it over a network.</span></span>  

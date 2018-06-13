@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639592"
 ---
 # <a name="specified-registry-key-does-not-exist"></a><span data-ttu-id="34028-102">Chave do Registro especificada não existe</span><span class="sxs-lookup"><span data-stu-id="34028-102">Specified registry key does not exist</span></span>
 <span data-ttu-id="34028-103">A chave do registro que foi especificada não existe.</span><span class="sxs-lookup"><span data-stu-id="34028-103">The registry key that has been specified does not exist.</span></span>  

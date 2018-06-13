@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807362"
 ---
 # <a name="configuring-tracing"></a><span data-ttu-id="ee335-102">Configurando o rastreamento</span><span class="sxs-lookup"><span data-stu-id="ee335-102">Configuring Tracing</span></span>
 <span data-ttu-id="ee335-103">Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, conjunto de rastreamento de atividades e propagação para oferecer suporte a correlação de rastreamento ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.</span><span class="sxs-lookup"><span data-stu-id="ee335-103">This topic describes how you can enable tracing, configure trace sources to emit traces and set trace levels, set activity tracing and propagation to support end-to-end trace correlation, and set trace listeners to access traces.</span></span>  

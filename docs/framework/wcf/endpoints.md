@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803388"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="ae08a-102">Pontos de extremidade do Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ae08a-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="ae08a-103">Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço.</span><span class="sxs-lookup"><span data-stu-id="ae08a-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="ae08a-104">Pontos de extremidade de fornecem aos clientes acesso à funcionalidade que oferece um serviço WCF.</span><span class="sxs-lookup"><span data-stu-id="ae08a-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  

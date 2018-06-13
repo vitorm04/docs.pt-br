@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
 ms.openlocfilehash: dbc5cfd7bf6e1f1b77dd14a6771c387fac29d062
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645922"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a><span data-ttu-id="07e79-102">Removendo elementos, atributos e nós de uma árvore XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07e79-102">Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="07e79-103">Você pode modificar uma árvore XML, remover elementos, atributos e outros tipos de nós.</span><span class="sxs-lookup"><span data-stu-id="07e79-103">You can modify an XML tree, removing elements, attributes, and other types of nodes.</span></span>  

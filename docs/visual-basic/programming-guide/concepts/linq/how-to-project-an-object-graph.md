@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643765"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="760da-102">Como: projeto de um gráfico de objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="760da-102">How to: Project an Object Graph (Visual Basic)</span></span>
 <span data-ttu-id="760da-103">Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.</span><span class="sxs-lookup"><span data-stu-id="760da-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
