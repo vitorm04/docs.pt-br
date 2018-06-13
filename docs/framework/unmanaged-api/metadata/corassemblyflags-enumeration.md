@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442820"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumeração CorAssemblyFlags
 Contém valores que descrevem os metadados aplicado a uma compilação do assembly.  

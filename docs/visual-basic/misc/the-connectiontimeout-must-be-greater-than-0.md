@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640523"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout deve ser maior que 0
 Quando o upload e download de arquivos com o [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), você deve especificar um `connectionTimeout` maior `0`.  

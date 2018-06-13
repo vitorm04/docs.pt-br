@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644115"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operações de consulta básica (Visual Basic)
 Este tópico fornece uma breve introdução ao [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões no Visual Basic e alguns dos tipos típicos de operações executadas em uma consulta. Para mais informações, consulte os seguintes tópicos:  

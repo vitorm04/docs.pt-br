@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604933"
 ---
 # <a name="doloop-statement-visual-basic"></a>Instrução Do...Loop (Visual Basic)
 Repete um bloco de instruções enquanto uma `Boolean` condição é `True` ou até que a condição se torne `True`.  

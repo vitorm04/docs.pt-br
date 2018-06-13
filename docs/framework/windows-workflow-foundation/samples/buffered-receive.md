@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518705"
 ---
 # <a name="buffered-receive"></a>Armazenados em buffer receber
 Este exemplo demonstra como instalar e configurar o recurso de buffer de recebimento no Windows Workflow Foundation (WF). Armazenados em buffer receber permite que o autor de fluxo de trabalho crie um fluxo de trabalho sem ter que se preocupar na ordem em que as mensagens são recebidas. O armazenados em buffer recebe mensagens de buffers de recurso localmente e entrega-as quando o fluxo de trabalho está pronto para as receber.  

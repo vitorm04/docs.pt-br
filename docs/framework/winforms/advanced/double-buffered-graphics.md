@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524060"
 ---
 # <a name="double-buffered-graphics"></a>Elementos gráficos em buffer duplo
 A cintilação é um problema comum na programação de gráficos. Operações gráficas que requerem várias operações de pintura complexas podem fazer as imagens renderizadas parecerem cintilar ou ter uma aparência inaceitável por outro motivo. Para resolver esses problemas, o .NET Framework dá acesso a buffer duplo.  

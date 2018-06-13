@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518496"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Escopo e visibilidade de definição de atividades
 O escopo e a visibilidade de definição de atividade, assim como o escopo e a visibilidade de um objeto, são a capacidade de objetos ou outras atividades para acessar membros da atividade. A definição da atividade é executada por implementações seguintes:  

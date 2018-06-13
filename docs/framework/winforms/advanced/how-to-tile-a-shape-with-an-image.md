@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523117"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Como preencher uma forma com instâncias de uma imagem organizadas lado a lado
 Da mesma forma que blocos podem ser colocados lado a lado para recobrir um piso, imagens retangulares podem ser colocadas umas ao lado das outras para preencher (organizar lado a lado) uma forma. Para organizar o interior de uma forma lado a lado, use um pincel de textura. Quando você cria um <xref:System.Drawing.TextureBrush> do objeto, um dos argumentos que você passa para o construtor é um <xref:System.Drawing.Image> objeto. Quando você usa o pincel de textura para pintar o interior de uma forma, ela será preenchida com repetidas cópias dessa imagem.  

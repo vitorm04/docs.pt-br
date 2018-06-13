@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639465"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>Não é possível ler o fluxo transmitido para TextFieldParser
 O [objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md) não é possível ler o fluxo que foi passado para ele. Isso pode ser resultado da tentativa de ler um arquivo que não é um arquivo de texto.  
