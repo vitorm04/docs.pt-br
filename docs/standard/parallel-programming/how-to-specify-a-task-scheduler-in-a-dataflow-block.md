@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585496"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Como: Especificar um agendador de tarefas em um bloco de fluxo de dados
 Este documento demonstra como associar um agendador de tarefas específico quando você usa o fluxo de dados em seu aplicativo. O exemplo usa a classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> em um aplicativo Windows Forms para mostrar quando as tarefas do leitor estão ativas e quando uma tarefa de gravador está ativa. Ele também usa o método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> para permitir que um bloco de fluxo de dados seja executado no thread da interface do usuário.

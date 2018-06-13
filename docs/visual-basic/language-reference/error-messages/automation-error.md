@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583871"
 ---
 # <a name="automation-error"></a>Erro de automação
 Ocorreu um erro ao executar um método ou ao obter ou configurar uma propriedade de uma variável de objeto. O erro foi relatado pelo aplicativo que criou o objeto.  

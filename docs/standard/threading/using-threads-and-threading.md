@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584174"
 ---
 # <a name="using-threads-and-threading"></a>Usando threads e threading
 Os tópicos nesta seção abordam a criação e gerenciamento de threads gerenciados, como transmitir dados para threads gerenciados e obter resultados e como destruir threads e tratar um <xref:System.Threading.ThreadAbortException>.  
