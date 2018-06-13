@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33212125"
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publicar um aplicativo Olá, Mundo com o Visual Studio 2017
 

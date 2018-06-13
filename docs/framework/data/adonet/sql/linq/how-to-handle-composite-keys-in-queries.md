@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354233"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Como: Manipular teclas compostas em consultas
 Alguns operadores podem levar apenas um argumento. Se o argumento deve incluir mais de uma coluna de base de dados, você deve criar um tipo anônimo para representar a combinação.  

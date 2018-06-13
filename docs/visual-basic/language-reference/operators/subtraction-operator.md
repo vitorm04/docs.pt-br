@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604309"
 ---
 # <a name="--operator-visual-basic"></a>Operador - (Visual Basic)
 Retorna a diferença entre duas expressões numéricas ou o valor negativo de uma expressão numérica.  

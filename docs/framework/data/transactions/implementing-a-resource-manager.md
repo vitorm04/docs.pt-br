@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363257"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementar um Gerenciador de recursos
 Cada recurso usado em uma transação é gerenciado por um Gerenciador de recursos, as ações são coordenadas por um Gerenciador de transações. Gerenciadores de recursos trabalham em cooperação com o Gerenciador de transações para fornecer o aplicativo com uma garantia de atomicidade e isolamento. Microsoft SQL Server, filas de mensagens duráveis, tabelas de hash em memória são exemplos de gerenciadores de recursos.  

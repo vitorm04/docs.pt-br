@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357145"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recuperando identidade ou valores de Autonumber
 Uma chave primária em um banco de dados relacional é uma coluna ou uma combinação de colunas que sempre contém valores exclusivos. Saber o valor da chave primária permite que você localize a linha que o contém. Os mecanismos de bancos de dados relacionais, como o SQL Server, o Oracle e o Microsoft Access/Jet dão suporte à criação de colunas de incremento automático, que podem ser designadas como chaves primárias. Esses valores gerados pelo servidor como linhas são adicionados a uma tabela. No SQL Server, você define a propriedade de identidade de uma coluna, no Oracle você cria uma Sequência e no Microsoft Access você cria uma coluna AutoNumber.  

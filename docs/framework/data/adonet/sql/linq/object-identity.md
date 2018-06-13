@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358463"
 ---
 # <a name="object-identity"></a>Identidade do objeto
 Os objetos em tempo de execução têm identidades exclusivas. Duas variáveis que referem-se ao mesmo objeto realmente referem-se à mesma instância de objeto. Devido ao fato, as alterações feitas por um caminho com uma variável imediatamente são visíveis com o outro.  

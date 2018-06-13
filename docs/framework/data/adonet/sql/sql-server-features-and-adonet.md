@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356561"
 ---
 # <a name="sql-server-features-and-adonet"></a>funcionalidades do SQL Server e ADO.NET
 Os tópicos desta seção discutem os recursos do SQL Server que são destinados a desenvolver aplicativos de banco de dados usando o ADO.NET.  

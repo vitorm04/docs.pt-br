@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527541"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Como obter e definir a célula atual no controle DataGridView dos Windows Forms
 Interação com o <xref:System.Windows.Forms.DataGridView> geralmente requer que você descobre programaticamente célula que está ativa no momento. Talvez você precise alterar a célula atual. Você pode executar essas tarefas com o <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propriedade.  

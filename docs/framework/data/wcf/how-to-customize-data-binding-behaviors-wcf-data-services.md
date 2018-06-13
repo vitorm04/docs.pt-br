@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364133"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Como: personalizar dados de associação comportamentos (WCF Data Services)
 Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode fornecer lógica personalizada que é chamada pelo <xref:System.Data.Services.Client.DataServiceCollection%601> quando um objeto é adicionado ou removido da coleção de associação ou quando for detectada uma alteração de propriedade. Essa lógica personalizada é fornecida como métodos, referenciados como <xref:System.Func%602> delegados, que retornam um valor de `false` quando o comportamento padrão deve ser executado ainda quando o método personalizado é concluído e `true` quando subsequentes de processamento do evento deve ser interrompido.  
