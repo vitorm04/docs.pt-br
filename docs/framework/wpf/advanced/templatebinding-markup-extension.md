@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546914"
 ---
 # <a name="templatebinding-markup-extension"></a><span data-ttu-id="d782c-102">Extensão de marcação TemplateBinding</span><span class="sxs-lookup"><span data-stu-id="d782c-102">TemplateBinding Markup Extension</span></span>
 <span data-ttu-id="d782c-103">Vincula o valor de uma propriedade em um modelo de controle para ser o valor de outra propriedade no controle personalizado.</span><span class="sxs-lookup"><span data-stu-id="d782c-103">Links the value of a property in a control template to be the value of another property on the templated control.</span></span>  

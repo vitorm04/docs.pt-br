@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d79b0c1fed0178f8463174fe981f250d6f6fb5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430701"
 ---
 # <a name="eclrevent-enumeration"></a><span data-ttu-id="dc1a4-102">Enumeração EClrEvent</span><span class="sxs-lookup"><span data-stu-id="dc1a4-102">EClrEvent Enumeration</span></span>
 <span data-ttu-id="dc1a4-103">Descreve os eventos de runtime (CLR) de linguagem comum para a qual o host pode registrar retornos de chamada.</span><span class="sxs-lookup"><span data-stu-id="dc1a4-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  

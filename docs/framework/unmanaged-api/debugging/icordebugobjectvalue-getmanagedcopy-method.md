@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0d8dc3afe188e18d0804055f869e5090ebc4224
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417671"
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="f9e5f-102">Método ICorDebugObjectValue::GetManagedCopy</span><span class="sxs-lookup"><span data-stu-id="f9e5f-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
 <span data-ttu-id="f9e5f-103">`GetManagedCopy` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="f9e5f-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="f9e5f-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="f9e5f-104">Do not call this method.</span></span>  

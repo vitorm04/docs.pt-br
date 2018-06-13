@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415454"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="ac729-102">Método ICorDebugILFrame::EnumerateLocalVariables</span><span class="sxs-lookup"><span data-stu-id="ac729-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
 <span data-ttu-id="ac729-103">Obtém um enumerador para as variáveis locais nesse quadro.</span><span class="sxs-lookup"><span data-stu-id="ac729-103">Gets an enumerator for the local variables in this frame.</span></span>  

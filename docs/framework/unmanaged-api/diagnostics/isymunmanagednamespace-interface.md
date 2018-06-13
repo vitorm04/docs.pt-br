@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9408a56b7a1e8cbad94014b55ec5d830e1734810
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426082"
 ---
 # <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="b5f74-102">Interface ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="b5f74-102">ISymUnmanagedNamespace Interface</span></span>
 <span data-ttu-id="b5f74-103">Representa um namespace.</span><span class="sxs-lookup"><span data-stu-id="b5f74-103">Represents a namespace.</span></span>  

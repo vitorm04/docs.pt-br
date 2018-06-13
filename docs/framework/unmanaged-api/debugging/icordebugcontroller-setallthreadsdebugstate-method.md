@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ee396c512dca2bea0a7a9737d5515defce4b2b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415122"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a><span data-ttu-id="59269-102">Método ICorDebugController::SetAllThreadsDebugState</span><span class="sxs-lookup"><span data-stu-id="59269-102">ICorDebugController::SetAllThreadsDebugState Method</span></span>
 <span data-ttu-id="59269-103">Define o estado de depuração de todos os threads gerenciados no processo.</span><span class="sxs-lookup"><span data-stu-id="59269-103">Sets the debug state of all managed threads in the process.</span></span>  

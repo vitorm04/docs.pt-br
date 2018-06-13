@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac4ddc33bcaf07d615fd186a63d96b1f4f6464c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417726"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a><span data-ttu-id="d874a-102">Interface ICorDebugHeapSegmentEnum</span><span class="sxs-lookup"><span data-stu-id="d874a-102">ICorDebugHeapSegmentEnum Interface</span></span>
 <span data-ttu-id="d874a-103">Fornece um enumerador para regiões de memória do heap gerenciado.</span><span class="sxs-lookup"><span data-stu-id="d874a-103">Provides an enumerator for the memory regions of the managed heap.</span></span> <span data-ttu-id="d874a-104">Esta interface é uma subclasse da interface ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="d874a-104">This interface is a subclass of the ICorDebugEnum interface.</span></span>  

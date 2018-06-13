@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415016"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a><span data-ttu-id="83f89-102">Método ICorDebugILFrame::EnumerateArguments</span><span class="sxs-lookup"><span data-stu-id="83f89-102">ICorDebugILFrame::EnumerateArguments Method</span></span>
 <span data-ttu-id="83f89-103">Obtém um enumerador para os argumentos nesse quadro.</span><span class="sxs-lookup"><span data-stu-id="83f89-103">Gets an enumerator for the arguments in this frame.</span></span>  

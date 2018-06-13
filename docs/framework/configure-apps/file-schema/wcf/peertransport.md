@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748614"
 ---
 # <a name="ltpeertransportgt"></a><span data-ttu-id="d264a-102">&lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="d264a-102">&lt;peerTransport&gt;</span></span>
 <span data-ttu-id="d264a-103">Define um transporte de par para uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="d264a-103">Defines a peer transport for a custom binding.</span></span>  

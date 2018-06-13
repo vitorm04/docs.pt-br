@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d62f4f8a34123bcd3f0cbe56f1c1b958bcaa6ef2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413365"
 ---
 # <a name="icordebugframegetcallee-method"></a><span data-ttu-id="d41a2-102">Método ICorDebugFrame::GetCallee</span><span class="sxs-lookup"><span data-stu-id="d41a2-102">ICorDebugFrame::GetCallee Method</span></span>
 <span data-ttu-id="d41a2-103">Obtém um ponteiro para o objeto ICorDebugFrame da atual cadeia que este quadro chamado.</span><span class="sxs-lookup"><span data-stu-id="d41a2-103">Gets a pointer to the ICorDebugFrame object in the current chain that this frame called.</span></span>  

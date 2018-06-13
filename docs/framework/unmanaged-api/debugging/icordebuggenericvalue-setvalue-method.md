@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83aebad108a743d25b8ea93c99060d10bf5c3980
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413202"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a><span data-ttu-id="f2f72-102">Método ICorDebugGenericValue::SetValue</span><span class="sxs-lookup"><span data-stu-id="f2f72-102">ICorDebugGenericValue::SetValue Method</span></span>
 <span data-ttu-id="f2f72-103">Copia um novo valor de buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="f2f72-103">Copies a new value from the specified buffer.</span></span>  

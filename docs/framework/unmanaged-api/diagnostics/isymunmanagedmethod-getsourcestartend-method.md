@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426218"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="3e395-102">Método ISymUnmanagedMethod::GetSourceStartEnd</span><span class="sxs-lookup"><span data-stu-id="3e395-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
 <span data-ttu-id="3e395-103">Obtém as posições de documento de início e término para a fonte deste método.</span><span class="sxs-lookup"><span data-stu-id="3e395-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="3e395-104">A primeira posição de matriz é o início e a segunda posição de matriz é o final.</span><span class="sxs-lookup"><span data-stu-id="3e395-104">The first array position is the start, and the second array position is the end.</span></span>  

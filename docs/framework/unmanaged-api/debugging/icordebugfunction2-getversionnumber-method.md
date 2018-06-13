@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdd2151c4886959647de4f9e27a20a93ffc07429
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420047"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a><span data-ttu-id="460e9-102">Método ICorDebugFunction2::GetVersionNumber</span><span class="sxs-lookup"><span data-stu-id="460e9-102">ICorDebugFunction2::GetVersionNumber Method</span></span>
 <span data-ttu-id="460e9-103">Obtém a versão de editar e continuar dessa função.</span><span class="sxs-lookup"><span data-stu-id="460e9-103">Gets the Edit and Continue version of this function.</span></span>  

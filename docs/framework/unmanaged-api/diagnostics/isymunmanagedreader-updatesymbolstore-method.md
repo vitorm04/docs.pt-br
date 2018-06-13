@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427376"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="02678-102">Método ISymUnmanagedReader::UpdateSymbolStore</span><span class="sxs-lookup"><span data-stu-id="02678-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
 <span data-ttu-id="02678-103">Atualiza o repositório de símbolos existente com um repositório de símbolos delta.</span><span class="sxs-lookup"><span data-stu-id="02678-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="02678-104">Esse método é usado em cenários de editar e continuar para atualizar o repositório de símbolos para corresponder deltas para o arquivo executável (PE) portátil original.</span><span class="sxs-lookup"><span data-stu-id="02678-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  

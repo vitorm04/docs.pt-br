@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2515e21ec00bd656eafd21a092a27304f7b1769
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419010"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a><span data-ttu-id="ebbbd-102">Método ICorDebugProcess::ClearCurrentException</span><span class="sxs-lookup"><span data-stu-id="ebbbd-102">ICorDebugProcess::ClearCurrentException Method</span></span>
 <span data-ttu-id="ebbbd-103">Limpa a exceção atual não gerenciada em um determinado thread.</span><span class="sxs-lookup"><span data-stu-id="ebbbd-103">Clears the current unmanaged exception on the given thread.</span></span>  

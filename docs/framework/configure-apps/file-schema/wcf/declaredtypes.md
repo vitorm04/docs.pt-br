@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747610"
 ---
 # <a name="ltdeclaredtypesgt"></a><span data-ttu-id="d3676-102">&lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="d3676-102">&lt;declaredTypes&gt;</span></span>
 <span data-ttu-id="d3676-103">Contém de tipos conhecidos que o <xref:System.Runtime.Serialization.DataContractSerializer> usa durante a desserialização.</span><span class="sxs-lookup"><span data-stu-id="d3676-103">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  

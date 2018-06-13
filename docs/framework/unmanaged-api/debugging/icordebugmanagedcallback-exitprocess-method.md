@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416875"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a><span data-ttu-id="62497-102">Método ICorDebugManagedCallback::ExitProcess</span><span class="sxs-lookup"><span data-stu-id="62497-102">ICorDebugManagedCallback::ExitProcess Method</span></span>
 <span data-ttu-id="62497-103">Notifica o depurador que um processo foi encerrado.</span><span class="sxs-lookup"><span data-stu-id="62497-103">Notifies the debugger that a process has exited.</span></span>  

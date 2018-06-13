@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416017"
 ---
 # <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="e637d-102">Método ICorDebugModule::GetAssembly</span><span class="sxs-lookup"><span data-stu-id="e637d-102">ICorDebugModule::GetAssembly Method</span></span>
 <span data-ttu-id="e637d-103">Obtém o assembly contendo para este módulo.</span><span class="sxs-lookup"><span data-stu-id="e637d-103">Gets the containing assembly for this module.</span></span>  

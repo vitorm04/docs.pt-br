@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4051c3f8300b02581c86642455954615d920c3ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415435"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a><span data-ttu-id="4f73a-102">Método ICorDebugManagedCallback2::FunctionRemapComplete</span><span class="sxs-lookup"><span data-stu-id="4f73a-102">ICorDebugManagedCallback2::FunctionRemapComplete Method</span></span>
 <span data-ttu-id="4f73a-103">Notifica o depurador que a execução de código alternou para uma nova versão de uma função editada.</span><span class="sxs-lookup"><span data-stu-id="4f73a-103">Notifies the debugger that code execution has switched to a new version of an edited function.</span></span>  

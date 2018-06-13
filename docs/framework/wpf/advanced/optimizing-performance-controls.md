@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549257"
 ---
 # <a name="optimizing-performance-controls"></a><span data-ttu-id="4b39a-102">Otimizando desempenho: controles</span><span class="sxs-lookup"><span data-stu-id="4b39a-102">Optimizing Performance: Controls</span></span>
 <span data-ttu-id="4b39a-103">O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui muitos dos componentes comuns de interface do usuário que são usados na maioria dos aplicativos do Windows.</span><span class="sxs-lookup"><span data-stu-id="4b39a-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] includes many of the common user-interface (UI) components that are used in most Windows applications.</span></span> <span data-ttu-id="4b39a-104">Este tópico contém técnicas para melhorar o desempenho de sua interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="4b39a-104">This topic contains techniques for improving the performance of your UI.</span></span>  

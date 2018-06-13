@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422065"
 ---
 # <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="14711-102">Método ICorDebugType2::GetTypeID</span><span class="sxs-lookup"><span data-stu-id="14711-102">ICorDebugType2::GetTypeID Method</span></span>
 <span data-ttu-id="14711-103">Obtém um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) para este tipo.</span><span class="sxs-lookup"><span data-stu-id="14711-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  

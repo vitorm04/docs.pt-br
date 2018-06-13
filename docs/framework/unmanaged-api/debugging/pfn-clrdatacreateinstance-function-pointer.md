@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee003d668916baec313c6115cc12826286f6cdd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423670"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="6bdb4-102">Ponteiro de função PFN_CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="6bdb4-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
 <span data-ttu-id="6bdb4-103">Aponta para uma função que cria um objeto de interface para o item de destino especificado.</span><span class="sxs-lookup"><span data-stu-id="6bdb4-103">Points to a function that creates an interface object for the specified target item.</span></span>  

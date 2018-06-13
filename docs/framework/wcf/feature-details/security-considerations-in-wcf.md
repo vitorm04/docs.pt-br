@@ -10,8 +10,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 9d26acf8443967bff36637c482dd3270ef034f40
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497523"
 ---
 # <a name="security-considerations-in-wcf"></a><span data-ttu-id="5c36a-102">Considerações de segurança no WCF</span><span class="sxs-lookup"><span data-stu-id="5c36a-102">Security Considerations in WCF</span></span>
 <span data-ttu-id="5c36a-103">Os tópicos nesta seção listam vários itens relacionados à segurança a serem considerados durante a criação de um aplicativo do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="5c36a-103">The topics in this section list various security-related items to consider when designing a Windows Communication Foundation (WCF) application.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3bb4331b1c55cbda818866c5ff08f9bacd3ebae0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413979"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="ca803-102">Método ICorDebugFrame::GetFunctionToken</span><span class="sxs-lookup"><span data-stu-id="ca803-102">ICorDebugFrame::GetFunctionToken Method</span></span>
 <span data-ttu-id="ca803-103">Obtém o token de metadados para a função que contém o código associado deste quadro de pilhas.</span><span class="sxs-lookup"><span data-stu-id="ca803-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  

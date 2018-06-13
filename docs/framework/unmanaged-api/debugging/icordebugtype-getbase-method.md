@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b96c6ab8fb9065e1a08ad45a7f4482ef0b32788b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418877"
 ---
 # <a name="icordebugtypegetbase-method"></a><span data-ttu-id="d62b1-102">Método ICorDebugType::GetBase</span><span class="sxs-lookup"><span data-stu-id="d62b1-102">ICorDebugType::GetBase Method</span></span>
 <span data-ttu-id="d62b1-103">Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver, do tipo representado por esse `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="d62b1-103">Gets an interface pointer to an ICorDebugType that represents the base type, if one exists, of the type represented by this `ICorDebugType`.</span></span>  

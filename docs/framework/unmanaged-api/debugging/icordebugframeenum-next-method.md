@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f049a7cadf1857495e49b9bdc2fecd1b49103af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415477"
 ---
 # <a name="icordebugframeenumnext-method"></a><span data-ttu-id="508ee-102">Método ICorDebugFrameEnum::Next</span><span class="sxs-lookup"><span data-stu-id="508ee-102">ICorDebugFrameEnum::Next Method</span></span>
 <span data-ttu-id="508ee-103">Obtém o número especificado de instâncias ICorDebugFrame, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="508ee-103">Gets the specified number of ICorDebugFrame instances, starting at the current position.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413274"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="57780-102">Método ICorDebugEval2::NewParameterizedArray</span><span class="sxs-lookup"><span data-stu-id="57780-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
 <span data-ttu-id="57780-103">Aloca uma nova matriz do tipo de elemento especificado e dimensões.</span><span class="sxs-lookup"><span data-stu-id="57780-103">Allocates a new array of the specified element type and dimensions.</span></span>  

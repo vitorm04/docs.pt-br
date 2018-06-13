@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414977"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="b8103-102">Método ICorDebugILFrame2::RemapFunction</span><span class="sxs-lookup"><span data-stu-id="b8103-102">ICorDebugILFrame2::RemapFunction Method</span></span>
 <span data-ttu-id="b8103-103">Remapeia uma função editada, especificando o novo deslocamento de linguagem intermediária (MSIL) Microsoft</span><span class="sxs-lookup"><span data-stu-id="b8103-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  

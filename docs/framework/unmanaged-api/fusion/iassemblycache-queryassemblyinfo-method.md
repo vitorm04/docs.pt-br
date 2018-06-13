@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6935a72bb99e636b3732958ee88ad224b401513b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430714"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="ba2b2-102">Método IAssemblyCache::QueryAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="ba2b2-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
 <span data-ttu-id="ba2b2-103">Obtém os dados solicitados sobre o assembly especificado.</span><span class="sxs-lookup"><span data-stu-id="ba2b2-103">Gets the requested data about the specified assembly.</span></span>  

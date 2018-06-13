@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413313"
 ---
 # <a name="icordebugmodulegetsize-method"></a><span data-ttu-id="8ee72-102">Método ICorDebugModule::GetSize</span><span class="sxs-lookup"><span data-stu-id="8ee72-102">ICorDebugModule::GetSize Method</span></span>
 <span data-ttu-id="8ee72-103">Obtém o tamanho, em bytes, do módulo.</span><span class="sxs-lookup"><span data-stu-id="8ee72-103">Gets the size, in bytes, of the module.</span></span>  

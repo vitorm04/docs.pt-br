@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06c020b9f6c074be11e3433939ce6898586123cd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412601"
 ---
 # <a name="icordebugframegetchain-method"></a><span data-ttu-id="827dc-102">Método ICorDebugFrame::GetChain</span><span class="sxs-lookup"><span data-stu-id="827dc-102">ICorDebugFrame::GetChain Method</span></span>
 <span data-ttu-id="827dc-103">Obtém um ponteiro para a cadeia que este quadro é uma parte do.</span><span class="sxs-lookup"><span data-stu-id="827dc-103">Gets a pointer to the chain this frame is a part of.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f7e5fceacc3fefa9267a9d7f989e745c392322e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414119"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="a87da-102">Método ICorDebugInternalFrame::GetFrameType</span><span class="sxs-lookup"><span data-stu-id="a87da-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
 <span data-ttu-id="a87da-103">Obtém o tipo deste quadro interno.</span><span class="sxs-lookup"><span data-stu-id="a87da-103">Gets the type of this internal frame.</span></span>  

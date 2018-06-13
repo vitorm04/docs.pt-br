@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 230666cefdadd56465fac35222500ad4b6da67e3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418289"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="3daee-102">Método ICorDebugObjectValue::GetFieldValue</span><span class="sxs-lookup"><span data-stu-id="3daee-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
 <span data-ttu-id="3daee-103">Obtém o valor do campo especificado da classe especificada para o valor desse objeto.</span><span class="sxs-lookup"><span data-stu-id="3daee-103">Gets the value of the specified field of the specified class for this object value.</span></span>  

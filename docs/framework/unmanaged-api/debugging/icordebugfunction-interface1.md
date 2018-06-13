@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 344acf109d58d0ed2fbc8a91da0761b4dd148a27
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419173"
 ---
 # <a name="icordebugfunction-interface1"></a><span data-ttu-id="8e221-102">ICorDebugFunction Interface1</span><span class="sxs-lookup"><span data-stu-id="8e221-102">ICorDebugFunction Interface1</span></span>
 <span data-ttu-id="8e221-103">Representa uma função ou um método gerenciado.</span><span class="sxs-lookup"><span data-stu-id="8e221-103">Represents a managed function or method.</span></span>  

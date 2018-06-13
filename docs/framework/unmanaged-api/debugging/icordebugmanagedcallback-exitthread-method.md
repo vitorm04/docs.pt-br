@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24b01fecc7947d14e36b4411a58d200667b0f2a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415536"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="eab39-102">Método ICorDebugManagedCallback::ExitThread</span><span class="sxs-lookup"><span data-stu-id="eab39-102">ICorDebugManagedCallback::ExitThread Method</span></span>
 <span data-ttu-id="eab39-103">Notifica o depurador que um thread que estava executando código gerenciado foi encerrado.</span><span class="sxs-lookup"><span data-stu-id="eab39-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  

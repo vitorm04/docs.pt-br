@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420635"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="99a27-102">Método ICorDebugThread::GetActiveFrame</span><span class="sxs-lookup"><span data-stu-id="99a27-102">ICorDebugThread::GetActiveFrame Method</span></span>
 <span data-ttu-id="99a27-103">Obtém um ponteiro de interface para o quadro ativo (mais recente) no objeto ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="99a27-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  

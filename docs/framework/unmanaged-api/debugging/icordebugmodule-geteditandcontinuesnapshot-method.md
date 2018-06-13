@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414324"
 ---
 # <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="50b1d-102">Método ICorDebugModule::GetEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="50b1d-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
 <span data-ttu-id="50b1d-103">Preterido.</span><span class="sxs-lookup"><span data-stu-id="50b1d-103">Deprecated.</span></span>  

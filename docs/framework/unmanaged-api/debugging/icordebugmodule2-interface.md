@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 537023cf117477b54117799fc9ea62e894bb6591
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419134"
 ---
 # <a name="icordebugmodule2-interface1"></a><span data-ttu-id="9a88c-102">Interface1 ICorDebugModule2</span><span class="sxs-lookup"><span data-stu-id="9a88c-102">ICorDebugModule2 Interface1</span></span>
 <span data-ttu-id="9a88c-103">Serve como uma extensão lógica para a interface ICorDebugModule.</span><span class="sxs-lookup"><span data-stu-id="9a88c-103">Serves as a logical extension to the ICorDebugModule interface.</span></span>  

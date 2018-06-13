@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413134"
 ---
 # <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="e1b7c-102">Método ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="e1b7c-102">ICorDebugErrorInfoEnum::Next Method</span></span>
 <span data-ttu-id="e1b7c-103">`ICorDebugErrorInfoEnum::Next` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="e1b7c-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="e1b7c-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="e1b7c-104">Do not call this method.</span></span>  

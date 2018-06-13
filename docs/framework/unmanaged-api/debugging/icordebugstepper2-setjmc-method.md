@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418191"
 ---
 # <a name="icordebugstepper2setjmc-method"></a><span data-ttu-id="a5f6a-102">Método ICorDebugStepper2::SetJMC</span><span class="sxs-lookup"><span data-stu-id="a5f6a-102">ICorDebugStepper2::SetJMC Method</span></span>
 <span data-ttu-id="a5f6a-103">Define um valor que especifica se este ICorDebugStepper etapas somente através de código que é criado pelo desenvolvedor do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a5f6a-103">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span> <span data-ttu-id="a5f6a-104">Esse processo também é conhecido apenas como meu depuração de código (JMC).</span><span class="sxs-lookup"><span data-stu-id="a5f6a-104">This process is also known as just my code (JMC) debugging.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415636"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="76efd-102">Método ICorDebugModule::EnableJITDebugging</span><span class="sxs-lookup"><span data-stu-id="76efd-102">ICorDebugModule::EnableJITDebugging Method</span></span>
 <span data-ttu-id="76efd-103">Controla se o compilador just-in-time (JIT) preserva as informações de depuração para métodos neste módulo.</span><span class="sxs-lookup"><span data-stu-id="76efd-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  

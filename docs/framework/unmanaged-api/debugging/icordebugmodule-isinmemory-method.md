@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415887"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a><span data-ttu-id="ab068-102">Método ICorDebugModule::IsInMemory</span><span class="sxs-lookup"><span data-stu-id="ab068-102">ICorDebugModule::IsInMemory Method</span></span>
 <span data-ttu-id="ab068-103">Obtém um valor que indica se este módulo existe apenas na memória.</span><span class="sxs-lookup"><span data-stu-id="ab068-103">Gets a value that indicates whether this module exists only in memory.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ff378602fc7338263ef49aee6802d2138bab9d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413166"
 ---
 # <a name="icordebugevalnewobject-method"></a><span data-ttu-id="26d9e-102">Método ICorDebugEval::NewObject</span><span class="sxs-lookup"><span data-stu-id="26d9e-102">ICorDebugEval::NewObject Method</span></span>
 <span data-ttu-id="26d9e-103">Aloca uma nova instância de objeto e chama o método de construtor especificado.</span><span class="sxs-lookup"><span data-stu-id="26d9e-103">Allocates a new object instance and calls the specified constructor method.</span></span>  

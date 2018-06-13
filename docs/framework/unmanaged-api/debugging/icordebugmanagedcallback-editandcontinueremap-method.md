@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e8aa71a79bee45d5a8e1f3448c781e6ba1ec605
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414132"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a><span data-ttu-id="cc6d6-102">Método ICorDebugManagedCallback::EditAndContinueRemap</span><span class="sxs-lookup"><span data-stu-id="cc6d6-102">ICorDebugManagedCallback::EditAndContinueRemap Method</span></span>
 <span data-ttu-id="cc6d6-103">Esse método foi substituído.</span><span class="sxs-lookup"><span data-stu-id="cc6d6-103">This method has been deprecated.</span></span> <span data-ttu-id="cc6d6-104">Notifica o depurador que um evento remapear foi enviado para o ambiente de desenvolvimento integrado (IDE).</span><span class="sxs-lookup"><span data-stu-id="cc6d6-104">It notifies the debugger that a remap event has been sent to the integrated development environment (IDE).</span></span>  

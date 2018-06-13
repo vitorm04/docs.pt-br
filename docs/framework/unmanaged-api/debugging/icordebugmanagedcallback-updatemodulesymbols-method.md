@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0a506f05aac3b8335a0863c3152567fe05463a4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415874"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="cb710-102">Método ICorDebugManagedCallback::UpdateModuleSymbols</span><span class="sxs-lookup"><span data-stu-id="cb710-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
 <span data-ttu-id="cb710-103">Notifica o depurador que alterou os símbolos para um módulo de tempo de execução de linguagem comum.</span><span class="sxs-lookup"><span data-stu-id="cb710-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  

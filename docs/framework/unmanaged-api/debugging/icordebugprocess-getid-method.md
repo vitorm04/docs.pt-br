@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d752eb17b956e2367e8b191080a370506a61ff34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416661"
 ---
 # <a name="icordebugprocessgetid-method"></a><span data-ttu-id="37752-102">Método ICorDebugProcess::GetID</span><span class="sxs-lookup"><span data-stu-id="37752-102">ICorDebugProcess::GetID Method</span></span>
 <span data-ttu-id="37752-103">Obtém a ID de sistema operacional (SO) do processo.</span><span class="sxs-lookup"><span data-stu-id="37752-103">Gets the operating system (OS) ID of the process.</span></span>  

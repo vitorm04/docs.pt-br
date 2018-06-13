@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d765f87e36c98b5f664e84d85b883bc949fccf54
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415328"
 ---
 # <a name="icordebugfunction2-interface1"></a><span data-ttu-id="eb30f-102">Interface1 ICorDebugFunction2</span><span class="sxs-lookup"><span data-stu-id="eb30f-102">ICorDebugFunction2 Interface1</span></span>
 <span data-ttu-id="eb30f-103">Logicamente estende a interface ICorDebugFunction para fornecer suporte para apenas meu código passo a passo de depuração, que ignora o código não-usuário.</span><span class="sxs-lookup"><span data-stu-id="eb30f-103">Logically extends the ICorDebugFunction interface to provide support for Just My Code step-through debugging, which skips non-user code.</span></span>  

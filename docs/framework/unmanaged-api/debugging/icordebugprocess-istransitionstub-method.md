@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420089"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="e21cc-102">Método ICorDebugProcess::IsTransitionStub</span><span class="sxs-lookup"><span data-stu-id="e21cc-102">ICorDebugProcess::IsTransitionStub Method</span></span>
 <span data-ttu-id="e21cc-103">Obtém um valor que indica se um endereço está dentro de um stub que fará com que uma transição para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="e21cc-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  

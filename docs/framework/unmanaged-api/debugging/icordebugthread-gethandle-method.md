@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418266"
 ---
 # <a name="icordebugthreadgethandle-method"></a><span data-ttu-id="ae74b-102">Método ICorDebugThread::GetHandle</span><span class="sxs-lookup"><span data-stu-id="ae74b-102">ICorDebugThread::GetHandle Method</span></span>
 <span data-ttu-id="ae74b-103">Obtém o identificador atual para a parte ativa deste ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="ae74b-103">Gets the current handle for the active part of this ICorDebugThread.</span></span>  

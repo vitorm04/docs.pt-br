@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421354"
 ---
 # <a name="icordebugsteppersteprange-method"></a><span data-ttu-id="f8488-102">Método ICorDebugStepper::StepRange</span><span class="sxs-lookup"><span data-stu-id="f8488-102">ICorDebugStepper::StepRange Method</span></span>
 <span data-ttu-id="f8488-103">Faz com que este ICorDebugStepper para percorrer por meio de seu recipiente thread e para retornar quando atingir código além do último dos intervalos especificados.</span><span class="sxs-lookup"><span data-stu-id="f8488-103">Causes this ICorDebugStepper to single-step through its containing thread, and to return when it reaches code beyond the last of the specified ranges.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412799"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a><span data-ttu-id="8a8e7-102">Método ICorDebugEval2::NewParameterizedObject</span><span class="sxs-lookup"><span data-stu-id="8a8e7-102">ICorDebugEval2::NewParameterizedObject Method</span></span>
 <span data-ttu-id="8a8e7-103">Cria um novo objeto de tipo parametrizado e chama o método de construtor do objeto.</span><span class="sxs-lookup"><span data-stu-id="8a8e7-103">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 68288111e3f862cf1364031eaad9c63cf347146f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415932"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a><span data-ttu-id="f1f82-102">Método ICorDebugManagedCallback2::ChangeConnection</span><span class="sxs-lookup"><span data-stu-id="f1f82-102">ICorDebugManagedCallback2::ChangeConnection Method</span></span>
 <span data-ttu-id="f1f82-103">Notifica o depurador que o conjunto de tarefas associadas a conexão especificada foi alterado.</span><span class="sxs-lookup"><span data-stu-id="f1f82-103">Notifies the debugger that the set of tasks associated with the specified connection has changed.</span></span>  

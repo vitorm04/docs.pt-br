@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b3b77a0ffc7af3b3640d1b255bd3be522f45a7a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413544"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a><span data-ttu-id="655a6-102">Método ICorDebugEval2::NewStringWithLength</span><span class="sxs-lookup"><span data-stu-id="655a6-102">ICorDebugEval2::NewStringWithLength Method</span></span>
 <span data-ttu-id="655a6-103">Cria uma cadeia de caracteres de comprimento especificado, com o conteúdo especificado.</span><span class="sxs-lookup"><span data-stu-id="655a6-103">Creates a string of the specified length, with the specified contents.</span></span>  

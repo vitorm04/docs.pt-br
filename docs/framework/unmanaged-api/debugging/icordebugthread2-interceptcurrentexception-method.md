@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f417fcd001d9e442ae518dbcd9df26eecb6efae9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421968"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a><span data-ttu-id="5387e-102">Método ICorDebugThread2::InterceptCurrentException</span><span class="sxs-lookup"><span data-stu-id="5387e-102">ICorDebugThread2::InterceptCurrentException Method</span></span>
 <span data-ttu-id="5387e-103">Permite que um depurador interceptar a exceção atual neste thread.</span><span class="sxs-lookup"><span data-stu-id="5387e-103">Allows a debugger to intercept the current exception on this thread.</span></span>  

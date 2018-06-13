@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d881a1fe3965b6e1d89e6172c887061434cd52ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418712"
 ---
 # <a name="icordebugtypegettype-method"></a><span data-ttu-id="8b44b-102">Método ICorDebugType::GetType</span><span class="sxs-lookup"><span data-stu-id="8b44b-102">ICorDebugType::GetType Method</span></span>
 <span data-ttu-id="8b44b-103">Obtém um valor de CorElementType que descreve o tipo nativo do common language runtime (CLR) <xref:System.Type> representado por esse ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="8b44b-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  

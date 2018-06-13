@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 433e387365834498203e444ed2f85889f8adde06
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420437"
 ---
 # <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="b2d6c-102">Método ICorDebugValueEnum::Next</span><span class="sxs-lookup"><span data-stu-id="b2d6c-102">ICorDebugValueEnum::Next Method</span></span>
 <span data-ttu-id="b2d6c-103">Obtém o número especificado de instâncias de "ICorDebugValue" de enumeração, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="b2d6c-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  

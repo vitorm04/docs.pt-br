@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 195cea23313d88b636479147faa512889ca94b17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413966"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a><span data-ttu-id="22940-102">Método ICorDebugModule::GetClassFromToken</span><span class="sxs-lookup"><span data-stu-id="22940-102">ICorDebugModule::GetClassFromToken Method</span></span>
 <span data-ttu-id="22940-103">Obtém a classe especificada pelo token de metadados.</span><span class="sxs-lookup"><span data-stu-id="22940-103">Gets the class specified by the metadata token.</span></span>  

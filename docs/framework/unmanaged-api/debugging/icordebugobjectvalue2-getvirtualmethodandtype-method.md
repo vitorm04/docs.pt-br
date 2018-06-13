@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c9a6978f35b5ea9fb71f8e933dbc7a08b1c390ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416495"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="e059e-102">Método ICorDebugObjectValue2::GetVirtualMethodAndType</span><span class="sxs-lookup"><span data-stu-id="e059e-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
 <span data-ttu-id="e059e-103">Este método ainda não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="e059e-103">This method is not yet implemented.</span></span>  

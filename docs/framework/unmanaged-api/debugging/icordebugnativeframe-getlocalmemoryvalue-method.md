@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417265"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="75446-102">Método ICorDebugNativeFrame::GetLocalMemoryValue</span><span class="sxs-lookup"><span data-stu-id="75446-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
 <span data-ttu-id="75446-103">Obtém o valor de um argumento ou uma variável local que é armazenado no local de memória especificado para este quadro nativo.</span><span class="sxs-lookup"><span data-stu-id="75446-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  

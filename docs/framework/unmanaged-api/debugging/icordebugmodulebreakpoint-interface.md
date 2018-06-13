@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416131"
 ---
 # <a name="icordebugmodulebreakpoint-interface1"></a><span data-ttu-id="331df-102">ICorDebugModuleBreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="331df-102">ICorDebugModuleBreakpoint Interface1</span></span>
 <span data-ttu-id="331df-103">Fornece acesso a módulos específicos.</span><span class="sxs-lookup"><span data-stu-id="331df-103">Provides access to specific modules.</span></span> <span data-ttu-id="331df-104">Esta interface é uma subclasse da interface ICorDebugBreakpoint.</span><span class="sxs-lookup"><span data-stu-id="331df-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  

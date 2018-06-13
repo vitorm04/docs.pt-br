@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dde1f8f0325bfe501c2b1ebf034cc1fe68cda4e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412786"
 ---
 # <a name="icordebugenumreset-method"></a><span data-ttu-id="3255c-102">Método ICorDebugEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="3255c-102">ICorDebugEnum::Reset Method</span></span>
 <span data-ttu-id="3255c-103">Move o cursor para o início da enumeração.</span><span class="sxs-lookup"><span data-stu-id="3255c-103">Moves the cursor to the beginning of the enumeration.</span></span>  

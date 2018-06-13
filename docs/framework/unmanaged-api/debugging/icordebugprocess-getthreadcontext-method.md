@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea977b1ccecf9de5a04e1f1127658ca6c15043a4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416534"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a><span data-ttu-id="3011f-102">Método ICorDebugProcess::GetThreadContext</span><span class="sxs-lookup"><span data-stu-id="3011f-102">ICorDebugProcess::GetThreadContext Method</span></span>
 <span data-ttu-id="3011f-103">Obtém o contexto do thread especificado neste processo.</span><span class="sxs-lookup"><span data-stu-id="3011f-103">Gets the context for the given thread in this process.</span></span>  

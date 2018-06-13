@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25f352a3a6dfae69116d6cda2497d55485b951cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417057"
 ---
 # <a name="icordebugheapenum-interface"></a><span data-ttu-id="b7fc0-102">Interface ICorDebugHeapEnum</span><span class="sxs-lookup"><span data-stu-id="b7fc0-102">ICorDebugHeapEnum Interface</span></span>
 <span data-ttu-id="b7fc0-103">Fornece um enumerador para objetos no heap gerenciado.</span><span class="sxs-lookup"><span data-stu-id="b7fc0-103">Provides an enumerator for objects on the managed heap.</span></span> <span data-ttu-id="b7fc0-104">Esta interface é uma subclasse da interface ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="b7fc0-104">This interface is a subclass of the ICorDebugEnum interface.</span></span>  

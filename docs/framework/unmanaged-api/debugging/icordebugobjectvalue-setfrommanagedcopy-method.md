@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a2905caa011df4f0699445bafb8523c6b7e9eb8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413859"
 ---
 # <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="205a7-102">Método ICorDebugObjectValue::SetFromManagedCopy</span><span class="sxs-lookup"><span data-stu-id="205a7-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
 <span data-ttu-id="205a7-103">`SetFromManagedCopy` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="205a7-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="205a7-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="205a7-104">Do not call this method.</span></span>  
