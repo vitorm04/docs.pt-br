@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21c2352a40d46c80e46c10a3874f911be433f37e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461803"
 ---
 # <a name="icorprofilerinfo3-interface"></a>Interface ICorProfilerInfo3
 Fornece métodos que criadores de perfil de código usam para se comunicar com o common language runtime (CLR) para controlar o monitoramento de eventos e para solicitar informações. O `ICorProfilerInfo3` interface é uma extensão do [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interface. Ele fornece novos métodos com suporte no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] e versões posteriores.  

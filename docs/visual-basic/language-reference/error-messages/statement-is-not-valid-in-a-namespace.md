@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594761"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>A instrução não é válida em um namespace
 A instrução não pode aparecer no nível de um namespace. As únicas declarações permitidas no nível de namespace são módulo, interface, classe, representante, enumeração e declarações de estrutura.  

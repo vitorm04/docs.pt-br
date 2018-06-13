@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590528"
 ---
 # <a name="byte-data-type-visual-basic"></a>Tipo de dados byte (Visual Basic)
 Mantém inteiros sem sinal de 8 bits (1-bytes) que variam de 0 a 255.

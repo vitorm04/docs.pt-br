@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561830"
 ---
 # <a name="xuid-directive"></a>Diretiva x:Uid
 Fornece um identificador exclusivo para elementos de marcação. Em muitos cenários, este identificador exclusivo é usado por processos de localização de XAML e ferramentas.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591290"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de tarefas paralelas)
 As exceções sem tratamento que são lançadas pelo código de usuário que está sendo executado dentro de uma tarefa são propagadas de volta para o thread de chamada, exceto em certos cenários que são descritos mais adiante neste tópico. As exceções são propagadas quando você usa um dos métodos estáticos ou de instância de <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, e você lida com eles ao incluir a chamada em uma instrução `try` / `catch`. Se uma tarefa é o pai das tarefas filho anexadas, ou se você está esperando várias tarefas, várias exceções podem ser lançadas.  

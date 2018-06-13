@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592269"
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Como desenhar formas com os controles OvalShape e RectangleShape (Visual Studio)
 Você pode usar o controle <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> para desenhar círculos ou elipses em um formulário ou contêiner, no tempo de design e em tempo de execução. Você pode usar o controle <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> para desenhar quadrados, retângulos ou retângulos com cantos arredondados em um formulário ou contêiner. Você também pode usar esse controle para desenhar formas em tempo de design e em tempo de execução.  

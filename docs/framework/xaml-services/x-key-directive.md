@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565893"
 ---
 # <a name="xkey-directive"></a>Diretiva x:Key
 Identifica os elementos que são criados e referenciados em um dicionário definido em XAML. Adicionando um `x:Key` valor para um elemento de objeto XAML é a maneira mais comum para identificar um recurso em um dicionário de recurso, por exemplo, em um WPF <xref:System.Windows.ResourceDictionary>.  

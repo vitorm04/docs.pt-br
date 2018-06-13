@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596831"
 ---
 # <a name="argument-39conversion39-is-not-valid"></a>Argumento &#39;conversão&#39; não é válido
 Um valor para o `VbStrConv` enumeração não é válida, possivelmente porque ele é menor que zero. Valores de enumeração devem ser maior que ou igual a zero.  

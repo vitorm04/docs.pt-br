@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589978"
 ---
 # <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Função &#39; &lt;procedurename&gt; &#39; &#39;t retorna um valor em todos os caminhos de código
 Função '\<procedurename >' não retorna um valor em todos os caminhos de código. Uma instrução 'Return' está faltando?  

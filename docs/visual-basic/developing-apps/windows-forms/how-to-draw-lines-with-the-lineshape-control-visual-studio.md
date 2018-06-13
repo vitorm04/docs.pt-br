@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587339"
 ---
 # <a name="how-to-draw-lines-with-the-lineshape-control-visual-studio"></a>Como desenhar linhas com o controle LineShape (Visual Studio)
 Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.LineShape> controle para desenhar linhas horizontais, verticais ou diagonais em um formulário ou o contêiner, em tempo de design e em tempo de execução.  

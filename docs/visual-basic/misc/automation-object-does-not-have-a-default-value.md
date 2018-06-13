@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599230"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a>Objeto de automação não tem um valor padrão
 Visual Basic não pode determinar o membro padrão para o objeto especificado.  

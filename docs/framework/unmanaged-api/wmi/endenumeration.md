@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d77497beb122bef580d6eb142fede33b8cf220e3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459512"
 ---
 # <a name="endenumeration-function"></a>Função EndEnumeration
 Encerra uma sequência de enumeração iniciada com uma chamada para o [BeginEnumeration função](beginenumeration.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640261"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Exemplo de saídas de partes de documentos do Office Open XML (Visual Basic)
 Este tópico mostra como abrir um documento do Office Open XML e acessar partes dentro deles.  
