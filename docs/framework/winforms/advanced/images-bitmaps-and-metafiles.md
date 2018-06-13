@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522195"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Imagens, bitmaps e metarquivos
 A classe base `Image` é abstrata e fornece métodos para trabalhar com imagens de varredura (bitmaps) e imagens vetoriais (metarquivos). O `Bitmap` classe e o <xref:System.Drawing.Imaging.Metafile> classe ambos herdam o `Image` classe. A classe `Bitmap` expande os recursos da classe `Image` fornecendo métodos adicionais para carregar, salvar e manipular imagens de varredura. O <xref:System.Drawing.Imaging.Metafile> classe expande os recursos da `Image` classe fornecendo métodos adicionais para registrar e examinar imagens de vetor.  

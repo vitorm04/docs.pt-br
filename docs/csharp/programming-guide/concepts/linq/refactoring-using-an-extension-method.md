@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335478"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refatoração usando um método de extensão (C#)
 Este exemplo se baseia no exemplo anterior, [Recuperando o texto dos parágrafos (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), refatorando a concatenação de cadeias de caracteres usando uma função pura implementada como um método de extensão.  

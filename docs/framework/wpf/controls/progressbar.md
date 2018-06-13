@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552890"
 ---
 # <a name="progressbar"></a>ProgressBar
 A <xref:System.Windows.Controls.ProgressBar> indica o progresso de uma operação. O <xref:System.Windows.Controls.ProgressBar> controle consiste em uma janela que é preenchida com a cor de realce de sistema como uma operação progride.  

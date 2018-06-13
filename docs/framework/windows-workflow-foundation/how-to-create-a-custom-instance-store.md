@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519854"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Como: Crie uma instância personalizado Store
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contém <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, um armazenamento de instância que usa o SQL Server para persistir dados de fluxo de trabalho. Se seu aplicativo é necessário manter dados de fluxo de trabalho para outro meio, como um base de dados diferente ou um sistema de arquivos, você pode implementar um armazenamento personalizado de instância. Um armazenamento personalizado de instância é criado estendendo a classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> e implementar métodos que são necessários para a implementação. Para uma implementação completa de um repositório de instância personalizada, consulte o [processo de compra corporativo](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.  

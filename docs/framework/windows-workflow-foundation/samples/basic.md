@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515630"
 ---
 # <a name="basic"></a>Basic
 Esta seção fornece exemplos que demonstram a funcionalidade básica do Windows Workflow Foundation (WF).  

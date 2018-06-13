@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517985"
 ---
 # <a name="support-for-queries"></a>Suporte para consultas
 A instância Store de fluxo de trabalho do SQL registra um conjunto de propriedades conhecidos no armazenamento. Os usuários podem ver para as instâncias com base nessas propriedades. A lista a seguir contém algumas dessas propriedades conhecidas:  

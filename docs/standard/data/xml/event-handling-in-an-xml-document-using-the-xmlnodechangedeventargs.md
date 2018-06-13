@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569727"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Tratamento de eventos em um documento XML usando o XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** encapsula os argumentos passados para manipuladores de eventos registrados no objeto **XmlDocument** para manipular eventos. Os eventos e uma descrição de quando são acionados dados na tabela a seguir.  

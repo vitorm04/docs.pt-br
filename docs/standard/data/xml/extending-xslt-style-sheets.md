@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568817"
 ---
 # <a name="extending-xslt-style-sheets"></a>Estendendo folhas de estilos XSLT
 Esta seção descreve os diferentes métodos de estender a funcionalidade de fonte. Você pode adicionar objetos ou parâmetros de extensão usando a classe de <xref:System.Xml.Xsl.XsltArgumentList> . Os objetos ou parâmetros de extensão podem ser chamados de folha de estilos. Além disso, você também pode inserir blocos de script na folha de estilos usando o elemento de `msxsl:script` .  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213634"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (opções do compilador C#)
 A opção **-nologo** inibe a exibição da faixa de conexão quando o compilador é iniciado e inibe a exibição de mensagens informativas durante a compilação.  

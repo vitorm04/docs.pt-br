@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550742"
 ---
 # <a name="checkbox"></a>CheckBox
 Você pode usar um <xref:System.Windows.Controls.CheckBox> no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do seu aplicativo para representar as opções que um usuário pode selecionar ou desmarcar. Você pode usar uma única caixa de seleção, ou você pode agrupar duas ou mais caixas de seleção.  

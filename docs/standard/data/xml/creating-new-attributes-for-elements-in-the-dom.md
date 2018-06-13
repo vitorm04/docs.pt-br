@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570374"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Criando novos atributos para elementos no DOM
 Criar novos atributos é diferente de criar outros tipos de nó, pois os atributos não são nós, mas propriedades de um nó de elemento e estão contidos em um **XmlAttributeCollection** associado ao elemento. Há várias maneiras de criar um atributo e anexá-lo a um elemento:  

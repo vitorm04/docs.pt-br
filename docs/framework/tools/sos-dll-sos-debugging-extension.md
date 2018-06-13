@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409900"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extensão de Depuração SOS)
 A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados no Visual Studio e no depurador do Windows (WinDbg.exe) fornecendo informações sobre o ambiente interno do CLR (Common Language Runtime). Essa ferramenta exige que o projeto tenha depuração não gerenciada habilitada. SOS.dll é instalado automaticamente com o .NET Framework. Para usar SOS.dll no Visual Studio, instale o [WDK (Kit de Driver do Windows)](http://msdn.microsoft.com/windows/hardware/hh852362).  

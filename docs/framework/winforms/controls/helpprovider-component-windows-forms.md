@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524151"
 ---
 # <a name="helpprovider-component-windows-forms"></a>Componente HelpProvider (Windows Forms)
 Windows Forms `HelpProvider` componente é usado para associar um arquivo de ajuda HTML Help 1. x (um arquivo. chm, produzido com o HTML Help Workshop, ou um arquivo. htm) com seu aplicativo do Windows.  

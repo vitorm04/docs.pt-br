@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84ca240f937e210846e6eb9a17abfe70a280b87d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403550"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>Método ICorDebugAppDomainEnum::Next
 Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.  
