@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809011"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclagem, exibir e filtrar mensagens de rastreamento no log de forma que você pode diagnosticar, reparar e verificar os problemas do serviço WCF facilmente.  

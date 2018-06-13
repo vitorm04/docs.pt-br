@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585643"
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Erro ao salvar o arquivo de recurso Win32 temporário &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;
 O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto. O vinculador relatou um erro ao obter um nome de arquivo para uso na gravação de um recurso na memória.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808878"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Usando o WCF Moniker com clientes COM
 Este exemplo demonstra como usar o moniker de serviço do Windows Communication Foundation (WCF) para integrar serviços Web em ambientes de desenvolvimento baseado em COM, como o Microsoft Office Visual Basic for Applications (VBA Office) ou Visual Basic 6.0. Este exemplo consiste em um cliente do Windows Script Host (. vbs), uma biblioteca de cliente de suporte (. dll) e uma biblioteca de serviço (. dll) hospedada pelo Internet Information Services (IIS). O serviço é um serviço de cálculo e o cliente COM chamadas operações matemáticas, adicionar, subtrair, multiplicar e dividir — no serviço. Atividade do cliente estiver visível na janela de caixa de mensagem.  

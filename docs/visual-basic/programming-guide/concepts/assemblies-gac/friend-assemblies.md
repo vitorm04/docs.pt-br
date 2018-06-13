@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644375"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Assemblies amigáveis (Visual Basic)
 Um *assembly friend* é um assembly que pode acessar outro assembly [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) tipos e membros. Se você identificar um assembly como um assembly amigável, não precisará marcar os tipos e membros como públicos para que eles sejam acessados por outros assemblies. Isso é especialmente conveniente nos seguintes cenários:  

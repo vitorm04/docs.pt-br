@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638324"
 ---
 # <a name="the-path-has-not-been-set"></a>O caminho não foi definido
 Foi tentada uma operação de arquivo, como mover ou copiar um arquivo, sem fornecer o caminho necessário. Isso pode resultar da análise incorreta do caminho.  

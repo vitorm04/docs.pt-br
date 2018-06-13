@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647898"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refatoração usando um método de extensão (Visual Basic)
 Este exemplo é baseado no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), pela concatenação de cadeias de caracteres usando uma função pura é implementada como um método de extensão de refatoração.  
