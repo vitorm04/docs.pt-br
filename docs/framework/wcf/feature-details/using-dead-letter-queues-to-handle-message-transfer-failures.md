@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504075"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a><span data-ttu-id="21bae-102">Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha</span><span class="sxs-lookup"><span data-stu-id="21bae-102">Using Dead-Letter Queues to Handle Message Transfer Failures</span></span>
 <span data-ttu-id="21bae-103">Mensagens em fila podem não entrega.</span><span class="sxs-lookup"><span data-stu-id="21bae-103">Queued messages can fail delivery.</span></span> <span data-ttu-id="21bae-104">Essas mensagens com falha são registradas em uma fila de mensagens mortas.</span><span class="sxs-lookup"><span data-stu-id="21bae-104">These failed messages are recorded in a dead-letter queue.</span></span> <span data-ttu-id="21bae-105">Falha na entrega pode ser causado por motivos como falhas de rede, uma fila excluída, uma fila cheia, falha de autenticação ou uma falha ao entregar no tempo.</span><span class="sxs-lookup"><span data-stu-id="21bae-105">The failed delivery can be caused by reasons such as network failures, a deleted queue, a full queue, authentication failure, or a failure to deliver on time.</span></span>  

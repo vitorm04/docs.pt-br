@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514046"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="e7c20-102">Como: Propriedades de dados de instância de Deserialize</span><span class="sxs-lookup"><span data-stu-id="e7c20-102">How to: Deserialize Instance Data Properties</span></span>
 <span data-ttu-id="e7c20-103">Pode haver situações quando um usuário ou um administrador de fluxo de trabalho podem querer inspecione manualmente o estado de uma instância persistentes de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="e7c20-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="e7c20-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fornece uma exibição na tabela de instâncias que expõe as seguintes quatro colunas:</span><span class="sxs-lookup"><span data-stu-id="e7c20-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  

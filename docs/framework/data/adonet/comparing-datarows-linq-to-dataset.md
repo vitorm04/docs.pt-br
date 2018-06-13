@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756274"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a><span data-ttu-id="9f315-102">Comparando DataRows (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="9f315-102">Comparing DataRows (LINQ to DataSet)</span></span>
 <span data-ttu-id="9f315-103">O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] define vários operadores de conjunto para comparar elementos de origem e ver se são iguais.</span><span class="sxs-lookup"><span data-stu-id="9f315-103">[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] defines various set operators to compare source elements to see if they are equal.</span></span> <span data-ttu-id="9f315-104">O [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] fornece os seguintes operadores de conjunto:</span><span class="sxs-lookup"><span data-stu-id="9f315-104">[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] provides the following set operators:</span></span>  

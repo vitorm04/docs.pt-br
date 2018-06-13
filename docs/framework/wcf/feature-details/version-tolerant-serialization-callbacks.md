@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497926"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a><span data-ttu-id="4989e-102">Retornos de chamada de serialização tolerantes à versão</span><span class="sxs-lookup"><span data-stu-id="4989e-102">Version-Tolerant Serialization Callbacks</span></span>
 <span data-ttu-id="4989e-103">O modelo de programação de contrato de dados suporta totalmente os métodos de retorno de chamada de serialização tolerantes à versão que o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classes de suporte.</span><span class="sxs-lookup"><span data-stu-id="4989e-103">The data contract programming model fully supports the version-tolerant serialization callback methods that the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> and <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classes support.</span></span>  

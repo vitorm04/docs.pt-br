@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330685"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a><span data-ttu-id="be3cf-102">Como criar um documento com namespaces (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="be3cf-102">How to: Create a Document with Namespaces (C#) (LINQ to XML)</span></span>
 <span data-ttu-id="be3cf-103">Este tópico mostra como criar documentos com namespaces.</span><span class="sxs-lookup"><span data-stu-id="be3cf-103">This topic shows how to create documents with namespaces.</span></span>  

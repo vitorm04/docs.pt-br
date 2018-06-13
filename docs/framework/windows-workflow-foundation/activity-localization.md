@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512457"
 ---
 # <a name="activity-localization"></a><span data-ttu-id="18c41-102">Localização de atividades</span><span class="sxs-lookup"><span data-stu-id="18c41-102">Activity Localization</span></span>
 <span data-ttu-id="18c41-103">Quando os aplicativos de fluxo de trabalho e componentes têm o potencialmente ser localizado em outros idiomas e culturas, as cadeias de caracteres de recursos devem ser usadas de modo que eles possam ser encontradas sem recompilar.</span><span class="sxs-lookup"><span data-stu-id="18c41-103">When workflow applications and components have the potential to be localized into other cultures and languages, resource strings should be used so that they can be localized without recompiling.</span></span>  

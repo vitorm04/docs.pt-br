@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf6152c643395fe52a43424cab33f527d577b5bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413873"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="9fc37-102">Método ICorDebugManagedCallback::Exception</span><span class="sxs-lookup"><span data-stu-id="9fc37-102">ICorDebugManagedCallback::Exception Method</span></span>
 <span data-ttu-id="9fc37-103">Notifica o depurador que tenha sido lançada uma exceção do código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="9fc37-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  

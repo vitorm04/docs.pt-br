@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514073"
 ---
 # <a name="basic-validation"></a><span data-ttu-id="515f8-102">Validação básica</span><span class="sxs-lookup"><span data-stu-id="515f8-102">Basic Validation</span></span>
 <span data-ttu-id="515f8-103">Esse exemplo consiste em uma atividade, `CreateProduct`, que valida que o argumento de `Cost` é menor que ou igual ao seu argumento de `Price` .</span><span class="sxs-lookup"><span data-stu-id="515f8-103">This sample consists of an activity, `CreateProduct`, which validates that its `Cost` argument is smaller than or equal to its `Price` argument.</span></span>  

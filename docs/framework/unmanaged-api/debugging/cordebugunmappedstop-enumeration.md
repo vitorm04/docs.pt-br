@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d812a452910913f169d4377bafa82e823c533d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404411"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a><span data-ttu-id="eb925-102">Enumeração CorDebugUnmappedStop</span><span class="sxs-lookup"><span data-stu-id="eb925-102">CorDebugUnmappedStop Enumeration</span></span>
 <span data-ttu-id="eb925-103">Especifica o tipo de código não mapeado que pode disparar uma interrupção na execução do código pelo passador.</span><span class="sxs-lookup"><span data-stu-id="eb925-103">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  

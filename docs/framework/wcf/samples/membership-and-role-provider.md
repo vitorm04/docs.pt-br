@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506682"
 ---
 # <a name="membership-and-role-provider"></a><span data-ttu-id="2ec33-102">Provedor de função e associação</span><span class="sxs-lookup"><span data-stu-id="2ec33-102">Membership and Role Provider</span></span>
 <span data-ttu-id="2ec33-103">O provedor de função e associação de exemplo demonstra como um serviço pode usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedores de associação e funções para autenticar e autorizar clientes.</span><span class="sxs-lookup"><span data-stu-id="2ec33-103">The Membership and Role Provider sample demonstrates how a service can use the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership and role providers to authenticate and authorize clients.</span></span>  

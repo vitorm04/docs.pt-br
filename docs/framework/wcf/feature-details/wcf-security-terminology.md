@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508300"
 ---
 # <a name="wcf-security-terminology"></a><span data-ttu-id="fcdcd-102">Terminologia de segurança do WCF</span><span class="sxs-lookup"><span data-stu-id="fcdcd-102">WCF Security Terminology</span></span>
 <span data-ttu-id="fcdcd-103">Parte da terminologia usada ao abordar a segurança podem não ser conhecidas.</span><span class="sxs-lookup"><span data-stu-id="fcdcd-103">Some of the terminology used when discussing security may be unfamiliar.</span></span> <span data-ttu-id="fcdcd-104">Este tópico fornece curtas explicações sobre alguns dos termos de segurança, mas não se destina a fornecer a documentação abrangente para cada item.</span><span class="sxs-lookup"><span data-stu-id="fcdcd-104">This topic provides short explanations of some of security terms, but is not intended to provide comprehensive documentation for every item.</span></span>  

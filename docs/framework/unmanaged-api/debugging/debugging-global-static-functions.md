@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406445"
 ---
 # <a name="debugging-global-static-functions"></a><span data-ttu-id="042a4-102">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="042a4-102">Debugging Global Static Functions</span></span>
 <span data-ttu-id="042a4-103">Esta seção descreve as funções estáticas globais não gerenciadas que usa a API de depuração.</span><span class="sxs-lookup"><span data-stu-id="042a4-103">This section describes the unmanaged global static functions that the debugging API uses.</span></span>  

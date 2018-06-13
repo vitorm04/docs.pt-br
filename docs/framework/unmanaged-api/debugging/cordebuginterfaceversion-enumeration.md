@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410001"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a><span data-ttu-id="fc454-102">Enumeração CorDebugInterfaceVersion</span><span class="sxs-lookup"><span data-stu-id="fc454-102">CorDebugInterfaceVersion Enumeration</span></span>
 <span data-ttu-id="fc454-103">Especifica uma interface, uma versão do .NET Framework ou uma versão do .NET Framework na qual uma interface foi introduzida.</span><span class="sxs-lookup"><span data-stu-id="fc454-103">Specifies an interface, a version of the .NET Framework, or a version of the .NET Framework in which an interface was introduced.</span></span>  

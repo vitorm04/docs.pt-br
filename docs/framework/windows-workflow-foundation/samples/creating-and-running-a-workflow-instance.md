@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513680"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a><span data-ttu-id="1231b-102">Criando e executando uma instância de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="1231b-102">Creating and Running a Workflow Instance</span></span>
 <span data-ttu-id="1231b-103">Este exemplo mostra como executar uma instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="1231b-103">This sample shows how to run a workflow instance.</span></span> <span data-ttu-id="1231b-104">Mostra como executar forma síncrona e de forma assíncrona.</span><span class="sxs-lookup"><span data-stu-id="1231b-104">It shows how to execute it synchronously and asynchronously.</span></span>  

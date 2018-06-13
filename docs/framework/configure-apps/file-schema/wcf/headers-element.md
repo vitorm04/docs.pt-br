@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748273"
 ---
 # <a name="ltheadersgt-element"></a><span data-ttu-id="64708-102">elemento de &lt;cabeçalhos&gt;</span><span class="sxs-lookup"><span data-stu-id="64708-102">&lt;headers&gt; element</span></span>
 <span data-ttu-id="64708-103">Contém uma coleção de cabeçalhos de endereço que são necessárias para tratar corretamente o emissor local.</span><span class="sxs-lookup"><span data-stu-id="64708-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="64708-104">Você pode usar o `add` palavra-chave para adicionar um cabeçalho para esta coleção.</span><span class="sxs-lookup"><span data-stu-id="64708-104">You can use the `add` keyword to add a header to this collection.</span></span>  

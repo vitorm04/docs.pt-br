@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506823"
 ---
 # <a name="sessions-and-queues"></a><span data-ttu-id="95e32-102">Sessões e filas</span><span class="sxs-lookup"><span data-stu-id="95e32-102">Sessions and Queues</span></span>
 <span data-ttu-id="95e32-103">Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionadas na comunicação em fila por meio do transporte de enfileiramento de mensagens (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="95e32-103">This sample demonstrates how to send and receive a set of related messages in queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="95e32-104">Este exemplo usa o `netMsmqBinding` associação.</span><span class="sxs-lookup"><span data-stu-id="95e32-104">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="95e32-105">O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.</span><span class="sxs-lookup"><span data-stu-id="95e32-105">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

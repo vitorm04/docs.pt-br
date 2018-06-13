@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13803a8cc292da602b1b920a3879120c3e754ca4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414552"
 ---
 # <a name="icordebugcode2-interface1"></a><span data-ttu-id="61807-102">Interface1 ICorDebugCode2</span><span class="sxs-lookup"><span data-stu-id="61807-102">ICorDebugCode2 Interface1</span></span>
 <span data-ttu-id="61807-103">Fornece métodos que estendem os recursos do "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="61807-103">Provides methods that extend the capabilities of "ICorDebugCode".</span></span>  

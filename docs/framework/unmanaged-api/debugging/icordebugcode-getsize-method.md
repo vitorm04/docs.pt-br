@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c5d42aa7053c1138808775a16d820d5fef3b095
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410813"
 ---
 # <a name="icordebugcodegetsize-method"></a><span data-ttu-id="37289-102">Método ICorDebugCode::GetSize</span><span class="sxs-lookup"><span data-stu-id="37289-102">ICorDebugCode::GetSize Method</span></span>
 <span data-ttu-id="37289-103">Obtém o tamanho, em bytes, do código binário representado por esse "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="37289-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  

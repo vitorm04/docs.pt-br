@@ -20,8 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18903bd00b0a9d09365d03c155531a25dc013189
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406082"
 ---
 # <a name="closeclrenumeration-function"></a><span data-ttu-id="e203d-102">Função CloseCLREnumeration</span><span class="sxs-lookup"><span data-stu-id="e203d-102">CloseCLREnumeration Function</span></span>
 <span data-ttu-id="e203d-103">Fecha qualquer válido language runtime (CLR) inicialização continuar eventos comuns localizados em uma matriz de identificadores retornado pelo [função EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)e libera a memória para as matrizes de caminho do identificador e a cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="e203d-103">Closes any valid common language runtime (CLR) continue-startup events located in an array of handles returned by the [EnumerateCLRs function](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md), and frees the memory for the handle and string path arrays.</span></span>  

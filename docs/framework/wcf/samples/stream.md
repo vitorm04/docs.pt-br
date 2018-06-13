@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508209"
 ---
 # <a name="stream"></a><span data-ttu-id="c9cc6-102">Fluxo</span><span class="sxs-lookup"><span data-stu-id="c9cc6-102">Stream</span></span>
 <span data-ttu-id="c9cc6-103">O exemplo de fluxo demonstra o uso de fluxo de comunicação de modo de transferência.</span><span class="sxs-lookup"><span data-stu-id="c9cc6-103">The Stream sample demonstrates the use of streaming transfer mode communication.</span></span> <span data-ttu-id="c9cc6-104">O serviço expõe diversas operações que enviam e recebem fluxos.</span><span class="sxs-lookup"><span data-stu-id="c9cc6-104">The service exposes several operations that send and receive streams.</span></span> <span data-ttu-id="c9cc6-105">Este exemplo é hospedado automaticamente.</span><span class="sxs-lookup"><span data-stu-id="c9cc6-105">This sample is self-hosted.</span></span> <span data-ttu-id="c9cc6-106">O cliente e o serviço são programas de console.</span><span class="sxs-lookup"><span data-stu-id="c9cc6-106">Both the client and service are console programs.</span></span>  

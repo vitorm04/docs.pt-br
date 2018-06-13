@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512347"
 ---
 # <a name="3501---inferredcontractdescription"></a><span data-ttu-id="dbf88-102">3501 - InferredContractDescription</span><span class="sxs-lookup"><span data-stu-id="dbf88-102">3501 - InferredContractDescription</span></span>
 ## <a name="properties"></a><span data-ttu-id="dbf88-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="dbf88-103">Properties</span></span>  

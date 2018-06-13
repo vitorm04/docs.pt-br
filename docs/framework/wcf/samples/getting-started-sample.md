@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505763"
 ---
 # <a name="getting-started-sample"></a><span data-ttu-id="21183-102">Exemplo de introdução</span><span class="sxs-lookup"><span data-stu-id="21183-102">Getting Started Sample</span></span>
 <span data-ttu-id="21183-103">O guia de Introdução demonstra como implementar um serviço típico e um cliente típico usando o Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="21183-103">The Getting Started sample demonstrates how to implement a typical service and a typical client using Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="21183-104">Este exemplo é a base para todos os outros exemplos de tecnologia básico.</span><span class="sxs-lookup"><span data-stu-id="21183-104">This sample is the basis for all other basic technology samples.</span></span>  

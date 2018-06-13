@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504378"
 ---
 # <a name="security-validation"></a><span data-ttu-id="c3f09-102">Validação de segurança</span><span class="sxs-lookup"><span data-stu-id="c3f09-102">Security Validation</span></span>
 <span data-ttu-id="c3f09-103">Este exemplo demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos.</span><span class="sxs-lookup"><span data-stu-id="c3f09-103">This sample demonstrates how to use a custom behavior to validate services on a computer to ensure they meet specific criteria.</span></span> <span data-ttu-id="c3f09-104">Neste exemplo, os serviços são validados pelo comportamento personalizado verificação por meio de cada ponto de extremidade do serviço e para verificar se eles contêm elementos de associação de segurança.</span><span class="sxs-lookup"><span data-stu-id="c3f09-104">In this sample, services are validated by the custom behavior by scanning through each endpoint on the service and checking to see whether they contain secure binding elements.</span></span> <span data-ttu-id="c3f09-105">Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="c3f09-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

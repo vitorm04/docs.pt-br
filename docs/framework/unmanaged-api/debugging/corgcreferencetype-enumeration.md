@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408600"
 ---
 # <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="ccedb-102">Enumeração CorGCReferenceType</span><span class="sxs-lookup"><span data-stu-id="ccedb-102">CorGCReferenceType Enumeration</span></span>
 <span data-ttu-id="ccedb-103">Identifica a fonte de um objeto para ser coletado do lixo.</span><span class="sxs-lookup"><span data-stu-id="ccedb-103">Identifies the source of an object to be garbage-collected.</span></span>  

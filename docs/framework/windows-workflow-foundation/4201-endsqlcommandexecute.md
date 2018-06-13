@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510215"
 ---
 # <a name="4201---endsqlcommandexecute"></a><span data-ttu-id="6c6c0-102">4201 - EndSqlCommandExecute</span><span class="sxs-lookup"><span data-stu-id="6c6c0-102">4201 - EndSqlCommandExecute</span></span>
 ## <a name="properties"></a><span data-ttu-id="6c6c0-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="6c6c0-103">Properties</span></span>  

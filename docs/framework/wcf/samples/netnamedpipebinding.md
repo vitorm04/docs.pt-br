@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503191"
 ---
 # <a name="netnamedpipebinding"></a><span data-ttu-id="81385-102">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="81385-102">NetNamedPipeBinding</span></span>
 <span data-ttu-id="81385-103">Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunicação entre processos no mesmo computador.</span><span class="sxs-lookup"><span data-stu-id="81385-103">This sample demonstrates the `netNamedPipeBinding` binding, which provides cross-process communication on the same machine.</span></span> <span data-ttu-id="81385-104">Pipes nomeados não funcionam em computadores.</span><span class="sxs-lookup"><span data-stu-id="81385-104">Named pipes do not work across machines.</span></span> <span data-ttu-id="81385-105">Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) serviço da Calculadora.</span><span class="sxs-lookup"><span data-stu-id="81385-105">This sample is based on The [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) calculator service.</span></span>  

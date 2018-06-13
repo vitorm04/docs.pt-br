@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500235"
 ---
 # <a name="interop-extensibility"></a><span data-ttu-id="538ca-102">Extensibilidade de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="538ca-102">Interop Extensibility</span></span>
 <span data-ttu-id="538ca-103">Esta seção contém exemplos que demonstram interoperabilidade personalizada.</span><span class="sxs-lookup"><span data-stu-id="538ca-103">This section contains samples that demonstrate custom interoperability.</span></span>  

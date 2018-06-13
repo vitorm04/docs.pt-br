@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 895c8bc7b550fd063a9215c60f10f183e24bac83
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402946"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a><span data-ttu-id="01ef2-102">Método ICorDebugAssembly2::IsFullyTrusted</span><span class="sxs-lookup"><span data-stu-id="01ef2-102">ICorDebugAssembly2::IsFullyTrusted Method</span></span>
 <span data-ttu-id="01ef2-103">Obtém um valor que indica se o assembly foi concedido confiança total por sistema de segurança de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="01ef2-103">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>  

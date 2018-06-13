@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500410"
 ---
 # <a name="tool-samples"></a><span data-ttu-id="446d5-102">Exemplos de ferramentas</span><span class="sxs-lookup"><span data-stu-id="446d5-102">Tool Samples</span></span>
 <span data-ttu-id="446d5-103">Esta seção contém as ferramentas do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="446d5-103">This section contains Windows Communication Foundation (WCF) tools.</span></span>  

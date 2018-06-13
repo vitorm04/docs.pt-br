@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747974"
 ---
 # <a name="ltpnrppeerresolvergt"></a><span data-ttu-id="96a33-102">&lt;pnrpPeerResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="96a33-102">&lt;pnrpPeerResolver&gt;</span></span>
 <span data-ttu-id="96a33-103">Especifica que o resolvedor PNRP (Peer Name Resolution Protocol) deve ser usado como um resolvedor.</span><span class="sxs-lookup"><span data-stu-id="96a33-103">Specifies that the PNRP (Peer Name Resolution Protocol) resolver is to be used as a resolver.</span></span> <span data-ttu-id="96a33-104">Esse elemento é opcional porque o PNRP é o resolvedor padrão.</span><span class="sxs-lookup"><span data-stu-id="96a33-104">This element is optional because PNRP is the default resolver.</span></span>  

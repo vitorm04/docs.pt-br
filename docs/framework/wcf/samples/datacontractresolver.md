@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503230"
 ---
 # <a name="datacontractresolver"></a><span data-ttu-id="a1efd-102">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="a1efd-102">DataContractResolver</span></span>
 <span data-ttu-id="a1efd-103">Este exemplo demonstra como os processos de serialização e desserialização podem ser personalizados usando o <xref:System.Runtime.Serialization.DataContractResolver> classe.</span><span class="sxs-lookup"><span data-stu-id="a1efd-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="a1efd-104">Este exemplo mostra como usar um DataContractResolver para mapear tipos CLR para e de uma representação de xsi: Type durante a serialização e desserialização.</span><span class="sxs-lookup"><span data-stu-id="a1efd-104">This sample shows how to use a DataContractResolver to map CLR types to and from an xsi:type representation during serialization and deserialization.</span></span>  

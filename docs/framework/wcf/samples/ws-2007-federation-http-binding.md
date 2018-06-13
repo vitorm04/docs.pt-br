@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507075"
 ---
 # <a name="ws-2007-federation-http-binding"></a><span data-ttu-id="ddef2-102">Associação HTTP de federação do WS 2007</span><span class="sxs-lookup"><span data-stu-id="ddef2-102">WS 2007 Federation HTTP Binding</span></span>
 <span data-ttu-id="ddef2-103">Este exemplo demonstra o uso de <xref:System.ServiceModel.WS2007FederationHttpBinding>, um padrão de associação que você pode usar para criar cenários federados que suporte de versão 1.3 da especificação WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="ddef2-103">This sample demonstrates the use of <xref:System.ServiceModel.WS2007FederationHttpBinding>, a standard binding that you can use to build federated scenarios that support version 1.3 of the WS-Trust specification.</span></span>  

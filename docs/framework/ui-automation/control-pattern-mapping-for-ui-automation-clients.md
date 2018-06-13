@@ -10,8 +10,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 571d94c7654038c7ea47721caa35c41d31983016
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410043"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a><span data-ttu-id="5289f-102">Mapeamento de Padrão de Controles para Clientes de Automação de IU</span><span class="sxs-lookup"><span data-stu-id="5289f-102">Control Pattern Mapping for UI Automation Clients</span></span>
 > [!NOTE]

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507747"
 ---
 # <a name="securitybindingelement-authentication-modes"></a><span data-ttu-id="92004-102">SecurityBindingElement Authentication Modes</span><span class="sxs-lookup"><span data-stu-id="92004-102">SecurityBindingElement Authentication Modes</span></span>
 <span data-ttu-id="92004-103">Windows Communication Foundation (WCF) fornece vários modos pelos quais os clientes e serviços autenticam um ao outro.</span><span class="sxs-lookup"><span data-stu-id="92004-103">Windows Communication Foundation (WCF) provides several modes by which clients and services authenticate to one another.</span></span> <span data-ttu-id="92004-104">Você pode criar elementos de associação para esses modos de autenticação de segurança usando os métodos estáticos no <xref:System.ServiceModel.Channels.SecurityBindingElement> classe ou por meio da configuração.</span><span class="sxs-lookup"><span data-stu-id="92004-104">You can create security binding elements for these authentication modes by using static methods on the <xref:System.ServiceModel.Channels.SecurityBindingElement> class or through configuration.</span></span> <span data-ttu-id="92004-105">Este tópico descreve brevemente os modos de 18 autenticação.</span><span class="sxs-lookup"><span data-stu-id="92004-105">This topic briefly describes the 18 authentication modes.</span></span>  

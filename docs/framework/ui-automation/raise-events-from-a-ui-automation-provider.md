@@ -10,8 +10,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: e65ca3af979f9e440744d26e960a74e19d6c278f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404895"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a><span data-ttu-id="278e1-102">Disparar Eventos de um Provedor de Automação UI</span><span class="sxs-lookup"><span data-stu-id="278e1-102">Raise Events from a UI Automation Provider</span></span>
 > [!NOTE]

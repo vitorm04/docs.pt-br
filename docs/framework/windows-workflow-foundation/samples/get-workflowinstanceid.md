@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513900"
 ---
 # <a name="get-workflowinstanceid"></a><span data-ttu-id="5e515-102">Obter WorkflowInstanceId</span><span class="sxs-lookup"><span data-stu-id="5e515-102">Get WorkflowInstanceId</span></span>
 <span data-ttu-id="5e515-103">Este exemplo demonstra como usar a atividade personalizado, `GetWorkflowInstanceId` para retornar a identificação de instância de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="5e515-103">This sample demonstrates how to use the custom activity, `GetWorkflowInstanceId` to return the workflow instance ID.</span></span>  

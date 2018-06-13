@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406586"
 ---
 # <a name="cordebugintercept-enumeration"></a><span data-ttu-id="5ad02-102">Enumeração CorDebugIntercept</span><span class="sxs-lookup"><span data-stu-id="5ad02-102">CorDebugIntercept Enumeration</span></span>
 <span data-ttu-id="5ad02-103">Indica os tipos de código que pode ser interceptado (isto é, entrado em).</span><span class="sxs-lookup"><span data-stu-id="5ad02-103">Indicates the types of code that can be intercepted (that is, stepped into).</span></span>  

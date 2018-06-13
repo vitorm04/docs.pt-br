@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408054"
 ---
 # <a name="how-to-enable-token-replay-detection"></a><span data-ttu-id="d90b7-102">Como habilitar a detecção de reprodução de tokens</span><span class="sxs-lookup"><span data-stu-id="d90b7-102">How To: Enable Token Replay Detection</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="d90b7-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="d90b7-103">Applies To</span></span>  

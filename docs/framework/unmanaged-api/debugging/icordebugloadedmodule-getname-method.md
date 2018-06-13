@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8bfdf8e43258d14e7298119ce4d7136ea5de54c1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415035"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a><span data-ttu-id="c4703-102">Método ICorDebugLoadedModule::GetName</span><span class="sxs-lookup"><span data-stu-id="c4703-102">ICorDebugLoadedModule::GetName Method</span></span>
 <span data-ttu-id="c4703-103">Obtém o nome do módulo carregado.</span><span class="sxs-lookup"><span data-stu-id="c4703-103">Gets the name of the loaded module.</span></span>  

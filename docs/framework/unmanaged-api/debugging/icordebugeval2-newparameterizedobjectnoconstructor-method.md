@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aad5a285fc2280dc062b0f4cbb69977a7e605e9c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412763"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a><span data-ttu-id="5c6b5-102">Método ICorDebugEval2::NewParameterizedObjectNoConstructor</span><span class="sxs-lookup"><span data-stu-id="5c6b5-102">ICorDebugEval2::NewParameterizedObjectNoConstructor Method</span></span>
 <span data-ttu-id="5c6b5-103">Cria um novo objeto de tipo parametrizado da classe especificada sem tentar chamar um método de construtor.</span><span class="sxs-lookup"><span data-stu-id="5c6b5-103">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method.</span></span>  

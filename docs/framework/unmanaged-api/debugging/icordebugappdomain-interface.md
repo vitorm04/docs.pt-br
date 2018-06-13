@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84a11b6264ac0e241c1975eea5626edbdddce206
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406871"
 ---
 # <a name="icordebugappdomain-interface1"></a><span data-ttu-id="2d858-102">ICorDebugAppDomain Interface1</span><span class="sxs-lookup"><span data-stu-id="2d858-102">ICorDebugAppDomain Interface1</span></span>
 <span data-ttu-id="2d858-103">Fornece métodos para depurar domínios de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2d858-103">Provides methods for debugging application domains.</span></span> <span data-ttu-id="2d858-104">Esta interface é uma subclasse de ICorDebugController.</span><span class="sxs-lookup"><span data-stu-id="2d858-104">This interface is a subclass of ICorDebugController.</span></span>  

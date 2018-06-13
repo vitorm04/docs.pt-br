@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513767"
 ---
 # <a name="execution"></a><span data-ttu-id="6fcab-102">Execução</span><span class="sxs-lookup"><span data-stu-id="6fcab-102">Execution</span></span>
 <span data-ttu-id="6fcab-103">Esta seção contém exemplos que demonstram os fluxos de trabalho em execução no Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="6fcab-103">This section contains samples that demonstrate executing workflows in Windows Workflow Foundation (WF).</span></span>  
