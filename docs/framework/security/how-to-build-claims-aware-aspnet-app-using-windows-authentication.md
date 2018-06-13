@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 2a5dbec2e92d32e45bc0271de04f8c6403f67f90
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399789"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a><span data-ttu-id="cd42a-102">Como criar um aplicativo ASP.NET baseado em declarações usando a Autenticação do Windows</span><span class="sxs-lookup"><span data-stu-id="cd42a-102">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="cd42a-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="cd42a-103">Applies To</span></span>  
