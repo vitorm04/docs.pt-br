@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406263"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>Método ICorDebug::CanLaunchOrAttach
 Retorna um HRESULT que indica se iniciar um novo processo ou anexar ao processo existente especificado é possíveis dentro do contexto da configuração do computador e o tempo de execução atual.  

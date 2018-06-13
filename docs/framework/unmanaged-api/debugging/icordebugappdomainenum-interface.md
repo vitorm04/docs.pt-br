@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8db3b02ba4766d046fc549eec8add31f51069
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407914"
 ---
 # <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
 Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` valores que começam no seguinte local na enumeração. Esta interface é uma subclasse de "ICorDebugEnum".  

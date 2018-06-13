@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6df28cd3eaadfe62cd34e20e6e03d5a89e6bb425
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401203"
 ---
 # <a name="emitmanifest-method"></a>Método EmitManifest
 Emite o manifesto final. Chame este método depois de importar todos os outros arquivos e definir todas as opções. Não chame este método para os módulos não associados.  

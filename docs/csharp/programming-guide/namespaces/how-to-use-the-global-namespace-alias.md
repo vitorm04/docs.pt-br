@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327236"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Como usar o alias de namespace global (Guia de Programação em C#)
 A capacidade de acessar um membro no [namespace](../../../csharp/language-reference/keywords/namespace.md) global é útil quando o membro estiver oculto por outra entidade com o mesmo nome.  

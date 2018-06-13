@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408134"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Diretrizes de codificação segura para código não gerenciado
 Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, APIs de código nativo, assim como Win32). Visto que isso significa que sair do perímetro de segurança para código gerenciado, o devido cuidado é necessário. Se seu código é neutro em termos de segurança, seu código e qualquer outro código que o chama devem ter permissão de código não gerenciado (<xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificado).  

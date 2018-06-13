@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bed903c7380bc73601f03a83d2c637ef34d9b9e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405208"
 ---
 # <a name="assemblyattributesgoheresm"></a>AssemblyAttributesGoHereSM
 Usado pelo ALink como um espaço reservado para armazenar informações sobre atributos personalizados.  

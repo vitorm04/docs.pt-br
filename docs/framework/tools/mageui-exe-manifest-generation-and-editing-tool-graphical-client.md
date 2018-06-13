@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404947"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI.exe têm o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Adicionando ou removendo assemblies de um manifesto ou assinando novamente manifestos existente, MageUI.exe não atualiza o manifesto com o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  

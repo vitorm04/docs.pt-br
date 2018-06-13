@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398720"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Como carregar assemblies no contexto de somente reflexão
 O contexto de carregamento de somente reflexão permite que você examine assemblies compilados para outras plataformas ou para outras versões do .NET Framework. O código carregado neste contexto pode apenas ser examinado, ele não pode ser executado. Isso significa que os objetos não podem ser criados, pois os construtores não podem ser executados. Como o código não pode ser executado, as dependências não são carregadas automaticamente. Se precisar examiná-las, você mesmo deverá carregá-las.  

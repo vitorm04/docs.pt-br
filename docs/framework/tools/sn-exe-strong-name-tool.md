@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401115"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  

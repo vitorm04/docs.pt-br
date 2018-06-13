@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409201"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
 A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermediate Language) (como gravadores de compiladores, desenvolvedores de mecanismos de script etc.) a determinar se o código MSIL e os metadados associados atendem aos requisitos de segurança de tipo. Alguns compiladores só gerarão código fortemente tipado verificável se você evitar usar determinados constructos de linguagem. Se, como desenvolvedor, estiver usando um compilador assim, você talvez queira verificar se não comprometeu a segurança de tipo do código. Nessa situação, é possível executar a ferramenta PEVerify nos arquivos para verificar MSIL e metadados.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352858"
 ---
 # <a name="clr-triggers"></a>Gatilhos de CLR
 Um gatilho é um tipo especial de procedimento armazenado que é executado automaticamente quando um evento de linguagem é executado. Devido à integração do Microsoft SQL Server com o CLR do .NET Framework, você pode usar qualquer linguagem do .NET Framework para criar gatilhos CLR.  

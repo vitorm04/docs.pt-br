@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1c3bcc0ed22fa970d92e2384277d0786016db19
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402103"
 ---
 # <a name="icordebugassemblygetprocess-method"></a>Método ICorDebugAssembly::GetProcess
 Obtém um ponteiro de interface para o processo no qual essa instância ICorDebugAssembly está sendo executado.  

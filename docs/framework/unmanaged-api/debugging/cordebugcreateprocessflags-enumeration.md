@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fdc37676bfae8ac90fde0a7a5b11037b8357e25
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403751"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>Enumeração CorDebugCreateProcessFlags
 Fornece opções adicionais de depuração que podem ser usadas em uma chamada para o [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) método.  

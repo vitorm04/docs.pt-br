@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404304"
 ---
 # <a name="getstartupnotificationevent-function"></a>Função GetStartupNotificationEvent
 Cria ou abre um identificador de evento será sinalizado após qualquer common language runtime (CLR) que está sendo carregado no processo de destino especificado.  

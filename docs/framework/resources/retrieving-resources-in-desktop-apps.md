@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399802"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  

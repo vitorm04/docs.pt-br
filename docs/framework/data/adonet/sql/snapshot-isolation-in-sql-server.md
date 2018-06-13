@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365009"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento de instantâneo no SQL Server
 O isolamento de instantâneo melhora a simultaneidade para aplicativos de OLTP.  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1089668aa19747f5f694360ebb87098e2df9ad4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405545"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>Método ICorDebugAppDomain4::GetObjectForCCW
 Obtém um objeto gerenciado de um ponteiro CCW callable wrapper () COM.  

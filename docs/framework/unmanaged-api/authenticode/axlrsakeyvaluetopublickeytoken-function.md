@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402402"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>Função _AxlRSAKeyValueToPublicKeyToken
 Converte um Módulo e um Expoente em um token de chave pública com nome forte.  

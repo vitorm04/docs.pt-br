@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401681"
 ---
 # <a name="wif-api-reference"></a>Referência de API do WIF
 As classes do WIF (Windows Identity Foundation) foram divididas entre os seguintes assemblies: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll). Este tópico fornece links para os namespaces do WIF e breves explicações sobre as classes que cada namespace contém.  

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d79a8c5bc204b6479741c32c47e6b41ff873a1bc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406917"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>Função CertVerifyAuthenticodeLicense
 Verifica a validade de uma licença XrML Authenticode.  

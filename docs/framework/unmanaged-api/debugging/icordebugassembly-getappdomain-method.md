@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401973"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>Método ICorDebugAssembly::GetAppDomain
 Obtém um ponteiro de interface para o domínio de aplicativo que contém essa `ICorDebugAssembly` instância.  

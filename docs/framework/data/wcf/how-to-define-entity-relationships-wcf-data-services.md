@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363986"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Como: definir relações de entidades (WCF Data Services)
 Quando você adiciona uma nova entidade no [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], todas as relações entre as entidades relacionadas e nova entidade não são definidas automaticamente. Você pode criar e alterar relações entre instâncias de entidade e que a biblioteca cliente refletir essas alterações no serviço de dados. Para obter mais informações, consulte [atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

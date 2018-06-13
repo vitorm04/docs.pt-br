@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399143"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Como criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  

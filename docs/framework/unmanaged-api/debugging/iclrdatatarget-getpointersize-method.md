@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406488"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Método ICLRDataTarget::GetPointerSize
 Obtém o tamanho, em bytes, do tipo de ponteiro que usa o processo de destino. Este método é chamado pelos serviços de acesso de dados de tempo de execução linguagem comuns.  

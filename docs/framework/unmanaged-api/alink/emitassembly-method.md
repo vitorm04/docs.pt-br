@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1cd1c077a8f2a5fe3b2b46c2e1da2e92b5a797a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402051"
 ---
 # <a name="emitassembly-method"></a>Método EmitAssembly
 Cria o assembly. Chame este método depois que todos os outros arquivos são fechados, exceto o arquivo de assembly. Não chame este método durante a produção de módulos não associados.  

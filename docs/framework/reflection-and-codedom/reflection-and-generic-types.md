@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399698"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexão e tipos genéricos
 <a name="top"></a> Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo comum é que um tipo genérico tem associado a ele um conjunto de parâmetros de tipo (se for uma definição de tipo genérico) ou argumentos de tipo (se for um tipo construído). Um método genérico é diferente de um método comum da mesma maneira.  

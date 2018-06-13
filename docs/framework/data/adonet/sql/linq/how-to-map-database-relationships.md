@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364291"
 ---
 # <a name="how-to-map-database-relationships"></a>Como mapear relações de banco de dados
 Você pode codificar como referências de propriedade em sua classe de entidade todas as relações de dados que serão sempre as mesmas. No banco de dados de exemplo Northwind, por exemplo, como os clientes geralmente fazem os pedidos, há sempre uma relação no modelo entre os clientes e seus pedidos.  

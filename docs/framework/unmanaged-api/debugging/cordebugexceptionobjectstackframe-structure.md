@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403725"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>Estrutura CorDebugExceptionObjectStackFrame
 Representa informações de quadro de pilha de um objeto de exceção.  

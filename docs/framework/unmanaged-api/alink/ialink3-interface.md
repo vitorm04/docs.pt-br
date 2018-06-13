@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402126"
 ---
 # <a name="ialink3-interface"></a>Interface IALink3
 Fornece um único método, `SetManifestFile`, que permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usará quando ele cria um assembly.  

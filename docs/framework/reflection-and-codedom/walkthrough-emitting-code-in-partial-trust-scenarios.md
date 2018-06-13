@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399750"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Instruções passo a passo: emitindo código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  

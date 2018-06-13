@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407548"
 ---
 # <a name="exportnestedtype-method"></a>Método ExportNestedType
 Especifica tipos aninhados como exportável. O [método ExportType](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) também pode criar tipos de exportação aninhado, mas esse método é mais rápido.  

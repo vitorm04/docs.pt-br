@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399264"
 ---
 # <a name="json-web-token-handler-api-reference"></a>Referência à API do Manipulador de Token da Web JSON
 Esta seção contém a referência de API para a extensão WIF do manipulador de Token Web JSON.

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361767"
 ---
 # <a name="debugging-support"></a>Depuração de suporte
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece suporte geral de depuração para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projetos.  Consulte também [depuração LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) ou [depuração LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356853"
 ---
 # <a name="transaction-management-escalation"></a>Escalonamento de bloqueios de gerenciamento de transação
 Windows hospeda um conjunto de serviços e módulos que constituem uma transação manager. Escalonamento de gerenciamento de transações descreve o processo de migração de uma transação de um dos componentes do Gerenciador de transações para outro.  

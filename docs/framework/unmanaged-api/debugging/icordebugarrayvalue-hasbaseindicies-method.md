@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 574df434360dfab644a4c937dac46ebc3871a53a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399491"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>Método ICorDebugArrayValue::HasBaseIndicies
 Obtém um valor que indica se todas as dimensões dessa matriz tem um índice de base do diferente de zero.  

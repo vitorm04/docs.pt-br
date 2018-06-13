@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398698"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 A reflexão fornece a capacidade de obter informações sobre tipos e membros e de acessar membros (ou seja, chamar métodos e construtores, obter e definir valores de propriedade, adicionar e remover manipuladores de eventos e assim por diante). O uso da reflexão para obter informações sobre tipos e membros não é restrito. Todo o código pode usar reflexões para realizar as seguintes tarefas:  

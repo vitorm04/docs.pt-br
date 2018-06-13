@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410027"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Gerador de Arquivo de Recurso)
 O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt ou .restext) e arquivos de recurso com base em XML (.resx) em arquivos binários do Common Language Runtime (.resources) que podem ser inseridos em um executável binário do tempo de execução ou em um assembly satélite. (Consulte [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399685"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  

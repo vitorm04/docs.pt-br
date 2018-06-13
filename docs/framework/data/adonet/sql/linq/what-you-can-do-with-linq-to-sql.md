@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356412"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>O que você pode fazer com LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oferece suporte a todos os recursos de chave esperado como um desenvolvedor SQL. Você pode consultar informações, e inserir, atualizar e excluir informações de tabelas.  

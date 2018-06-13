@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399633"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
 -   [Novidades no Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  

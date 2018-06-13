@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404217"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Método ICLRDataTarget::ReadVirtual
 Lê dados do endereço de memória virtual especificado no buffer especificado.  

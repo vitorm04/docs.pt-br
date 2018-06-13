@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399026"
 ---
 # <a name="json-web-token-handler"></a>Manipulador de Token da Web JSON
 A extensão do Manipulador de Tokens da Web JSON para Windows Identity Foundation permite que você crie e valide JWT (Tokens da Web JSON) em seus aplicativos. O Manipulador de Tokens JWT pode ser configurado para ser executado no pipeline WIF como outros manipuladores de tokens de segurança internos, mas também pode ser usado de forma independente para executar a validação do token em aplicativos leves. O Manipulador de Tokens JWT é particularmente útil ao usar um esquema de token portador OAuth 2.0, como a autenticação no Active Directory do Microsoft Azure.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 11c08e59813014bf9a474e92d06c6bd2576dd7d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404866"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>Método ICorDebugBreakpointEnum::Next
 Obtém o número especificado de instâncias de ICorDebugBreakpoint de enumeração, começando na posição atual.  

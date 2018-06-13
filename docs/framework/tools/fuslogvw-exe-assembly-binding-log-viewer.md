@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400205"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 O Visualizador de Log de Associação do Assembly exibe detalhes das associações de assembly. Essas informações ajudam a diagnosticar por que o .NET Framework não pode localizar um assembly no tempo de execução. Essas falhas normalmente são o resultado de um assembly implantado no local incorreto, de uma imagem nativa que não é mais válida ou de uma incompatibilidade em números de versão ou culturas. A falha no Common Language Runtime em localizar um assembly costuma aparecer como um <xref:System.TypeLoadException> em seu aplicativo.  

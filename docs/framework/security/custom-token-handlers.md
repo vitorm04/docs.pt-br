@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399971"
 ---
 # <a name="custom-token-handlers"></a>Manipuladores de token personalizados
 Este tópico aborda os manipuladores de token no WIF e como eles são usados para processar tokens. O tópico também aborda o que é necessário para criar manipuladores de token personalizados para os tipos de token sem suporte por padrão no WIF.  

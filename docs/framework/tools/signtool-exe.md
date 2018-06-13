@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409809"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  

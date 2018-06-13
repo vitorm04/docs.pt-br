@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409072"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
 O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  

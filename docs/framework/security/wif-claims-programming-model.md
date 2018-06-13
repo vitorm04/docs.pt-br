@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408961"
 ---
 # <a name="wif-claims-programming-model"></a>Modelo de programação de declarações do WIF
 Os desenvolvedores do ASP.NET e do WCF (Windows Communication Foundation) normalmente usam as interfaces de IIdentity e IPrincipal para trabalhar com as informações de identidade do usuário. No .NET 4.5, o WIF (Windows Identity Foundation) foi integrado, de modo que as declarações agora estejam sempre presentes para qualquer entidade de segurança, conforme ilustrado no seguinte diagrama:  

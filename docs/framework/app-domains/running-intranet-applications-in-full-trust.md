@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356775"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Executando aplicativos de intranet em confiança total
 A partir do .NET Framework versão 3.5 SP1 (Service Pack 1), os aplicativos e seus assemblies de bibliotecas podem ser executados como assemblies de confiança total de um compartilhamento de rede. A evidência de zona <xref:System.Security.SecurityZone.MyComputer> é automaticamente adicionada a assemblies que são carregados de um compartilhamento na intranet. Essa evidência fornece a esses assemblies o mesmo conjunto de concessões (que geralmente é de confiança total) que os assemblies que residem no computador. Essa funcionalidade não se aplica aos aplicativos ClickOnce ou que são projetados para serem executados em um host.  

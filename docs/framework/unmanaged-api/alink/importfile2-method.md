@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 61bc7783823408164ae2b073e097a0e85e193be6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401236"
 ---
 # <a name="importfile2-method"></a>Método ImportFile2
 Importa os assemblies e módulos não associados. Esse método é como [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), mas funciona mesmo se o arquivo que está sendo importado não existe no disco.  

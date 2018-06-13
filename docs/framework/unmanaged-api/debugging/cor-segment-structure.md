@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406501"
 ---
 # <a name="corsegment-structure"></a>Estrutura COR_SEGMENT
 Contém informações sobre uma região da memória no heap gerenciado.  

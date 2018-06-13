@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398866"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  

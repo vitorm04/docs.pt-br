@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399244"
 ---
 # <a name="resources-in-desktop-apps"></a>Recursos em aplicativos de área de trabalho
 Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um recurso é qualquer dado não executável que está implantado de modo lógico com um aplicativo. Um recurso pode ser exibido em um aplicativo como mensagens de erro ou como parte da interface do usuário. Os recursos podem conter dados em vários formatos, incluindo cadeias de caracteres, imagens e objetos persistentes. (Para gravar objetos persistentes em um arquivo de recurso, os objetos devem ser serializáveis.) Armazenar dados em um arquivo de recurso permite alterar os dados sem recompilar todo o aplicativo. Também é possível armazenar dados em um único local e eliminar a necessidade de depender de dados embutidos em código que são armazenados em vários locais.  

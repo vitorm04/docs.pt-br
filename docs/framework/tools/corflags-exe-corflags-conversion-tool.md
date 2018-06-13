@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400023"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Ferramenta de Conversão de CorFlags)
 A ferramenta Conversão CorFlags permite configurar a seção CorFlags do cabeçalho de uma imagem PE (Portable Executable).  

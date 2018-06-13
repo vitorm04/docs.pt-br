@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c0545440ed63ba914229249080ec9f6be8eb2b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402247"
 ---
 # <a name="icordebugchaingetprevious-method"></a>Método ICorDebugChain::GetPrevious
 Obtém a cadeia anterior de quadros do thread.  
