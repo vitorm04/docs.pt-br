@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552669"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a><span data-ttu-id="bc164-102">Como criar um ListViewItems com um CheckBox</span><span class="sxs-lookup"><span data-stu-id="bc164-102">How to: Create ListViewItems with a CheckBox</span></span>
 <span data-ttu-id="bc164-103">Este exemplo mostra como exibir uma coluna de <xref:System.Windows.Controls.CheckBox> controles em um <xref:System.Windows.Controls.ListView> controle que usa um <xref:System.Windows.Controls.GridView>.</span><span class="sxs-lookup"><span data-stu-id="bc164-103">This example shows how to display a column of <xref:System.Windows.Controls.CheckBox> controls in a <xref:System.Windows.Controls.ListView> control that uses a <xref:System.Windows.Controls.GridView>.</span></span>  

@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: ba4610e7f5276f6c033a53ea78fb30bce50bc304
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957916"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a><span data-ttu-id="573cc-103">Modernizar aplicativos existentes do .NET para aplicativos com otimização de nuvem</span><span class="sxs-lookup"><span data-stu-id="573cc-103">Modernize existing .NET apps to Cloud-Optimized applications</span></span>
 

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f2633bfadaabf208a2b86fda83375c3a136b93b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448166"
 ---
 # <a name="imaptokenmap-method"></a><span data-ttu-id="434f8-102">Método IMapToken::Map</span><span class="sxs-lookup"><span data-stu-id="434f8-102">IMapToken::Map Method</span></span>
 <span data-ttu-id="434f8-103">Mapeia uma relação entre os assemblies usando assinaturas de metadados.</span><span class="sxs-lookup"><span data-stu-id="434f8-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
