@@ -15,8 +15,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 166a2aa72fb718ee38fb6ef964179a6cd112deb3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400699"
 ---
 # <a name="register-a-client-side-provider-assembly"></a><span data-ttu-id="9fddc-102">Registrar um Módulo Provedor do Lado do Cliente</span><span class="sxs-lookup"><span data-stu-id="9fddc-102">Register a Client-Side Provider Assembly</span></span>
 > [!NOTE]

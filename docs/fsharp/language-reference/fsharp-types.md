@@ -4,8 +4,10 @@ description: 'Saiba mais sobre os tipos que são usados em F # e como tipos F # 
 ms.date: 05/16/2016
 ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565570"
 ---
 # <a name="f-types"></a><span data-ttu-id="02679-103">Tipos F#</span><span class="sxs-lookup"><span data-stu-id="02679-103">F# Types</span></span>
 

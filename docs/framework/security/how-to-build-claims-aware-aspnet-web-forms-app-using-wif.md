@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400088"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="c8fb7-102">Como criar um aplicativo ASP.NET Web Forms baseado em declarações usando o WIF</span><span class="sxs-lookup"><span data-stu-id="c8fb7-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="c8fb7-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="c8fb7-103">Applies To</span></span>  

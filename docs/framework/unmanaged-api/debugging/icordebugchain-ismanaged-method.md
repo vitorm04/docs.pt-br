@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8c61cc12e438c0786b6e093b8bb1ea288a42e3a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401161"
 ---
 # <a name="icordebugchainismanaged-method"></a><span data-ttu-id="7e86d-102">Método ICorDebugChain::IsManaged</span><span class="sxs-lookup"><span data-stu-id="7e86d-102">ICorDebugChain::IsManaged Method</span></span>
 <span data-ttu-id="7e86d-103">Obtém um valor que indica se esta cadeia está em execução de código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="7e86d-103">Gets a value that indicates whether this chain is running managed code.</span></span>  

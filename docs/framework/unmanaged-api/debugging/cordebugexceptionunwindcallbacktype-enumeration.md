@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7fe2fcf10b517f4eb7b1c7e87142afb386821246
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404088"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a><span data-ttu-id="00f8d-102">Enumeração CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="00f8d-102">CorDebugExceptionUnwindCallbackType Enumeration</span></span>
 <span data-ttu-id="00f8d-103">Indica o evento que está sendo sinalizado pelo retorno de chamada durante a fase de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="00f8d-103">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  

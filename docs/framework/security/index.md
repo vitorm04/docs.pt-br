@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 5ef0daf33539445e431a2930478e18ff770eff28
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399633"
 ---
 # <a name="windows-identity-foundation"></a><span data-ttu-id="cd042-102">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="cd042-102">Windows Identity Foundation</span></span>
 -   [<span data-ttu-id="cd042-103">Novidades no Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="cd042-103">What's New in Windows Identity Foundation 4.5</span></span>](../../../docs/framework/security/whats-new-in-wif.md)  

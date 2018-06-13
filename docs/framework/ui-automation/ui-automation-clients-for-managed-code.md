@@ -12,8 +12,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 2b49ab4d454fd97bbcb8290127456f1cc29916e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400989"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="33733-102">Clientes de Automação de Interface de Usuário para Código Gerenciado</span><span class="sxs-lookup"><span data-stu-id="33733-102">UI Automation Clients for Managed Code</span></span>
 > [!NOTE]

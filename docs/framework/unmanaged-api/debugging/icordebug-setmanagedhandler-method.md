@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcf97f9fffabb9ae9579016517cfc335e6f783a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404567"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a><span data-ttu-id="1155d-102">Método ICorDebug::SetManagedHandler</span><span class="sxs-lookup"><span data-stu-id="1155d-102">ICorDebug::SetManagedHandler Method</span></span>
 <span data-ttu-id="1155d-103">Especifica o objeto do manipulador de eventos para eventos gerenciados.</span><span class="sxs-lookup"><span data-stu-id="1155d-103">Specifies the event handler object for managed events.</span></span>  

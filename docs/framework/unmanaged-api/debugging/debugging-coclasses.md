@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 403815f38e0ce85d34d97f17b0af23246b5507e7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401902"
 ---
 # <a name="debugging-coclasses"></a><span data-ttu-id="e08ea-102">Depurando coclasses</span><span class="sxs-lookup"><span data-stu-id="e08ea-102">Debugging Coclasses</span></span>
 <span data-ttu-id="e08ea-103">Esta seção descreve os coclasses não gerenciadas que usa a API de depuração.</span><span class="sxs-lookup"><span data-stu-id="e08ea-103">This section describes the unmanaged coclasses that the debugging API uses.</span></span>  

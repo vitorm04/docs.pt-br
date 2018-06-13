@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405763"
 ---
 # <a name="icordebugappdomaingetname-method"></a><span data-ttu-id="d4144-102">Método ICorDebugAppDomain::GetName</span><span class="sxs-lookup"><span data-stu-id="d4144-102">ICorDebugAppDomain::GetName Method</span></span>
 <span data-ttu-id="d4144-103">Obtém o nome do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d4144-103">Gets the name of the application domain.</span></span>  

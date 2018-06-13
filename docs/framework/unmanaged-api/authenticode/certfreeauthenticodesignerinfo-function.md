@@ -12,8 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84f15dc49d14e781f69d0f9da8f314eb71d8c034
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401610"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a><span data-ttu-id="8d760-102">Função CertFreeAuthenticodeSignerInfo</span><span class="sxs-lookup"><span data-stu-id="8d760-102">CertFreeAuthenticodeSignerInfo Function</span></span>
 <span data-ttu-id="8d760-103">Libera os recursos alocados para o [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) estrutura.</span><span class="sxs-lookup"><span data-stu-id="8d760-103">Frees resources allocated for the [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) structure.</span></span>  

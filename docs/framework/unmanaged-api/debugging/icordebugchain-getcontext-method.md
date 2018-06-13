@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0fd80cb16466d95f443b098fe20f2d407ba2aed8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401723"
 ---
 # <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="d47c5-102">Método ICorDebugChain::GetContext</span><span class="sxs-lookup"><span data-stu-id="d47c5-102">ICorDebugChain::GetContext Method</span></span>
 <span data-ttu-id="d47c5-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d47c5-103">This method is not implemented in the current version of the .NET Framework.</span></span>  

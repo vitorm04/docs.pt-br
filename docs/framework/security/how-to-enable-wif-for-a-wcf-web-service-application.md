@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398977"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a><span data-ttu-id="15645-102">Como habilitar o WIF para um aplicativo de serviço Web WCF</span><span class="sxs-lookup"><span data-stu-id="15645-102">How To: Enable WIF for a WCF Web Service Application</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="15645-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="15645-103">Applies To</span></span>  

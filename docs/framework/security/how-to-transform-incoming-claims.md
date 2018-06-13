@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: cb71e320116c3af73139f1a8083fa62e8a7e21a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400166"
 ---
 # <a name="how-to-transform-incoming-claims"></a><span data-ttu-id="2b98a-102">Como transformar declarações de entrada</span><span class="sxs-lookup"><span data-stu-id="2b98a-102">How To: Transform Incoming Claims</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="2b98a-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="2b98a-103">Applies To</span></span>  

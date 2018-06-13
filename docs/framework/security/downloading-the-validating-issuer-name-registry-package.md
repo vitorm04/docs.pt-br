@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
 ms.openlocfilehash: 03b68f4b9dc6fde02c951968067e0311e4981d33
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398743"
 ---
 # <a name="downloading-the-validating-issuer-name-registry-package"></a><span data-ttu-id="67056-102">Baixando o Pacote de Registro do nome do emissor de validação</span><span class="sxs-lookup"><span data-stu-id="67056-102">Downloading the Validating Issuer Name Registry Package</span></span>
 <span data-ttu-id="67056-103">Este tópico descreve como baixar e usar o VINR (Registro do Nome do Emissor de Validação) no projeto.</span><span class="sxs-lookup"><span data-stu-id="67056-103">This topic discusses how to download and use the Validating Issuer Name Registry (VINR) in your project.</span></span>  

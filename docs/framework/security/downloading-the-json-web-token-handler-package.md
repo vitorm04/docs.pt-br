@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 5a4846a5ec92324105f41b320d0d77f8749c28f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404671"
 ---
 # <a name="downloading-the-json-web-token-handler-package"></a><span data-ttu-id="1e0b9-102">Baixando o Pacote do Manipulador de Token da Web JSON</span><span class="sxs-lookup"><span data-stu-id="1e0b9-102">Downloading the JSON Web Token Handler Package</span></span>
 <span data-ttu-id="1e0b9-103">Este tópico descreve como baixar e usar o Manipulador de Token Web JSON no projeto.</span><span class="sxs-lookup"><span data-stu-id="1e0b9-103">This topic discusses how to download and use the JSON Web Token Handler in your project.</span></span>  

@@ -15,8 +15,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 84774cbc3ca3741e7c46397249dcec617d26e8a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407500"
 ---
 # <a name="navigate-among-ui-automation-elements-with-treewalker"></a><span data-ttu-id="f5e35-102">Navegar em elementos de automação de interface do usuário com TreeWalker</span><span class="sxs-lookup"><span data-stu-id="f5e35-102">Navigate Among UI Automation Elements with TreeWalker</span></span>
 > [!NOTE]

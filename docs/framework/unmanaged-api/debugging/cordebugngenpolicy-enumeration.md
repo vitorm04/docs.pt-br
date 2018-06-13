@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404018"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="e963a-102">Enumeração CorDebugNGenPolicy</span><span class="sxs-lookup"><span data-stu-id="e963a-102">CorDebugNGenPolicy Enumeration</span></span>
 <span data-ttu-id="e963a-103">Fornece um valor que determina se um depurador carrega imagens nativas (NGen) do cache de imagens nativas.</span><span class="sxs-lookup"><span data-stu-id="e963a-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  

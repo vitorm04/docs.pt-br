@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d0e7f20be3f18e49dcc1b986460d5da0c3d7777
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401934"
 ---
 # <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="dd5ff-102">Método ICorDebugCode::GetFunction</span><span class="sxs-lookup"><span data-stu-id="dd5ff-102">ICorDebugCode::GetFunction Method</span></span>
 <span data-ttu-id="dd5ff-103">Obtém o "ICorDebugFunction" associado a essa "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="dd5ff-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  

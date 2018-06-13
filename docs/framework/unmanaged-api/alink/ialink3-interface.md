@@ -10,8 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402126"
 ---
 # <a name="ialink3-interface"></a><span data-ttu-id="753d7-102">Interface IALink3</span><span class="sxs-lookup"><span data-stu-id="753d7-102">IALink3 Interface</span></span>
 <span data-ttu-id="753d7-103">Fornece um único método, `SetManifestFile`, que permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usará quando ele cria um assembly.</span><span class="sxs-lookup"><span data-stu-id="753d7-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  

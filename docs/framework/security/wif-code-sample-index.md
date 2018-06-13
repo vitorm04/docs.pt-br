@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: c369be1dd9cdc529b180bc798c0e3b0291bc382a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405597"
 ---
 # <a name="wif-code-sample-index"></a><span data-ttu-id="f2728-102">Índice de exemplos de código do WIF</span><span class="sxs-lookup"><span data-stu-id="f2728-102">WIF Code Sample Index</span></span>
 <span data-ttu-id="f2728-103">Veja a seguir amostras de código do Windows Identity Foundation 4.5:</span><span class="sxs-lookup"><span data-stu-id="f2728-103">The following are code samples for Windows Identity Foundation 4.5:</span></span>  

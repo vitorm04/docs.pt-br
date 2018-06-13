@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: aa0dc3fc2e2121059700b5f55e4df34bc6af6b62
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399646"
 ---
 # <a name="wif-guidelines"></a><span data-ttu-id="c08e0-102">Diretrizes do WIF</span><span class="sxs-lookup"><span data-stu-id="c08e0-102">WIF Guidelines</span></span>
 -   [<span data-ttu-id="c08e0-103">Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="c08e0-103">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  

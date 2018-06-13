@@ -17,8 +17,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 2fe7ecd84c6b88e6ccc81188235a6735b926a04b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401080"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a><span data-ttu-id="a8975-102">Encontre e destaque texto usando automação de interface de usuário</span><span class="sxs-lookup"><span data-stu-id="a8975-102">Find and Highlight Text Using UI Automation</span></span>
 > [!NOTE]

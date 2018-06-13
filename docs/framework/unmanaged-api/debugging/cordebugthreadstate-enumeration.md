@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ba8bca6d14308284c869b923853f7e27e045bca5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402933"
 ---
 # <a name="cordebugthreadstate-enumeration"></a><span data-ttu-id="b6165-102">Enumeração CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="b6165-102">CorDebugThreadState Enumeration</span></span>
 <span data-ttu-id="b6165-103">Especifica o estado de um thread para depuração.</span><span class="sxs-lookup"><span data-stu-id="b6165-103">Specifies the state of a thread for debugging.</span></span>  

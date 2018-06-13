@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399763"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a><span data-ttu-id="ad941-102">MDbg.exe (Depurador de Linha de Comando do .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="ad941-102">MDbg.exe (.NET Framework Command-Line Debugger)</span></span>
 <span data-ttu-id="ad941-103">O Depurador de Linha de Comando do .NET Framework ajuda fornecedores de ferramentas e desenvolvedores de aplicativos na localização e na correção de bugs em programas com o Common Language Runtime do .NET Framework como destino.</span><span class="sxs-lookup"><span data-stu-id="ad941-103">The NET Framework Command-Line Debugger helps tools vendors and application developers find and fix bugs in programs that target the .NET Framework common language runtime.</span></span> <span data-ttu-id="ad941-104">Essa ferramenta usa a API de depuração do tempo de execução para fornecer serviços de depuração.</span><span class="sxs-lookup"><span data-stu-id="ad941-104">This tool uses the runtime debugging API to provide debugging services.</span></span> <span data-ttu-id="ad941-105">É possível usar MDbg.exe para depurar apenas o código gerenciado; não há suporte para depurar o código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="ad941-105">You can use MDbg.exe to debug only managed code; there is no support for debugging unmanaged code.</span></span>  

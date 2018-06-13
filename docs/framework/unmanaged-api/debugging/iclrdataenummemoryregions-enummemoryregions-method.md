@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 16d91156427c2ef7bdabd5ab11b01894fbced64c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406609"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a><span data-ttu-id="8f7ad-102">Método ICLRDataEnumMemoryRegions::EnumMemoryRegions</span><span class="sxs-lookup"><span data-stu-id="8f7ad-102">ICLRDataEnumMemoryRegions::EnumMemoryRegions Method</span></span>
 <span data-ttu-id="8f7ad-103">Enumera a áreas específicas de memória.</span><span class="sxs-lookup"><span data-stu-id="8f7ad-103">Enumerates specified areas of memory.</span></span>  

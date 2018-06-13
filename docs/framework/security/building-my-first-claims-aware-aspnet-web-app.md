@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7e36ec5b824f60057ce7b1f18c695607cf9b88a3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399659"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a><span data-ttu-id="ea335-102">Criando meu primeiro aplicativo Web ASP.NET baseado em declarações</span><span class="sxs-lookup"><span data-stu-id="ea335-102">Building My First Claims-Aware ASP.NET Web Application</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="ea335-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="ea335-103">Applies To</span></span>  

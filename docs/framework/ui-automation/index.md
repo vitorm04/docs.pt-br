@@ -11,8 +11,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 79e67e58e6280d176969f770f91b5ab93d728b95
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400322"
 ---
 # <a name="accessibility"></a><span data-ttu-id="ec1a3-102">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="ec1a3-102">Accessibility</span></span>
 > [!NOTE]

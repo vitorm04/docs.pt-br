@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 146724f31e1d09f09f94d102366539dc79ddfe02
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399143"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="d27d1-102">Como criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF</span><span class="sxs-lookup"><span data-stu-id="d27d1-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="d27d1-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="d27d1-103">Applies To</span></span>  

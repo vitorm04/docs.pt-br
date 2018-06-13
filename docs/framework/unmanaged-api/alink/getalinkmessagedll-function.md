@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402211"
 ---
 # <a name="getalinkmessagedll-function"></a><span data-ttu-id="b7a8a-102">Função GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="b7a8a-102">GetALinkMessageDll Function</span></span>
 <span data-ttu-id="b7a8a-103">Localiza e carrega a DLL de mensagem.</span><span class="sxs-lookup"><span data-stu-id="b7a8a-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="b7a8a-104">Retorna 0 se a DLL de mensagem não pode ser localizada ou carregada.</span><span class="sxs-lookup"><span data-stu-id="b7a8a-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="b7a8a-105">A DLL de mensagem deve ser em um subdiretório, cujo nome é uma ID de idioma ou no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="b7a8a-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  

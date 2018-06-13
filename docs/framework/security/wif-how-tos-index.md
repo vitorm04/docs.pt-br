@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b4251ea4afb149aaecf4b98706ca1d43840ea771
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400049"
 ---
 # <a name="wif-how-to39s-index"></a><span data-ttu-id="842ef-102">Índice de Instruções do WIF</span><span class="sxs-lookup"><span data-stu-id="842ef-102">WIF How-To&#39;s Index</span></span>
 -   [<span data-ttu-id="842ef-103">Como criar um aplicativo Web ASP.NET MVC com reconhecimento de declarações usando WIF</span><span class="sxs-lookup"><span data-stu-id="842ef-103">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  

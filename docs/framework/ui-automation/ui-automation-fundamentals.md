@@ -11,8 +11,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 04a0cab64e8e2a7df1cfb256e8e86fe20659ff60
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400764"
 ---
 # <a name="ui-automation-fundamentals"></a><span data-ttu-id="8a1b5-102">Fundamentos de automação da interface do usuário</span><span class="sxs-lookup"><span data-stu-id="8a1b5-102">UI Automation Fundamentals</span></span>
 > [!NOTE]

@@ -14,8 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa8bbcf4d8e5aadee6a4250d23842187d6c2af09
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405480"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a><span data-ttu-id="1aefa-102">Enumeração CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="1aefa-102">CorDebugDecodeEventFlagsWindows Enumeration</span></span>
 <span data-ttu-id="1aefa-103">Fornece informações adicionais sobre eventos de depuração na plataforma Windows.</span><span class="sxs-lookup"><span data-stu-id="1aefa-103">Provides additional information about debug events on the Windows platform.</span></span>  

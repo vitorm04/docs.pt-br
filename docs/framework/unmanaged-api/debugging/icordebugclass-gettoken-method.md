@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f67bd427c83385b2433b9f2e97f0b54e3b29a76f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401057"
 ---
 # <a name="icordebugclassgettoken-method"></a><span data-ttu-id="096d4-102">Método ICorDebugClass::GetToken</span><span class="sxs-lookup"><span data-stu-id="096d4-102">ICorDebugClass::GetToken Method</span></span>
 <span data-ttu-id="096d4-103">Obtém o `TypeDef` token de metadados que faz referência a definição dessa classe.</span><span class="sxs-lookup"><span data-stu-id="096d4-103">Gets the `TypeDef` metadata token that references the definition of this class.</span></span>  

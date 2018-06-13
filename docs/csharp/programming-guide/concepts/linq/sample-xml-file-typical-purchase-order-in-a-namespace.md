@@ -1,26 +1,18 @@
 ---
-title: "Arquivo XML de exemplo: ordem de compra típica em um namespace1"
-ms.custom: 
+title: 'Arquivo XML de exemplo: ordem de compra típica em um namespace1'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4e85dc10de556f37d63438b4c2d19f52e181efad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337555"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="754be-102">Arquivo XML de Exemplo: Ordem de compra típico em um namespace</span><span class="sxs-lookup"><span data-stu-id="754be-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="754be-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="754be-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="754be-104">Este arquivo é uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="754be-104">This file is a typical purchase order.</span></span> <span data-ttu-id="754be-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="754be-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="66e8b-102">Arquivo XML de Exemplo: Ordem de compra típico em um namespace</span><span class="sxs-lookup"><span data-stu-id="66e8b-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="66e8b-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="66e8b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="66e8b-104">Este arquivo é uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="66e8b-104">This file is a typical purchase order.</span></span> <span data-ttu-id="66e8b-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="66e8b-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="754be-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="754be-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="66e8b-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="66e8b-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -62,5 +54,5 @@ ms.lasthandoff: 10/18/2017
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="754be-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="754be-107">See Also</span></span>  
- [<span data-ttu-id="754be-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="754be-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="66e8b-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="66e8b-107">See Also</span></span>  
+ [<span data-ttu-id="66e8b-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="66e8b-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

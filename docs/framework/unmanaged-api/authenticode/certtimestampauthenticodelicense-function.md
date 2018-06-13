@@ -12,8 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b110adac8c1ae68a3918a9e0fdf3f3eb4d017f0f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406202"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="4e2af-102">Função CertTimestampAuthenticodeLicense</span><span class="sxs-lookup"><span data-stu-id="4e2af-102">CertTimestampAuthenticodeLicense Function</span></span>
 <span data-ttu-id="4e2af-103">Carimbo de data/hora em uma licença Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="4e2af-103">Time-stamps an Authenticode XrML license.</span></span>  

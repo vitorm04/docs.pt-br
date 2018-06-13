@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d408f317b546fb7e8314e904e6f5ad9e6296ae6d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403260"
 ---
 # <a name="icordebugchainenumerateframes-method"></a><span data-ttu-id="f12e9-102">Método ICorDebugChain::EnumerateFrames</span><span class="sxs-lookup"><span data-stu-id="f12e9-102">ICorDebugChain::EnumerateFrames Method</span></span>
 <span data-ttu-id="f12e9-103">Obtém um enumerador que contém todos os quadros de pilha gerenciada na cadeia, começando com o quadro mais recente.</span><span class="sxs-lookup"><span data-stu-id="f12e9-103">Gets an enumerator that contains all the managed stack frames in the chain, starting with the most recent frame.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c52795251b5cacebe749b1eedf918f8b20497796
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402891"
 ---
 # <a name="icordebugclassgetmodule-method"></a><span data-ttu-id="94af0-102">Método ICorDebugClass::GetModule</span><span class="sxs-lookup"><span data-stu-id="94af0-102">ICorDebugClass::GetModule Method</span></span>
 <span data-ttu-id="94af0-103">Obtém o módulo que define essa classe.</span><span class="sxs-lookup"><span data-stu-id="94af0-103">Gets the module that defines this class.</span></span>  

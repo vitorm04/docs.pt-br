@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405134"
 ---
 # <a name="icordebugchaingetcaller-method"></a><span data-ttu-id="fc3ec-102">Método ICorDebugChain::GetCaller</span><span class="sxs-lookup"><span data-stu-id="fc3ec-102">ICorDebugChain::GetCaller Method</span></span>
 <span data-ttu-id="fc3ec-103">Obtém a cadeia que chamou essa cadeia.</span><span class="sxs-lookup"><span data-stu-id="fc3ec-103">Gets the chain that called this chain.</span></span>  

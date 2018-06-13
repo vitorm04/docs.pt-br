@@ -12,8 +12,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 0ef4422da7457e53c7e101c8b7e7b2f592d135d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403221"
 ---
 # <a name="ui-automation-control-types"></a><span data-ttu-id="d715d-102">Tipos de controle de automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="d715d-102">UI Automation Control Types</span></span>
 <span data-ttu-id="d715d-103">**Observação** esta documentação destina-se para desenvolvedores do .NET Framework que querem usar gerenciado [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes definidas no <xref:System.Windows.Automation> namespace.</span><span class="sxs-lookup"><span data-stu-id="d715d-103">**Note** This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="d715d-104">Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).</span><span class="sxs-lookup"><span data-stu-id="d715d-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  

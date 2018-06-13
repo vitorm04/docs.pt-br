@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bed903c7380bc73601f03a83d2c637ef34d9b9e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405208"
 ---
 # <a name="assemblyattributesgoheresm"></a><span data-ttu-id="3b8e2-102">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="3b8e2-102">AssemblyAttributesGoHereSM</span></span>
 <span data-ttu-id="3b8e2-103">Usado pelo ALink como um espaço reservado para armazenar informações sobre atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="3b8e2-103">Used by ALink as a placeholder to store information about custom attributes.</span></span>  

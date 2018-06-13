@@ -12,8 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402402"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="728e1-102">Função _AxlRSAKeyValueToPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="728e1-102">_AxlRSAKeyValueToPublicKeyToken Function</span></span>
 <span data-ttu-id="728e1-103">Converte um Módulo e um Expoente em um token de chave pública com nome forte.</span><span class="sxs-lookup"><span data-stu-id="728e1-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  

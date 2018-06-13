@@ -12,8 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b197aa539e60a9dbcee55cf190c44b45da3a5fb4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402009"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="f74fe-102">Função _AxlGetIssuerPublicKeyHash</span><span class="sxs-lookup"><span data-stu-id="f74fe-102">_AxlGetIssuerPublicKeyHash Function</span></span>
 <span data-ttu-id="f74fe-103">Recupera o hash SHA-1 da chave pública associada à chave privada usada para assinar o certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="f74fe-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  

@@ -14,8 +14,10 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 4f0af8eac1238c377682bd4880efb89c4d9442db
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403195"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a><span data-ttu-id="a310f-102">Obter o estado Toggle de uma caixa de seleção usando automação de interface do usuário</span><span class="sxs-lookup"><span data-stu-id="a310f-102">Get the Toggle State of a Check Box Using UI Automation</span></span>
 > [!NOTE]

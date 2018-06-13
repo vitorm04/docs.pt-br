@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d172af14aba418d6e97fe77724bf91b0eaf1c56a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403108"
 ---
 # <a name="icordebugappdomaingetprocess-method"></a><span data-ttu-id="7b71a-102">Método ICorDebugAppDomain::GetProcess</span><span class="sxs-lookup"><span data-stu-id="7b71a-102">ICorDebugAppDomain::GetProcess Method</span></span>
 <span data-ttu-id="7b71a-103">Obtém o processo que contém o domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="7b71a-103">Gets the process containing the application domain.</span></span>  

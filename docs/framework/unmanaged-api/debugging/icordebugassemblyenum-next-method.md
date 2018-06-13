@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405282"
 ---
 # <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="eb7ac-102">Método ICorDebugAssemblyEnum::Next</span><span class="sxs-lookup"><span data-stu-id="eb7ac-102">ICorDebugAssemblyEnum::Next Method</span></span>
 <span data-ttu-id="eb7ac-103">Obtém o número especificado de assemblies da coleção, começando na posição atual do cursor.</span><span class="sxs-lookup"><span data-stu-id="eb7ac-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  

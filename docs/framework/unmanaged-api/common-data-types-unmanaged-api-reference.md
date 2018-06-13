@@ -6,8 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c359c9b14452e82b7fd2425409b373ead430d3d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407073"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a><span data-ttu-id="fe739-102">Tipos de dados comuns (referência API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="fe739-102">Common Data Types (Unmanaged API Reference)</span></span>
 <span data-ttu-id="fe739-103">Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas para o .NET Framework que são definidas por instruções `typedef` do C/C++.</span><span class="sxs-lookup"><span data-stu-id="fe739-103">This topic lists simple data types used by the unmanaged APIs for the .NET Framework that are defined by C/C++ `typedef` statements.</span></span> <span data-ttu-id="fe739-104">Esses tipos de dados são geralmente aliases para tipos de dados primitivos do C/C++.</span><span class="sxs-lookup"><span data-stu-id="fe739-104">These data types are typically aliases for C/C++ primitive data types.</span></span> <span data-ttu-id="fe739-105">Geralmente, os valores desses tipos de dados são opacos, ou seja, eles são retornados por uma função ou um método específico para que possam ser transmitidos para outras funções ou métodos sem modificação.</span><span class="sxs-lookup"><span data-stu-id="fe739-105">Typically, the values of these data types are opaque; that is, they are returned by a particular function or method so that they can be passed to other functions or methods without modification.</span></span>  

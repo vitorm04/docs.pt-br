@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 18be4babf7e9cfbfe9ebfb43da6f98a8544b2fe6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399971"
 ---
 # <a name="custom-token-handlers"></a><span data-ttu-id="bb42e-102">Manipuladores de token personalizados</span><span class="sxs-lookup"><span data-stu-id="bb42e-102">Custom Token Handlers</span></span>
 <span data-ttu-id="bb42e-103">Este tópico aborda os manipuladores de token no WIF e como eles são usados para processar tokens.</span><span class="sxs-lookup"><span data-stu-id="bb42e-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="bb42e-104">O tópico também aborda o que é necessário para criar manipuladores de token personalizados para os tipos de token sem suporte por padrão no WIF.</span><span class="sxs-lookup"><span data-stu-id="bb42e-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  

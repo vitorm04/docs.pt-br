@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406299"
 ---
 # <a name="exporttypeforwarder-method"></a><span data-ttu-id="dbfc8-102">Método ExportTypeForwarder</span><span class="sxs-lookup"><span data-stu-id="dbfc8-102">ExportTypeForwarder Method</span></span>
 <span data-ttu-id="dbfc8-103">Adiciona um encaminhador de tipo para o tipo de tabela do assembly fornecido.</span><span class="sxs-lookup"><span data-stu-id="dbfc8-103">Adds a type forwarder to the type table of the given assembly.</span></span>  

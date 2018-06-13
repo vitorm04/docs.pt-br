@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405366"
 ---
 # <a name="iclrdatatargetrequest-method"></a><span data-ttu-id="e6f7c-102">Método ICLRDataTarget::Request</span><span class="sxs-lookup"><span data-stu-id="e6f7c-102">ICLRDataTarget::Request Method</span></span>
 <span data-ttu-id="e6f7c-103">Chamado pelos comuns language runtime (CLR) dados serviços de acesso para uma operação de solicitação, conforme definido pela implementação.</span><span class="sxs-lookup"><span data-stu-id="e6f7c-103">Called by the common language runtime (CLR) data access services to request an operation, as defined by the implementation.</span></span>  

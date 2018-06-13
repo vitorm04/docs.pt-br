@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53d40c198b53370733009c76fd3d49f14df93e6c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402090"
 ---
 # <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="13971-102">Método ICorDebug::EnumerateProcesses</span><span class="sxs-lookup"><span data-stu-id="13971-102">ICorDebug::EnumerateProcesses Method</span></span>
 <span data-ttu-id="13971-103">Obtém um enumerador para os processos que estão sendo depurados.</span><span class="sxs-lookup"><span data-stu-id="13971-103">Gets an enumerator for the processes that are being debugged.</span></span>  

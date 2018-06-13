@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9c341ba3d0164e65cd752baa20f674fe3afc714
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405428"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="a812b-102">Método ICorDebugArrayValue::GetDimensions</span><span class="sxs-lookup"><span data-stu-id="a812b-102">ICorDebugArrayValue::GetDimensions Method</span></span>
 <span data-ttu-id="a812b-103">Obtém o número de elementos em cada dimensão dessa matriz.</span><span class="sxs-lookup"><span data-stu-id="a812b-103">Gets the number of elements in each dimension of this array.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9d4965751db1a70871270317a644b0acb1302f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405974"
 ---
 # <a name="clrdatacreateinstance-function"></a><span data-ttu-id="cbbea-102">Função CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="cbbea-102">CLRDataCreateInstance Function</span></span>
 <span data-ttu-id="cbbea-103">Cria um objeto de interface para o item de destino especificado.</span><span class="sxs-lookup"><span data-stu-id="cbbea-103">Creates an interface object for the specified target item.</span></span>  

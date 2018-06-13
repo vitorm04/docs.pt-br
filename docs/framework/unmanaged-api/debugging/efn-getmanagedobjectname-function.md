@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402198"
 ---
 # <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="fc583-102">Função _EFN_GetManagedObjectName</span><span class="sxs-lookup"><span data-stu-id="fc583-102">_EFN_GetManagedObjectName Function</span></span>
 <span data-ttu-id="fc583-103">Obtém o nome de um tipo usando o ponteiro de objeto gerenciado fornecido.</span><span class="sxs-lookup"><span data-stu-id="fc583-103">Gets the name of a type using the provided managed object pointer.</span></span>  

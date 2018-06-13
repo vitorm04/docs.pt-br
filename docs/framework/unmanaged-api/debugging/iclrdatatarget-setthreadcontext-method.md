@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73697fdd19f2492aabdc0d76e8c1a27c917c85f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405532"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a><span data-ttu-id="112da-102">Método ICLRDataTarget::SetThreadContext</span><span class="sxs-lookup"><span data-stu-id="112da-102">ICLRDataTarget::SetThreadContext Method</span></span>
 <span data-ttu-id="112da-103">Define o contexto atual do thread especificado no processo de destino.</span><span class="sxs-lookup"><span data-stu-id="112da-103">Sets the current context of the specified thread in the target process.</span></span> <span data-ttu-id="112da-104">Este método é chamado, os serviços de acesso dados common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="112da-104">This method is called by the common language runtime (CLR) data access services.</span></span>  

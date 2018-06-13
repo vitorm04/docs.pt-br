@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404217"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a><span data-ttu-id="81360-102">Método ICLRDataTarget::ReadVirtual</span><span class="sxs-lookup"><span data-stu-id="81360-102">ICLRDataTarget::ReadVirtual Method</span></span>
 <span data-ttu-id="81360-103">Lê dados do endereço de memória virtual especificado no buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="81360-103">Reads data from the specified virtual memory address into the specified buffer.</span></span>  

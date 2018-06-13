@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13137dcf7c2edd96397916cc7db905c9e48a3d0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401594"
 ---
 # <a name="icordebugappdomainenumerateassemblies-method"></a><span data-ttu-id="d1385-102">Método ICorDebugAppDomain::EnumerateAssemblies</span><span class="sxs-lookup"><span data-stu-id="d1385-102">ICorDebugAppDomain::EnumerateAssemblies Method</span></span>
 <span data-ttu-id="d1385-103">Obtém um enumerador para os assemblies no domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d1385-103">Gets an enumerator for the assemblies in the application domain.</span></span>  

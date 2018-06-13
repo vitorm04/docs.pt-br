@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407953"
 ---
 # <a name="cordebugmappingresult-enumeration"></a><span data-ttu-id="8b64b-102">Enumeração CorDebugMappingResult</span><span class="sxs-lookup"><span data-stu-id="8b64b-102">CorDebugMappingResult Enumeration</span></span>
 <span data-ttu-id="8b64b-103">Fornece os detalhes sobre como o valor do ponteiro de instrução (IP) foi obtido.</span><span class="sxs-lookup"><span data-stu-id="8b64b-103">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  

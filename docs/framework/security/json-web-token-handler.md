@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
 ms.openlocfilehash: 27c01a3d0ce0f2891b00ad28526d4753b9be4ce0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399026"
 ---
 # <a name="json-web-token-handler"></a><span data-ttu-id="cc27f-102">Manipulador de Token da Web JSON</span><span class="sxs-lookup"><span data-stu-id="cc27f-102">JSON Web Token Handler</span></span>
 <span data-ttu-id="cc27f-103">A extensão do Manipulador de Tokens da Web JSON para Windows Identity Foundation permite que você crie e valide JWT (Tokens da Web JSON) em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="cc27f-103">The JSON Web Token Handler extension for Windows Identity Foundation enables you to create and validate JSON Web Tokens (JWT) in your applications.</span></span> <span data-ttu-id="cc27f-104">O Manipulador de Tokens JWT pode ser configurado para ser executado no pipeline WIF como outros manipuladores de tokens de segurança internos, mas também pode ser usado de forma independente para executar a validação do token em aplicativos leves.</span><span class="sxs-lookup"><span data-stu-id="cc27f-104">The JWT Token Handler can be configured to run in the WIF pipeline like other built-in security token handlers, but it can also be used independently to perform token validation in lightweight applications.</span></span> <span data-ttu-id="cc27f-105">O Manipulador de Tokens JWT é particularmente útil ao usar um esquema de token portador OAuth 2.0, como a autenticação no Active Directory do Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="cc27f-105">The JWT Token Handler is particularly useful when using an OAuth 2.0 bearer token scheme, such as authenticating to Windows Azure Active Directory.</span></span>  

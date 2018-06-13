@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfc8800915009912716ec2ed9044a633a8ad0582
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401739"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="b1d96-102">Método ICorDebugBoxValue::GetObject</span><span class="sxs-lookup"><span data-stu-id="b1d96-102">ICorDebugBoxValue::GetObject Method</span></span>
 <span data-ttu-id="b1d96-103">Obtém o valor Demarcado.</span><span class="sxs-lookup"><span data-stu-id="b1d96-103">Gets the boxed value.</span></span>  

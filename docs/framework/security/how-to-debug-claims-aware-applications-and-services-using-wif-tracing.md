@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408626"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a><span data-ttu-id="c79ec-102">Como depurar serviços e aplicativos baseados em declarações usando o rastreamento do WIF</span><span class="sxs-lookup"><span data-stu-id="c79ec-102">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="c79ec-103">Aplica-se a</span><span class="sxs-lookup"><span data-stu-id="c79ec-103">Applies To</span></span>  
