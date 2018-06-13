@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759264"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 Você pode redirecionar referências de associação de tempo de compilação para assemblies do .NET Framework, os assemblies de terceiros ou assemblies do seu próprio aplicativo. Você pode redirecionar seu aplicativo para usar uma versão diferente de um assembly de várias maneiras: por meio da política de publicador, por meio de um arquivo de configuração do aplicativo. ou por meio do arquivo de configuração de máquina. Este artigo descreve o funcionamento de associação de assembly do .NET Framework e como ele pode ser configurado.  

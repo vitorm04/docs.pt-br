@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759303"
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
 As coleções de esquema comum são as coleções de esquemas que são implementadas por cada um dos provedores gerenciados do .NET Framework. Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de coleções de esquema com suporte ao chamar o **GetSchema** método sem argumentos, ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam. Essas coleções descrevem todas as colunas necessárias. Provedores serão livres para adicionar colunas adicionais, se desejarem. Por exemplo, `SqlClient` e `OracleClient` adicionar o nome do parâmetro na coleção de restrições.  

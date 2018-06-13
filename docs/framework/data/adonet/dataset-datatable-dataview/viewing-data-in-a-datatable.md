@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761240"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Exibindo dados em uma DataTable
 Você pode acessar o conteúdo de um <xref:System.Data.DataTable> usando o **linhas** e **colunas** coleções do **DataTable**. Você também pode usar o <xref:System.Data.DataTable.Select%2A> método para retornar subconjuntos de dados em um **DataTable** acordo com critérios inclusive critérios de pesquisa, ordem de classificação e o estado de linha. Além disso, você pode usar o <xref:System.Data.DataRowCollection.Find%2A> método o **DataRowCollection** durante a pesquisa de uma linha específica usando um valor de chave primária.  

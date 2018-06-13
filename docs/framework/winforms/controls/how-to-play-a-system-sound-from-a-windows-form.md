@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532393"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Como executar um som de sistema a partir de um Windows Form
 O código a seguir exemplo desempenha o `Exclamation` som de sistema em tempo de execução. Para obter mais informações sobre sons do sistema, consulte <xref:System.Media.SystemSounds>.  

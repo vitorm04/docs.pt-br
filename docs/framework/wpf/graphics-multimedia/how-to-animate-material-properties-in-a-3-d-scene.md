@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559045"
 ---
 # <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>Como animar propriedades de material em uma cena 3D
 Este exemplo mostra como animar a <xref:System.Windows.Media.Brush.Opacity%2A> propriedade o <xref:System.Windows.Media.Media3D.Material> aplicado a um [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modelo.  

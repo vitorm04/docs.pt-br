@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566568"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 Extensões de marcação são uma técnica XAML para obtenção de um valor que não é um primitivo nem um tipo específico de XAML. Para uso de atributo, extensões de marcação usam a sequência de caracteres conhecido de uma chave de abertura `{` para inserir o escopo de extensão de marcação e uma chave de fechamento `}` para sair. Ao usar serviços XAML do .NET Framework, você pode usar algumas das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasse do <xref:System.Windows.Markup.MarkupExtension> classe, definido em System. XAML e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma estrutura específica, se você já está fazendo referência a essa estrutura.  

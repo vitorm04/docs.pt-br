@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525077"
 ---
 # <a name="button-control-windows-forms"></a>Controle de botão (Windows Forms)
 O controle `Button` dos Windows Forms permite que o usuário clique nele para realizar uma ação. O controle `Button` pode exibir texto e imagens. Quando o botão é clicado, ele se parece como se estivesse sendo empurrado e solto.  

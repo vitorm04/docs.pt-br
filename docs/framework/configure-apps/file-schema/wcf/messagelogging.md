@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750681"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 Este elemento define as configurações para os recursos de log de mensagens do Windows Communication Foundation (WCF).  

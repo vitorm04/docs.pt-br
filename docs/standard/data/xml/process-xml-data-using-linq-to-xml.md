@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568739"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Dados XML do processo usando LINQ to XML
 LINQ to XML é o novo modelo no .NET Framework versão 3.5 para processar dados XML. LINQ to XML permite que os desenvolvedores de tudo o que esperariam com dados XML: consultando, modificando, criando, salvar, e serialização documentos XML. A mentira real das vantagens dos recursos de consulta e de design.  

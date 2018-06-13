@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529653"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Estilos de célula no controle DataGridView dos Windows Forms
 Cada célula dentro de <xref:System.Windows.Forms.DataGridView> controle pode ter seu próprio estilo, como fonte, cor do plano de fundo, cor de primeiro plano e formato de texto. Normalmente, no entanto, várias células compartilharão características de determinado estilo.  

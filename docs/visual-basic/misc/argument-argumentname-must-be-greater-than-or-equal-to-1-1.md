@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600640"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to--1"></a>Argumento &#39; &lt;argumentname&gt; &#39; deve ser maior que ou igual a -1
 Um valor de argumento é menor que -1.  

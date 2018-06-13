@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560871"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Como pintar uma área com um gradiente linear
 Este exemplo mostra como usar o <xref:System.Windows.Media.LinearGradientBrush> classe para pintar uma área com um gradiente linear. No exemplo a seguir, o <xref:System.Windows.Shapes.Shape.Fill%2A> de um <xref:System.Windows.Shapes.Rectangle> é pintado com um gradiente linear diagonal que faz a transição de amarelo para vermelho para azul para verde limão.  

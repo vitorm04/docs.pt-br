@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557856"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que deem suporte a extensibilidade de suplemento. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também devem exibir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que são fornecidas por suplementos. Este tópico mostra como o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estes cenários, a arquitetura por trás dele, seus benefícios e suas limitações.  

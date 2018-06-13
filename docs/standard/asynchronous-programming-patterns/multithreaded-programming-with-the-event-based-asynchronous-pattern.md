@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567296"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Programação multithreaded com o padrão assíncrono baseado em evento
 Há várias maneiras de expor recursos assíncronos para o código cliente. O Padrão Assíncrono Baseado em Evento prescreve a maneira recomendada de as classes apresentarem comportamento assíncrono.  

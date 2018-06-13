@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554775"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>Como obter ou definir um valor de encaixe
 O exemplo a seguir mostra como atribuir um <xref:System.Windows.Controls.Dock> valor para um objeto. O exemplo usa o <xref:System.Windows.Controls.DockPanel.GetDock%2A> e <xref:System.Windows.Controls.DockPanel.SetDock%2A> métodos de <xref:System.Windows.Controls.DockPanel>.  

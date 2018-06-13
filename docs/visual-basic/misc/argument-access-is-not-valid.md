@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600527"
 ---
 # <a name="argument-39access39-is-not-valid-valid-values-for-output-mode-are-39openaccesswrite39-and-39openaccessdefault39"></a>Argumento &#39;acesso&#39; não é válido. Os valores válidos para o modo de saída são &#39;OpenAcess&#39; e &#39;OpenAccess&#39;
 Um valor de acesso não é válido no modo de saída.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760083"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Especificar as relações entre os elementos com nenhuma aninhamento
 Quando elementos não estão aninhados, nenhuma relação implícita é criadas. No entanto, você pode especificar explicitamente relações entre os elementos que não estão aninhadas usando a **msdata:Relationship** anotação.  

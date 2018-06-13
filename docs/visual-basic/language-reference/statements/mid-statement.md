@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602259"
 ---
 # <a name="mid-statement"></a>Instrução Mid
 Substitui um número especificado de caracteres em um `String` variável com caracteres de outra cadeia de caracteres.  

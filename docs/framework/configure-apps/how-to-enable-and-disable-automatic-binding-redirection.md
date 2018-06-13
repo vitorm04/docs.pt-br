@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757561"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como habilitar e desabilitar o redirecionamento automático de associações
 A partir do [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], quando você compila aplicativos destinados ao [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], os redirecionamentos de associação podem ser automaticamente adicionados ao arquivo de configuração do aplicativo para unificação do assembly de substituição. Redirecionamentos de associação serão adicionados se o seu aplicativo ou seus componentes fizerem referência a mais de uma versão do mesmo assembly, mesmo se você especificar manualmente redirecionamentos de associação no arquivo de configuração para seu aplicativo. O recurso de redirecionamento de associação automático afeta os aplicativos tradicionais da área de trabalho que usam o [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], embora o comportamento seja um pouco diferente para um aplicativo Web. Você pode habilitar o redirecionamento de associação automático se houver aplicativos que usem versões anteriores do .NET Framework ou pode desativar esse recurso se desejar manter redirecionamentos manuais de associações criadas.  
