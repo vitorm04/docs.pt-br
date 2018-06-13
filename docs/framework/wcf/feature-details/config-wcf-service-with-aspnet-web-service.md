@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490370"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Como configurar um serviço do WCF para interoperar com os clientes de serviço Web do ASP.NET
 Para configurar um ponto de extremidade de serviço do Windows Communication Foundation (WCF) para interoperabilidade com [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de serviço da Web, use o <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como o tipo de associação para o ponto de extremidade de serviço.  

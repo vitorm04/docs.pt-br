@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498069"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)
 Quando o Windows Communication Foundation (WCF) recebe uma mensagem SOAP assinada usando um certificado x. 509, por padrão ele verifica se o certificado x. 509 foi emitido por uma autoridade de certificação confiável. Isso é feito procurando em um repositório de certificados e determinar se o certificado de autoridade de certificação tiver sido designada como confiável. Ordem do WCF tomar essa decisão, a cadeia de certificados de autoridade de certificação deve ser instalada no repositório de certificado correto.  

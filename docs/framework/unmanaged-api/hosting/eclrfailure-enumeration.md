@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ef4e12015adc3d6e67ad9c8ba8b152cd775b85e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431923"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumeração EClrFailure
 Descreve o conjunto de falhas para o qual um host pode definir as ações de política.  

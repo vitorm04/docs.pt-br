@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489977"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Proteção estendida para visão geral de autenticação
 Proteção estendida para autenticação ajuda a impedir ataques man-in-the-middle (MITM), em que um invasor intercepta as credenciais do cliente e encaminha-os para um servidor.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504962"
 ---
 # <a name="unwrapped-messages"></a>Mensagens sem quebra de texto
 Este exemplo demonstra mensagens sem. Por padrão, o corpo da mensagem é formatado, de modo que os parâmetros para uma operação de serviço são quebrados. O exemplo a seguir mostra um `Add` mensagem de solicitação para o `ICalculator` serviço no modo encapsulado.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490728"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como configurar rastreamento com WorkflowServiceHost
 Este tópico explica como configurar o controle para um [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fluxo de trabalho hospedados em <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Ele é configurado por meio de um arquivo Web. config, especificando um comportamento de serviço.  

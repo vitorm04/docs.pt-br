@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494810"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Como recuperar metadados e implementar um serviço compatível
 Geralmente, a mesma pessoa não projetar e implementar serviços. Em ambientes com aplicativos interoperacionais importantes, contratos podem ser criados ou descritos no WSDL Web Services Description Language () e um desenvolvedor deve implementar um serviço que está em conformidade com o contrato fornecido. Talvez você queira migrar um serviço existente para o Windows Communication Foundation (WCF), mas preservar o formato de transmissão. Além disso, os contratos duplex exigem chamadores implementar um contrato de retorno de chamada também.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489603"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Configurando valores de tempo limite em uma associação
 Há um número de configurações de tempo limite em associações do WCF. Definir esses tempo limite configurações corretamente podem melhorar não apenas o serviço desempenho, mas também executar uma função na usabilidade e segurança de seu serviço. Limite a seguir estão disponíveis em associações do WCF:  

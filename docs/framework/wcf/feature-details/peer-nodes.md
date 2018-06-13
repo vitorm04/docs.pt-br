@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491524"
 ---
 # <a name="peer-nodes"></a>Nós pares
 Um PeerNode é um ponto de extremidade em uma malha de canal par. Um aplicativo pode ter vários nós par que participem de diferentes malhas. Por exemplo, um aplicativo de chat de ponto a ponto pode fazer parte de duas malhas separadas: uma malha para bate-papo com amigos de ensino; e outra para bate-papo com colegas de trabalho.  

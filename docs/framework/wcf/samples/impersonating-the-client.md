@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505004"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
 O exemplo representação demonstra como representar o aplicativo chamador no serviço de forma que o serviço pode acessar recursos do sistema em nome do chamador.  

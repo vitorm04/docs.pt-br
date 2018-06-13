@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489629"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Como permitir solicitações de metadados durante a autorização
 Durante a autorização personalizada, é necessário para permitir que uma solicitação de metadados a serem processadas. O tópico a seguir apresenta as etapas para validar essa solicitação.  

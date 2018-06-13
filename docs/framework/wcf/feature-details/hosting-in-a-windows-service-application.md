@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492226"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
 Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) fornecem um processo de modelo especialmente adequado para aplicativos que devem estar contidos em um executável de longa execução e não exibem nenhuma forma de interface do usuário. O tempo de vida de uma janela de aplicativo de serviço é gerenciado pelo Gerenciador de controle de serviços (SCM), que permite que você iniciar, parar e pausar aplicativos de serviço do Windows. Você pode configurar um processo de serviço do Windows para iniciar automaticamente quando o computador é iniciado, tornando-o um ambiente de hospedagem adequado para aplicativos "sempre ativos". Para obter mais informações sobre aplicativos de serviço do Windows, consulte [aplicativos de serviço do Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  

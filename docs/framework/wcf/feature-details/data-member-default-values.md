@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492119"
 ---
 # <a name="data-member-default-values"></a>Valores padrões de membro de dados
 No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos têm um conceito de *valores padrão*. Por exemplo, para qualquer tipo de referência, o valor padrão é `null`, e para um tipo inteiro é zero. É recomendável ocasionalmente para omitir um membro de dados serializados dados quando ele é definido como seu valor padrão. Como o membro tem um valor padrão, um valor real não precisa ser serializado; Isso tem uma vantagem de desempenho.  

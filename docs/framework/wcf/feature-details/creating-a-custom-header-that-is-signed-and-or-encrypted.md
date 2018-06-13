@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490689"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Criar um cabeçalho personalizado que é assinado e- ou criptografado
 Ao chamar um serviço WCF não usando um cliente WCF, às vezes, é necessário usar cabeçalhos SOAP personalizados. Há um bug de conversão em formato canônico no WCF que impede a trabalhar com um serviço WCF não cabeçalhos personalizados que são assinados e criptografados. O problema é causado pela concessão incorreta de namespaces XML padrão. Isso só será um problema ao chamar serviços WCF não com cabeçalhos personalizados que são assinados e/ou criptografados.  Quando o serviço recebe a mensagem que contém o cabeçalho personalizado assinado e/ou criptografado não é possível verificar a assinatura. Essa solução alternativa evita o erro de conversão em formato canônico, permite a interoperabilidade com serviços WCF não, mas não impede que a interoperabilidade com serviços WCF.  

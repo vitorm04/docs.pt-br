@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491244"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Como usar um Moniker de serviço com contratos de intercâmbio de metadados
 Depois de desenvolver alguns novos serviços WCF, você pode decidir que deseja ser capaz de chamar esses serviços de um script ou um aplicativo do Visual Basic 6.0. Um método seria gerar um assembly de cliente do WCF, registre o assembly com, instalar o assembly no GAC e faça referência os tipos COM o código do Visual Basic. Quando você distribui o aplicativo, você precisará distribuir o conjunto do cliente do WCF. O usuário terá, em seguida, registre o assembly de cliente do WCF com e colocá-lo no GAC. Interoperabilidade de WCF também permite que você faça o mesmo serviço chama sem depender de um assembly de cliente do WCF. O WCF moniker permite chamar qualquer serviço do WCF em qualquer linguagem compatível COM o com (Visual Basic, VBScript, Visual Basic for Applications (VBA) e assim por diante), especificando um ponto de extremidade do exchange (Mex) de metadados URI que o moniker de serviço usa para extrair o tipo informações sobre o serviço. Este tópico descreve como chamar o exemplo de obter WCF iniciado usando um moniker WCF que especifica um ponto de extremidade Mex.  

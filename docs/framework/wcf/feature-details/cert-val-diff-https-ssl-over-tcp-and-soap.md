@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489463"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Diferenças de validação de certificado entre segurança de SOAP, HTTPS, SSL através de TCP
 Você pode usar certificados no Windows Communication Foundation (WCF) com segurança de camada de mensagem (SOAP) além da segurança de camada de transporte (TLS) via HTTP (HTTPS) ou TCP. Este tópico descreve as diferenças no modo como esses certificados são validados.  

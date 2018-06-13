@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499565"
 ---
 # <a name="discovery-extensibility"></a>Extensibilidade de descoberta
 O exemplo nesta seção mostram como estender o recurso de descoberta do Windows Communication Foundation (WCF).  

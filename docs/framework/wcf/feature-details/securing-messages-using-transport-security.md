@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499457"
 ---
 # <a name="securing-messages-using-transport-security"></a>Mensagens de segurança que usam a segurança de transporte
 Esta seção aborda a segurança de transporte do serviço de enfileiramento de mensagens (MSMQ) que você pode usar para proteger as mensagens enviadas para uma fila.  

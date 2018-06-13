@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492796"
 ---
 # <a name="architecture-of-syndication"></a>Arquitetura de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravados em transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  

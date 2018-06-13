@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491982"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Como definir uma confirmação de assinatura
 *Confirmação de assinatura* é um mecanismo para um iniciador de mensagem garantir que uma resposta recebida foi gerada em resposta à mensagem original do remetente. Confirmação de assinatura é definida na especificação WS-Security 1.1. Se um ponto de extremidade oferece suporte ao WS-Security 1.0, você não pode usar a confirmação de assinatura.  

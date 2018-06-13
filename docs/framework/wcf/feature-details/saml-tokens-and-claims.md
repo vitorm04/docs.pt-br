@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494726"
 ---
 # <a name="saml-tokens-and-claims"></a>Declarações e tokens de SAML
 Security asserções Markup Language (SAML) *tokens* são representações de XML de declarações. Por padrão, os tokens SAML que usa o Windows Communication Foundation (WCF) em cenários de segurança federada são *tokens emitidos*.  

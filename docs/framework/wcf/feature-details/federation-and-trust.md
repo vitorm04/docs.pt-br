@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492899"
 ---
 # <a name="federation-and-trust"></a>Federação e confiabilidade
 Este tópico abrange vários aspectos relacionados a aplicativos federados, limites de confiança e configuração e uso de tokens emitidos no Windows Communication Foundation (WCF).  

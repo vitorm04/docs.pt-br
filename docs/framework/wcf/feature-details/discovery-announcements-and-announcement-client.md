@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490279"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anúncios de descoberta e cliente de anúncio
 O recurso de descoberta do WCF permite que os componentes de anunciar a disponibilidade. Se configurado para fazer isso, um serviço envia Hello e Bye anúncios. Os clientes ou outros componentes podem escutar essas mensagens de aviso e agir sobre eles. Isso fornece um método alternativo para os clientes estar ciente dos serviços. Funcionalidade de notificação tem vários usos, por exemplo, se os serviços de entrar e saiam de uma rede com frequência, anúncios podem ser uma alternativa melhor que a pesquisa de serviços. Com essa abordagem, o tráfego de rede é reduzido e o cliente pode aprender sobre a presença ou a saída do serviço, assim como anúncios são recebidos.  

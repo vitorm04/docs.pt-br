@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491073"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Como fazer intercâmbio de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens
 Você pode integrar os aplicativos existentes do serviço de enfileiramento de mensagens (MSMQ) com aplicativos do Windows Communication Foundation (WCF) usando a associação de integração do MSMQ para converter as mensagens MSMQ em mensagens do WCF. Isso permite que você chame em aplicativos de receptor MSMQ de clientes do WCF, bem como chamar serviços WCF de aplicativos de remetente do MSMQ.  

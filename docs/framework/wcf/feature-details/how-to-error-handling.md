@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493590"
 ---
 # <a name="how-to-error-handling"></a>Como lidar com erros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa o tratamento de erros. Neste exemplo, as mensagens são roteadas para um ponto de extremidade de destino. Se uma mensagem não pode ser entregue devido a uma falha de comunicação ou de rede (<xref:System.ServiceModel.CommunicationException>), a mensagem é enviada novamente para um ponto de extremidade alternativo.  

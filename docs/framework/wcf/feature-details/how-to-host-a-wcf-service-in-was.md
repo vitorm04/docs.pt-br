@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492662"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Como hospedar um serviço do WCF em WAS
 Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processo do Windows (também conhecido como WAS) hospedado serviço Windows Communication Foundation (WCF). FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. WCF usa o adaptador de escuta para comunicar as solicitações de ativação nos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens recebidas.  

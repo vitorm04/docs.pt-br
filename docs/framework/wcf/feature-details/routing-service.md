@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496221"
 ---
 # <a name="routing-service"></a>Serviço de roteamento
 O serviço de roteamento é um intermediário SOAP genérico que atua como um roteador de mensagem. A funcionalidade básica do serviço de roteamento é a capacidade para rotear mensagens com base no conteúdo da mensagem, que permite que uma mensagem a serem encaminhados para um ponto de extremidade do cliente com base em um valor dentro da mensagem, no cabeçalho ou no corpo da mensagem.  

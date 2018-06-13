@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491794"
 ---
 # <a name="how-to-service-data-partitioning"></a>Como particionar dados de serviço
 Este tópico descreve as etapas básicas necessárias para mensagens de partição em várias instâncias do mesmo serviço de destino. Particionamento de dados de serviço geralmente são usados quando você precisar dimensionar um serviço para fornecer a melhor qualidade de serviço, ou quando você precisa lidar com solicitações de diferentes clientes de uma maneira específica. Por exemplo, mensagens de alto valor ou clientes "Ouro" podem precisar ser processado em uma prioridade mais alta que as mensagens de um cliente padrão.  

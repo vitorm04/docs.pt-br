@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492789"
 ---
 # <a name="data-contract-equivalence"></a>Equivalência de contrato de dados
 Para um cliente enviar dados de um determinado tipo com êxito a um serviço ou um serviço para enviar dados com êxito a um cliente, o tipo de envio não necessariamente precisa existir na extremidade de recebimento. O único requisito é que os contratos de ambos os tipos de dados ser equivalentes. (Às vezes, equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  

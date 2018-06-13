@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491862"
 ---
 # <a name="peer-to-peer-networking"></a>Rede peer-to-peer
 Canal par é uma com vários participantes, ponto a ponto (P2P) comunicação tecnologia Windows Communication Foundation (WCF). Ele fornece um seguro e escalonável com base em mensagem P2P canal de comunicação para os desenvolvedores de aplicativos. Um exemplo comum de um aplicativo com vários participantes que pode se beneficiar de canal par é um aplicativo de colaboração, como bate-papo, quando um grupo de pessoas bate-papo entre si de maneira ponto a ponto, sem servidores. Canal par permite P2P colaboração, distribuição de conteúdo, balanceamento de carga e processamento distribuído para os cenários de consumidor e empresariais.  

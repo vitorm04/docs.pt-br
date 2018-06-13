@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285737"
 ---
 # <a name="using-statement-c-reference"></a>Instrução using (Referência de C#)
 Fornece uma sintaxe conveniente que garante o uso correto de objetos <xref:System.IDisposable>.  

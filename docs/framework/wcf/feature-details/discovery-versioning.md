@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489174"
 ---
 # <a name="discovery-versioning"></a>Controle de versão de descoberta
 Este tópico fornece uma visão geral da implementação de alguns novos recursos de descoberta. Ele também fornece uma visão geral sobre como selecionar a versão de descoberta para usar.  

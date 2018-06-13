@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491277"
 ---
 # <a name="correlation"></a>Correlação
 Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros serviços, é importante que as mensagens entre eles são despachadas para a instância de fluxo de trabalho apropriado. Correlação fornece o mecanismo para isso. Os tópicos nesta seção fornecem uma visão geral de correlação e como usá-lo em cenários de serviço de fluxo de trabalho diferente.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493124"
 ---
 # <a name="client-configuration"></a>Configuração do cliente
 Você pode usar a configuração do cliente Windows Communication Foundation (WCF) para especificar o endereço, associação, comportamento e contrato, as propriedades de "ABC" do ponto de extremidade de cliente, que os clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cujos atributos são usados para configurar o ponto de extremidade ABC. Esses atributos são discutidos na seção "Configurando pontos de extremidade" deste tópico.  

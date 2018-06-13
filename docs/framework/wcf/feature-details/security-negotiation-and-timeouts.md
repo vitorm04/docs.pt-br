@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497458"
 ---
 # <a name="security-negotiation-and-timeouts"></a>Negociação de segurança e tempo limite
 Ao autenticam clientes e serviços, Windows Communication Foundation (WCF) suporta o modo em que a credencial de serviço é negociada como parte da autenticação. Nesses cenários, uma troca potencialmente vários trecho ocorre entre o cliente e o serviço para propagar as credenciais do serviço ao cliente. O <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> propriedade controla quanto tempo a troca de multi-segmento de pode demorar para ser concluída. No entanto, esse tempo limite se aplica somente se o exchange leva mais que uma única solicitação-resposta. Em casos onde a negociação é realizada em uma única viagem de ida e, o tempo limite não se aplica.  

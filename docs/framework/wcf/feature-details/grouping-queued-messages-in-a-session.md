@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491895"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupamento de mensagens em fila em uma sessão
 Windows Communication Foundation (WCF) fornece uma sessão que permite agrupar um conjunto de mensagens relacionadas juntas para processamento por um único aplicativo. As mensagens que fazem parte de uma sessão devem ser parte da mesma transação. Como todas as mensagens fazem parte da mesma transação, se uma mensagem falhar ao ser processada toda a sessão será revertida. Sessões têm comportamento semelhante em relação a filas de mensagens mortas e suspeitas. O tempo para a propriedade de vida (TTL) definida em uma associação enfileirada configurada para sessões é aplicado à sessão como um todo. Se apenas algumas das mensagens na sessão são enviadas antes que o TTL expire, toda a sessão é colocada na fila de mensagens mortas. Da mesma forma, quando as mensagens em uma sessão não ser enviada a um aplicativo da fila de aplicativos, toda a sessão é colocada na fila de suspeitas (se disponível).  

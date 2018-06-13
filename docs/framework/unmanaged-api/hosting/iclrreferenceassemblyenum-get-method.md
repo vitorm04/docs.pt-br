@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d8cfb2f18bcceed3a125ac7876122c02d2267698
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436449"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>Método ICLRReferenceAssemblyEnum::Get
 Obtém a identidade do assembly no índice fornecido.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491018"
 ---
 # <a name="peer-channel-concepts"></a>Conceitos de canal par
 Esta seção explica os conceitos que compõem o canal de pares do Windows Communication Foundation (WCF).  
