@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b0017cff43f7a1b1bdd90806f50abb374a96dadf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450418"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a><span data-ttu-id="a1694-102">Método ICorProfilerCallback::AppDomainCreationFinished</span><span class="sxs-lookup"><span data-stu-id="a1694-102">ICorProfilerCallback::AppDomainCreationFinished Method</span></span>
 <span data-ttu-id="a1694-103">Notifica o criador de perfil que foi criado um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a1694-103">Notifies the profiler that an application domain has been created.</span></span>  

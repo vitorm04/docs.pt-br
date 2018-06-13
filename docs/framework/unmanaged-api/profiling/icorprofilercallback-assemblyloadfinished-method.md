@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7f000b6e944be7bd2e38f97e40176952cb19605
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450626"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="8c07d-102">Método ICorProfilerCallback::AssemblyLoadFinished</span><span class="sxs-lookup"><span data-stu-id="8c07d-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
 <span data-ttu-id="8c07d-103">Notifica o criador de perfil que um assembly terminou o carregamento.</span><span class="sxs-lookup"><span data-stu-id="8c07d-103">Notifies the profiler that an assembly has finished loading.</span></span>  

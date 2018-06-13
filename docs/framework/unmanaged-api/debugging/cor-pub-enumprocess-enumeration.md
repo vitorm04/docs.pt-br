@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcdb5883e109d7e0c73c8fb76ee61b52cf23091f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406995"
 ---
 # <a name="corpubenumprocess-enumeration"></a><span data-ttu-id="a0e37-102">Enumeração COR_PUB_ENUMPROCESS</span><span class="sxs-lookup"><span data-stu-id="a0e37-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
 <span data-ttu-id="a0e37-103">Identifica o tipo de processo que será enumerado.</span><span class="sxs-lookup"><span data-stu-id="a0e37-103">Identifies the type of process to be enumerated.</span></span>  

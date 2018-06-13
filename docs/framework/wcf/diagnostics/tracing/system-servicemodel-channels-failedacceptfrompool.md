@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479305"
 ---
 # <a name="systemservicemodelchannelsfailedacceptfrompool"></a><span data-ttu-id="cf6a0-102">System.ServiceModel.Channels.FailedAcceptFromPool</span><span class="sxs-lookup"><span data-stu-id="cf6a0-102">System.ServiceModel.Channels.FailedAcceptFromPool</span></span>
 <span data-ttu-id="cf6a0-103">Falha ao tentar reutilizar uma conexão em pool.</span><span class="sxs-lookup"><span data-stu-id="cf6a0-103">An attempt to reuse a pooled connection failed.</span></span> <span data-ttu-id="cf6a0-104">Outra tentativa será feita dentro do período de tempo limite especificado.</span><span class="sxs-lookup"><span data-stu-id="cf6a0-104">Another attempt is made within the specified timeout period.</span></span>  

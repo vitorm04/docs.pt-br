@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: e1f47225-9996-4fbf-ab86-62d2e955f3fc
 ms.openlocfilehash: 30f7a2a720f3a2188ea69cbc6c7f4751a823610d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562206"
 ---
 # <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="522eb-102">Funcionalidades da linguagem (x:) do Namespace XAML</span><span class="sxs-lookup"><span data-stu-id="522eb-102">XAML Namespace (x:) Language Features</span></span>
 ## <a name="in-this-section"></a><span data-ttu-id="522eb-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="522eb-103">In This Section</span></span>  

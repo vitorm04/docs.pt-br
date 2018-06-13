@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 85483e4319b56c0df150558ce6c6a3878a6fa041
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578075"
 ---
 # <a name="time-zone-overview"></a><span data-ttu-id="e1f42-102">Visão geral do fuso horário</span><span class="sxs-lookup"><span data-stu-id="e1f42-102">Time zone overview</span></span>
 

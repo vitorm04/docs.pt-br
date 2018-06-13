@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0d560b81aca1c6d859000cda682ee6c75fd7acb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454176"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a><span data-ttu-id="d4416-102">Método ICorProfilerInfo3::GetAppDomainsContainingModule</span><span class="sxs-lookup"><span data-stu-id="d4416-102">ICorProfilerInfo3::GetAppDomainsContainingModule Method</span></span>
 <span data-ttu-id="d4416-103">Obtém os identificadores dos domínios de aplicativo no qual o módulo especificado foi carregado.</span><span class="sxs-lookup"><span data-stu-id="d4416-103">Gets the identifiers of the application domains in which the given module has been loaded.</span></span>  

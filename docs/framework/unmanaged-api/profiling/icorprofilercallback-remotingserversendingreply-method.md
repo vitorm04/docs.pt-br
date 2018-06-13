@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98563c175f12ad1ff25e1f578270fe1099175487
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453770"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a><span data-ttu-id="2b48a-102">Método ICorProfilerCallback::RemotingServerSendingReply</span><span class="sxs-lookup"><span data-stu-id="2b48a-102">ICorProfilerCallback::RemotingServerSendingReply Method</span></span>
 <span data-ttu-id="2b48a-103">Notifica o criador de perfil que o processo terminou de processar uma solicitação de invocação de método remoto e é a resposta por meio de um canal de transmissão.</span><span class="sxs-lookup"><span data-stu-id="2b48a-103">Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.</span></span>  

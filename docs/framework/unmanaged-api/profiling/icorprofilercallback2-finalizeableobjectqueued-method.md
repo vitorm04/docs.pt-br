@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d10b313adc60e2b851d32aeea70e2993480b0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451802"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="610d4-102">Método ICorProfilerCallback2::FinalizeableObjectQueued</span><span class="sxs-lookup"><span data-stu-id="610d4-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
 <span data-ttu-id="610d4-103">Notifica o criador de perfil de código que um objeto com um finalizador foi enfileirado para o thread do finalizador para execução do seu `Finalize` método.</span><span class="sxs-lookup"><span data-stu-id="610d4-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  

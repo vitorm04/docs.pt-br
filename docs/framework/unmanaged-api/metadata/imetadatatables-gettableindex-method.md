@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d207eae5e9ac1b3020216226442321e72840c037
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450356"
 ---
 # <a name="imetadatatablesgettableindex-method"></a><span data-ttu-id="ee4b4-102">Método IMetaDataTables::GetTableIndex</span><span class="sxs-lookup"><span data-stu-id="ee4b4-102">IMetaDataTables::GetTableIndex Method</span></span>
 <span data-ttu-id="ee4b4-103">Obtém o índice para a tabela referenciada pelo token especificado.</span><span class="sxs-lookup"><span data-stu-id="ee4b4-103">Gets the index for the table referenced by the specified token.</span></span>  

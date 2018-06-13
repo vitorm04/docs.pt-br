@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e9d6c322d82b34af908065106ef03ccf5ff846e0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451724"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="64b0c-102">Método ICorProfilerCallback::ModuleLoadStarted</span><span class="sxs-lookup"><span data-stu-id="64b0c-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
 <span data-ttu-id="64b0c-103">Notifica o criador de perfil que um módulo está sendo carregado.</span><span class="sxs-lookup"><span data-stu-id="64b0c-103">Notifies the profiler that a module is being loaded.</span></span>  

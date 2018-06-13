@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Channels.PeerNodeOpening
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 132d4928-ea20-4952-b115-d050499bc728
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e29b37e1cc50d06154df81911bd71900989b9b40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 990b7902168dca4c507815f25c86514fb3897fa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480539"
 ---
-# <a name="systemservicemodelchannelspeernodeopening"></a><span data-ttu-id="fcf3b-102">System.ServiceModel.Channels.PeerNodeOpening</span><span class="sxs-lookup"><span data-stu-id="fcf3b-102">System.ServiceModel.Channels.PeerNodeOpening</span></span>
-<span data-ttu-id="fcf3b-103">PeerNode começou a inicialização.</span><span class="sxs-lookup"><span data-stu-id="fcf3b-103">The PeerNode has begun initializing.</span></span>  
+# <a name="systemservicemodelchannelspeernodeopening"></a><span data-ttu-id="c4382-102">System.ServiceModel.Channels.PeerNodeOpening</span><span class="sxs-lookup"><span data-stu-id="c4382-102">System.ServiceModel.Channels.PeerNodeOpening</span></span>
+<span data-ttu-id="c4382-103">PeerNode começou a inicialização.</span><span class="sxs-lookup"><span data-stu-id="c4382-103">The PeerNode has begun initializing.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="fcf3b-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="fcf3b-104">Description</span></span>  
- <span data-ttu-id="fcf3b-105">Este rastreamento ocorre no início da execução do código (Open) de inicialização de PeerNode.</span><span class="sxs-lookup"><span data-stu-id="fcf3b-105">This trace occurs at the beginning of running the PeerNode initialization (Open) code.</span></span>  
+## <a name="description"></a><span data-ttu-id="c4382-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="c4382-104">Description</span></span>  
+ <span data-ttu-id="c4382-105">Este rastreamento ocorre no início da execução do código (Open) de inicialização de PeerNode.</span><span class="sxs-lookup"><span data-stu-id="c4382-105">This trace occurs at the beginning of running the PeerNode initialization (Open) code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcf3b-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fcf3b-106">See Also</span></span>  
- [<span data-ttu-id="fcf3b-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="fcf3b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="fcf3b-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="fcf3b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="fcf3b-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="fcf3b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c4382-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c4382-106">See Also</span></span>  
+ [<span data-ttu-id="c4382-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="c4382-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c4382-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="c4382-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c4382-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="c4382-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

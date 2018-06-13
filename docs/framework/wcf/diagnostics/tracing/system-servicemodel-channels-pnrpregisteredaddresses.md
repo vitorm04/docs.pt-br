@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480279"
 ---
 # <a name="systemservicemodelchannelspnrpregisteredaddresses"></a><span data-ttu-id="27ebd-102">System.ServiceModel.Channels.PnrpRegisteredAddresses</span><span class="sxs-lookup"><span data-stu-id="27ebd-102">System.ServiceModel.Channels.PnrpRegisteredAddresses</span></span>
 <span data-ttu-id="27ebd-103">O resolvedor Pnrp registrou endereços do nó local.</span><span class="sxs-lookup"><span data-stu-id="27ebd-103">The Pnrp Resolver has registered the local node's addresses.</span></span>  

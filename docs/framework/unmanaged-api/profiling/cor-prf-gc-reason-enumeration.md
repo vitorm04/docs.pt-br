@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450093"
 ---
 # <a name="corprfgcreason-enumeration"></a><span data-ttu-id="65d68-102">Enumeração COR_PRF_GC_REASON</span><span class="sxs-lookup"><span data-stu-id="65d68-102">COR_PRF_GC_REASON Enumeration</span></span>
 <span data-ttu-id="65d68-103">Indica o motivo pelo qual essa coleta de lixo está ocorrendo.</span><span class="sxs-lookup"><span data-stu-id="65d68-103">Indicates the reason that garbage collection is occurring.</span></span>  

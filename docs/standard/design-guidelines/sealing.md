@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573728"
 ---
 # <a name="sealing"></a><span data-ttu-id="40c53-102">Lacrar</span><span class="sxs-lookup"><span data-stu-id="40c53-102">Sealing</span></span>
 <span data-ttu-id="40c53-103">Um dos recursos orientados a objeto estruturas é que os desenvolvedores podem estender e personalizá-los de maneiras inesperadas pelos designers do framework.</span><span class="sxs-lookup"><span data-stu-id="40c53-103">One of the features of object-oriented frameworks is that developers can extend and customize them in ways unanticipated by the framework designers.</span></span> <span data-ttu-id="40c53-104">Este é o poder e o risco de design extensível.</span><span class="sxs-lookup"><span data-stu-id="40c53-104">This is both the power and danger of extensible design.</span></span> <span data-ttu-id="40c53-105">Quando você cria a estrutura, ele é, portanto, muito importante projetar cuidadosamente para extensibilidade quando for necessário e para limitar a extensibilidade quando é perigoso.</span><span class="sxs-lookup"><span data-stu-id="40c53-105">When you design your framework, it is, therefore, very important to carefully design for extensibility when it is desired, and to limit extensibility when it is dangerous.</span></span>  

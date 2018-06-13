@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2556196b7c8f81709e6880962e8ff36e126dd8b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450057"
 ---
 # <a name="corprftransitionreason-enumeration"></a><span data-ttu-id="52bd3-102">Enumeração COR_PRF_TRANSITION_REASON</span><span class="sxs-lookup"><span data-stu-id="52bd3-102">COR_PRF_TRANSITION_REASON Enumeration</span></span>
 <span data-ttu-id="52bd3-103">Indica o motivo para uma transição de código gerenciado para não gerenciado ou vice-versa.</span><span class="sxs-lookup"><span data-stu-id="52bd3-103">Indicates the reason for a transition from managed to unmanaged code, or vice versa.</span></span>  

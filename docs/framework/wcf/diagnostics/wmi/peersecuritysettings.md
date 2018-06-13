@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 58b372f26fee7dc180d75731fd4855db569c87c7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484512"
 ---
 # <a name="peersecuritysettings"></a><span data-ttu-id="9b41f-102">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="9b41f-102">PeerSecuritySettings</span></span>
 <span data-ttu-id="9b41f-103">PeerSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="9b41f-103">PeerSecuritySettings</span></span>  

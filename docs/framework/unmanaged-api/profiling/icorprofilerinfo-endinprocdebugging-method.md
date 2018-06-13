@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cbf7e2e7de54b065f25f3a1873d760ab5051cc91
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452605"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="31f6f-102">Método ICorProfilerInfo::EndInprocDebugging</span><span class="sxs-lookup"><span data-stu-id="31f6f-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
 <span data-ttu-id="31f6f-103">Fecha uma sessão de depuração em andamento.</span><span class="sxs-lookup"><span data-stu-id="31f6f-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="31f6f-104">Este método está obsoleto no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="31f6f-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

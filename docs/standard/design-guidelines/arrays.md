@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570380"
 ---
 # <a name="arrays"></a><span data-ttu-id="920c0-102">Matrizes</span><span class="sxs-lookup"><span data-stu-id="920c0-102">Arrays</span></span>
 <span data-ttu-id="920c0-103">**FAZER ✓** preferir usar coleções em matrizes em APIs públicas.</span><span class="sxs-lookup"><span data-stu-id="920c0-103">**✓ DO** prefer using collections over arrays in public APIs.</span></span> <span data-ttu-id="920c0-104">O [coleções](../../../docs/standard/design-guidelines/guidelines-for-collections.md) seção fornece detalhes sobre como escolher entre coleções e matrizes.</span><span class="sxs-lookup"><span data-stu-id="920c0-104">The [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section provides details about how to choose between collections and arrays.</span></span>  

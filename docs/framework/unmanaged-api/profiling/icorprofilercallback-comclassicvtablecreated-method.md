@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2dcb45fcc987952ec5e84cc468dda8d8ede38bdf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451305"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a><span data-ttu-id="1c6f7-102">Método ICorProfilerCallback::COMClassicVTableCreated</span><span class="sxs-lookup"><span data-stu-id="1c6f7-102">ICorProfilerCallback::COMClassicVTableCreated Method</span></span>
 <span data-ttu-id="1c6f7-103">Notifica o criador de perfil que foi criada uma vtable interoperabilidade COM para o IID e a classe especificada.</span><span class="sxs-lookup"><span data-stu-id="1c6f7-103">Notifies the profiler that a COM interop vtable for the specified IID and class has been created.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b4b6b7b7b0dbb36724ff5eee2f3f78a3a7422cb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453327"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="78e52-102">Método ICorProfilerInfo::GetClassFromToken</span><span class="sxs-lookup"><span data-stu-id="78e52-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
 <span data-ttu-id="78e52-103">Obtém a ID da classe, recebe o token de metadados.</span><span class="sxs-lookup"><span data-stu-id="78e52-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="78e52-104">Este método está obsoleto no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="78e52-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="78e52-105">Use [Icorprofilerinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) em vez disso.</span><span class="sxs-lookup"><span data-stu-id="78e52-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  

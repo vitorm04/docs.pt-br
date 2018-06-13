@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484091"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforerror"></a><span data-ttu-id="0edaf-102">System.ServiceModel.TxCompletionStatusCompletedForError</span><span class="sxs-lookup"><span data-stu-id="0edaf-102">System.ServiceModel.TxCompletionStatusCompletedForError</span></span>
 <span data-ttu-id="0edaf-103">A transação especificada para a operação especificada foi concluída devido a uma exceção sem tratamento de execução.</span><span class="sxs-lookup"><span data-stu-id="0edaf-103">The specified transaction for the specified operation was completed due to an unhandled execution exception.</span></span>  

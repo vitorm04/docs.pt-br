@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 14f4f16a73c50de2d23804f77bca180f4e9827b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453916"
 ---
 # <a name="functionleave3-function"></a><span data-ttu-id="9ff93-102">Função FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="9ff93-102">FunctionLeave3 Function</span></span>
 <span data-ttu-id="9ff93-103">Notifica o criador de perfil que o controle está sendo retornado de uma função.</span><span class="sxs-lookup"><span data-stu-id="9ff93-103">Notifies the profiler that control is being returned from a function.</span></span>  

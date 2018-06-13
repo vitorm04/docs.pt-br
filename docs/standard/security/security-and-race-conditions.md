@@ -15,8 +15,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdfc4d9e9ba3653bd1a762767e3c39a4f62e587a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582129"
 ---
 # <a name="security-and-race-conditions"></a><span data-ttu-id="cc86e-102">Segurança e condições de corrida</span><span class="sxs-lookup"><span data-stu-id="cc86e-102">Security and Race Conditions</span></span>
 <span data-ttu-id="cc86e-103">Outra área de interesse é a possibilidade de falhas de segurança explorado por condições de corrida.</span><span class="sxs-lookup"><span data-stu-id="cc86e-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="cc86e-104">Há várias maneiras em que isso pode acontecer.</span><span class="sxs-lookup"><span data-stu-id="cc86e-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="cc86e-105">Os seguintes subtópicos descrevem algumas das principais armadilhas que o desenvolvedor deve evitar.</span><span class="sxs-lookup"><span data-stu-id="cc86e-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d562aef58c1e3b5bbbe690b54eb08384052c657
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456769"
 ---
 # <a name="strongnamegetblobfromimage-function"></a><span data-ttu-id="8505e-102">Função StrongNameGetBlobFromImage</span><span class="sxs-lookup"><span data-stu-id="8505e-102">StrongNameGetBlobFromImage Function</span></span>
 <span data-ttu-id="8505e-103">Obtém uma representação binária da imagem do assembly no endereço de memória especificado.</span><span class="sxs-lookup"><span data-stu-id="8505e-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  

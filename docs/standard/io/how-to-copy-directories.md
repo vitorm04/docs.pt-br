@@ -1,13 +1,7 @@
 ---
-title: "Como copiar diretórios"
-ms.custom: 
+title: Como copiar diretórios
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,32 +12,28 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 43e9027c1dbfc831f598991374c22434e01fe7ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1cfe07af216da1c35b093a1ca23e4d48c60a7bfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571229"
 ---
-# <a name="how-to-copy-directories"></a><span data-ttu-id="2ddc1-102">Como copiar diretórios</span><span class="sxs-lookup"><span data-stu-id="2ddc1-102">How to: Copy Directories</span></span>
-<span data-ttu-id="2ddc1-103">Este exemplo demonstra como usar classes de E/S para copiar de forma síncrona o conteúdo de um diretório para outro local.</span><span class="sxs-lookup"><span data-stu-id="2ddc1-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="2ddc1-104">Nesse exemplo, o usuário pode especificar se deseja copiar também os subdiretórios.</span><span class="sxs-lookup"><span data-stu-id="2ddc1-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="2ddc1-105">Se os subdiretórios forem copiadas, o método nesse exemplo as copiará recursivamente chamando a si próprio em cada subdiretório subsequente até que não haja mais nada para copiar.</span><span class="sxs-lookup"><span data-stu-id="2ddc1-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  
+# <a name="how-to-copy-directories"></a><span data-ttu-id="b639e-102">Como copiar diretórios</span><span class="sxs-lookup"><span data-stu-id="b639e-102">How to: Copy Directories</span></span>
+<span data-ttu-id="b639e-103">Este exemplo demonstra como usar classes de E/S para copiar de forma síncrona o conteúdo de um diretório para outro local.</span><span class="sxs-lookup"><span data-stu-id="b639e-103">This example demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span> <span data-ttu-id="b639e-104">Nesse exemplo, o usuário pode especificar se deseja copiar também os subdiretórios.</span><span class="sxs-lookup"><span data-stu-id="b639e-104">In this example, the user can specify whether to also copy the subdirectories.</span></span> <span data-ttu-id="b639e-105">Se os subdiretórios forem copiadas, o método nesse exemplo as copiará recursivamente chamando a si próprio em cada subdiretório subsequente até que não haja mais nada para copiar.</span><span class="sxs-lookup"><span data-stu-id="b639e-105">If the subdirectories are copied, the method in this example recursively copies them by calling itself on each subsequent subdirectory until there are no more to copy.</span></span>  
   
- <span data-ttu-id="2ddc1-106">Para obter um exemplo de como copiar arquivos de forma assíncrona, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).</span><span class="sxs-lookup"><span data-stu-id="2ddc1-106">For an example of copying files asynchronously, see [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span>  
+ <span data-ttu-id="b639e-106">Para obter um exemplo de como copiar arquivos de forma assíncrona, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).</span><span class="sxs-lookup"><span data-stu-id="b639e-106">For an example of copying files asynchronously, see [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2ddc1-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2ddc1-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b639e-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b639e-107">Example</span></span>  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="2ddc1-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2ddc1-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b639e-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b639e-108">See Also</span></span>  
  <xref:System.IO.FileInfo>  
  <xref:System.IO.DirectoryInfo>  
  <xref:System.IO.FileStream>  
- [<span data-ttu-id="2ddc1-109">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="2ddc1-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
- [<span data-ttu-id="2ddc1-110">Tarefas comuns de E/S</span><span class="sxs-lookup"><span data-stu-id="2ddc1-110">Common I/O Tasks</span></span>](../../../docs/standard/io/common-i-o-tasks.md)  
- [<span data-ttu-id="2ddc1-111">E/S de arquivo assíncrona</span><span class="sxs-lookup"><span data-stu-id="2ddc1-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)
+ [<span data-ttu-id="b639e-109">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="b639e-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
+ [<span data-ttu-id="b639e-110">Tarefas comuns de E/S</span><span class="sxs-lookup"><span data-stu-id="b639e-110">Common I/O Tasks</span></span>](../../../docs/standard/io/common-i-o-tasks.md)  
+ [<span data-ttu-id="b639e-111">E/S de arquivo assíncrona</span><span class="sxs-lookup"><span data-stu-id="b639e-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)

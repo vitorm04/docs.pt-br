@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558534"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a><span data-ttu-id="2f9f4-102">Como animar um objeto usando quadros-chave</span><span class="sxs-lookup"><span data-stu-id="2f9f4-102">How to: Animate an Object by Using Key Frames</span></span>
 <span data-ttu-id="2f9f4-103">Este exemplo mostra como animar um objeto, que neste exemplo é o <xref:System.Windows.Controls.Page.Background%2A> propriedade de um <xref:System.Windows.Controls.Page> controle usando quadros-chave.</span><span class="sxs-lookup"><span data-stu-id="2f9f4-103">This example shows how to animate an object, which in this example is the <xref:System.Windows.Controls.Page.Background%2A> property of a <xref:System.Windows.Controls.Page> control, by using key frames.</span></span>  

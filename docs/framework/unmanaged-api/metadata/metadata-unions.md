@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 417c40f1b0e1ba1b9f7eb39d26da236b5bb691b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451913"
 ---
 # <a name="metadata-unions"></a><span data-ttu-id="4e2d4-102">Uniões de metadados</span><span class="sxs-lookup"><span data-stu-id="4e2d4-102">Metadata Unions</span></span>
 <span data-ttu-id="4e2d4-103">Esta seção descreve as uniões não gerenciadas que usa o API de metadados.</span><span class="sxs-lookup"><span data-stu-id="4e2d4-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  

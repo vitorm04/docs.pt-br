@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758575"
 ---
 # <a name="ltissuertokenresolvergt"></a><span data-ttu-id="21123-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="21123-102">&lt;issuerTokenResolver&gt;</span></span>
 <span data-ttu-id="21123-103">Registra o resolvedor de token do emissor que é usado por manipuladores na coleção de manipulador de token.</span><span class="sxs-lookup"><span data-stu-id="21123-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="21123-104">O resolvedor de token do emissor é usado para resolver o token de assinatura em tokens de entrada e de mensagens.</span><span class="sxs-lookup"><span data-stu-id="21123-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  

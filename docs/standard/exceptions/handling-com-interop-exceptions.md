@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571258"
 ---
 # <a name="handling-com-interop-exceptions"></a><span data-ttu-id="e9137-102">Manipulando exceções de interoperabilidade COM</span><span class="sxs-lookup"><span data-stu-id="e9137-102">Handling COM Interop Exceptions</span></span>
 <span data-ttu-id="e9137-103">Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de exceções.</span><span class="sxs-lookup"><span data-stu-id="e9137-103">Managed and unmanaged code can work together to handle exceptions.</span></span> <span data-ttu-id="e9137-104">Se um método lança uma exceção no código gerenciado, o common language runtime pode passar um HRESULT para um objeto COM.</span><span class="sxs-lookup"><span data-stu-id="e9137-104">If a method throws an exception in managed code, the common language runtime can pass an HRESULT to a COM object.</span></span> <span data-ttu-id="e9137-105">Se um método falhar no código não gerenciado, retornando um HRESULT de falha, o tempo de execução lançará uma exceção que pode ser detectada pelo código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="e9137-105">If a method fails in unmanaged code by returning a failure HRESULT, the runtime throws an exception that can be caught by managed code.</span></span>  

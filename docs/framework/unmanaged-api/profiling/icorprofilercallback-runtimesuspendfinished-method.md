@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0b243c507171a4d907ef4594ae0c715a074c965a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452212"
 ---
 # <a name="icorprofilercallbackruntimesuspendfinished-method"></a><span data-ttu-id="f35e5-102">Método ICorProfilerCallback::RuntimeSuspendFinished</span><span class="sxs-lookup"><span data-stu-id="f35e5-102">ICorProfilerCallback::RuntimeSuspendFinished Method</span></span>
 <span data-ttu-id="f35e5-103">Notifica o criador de perfil que o tempo de execução foi concluída a suspensão de todos os threads de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="f35e5-103">Notifies the profiler that the runtime has completed suspension of all runtime threads.</span></span>  

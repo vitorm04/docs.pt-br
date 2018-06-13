@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450922"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="eee2f-102">Método ICorProfilerCallback::AppDomainShutdownStarted</span><span class="sxs-lookup"><span data-stu-id="eee2f-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
 <span data-ttu-id="eee2f-103">Notifica o criador de perfil que um domínio de aplicativo está sendo descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="eee2f-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  

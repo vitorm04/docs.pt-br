@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573832"
 ---
 # <a name="visual-f-development-environment-features"></a><span data-ttu-id="e0719-103">Recursos do Ambiente de Desenvolvimento em Visual F#</span><span class="sxs-lookup"><span data-stu-id="e0719-103">Visual F# Development Environment Features</span></span>
 
