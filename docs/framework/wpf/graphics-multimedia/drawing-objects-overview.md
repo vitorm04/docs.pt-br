@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558181"
 ---
 # <a name="drawing-objects-overview"></a>Visão geral dos objetos de desenho
 Este tópico apresenta <xref:System.Windows.Media.Drawing> objetos e descreve como usá-los para desenhar formas, bitmaps, texto e mídia de forma eficiente. Use <xref:System.Windows.Media.Drawing> pintar objetos quando você cria clip-art, com um <xref:System.Windows.Media.DrawingBrush>, ou use <xref:System.Windows.Media.Visual> objetos.  

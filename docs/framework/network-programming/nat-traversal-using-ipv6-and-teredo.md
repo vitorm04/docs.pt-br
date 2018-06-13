@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398112"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Passagem de NAT usando IPv6 e Teredo
 Foram feitas melhorias que dão suporte para a passagem de NAT (conversão de endereços de rede). Essas alterações são projetadas para uso com o IPv6 e Teredo, mas elas também são aplicáveis a outras tecnologias de túnel IP. Essas melhorias afetam as classes no <xref:System.Net> e nos namespaces relacionados.  

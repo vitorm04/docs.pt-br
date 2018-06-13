@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561667"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Como simplificar animações usando linhas do tempo filho
 Este exemplo mostra como simplificar animações usando filho <xref:System.Windows.Media.Animation.ParallelTimeline> objetos. Um <xref:System.Windows.Media.Animation.Storyboard> é um tipo de <xref:System.Windows.Media.Animation.Timeline> que fornece informações de direcionamento para o cronogramas que ele contém. Use um <xref:System.Windows.Media.Animation.Storyboard> para fornecer informações, incluindo informações de objeto e propriedade de direcionamento da linha do tempo.  

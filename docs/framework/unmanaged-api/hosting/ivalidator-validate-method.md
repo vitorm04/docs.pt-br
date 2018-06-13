@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440610"
 ---
 # <a name="ivalidatorvalidate-method"></a>Método IValidator::Validate
 Valida o especificado PE (executável portátil) ou arquivo do Microsoft intermediate language (MSIL).  

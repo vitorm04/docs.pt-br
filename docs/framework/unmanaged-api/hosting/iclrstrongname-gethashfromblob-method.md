@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435255"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Método ICLRStrongName::GetHashFromBlob
 Obtém um hash do assembly no endereço de memória especificado, usando o algoritmo de hash especificado.  

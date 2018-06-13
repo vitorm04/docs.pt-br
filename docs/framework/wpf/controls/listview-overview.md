@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557375"
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  

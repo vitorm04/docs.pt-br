@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557232"
 ---
 # <a name="tooltip-overview"></a>Visão geral de ToolTip
 Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, tal como em um <xref:System.Windows.Controls.Button>. Este tópico apresenta a dica de ferramenta e discute como criar e personalizar o conteúdo da dica de ferramenta.  

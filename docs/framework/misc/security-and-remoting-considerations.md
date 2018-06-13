@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398164"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
 Comunicação remota permite que você configure transparente chamadas entre domínios de aplicativo, processos ou computadores. No entanto, a movimentação da pilha código acesso segurança não pode ultrapassar os limites de processo ou máquinas (Aplicar entre domínios de aplicativos do mesmo processo).  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 187c0a8d929958b7eaf1e99771da6a0d29c3d5f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434181"
 ---
 # <a name="iclrmemorynotificationcallbackonmemorynotification-method"></a>Método ICLRMemoryNotificationCallback::OnMemoryNotification
 Notifica o common language runtime (CLR) da carga de memória no computador.  

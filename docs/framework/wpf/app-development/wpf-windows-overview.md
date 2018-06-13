@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558116"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos do Windows Presentation Foundation (WPF) autônomo por meio do windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes que abrangem os conceitos básicos de criação e gerenciamento de janelas de aplicativos autônomos.  

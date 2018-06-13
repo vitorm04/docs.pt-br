@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397163"
 ---
 # <a name="using-tcp-services"></a>Usando os serviços TCP
 A classe <xref:System.Net.Sockets.TcpClient> solicita dados de um recurso da Internet usando o TCP. Os métodos e as propriedades de **TcpClient** abstraem os detalhes para criar um <xref:System.Net.Sockets.Socket> para solicitar e receber dados usando o TCP. Como a conexão com o dispositivo remoto é representada como um fluxo, os dados podem ser lidos e gravados com técnicas de manipulação de fluxo do .NET Framework.  

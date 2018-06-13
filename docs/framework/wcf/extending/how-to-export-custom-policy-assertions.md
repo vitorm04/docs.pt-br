@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488212"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Como exportar declarações de política personalizadas
 Declarações de política descrevem os recursos e requisitos de um ponto de extremidade de serviço. Aplicativos de serviço podem usar declarações de política personalizada nos metadados de serviço para comunicar-se o ponto de extremidade, informações de personalização de associação ou o contrato para o aplicativo cliente. Você pode usar o Windows Communication Foundation (WCF) para exportar declarações em expressões de política anexadas em associações de WSDL no ponto de extremidade, operação ou entidades de mensagem, dependendo do modo como os recursos ou os requisitos que você está se comunicando.  

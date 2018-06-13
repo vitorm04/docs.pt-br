@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397527"
 ---
 # <a name="proxy-configuration"></a>Configuração de proxy
 Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy pode retornar um recurso solicitado do seu cache ou encaminhar a solicitação para o servidor na qual o recurso reside. Proxies podem melhorar o desempenho da rede, reduzindo o número de solicitações enviadas a servidores remotos. Proxies também podem ser usados para restringir o acesso aos recursos.  

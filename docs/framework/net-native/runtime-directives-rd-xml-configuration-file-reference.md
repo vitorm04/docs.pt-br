@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397267"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de configuração XML que especifica se os elementos do programa designado estão disponíveis para reflexão. Aqui está um exemplo de um arquivo de diretivas de tempo de execução:  

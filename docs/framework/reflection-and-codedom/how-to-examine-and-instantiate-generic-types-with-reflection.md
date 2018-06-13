@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397566"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Como examinar tipos genéricos e criar instâncias deles com a reflexão
 As informações sobre tipos genéricos são obtidas da mesma forma que as informações sobre os outros tipos: examinando um objeto <xref:System.Type> que representa o tipo genérico. A diferença de princípio é que um tipo genérico tem uma lista de objetos <xref:System.Type> que representam seus parâmetros de tipo genérico. O primeiro procedimento nesta seção examina os tipos genéricos.  

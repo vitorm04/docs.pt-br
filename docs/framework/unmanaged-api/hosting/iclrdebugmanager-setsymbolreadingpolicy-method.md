@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ee21861ed3911303d4661721b65e9e147c6953a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433813"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>Método ICLRDebugManager::SetSymbolReadingPolicy
 Define a política para a leitura de arquivos do programa (PDB) de banco de dados. A política determina se as informações sobre números de linha e de arquivos estão incluídas em pilhas de chamadas.  

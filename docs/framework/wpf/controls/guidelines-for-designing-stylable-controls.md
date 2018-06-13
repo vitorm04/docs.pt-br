@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558207"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Diretrizes para criar controles com estilo
 Este documento resume um conjunto de práticas recomendadas a serem consideradas ao criar um controle que você deseja que seja fácil de criar estilos e modelos. Nós chegamos a este conjunto de práticas recomendadas por meio de muitas tentativas e erros ao trabalhar nos estilos de controle de tema do conjunto de controles internos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aprendemos que uma definição de estilo bem-sucedida é tanto uma função de um modelo de objeto com um bom design quanto é do próprio estilo. O público-alvo deste documento é o autor do controle, não os autores de estilo.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559520"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Como criar uma cena 3D
 Este exemplo mostra como criar um objeto 3D parecido com uma folha de papel que foi girada. Um <xref:System.Windows.Controls.Viewport3D> juntamente com os seguintes componentes são usados para criar esta cena 3D simples:  

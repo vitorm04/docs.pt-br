@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547720"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Carregamento de XAML e propriedades da dependência
 A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] atual de seu processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é inerentemente com reconhecimento de propriedade de dependência. O processador [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa métodos de sistema de propriedade de propriedades de dependência ao carregar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] binários e processar atributos que são propriedades de dependência. Isso desvia os wrappers de propriedade de forma efetiva. Quando você implementa propriedades de dependência personalizadas, você deve considerar esse comportamento e evitar colocar qualquer outro código no seu wrapper de propriedade diferente dos métodos de sistema de propriedade <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A>.  

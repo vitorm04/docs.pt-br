@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546260"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Como navegar para frente ou para trás por meio do histórico de navegação
 Este exemplo ilustra como navegar para frente ou para trás nas entradas no histórico de navegação.  

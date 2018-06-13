@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 924708957f02055d1cf20739f8642f0e924d6210
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440652"
 ---
 # <a name="itypename-interface"></a>Interface ITypeName
 Fornece métodos para obter informações de nome de tipo.  

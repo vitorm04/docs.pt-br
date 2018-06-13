@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336037"
 ---
 # <a name="multithreaded-applications-c"></a>Aplicativos com multithread (C#)
 Com o C#, é possível escrever aplicativos que executam várias tarefas ao mesmo tempo. Tarefas com o potencial de atrasar outras tarefas podem ser executadas em threads separados, um processo conhecido como *multithreading* ou *free threading*.  

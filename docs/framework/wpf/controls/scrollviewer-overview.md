@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557921"
 ---
 # <a name="scrollviewer-overview"></a>Visão geral de ScrollViewer
 O conteúdo dentro de uma interface do usuário geralmente é maior do que a área de exibição de uma tela de computador. O <xref:System.Windows.Controls.ScrollViewer> controle fornece uma maneira conveniente para habilitar a rolagem do conteúdo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos. Este tópico apresenta o <xref:System.Windows.Controls.ScrollViewer> elemento e fornece vários exemplos de uso.  

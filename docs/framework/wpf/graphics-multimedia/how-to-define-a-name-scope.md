@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559709"
 ---
 # <a name="how-to-define-a-name-scope"></a>Como definir um escopo de nome
 Para animar com <xref:System.Windows.Media.Animation.Storyboard> no código, você deve criar um <xref:System.Windows.NameScope> e registrar os nomes dos objetos de destino com o elemento que possui esse escopo de nomes. No exemplo a seguir, uma <xref:System.Windows.NameScope> é criado para `myMainPanel`. Dois botões, `button1` e `button2`, são adicionados ao painel e seus nomes registrados. Várias animações e um <xref:System.Windows.Media.Animation.Storyboard> são criados. O storyboard <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método é usado para iniciar as animações.  

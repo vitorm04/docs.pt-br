@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397553"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de rastreamento JIT
 <a name="top"></a> Esses eventos coletam informações sobre o êxito ou falha de inlining JIT (Just-In-Time) e chamadas tail JIT.  

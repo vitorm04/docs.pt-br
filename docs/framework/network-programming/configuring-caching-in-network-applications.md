@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395252"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Configurando o cache em aplicativos de rede
 Para configurar o cache, é necessário especificar uma política de cache no nível do aplicativo ou da <xref:System.Net.WebRequest>. Os tópicos a seguir fornecem exemplos de código que demonstram como configurar aplicativos e solicitações para usar o cache.  

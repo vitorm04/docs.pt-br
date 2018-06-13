@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439642"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>Método ICLRTaskManager::CreateTask
 Solicita explicitamente que o common language runtime (CLR) crie uma nova tarefa.  

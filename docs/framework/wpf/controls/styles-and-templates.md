@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553362"
 ---
 # <a name="styles-and-templates"></a>Estilos e modelos 
 Estilos e Windows Presentation Foundation (WPF) se referem a um conjunto de recursos (estilos, modelos, disparadores e storyboards) que permitem que um aplicativo, documento ou designer de interface de usuário criar aplicativos visualmente atraentes e Padronize em uma determinada aparência para seus produtos.  

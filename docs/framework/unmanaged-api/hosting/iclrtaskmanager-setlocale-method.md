@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab6b13c6b7dba34f5ea82d05f483b36bf96aab1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437320"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>Método ICLRTaskManager::SetLocale
 Notifica o common language runtime (CLR) que o host tiver modificado o valor do identificador de localidade (que é mapeado para a cultura geográfica e o idioma) da tarefa em execução no momento.  

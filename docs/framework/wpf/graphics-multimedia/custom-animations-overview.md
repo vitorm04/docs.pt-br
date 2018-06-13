@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558025"
 ---
 # <a name="custom-animations-overview"></a>Visão geral de animações personalizadas
 Este tópico descreve como e quando estender o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de animação criando quadros-chave personalizados, classes de animação ou utilizando callback por quadro para contorná-lo.  

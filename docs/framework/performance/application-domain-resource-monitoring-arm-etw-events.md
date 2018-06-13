@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398177"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de monitoramento de recursos de domínio de aplicativo (ARM)
 <a name="top"></a> Esses eventos fornecem informações de diagnóstico detalhadas sobre o estado de um domínio do aplicativo. Use esses eventos ou o recurso ARM (monitoramento de recursos do domínio do aplicativo) para obter as mesmas informações.  

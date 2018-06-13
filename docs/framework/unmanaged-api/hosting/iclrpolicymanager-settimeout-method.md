@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b5a389af718322d1e0fffebae046bf28731877b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435771"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>Método ICLRPolicyManager::SetTimeout
 Define um valor de tempo limite para a operação especificada.  

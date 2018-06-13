@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487851"
 ---
 # <a name="custom-authorization"></a>Autorização personalizada
 Autorização é o processo de controlar o acesso a recursos e tarefas. Os tópicos nesta seção permitem que você criar para implementar tipos de declaração diferente ou políticas.  

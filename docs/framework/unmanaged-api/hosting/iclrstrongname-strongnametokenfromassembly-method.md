@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aea9fb2bb9c4535e30a42ad956b04b3bb06a798a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433982"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>Método ICLRStrongName::StrongNameTokenFromAssembly
 Cria um token de nome forte do arquivo de assembly especificado.  

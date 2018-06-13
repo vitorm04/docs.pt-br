@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87b4d4a9606723e5cf55fac19469809e1014b7c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439681"
 ---
 # <a name="ihostpolicymanageronfailure-method"></a>Método IHostPolicyManager::OnFailure
 Notifica o host que o common language runtime (CLR) está prestes a realizar a ação especificada por uma chamada para o [SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) método em resposta a uma falha de alocação ou recuperação de recursos.  

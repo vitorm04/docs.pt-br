@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396913"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como definir um tipo genérico com a emissão de reflexão
 Este tópico mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.  

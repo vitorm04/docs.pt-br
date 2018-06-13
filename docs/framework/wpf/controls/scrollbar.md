@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555997"
 ---
 # <a name="scrollbar"></a>ScrollBar
 Um <xref:System.Windows.Controls.Primitives.ScrollBar> permite que você exiba o conteúdo que está fora da área de exibição atual deslizando o <xref:System.Windows.Controls.Primitives.Thumb> para tornar o conteúdo visível.  

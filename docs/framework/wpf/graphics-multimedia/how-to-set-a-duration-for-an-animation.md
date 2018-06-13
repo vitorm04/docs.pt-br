@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561369"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Como definir uma duração para uma animação
 Um <xref:System.Windows.Media.Animation.Timeline> representa um segmento de tempo e o comprimento do segmento são determinados pela linha do tempo <xref:System.Windows.Duration>. Quando um <xref:System.Windows.Media.Animation.Timeline> atinge o final de sua duração, sua execução é interrompida. Se o <xref:System.Windows.Media.Animation.Timeline> possui linhas filho, são interrompidas também. No caso de uma animação, a <xref:System.Windows.Duration> Especifica quanto tempo a animação leva para fazer a transição do seu valor inicial ao seu valor final.  

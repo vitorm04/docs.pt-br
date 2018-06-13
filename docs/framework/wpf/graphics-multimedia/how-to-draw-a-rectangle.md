@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561040"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Como desenhar um retângulo
 Este exemplo mostra como desenhar um retângulo, usando o <xref:System.Windows.Shapes.Rectangle> elemento.  

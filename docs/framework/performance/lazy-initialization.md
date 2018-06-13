@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398021"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  

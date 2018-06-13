@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df1fb24c4003f77523ef01a4029fd19cc55a3fef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442215"
 ---
 # <a name="ihosttask-interface"></a>Interface IHostTask
 Fornece métodos que permitem que o common language runtime (CLR) para se comunicar com o host para gerenciar as tarefas.  

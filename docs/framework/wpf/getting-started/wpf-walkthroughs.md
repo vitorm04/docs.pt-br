@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557882"
 ---
 # <a name="wpf-walkthroughs"></a>Explicações passo a passo WPF
 Instruções passo a passo oferecem orientações em etapas para cenários comuns. Isso torna esse bom local para começar a conhecer o produto ou uma área de recurso específica.  

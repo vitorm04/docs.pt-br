@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558103"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Teste de clique na camada visual
 Este tópico fornece uma visão geral da funcionalidade de teste de clique fornecida pela camada visual. Suporte a teste de clique permite que você determine se um valor de geometria ou de ponto está dentro do conteúdo renderizado de um <xref:System.Windows.Media.Visual>, permitindo que você implemente comportamento de interface do usuário, como um retângulo de seleção para selecionar vários objetos.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436105"
 ---
 # <a name="iclrstrongname-interface"></a>Interface ICLRStrongName
 Fornece funções estáticas globais de básicas para assinar assemblies com nomes fortes. Todos os `ICLRStrongName` métodos retornam os HRESULTs COM padrão.  

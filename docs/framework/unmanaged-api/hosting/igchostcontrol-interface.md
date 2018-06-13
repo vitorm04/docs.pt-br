@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b957642606cfcd43b6a02d64450d51174eb7768
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439746"
 ---
 # <a name="igchostcontrol-interface"></a>Interface IGCHostControl
 Fornece um método que permite que o coletor de lixo solicitar o host para alterar os limites de memória virtual.  

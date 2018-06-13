@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558337"
 ---
 # <a name="popup-placement-behavior"></a>Comportamento de posicionamento do pop-up
 Um <xref:System.Windows.Controls.Primitives.Popup> controle exibe o conteúdo em uma janela separada que flutua sobre um aplicativo. Você pode especificar a posição de um <xref:System.Windows.Controls.Primitives.Popup> em relação a um controle, o mouse ou a tela usando o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriedades.  Essas propriedades funcionam em conjunto para fornecer flexibilidade para especificar a posição do <xref:System.Windows.Controls.Primitives.Popup>.  

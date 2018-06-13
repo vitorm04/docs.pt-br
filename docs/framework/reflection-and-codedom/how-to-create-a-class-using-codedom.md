@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395382"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Como criar uma classe usando o CodeDOM
 Os procedimentos a seguir ilustram como criar e compilar um grafo CodeDOM que gera uma classe que contém dois campos, três propriedades, um método, um construtor e um ponto de entrada.  

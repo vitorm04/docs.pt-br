@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557115"
 ---
 # <a name="adorners-overview"></a>Visão geral de adornos
 Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado para fornecer dicas visuais para um usuário. Entre outros usos, adornos podem ser usados para adicionar alças funcionais a elementos ou para fornecer informações de estado sobre um controle.  

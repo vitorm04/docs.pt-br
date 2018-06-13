@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543700"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Como criar um evento roteado personalizado
 Para o evento personalizado dar suporte a roteamento de eventos, você precisa registrar uma <xref:System.Windows.RoutedEvent> usando o <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> método. Este exemplo demonstra as noções básicas da criação de um evento roteado personalizado.  

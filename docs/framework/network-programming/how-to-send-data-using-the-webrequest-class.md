@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394651"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Como enviar dados usando a classe WebRequest
 O procedimento a seguir descreve as etapas usadas para enviar dados para um servidor. Esse procedimento normalmente é usado para enviar dados para uma página da Web.  

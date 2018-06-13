@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545159"
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Como manipular grupos de linhas de uma tabela por meio da propriedade RowGroups
 Este exemplo demonstra algumas das operações mais comuns que podem ser executadas em grupos de linhas da tabela por meio de <xref:System.Windows.Documents.Table.RowGroups%2A> propriedade.  

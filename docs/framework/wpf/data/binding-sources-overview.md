@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558129"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  

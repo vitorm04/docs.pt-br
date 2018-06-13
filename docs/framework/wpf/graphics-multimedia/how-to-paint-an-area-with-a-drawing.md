@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560897"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Como pintar uma área com um desenho
 Este exemplo mostra como pintar uma área com um desenho. Para pintar uma área com um desenho, use um <xref:System.Windows.Media.DrawingBrush> e um ou mais <xref:System.Windows.Media.Drawing> objetos.   O exemplo a seguir usa um <xref:System.Windows.Media.DrawingBrush> para pintar um objeto com um desenho de duas elipses.  

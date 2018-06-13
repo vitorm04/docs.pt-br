@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557570"
 ---
 # <a name="popup-overview"></a>Visão geral do pop-up
 O <xref:System.Windows.Controls.Primitives.Popup> controle fornece uma maneira de exibir o conteúdo em uma janela separada que flutua sobre a janela atual do aplicativo em relação a um elemento designado ou tela coordenada. Este tópico apresenta o <xref:System.Windows.Controls.Primitives.Popup> controlar e fornece informações sobre seu uso.  

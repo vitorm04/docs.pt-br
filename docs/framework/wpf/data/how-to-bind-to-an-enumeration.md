@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554941"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Como associar a uma enumeração
 Este exemplo mostra como associar a uma enumeração associando ao método GetValues da enumeração.  

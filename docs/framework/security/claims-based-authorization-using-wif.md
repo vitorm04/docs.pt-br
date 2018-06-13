@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398619"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
