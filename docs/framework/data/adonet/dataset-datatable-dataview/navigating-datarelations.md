@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761422"
 ---
 # <a name="navigating-datarelations"></a>Navegando em DataRelations
 Uma das principais funções de um <xref:System.Data.DataRelation> é permitir a navegação de um <xref:System.Data.DataTable> para outro em um <xref:System.Data.DataSet>. Isso permite que você recupere todos relacionado <xref:System.Data.DataRow> objetos em um **DataTable** quando é fornecido um único **DataRow** de um relacionados **DataTable**. Por exemplo, depois de estabelecer um **DataRelation** entre uma tabela de clientes e uma tabela de pedidos, você pode recuperar todas as linhas de ordem para uma linha de cliente específico usando **GetChildRows**.  

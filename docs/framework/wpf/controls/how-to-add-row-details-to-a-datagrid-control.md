@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555945"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Como adicionar detalhes de linha a um controle DataGrid
 Ao usar o <xref:System.Windows.Controls.DataGrid> controle, você pode personalizar a apresentação de dados com a adição de uma seção de detalhes da linha. Adicionar uma seção de detalhes de linha permite agrupar alguns dados em um modelo que fica opcionalmente visível ou recolhido. Por exemplo, você pode adicionar detalhes da linha para um <xref:System.Windows.Controls.DataGrid> que apresenta apenas um resumo dos dados para cada linha a <xref:System.Windows.Controls.DataGrid>, mas apresenta mais campos de dados quando o usuário seleciona uma linha. Definir o modelo para a seção detalhes da linha de <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> propriedade. A ilustração a seguir mostra um exemplo de uma seção de detalhes da linha.  

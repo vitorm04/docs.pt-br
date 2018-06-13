@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762404"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Executar uma consulta XPath em um conjunto de dados
 A relação entre um sincronizado <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> permite a você fazer uso do XML serviços, como a consulta XML Path Language (XPath), que acessam o **XmlDataDocument** e podem executar determinadas funcionalidades modo mais conveniente de acessar o **DataSet** diretamente. Por exemplo, em vez de usar o **selecione** método de um <xref:System.Data.DataTable> para navegar em relações com outras tabelas em um **conjunto de dados**, você pode executar uma consulta XPath em um **XmlDataDocument**  que está sincronizado com o **DataSet**, para obter uma lista de elementos XML na forma de um <xref:System.Xml.XmlNodeList>. Nós o **XmlNodeList**, convertido como <xref:System.Xml.XmlElement> nós, pode ser passada para o **GetRowFromElement** método do **XmlDataDocument**para retornar a correspondência <xref:System.Data.DataRow> referências às linhas da tabela na sincronizado **conjunto de dados**.  

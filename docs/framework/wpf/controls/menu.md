@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555776"
 ---
 # <a name="menu"></a>Menu
 Um <xref:System.Windows.Controls.Menu> é um controle que permite a organização hierárquica de elementos associados com comandos ou manipuladores de eventos. Cada <xref:System.Windows.Controls.Menu> pode conter vários <xref:System.Windows.Controls.MenuItem> controles. Cada <xref:System.Windows.Controls.MenuItem> pode invocar um comando ou chamar um `Click` manipulador de eventos. Um <xref:System.Windows.Controls.MenuItem> também pode ter vários <xref:System.Windows.Controls.MenuItem> elementos como filhos, formando um submenu.  

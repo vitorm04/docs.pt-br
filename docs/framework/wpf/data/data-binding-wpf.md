@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555770"
 ---
 # <a name="data-binding-wpf"></a>Associação de dados (WPF)
 Associação de dados do Windows Presentation Foundation (WPF) fornece uma maneira simple e consistente para aplicações apresentar e interagir com dados. Elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos common language runtime (CLR) e XML.  

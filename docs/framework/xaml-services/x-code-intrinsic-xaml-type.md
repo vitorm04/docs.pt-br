@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564307"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Tipo intrínseco x:Code (XAML)
 Permite que o posicionamento de código dentro de uma produção XAML. Esse código pode ser compilado ou por qualquer implementação de processador XAML que compila XAML ou à esquerda na produção XAML para uso posterior, como interpretação por um tempo de execução.  

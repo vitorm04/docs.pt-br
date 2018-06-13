@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559726"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Como aplicar material à frente e ao verso de um objeto 3D
 O exemplo a seguir mostra como aplicar um <xref:System.Windows.Media.Media3D.Material> de objeto para a frente e verso um 3D e animar o objeto para mostrar ambos os lados do objeto. O <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar um vermelho <xref:System.Windows.Media.Brush> para o lado frontal do objeto e o <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> propriedade do <xref:System.Windows.Media.Media3D.GeometryModel3D> é usado para aplicar um azul <xref:System.Windows.Media.Brush> a parte traseira do objeto. O código a seguir mostra o aplicativo de materiais para o objeto:  

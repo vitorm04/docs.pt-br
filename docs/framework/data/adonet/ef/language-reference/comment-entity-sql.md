@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764158"
 ---
 # <a name="---comment-entity-sql"></a>-- (Comentário) (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consultas podem conter comentários. Dois traços (`--`) início de uma linha de comentário.  

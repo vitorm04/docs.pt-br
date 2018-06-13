@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759173"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Criando um objeto de DataView (LINQ to DataSet)
 Há duas maneiras de criar <xref:System.Data.DataView> no contexto de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] . Você pode criar <xref:System.Data.DataView> de uma consulta de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sobre <xref:System.Data.DataTable>, ou você pode criá-lo de <xref:System.Data.DataTable>tipado ou un- digitado. Em ambos os casos, você cria o <xref:System.Data.DataView> usando um do <xref:System.Data.DataTableExtensions.AsDataView%2A> métodos de extensão <xref:System.Data.DataView> não é construível diretamente no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contexto.  

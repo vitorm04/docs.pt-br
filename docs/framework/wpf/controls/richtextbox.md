@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554086"
 ---
 # <a name="richtextbox"></a>RichTextBox
 O <xref:System.Windows.Controls.RichTextBox> elemento define um controle de edição com suporte interno para recursos, como Recortar e colar, apresentação de documentos ricos e seleção de conteúdo.  

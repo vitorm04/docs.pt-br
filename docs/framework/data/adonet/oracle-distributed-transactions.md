@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765195"
 ---
 # <a name="oracle-distributed-transactions"></a>Transações distribuídas do Oracle
 O <xref:System.Data.OracleClient.OracleConnection> objeto inscreve automaticamente em uma transação distribuída existente se ela determina se uma transação está ativa. Inscrição de transação automática ocorre quando a conexão está aberta ou recuperado do pool de conexão. Você pode desabilitar a inscrição automática em transações, especificando  

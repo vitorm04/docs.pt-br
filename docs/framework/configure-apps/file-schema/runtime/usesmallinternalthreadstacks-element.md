@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745481"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; elemento
 Solicitações que o common language runtime (CLR) reduzir memória usam com a especificação de tamanhos de pilha explícita ao criar determinados threads que ele usa internamente, em vez de usar o tamanho da pilha padrão para esses threads.  

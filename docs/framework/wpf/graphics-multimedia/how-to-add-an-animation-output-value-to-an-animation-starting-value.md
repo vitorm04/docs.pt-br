@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557609"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Como adicionar um valor de saída da animação a um valor inicial de animação
 Este exemplo mostra como adicionar um valor de saída de animação a um valor inicial de animação.  

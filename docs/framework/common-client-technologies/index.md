@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753489"
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>Tecnologias cliente comuns no .NET Framework
 Esta seção descreve as diferentes tecnologias que você pode usar em seus aplicativos cliente.  

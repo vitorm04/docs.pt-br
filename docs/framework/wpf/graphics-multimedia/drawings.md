@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556024"
 ---
 # <a name="drawings"></a>Desenhos
 <xref:System.Windows.Media.Drawing> objetos são usados para desenhar formas, imagens ou texto de forma eficiente. Desenhos são utilizados quando pintando com um <xref:System.Windows.Media.DrawingBrush> ou programação com <xref:System.Windows.Media.Visual> objetos.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758471"
 ---
 # <a name="connection-string-builders"></a>Construtores de cadeia de conexão
 Em versões anteriores do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]verificação de cadeias de caracteres de conexão com a cadeia de caracteres concatenada valores não tivesse ocorrido, para que em tempo de execução, uma palavra-chave incorreta gerados pelo tempo de compilação um <xref:System.ArgumentException>. Cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dava suporte a diferentes tipos de sintaxe de palavras-chave de cadeias de conexão, o que dificultava a construção de cadeias de conexão válidas manualmente. Para resolver esse problema, o [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu novos construtores de cadeia de conexão para cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e suas respectivas classes de construtores de cadeias de conexão.  

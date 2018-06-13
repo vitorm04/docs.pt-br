@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525556"
 ---
 # <a name="constituent-controls"></a>Controles constituintes
 Os controles que compõem um controle de usuário ou *controles membros* como são denominados, são relativamente inflexíveis quando se trata de renderização de elementos gráficos personalizados. Todos os controles de Windows Forms lidar com sua próprias renderização por meio de seus próprios <xref:System.Windows.Forms.Control.OnPaint%2A> método. Como esse método é protegido, ele não está acessível para o desenvolvedor e, portanto, não pode ser impedido de ser executado quando o controle é pintado. Isso não significa, no entanto, que não é possível adicionar código para afetar a aparência dos controles membros. A renderização adicional pode ser realizada adicionando um manipulador de eventos. Por exemplo, suponha que você estava criando um <xref:System.Windows.Forms.UserControl> com um botão chamado `MyButton`. Se você quisesse ter renderização adicionais além do que foi fornecido pelo <xref:System.Web.UI.WebControls.Button>, você deve adicionar código ao seu controle de usuário semelhante à seguinte:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756807"
 ---
 # <a name="complex-type"></a>tipo complexo
 Um *tipo complexo* é um modelo para definir propriedades ricos, estruturadas em [tipos de entidade](../../../../docs/framework/data/adonet/entity-type.md) ou em outros tipos complexos. Cada modelo contém o seguinte:  

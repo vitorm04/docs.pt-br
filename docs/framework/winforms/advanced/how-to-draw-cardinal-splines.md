@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525054"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Como desenhar splines cardinais
 Um spline cardinal é uma curva que passa suavemente por um determinado conjunto de pontos. Para desenhar uma spline cardeal, crie um <xref:System.Drawing.Graphics> de objeto e passar o endereço de uma matriz de pontos para a <xref:System.Drawing.Graphics.DrawCurve%2A> método.  

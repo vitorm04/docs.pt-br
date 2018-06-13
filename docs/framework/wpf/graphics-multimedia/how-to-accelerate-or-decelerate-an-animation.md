@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555666"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>Como acelerar ou desacelerar uma animação
 Este exemplo demonstra como fazer uma animação acelerar e desacelerar ao longo do tempo. No exemplo a seguir, vários retângulos são animados por animações com diferentes <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> e <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> configurações.  

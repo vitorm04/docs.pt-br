@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555971"
 ---
 # <a name="tabcontrol"></a>TabControl
 <xref:System.Windows.Controls.TabControl> elementos de exibem o conteúdo em páginas distintas acessadas selecionando a guia apropriada. Cada guia contém um <xref:System.Windows.Controls.TabItem>.  

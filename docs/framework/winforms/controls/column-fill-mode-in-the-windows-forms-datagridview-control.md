@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528838"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modo de preenchimento da coluna no controle DataGridView dos Windows Forms
 No modo de preenchimento de coluna, o <xref:System.Windows.Forms.DataGridView> controle redimensiona as colunas automaticamente para que eles preenchem a largura da área de exibição disponíveis. O controle não exibir a barra de rolagem horizontal, exceto quando é necessário para manter a largura de cada coluna igual a ou maior que seu <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> o valor da propriedade.  

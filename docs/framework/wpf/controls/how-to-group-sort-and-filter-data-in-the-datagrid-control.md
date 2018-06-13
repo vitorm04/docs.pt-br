@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557024"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Como agrupar, classificar e filtrar dados no controle DataGrid
 Geralmente é útil exibir dados em um <xref:System.Windows.Controls.DataGrid> de diferentes maneiras por agrupamento, classificação e filtragem dos dados. Para agrupar, classificar e filtrar os dados em um <xref:System.Windows.Controls.DataGrid>, você associa um <xref:System.Windows.Data.CollectionView> que dá suporte a essas funções. Em seguida, você pode trabalhar com os dados de <xref:System.Windows.Data.CollectionView> sem afetar os dados de origem subjacentes. As alterações no modo de exibição de coleção são refletidas no <xref:System.Windows.Controls.DataGrid> interface do usuário (IU).  

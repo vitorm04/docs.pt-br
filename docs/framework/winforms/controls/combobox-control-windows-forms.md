@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524528"
 ---
 # <a name="combobox-control-windows-forms"></a>Controle ComboBox (Windows Forms)
 Windows Forms `ComboBox` controle é usado para exibir dados em uma caixa de combinação suspensa. Por padrão, o `ComboBox` controle aparece em duas partes: a parte superior é uma caixa de texto que permite ao usuário digitar um item de lista. A segunda parte é uma caixa de listagem que exibe uma lista de itens na qual o usuário pode selecionar item.  

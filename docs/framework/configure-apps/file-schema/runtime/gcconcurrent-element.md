@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745832"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; elemento
 Especifica se o common language runtime executa a coleta de lixo em um thread separado.  
