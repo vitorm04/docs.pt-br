@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585295"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;membername&gt; &#39; é ambíguo nas interfaces herdadas &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;interfacename2&gt;&#39;
 A interface herda dois ou mais membros com o mesmo nome de várias interfaces.  

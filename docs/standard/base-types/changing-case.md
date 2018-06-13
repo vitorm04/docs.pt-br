@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570510"
 ---
 # <a name="changing-case-in-net"></a>Como alterar a capitalização no .NET
 Se você gravar um aplicativo que aceita a inserção de informações por um usuário, talvez você nunca tenha certeza se ele ou ela usará maiúsculas ou minúsculas para inserir os dados. Muitas vezes, você quer que as cadeias de caracteres tenham a grafia de maiúsculas e minúsculas consistente, especialmente se você estiver exibindo-as na interface do usuário. A tabela seguinte descreve três métodos de alteração de capitalização. Os primeiros dois métodos fornecem uma sobrecarga que aceita uma cultura.  

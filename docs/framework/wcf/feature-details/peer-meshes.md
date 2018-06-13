@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493331"
 ---
 # <a name="peer-meshes"></a>Malhas ponto a ponto
 Um *malha* é um conjunto nomeado (um gráfico interconectado) de nós ponto que pode se comunicar entre si e que são identificados por uma ID exclusiva de malha Cada nó é conectado a vários outros nós. Em uma malha bem conectada, há um caminho entre dois nós, com poucas saltos entre os nós as bordas mais distante da malha, e a malha permanecerão conectada, mesmo que alguns nós ou conexões diminuir. Nós ativos de malha publicam suas informações de ponto de extremidade com uma ID de malha correspondente para que outros pares podem encontrá-los.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a691f61fcd25b7aaaae90e6adcc3c2ee0c421cf0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424252"
 ---
 # <a name="icorpublishenumskip-method"></a>Método ICorPublishEnum::Skip
 Move o cursor para a frente na enumeração pelo número especificado de itens.  

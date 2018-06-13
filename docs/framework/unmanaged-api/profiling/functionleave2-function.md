@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3d6486a90d952208af89428423867a3daa4e8618
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453353"
 ---
 # <a name="functionleave2-function"></a>Função FunctionLeave2
 Notifica o criador de perfil que uma função está prestes a retornar ao chamador e fornece informações sobre a pilha quadro e função de valor retornado.  

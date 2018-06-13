@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450993"
 ---
 # <a name="metadata-interfaces"></a>Interfaces de metadados
 Esta seção descreve as interfaces não gerenciadas que fornecem acesso aos metadados expostos por tipos do .NET Framework, métodos, campos e assim por diante.  

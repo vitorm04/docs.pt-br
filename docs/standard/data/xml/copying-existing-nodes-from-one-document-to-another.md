@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573920"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copiando nós existentes de um documento para outro
 O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore inteira do nó são copiados de um **XmlDocument** para outro. O nó retornado de chamada é uma cópia do nó do documento de origem, incluindo valores de atributo, nome de nó, tipo de nó, e todos os atributos URL relacionados como o prefixo, o nome local, e namespace Uniform Resource Identifier (URI). O documento de origem não é alterado. Depois que você importou o nó, você ainda precisará adicioná-lo à árvore usando um dos métodos usados para nós de inserção.  

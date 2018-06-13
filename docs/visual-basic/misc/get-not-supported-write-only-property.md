@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636749"
 ---
 # <a name="get-not-supported-write-only-property"></a>Obter sem suporte (propriedade de somente gravação)
 Uma propriedade não pode ser lido porque ele é somente gravação.  

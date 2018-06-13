@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548464"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que fornecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  

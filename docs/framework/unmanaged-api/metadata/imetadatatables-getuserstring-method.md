@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d7dee3da1967f8a958ea95ab4555f279c962f51
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451789"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Método IMetaDataTables::GetUserString
 Obtém a cadeia de caracteres codificada no índice especificado na coluna de cadeia de caracteres no escopo atual.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573080"
 ---
 # <a name="virtual-members"></a>Membros virtuais
 Membros virtuais podem ser substituídos, portanto, alterar o comportamento da subclasse. Eles são bastante semelhantes para retornos de chamada em termos de extensibilidade que eles fornecem, mas eles são melhores em termos de desempenho de execução e o consumo de memória. Além disso, os membros virtuais achar mais naturais em cenários que exigem a criação especial de tipo de um tipo existente (especialização).  

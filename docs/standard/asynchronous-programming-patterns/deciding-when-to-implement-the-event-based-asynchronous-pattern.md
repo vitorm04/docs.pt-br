@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570972"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidindo quando implementar o padrão assíncrono baseado em evento
 O Padrão assíncrono baseado em evento oferece um padrão para expor o comportamento assíncrono de uma classe. Com a introdução deste padrão, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dois padrões para expor o comportamento assíncrono: o Padrão assíncrono baseado na interface de <xref:System.IAsyncResult?displayProperty=nameWithType> e o padrão baseado no evento. Este tópico descreve quando é apropriado implementar os dois padrões.  

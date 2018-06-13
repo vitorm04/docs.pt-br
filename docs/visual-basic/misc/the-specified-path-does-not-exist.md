@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637889"
 ---
 # <a name="the-specified-path-does-not-exist"></a>O caminho especificado não existe
 Um caminho especificado não existir, talvez devido a um erro na combinação de cadeias de caracteres.  

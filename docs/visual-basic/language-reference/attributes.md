@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583361"
 ---
 # <a name="attributes-visual-basic"></a>Atributos (Visual Basic)
 Visual Basic fornece vários atributos que permitem que objetos interoperem com código não gerenciado e um atributo que permite que os membros de módulo sejam acessados sem o nome do módulo. A tabela a seguir lista os atributos usados pelo Visual Basic.  

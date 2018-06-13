@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449345"
 ---
 # <a name="imetadataimport-interface"></a>Interface IMetaDataImport
 Fornece métodos para importação e manipulação de metadados existentes de um arquivo PE (executável portátil) ou outra fonte, como uma biblioteca de tipos ou um binário de metadados independente, o tempo de execução.  

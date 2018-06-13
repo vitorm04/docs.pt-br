@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549121"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem melhor qualidade e desempenho de renderização de texto, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] suporte a tipografia, texto internacional aperfeiçoado, suporte de fonte aperfeiçoado e APIs (interfaces de programação de aplicativo).  

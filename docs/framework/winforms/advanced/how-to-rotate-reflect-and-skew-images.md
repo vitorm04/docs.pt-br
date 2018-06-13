@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523449"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Como girar, refletir e distorcer imagens
 Você pode girar, refletir e distorcer uma imagem especificando pontos de destino para os cantos superior esquerdo, superior direito e inferior esquerdo da imagem original. Os três pontos de destino determinam uma transformação afim que mapeia a imagem retangular original para um paralelogramo.  

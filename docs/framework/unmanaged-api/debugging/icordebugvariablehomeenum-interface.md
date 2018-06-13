@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a80a334d1b586aec30c6cf2715d7fb841bc76929
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423254"
 ---
 # <a name="icordebugvariablehomeenum-interface"></a>Interface ICorDebugVariableHomeEnum
 Fornece um enumerador para a variáveis locais e os argumentos em uma função.  

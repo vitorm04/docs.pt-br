@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636790"
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>Objeto&#39;configuração de localidade atual do t suporte (Visual Basic)
 Você tentou acessar um objeto que não oferece suporte à configuração de localidade para o projeto atual.  

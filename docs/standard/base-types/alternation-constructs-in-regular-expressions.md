@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574729"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 <a name="top"></a> Os constructos de alternância modificam uma expressão regular para permitir uma correspondência condicional ou do tipo um/ou outro. O .NET dá suporte a três constructos de alternância:  

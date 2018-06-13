@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548809"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartilhando loops de mensagem entre Win32 e WPF
 Este tópico descreve como implementar um loop de mensagem para interoperação com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], usando existente mensagem exposição de loop no <xref:System.Windows.Threading.Dispatcher> ou criando um loop de mensagem separado no [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lado do seu código de interoperação.  

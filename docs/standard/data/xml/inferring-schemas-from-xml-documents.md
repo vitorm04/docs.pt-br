@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574814"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Inferindo esquemas de documentos XML
 Este tópico descreve como usar a classe de <xref:System.Xml.Schema.XmlSchemaInference> para inferir um esquema de linguagem de definição de esquema XML (XSD) da estrutura de um documento XML.  
