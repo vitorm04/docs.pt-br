@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 039dab1b4ca86cb26de739e74b152f108f074c43
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426166"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="b35ff-102">Método ISymUnmanagedNamespace::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="b35ff-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
 <span data-ttu-id="b35ff-103">Obtém o filho desse namespace.</span><span class="sxs-lookup"><span data-stu-id="b35ff-103">Gets the children of this namespace.</span></span>  

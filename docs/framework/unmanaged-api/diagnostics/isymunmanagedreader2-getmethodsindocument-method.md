@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 762649e260817c43291de416d2f1a92a8f03afb5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427363"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="2511e-102">Método ISymUnmanagedReader2::GetMethodsInDocument</span><span class="sxs-lookup"><span data-stu-id="2511e-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
 <span data-ttu-id="2511e-103">Obtém cada método que tem informações de linha do documento fornecido.</span><span class="sxs-lookup"><span data-stu-id="2511e-103">Gets every method that has line information in the provided document.</span></span>  

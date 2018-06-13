@@ -11,8 +11,10 @@ author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: a1cbd682faa4c60e50bc3b73b58ef226dd599da2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358229"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="6f41b-102">\<Limpar > elemento NameValueSectionHandler e DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="6f41b-102">\<clear> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 

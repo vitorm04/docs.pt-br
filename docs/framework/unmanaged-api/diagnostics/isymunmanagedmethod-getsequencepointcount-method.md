@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1a9ef59cfe63ba745e6f5eba3ba2c3f3f983886
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425386"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a><span data-ttu-id="d3467-102">Método ISymUnmanagedMethod::GetSequencePointCount</span><span class="sxs-lookup"><span data-stu-id="d3467-102">ISymUnmanagedMethod::GetSequencePointCount Method</span></span>
 <span data-ttu-id="d3467-103">Obtém a contagem de pontos de sequência dentro desse método.</span><span class="sxs-lookup"><span data-stu-id="d3467-103">Gets the count of sequence points within this method.</span></span>  

@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425399"
 ---
 # <a name="corsymaddrkind-enumeration"></a><span data-ttu-id="4904c-102">Enumeração CorSymAddrKind</span><span class="sxs-lookup"><span data-stu-id="4904c-102">CorSymAddrKind Enumeration</span></span>
 <span data-ttu-id="4904c-103">Indica o tipo de endereço de memória.</span><span class="sxs-lookup"><span data-stu-id="4904c-103">Indicates the type of memory address.</span></span>  

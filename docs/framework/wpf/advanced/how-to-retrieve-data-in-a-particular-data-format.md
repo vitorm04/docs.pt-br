@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545101"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a><span data-ttu-id="4dd47-102">Como recuperar dados em um formato de dados específico</span><span class="sxs-lookup"><span data-stu-id="4dd47-102">How to: Retrieve Data in a Particular Data Format</span></span>
 <span data-ttu-id="4dd47-103">Os exemplos a seguir mostram como recuperar dados de um objeto de dados em um formato especificado.</span><span class="sxs-lookup"><span data-stu-id="4dd47-103">The following examples show how to retrieve data from a data object in a specified format.</span></span>  
