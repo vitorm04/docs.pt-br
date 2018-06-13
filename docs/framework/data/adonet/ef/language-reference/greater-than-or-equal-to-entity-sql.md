@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761981"
 ---
 # <a name="gt-greater-than-or-equal-to-entity-sql"></a><span data-ttu-id="8f64c-102">&gt;= (Maior que ou igual a) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8f64c-102">&gt;= (Greater Than or Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="8f64c-103">Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.</span><span class="sxs-lookup"><span data-stu-id="8f64c-103">Compares two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span>  

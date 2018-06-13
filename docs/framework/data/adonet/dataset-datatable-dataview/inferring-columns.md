@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761071"
 ---
 # <a name="inferring-columns"></a><span data-ttu-id="46b76-102">Inferindo colunas</span><span class="sxs-lookup"><span data-stu-id="46b76-102">Inferring Columns</span></span>
 <span data-ttu-id="46b76-103">Depois que o ADO.NET determinou de um documento XML que elementos inferir como tabelas para um <xref:System.Data.DataSet>, ele infere, em seguida, as colunas para as tabelas.</span><span class="sxs-lookup"><span data-stu-id="46b76-103">After ADO.NET has determined from an XML document which elements to infer as tables for a <xref:System.Data.DataSet>, it then infers the columns for those tables.</span></span> <span data-ttu-id="46b76-104">O ADO.NET 2.0 introduziu um novo mecanismo de inferência de esquema que infere um tipo de dados fortemente tipados para cada **simpleType** elemento.</span><span class="sxs-lookup"><span data-stu-id="46b76-104">ADO.NET 2.0 introduced a new schema inference engine that infers a strongly typed data type for each **simpleType** element.</span></span> <span data-ttu-id="46b76-105">Nas versões anteriores, o tipo de dados de um deduzido **simpleType** elemento era sempre **xsd: string**.</span><span class="sxs-lookup"><span data-stu-id="46b76-105">In previous versions, the data type of an inferred **simpleType** element was always **xsd:string**.</span></span>  

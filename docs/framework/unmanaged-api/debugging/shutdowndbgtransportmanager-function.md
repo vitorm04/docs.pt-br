@@ -20,8 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424096"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a><span data-ttu-id="85020-102">Função ShutdownDbgTransportManager</span><span class="sxs-lookup"><span data-stu-id="85020-102">ShutdownDbgTransportManager Function</span></span>
 <span data-ttu-id="85020-103">Desliga o Gerenciador de transporte para uma conexão a uma máquina de destino remoto.</span><span class="sxs-lookup"><span data-stu-id="85020-103">Shuts down the transport manager for a connection to a remote target machine.</span></span>  

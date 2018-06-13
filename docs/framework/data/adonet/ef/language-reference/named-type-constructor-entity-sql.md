@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763157"
 ---
 # <a name="named-type-constructor-entity-sql"></a><span data-ttu-id="70c65-102">Construtor de tipo nomeado (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="70c65-102">Named Type Constructor (Entity SQL)</span></span>
 <span data-ttu-id="70c65-103">Usado para criar instâncias de tipos nominais de modelo conceitual como a entidade ou tipos complexos.</span><span class="sxs-lookup"><span data-stu-id="70c65-103">Used to create instances of conceptual model nominal types such as Entity or Complex types.</span></span>  

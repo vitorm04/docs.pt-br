@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422940"
 ---
 # <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="06c7d-102">Método ICorDebugObjectEnum::Next</span><span class="sxs-lookup"><span data-stu-id="06c7d-102">ICorDebugObjectEnum::Next Method</span></span>
 <span data-ttu-id="06c7d-103">Obtém os endereços virtuais relativos (RVAs) do número especificado de objetos de enumeração, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="06c7d-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
