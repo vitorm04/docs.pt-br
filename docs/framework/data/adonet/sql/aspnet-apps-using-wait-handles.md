@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356457"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Aplicativos ASP.NET que usam identificadores de espera
 O retorno de chamada e os modelos de sondagem para lidar com operações assíncronas são úteis quando seu aplicativo estiver processando apenas uma operação assíncrona por vez. Os modelos de espera fornecem uma maneira mais flexível de processamento de várias operações assíncronas. Há dois modelos de espera, nomeados para o <xref:System.Threading.WaitHandle> métodos usados para implementá-las: o modelo de espera (nenhuma) e o modelo de espera (todos).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538673"
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Como definir estilos de célula padrão para o controle DataGridView dos Windows Forms
 Com o <xref:System.Windows.Forms.DataGridView> controle, você pode especificar os estilos de célula padrão para todo o controle em colunas e linhas específicas. Esses padrões filtram do nível do controle até o nível de coluna e depois até o nível de linha e o nível da célula. Se um determinado <xref:System.Windows.Forms.DataGridViewCellStyle> propriedade não está definida no nível da célula, a configuração de propriedade padrão no nível de linha é usada. Se a propriedade também não estiver definida no nível de linha, a configuração de coluna padrão será usada. Por fim, se a propriedade não também é definida no nível de coluna, o padrão <xref:System.Windows.Forms.DataGridView> configuração é usada. Com essa configuração, você pode evitar precisar duplicar as configurações de propriedade em vários níveis. Em cada nível, basta especifica os estilos que são diferentes dos níveis acima. Para obter mais informações, consulte [Estilos de célula no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  

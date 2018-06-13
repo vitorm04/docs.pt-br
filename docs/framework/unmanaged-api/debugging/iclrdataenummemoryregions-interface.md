@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3db8124f32a03180ef640194534b587f0152f778
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404882"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>Interface ICLRDataEnumMemoryRegions
 Fornece um método para enumerar as regiões da memória que são especificadas por chamadores.  

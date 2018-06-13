@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391362"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Como adicionar instruções de rastreamento ao código de um aplicativo
 Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Esses métodos podem ser divididos em duas categorias: **Write**, **WriteLine**, and **Fail** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf** e **Assert** testam uma condição booliana e gravam ou não com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  

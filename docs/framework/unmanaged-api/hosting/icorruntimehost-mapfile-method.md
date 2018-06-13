@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436618"
 ---
 # <a name="icorruntimehostmapfile-method"></a>Método ICorRuntimeHost::MapFile
 Mapeia o arquivo especificado na memória. Esse método é obsoleto.  

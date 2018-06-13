@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf3aff2c3c4d10c4ee805a6110561d6fdcd63a55
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437980"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>Método ICorRuntimeHost::CreateDomainSetup
 Obtém um ponteiro de interface do tipo IAppDomainSetup para um <xref:System.AppDomainSetup?displayProperty=nameWithType> instância. `IAppDomainSetup` fornece métodos para configurar aspectos de um domínio de aplicativo antes que ele é criado.  

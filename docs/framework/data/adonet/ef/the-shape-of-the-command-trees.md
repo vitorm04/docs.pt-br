@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766030"
 ---
 # <a name="the-shape-of-the-command-trees"></a>A forma das árvores de comando
 O módulo de geração SQL é responsável por gerar uma consulta SQL backend específica com base em uma entrada dada comando expressão de consulta de árvore. Esta seção descreve as características, propriedades, e a estrutura das árvores de comando de consulta.  

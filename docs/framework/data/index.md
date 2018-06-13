@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356745"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dados e modelagem no .NET Framework
 Esta seção fornece informações de como acessar dados usando ADO.NET, LINQ (consulta integrada à linguagem), WCF Data Services e XML.  

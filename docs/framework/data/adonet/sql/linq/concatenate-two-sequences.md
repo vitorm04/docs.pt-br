@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354047"
 ---
 # <a name="concatenate-two-sequences"></a>Concatenar duas sequências
 Use o operador de <xref:System.Linq.Queryable.Concat%2A> para concatenar duas sequências.  

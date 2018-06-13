@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538764"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Como manipular eventos de entrada do usuário em controles do Windows Forms
 Este exemplo demonstra como tratar a maioria dos teclado, mouse, foco e eventos de validação que podem ocorrer em um controle de formulários do Windows. A caixa de texto denominada `TextBoxInput` recebe os eventos quando ela tem o foco e informações sobre cada evento são gravadas na caixa de texto denominada `TextBoxOutput` na ordem em que os eventos são gerados. O aplicativo também inclui um conjunto de caixas de seleção que pode ser usado para filtrar quais eventos de relatório.  

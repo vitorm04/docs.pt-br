@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754909"
 ---
 # <a name="ltcleargt"></a>&lt;clear&gt;
 Limpa todos os manipuladores de token de segurança da coleção de manipulador de token atual.  

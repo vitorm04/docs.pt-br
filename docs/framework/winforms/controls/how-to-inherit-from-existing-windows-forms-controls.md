@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538735"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Como herdar de controles dos Windows Forms existentes
 Se você quiser estender a funcionalidade de um controle existente, poderá criar um controle derivado de um controle existente por meio de herança. Ao herdar de um controle existente, você herda todas as funcionalidades e propriedades visuais desse controle. Por exemplo, se você estivesse criando um controle que é herdado de <xref:System.Windows.Forms.Button>, o novo controle seria e funcionam exatamente como um padrão <xref:System.Windows.Forms.Button> controle. Dessa forma, você poderia estender ou modificar a funcionalidade de seu novo controle por meio da implementação de métodos e propriedades personalizados. Em alguns controles, você também pode alterar a aparência visual do seu controle herdado, substituindo seu <xref:System.Windows.Forms.Control.OnPaint%2A> método.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538842"
 ---
 # <a name="toolstripcontainer-control"></a>Controle ToolStripContainer
 <xref:System.Windows.Forms.ToolStrip> controles de recurso rafting interno (compartilhamento de espaço horizontal ou vertical dentro da área de ferramenta quando encaixado) usando o <xref:System.Windows.Forms.ToolStripContainer>.  

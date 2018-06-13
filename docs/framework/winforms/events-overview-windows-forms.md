@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540090"
 ---
 # <a name="events-overview-windows-forms"></a>Visão geral sobre eventos (Windows Forms)
 Um evento é uma ação a qual você pode responder ou "manipular", no código. Os eventos podem ser gerados por uma ação do usuário, como o clicar do mouse ou pressionar de uma tecla, pelo código de programa ou pelo sistema.  
