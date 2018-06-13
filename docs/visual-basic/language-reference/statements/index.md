@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
 ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602782"
 ---
 # <a name="statements-visual-basic"></a><span data-ttu-id="78916-102">Instruções (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78916-102">Statements (Visual Basic)</span></span>
 <span data-ttu-id="78916-103">Os tópicos nesta seção contêm tabelas da declaração do Visual Basic e instruções executáveis e de listas importantes que se aplicam a muitas instruções.</span><span class="sxs-lookup"><span data-stu-id="78916-103">The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.</span></span>  

@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: f29b8e01239f46b0d56319ba3da1a8fe179a17e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601147"
 ---
 # <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="7611f-102">&lt;exceção&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7611f-102">&lt;exception&gt; (Visual Basic)</span></span>
 <span data-ttu-id="7611f-103">Especifica quais exceções podem ser geradas.</span><span class="sxs-lookup"><span data-stu-id="7611f-103">Specifies which exceptions can be thrown.</span></span>  

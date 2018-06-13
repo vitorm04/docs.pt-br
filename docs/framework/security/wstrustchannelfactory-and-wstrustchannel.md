@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410449"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a><span data-ttu-id="a96eb-102">WSTrustChannelFactory e WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="a96eb-102">WSTrustChannelFactory and WSTrustChannel</span></span>
 <span data-ttu-id="a96eb-103">Se você já estiver familiarizado com o WCF (Windows Communication Foundation), saberá que um cliente WCF já é baseado em federação.</span><span class="sxs-lookup"><span data-stu-id="a96eb-103">If you are already familiar with Windows Communication Foundation (WCF), you know that a WCF client is already federation aware.</span></span> <span data-ttu-id="a96eb-104">Configurando um cliente WCF com uma <xref:System.ServiceModel.WSFederationHttpBinding> ou uma associação personalizada semelhante, você pode habilitar a autenticação federada em um serviço.</span><span class="sxs-lookup"><span data-stu-id="a96eb-104">By configuring a WCF client with a <xref:System.ServiceModel.WSFederationHttpBinding> or similar custom binding, you can enable federated authentication to a service.</span></span>  

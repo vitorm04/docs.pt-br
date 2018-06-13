@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
 ms.openlocfilehash: 400879ba37c6b3215d9570ca6eb8eaa06edea03b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600799"
 ---
 # <a name="bad-record-number"></a><span data-ttu-id="d3f45-102">Número de registro incorreto</span><span class="sxs-lookup"><span data-stu-id="d3f45-102">Bad record number</span></span>
 <span data-ttu-id="d3f45-103">O número do registro em `a FileGet`, `FilePut`, `FileGetObject`, ou `FilePutObject` instrução é menor ou igual a zero.</span><span class="sxs-lookup"><span data-stu-id="d3f45-103">The record number in `a FileGet`, `FilePut`, `FileGetObject`, or `FilePutObject` statement is less than or equal to zero.</span></span>  

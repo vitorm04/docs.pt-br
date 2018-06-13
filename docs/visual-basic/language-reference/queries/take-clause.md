@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604023"
 ---
 # <a name="take-clause-visual-basic"></a><span data-ttu-id="ca889-102">Cláusula Take (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca889-102">Take Clause (Visual Basic)</span></span>
 <span data-ttu-id="ca889-103">Retorna um número especificado de elementos contíguos do início de uma coleção.</span><span class="sxs-lookup"><span data-stu-id="ca889-103">Returns a specified number of contiguous elements from the start of a collection.</span></span>  

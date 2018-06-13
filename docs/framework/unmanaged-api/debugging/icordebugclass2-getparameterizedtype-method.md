@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a5b3a28c7250a16e78e199bceff7c9e64517319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408207"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a><span data-ttu-id="e4455-102">Método ICorDebugClass2::GetParameterizedType</span><span class="sxs-lookup"><span data-stu-id="e4455-102">ICorDebugClass2::GetParameterizedType Method</span></span>
 <span data-ttu-id="e4455-103">Obtém o tipo de declaração para essa classe.</span><span class="sxs-lookup"><span data-stu-id="e4455-103">Gets the type declaration for this class.</span></span>  

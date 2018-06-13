@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604959"
 ---
 # <a name="using-statement-visual-basic"></a><span data-ttu-id="a9fbe-102">Instrução Using (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9fbe-102">Using Statement (Visual Basic)</span></span>
 <span data-ttu-id="a9fbe-103">Declara o início de um `Using` bloquear e, opcionalmente, adquire os recursos do sistema que controla o bloco.</span><span class="sxs-lookup"><span data-stu-id="a9fbe-103">Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
 ms.openlocfilehash: 9e59d3bc5e2bfca3628248d08ffc475334d4da79
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602745"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a><span data-ttu-id="7c6d5-102">O valor do tipo &#39;type1&#39; não pode ser convertido em &#39;type2&#39;</span><span class="sxs-lookup"><span data-stu-id="7c6d5-102">Value of type &#39;type1&#39; cannot be converted to &#39;type2&#39;</span></span>
 <span data-ttu-id="7c6d5-103">O valor do tipo 'type1' não pode ser convertido em 'type2'.</span><span class="sxs-lookup"><span data-stu-id="7c6d5-103">Value of type 'type1' cannot be converted to 'type2'.</span></span> <span data-ttu-id="7c6d5-104">Você pode usar a propriedade 'Value' para obter o valor de cadeia de caracteres do primeiro elemento de '\<parentElement >'.</span><span class="sxs-lookup"><span data-stu-id="7c6d5-104">You can use the 'Value' property to get the string value of the first element of '\<parentElement>'.</span></span>  

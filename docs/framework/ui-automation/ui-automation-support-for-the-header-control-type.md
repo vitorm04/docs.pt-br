@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404824"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a><span data-ttu-id="75d9e-102">Suporte de automação de interface de usuário para o Tipo de Controle Header</span><span class="sxs-lookup"><span data-stu-id="75d9e-102">UI Automation Support for the Header Control Type</span></span>
 > [!NOTE]

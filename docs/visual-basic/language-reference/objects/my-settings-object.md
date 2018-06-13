@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603026"
 ---
 # <a name="mysettings-object"></a><span data-ttu-id="bf19a-102">Objeto My.Settings</span><span class="sxs-lookup"><span data-stu-id="bf19a-102">My.Settings Object</span></span>
 <span data-ttu-id="bf19a-103">Fornece propriedades e métodos para acessar as configurações do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bf19a-103">Provides properties and methods for accessing the application's settings.</span></span>  

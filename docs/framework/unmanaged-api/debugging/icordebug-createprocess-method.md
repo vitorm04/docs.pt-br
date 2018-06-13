@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 044f94a567dc4bc2b169ba2a5f2a5d7b4f98e516
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408571"
 ---
 # <a name="icordebugcreateprocess-method"></a><span data-ttu-id="3c79c-102">Método ICorDebug::CreateProcess</span><span class="sxs-lookup"><span data-stu-id="3c79c-102">ICorDebug::CreateProcess Method</span></span>
 <span data-ttu-id="3c79c-103">Inicia um processo e o thread principal sob o controle do depurador.</span><span class="sxs-lookup"><span data-stu-id="3c79c-103">Launches a process and its primary thread under the control of the debugger.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa79382d597d303d492e3a441c15a422697be279
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405961"
 ---
 # <a name="icordebuginitialize-method"></a><span data-ttu-id="82d23-102">Método ICorDebug::Initialize</span><span class="sxs-lookup"><span data-stu-id="82d23-102">ICorDebug::Initialize Method</span></span>
 <span data-ttu-id="82d23-103">Inicializa o objeto `ICorDebug`.</span><span class="sxs-lookup"><span data-stu-id="82d23-103">Initializes the `ICorDebug` object.</span></span>  

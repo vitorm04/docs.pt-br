@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e55bc18c7a41e235d1ba6274067c45c26dc7262a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405442"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a><span data-ttu-id="4979f-102">Método ICLRDataTarget::WriteVirtual</span><span class="sxs-lookup"><span data-stu-id="4979f-102">ICLRDataTarget::WriteVirtual Method</span></span>
 <span data-ttu-id="4979f-103">Grava dados de buffer especificado para o endereço de memória virtual especificado.</span><span class="sxs-lookup"><span data-stu-id="4979f-103">Writes data from the specified buffer to the specified virtual memory address.</span></span>  
