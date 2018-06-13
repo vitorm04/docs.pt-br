@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364440"
 ---
 # <a name="wcf-data-services-resources"></a>Recursos do WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tópicos de Introdução podem ser encontrados nos seguintes locais. Muitos desses tópicos também contém links para tópicos relacionados que contêm informações mais detalhadas.  

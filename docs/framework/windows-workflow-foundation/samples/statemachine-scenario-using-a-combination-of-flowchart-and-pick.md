@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517930"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Cenário de StateMachine usando uma combinação de fluxograma e de picareta
 Este exemplo demonstra como implementar um cenário simples de cronômetro usando uma combinação de atividades de <xref:System.Activities.Statements.Flowchart> e de <xref:System.Activities.Statements.Pick> . Using receber e envia dentro de atividade de picareta para escutar eventos de cronômetro.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521330"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Como: Desenhar uma única B&#233;zier Spline
 Uma spline de Bézier é definida por quatro pontos: um ponto inicial, dois pontos de controle e um ponto de extremidade.  

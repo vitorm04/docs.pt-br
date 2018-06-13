@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520728"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Como aplicar correção gama a um gradiente
 Você pode habilitar correção gama de um pincel de gradiente linear, definindo o pincel <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propriedade `true`. Você pode desabilitar a correção gama definindo o <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propriedade `false`. Correção gama é desabilitada por padrão.  

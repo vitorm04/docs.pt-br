@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551961"
 ---
 # <a name="expander"></a>Expansor
 Um <xref:System.Windows.Controls.Expander> permite que um usuário exibir um cabeçalho e expanda esse cabeçalho para ver mais detalhes, ou para recolher uma seção em um cabeçalho.  

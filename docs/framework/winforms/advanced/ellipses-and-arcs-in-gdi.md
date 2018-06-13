@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522103"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Elipses e arcos no GDI+
 Você pode facilmente desenha elipses e arcos usando o <xref:System.Drawing.Graphics.DrawEllipse%2A> e <xref:System.Drawing.Graphics.DrawArc%2A> métodos de <xref:System.Drawing.Graphics> classe.  

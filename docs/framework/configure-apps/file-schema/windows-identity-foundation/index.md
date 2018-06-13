@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767603"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Esquema de configuração do Windows Identity Foundation
 Os tópicos nesta seção fornecem informações sobre o esquema de configuração do WIF (Windows Identity Foundation). Você também pode configurar um aplicativo para usar o WIF por meio de classes expostas pela estrutura. Essas classes são indicadas nas seções que tratam os elementos relevantes no esquema. A seguir é mostrada a estrutura de marca XML básica exposta pelo esquema de configuração do WIF. Os atributos são omitidos. Os comentários realçados indicam os componentes principais do esquema.  

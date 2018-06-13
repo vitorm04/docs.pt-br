@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522340"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Como usar uma matriz de cores para definir valores alfa em imagens
 O <xref:System.Drawing.Bitmap> classe (que herda do <xref:System.Drawing.Image> classe) e o <xref:System.Drawing.Imaging.ImageAttributes> classe fornecem funcionalidade para obter e definir valores de pixel. Você pode usar o <xref:System.Drawing.Imaging.ImageAttributes> classe para modificar o alpha valores para uma imagem inteira ou você pode chamar o <xref:System.Drawing.Bitmap.SetPixel%2A> método o <xref:System.Drawing.Bitmap> classe para modificar valores em pixel individuais.  
