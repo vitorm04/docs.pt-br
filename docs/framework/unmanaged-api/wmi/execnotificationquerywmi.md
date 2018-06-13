@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462410"
 ---
 # <a name="execnotificationquerywmi-function"></a><span data-ttu-id="3a37c-103">Função ExecNotificationQueryWmi</span><span class="sxs-lookup"><span data-stu-id="3a37c-103">ExecNotificationQueryWmi function</span></span>
 <span data-ttu-id="3a37c-104">Executa uma consulta para receber eventos.</span><span class="sxs-lookup"><span data-stu-id="3a37c-104">Executes a query to receive events.</span></span> <span data-ttu-id="3a37c-105">A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos assim que elas chegam.</span><span class="sxs-lookup"><span data-stu-id="3a37c-105">The call returns immediately, and the caller can poll the returned enumerator for events as they arrive.</span></span> <span data-ttu-id="3a37c-106">Liberar o enumerador retornado cancela a consulta.</span><span class="sxs-lookup"><span data-stu-id="3a37c-106">Releasing the returned enumerator cancels the query.</span></span>  

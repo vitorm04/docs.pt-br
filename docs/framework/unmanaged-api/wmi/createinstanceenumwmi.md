@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461370"
 ---
 # <a name="createinstanceenumwmi-function"></a><span data-ttu-id="b7cb4-103">Função CreateInstanceEnumWmi</span><span class="sxs-lookup"><span data-stu-id="b7cb4-103">CreateInstanceEnumWmi function</span></span>
 <span data-ttu-id="b7cb4-104">Retorna um enumerador que retorna as instâncias de uma classe especificada que atendem aos critérios de seleção especificada.</span><span class="sxs-lookup"><span data-stu-id="b7cb4-104">Returns an enumerator that returns the instances of a specified class that meet specified selection criteria.</span></span> 

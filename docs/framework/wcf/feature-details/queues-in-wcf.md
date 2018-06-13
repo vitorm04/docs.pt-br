@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496582"
 ---
 # <a name="queues-in-windows-communication-foundation"></a><span data-ttu-id="3a5fe-102">Filas no Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="3a5fe-102">Queues in Windows Communication Foundation</span></span>
 <span data-ttu-id="3a5fe-103">Os tópicos desta seção discutem o suporte do Windows Communication Foundation (WCF) para filas.</span><span class="sxs-lookup"><span data-stu-id="3a5fe-103">The topics in this section discuss Windows Communication Foundation (WCF) support for queues.</span></span> <span data-ttu-id="3a5fe-104">WCF fornece suporte para enfileiramento de mensagens, aproveitando Microsoft Message Queuing (anteriormente conhecido como MSMQ) como um transporte e permite que os seguintes cenários:</span><span class="sxs-lookup"><span data-stu-id="3a5fe-104">WCF provides support for queuing by leveraging Microsoft Message Queuing (previously known as MSMQ) as a transport and enables the following scenarios:</span></span>  

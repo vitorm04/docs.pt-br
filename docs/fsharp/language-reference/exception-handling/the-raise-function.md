@@ -4,8 +4,10 @@ description: "Saiba como a F # 'raise' função é usada para indicar que ocorre
 ms.date: 05/16/2016
 ms.openlocfilehash: bad18bfbccd738a12e16a0e026ade22e96d4cfcb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564734"
 ---
 # <a name="exceptions-the-raise-function"></a><span data-ttu-id="20f88-103">Exceções: a função raise</span><span class="sxs-lookup"><span data-stu-id="20f88-103">Exceptions: the raise Function</span></span>
 

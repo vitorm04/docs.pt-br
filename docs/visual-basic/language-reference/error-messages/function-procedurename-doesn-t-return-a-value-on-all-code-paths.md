@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: 4c18c6229eb170e8a688aaa2734ae8fbfa081061
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589978"
 ---
 # <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a><span data-ttu-id="8cd61-102">Função &#39; &lt;procedurename&gt; &#39; &#39;t retorna um valor em todos os caminhos de código</span><span class="sxs-lookup"><span data-stu-id="8cd61-102">Function &#39;&lt;procedurename&gt;&#39; doesn&#39;t return a value on all code paths</span></span>
 <span data-ttu-id="8cd61-103">Função '\<procedurename >' não retorna um valor em todos os caminhos de código.</span><span class="sxs-lookup"><span data-stu-id="8cd61-103">Function '\<procedurename>' doesn't return a value on all code paths.</span></span> <span data-ttu-id="8cd61-104">Uma instrução 'Return' está faltando?</span><span class="sxs-lookup"><span data-stu-id="8cd61-104">Are you missing a 'Return' statement?</span></span>  

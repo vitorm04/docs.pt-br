@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
 ms.openlocfilehash: 069de813a0426230e19cddf14c3b83d40a602a41
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588990"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a><span data-ttu-id="0df6a-102">Construtor &#39; &lt;nome&gt; &#39; não é possível chamar a mesmo</span><span class="sxs-lookup"><span data-stu-id="0df6a-102">Constructor &#39;&lt;name&gt;&#39; cannot call itself</span></span>
 <span data-ttu-id="0df6a-103">Um `Sub New` procedimento em uma classe ou estrutura chama a mesmo.</span><span class="sxs-lookup"><span data-stu-id="0df6a-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  

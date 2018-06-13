@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
 ms.openlocfilehash: ef904173b1791309f6c2722bd959cabdad1d71da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588142"
 ---
 # <a name="39elseif39-must-be-preceded-by-a-matching-39if39-or-39elseif39"></a><span data-ttu-id="f98e3-102">&#39;#ElseIf&#39; deve ser precedido por uma correspondência &#39;#If&#39; ou &#39;#ElseIf&#39;</span><span class="sxs-lookup"><span data-stu-id="f98e3-102">&#39;#ElseIf&#39; must be preceded by a matching &#39;#If&#39; or &#39;#ElseIf&#39;</span></span>
 <span data-ttu-id="f98e3-103">`#ElseIf` é uma diretiva de compilação condicional.</span><span class="sxs-lookup"><span data-stu-id="f98e3-103">`#ElseIf` is a conditional compilation directive.</span></span> <span data-ttu-id="f98e3-104">Um `#ElseIf` cláusula deve ser precedida por uma correspondência `#If` ou `#ElseIf` cláusula.</span><span class="sxs-lookup"><span data-stu-id="f98e3-104">An `#ElseIf` clause must be preceded by a matching `#If` or `#ElseIf` clause.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459633"
 ---
 # <a name="getobjecttext-function"></a><span data-ttu-id="ef83f-103">Função GetObjectText</span><span class="sxs-lookup"><span data-stu-id="ef83f-103">GetObjectText function</span></span>
 <span data-ttu-id="ef83f-104">Retorna um processamento textual do objeto na sintaxe de formato MOF (Managed Object).</span><span class="sxs-lookup"><span data-stu-id="ef83f-104">Returns a textual rendering of the object in the Managed Object Format (MOF) syntax.</span></span>

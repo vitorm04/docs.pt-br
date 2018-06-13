@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461448"
 ---
 # <a name="createclassenumwmi-function"></a><span data-ttu-id="6da58-103">Função CreateClassEnumWmi</span><span class="sxs-lookup"><span data-stu-id="6da58-103">CreateClassEnumWmi function</span></span>
 <span data-ttu-id="6da58-104">Retorna um enumerador para todas as classes que atendem aos critérios de seleção especificada.</span><span class="sxs-lookup"><span data-stu-id="6da58-104">Returns an enumerator for all classes that satisfy the specified selection criteria.</span></span>  

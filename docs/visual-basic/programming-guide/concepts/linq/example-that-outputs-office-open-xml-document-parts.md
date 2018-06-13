@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
 ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640261"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="6293d-102">Exemplo de saídas de partes de documentos do Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6293d-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
 <span data-ttu-id="6293d-103">Este tópico mostra como abrir um documento do Office Open XML e acessar partes dentro deles.</span><span class="sxs-lookup"><span data-stu-id="6293d-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  

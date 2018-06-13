@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c4fe3eec4940b57001b7734c581076388f8ba0c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456980"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="527cd-102">Método ICorProfilerInfo4::GetFunctionFromIP2</span><span class="sxs-lookup"><span data-stu-id="527cd-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
 <span data-ttu-id="527cd-103">Um ponteiro de instrução do código gerenciado é mapeado para a versão recompilada JIT de uma função.</span><span class="sxs-lookup"><span data-stu-id="527cd-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  

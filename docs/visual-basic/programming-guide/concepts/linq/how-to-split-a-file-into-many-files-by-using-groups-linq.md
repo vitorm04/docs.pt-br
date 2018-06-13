@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
 ms.openlocfilehash: 19b542e22aa6e987a21095025a136d7602057b2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642146"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="4dd61-102">Como: dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4dd61-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="4dd61-103">Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.</span><span class="sxs-lookup"><span data-stu-id="4dd61-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  

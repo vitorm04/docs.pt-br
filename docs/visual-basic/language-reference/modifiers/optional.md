@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599298"
 ---
 # <a name="optional-visual-basic"></a><span data-ttu-id="e7224-102">Opcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7224-102">Optional (Visual Basic)</span></span>
 <span data-ttu-id="e7224-103">Especifica que um argumento de procedimento pode ser omitido quando o procedimento é chamado.</span><span class="sxs-lookup"><span data-stu-id="e7224-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>  

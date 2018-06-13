@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591801"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a><span data-ttu-id="596af-102">Copiar o valor do &#39;ByRef&#39; parâmetro &#39; &lt;parametername&gt; &#39; volta para o argumento correspondente limita do tipo &#39; &lt;typename1&gt; &#39; tipo &#39; &lt;typename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="596af-102">Copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument narrows from type &#39;&lt;typename1&gt;&#39; to type &#39;&lt;typename2&gt;&#39;</span></span>
 <span data-ttu-id="596af-103">Um procedimento é chamado com um argumento que amplia para o tipo do parâmetro correspondente, e a conversão do parâmetro para o argumento é restritiva.</span><span class="sxs-lookup"><span data-stu-id="596af-103">A procedure is called with an argument that widens to the corresponding parameter type, and the conversion from the parameter to the argument is narrowing.</span></span>  

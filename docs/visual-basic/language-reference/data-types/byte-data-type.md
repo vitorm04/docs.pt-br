@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590528"
 ---
 # <a name="byte-data-type-visual-basic"></a><span data-ttu-id="92309-102">Tipo de dados byte (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92309-102">Byte data type (Visual Basic)</span></span>
 <span data-ttu-id="92309-103">Mantém inteiros sem sinal de 8 bits (1-bytes) que variam de 0 a 255.</span><span class="sxs-lookup"><span data-stu-id="92309-103">Holds unsigned 8-bit (1-byte) integers that range in value from 0 through 255.</span></span>

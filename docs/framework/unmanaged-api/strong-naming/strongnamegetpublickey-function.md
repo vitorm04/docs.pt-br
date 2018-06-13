@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461007"
 ---
 # <a name="strongnamegetpublickey-function"></a><span data-ttu-id="a0e4f-102">Função StrongNameGetPublicKey</span><span class="sxs-lookup"><span data-stu-id="a0e4f-102">StrongNameGetPublicKey Function</span></span>
 <span data-ttu-id="a0e4f-103">Obtém a chave pública de um par de chaves pública/privada.</span><span class="sxs-lookup"><span data-stu-id="a0e4f-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="a0e4f-104">O par de chaves pode ser fornecido como um nome de contêiner de chave em um provedor de serviços de criptografia (CSP) ou como uma coleção bruta de bytes.</span><span class="sxs-lookup"><span data-stu-id="a0e4f-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  

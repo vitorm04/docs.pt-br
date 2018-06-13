@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587873"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a><span data-ttu-id="7f421-102">&#39;Linha&#39; instruções não são mais suportados (erro de compilador do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f421-102">&#39;Line&#39; statements are no longer supported (Visual Basic Compiler Error)</span></span>
 <span data-ttu-id="7f421-103">Não há suporte para instruções de linha.</span><span class="sxs-lookup"><span data-stu-id="7f421-103">Line statements are no longer supported.</span></span> <span data-ttu-id="7f421-104">A funcionalidade de e/s de arquivo está disponível como `Microsoft.VisualBasic.FileSystem.LineInput` e funcionalidade de elementos gráficos está disponível como `System.Drawing.Graphics.DrawLine`.</span><span class="sxs-lookup"><span data-stu-id="7f421-104">File I/O functionality is available as `Microsoft.VisualBasic.FileSystem.LineInput` and graphics functionality is available as `System.Drawing.Graphics.DrawLine`.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461991"
 ---
 # <a name="connectserverwmi-function"></a><span data-ttu-id="993b1-103">Função ConnectServerWmi</span><span class="sxs-lookup"><span data-stu-id="993b1-103">ConnectServerWmi function</span></span>
 <span data-ttu-id="993b1-104">Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado.</span><span class="sxs-lookup"><span data-stu-id="993b1-104">Creates a connection through DCOM to a WMI namespace on a specified computer.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591957"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a><span data-ttu-id="04ec1-102">Instruções passo a passo: criando um aplicativo criptográfico</span><span class="sxs-lookup"><span data-stu-id="04ec1-102">Walkthrough: Creating a Cryptographic Application</span></span>
 <span data-ttu-id="04ec1-103">Este passo a passo demonstra como criptografar e descriptografar o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="04ec1-103">This walkthrough demonstrates how to encrypt and decrypt content.</span></span> <span data-ttu-id="04ec1-104">Os exemplos de código são projetados para um aplicativo Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="04ec1-104">The code examples are designed for a Windows Forms application.</span></span> <span data-ttu-id="04ec1-105">Este aplicativo não demonstram cenários do mundo real, como o uso de cartões inteligentes.</span><span class="sxs-lookup"><span data-stu-id="04ec1-105">This application does not demonstrate real world scenarios, such as using smart cards.</span></span> <span data-ttu-id="04ec1-106">Em vez disso, ele demonstra os fundamentos da criptografia e descriptografia.</span><span class="sxs-lookup"><span data-stu-id="04ec1-106">Instead, it demonstrates the fundamentals of encryption and decryption.</span></span>  

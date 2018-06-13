@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460415"
 ---
 # <a name="formatfromrawvalue-function"></a><span data-ttu-id="21f3a-103">Função FormatFromRawValue</span><span class="sxs-lookup"><span data-stu-id="21f3a-103">FormatFromRawValue function</span></span>
 <span data-ttu-id="21f3a-104">Converte um valor de dados de desempenho bruto para o formato especificado ou dois valores de dados de desempenho bruto se a conversão de formato é baseado no tempo.</span><span class="sxs-lookup"><span data-stu-id="21f3a-104">Converts one raw performance data value to the specified format, or two raw performance data values if the format conversion is time-based.</span></span>   

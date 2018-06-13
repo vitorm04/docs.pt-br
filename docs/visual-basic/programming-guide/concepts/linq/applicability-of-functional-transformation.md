@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
 ms.openlocfilehash: bdb487ce0de986a1dba36908352a8270cfde2700
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643557"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a><span data-ttu-id="1331f-102">Aplicabilidade de transformação funcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1331f-102">Applicability of Functional Transformation (Visual Basic)</span></span>
 <span data-ttu-id="1331f-103">Transformações e puras são aplicáveis em uma variedade de situações.</span><span class="sxs-lookup"><span data-stu-id="1331f-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  

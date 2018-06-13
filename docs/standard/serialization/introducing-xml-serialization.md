@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592217"
 ---
 # <a name="introducing-xml-serialization"></a><span data-ttu-id="e1c72-102">Apresentando a serialização XML</span><span class="sxs-lookup"><span data-stu-id="e1c72-102">Introducing XML Serialization</span></span>
 <span data-ttu-id="e1c72-103">A serialização é o processo de conversão de um objeto em um formulário que possa ser prontamente transportado.</span><span class="sxs-lookup"><span data-stu-id="e1c72-103">Serialization is the process of converting an object into a form that can be readily transported.</span></span> <span data-ttu-id="e1c72-104">Por exemplo, você pode serializar um objeto e transportá-lo pela Internet usando HTTP entre um cliente e um servidor.</span><span class="sxs-lookup"><span data-stu-id="e1c72-104">For example, you can serialize an object and transport it over the Internet using HTTP between a client and a server.</span></span> <span data-ttu-id="e1c72-105">Na outra extremidade, a desserialização reconstrói o objeto a partir do fluxo.</span><span class="sxs-lookup"><span data-stu-id="e1c72-105">On the other end, deserialization reconstructs the object from the stream.</span></span>  

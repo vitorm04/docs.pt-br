@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593633"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a><span data-ttu-id="06e62-102">&#39;&lt;Name1&gt; &#39; é ambíguo, importado dos namespaces ou tipos &#39; &lt;name2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="06e62-102">&#39;&lt;name1&gt;&#39; is ambiguous, imported from the namespaces or types &#39;&lt;name2&gt;&#39;</span></span>
 <span data-ttu-id="06e62-103">Você forneceu um nome que é ambíguo e, portanto, está em conflito com outro nome.</span><span class="sxs-lookup"><span data-stu-id="06e62-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="06e62-104">O compilador do Visual Basic não tem nenhuma regra de resolução de conflitos; Você deve resolver a ambiguidade de nomes por conta própria.</span><span class="sxs-lookup"><span data-stu-id="06e62-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  

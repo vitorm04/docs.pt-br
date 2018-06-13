@@ -22,9 +22,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460282"
 ---
 # <a name="strongnametokenfrompublickey-function"></a><span data-ttu-id="ab411-102">Função StrongNameTokenFromPublicKey</span><span class="sxs-lookup"><span data-stu-id="ab411-102">StrongNameTokenFromPublicKey Function</span></span>
 <span data-ttu-id="ab411-103">Obtém um token que representa uma chave pública.</span><span class="sxs-lookup"><span data-stu-id="ab411-103">Gets a token representing a public key.</span></span> <span data-ttu-id="ab411-104">Um token de nome forte é a forma abreviada de uma chave pública.</span><span class="sxs-lookup"><span data-stu-id="ab411-104">A strong name token is the shortened form of a public key.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495087"
 ---
 # <a name="how-to-configure-a-local-issuer"></a><span data-ttu-id="5e6d6-102">Como configurar um emissor local</span><span class="sxs-lookup"><span data-stu-id="5e6d6-102">How to: Configure a Local Issuer</span></span>
 <span data-ttu-id="5e6d6-103">Este tópico descreve como configurar um cliente para usar um emissor local para tokens emitidos.</span><span class="sxs-lookup"><span data-stu-id="5e6d6-103">This topic describes how to configure a client to use a local issuer for issued tokens.</span></span>  

@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462046"
 ---
 # <a name="profiling-interfaces"></a><span data-ttu-id="480a8-102">Criação de perfil de interfaces</span><span class="sxs-lookup"><span data-stu-id="480a8-102">Profiling Interfaces</span></span>
 <span data-ttu-id="480a8-103">Esta seção descreve as interfaces não gerenciadas que permitem criar o perfil de um programa que está sendo executado no CLR (Common Language Runtime).</span><span class="sxs-lookup"><span data-stu-id="480a8-103">This section describes the unmanaged interfaces that enable you to profile a program that is being executed by the common language runtime (CLR).</span></span>  

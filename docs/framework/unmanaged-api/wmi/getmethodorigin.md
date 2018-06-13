@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458143"
 ---
 # <a name="getmethodorigin-function"></a><span data-ttu-id="edc06-103">Função GetMethodOrigin</span><span class="sxs-lookup"><span data-stu-id="edc06-103">GetMethodOrigin function</span></span>
 <span data-ttu-id="edc06-104">Determina a classe em que um método é declarado.</span><span class="sxs-lookup"><span data-stu-id="edc06-104">Determines the class in which a method is declared.</span></span>

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 886bb706be30481c082012bf057a001f37903b16
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461650"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="a34cf-102">Método ICorProfilerInfo::SetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="a34cf-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
 <span data-ttu-id="a34cf-103">Substitui o corpo da função especificada no módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="a34cf-103">Replaces the body of the specified function in the specified module.</span></span>  

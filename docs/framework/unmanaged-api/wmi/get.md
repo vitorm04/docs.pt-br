@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460142"
 ---
 # <a name="get-function"></a><span data-ttu-id="d6b45-103">Função Get</span><span class="sxs-lookup"><span data-stu-id="d6b45-103">Get function</span></span>
 <span data-ttu-id="d6b45-104">Recupera o valor da propriedade especificado se ele existir.</span><span class="sxs-lookup"><span data-stu-id="d6b45-104">Retrieves the specified property value if it exists.</span></span>

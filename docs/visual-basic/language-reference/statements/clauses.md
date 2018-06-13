@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 5e89f5f3-d129-4ed1-8857-30cd71cff95e
 ms.openlocfilehash: a77a95879bd556b1dfb1503c4648d04629052189
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596587"
 ---
 # <a name="clauses-visual-basic"></a><span data-ttu-id="69e22-102">Cláusulas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69e22-102">Clauses (Visual Basic)</span></span>
 <span data-ttu-id="69e22-103">Os tópicos nesta seção documentam cláusulas de tempo de execução do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="69e22-103">The topics in this section document Visual Basic run-time clauses.</span></span>  
