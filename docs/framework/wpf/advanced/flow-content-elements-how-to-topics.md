@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546368"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Tópicos explicativos de elementos de conteúdo do fluxo
 Os tópicos nesta seção descrevem como realizar tarefas comuns usando vários elementos de fluxo de conteúdo e recursos relacionados.  

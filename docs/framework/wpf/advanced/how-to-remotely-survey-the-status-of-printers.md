@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545965"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Como pesquisar remotamente o status das impressoras
 A qualquer momento em médias e grandes empresas, pode haver várias impressoras que não estão funcionando devido a atolamentos de papel ou falta de papel ou alguma outra situação problemática. Um conjunto sofisticado de propriedades da impressora expostas na [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] do Microsoft .NET Framework fornece um meio para executar uma pesquisa rápida dos Estados de impressoras.  

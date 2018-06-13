@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544616"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Como usar uma grade para layout automático
 Este exemplo descreve como usar uma grade na abordagem de layout automático para criar um aplicativo localizável.  

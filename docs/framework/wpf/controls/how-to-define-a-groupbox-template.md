@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551127"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>Como definir um modelo de GroupBox
 Este exemplo mostra como criar um modelo para um <xref:System.Windows.Controls.GroupBox> controle.  

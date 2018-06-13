@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524905"
 ---
 # <a name="checkbox-control-windows-forms"></a>Controle CheckBox (Windows Forms)
 Windows Forms `CheckBox` controle indica se uma determinada condição está ativado ou desativado. É usado normalmente para apresentar uma seleção Sim/Não ou Verdadeiro/Falso ao usuário. Use os controles de caixa de seleção em grupos para exibir múltiplas opções entre as quais o usuário pode escolher uma ou mais. É semelhante do <xref:System.Windows.Forms.RadioButton> agrupados de controle, mas qualquer número de `CheckBox` controles podem ser selecionados.  

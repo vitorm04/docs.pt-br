@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544389"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Como inverter um UIElement horizontal ou verticalmente
 Este exemplo mostra como usar um <xref:System.Windows.Media.ScaleTransform> para inverter uma <xref:System.Windows.UIElement> horizontal ou verticalmente. Neste exemplo, um <xref:System.Windows.Controls.Button> controle (um tipo de <xref:System.Windows.UIElement>) é invertido aplicando uma <xref:System.Windows.Media.ScaleTransform> para sua <xref:System.Windows.UIElement.RenderTransform%2A> propriedade.  

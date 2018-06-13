@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547206"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Instruções passo a passo: hospedando um controle ActiveX no WPF
 Para permitir uma melhor interação com navegadores, você pode usar controles [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] nos seus aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essa instrução passo a passo demonstra como você pode hospedar o [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como um controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

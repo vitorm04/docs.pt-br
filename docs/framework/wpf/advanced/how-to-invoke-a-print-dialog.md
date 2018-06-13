@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545552"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Como invocar uma caixa de diálogo Imprimir
 Para fornecer a capacidade de imprimir a partir de seu aplicativo, você pode simplesmente criar e abrir um <xref:System.Windows.Controls.PrintDialog> objeto.  

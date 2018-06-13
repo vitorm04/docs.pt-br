@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547756"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Como abrir um arquivo solto em um controle RichTextBox
 Em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], o <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Documents.FlowDocument> todos os controles têm a funcionalidade de arrastar e soltar. A funcionalidade interna permite arrastar e soltar o texto dentro e entre os controles. No entanto, ela não habilita a abertura de um arquivo soltando-o no controle. Esses controles também marcam os eventos do tipo "arrastar e soltar" como manipulados. Como resultado, por padrão, não é possível adicionar seus próprios manipuladores de eventos para fornecer funcionalidade para abrir os arquivos soltos.  

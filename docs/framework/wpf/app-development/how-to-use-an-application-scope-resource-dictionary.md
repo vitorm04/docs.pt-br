@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547044"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Como usar um dicionário de recursos de escopo do aplicativo
 Este exemplo mostra como definir e usar um dicionário de recursos personalizado de escopo do aplicativo.  

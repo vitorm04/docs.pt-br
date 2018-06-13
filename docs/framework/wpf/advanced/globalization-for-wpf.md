@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547944"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta os problemas que você deve estar ciente ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] em `System.Globalization`.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532708"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Como dividir uma janela horizontalmente o designer
 Este exemplo torna a divisão que divide o <xref:System.Windows.Forms.SplitContainer> horizontal do controle.  

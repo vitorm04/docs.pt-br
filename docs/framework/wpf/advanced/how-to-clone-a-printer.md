@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544185"
 ---
 # <a name="how-to-clone-a-printer"></a>Como clonar uma impressora
 A maioria das empresas comprará várias impressoras do mesmo modelo em algum momento. Normalmente, elas são instaladas com configurações praticamente idênticas. Instalar cada impressora pode ser um processo demorado e sujeito a erros. O <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> namespace e o <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe que são expostos com o Microsoft .NET Framework, é possível instalar instantaneamente qualquer número adicionais de filas de impressão que são clonadas de uma fila de impressão existente.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545565"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Como manipular elementos de conteúdo de fluxo por meio da propriedade Inlines
 Esses exemplos demonstram algumas das operações mais comuns que podem ser executadas em elementos de conteúdo de fluxo embutido (e contêineres desses elementos, como <xref:System.Windows.Controls.TextBlock>) por meio de **linhas internas** propriedade. Esta propriedade é usada para adicionar e remover itens de <xref:System.Windows.Documents.InlineCollection>. Elementos de conteúdo de fluxo com uma propriedade **Inlines** incluem:  

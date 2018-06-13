@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552864"
 ---
 # <a name="contextmenu-overview"></a>Visão geral de ContextMenu
 O <xref:System.Windows.Controls.ContextMenu> classe representa o elemento que expõe funcionalidade usando um contexto específico <xref:System.Windows.Controls.Menu>. Normalmente, um usuário expõe o <xref:System.Windows.Controls.ContextMenu> no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] clicando com o botão do mouse. Este tópico apresenta o <xref:System.Windows.Controls.ContextMenu> elemento e fornece exemplos de como usá-lo em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e código.  

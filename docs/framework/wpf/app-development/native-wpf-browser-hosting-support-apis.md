@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550014"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>APIs de suporte à hospedagem de navegador do WPF nativa
 A hospedagem de aplicações [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] em navegadores da Web é facilitada por um servidor de documento ativo (também conhecido como DocObject) registrado no host WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pode ativar e integrar diretamente com um documento ativo. Para hospedar documentos XBAPs e XAML Flexível em navegadores Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] fornece um plug-in NPAPI, que oferece um ambiente de hospedagem semelhante ao [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documento ativo como faz o [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Entretanto, a maneira mais fácil de hospedar documentos XBAPs e XAML em outros navegadores e aplicativos independentes é através do controle do navegador da Web do Internet Explorer. O controle do Navegador da Web fornece o complexo ambiente de hospedagem do servidor de documento ativo, mas permite que seu próprio host personalize e amplie esse ambiente e se comunique diretamente com o servidor de documento ativo atual.  

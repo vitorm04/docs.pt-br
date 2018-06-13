@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552760"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Como usar os métodos de rolagem de conteúdo do ScrollViewer
 Este exemplo mostra como usar os métodos de rolagem de <xref:System.Windows.Controls.ScrollViewer> elemento. Esses métodos fornecem rolagem incremental do conteúdo, por linha ou por página, em um <xref:System.Windows.Controls.ScrollViewer>.  

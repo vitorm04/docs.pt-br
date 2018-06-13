@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550180"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>Como habilitar caracteres de tabulação em um controle TextBox
 Este exemplo mostra como habilitar a aceitação de caracteres de tabulação como entrada normal em um <xref:System.Windows.Controls.TextBox> controle.  

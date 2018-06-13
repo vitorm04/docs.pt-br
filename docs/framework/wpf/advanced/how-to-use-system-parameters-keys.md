@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544710"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>Como usar chaves de parâmetros do sistema
 Os recursos do sistema expõem inúmeras métricas do sistema como recursos para ajudar os desenvolvedores a criar recursos visuais consistentes com as configurações do sistema. <xref:System.Windows.SystemParameters> é uma classe que contém os valores de parâmetros de sistema e as chaves associadas aos valores — por exemplo, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> e <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>. Métricas de parâmetros de sistema podem ser usadas como recursos estáticos ou dinâmicos. Use um recurso dinâmico se você quiser que a métrica de parâmetro para atualizar automaticamente enquanto o aplicativo é executado; Caso contrário, use um recurso estático.  

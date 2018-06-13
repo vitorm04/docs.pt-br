@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549224"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interoperação do WPF e dos Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] apresentam duas diferentes arquiteturas para criação de interfaces de aplicativo. O <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> namespace fornece classes que permitem cenários comuns de interoperação. As duas classes chave que implementam recursos de interoperabilidade são <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost>. Este tópico descreve quais cenários de interoperação tem suporte e quais cenários não tem suporte.  

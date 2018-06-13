@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543993"
 ---
 # <a name="how-to-find-the-source-element-in-an-event-handler"></a>Como localizar o elemento de origem em um manipulador de eventos
 Este exemplo mostra como localizar o elemento de origem em um manipulador de eventos.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548104"
 ---
 # <a name="focus-overview"></a>Visão geral do foco
 Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], há dois conceitos principais relativos ao foco: foco do teclado e foco lógico.  O foco do teclado refere-se ao elemento que recebe entrada do teclado e foco lógico refere-se ao elemento em um escopo de foco que tem foco.  Esses conceitos são discutidos em detalhes nesta visão geral.  Noções básicas sobre a diferença entre esses conceitos é importante para a criação de aplicativos complexos que têm várias regiões no qual o foco pode ser obtido.  

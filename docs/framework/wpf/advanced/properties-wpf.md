@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546023"
 ---
 # <a name="properties-wpf"></a>Propriedades (WPF)
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um conjunto de serviços que pode ser usado para estender a funcionalidade de uma propriedade [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Coletivamente, esses serviços normalmente são referidos como o sistema de propriedade do WPF. Uma propriedade que tem o suporte do sistema de propriedades do [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] é conhecida como uma propriedade de dependência.  

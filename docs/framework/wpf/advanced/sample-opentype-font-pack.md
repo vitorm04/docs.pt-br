@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546930"
 ---
 # <a name="sample-opentype-font-pack"></a>Pacote de fontes OpenType de amostra
 Este tópico fornece uma visão geral das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de exemplo que são distribuídas com o [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. O suporte de fontes de exemplo estendeu os recursos [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] que podem ser usados por aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

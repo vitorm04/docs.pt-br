@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546130"
 ---
 # <a name="preview-events"></a>Eventos de visualização
 Eventos de Visualização, também conhecidos como eventos de túnel, são eventos roteados em que a direção da rota vai da raiz do aplicativo em direção ao elemento que gerou o evento e é relatado como origem nos dados do evento. Nem todos os cenários de eventos têm suporte ou precisam de eventos de visualização. Este tópico descreve as situações em que os eventos de visualização existem, como aplicativos ou componentes devem lidar com eles e casos em que criar eventos de visualização em componentes ou classes personalizados pode ser apropriado.  

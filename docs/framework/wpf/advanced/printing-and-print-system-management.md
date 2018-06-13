@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547414"
 ---
 # <a name="printing-and-print-system-management"></a>Impressão e gerenciamento do sistema de impressão
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] e o Microsoft .NET Framework introduz um novo caminho de impressão — uma alternativa ao [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] impressão — e um conjunto muito maior de gerenciamento do sistema de impressão [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  

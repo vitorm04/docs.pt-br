@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532843"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Como imprimir com um controle WebBrowser
 O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.WebBrowser> controle para imprimir uma página da Web sem exibi-lo.  

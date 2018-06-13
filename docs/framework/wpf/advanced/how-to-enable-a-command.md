@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545276"
 ---
 # <a name="how-to-enable-a-command"></a>Como habilitar um comando
 O exemplo a seguir demonstra como usar comandos em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  O exemplo mostra como associar um <xref:System.Windows.Input.RoutedCommand> para um <xref:System.Windows.Controls.Button>, crie um <xref:System.Windows.Input.CommandBinding>e criar manipuladores de eventos que implementam o <xref:System.Windows.Input.RoutedCommand>.  Para obter mais informações sobre comandos, consulte [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md).  

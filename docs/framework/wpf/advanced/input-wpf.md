@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544226"
 ---
 # <a name="input-wpf"></a>Entrada (WPF)
 Windows Presentation Foundation (WPF) inclui suporte para vários tipos de entrada. Essa entrada inclui o texto, toque, mouse, comandos, foco, toque, arrastar e soltar e tinta digital. Esta seção descreve os tópicos relacionados a entrada no WPF.  

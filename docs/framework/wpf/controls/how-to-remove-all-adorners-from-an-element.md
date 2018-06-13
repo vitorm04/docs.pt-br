@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551610"
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>Como remover todos os adornos de um elemento
 Este exemplo mostra como remover todos os adornos de especificada programaticamente <xref:System.Windows.UIElement>.  

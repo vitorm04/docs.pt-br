@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546065"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>Atributo PresentationOptions:Freeze
 Conjuntos de <xref:System.Windows.Freezable.IsFrozen%2A> estado para `true` em que o contém <xref:System.Windows.Freezable> elemento. Comportamento padrão para um <xref:System.Windows.Freezable> sem o `PresentationOptions:Freeze` atributo especificado é que <xref:System.Windows.Freezable.IsFrozen%2A> é `false` em tempo de carregamento e dependente geral <xref:System.Windows.Freezable> comportamento em tempo de execução.  

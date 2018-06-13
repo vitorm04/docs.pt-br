@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547976"
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>Como obter e definir a janela principal do aplicativo
 Este exemplo mostra como obter e definir a janela principal do aplicativo.  

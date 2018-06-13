@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546049"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>Como: definir a altura de uma janela de uma página
 Este exemplo ilustra como definir a altura da janela de um <xref:System.Windows.Controls.Page>.  
