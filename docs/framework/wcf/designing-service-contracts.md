@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809921"
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve qual serviço os contratos são, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudarão a criar operações que atendem a requisitos do seu cenário.  

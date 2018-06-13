@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656039"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Como modificar literais XML (Visual Basic)
 Visual Basic fornece maneiras convenientes para modificar literais XML. Você pode adicionar ou excluir elementos e atributos, e você também pode substituir um elemento existente com um novo elemento XML. Este tópico fornece vários exemplos de como modificar um XML literal existente.  

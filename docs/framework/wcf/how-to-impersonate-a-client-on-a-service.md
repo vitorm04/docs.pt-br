@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810220"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Como personificar um cliente em um serviço
 Representar um cliente em um serviço do Windows Communication Foundation (WCF) permite que o serviço executar ações em nome do cliente. Para ações sujeitos a acesso (ACL) da lista de controle verifica, como acesso a diretórios e arquivos em um computador ou acesso a um banco de dados do SQL Server, a verificação ACL é em relação à conta de usuário do cliente. Este tópico mostra as etapas básicas necessárias para permitir que um cliente em um domínio do Windows definir um nível de representação do cliente. Para um exemplo de isso, consulte [representar o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter mais informações sobre representação do cliente, consulte [delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

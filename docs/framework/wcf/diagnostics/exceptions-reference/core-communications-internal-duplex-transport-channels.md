@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471658"
 ---
 # <a name="core-communications-internal-duplex-transport-channels"></a>Comunicações principais: Canais de transporte duplex internos
 Este tópico lista todas as exceções geradas por canais de transporte do Windows Communication Foundation (WCF) interno Duplex.  
