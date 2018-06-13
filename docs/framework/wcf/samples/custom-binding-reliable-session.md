@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500757"
 ---
 # <a name="custom-binding-reliable-session"></a><span data-ttu-id="93532-102">Sessão confiável de associação personalizada</span><span class="sxs-lookup"><span data-stu-id="93532-102">Custom Binding Reliable Session</span></span>
 <span data-ttu-id="93532-103">Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos.</span><span class="sxs-lookup"><span data-stu-id="93532-103">A custom binding is defined by an ordered list of discrete binding elements.</span></span> <span data-ttu-id="93532-104">Este exemplo demonstra como configurar uma associação personalizada com vários transporte e mensagem de elementos de codificação, especialmente habilitar sessões confiáveis.</span><span class="sxs-lookup"><span data-stu-id="93532-104">This sample demonstrates how to configure a custom binding with various transport and message encoding elements, especially enabling reliable sessions.</span></span>  

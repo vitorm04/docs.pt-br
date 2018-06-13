@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493590"
 ---
 # <a name="how-to-error-handling"></a><span data-ttu-id="110ee-102">Como lidar com erros</span><span class="sxs-lookup"><span data-stu-id="110ee-102">How To: Error Handling</span></span>
 <span data-ttu-id="110ee-103">Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa o tratamento de erros.</span><span class="sxs-lookup"><span data-stu-id="110ee-103">This topic outlines the basic steps required to create a routing configuration that uses error handling.</span></span> <span data-ttu-id="110ee-104">Neste exemplo, as mensagens são roteadas para um ponto de extremidade de destino.</span><span class="sxs-lookup"><span data-stu-id="110ee-104">In this example, messages are routed to a destination endpoint.</span></span> <span data-ttu-id="110ee-105">Se uma mensagem não pode ser entregue devido a uma falha de comunicação ou de rede (<xref:System.ServiceModel.CommunicationException>), a mensagem é enviada novamente para um ponto de extremidade alternativo.</span><span class="sxs-lookup"><span data-stu-id="110ee-105">If a message cannot be delivered due to a network or communications-related failure (<xref:System.ServiceModel.CommunicationException>), the message is resent to an alternate endpoint.</span></span>  

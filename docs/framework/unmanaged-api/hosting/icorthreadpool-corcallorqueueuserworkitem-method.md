@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f18fcd5be15794449cc6c60d5217db702159e34d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436657"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a><span data-ttu-id="8cd16-102">Método ICorThreadpool::CorCallOrQueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="8cd16-102">ICorThreadpool::CorCallOrQueueUserWorkItem Method</span></span>
 <span data-ttu-id="8cd16-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="8cd16-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

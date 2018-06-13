@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494108"
 ---
 # <a name="hosting-in-internet-information-services"></a><span data-ttu-id="b9050-102">Hospedagem no Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="b9050-102">Hosting in Internet Information Services</span></span>
 <span data-ttu-id="b9050-103">É uma opção para hospedar os serviços do Windows Communication Foundation (WCF) dentro de um aplicativo de serviços de informações da Internet (IIS).</span><span class="sxs-lookup"><span data-stu-id="b9050-103">One option for hosting Windows Communication Foundation (WCF) services is inside of an Internet Information Services (IIS) application.</span></span> <span data-ttu-id="b9050-104">Esse modelo de hospedagem é semelhante ao modelo usado por [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e serviços Web (ASMX) de serviços Web do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="b9050-104">This hosting model is similar to the model used by [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] and ASP.NET Web services (ASMX) Web Services.</span></span>  

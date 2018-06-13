@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491953"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a><span data-ttu-id="35369-102">Acessando os serviços WCF com um aplicativo cliente da Windows Store</span><span class="sxs-lookup"><span data-stu-id="35369-102">Accessing WCF Services with a Windows Store Client App</span></span>
 <span data-ttu-id="35369-103">O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Windows Store.</span><span class="sxs-lookup"><span data-stu-id="35369-103">Windows 8 introduces a new type of application called Windows Store applications.</span></span> <span data-ttu-id="35369-104">Esses aplicativos são criados em torno de uma interface de tela sensível ao toque.</span><span class="sxs-lookup"><span data-stu-id="35369-104">These applications are designed around a touch screen interface.</span></span> <span data-ttu-id="35369-105">O .NET Framework 4.5 permite que aplicativos da Windows Store chamem serviços WCF.</span><span class="sxs-lookup"><span data-stu-id="35369-105">.NET Framework 4.5 enables Windows Store applications to call WCF services.</span></span>  

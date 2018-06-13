@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: fdf18564d3545e0061d8323e544aecfeed621d0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489977"
 ---
 # <a name="extended-protection-for-authentication-overview"></a><span data-ttu-id="7119e-102">Proteção estendida para visão geral de autenticação</span><span class="sxs-lookup"><span data-stu-id="7119e-102">Extended Protection for Authentication Overview</span></span>
 <span data-ttu-id="7119e-103">Proteção estendida para autenticação ajuda a impedir ataques man-in-the-middle (MITM), em que um invasor intercepta as credenciais do cliente e encaminha-os para um servidor.</span><span class="sxs-lookup"><span data-stu-id="7119e-103">Extended Protection for Authentication helps protect against man-in-the-middle (MITM) attacks, in which an attacker intercepts a client’s credentials and forwards them to a server.</span></span>  

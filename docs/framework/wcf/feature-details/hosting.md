@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489392"
 ---
 # <a name="hosting"></a><span data-ttu-id="f081c-102">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="f081c-102">Hosting</span></span>
 <span data-ttu-id="f081c-103">Os tópicos na seção descrevem a hospedagem de serviços.</span><span class="sxs-lookup"><span data-stu-id="f081c-103">The topics in the section describe service hosting.</span></span> <span data-ttu-id="f081c-104">Um serviço pode ser hospedado por serviços de informações da Internet (IIS), o serviço de ativação de processos do Windows (WAS), o Windows Server AppFabric, um serviço do Windows ou por um aplicativo gerenciado, esta opção também é conhecida como *hospedagem self*.</span><span class="sxs-lookup"><span data-stu-id="f081c-104">A service can be hosted by Internet Information Services (IIS), Windows Process Activation Service (WAS), Windows Server AppFabric, a Windows service, or by a managed application—this option is often referred to as *self hosting*.</span></span>  

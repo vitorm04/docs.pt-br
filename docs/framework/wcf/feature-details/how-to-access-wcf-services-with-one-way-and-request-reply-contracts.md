@@ -1,31 +1,20 @@
 ---
-title: "Como acessar os serviços do WCF com contratos de resposta/solicitação e unidirecionais"
-ms.custom: 
+title: Como acessar os serviços do WCF com contratos de resposta/solicitação e unidirecionais
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ae2153ef7246194774535fd399d03dd109a221a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494316"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="ccba1-102">Como acessar os serviços do WCF com contratos de resposta/solicitação e unidirecionais</span><span class="sxs-lookup"><span data-stu-id="ccba1-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
-<span data-ttu-id="ccba1-103">Os procedimentos a seguir descrevem como acessar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço que define um contrato unidirecional e um contrato de solicitação-resposta e que não usa o padrão de comunicação duplex.</span><span class="sxs-lookup"><span data-stu-id="ccba1-103">The following procedures describe how to access a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="95e87-102">Como acessar os serviços do WCF com contratos de resposta/solicitação e unidirecionais</span><span class="sxs-lookup"><span data-stu-id="95e87-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
+<span data-ttu-id="95e87-103">Os procedimentos a seguir descrevem como para acessar um serviço do Windows Communication Foundation (WCF) que define um contrato unidirecional e um contrato de solicitação-resposta e que não usa o padrão de comunicação duplex.</span><span class="sxs-lookup"><span data-stu-id="95e87-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
   
-### <a name="to-define-the-service"></a><span data-ttu-id="ccba1-104">Para definir o serviço</span><span class="sxs-lookup"><span data-stu-id="ccba1-104">To define the service</span></span>  
+### <a name="to-define-the-service"></a><span data-ttu-id="95e87-104">Para definir o serviço</span><span class="sxs-lookup"><span data-stu-id="95e87-104">To define the service</span></span>  
   
-1.  <span data-ttu-id="ccba1-105">Declare o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="ccba1-105">Declare the service contract.</span></span> <span data-ttu-id="ccba1-106">As operações que devem ser unidirecional devem ter `IsOneWay` definida como `true` dentro de <xref:System.ServiceModel.OperationContractAttribute>.</span><span class="sxs-lookup"><span data-stu-id="ccba1-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="ccba1-107">O código a seguir declara a `IOneWayCalculator` contrato com operações unidirecionais para `Add`, `Subtract`, `Multiply`, e `Divide`.</span><span class="sxs-lookup"><span data-stu-id="ccba1-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="ccba1-108">Ele também define uma operação de resposta de solicitação chamada `SayHello`.</span><span class="sxs-lookup"><span data-stu-id="ccba1-108">It also defines a request response operation called `SayHello`.</span></span>  
+1.  <span data-ttu-id="95e87-105">Declare o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="95e87-105">Declare the service contract.</span></span> <span data-ttu-id="95e87-106">As operações que devem ser unidirecional devem ter `IsOneWay` definida como `true` dentro de <xref:System.ServiceModel.OperationContractAttribute>.</span><span class="sxs-lookup"><span data-stu-id="95e87-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="95e87-107">O código a seguir declara a `IOneWayCalculator` contrato com operações unidirecionais para `Add`, `Subtract`, `Multiply`, e `Divide`.</span><span class="sxs-lookup"><span data-stu-id="95e87-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="95e87-108">Ele também define uma operação de resposta de solicitação chamada `SayHello`.</span><span class="sxs-lookup"><span data-stu-id="95e87-108">It also defines a request response operation called `SayHello`.</span></span>  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-2.  <span data-ttu-id="ccba1-109">Implemente o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="ccba1-109">Implement the service contract.</span></span> <span data-ttu-id="ccba1-110">O código a seguir implementa a `IOnewayCalculator` interface.</span><span class="sxs-lookup"><span data-stu-id="ccba1-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
+2.  <span data-ttu-id="95e87-109">Implemente o contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="95e87-109">Implement the service contract.</span></span> <span data-ttu-id="95e87-110">O código a seguir implementa a `IOnewayCalculator` interface.</span><span class="sxs-lookup"><span data-stu-id="95e87-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -82,7 +71,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  <span data-ttu-id="ccba1-111">Hospede o serviço em um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="ccba1-111">Host the service in a console application.</span></span> <span data-ttu-id="ccba1-112">O código a seguir mostra como hospedar o serviço.</span><span class="sxs-lookup"><span data-stu-id="ccba1-112">The following code shows how to host the service.</span></span>  
+3.  <span data-ttu-id="95e87-111">Hospede o serviço em um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="95e87-111">Host the service in a console application.</span></span> <span data-ttu-id="95e87-112">O código a seguir mostra como hospedar o serviço.</span><span class="sxs-lookup"><span data-stu-id="95e87-112">The following code shows how to host the service.</span></span>  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -118,9 +107,9 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-### <a name="to-access-the-service"></a><span data-ttu-id="ccba1-113">Para acessar o serviço</span><span class="sxs-lookup"><span data-stu-id="ccba1-113">To access the service</span></span>  
+### <a name="to-access-the-service"></a><span data-ttu-id="95e87-113">Para acessar o serviço</span><span class="sxs-lookup"><span data-stu-id="95e87-113">To access the service</span></span>  
   
-1.  <span data-ttu-id="ccba1-114">Execute o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando o endereço de ponto de extremidade de troca de metadados para criar a classe de cliente para o serviço usando a seguinte linha de comando: `Svcutil http://localhost:8000/Service` o [ServiceModel Ferramenta de utilitário de metadados (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gera um conjunto de interfaces e classes, conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="ccba1-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
+1.  <span data-ttu-id="95e87-114">Execute o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando o endereço de ponto de extremidade de troca de metadados para criar a classe de cliente para o serviço usando a seguinte linha de comando: `Svcutil http://localhost:8000/Service` o [ServiceModel Ferramenta de utilitário de metadados (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gera um conjunto de interfaces e classes, conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="95e87-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -205,9 +194,9 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     <span data-ttu-id="ccba1-115">Observe o `IOneWayCalculator` interface as operações de serviço unidirecional com o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> atributo definido como `true` e a operação de serviço de solicitação-resposta tem o atributo definido como o valor padrão, `false`.</span><span class="sxs-lookup"><span data-stu-id="ccba1-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="ccba1-116">Observe também o `OneWayCalculatorClient` classe.</span><span class="sxs-lookup"><span data-stu-id="ccba1-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="ccba1-117">Esta é a classe que você usará para chamar o serviço.</span><span class="sxs-lookup"><span data-stu-id="ccba1-117">This is the class that you will use to call the service.</span></span>  
+     <span data-ttu-id="95e87-115">Observe o `IOneWayCalculator` interface as operações de serviço unidirecional com o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> atributo definido como `true` e a operação de serviço de solicitação-resposta tem o atributo definido como o valor padrão, `false`.</span><span class="sxs-lookup"><span data-stu-id="95e87-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="95e87-116">Observe também o `OneWayCalculatorClient` classe.</span><span class="sxs-lookup"><span data-stu-id="95e87-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="95e87-117">Esta é a classe que você usará para chamar o serviço.</span><span class="sxs-lookup"><span data-stu-id="95e87-117">This is the class that you will use to call the service.</span></span>  
   
-2.  <span data-ttu-id="ccba1-118">Crie o objeto de cliente.</span><span class="sxs-lookup"><span data-stu-id="ccba1-118">Create the client object.</span></span>  
+2.  <span data-ttu-id="95e87-118">Crie o objeto de cliente.</span><span class="sxs-lookup"><span data-stu-id="95e87-118">Create the client object.</span></span>  
   
     ```csharp  
     // Create a client  
@@ -216,7 +205,7 @@ ms.lasthandoff: 12/22/2017
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  <span data-ttu-id="ccba1-119">Chame operações de serviço.</span><span class="sxs-lookup"><span data-stu-id="ccba1-119">Call service operations.</span></span>  
+3.  <span data-ttu-id="95e87-119">Chame operações de serviço.</span><span class="sxs-lookup"><span data-stu-id="95e87-119">Call service operations.</span></span>  
   
     ```csharp  
     // Call the Add service operation.  
@@ -250,15 +239,15 @@ ms.lasthandoff: 12/22/2017
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  <span data-ttu-id="ccba1-120">Feche o cliente para fechar conexões e limpar os recursos.</span><span class="sxs-lookup"><span data-stu-id="ccba1-120">Close the client to close connections and clean up resources.</span></span>  
+4.  <span data-ttu-id="95e87-120">Feche o cliente para fechar conexões e limpar os recursos.</span><span class="sxs-lookup"><span data-stu-id="95e87-120">Close the client to close connections and clean up resources.</span></span>  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="ccba1-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ccba1-121">Example</span></span>  
- <span data-ttu-id="ccba1-122">A seguir está uma listagem completa do código usado neste tópico.</span><span class="sxs-lookup"><span data-stu-id="ccba1-122">The following is a complete listing of the code used  in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="95e87-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="95e87-121">Example</span></span>  
+ <span data-ttu-id="95e87-122">A seguir está uma listagem completa do código usado neste tópico.</span><span class="sxs-lookup"><span data-stu-id="95e87-122">The following is a complete listing of the code used  in this topic.</span></span>  
   
 ```csharp  
 // Service.cs  
@@ -411,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ccba1-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ccba1-123">See Also</span></span>  
- [<span data-ttu-id="ccba1-124">Serviços unidirecionais</span><span class="sxs-lookup"><span data-stu-id="ccba1-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a><span data-ttu-id="95e87-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="95e87-123">See Also</span></span>  
+ [<span data-ttu-id="95e87-124">Serviços unidirecionais</span><span class="sxs-lookup"><span data-stu-id="95e87-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)

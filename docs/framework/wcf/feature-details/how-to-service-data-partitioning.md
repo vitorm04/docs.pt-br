@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
 ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491794"
 ---
 # <a name="how-to-service-data-partitioning"></a><span data-ttu-id="a08d8-102">Como particionar dados de serviço</span><span class="sxs-lookup"><span data-stu-id="a08d8-102">How To: Service Data Partitioning</span></span>
 <span data-ttu-id="a08d8-103">Este tópico descreve as etapas básicas necessárias para mensagens de partição em várias instâncias do mesmo serviço de destino.</span><span class="sxs-lookup"><span data-stu-id="a08d8-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="a08d8-104">Particionamento de dados de serviço geralmente são usados quando você precisar dimensionar um serviço para fornecer a melhor qualidade de serviço, ou quando você precisa lidar com solicitações de diferentes clientes de uma maneira específica.</span><span class="sxs-lookup"><span data-stu-id="a08d8-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="a08d8-105">Por exemplo, mensagens de alto valor ou clientes "Ouro" podem precisar ser processado em uma prioridade mais alta que as mensagens de um cliente padrão.</span><span class="sxs-lookup"><span data-stu-id="a08d8-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  

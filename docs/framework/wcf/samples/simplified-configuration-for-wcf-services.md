@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502258"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a><span data-ttu-id="bfd03-102">Configuração simplificada para serviços do WCF</span><span class="sxs-lookup"><span data-stu-id="bfd03-102">Simplified Configuration for WCF Services</span></span>
 <span data-ttu-id="bfd03-103">Este exemplo demonstra como implementar e configurar um serviço típico e o cliente usando o Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="bfd03-103">This sample demonstrates how to implement and configure a typical service and client using Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="bfd03-104">Este exemplo é a base para todos os outros exemplos de tecnologia básico.</span><span class="sxs-lookup"><span data-stu-id="bfd03-104">This sample is the basis for all other basic technology samples.</span></span>  

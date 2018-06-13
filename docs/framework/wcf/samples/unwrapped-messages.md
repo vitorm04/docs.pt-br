@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504962"
 ---
 # <a name="unwrapped-messages"></a><span data-ttu-id="24a38-102">Mensagens sem quebra de texto</span><span class="sxs-lookup"><span data-stu-id="24a38-102">Unwrapped Messages</span></span>
 <span data-ttu-id="24a38-103">Este exemplo demonstra mensagens sem.</span><span class="sxs-lookup"><span data-stu-id="24a38-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="24a38-104">Por padrão, o corpo da mensagem é formatado, de modo que os parâmetros para uma operação de serviço são quebrados.</span><span class="sxs-lookup"><span data-stu-id="24a38-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="24a38-105">O exemplo a seguir mostra um `Add` mensagem de solicitação para o `ICalculator` serviço no modo encapsulado.</span><span class="sxs-lookup"><span data-stu-id="24a38-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  

@@ -12,8 +12,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 97fc358ac66bb92ccc40c92207bf6561f61b84f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489870"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a><span data-ttu-id="72430-102">Como desabilitar sessões seguranças em uma WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="72430-102">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>
 <span data-ttu-id="72430-103">Alguns serviços podem exigir credenciais federadas mas não oferecer suporte a sessões seguras.</span><span class="sxs-lookup"><span data-stu-id="72430-103">Some services may require federated credentials but not support secure sessions.</span></span> <span data-ttu-id="72430-104">Nesse caso, você deve desabilitar o recurso de sessão segura.</span><span class="sxs-lookup"><span data-stu-id="72430-104">In that case, you must disable the secure session feature.</span></span> <span data-ttu-id="72430-105">Ao contrário de <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, a <xref:System.ServiceModel.WSFederationHttpBinding> classe não fornecerá uma maneira de desabilitar sessões seguras ao se comunicar com um serviço.</span><span class="sxs-lookup"><span data-stu-id="72430-105">Unlike the <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, the <xref:System.ServiceModel.WSFederationHttpBinding> class does not provide a way to disable secure sessions when communicating with a service.</span></span> <span data-ttu-id="72430-106">Em vez disso, você deve criar uma associação personalizada que substitui as configurações de sessão segura com um programa de inicialização.</span><span class="sxs-lookup"><span data-stu-id="72430-106">Instead, you must create a custom binding that replaces the secure session settings with a bootstrap.</span></span>  

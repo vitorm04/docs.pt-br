@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489749"
 ---
 # <a name="custom-filters"></a><span data-ttu-id="30a96-102">Filtros personalizados</span><span class="sxs-lookup"><span data-stu-id="30a96-102">Custom Filters</span></span>
 <span data-ttu-id="30a96-103">Filtros personalizados permitem que você definir a lógica de correspondência que não pode ser feita usando os filtros de mensagem fornecida pelo sistema.</span><span class="sxs-lookup"><span data-stu-id="30a96-103">Custom filters allow you to define matching logic that cannot be accomplished using the system-provided message filters.</span></span> <span data-ttu-id="30a96-104">Por exemplo, você pode criar um filtro personalizado que realiza hash de um elemento de mensagem específica e, em seguida, examina o valor para determinar se o filtro deve retornar true ou false.</span><span class="sxs-lookup"><span data-stu-id="30a96-104">For example, you might create a custom filter that hashes a particular message element and then examines the value to determine whether the filter should return true or false.</span></span>  

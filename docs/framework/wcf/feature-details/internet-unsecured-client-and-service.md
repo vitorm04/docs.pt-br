@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491469"
 ---
 # <a name="internet-unsecured-client-and-service"></a><span data-ttu-id="32c99-102">Serviço e cliente de internet desprotegido</span><span class="sxs-lookup"><span data-stu-id="32c99-102">Internet Unsecured Client and Service</span></span>
 <span data-ttu-id="32c99-103">A ilustração a seguir mostra um exemplo de um público, não segura cliente Windows Communication Foundation (WCF) e serviço.</span><span class="sxs-lookup"><span data-stu-id="32c99-103">The following illustration shows an example of a public, unsecured Windows Communication Foundation (WCF) client and service.</span></span>  
