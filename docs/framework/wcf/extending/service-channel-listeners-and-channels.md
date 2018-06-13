@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809645"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Serviço : ouvintes de canal e canais
 Há três categorias de objetos de canal: canais, ouvintes de canais e fábricas de canais. Canais são a interface entre o aplicativo e a pilha de canais. Ouvintes de canais são responsáveis por criar canais no lado do recebimento (ou escutar), normalmente em resposta a uma nova mensagem de entrada ou a conexão. Fábricas de canais são responsáveis por criar canais no lado de envio para iniciar a comunicação com um ponto de extremidade.  

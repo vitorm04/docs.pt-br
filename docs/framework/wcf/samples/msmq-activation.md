@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808124"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processo para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo Web hospedado e o cliente é auto-hospedado e saídas para o console para observar o status das ordens de compra enviada.  

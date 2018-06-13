@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803748"
 ---
 # <a name="reliable-services"></a>Serviços confiáveis
 Sessões confiáveis e filas são os recursos do Windows Communication Foundation (WCF) que implementa o sistema de mensagens confiável. Este tópico explica os recursos de mensagens confiáveis do WCF.  

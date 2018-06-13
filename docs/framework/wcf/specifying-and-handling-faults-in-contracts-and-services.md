@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806494"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificando e lidando com falhas em contratos e serviços
 Aplicativos do Windows Communication Foundation (WCF) lidar com situações de erro, mapeando os objetos de exceção gerenciada para objetos de falhas SOAP e objetos de falhas SOAP em objetos de exceção gerenciada. Os tópicos nesta seção abordam como criar contratos para expor o erro condições como falhas de SOAP personalizadas, como retornar essas falhas como parte da implementação de serviço e como os clientes capturar essas falhas.  

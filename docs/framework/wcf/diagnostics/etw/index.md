@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809258"
 ---
 # <a name="analytic-tracing-with-etw"></a>Rastreamento analítico com ETW
 Rastreamento analítico do Windows Communication Foundation (WCF) oferece uma maneira de capturar informações de diagnóstico durante a execução de um serviço WCF. Eventos de rastreamento analítico do WCF são emitidos nos pontos-chave na pilha do WCF para permitir a solução de problemas de serviços do WCF em um ambiente de produção. Rastreamento analítico para serviços WCF tem um impacto mínimo sobre o desempenho de um produto de servidor que hospeda [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] dos serviços WCF como esses eventos são emitidos com muita eficiência em uma sessão de rastreamento de eventos para Windows (ETW).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805519"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controlando o consumo de recursos e a melhoria de desempenho
 Este tópico descreve várias propriedades em diferentes áreas da arquitetura do Windows Communication Foundation (WCF) que funcionam no consumo de recursos de controle e afetam o desempenho.  

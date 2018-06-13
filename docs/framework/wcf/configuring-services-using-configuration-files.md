@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807427"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração oferece a flexibilidade do fornecimento de ponto de extremidade e dados de comportamento de serviço no ponto de distribuição em vez de no tempo de design. Este tópico descreve as principais técnicas disponíveis.  

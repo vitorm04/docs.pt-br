@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803375"
 ---
 # <a name="custom-binding"></a>Associação personalizado
 Esta seção contém exemplos que demonstram o uso de um atributo de associação personalizada de um elemento de ponto de extremidade.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804411"
 ---
 # <a name="operation-performance-counters"></a>Contadores de desempenho de operação
 Contadores de desempenho da operação estão localizados sob o `ServiceModelOperation 4.0.0.0` objeto de desempenho durante a exibição com o Monitor de desempenho (Perfmon.exe). Cada operação tem uma instância individual. Ou seja, se um dado contrato tem operações de 10, 10 instâncias de contador de operação são associadas com esse contrato. As instâncias de objeto são nomeadas usando o seguinte padrão:  

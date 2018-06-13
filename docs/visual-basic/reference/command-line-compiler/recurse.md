@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652416"
 ---
 # <a name="-recurse"></a>-recurse
 Compila arquivos de código-fonte em todos os diretórios filhos do diretório do projeto ou o diretório especificado.  

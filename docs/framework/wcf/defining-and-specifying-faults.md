@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806868"
 ---
 # <a name="defining-and-specifying-faults"></a>Definindo e especificando falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de forma interoperável. Este tópico discute quando e como definir o conteúdo de falhas personalizado e especificar quais operações podem retorná-los. Para obter mais informações sobre como um serviço ou cliente duplex, pode enviar as falhas e como um cliente ou aplicativo de serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em aplicativos do Windows Communication Foundation (WCF), consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

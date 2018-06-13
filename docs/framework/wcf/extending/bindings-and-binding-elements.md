@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804619"
 ---
 # <a name="bindings-and-binding-elements"></a>Associações e elementos de associações
 Associações são coleções de elementos de configuração especial, chamados *elementos de associação*, que é avaliado pelo tempo de execução do serviço sempre que um cliente ou o ponto de extremidade de serviço está sendo construído. O tipo e a ordem dos elementos de associação dentro de uma associação determina a seleção e a ordem de empilhamento dos canais de transporte e protocolo na pilha de canais de um ponto de extremidade.  

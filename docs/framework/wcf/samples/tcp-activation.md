@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807398"
 ---
 # <a name="tcp-activation"></a>Ativação TCP
 Este exemplo demonstra como hospedar um serviço que usa serviços de ativação de processos do Windows (WAS) para ativar um serviço que se comunica através do protocolo NET. TCP. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

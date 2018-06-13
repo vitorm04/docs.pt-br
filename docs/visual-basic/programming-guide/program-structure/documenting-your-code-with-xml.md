@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650495"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentando o código com XML (Visual Basic)
 No Visual Basic, você pode documentar seu código usando XML  

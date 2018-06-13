@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652371"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrizes de parâmetros (Visual Basic)
 Normalmente, você não pode chamar um procedimento com mais argumentos do que especifica a declaração de procedimento. Quando você precisar de um número indefinido de argumentos, você pode declarar uma *matriz de parâmetro*, que permite que um procedimento aceitar uma matriz de valores para um parâmetro. Você não precisa saber o número de elementos na matriz de parâmetros quando você define o procedimento. O tamanho da matriz é determinado individualmente por cada chamada ao procedimento.  

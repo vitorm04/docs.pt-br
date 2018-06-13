@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648792"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Como declarar e usar prefixos de namespace XML (Visual Basic)
 Este exemplo mostra como importar o prefixo de namespace XML `ns` e usá-lo em um literal XML e propriedades de eixo XML.  

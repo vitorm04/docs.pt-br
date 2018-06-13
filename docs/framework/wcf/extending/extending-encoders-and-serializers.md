@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803534"
 ---
 # <a name="extending-encoders-and-serializers"></a>Estendendo codificadores e serializadores
 Os tópicos nesta seção descrevem como estender o sistema de serialização do Windows Communication Foundation (WCF).  

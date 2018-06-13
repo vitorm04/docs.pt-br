@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803699"
 ---
 # <a name="extending-wcf"></a>Estendendo o WCF
 Windows Communication Foundation (WCF) permite que você modifique e estender os componentes de tempo de execução para controlar com precisão e estender aplicativos baseados em serviço. Os tópicos nesta seção vá em detalhes sobre a arquitetura de extensibilidade. Para obter mais informações sobre programação básica, consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  

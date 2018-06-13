@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806013"
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Os tópicos contidos nesta seção destinam-se a dar exposição rápida para o Windows Communication Foundation (WCF) experiência em programação. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhando com este tutorial fornece um entendimento introdutório das etapas necessárias para criar o cliente e o serviço WCF aplicativos. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço onde o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecido pelo serviço para seus clientes.  

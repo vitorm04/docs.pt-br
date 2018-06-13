@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808998"
 ---
 # <a name="debugging-on-the-client"></a>Depuração do cliente
 Para tornar mais fácil para os usuários escrever aplicativos de cliente para o serviço WCF, você pode adicionar o [ \<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) comportamento para o arquivo de configuração do serviço de serviço. Esse comportamento pode ser usado para publicar as páginas de Ajuda e retornar informações de exceção gerenciada em detalhes das falhas SOAP retornadas ao cliente.

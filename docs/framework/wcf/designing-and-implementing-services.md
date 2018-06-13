@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805061"
 ---
 # <a name="designing-and-implementing-services"></a>Serviços de implantação e projeção
 Esta seção mostra como definir e implementar contratos do WCF. Um contrato de serviço Especifica o que um ponto de extremidade se comunica com o mundo exterior. Em um nível mais concreto, é uma afirmação sobre um conjunto de mensagens específicas organizados em padrões de troca de mensagem básica (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço é um conjunto logicamente relacionado de troca de mensagens, uma operação de serviço é uma troca de mensagens único. Por exemplo, um `Hello` operação obviamente deve aceitar uma mensagem (de modo que o chamador pode anunciar a saudação) e pode ou não pode retornar uma mensagem (dependendo de cortesia da operação).  

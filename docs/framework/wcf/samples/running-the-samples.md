@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807248"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Executando os exemplos do Windows Communication Foundation
 Os exemplos do Windows Communication Foundation (WCF) podem ser executados em uma configuração de computador único ou entre computadores. Fornecido, os exemplos estão prontos para execução em um único computador. Em uma configuração entre computadores, é necessário modificar o arquivo de configuração do exemplo. Os procedimentos a seguir explicam como executar um exemplo em configurações do mesmo computador e entre computadores. Observe que há variações nas etapas para serviços hospedados no serviços de informações da Internet (IIS) e os exemplos auto-hospedado. A maioria dos exemplos estão hospedados no IIS; Consulte as informações do Leiame do exemplo para determinar como ele está hospedado.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656065"
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombreamento no Visual Basic
 Quando dois elementos de programação compartilham o mesmo nome, um deles pode ocultar, ou *sombra*, outro. Em tal situação, o elemento sombreado não está disponível para referência; em vez disso, quando seu código usa o nome do elemento, o compilador do Visual Basic resolve para o elemento de sombreamento.  

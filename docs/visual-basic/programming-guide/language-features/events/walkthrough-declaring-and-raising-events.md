@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652803"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Instruções passo a passo: declarando e acionando eventos (Visual Basic)
 Este passo a passo demonstra como declarar e disparar eventos de uma classe denominada `Widget`. Depois de concluir as etapas, talvez você queira ler o tópico [passo a passo: Manipulando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que mostra como usar eventos de `Widget` objetos para fornecer informações de status em um aplicativo.  

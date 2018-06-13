@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655578"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operadores aritméticos no Visual Basic
 Operadores aritméticos são usados para executar muitas das operações aritméticas familiares que envolvem o cálculo de valores numéricos representados por literais, variáveis, outras expressões, função e chamadas de propriedade e constantes. Também são classificados com operadores aritméticos são os operadores bit shift, que atuam no nível dos bits individuais dos operandos e mudar seus padrões de bits para a esquerda ou direita.  

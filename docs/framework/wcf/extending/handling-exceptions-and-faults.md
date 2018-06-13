@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809554"
 ---
 # <a name="handling-exceptions-and-faults"></a>Lidando com exceções e falhas
 Exceções são usadas para comunicar erros localmente dentro do serviço ou a implementação de cliente. Falhas, por outro lado, são usadas para comunicar erros em limites de serviços, como do servidor para o cliente ou vice-versa. Além de falhas, canais de transporte geralmente usam mecanismos de transporte específicos para comunicar erros de nível de transporte. Por exemplo, o transporte HTTP usa códigos de status como 404 para comunicar uma URL de ponto de extremidade não existente (não há nenhum ponto de extremidade para enviar de volta uma falha). Este documento consiste em três seções que fornecem orientação para os autores de canal personalizado. A primeira seção fornece orientações sobre quando e como definir e gerar exceções. A segunda seção fornece orientações sobre como gerar e consumir falhas. A terceira seção explica como fornecer informações de rastreamento para ajudar o usuário do seu canal personalizado na solução de aplicativos em execução.  

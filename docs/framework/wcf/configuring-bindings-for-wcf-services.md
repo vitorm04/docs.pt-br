@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806052"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
 Ao criar um aplicativo, você geralmente deseja adiar decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou identificador de recurso uniforme (URI) será. Em vez de codificar um endereço, é preferível para permitir que um administrador fazer isso depois de criar um serviço. Essa flexibilidade é feita por meio da configuração.  

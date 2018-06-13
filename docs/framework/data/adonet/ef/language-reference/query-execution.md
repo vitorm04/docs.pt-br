@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804814"
 ---
 # <a name="query-execution"></a>Execução da Consulta
 Depois de ser criada por um usuário, uma consulta LINQ é convertida em uma árvore de comando. Uma árvore de comando é uma representação de uma consulta compatível com o Entity Framework. Em seguida, a árvore de comando é executada na fonte de dados. Em tempo de execução de consulta, todas as expressões e consulta (isto é, todos os componentes da consulta) são avaliados, incluindo essas expressões usadas na materialização do resultado.  

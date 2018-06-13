@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809463"
 ---
 # <a name="data-contract-surrogates"></a>Substitutos de contrato de dados
 O contrato de dados *substituto* é um recurso avançado baseado em modelo de contrato de dados. Esse recurso destina-se a ser usada para personalização de tipo e substituição em situações em que os usuários desejarem alterar como um tipo é serializado, desserializado ou projetado nos metadados. Alguns cenários onde um substituto pode ser usado é quando um contrato de dados não foi especificado para o tipo, campos e propriedades não são marcadas com o <xref:System.Runtime.Serialization.DataMemberAttribute> atributo ou usuários deseja criar dinamicamente as variações de esquema.  

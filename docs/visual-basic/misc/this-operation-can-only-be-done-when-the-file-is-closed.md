@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640274"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>Esta operação só pode ser feita quando o arquivo é fechado
 Quando um arquivo estiver aberto, foi feita uma tentativa para executar uma operação que pode ser executada apenas quando o arquivo seja fechado.  

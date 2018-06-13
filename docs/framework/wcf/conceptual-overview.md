@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804973"
 ---
 # <a name="conceptual-overview"></a>Visão geral conceitual
 Este tópico resume as informações sobre o Windows Communication Foundation (WCF) de mensagens de sistema e as classes que dão suporte ao seu uso.  

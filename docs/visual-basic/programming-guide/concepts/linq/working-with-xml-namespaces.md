@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647395"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Trabalhando com Namespaces XML (Visual Basic)
 Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte a namespaces.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805350"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificando a execução do cliente- Comportamento do tempo
 Os clientes do Windows Communication Foundation (WCF), como serviços do Windows Communication Foundation (WCF), podem ser configurados para modificar o comportamento de tempo de execução de acordo com o aplicativo cliente. Três atributos estão disponíveis para especificar o comportamento de tempo de execução do cliente. Objetos de retorno de chamada duplex cliente podem usar o <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> atributos para modificar seu comportamento de tempo de execução. O atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, pode ser usado para separar o destino lógico de destino da rede imediata. Além disso, podem usar tipos de retorno de chamada de cliente duplex alguns comportamentos no lado do serviço. Para obter mais informações, consulte [especificando comportamento de tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  

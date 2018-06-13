@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648769"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes definidas pelo usuário (Visual Basic)
 Uma constante é um nome significativo que toma o lugar de um número ou uma cadeia de caracteres que não é alterado. Constantes armazenam valores que, como o nome implica, permanecem constantes durante a execução de um aplicativo. Você pode usar constantes definidas por controles ou componentes que você trabalha com, ou você pode criar seus próprios. Constantes que você mesmo cria são descritas como *definida pelo usuário*.  

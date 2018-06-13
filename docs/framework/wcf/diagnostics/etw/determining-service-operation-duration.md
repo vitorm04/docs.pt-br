@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804957"
 ---
 # <a name="determining-service-operation-duration"></a>Determinando a duração da operação de serviço
 Se o rastreamento analítico é habilitado em um aplicativo do Windows Communication Foundation (WCF), a duração da execução de uma operação de serviço pode facilmente ser determinada examinando o log de eventos.  Este tópico demonstra como determinar a quantidade de tempo para concluir uma operação de serviço.  
