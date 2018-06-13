@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763937"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema e coleções de esquema
 O **Conexão** classes em cada uma da implementação de provedores gerenciados do .NET Framework um **GetSchema** método que é usado para recuperar informações de esquema sobre o banco de dados que está conectado no momento, e as informações de esquema retornadas do **GetSchema** método vem na forma de um <xref:System.Data.DataTable>. O **GetSchema** é um método sobrecarregado que fornece parâmetros opcionais para especificar a coleção de esquema para retornar e restringir a quantidade de informações retornadas.  

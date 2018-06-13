@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763261"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizando um conjunto de dados com um XmlDataDocument
 Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando um fortemente tipada <xref:System.Data.DataSet> sincronizado com um <xref:System.Xml.XmlDataDocument>. Os exemplos a seguir criam um **DataSet** com um esquema minimizado que corresponde apenas uma parte do documento XML de origem. Os exemplos usam um **XmlDataDocument** para preservar a fidelidade do documento XML de origem, permitindo que o **conjunto de dados** a ser usado para expor um subconjunto do documento XML.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335920"
 ---
 # <a name="deferred-execution-example-c"></a>Exemplo de execução adiada (C#)
 Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.  
