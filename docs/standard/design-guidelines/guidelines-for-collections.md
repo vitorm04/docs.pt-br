@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578853"
 ---
 # <a name="guidelines-for-collections"></a>Diretrizes para coleções
 Qualquer tipo projetado especificamente para manipular um grupo de objetos que têm algumas características comuns pode ser considerado uma coleção. Quase sempre é apropriado para esses tipos implementar <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, portanto, nesta seção só consideramos tipos que implementam uma ou ambas as interfaces para coleções de ser.  
