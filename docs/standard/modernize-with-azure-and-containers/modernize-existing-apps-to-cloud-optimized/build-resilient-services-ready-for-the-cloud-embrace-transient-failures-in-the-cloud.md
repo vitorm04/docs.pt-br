@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 1df21d0f647b96c315686921276be3526f66bbc8
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957926"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a><span data-ttu-id="9cf52-105">Criar serviços resilientes prontos para a nuvem: adotar falhas transitórias na nuvem</span><span class="sxs-lookup"><span data-stu-id="9cf52-105">Build resilient services ready for the cloud: Embrace transient failures in the cloud</span></span>
 

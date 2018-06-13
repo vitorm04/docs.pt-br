@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415169"
 ---
 # <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="b5649-102">Método ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="b5649-102">ICorDebugController::CommitChanges Method</span></span>
 <span data-ttu-id="b5649-103">`CommitChanges` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="b5649-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="b5649-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="b5649-104">Do not call this method.</span></span>  

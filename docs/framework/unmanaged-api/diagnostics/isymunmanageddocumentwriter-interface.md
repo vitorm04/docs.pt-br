@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b2ee8a5d98c3577bc54ecdaa5205f08a5c610830
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424450"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="f730d-102">Interface ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="f730d-102">ISymUnmanagedDocumentWriter Interface</span></span>
 <span data-ttu-id="f730d-103">Fornece métodos para gravar em um documento referenciado por um repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="f730d-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  

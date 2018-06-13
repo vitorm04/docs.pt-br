@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ada120b9cb4100bfadff83d96e0226f911958bf7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420759"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a><span data-ttu-id="81c45-102">Método ICorDebugThread::SetDebugState</span><span class="sxs-lookup"><span data-stu-id="81c45-102">ICorDebugThread::SetDebugState Method</span></span>
 <span data-ttu-id="81c45-103">Define os sinalizadores que descrevem o estado de depuração deste ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="81c45-103">Sets flags that describe the debugging state of this ICorDebugThread.</span></span>  

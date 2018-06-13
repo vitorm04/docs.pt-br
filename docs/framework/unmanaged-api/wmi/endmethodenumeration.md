@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458484"
 ---
 # <a name="endmethodenumeration-function"></a><span data-ttu-id="aa09a-103">Função EndMethodEnumeration</span><span class="sxs-lookup"><span data-stu-id="aa09a-103">EndMethodEnumeration function</span></span>
 <span data-ttu-id="aa09a-104">Encerra uma sequência de enumeração iniciada com uma chamada para o [BeginMethodEnumeration função](beginmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="aa09a-104">Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).</span></span>  

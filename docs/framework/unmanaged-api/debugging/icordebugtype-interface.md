@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de2871b406bb9da84d20d7c526ad4a703baae409
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422841"
 ---
 # <a name="icordebugtype-interface1"></a><span data-ttu-id="765b4-102">ICorDebugType Interface1</span><span class="sxs-lookup"><span data-stu-id="765b4-102">ICorDebugType Interface1</span></span>
 <span data-ttu-id="765b4-103">Representa um tipo básico ou complexo (que é, definido pelo usuário).</span><span class="sxs-lookup"><span data-stu-id="765b4-103">Represents a type, either basic or complex (that is, user-defined).</span></span> <span data-ttu-id="765b4-104">Se o tipo for genérico, `ICorDebugType` representará o tipo genérico instanciado.</span><span class="sxs-lookup"><span data-stu-id="765b4-104">If the type is generic, `ICorDebugType` represents the instantiated generic type.</span></span>  

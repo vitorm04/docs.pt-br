@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: ece366ee3918124bb60e367d3c7447c1d4555c72
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957936"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a><span data-ttu-id="50ada-103">Tecnologias da Microsoft em aplicativos com otimização de nuvem</span><span class="sxs-lookup"><span data-stu-id="50ada-103">Microsoft technologies in cloud-optimized applications</span></span>
 

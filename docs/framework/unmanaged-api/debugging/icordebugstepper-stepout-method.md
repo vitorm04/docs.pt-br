@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f663f5134cf34bf9beb66da20bbb5886baff5415
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419160"
 ---
 # <a name="icordebugstepperstepout-method"></a><span data-ttu-id="9eabb-102">Método ICorDebugStepper::StepOut</span><span class="sxs-lookup"><span data-stu-id="9eabb-102">ICorDebugStepper::StepOut Method</span></span>
 <span data-ttu-id="9eabb-103">Faz com que este ICorDebugStepper para percorrer por meio de seu recipiente thread e concluir quando o quadro atual retorna o controle para o quadro de chamada.</span><span class="sxs-lookup"><span data-stu-id="9eabb-103">Causes this ICorDebugStepper to single-step through its containing thread, and to complete when the current frame returns control to the calling frame.</span></span>  

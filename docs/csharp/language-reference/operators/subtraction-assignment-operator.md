@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171449"
 ---
 # <a name="--operator-c-reference"></a><span data-ttu-id="13f26-102">Operador -= (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="13f26-102">-= Operator (C# Reference)</span></span>
 <span data-ttu-id="13f26-103">O operador de atribuição de subtração.</span><span class="sxs-lookup"><span data-stu-id="13f26-103">The subtraction assignment operator.</span></span>  

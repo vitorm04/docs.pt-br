@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1cc7a299e6be328095c0368acf0a4b767fb74d01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423943"
 ---
 # <a name="variablelocationtype-enumeration"></a><span data-ttu-id="c0acf-102">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="c0acf-102">VariableLocationType Enumeration</span></span>
 <span data-ttu-id="c0acf-103">Indica o tipo de local nativo de uma variável.</span><span class="sxs-lookup"><span data-stu-id="c0acf-103">Indicates the native location type of a variable.</span></span>  
