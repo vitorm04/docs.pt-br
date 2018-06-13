@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318793"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Como localizar um atributo do pai (XPath-LINQ to XML) (C#)
 Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.  

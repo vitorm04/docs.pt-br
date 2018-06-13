@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339665"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a>Manipulando ponteiros (Guia de Programação em C#)
 Esta seção inclui as seguintes operações de ponteiro:  

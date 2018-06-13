@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353254"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recuperando dados usando um DataReader
 Recuperando dados usando um **DataReader** envolve a criação de uma instância do **comando** objeto e, em seguida, criando um **DataReader** chamando  **ExecuteReader** para recuperar linhas de uma fonte de dados. O exemplo a seguir ilustra o uso uma **DataReader** onde `reader` representa um DataReader válido e `command` representa um objeto de comando válido.  

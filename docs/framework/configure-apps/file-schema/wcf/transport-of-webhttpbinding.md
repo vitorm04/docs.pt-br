@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767448"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;transporte&gt; de &lt;webHttpBinding&gt;
 Define as configurações de segurança de nível de transporte para um ponto de extremidade de serviço configurada para receber solicitações HTTP.  

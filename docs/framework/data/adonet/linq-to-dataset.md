@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764847"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] torna mais fácil e rápido a consulta sobre os dados armazenados em cache uma <xref:System.Data.DataSet> objeto. Especificamente, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] simplifica a consulta, permitindo que os desenvolvedores a escrever consultas de linguagem de programação em si, em vez de usando uma linguagem de consulta separada. Isso é especialmente útil para desenvolvedores do Visual Studio, que agora podem se beneficiar da verificação de sintaxe de tempo de compilação, digitação estática e suporte do IntelliSense fornecidos pelo Visual Studio em suas consultas.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356322"
 ---
 # <a name="serialization"></a>Serialização
 Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recursos de serialização. Os parágrafos que seguem fornecem informações sobre como adicionar em tempo de design a serialização durante a geração de código e o comportamento de serialização de tempo de execução de classes de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  

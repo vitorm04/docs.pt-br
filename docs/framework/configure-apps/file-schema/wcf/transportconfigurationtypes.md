@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766940"
 ---
 # <a name="lttransportconfigurationtypesgt"></a>&lt;transportConfigurationTypes&gt;
 Representa uma coleção de elementos de configuração que identificam o tipo de um transporte particular. Isso pode ser usado para adicionar protocolos personalizados do WAS.  

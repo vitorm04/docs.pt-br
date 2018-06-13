@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340015"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Como capturar uma exceção não compatível com CLS
 Algumas linguagens .NET, incluindo o C++/CLI, permite que os objetos lancem exceções que não derivam de <xref:System.Exception>. Essas exceções são chamadas de *exceções não CLS* ou *não exceções*. No Visual C# não é possível gerar exceções não CLS, mas você pode capturá-las de duas maneiras:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766082"
 ---
 # <a name="distributed-transactions"></a>Transações distribuídas
 Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (confirmação) ou falha (anulação) como uma unidade, entre outras coisas. Um *transação distribuída* é uma transação que afeta a vários recursos. Para que uma transação distribuída seja confirmada, todos os participantes devem garantir que qualquer alteração nos dados será permanente. As alterações devem persistir mesmo que haja falhas do sistema ou outros eventos imprevisíveis. Mesmo se um único participante não fizer essa garantia, a transação inteira falhará e todas as alterações aos dados dentro do escopo da transação serão revertidas.  
