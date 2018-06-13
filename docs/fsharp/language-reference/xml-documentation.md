@@ -4,8 +4,10 @@ description: 'Saiba mais sobre o suporte em F # para gerar a documentação de c
 ms.date: 05/16/2016
 ms.openlocfilehash: 8bdea89ac810851af07d3aedbbb17d5d90a92ff8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566370"
 ---
 # <a name="xml-documentation"></a><span data-ttu-id="104b7-103">Documentação XML</span><span class="sxs-lookup"><span data-stu-id="104b7-103">XML Documentation</span></span>
 

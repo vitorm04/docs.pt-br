@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534827"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="d771e-102">Como inserir aspas em uma cadeia de caracteres (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d771e-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
 <span data-ttu-id="d771e-103">Às vezes, você pode querer colocar aspas (" ") em uma cadeia de caracteres de texto.</span><span class="sxs-lookup"><span data-stu-id="d771e-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="d771e-104">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="d771e-104">For example:</span></span>  

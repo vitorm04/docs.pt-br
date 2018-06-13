@@ -1,26 +1,20 @@
 ---
 title: '#elif (Referência de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#elif'
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1512bbbc46ce15570507c8b51540eef607d55dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc5c4b48790d0cb6825883922f3903414bb2b26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275559"
 ---
-# <a name="elif-c-reference"></a><span data-ttu-id="4604f-102">#elif (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="4604f-102">#elif (C# Reference)</span></span>
-<span data-ttu-id="4604f-103">O `#elif` permite criar uma diretiva condicional composta.</span><span class="sxs-lookup"><span data-stu-id="4604f-103">`#elif` lets you create a compound conditional directive.</span></span> <span data-ttu-id="4604f-104">A expressão `#elif` será avaliada se nenhum dos [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) anteriores nem nenhuma diretiva `#elif`, opcional, anterior avaliar expressões para `true`.</span><span class="sxs-lookup"><span data-stu-id="4604f-104">The `#elif` expression will be evaluated if neither the preceding [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nor any preceding, optional, `#elif` directive expressions evaluate to `true`.</span></span> <span data-ttu-id="4604f-105">Se uma expressão `#elif` for avaliada como `true`, o compilador avalia todo o código entre o `#elif` e a próxima diretiva condicional.</span><span class="sxs-lookup"><span data-stu-id="4604f-105">If a `#elif` expression evaluates to `true`, the compiler evaluates all the code between the `#elif` and the next conditional directive.</span></span> <span data-ttu-id="4604f-106">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="4604f-106">For example:</span></span>  
+# <a name="elif-c-reference"></a><span data-ttu-id="32bb8-102">#elif (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="32bb8-102">#elif (C# Reference)</span></span>
+<span data-ttu-id="32bb8-103">O `#elif` permite criar uma diretiva condicional composta.</span><span class="sxs-lookup"><span data-stu-id="32bb8-103">`#elif` lets you create a compound conditional directive.</span></span> <span data-ttu-id="32bb8-104">A expressão `#elif` será avaliada se nenhum dos [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) anteriores nem nenhuma diretiva `#elif`, opcional, anterior avaliar expressões para `true`.</span><span class="sxs-lookup"><span data-stu-id="32bb8-104">The `#elif` expression will be evaluated if neither the preceding [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nor any preceding, optional, `#elif` directive expressions evaluate to `true`.</span></span> <span data-ttu-id="32bb8-105">Se uma expressão `#elif` for avaliada como `true`, o compilador avalia todo o código entre o `#elif` e a próxima diretiva condicional.</span><span class="sxs-lookup"><span data-stu-id="32bb8-105">If a `#elif` expression evaluates to `true`, the compiler evaluates all the code between the `#elif` and the next conditional directive.</span></span> <span data-ttu-id="32bb8-106">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="32bb8-106">For example:</span></span>  
   
 ```csharp
 #define VC7  
@@ -32,21 +26,21 @@ ms.lasthandoff: 11/21/2017
 #endif  
 ```  
   
- <span data-ttu-id="4604f-107">É possível usar os operadores `==` (igualdade), `!=` (desigualdade), `&&` (e) e `||` (ou), para avaliar vários símbolos.</span><span class="sxs-lookup"><span data-stu-id="4604f-107">You can use the operators `==` (equality), `!=` (inequality), `&&` (and), and `||` (or), to evaluate multiple symbols.</span></span> <span data-ttu-id="4604f-108">Também é possível agrupar os símbolos e operadores com parênteses.</span><span class="sxs-lookup"><span data-stu-id="4604f-108">You can also group symbols and operators with parentheses.</span></span>  
+ <span data-ttu-id="32bb8-107">É possível usar os operadores `==` (igualdade), `!=` (desigualdade), `&&` (e) e `||` (ou), para avaliar vários símbolos.</span><span class="sxs-lookup"><span data-stu-id="32bb8-107">You can use the operators `==` (equality), `!=` (inequality), `&&` (and), and `||` (or), to evaluate multiple symbols.</span></span> <span data-ttu-id="32bb8-108">Também é possível agrupar os símbolos e operadores com parênteses.</span><span class="sxs-lookup"><span data-stu-id="32bb8-108">You can also group symbols and operators with parentheses.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4604f-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="4604f-109">Remarks</span></span>  
- <span data-ttu-id="4604f-110">`#elif` é equivalente a usar:</span><span class="sxs-lookup"><span data-stu-id="4604f-110">`#elif` is equivalent to using:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32bb8-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="32bb8-109">Remarks</span></span>  
+ <span data-ttu-id="32bb8-110">`#elif` é equivalente a usar:</span><span class="sxs-lookup"><span data-stu-id="32bb8-110">`#elif` is equivalent to using:</span></span>  
   
 ```csharp
 #else  
 #if  
 ```  
   
- <span data-ttu-id="4604f-111">Usar `#elif` é mais simples, porque cada `#if` requer um [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), enquanto um `#elif` pode ser usado sem um `#endif` de correspondência.</span><span class="sxs-lookup"><span data-stu-id="4604f-111">Using `#elif` is simpler, because each `#if` requires a [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), whereas a `#elif` can be used without a matching `#endif`.</span></span>  
+ <span data-ttu-id="32bb8-111">Usar `#elif` é mais simples, porque cada `#if` requer um [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), enquanto um `#elif` pode ser usado sem um `#endif` de correspondência.</span><span class="sxs-lookup"><span data-stu-id="32bb8-111">Using `#elif` is simpler, because each `#if` requires a [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), whereas a `#elif` can be used without a matching `#endif`.</span></span>  
   
- <span data-ttu-id="4604f-112">Consulte [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para obter um exemplo de como usar `#elif`.</span><span class="sxs-lookup"><span data-stu-id="4604f-112">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#elif`.</span></span>  
+ <span data-ttu-id="32bb8-112">Consulte [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para obter um exemplo de como usar `#elif`.</span><span class="sxs-lookup"><span data-stu-id="32bb8-112">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#elif`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4604f-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4604f-113">See Also</span></span>  
- [<span data-ttu-id="4604f-114">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="4604f-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="4604f-115">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="4604f-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="4604f-116">Diretivas do pré-processador do C#</span><span class="sxs-lookup"><span data-stu-id="4604f-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="32bb8-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32bb8-113">See Also</span></span>  
+ [<span data-ttu-id="32bb8-114">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="32bb8-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="32bb8-115">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="32bb8-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="32bb8-116">Diretivas do pré-processador do C#</span><span class="sxs-lookup"><span data-stu-id="32bb8-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

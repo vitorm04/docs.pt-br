@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555864"
 ---
 # <a name="control-library"></a><span data-ttu-id="d99db-102">Biblioteca de controles</span><span class="sxs-lookup"><span data-stu-id="d99db-102">Control Library</span></span>
 <span data-ttu-id="d99db-103">A biblioteca de controle do Windows Presentation Foundation (WPF) contém informações sobre os controles fornecidos do Windows Presentation Foundation (WPF), listados em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="d99db-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  

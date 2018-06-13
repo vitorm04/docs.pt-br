@@ -4,8 +4,10 @@ description: 'Saiba como usar funções genéricas de F # e tipos que permitem q
 ms.date: 05/16/2016
 ms.openlocfilehash: 332e42dd53689440757da04727b69eb3d85ca0fa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565494"
 ---
 # <a name="generics"></a><span data-ttu-id="cc827-103">Genéricos</span><span class="sxs-lookup"><span data-stu-id="cc827-103">Generics</span></span>
 
