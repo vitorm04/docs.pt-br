@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643020"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="97db5-102">Como chamar uma função do Windows que use tipos não assinados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97db5-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
 <span data-ttu-id="97db5-103">Se você está consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com o Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="97db5-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>  

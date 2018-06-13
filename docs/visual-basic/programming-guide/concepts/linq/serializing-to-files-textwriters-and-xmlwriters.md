@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
 ms.openlocfilehash: ff877e3c800bd1409d796fb68d651175d3602e34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645303"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a><span data-ttu-id="62d53-102">Serializando arquivos, o TextWriters, e o XmlWriters</span><span class="sxs-lookup"><span data-stu-id="62d53-102">Serializing to Files, TextWriters, and XmlWriters</span></span>
 <span data-ttu-id="62d53-103">Você pode serializar árvores XML a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, ou a <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="62d53-103">You can serialize XML trees to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.</span></span>  
