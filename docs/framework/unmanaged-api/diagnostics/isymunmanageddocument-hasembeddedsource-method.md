@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 350aecb9f9c99c9aa44ae6df6d31c7cb69ae5760
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430339"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="90112-102">Método ISymUnmanagedDocument::HasEmbeddedSource</span><span class="sxs-lookup"><span data-stu-id="90112-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
 <span data-ttu-id="90112-103">Retorna `true` se o documento tem origem inserida nos símbolos de depuração; caso contrário, retornará `false`.</span><span class="sxs-lookup"><span data-stu-id="90112-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  

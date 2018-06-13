@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 078fac7f21ac31b21e5ac442ef81a1c0f496db93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430396"
 ---
 # <a name="icatalogservices-interface"></a><span data-ttu-id="66393-102">Interface ICatalogServices</span><span class="sxs-lookup"><span data-stu-id="66393-102">ICatalogServices Interface</span></span>
 <span data-ttu-id="66393-103">Fornece métodos para serviços de catalogação.</span><span class="sxs-lookup"><span data-stu-id="66393-103">Provides methods for cataloging services.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
 ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517164"
 ---
 # <a name="application-settings-for-windows-forms"></a><span data-ttu-id="1d5dd-102">Configurações do aplicativo para o Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1d5dd-102">Application Settings for Windows Forms</span></span>
 <span data-ttu-id="1d5dd-103">O recurso Configurações de aplicativo dos Windows Forms facilita a criação, o repositório e a manutenção de aplicativos personalizados e preferências do usuário no cliente.</span><span class="sxs-lookup"><span data-stu-id="1d5dd-103">The Applications Settings feature of Windows Forms makes it easy to create, store, and maintain custom application and user preferences on the client.</span></span> <span data-ttu-id="1d5dd-104">Com as Configurações de aplicativo, é possível armazenar não apenas dados do aplicativo, como cadeias de conexão de banco de dados, mas também dados específicos do usuário, como posições da barra de ferramentas e as listas mais recentemente usadas.</span><span class="sxs-lookup"><span data-stu-id="1d5dd-104">With Application Settings, you can store not only application data such as database connection strings, but also user-specific data, such as toolbar positions and most-recently used lists.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534245"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="2ba1d-102">Como responder a cliques no botão dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2ba1d-102">How to: Respond to Windows Forms Button Clicks</span></span>
 <span data-ttu-id="2ba1d-103">O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> controle é executar um código quando o botão é clicado.</span><span class="sxs-lookup"><span data-stu-id="2ba1d-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  

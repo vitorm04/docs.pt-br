@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522276"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a><span data-ttu-id="fa947-102">Como definir a largura e o alinhamento de uma caneta</span><span class="sxs-lookup"><span data-stu-id="fa947-102">How to: Set Pen Width and Alignment</span></span>
 <span data-ttu-id="fa947-103">Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da caneta como um dos argumentos para o construtor.</span><span class="sxs-lookup"><span data-stu-id="fa947-103">When you create a <xref:System.Drawing.Pen>, you can supply the pen width as one of the arguments to the constructor.</span></span> <span data-ttu-id="fa947-104">Você também pode alterar a largura da caneta com o <xref:System.Drawing.Pen.Width%2A> propriedade o <xref:System.Drawing.Pen> classe.</span><span class="sxs-lookup"><span data-stu-id="fa947-104">You can also change the pen width with the <xref:System.Drawing.Pen.Width%2A> property of the <xref:System.Drawing.Pen> class.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548921"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a><span data-ttu-id="34dd6-102">O modelo de objeto Ink: Windows Forms e COM versus WPF</span><span class="sxs-lookup"><span data-stu-id="34dd6-102">The Ink Object Model: Windows Forms and COM versus WPF</span></span>
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550092"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="0a474-102">Como persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo</span><span class="sxs-lookup"><span data-stu-id="0a474-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
 <span data-ttu-id="0a474-103">Este exemplo mostra como persistir as propriedades de escopo de aplicativo quando um aplicativo é desligado e como restaurar propriedades de escopo de aplicativo quando um aplicativo é a próximo inicialização.</span><span class="sxs-lookup"><span data-stu-id="0a474-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  

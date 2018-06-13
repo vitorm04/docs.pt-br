@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514834"
 ---
 # <a name="code-bodied"></a><span data-ttu-id="17e92-102">o corpóreo</span><span class="sxs-lookup"><span data-stu-id="17e92-102">Code-Bodied</span></span>
 <span data-ttu-id="17e92-103">Esta seção contém exemplos de atividade personalizados criados declarativamente no código.</span><span class="sxs-lookup"><span data-stu-id="17e92-103">This section contains custom activity samples created declaratively in code.</span></span>  

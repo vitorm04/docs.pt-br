@@ -1,36 +1,25 @@
 ---
-title: "Paginação por meio de um resultado de consulta"
-ms.custom: 
+title: Paginação por meio de um resultado de consulta
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 83e8241fed71ec4dd0ea32f97b02373f3a1d56bb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 73475f8521b4112929339cc7f1116e36ffebedb7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358962"
 ---
-# <a name="paging-through-a-query-result"></a><span data-ttu-id="52df8-102">Paginação por meio de um resultado de consulta</span><span class="sxs-lookup"><span data-stu-id="52df8-102">Paging Through a Query Result</span></span>
-<span data-ttu-id="52df8-103">Paginação por meio de um resultado de consulta é o processo de retornar os resultados de uma consulta em subconjuntos menores de dados ou páginas.</span><span class="sxs-lookup"><span data-stu-id="52df8-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="52df8-104">Essa é uma prática comum para exibir os resultados para um usuário em partes pequenas, fácil de gerenciar.</span><span class="sxs-lookup"><span data-stu-id="52df8-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  
+# <a name="paging-through-a-query-result"></a><span data-ttu-id="950bf-102">Paginação por meio de um resultado de consulta</span><span class="sxs-lookup"><span data-stu-id="950bf-102">Paging Through a Query Result</span></span>
+<span data-ttu-id="950bf-103">Paginação por meio de um resultado de consulta é o processo de retornar os resultados de uma consulta em subconjuntos menores de dados ou páginas.</span><span class="sxs-lookup"><span data-stu-id="950bf-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="950bf-104">Essa é uma prática comum para exibir os resultados para um usuário em partes pequenas, fácil de gerenciar.</span><span class="sxs-lookup"><span data-stu-id="950bf-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  
   
- <span data-ttu-id="52df8-105">O **DataAdapter** fornece um recurso para retornar apenas uma página de dados, por meio de sobrecargas do **preencher** método.</span><span class="sxs-lookup"><span data-stu-id="52df8-105">The **DataAdapter** provides a facility for returning only a page of data, through overloads of the **Fill** method.</span></span> <span data-ttu-id="52df8-106">No entanto, isso pode não ser a melhor escolha para paginação resultados de consultas grandes porque, embora o **DataAdapter** preenche o destino <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> com apenas os registros solicitados, os recursos para retornar o toda consulta ainda são usados.</span><span class="sxs-lookup"><span data-stu-id="52df8-106">However, this might not be the best choice for paging through large query results because, although the **DataAdapter** fills the target <xref:System.Data.DataTable> or <xref:System.Data.DataSet> with only the requested records, the resources to return the entire query are still used.</span></span> <span data-ttu-id="52df8-107">Para retornar uma página de dados de uma fonte de dados sem o uso de recursos para retornar a consulta inteira, especifica critérios adicionais para a consulta que reduzem as linhas retornadas a apenas aqueles necessários.</span><span class="sxs-lookup"><span data-stu-id="52df8-107">To return a page of data from a data source without using the resources to return the entire query, specify additional criteria for your query that reduce the rows returned to only those required.</span></span>  
+ <span data-ttu-id="950bf-105">O **DataAdapter** fornece um recurso para retornar apenas uma página de dados, por meio de sobrecargas do **preencher** método.</span><span class="sxs-lookup"><span data-stu-id="950bf-105">The **DataAdapter** provides a facility for returning only a page of data, through overloads of the **Fill** method.</span></span> <span data-ttu-id="950bf-106">No entanto, isso pode não ser a melhor escolha para paginação resultados de consultas grandes porque, embora o **DataAdapter** preenche o destino <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> com apenas os registros solicitados, os recursos para retornar o toda consulta ainda são usados.</span><span class="sxs-lookup"><span data-stu-id="950bf-106">However, this might not be the best choice for paging through large query results because, although the **DataAdapter** fills the target <xref:System.Data.DataTable> or <xref:System.Data.DataSet> with only the requested records, the resources to return the entire query are still used.</span></span> <span data-ttu-id="950bf-107">Para retornar uma página de dados de uma fonte de dados sem o uso de recursos para retornar a consulta inteira, especifica critérios adicionais para a consulta que reduzem as linhas retornadas a apenas aqueles necessários.</span><span class="sxs-lookup"><span data-stu-id="950bf-107">To return a page of data from a data source without using the resources to return the entire query, specify additional criteria for your query that reduce the rows returned to only those required.</span></span>  
   
- <span data-ttu-id="52df8-108">Para usar o **preencher** método para retornar uma página de dados, especifique um **startRecord** parâmetro para o primeiro registro na página de dados e um **maxRecords** parâmetro para o número de registros na página de dados.</span><span class="sxs-lookup"><span data-stu-id="52df8-108">To use the **Fill** method to return a page of data, specify a **startRecord** parameter, for the first record in the page of data, and a **maxRecords** parameter, for the number of records in the page of data.</span></span>  
+ <span data-ttu-id="950bf-108">Para usar o **preencher** método para retornar uma página de dados, especifique um **startRecord** parâmetro para o primeiro registro na página de dados e um **maxRecords** parâmetro para o número de registros na página de dados.</span><span class="sxs-lookup"><span data-stu-id="950bf-108">To use the **Fill** method to return a page of data, specify a **startRecord** parameter, for the first record in the page of data, and a **maxRecords** parameter, for the number of records in the page of data.</span></span>  
   
- <span data-ttu-id="52df8-109">O exemplo de código a seguir mostra como usar o **preencher** método para retornar a primeira página de um resultado de consulta em que o tamanho da página é cinco registros.</span><span class="sxs-lookup"><span data-stu-id="52df8-109">The following code example shows how to use the **Fill** method to return the first page of a query result where the page size is five records.</span></span>  
+ <span data-ttu-id="950bf-109">O exemplo de código a seguir mostra como usar o **preencher** método para retornar a primeira página de um resultado de consulta em que o tamanho da página é cinco registros.</span><span class="sxs-lookup"><span data-stu-id="950bf-109">The following code example shows how to use the **Fill** method to return the first page of a query result where the page size is five records.</span></span>  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -57,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- <span data-ttu-id="52df8-110">No exemplo anterior, o **DataSet** só é preenchida com cinco registros, mas toda a **pedidos** tabela é retornada.</span><span class="sxs-lookup"><span data-stu-id="52df8-110">In the previous example, the **DataSet** is only filled with five records, but the entire **Orders** table is returned.</span></span> <span data-ttu-id="52df8-111">Para preencher o **DataSet** com os mesmos registros de cinco, mas somente retorno cinco registros, usar a parte superior e cláusulas WHERE na instrução SQL, como no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="52df8-111">To fill the **DataSet** with those same five records, but only return five records, use the TOP and WHERE clauses in your SQL statement, as in the following code example.</span></span>  
+ <span data-ttu-id="950bf-110">No exemplo anterior, o **DataSet** só é preenchida com cinco registros, mas toda a **pedidos** tabela é retornada.</span><span class="sxs-lookup"><span data-stu-id="950bf-110">In the previous example, the **DataSet** is only filled with five records, but the entire **Orders** table is returned.</span></span> <span data-ttu-id="950bf-111">Para preencher o **DataSet** com os mesmos registros de cinco, mas somente retorno cinco registros, usar a parte superior e cláusulas WHERE na instrução SQL, como no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="950bf-111">To fill the **DataSet** with those same five records, but only return five records, use the TOP and WHERE clauses in your SQL statement, as in the following code example.</span></span>  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -82,7 +71,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
- <span data-ttu-id="52df8-112">Observe que, quando a paginação pelos resultados da consulta, dessa forma, você deve preservar o identificador exclusivo que ordena as linhas, para passar a ID exclusiva para o comando para retornar a próxima página de registros, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="52df8-112">Note that, when paging through the query results in this way, you must preserve the unique identifier that orders the rows, in order to pass the unique ID to the command to return the next page of records, as shown in the following code example.</span></span>  
+ <span data-ttu-id="950bf-112">Observe que, quando a paginação pelos resultados da consulta, dessa forma, você deve preservar o identificador exclusivo que ordena as linhas, para passar a ID exclusiva para o comando para retornar a próxima página de registros, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="950bf-112">Note that, when paging through the query results in this way, you must preserve the unique identifier that orders the rows, in order to pass the unique ID to the command to return the next page of records, as shown in the following code example.</span></span>  
   
 ```vb  
 Dim lastRecord As String = _  
@@ -94,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- <span data-ttu-id="52df8-113">Para retornar a próxima página de registros usando a sobrecarga do **preencher** método que utiliza o **startRecord** e **maxRecords** parâmetros, incrementar o índice atual do registro pelo o tamanho da página e o preenchimento de tabela.</span><span class="sxs-lookup"><span data-stu-id="52df8-113">To return the next page of records using the overload of the **Fill** method that takes the **startRecord** and **maxRecords** parameters, increment the current record index by the page size and fill the table.</span></span> <span data-ttu-id="52df8-114">Lembre-se de que o servidor de banco de dados retorna os resultados de consulta inteira, embora apenas uma página de registros é adicionada para o **conjunto de dados**.</span><span class="sxs-lookup"><span data-stu-id="52df8-114">Remember that the database server returns the entire query results even though only one page of records is added to the **DataSet**.</span></span> <span data-ttu-id="52df8-115">No exemplo de código a seguir, as linhas da tabela são limpos antes que eles são preenchidos com a próxima página de dados.</span><span class="sxs-lookup"><span data-stu-id="52df8-115">In the following code example, the table rows are cleared before they are filled with the next page of data.</span></span> <span data-ttu-id="52df8-116">Deseja preservar um determinado número de linhas retornadas em um cache local para reduzir viagens ao banco de dados.</span><span class="sxs-lookup"><span data-stu-id="52df8-116">You might want to preserve a certain number of returned rows in a local cache to reduce trips to the database server.</span></span>  
+ <span data-ttu-id="950bf-113">Para retornar a próxima página de registros usando a sobrecarga do **preencher** método que utiliza o **startRecord** e **maxRecords** parâmetros, incrementar o índice atual do registro pelo o tamanho da página e o preenchimento de tabela.</span><span class="sxs-lookup"><span data-stu-id="950bf-113">To return the next page of records using the overload of the **Fill** method that takes the **startRecord** and **maxRecords** parameters, increment the current record index by the page size and fill the table.</span></span> <span data-ttu-id="950bf-114">Lembre-se de que o servidor de banco de dados retorna os resultados de consulta inteira, embora apenas uma página de registros é adicionada para o **conjunto de dados**.</span><span class="sxs-lookup"><span data-stu-id="950bf-114">Remember that the database server returns the entire query results even though only one page of records is added to the **DataSet**.</span></span> <span data-ttu-id="950bf-115">No exemplo de código a seguir, as linhas da tabela são limpos antes que eles são preenchidos com a próxima página de dados.</span><span class="sxs-lookup"><span data-stu-id="950bf-115">In the following code example, the table rows are cleared before they are filled with the next page of data.</span></span> <span data-ttu-id="950bf-116">Deseja preservar um determinado número de linhas retornadas em um cache local para reduzir viagens ao banco de dados.</span><span class="sxs-lookup"><span data-stu-id="950bf-116">You might want to preserve a certain number of returned rows in a local cache to reduce trips to the database server.</span></span>  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -112,7 +101,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- <span data-ttu-id="52df8-117">Para retornar a próxima página de registros sem ter que o servidor de banco de dados retornar a consulta inteira, especifique critérios restritivos a instrução SELECT.</span><span class="sxs-lookup"><span data-stu-id="52df8-117">To return the next page of records without having the database server return the entire query, specify restrictive criteria to the SELECT statement.</span></span> <span data-ttu-id="52df8-118">Como o exemplo anterior preservadas o último registro retornado, você pode usá-lo na cláusula WHERE para especificar um ponto de partida para a consulta, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="52df8-118">Because the preceding example preserved the last record returned, you can use it in the WHERE clause to specify a starting point for the query, as shown in the following code example.</span></span>  
+ <span data-ttu-id="950bf-117">Para retornar a próxima página de registros sem ter que o servidor de banco de dados retornar a consulta inteira, especifique critérios restritivos a instrução SELECT.</span><span class="sxs-lookup"><span data-stu-id="950bf-117">To return the next page of records without having the database server return the entire query, specify restrictive criteria to the SELECT statement.</span></span> <span data-ttu-id="950bf-118">Como o exemplo anterior preservadas o último registro retornado, você pode usá-lo na cláusula WHERE para especificar um ponto de partida para a consulta, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="950bf-118">Because the preceding example preserved the last record returned, you can use it in the WHERE clause to specify a starting point for the query, as shown in the following code example.</span></span>  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -134,6 +123,6 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="52df8-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="52df8-119">See Also</span></span>  
- [<span data-ttu-id="52df8-120">DataAdapters e DataReaders</span><span class="sxs-lookup"><span data-stu-id="52df8-120">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- <span data-ttu-id="52df8-121">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="52df8-121">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="950bf-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="950bf-119">See Also</span></span>  
+ [<span data-ttu-id="950bf-120">DataAdapters e DataReaders</span><span class="sxs-lookup"><span data-stu-id="950bf-120">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ <span data-ttu-id="950bf-121">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="950bf-121">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>

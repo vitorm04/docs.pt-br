@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516757"
 ---
 # <a name="windows-workflow-overview"></a><span data-ttu-id="b1ee1-102">Visão geral de fluxo de trabalho do Windows</span><span class="sxs-lookup"><span data-stu-id="b1ee1-102">Windows Workflow Overview</span></span>
 <span data-ttu-id="b1ee1-103">Um fluxo de trabalho é um conjunto de unidades elementares chamado *atividades* que são armazenados como um modelo que descreve um processo do mundo real.</span><span class="sxs-lookup"><span data-stu-id="b1ee1-103">A workflow is a set of elemental units called *activities* that are stored as a model that describes a real-world process.</span></span> <span data-ttu-id="b1ee1-104">Fluxos de trabalho fornecem uma maneira de descrever a ordem de relações de execução e dependentes entre partes de trabalho ou longo tempo.</span><span class="sxs-lookup"><span data-stu-id="b1ee1-104">Workflows provide a way of describing the order of execution and dependent relationships between pieces of short- or long-running work.</span></span> <span data-ttu-id="b1ee1-105">Este trabalho passa pelo modelo do início ao final, e as atividades podem ser executadas por pessoas ou funções do sistema.</span><span class="sxs-lookup"><span data-stu-id="b1ee1-105">This work passes through the model from start to finish, and activities might be executed by people or by system functions.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 063ddd0bfa1734d43f90b4680166c21b80f5cc05
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439101"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a><span data-ttu-id="d20a6-102">Método IHostMemoryManager::VirtualFree</span><span class="sxs-lookup"><span data-stu-id="d20a6-102">IHostMemoryManager::VirtualFree Method</span></span>
 <span data-ttu-id="d20a6-103">Serve como um wrapper lógico para a função Win32 correspondente.</span><span class="sxs-lookup"><span data-stu-id="d20a6-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="d20a6-104">A implementação do Win32 de `VirtualFree` libera, decommits, ou libera e decommits uma região de páginas no espaço de endereço virtual do processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="d20a6-104">The Win32 implementation of `VirtualFree` releases, decommits, or releases and decommits a region of pages within the virtual address space of the calling process.</span></span>  

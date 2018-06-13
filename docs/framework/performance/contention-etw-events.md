@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397514"
 ---
 # <a name="contention-etw-events"></a><span data-ttu-id="482bc-102">Eventos ETW de contenção</span><span class="sxs-lookup"><span data-stu-id="482bc-102">Contention ETW Events</span></span>
 <span data-ttu-id="482bc-103">Eventos de contenção são acionados sempre que há contenção em bloqueios <xref:System.Threading.Monitor?displayProperty=nameWithType> ou bloqueios nativos usados pelo tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="482bc-103">Contention events are raised whenever there is contention for <xref:System.Threading.Monitor?displayProperty=nameWithType> locks or native locks used by the runtime.</span></span> <span data-ttu-id="482bc-104">A contenção ocorre quando um thread aguarda um bloqueio, enquanto outro thread possui o bloqueio.</span><span class="sxs-lookup"><span data-stu-id="482bc-104">Contention occurs when a thread is waiting for a lock while another thread possesses the lock.</span></span>  

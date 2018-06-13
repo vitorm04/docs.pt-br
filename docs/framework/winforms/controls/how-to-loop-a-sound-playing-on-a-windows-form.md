@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533751"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a><span data-ttu-id="30620-102">Como executar um som em loop em um Windows Form</span><span class="sxs-lookup"><span data-stu-id="30620-102">How to: Loop a Sound Playing on a Windows Form</span></span>
 <span data-ttu-id="30620-103">O exemplo de código a seguir toca um som repetidamente.</span><span class="sxs-lookup"><span data-stu-id="30620-103">The following code example plays a sound repeatedly.</span></span> <span data-ttu-id="30620-104">Quando o código de `stopPlayingButton_Click` manipulador de eventos é executado, qualquer som no momento será interrompido.</span><span class="sxs-lookup"><span data-stu-id="30620-104">When the code in the `stopPlayingButton_Click` event handler runs, any sound currently playing stops.</span></span> <span data-ttu-id="30620-105">Se nenhum som é reproduzido, nada acontecerá.</span><span class="sxs-lookup"><span data-stu-id="30620-105">If no sound is playing, nothing happens.</span></span>  

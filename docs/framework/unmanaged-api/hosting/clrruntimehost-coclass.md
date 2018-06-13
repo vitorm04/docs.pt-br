@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59fed7519402b4c3c1b2405ea99f8ba484781e95
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430737"
 ---
 # <a name="clrruntimehost-coclass"></a><span data-ttu-id="59114-102">Coclass CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="59114-102">CLRRuntimeHost Coclass</span></span>
 <span data-ttu-id="59114-103">Fornece interfaces para gerenciar a execução de código em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="59114-103">Provides interfaces for managing code execution by the runtime.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550771"
 ---
 # <a name="windows-in-wpf-applications"></a><span data-ttu-id="83ba1-102">Windows em aplicativos WPF</span><span class="sxs-lookup"><span data-stu-id="83ba1-102">Windows in WPF Applications</span></span>
 <span data-ttu-id="83ba1-103">Os usuários interagem com aplicativos por meio do windows.</span><span class="sxs-lookup"><span data-stu-id="83ba1-103">Users interact with applications through windows.</span></span> <span data-ttu-id="83ba1-104">O objetivo fundamental de uma janela é hospedar e exibir o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="83ba1-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="83ba1-105">O tipo de conteúdo que uma janela hospeda depende do tipo de dados que um aplicativo opera, que podem incluir mídia, páginas de aplicativo linguagem XAML (Extensible Markup), páginas da Web, documentos, tabelas de banco de dados e registros e informações do sistema.</span><span class="sxs-lookup"><span data-stu-id="83ba1-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515079"
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a><span data-ttu-id="7c4da-102">Determinando a duração da execução de fluxo de trabalho usando rastreamento</span><span class="sxs-lookup"><span data-stu-id="7c4da-102">Determining Workflow Execution Duration Using Tracing</span></span>
 <span data-ttu-id="7c4da-103">Este tópico demonstra como determinar o tempo necessário para que um fluxo de trabalho com êxito concluído, são hospedado é executado usando o rastreamento de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7c4da-103">This topic demonstrates how to determine the time it takes for a successfully completed, self-hosted workflow to execute by using workflow tracing.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d93c50968192a7789cbf08968d7ec272c9775d6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438507"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="1a2d4-102">Método IHostMemoryManager::AcquiredVirtualAddressSpace</span><span class="sxs-lookup"><span data-stu-id="1a2d4-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
 <span data-ttu-id="1a2d4-103">Notifica o host que o common language runtime (CLR) adquiriu a memória especificada do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="1a2d4-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  

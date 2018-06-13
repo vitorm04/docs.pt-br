@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520273"
 ---
 # <a name="tracking-records"></a><span data-ttu-id="571fb-102">Controlando registros</span><span class="sxs-lookup"><span data-stu-id="571fb-102">Tracking Records</span></span>
 <span data-ttu-id="571fb-103">O tempo de execução de fluxo de trabalho é instrumentado para emitir registros de controle para siga a execução de uma instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="571fb-103">The workflow runtime is instrumented to emit tracking records to follow the execution of a workflow instance.</span></span>  

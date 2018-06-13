@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549585"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a><span data-ttu-id="2e530-102">Como criar um suplemento que seja uma interface do usuário</span><span class="sxs-lookup"><span data-stu-id="2e530-102">How to: Create an Add-In That Is a UI</span></span>
 <span data-ttu-id="2e530-103">Este exemplo mostra como criar um suplemento que é um Windows Presentation Foundation (WPF) que é hospedado por um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativo autônomo.</span><span class="sxs-lookup"><span data-stu-id="2e530-103">This example shows how to create an add-in that is a Windows Presentation Foundation (WPF) which is hosted by a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] standalone application.</span></span>  

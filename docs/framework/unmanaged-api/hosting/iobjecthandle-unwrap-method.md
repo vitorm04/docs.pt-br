@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d9a8f9aa910054a4541e4ff8c1f7cad63077ba8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439944"
 ---
 # <a name="iobjecthandleunwrap-method"></a><span data-ttu-id="23ff4-102">Método IObjectHandle::Unwrap</span><span class="sxs-lookup"><span data-stu-id="23ff4-102">IObjectHandle::Unwrap Method</span></span>
 <span data-ttu-id="23ff4-103">Ou não um objeto marshal-by-value de indireção.</span><span class="sxs-lookup"><span data-stu-id="23ff4-103">Unwraps a marshal-by-value object from indirection.</span></span>  

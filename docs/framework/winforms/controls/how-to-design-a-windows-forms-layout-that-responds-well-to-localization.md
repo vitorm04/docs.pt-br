@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533872"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a><span data-ttu-id="81b65-102">Como criar um layout dos Windows Forms que responda bem à localização</span><span class="sxs-lookup"><span data-stu-id="81b65-102">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>
 <span data-ttu-id="81b65-103">Criação de formulários que estão prontos para ser localizados aumenta a velocidade de desenvolvimento para mercados internacionais.</span><span class="sxs-lookup"><span data-stu-id="81b65-103">Creating forms that are ready to be localized greatly speeds development for international markets.</span></span> <span data-ttu-id="81b65-104">Você pode usar o <xref:System.Windows.Forms.TableLayoutPanel> controle para implementar layouts respondem normalmente como redimensionam controles devido a alterações em seus <xref:System.Windows.Forms.Control.Text%2A> valores de propriedade.</span><span class="sxs-lookup"><span data-stu-id="81b65-104">You can use the <xref:System.Windows.Forms.TableLayoutPanel> control to implement layouts that respond gracefully as controls resize due to changes in their <xref:System.Windows.Forms.Control.Text%2A> property values.</span></span>  

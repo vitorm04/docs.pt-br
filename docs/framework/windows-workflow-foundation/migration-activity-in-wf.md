@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514341"
 ---
 # <a name="migration-activity-in-wf"></a><span data-ttu-id="56430-102">Atividade de migração em WF</span><span class="sxs-lookup"><span data-stu-id="56430-102">Migration Activity in WF</span></span>
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="56430-103"> fornece o <xref:System.Activities.Statements.Interop> atividade para executar atividades derivam da atividade em um fluxo de trabalho se baseia em <xref:System.Activities.Activity>.</span><span class="sxs-lookup"><span data-stu-id="56430-103"> provides the <xref:System.Activities.Statements.Interop> activity for executing activities that derive from Activity within a workflow that is based on <xref:System.Activities.Activity>.</span></span> <span data-ttu-id="56430-104">Para obter mais informações, consulte o [orientação](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) seção.</span><span class="sxs-lookup"><span data-stu-id="56430-104">For more information, see the [Migration Guidance](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) section.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529802"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a><span data-ttu-id="fa83e-102">Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fa83e-102">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="fa83e-103">O <xref:System.Windows.Forms.DataGridView> controle foi projetado para fornecer escalabilidade máxima.</span><span class="sxs-lookup"><span data-stu-id="fa83e-103">The <xref:System.Windows.Forms.DataGridView> control is designed to provide maximum scalability.</span></span> <span data-ttu-id="fa83e-104">Se você precisa exibir grandes quantidades de dados, siga as diretrizes descritas neste tópico para evitar o consumo de grandes quantidades de memória ou prejudicar a capacidade de resposta da UI (interface do usuário).</span><span class="sxs-lookup"><span data-stu-id="fa83e-104">If you need to display large amounts of data, you should follow the guidelines described in this topic to avoid consuming large amounts of memory or degrading the responsiveness of the user interface (UI).</span></span> <span data-ttu-id="fa83e-105">Este tópico discute os seguintes problemas:</span><span class="sxs-lookup"><span data-stu-id="fa83e-105">This topic discusses the following issues:</span></span>  

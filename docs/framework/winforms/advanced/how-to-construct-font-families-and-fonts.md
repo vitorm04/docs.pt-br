@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520884"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="7fe9e-102">Como construir fontes e famílias de fontes</span><span class="sxs-lookup"><span data-stu-id="7fe9e-102">How to: Construct Font Families and Fonts</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="7fe9e-103"> agrupa fontes com a mesma face de tipo, mas diferentes estilos em famílias de fontes.</span><span class="sxs-lookup"><span data-stu-id="7fe9e-103"> groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="7fe9e-104">Por exemplo, a família de fonte Arial contém as seguintes fontes:</span><span class="sxs-lookup"><span data-stu-id="7fe9e-104">For example, the Arial font family contains the following fonts:</span></span>  

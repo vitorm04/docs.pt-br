@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532519"
 ---
 # <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="b571d-102">Como configurar margens de imagem e margens de verificação ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="b571d-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
 <span data-ttu-id="b571d-103">Você pode personalizar um <xref:System.Windows.Forms.ContextMenuStrip> definindo o <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> e <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> propriedades em várias combinações.</span><span class="sxs-lookup"><span data-stu-id="b571d-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  

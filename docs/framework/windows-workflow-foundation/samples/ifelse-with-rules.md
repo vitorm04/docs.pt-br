@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515115"
 ---
 # <a name="ifelse-with-rules"></a><span data-ttu-id="56d1a-102">IfElse com regras</span><span class="sxs-lookup"><span data-stu-id="56d1a-102">IfElse With Rules</span></span>
 <span data-ttu-id="56d1a-103">Este exemplo mostra o uso de uma condição de regra com uma atividade de <xref:System.Workflow.Activities.IfElseActivity> .</span><span class="sxs-lookup"><span data-stu-id="56d1a-103">This sample shows the use of a rule condition with an <xref:System.Workflow.Activities.IfElseActivity> activity.</span></span>  

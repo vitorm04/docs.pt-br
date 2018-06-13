@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521008"
 ---
 # <a name="how-to-read-settings-at-run-time-with-c"></a><span data-ttu-id="fb261-102">Como ler configurações em tempo de execução com C#</span><span class="sxs-lookup"><span data-stu-id="fb261-102">How To: Read Settings at Run Time With C#</span></span> #
 <span data-ttu-id="fb261-103">Você pode ler as configurações no escopo do aplicativo tanto no escopo do usuário em tempo de execução por meio do objeto de propriedades.</span><span class="sxs-lookup"><span data-stu-id="fb261-103">You can read both Application-scoped and User-scoped settings at run time via the Properties object.</span></span> <span data-ttu-id="fb261-104">O objeto de propriedades expõe todas as configurações padrão do projeto por meio do membro Properties.Settings.Default.</span><span class="sxs-lookup"><span data-stu-id="fb261-104">The Properties object exposes all of the default settings for the project via the Properties.Settings.Default member.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518946"
 ---
 # <a name="using-activity-delegates"></a><span data-ttu-id="340d0-102">Usando representantes de atividades</span><span class="sxs-lookup"><span data-stu-id="340d0-102">Using Activity Delegates</span></span>
 <span data-ttu-id="340d0-103">Os representantes de atividade permitem autores de atividade para expor retornos de chamada com assinaturas específicas, para que os usuários de atividade podem fornecer manipuladores atividades base.</span><span class="sxs-lookup"><span data-stu-id="340d0-103">Activity delegates enable activity authors to expose callbacks with specific signatures, for which users of the activity can provide activity-based handlers.</span></span> <span data-ttu-id="340d0-104">Dois tipos de representantes de atividade estão disponíveis: <xref:System.Activities.ActivityAction%601> é usado para definir os representantes de atividade que não têm um valor de retorno, e <xref:System.Activities.ActivityFunc%601> é usado para definir os representantes de atividade que têm um valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="340d0-104">Two types of activity delegates are available: <xref:System.Activities.ActivityAction%601> is used to define activity delegates that do not have a return value, and <xref:System.Activities.ActivityFunc%601> is used to define activity delegates that do have a return value.</span></span>  

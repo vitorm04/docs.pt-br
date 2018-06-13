@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7634ec801a30aa7ba07954c1df0c3d37ec279eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440295"
 ---
 # <a name="ceesectionrelocextra-union"></a><span data-ttu-id="61bd5-102">CeeSectionRelocExtra União</span><span class="sxs-lookup"><span data-stu-id="61bd5-102">CeeSectionRelocExtra Union</span></span>
 <span data-ttu-id="61bd5-103">Representa um deslocamento de endereço que é usado pelo [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface para realocar uma seção.</span><span class="sxs-lookup"><span data-stu-id="61bd5-103">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.</span></span>  

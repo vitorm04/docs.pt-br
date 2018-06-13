@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c9d10126ac7edd3073d91a9c68c86a7df8cad402
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441111"
 ---
 # <a name="imanagedobject-interface"></a><span data-ttu-id="54c79-102">Interface IManagedObject</span><span class="sxs-lookup"><span data-stu-id="54c79-102">IManagedObject Interface</span></span>
 <span data-ttu-id="54c79-103">Fornece métodos para controlar um objeto gerenciado.</span><span class="sxs-lookup"><span data-stu-id="54c79-103">Provides methods for controlling a managed object.</span></span>  

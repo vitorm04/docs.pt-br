@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
 ms.openlocfilehash: 0b9262611f805cd2e39cc4ca40121998838f2c3d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523540"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a><span data-ttu-id="ee242-102">Alterando a aparência do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ee242-102">Changing the Appearance of Windows Forms</span></span>
 <span data-ttu-id="ee242-103">Você pode personalizar a aparência de seus aplicativos de formulários do Windows de várias maneiras diferentes, como alterar a borda opacidade, forma, estilo ou definindo uma imagem de plano de fundo para o seu aplicativo de formulários do Windows.</span><span class="sxs-lookup"><span data-stu-id="ee242-103">You can customize the look of your Windows Forms applications in many different ways, such as changing the border, opacity, shape, style, or setting a background image for your Windows Forms application.</span></span>  

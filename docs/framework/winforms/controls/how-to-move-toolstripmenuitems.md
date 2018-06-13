@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534902"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="7a0e4-102">Como mover ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="7a0e4-102">How to: Move ToolStripMenuItems</span></span>
 <span data-ttu-id="7a0e4-103">Em tempo de design, você pode mover todos os menus de nível superior e seus itens de menu para um local diferente <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="7a0e4-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="7a0e4-104">Você também pode mover itens de menu individuais entre menus de nível superior ou alterar a posição dos itens de menu dentro de um menu.</span><span class="sxs-lookup"><span data-stu-id="7a0e4-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  

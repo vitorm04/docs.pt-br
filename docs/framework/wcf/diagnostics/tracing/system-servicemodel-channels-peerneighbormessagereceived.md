@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33479002"
 ---
 # <a name="systemservicemodelchannelspeerneighbormessagereceived"></a><span data-ttu-id="08762-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span><span class="sxs-lookup"><span data-stu-id="08762-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span></span>
 <span data-ttu-id="08762-103">Uma mensagem foi recebida de um peer neighbor.</span><span class="sxs-lookup"><span data-stu-id="08762-103">A message was received from a peer neighbor.</span></span>  

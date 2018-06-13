@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524394"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a><span data-ttu-id="8e740-102">Controle FlowLayoutPanel (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="8e740-102">FlowLayoutPanel Control (Windows Forms)</span></span>
 <span data-ttu-id="8e740-103">O `FlowLayoutPanel` controle organiza seu conteúdo em uma direção de fluxo horizontal ou vertical.</span><span class="sxs-lookup"><span data-stu-id="8e740-103">The `FlowLayoutPanel` control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="8e740-104">Seu conteúdo pode ser encapsulado de uma linha à outra ou de uma coluna à próxima.</span><span class="sxs-lookup"><span data-stu-id="8e740-104">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="8e740-105">Como alternativa, seu conteúdo pode ser recortado, em vez de encapsulado.</span><span class="sxs-lookup"><span data-stu-id="8e740-105">Alternately, its contents can be clipped instead of wrapped.</span></span>  

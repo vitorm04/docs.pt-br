@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477926"
 ---
 # <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a><span data-ttu-id="aecfd-102">System.ServiceModel.Channels.PnrpUnregisteredAddresses</span><span class="sxs-lookup"><span data-stu-id="aecfd-102">System.ServiceModel.Channels.PnrpUnregisteredAddresses</span></span>
 <span data-ttu-id="aecfd-103">O resolvedor Pnrp tem seu registro cancelado endereços do nó local.</span><span class="sxs-lookup"><span data-stu-id="aecfd-103">The Pnrp Resolver has unregistered the local node's addresses.</span></span>  

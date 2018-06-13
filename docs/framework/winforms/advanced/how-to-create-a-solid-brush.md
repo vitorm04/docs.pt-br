@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520741"
 ---
 # <a name="how-to-create-a-solid-brush"></a><span data-ttu-id="2badb-102">Como criar um pincel sólido</span><span class="sxs-lookup"><span data-stu-id="2badb-102">How to: Create a Solid Brush</span></span>
 <span data-ttu-id="2badb-103">Este exemplo cria um <xref:System.Drawing.SolidBrush> objeto que pode ser usado por um <xref:System.Drawing.Graphics> objeto para preencher as formas.</span><span class="sxs-lookup"><span data-stu-id="2badb-103">This example creates a <xref:System.Drawing.SolidBrush> object that can be used by a <xref:System.Drawing.Graphics> object for filling shapes.</span></span>  

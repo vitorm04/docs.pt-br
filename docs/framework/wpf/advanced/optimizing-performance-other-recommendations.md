@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547229"
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="5f255-102">Otimizando desempenho: outras recomendações</span><span class="sxs-lookup"><span data-stu-id="5f255-102">Optimizing Performance: Other Recommendations</span></span>
 <a name="introduction"></a> <span data-ttu-id="5f255-103">Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).</span><span class="sxs-lookup"><span data-stu-id="5f255-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  

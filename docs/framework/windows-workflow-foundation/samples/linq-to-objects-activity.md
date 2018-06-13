@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516663"
 ---
 # <a name="linq-to-objects-activity"></a><span data-ttu-id="ffb0c-102">LINQ a atividade de objetos</span><span class="sxs-lookup"><span data-stu-id="ffb0c-102">LINQ to Objects Activity</span></span>
 <span data-ttu-id="ffb0c-103">Este exemplo demonstra como criar uma atividade para usar LINQ a objetos para os elementos de consulta em uma coleção.</span><span class="sxs-lookup"><span data-stu-id="ffb0c-103">This sample demonstrates how to create an activity to use LINQ to Objects to query elements in a collection.</span></span>  

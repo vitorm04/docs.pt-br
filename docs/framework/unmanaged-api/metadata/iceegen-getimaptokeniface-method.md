@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 627ae1f3da053af9a1bf9962e5b46cfb8b5046cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442736"
 ---
 # <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="3f1e4-102">Método ICeeGen::GetIMapTokenIface</span><span class="sxs-lookup"><span data-stu-id="3f1e4-102">ICeeGen::GetIMapTokenIface Method</span></span>
 <span data-ttu-id="3f1e4-103">Obtém a interface referenciada pelo token especificado.</span><span class="sxs-lookup"><span data-stu-id="3f1e4-103">Gets the interface referenced by the specified token.</span></span>  

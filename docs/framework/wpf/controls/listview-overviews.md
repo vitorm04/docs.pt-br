@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551037"
 ---
 # <a name="listview-overviews"></a><span data-ttu-id="53629-102">Visões gerais de ListView</span><span class="sxs-lookup"><span data-stu-id="53629-102">ListView Overviews</span></span>
 <span data-ttu-id="53629-103">Os tópicos nesta seção mostram como usar um <xref:System.Windows.Controls.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="53629-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  

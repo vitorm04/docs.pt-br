@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525224"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a><span data-ttu-id="f9c96-102">Como executar operações de arrastar e soltar entre aplicativos</span><span class="sxs-lookup"><span data-stu-id="f9c96-102">How to: Perform Drag-and-Drop Operations Between Applications</span></span>
 <span data-ttu-id="f9c96-103">Executar operações de arrastar e soltar entre aplicativos é não diferente de ativar esta ação dentro de um aplicativo, como os dois aplicativos envolvidos se comportem de acordo com o "contrato" estabelecido entre o <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A> Propriedades.</span><span class="sxs-lookup"><span data-stu-id="f9c96-103">Performing drag-and-drop operations between applications is no different than enabling this action within an application, as long as both applications involved behave according to the "contract" established between the <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> and <xref:System.Windows.Forms.DragEventArgs.Effect%2A> properties.</span></span>  

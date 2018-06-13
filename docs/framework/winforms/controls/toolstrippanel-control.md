@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 14ddd56540d8649a3705ef2d19726499fbfcaf9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535422"
 ---
 # <a name="toolstrippanel-control"></a><span data-ttu-id="0415a-102">Controle ToolStripPanel</span><span class="sxs-lookup"><span data-stu-id="0415a-102">ToolStripPanel Control</span></span>
 <span data-ttu-id="0415a-103">`ToolStripPanel` controle habilita o compartilhamento de espaço horizontal ou vertical dentro da área de ferramenta quando estiver encaixada e organização de <xref:System.Windows.Forms.ToolStrip> controla quando você não precisa de quatro painéis e painel central de um <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="0415a-103">`ToolStripPanel` control enables the sharing of horizontal or vertical space within the tool area when docked and arranging of <xref:System.Windows.Forms.ToolStrip> controls when you do not need the four panels and central panel of a <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  

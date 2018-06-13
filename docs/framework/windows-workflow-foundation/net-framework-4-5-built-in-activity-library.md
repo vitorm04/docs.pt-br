@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513877"
 ---
 # <a name="net-framework-45-built-in-activity-library"></a><span data-ttu-id="6007a-102">biblioteca interno de atividade do .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="6007a-102">.NET Framework 4.5 Built-In Activity Library</span></span>
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="6007a-103"> inclui uma nova biblioteca de atividade com funcionalidade expandida.</span><span class="sxs-lookup"><span data-stu-id="6007a-103"> includes a new activity library with expanded functionality.</span></span> <span data-ttu-id="6007a-104">Os tipos de atividades incluem o seguinte:</span><span class="sxs-lookup"><span data-stu-id="6007a-104">The types of activities include the following:</span></span>  

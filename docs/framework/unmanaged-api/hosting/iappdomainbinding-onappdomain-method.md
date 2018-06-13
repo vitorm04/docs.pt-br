@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5db040f6db078b211043c547eed823c9b495ac97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431316"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="f6ab2-102">Método IAppDomainBinding::OnAppDomain</span><span class="sxs-lookup"><span data-stu-id="f6ab2-102">IAppDomainBinding::OnAppDomain Method</span></span>
 <span data-ttu-id="f6ab2-103">Chamado pelo common language runtime (CLR) para notificar o host que um domínio de aplicativo foi criado.</span><span class="sxs-lookup"><span data-stu-id="f6ab2-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  

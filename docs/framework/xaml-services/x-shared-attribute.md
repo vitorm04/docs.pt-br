@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563791"
 ---
 # <a name="xshared-attribute"></a><span data-ttu-id="9c28d-102">Atributo x:Shared</span><span class="sxs-lookup"><span data-stu-id="9c28d-102">x:Shared Attribute</span></span>
 <span data-ttu-id="9c28d-103">Quando definido como `false`, modifica o comportamento de recuperação de recursos do WPF para que as solicitações para o recurso atribuído criam uma nova instância para cada solicitação, em vez de compartilhar a mesma instância para todas as solicitações.</span><span class="sxs-lookup"><span data-stu-id="9c28d-103">When set to `false`, modifies WPF resource-retrieval behavior so that requests for the attributed resource create a new instance for each request instead of sharing the same instance for all requests.</span></span>  
