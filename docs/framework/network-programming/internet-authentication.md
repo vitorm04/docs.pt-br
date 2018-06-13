@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396179"
 ---
 # <a name="internet-authentication"></a>Autenticação da Internet
 As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de autenticação de cliente, incluindo os métodos de autenticação padrão de Internet básico, digest, negotiate, NTLM e a autenticação Kerberos, bem como métodos personalizados criados por você.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a96f2b21e524f03ea3290be268244eaceeb5c7f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408171"
 ---
 # <a name="icordebugarrayvalue-interface1"></a>ICorDebugArrayValue Interface1
 Uma subclasse de ICorDebugHeapValue que representa uma matriz unidimensional ou multidimensional.  

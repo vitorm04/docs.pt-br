@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394496"
 ---
 # <a name="location-based-cache-policies"></a>Políticas de cache baseadas na localização
 Uma política de cache baseada na localização define a atualização das entradas armazenadas em cache válidas de acordo com o local em que o recurso solicitado pode ser obtido. Um recurso em cache é válido se usá-lo não viola os requisitos de revalidação especificados pelo servidor. Uma política de cache baseada na localização é criada programaticamente usando um construtor de classe <xref:System.Net.Cache.RequestCachePolicy> ou <xref:System.Net.Cache.HttpRequestCachePolicy>. O tipo de política baseada na localização é passado para o construtor usando um valor de enumeração <xref:System.Net.Cache.RequestCacheLevel> ou <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obter exemplos de código que criam políticas de cache baseadas na localização, consulte [Como definir uma política de cache baseada na localização para um aplicativo](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). As seções a seguir explicam cada tipo de política de cache baseada na localização para recursos de protocolo HTTP (http e https).  

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 56333165d179abd79e82f1416342a2700029eb12
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401668"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>Função _AxlPublicKeyBlobToPublicKeyToken
 Computa o token de chave pública do nome forte de um formato CSP PUBLICKEYBLOB.  

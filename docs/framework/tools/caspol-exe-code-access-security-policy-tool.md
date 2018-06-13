@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410092"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  

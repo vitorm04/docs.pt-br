@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396799"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Como definir um método genérico com a emissão de reflexão
 O primeiro procedimento mostra como criar um método genérico simples com dois parâmetros de tipo e como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo.  

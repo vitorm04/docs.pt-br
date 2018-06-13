@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638561"
 ---
 # <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a>Campo &#39; &lt;fieldname&gt; &#39; do tipo &#39; &lt;typename&gt; &#39; é &#39;ReadOnly&#39;
 Você tentou gravar em um campo que é declarado `ReadOnly`.  
