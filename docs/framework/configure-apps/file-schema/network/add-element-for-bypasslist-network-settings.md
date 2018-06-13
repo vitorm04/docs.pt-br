@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754513"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Adicionar&gt; elemento bypasslist (configurações de rede)
 Adiciona um endereço IP ou nome DNS para a lista de proxies.  

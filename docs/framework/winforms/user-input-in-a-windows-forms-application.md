@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538357"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Entrada do usuário em um aplicativo do Windows Forms
 No Windows Forms, a entrada do usuário é enviada para aplicativos na forma de mensagens do Windows. Uma série de métodos substituíveis processam essas mensagens no nível do aplicativo, formulário e controle. Quando esses métodos recebem mensagens de mouse e teclado, eles geram eventos que podem ser manipulados para obter informações sobre a entrada de mouse ou de teclado. Em muitos casos, os aplicativos do Windows Forms serão capazes de processar todas as entradas do usuário simplesmente manipulando esses eventos. Em outros casos, um aplicativo pode precisar substituir um dos métodos que processam mensagens para interceptar uma mensagem específica antes de ela ser recebida pelo aplicativo, formulário ou controle.  

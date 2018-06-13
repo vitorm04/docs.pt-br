@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da16a22c71c1fac1932f74a9af18fbc30eb326f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410826"
 ---
 # <a name="icordebugenumclone-method"></a>Método ICorDebugEnum::Clone
 Cria uma cópia do objeto ICorDebugEnum.  

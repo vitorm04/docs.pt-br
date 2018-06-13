@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 02ca9ed57e62d2c066de2d7c1a1e4b57094dbc0f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413349"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>Método ICorDebugManagedCallback::UnloadModule
 Notifica o depurador que um módulo de tempo de execução de linguagem comum (DLL) foi descarregado.  

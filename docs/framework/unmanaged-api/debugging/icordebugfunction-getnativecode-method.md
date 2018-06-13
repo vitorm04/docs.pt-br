@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1cb073c1f93c6d60d86e5160dcfb0cbdaf1cd33
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414565"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a>Método ICorDebugFunction::GetNativeCode
 Obtém o código nativo para a função que é representada por esta instância de ICorDebugFunction.  

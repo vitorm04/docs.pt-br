@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542243"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle rico conjunto escrito com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  

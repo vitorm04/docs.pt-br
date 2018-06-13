@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2dc6344616dfa5e633fca140ab2dab2b95c81a4b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411276"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>Método ICorDebugCode2::GetCompilerFlags
 Obtém os sinalizadores que especificam as condições sob as quais este objeto de código foi qualquer just-in-time (JIT) compilado ou gerado usando o gerador de imagem nativa (Ngen.exe).  

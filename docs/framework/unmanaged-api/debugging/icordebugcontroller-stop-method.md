@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411260"
 ---
 # <a name="icordebugcontrollerstop-method"></a>Método ICorDebugController::Stop
 Executa uma parada cooperativa em todos os threads que estão executando o código gerenciado no processo.  

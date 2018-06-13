@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548332"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Tópicos explicativos de compilação e implantação
 Os tópicos a seguir mostram como criar arquivos de projeto para os diversos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos de aplicativos.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410384"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
 A Manifest Generation and Editing Tool (Mage.exe) é uma ferramenta de linha de comando que dá suporte à criação e à edição dos manifestos de aplicativo e implantação. Como uma ferramenta de linha de comando, Mage.exe pode ser executado com base tanto em scripts de lote quanto em aplicativos com base no Windows, inclusive aplicativos do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  

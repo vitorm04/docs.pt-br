@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 184e578efb549a1dc2e9ec1e30a29ff289b68719
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411697"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>Método ICorDebugFunction::GetClass
 Obtém um objeto ICorDebugClass que representa essa função é um membro da classe.  

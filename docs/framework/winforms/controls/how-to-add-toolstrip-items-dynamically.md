@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526308"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>Como adicionar itens ToolStrip de forma dinâmica
 Você pode preencher a coleção de itens de menu do dinamicamente um <xref:System.Windows.Forms.ToolStrip> quando abre o menu de controle.  

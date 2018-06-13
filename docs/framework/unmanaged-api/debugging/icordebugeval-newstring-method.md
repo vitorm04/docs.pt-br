@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412224"
 ---
 # <a name="icordebugevalnewstring-method"></a>Método ICorDebugEval::NewString
 Aloca uma nova instância da cadeia de caracteres com o conteúdo especificado.  

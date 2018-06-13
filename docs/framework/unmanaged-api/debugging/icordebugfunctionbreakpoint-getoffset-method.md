@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aca1d77ace512ca84cda3b6844d214e4c8d6cad7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412059"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>Método ICorDebugFunctionBreakpoint::GetOffset
 Obtém o deslocamento do ponto de interrupção na função.  

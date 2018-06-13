@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412315"
 ---
 # <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a>Método ICorDebugHeapValue::CreateRelocBreakpoint
 Este método não está implementado na versão atual do .NET Framework.  

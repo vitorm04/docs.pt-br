@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539021"
 ---
 # <a name="advanced-ink-handling"></a>Tratamento de tinta avançado
 O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] acompanha o <xref:System.Windows.Controls.InkCanvas>, e é um elemento que você pode colocar em seu aplicativo para iniciar imediatamente a coletar e exibir tinta. No entanto, se o <xref:System.Windows.Controls.InkCanvas> controle não fornece um nível de controle fino o suficiente, você pode manter controle em um nível mais alto ao personalizar suas próprias classes de coleção e tinta renderização usando <xref:System.Windows.Input.StylusPlugIns>.  

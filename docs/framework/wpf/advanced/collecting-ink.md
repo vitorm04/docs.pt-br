@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541064"
 ---
 # <a name="collecting-ink"></a>Coletando tinta
 A plataforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) coleta tinta digital como uma parte importante da sua funcionalidade. Este tópico aborda os métodos para coleta de tinta no Windows Presentation Foundation (WPF).  
