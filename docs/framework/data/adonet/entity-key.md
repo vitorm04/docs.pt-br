@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764990"
 ---
 # <a name="entity-key"></a>chave de entidade
 Um *chave da entidade* é um [propriedade](../../../../docs/framework/data/adonet/property.md) ou um conjunto de propriedades de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) que são usadas para determinar a identidade. As propriedades que compõem uma chave de entidade são escolhidas em tempo de design. Os valores das propriedades de chave de entidade devem identificar exclusivamente uma instância do tipo de entidade dentro de um [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) em tempo de execução. As propriedades que compõem uma chave de entidade devem ser escolhidas para garantir a exclusividade de instâncias em um conjunto de entidades.  

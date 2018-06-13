@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519919"
 ---
 # <a name="property-promotion-activity"></a>Atividade da promoção de propriedade
 Este exemplo fornece uma solução ponta a ponta que integre o recurso de promoção de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> diretamente na experiência de criação de fluxo de trabalho. Uma coleção de elementos de configuração, as atividades de fluxo de trabalho, e as extensões de fluxo de trabalho que simplificam o uso de recurso da promoção são fornecidas. Além disso, o exemplo contém um fluxo de trabalho simples que demonstra como usar essa coleção.  

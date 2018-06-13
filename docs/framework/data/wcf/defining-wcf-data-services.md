@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356620"
 ---
 # <a name="defining-wcf-data-services"></a>Configurando WCF Data Services
 Esta seção descreve como criar e configurar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Para obter mais informações sobre as etapas básicas necessárias para criar um serviço de dados, consulte [expondo seus dados como um serviço](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  

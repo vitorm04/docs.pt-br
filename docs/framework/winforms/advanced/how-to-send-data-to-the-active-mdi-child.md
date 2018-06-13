@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523179"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Como enviar dados para o filhos MDI ativos
 Geralmente, dentro do contexto de [aplicativos de Interface de documentos múltiplos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365378"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Modelo de objeto LINQ to SQL
 Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um modelo de objeto expressado na linguagem de programação do desenvolvedor é mapeado para o modelo de dados de um banco de dados relacional. Assim, as operações de dados são conduzidas de acordo com o modelo de objeto.  

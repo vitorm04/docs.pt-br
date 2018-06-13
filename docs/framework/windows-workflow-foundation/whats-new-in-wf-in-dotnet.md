@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520442"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>O que&#39;novo no Windows Workflow Foundation no .NET 4.5
 Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta muitos novos recursos, como novas atividades, os recursos de designer e modelos de desenvolvimento de fluxo de trabalho. Muitos, mas não todos, os novos recursos do fluxo de trabalho introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos que têm suporte, consulte [suporte para recursos do novo fluxo de trabalho Foundation 4.5 no Designer de fluxo de trabalho hospedado novamente](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Este tópico fornece uma visão geral dos novos recursos de fluxo de trabalho introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

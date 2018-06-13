@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755091"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Define o tipo de declaração que especifica o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade. O tipo de declaração é usado para pesquisar um <xref:System.Security.Claims.Claim> na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método deste manipulador de token. O valor da declaração correspondente, em seguida, é definido como o nome do <xref:System.Security.Principal.IIdentity> gerado deste manipulador de token.  

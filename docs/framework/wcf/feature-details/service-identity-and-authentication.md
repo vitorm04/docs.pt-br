@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508181"
 ---
 # <a name="service-identity-and-authentication"></a>Identidade e autenticação de serviço
 Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço WSDL Web Services Description Language (). Esse valor, propagada para qualquer cliente, é usado para autenticar o serviço. Depois que o cliente inicia uma comunicação para um ponto de extremidade e o serviço se autentica para o cliente, o cliente compara o valor de identidade do ponto de extremidade com o valor real retornado o processo de autenticação de ponto de extremidade. Se elas corresponderem, o cliente terá certeza que ele contatou o ponto de extremidade de serviço esperada. Isso funciona como uma proteção contra *phishing* , impedindo que um cliente que está sendo redirecionado para um ponto de extremidade hospedado por um serviço mal-intencionado.  

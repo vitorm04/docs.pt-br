@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517901"
 ---
 # <a name="interop-with-35-rule-set"></a>Interoperabilidade com conjunto de regras 3,5
 Este exemplo demonstra o uso do <xref:System.Activities.Statements.Interop> atividade integrar uma atividade personalizada no [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] usando <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` e regras. Passar dados para a atividade personalizado associando variáveis de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] às propriedades de dependência exposta pela atividade personalizado.  

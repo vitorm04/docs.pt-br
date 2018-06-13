@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398242"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Suporte ao International Resource Identifier em System.Uri
 A classe <xref:System.Uri?displayProperty=nameWithType> foi estendida com o suporte a IDNs (nomes de domínio internacionalizados) e ao IRI (International Resource Identifier). Essas melhorias estão disponíveis no .NET Framework 3.5, 3.0 SP1 e 2.0 SP1.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524336"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Usando uma caneta para desenhar linhas e formas
 Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objetos para desenhar o contorno de formas, curvas e segmentos de linha. Nesta seção, *linha* refere-se a qualquer uma dessas opções, a menos que especificado como um segmento de linha. Defina as propriedades de uma caneta para controlar a cor, largura, alinhamento e o estilo das linhas desenhadas com essa caneta.  

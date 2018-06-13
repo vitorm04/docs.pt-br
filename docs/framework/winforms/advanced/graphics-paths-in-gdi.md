@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523881"
 ---
 # <a name="graphics-paths-in-gdi"></a>demarcadores de elementos gráficos no GDI+
 Os demarcadores são formados combinando linhas, retângulos e curvas simples. Lembre-se do [visão geral de elementos gráficos vetoriais](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) que os seguintes blocos de construção básicos provaram para ser mais útil para desenhar imagens:  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f5ddd352d027365e02366e9aa779053da3bdc2f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434798"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>Método ICLRProbingAssemblyEnum::Get
 Obtém a identidade do assembly no índice especificado.  

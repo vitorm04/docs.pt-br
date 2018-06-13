@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519893"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modelando o comportamento cancelar em fluxos de trabalho
 As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma atividade de <xref:System.Activities.Statements.Parallel> que cancela ramificações incompletos quando seu <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> avalia a `true`, ou fora de fluxo de trabalho, se o host chama <xref:System.Activities.WorkflowApplication.Cancel%2A>. Para fornecer tratamento cancelar, os autores de fluxo de trabalho podem usar a atividade de <xref:System.Activities.Statements.CancellationScope> , a atividade de <xref:System.Activities.Statements.CompensableActivity> , ou crie as atividades personalizados que fornecem lógica cancelar. Este tópico fornece uma visão geral de cancelamento em fluxos de trabalho.  

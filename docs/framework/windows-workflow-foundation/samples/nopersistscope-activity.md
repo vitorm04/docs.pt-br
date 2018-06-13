@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516433"
 ---
 # <a name="nopersistscope-activity"></a>Atividade de NoPersistScope
 Este exemplo mostra como manipular um estado não-serializáveis e descartável em um fluxo de trabalho. É importante que fluxos de trabalho não tentam manter o estado não-serializáveis e também é importante para objetos descartáveis ser limpado depois que são usados no fluxo de trabalho.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522211"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Como criar um formulário do Windows Form com uma forma
 Este exemplo dá uma forma elíptica redimensiona com o formulário de um formulário.  
