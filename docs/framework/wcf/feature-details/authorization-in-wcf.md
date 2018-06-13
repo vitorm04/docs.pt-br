@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488566"
 ---
 # <a name="authorization-in-wcf"></a>Autorização no WCF
 A autorização é o processo de controle de acesso e direitos a recursos, como arquivos ou serviços. Os tópicos nesta seção mostram como executar essa tarefa básica no Windows Communication Foundation (WCF) em uma variedade de maneiras.  

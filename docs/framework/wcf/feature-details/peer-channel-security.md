@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494498"
 ---
 # <a name="peer-channel-security"></a>Segurança de canal par
 Canal par permite uma variedade de tipos de aplicativo distribuído que dependem de mensagens entre vários participantes. Alguns exemplos incluem a distribuição de conteúdo de escala da Internet, em que uma fonte confiável distribui o conteúdo (por exemplo, mídia ou atualizações de software), um grupo de amigos do exchange músicas e fotos ou uma equipe de colegas em colaboração editar um documento. Cada um desses cenários exige um modelo de segurança exclusivo. O modelo de segurança de canal par foi desenvolvido para atender a esses cenários e fornece um modelo de segurança para as respectivas necessidades de modelos diferentes de identidade, autenticação e autorização.  

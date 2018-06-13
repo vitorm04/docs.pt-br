@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492281"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurando a descoberta em um arquivo de configuração
 Existem quatro grupos principais de definições de configuração usados na descoberta. Este tópico será brevemente descrevem cada e mostram exemplos de como configurá-los. Cada seção a seguir será um link para mais documentação detalhada sobre cada área.  

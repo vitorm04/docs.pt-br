@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8a4fe2a65244156abe1bb0da4266f949ddd3df6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447065"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Método IMetaDataImport::EnumTypeRefs
 Enumera os tokens de TypeRef definidos no escopo atual de metadados.  

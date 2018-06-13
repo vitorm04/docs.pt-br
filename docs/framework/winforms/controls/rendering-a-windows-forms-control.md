@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541382"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Renderizando um controle dos Windows Forms
 Renderização se refere ao processo de criar uma representação visual na tela do usuário. O Windows Forms usa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (a nova biblioteca de gráficos do Windows) para renderização. As classes gerenciadas que fornecem acesso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] estão no <xref:System.Drawing?displayProperty=nameWithType> namespace e seus subnamespaces.  

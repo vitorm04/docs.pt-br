@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449319"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Método IMetaDataImport::GetParamProps
 Obtém os valores de metadados para o parâmetro referenciado pelo ParamDef especificado token.  

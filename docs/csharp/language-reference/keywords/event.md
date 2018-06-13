@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955960"
 ---
 # <a name="event-c-reference"></a>event (Referência de C#)
 A palavra-chave `event` é usada para declarar um evento em uma classe publicadora.  

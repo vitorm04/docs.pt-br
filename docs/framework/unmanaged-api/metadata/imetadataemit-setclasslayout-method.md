@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449115"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Método IMetaDataEmit::SetClassLayout
 Conclui o layout dos campos de uma classe que tenha sido definido por uma chamada anterior ao [método DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  

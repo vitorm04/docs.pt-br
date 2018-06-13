@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 269dac0f3d8a719224c177ef2c261e4c1e2e7e92
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445161"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>Método IMetaDataEmit::DeleteToken
 Exclui o token especificado do escopo de metadados atual.  

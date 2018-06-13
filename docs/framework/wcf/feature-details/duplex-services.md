@@ -10,6 +10,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037357"
 ---
 # <a name="duplex-services"></a>Serviços de duplex
 Um contrato de serviço duplex é um padrão de troca de mensagem no qual os pontos de extremidade podem enviar mensagens para o outro independentemente. Um serviço duplex, portanto, pode enviar mensagens para o ponto de extremidade do cliente, fornecendo o comportamento do tipo de evento. Comunicação duplex ocorre quando um cliente se conecta a um serviço e fornece o serviço com um canal em que o serviço pode enviar mensagens de volta ao cliente. Observe que o comportamento do tipo de evento de serviços duplex só funciona em uma sessão.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493632"
 ---
 # <a name="how-to-enable-streaming"></a>Como habilitar transmissão
 Windows Communication Foundation (WCF) pode enviar mensagens usando transferências em buffer ou transmitidas. No modo de transferência em buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes de entregar completamente. O modo de streaming é útil quando as informações que são passadas é demoradas e podem ser processadas em série. O modo contínuo também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  

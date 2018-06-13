@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d752d6dbe8a6b7a23faae498f9118c8d89e92929
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447691"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>Método IMetaDataImport::IsValidToken
 Obtém um valor que indica se o token especificado contém uma referência válida para um objeto de código.  

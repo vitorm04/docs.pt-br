@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492265"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Prevenindo ataques por repetição quando um serviço do WCF é hospedado em uma Web Farm
 Quando usar a segurança de mensagem WCF impede ataques por repetição criando um NONCE fora da mensagem de entrada e verificação interna `InMemoryNonceCache` para ver se o NONCE gerado está presente. Se for, a mensagem será descartada como uma reprodução. Quando um serviço WCF é hospedado em um web farm, desde o `InMemoryNonceCache` não é compartilhado entre os nós no farm da web, o serviço está vulnerável a ataques de repetição.  Para atenuar esse cenário WCF 4.5 fornece um ponto de extensibilidade que permite que você implemente seu próprio cache compartilhado de NONCE derivando uma classe da classe abstrata <xref:System.ServiceModel.Security.NonceCache>.  

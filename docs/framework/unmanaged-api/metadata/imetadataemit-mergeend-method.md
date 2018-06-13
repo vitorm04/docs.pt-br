@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449436"
 ---
 # <a name="imetadataemitmergeend-method"></a>Método IMetaDataEmit::MergeEnd
 Todos os escopos de metadados especificados por uma ou mais chamadas anteriores para o escopo mesclagens em atual [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  

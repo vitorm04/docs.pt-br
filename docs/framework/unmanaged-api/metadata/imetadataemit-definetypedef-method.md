@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446591"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Método IMetaDataEmit::DefineTypeDef
 Cria uma definição de tipo para um tipo common language runtime e obtém um token de metadados para essa definição de tipo.  

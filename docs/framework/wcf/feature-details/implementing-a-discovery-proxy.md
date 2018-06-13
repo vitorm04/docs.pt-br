@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492213"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementando um proxy de descoberta
 Esta seção descreve as etapas necessárias para implementar um proxy de descoberta. Um proxy de descoberta é um serviço autônomo que contém um repositório de serviços. Os clientes podem consultar um proxy de descoberta para localizar serviços detectáveis que o proxy está ciente do. Como um proxy é populado com os serviços é o implementador. Por exemplo, um proxy de descoberta pode se conectar a um repositório de serviço existente e fazer essas informações detectáveis, um administrador pode usar uma API de gerenciamento para adicionar serviços de descoberta para um proxy ou um proxy de descoberta pode usar a funcionalidade de lançamento para Atualize seu cache interno.  

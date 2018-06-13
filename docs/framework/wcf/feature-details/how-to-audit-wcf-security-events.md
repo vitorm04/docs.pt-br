@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493250"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Como fazer auditoria de eventos de segurança do Windows Communication Foundation
 Windows Communication Foundation (WCF) permite registrar eventos de segurança para o log de eventos do Windows, que pode ser visualizado usando o Visualizador de eventos do Windows. Este tópico explica como configurar um aplicativo para que ele registra eventos de segurança. Para obter mais informações sobre a auditoria do WCF, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  

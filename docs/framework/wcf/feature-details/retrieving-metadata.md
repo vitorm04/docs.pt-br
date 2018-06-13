@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493591"
 ---
 # <a name="retrieving-metadata"></a>Recuperando metadados
 Recuperação de metadados é o processo de solicitar e recuperar metadados de um ponto de extremidade de metadados, como um ponto de extremidade de metadados do WS-MetadataExchange (MEX) ou um ponto de extremidade de metadados HTTP/GET.  

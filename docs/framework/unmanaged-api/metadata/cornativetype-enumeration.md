@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448619"
 ---
 # <a name="cornativetype-enumeration"></a>Enumeração CorNativeType
 Contém valores que descrevem os tipos nativos de não gerenciados.  

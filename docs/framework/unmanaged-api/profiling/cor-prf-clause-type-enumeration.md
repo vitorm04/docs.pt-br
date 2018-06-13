@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449927"
 ---
 # <a name="corprfclausetype-enumeration"></a>Enumeração COR_PRF_CLAUSE_TYPE
 Indica o tipo de cláusula de exceção que o código acabou de inserir ou deixar.  
