@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353886"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Como: projeto resultados da consulta (WCF Data Services)
 Projeção fornece um mecanismo para reduzir a quantidade de dados retornados por uma consulta especificando que somente algumas propriedades de uma entidade são retornadas na resposta. Você pode executar as projeções nos resultados de uma [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] de consulta usando o `$select` opção de consulta ou usando o [selecione](~/docs/csharp/language-reference/keywords/select-clause.md) cláusula ([selecione](~/docs/visual-basic/language-reference/queries/select-clause.md) no Visual Basic) em uma consulta LINQ. Para obter mais informações, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

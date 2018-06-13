@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338738"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
 O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Office. Os novos recursos incluem argumentos nomeados e opcionais, um novo tipo chamado `dynamic` e a capacidade de passar argumentos para parâmetros de referência em métodos COM como se fossem parâmetros de valor.  

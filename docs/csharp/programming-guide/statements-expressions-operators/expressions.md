@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339651"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 Uma *expressão* é uma sequência de um ou mais operandos e zero ou mais operadores que podem ser avaliados como um valor, objeto, método ou namespace único. As expressões podem consistir de um valor literal, uma invocação de método, um operador e seus operandos ou um *nome simples*. Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo.  

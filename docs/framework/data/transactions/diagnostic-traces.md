@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363461"
 ---
 # <a name="diagnostic-traces"></a>Rastreamentos de diagnóstico
 Os rastreamentos são a publicação de mensagens específicas que são gerados durante a execução do aplicativo. Ao usar o rastreamento, você deve ter um mecanismo para coletar e registrar as mensagens são enviadas. Mensagens de rastreamento são recebidas por ouvintes. A finalidade de um ouvinte é coletar, armazenar e rotear mensagens de rastreamento. Os ouvintes direcionam a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  

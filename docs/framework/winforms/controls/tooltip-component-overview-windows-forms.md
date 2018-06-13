@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535532"
 ---
 # <a name="tooltip-component-overview-windows-forms"></a>Visão geral do componente ToolTip (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolTip> componente exibe texto quando o usuário aponta para controles. Uma dica de ferramenta pode ser associada a qualquer controle. Um exemplo de uso desse componente: para economizar espaço em um formulário, você pode exibir um pequeno ícone em um botão e usar uma dica de ferramenta para explicar a função do botão.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531047"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Como associar um controle dos Windows Forms a um tipo usando o designer
 Quando estiver compilando controles que interagem com os dados, pode ser necessário associar um controle a um tipo, em vez de um objeto. Geralmente é necessário associar um controle a um tipo no tempo de design, quando os dados podem não estar disponíveis, mas ainda é recomendável fazer com que os controles associados a dados exibam dados da interface pública de um tipo. Os procedimentos a seguir demonstram como criar um novo <xref:System.Windows.Forms.BindingSource> que é associado a um tipo e como associar uma das propriedades do tipo para o <xref:System.Windows.Forms.TextBox.Text%2A> propriedade de um <xref:System.Windows.Forms.TextBox>.  

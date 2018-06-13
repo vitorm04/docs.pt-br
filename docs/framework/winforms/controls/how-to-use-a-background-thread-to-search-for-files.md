@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540297"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Como usar um thread em segundo plano para procurar arquivos
 O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona a funcionalidade para o <xref:System.Threading> namespace; no entanto, o <xref:System.Threading> namespace é retido para compatibilidade com versões anteriores e o uso futuro, se você escolher. Para obter mais informações, consulte [Visão Geral do Componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362228"
 ---
 # <a name="overview-of-sql-server-security"></a>Visão geral de segurança do SQL Server
 Uma estratégia de defesa em profundidade, com a sobreposição de camadas de segurança, é a melhor maneira de ameaças de segurança do contador. SQL Server fornece uma arquitetura de segurança que foi projetada para permitir que os administradores de banco de dados e desenvolvedores criar aplicativos de banco de dados seguro e ameaças de contador. Cada versão do SQL Server melhorou em versões anteriores do SQL Server com a introdução de novos recursos e funcionalidades. No entanto, a segurança não é fornecido na caixa. Cada aplicativo é exclusivo em seus requisitos de segurança. Os desenvolvedores precisam entender qual combinação de recursos e funcionalidade são mais apropriados para o contador de ameaças conhecidas e para prever as ameaças que podem surgir no futuro.  

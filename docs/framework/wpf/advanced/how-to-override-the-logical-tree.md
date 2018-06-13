@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542884"
 ---
 # <a name="how-to-override-the-logical-tree"></a>Como substituir a árvore lógica
 Embora não seja necessário na maioria dos casos, autores de controle avançados têm a opção de substituir a árvore lógica.  

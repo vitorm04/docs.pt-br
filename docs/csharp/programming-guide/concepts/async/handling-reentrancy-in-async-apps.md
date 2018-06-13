@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339755"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Tratando a reentrada em aplicativos assíncronos (C#)
 Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída. Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.  

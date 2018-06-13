@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356095"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL de n camadas com serviços da Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] foi desenvolvido especialmente para uso na camada intermediária em uma camada de acesso de dados flexível (DAL) como um serviço Web. Se a camada de apresentação é uma página da Web ASP.NET, então você usa o controle de servidor Web de <xref:System.Web.UI.WebControls.LinqDataSource> para gerenciar a transferência de dados entre a interface do usuário e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Se a camada de apresentação não é uma página ASP.NET, então a camada intermediária e a camada de apresentação devem fazer qualquer trabalho adicional para gerenciar serialização e desserialização de dados.  

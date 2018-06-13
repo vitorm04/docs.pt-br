@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352633"
 ---
 # <a name="referential-integrity-constraint"></a>restrição de integridade referencial
 Um *restrição de integridade referencial* modelo de dados na entidade (EDM) é semelhante a uma restrição de integridade referencial em um banco de dados relacional. Da mesma forma que uma coluna (ou colunas) de uma tabela de banco de dados podem fazer referência a chave primária de outra tabela, uma [propriedade](../../../../docs/framework/data/adonet/property.md) (ou propriedades) de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) podem fazer referência a [chave da entidade ](../../../../docs/framework/data/adonet/entity-key.md) de outro tipo de entidade. O tipo de entidade referenciada é chamado de *extremidade principal* da restrição. O tipo de entidade que faz referência a extremidade principal é chamado de *extremidade dependente* da restrição.  

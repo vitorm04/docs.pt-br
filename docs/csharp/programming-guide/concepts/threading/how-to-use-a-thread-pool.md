@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340470"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>Como usar um pool de threads (C#)
 O *pooling de threads* é uma forma de multithreading em que as tarefas são adicionadas a uma fila e iniciadas automaticamente quando os threads são criados. Para obter mais informações, consulte [Pooling de threads (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).  

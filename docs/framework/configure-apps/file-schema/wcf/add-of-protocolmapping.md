@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349001"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;adicionar&gt; &lt;protocolMapping&gt;
 Representa um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, net.tcp, NET. pipe, etc.) e uma associação do Windows Communication Foundation (WCF). Durante a criação de pontos de extremidade padrão em tempo de execução, o WCF examina os mapeamentos configurados e decide em qual associação a ser usado para um determinado com base em endereço.  

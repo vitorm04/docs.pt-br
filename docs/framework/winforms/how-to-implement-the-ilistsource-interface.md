@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539410"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Como implementar a interface IListSource
 Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma classe associável que não implementa <xref:System.Collections.IList> , mas em vez disso, fornece uma lista de outro local.  

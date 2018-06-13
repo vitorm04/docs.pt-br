@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535851"
 ---
 # <a name="numericupdown-control-windows-forms"></a>Controle NumericUpDown (Windows Forms)
 O controle `NumericUpDown` dos Windows Forms parece com a combinação de uma caixa de texto e um par de setas em que o usuário pode clicar para ajustar um valor. O controle exibe e define um único valor numérico de uma lista de opções. O usuário pode aumentar e diminuir o número clicando nos botões para cima e para baixo, pressionando as teclas de seta para CIMA e para BAIXO ou digitando um número. Clicar na tecla de seta para CIMA move o valor até seu máximo; clicar na tecla de seta para BAIXO move a posição para o mínimo. Um exemplo de onde esse tipo de controle pode ser útil é para controle de volume em um reprodutor de música. Controles numéricos para cima e para baixo são usados em alguns aplicativos do painel de controle do Windows.  

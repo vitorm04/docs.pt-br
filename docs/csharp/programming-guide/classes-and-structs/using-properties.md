@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339742"
 ---
 # <a name="using-properties-c-programming-guide"></a>Usando propriedades (Guia de Programação em C#)
 As propriedades combinam aspectos de métodos e campos. Para o usuário de um objeto, uma propriedade parece ser um campo. Acessar a propriedade requer a mesma sintaxe. Para o implementador de uma classe, uma propriedade consiste em um ou dois blocos de código, que representam um acessador [get](../../../csharp/language-reference/keywords/get.md) e/ou um acessador [set](../../../csharp/language-reference/keywords/set.md). O bloco de código para o acessador `get` é executado quando a propriedade é lida. O bloco de código para o acessador `set` é executado quando um novo valor é atribuído à propriedade. Uma propriedade sem um acessador `set` é considerada como somente leitura. Uma propriedade sem um acessador `get` é considerada como somente gravação. Uma propriedade que tem os dois acessadores é leitura/gravação.  

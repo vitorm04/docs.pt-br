@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357855"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Operações de envio em lote (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] dá suporte a lotes de processamento de solicitações para um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviço. Para obter mais informações, consulte [OData: processamento em lote](http://go.microsoft.com/fwlink/?LinkId=186075). Em [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], cada operação que utiliza o <xref:System.Data.Services.Client.DataServiceContext>, como a execução de uma consulta ou salvar as alterações, resulta em uma solicitação separada que estão sendo enviados para o serviço de dados. Para manter um escopo lógico para conjuntos de operações, você pode definir explicitamente os lotes operacionais. Isso garante que todas as operações no lote são enviados para o serviço de dados em uma única solicitação HTTP, permite que o servidor processar as operações atomicamente e reduz o número de idas e voltas para o serviço de dados.  

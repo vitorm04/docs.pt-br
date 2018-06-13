@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530309"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Como associar controles dos Windows Forms a valores de banco de dados DBNull
 Quando você associa os controles de formulários do Windows para uma fonte de dados e a fonte de dados retorna um <xref:System.DBNull> valor, você pode substituir um valor apropriado sem tratamento, formatação ou eventos de análise. O <xref:System.Windows.Forms.Binding.NullValue%2A> propriedade converterá <xref:System.DBNull> ao objeto especificado quando formatação ou os valores de fonte de dados de análise.  

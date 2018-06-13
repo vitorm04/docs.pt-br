@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355211"
 ---
 # <a name="transaction-processing"></a>Processamento de transações
 Ao comprar um livro de livrarias online, você troca money (na forma de crédito) de um livro. Se o crédito é boa, uma série de operações relacionadas garante que você obtenha o livro e a livraria obtém seu dinheiro. No entanto, se uma única operação na série falhar durante a troca, toda a troca falhará. Você não obtiver o livro e a livraria não obter seu dinheiro.  

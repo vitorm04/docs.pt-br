@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353479"
 ---
 # <a name="querying-typed-datasets"></a>Consultando DataSets tipados
 Se o esquema do <xref:System.Data.DataSet> for conhecido no tempo de design do aplicativo, recomendamos usar um <xref:System.Data.DataSet> tipado ao usar o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Um tipo <xref:System.Data.DataSet> é uma classe que deriva de um <xref:System.Data.DataSet>. Como tal, herda todos os métodos, eventos e propriedades de um <xref:System.Data.DataSet>. Além disso, um tipo <xref:System.Data.DataSet> fornece métodos com rigidez de tipos, propriedades e eventos. Isso significa que você pode acessar tabelas e colunas pelo nome, em vez de usar métodos baseados em coleção. Isso torna as consultas mais simples e mais legíveis. Para obter mais informações, consulte [DataSets tipados](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

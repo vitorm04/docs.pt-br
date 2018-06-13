@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354566"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Como gerar código personalizado modificando um arquivo DBML
 Você pode gerar o código de origem do Visual Basic ou c# de um arquivo de metadados do banco de dados markup language (. dbml). Essa abordagem fornece uma oportunidade para personalizar o arquivo .dbml padrão antes de você gerar o código de mapeamento do aplicativo. Esse é um recurso avançado.  

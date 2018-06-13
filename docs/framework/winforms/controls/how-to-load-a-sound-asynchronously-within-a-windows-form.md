@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533563"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Como carregar um som de forma assíncrona dentro de um Windows Form
 O exemplo de código a seguir carrega assincronamente um som de uma URL e é reproduzido em um novo thread.  

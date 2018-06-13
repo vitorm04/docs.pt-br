@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530267"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>Como copiar controles entre Windows Forms
 Um controle pode ser copiado para o mesmo formulário, para outro formulário dentro do projeto ou na área de transferência para uso em outras soluções.  

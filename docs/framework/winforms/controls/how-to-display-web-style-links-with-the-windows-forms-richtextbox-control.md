@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532601"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Como exibir links em estilo da Web com o controle RichTextBox dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> controle pode exibir links da Web como colorido e sublinhado. Você pode gravar o código que abre uma janela do navegador mostrando o site da Web especificado no texto do link quando o link é clicado.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357251"
 ---
 # <a name="schema-restrictions"></a>Restrições de esquema
 O segundo parâmetro opcional do **GetSchema** método é retornado as restrições que são usadas para limitar a quantidade de informações de esquema e ela é passada para o **GetSchema** método como uma matriz de cadeias de caracteres . A posição na matriz determina os valores que você pode passar, e isso é equivalente ao número de restrição.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541655"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associação de dados e o Windows Forms
 No Windows Forms, você pode vincular não apenas a fontes de dados tradicionais, mas também a praticamente qualquer estrutura que contenha dados. Você pode vincular a uma matriz de valores que você calcula no tempo de execução, lê de um arquivo ou deriva dos valores de outros controles.  

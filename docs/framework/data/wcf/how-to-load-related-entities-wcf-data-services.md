@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358155"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>Como: carregar entidades relacionadas (WCF Data Services)
 Quando você precisar carregar entidades associadas em [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode usar o <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método o <xref:System.Data.Services.Client.DataServiceContext> classe. Você também pode usar o <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método sobre o <xref:System.Data.Services.Client.DataServiceQuery%601> para exigir que as entidades relacionadas ansiosamente sejam carregados na mesma resposta de consulta.  

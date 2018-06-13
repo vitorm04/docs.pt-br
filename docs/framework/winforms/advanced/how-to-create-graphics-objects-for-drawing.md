@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526482"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Como criar objetos gráficos para desenho
 Antes que você possa desenhar linhas e formas, renderizar texto, ou exibir e manipular imagens com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você precisa criar um <xref:System.Drawing.Graphics> objeto. O <xref:System.Drawing.Graphics> objeto representa um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superfície de desenho e é o objeto que é usado para criar imagens gráficas.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356501"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Como: adicionar, modificar e excluir entidades (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente, você pode criar, atualizar e excluir dados de entidade em um serviço de dados executando as ações equivalentes em objetos de <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

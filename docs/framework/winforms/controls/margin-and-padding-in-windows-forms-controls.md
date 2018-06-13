@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534408"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margem e preenchimento em controles dos Windows Forms
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace fornece muitos recursos de layout para fazer isso. Duas das mais importantes são o <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A> propriedades.  
