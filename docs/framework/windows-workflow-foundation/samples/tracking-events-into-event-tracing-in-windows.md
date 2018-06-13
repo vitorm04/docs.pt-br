@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519500"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a><span data-ttu-id="1c4a3-102">Eventos de rastreamento no rastreamento de evento no Windows</span><span class="sxs-lookup"><span data-stu-id="1c4a3-102">Tracking Events into Event Tracing in Windows</span></span>
 <span data-ttu-id="1c4a3-103">Este exemplo demonstra como habilitar o Windows Workflow Foundation (WF) em um serviço de fluxo de trabalho de controle e emitir os eventos de rastreamento de eventos para Windows ETW (rastreamento).</span><span class="sxs-lookup"><span data-stu-id="1c4a3-103">This sample demonstrates how to enable Windows Workflow Foundation (WF) tracking on a workflow service and emit the tracking events in Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="1c4a3-104">Para emitir registros de acompanhamento de fluxo de trabalho em ETW, o exemplo usa o participante de rastreamento de<xref:System.Activities.Tracking.EtwTrackingParticipant>(ETW).</span><span class="sxs-lookup"><span data-stu-id="1c4a3-104">To emit workflow tracking records into ETW, the sample uses the ETW tracking participant (<xref:System.Activities.Tracking.EtwTrackingParticipant>).</span></span>  

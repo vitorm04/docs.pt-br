@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521772"
 ---
 # <a name="coordinate-systems-and-transformations"></a><span data-ttu-id="84a72-102">Sistemas de coordenadas e transformações</span><span class="sxs-lookup"><span data-stu-id="84a72-102">Coordinate Systems and Transformations</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="84a72-103"> Fornece uma transformação do mundo e uma transformação de página para que você pode transformar (girar, dimensionar, traduzir e assim por diante) os itens que você desenhar.</span><span class="sxs-lookup"><span data-stu-id="84a72-103"> provides a world transformation and a page transformation so that you can transform (rotate, scale, translate, and so on) the items you draw.</span></span> <span data-ttu-id="84a72-104">As duas transformações também permitem que você trabalhe em uma variedade de sistemas de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="84a72-104">The two transformations also allow you to work in a variety of coordinate systems.</span></span>  

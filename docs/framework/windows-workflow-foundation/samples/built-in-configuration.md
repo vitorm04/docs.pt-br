@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518614"
 ---
 # <a name="built-in-configuration"></a><span data-ttu-id="5e5c6-102">Configuração interno</span><span class="sxs-lookup"><span data-stu-id="5e5c6-102">Built-in Configuration</span></span>
 <span data-ttu-id="5e5c6-103">Este exemplo demonstra o uso e a configuração da instância de fluxo de trabalho SQL.</span><span class="sxs-lookup"><span data-stu-id="5e5c6-103">This sample demonstrates the use and configuration of the SQL workflow instance store.</span></span> <span data-ttu-id="5e5c6-104">O armazenamento de instância de fluxo de trabalho do SQL é uma implementação SQL- base de um armazenamento de instância.</span><span class="sxs-lookup"><span data-stu-id="5e5c6-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="5e5c6-105">Permite que uma instância salvar e carrega o estado para e de um base de dados SQL Server ou do SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="5e5c6-105">It allows an instance to save and load its state to and from a SQL Server or SQL Server Express database.</span></span>  

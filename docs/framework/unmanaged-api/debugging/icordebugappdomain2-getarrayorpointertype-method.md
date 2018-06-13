@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405819"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a><span data-ttu-id="e83b1-102">Método ICorDebugAppDomain2::GetArrayOrPointerType</span><span class="sxs-lookup"><span data-stu-id="e83b1-102">ICorDebugAppDomain2::GetArrayOrPointerType Method</span></span>
 <span data-ttu-id="e83b1-103">Obtém uma matriz do tipo especificado, ou um ponteiro ou referência ao tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="e83b1-103">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>  

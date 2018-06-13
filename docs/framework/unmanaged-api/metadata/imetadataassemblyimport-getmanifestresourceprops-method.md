@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 07237794ca45b16b1ae1ca95b1d62889f095350f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448153"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="459ae-102">Método IMetaDataAssemblyImport::GetManifestResourceProps</span><span class="sxs-lookup"><span data-stu-id="459ae-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
 <span data-ttu-id="459ae-103">Obtém o conjunto de propriedades do recurso de manifesto com a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="459ae-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  

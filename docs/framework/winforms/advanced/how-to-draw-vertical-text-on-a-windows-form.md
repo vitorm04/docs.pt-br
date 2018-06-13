@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521535"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a><span data-ttu-id="27690-102">Como desenhar texto vertical em um formulário do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="27690-102">How to: Draw Vertical Text on a Windows Form</span></span>
 <span data-ttu-id="27690-103">O exemplo de código a seguir mostra como desenhar texto vertical em um formulário usando o <xref:System.Drawing.Graphics.DrawString%2A> método <xref:System.Drawing.Graphics>.</span><span class="sxs-lookup"><span data-stu-id="27690-103">The following code example shows how to draw vertical text on a form by using the <xref:System.Drawing.Graphics.DrawString%2A> method of <xref:System.Drawing.Graphics>.</span></span>  

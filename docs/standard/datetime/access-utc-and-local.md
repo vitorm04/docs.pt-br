@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571141"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a><span data-ttu-id="b2498-102">Como: acessar os objetos de zona predefinidos UTC e a hora local</span><span class="sxs-lookup"><span data-stu-id="b2498-102">How to: Access the predefined UTC and local time zone objects</span></span>
 
