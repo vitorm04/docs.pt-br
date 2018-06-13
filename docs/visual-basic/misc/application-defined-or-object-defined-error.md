@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 02b8e145-7988-48ad-abad-ed7656b4933c
 ms.openlocfilehash: 54add44280c3381b8a5724cd8c28ba91f879e130
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597478"
 ---
 # <a name="application-defined-or-object-defined-error"></a><span data-ttu-id="935ae-102">Erro definido pelo aplicativo ou definido por objeto</span><span class="sxs-lookup"><span data-stu-id="935ae-102">Application-defined or object-defined error</span></span>
 <span data-ttu-id="935ae-103">Ocorreu um erro definido pelo aplicativo ou definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="935ae-103">An application-defined or user-defined error occurred.</span></span> <span data-ttu-id="935ae-104">Verifique o erro.</span><span class="sxs-lookup"><span data-stu-id="935ae-104">Check the error.</span></span>  

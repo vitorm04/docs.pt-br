@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
 ms.openlocfilehash: 6b3664a29d5a780c7ce49f51f0ea13d064d578e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600760"
 ---
 # <a name="xml-literals-visual-basic"></a><span data-ttu-id="e410b-102">Literais XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e410b-102">XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="e410b-103">Os tópicos desta seção documentam a sintaxe dos literais XML no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e410b-103">The topics in this section document the syntax of XML literals in Visual Basic.</span></span> <span data-ttu-id="e410b-104">A sintaxe de literal do XML permite incorporar XML diretamente ao código.</span><span class="sxs-lookup"><span data-stu-id="e410b-104">The XML literal syntax enables you to incorporate XML directly in your code.</span></span>  

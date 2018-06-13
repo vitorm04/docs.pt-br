@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590849"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a><span data-ttu-id="632de-102">Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;defaultpropertyname&gt; &#39; da interface &#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="632de-102">Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;</span></span>
 <span data-ttu-id="632de-103">Uma interface herda de duas interfaces, cada uma delas declara uma propriedade padrão com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="632de-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="632de-104">O compilador não é possível resolver um acesso de propriedade padrão sem qualificação.</span><span class="sxs-lookup"><span data-stu-id="632de-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="632de-105">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="632de-105">The following example illustrates this.</span></span>  

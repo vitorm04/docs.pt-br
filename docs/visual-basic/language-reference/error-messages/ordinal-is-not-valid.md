@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 12d73b33e3c025b40c98d84e3507af7be1e1e91a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593597"
 ---
 # <a name="ordinal-is-not-valid"></a><span data-ttu-id="8c9d9-102">O ordinal não é válido</span><span class="sxs-lookup"><span data-stu-id="8c9d9-102">Ordinal is not valid</span></span>
 <span data-ttu-id="8c9d9-103">A chamada para uma biblioteca de vínculo dinâmico (DLL) indicado para usar um número em vez de um nome de procedimento, usando o `#num` sintaxe.</span><span class="sxs-lookup"><span data-stu-id="8c9d9-103">Your call to a dynamic-link library (DLL) indicated to use a number instead of a procedure name, using the `#num` syntax.</span></span> <span data-ttu-id="8c9d9-104">Esse erro tem as seguintes causas possíveis:</span><span class="sxs-lookup"><span data-stu-id="8c9d9-104">This error has the following possible causes:</span></span>  

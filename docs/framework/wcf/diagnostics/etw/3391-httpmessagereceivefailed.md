@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33464813"
 ---
 # <a name="3391---httpmessagereceivefailed"></a><span data-ttu-id="727a9-102">3391 - HttpMessageReceiveFailed</span><span class="sxs-lookup"><span data-stu-id="727a9-102">3391 - HttpMessageReceiveFailed</span></span>
 ## <a name="properties"></a><span data-ttu-id="727a9-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="727a9-103">Properties</span></span>  

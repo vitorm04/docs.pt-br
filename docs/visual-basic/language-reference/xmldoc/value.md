@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
 ms.openlocfilehash: f33a4ec32b45d8996bd39f0cc49097b5fd9252e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602452"
 ---
 # <a name="ltvaluegt-visual-basic"></a><span data-ttu-id="867f5-102">&lt;valor&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="867f5-102">&lt;value&gt; (Visual Basic)</span></span>
 <span data-ttu-id="867f5-103">Especifica a descrição de uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="867f5-103">Specifies the description of a property.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
 ms.openlocfilehash: 52e4288255a246f78730b33beb55f6d2d83ff214
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593948"
 ---
 # <a name="39optional39-expected"></a><span data-ttu-id="97c65-102">&#39;Opcional&#39; esperado</span><span class="sxs-lookup"><span data-stu-id="97c65-102">&#39;Optional&#39; expected</span></span>
 <span data-ttu-id="97c65-103">Um argumento opcional em uma declaração de procedimento é seguido por um argumento necessário.</span><span class="sxs-lookup"><span data-stu-id="97c65-103">An optional argument in a procedure declaration is followed by a required argument.</span></span> <span data-ttu-id="97c65-104">Cada argumento após um argumento opcional também deve ser opcional.</span><span class="sxs-lookup"><span data-stu-id="97c65-104">Every argument following an optional argument must also be optional.</span></span>  

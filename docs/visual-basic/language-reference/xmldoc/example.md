@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
 ms.openlocfilehash: 8c09ab934ee7457fdff39a63c58f2546cda4d643
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598544"
 ---
 # <a name="ltexamplegt-visual-basic"></a><span data-ttu-id="a6367-102">&lt;exemplo&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6367-102">&lt;example&gt; (Visual Basic)</span></span>
 <span data-ttu-id="a6367-103">Especifica um exemplo para o membro.</span><span class="sxs-lookup"><span data-stu-id="a6367-103">Specifies an example for the member.</span></span>  

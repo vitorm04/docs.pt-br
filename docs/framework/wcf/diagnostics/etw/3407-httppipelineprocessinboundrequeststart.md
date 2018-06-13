@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33465592"
 ---
 # <a name="3407---httppipelineprocessinboundrequeststart"></a><span data-ttu-id="cdfcc-102">3407 - HttpPipelineProcessInboundRequestStart</span><span class="sxs-lookup"><span data-stu-id="cdfcc-102">3407 - HttpPipelineProcessInboundRequestStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="cdfcc-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="cdfcc-103">Properties</span></span>  

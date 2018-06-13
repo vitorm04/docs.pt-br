@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c7b539ce01f7e25dba12a78b95097eebae175bc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414652"
 ---
 # <a name="icordebugframeenum-interface1"></a><span data-ttu-id="6df92-102">ICorDebugFrameEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="6df92-102">ICorDebugFrameEnum Interface1</span></span>
 <span data-ttu-id="6df92-103">Implementa métodos ICorDebugEnum e enumera ICorDebugFrame matrizes.</span><span class="sxs-lookup"><span data-stu-id="6df92-103">Implements ICorDebugEnum methods, and enumerates ICorDebugFrame arrays.</span></span>  

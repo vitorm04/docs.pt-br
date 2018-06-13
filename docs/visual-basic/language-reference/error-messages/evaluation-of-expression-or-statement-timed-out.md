@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
 ms.openlocfilehash: adbea4a7062cbc5f8e0a5ad8d02acc775f8441b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586419"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="0aa87-102">A avaliação da expressão ou da instrução atingiu o tempo limite</span><span class="sxs-lookup"><span data-stu-id="0aa87-102">Evaluation of expression or statement timed out</span></span>
 <span data-ttu-id="0aa87-103">A avaliação de uma expressão não foi concluída de maneira oportuna.</span><span class="sxs-lookup"><span data-stu-id="0aa87-103">The evaluation of an expression did not complete in a timely manner.</span></span>  

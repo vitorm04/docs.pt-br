@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 9db79071c4895d49680352bde2d0824a3756d941
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594169"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="62bf1-102">Estouro (erro de tempo de execução do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62bf1-102">Overflow (Visual Basic Run-Time Error)</span></span>
 <span data-ttu-id="62bf1-103">Um estouro ocorre quando você tentar uma atribuição que excede os limites de destino da atribuição.</span><span class="sxs-lookup"><span data-stu-id="62bf1-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
