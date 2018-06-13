@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639465"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a><span data-ttu-id="bd0b4-102">Não é possível ler o fluxo transmitido para TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="bd0b4-102">The stream passed to TextFieldParser cannot be read</span></span>
 <span data-ttu-id="bd0b4-103">O [objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md) não é possível ler o fluxo que foi passado para ele.</span><span class="sxs-lookup"><span data-stu-id="bd0b4-103">The [TextFieldParser Object](../../visual-basic/language-reference/objects/textfieldparser-object.md) cannot read the stream that has been passed to it.</span></span> <span data-ttu-id="bd0b4-104">Isso pode ser resultado da tentativa de ler um arquivo que não é um arquivo de texto.</span><span class="sxs-lookup"><span data-stu-id="bd0b4-104">This may be a result of attempting to read a file that is not a text file.</span></span>  

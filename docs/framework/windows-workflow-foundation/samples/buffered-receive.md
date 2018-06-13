@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518705"
 ---
 # <a name="buffered-receive"></a><span data-ttu-id="3ae19-102">Armazenados em buffer receber</span><span class="sxs-lookup"><span data-stu-id="3ae19-102">Buffered Receive</span></span>
 <span data-ttu-id="3ae19-103">Este exemplo demonstra como instalar e configurar o recurso de buffer de recebimento no Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="3ae19-103">This sample demonstrates how to set up and configure the buffered receive feature in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="3ae19-104">Armazenados em buffer receber permite que o autor de fluxo de trabalho crie um fluxo de trabalho sem ter que se preocupar na ordem em que as mensagens são recebidas.</span><span class="sxs-lookup"><span data-stu-id="3ae19-104">Buffered receive allows the workflow author to create a workflow without having to worry about the order in which messages are received.</span></span> <span data-ttu-id="3ae19-105">O armazenados em buffer recebe mensagens de buffers de recurso localmente e entrega-as quando o fluxo de trabalho está pronto para as receber.</span><span class="sxs-lookup"><span data-stu-id="3ae19-105">The buffered receive feature buffers messages locally and delivers them when the workflow is ready to receive them.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
 ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643873"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a><span data-ttu-id="35f91-102">Criando Interfaces genéricas variantes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35f91-102">Creating Variant Generic Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="35f91-103">Você pode declarar parâmetros de tipo genérico em interfaces como covariantes ou contravariantes.</span><span class="sxs-lookup"><span data-stu-id="35f91-103">You can declare generic type parameters in interfaces as covariant or contravariant.</span></span> <span data-ttu-id="35f91-104">A *Covariância* permite que os métodos de interface tenham tipos de retorno mais derivados que aqueles definidos pelos parâmetros de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="35f91-104">*Covariance* allows interface methods to have more derived return types than that defined by the generic type parameters.</span></span> <span data-ttu-id="35f91-105">A *Contravariância* permite que os métodos de interface tenham tipos de argumentos que são menos derivados que aqueles especificados pelos parâmetros genéricos.</span><span class="sxs-lookup"><span data-stu-id="35f91-105">*Contravariance* allows interface methods to have argument types that are less derived than that specified by the generic parameters.</span></span> <span data-ttu-id="35f91-106">Uma interface genérica que tenha parâmetros de tipo genérico covariantes ou contravariantes é chamada de *variante*.</span><span class="sxs-lookup"><span data-stu-id="35f91-106">A generic interface that has covariant or contravariant generic type parameters is called *variant*.</span></span>  

@@ -1,13 +1,6 @@
 ---
-title: "Como usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento"
-ms.custom: 
+title: Como usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8bbc17b8344fca496dcf8f4077a69b6db1453c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72a9cb3a19f0d449dcb376a65f1734b79ed61ab9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522353"
 ---
-# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="833d6-102">Como usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento</span><span class="sxs-lookup"><span data-stu-id="833d6-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
-<span data-ttu-id="833d6-103">O modo de interpolação de um <xref:System.Drawing.Graphics> objeto influencia a maneira [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imagens escalas (expande e reduz o tempo).</span><span class="sxs-lookup"><span data-stu-id="833d6-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="833d6-104">O <xref:System.Drawing.Drawing2D.InterpolationMode> enumeração define os vários modos de interpolação, alguns dos quais são mostrados na lista a seguir:</span><span class="sxs-lookup"><span data-stu-id="833d6-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="75d44-102">Como usar o modo de interpolação para controlar a qualidade da imagem durante o dimensionamento</span><span class="sxs-lookup"><span data-stu-id="75d44-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
+<span data-ttu-id="75d44-103">O modo de interpolação de um <xref:System.Drawing.Graphics> objeto influencia a maneira [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imagens escalas (expande e reduz o tempo).</span><span class="sxs-lookup"><span data-stu-id="75d44-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="75d44-104">O <xref:System.Drawing.Drawing2D.InterpolationMode> enumeração define os vários modos de interpolação, alguns dos quais são mostrados na lista a seguir:</span><span class="sxs-lookup"><span data-stu-id="75d44-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
@@ -40,23 +29,23 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- <span data-ttu-id="833d6-105">Para alongar uma imagem, cada pixel da imagem original deve ser mapeado para um grupo de pixels da imagem maior.</span><span class="sxs-lookup"><span data-stu-id="833d6-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="833d6-106">Para encolher uma imagem, cada pixel da imagem original deve ser mapeado para pixels únicos da imagem menor.</span><span class="sxs-lookup"><span data-stu-id="833d6-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="833d6-107">A eficácia dos algoritmos que executam esses mapeamentos determina a qualidade de uma imagem dimensionada.</span><span class="sxs-lookup"><span data-stu-id="833d6-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="833d6-108">Algoritmos que produzem imagens dimensionadas de qualidade superior tendem a exigir mais tempo de processamento.</span><span class="sxs-lookup"><span data-stu-id="833d6-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="833d6-109">Na lista anterior, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> é o modo de qualidade inferior e <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> é o modo mais alta qualidade.</span><span class="sxs-lookup"><span data-stu-id="833d6-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
+ <span data-ttu-id="75d44-105">Para alongar uma imagem, cada pixel da imagem original deve ser mapeado para um grupo de pixels da imagem maior.</span><span class="sxs-lookup"><span data-stu-id="75d44-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="75d44-106">Para encolher uma imagem, cada pixel da imagem original deve ser mapeado para pixels únicos da imagem menor.</span><span class="sxs-lookup"><span data-stu-id="75d44-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="75d44-107">A eficácia dos algoritmos que executam esses mapeamentos determina a qualidade de uma imagem dimensionada.</span><span class="sxs-lookup"><span data-stu-id="75d44-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="75d44-108">Algoritmos que produzem imagens dimensionadas de qualidade superior tendem a exigir mais tempo de processamento.</span><span class="sxs-lookup"><span data-stu-id="75d44-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="75d44-109">Na lista anterior, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> é o modo de qualidade inferior e <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> é o modo mais alta qualidade.</span><span class="sxs-lookup"><span data-stu-id="75d44-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
   
- <span data-ttu-id="833d6-110">Para definir o modo de interpolação, atribua um dos membros a <xref:System.Drawing.Drawing2D.InterpolationMode> enumeração para o <xref:System.Drawing.Graphics.InterpolationMode%2A> propriedade de um <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="833d6-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
+ <span data-ttu-id="75d44-110">Para definir o modo de interpolação, atribua um dos membros a <xref:System.Drawing.Drawing2D.InterpolationMode> enumeração para o <xref:System.Drawing.Graphics.InterpolationMode%2A> propriedade de um <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="75d44-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="833d6-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="833d6-111">Example</span></span>  
- <span data-ttu-id="833d6-112">O exemplo a seguir desenha uma imagem e, em seguida, reduz a imagem com três modos diferentes de interpolação.</span><span class="sxs-lookup"><span data-stu-id="833d6-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
+## <a name="example"></a><span data-ttu-id="75d44-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="75d44-111">Example</span></span>  
+ <span data-ttu-id="75d44-112">O exemplo a seguir desenha uma imagem e, em seguida, reduz a imagem com três modos diferentes de interpolação.</span><span class="sxs-lookup"><span data-stu-id="75d44-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
   
- <span data-ttu-id="833d6-113">A ilustração a seguir mostra a imagem original e as três imagens menores.</span><span class="sxs-lookup"><span data-stu-id="833d6-113">The following illustration shows the original image and the three smaller images.</span></span>  
+ <span data-ttu-id="75d44-113">A ilustração a seguir mostra a imagem original e as três imagens menores.</span><span class="sxs-lookup"><span data-stu-id="75d44-113">The following illustration shows the original image and the three smaller images.</span></span>  
   
- <span data-ttu-id="833d6-114">![Imagem com configurações de interpolação variadas](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span><span class="sxs-lookup"><span data-stu-id="833d6-114">![Image with Varied Interpolation Settings](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span></span>  
+ <span data-ttu-id="75d44-114">![Imagem com configurações de interpolação variadas](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span><span class="sxs-lookup"><span data-stu-id="75d44-114">![Image with Varied Interpolation Settings](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="833d6-115">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="833d6-115">Compiling the Code</span></span>  
- <span data-ttu-id="833d6-116">O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="833d6-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="75d44-115">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="75d44-115">Compiling the Code</span></span>  
+ <span data-ttu-id="75d44-116">O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="75d44-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="833d6-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="833d6-117">See Also</span></span>  
- [<span data-ttu-id="833d6-118">Imagens, bitmaps e metarquivos</span><span class="sxs-lookup"><span data-stu-id="833d6-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [<span data-ttu-id="833d6-119">Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos</span><span class="sxs-lookup"><span data-stu-id="833d6-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="75d44-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="75d44-117">See Also</span></span>  
+ [<span data-ttu-id="75d44-118">Imagens, bitmaps e metarquivos</span><span class="sxs-lookup"><span data-stu-id="75d44-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="75d44-119">Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos</span><span class="sxs-lookup"><span data-stu-id="75d44-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

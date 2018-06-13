@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
 ms.openlocfilehash: 228afa6cd4bf0599bf7bd63afff17014799ef1b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642841"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="c5ef9-102">Como: recuperar o valor raso de um elemento (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5ef9-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
 <span data-ttu-id="c5ef9-103">Este tópico mostra como obter o valor raso de um elemento.</span><span class="sxs-lookup"><span data-stu-id="c5ef9-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="c5ef9-104">O valor raso é o valor do elemento específico somente, diferentemente de valor maior, que inclui os valores de todos os elementos descendentes concatenados em uma única cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="c5ef9-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  

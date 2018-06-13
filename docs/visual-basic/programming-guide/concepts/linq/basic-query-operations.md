@@ -17,8 +17,10 @@ helpviewer_keywords:
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: 5587a60e97464324659b325e38a18ac25488d30d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644115"
 ---
 # <a name="basic-query-operations-visual-basic"></a><span data-ttu-id="86c9d-102">Operações de consulta básica (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="86c9d-102">Basic Query Operations (Visual Basic)</span></span>
 <span data-ttu-id="86c9d-103">Este tópico fornece uma breve introdução ao [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões no Visual Basic e alguns dos tipos típicos de operações executadas em uma consulta.</span><span class="sxs-lookup"><span data-stu-id="86c9d-103">This topic provides a brief introduction to [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in Visual Basic, and to some of the typical kinds of operations that you perform in a query.</span></span> <span data-ttu-id="86c9d-104">Para mais informações, consulte os seguintes tópicos:</span><span class="sxs-lookup"><span data-stu-id="86c9d-104">For more information, see the following topics:</span></span>  

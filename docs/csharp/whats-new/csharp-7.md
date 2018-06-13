@@ -8,6 +8,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956403"
 ---
 # <a name="whats-new-in-c-70"></a><span data-ttu-id="40b63-103">Novidades no C# 7.0</span><span class="sxs-lookup"><span data-stu-id="40b63-103">What's new in C# 7.0</span></span>
 

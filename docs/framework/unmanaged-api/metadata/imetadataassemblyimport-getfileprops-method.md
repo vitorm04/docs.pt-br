@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f147fef90d7a9033bdfd07b75e5c33efd2c6881f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444510"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a><span data-ttu-id="68d44-102">Método IMetaDataAssemblyImport::GetFileProps</span><span class="sxs-lookup"><span data-stu-id="68d44-102">IMetaDataAssemblyImport::GetFileProps Method</span></span>
 <span data-ttu-id="68d44-103">Obtém as propriedades do arquivo com a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="68d44-103">Gets the properties of the file with the specified metadata signature.</span></span>  

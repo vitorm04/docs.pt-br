@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605479"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a><span data-ttu-id="22ed1-102">Instrução Try...Catch...Finally (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22ed1-102">Try...Catch...Finally Statement (Visual Basic)</span></span>
 <span data-ttu-id="22ed1-103">Fornece uma maneira de lidar com alguns ou todos os erros possíveis que podem ocorrer em um determinado bloco de código, ainda assim, executar código.</span><span class="sxs-lookup"><span data-stu-id="22ed1-103">Provides a way to handle some or all possible errors that may occur in a given block of code, while still running code.</span></span>  

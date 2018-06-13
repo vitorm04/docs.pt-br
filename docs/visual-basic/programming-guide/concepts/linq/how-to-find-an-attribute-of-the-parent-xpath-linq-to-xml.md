@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
 ms.openlocfilehash: af2b6fc3aaebe4ba45be405c587c549ea73b3289
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639357"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="cca0b-102">Como: localizar um atributo do pai (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cca0b-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="cca0b-103">Este tópico mostra como navegar para o elemento pai e localizar um atributo deles.</span><span class="sxs-lookup"><span data-stu-id="cca0b-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  

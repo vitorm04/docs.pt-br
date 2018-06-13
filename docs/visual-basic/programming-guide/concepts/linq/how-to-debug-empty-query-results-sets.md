@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642961"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a><span data-ttu-id="1ce9c-102">Como: depurar conjuntos de resultados de consulta vazia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1ce9c-102">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>
 <span data-ttu-id="1ce9c-103">Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.</span><span class="sxs-lookup"><span data-stu-id="1ce9c-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  

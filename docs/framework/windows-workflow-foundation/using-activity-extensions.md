@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517219"
 ---
 # <a name="using-activity-extensions"></a><span data-ttu-id="82a58-102">Usando extensões de atividade</span><span class="sxs-lookup"><span data-stu-id="82a58-102">Using Activity Extensions</span></span>
 <span data-ttu-id="82a58-103">As atividades podem interagir com as extensões do aplicativo de fluxo de trabalho que permitem que o host fornece funcionalidade adicional que não é modelada explicitamente no fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="82a58-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="82a58-104">Este tópico descreve como criar e usar uma extensão para contar o número de vezes que a atividade é executado.</span><span class="sxs-lookup"><span data-stu-id="82a58-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>  

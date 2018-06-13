@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: a447f9a6-1c90-4c71-abff-81170331e4c5
 ms.openlocfilehash: fe2080b998c846bd4defb7d73c8959d89a4ed951
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601852"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-1-to-255"></a><span data-ttu-id="8ee16-102">Argumento &#39; &lt;argumentname&gt; &#39; deve estar no intervalo de 1 a 255</span><span class="sxs-lookup"><span data-stu-id="8ee16-102">Argument &#39;&lt;argumentname&gt;&#39; must be within the range 1 to 255</span></span>
 <span data-ttu-id="8ee16-103">Um argumento não é válido porque está fora do intervalo de 0 a 255.</span><span class="sxs-lookup"><span data-stu-id="8ee16-103">An argument is not valid because it falls outside of the range 0 to 255.</span></span>  

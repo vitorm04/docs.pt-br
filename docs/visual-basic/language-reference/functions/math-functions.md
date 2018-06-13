@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: 9c55b48cbc285ab5ed8742a23af43d3a017a35e3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604530"
 ---
 # <a name="math-functions-visual-basic"></a><span data-ttu-id="f5524-102">Funções matemáticas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5524-102">Math Functions (Visual Basic)</span></span>
 <span data-ttu-id="f5524-103">Os métodos de <xref:System.Math?displayProperty=nameWithType> classe fornecer trigonométricas, logarítmicas e outras funções matemáticas comuns.</span><span class="sxs-lookup"><span data-stu-id="f5524-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  

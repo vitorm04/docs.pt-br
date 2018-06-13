@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412354"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="cb2a0-102">Método ICorDebugFunction2::SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="cb2a0-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
 <span data-ttu-id="cb2a0-103">Marca a função representada por esse ICorDebugFunction2 para apenas meu código passo a passo.</span><span class="sxs-lookup"><span data-stu-id="cb2a0-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
