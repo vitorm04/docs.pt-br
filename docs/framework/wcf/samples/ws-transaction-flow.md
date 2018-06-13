@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807209"
 ---
 # <a name="ws-transaction-flow"></a>Fluxo de transação WS
 Este exemplo demonstra o uso de uma transação de coordenada de cliente e as opções de cliente e servidor para a transação fluem usando o protocolo WS-AT tanto na OleTransactions. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo, mas as operações são atribuídas para demonstrar o uso do `TransactionFlowAttribute` com o **TransactionFlowOption** enumeração para determinar para qual transação grau fluxo está habilitado. Dentro do escopo da transação que fluiu, um log das operações solicitados é gravado em um banco de dados e persiste até que a transação de cliente coordenada concluída - se a transação do cliente não for concluída, a transação de serviço da Web garante que o as atualizações adequadas para o banco de dados não são confirmadas.  

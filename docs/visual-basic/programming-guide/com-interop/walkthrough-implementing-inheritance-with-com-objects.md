@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644297"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Instruções passo a passo: implementando a herança com objetos COM (Visual Basic)
 Você pode derivar de classes do Visual Basic para `Public` classes de objetos COM, mesmo aqueles criados em versões anteriores do Visual Basic. As propriedades e métodos de classes herdadas de objetos podem ser substituídos ou sobrecarregados apenas como propriedades e métodos de qualquer outra classe base podem ser substituídos ou sobrecarregados. Herança de objetos é útil quando você tiver uma biblioteca de classe existente que você não deseja recompilar.  

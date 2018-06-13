@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640362"
 ---
 # <a name="the-source-folder-does-not-exist"></a>A pasta de origem não existe
 Você tentou uma operação que faz referência a uma pasta de origem não existe. Isso pode ser o resultado de fornecer um caminho de arquivo incorreto.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643465"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 Esta seção contém visões gerais, exemplos e informações que ajudarão você a entender e usar o Visual Basic e LINQ (consulta).  

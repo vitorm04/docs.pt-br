@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639749"
 ---
 # <a name="specified-dll-function-not-found"></a>Função DLL especificada não encontrada
 A biblioteca de vínculo dinâmico (DLL) em uma referência de biblioteca do usuário foi encontrada, mas a função DLL especificada não foi encontrada na DLL.  

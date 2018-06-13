@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641351"
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a>Caminho &#39; &lt;pathname&gt; &#39; não encontrado
 O sistema operacional é não é possível localizar o caminho especificado durante uma operação de acesso a arquivos ou o acesso ao disco. O caminho para um arquivo deve incluir a especificação da unidade e os diretórios e subdiretórios que devem ser percorridos para localizar o arquivo. Um caminho pode ser relativo ou absoluto.  
