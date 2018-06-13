@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639383"
 ---
 # <a name="printer-error"></a>Erro de impressora
 Ocorreu um erro na impressora, mas nenhuma outra informação foi retornada para o computador que enviou o arquivo.  

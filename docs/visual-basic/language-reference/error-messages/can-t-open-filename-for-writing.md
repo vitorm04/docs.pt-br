@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586530"
 ---
 # <a name="can39t-open-39ltfilenamegt39-for-writing"></a>Pode&#39;t abrir &#39; &lt;filename&gt; &#39; para gravação
 O arquivo especificado não pode ser aberto para gravação, talvez porque ele já foi aberto.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594907"
 ---
 # <a name="overflow-visual-basic-error"></a>Estouro (erro do Visual Basic)
 Um valor literal representa um valor fora dos limites do tipo de dados ao qual ela está sendo atribuída.  

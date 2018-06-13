@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593279"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Sem espaço na pilha (Visual Basic)
 A pilha é uma área de trabalho de memória aumenta e diminui dinamicamente com as demandas do seu programa em execução. Os limites foram excedidos.  

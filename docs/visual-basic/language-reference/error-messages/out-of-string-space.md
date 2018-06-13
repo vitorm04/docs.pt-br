@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594440"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Fora do espaço da cadeia de caracteres (Visual Basic)
 Com o Visual Basic, você pode usar cadeias de caracteres muito grandes. No entanto, os requisitos de outros programas e a maneira como você trabalha com suas cadeias de caracteres ainda podem causar esse erro.  

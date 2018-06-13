@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588220"
 ---
 # <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;Como qualquer&#39; não há suporte para &#39;Declare&#39; instruções
 O `Any` tipo de dados foi usado com `Declare` instruções no Visual Basic 6.0 e versões anteriores para permitir o uso dos argumentos que pode conter qualquer tipo de dados. Visual Basic oferece suporte à sobrecarga, porém e assim torna o `Any` obsoleto de tipo de dados.  

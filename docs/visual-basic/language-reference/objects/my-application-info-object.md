@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594589"
 ---
 # <a name="myapplicationinfo-object"></a>Objeto My.Application.Info
 Fornece propriedades para obter informações sobre o aplicativo, como o número de versão, descrição, assemblies carregados e assim por diante.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586572"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Criando threads e passando dados na hora de início
 Quando um processo do sistema operacional é criado, o sistema operacional injeta um thread para executar o código nesse processo, incluindo qualquer domínio de aplicativo original. Desse ponto em diante, os domínios de aplicativo podem ser criados e destruídos sem qualquer criação ou destruição de threads do sistema operacional. Se o código que estiver sendo executado for um código gerenciado, um objeto <xref:System.Threading.Thread> para o thread em execução no domínio do aplicativo atual poderá ser obtido recuperando a propriedade <xref:System.Threading.Thread.CurrentThread%2A> estática do tipo <xref:System.Threading.Thread>. Este tópico descreve a criação de thread e aborda alternativas para passar dados para o procedimento do thread.  

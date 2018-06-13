@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584664"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Como escrever um loop Parallel.For com variáveis locais de thread
 Este exemplo mostra como usar variáveis de thread local para armazenar e recuperar o estado em cada tarefa separada criada por um loop <xref:System.Threading.Tasks.Parallel.For%2A>. Usando dados de thread local, você pode evitar a sobrecarga de sincronizar um grande número de acessos com estado compartilhado. Em vez de gravar em um recurso compartilhado em cada iteração, você computa e armazena o valor até todas as iterações da tarefas serem concluídas. Em seguida, é possível gravar o resultado final uma vez no recurso compartilhado ou passá-lo para outro método.  

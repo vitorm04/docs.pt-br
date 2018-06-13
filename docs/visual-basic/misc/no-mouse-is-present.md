@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637851"
 ---
 # <a name="no-mouse-is-present"></a>Nenhum mouse está presente
 Uma das propriedades do `My.Computer.Mouse` objeto foi chamado, mas o computador tem não mouse ou porta de mouse instalado.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637411"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>Arquivo especificado por nome de arquivo não usa a codificação especificada por FileEncoding
 Tentativa de ler um arquivo, mas a codificação especificada não é usada pelo arquivo.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638337"
 ---
 # <a name="set-not-supported-at-run-time"></a>Conjunto não tem suportado em tempo de execução
 Você tentou definir ou alterar uma propriedade cujo valor pode ser definido apenas em tempo de design.  

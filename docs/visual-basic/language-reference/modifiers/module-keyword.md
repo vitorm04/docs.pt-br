@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595271"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Módulo &lt;palavra-chave&gt; (Visual Basic)
 Especifica que um atributo no início de um arquivo de origem se aplica para o módulo do assembly atual.  
