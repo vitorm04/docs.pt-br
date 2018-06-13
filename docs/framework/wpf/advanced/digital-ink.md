@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537467"
 ---
 # <a name="digital-ink"></a>Tinta digital
 Esta seção discute o uso de tinta digital no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradicionalmente encontrado somente no SDK do Tablet PC, tinta digital agora está disponível no núcleo do Windows Presentation Foundation. Isso significa que agora você pode desenvolver aplicativos completos do Tablet PC usando o poder do Windows Presentation Foundation.  

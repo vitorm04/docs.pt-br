@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529838"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Personalizando o controle DataGridView dos Windows Forms
 O controle `DataGridView` fornece várias propriedades que podem ser usadas para ajustar a aparência e o comportamento básico (visual) das células, linhas e colunas. Se você tiver necessidades especiais que vão além dos recursos da <xref:System.Windows.Forms.DataGridViewCellStyle> da classe, no entanto, você também pode implementar o controle de desenho do proprietário ou estender seus recursos, criando personalizadas células, colunas e linhas.  
