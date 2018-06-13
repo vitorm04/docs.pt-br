@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425315"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Método ISymUnmanagedReader::GetUserEntryPoint
 Retorna o método especificado como o ponto de entrada do usuário para o módulo, se houver. Por exemplo, esse método pode ser o principal método de usuário em vez de gerado pelo compilador stubs antes do método principal.  

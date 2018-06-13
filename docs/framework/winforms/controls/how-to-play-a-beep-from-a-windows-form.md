@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531203"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Como executar um bipe a partir de um Windows Form
 Este exemplo executa um bipe em tempo de execução.  

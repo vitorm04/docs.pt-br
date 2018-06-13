@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534726"
 ---
 # <a name="trackbar-control-windows-forms"></a>Controle TrackBar (Windows Forms)
 Windows Forms `TrackBar` controle (também chamado de controle "deslizante") é usado para navegar por uma grande quantidade de informações ou para ajustar visualmente uma configuração numérica. O `TrackBar` controle tem duas partes: o thumb, também conhecido como um controle deslizante e as marcas de escala. O elevador é parte que pode ser ajustada. Sua posição corresponde do <xref:System.Windows.Forms.TrackBar.Value%2A> propriedade. As marcas de escala são indicadores visuais espaçados em intervalos regulares. A barra de controle move em incrementos que você especificar e pode ser alinhado horizontalmente ou verticalmente. Um exemplo de uso de uma barra de controle seria para a configuração de mouse ou taxa de intermitência do cursor.  

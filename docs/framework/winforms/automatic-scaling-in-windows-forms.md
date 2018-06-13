@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529877"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Dimensionamento automático em Windows Forms
 Dimensionamento automático permite que um formulário e seus controles criados em uma máquina com uma determinada exibição resolução ou sistema de fonte, a ser exibido corretamente em outro computador com uma fonte de sistema ou resolução de exibição diferente. Ela garante que o formulário e seus controles serão inteligentemente redimensionados para ser consistente com nativos do windows e outros aplicativos em computadores dos usuários e outros desenvolvedores. O suporte a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para dimensionamento automático e estilos visuais permite [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicativos para manter uma aparência consistente quando comparado a aplicativos nativos do Windows na máquina de cada usuário.

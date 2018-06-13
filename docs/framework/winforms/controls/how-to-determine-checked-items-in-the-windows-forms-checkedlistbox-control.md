@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531008"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Como determinar itens verificados no controle CheckedListBox dos Windows Forms
 Ao apresentar dados em um Windows Forms <xref:System.Windows.Forms.CheckedListBox> controle, ou pode iterar por meio da coleção armazenada no <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> propriedade ou percorra a lista usando o <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método para determinar quais itens são verificados. O <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método recebe um número de índice do item como seu argumento e retorna `true` ou `false`. Ao contrário do que você esperava, o <xref:System.Windows.Forms.ListBox.SelectedItems%2A> e <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> propriedades não determinar quais itens são verificados; elas determinam quais itens são realçados.  

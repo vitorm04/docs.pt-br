@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533709"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Como definir o renderizador ToolStrip para um aplicativo
 Você pode personalizar a aparência de seu <xref:System.Windows.Forms.ToolStrip> controla individualmente ou todos os <xref:System.Windows.Forms.ToolStrip> controles em seu aplicativo.  

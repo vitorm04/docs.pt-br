@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529154"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Como criar um gradiente de demarcador
 O <xref:System.Drawing.Drawing2D.PathGradientBrush> classe permite que você personalize a forma como preencher uma forma alterando as cores gradualmente. Por exemplo, você pode especificar uma cor para o centro de um caminho e outra cor para o limite de um caminho. Você também pode especificar cores separadas para cada um dos vários pontos ao longo do limite de um caminho.  

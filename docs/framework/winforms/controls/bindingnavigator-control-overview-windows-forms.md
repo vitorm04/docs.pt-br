@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528776"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Visão geral do controle BindingNavigator (Windows Forms)
 Você pode usar o <xref:System.Windows.Forms.BindingNavigator> controle para criar um meio padronizado para que os usuários de pesquisa e alterar dados em um Windows Form. Você usa com frequência <xref:System.Windows.Forms.BindingNavigator> com o <xref:System.Windows.Forms.BindingSource> componente para permitir que os usuários percorrer os registros de dados em um formulário e interagir com os registros.  

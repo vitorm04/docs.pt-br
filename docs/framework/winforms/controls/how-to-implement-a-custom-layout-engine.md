@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531291"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>Como implementar um mecanismo de layout personalizado
 O exemplo de código a seguir demonstra como criar um mecanismo de layout personalizado que executa um layout de fluxo simples. Ele implementa um controle de painel chamado `DemoFlowPanel`, que substitui o <xref:System.Windows.Forms.Control.LayoutEngine%2A> propriedade para fornecer uma instância do `DemoFlowLayout` classe.  

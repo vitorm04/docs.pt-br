@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535441"
 ---
 # <a name="linklabel-control-windows-forms"></a>Controle LinkLabel (Windows Forms)
 Windows Forms `LinkLabel` controle permite que você adicionar links de estilo da Web para aplicativos de formulários do Windows. Você pode usar o `LinkLabel` controle tudo o que você pode usar o <xref:System.Windows.Forms.Label> controlar para; você também pode definir a parte do texto como um link para um objeto ou página da Web.  

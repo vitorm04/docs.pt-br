@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534447"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Como carregar arquivos no controle RichTextBox dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> controle pode exibir um texto sem formatação, em texto sem formatação Unicode ou arquivo de formato de Rich Text (RTF). Para fazer isso, chame o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método. Você também pode usar o <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> método para carregar dados de um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  

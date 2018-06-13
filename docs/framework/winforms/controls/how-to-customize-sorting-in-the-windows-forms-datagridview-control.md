@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533410"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Como personalizar a classificação no controle DataGridView dos Windows Forms
 O <xref:System.Windows.Forms.DataGridView> controle fornece classificação automática, mas, dependendo de suas necessidades, talvez seja necessário personalizar as operações de classificação. Por exemplo, é possível usar a classificação programática para criar uma interface do usuário (UI) alternativa. Como alternativa, você pode manipular o <xref:System.Windows.Forms.DataGridView.SortCompare> chamada ou evento de `Sort(IComparer)` de sobrecarga do <xref:System.Windows.Forms.DataGridView.Sort%2A> método maior flexibilidade de classificação, como classificar várias colunas.  

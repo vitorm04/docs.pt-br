@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532308"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Como encaixar controles nos Windows Forms
 Você pode encaixar controles nas bordas do formulário ou fazer com que eles preencham o contêiner do controle (um controle de contêiner ou formulário). Por exemplo, o Windows Explorer encaixa seu <xref:System.Windows.Forms.TreeView> controle para o lado esquerdo da janela e sua <xref:System.Windows.Forms.ListView> controle para o lado direito da janela. Use o <xref:System.Windows.Forms.Control.Dock%2A> propriedade para todos os controles de Windows Forms visíveis definir o modo de encaixe.  

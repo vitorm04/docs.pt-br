@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521450"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Como alterar o valor de uma configuração existente em tempo de design
 Você pode usar o Visual Studio para editar os valores das configurações existentes em seu projeto.  

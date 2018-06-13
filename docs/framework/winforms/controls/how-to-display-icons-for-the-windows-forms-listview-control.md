@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533598"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Como exibir ícones do controle ListView dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.ListView> controle pode exibir ícones de três das listas de imagens. Os modos de exibição de lista, detalhes e SmallIcon exibem imagens da lista de imagens especificado no <xref:System.Windows.Forms.ListView.SmallImageList%2A> propriedade. O modo de exibição LargeIcon exibe imagens da lista de imagem especificado no <xref:System.Windows.Forms.ListView.LargeImageList%2A> propriedade. Uma exibição de lista também pode exibir um conjunto adicional de ícones, definido <xref:System.Windows.Forms.ListView.StateImageList%2A> propriedade, ao lado de ícones grandes ou pequenos. Para obter mais informações sobre listas de imagens, consulte [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [Como adicionar ou remover imagens com o componente ImageList dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

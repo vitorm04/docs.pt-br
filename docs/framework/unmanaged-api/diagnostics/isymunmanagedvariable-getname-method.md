@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9abbfa14777c5a5f5a77fa91db0fbafee095ba9b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429231"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>Método ISymUnmanagedVariable::GetName
 Obtém o nome dessa variável.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531876"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Como navegar até uma URL com o controle WebBrowser
 O exemplo de código a seguir demonstra como navegar a <xref:System.Windows.Forms.WebBrowser> controle a uma URL específica.  

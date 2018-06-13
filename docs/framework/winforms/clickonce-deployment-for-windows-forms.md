@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529527"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Implantação do ClickOnce para o Windows Forms
 Os tópicos a seguir descrevem [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], uma tecnologia usada para implantar facilmente aplicativos de formulários do Windows em computadores cliente.  

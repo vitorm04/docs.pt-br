@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432371"
 ---
 # <a name="corvalidateimage-function"></a>Função _CorValidateImage
 Valida as imagens do módulo gerenciado e notifica o carregador do sistema operacional depois de terem sido carregados.  

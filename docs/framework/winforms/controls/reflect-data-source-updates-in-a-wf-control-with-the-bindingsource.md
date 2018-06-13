@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536872"
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Como refletir atualizações feitas na fonte de dados em um controle dos Windows Forms com o BindingSource
 Quando você usa os controles de associação de dados, às vezes você precisa responder a alterações na fonte de dados quando a fonte de dados não gerará eventos lista alterada. Quando você usa o <xref:System.Windows.Forms.BindingSource> componente para associar a fonte de dados a um controle de formulários do Windows, você pode notificar o controle que a fonte de dados foi alterado, chamando o <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> método.  

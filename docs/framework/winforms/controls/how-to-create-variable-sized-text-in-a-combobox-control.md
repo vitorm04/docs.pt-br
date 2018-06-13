@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533225"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Como criar texto dimensionado da variável em um controle ComboBox
 Este exemplo demonstra o desenho personalizado de texto em uma <xref:System.Windows.Forms.ComboBox> controle. Quando um item atende a certos critérios, ele é desenhado em uma fonte maior e ativado vermelho.  

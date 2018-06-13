@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531629"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Como definir o comportamento de redimensionamento e posicionamento em uma janela dividida
 Os painéis do <xref:System.Windows.Forms.SplitContainer> controle se prestam a que está sendo redimensionada e manipulados pelos usuários. No entanto, há momentos em que é útil controlar o divisor com programação, onde ele está posicionado e em que grau pode ser movido.  

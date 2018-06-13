@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535263"
 ---
 # <a name="notifyicon-component-windows-forms"></a>Componente NotifyIcon (Windows Forms)
 Windows Forms `NotifyIcon` componente exibe ícones na área de notificação de status da barra de tarefas para processos que são executados em segundo plano e não seriam caso contrário têm interfaces do usuário. Por exemplo, um programa de proteção contra vírus que pode ser acessado clicando em um ícone na área de notificação de status da barra de tarefas.  

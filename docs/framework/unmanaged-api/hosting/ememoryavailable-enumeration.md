@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429880"
 ---
 # <a name="ememoryavailable-enumeration"></a>Enumeração EMemoryAvailable
 Contém valores que indicam a quantidade de memória física livre no computador. Esses valores mapeiam logicamente para os eventos de alta e baixa memória retornado do `CreateMemoryResourceNotification` função na API do Win32.  

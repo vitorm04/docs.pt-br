@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b36f4007f286938169cc5d583908493916b9e6f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425334"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>Método ISymUnmanagedReader::GetSymbolStoreFileName
 Fornece o nome de arquivo em disco do repositório de símbolos.  

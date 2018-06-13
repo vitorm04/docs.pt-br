@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534054"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Como selecionar um intervalo de datas no controle MonthCalendar dos Windows Forms
 Um recurso importante do Windows Forms <xref:System.Windows.Forms.MonthCalendar> controle é que o usuário pode selecionar um intervalo de datas. Esse recurso é um aprimoramento o recurso de seleção de data do <xref:System.Windows.Forms.DateTimePicker> controle, que só permite que o usuário selecione um valor único de data/hora. Você pode definir um intervalo de datas ou obter um intervalo de seleção definido pelo usuário usando as propriedades do <xref:System.Windows.Forms.MonthCalendar> controle. O exemplo de código a seguir demonstra como definir um intervalo de seleção.  

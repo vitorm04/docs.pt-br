@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532380"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Como criar uma interface no estilo do Windows Explorer em Windows Forms
 O Windows Explorer é uma opção de interface do usuário comum para aplicativos devido à sua familiaridade pronta.  

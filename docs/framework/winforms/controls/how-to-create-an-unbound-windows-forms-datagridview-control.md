@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531060"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Como criar um controle DataGridView dos Windows Forms não associados
 O exemplo de código a seguir demonstra como preencher um <xref:System.Windows.Forms.DataGridView> controle programaticamente sem associação a uma fonte de dados. Isso é útil quando você tem uma pequena quantidade de dados que você deseja exibir em um formato de tabela.  

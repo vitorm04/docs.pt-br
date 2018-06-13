@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532779"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Como definir a imagem exibida por um controle dos Windows Forms usando o designer
 Vários controles de formulários do Windows podem exibir imagens. A imagem pode ser um ícone que explica a finalidade do controle, como um ícone de disco em um botão denotando o **salvar** comando. Como alternativa, o ícone pode ser uma imagem de plano de fundo para dar o controle a aparência desejada.  
