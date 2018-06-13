@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635172"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>Não é possível excluir uma seção do registro
 Foi feita uma tentativa para excluir uma seção do registro. Seções são chaves de registro de nível superior, como `HKEY_CURRENT_USER` e `HKEY_LOCAL_MACHINE`e não pode ser excluído.  

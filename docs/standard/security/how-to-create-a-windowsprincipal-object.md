@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581785"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Como criar um objeto WindowsPrincipal
 Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> de objeto, dependendo se o código deve repetidamente executar validação baseada em função ou execute-a apenas uma vez.  

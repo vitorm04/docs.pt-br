@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579167"
 ---
 # <a name="composite-formatting"></a>Formatação composta
 O recurso de formatação de composição do .NET utiliza uma lista de objetos e uma cadeia de caracteres de formato de composição como entrada. Uma cadeia de formato de composição consiste em um texto fixo intercalado com espaços reservados indexados, chamados de itens de formato, que correspondem aos objetos na lista. A operação de formatação produz uma cadeia de caracteres de resultado que consiste no texto fixo original intercalado com a representação de cadeia de caracteres dos objetos na lista.  

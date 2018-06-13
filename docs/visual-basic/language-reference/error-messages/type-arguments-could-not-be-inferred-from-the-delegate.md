@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598224"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Não foi possível inferir argumentos de tipo a partir do delegado
 Usa uma instrução de atribuição `AddressOf` para atribuir o endereço de um generic procedimento como um delegado, mas não fornece nenhum argumento de tipo para o procedimento genérico.  

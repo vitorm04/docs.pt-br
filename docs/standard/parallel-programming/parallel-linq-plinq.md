@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581375"
 ---
 # <a name="parallel-linq-plinq"></a>LINQ paralelo (PLINQ)
 PLINQ (Parallel LINQ) é uma implementação paralela da LINQ to Objects. O PLINQ implementa o conjunto completo de operadores de consulta padrão LINQ como métodos de extensão para o namespace <xref:System.Linq> e tem operadores adicionais para operações paralelas. O PLINQ combina a simplicidade e a legibilidade da sintaxe LINQ com o poder da programação paralela. Assim como código que tem como destino a Biblioteca de Paralelismo de Tarefas, as consultas PLINQ reduzem horizontalmente o grau de simultaneidade com base nos recursos do computador host.  

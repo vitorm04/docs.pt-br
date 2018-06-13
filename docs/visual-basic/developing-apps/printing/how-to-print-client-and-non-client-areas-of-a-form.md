@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584736"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Como imprimir áreas cliente e não cliente de um formulário (Visual Basic)
 O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente permite que você imprimir rapidamente uma imagem de um formulário exatamente como ele aparece na tela sem usar um <xref:System.Drawing.Printing.PrintDocument> componente. O procedimento a seguir mostra como imprimir um formulário, incluindo a área do cliente e a área não cliente. A área do cliente não inclui a barra de título, bordas e rolagem barras.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580218"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Como cancelar uma tarefa e seus filhos
 Estes exemplos mostram como realizar as seguintes tarefas:  

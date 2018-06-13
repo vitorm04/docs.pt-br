@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584586"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>O nome do arquivo ou da classe não foi localizado durante a operação de automação (Visual Basic)
 O nome especificado para nome de arquivo ou classe em uma chamada para o `GetObject` não foi possível encontrar a função.  

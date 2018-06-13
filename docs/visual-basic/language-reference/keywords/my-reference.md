@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597315"
 ---
 # <a name="my-reference-visual-basic"></a>Minha referência (Visual Basic)
 O `My` recurso torna a programação mais rápida e fácil, oferecendo a você acesso intuitivo comumente usados métodos, propriedades e eventos. Esta tabela lista os objetos contidos no `My`e as ações que podem ser executadas com cada.  

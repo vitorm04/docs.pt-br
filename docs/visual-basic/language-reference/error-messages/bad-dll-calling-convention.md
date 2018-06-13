@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583832"
 ---
 # <a name="bad-dll-calling-convention"></a>Convenção de chamada de DLL inválida
 Argumentos passados para uma biblioteca de vínculo dinâmico (DLL) devem corresponder exatamente àqueles esperado pela rotina. Convenções de chamada lidam com número, tipo e ordem dos argumentos. Seu programa pode chamar uma rotina em uma DLL que está sendo passada o tipo incorreto ou o número de argumentos.  

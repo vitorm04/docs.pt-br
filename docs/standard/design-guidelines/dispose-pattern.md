@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578983"
 ---
 # <a name="dispose-pattern"></a>Padrão de Dispose
 Todos os programas adquirem um ou mais recursos do sistema, como memória, manipuladores de sistema ou conexões de banco de dados durante sua execução. Os desenvolvedores precisam ter cuidado ao usar esses recursos do sistema, porque eles devem ser liberados após ter sido adquiridas e usadas.  

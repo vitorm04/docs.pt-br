@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579826"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 <a name="top"></a> O mecanismo de expressões regulares no .NET é uma ferramenta poderosa e repleta de recursos que processa o texto com base em correspondências de padrões em vez de em comparar e corresponder o texto literal. Na maioria dos casos, ele realiza a correspondência de padrões de forma rápida e eficiente. No entanto, em alguns casos, o mecanismo de expressões regulares pode parecer ser muito lento. Em casos extremos, pode até mesmo parecer parar de responder enquanto processa uma entrada relativamente pequena em um período de horas ou até mesmo dias.  

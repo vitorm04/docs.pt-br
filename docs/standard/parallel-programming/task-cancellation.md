@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582682"
 ---
 # <a name="task-cancellation"></a>Cancelamento da tarefa
 As classes <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> oferecem suporte ao cancelamento por meio do uso de tokens de cancelamento no .NET Framework. Para saber mais, confira [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md). Nas classes de tarefas, o cancelamento envolve a cooperação entre o delegado do usuário, que representa uma operação cancelável, e o código que solicitou o cancelamento.  Um cancelamento bem-sucedido envolve o código de solicitação chamar o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> e o delegado do usuário terminar a operação de forma breve. Você pode terminar a operação ao usar uma destas opções:  

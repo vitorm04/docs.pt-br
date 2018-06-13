@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582360"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
 A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML. Os seguintes procedimentos mostram como executar essas operações.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578578"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 Os eventos no .NET Framework são baseados no modelo de representante. O modelo de representante segue o padrão de design do observador, que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.  

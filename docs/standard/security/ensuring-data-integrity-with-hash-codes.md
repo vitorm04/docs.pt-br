@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581567"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Assegurando a integridade dos dados com códigos hash
 Um valor de hash é um valor numérico de comprimento fixo que identifica exclusivamente a dados. Valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que eles são usados com assinaturas digitais. Você pode assinar um valor de hash de forma mais eficiente que o maior valor de assinatura. Valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguras. O valor de hash de dados recebidos pode ser comparado com o valor de hash de dados como ele foi enviado para determinar se os dados foi alterados.  

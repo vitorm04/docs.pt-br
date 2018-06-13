@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585110"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argumento não opcional (Visual Basic)
 O número e tipos de argumentos devem corresponder aos esperados. Há um número incorreto de argumentos, ou um argumento omitido não é opcional. Um argumento só pode ser omitido de uma chamada para um procedimento definido pelo usuário se ele foi declarado `Optional` na definição do procedimento.  

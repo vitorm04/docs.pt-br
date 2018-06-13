@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603984"
 ---
 # <a name="nothing-visual-basic"></a>Nada (Visual Basic)
 Representa o valor padrão de qualquer tipo de dados. Para tipos de referência, o valor padrão é o `null` referência. Para tipos de valor, o valor padrão depende se o tipo de valor é anulável.  

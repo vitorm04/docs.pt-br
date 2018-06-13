@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579464"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.  

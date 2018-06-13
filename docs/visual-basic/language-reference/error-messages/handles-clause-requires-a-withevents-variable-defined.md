@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587427"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>A cláusula de identificadores requer uma variável WithEvents definida no tipo recipiente ou em um de seus tipos base
 Você não forneceu um `WithEvents` variável no seu `Handles` cláusula. O `Handles` palavra-chave no final de uma declaração de procedimento faz com que ele manipule eventos gerados por uma variável de objeto declarada usando o `WithEvents` palavra-chave.  

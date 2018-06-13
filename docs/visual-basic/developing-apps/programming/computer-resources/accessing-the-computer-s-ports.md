@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585535"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Acessando as portas do computador (Visual Basic)
 O objeto `My.Computer.Ports` fornece uma propriedade e um método para acessar as portas seriais do computador.  

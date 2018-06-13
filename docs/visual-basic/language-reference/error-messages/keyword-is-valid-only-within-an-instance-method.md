@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586354"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;palavra-chave&gt; &#39; é válido somente dentro de um método de instância
 O `Me`, `MyClass`, e `MyBase` palavras-chave se referem a instâncias de classe específica. Você não pode usá-las dentro de um compartilhado `Function` ou `Sub` procedimento.  

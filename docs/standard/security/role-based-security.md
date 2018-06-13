@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582526"
 ---
 # <a name="role-based-security"></a>Segurança baseada em função
 Funções geralmente são usadas em aplicativos financeiros ou de negócios para impor a política. Por exemplo, um aplicativo pode impor limites de tamanho da transação que está sendo processada dependendo se o usuário que fez a solicitação é um membro de uma função especificada. Administradores podem ter autorização para processar as transações que são menores que o limite especificado, supervisores podem ter um limite superior e vice-presidentes podem ter um limite ainda maior (ou nenhum limite em todos os). Segurança baseada em função também pode ser usada quando um aplicativo requer vários aprovações para concluir uma ação. Caso seja um sistema de compras em que qualquer funcionário pode gerar uma solicitação de compra, mas apenas um agente de compras pode converter essa solicitação em uma ordem de compra que pode ser enviada para um fornecedor.  

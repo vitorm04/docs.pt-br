@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576341"
 ---
 # <a name="how-to-implement-a-provider"></a>Como implementar um provedor
 O padrão de design do observador requer uma divisão entre um provedor, que monitora os dados e envia notificações e um ou mais observadores, que recebem notificações (retornos de chamada) do provedor. Este tópico discute como criar um provedor. Um tópico relacionado, [Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md), descreve como criar um observador.  

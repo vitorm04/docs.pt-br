@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581710"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Como acessar dispositivos de criptografia de hardware
 Você pode usar o <xref:System.Security.Cryptography.CspParameters> classe acessem dispositivos de criptografia de hardware. Por exemplo, você pode usar esta classe para integrar seu aplicativo com um cartão inteligente, um gerador de número aleatório de hardware ou uma implementação de um determinado algoritmo de criptografia de hardware.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577196"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapeando a hierarquia do objeto para dados XML
 Quando um documento XML está na memória, a representação conceitual é uma árvore. Para programar, você tem uma hierarquia de objeto para acessar os nós da árvore. O exemplo a seguir mostra como o conteúdo XML torna-se nós.  

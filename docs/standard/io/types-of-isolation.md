@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577610"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583374"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Como descriptografar elementos XML com chaves simétricas
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar um elemento em um documento XML.  Criptografia XML permite armazenar ou transportar XML confidencial, sem se preocupar com os dados que estão sendo lidos facilmente.  Este exemplo de código descriptografa um elemento XML usando o algoritmo de criptografia AES (Advanced Standard), também conhecido como Rijndael.  

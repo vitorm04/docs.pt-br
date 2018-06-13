@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582643"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Acessando o teclado (Visual Basic)
 O objeto `My.Computer.Keyboard` fornece propriedades para acessar o estado atual do teclado, como quais teclas estão pressionadas no momento e fornece um método para enviar pressionamentos de teclas para a janela ativa.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600747"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
 Especifica que uma propriedade ou procedimento não pode ser substituído em uma classe derivada.  

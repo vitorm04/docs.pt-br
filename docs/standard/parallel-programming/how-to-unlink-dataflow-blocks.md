@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581544"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Como: Desvincular blocos de fluxo de dados
 Este documento descreve como desvincular um bloco de fluxo de dados de destino de sua origem.

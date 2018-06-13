@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579724"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  

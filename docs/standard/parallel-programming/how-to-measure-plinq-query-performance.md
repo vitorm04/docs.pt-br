@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584599"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>como avaliar o desempenho de consulta PLINQ
 Este exemplo mostra como usar a classe <xref:System.Diagnostics.Stopwatch> para medir o tempo de execução necessário de uma consulta PLINQ.  

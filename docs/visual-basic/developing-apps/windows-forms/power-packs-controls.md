@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584192"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Controles do Visual Basic Power Packs
 Controles do Visual Basic Power Packs são adicionais aos controles do Windows Forms. Eles não são incluídos no Visual Studio.  Você pode [baixá-los](http://go.microsoft.com/fwlink/?LinkId=321343), mas eles são fornecidos como-está sem suporte.  

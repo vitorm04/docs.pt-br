@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583013"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: Executar ações quando um bloco de fluxo de dados recebe dados
 Os tipos de *Blocos de fluxo de dados de execução* chamam um representante fornecido pelo usuário ao receber dados. As classes <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> são tipos de blocos de fluxo de dados de execução. Você pode usar a palavra-chave `delegate` (`Sub` em Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> ou uma expressão lambda ao fornecer uma função de trabalho a um bloco de fluxo de dados de execução. Este documento descreve como usar <xref:System.Func%602> e as expressões lambda para executar a ação em blocos de execução.  

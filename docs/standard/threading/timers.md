@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584951"
 ---
 # <a name="timers"></a>Temporizadores
 Os temporizadores são objetos leves que permitem especificar um representante que será chamado em um horário especificado. Um thread no pool de threads executa a operação de espera.  

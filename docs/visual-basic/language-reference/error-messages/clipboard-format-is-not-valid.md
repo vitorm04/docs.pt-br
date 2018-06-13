@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586215"
 ---
 # <a name="clipboard-format-is-not-valid"></a>Formato inválido de área de transferência
 O formato de área de transferência especificado é incompatível com o método que está sendo executado. Entre as causas possíveis desse erro são:  

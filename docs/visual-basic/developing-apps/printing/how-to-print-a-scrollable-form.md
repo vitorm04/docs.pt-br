@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584008"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Como imprimir um formulário rolável (Visual Basic)
 O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente permite que você imprimir rapidamente uma imagem de um formulário sem usar um <xref:System.Drawing.Printing.PrintDocument> componente. Por padrão, somente a parte visível do formulário é impresso; Se um usuário tiver redimensionado do formulário em tempo de execução, a imagem não pode imprimir conforme pretendido. O procedimento a seguir mostra como imprimir a área de cliente completa de um formulário rolável, mesmo se o formulário foi redimensionado.  

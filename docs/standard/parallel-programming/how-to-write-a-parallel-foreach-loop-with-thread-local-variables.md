@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582731"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Como escrever um loop Parallel.ForEach com variáveis locais de thread
 O exemplo a seguir mostra como gravar um método <xref:System.Threading.Tasks.Parallel.ForEach%2A> que usa variáveis de thread local. Quando um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A> é executado, ele divide a coleção de origem em diversas partições. Cada partição tem sua própria cópia da variável de "thread local". O termo "thread local" não é muito preciso por que, em alguns casos, duas partições podem executar no mesmo thread.  

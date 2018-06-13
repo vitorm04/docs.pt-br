@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582630"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Processamento paralelo, simultaneidade e programação assíncrona no .NET
 O .NET fornece várias maneiras de escrever código assíncrono para tornar seu aplicativo mais ágil para o usuário e a escrever código paralelo que usa vários threads de execução para maximizar o desempenho do computador do usuário.  
