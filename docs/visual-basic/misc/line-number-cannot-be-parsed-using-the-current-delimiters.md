@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639128"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a><span data-ttu-id="503b2-102">Linha &lt;número&gt; não pode ser analisada usando Delimiters atuais</span><span class="sxs-lookup"><span data-stu-id="503b2-102">Line &lt;number&gt; cannot be parsed using the current Delimiters</span></span>
 <span data-ttu-id="503b2-103">A linha especificada não pode ser analisada porque ele usa delimitadores além daqueles especificados.</span><span class="sxs-lookup"><span data-stu-id="503b2-103">The specified line cannot be parsed because it uses delimiters other than those specified.</span></span>  

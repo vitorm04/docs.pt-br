@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
 ms.openlocfilehash: 463075dbf1b84de1af45f7644019e49bbeca6487
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645623"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a><span data-ttu-id="c4c29-102">Desempenho (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4c29-102">Performance (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="c4c29-103">Esta seção fornece informações sobre o desempenho em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]especificamente, o desempenho de compilação e de consultas funcionais.</span><span class="sxs-lookup"><span data-stu-id="c4c29-103">This section provides information about performance in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], specifically the performance of functional construction and queries.</span></span>  

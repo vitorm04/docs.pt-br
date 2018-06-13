@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807834"
 ---
 # <a name="configuring-message-logging"></a><span data-ttu-id="81aa1-102">Configurando registros de mensagens em log</span><span class="sxs-lookup"><span data-stu-id="81aa1-102">Configuring Message Logging</span></span>
 <span data-ttu-id="81aa1-103">Este tópico descreve como você pode configurar o log de mensagens para diferentes cenários.</span><span class="sxs-lookup"><span data-stu-id="81aa1-103">This topic describes how you can configure message logging for different scenarios.</span></span>  

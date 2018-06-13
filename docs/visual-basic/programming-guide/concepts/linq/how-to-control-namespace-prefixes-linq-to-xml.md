@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: f60f90ef6742dfd725f51ff7e760436117346e85
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641674"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="793d4-102">Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="793d4-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
 <span data-ttu-id="793d4-103">Este tópico descreve como você pode controlar prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="793d4-103">This topic describes how you can control namespace prefixes.</span></span>  

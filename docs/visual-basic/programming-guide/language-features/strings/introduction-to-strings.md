@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647284"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="a9fdc-102">Introdução a cadeias de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a9fdc-102">Introduction to Strings in Visual Basic</span></span>
 <span data-ttu-id="a9fdc-103">Esta seção descreve os conceitos básicos por trás do uso de cadeias de caracteres no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a9fdc-103">This section describes the basic concepts behind using strings in Visual Basic.</span></span>  

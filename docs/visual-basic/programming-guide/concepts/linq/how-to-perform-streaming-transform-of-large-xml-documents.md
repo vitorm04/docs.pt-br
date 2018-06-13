@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
 ms.openlocfilehash: 50534cc7692386b217dec46082acf65e244ebb48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643725"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a><span data-ttu-id="0c077-102">Como: executar o Streaming de transformação de grandes documentos XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c077-102">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>
 <span data-ttu-id="0c077-103">Às vezes você precisa transformar grandes arquivos XML e escrever seu aplicativo de modo que os requisitos de memória do aplicativo sejam previsíveis.</span><span class="sxs-lookup"><span data-stu-id="0c077-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="0c077-104">Se você tentar preencher uma árvore XML com um arquivo XML muito grande, seu uso de memória será proporcional ao tamanho do arquivo (isto é, excessivo).</span><span class="sxs-lookup"><span data-stu-id="0c077-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="0c077-105">Portanto, você deve usar uma técnica de streaming em vez disso.</span><span class="sxs-lookup"><span data-stu-id="0c077-105">Therefore, you should use a streaming technique instead.</span></span>  

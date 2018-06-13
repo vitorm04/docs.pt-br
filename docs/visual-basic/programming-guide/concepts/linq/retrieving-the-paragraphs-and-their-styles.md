@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
 ms.openlocfilehash: 5b8075b5aa05c32d2dc894149a8fa53f103138c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648301"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a><span data-ttu-id="6b878-102">Recuperando os parágrafos e seus estilos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b878-102">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>
 <span data-ttu-id="6b878-103">Nesse exemplo, nós escrevemos uma consulta que recupera os nós de parágrafo de um documento de WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="6b878-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="6b878-104">Também identifica o estilo de cada parágrafo.</span><span class="sxs-lookup"><span data-stu-id="6b878-104">It also identifies the style of each paragraph.</span></span>  

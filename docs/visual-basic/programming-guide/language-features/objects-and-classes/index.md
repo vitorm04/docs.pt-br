@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655857"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a><span data-ttu-id="31438-102">Objetos e classes no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="31438-102">Objects and classes in Visual Basic</span></span>
 <span data-ttu-id="31438-103">Um *objeto* é uma combinação de código e dados que podem ser tratados como uma unidade.</span><span class="sxs-lookup"><span data-stu-id="31438-103">An *object* is a combination of code and data that can be treated as a unit.</span></span> <span data-ttu-id="31438-104">Um objeto pode ser uma parte de um aplicativo, como um controle ou um formulário.</span><span class="sxs-lookup"><span data-stu-id="31438-104">An object can be a piece of an application, like a control or a form.</span></span> <span data-ttu-id="31438-105">Todo o aplicativo também pode ser um objeto.</span><span class="sxs-lookup"><span data-stu-id="31438-105">An entire application can also be an object.</span></span>

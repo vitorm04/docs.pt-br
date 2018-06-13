@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
 ms.openlocfilehash: e26ff23d5278bcaaeb2c8e26303c2380bbb1f1e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645324"
 ---
 # <a name="querying-xml-trees-visual-basic"></a><span data-ttu-id="eabf8-102">Consultando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eabf8-102">Querying XML Trees (Visual Basic)</span></span>
 <span data-ttu-id="eabf8-103">Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="eabf8-103">This section provides examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  

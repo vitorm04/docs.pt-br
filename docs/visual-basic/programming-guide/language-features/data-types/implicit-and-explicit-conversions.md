@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656159"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a><span data-ttu-id="31fc8-102">Conversões implícitas e explícitas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31fc8-102">Implicit and Explicit Conversions (Visual Basic)</span></span>
 <span data-ttu-id="31fc8-103">Um *conversão implícita* não requer nenhuma sintaxe especial no código-fonte.</span><span class="sxs-lookup"><span data-stu-id="31fc8-103">An *implicit conversion* does not require any special syntax in the source code.</span></span> <span data-ttu-id="31fc8-104">No exemplo a seguir, o Visual Basic converte implicitamente o valor de `k` para um valor de ponto flutuante de precisão única antes de atribuí-lo para `q`.</span><span class="sxs-lookup"><span data-stu-id="31fc8-104">In the following example, Visual Basic implicitly converts the value of `k` to a single-precision floating-point value before assigning it to `q`.</span></span>  

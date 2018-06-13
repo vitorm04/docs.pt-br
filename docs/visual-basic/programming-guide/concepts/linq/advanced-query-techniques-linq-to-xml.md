@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
 ms.openlocfilehash: 67227dddfcf44201ddd7e4adebd06a6022c6f2f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641967"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a><span data-ttu-id="957c9-102">Técnicas avançadas de consulta (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="957c9-102">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="957c9-103">Esta seção fornece exemplos de técnicas mais avançadas de consulta do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="957c9-103">This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.</span></span>  
