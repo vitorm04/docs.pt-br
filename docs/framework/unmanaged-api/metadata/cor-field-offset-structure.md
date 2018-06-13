@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c4a5c8efc87940b7df0bfd532beaa67931a8c81
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442112"
 ---
 # <a name="corfieldoffset-structure"></a>Estrutura COR_FIELD_OFFSET
 Armazena o deslocamento, em uma classe, do campo especificado.  

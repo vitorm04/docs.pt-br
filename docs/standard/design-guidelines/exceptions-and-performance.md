@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575330"
 ---
 # <a name="exceptions-and-performance"></a>Desempenho e exceções
 Uma preocupação comuns relacionada às exceções é que, se as exceções são usadas para código rotineiramente falha, o desempenho da implementação será inaceitável. Isso é uma preocupação válida. Quando um membro lança uma exceção, o desempenho pode ser mais lentas ordens de magnitude. No entanto, é possível atingir um bom desempenho ao estritamente aderindo às diretrizes de exceção que não é permitido usar códigos de erro. Dois padrões descritos nesta seção sugerem maneiras de fazer isso.  

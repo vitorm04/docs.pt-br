@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 52988378ff4df0bb03e15c9a4b25efbcd6c318f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457714"
 ---
 # <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a>Método ICorProfilerInfo2::SetEnterLeaveFunctionHooks2
 Especifica as funções implementada pelo criador de perfil a ser chamado nas versões atualizadas de "entrar", "Sair" e "tailcall" ganchos de funções gerenciadas.  

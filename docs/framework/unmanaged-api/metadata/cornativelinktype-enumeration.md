@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443255"
 ---
 # <a name="cornativelinktype-enumeration"></a>Enumeração CorNativeLinkType
 Fornece valores que indicam o tipo vinculado em código nativo.  

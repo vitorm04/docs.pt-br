@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574654"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Executando alterações de maiúsculas e minúsculas que não levam em conta a cultura
 Os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> fornecem sobrecargas que não aceitam quaisquer parâmetros. Por padrão, essas sobrecargas sem parâmetros executam alterações de maiúsculas e minúsculas com base no valor do <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Isso produz resultados sensíveis a maiúsculas e minúsculas que podem variar de acordo com a cultura. Para deixar claro se você deseja que as mudanças de maiúsculas e minúsculas sejam sensíveis à cultura ou não sejam insensíveis à cultura, você deve usar as sobrecargas desses métodos que exigem que você especifique explicitamente um parâmetro `culture`. Para mudanças de maiúsculas e minúsculas sensíveis à cultura, especifique `CultureInfo.CurrentCulture` para o parâmetro `culture`. Para mudanças de maiúsculas e minúsculas insensíveis à cultura, especifique `CultureInfo.InvariantCulture` para o parâmetro `culture`.  

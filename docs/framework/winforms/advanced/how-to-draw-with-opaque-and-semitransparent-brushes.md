@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523602"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Como desenhar com pincéis opacos e semitransparentes
 Quando você preencher uma forma, você deve passar um <xref:System.Drawing.Brush> objeto para um dos métodos de preenchimento a <xref:System.Drawing.Graphics> classe. Um parâmetro do <xref:System.Drawing.SolidBrush.%23ctor%2A> construtor é um <xref:System.Drawing.Color> objeto. Para preencher uma forma opaca, defina o componente alfa da cor como 255. Para preencher uma forma semitransparente, defina o componente alfa para qualquer valor de 1 a 254.  

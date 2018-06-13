@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520494"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Consumir feeds de OData de um fluxo de trabalho
 WCF Services Data é um componente de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] que permite que você crie serviços que usam o protocolo aberto de dados (OData) para exibir e receber dados sobre a Web ou intranet usando a semântica de transferência representacional de estado (RESTO). OData expõem dados como recursos que são endereçáveis por URIs. Qualquer aplicativo pode interagir com um serviço de dados com base OData- se pode enviar uma solicitação HTTP e processar o avanço de OData que um serviço de dados retorna. Além disso, Data WCF Services inclui bibliotecas de cliente que fornece uma experiência mais rica de programação quando você consome feeds de OData de aplicativos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Este tópico fornece uma visão geral de consumir um avanço de OData em um fluxo de trabalho com e sem o uso das bibliotecas de cliente.  

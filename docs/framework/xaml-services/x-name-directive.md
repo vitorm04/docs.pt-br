@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565844"
 ---
 # <a name="xname-directive"></a>Diretiva x:Name
 Identifica os elementos definidos em XAML em um namescope XAML. Namescopes XAML e seus modelos de exclusividade podem ser aplicados a objetos instanciados, quando estruturas fornecem APIs ou implementam comportamentos que acessam o gráfico de objeto criado XAML em tempo de execução.  

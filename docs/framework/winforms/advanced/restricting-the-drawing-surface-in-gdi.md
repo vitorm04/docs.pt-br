@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523917"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Restringindo a superfície de desenho no GDI+
 Recorte envolve restringir o desenho a um determinado retângulo ou região. A ilustração a seguir mostra a cadeia de caracteres "Hello" recortado para uma região em forma de coração.  

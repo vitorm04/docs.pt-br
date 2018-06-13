@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647827"
 ---
 # <a name="thread-pooling-visual-basic"></a>Thread Pooling (Visual Basic)
 Um *pool de threads* é uma coleção de threads que pode ser usada para executar várias tarefas em segundo plano. (Consulte [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) para obter mais informações.) Isso deixa o thread primário livre para executar outras tarefas de forma assíncrona.  

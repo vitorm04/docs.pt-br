@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643739"
 ---
 # <a name="converting-data-types-visual-basic"></a>Convertendo tipos de dados (Visual Basic)
 Os métodos de conversão alteram o tipo dos objetos de entrada.  

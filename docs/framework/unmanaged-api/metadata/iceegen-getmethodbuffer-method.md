@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a093b18f72cc99c53951b3dc588ce0cff3c7fefd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442602"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>Método ICeeGen::GetMethodBuffer
 Obtém um buffer de tamanho apropriado para o método no endereço virtual relativo especificado.  

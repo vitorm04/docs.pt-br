@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650797"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Como declarar enumerações (Visual Basic)
 Você cria uma enumeração com o `Enum` instrução na seção de declarações de uma classe ou um módulo. Você não pode declarar uma enumeração dentro de um método. Para especificar o nível apropriado de acesso, use `Private`, `Protected`, `Friend`, ou `Public`.  

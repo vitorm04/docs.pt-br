@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645961"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>LINQ (consulta integrada à linguagem) (Visual Basic)
 O LINQ é um conjunto de recursos que estende os recursos avançados de consulta à sintaxe das linguagens do Visual Basic. O LINQ apresenta padrões com aprendizado facilitado para consultar e atualizar dados, e a tecnologia pode ser estendida para dar suporte a, potencialmente, qualquer tipo de armazenamento de dados.  O NET Framework inclui assemblies de provedor LINQ que permitem o uso do LINQ com coleções do .NET Framework, bancos de dados do SQL Server, conjuntos de dados ADO.NET e documentos XML.  

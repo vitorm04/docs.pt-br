@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 353d98feed2ab54cf13af92883348598e822c1d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439085"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>Método IHostIoCompletionManager::GetMinThreads
 Obtém o número mínimo de threads que o host fornece para processar solicitações de e/s.  

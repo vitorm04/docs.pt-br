@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605349"
 ---
 # <a name="option-strict-statement"></a>Instrução Option Strict
 Restringe conversões de tipo de dados implícitos para somente conversões de expansão, não permite associação tardia e não permite digitar implícita que resulta em um `Object` tipo.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577079"
 ---
 # <a name="resolving-external-resources"></a>Resolvendo recursos externos
 A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocument** para localizar os recursos que não são embutidos nos dados XML, como definições de tipo de documento (DTDs), entidades e esquemas externos. Esses itens podem ser localizados em uma rede ou em uma unidade local, e são identificáveis por Uniform Resource Identifier (URI). Isso permite que o **XmlDocument** resolva os nós de **EntityReference** presentes no documento e valide o documento de acordo com DTDs ou esquema externos.  

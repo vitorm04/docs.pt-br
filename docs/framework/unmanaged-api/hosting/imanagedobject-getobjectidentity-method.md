@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1975e5bf20453a3bcd6761d9734be7ddd2ceef7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440321"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Método IManagedObject::GetObjectIdentity
 Obtém a identidade do objeto gerenciado.  

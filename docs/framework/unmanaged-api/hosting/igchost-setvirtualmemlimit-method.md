@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1d61c8aeaf458d8cbbd2976fa83aaa0eeb0f834
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437733"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>Método IGCHost::SetVirtualMemLimit
 Define o tamanho máximo de memória virtual do tempo de execução.  

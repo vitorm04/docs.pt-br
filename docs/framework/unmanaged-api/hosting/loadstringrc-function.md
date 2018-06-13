@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441809"
 ---
 # <a name="loadstringrc-function"></a>Função LoadStringRC
 Converte um valor HRESULT em uma mensagem de erro usando a cultura padrão do thread atual.  

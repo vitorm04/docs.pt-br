@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519744"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid
 Nesta tarefa, você criará o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  

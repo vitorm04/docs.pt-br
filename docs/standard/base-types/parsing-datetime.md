@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576097"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisando Cadeias de Caracteres de Data e Hora no .NET
 

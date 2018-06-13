@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b7c183a6ef61b97920fef5c80b4abad50da25bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444864"
 ---
 # <a name="imetadatadispenser-interface"></a>Interface IMetaDataDispenser
 Fornece métodos para criar um novo escopo de metadados, ou abrir um existente.  

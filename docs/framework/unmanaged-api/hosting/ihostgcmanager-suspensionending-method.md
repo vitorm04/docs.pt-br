@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f2835c9846657edffc745c435211f93b20f7173
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438828"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Método IHostGCManager::SuspensionEnding
 Notifica o host que o common language runtime (CLR) está continuando a execução de tarefas em threads que foi suspenso para uma coleta de lixo.  
