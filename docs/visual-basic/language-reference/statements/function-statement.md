@@ -33,6 +33,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234118"
 ---
 # <a name="function-statement-visual-basic"></a>Instrução Function (Visual Basic)
 Declara o nome, parâmetros e código que definem um `Function` procedimento.  
