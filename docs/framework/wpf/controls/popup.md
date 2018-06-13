@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
 ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551746"
 ---
 # <a name="popup"></a><span data-ttu-id="5bfba-102">Pop-up</span><span class="sxs-lookup"><span data-stu-id="5bfba-102">Popup</span></span>
 <span data-ttu-id="5bfba-103">O <xref:System.Windows.Controls.Primitives.Popup> controle exibe o conteúdo em uma janela separada que flutua sobre a janela atual do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5bfba-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  

@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
 ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551759"
 ---
 # <a name="adorners"></a><span data-ttu-id="6796e-102">Adornos</span><span class="sxs-lookup"><span data-stu-id="6796e-102">Adorners</span></span>
 <span data-ttu-id="6796e-103">Esta seção fornece informações sobre os adornos e [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework adorno.</span><span class="sxs-lookup"><span data-stu-id="6796e-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  

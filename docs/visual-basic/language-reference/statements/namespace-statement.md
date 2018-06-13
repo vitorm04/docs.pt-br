@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604848"
 ---
 # <a name="namespace-statement"></a><span data-ttu-id="a19e8-102">Instrução Namespace</span><span class="sxs-lookup"><span data-stu-id="a19e8-102">Namespace Statement</span></span>
 <span data-ttu-id="a19e8-103">Declara o nome de um namespace e faz com que o código-fonte que segue a declaração seja compilado dentro desse namespace.</span><span class="sxs-lookup"><span data-stu-id="a19e8-103">Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.</span></span>  

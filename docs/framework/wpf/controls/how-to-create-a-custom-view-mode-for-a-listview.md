@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551863"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a><span data-ttu-id="54054-102">Como criar um modo de exibição personalizado para um ListView</span><span class="sxs-lookup"><span data-stu-id="54054-102">How to: Create a Custom View Mode for a ListView</span></span>
 <span data-ttu-id="54054-103">Este exemplo mostra como criar um personalizado <xref:System.Windows.Controls.ListView.View%2A> modo para um <xref:System.Windows.Controls.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="54054-103">This example shows how to create a custom <xref:System.Windows.Controls.ListView.View%2A> mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  

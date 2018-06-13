@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319927"
 ---
 # <a name="nested-types-c-programming-guide"></a><span data-ttu-id="b954a-102">Tipos aninhados (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="b954a-102">Nested Types (C# Programming Guide)</span></span>
 <span data-ttu-id="b954a-103">Um tipo definido em uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é denominado tipo aninhado.</span><span class="sxs-lookup"><span data-stu-id="b954a-103">A type defined within a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is called a nested type.</span></span> <span data-ttu-id="b954a-104">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="b954a-104">For example:</span></span>  

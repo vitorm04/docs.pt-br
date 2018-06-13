@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
 ms.openlocfilehash: 28b92e903d954312374d8e4041c4fdeb9ed375d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554354"
 ---
 # <a name="viewbox"></a><span data-ttu-id="1166a-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="1166a-102">Viewbox</span></span>
 <span data-ttu-id="1166a-103">O <xref:System.Windows.Controls.Viewbox> controle é usado para alongar ou escalar um elemento filho.</span><span class="sxs-lookup"><span data-stu-id="1166a-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
