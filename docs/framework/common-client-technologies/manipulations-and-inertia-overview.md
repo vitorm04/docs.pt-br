@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744389"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Visão geral de manipulações e inércia
 As *manipulações* permitem aos usuários mover, girar e redimensionar elementos de interface do usuário usando *manipuladores*. Um manipulador representa um mouse ou (em um cenário sensível ao toque) uma caneta ou um dedo.  

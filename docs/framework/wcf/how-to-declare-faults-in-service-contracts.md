@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500214"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Como declarar falhas em contratos de serviço
 No código gerenciado, as exceções são geradas quando ocorrem condições de erro. Em aplicativos do Windows Communication Foundation (WCF), no entanto, os contratos de serviço especificar quais informações de erro são retornadas aos clientes declarando falhas de SOAP no contrato de serviço. Para obter uma visão geral da relação entre exceções e falhas, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

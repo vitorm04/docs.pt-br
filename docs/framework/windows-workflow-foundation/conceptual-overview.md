@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511843"
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Visão geral conceitual de fluxo de trabalho do Windows
 Esta seção contém um conjunto de tópicos que abordam os maiores conceitos por trás do Windows Workflow Foundation (WF).  

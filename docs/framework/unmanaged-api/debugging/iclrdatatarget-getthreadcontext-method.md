@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407682"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>Método ICLRDataTarget::GetThreadContext
 Obtém o contexto de execução atual de determinado thread no processo de destino. Este método é chamado pelos serviços de acesso de dados de tempo de execução linguagem comuns.  

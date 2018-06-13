@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514149"
 ---
 # <a name="bookmarks"></a>Indicadores
 Este exemplo demonstra como escrever uma atividade personalizado que cria um indicador para receber entrada externo. O exemplo também inclui um aplicativo de console básico que usa a atividade personalizado em um fluxo de trabalho e mostra como descobrir e para continuar indexadores associados com um fluxo de trabalho em execução como ouvinte exemplo. Para obter mais informações sobre indicadores, consulte [indicadores](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

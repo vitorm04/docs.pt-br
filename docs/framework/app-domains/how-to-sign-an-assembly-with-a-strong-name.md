@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744623"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  

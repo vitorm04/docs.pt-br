@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514046"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Como: Propriedades de dados de instância de Deserialize
 Pode haver situações quando um usuário ou um administrador de fluxo de trabalho podem querer inspecione manualmente o estado de uma instância persistentes de fluxo de trabalho. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fornece uma exibição na tabela de instâncias que expõe as seguintes quatro colunas:  

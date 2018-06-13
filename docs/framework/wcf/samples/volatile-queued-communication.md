@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508022"
 ---
 # <a name="volatile-queued-communication"></a>Comunicação em fila volátil
 Este exemplo demonstra como realizar a comunicação em fila volátil sobre o transporte de enfileiramento de mensagens (MSMQ). Este exemplo usa <xref:System.ServiceModel.NetMsmqBinding>. O serviço nesse caso é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  

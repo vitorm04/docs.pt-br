@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748393"
 ---
 # <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; elemento (configurações de Cache)
 Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> classe define um [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) elemento que você pode usar para configurar o cache. Várias instâncias de <xref:System.Runtime.Caching.MemoryCache> classe pode ser usada em um único aplicativo. Cada `memoryCache` elemento no arquivo de configuração pode conter configurações para um conjunto nomeado <xref:System.Runtime.Caching.MemoryCache> instância.  

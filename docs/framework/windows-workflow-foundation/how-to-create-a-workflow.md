@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513257"
 ---
 # <a name="how-to-create-a-workflow"></a>Como: Crie um fluxo de trabalho
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Estes tópicos nesta etapa da seção durante a criação de um fluxo de trabalho que usa as duas atividades internas, como o <xref:System.Activities.Statements.Flowchart> atividade e as atividades personalizadas do anterior [como: criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número. Somente um dos tópicos nesta seção é necessário para concluir o tutorial; você deve escolher o estilo que os interesses você e seguem essa etapa. No entanto, você pode concluir todos os tópicos se desejado.  

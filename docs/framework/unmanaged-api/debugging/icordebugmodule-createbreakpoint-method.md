@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 313d3d74356a378351270916e1043a1cc4d799ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414236"
 ---
 # <a name="icordebugmodulecreatebreakpoint-method"></a>Método ICorDebugModule::CreateBreakpoint
 Este método não foi implementado na versão atual do .NET Framework.  

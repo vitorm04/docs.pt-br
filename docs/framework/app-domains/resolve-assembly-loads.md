@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745611"
 ---
 # <a name="resolving-assembly-loads"></a>Resolvendo carregamentos de assembly
 O .NET Framework fornece o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicativos que exigem maior controle sobre o carregamento do assembly. Ao tratar esse evento, seu aplicativo pode carregar um assembly no contexto de carga de fora dos caminhos normais de investigação, selecionar qual das várias versões de assembly carregar, emitir um assembly dinâmico e retorná-lo, etc. Este tópico fornece orientação para a manipulação do evento <xref:System.AppDomain.AssemblyResolve>.  

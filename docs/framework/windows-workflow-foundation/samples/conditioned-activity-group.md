@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514059"
 ---
 # <a name="conditioned-activity-group"></a>Grupo de atividade condicionado
 O exemplo demonstra um aplicativo do registro do traço. <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) tem duas atividades de código a seguir: uma atividade do carro e uma atividade de linha sobrecarga. No construtor de `SimpleCAGWorkflow` , um objeto de ArrayList “travelNeedType” é preenchido com os tipos de registros de traço necessários. Comentando por uma ou ambas as instruções de `travelNeeds.Add` , você altera o comportamento de CAG de acordo. As atividades de carro e linha sobrecarga têm sua condição de <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> preenchida com <xref:System.Workflow.Activities.CodeCondition>. Atividade de carro executa somente se a coleção de `travelNeeds` tem uma entrada de `TravelNeeds.Car` , e a atividade de linha sobrecarga executa somente se a coleção de `travelNeeds` tem uma entrada de `TravelNeeds.Airline` .  

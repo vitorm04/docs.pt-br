@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512594"
 ---
 # <a name="configuring-activity-validation"></a>Configurando a validação de atividades
 Validação de atividade autores e permite que usuários da atividade para identificar e relatar erros na configuração de uma atividade antes da execução. Windows Workflow Foundation (WF) fornece os seguintes três tipos de validação de atividades:  

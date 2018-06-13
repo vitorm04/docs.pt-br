@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746001"
 ---
 # <a name="ltdiscoveryclientsettingsgt"></a>&lt;discoveryClientSettings&gt;
 Contém as configurações necessitadas por um aplicativo para participar do processo de descoberta de serviço como um cliente.  

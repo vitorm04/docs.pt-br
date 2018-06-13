@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505763"
 ---
 # <a name="getting-started-sample"></a>Exemplo de introdução
 O guia de Introdução demonstra como implementar um serviço típico e um cliente típico usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básico.  

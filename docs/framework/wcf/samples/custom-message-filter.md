@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504122"
 ---
 # <a name="custom-message-filter"></a>Filtro de mensagem personalizado
 Este exemplo demonstra como substituir os filtros de mensagem que usa o Windows Communication Foundation (WCF) para enviar mensagens a pontos de extremidade.  

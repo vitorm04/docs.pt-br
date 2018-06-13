@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413502"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>Método ICorDebugHeapValue::IsValid
 Obtém um valor que indica se o objeto representado por esse ICorDebugHeapValue é válido.  

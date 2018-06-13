@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508209"
 ---
 # <a name="stream"></a>Fluxo
 O exemplo de fluxo demonstra o uso de fluxo de comunicação de modo de transferência. O serviço expõe diversas operações que enviam e recebem fluxos. Este exemplo é hospedado automaticamente. O cliente e o serviço são programas de console.  

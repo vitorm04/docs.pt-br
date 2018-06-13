@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502670"
 ---
 # <a name="self-host"></a>Self-Host
 Este exemplo demonstra como implementar um serviço hospedado automaticamente em um aplicativo de console. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). O arquivo de configuração do serviço foi renomeado de Web. config para o App. config e modificado para configurar um endereço base, o host usa. O código de origem do serviço foi modificado para implementar um estático `Main` função que cria e abre um host de serviço que fornece o endereço base configurado. A implementação do serviço foi modificada para gravar a saída para o console para cada operação. O cliente está inalterado, exceto para a configuração do endereço de ponto de extremidade correto do serviço.  

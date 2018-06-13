@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744363"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Como receber notificações de exceções de primeira tentativa
 O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.AppDomain> permite que você receba uma notificação de que uma exceção foi lançada, antes de o Common Language Runtime começar a procurar por manipuladores de exceção.  

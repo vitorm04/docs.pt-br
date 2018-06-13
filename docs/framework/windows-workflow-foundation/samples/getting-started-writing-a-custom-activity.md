@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513301"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a>Introdução ao escrever uma atividade personalizado
 Este exemplo demonstra como definir uma atividade personalizado simples em XAML. A atividade é dada o nome `Rhyme`, e sua lógica é uma sequência de três atividades de <xref:System.Activities.Statements.WriteLine> .  

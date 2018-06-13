@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504075"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
 Mensagens em fila podem não entrega. Essas mensagens com falha são registradas em uma fila de mensagens mortas. Falha na entrega pode ser causado por motivos como falhas de rede, uma fila excluída, uma fila cheia, falha de autenticação ou uma falha ao entregar no tempo.  

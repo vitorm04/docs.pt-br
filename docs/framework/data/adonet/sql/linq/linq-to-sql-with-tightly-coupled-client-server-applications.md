@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359914"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL com aplicativos Apertado- agrupados do servidor cliente
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode ser usado na camada intermediária com clientes inteligentes estreitamente ligado na camada de apresentação. Em cenários que não envolvem acesso a dados somente leitura, a nenhuma verificação de concorrência otimista, ou concorrência otimista com os carimbos de data/hora, não há muito mais complexidade do que com cenários de não remoto. No entanto, quando uma base de dados requer verificação de simultaneidade otimista com valores originais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não fornece o nível de suporte para fazer ide de dados que que você localiza em datasets. No entanto, uma camada intermediária de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode trocar dados com clientes em qualquer plataforma.  

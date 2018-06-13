@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513807"
 ---
 # <a name="writing-projects-targeting-the-net-framework-30-and-35-in-visual-studio-2010"></a>Escrever projetos direcionar o.NET Framework 3.0 e os 3,5 no Visual Studio 2010
 Você pode usar [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] para criar projetos que destinam-se a versão 3,0 ou 3,5 de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Este tópico descreve como fazer isso.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508097"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede com frequência não têm uma conexão direta e abrir o caminho para a comunicação. Pacotes são filtradas, roteadas, analisados e transformados em máquinas de ponto de extremidade e intermediários máquinas na rede. Conversões de endereço de rede (NAT) e firewalls são exemplos comuns de aplicativos intermediários que podem participar de comunicação de rede.  

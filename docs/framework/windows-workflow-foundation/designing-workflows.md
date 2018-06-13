@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511671"
 ---
 # <a name="designing-workflows"></a>Criando fluxos de trabalho
 Os tópicos nesta seção descrevem os paradigma de controle de fluxo usados no desenvolvimento de fluxo de trabalho.  

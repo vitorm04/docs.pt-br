@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507652"
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Glossário Windows Communication Foundation para o .NET Framework 4.5
 Os seguintes termos são definidos para a documentação do Windows Communication Foundation.  

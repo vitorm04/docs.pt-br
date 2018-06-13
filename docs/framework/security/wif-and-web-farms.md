@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410410"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web Farms
 Ao usar o WIF (Windows Identity Foundation) para proteger os recursos de um aplicativo RP (terceira parte confiável) implantado em uma web farm, siga etapas específicas para garantir que o WIF possa processar tokens de instâncias do aplicativo RP em execução em diferentes computadores no farm. Esse processamento inclui validação de assinaturas de token de sessão, criptografia e descriptografia de tokens de sessão, cache de tokens de sessão e detecção de tokens de segurança reproduzidos.  

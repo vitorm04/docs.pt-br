@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748273"
 ---
 # <a name="ltheadersgt-element"></a>elemento de &lt;cabeçalhos&gt;
 Contém uma coleção de cabeçalhos de endereço que são necessárias para tratar corretamente o emissor local. Você pode usar o `add` palavra-chave para adicionar um cabeçalho para esta coleção.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330685"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ to XML)
 Este tópico mostra como criar documentos com namespaces.  

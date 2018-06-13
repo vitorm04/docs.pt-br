@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500071"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Como implementar uma operação de serviço assíncrona
 Em aplicativos do Windows Communication Foundation (WCF), uma operação de serviço pode ser implementada assíncrona ou síncrona sem ditando ao cliente como chamá-lo. Por exemplo, operações de serviço assíncrona podem chamar sincronamente e operações de serviço síncronas podem ser chamadas de forma assíncrona. Para obter um exemplo que mostra como chamar uma operação assíncrona em um aplicativo cliente, consulte [como: chamar operações de serviço assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obter mais informações sobre operações síncronas e assíncronas, consulte [criar contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md) e [síncrona e operações assíncronas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Este tópico descreve a estrutura básica de uma operação de serviço assíncrona, o código não está completo. Para um exemplo completo de cliente e serviço consulte [assíncrona](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  

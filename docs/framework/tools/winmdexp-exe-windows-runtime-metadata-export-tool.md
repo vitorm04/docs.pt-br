@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408093"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
 A Ferramenta de Exportação dos Metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Embora os assemblies do .NET Framework e os arquivos de metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes [!INCLUDE[wrt](../../../includes/wrt-md.md)]. O processo de transformar um módulo do .NET Framework em um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] é conhecido como *exportação*. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  

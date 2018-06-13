@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747480"
 ---
 # <a name="ltbaseaddressesgt"></a>&lt;BaseAddresses&gt;
 Representa uma coleção de `baseAddress` elementos, que são endereços de base para um host de serviço em um ambiente de hospedagem interna. Se um endereço base estiver presente, os pontos de extremidade podem ser configurados com endereços em relação ao endereço base.  

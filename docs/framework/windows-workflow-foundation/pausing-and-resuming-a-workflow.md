@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513478"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Pausando e continuando um fluxo de trabalho
 Fluxos de trabalho pausarão e continuarão em resposta a indexadores e para atividades de bloqueio como <xref:System.Activities.Statements.Delay>, mas um fluxo de trabalho também pode ser explicitamente pausado, descarregado, e continuado usando a persistência.  

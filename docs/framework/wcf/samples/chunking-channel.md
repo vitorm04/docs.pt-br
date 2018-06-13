@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508811"
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
 Ao enviar mensagens grandes usando o Windows Communication Foundation (WCF), geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. É uma solução possível transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Mensagens confiáveis e segurança são dois exemplos como esse. Outra solução possível é dividir a mensagens grandes em mensagens menores chamado partes, enviar parte de um desses blocos em um momento e reconstituir a mensagem grande no lado de recepção. O próprio aplicativo poderia fazer esse agrupamento e eliminação de agrupamento ou use um canal personalizado para fazer isso. O exemplo de canal agrupamento mostra como um protocolo personalizado ou canal em camadas pode ser usado para fazer o agrupamento e a eliminação de agrupamento de mensagens arbitrariamente grandes.  

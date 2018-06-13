@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749628"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;adicionar&gt; &lt;transportConfigurationType&gt;
 Esse elemento é um par chave/valor, que identifica o tipo de um transporte particular.  
