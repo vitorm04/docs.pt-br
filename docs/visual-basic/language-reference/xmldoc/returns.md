@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
 ms.openlocfilehash: effc55bd65ae6c54575b7931529499505a9523cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598359"
 ---
 # <a name="ltreturnsgt-visual-basic"></a><span data-ttu-id="ad56b-102">&lt;Retorna&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad56b-102">&lt;returns&gt; (Visual Basic)</span></span>
 <span data-ttu-id="ad56b-103">Especifica o valor de retorno da propriedade ou função.</span><span class="sxs-lookup"><span data-stu-id="ad56b-103">Specifies the return value of the property or function.</span></span>  

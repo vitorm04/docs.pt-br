@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604322"
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a><span data-ttu-id="f223d-102">Não é possível vincular ao arquivo de recurso &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;</span><span class="sxs-lookup"><span data-stu-id="f223d-102">Unable to link to resource file &#39;&lt;filename&gt;&#39;: &lt;error message&gt;</span></span>
 <span data-ttu-id="f223d-103">O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto.</span><span class="sxs-lookup"><span data-stu-id="f223d-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="f223d-104">O vinculador relatou um erro ao vincular a um arquivo de recurso COM+ nativo do assembly.</span><span class="sxs-lookup"><span data-stu-id="f223d-104">The linker has reported an error linking to a native COM+ resource file from the assembly.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571027"
 ---
 # <a name="usage-guidelines"></a><span data-ttu-id="0c82b-102">Diretrizes de uso</span><span class="sxs-lookup"><span data-stu-id="0c82b-102">Usage Guidelines</span></span>
 <span data-ttu-id="0c82b-103">Esta seção contém diretrizes para usar tipos comuns nas APIs publicamente acessível.</span><span class="sxs-lookup"><span data-stu-id="0c82b-103">This section contains guidelines for using common types in publicly accessible APIs.</span></span> <span data-ttu-id="0c82b-104">Ele lida com o uso direto de tipos de estrutura (por exemplo, atributos de serialização) internas e operadores comuns de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="0c82b-104">It deals with direct usage of built-in Framework types (e.g., serialization attributes) and overloading common operators.</span></span>  

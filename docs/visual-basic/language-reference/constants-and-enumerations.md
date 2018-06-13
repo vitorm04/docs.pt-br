@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591736"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a><span data-ttu-id="9c05b-102">Constantes e enumerações (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9c05b-102">Constants and Enumerations (Visual Basic)</span></span>
 <span data-ttu-id="9c05b-103">Visual Basic fornece um número de enumerações e constantes predefinidas para desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="9c05b-103">Visual Basic supplies a number of predefined constants and enumerations for developers.</span></span> <span data-ttu-id="9c05b-104">Constantes armazenam valores que permanecem constantes durante a execução de um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="9c05b-104">Constants store values that remain constant throughout the execution of an application.</span></span> <span data-ttu-id="9c05b-105">Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes.</span><span class="sxs-lookup"><span data-stu-id="9c05b-105">Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.</span></span>  

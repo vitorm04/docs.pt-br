@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462183"
 ---
 # <a name="qualifiersetput-function"></a><span data-ttu-id="da9ab-103">Função QualifierSet_Put</span><span class="sxs-lookup"><span data-stu-id="da9ab-103">QualifierSet_Put function</span></span>
 <span data-ttu-id="da9ab-104">Grava o qualificador de nome e o valor.</span><span class="sxs-lookup"><span data-stu-id="da9ab-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="da9ab-105">O novo qualificador substitui o valor anterior do mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="da9ab-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="da9ab-106">Se o qualificador não existir, ele será criado.</span><span class="sxs-lookup"><span data-stu-id="da9ab-106">If the qualifier does not exist, it is created.</span></span> 

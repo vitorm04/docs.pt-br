@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460577"
 ---
 # <a name="getpropertyhandle-function"></a><span data-ttu-id="a7afe-103">Função GetPropertyHandle</span><span class="sxs-lookup"><span data-stu-id="a7afe-103">GetPropertyHandle function</span></span>
 <span data-ttu-id="a7afe-104">Retorna um identificador exclusivo que identifica uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="a7afe-104">Returns a unique handle that identifies a property.</span></span>

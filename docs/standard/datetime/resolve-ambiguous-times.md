@@ -13,8 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a92081a164d15e5150c582b37c6c688cd15e619e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571193"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a><span data-ttu-id="c6765-102">Como: resolver horários ambíguos</span><span class="sxs-lookup"><span data-stu-id="c6765-102">How to: Resolve ambiguous times</span></span>
 

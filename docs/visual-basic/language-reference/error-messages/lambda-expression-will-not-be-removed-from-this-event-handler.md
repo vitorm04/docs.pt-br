@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590161"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="b03e6-102">A expressão lambda não será removida deste manipulador de eventos</span><span class="sxs-lookup"><span data-stu-id="b03e6-102">Lambda expression will not be removed from this event handler</span></span>
 <span data-ttu-id="b03e6-103">Expressão lambda não será removida deste manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="b03e6-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="b03e6-104">Atribua a expressão lambda a uma variável e use a variável para adicionar e remover o evento.</span><span class="sxs-lookup"><span data-stu-id="b03e6-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  

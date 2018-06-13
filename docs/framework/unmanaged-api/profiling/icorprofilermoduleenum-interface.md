@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2275eb37d0e62c3f0ee8bbc8ea6db66901a3f1c1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458053"
 ---
 # <a name="icorprofilermoduleenum-interface"></a><span data-ttu-id="26c52-102">Interface ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="26c52-102">ICorProfilerModuleEnum Interface</span></span>
 <span data-ttu-id="26c52-103">Fornece métodos para iterar de forma sequencial por meio de uma coleção de módulos carregados pelo aplicativo ou pelo criador de perfis.</span><span class="sxs-lookup"><span data-stu-id="26c52-103">Provides methods to sequentially iterate through a collection of modules loaded by the application or the profiler.</span></span>  

@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d1fa297536cbac174e77b2d19b53b642a577f949
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474783"
 ---
 # <a name="service-security-calls-not-authorized-per-second"></a><span data-ttu-id="89de1-102">Serviço: chamadas de segurança não autorizadas por segundo</span><span class="sxs-lookup"><span data-stu-id="89de1-102">Service: Security Calls Not Authorized Per Second</span></span>
 <span data-ttu-id="89de1-103">Nome do contador: segurança chamadas não autorizadas por segundo</span><span class="sxs-lookup"><span data-stu-id="89de1-103">Counter name: Security Calls Not Authorized Per Second</span></span>  

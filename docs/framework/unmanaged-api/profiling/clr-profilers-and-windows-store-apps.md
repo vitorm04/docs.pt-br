@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462280"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a><span data-ttu-id="9b732-102">Criadores de perfil CLR e aplicativos da Windows Store</span><span class="sxs-lookup"><span data-stu-id="9b732-102">CLR Profilers and Windows Store Apps</span></span>
 <span data-ttu-id="9b732-103">Este tópico discute o que você precisa pensar sobre quando gravar ferramentas de diagnóstico que analisam gerenciado código em execução dentro de um aplicativo da Windows Store.</span><span class="sxs-lookup"><span data-stu-id="9b732-103">This topic discusses what you need to think about when writing diagnostic tools that analyze managed code running inside a Windows Store app.</span></span>  <span data-ttu-id="9b732-104">Ele também fornece diretrizes para modificar suas ferramentas de desenvolvimento para que eles continuem a funcionar quando você executá-los nos aplicativos da Windows Store.</span><span class="sxs-lookup"><span data-stu-id="9b732-104">It also provides guidelines to modify your existing development tools so they continue to work when you run them against Windows Store apps.</span></span>  <span data-ttu-id="9b732-105">Para entender essas informações, é melhor que se você estiver familiarizado com o idioma em tempo de execução de criação de perfil API comum, você já tiver usado essa API em uma ferramenta de diagnóstica que é executado corretamente em relação a aplicativos de área de trabalho do Windows e você agora está interessado em modificando a ferramenta para executar corretamente em aplicativos da Windows Store.</span><span class="sxs-lookup"><span data-stu-id="9b732-105">To understand this information, it’s best if you're  familiar with the Common Language Runtime Profiling API, you’ve already used this API in a diagnostic tool that runs correctly against Windows desktop applications, and you’re now interested in modifying the tool to run correctly against Windows Store apps.</span></span>  

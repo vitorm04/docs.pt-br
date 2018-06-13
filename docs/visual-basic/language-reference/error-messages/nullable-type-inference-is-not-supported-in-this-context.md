@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
 ms.openlocfilehash: ea531c7be676e940a263b019a66cc80cf280a772
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593185"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a><span data-ttu-id="7dda3-102">Inferência de tipo que permite valor nulo não suportada neste contexto</span><span class="sxs-lookup"><span data-stu-id="7dda3-102">Nullable type inference is not supported in this context</span></span>
 <span data-ttu-id="7dda3-103">Estruturas e tipos de valor podem ser declaradas anuláveis.</span><span class="sxs-lookup"><span data-stu-id="7dda3-103">Value types and structures can be declared nullable.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457350"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="d7f85-102">Restrições a parâmetros de tipo (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="d7f85-102">Constraints on type parameters (C# Programming Guide)</span></span>
 

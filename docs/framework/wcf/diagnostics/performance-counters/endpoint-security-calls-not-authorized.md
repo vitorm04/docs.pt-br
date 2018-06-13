@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b449aaad65f01a5f4835f8335543220383543984
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471250"
 ---
 # <a name="endpoint-security-calls-not-authorized"></a><span data-ttu-id="8a064-102">Ponto de extremidade: mensagens de segurança não autorizadas</span><span class="sxs-lookup"><span data-stu-id="8a064-102">Endpoint: Security Calls Not Authorized</span></span>
 <span data-ttu-id="8a064-103">Nome do contador: Chamadas de segurança não autorizadas.</span><span class="sxs-lookup"><span data-stu-id="8a064-103">Counter Name: Security Calls Not Authorized.</span></span>  

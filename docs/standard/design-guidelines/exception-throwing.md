@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573715"
 ---
 # <a name="exception-throwing"></a><span data-ttu-id="34880-102">Lançando exceções</span><span class="sxs-lookup"><span data-stu-id="34880-102">Exception Throwing</span></span>
 <span data-ttu-id="34880-103">Lançando exceções diretrizes descritas nesta seção exigem uma definição válida do significado da falha de execução.</span><span class="sxs-lookup"><span data-stu-id="34880-103">Exception-throwing guidelines described in this section require a good definition of the meaning of execution failure.</span></span> <span data-ttu-id="34880-104">Falha na execução ocorre sempre que um membro não é possível fazer o que ele foi projetado para fazer (o que o nome de membro implica).</span><span class="sxs-lookup"><span data-stu-id="34880-104">Execution failure occurs whenever a member cannot do what it was designed to do (what the member name implies).</span></span> <span data-ttu-id="34880-105">Por exemplo, se o `OpenFile` método não pode retornar um identificador de arquivo aberto ao chamador, ele será considerado uma falha na execução.</span><span class="sxs-lookup"><span data-stu-id="34880-105">For example, if the `OpenFile` method cannot return an opened file handle to the caller, it would be considered an execution failure.</span></span>  

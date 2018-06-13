@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
 ms.openlocfilehash: 72febe4e161ee4c19f07816445757a730cec6edf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593708"
 ---
 # <a name="object-required-visual-basic"></a><span data-ttu-id="b5562-102">Objeto obrigatório (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b5562-102">Object required (Visual Basic)</span></span>
 <span data-ttu-id="b5562-103">Referências a propriedades e métodos geralmente exigem um qualificador de objeto explícito.</span><span class="sxs-lookup"><span data-stu-id="b5562-103">References to properties and methods often require an explicit object qualifier.</span></span> <span data-ttu-id="b5562-104">Este é o caso.</span><span class="sxs-lookup"><span data-stu-id="b5562-104">This is such a case.</span></span>  

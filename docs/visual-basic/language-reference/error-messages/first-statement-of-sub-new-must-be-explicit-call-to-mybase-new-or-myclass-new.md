@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
 ms.openlocfilehash: dbce2a9edcc38ff137cb7ec0c97e5c259c0a0979
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589887"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a><span data-ttu-id="ae107-102">A primeira instrução &#39;Sub New&#39; deve ser uma chamada explícita para &#39;MyBase. New&#39; ou &#39;MyClass. New&#39; porque o &#39; &lt;constructorname&gt; &#39; na classe base &#39; &lt;baseclassname&gt; &#39; de &#39; &lt;derivedclassname&gt; &#39; está marcado como obsoleto: &#39; &lt;errormessage&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ae107-102">First statement of this &#39;Sub New&#39; must be an explicit call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; because the &#39;&lt;constructorname&gt;&#39; in the base class &#39;&lt;baseclassname&gt;&#39; of &#39;&lt;derivedclassname&gt;&#39; is marked obsolete: &#39;&lt;errormessage&gt;&#39;</span></span>
 <span data-ttu-id="ae107-103">Um construtor de classe não chama explicitamente um construtor de classe base, e o construtor de classe de base implícito está marcado com o <xref:System.ObsoleteAttribute> atributo e a diretiva para tratá-lo como um erro.</span><span class="sxs-lookup"><span data-stu-id="ae107-103">A class constructor does not explicitly call a base class constructor, and the implicit base class constructor is marked with the <xref:System.ObsoleteAttribute> attribute and the directive to treat it as an error.</span></span>  

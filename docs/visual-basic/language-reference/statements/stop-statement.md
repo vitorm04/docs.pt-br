@@ -14,8 +14,10 @@ helpviewer_keywords:
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
 ms.openlocfilehash: 955a3b6a2f7dc1d0e9823ed6d500ab7f7f9fe5b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599129"
 ---
 # <a name="stop-statement-visual-basic"></a><span data-ttu-id="21720-102">Instrução Stop (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21720-102">Stop Statement (Visual Basic)</span></span>
 <span data-ttu-id="21720-103">Suspende a execução.</span><span class="sxs-lookup"><span data-stu-id="21720-103">Suspends execution.</span></span>  

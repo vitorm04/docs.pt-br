@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459063"
 ---
 # <a name="3328---clientformatterdeserializereplystart"></a><span data-ttu-id="63bcf-102">3328 - ClientFormatterDeserializeReplyStart</span><span class="sxs-lookup"><span data-stu-id="63bcf-102">3328 - ClientFormatterDeserializeReplyStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="63bcf-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="63bcf-103">Properties</span></span>  

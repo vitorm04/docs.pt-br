@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
 ms.openlocfilehash: daeeab853f6a7f582542fa15ffc09ce749731d6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594377"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a><span data-ttu-id="617d2-102">&lt;type1&gt;&#39;&lt;typename&gt; &#39; deve implementar &#39; &lt;methodname&gt; &#39; para interface &#39; &lt;interfacename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="617d2-102">&lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;methodname&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;</span></span>
 <span data-ttu-id="617d2-103">Uma classe ou estrutura alega implementar uma interface mas não implementa um procedimento definido pela interface.</span><span class="sxs-lookup"><span data-stu-id="617d2-103">A class or structure claims to implement an interface but does not implement a procedure defined by the interface.</span></span> <span data-ttu-id="617d2-104">Cada membro da interface deve ser implementado.</span><span class="sxs-lookup"><span data-stu-id="617d2-104">Every member of the interface must be implemented.</span></span>  

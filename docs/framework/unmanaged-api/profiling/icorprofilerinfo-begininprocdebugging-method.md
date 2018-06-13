@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82e798e1a31f771c63e71f2a85f8cbb684b237bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462384"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a><span data-ttu-id="7452a-102">Método ICorProfilerInfo::BeginInprocDebugging</span><span class="sxs-lookup"><span data-stu-id="7452a-102">ICorProfilerInfo::BeginInprocDebugging Method</span></span>
 <span data-ttu-id="7452a-103">Inicializa suporte à depuração no processo.</span><span class="sxs-lookup"><span data-stu-id="7452a-103">Initializes in-process debugging support.</span></span> <span data-ttu-id="7452a-104">Este método está obsoleto no .NET Framework versão 2.0.</span><span class="sxs-lookup"><span data-stu-id="7452a-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562239"
 ---
 # <a name="xreference-markup-extension"></a><span data-ttu-id="c3dfe-102">Extensão de marcação x:Reference</span><span class="sxs-lookup"><span data-stu-id="c3dfe-102">x:Reference Markup Extension</span></span>
 <span data-ttu-id="c3dfe-103">Faz referência a uma instância que é declarada em outro lugar na marcação XAML.</span><span class="sxs-lookup"><span data-stu-id="c3dfe-103">References an instance that is declared elsewhere in XAML markup.</span></span> <span data-ttu-id="c3dfe-104">A referência a um elemento `x:Name`.</span><span class="sxs-lookup"><span data-stu-id="c3dfe-104">The reference refers to an element's `x:Name`.</span></span>  

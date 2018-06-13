@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34234367"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="d4f9d-102">Contexto verificado e não verificado (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="d4f9d-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="d4f9d-103">Instruções C# podem ser executadas em contexto marcado ou desmarcado.</span><span class="sxs-lookup"><span data-stu-id="d4f9d-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="d4f9d-104">Em um contexto marcado, o estouro aritmético gera uma exceção.</span><span class="sxs-lookup"><span data-stu-id="d4f9d-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="d4f9d-105">Em um contexto não verificado, o estouro aritmético é ignorado, e o resultado é truncado descartando todos os bits de ordem superior que não se encaixam no tipo de destino.</span><span class="sxs-lookup"><span data-stu-id="d4f9d-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

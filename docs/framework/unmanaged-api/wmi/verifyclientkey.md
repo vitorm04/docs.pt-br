@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459558"
 ---
 # <a name="verifyclientkey-function"></a><span data-ttu-id="68597-103">Função VerifyClientKey</span><span class="sxs-lookup"><span data-stu-id="68597-103">VerifyClientKey function</span></span>
 <span data-ttu-id="68597-104">Garante que a chave do cliente tem a segurança correta.</span><span class="sxs-lookup"><span data-stu-id="68597-104">Ensures that the client key has the correct security.</span></span>  

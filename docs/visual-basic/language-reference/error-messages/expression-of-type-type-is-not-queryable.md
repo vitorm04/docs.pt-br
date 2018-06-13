@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
 ms.openlocfilehash: 9d333abda5e303f8fab6d1f707df7ac77d8e03ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589003"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a><span data-ttu-id="72356-102">A expressão do tipo &lt;tipo&gt; não é passível de consulta</span><span class="sxs-lookup"><span data-stu-id="72356-102">Expression of type &lt;type&gt; is not queryable</span></span>
 <span data-ttu-id="72356-103">A expressão do tipo \<tipo > não é passível de consulta.</span><span class="sxs-lookup"><span data-stu-id="72356-103">Expression of type \<type> is not queryable.</span></span> <span data-ttu-id="72356-104">Certifique-se de que não está faltando uma importação de referência e/ou namespace do assembly para o provedor LINQ.</span><span class="sxs-lookup"><span data-stu-id="72356-104">Make sure you are not missing an assembly reference and/or namespace import for the LINQ provider.</span></span>  

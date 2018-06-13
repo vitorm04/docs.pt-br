@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605089"
 ---
 # <a name="on-error-statement-visual-basic"></a><span data-ttu-id="a831e-102">Instrução On Error (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a831e-102">On Error Statement (Visual Basic)</span></span>
 <span data-ttu-id="a831e-103">Ativa uma rotina de tratamento de erros e especifica o local da rotina de dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros.</span><span class="sxs-lookup"><span data-stu-id="a831e-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  

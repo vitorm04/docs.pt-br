@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572821"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a><span data-ttu-id="9aca7-102">Como: permitir que os usuários a resolver horários ambíguos</span><span class="sxs-lookup"><span data-stu-id="9aca7-102">How to: Let users resolve ambiguous times</span></span>
 

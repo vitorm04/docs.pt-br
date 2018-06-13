@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d3e21d42340378c576bfc65750fba26a257b82cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457740"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a><span data-ttu-id="74a08-102">Método ICorProfilerCallback4::ReJITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="74a08-102">ICorProfilerCallback4::ReJITCompilationStarted Method</span></span>
 <span data-ttu-id="74a08-103">Notifica o criador de perfil que o compilador just-in-time (JIT) foi iniciado recompilar uma função.</span><span class="sxs-lookup"><span data-stu-id="74a08-103">Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.</span></span>  

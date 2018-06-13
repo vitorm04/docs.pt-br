@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603815"
 ---
 # <a name="f-p-statements"></a><span data-ttu-id="1c181-102">Instruções F-P</span><span class="sxs-lookup"><span data-stu-id="1c181-102">F-P Statements</span></span>
 <span data-ttu-id="1c181-103">A tabela a seguir contém uma lista de instruções de linguagem do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1c181-103">The following table contains a listing of Visual Basic language statements.</span></span>  

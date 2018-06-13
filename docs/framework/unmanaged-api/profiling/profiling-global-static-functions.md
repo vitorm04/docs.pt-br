@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461829"
 ---
 # <a name="profiling-global-static-functions"></a><span data-ttu-id="b4208-102">Criando perfil de funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="b4208-102">Profiling Global Static Functions</span></span>
 <span data-ttu-id="b4208-103">Esta seção descreve as funções de API não gerenciadas que usa a API de criação de perfil.</span><span class="sxs-lookup"><span data-stu-id="b4208-103">This section describes the unmanaged API functions that the profiling API uses.</span></span>  

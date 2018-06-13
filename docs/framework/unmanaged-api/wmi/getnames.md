@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461975"
 ---
 # <a name="getnames-function"></a><span data-ttu-id="3173e-103">Função GetNames</span><span class="sxs-lookup"><span data-stu-id="3173e-103">GetNames function</span></span>
 <span data-ttu-id="3173e-104">Recupera um subconjunto ou todos os nomes das propriedades de um objeto.</span><span class="sxs-lookup"><span data-stu-id="3173e-104">Retrieves either a subset or all of the names of the properties of an object.</span></span> 
