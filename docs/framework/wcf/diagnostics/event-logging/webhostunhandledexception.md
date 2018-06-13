@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469418"
 ---
 # <a name="webhostunhandledexception"></a><span data-ttu-id="9b215-102">WebHostUnhandledException</span><span class="sxs-lookup"><span data-stu-id="9b215-102">WebHostUnhandledException</span></span>
 <span data-ttu-id="9b215-103">ID: 109</span><span class="sxs-lookup"><span data-stu-id="9b215-103">Id: 109</span></span>  

@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 ms.openlocfilehash: 855e32463284604fc27d4b73331ae48967dddefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650446"
 ---
 # <a name="data-types-in-visual-basic"></a><span data-ttu-id="b03e1-102">Tipos de dados no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b03e1-102">Data Types in Visual Basic</span></span>
 <span data-ttu-id="b03e1-103">O *tipo de dados* de um elemento de programação se refere a que tipo de dados ele pode armazenar e como ele armazena esses dados.</span><span class="sxs-lookup"><span data-stu-id="b03e1-103">The *data type* of a programming element refers to what kind of data it can hold and how it stores that data.</span></span> <span data-ttu-id="b03e1-104">Os tipos de dados se aplicam a todos os valores que podem ser armazenados na memória do computador ou participam da avaliação de uma expressão.</span><span class="sxs-lookup"><span data-stu-id="b03e1-104">Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression.</span></span> <span data-ttu-id="b03e1-105">Cada variável, literal, constante, enumeração, propriedade, parâmetro de procedimento, argumento de procedimento e valor retornado do procedimento tem um tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="b03e1-105">Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.</span></span>  

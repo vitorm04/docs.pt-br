@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172222"
 ---
 # <a name="enum-c-reference"></a><span data-ttu-id="55264-102">enum (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="55264-102">enum (C# Reference)</span></span>
 <span data-ttu-id="55264-103">A palavra-chave `enum` é usada para declarar uma enumeração, um tipo distinto que consiste em um conjunto de constantes nomeadas denominado lista de enumeradores.</span><span class="sxs-lookup"><span data-stu-id="55264-103">The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.</span></span>  

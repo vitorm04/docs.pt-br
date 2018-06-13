@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652864"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="60e58-102">Como criar literais XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="60e58-102">How to: Create XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="60e58-103">Você pode criar um documento XML, fragmento ou elemento diretamente no código usando um literal XML.</span><span class="sxs-lookup"><span data-stu-id="60e58-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="60e58-104">Os exemplos neste tópico demonstram como criar um elemento XML que tem três elementos filho e como criar um documento XML.</span><span class="sxs-lookup"><span data-stu-id="60e58-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  

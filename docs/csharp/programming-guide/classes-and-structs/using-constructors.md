@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172310"
 ---
 # <a name="using-constructors-c-programming-guide"></a><span data-ttu-id="a27dc-102">Usando construtores (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="a27dc-102">Using Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="a27dc-103">Quando uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criado, seu construtor é chamado.</span><span class="sxs-lookup"><span data-stu-id="a27dc-103">When a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="a27dc-104">Os construtores têm o mesmo nome que a classe ou struct e eles geralmente inicializam os membros de dados do novo objeto.</span><span class="sxs-lookup"><span data-stu-id="a27dc-104">Constructors have the same name as the class or struct, and they usually initialize the data members of the new object.</span></span>  

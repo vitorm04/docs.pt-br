@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650815"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a><span data-ttu-id="898b4-102">Conversão de delegado reduzida (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="898b4-102">Relaxed Delegate Conversion (Visual Basic)</span></span>
 <span data-ttu-id="898b4-103">Conversão de delegado reduzida permite que você atribua sub-rotinas e funções a delegados ou manipuladores mesmo quando as assinaturas não são idênticas.</span><span class="sxs-lookup"><span data-stu-id="898b4-103">Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical.</span></span> <span data-ttu-id="898b4-104">Portanto, ligação a delegados fica consistente com a associação já permitida para invocações de método.</span><span class="sxs-lookup"><span data-stu-id="898b4-104">Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653436"
 ---
 # <a name="-nowarn"></a><span data-ttu-id="e2cf5-102">-nowarn</span><span class="sxs-lookup"><span data-stu-id="e2cf5-102">-nowarn</span></span>
 <span data-ttu-id="e2cf5-103">Suprime a capacidade do compilador para gerar avisos.</span><span class="sxs-lookup"><span data-stu-id="e2cf5-103">Suppresses the compiler's ability to generate warnings.</span></span>  

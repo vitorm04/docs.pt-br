@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
 ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653566"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a><span data-ttu-id="69ddf-102">Visão geral de operadores de consulta padrão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69ddf-102">Standard Query Operators Overview (Visual Basic)</span></span>
 <span data-ttu-id="69ddf-103">Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ.</span><span class="sxs-lookup"><span data-stu-id="69ddf-103">The *standard query operators* are the methods that form the LINQ pattern.</span></span> <span data-ttu-id="69ddf-104">A maioria desses métodos opera em sequências; neste contexto, uma sequência é um objeto cujo tipo implementa a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="69ddf-104">Most of these methods operate on sequences, where a sequence is an object whose type implements the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="69ddf-105">Os operadores de consulta padrão fornecem recursos de consulta incluindo filtragem, projeção, agregação, classificação e muito mais.</span><span class="sxs-lookup"><span data-stu-id="69ddf-105">The standard query operators provide query capabilities including filtering, projection, aggregation, sorting and more.</span></span>  

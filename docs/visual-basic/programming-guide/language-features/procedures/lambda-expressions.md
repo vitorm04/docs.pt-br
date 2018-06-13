@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654788"
 ---
 # <a name="lambda-expressions-visual-basic"></a><span data-ttu-id="07e15-102">Expressões lambda (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07e15-102">Lambda Expressions (Visual Basic)</span></span>
 <span data-ttu-id="07e15-103">Um *expressão lambda* é uma função ou sub-rotina sem um nome que pode ser usado sempre que um delegado é válido.</span><span class="sxs-lookup"><span data-stu-id="07e15-103">A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid.</span></span> <span data-ttu-id="07e15-104">Expressões lambda podem ser funções ou sub-rotinas e podem ser de linha única ou multilinha.</span><span class="sxs-lookup"><span data-stu-id="07e15-104">Lambda expressions can be functions or subroutines and can be single-line or multi-line.</span></span> <span data-ttu-id="07e15-105">Você pode passar valores do escopo atual para uma expressão lambda.</span><span class="sxs-lookup"><span data-stu-id="07e15-105">You can pass values from the current scope to a lambda expression.</span></span>  

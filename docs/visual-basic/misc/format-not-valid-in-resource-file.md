@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
 ms.openlocfilehash: 07181e067242b07d5b419c4e9fe565cc708fc067
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636126"
 ---
 # <a name="format-not-valid-in-resource-file"></a><span data-ttu-id="5839f-102">Formato inválido no arquivo de recurso</span><span class="sxs-lookup"><span data-stu-id="5839f-102">Format not valid in resource file</span></span>
 <span data-ttu-id="5839f-103">Um arquivo de recurso em seu projeto não segue o formato padrão para um arquivo de recurso do Windows ou há uma incompatibilidade entre o arquivo de recurso e o projeto do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5839f-103">A resource file in your project does not follow the standard format for a Windows resource file or there is a mismatch between the resource file and the Visual Basic project.</span></span>  

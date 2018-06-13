@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656289"
 ---
 # <a name="scope-in-visual-basic"></a><span data-ttu-id="a4611-102">Escopo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a4611-102">Scope in Visual Basic</span></span>
 <span data-ttu-id="a4611-103">O *escopo* de um elemento declarado é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome ou tornando-o disponível por meio de um [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="a4611-103">The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span> <span data-ttu-id="a4611-104">Um elemento pode ter escopo em um dos seguintes níveis:</span><span class="sxs-lookup"><span data-stu-id="a4611-104">An element can have scope at one of the following levels:</span></span>  

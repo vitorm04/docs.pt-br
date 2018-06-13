@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652903"
 ---
 # <a name="-optionstrict"></a><span data-ttu-id="fc24a-102">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="fc24a-102">-optionstrict</span></span>
 <span data-ttu-id="fc24a-103">Impõe a semântica de tipo estrito para restringir a conversões de tipo implícito.</span><span class="sxs-lookup"><span data-stu-id="fc24a-103">Enforces strict type semantics to restrict implicit type conversions.</span></span>  

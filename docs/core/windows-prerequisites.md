@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311982"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a><span data-ttu-id="576bb-103">Pré-requisitos para .NET Core no Windows</span><span class="sxs-lookup"><span data-stu-id="576bb-103">Prerequisites for .NET Core on Windows</span></span>
 

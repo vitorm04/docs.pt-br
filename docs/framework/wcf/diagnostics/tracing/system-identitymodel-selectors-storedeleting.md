@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476548"
 ---
 # <a name="systemidentitymodelselectorsstoredeleting"></a><span data-ttu-id="00f72-102">System.IdentityModel.Selectors.StoreDeleting</span><span class="sxs-lookup"><span data-stu-id="00f72-102">System.IdentityModel.Selectors.StoreDeleting</span></span>
 <span data-ttu-id="00f72-103">System.IdentityModel.Selectors.StoreDeleting</span><span class="sxs-lookup"><span data-stu-id="00f72-103">System.IdentityModel.Selectors.StoreDeleting</span></span>  

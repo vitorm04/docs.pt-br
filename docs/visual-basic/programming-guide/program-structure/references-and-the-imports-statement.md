@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651844"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a><span data-ttu-id="cc0b1-102">Referências e a instrução Imports (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc0b1-102">References and the Imports Statement (Visual Basic)</span></span>
 <span data-ttu-id="cc0b1-103">Você pode disponibilizar objetos externos ao seu projeto, escolhendo o **adicionar referência** comando o **projeto** menu.</span><span class="sxs-lookup"><span data-stu-id="cc0b1-103">You can make external objects available to your project by choosing the **Add Reference** command on the **Project** menu.</span></span> <span data-ttu-id="cc0b1-104">Referências no Visual Basic poderá apontar para assemblies, que são como bibliotecas mas contêm mais informações.</span><span class="sxs-lookup"><span data-stu-id="cc0b1-104">References in Visual Basic can point to assemblies, which are like type libraries but contain more information.</span></span>  

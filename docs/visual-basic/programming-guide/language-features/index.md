@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652006"
 ---
 # <a name="visual-basic-language-features"></a><span data-ttu-id="b66d0-102">Funcionalidades da linguagem do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b66d0-102">Visual Basic Language Features</span></span>
 <span data-ttu-id="b66d0-103">Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto.</span><span class="sxs-lookup"><span data-stu-id="b66d0-103">The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language.</span></span> <span data-ttu-id="b66d0-104">Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b66d0-104">After creating the user interface for your application using forms and controls, you need to write the code that defines the application's behavior.</span></span> <span data-ttu-id="b66d0-105">Assim como acontece com qualquer linguagem de programação moderna, Visual Basic oferece suporte a um número de construções de programação comuns e elementos de linguagem.</span><span class="sxs-lookup"><span data-stu-id="b66d0-105">As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.</span></span>  

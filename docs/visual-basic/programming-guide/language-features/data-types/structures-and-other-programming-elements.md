@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652019"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="011ac-102">Estruturas e outros elementos de programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="011ac-102">Structures and Other Programming Elements (Visual Basic)</span></span>
 <span data-ttu-id="011ac-103">Você pode usar as estruturas em conjunto com matrizes, objetos e procedimentos, bem como entre si.</span><span class="sxs-lookup"><span data-stu-id="011ac-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="011ac-104">As interações usam a mesma sintaxe que esses elementos usam individualmente.</span><span class="sxs-lookup"><span data-stu-id="011ac-104">The interactions use the same syntax as these elements use individually.</span></span>  

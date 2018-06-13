@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656107"
 ---
 # <a name="-vbruntime"></a><span data-ttu-id="ff1e0-102">-/vbruntime</span><span class="sxs-lookup"><span data-stu-id="ff1e0-102">-vbruntime</span></span>
 <span data-ttu-id="ff1e0-103">Especifica que o compilador deve compilar sem uma referência à biblioteca de tempo de execução do Visual Basic, ou com uma referência a uma biblioteca de tempo de execução específica.</span><span class="sxs-lookup"><span data-stu-id="ff1e0-103">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>  

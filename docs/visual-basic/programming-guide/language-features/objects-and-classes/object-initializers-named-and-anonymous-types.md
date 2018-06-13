@@ -12,8 +12,10 @@ helpviewer_keywords:
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 612b1dcea0f776dfd4580803e76f2785e7d28da6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655630"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a><span data-ttu-id="8457a-102">Inicializadores de objeto: tipos nomeados e anônimos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8457a-102">Object Initializers: Named and Anonymous Types (Visual Basic)</span></span>
 <span data-ttu-id="8457a-103">Inicializadores de objeto permitem que você especifique propriedades para um objeto complexo usando uma única expressão.</span><span class="sxs-lookup"><span data-stu-id="8457a-103">Object initializers enable you to specify properties for a complex object by using a single expression.</span></span> <span data-ttu-id="8457a-104">Eles podem ser usados para criar instâncias dos tipos nomeados e de tipos anônimos.</span><span class="sxs-lookup"><span data-stu-id="8457a-104">They can be used to create instances of named types and of anonymous types.</span></span>  

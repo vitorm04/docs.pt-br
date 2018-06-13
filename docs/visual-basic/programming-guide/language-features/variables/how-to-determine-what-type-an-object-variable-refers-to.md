@@ -1,40 +1,31 @@
 ---
-title: "Como determinar a que tipo uma variável de objeto se refere (Visual Basic)"
-ms.custom: 
+title: Como determinar a que tipo uma variável de objeto se refere (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5dd6785ecd48be3f0455de63b9e3f13a485ddbb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dfd4ed87b65f536802ae71cbc3de41e1c4f83af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651308"
 ---
-# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a><span data-ttu-id="b1aa2-102">Como determinar a que tipo uma variável de objeto se refere (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1aa2-102">How to: Determine What Type an Object Variable Refers To (Visual Basic)</span></span>
-<span data-ttu-id="b1aa2-103">Uma variável de objeto contém um ponteiro para dados armazenados em outro lugar.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-103">An object variable contains a pointer to data that is stored elsewhere.</span></span> <span data-ttu-id="b1aa2-104">O tipo de dados pode alterar durante o tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-104">The type of that data can change during run time.</span></span> <span data-ttu-id="b1aa2-105">A qualquer momento, você pode usar o <xref:System.Type.GetTypeCode%2A> método para determinar o tipo de tempo de execução atual, ou o [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para descobrir se o atual tipo de tempo de execução é compatível com um tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-105">At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.</span></span>  
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a><span data-ttu-id="0f960-102">Como determinar a que tipo uma variável de objeto se refere (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f960-102">How to: Determine What Type an Object Variable Refers To (Visual Basic)</span></span>
+<span data-ttu-id="0f960-103">Uma variável de objeto contém um ponteiro para dados armazenados em outro lugar.</span><span class="sxs-lookup"><span data-stu-id="0f960-103">An object variable contains a pointer to data that is stored elsewhere.</span></span> <span data-ttu-id="0f960-104">O tipo de dados pode alterar durante o tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="0f960-104">The type of that data can change during run time.</span></span> <span data-ttu-id="0f960-105">A qualquer momento, você pode usar o <xref:System.Type.GetTypeCode%2A> método para determinar o tipo de tempo de execução atual, ou o [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para descobrir se o atual tipo de tempo de execução é compatível com um tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="0f960-105">At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.</span></span>  
   
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a><span data-ttu-id="b1aa2-106">Para determinar que exatamente tipo a uma variável de objeto atualmente refere-se a</span><span class="sxs-lookup"><span data-stu-id="b1aa2-106">To determine the exact type an object variable currently refers to</span></span>  
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a><span data-ttu-id="0f960-106">Para determinar que exatamente tipo a uma variável de objeto atualmente refere-se a</span><span class="sxs-lookup"><span data-stu-id="0f960-106">To determine the exact type an object variable currently refers to</span></span>  
   
-1.  <span data-ttu-id="b1aa2-107">A variável de objeto, chame o <xref:System.Object.GetType%2A> método para recuperar um <xref:System.Type?displayProperty=nameWithType> objeto.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-107">On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
+1.  <span data-ttu-id="0f960-107">A variável de objeto, chame o <xref:System.Object.GetType%2A> método para recuperar um <xref:System.Type?displayProperty=nameWithType> objeto.</span><span class="sxs-lookup"><span data-stu-id="0f960-107">On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
   
     ```  
     Dim myObject As Object  
     myObject.GetType()  
     ```  
   
-2.  <span data-ttu-id="b1aa2-108">Sobre o <xref:System.Type?displayProperty=nameWithType> classe, chame o método compartilhado <xref:System.Type.GetTypeCode%2A> para recuperar o <xref:System.TypeCode> valor de enumeração para o tipo de objeto.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-108">On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.</span></span>  
+2.  <span data-ttu-id="0f960-108">Sobre o <xref:System.Type?displayProperty=nameWithType> classe, chame o método compartilhado <xref:System.Type.GetTypeCode%2A> para recuperar o <xref:System.TypeCode> valor de enumeração para o tipo de objeto.</span><span class="sxs-lookup"><span data-stu-id="0f960-108">On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.</span></span>  
   
     ```  
     Dim myObject As Object  
@@ -42,11 +33,11 @@ ms.lasthandoff: 11/21/2017
     MsgBox("myObject currently has type code " & CStr(datTyp))  
     ```  
   
-     <span data-ttu-id="b1aa2-109">Você pode testar o <xref:System.TypeCode> valor de enumeração contra qualquer enumeração membros são de interesse, como `Double`.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-109">You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.</span></span>  
+     <span data-ttu-id="0f960-109">Você pode testar o <xref:System.TypeCode> valor de enumeração contra qualquer enumeração membros são de interesse, como `Double`.</span><span class="sxs-lookup"><span data-stu-id="0f960-109">You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.</span></span>  
   
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a><span data-ttu-id="b1aa2-110">Para determinar se um objeto de tipo de variável é compatível com um tipo especificado</span><span class="sxs-lookup"><span data-stu-id="b1aa2-110">To determine whether an object variable's type is compatible with a specified type</span></span>  
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a><span data-ttu-id="0f960-110">Para determinar se um objeto de tipo de variável é compatível com um tipo especificado</span><span class="sxs-lookup"><span data-stu-id="0f960-110">To determine whether an object variable's type is compatible with a specified type</span></span>  
   
--   <span data-ttu-id="b1aa2-111">Use o `TypeOf` operador em combinação com o [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) para testar o objeto com um `TypeOf`... `Is` expressão.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-111">Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.</span></span>  
+-   <span data-ttu-id="0f960-111">Use o `TypeOf` operador em combinação com o [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) para testar o objeto com um `TypeOf`... `Is` expressão.</span><span class="sxs-lookup"><span data-stu-id="0f960-111">Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.</span></span>  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  
@@ -54,18 +45,18 @@ ms.lasthandoff: 11/21/2017
     End If  
     ```  
   
-     <span data-ttu-id="b1aa2-112">O `TypeOf`... `Is` retorna `True` se o objeto do tempo de execução tipo é compatível com o tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-112">The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.</span></span>  
+     <span data-ttu-id="0f960-112">O `TypeOf`... `Is` retorna `True` se o objeto do tempo de execução tipo é compatível com o tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="0f960-112">The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.</span></span>  
   
-     <span data-ttu-id="b1aa2-113">O critério para compatibilidade depende se o tipo especificado é uma classe, estrutura ou interface.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-113">The criterion for compatibility depends on whether the specified type is a class, structure, or interface.</span></span> <span data-ttu-id="b1aa2-114">Em geral, os tipos são compatíveis, se o objeto é do mesmo tipo, herda de ou implementa o tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-114">In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type.</span></span> <span data-ttu-id="b1aa2-115">Para obter mais informações, consulte [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span><span class="sxs-lookup"><span data-stu-id="b1aa2-115">For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span></span>  
+     <span data-ttu-id="0f960-113">O critério para compatibilidade depende se o tipo especificado é uma classe, estrutura ou interface.</span><span class="sxs-lookup"><span data-stu-id="0f960-113">The criterion for compatibility depends on whether the specified type is a class, structure, or interface.</span></span> <span data-ttu-id="0f960-114">Em geral, os tipos são compatíveis, se o objeto é do mesmo tipo, herda de ou implementa o tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="0f960-114">In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type.</span></span> <span data-ttu-id="0f960-115">Para obter mais informações, consulte [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span><span class="sxs-lookup"><span data-stu-id="0f960-115">For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b1aa2-116">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="b1aa2-116">Compiling the Code</span></span>  
- <span data-ttu-id="b1aa2-117">Observe que o tipo especificado não pode ser uma variável ou expressão.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-117">Note that the specified type cannot be a variable or expression.</span></span> <span data-ttu-id="b1aa2-118">Ele deve ser o nome de um tipo definido, como uma classe, estrutura ou interface.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-118">It must be the name of a defined type, such as a class, structure, or interface.</span></span> <span data-ttu-id="b1aa2-119">Isso inclui tipos intrínsecos como `Integer` e `String`.</span><span class="sxs-lookup"><span data-stu-id="b1aa2-119">This includes intrinsic types such as `Integer` and `String`.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0f960-116">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="0f960-116">Compiling the Code</span></span>  
+ <span data-ttu-id="0f960-117">Observe que o tipo especificado não pode ser uma variável ou expressão.</span><span class="sxs-lookup"><span data-stu-id="0f960-117">Note that the specified type cannot be a variable or expression.</span></span> <span data-ttu-id="0f960-118">Ele deve ser o nome de um tipo definido, como uma classe, estrutura ou interface.</span><span class="sxs-lookup"><span data-stu-id="0f960-118">It must be the name of a defined type, such as a class, structure, or interface.</span></span> <span data-ttu-id="0f960-119">Isso inclui tipos intrínsecos como `Integer` e `String`.</span><span class="sxs-lookup"><span data-stu-id="0f960-119">This includes intrinsic types such as `Integer` and `String`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1aa2-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b1aa2-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0f960-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0f960-120">See Also</span></span>  
  <xref:System.Object.GetType%2A>  
  <xref:System.Type?displayProperty=nameWithType>  
  <xref:System.Type.GetTypeCode%2A>  
  <xref:System.TypeCode>  
- [<span data-ttu-id="b1aa2-121">Variáveis de Objeto</span><span class="sxs-lookup"><span data-stu-id="b1aa2-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [<span data-ttu-id="b1aa2-122">Valores de Variável de Objeto</span><span class="sxs-lookup"><span data-stu-id="b1aa2-122">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [<span data-ttu-id="b1aa2-123">Tipo de Dados Object</span><span class="sxs-lookup"><span data-stu-id="b1aa2-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+ [<span data-ttu-id="0f960-121">Variáveis de Objeto</span><span class="sxs-lookup"><span data-stu-id="0f960-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="0f960-122">Valores de Variável de Objeto</span><span class="sxs-lookup"><span data-stu-id="0f960-122">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [<span data-ttu-id="0f960-123">Tipo de Dados Object</span><span class="sxs-lookup"><span data-stu-id="0f960-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)

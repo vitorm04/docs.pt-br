@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 ms.openlocfilehash: 99fe0eee194fae21615652c9426bf6027fbf4354
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652877"
 ---
 # <a name="delegates-visual-basic"></a><span data-ttu-id="b855c-102">Delegados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b855c-102">Delegates (Visual Basic)</span></span>
 <span data-ttu-id="b855c-103">Os delegados são objetos que se referem aos métodos.</span><span class="sxs-lookup"><span data-stu-id="b855c-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="b855c-104">Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação.</span><span class="sxs-lookup"><span data-stu-id="b855c-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="b855c-105">Mas diferentemente ponteiros de função, Visual Basic delegados são um tipo de referência com base na classe <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b855c-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b855c-106">Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.</span><span class="sxs-lookup"><span data-stu-id="b855c-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>  

@@ -9,8 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffb1d27f614afc3b07f9d663831fc2071535236f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653202"
 ---
 # <a name="-deterministic"></a><span data-ttu-id="2597a-102">-deterministic</span><span class="sxs-lookup"><span data-stu-id="2597a-102">-deterministic</span></span>
 

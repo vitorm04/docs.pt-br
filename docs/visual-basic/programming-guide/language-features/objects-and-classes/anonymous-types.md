@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656250"
 ---
 # <a name="anonymous-types-visual-basic"></a><span data-ttu-id="d5b9f-102">Tipos anônimos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5b9f-102">Anonymous Types (Visual Basic)</span></span>
 <span data-ttu-id="d5b9f-103">Visual Basic oferece suporte a tipos anônimos, que permitem que você crie objetos sem escrever uma definição de classe para o tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="d5b9f-103">Visual Basic supports anonymous types, which enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="d5b9f-104">Em vez disso, o compilador gera uma classe para você.</span><span class="sxs-lookup"><span data-stu-id="d5b9f-104">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="d5b9f-105">A classe sem nome utilizável, herda diretamente da <xref:System.Object>e contém as propriedades que você especificar no declarar o objeto.</span><span class="sxs-lookup"><span data-stu-id="d5b9f-105">The class has no usable name, inherits directly from <xref:System.Object>, and contains the properties you specify in declaring the object.</span></span> <span data-ttu-id="d5b9f-106">Porque o nome do tipo de dados não for especificado, ele é chamado como uma *tipo anônimo*.</span><span class="sxs-lookup"><span data-stu-id="d5b9f-106">Because the name of the data type is not specified, it is referred to as an *anonymous type*.</span></span>  
