@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806140"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="5cebb-102">Transporte: transações personalizadas através de exemplo de UDP</span><span class="sxs-lookup"><span data-stu-id="5cebb-102">Transport: Custom Transactions over UDP Sample</span></span>
 <span data-ttu-id="5cebb-103">Este exemplo se baseia o [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemplo no Windows Communication Foundation (WCF)[extensibilidade de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="5cebb-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="5cebb-104">Ele estende o exemplo de transporte UDP para oferecer suporte ao fluxo de transação personalizado e demonstra o uso de <xref:System.ServiceModel.Channels.TransactionMessageProperty> propriedade.</span><span class="sxs-lookup"><span data-stu-id="5cebb-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  

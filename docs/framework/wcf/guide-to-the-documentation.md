@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805532"
 ---
 # <a name="guide-to-the-documentation"></a><span data-ttu-id="c0c42-102">Guia para a documentação</span><span class="sxs-lookup"><span data-stu-id="c0c42-102">Guide to the Documentation</span></span>
 <span data-ttu-id="c0c42-103">Desde que este é um guia sobre a documentação do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c0c42-103">Provided here is guidance about the Windows Communication Foundation (WCF) documentation.</span></span> <span data-ttu-id="c0c42-104">Documentos associados são pontos de partida recomendados agrupados de acordo com interesses e níveis específicos de experiência.</span><span class="sxs-lookup"><span data-stu-id="c0c42-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  

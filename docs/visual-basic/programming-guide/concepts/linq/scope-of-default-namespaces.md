@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
 ms.openlocfilehash: a0c07c1b6ca4fea836bd37e4a311655fcb1d7878
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645737"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="97461-102">Escopo de namespace padrão no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="97461-102">Scope of Default Namespaces in Visual Basic</span></span>
 <span data-ttu-id="97461-103">Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas.</span><span class="sxs-lookup"><span data-stu-id="97461-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="97461-104">Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.</span><span class="sxs-lookup"><span data-stu-id="97461-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  

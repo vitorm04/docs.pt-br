@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: 0e8df8e6e324b2a575fb6232c54a223cb35a4ef2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644440"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="d401b-102">Como: combinar e comparar coleções de cadeia de caracteres (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d401b-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="d401b-103">Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados.</span><span class="sxs-lookup"><span data-stu-id="d401b-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="d401b-104">Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.</span><span class="sxs-lookup"><span data-stu-id="d401b-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  

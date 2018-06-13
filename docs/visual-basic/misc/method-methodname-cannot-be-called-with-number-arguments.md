@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
 ms.openlocfilehash: acfdf407527bf505173b520b673162ac3fae76a9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636113"
 ---
 # <a name="method-39ltmethodnamegt39-cannot-be-called-with-ltnumbergt-arguments"></a><span data-ttu-id="244bc-102">Método &#39; &lt;methodname&gt; &#39; não pode ser chamado com &lt;número&gt; argumentos</span><span class="sxs-lookup"><span data-stu-id="244bc-102">Method &#39;&lt;methodname&gt;&#39; cannot be called with &lt;number&gt; arguments</span></span>
 <span data-ttu-id="244bc-103">Uma chamada de método contém o número errado de argumentos.</span><span class="sxs-lookup"><span data-stu-id="244bc-103">A method call contains the wrong number of arguments.</span></span>  
