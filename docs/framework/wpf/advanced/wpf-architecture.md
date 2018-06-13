@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549640"
 ---
 # <a name="wpf-architecture"></a><span data-ttu-id="bda54-102">Arquitetura do WPF</span><span class="sxs-lookup"><span data-stu-id="bda54-102">WPF Architecture</span></span>
 <span data-ttu-id="bda54-103">Este tópico fornece um tutorial sobre a hierarquia de classe do Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="bda54-103">This topic provides a guided tour of the Windows Presentation Foundation (WPF) class hierarchy.</span></span> <span data-ttu-id="bda54-104">Ele aborda a maioria dos subsistemas principais do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve como eles interagem.</span><span class="sxs-lookup"><span data-stu-id="bda54-104">It covers most of the major subsystems of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], and describes how they interact.</span></span> <span data-ttu-id="bda54-105">Ele também detalha algumas das escolhas feitas pelos arquitetos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bda54-105">It also details some of the choices made by the architects of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span>  

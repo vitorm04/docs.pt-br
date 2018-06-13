@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323704"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a><span data-ttu-id="3015f-102">Tutorial: encadear consultas juntas (C#)</span><span class="sxs-lookup"><span data-stu-id="3015f-102">Tutorial: Chaining Queries Together (C#)</span></span>
 <span data-ttu-id="3015f-103">Este tutorial mostra o modelo de processamento quando você encadea consultas juntos.</span><span class="sxs-lookup"><span data-stu-id="3015f-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="3015f-104">Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais.</span><span class="sxs-lookup"><span data-stu-id="3015f-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="3015f-105">É importante compreender exatamente como as consultas encadeadas funcionam.</span><span class="sxs-lookup"><span data-stu-id="3015f-105">It is important to understand exactly how chained queries work.</span></span>  

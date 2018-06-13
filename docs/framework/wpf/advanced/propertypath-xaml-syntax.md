@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548981"
 ---
 # <a name="propertypath-xaml-syntax"></a><span data-ttu-id="765b3-102">Sintaxe PropertyPath (XAML)</span><span class="sxs-lookup"><span data-stu-id="765b3-102">PropertyPath XAML Syntax</span></span>
 <span data-ttu-id="765b3-103">O <xref:System.Windows.PropertyPath> objeto oferece suporte a um complexo embutido [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxe para definir várias propriedades que tomam a <xref:System.Windows.PropertyPath> tipo como seu valor.</span><span class="sxs-lookup"><span data-stu-id="765b3-103">The <xref:System.Windows.PropertyPath> object supports a complex inline [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntax for setting various properties that take the <xref:System.Windows.PropertyPath> type as their value.</span></span> <span data-ttu-id="765b3-104">Este tópico documenta o <xref:System.Windows.PropertyPath> sintaxe conforme aplicado a sintaxes de associação e animação.</span><span class="sxs-lookup"><span data-stu-id="765b3-104">This topic documents the <xref:System.Windows.PropertyPath> syntax as applied to binding and animation syntaxes.</span></span>  

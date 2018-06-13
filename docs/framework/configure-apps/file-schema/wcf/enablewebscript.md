@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751890"
 ---
 # <a name="ltenablewebscriptgt"></a><span data-ttu-id="349b7-102">&lt;enableWebScript&gt;</span><span class="sxs-lookup"><span data-stu-id="349b7-102">&lt;enableWebScript&gt;</span></span>
 <span data-ttu-id="349b7-103">Este elemento habilita o comportamento de ponto de extremidade que torna possível consumir o serviço de páginas da web de ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="349b7-103">This element enables the endpoint behavior that makes it possible to consume the service from ASP.NET AJAX web pages.</span></span>  

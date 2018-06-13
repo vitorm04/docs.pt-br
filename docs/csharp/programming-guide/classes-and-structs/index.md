@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327353"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a><span data-ttu-id="1faea-103">Classes e structs (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="1faea-103">Classes and Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="1faea-104">Classes e structs são duas das construções básicas do Common Type System no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1faea-104">Classes and structs are two of the basic constructs of the common type system in the .NET Framework.</span></span> <span data-ttu-id="1faea-105">Cada um é, essencialmente, uma estrutura de dados que encapsula um conjunto de dados e os comportamentos que são uma unidade lógica.</span><span class="sxs-lookup"><span data-stu-id="1faea-105">Each is essentially a data structure that encapsulates a set of data and behaviors that belong together as a logical unit.</span></span> <span data-ttu-id="1faea-106">Os dados e os comportamentos são os *membros* da classe ou struct, e eles incluem seus métodos, propriedades e eventos, e etc., conforme listado neste tópico.</span><span class="sxs-lookup"><span data-stu-id="1faea-106">The data and behaviors are the *members* of the class or struct, and they include its methods, properties, and events, and so on, as listed later in this topic.</span></span>  

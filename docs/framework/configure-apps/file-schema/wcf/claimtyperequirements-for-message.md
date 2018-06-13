@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754539"
 ---
 # <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a><span data-ttu-id="b471a-102">&lt;claimTypeRequirements&gt; de &lt;mensagem&gt;</span><span class="sxs-lookup"><span data-stu-id="b471a-102">&lt;claimTypeRequirements&gt; for &lt;message&gt;</span></span>
 <span data-ttu-id="b471a-103">Especifica uma coleção de tipos de declaração necessária.</span><span class="sxs-lookup"><span data-stu-id="b471a-103">Specifies a collection of required claim types.</span></span>  

@@ -1,26 +1,18 @@
 ---
-title: "Arquivo XML de exemplo: configuração de teste em um namespace1"
-ms.custom: 
+title: 'Arquivo XML de exemplo: configuração de teste em um namespace1'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fecab66eae4b5ed93788435757aed555b708eb3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 04d66eaa7fd134fdf368614ca94261b80c16d4d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333047"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="78a14-102">Arquivo XML de Exemplo: Configuração de teste em um namespace</span><span class="sxs-lookup"><span data-stu-id="78a14-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="78a14-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="78a14-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="78a14-104">Este é um arquivo de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="78a14-104">This is a test configuration file.</span></span> <span data-ttu-id="78a14-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="78a14-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="e8350-102">Arquivo XML de Exemplo: Configuração de teste em um namespace</span><span class="sxs-lookup"><span data-stu-id="e8350-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="e8350-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e8350-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e8350-104">Este é um arquivo de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="e8350-104">This is a test configuration file.</span></span> <span data-ttu-id="e8350-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="e8350-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="78a14-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="78a14-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="e8350-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="e8350-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -64,5 +56,5 @@ ms.lasthandoff: 10/18/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="78a14-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="78a14-107">See Also</span></span>  
- [<span data-ttu-id="78a14-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="78a14-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="e8350-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e8350-107">See Also</span></span>  
+ [<span data-ttu-id="e8350-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e8350-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
