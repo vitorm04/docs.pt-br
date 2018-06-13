@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548117"
 ---
 # <a name="xaml-in-wpf"></a>XAML no WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] é uma linguagem de marcação para aplicativos de programação. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementa a implementação do processador aXAML e fornece suporte de linguagem XAML. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos são implementados, de modo que eles possam fornecer o tipo necessário fazendo para uma representação de XAML. Em geral, você pode criar a maior parte do seu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da interface do usuário do aplicativo na marcação XAML.  

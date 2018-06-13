@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333967"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar e usar um delegado e criar uma instância dele (Guia de Programação em C#)
 No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostrado no exemplo a seguir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322491"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Como escrever um construtor de cópia (Guia de Programação em C#)
 O C# não fornece um construtor de cópia para objetos, mas é possível escrever um por conta própria.  

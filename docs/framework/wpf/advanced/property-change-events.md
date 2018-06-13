@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547645"
 ---
 # <a name="property-change-events"></a>Eventos de alteração na propriedade
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define vários eventos que são gerados em resposta a uma alteração no valor de uma propriedade. Geralmente, a propriedade é uma propriedade de dependência. O evento propriamente dito é, às vezes, um evento roteado e, às vezes, é um evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] padrão. A definição do evento varia dependendo do cenário, porque algumas alterações de propriedades são mais adequadamente roteadas por uma árvore de elemento, enquanto outras alterações de propriedades são geralmente apenas de interesse ao objeto no qual a propriedade foi alterada.  

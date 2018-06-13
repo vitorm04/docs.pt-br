@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548309"
 ---
 # <a name="use-automatic-layout-overview"></a>Visão geral do uso de layout automático
 Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos com localizável [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. No passado, a localização de um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] era um processo demorado. Cada idioma que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] foi adaptado para necessário um ajuste de pixel por pixel. Hoje, com o design correto e o direito de codificação de padrões, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] podem ser construídas para que localizadores tenham menos redimensionar e reposicionar para fazer. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionadas e reposicionadas é chamada de layout automático e pode ser obtida usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design de aplicativo.  

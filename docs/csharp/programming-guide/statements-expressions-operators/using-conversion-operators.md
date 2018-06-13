@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332300"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Usando operadores de conversão (Guia de Programação em C#)
 É possível usar operadores de conversão `implicit`, que são mais fáceis de usar ou operadores de conversão `explicit`, que indicam claramente para alguém que lê o código que você está convertendo um tipo. Este tópico demonstra os dois os tipos de operador de conversão.  

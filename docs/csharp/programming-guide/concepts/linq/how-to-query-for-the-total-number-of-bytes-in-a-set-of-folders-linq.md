@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322465"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Como consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)
 Este exemplo mostra como recuperar o número total de bytes usado por todos os arquivos em uma pasta especificada e todas as suas subpastas.  

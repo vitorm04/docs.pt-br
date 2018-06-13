@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325092"
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Como executar conversão cast com segurança usando operadores as e is (Guia de Programação em C#)
 Como os objetos são polimórficos, é possível que uma variável de tipo de classe base mantenha um tipo derivado. Para acessar o método de tipo derivado, é necessário converter o valor de volta no tipo derivado. No entanto, tentar uma conversão simples nesses casos, cria o risco de lançar uma <xref:System.InvalidCastException>. Isso ocorre porque o C# fornece os operadores [is](../../../csharp/language-reference/keywords/is.md) e [as](../../../csharp/language-reference/keywords/as.md). É possível usar esses operadores para testar se uma conversão será bem-sucedida sem fazer com que uma exceção seja lançada. Em geral, o operador `as` é mais eficiente, porque ele realmente retornará o valor de conversão se a conversão puder ser realizada com êxito. O operador `is` retorna apenas um valor booliano. Portanto, ele poderá ser usado quando você desejar determinar o tipo de um objeto, mas não será necessário convertê-lo realmente.  

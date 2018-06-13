@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218852"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e MSTest
 

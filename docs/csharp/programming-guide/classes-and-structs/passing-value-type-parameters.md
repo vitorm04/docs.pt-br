@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317018"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Passando parâmetros de tipo de valor (Guia de Programação em C#)
 Uma variável de [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) contém seus dados diretamente, o que não acontece com uma variável de [tipo de referência](../../../csharp/language-reference/keywords/reference-types.md), que contém uma referência a seus dados. Passar uma variável de tipo de valor para um método por valor significa passar uma cópia da variável para o método. Quaisquer alterações no parâmetro que ocorrem dentro do método não afetam os dados originais armazenados na variável de argumento. Se desejar que o método chamado altere o valor do parâmetro, é necessário passá-lo por referência, usando a palavra-chave [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Você também pode usar a palavra-chave [in](../../../csharp/language-reference/keywords/out-parameter-modifier.md) para passar um parâmetro de valor por referência, para evitar a cópia e ainda garantir que o valor não seja alterado. Para simplificar, os exemplos a seguir usam `ref`.  

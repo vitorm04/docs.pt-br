@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326414"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (Guia de Programação em C#)
 O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectangle` e `Color`. Embora seja conveniente representar um ponto como uma [classe](../../../csharp/language-reference/keywords/class.md) com [Propriedades Auto-implementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), um [struct](../../../csharp/language-reference/keywords/struct.md) pode ser mais eficiente em alguns cenários. Por exemplo, se você declarar uma matriz de 1000 objetos `Point`, alocará memória adicional para referenciar cada objeto, nesse caso, um struct será mais barato. Como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contém um objeto chamado <xref:System.Drawing.Point>, o struct neste exemplo é chamado “CoOrds”.  

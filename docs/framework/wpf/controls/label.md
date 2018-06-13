@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553722"
 ---
 # <a name="label"></a>Rotular
 <xref:System.Windows.Controls.Label> controles geralmente fornecem informações de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historicamente, um <xref:System.Windows.Controls.Label> continha apenas texto, mas como o <xref:System.Windows.Controls.Label> que acompanha o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é um <xref:System.Windows.Controls.ContentControl>, ele pode conter texto ou um <xref:System.Windows.UIElement>.  

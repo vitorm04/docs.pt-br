@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322124"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Como listar todos os nós em uma árvore (C#)
 Às vezes é útil listar todos os nós em uma árvore. Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore. Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.  

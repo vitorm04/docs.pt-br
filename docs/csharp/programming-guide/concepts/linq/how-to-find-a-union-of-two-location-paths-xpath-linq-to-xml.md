@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333291"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)
 O XPath permite que você localize a união de resultados de dois caminhos de local XPath.  

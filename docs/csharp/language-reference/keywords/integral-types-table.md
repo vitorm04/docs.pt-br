@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267903"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela de tipos integrais (Referência de C#)
 A tabela a seguir mostra os tamanhos e os intervalos de tipos integrais, que constituem um subconjunto de tipos simples.  

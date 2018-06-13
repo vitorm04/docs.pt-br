@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549705"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade do <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  

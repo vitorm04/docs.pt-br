@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313908"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Classes e membros de classes abstract e sealed (Guia de Programação em C#)
 A palavra-chave [abstract](../../../csharp/language-reference/keywords/abstract.md) permite que você crie classes e membros de [classe](../../../csharp/language-reference/keywords/class.md) que estão incompletos e devem ser implementados em uma classe derivada.  

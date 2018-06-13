@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549536"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms e mapeamento de propriedade do WPF
 As tecnologias [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm dois modelos de propriedade semelhantes, mas diferentes. O *mapeamento de propriedade* dá suporte à interoperação entre as duas arquiteturas e fornece os seguintes recursos:  

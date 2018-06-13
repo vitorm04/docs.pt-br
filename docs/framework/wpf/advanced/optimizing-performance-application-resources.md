@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546589"
 ---
 # <a name="optimizing-performance-application-resources"></a>Otimizando desempenho: recursos do aplicativo
 O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite compartilhar recursos do aplicativo para dar suporte a um comportamento ou a uma aparência consistente entre elementos de tipos semelhantes. Este tópico dá algumas recomendações nessa área que podem ajudar a melhorar o desempenho dos seus aplicativos.  

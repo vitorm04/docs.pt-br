@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314321"
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guia de Programação em C#)
 Um *campo* é uma variável de qualquer tipo que é declarada diretamente em uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md). Os campos são *membros* do tipo que os contém.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332180"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Como implementar membros de interface explicitamente (Guia de Programação em C#)
 Este exemplo declara uma [interface](../../../csharp/language-reference/keywords/interface.md), `IDimensions` e uma classe, `Box`, que implementa explicitamente os membros de interface `getLength` e `getWidth`. Os membros são acessados por meio da instância `dimensions` da interface.  

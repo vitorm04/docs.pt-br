@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323437"
 ---
 # <a name="thread-timers-c"></a>Temporizadores de thread (C#)
 A classe <xref:System.Threading.Timer?displayProperty=nameWithType> é útil para executar periodicamente uma tarefa em um thread separado. Por exemplo, você pode usar um temporizador de thread para verificar o status e a integridade de um banco de dados ou para fazer backup de arquivos críticos.  
