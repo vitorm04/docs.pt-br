@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501449"
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>Descubra um serviço com exemplo de modo único de URI de escuta
 Este exemplo demonstra como descobrir um serviço que tem o <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> propriedade definida como <xref:System.ServiceModel.Description.ListenUriMode.Unique>. Quando o <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> está definida como <xref:System.ServiceModel.Description.ListenUriMode.Unique>, o ListenUri é garantido como sendo exclusivo definindo a porta a ser exclusivo ou o caminho ser exclusivo, acrescentando um GUID.  

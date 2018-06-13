@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501243"
 ---
 # <a name="syndication-extensibility-samples"></a>Exemplos de extensibilidade de sindicalização
 Esta seção contém exemplos que demonstram a agregação personalizada no Windows Communication Foundation (WCF).  

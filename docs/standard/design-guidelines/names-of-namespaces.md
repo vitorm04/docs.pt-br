@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576426"
 ---
 # <a name="names-of-namespaces"></a>Nomes de Namespaces
 Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está criando clareza suficiente para o programador usando a estrutura imediatamente saber o que é provavelmente o conteúdo do namespace. O modelo a seguir especifica a regra geral para nomear namespaces:  

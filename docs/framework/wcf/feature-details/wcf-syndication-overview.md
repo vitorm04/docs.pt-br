@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498238"
 ---
 # <a name="wcf-syndication-overview"></a>Visão geral de sindicalização do WCF
 Windows Communication Foundation (WCF) oferece suporte para expor feeds de agregação de um serviço WCF. Distribuição é um mecanismo de integração de aplicativos no qual um servidor expõe alguns dados de aplicativo em um formato interoperável conhecido como um feed. Um feed é um conjunto de dados de aplicativo que consiste em alguns metadados em nível de feed (título, autor, URL e outros metadados) e uma série de itens de feed. No feed, os itens do feed são geralmente tempo ordenadas em ordem cronológica inversa. Um item do feed consiste em um conjunto padrão de metadados de nível de item (título, URL, data de criação, categoria e outros metadados de nível de item) e um valor arbitrário de dados específicos do aplicativo. Os dois tipos mais comuns de feeds de agregação são RSS Really Simple Syndication () 2.0 e Atom 1.0, que são suportados pelo WCF.  

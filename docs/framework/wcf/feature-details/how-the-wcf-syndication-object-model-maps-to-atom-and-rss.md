@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496033"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Como o modelo de objeto de sindicalização do WCF mapeia para Atom e RSS
 Ao desenvolver um serviço de distribuição do Windows Communication Foundation (WCF), você deve criar feeds e itens usando as classes a seguir:  

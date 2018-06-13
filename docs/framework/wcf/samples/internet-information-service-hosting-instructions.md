@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507568"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instruções de hospedagem de serviço de informação de internet
 Para executar os exemplos que são hospedados por serviços de informações da Internet (IIS), você deve garantir que o IIS está instalado corretamente e está em execução.  

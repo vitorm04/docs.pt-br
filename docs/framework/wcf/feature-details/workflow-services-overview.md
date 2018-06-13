@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502722"
 ---
 # <a name="workflow-services-overview"></a>Visão geral de serviços de fluxo de trabalho
 Serviços de fluxo de trabalho são serviços baseados em WCF que são implementados usando fluxos de trabalho. Serviços de fluxo de trabalho são fluxos de trabalho que usam as atividades de mensagens para enviar e receber mensagens do Windows Communication Foundation (WCF). .NET framework 4.5 apresenta uma série de atividades de mensagens que permite enviar e receber mensagens de um fluxo de trabalho. Para obter mais informações sobre atividades e como eles podem ser usados para implementar os padrões de troca de mensagem diferente de mensagens, consulte [atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
