@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb6a3e65b1f1d59cde3bff99e491bcf09816c8ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428052"
 ---
 # <a name="isymunmanagedwriterabort-method"></a><span data-ttu-id="34f44-102">Método ISymUnmanagedWriter::Abort</span><span class="sxs-lookup"><span data-stu-id="34f44-102">ISymUnmanagedWriter::Abort Method</span></span>
 <span data-ttu-id="34f44-103">Fecha o gravador de símbolo sem confirmar os símbolos para o armazenamento de símbolo.</span><span class="sxs-lookup"><span data-stu-id="34f44-103">Closes the symbol writer without committing the symbols to the symbol store.</span></span> <span data-ttu-id="34f44-104">Após essa chamada, o gravador de símbolo se torna inválido para obter informações mais atualizadas.</span><span class="sxs-lookup"><span data-stu-id="34f44-104">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="34f44-105">Para confirmar os símbolos e fechar o gravador de símbolo, use o [Isymunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="34f44-105">To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b36f4007f286938169cc5d583908493916b9e6f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425334"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="732d6-102">Método ISymUnmanagedReader::GetSymbolStoreFileName</span><span class="sxs-lookup"><span data-stu-id="732d6-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
 <span data-ttu-id="732d6-103">Fornece o nome de arquivo em disco do repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="732d6-103">Provides the on-disk file name of the symbol store.</span></span>  

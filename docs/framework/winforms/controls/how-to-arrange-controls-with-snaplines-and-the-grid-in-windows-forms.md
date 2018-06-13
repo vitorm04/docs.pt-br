@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528344"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a><span data-ttu-id="ad56e-102">Como organizar controles com guias de alinhamento e a grade nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ad56e-102">How to: Arrange Controls with Snaplines and the Grid in Windows Forms</span></span>
 <span data-ttu-id="ad56e-103">Usando os recursos de layout do Visual Studio, você precisamente pode direcionar onde os controles são colocados em um formulário.</span><span class="sxs-lookup"><span data-stu-id="ad56e-103">Using the layout features of Visual Studio, you can precisely direct where controls are placed on a form.</span></span> <span data-ttu-id="ad56e-104">Controles adicionados a um formulário ou movidos em um formulário podem ser alinhados automaticamente para as linhas e colunas da grade Designer de Formulários do Windows ou você pode alinhar controles usando o recurso de guias de ajuste.</span><span class="sxs-lookup"><span data-stu-id="ad56e-104">Controls added to a form or moved on a form can be automatically aligned to the rows and columns of the Windows Forms Designer's grid, or you can align controls by using the snaplines feature.</span></span>  

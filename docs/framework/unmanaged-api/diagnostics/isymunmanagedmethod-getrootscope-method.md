@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 417ce67d807fddd3b99ceff4b05f1524db3044e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430522"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="ddba0-102">Método ISymUnmanagedMethod::GetRootScope</span><span class="sxs-lookup"><span data-stu-id="ddba0-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
 <span data-ttu-id="ddba0-103">Obtém o escopo léxico raiz dentro desse método.</span><span class="sxs-lookup"><span data-stu-id="ddba0-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="ddba0-104">Esse escopo abrange todo o método.</span><span class="sxs-lookup"><span data-stu-id="ddba0-104">This scope encloses the entire method.</span></span>  

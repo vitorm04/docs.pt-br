@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642084"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a><span data-ttu-id="082bb-102">Como: classificar os elementos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="082bb-102">How to: Sort Elements (Visual Basic)</span></span>
 <span data-ttu-id="082bb-103">Este exemplo mostra como escrever uma consulta que classifica seus resultados.</span><span class="sxs-lookup"><span data-stu-id="082bb-103">This example shows how to write a query that sorts its results.</span></span>  

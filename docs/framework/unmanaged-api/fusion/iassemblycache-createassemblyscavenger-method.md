@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe1857e0eb22ee75cda6f612fbc0e1c699a3bde
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428475"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="e53c8-102">Método IAssemblyCache::CreateAssemblyScavenger</span><span class="sxs-lookup"><span data-stu-id="e53c8-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
 <span data-ttu-id="e53c8-103">Reservado para uso interno pela tecnologia de fusão.</span><span class="sxs-lookup"><span data-stu-id="e53c8-103">Reserved for internal use by the fusion technology.</span></span>  

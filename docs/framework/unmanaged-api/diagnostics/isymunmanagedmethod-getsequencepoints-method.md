@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426044"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="74f18-102">Método ISymUnmanagedMethod::GetSequencePoints</span><span class="sxs-lookup"><span data-stu-id="74f18-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
 <span data-ttu-id="74f18-103">Obtém todos os pontos de sequência dentro desse método.</span><span class="sxs-lookup"><span data-stu-id="74f18-103">Gets all the sequence points within this method.</span></span>  

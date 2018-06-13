@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528584"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="c1a2b-102">Como alinhar vários controles nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c1a2b-102">How to: Align Multiple Controls on Windows Forms</span></span>
 <span data-ttu-id="c1a2b-103">Para padronizar o layout da interface do usuário (IU) do seu aplicativo do Windows, você pode posicionar grupos de controles com um único comando.</span><span class="sxs-lookup"><span data-stu-id="c1a2b-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  

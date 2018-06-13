@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429880"
 ---
 # <a name="ememoryavailable-enumeration"></a><span data-ttu-id="ed16b-102">Enumeração EMemoryAvailable</span><span class="sxs-lookup"><span data-stu-id="ed16b-102">EMemoryAvailable Enumeration</span></span>
 <span data-ttu-id="ed16b-103">Contém valores que indicam a quantidade de memória física livre no computador.</span><span class="sxs-lookup"><span data-stu-id="ed16b-103">Contains values that indicate the amount of free physical memory on the computer.</span></span> <span data-ttu-id="ed16b-104">Esses valores mapeiam logicamente para os eventos de alta e baixa memória retornado do `CreateMemoryResourceNotification` função na API do Win32.</span><span class="sxs-lookup"><span data-stu-id="ed16b-104">These values logically map to the events for high and low memory returned from the `CreateMemoryResourceNotification` function in the Win32 API.</span></span>  

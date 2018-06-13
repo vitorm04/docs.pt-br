@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc0f72168e076f661bfefc17c851d7d353e5e742
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426746"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="934a4-102">Método ISymUnmanagedVariable::GetAttributes</span><span class="sxs-lookup"><span data-stu-id="934a4-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
 <span data-ttu-id="934a4-103">Obtém os sinalizadores de atributo para essa variável.</span><span class="sxs-lookup"><span data-stu-id="934a4-103">Gets the attribute flags for this variable.</span></span>  

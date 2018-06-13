@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432371"
 ---
 # <a name="corvalidateimage-function"></a><span data-ttu-id="279ef-102">Função _CorValidateImage</span><span class="sxs-lookup"><span data-stu-id="279ef-102">_CorValidateImage Function</span></span>
 <span data-ttu-id="279ef-103">Valida as imagens do módulo gerenciado e notifica o carregador do sistema operacional depois de terem sido carregados.</span><span class="sxs-lookup"><span data-stu-id="279ef-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  

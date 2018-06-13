@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 43a00d687c6a9ec42cb8573e70d181b4dc2c7d0e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433211"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a><span data-ttu-id="c9d91-102">Método ICLRRuntimeInfo::LoadErrorString</span><span class="sxs-lookup"><span data-stu-id="c9d91-102">ICLRRuntimeInfo::LoadErrorString Method</span></span>
 <span data-ttu-id="c9d91-103">Converte um valor HRESULT em uma mensagem de erro apropriada para a cultura especificada.</span><span class="sxs-lookup"><span data-stu-id="c9d91-103">Translates an HRESULT value into an appropriate error message for the specified culture.</span></span>  

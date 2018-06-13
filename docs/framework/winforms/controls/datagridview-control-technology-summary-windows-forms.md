@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528867"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a><span data-ttu-id="5dc81-102">Resumo de tecnologia do controle DataGridView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5dc81-102">DataGridView Control Technology Summary (Windows Forms)</span></span>
 <span data-ttu-id="5dc81-103">Este tópico resume as informações sobre o controle `DataGridView` e as classes que dão suporte ao seu uso.</span><span class="sxs-lookup"><span data-stu-id="5dc81-103">This topic summarizes information about the `DataGridView` control and the classes that support its use.</span></span>  

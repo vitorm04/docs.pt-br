@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536492"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="d16ba-102">Como mostrar uma lista de fontes ao componente FontDialog</span><span class="sxs-lookup"><span data-stu-id="d16ba-102">How to: Show a Font List with the FontDialog Component</span></span>
 <span data-ttu-id="d16ba-103">O componente [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) permite aos usuários selecionar uma fonte, bem como alterar seus aspectos de exibição, como peso e tamanho.</span><span class="sxs-lookup"><span data-stu-id="d16ba-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  

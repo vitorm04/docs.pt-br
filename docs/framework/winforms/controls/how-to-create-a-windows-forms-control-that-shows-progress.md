@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531424"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a><span data-ttu-id="5d00a-102">Como criar um controle dos Windows Forms que mostre o progresso</span><span class="sxs-lookup"><span data-stu-id="5d00a-102">How to: Create a Windows Forms Control That Shows Progress</span></span>
 <span data-ttu-id="5d00a-103">O exemplo de código a seguir mostra um controle personalizado chamado `FlashTrackBar` que pode ser usado para mostrar ao usuário o nível ou o andamento de um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5d00a-103">The following code example shows a custom control called `FlashTrackBar` that can be used to show the user the level or the progress of an application.</span></span> <span data-ttu-id="5d00a-104">Ele usa um gradiente para representar visualmente o progresso.</span><span class="sxs-lookup"><span data-stu-id="5d00a-104">It uses a gradient to visually represent progress.</span></span>  

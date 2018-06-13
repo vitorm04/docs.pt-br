@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aeb3c4e9a1d87b2d93a310b88c340aec0955a845
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425292"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="da3e1-102">Método ISymUnmanagedNamespace::GetName</span><span class="sxs-lookup"><span data-stu-id="da3e1-102">ISymUnmanagedNamespace::GetName Method</span></span>
 <span data-ttu-id="da3e1-103">Obtém o nome desse namespace.</span><span class="sxs-lookup"><span data-stu-id="da3e1-103">Gets the name of this namespace.</span></span>  

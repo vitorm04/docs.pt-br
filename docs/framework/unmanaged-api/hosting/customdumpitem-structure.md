@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433090"
 ---
 # <a name="customdumpitem-structure"></a><span data-ttu-id="83adf-102">Estrutura CustomDumpItem</span><span class="sxs-lookup"><span data-stu-id="83adf-102">CustomDumpItem Structure</span></span>
 <span data-ttu-id="83adf-103">Descreve um item a ser adicionado a um despejo personalizado nos relatórios de erros.</span><span class="sxs-lookup"><span data-stu-id="83adf-103">Describes an item to be added to a custom dump in error reporting.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533364"
 ---
 # <a name="toolstripprogressbar-control"></a><span data-ttu-id="eb08c-102">Controle ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="eb08c-102">ToolStripProgressBar Control</span></span>
 <span data-ttu-id="eb08c-103">O <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows.Forms.ToolStrip> renderização e rafting recursos com sua funcionalidade de controle de processo típica.</span><span class="sxs-lookup"><span data-stu-id="eb08c-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines <xref:System.Windows.Forms.ToolStrip> rendering and rafting features with its typical process-tracking functionality.</span></span>  

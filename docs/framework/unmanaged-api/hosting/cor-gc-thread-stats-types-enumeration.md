@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74de8838d7f9ad1995bf7b15699b5589d13a0cab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428831"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="88802-102">Enumeração COR_GC_THREAD_STATS_TYPES</span><span class="sxs-lookup"><span data-stu-id="88802-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
 <span data-ttu-id="88802-103">Indica as estatísticas de coleta de lixo para um thread.</span><span class="sxs-lookup"><span data-stu-id="88802-103">Indicates the garbage collection statistics for a thread.</span></span>  

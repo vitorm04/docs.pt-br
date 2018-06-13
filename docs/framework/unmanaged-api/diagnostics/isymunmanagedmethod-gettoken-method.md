@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89ae648e38b6349bfad0a37724a9bdc1ae05e365
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425279"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="1fe6f-102">Método ISymUnmanagedMethod::GetToken</span><span class="sxs-lookup"><span data-stu-id="1fe6f-102">ISymUnmanagedMethod::GetToken Method</span></span>
 <span data-ttu-id="1fe6f-103">Retorna o token de metadados para esse método.</span><span class="sxs-lookup"><span data-stu-id="1fe6f-103">Returns the metadata token for this method.</span></span>  

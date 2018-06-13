@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531291"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="59de5-102">Como implementar um mecanismo de layout personalizado</span><span class="sxs-lookup"><span data-stu-id="59de5-102">How to: Implement a Custom Layout Engine</span></span>
 <span data-ttu-id="59de5-103">O exemplo de código a seguir demonstra como criar um mecanismo de layout personalizado que executa um layout de fluxo simples.</span><span class="sxs-lookup"><span data-stu-id="59de5-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="59de5-104">Ele implementa um controle de painel chamado `DemoFlowPanel`, que substitui o <xref:System.Windows.Forms.Control.LayoutEngine%2A> propriedade para fornecer uma instância do `DemoFlowLayout` classe.</span><span class="sxs-lookup"><span data-stu-id="59de5-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  

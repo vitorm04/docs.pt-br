@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534261"
 ---
 # <a name="how-to-disable-tab-pages"></a><span data-ttu-id="127ae-102">Como desabilitar páginas de guia</span><span class="sxs-lookup"><span data-stu-id="127ae-102">How to: Disable Tab Pages</span></span>
 <span data-ttu-id="127ae-103">Em algumas ocasiões, pode ser útil restringir o acesso aos dados que estão disponíveis no seu Aplicativo do Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="127ae-103">On some occasions, you will want to restrict access to data that is available within your Windows Forms application.</span></span> <span data-ttu-id="127ae-104">Um exemplo disso seria quando você tem dados exibidos nas páginas da guia de um controle guia. Os administradores poderiam ter informações em uma página da guia que você gostaria de proibir para convidados ou usuários de nível inferior.</span><span class="sxs-lookup"><span data-stu-id="127ae-104">One example of this might be when you have data displayed in the tab pages of a tab control; administrators could have information on a tab page that you would want to restrict from guest or lower-level users.</span></span>  

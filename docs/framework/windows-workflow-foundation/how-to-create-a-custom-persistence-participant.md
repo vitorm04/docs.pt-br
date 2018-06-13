@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517235"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a><span data-ttu-id="fe0f8-102">Como: Crie um participante personalizado de persistência</span><span class="sxs-lookup"><span data-stu-id="fe0f8-102">How to: Create a Custom Persistence Participant</span></span>
 <span data-ttu-id="fe0f8-103">O seguinte procedimento tem as etapas para criar um participante de persistência.</span><span class="sxs-lookup"><span data-stu-id="fe0f8-103">The following procedure has steps to create a persistence participant.</span></span> <span data-ttu-id="fe0f8-104">Consulte o [participantes de persistência](http://go.microsoft.com/fwlink/?LinkID=177735) exemplo e [repositório extensibilidade](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tópico para implementações de exemplo de participantes de persistência.</span><span class="sxs-lookup"><span data-stu-id="fe0f8-104">See the [Participating in Persistence](http://go.microsoft.com/fwlink/?LinkID=177735) sample and [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) topic for sample implementations of persistence participants.</span></span>  

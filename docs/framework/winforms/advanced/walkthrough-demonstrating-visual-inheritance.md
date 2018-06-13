@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529695"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a><span data-ttu-id="75d19-102">Instruções passo a passo: demonstrando herança visual</span><span class="sxs-lookup"><span data-stu-id="75d19-102">Walkthrough: Demonstrating Visual Inheritance</span></span>
 <span data-ttu-id="75d19-103">A herança visual permite que você veja os controles no formulário de base e adicione novos controles.</span><span class="sxs-lookup"><span data-stu-id="75d19-103">Visual inheritance enables you to see the controls on the base form and to add new controls.</span></span> <span data-ttu-id="75d19-104">Neste passo a passo, você criará um formulário de base e o compilará em uma biblioteca de classes.</span><span class="sxs-lookup"><span data-stu-id="75d19-104">In this walkthrough you will create a base form and compile it into a class library.</span></span> <span data-ttu-id="75d19-105">Você importará esta biblioteca de classes em outro projeto e criará um novo formulário que herda do formulário de base.</span><span class="sxs-lookup"><span data-stu-id="75d19-105">You will import this class library into another project and create a new form that inherits from the base form.</span></span> <span data-ttu-id="75d19-106">Durante este passo a passo, você aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="75d19-106">During this walkthrough, you will learn how to:</span></span>  

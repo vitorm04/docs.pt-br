@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432980"
 ---
 # <a name="compareassemblyidentity-function"></a><span data-ttu-id="9b1d8-102">Função CompareAssemblyIdentity</span><span class="sxs-lookup"><span data-stu-id="9b1d8-102">CompareAssemblyIdentity Function</span></span>
 <span data-ttu-id="9b1d8-103">Compara duas identidades de assembly para determinar se eles são equivalentes.</span><span class="sxs-lookup"><span data-stu-id="9b1d8-103">Compares two assembly identities to determine whether they are equivalent.</span></span>  

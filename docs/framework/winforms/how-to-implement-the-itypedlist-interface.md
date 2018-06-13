@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538056"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a><span data-ttu-id="b39a6-102">Como implementar a interface ITypedList</span><span class="sxs-lookup"><span data-stu-id="b39a6-102">How to: Implement the ITypedList Interface</span></span>
 <span data-ttu-id="b39a6-103">Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a descoberta do esquema para obter uma lista associável.</span><span class="sxs-lookup"><span data-stu-id="b39a6-103">Implement the <xref:System.ComponentModel.ITypedList> interface to enable discovery of the schema for a bindable list.</span></span>  

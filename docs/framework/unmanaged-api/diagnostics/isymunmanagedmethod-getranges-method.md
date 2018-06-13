@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426014"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="54bf2-102">Método ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="54bf2-102">ISymUnmanagedMethod::GetRanges Method</span></span>
 <span data-ttu-id="54bf2-103">Fornecido uma posição em um documento, retorna uma matriz de pares deslocamentos de início e término que correspondem aos intervalos de Microsoft intermediate language (MSIL) que abrange a posição dentro desse método.</span><span class="sxs-lookup"><span data-stu-id="54bf2-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="54bf2-104">A matriz é uma matriz de inteiros e tem o formato [início, end, início, fim].</span><span class="sxs-lookup"><span data-stu-id="54bf2-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="54bf2-105">O número de pares de intervalo é o comprimento da matriz dividido por 2.</span><span class="sxs-lookup"><span data-stu-id="54bf2-105">The number of range pairs is the length of the array divided by 2.</span></span>  

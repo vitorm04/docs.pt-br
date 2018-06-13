@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1e9a2261ab5fd06e0514efdddf8a8e952a6e3d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426884"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="285c9-102">Método ISymUnmanagedWriter::GetDebugInfo</span><span class="sxs-lookup"><span data-stu-id="285c9-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
 <span data-ttu-id="285c9-103">Retorna as informações necessárias para que um compilador gravar a entrada de diretório de depuração no cabeçalho de arquivo executável (PE) do portátil.</span><span class="sxs-lookup"><span data-stu-id="285c9-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="285c9-104">O gravador de símbolo preenche todos os campos, exceto para `TimeDateStamp` e `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="285c9-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="285c9-105">(O compilador é responsável por definir esses dois campos adequadamente.)</span><span class="sxs-lookup"><span data-stu-id="285c9-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  

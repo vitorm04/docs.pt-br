@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533722"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a><span data-ttu-id="321e0-102">Como dimensionar um controle de rótulo dos Windows Forms para encaixar o conteúdo</span><span class="sxs-lookup"><span data-stu-id="321e0-102">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>
 <span data-ttu-id="321e0-103">Windows Forms <xref:System.Windows.Forms.Label> controle pode ser de linha única ou multilinha, e podem ser fixas no tamanho ou pode redimensionar automaticamente para acomodar a legenda.</span><span class="sxs-lookup"><span data-stu-id="321e0-103">The Windows Forms <xref:System.Windows.Forms.Label> control can be single-line or multi-line, and it can be either fixed in size or can automatically resize itself to accommodate its caption.</span></span> <span data-ttu-id="321e0-104">O <xref:System.Windows.Forms.Label.AutoSize%2A> propriedade ajuda a dimensionar os controles para caber legendas maiores ou menores, que é especialmente útil se a legenda será alterado em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="321e0-104">The <xref:System.Windows.Forms.Label.AutoSize%2A> property helps you size the controls to fit larger or smaller captions, which is particularly useful if the caption will change at run time.</span></span>  

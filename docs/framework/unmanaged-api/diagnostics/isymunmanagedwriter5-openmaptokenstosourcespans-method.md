@@ -6,8 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d3bc8b00b568f96cd55b7811f310d34c1ff700d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428642"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a><span data-ttu-id="28f93-102">Método ISymUnmanagedWriter5::OpenMapTokensToSourceSpans</span><span class="sxs-lookup"><span data-stu-id="28f93-102">ISymUnmanagedWriter5::OpenMapTokensToSourceSpans Method</span></span>
 <span data-ttu-id="28f93-103">Abra uma seção de dados personalizada especial para emitir informações de mapeamento de span da fonte de token em.</span><span class="sxs-lookup"><span data-stu-id="28f93-103">Open a special custom data section to emit token-to-source span mapping information into.</span></span> <span data-ttu-id="28f93-104">Abrir esta seção quando um método já estiver aberto, ou vice-versa, é um erro.</span><span class="sxs-lookup"><span data-stu-id="28f93-104">Opening this section when a method is already open, or vice versa, is an error.</span></span>  

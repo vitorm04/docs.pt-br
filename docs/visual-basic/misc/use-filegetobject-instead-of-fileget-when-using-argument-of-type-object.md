@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640404"
 ---
 # <a name="use-39filegetobject39-instead-of-39fileget39-when-using-argument-of-type-39object39"></a><span data-ttu-id="c1980-102">Use &#39;FileGetObject&#39; em vez de &#39;FileGet&#39; quando usar argumento do tipo &#39;objeto&#39;</span><span class="sxs-lookup"><span data-stu-id="c1980-102">Use &#39;FileGetObject&#39; instead of &#39;FileGet&#39; when using argument of type &#39;Object&#39;</span></span>
 <span data-ttu-id="c1980-103">O `FileGet` método inclui um argumento do tipo `Object`.</span><span class="sxs-lookup"><span data-stu-id="c1980-103">The `FileGet` method includes an argument of type `Object`.</span></span> <span data-ttu-id="c1980-104">`FileGetObject` deve ser usado no lugar de `FileGet` para evitar ambiguidades.</span><span class="sxs-lookup"><span data-stu-id="c1980-104">`FileGetObject` should be used in place of `FileGet` to avoid ambiguities.</span></span>  

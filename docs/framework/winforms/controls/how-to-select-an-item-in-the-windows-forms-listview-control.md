@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532815"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="8adc0-102">Como selecionar um item no controle ListView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8adc0-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
 <span data-ttu-id="8adc0-103">Este exemplo demonstra como programaticamente selecionar um item em um Windows Forms <xref:System.Windows.Forms.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="8adc0-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="8adc0-104">Selecionando um item por meio de programação não altera automaticamente o foco para o <xref:System.Windows.Forms.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="8adc0-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="8adc0-105">Por esse motivo, você normalmente também desejará definir o item como foco quando a seleção de um item.</span><span class="sxs-lookup"><span data-stu-id="8adc0-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  

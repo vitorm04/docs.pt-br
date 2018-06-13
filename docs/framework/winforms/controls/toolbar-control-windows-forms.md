@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
 ms.openlocfilehash: e21b31805eb0b840866313f16cc85ea33c84e515
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537119"
 ---
 # <a name="toolbar-control-windows-forms"></a><span data-ttu-id="29a7d-102">Controle ToolBar (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="29a7d-102">ToolBar Control (Windows Forms)</span></span>
 > [!NOTE]

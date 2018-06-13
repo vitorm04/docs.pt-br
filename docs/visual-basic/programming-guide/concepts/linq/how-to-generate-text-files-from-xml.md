@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
 ms.openlocfilehash: 6b9e816fc61a583e8ea07045127b895480c03147
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642773"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="e23e4-102">Como: gerar arquivos de texto de XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e23e4-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
 <span data-ttu-id="e23e4-103">Este exemplo mostra como gerar um arquivo separado por vírgulas de (CSV) dos valores de um arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="e23e4-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  

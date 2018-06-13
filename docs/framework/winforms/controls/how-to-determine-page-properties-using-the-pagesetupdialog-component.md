@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532721"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a><span data-ttu-id="96ddb-102">Como determinar propriedades de página usando o componente PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="96ddb-102">How to: Determine Page Properties Using the PageSetupDialog Component</span></span>
 <span data-ttu-id="96ddb-103">O componente [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) apresenta o layout, tamanho do papel e outras opções de layout da página ao usuário para um documento.</span><span class="sxs-lookup"><span data-stu-id="96ddb-103">The [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) component presents layout, paper size, and other page layout choices to the user for a document.</span></span>  

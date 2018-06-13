@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753408"
 ---
 # <a name="ltfiltertablesgt"></a><span data-ttu-id="54676-102">&lt;filterTables&gt;</span><span class="sxs-lookup"><span data-stu-id="54676-102">&lt;filterTables&gt;</span></span>
 <span data-ttu-id="54676-103">Representa uma seção de configuração para definir as tabelas de roteamento que contêm mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para enviar mensagens quando correspondências de filtro.</span><span class="sxs-lookup"><span data-stu-id="54676-103">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

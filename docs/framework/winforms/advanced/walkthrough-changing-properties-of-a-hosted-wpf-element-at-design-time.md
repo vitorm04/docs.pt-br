@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529815"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a><span data-ttu-id="5a116-102">Instruções passo a passo: alterando propriedades de um elemento WPF hospedado no tempo de design</span><span class="sxs-lookup"><span data-stu-id="5a116-102">Walkthrough: Changing Properties of a Hosted WPF Element at Design Time</span></span>
 <span data-ttu-id="5a116-103">Este passo a passo mostra como alterar os valores de propriedade de um controle WPF (Windows Presentation Foundation) hospedado em um formulário do Windows Form.</span><span class="sxs-lookup"><span data-stu-id="5a116-103">This walkthrough shows you how to change property values of a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>  

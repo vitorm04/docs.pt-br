@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
 ms.openlocfilehash: 8fe9580114d6e21e698687ba398d60c0af72d57f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537132"
 ---
 # <a name="savefiledialog-component-windows-forms"></a><span data-ttu-id="0c5f0-102">Componente SaveFileDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="0c5f0-102">SaveFileDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="0c5f0-103">Windows Forms <xref:System.Windows.Forms.SaveFileDialog> componente é uma caixa de diálogo pré-configurado.</span><span class="sxs-lookup"><span data-stu-id="0c5f0-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="0c5f0-104">É o mesmo que a caixa de diálogo Salvar arquivo padrão usada pelo Windows.</span><span class="sxs-lookup"><span data-stu-id="0c5f0-104">It is the same as the standard Save File dialog box used by Windows.</span></span> <span data-ttu-id="0c5f0-105">Ele herda o <xref:System.Windows.Forms.CommonDialog> classe.</span><span class="sxs-lookup"><span data-stu-id="0c5f0-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

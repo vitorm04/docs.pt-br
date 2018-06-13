@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531187"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="4ea6f-102">Como exibir imagens em células do controle DataGridView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4ea6f-102">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="4ea6f-103">Uma imagem ou um gráfico é um dos valores que você pode exibir em uma linha de dados.</span><span class="sxs-lookup"><span data-stu-id="4ea6f-103">A picture or graphic is one of the values that you can display in a row of data.</span></span> <span data-ttu-id="4ea6f-104">Frequentemente, esses elementos gráficos assumem a forma de foto do funcionário ou um logotipo da empresa.</span><span class="sxs-lookup"><span data-stu-id="4ea6f-104">Frequently, these graphics take the form of an employee's photograph or a company logo.</span></span>  

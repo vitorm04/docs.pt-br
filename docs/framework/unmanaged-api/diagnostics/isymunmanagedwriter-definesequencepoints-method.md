@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426930"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="68bab-102">Método ISymUnmanagedWriter::DefineSequencePoints</span><span class="sxs-lookup"><span data-stu-id="68bab-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
 <span data-ttu-id="68bab-103">Define um grupo de pontos de sequência dentro do método atual.</span><span class="sxs-lookup"><span data-stu-id="68bab-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="68bab-104">Cada linha de início e a coluna de início definem o início de uma instrução dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="68bab-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="68bab-105">Cada final de linha e coluna de término definem o fim de uma instrução dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="68bab-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="68bab-106">As matrizes devem ser classificadas em ordem crescente de deslocamentos.</span><span class="sxs-lookup"><span data-stu-id="68bab-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="68bab-107">O deslocamento é sempre medido desde o início do método, em bytes.</span><span class="sxs-lookup"><span data-stu-id="68bab-107">The offset is always measured from the start of the method, in bytes.</span></span>  

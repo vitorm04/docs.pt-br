@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519575"
 ---
 # <a name="workflow-security"></a><span data-ttu-id="43b92-102">Segurança de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="43b92-102">Workflow Security</span></span>
 <span data-ttu-id="43b92-103">Windows Workflow Foundation (WF) está integrado com diversas tecnologias diferentes, como Microsoft SQL Server e Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="43b92-103">Windows Workflow Foundation (WF) is integrated with several different technologies, such as Microsoft SQL Server and Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="43b92-104">Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.</span><span class="sxs-lookup"><span data-stu-id="43b92-104">Interacting with these technologies may introduce security issues into your workflow if done improperly.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434933"
 ---
 # <a name="iclrdebugmanager-interface"></a><span data-ttu-id="2e027-102">Interface ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="2e027-102">ICLRDebugManager Interface</span></span>
 <span data-ttu-id="2e027-103">Fornece métodos que permitem que um host associar um conjunto de tarefas com um identificador e um nome amigável.</span><span class="sxs-lookup"><span data-stu-id="2e027-103">Provides methods that allow a host to associate a set of tasks with an identifier and a friendly name.</span></span>  

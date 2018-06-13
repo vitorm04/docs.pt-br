@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426057"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a><span data-ttu-id="47ca0-102">Método ISymUnmanagedReader::GetSymAttribute</span><span class="sxs-lookup"><span data-stu-id="47ca0-102">ISymUnmanagedReader::GetSymAttribute Method</span></span>
 <span data-ttu-id="47ca0-103">Obtém um atributo personalizado com base no seu nome.</span><span class="sxs-lookup"><span data-stu-id="47ca0-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="47ca0-104">Ao contrário de atributos personalizados de metadados, os atributos personalizados são mantidos no repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="47ca0-104">Unlike metadata custom attributes, these custom attributes are held in the symbol store.</span></span>  

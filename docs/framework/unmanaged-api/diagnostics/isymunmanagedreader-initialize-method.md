@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426467"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="05398-102">Método ISymUnmanagedReader::Initialize</span><span class="sxs-lookup"><span data-stu-id="05398-102">ISymUnmanagedReader::Initialize Method</span></span>
 <span data-ttu-id="05398-103">Inicializa o leitor de símbolo com a interface de Importador de metadados que este leitor será associado, juntamente com o nome de arquivo do módulo.</span><span class="sxs-lookup"><span data-stu-id="05398-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  

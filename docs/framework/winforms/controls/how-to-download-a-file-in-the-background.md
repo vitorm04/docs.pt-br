@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536563"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a><span data-ttu-id="4ac7f-102">Como baixar um arquivo no segundo plano</span><span class="sxs-lookup"><span data-stu-id="4ac7f-102">How to: Download a File in the Background</span></span>
 <span data-ttu-id="4ac7f-103">Baixar um arquivo é uma tarefa comum e costuma ser útil executar esta operação potencialmente demorada em um thread separado.</span><span class="sxs-lookup"><span data-stu-id="4ac7f-103">Downloading a file is a common task, and it is often useful to run this potentially time-consuming operation on a separate thread.</span></span> <span data-ttu-id="4ac7f-104">Use o <xref:System.ComponentModel.BackgroundWorker> componente para realizar essa tarefa com muito pouco código.</span><span class="sxs-lookup"><span data-stu-id="4ac7f-104">Use the <xref:System.ComponentModel.BackgroundWorker> component to accomplish this task with very little code.</span></span>  

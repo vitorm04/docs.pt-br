@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430173"
 ---
 # <a name="corexemain2-function"></a><span data-ttu-id="1aa4c-102">Função _CorExeMain2</span><span class="sxs-lookup"><span data-stu-id="1aa4c-102">_CorExeMain2 Function</span></span>
 <span data-ttu-id="1aa4c-103">Executa o ponto de entrada no código do mapeamento de memória especificado.</span><span class="sxs-lookup"><span data-stu-id="1aa4c-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="1aa4c-104">Essa função é chamada pelo carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="1aa4c-104">This function is called by the operating system loader.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537210"
 ---
 # <a name="overriding-the-onpaint-method"></a><span data-ttu-id="2344d-102">Substituindo o método OnPaint</span><span class="sxs-lookup"><span data-stu-id="2344d-102">Overriding the OnPaint Method</span></span>
 <span data-ttu-id="2344d-103">As etapas básicas para a substituição de qualquer evento definido no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] são idênticas e são resumidas na lista a seguir.</span><span class="sxs-lookup"><span data-stu-id="2344d-103">The basic steps for overriding any event defined in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] are identical and are summarized in the following list.</span></span>  

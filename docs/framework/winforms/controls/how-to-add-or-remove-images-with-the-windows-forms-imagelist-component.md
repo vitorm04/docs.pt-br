@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527632"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="b821d-102">Como adicionar ou remover imagens com o componente ImageList dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b821d-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
 <span data-ttu-id="b821d-103">Windows Forms <xref:System.Windows.Forms.ImageList> componente normalmente é populado com imagens antes de ser associado um controle.</span><span class="sxs-lookup"><span data-stu-id="b821d-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="b821d-104">No entanto, você pode adicionar e remover imagens depois de associar a lista de imagens a um controle.</span><span class="sxs-lookup"><span data-stu-id="b821d-104">However, you can add and remove images after associating the image list with a control.</span></span>  

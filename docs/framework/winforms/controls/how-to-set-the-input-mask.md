@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 6f554c239e3444db5f6ac84f7994108ac70df0a9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537035"
 ---
 # <a name="how-to-set-the-input-mask"></a><span data-ttu-id="34877-102">Como definir a máscara de entrada</span><span class="sxs-lookup"><span data-stu-id="34877-102">How to: Set the Input Mask</span></span>
 <span data-ttu-id="34877-103">O controle de caixa de texto mascarado é um controle de caixa de texto avançado que dá suporte a uma sintaxe declarativa para aceitar ou rejeitar a entrada do usuário.</span><span class="sxs-lookup"><span data-stu-id="34877-103">The masked text box control is an enhanced text box control that supports a declarative syntax for accepting or rejecting user input.</span></span> <span data-ttu-id="34877-104">Definindo a propriedade Máscara, você pode especificar a entrada do usuário permitida sem escrever qualquer lógica de validação personalizada no seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="34877-104">By setting the Mask property, you can specify the allowable user input without writing any custom validation logic in your application.</span></span> <span data-ttu-id="34877-105">Para obter mais informações, consulte a seção comentários a <xref:System.Windows.Forms.MaskedTextBox> classe.</span><span class="sxs-lookup"><span data-stu-id="34877-105">For more information, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox> class.</span></span>  

@@ -9,9 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436027"
 ---
 # <a name="silverlight-debugging"></a><span data-ttu-id="4f3f2-102">Depuração Silverlight</span><span class="sxs-lookup"><span data-stu-id="4f3f2-102">Silverlight Debugging</span></span>
 <span data-ttu-id="4f3f2-103">Os tópicos nesta seção descrevem o ambiente e interfaces que fornece o common language runtime (CLR) para dar suporte a depuração de aplicativos baseados no Silverlight que estão executando o sistema operacional Windows, ou na plataforma Macintosh.</span><span class="sxs-lookup"><span data-stu-id="4f3f2-103">The topics in this section describe the environment and interfaces that the common language runtime (CLR) provides to support debugging Silverlight-based applications that are running on the Windows operating system, or on the Macintosh platform.</span></span>  

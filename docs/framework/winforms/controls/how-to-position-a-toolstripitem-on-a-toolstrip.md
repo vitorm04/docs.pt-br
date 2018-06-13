@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531578"
 ---
 # <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a><span data-ttu-id="b0e10-102">Como posicionar um ToolStripItem em um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b0e10-102">How to: Position a ToolStripItem on a ToolStrip</span></span>
 <span data-ttu-id="b0e10-103">Você pode mover ou adicionar uma <xref:System.Windows.Forms.ToolStripItem> à esquerda ou à direita de um <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="b0e10-103">You can move or add a <xref:System.Windows.Forms.ToolStripItem> to the left or right side of a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
