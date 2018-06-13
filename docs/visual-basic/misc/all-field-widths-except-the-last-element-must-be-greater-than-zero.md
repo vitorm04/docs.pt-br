@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598434"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a><span data-ttu-id="3e500-102">Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero</span><span class="sxs-lookup"><span data-stu-id="3e500-102">All field widths, except the last element, must be greater than zero</span></span>
 <span data-ttu-id="3e500-103">Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero.</span><span class="sxs-lookup"><span data-stu-id="3e500-103">All field widths, except the last element, must be greater than zero.</span></span> <span data-ttu-id="3e500-104">Uma largura de campo que menor ou igual a zero no último elemento indica que o último campo é de comprimento variável.</span><span class="sxs-lookup"><span data-stu-id="3e500-104">A field width less than or equal to zero in the last element indicates the last field is of variable length.</span></span>  

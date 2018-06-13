@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
 ms.openlocfilehash: 5fd1bdb665f4e72ad4c29efa3d1c5459975f0b05
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599971"
 ---
 # <a name="properties-visual-basic"></a><span data-ttu-id="e67dd-102">Propriedades (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e67dd-102">Properties (Visual Basic)</span></span>
 <span data-ttu-id="e67dd-103">Esta página lista as propriedades que são membros de módulos do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e67dd-103">This page lists the properties that are members of Visual Basic modules.</span></span> <span data-ttu-id="e67dd-104">Outras propriedades que são membros de objetos específicos do Visual Basic são listadas em [objetos](../../visual-basic/language-reference/objects/index.md).</span><span class="sxs-lookup"><span data-stu-id="e67dd-104">Other properties that are members of specific Visual Basic objects are listed in [Objects](../../visual-basic/language-reference/objects/index.md).</span></span>  

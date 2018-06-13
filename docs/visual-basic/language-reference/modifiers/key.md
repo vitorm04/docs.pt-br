@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599838"
 ---
 # <a name="key-visual-basic"></a><span data-ttu-id="e2104-102">Chave (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2104-102">Key (Visual Basic)</span></span>
 <span data-ttu-id="e2104-103">O `Key` palavra-chave permite que você especifique o comportamento para propriedades de tipos anônimos.</span><span class="sxs-lookup"><span data-stu-id="e2104-103">The `Key` keyword enables you to specify behavior for properties of anonymous types.</span></span> <span data-ttu-id="e2104-104">Somente as propriedades que você designar como propriedades de chave participam de testes de igualdade entre instâncias de tipo anônimo ou cálculo de valores de código de hash.</span><span class="sxs-lookup"><span data-stu-id="e2104-104">Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values.</span></span> <span data-ttu-id="e2104-105">Os valores das propriedades de chave não podem ser alterados.</span><span class="sxs-lookup"><span data-stu-id="e2104-105">The values of key properties cannot be changed.</span></span>  

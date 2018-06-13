@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235984"
 ---
 # <a name="property-statement"></a><span data-ttu-id="d26d0-102">Instrução Property</span><span class="sxs-lookup"><span data-stu-id="d26d0-102">Property Statement</span></span>
 <span data-ttu-id="d26d0-103">Declara o nome de uma propriedade e os procedimentos de propriedade usados para armazenar e recuperar o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="d26d0-103">Declares the name of a property, and the property procedures used to store and retrieve the value of the property.</span></span>  

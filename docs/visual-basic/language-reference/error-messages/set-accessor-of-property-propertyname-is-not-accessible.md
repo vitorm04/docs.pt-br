@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
 ms.openlocfilehash: d047d03755de89d4740482db4845d5db72003ac0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595846"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a><span data-ttu-id="11e89-102">&#39;Definir&#39; acessador de propriedade &#39; &lt;propertyname&gt; &#39; não está acessível</span><span class="sxs-lookup"><span data-stu-id="11e89-102">&#39;Set&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible</span></span>
 <span data-ttu-id="11e89-103">Uma declaração tenta recuperar o valor de uma propriedade quando ela não tem acesso para a propriedade `Set` procedimento.</span><span class="sxs-lookup"><span data-stu-id="11e89-103">A statement attempts to store the value of a property when it does not have access to the property's `Set` procedure.</span></span>  

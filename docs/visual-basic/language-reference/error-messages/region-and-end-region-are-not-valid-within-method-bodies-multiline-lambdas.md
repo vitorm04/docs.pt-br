@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 43707bf1-1c6b-4d82-b081-e5a17dca51c1
 ms.openlocfilehash: bf3843e0ec3009f3dc7d60e91c340a7f20543231
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593227"
 ---
 # <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a><span data-ttu-id="02999-102">&#39;#Region&#39; e &#39;#End região&#39; instruções não são válidas dentro do método corpos/lambdas multilinha</span><span class="sxs-lookup"><span data-stu-id="02999-102">&#39;#Region&#39; and &#39;#End Region&#39; statements are not valid within method bodies/multiline lambdas</span></span>
 <span data-ttu-id="02999-103">O `#Region` bloco deve ser declarado em um nível de namespace, módulo ou classe.</span><span class="sxs-lookup"><span data-stu-id="02999-103">The `#Region` block must be declared at a class, module, or namespace level.</span></span> <span data-ttu-id="02999-104">Uma região recolhível pode incluir um ou mais procedimentos, mas ele não pode começar ou terminar dentro de um procedimento.</span><span class="sxs-lookup"><span data-stu-id="02999-104">A collapsible region can include one or more procedures, but it cannot begin or end inside of a procedure.</span></span>  

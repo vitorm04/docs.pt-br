@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
 ms.openlocfilehash: f536f7915d8f8befcb4f1b0ca2494dd99a203ea6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594946"
 ---
 # <a name="mycomputerinfo-object"></a><span data-ttu-id="51e3f-102">Objeto My.Computer.Info</span><span class="sxs-lookup"><span data-stu-id="51e3f-102">My.Computer.Info Object</span></span>
 <span data-ttu-id="51e3f-103">Fornece propriedades para obter informações sobre memória, assemblies carregados, nome e sistema operacional do computador.</span><span class="sxs-lookup"><span data-stu-id="51e3f-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  

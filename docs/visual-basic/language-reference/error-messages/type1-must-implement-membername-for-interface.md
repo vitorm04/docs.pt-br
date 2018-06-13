@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
 ms.openlocfilehash: 0f93bd137bdc21268cbca139ae739843561350ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596740"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a><span data-ttu-id="f90e2-102">&lt;type1&gt;&#39;&lt;typename&gt; &#39; deve implementar &#39; &lt;membername&gt; &#39; para interface &#39; &lt;interfacename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="f90e2-102">&lt;type1&gt;&#39;&lt;typename&gt;&#39; must implement &#39;&lt;membername&gt;&#39; for interface &#39;&lt;interfacename&gt;&#39;</span></span>
 <span data-ttu-id="f90e2-103">'\<typename >' deve implementar '\<membername >' para interface '\<interfacename >'.</span><span class="sxs-lookup"><span data-stu-id="f90e2-103">'\<typename>' must implement '\<membername>' for interface '\<interfacename>'.</span></span> <span data-ttu-id="f90e2-104">Propriedade de implementação deve ter 'ReadOnly' / 'WriteOnly' especificadores.</span><span class="sxs-lookup"><span data-stu-id="f90e2-104">Implementing property must have matching 'ReadOnly'/'WriteOnly' specifiers.</span></span>  

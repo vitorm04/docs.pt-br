@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
 ms.openlocfilehash: 484f676070a1447067304dba1795d799c046dec6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595135"
 ---
 # <a name="mycomputerclipboard-object"></a><span data-ttu-id="7bc03-102">Objeto My.Computer.Clipboard</span><span class="sxs-lookup"><span data-stu-id="7bc03-102">My.Computer.Clipboard Object</span></span>
 <span data-ttu-id="7bc03-103">Fornece métodos para manipular a Área de Transferência.</span><span class="sxs-lookup"><span data-stu-id="7bc03-103">Provides methods for manipulating the Clipboard.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
 ms.openlocfilehash: 94c53d30ad9aea9386fbb1be3e65fa31719f7a2f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594465"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a><span data-ttu-id="e6e81-102">Função aninhada não tem uma assinatura compatível com delegado &#39; &lt;delegatename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="e6e81-102">Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;</span></span>
 <span data-ttu-id="e6e81-103">Uma expressão lambda foi atribuída a um delegado que tem uma assinatura incompatível.</span><span class="sxs-lookup"><span data-stu-id="e6e81-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="e6e81-104">Por exemplo, no código a seguir, delegar `Del` tem dois parâmetros inteiros.</span><span class="sxs-lookup"><span data-stu-id="e6e81-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  

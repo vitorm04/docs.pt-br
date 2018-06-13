@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172042"
 ---
 # <a name="amp-operator-c-reference"></a><span data-ttu-id="a253a-102">&amp;Operador = (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="a253a-102">&amp;= Operator (C# Reference)</span></span>
 <span data-ttu-id="a253a-103">O operador de atribuição AND.</span><span class="sxs-lookup"><span data-stu-id="a253a-103">The AND assignment operator.</span></span>  

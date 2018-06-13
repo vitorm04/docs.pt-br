@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: c41db8b37c883f9369a6b8d1f8bccbc0535f504c
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957906"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a><span data-ttu-id="4c510-103">Quando implantar contêineres do Windows para serviço de malha</span><span class="sxs-lookup"><span data-stu-id="4c510-103">When to deploy Windows Containers to Service Fabric</span></span>
 

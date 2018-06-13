@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597517"
 ---
 # <a name="myresponse-object"></a><span data-ttu-id="567c7-102">Objeto My.Response</span><span class="sxs-lookup"><span data-stu-id="567c7-102">My.Response Object</span></span>
 <span data-ttu-id="567c7-103">Obtém o <xref:System.Web.HttpResponse> objeto associado a <xref:System.Web.UI.Page>.</span><span class="sxs-lookup"><span data-stu-id="567c7-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="567c7-104">Esse objeto permite que você envie dados de resposta HTTP para um cliente e contém informações sobre essa resposta.</span><span class="sxs-lookup"><span data-stu-id="567c7-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  

@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: ebf022a52aaaf95ae335976f5e097921b0ac8006
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958006"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a><span data-ttu-id="6dc8d-103">Escolha as plataformas de computação do Azure para aplicativos baseados no contêiner</span><span class="sxs-lookup"><span data-stu-id="6dc8d-103">Choosing Azure compute platforms for container-based applications</span></span>
 

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
 ms.openlocfilehash: eeba33626310ed4963550d7522c0051367752580
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597403"
 ---
 # <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a><span data-ttu-id="acc46-102">&#39;&lt;TypeName&gt; &#39; é um tipo e não pode ser usado como uma expressão</span><span class="sxs-lookup"><span data-stu-id="acc46-102">&#39;&lt;typename&gt;&#39; is a type and cannot be used as an expression</span></span>
 <span data-ttu-id="acc46-103">Um nome de tipo ocorre onde uma expressão é necessária.</span><span class="sxs-lookup"><span data-stu-id="acc46-103">A type name occurs where an expression is required.</span></span> <span data-ttu-id="acc46-104">Uma expressão deve consistir de uma combinação de variáveis, constantes, literais, propriedades, e `Function` chamadas de procedimento.</span><span class="sxs-lookup"><span data-stu-id="acc46-104">An expression must consist of some combination of variables, constants, literals, properties, and `Function` procedure calls.</span></span>  

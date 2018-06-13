@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 0e880689001ece2b770811cfbe3fea43aa425b32
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957986"
 ---
 # <a name="what-about-cloud-native-applications"></a><span data-ttu-id="a54b3-103">E aplicativos de nuvem nativo?</span><span class="sxs-lookup"><span data-stu-id="a54b3-103">What about Cloud-Native applications?</span></span>
 

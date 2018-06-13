@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 6e698461-e944-4c0f-ae48-87429f1fe740
 ms.openlocfilehash: b52d704d957bd8d7fa60dcda50a28d0f68db2e01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595950"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a><span data-ttu-id="cf368-102">Informações e resumo da interação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf368-102">Information and Interaction Summary (Visual Basic)</span></span>
 <span data-ttu-id="cf368-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="cf368-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  

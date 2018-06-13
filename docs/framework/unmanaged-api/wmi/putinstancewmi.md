@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462154"
 ---
 # <a name="putinstancewmi-function"></a><span data-ttu-id="413fe-103">Função PutInstanceWmi</span><span class="sxs-lookup"><span data-stu-id="413fe-103">PutInstanceWmi function</span></span>
 <span data-ttu-id="413fe-104">Cria ou atualiza uma instância de uma classe existente.</span><span class="sxs-lookup"><span data-stu-id="413fe-104">Creates or updates an instance of an existing class.</span></span> <span data-ttu-id="413fe-105">A instância é gravada no repositório do WMI.</span><span class="sxs-lookup"><span data-stu-id="413fe-105">The instance is written to the WMI repository.</span></span> 
