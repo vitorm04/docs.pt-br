@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639566"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>Não é possível renomear a pasta raiz
 Foi feita uma tentativa para renomear o diretório raiz. Isso pode ser resultado de um caminho de arquivo analisado incorretamente.  

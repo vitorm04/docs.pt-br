@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639318"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Como: criar a hierarquia usando o agrupamento (Visual Basic)
 Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.  

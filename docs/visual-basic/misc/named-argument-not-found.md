@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638856"
 ---
 # <a name="named-argument-not-found-visual-basic"></a>Argumento nomeado não encontrado (Visual Basic)
 Um argumento nomeado não pode ser usado em uma chamada de procedimento, a menos que ele aparece na definição do procedimento. Você especificou um argumento nomeado, mas o procedimento não foi definido para aceitar um argumento com esse nome.  

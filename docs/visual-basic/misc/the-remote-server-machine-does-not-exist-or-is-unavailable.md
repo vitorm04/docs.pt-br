@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639241"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>A máquina de servidor remoto não existe ou está indisponível (Visual Basic)
 Você está tentando se conectar a um servidor remoto que não está disponível ou não existe. Esse erro pode ser causado pela sua conexão de rede é perdida.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639517"
 ---
 # <a name="the-file-is-currently-closed"></a>O arquivo está fechado no momento
 Foi feita uma tentativa de executar uma operação que só pode ser executada em um arquivo aberto, mas o arquivo está fechado no momento.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646371"
 ---
 # <a name="elementary-data-types-visual-basic"></a>Tipos de dados elementares (Visual Basic)
 Visual Basic oferece um conjunto predefinido de tipos de dados, que pode ser usada para muitos dos elementos de programação. Esta seção descreve esses tipos e como usá-los.  

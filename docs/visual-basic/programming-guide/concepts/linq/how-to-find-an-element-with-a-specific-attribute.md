@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642994"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Como: localizar um elemento com um atributo específico (Visual Basic)
 Este tópico mostra como localizar um elemento que tem um atributo que tem um valor específico.  

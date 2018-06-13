@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808439"
 ---
 # <a name="securing-clients"></a>Protegendo clientes
 No Windows Communication Foundation (WCF), o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. Para obter mais informações sobre como criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  

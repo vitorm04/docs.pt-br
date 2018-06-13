@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655857"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 Um *objeto* é uma combinação de código e dados que podem ser tratados como uma unidade. Um objeto pode ser uma parte de um aplicativo, como um controle ou um formulário. Todo o aplicativo também pode ser um objeto.
