@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440249"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interface IHostSecurityManager
 Fornece métodos que permitem o acesso e controle sobre o contexto de segurança do thread em execução no momento.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c2500f013584ef4722ceaaaee91d5db54991639
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439293"
 ---
 # <a name="ihostsecuritycontext-interface"></a>Interface IHostSecurityContext
 Permite que o common language runtime (CLR) para manter informações de contexto de segurança implementadas pelo host.  
