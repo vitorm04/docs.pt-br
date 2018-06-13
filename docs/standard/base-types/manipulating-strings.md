@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567582"
 ---
 # <a name="manipulating-strings-in-net"></a>Como manipular cadeias de caracteres no .NET
 O .NET fornece um amplo conjunto de rotinas que permitem criar, comparar e modificar cadeias de caracteres com eficiência, além de analisar rapidamente grandes quantidades de texto e dados para pesquisar, remover e substituir padrões de texto.  

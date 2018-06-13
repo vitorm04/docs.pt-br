@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746053"
 ---
 # <a name="lttracegt-element"></a>&lt;rastreamento&gt; elemento
 Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.  

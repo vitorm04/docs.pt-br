@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758351"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Adicionando restrições existentes para um conjunto de dados
 O **preencher** método o **DataAdapter** preenche uma <xref:System.Data.DataSet> apenas com colunas de tabelas e linhas de uma fonte de dados; no entanto restrições mais frequentemente definidas pela fonte de dados, o **preencher** método não adicionar essas informações de esquema para o **DataSet** por padrão. Para popular um **DataSet** com informações de restrição de chave primária existente de uma fonte de dados, você pode chamar o **FillSchema** método do **DataAdapter**, ou defina o **MissingSchemaAction** propriedade o **DataAdapter** para **AddWithKey** antes de chamar **preencher**. Isso garantirá que a chave primária restrições no **DataSet** refletem aqueles na fonte de dados. Informações de restrição de chave estrangeira não está incluídas e devem ser criadas explicitamente, conforme mostrado no [restrições de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

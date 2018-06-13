@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758822"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Criando um DataTable de uma consulta (LINQ to DataSet)
 A vinculação de dados é um uso comum do objeto <xref:System.Data.DataTable>. O método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> recebe os resultados de uma consulta e copia os dados em um <xref:System.Data.DataTable>, que podem ser usados para vinculação de dados. Quando as operações de dados tiverem sido executadas, o novo <xref:System.Data.DataTable> será mesclado de volta no <xref:System.Data.DataTable> de origem.  
