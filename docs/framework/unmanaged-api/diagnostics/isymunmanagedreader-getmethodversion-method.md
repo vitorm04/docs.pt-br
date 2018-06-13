@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 76d850363940ff53135fc66ec057ee67822fa40d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424658"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="f9ed1-102">Método ISymUnmanagedReader::GetMethodVersion</span><span class="sxs-lookup"><span data-stu-id="f9ed1-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
 <span data-ttu-id="f9ed1-103">Obtém a versão do método.</span><span class="sxs-lookup"><span data-stu-id="f9ed1-103">Gets the method version.</span></span> <span data-ttu-id="f9ed1-104">A versão do método começa em 1 e é incrementada toda vez que o método é recompilado.</span><span class="sxs-lookup"><span data-stu-id="f9ed1-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="f9ed1-105">A recompilação pode ocorrer sem alterações para o método.</span><span class="sxs-lookup"><span data-stu-id="f9ed1-105">Recompilation can happen without changes to the method.</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540999"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a><span data-ttu-id="527dc-102">Instruções passo a passo: executando uma operação em segundo plano</span><span class="sxs-lookup"><span data-stu-id="527dc-102">Walkthrough: Running an Operation in the Background</span></span>
 <span data-ttu-id="527dc-103">Se você tiver uma operação que levará algum tempo para ser concluída, e você não deseja causar atrasos em sua interface de usuário, você pode usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar a operação em outro thread.</span><span class="sxs-lookup"><span data-stu-id="527dc-103">If you have an operation that will take a long time to complete, and you do not want to cause delays in your user interface, you can use the <xref:System.ComponentModel.BackgroundWorker> class to run the operation on another thread.</span></span>  

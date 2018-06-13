@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539731"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="c8574-102">Como responder a cliques CheckBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8574-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
 <span data-ttu-id="c8574-103">Sempre que um usuário clica em um Windows Forms <xref:System.Windows.Forms.CheckBox> controle, o <xref:System.Windows.Forms.Control.Click> evento ocorre.</span><span class="sxs-lookup"><span data-stu-id="c8574-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="c8574-104">Você pode programar seu aplicativo para realizar alguma ação dependendo do estado da caixa de seleção.</span><span class="sxs-lookup"><span data-stu-id="c8574-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  

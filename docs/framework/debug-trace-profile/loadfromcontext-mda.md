@@ -11,8 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393075"
 ---
 # <a name="loadfromcontext-mda"></a><span data-ttu-id="a5bde-102">MDA loadFromContext</span><span class="sxs-lookup"><span data-stu-id="a5bde-102">loadFromContext MDA</span></span>
 <span data-ttu-id="a5bde-103">O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`.</span><span class="sxs-lookup"><span data-stu-id="a5bde-103">The `loadFromContext` managed debugging assistant (MDA) is activated if an assembly is loaded into the `LoadFrom` context.</span></span> <span data-ttu-id="a5bde-104">Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.</span><span class="sxs-lookup"><span data-stu-id="a5bde-104">This situation can occur as a result of calling <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> or other similar methods.</span></span>  

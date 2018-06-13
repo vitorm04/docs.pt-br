@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743323"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="c5175-102">&lt;authenticationModules&gt; elemento (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="c5175-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="c5175-103">Especifica os módulos usados para autenticar solicitações de rede.</span><span class="sxs-lookup"><span data-stu-id="c5175-103">Specifies modules used to authenticate network requests.</span></span>  

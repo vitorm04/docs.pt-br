@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f191c31ec5333fbea52c298f477c8c624beb92b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424502"
 ---
 # <a name="icorpublishenumgetcount-method"></a><span data-ttu-id="86358-102">Método ICorPublishEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="86358-102">ICorPublishEnum::GetCount Method</span></span>
 <span data-ttu-id="86358-103">Obtém o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="86358-103">Gets the number of items in the enumeration.</span></span>  

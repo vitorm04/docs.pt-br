@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3fc25f76ef0f848fc29ffbed12b653d1c59c1f2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423878"
 ---
 # <a name="icorpublishprocessismanaged-method"></a><span data-ttu-id="168fb-102">Método ICorPublishProcess::IsManaged</span><span class="sxs-lookup"><span data-stu-id="168fb-102">ICorPublishProcess::IsManaged Method</span></span>
 <span data-ttu-id="168fb-103">Obtém um valor que indica se o processo é referenciada por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) é conhecido por ter código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="168fb-103">Gets a value that indicates whether the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) is known to have managed code.</span></span>  

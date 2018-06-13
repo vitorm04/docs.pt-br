@@ -10,8 +10,10 @@ api_location:
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
 ms.openlocfilehash: 4931f64a525f14ad5b0b69c582a81cd15d98e541
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539047"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="7763f-102">Ativar a função (referência de API não gerenciada WPF)</span><span class="sxs-lookup"><span data-stu-id="7763f-102">Activate Function (WPF Unmanaged API Reference)</span></span>
 <span data-ttu-id="7763f-103">Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="7763f-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  

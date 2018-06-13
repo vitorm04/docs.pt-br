@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3bc9a90e9d889673d8f67e4f9158edebcb65235b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396361"
 ---
 # <a name="interop-etw-events"></a><span data-ttu-id="82041-102">Eventos ETW de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="82041-102">Interop ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="82041-103">Eventos de interoperabilidade capturam informações sobre a geração e o cache de stub da MSIL (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="82041-103">Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  

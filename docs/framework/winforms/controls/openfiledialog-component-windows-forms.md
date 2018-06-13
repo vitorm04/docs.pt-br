@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
 ms.openlocfilehash: ba04b904930f2393022ea4ca6276cef95e51d833
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539946"
 ---
 # <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="90a4f-102">Componente OpenFileDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="90a4f-102">OpenFileDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="90a4f-103">Windows Forms <xref:System.Windows.Forms.OpenFileDialog> componente é uma caixa de diálogo pré-configurado.</span><span class="sxs-lookup"><span data-stu-id="90a4f-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="90a4f-104">É a mesma caixa de diálogo **Abrir arquivo** exposta pelo sistema operacional Windows.</span><span class="sxs-lookup"><span data-stu-id="90a4f-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="90a4f-105">Ele herda o <xref:System.Windows.Forms.CommonDialog> classe.</span><span class="sxs-lookup"><span data-stu-id="90a4f-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  

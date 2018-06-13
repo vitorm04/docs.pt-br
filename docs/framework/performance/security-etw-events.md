@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e02274b63ddf7df42d26621791de0286df9655b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395506"
 ---
 # <a name="security-etw-events"></a><span data-ttu-id="f2338-102">Eventos ETW de segurança</span><span class="sxs-lookup"><span data-stu-id="f2338-102">Security ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="f2338-103">Eventos de segurança são gerados durante a verificação de nome forte e a verificação de Authenticode.</span><span class="sxs-lookup"><span data-stu-id="f2338-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  

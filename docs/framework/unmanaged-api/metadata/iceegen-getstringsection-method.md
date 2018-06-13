@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443031"
 ---
 # <a name="iceegengetstringsection-method"></a><span data-ttu-id="0a65b-102">Método ICeeGen::GetStringSection</span><span class="sxs-lookup"><span data-stu-id="0a65b-102">ICeeGen::GetStringSection Method</span></span>
 <span data-ttu-id="0a65b-103">Obtém uma representação de cadeia de caracteres da seção de código referenciada pelo identificador especificado.</span><span class="sxs-lookup"><span data-stu-id="0a65b-103">Gets a string representation of the code section referenced by the specified handle.</span></span>  
