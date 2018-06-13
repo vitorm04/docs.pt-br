@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393111"
 ---
 # <a name="synchronous-client-socket-example"></a><span data-ttu-id="32046-102">Exemplo de soquete de cliente síncrono</span><span class="sxs-lookup"><span data-stu-id="32046-102">Synchronous Client Socket Example</span></span>
 <span data-ttu-id="32046-103">O programa de exemplo a seguir cria um cliente que se conecta a um servidor.</span><span class="sxs-lookup"><span data-stu-id="32046-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="32046-104">O cliente é criado com um soquete síncrono e, portanto, a execução do aplicativo cliente é suspensa até que o servidor retorne uma resposta.</span><span class="sxs-lookup"><span data-stu-id="32046-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="32046-105">O aplicativo envia uma cadeia de caracteres ao servidor e, em seguida, exibe a cadeia de caracteres retornada pelo servidor no console.</span><span class="sxs-lookup"><span data-stu-id="32046-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  

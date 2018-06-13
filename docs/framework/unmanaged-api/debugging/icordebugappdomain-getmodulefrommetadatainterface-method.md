@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ab9773a5056dbfba422a9a53c7cd877e4c29abe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404593"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="bb6a5-102">Método ICorDebugAppDomain::GetModuleFromMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="bb6a5-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
 <span data-ttu-id="bb6a5-103">Obtém o módulo que corresponda à interface de metadados fornecidos.</span><span class="sxs-lookup"><span data-stu-id="bb6a5-103">Gets the module that corresponds to the given metadata interface.</span></span>  

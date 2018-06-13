@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c515a8184e8c01b0e292057f3f66ffef28f2c5fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402875"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a><span data-ttu-id="7ea4d-102">Método ICLRDataTarget::GetMachineType</span><span class="sxs-lookup"><span data-stu-id="7ea4d-102">ICLRDataTarget::GetMachineType Method</span></span>
 <span data-ttu-id="7ea4d-103">Obtém o identificador para o tipo de conjunto de instruções que o processo de destino está usando.</span><span class="sxs-lookup"><span data-stu-id="7ea4d-103">Gets the identifier for the kind of instruction set that the target process is using.</span></span>  

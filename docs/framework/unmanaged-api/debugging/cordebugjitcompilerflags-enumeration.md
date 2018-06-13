@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5835da6ee20673c2662f1166d304a45ca3e9daeb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405314"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a><span data-ttu-id="73a98-102">Enumeração CorDebugJITCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="73a98-102">CorDebugJITCompilerFlags Enumeration</span></span>
 <span data-ttu-id="73a98-103">Contém valores que influenciam o comportamento do compilador just-in-time (JIT) gerenciado.</span><span class="sxs-lookup"><span data-stu-id="73a98-103">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  

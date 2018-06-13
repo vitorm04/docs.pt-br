@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 90ad74a3b9dd26d0a6e390a777e862f4274f86d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403836"
 ---
 # <a name="icordebugassembly2-interface1"></a><span data-ttu-id="a2b7c-102">Interface1 ICorDebugAssembly2</span><span class="sxs-lookup"><span data-stu-id="a2b7c-102">ICorDebugAssembly2 Interface1</span></span>
 <span data-ttu-id="a2b7c-103">Representa um assembly.</span><span class="sxs-lookup"><span data-stu-id="a2b7c-103">Represents an assembly.</span></span> <span data-ttu-id="a2b7c-104">Essa interface é uma extensão da interface ICorDebugAssembly.</span><span class="sxs-lookup"><span data-stu-id="a2b7c-104">This interface is an extension of the ICorDebugAssembly interface.</span></span>  

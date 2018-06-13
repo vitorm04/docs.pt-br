@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 403adfbfe96558196e5ba64ddcbe0be637ba1b1c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403247"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="221f0-102">Método ICorDebugArrayValue::GetElementType</span><span class="sxs-lookup"><span data-stu-id="221f0-102">ICorDebugArrayValue::GetElementType Method</span></span>
 <span data-ttu-id="221f0-103">Obtém um valor que indica o tipo simple de elementos na matriz.</span><span class="sxs-lookup"><span data-stu-id="221f0-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  

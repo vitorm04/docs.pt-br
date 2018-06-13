@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408119"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a><span data-ttu-id="358be-102">Método ICorDebugArrayValue::GetBaseIndicies</span><span class="sxs-lookup"><span data-stu-id="358be-102">ICorDebugArrayValue::GetBaseIndicies Method</span></span>
 <span data-ttu-id="358be-103">Obtém o índice de base de cada dimensão da matriz.</span><span class="sxs-lookup"><span data-stu-id="358be-103">Gets the base index of each dimension in the array.</span></span>  

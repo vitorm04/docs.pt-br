@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
 ms.openlocfilehash: 9e63392ad4f057f39f271ee7963b635c9bc2bd73
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527307"
 ---
 # <a name="arranging-controls-on-windows-forms"></a><span data-ttu-id="99bc0-102">Organizando controles nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="99bc0-102">Arranging Controls on Windows Forms</span></span>
 <span data-ttu-id="99bc0-103">Ao colocar e manipular controles em formulários de diversas maneiras, você pode criar interfaces do usuário intuitivas e funcionais para usuários.</span><span class="sxs-lookup"><span data-stu-id="99bc0-103">By placing and manipulating controls on forms in different ways, you can create user interfaces that are both intuitive and functional for users.</span></span>  

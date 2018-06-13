@@ -20,8 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402185"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="a9a23-102">Estrutura CoreClrDebugProcInfo</span><span class="sxs-lookup"><span data-stu-id="a9a23-102">CoreClrDebugProcInfo Structure</span></span>
 <span data-ttu-id="a9a23-103">Representa um processo que está em execução em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="a9a23-103">Represents a process that is running on a remote machine.</span></span>  

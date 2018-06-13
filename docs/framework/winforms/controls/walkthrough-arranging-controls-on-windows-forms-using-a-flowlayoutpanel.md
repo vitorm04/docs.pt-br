@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541762"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a><span data-ttu-id="e2ef5-102">Explicação passo a passo: organizando controles no Windows Forms utilizando um FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="e2ef5-102">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>
 <span data-ttu-id="e2ef5-103">Alguns aplicativos exigem um formulário com um layout que se organiza adequadamente à medida que o formulário é redimensionado ou conforme o tamanho do conteúdo é alterado.</span><span class="sxs-lookup"><span data-stu-id="e2ef5-103">Some applications require a form with a layout that arranges itself appropriately as the form is resized or as the contents change in size.</span></span> <span data-ttu-id="e2ef5-104">Quando você precisa de um layout dinâmico e não deseja tratar <xref:System.Windows.Forms.Control.Layout> eventos explicitamente em seu código, considere o uso de um painel de layout.</span><span class="sxs-lookup"><span data-stu-id="e2ef5-104">When you need a dynamic layout and you do not want to handle <xref:System.Windows.Forms.Control.Layout> events explicitly in your code, consider using a layout panel.</span></span>  

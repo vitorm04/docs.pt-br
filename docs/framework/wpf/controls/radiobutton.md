@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553917"
 ---
 # <a name="radiobutton"></a><span data-ttu-id="3faa3-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="3faa3-102">RadioButton</span></span>
 <span data-ttu-id="3faa3-103"><xref:System.Windows.Controls.RadioButton> controles geralmente são agrupados juntos para oferecer aos usuários uma opção única entre várias opções; apenas um botão de cada vez pode ser selecionado.</span><span class="sxs-lookup"><span data-stu-id="3faa3-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  

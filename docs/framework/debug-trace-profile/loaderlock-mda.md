@@ -14,8 +14,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dbc6cc814d23923f01eceea70bd2fe45b9cbff8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388193"
 ---
 # <a name="loaderlock-mda"></a><span data-ttu-id="748e1-102">MDA loaderLock</span><span class="sxs-lookup"><span data-stu-id="748e1-102">loaderLock MDA</span></span>
 <span data-ttu-id="748e1-103">O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas de executar código gerenciado em um thread que mantém o bloqueio do carregador do sistema operacional Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="748e1-103">The `loaderLock` managed debugging assistant (MDA) detects attempts to execute managed code on a thread that holds the Microsoft Windows operating system loader lock.</span></span>  <span data-ttu-id="748e1-104">Qualquer execução desse tipo é inválida porque pode levar a deadlocks e ao uso de DLLs antes de elas terem sido inicializadas pelo carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="748e1-104">Any such execution is illegal because it can lead to deadlocks and to use of DLLs before they have been initialized by the operating system's loader.</span></span>  

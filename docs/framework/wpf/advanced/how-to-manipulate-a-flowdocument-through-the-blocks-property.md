@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544057"
 ---
 # <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a><span data-ttu-id="67fa5-102">Como manipular um FlowDocument por meio da propriedade Blocks</span><span class="sxs-lookup"><span data-stu-id="67fa5-102">How to: Manipulate a FlowDocument through the Blocks Property</span></span>
 <span data-ttu-id="67fa5-103">Esses exemplos demonstram algumas das operações mais comuns que podem ser executadas em um <xref:System.Windows.Documents.FlowDocument> por meio de <xref:System.Windows.Documents.FlowDocument.Blocks%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="67fa5-103">These examples demonstrate some of the more common operations that can be performed on a <xref:System.Windows.Documents.FlowDocument> through the <xref:System.Windows.Documents.FlowDocument.Blocks%2A> property.</span></span>  
