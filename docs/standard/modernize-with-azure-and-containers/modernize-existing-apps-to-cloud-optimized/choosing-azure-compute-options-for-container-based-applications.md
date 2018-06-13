@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958006"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Escolha as plataformas de computação do Azure para aplicativos baseados no contêiner
 

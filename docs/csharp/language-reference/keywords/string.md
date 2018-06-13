@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172156"
 ---
 # <a name="string-c-reference"></a>string (Referência de C#)
 O tipo `string` representa uma sequência de zero ou mais caracteres Unicode. `string` é um alias de <xref:System.String> no .NET.  

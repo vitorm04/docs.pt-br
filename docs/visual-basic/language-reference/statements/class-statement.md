@@ -18,6 +18,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235876"
 ---
 # <a name="class-statement-visual-basic"></a>Instrução Class (Visual Basic)
 Declara o nome de uma classe e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a classe.  

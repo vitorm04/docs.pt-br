@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579113"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificar dados XML usando XPathNavigator
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para modificar nós e valores em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  

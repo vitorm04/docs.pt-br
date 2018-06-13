@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579152"
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
 Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema, especialmente com servidores que processam grandes volumes de solicitações. Nesse caso, uma coleta de lixo longa pode fazer com que o tempo limite de uma solicitação seja atingido. Para impedir que uma coleta completa ocorra durante um período crítico, você pode ser notificado que uma coleta de lixo completa está se aproximando e, em seguida, tomar medidas para redirecionar a carga de trabalho para outra instância do servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  

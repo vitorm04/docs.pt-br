@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577157"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocos de script usando msxsl:script
 A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts inserido usando o elemento `msxsl:script`. Quando a folha de estilos é carregada, todas as funções definidas são compiladas para Microsoft Intermediate Language (MSIL) pelo Code Document Object Model (CodeDOM) e executadas durante o tempo de execução. O assembly gerado no bloco de script inserido é separado do assembly gerado para a folha de estilos.  

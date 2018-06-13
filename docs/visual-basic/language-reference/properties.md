@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599971"
 ---
 # <a name="properties-visual-basic"></a>Propriedades (Visual Basic)
 Esta página lista as propriedades que são membros de módulos do Visual Basic. Outras propriedades que são membros de objetos específicos do Visual Basic são listadas em [objetos](../../visual-basic/language-reference/objects/index.md).  

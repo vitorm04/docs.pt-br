@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598434"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero
 Todas as larguras de campo, exceto o último elemento, devem ser maiores que zero. Uma largura de campo que menor ou igual a zero no último elemento indica que o último campo é de comprimento variável.  

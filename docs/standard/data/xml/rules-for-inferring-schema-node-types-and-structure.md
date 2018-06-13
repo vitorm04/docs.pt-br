@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578229"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regras para inferir tipos de nó e estrutura de esquema
 Este tópico descreve como o processo de inferência de esquema converte os tipos de nós em um documento XML a estrutura do idioma da definição de esquema XML (XSD).  

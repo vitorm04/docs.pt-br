@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592126"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Como exibir cabeçalhos de item em um controle DataRepeater (Visual Studio)
 Cabeçalho do item em uma <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle fornece um indicador visual quando um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> é selecionado. Quando o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> está definida como <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (o padrão), o cabeçalho do item é exibido à esquerda de cada item. Quando o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> está definida como <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, o cabeçalho do item é exibido na parte superior de cada item.  

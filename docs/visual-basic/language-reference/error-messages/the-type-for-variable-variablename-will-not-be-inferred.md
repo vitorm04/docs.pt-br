@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594277"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>O tipo de variável &#39; &lt;variablename&gt; &#39; não será inferido porque está associado a um campo em um escopo delimitador
 O tipo de variável '\<variablename >' não será inferido porque está associado a um campo em um escopo delimitador. Altere o nome de '\<variablename >', ou use o nome totalmente qualificado (por exemplo, 'Me.variablename' ou 'MyBase.variablename').  

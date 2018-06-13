@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591931"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
 Na programação assíncrona, é muito comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, isso foi feito usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  

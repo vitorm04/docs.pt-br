@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585081"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estruturas de dados para programação paralela
 O .NET Framework versão 4 apresenta vários tipos novos que são úteis em programação paralela, incluindo um conjunto de classes de coleção simultâneas, primitivos de sincronização leve e tipos para inicialização lenta. Você pode usar esses tipos com qualquer código de aplicativo multithread, incluindo PLINQ e biblioteca de paralelismo de tarefas.  

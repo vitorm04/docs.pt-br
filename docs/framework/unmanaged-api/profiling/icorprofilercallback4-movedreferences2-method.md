@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb5145db6f081661996766aab0683dc5d8a97e61
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460757"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>Método ICorProfilerCallback4::MovedReferences2
 Chamado para o novo layout dos objetos no heap como resultado de uma coleta de lixo de compactação de relatório. Este método é chamado se o criador de perfil tiver implementado o [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface. Esse retorno de chamada substitui o [: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) método, porque ela pode relatar intervalos maiores de objetos cujos comprimentos excedem o que pode ser expressa em um ULONG.  

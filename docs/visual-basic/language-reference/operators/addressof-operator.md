@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597781"
 ---
 # <a name="addressof-operator-visual-basic"></a>Operador AddressOf (Visual Basic)
 Cria uma instância de delegado de procedimento que referencia o procedimento específico.  

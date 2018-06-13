@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592048"
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>Adicionando relatórios imprimíveis a aplicativos do Visual Studio
 O Visual Studio oferece suporte a uma variedade de soluções de relatório para ajudá-lo a adicionar dados ricos reportando para seus aplicativos Visual Basic. Você pode criar e adicionar relatórios usando controles ReportViewer, Crystal Reports ou SQL Server Reporting Services.  

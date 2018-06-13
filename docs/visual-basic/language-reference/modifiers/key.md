@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599838"
 ---
 # <a name="key-visual-basic"></a>Chave (Visual Basic)
 O `Key` palavra-chave permite que você especifique o comportamento para propriedades de tipos anônimos. Somente as propriedades que você designar como propriedades de chave participam de testes de igualdade entre instâncias de tipo anônimo ou cálculo de valores de código de hash. Os valores das propriedades de chave não podem ser alterados.  
