@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171857"
 ---
 # <a name="private-c-reference"></a><span data-ttu-id="dc556-102">private (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="dc556-102">private (C# Reference)</span></span>
 <span data-ttu-id="dc556-103">A palavra-chave `private` é um modificador de acesso de membro.</span><span class="sxs-lookup"><span data-stu-id="dc556-103">The `private` keyword is a member access modifier.</span></span> 

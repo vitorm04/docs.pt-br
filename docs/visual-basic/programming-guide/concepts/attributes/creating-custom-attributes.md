@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
 ms.openlocfilehash: 9af0832e04308bf1942fc955afe5a67161096465
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642843"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="0d730-102">Criando atributos personalizados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d730-102">Creating Custom Attributes (Visual Basic)</span></span>
 <span data-ttu-id="0d730-103">Você pode criar seus próprios atributos personalizados definindo uma classe de atributos, uma classe que deriva direta ou indiretamente de <xref:System.Attribute>, o que faz com que a identificação das definições de atributo nos metadados seja rápida e fácil.</span><span class="sxs-lookup"><span data-stu-id="0d730-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="0d730-104">Suponha que você queira marcar tipos com o nome do programador que escreveu o tipo.</span><span class="sxs-lookup"><span data-stu-id="0d730-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="0d730-105">Você pode definir uma classe de atributos `Author` personalizada:</span><span class="sxs-lookup"><span data-stu-id="0d730-105">You might define a custom `Author` attribute class:</span></span>  

@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
 ms.openlocfilehash: c3e8d783767c0c81fe66cc214acb9b44a7ad8b57
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593737"
 ---
 # <a name="property-not-found"></a><span data-ttu-id="d8d3d-102">Propriedade não localizada</span><span class="sxs-lookup"><span data-stu-id="d8d3d-102">Property not found</span></span>
 <span data-ttu-id="d8d3d-103">Este objeto não suporta a propriedade especificada.</span><span class="sxs-lookup"><span data-stu-id="d8d3d-103">This object does not support the specified property.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
 ms.openlocfilehash: e5915eb06af427c0631049af6dfc30399cb775e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640210"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="c04db-102">Como: localizar elementos descendentes (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c04db-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="c04db-103">Este tópico mostra como obter os elementos descendentes com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="c04db-103">This topic shows how to get the descendant elements with a particular name.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a5f23950eea94cde0655d364ad0c6701e04a7c1b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453838"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="73359-102">Método ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="73359-102">ICorProfilerObjectEnum::GetCount Method</span></span>
 <span data-ttu-id="73359-103">Obtém o número total de objetos congelados na coleção.</span><span class="sxs-lookup"><span data-stu-id="73359-103">Gets the total number of frozen objects in the collection.</span></span>  

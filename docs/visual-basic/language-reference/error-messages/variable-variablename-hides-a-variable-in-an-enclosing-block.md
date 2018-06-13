@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
 ms.openlocfilehash: 58e09caeb477d6b1df7f3be17e0a8ee05be3551e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595086"
 ---
 # <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="7c008-102">Variável &#39; &lt;variablename&gt; &#39; oculta uma variável em um bloco delimitador</span><span class="sxs-lookup"><span data-stu-id="7c008-102">Variable &#39;&lt;variablename&gt;&#39; hides a variable in an enclosing block</span></span>
 <span data-ttu-id="7c008-103">Uma variável incluída em um bloco tem o mesmo nome que outra variável local.</span><span class="sxs-lookup"><span data-stu-id="7c008-103">A variable enclosed in a block has the same name as another local variable.</span></span>  

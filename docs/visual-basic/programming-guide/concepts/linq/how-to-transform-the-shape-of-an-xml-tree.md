@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
 ms.openlocfilehash: c1221fb3ad4017d7367493a3c6abef23b8c6b55b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643933"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a><span data-ttu-id="451ce-102">Como: transformar a forma de uma árvore XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="451ce-102">How to: Transform the Shape of an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="451ce-103">A *forma* de um documento XML refere-se aos seus nomes de elemento, nomes de atributo e às características de sua hierarquia.</span><span class="sxs-lookup"><span data-stu-id="451ce-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  

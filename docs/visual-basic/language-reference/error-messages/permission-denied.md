@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
 ms.openlocfilehash: b814d041fe312220d30d8faf4674f809d8ddc8ca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595989"
 ---
 # <a name="permission-denied-visual-basic"></a><span data-ttu-id="57f85-102">Permissão negada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57f85-102">Permission denied (Visual Basic)</span></span>
 <span data-ttu-id="57f85-103">Foi feita uma tentativa para gravar em um disco protegido contra gravação ou para acessar um arquivo bloqueado.</span><span class="sxs-lookup"><span data-stu-id="57f85-103">An attempt was made to write to a write-protected disk or to access a locked file.</span></span>  

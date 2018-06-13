@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
 ms.openlocfilehash: ab4b8d1c77ae75aee6f2cf459258766f88d86abe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650472"
 ---
 # <a name="multithreaded-applications-visual-basic"></a><span data-ttu-id="a59cf-102">Aplicativos multithread (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a59cf-102">Multithreaded Applications (Visual Basic)</span></span>
 <span data-ttu-id="a59cf-103">Com o Visual Basic, você pode escrever aplicativos que executam várias tarefas ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="a59cf-103">With Visual Basic, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="a59cf-104">Tarefas com o potencial de atrasar outras tarefas podem ser executadas em threads separados, um processo conhecido como *multithreading* ou *free threading*.</span><span class="sxs-lookup"><span data-stu-id="a59cf-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  

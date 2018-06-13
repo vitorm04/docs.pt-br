@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
 ms.openlocfilehash: d390fc0e45967cd98697320eb6f61a51cb1c19da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645701"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a><span data-ttu-id="28ad3-102">Desempenho de consultas encadeadas (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28ad3-102">Performance of Chained Queries (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="28ad3-103">Um dos benefícios mais importantes LINQ (e LINQ to XML) é que as consultas encadeadas podem executar bem como uma única consulta maior, mais complicada.</span><span class="sxs-lookup"><span data-stu-id="28ad3-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599197"
 ---
 # <a name="writeonly-visual-basic"></a><span data-ttu-id="faaec-102">WriteOnly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="faaec-102">WriteOnly (Visual Basic)</span></span>
 <span data-ttu-id="faaec-103">Especifica que uma propriedade pode ser gravada mas não lida.</span><span class="sxs-lookup"><span data-stu-id="faaec-103">Specifies that a property can be written but not read.</span></span>  

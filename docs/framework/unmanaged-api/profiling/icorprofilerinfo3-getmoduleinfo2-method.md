@@ -1,14 +1,6 @@
 ---
-title: "Método ICorProfilerInfo3::GetModuleInfo2"
-ms.custom: 
+title: Método ICorProfilerInfo3::GetModuleInfo2
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.GetModuleInfo2
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 325db939c692a5dc7740e6cf813644ebffe9fc12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d461f5dc85c7107e36fc1492ac88f37d42ba9f24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459460"
 ---
-# <a name="icorprofilerinfo3getmoduleinfo2-method"></a><span data-ttu-id="320a9-102">Método ICorProfilerInfo3::GetModuleInfo2</span><span class="sxs-lookup"><span data-stu-id="320a9-102">ICorProfilerInfo3::GetModuleInfo2 Method</span></span>
-<span data-ttu-id="320a9-103">Especificado um ID de módulo, retorna o nome do arquivo do módulo, a ID do pai do módulo assembly e uma máscara de bits que descreve as propriedades do módulo.</span><span class="sxs-lookup"><span data-stu-id="320a9-103">Given a module ID, returns the file name of the module, the ID of the module's parent assembly, and a bitmask that describes the properties of the module.</span></span>  
+# <a name="icorprofilerinfo3getmoduleinfo2-method"></a><span data-ttu-id="badac-102">Método ICorProfilerInfo3::GetModuleInfo2</span><span class="sxs-lookup"><span data-stu-id="badac-102">ICorProfilerInfo3::GetModuleInfo2 Method</span></span>
+<span data-ttu-id="badac-103">Especificado um ID de módulo, retorna o nome do arquivo do módulo, a ID do pai do módulo assembly e uma máscara de bits que descreve as propriedades do módulo.</span><span class="sxs-lookup"><span data-stu-id="badac-103">Given a module ID, returns the file name of the module, the ID of the module's parent assembly, and a bitmask that describes the properties of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="320a9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="320a9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="badac-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="badac-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleInfo2(  
@@ -52,47 +41,47 @@ HRESULT GetModuleInfo2(
     [out] DWORD                 *pdwModuleFlags);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="320a9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="320a9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="badac-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="badac-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="320a9-106">[in] A ID do módulo para o qual as informações serão recuperadas.</span><span class="sxs-lookup"><span data-stu-id="320a9-106">[in] The ID of the module for which information will be retrieved.</span></span>  
+ <span data-ttu-id="badac-106">[in] A ID do módulo para o qual as informações serão recuperadas.</span><span class="sxs-lookup"><span data-stu-id="badac-106">[in] The ID of the module for which information will be retrieved.</span></span>  
   
  `ppBaseLoadAddress`  
- <span data-ttu-id="320a9-107">[out] O endereço base no qual o módulo é carregado.</span><span class="sxs-lookup"><span data-stu-id="320a9-107">[out] The base address at which the module is loaded.</span></span>  
+ <span data-ttu-id="badac-107">[out] O endereço base no qual o módulo é carregado.</span><span class="sxs-lookup"><span data-stu-id="badac-107">[out] The base address at which the module is loaded.</span></span>  
   
  `cchName`  
- <span data-ttu-id="320a9-108">[in] O comprimento, em caracteres, do `szName` buffer de retorno.</span><span class="sxs-lookup"><span data-stu-id="320a9-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
+ <span data-ttu-id="badac-108">[in] O comprimento, em caracteres, do `szName` buffer de retorno.</span><span class="sxs-lookup"><span data-stu-id="badac-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="320a9-109">[out] Um ponteiro para o total de caracteres do nome de arquivo do módulo que é retornado.</span><span class="sxs-lookup"><span data-stu-id="320a9-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
+ <span data-ttu-id="badac-109">[out] Um ponteiro para o total de caracteres do nome de arquivo do módulo que é retornado.</span><span class="sxs-lookup"><span data-stu-id="badac-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
   
  `szName`  
- <span data-ttu-id="320a9-110">[out] Um buffer de caractere largo fornecida pelo chamador.</span><span class="sxs-lookup"><span data-stu-id="320a9-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="320a9-111">Quando o método retorna, esse buffer contém o nome de arquivo do módulo.</span><span class="sxs-lookup"><span data-stu-id="320a9-111">When the method returns, this buffer contains the file name of the module.</span></span>  
+ <span data-ttu-id="badac-110">[out] Um buffer de caractere largo fornecida pelo chamador.</span><span class="sxs-lookup"><span data-stu-id="badac-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="badac-111">Quando o método retorna, esse buffer contém o nome de arquivo do módulo.</span><span class="sxs-lookup"><span data-stu-id="badac-111">When the method returns, this buffer contains the file name of the module.</span></span>  
   
  `pAssemblyId`  
- <span data-ttu-id="320a9-112">[out] Um ponteiro para a ID do assembly do pai do módulo.</span><span class="sxs-lookup"><span data-stu-id="320a9-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
+ <span data-ttu-id="badac-112">[out] Um ponteiro para a ID do assembly do pai do módulo.</span><span class="sxs-lookup"><span data-stu-id="badac-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
   
  `pdwModuleFlags`  
- <span data-ttu-id="320a9-113">[out] Um bitmask de valores da [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeração que especifica as propriedades do módulo.</span><span class="sxs-lookup"><span data-stu-id="320a9-113">[out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.</span></span>  
+ <span data-ttu-id="badac-113">[out] Um bitmask de valores da [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeração que especifica as propriedades do módulo.</span><span class="sxs-lookup"><span data-stu-id="badac-113">[out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="320a9-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="320a9-114">Remarks</span></span>  
- <span data-ttu-id="320a9-115">Para módulos dinâmicos, o `szName` parâmetro é o nome de metadados do módulo e o endereço base for 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="320a9-115">For dynamic modules, the `szName` parameter is the metadata name of the module, and the base address is 0 (zero).</span></span> <span data-ttu-id="320a9-116">O nome de metadados é o valor na coluna Nome da tabela de módulo dentro de metadados.</span><span class="sxs-lookup"><span data-stu-id="320a9-116">The metadata name is the value in the Name column from the Module table inside metadata.</span></span> <span data-ttu-id="320a9-117">Isso também é exposto como o <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> propriedade para código gerenciado e como o `szName` parâmetro o [: Getscopeprops](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) método ao código do cliente não gerenciado de metadados.</span><span class="sxs-lookup"><span data-stu-id="320a9-117">This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="badac-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="badac-114">Remarks</span></span>  
+ <span data-ttu-id="badac-115">Para módulos dinâmicos, o `szName` parâmetro é o nome de metadados do módulo e o endereço base for 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="badac-115">For dynamic modules, the `szName` parameter is the metadata name of the module, and the base address is 0 (zero).</span></span> <span data-ttu-id="badac-116">O nome de metadados é o valor na coluna Nome da tabela de módulo dentro de metadados.</span><span class="sxs-lookup"><span data-stu-id="badac-116">The metadata name is the value in the Name column from the Module table inside metadata.</span></span> <span data-ttu-id="badac-117">Isso também é exposto como o <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> propriedade para código gerenciado e como o `szName` parâmetro o [: Getscopeprops](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) método ao código do cliente não gerenciado de metadados.</span><span class="sxs-lookup"><span data-stu-id="badac-117">This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.</span></span>  
   
- <span data-ttu-id="320a9-118">Embora o `GetModuleInfo2` método pode ser chamado como ID do módulo existe, a ID do assembly pai não estarão disponível até que o criador de perfil recebe o [: Moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="320a9-118">Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
+ <span data-ttu-id="badac-118">Embora o `GetModuleInfo2` método pode ser chamado como ID do módulo existe, a ID do assembly pai não estarão disponível até que o criador de perfil recebe o [: Moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="badac-118">Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
   
- <span data-ttu-id="320a9-119">Quando `GetModuleInfo2` retorna, você deve verificar se o `szName` buffer era grande o suficiente para conter o nome completo do arquivo do módulo.</span><span class="sxs-lookup"><span data-stu-id="320a9-119">When `GetModuleInfo2` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="320a9-120">Para fazer isso, o valor de comparação que `pcchName` aponta para com o valor de `cchName` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="320a9-120">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="320a9-121">Se `pcchName` aponta para um valor que é maior do que `cchName`, alocar uma maior `szName` buffer, atualize `cchName` com o novo tamanho maior e chame `GetModuleInfo2` novamente.</span><span class="sxs-lookup"><span data-stu-id="320a9-121">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo2` again.</span></span>  
+ <span data-ttu-id="badac-119">Quando `GetModuleInfo2` retorna, você deve verificar se o `szName` buffer era grande o suficiente para conter o nome completo do arquivo do módulo.</span><span class="sxs-lookup"><span data-stu-id="badac-119">When `GetModuleInfo2` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="badac-120">Para fazer isso, o valor de comparação que `pcchName` aponta para com o valor de `cchName` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="badac-120">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="badac-121">Se `pcchName` aponta para um valor que é maior do que `cchName`, alocar uma maior `szName` buffer, atualize `cchName` com o novo tamanho maior e chame `GetModuleInfo2` novamente.</span><span class="sxs-lookup"><span data-stu-id="badac-121">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo2` again.</span></span>  
   
- <span data-ttu-id="320a9-122">Como alternativa, você pode primeiro chamar `GetModuleInfo2` com um comprimento zero `szName` buffer para obter o tamanho do buffer correto.</span><span class="sxs-lookup"><span data-stu-id="320a9-122">Alternatively, you can first call `GetModuleInfo2` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="320a9-123">Você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chame `GetModuleInfo2` novamente.</span><span class="sxs-lookup"><span data-stu-id="320a9-123">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo2` again.</span></span>  
+ <span data-ttu-id="badac-122">Como alternativa, você pode primeiro chamar `GetModuleInfo2` com um comprimento zero `szName` buffer para obter o tamanho do buffer correto.</span><span class="sxs-lookup"><span data-stu-id="badac-122">Alternatively, you can first call `GetModuleInfo2` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="badac-123">Você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chame `GetModuleInfo2` novamente.</span><span class="sxs-lookup"><span data-stu-id="badac-123">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="320a9-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="320a9-124">Requirements</span></span>  
- <span data-ttu-id="320a9-125">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="320a9-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="badac-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="badac-124">Requirements</span></span>  
+ <span data-ttu-id="badac-125">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="badac-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="320a9-126">**Cabeçalho:** Corprof. idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="320a9-126">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="badac-126">**Cabeçalho:** Corprof. idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="badac-126">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="320a9-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="320a9-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="badac-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="badac-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="320a9-128">**Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="320a9-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="badac-128">**Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="badac-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="320a9-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="320a9-129">See Also</span></span>  
- [<span data-ttu-id="320a9-130">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="320a9-130">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="320a9-131">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="320a9-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="320a9-132">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="320a9-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="badac-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="badac-129">See Also</span></span>  
+ [<span data-ttu-id="badac-130">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="badac-130">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
+ [<span data-ttu-id="badac-131">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="badac-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="badac-132">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="badac-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

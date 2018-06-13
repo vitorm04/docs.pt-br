@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
 ms.openlocfilehash: 6e4e280760b9238fdc403ac5fe586743334e4c69
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598176"
 ---
 # <a name="ltremarksgt-visual-basic"></a><span data-ttu-id="500a6-102">&lt;comentários&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="500a6-102">&lt;remarks&gt; (Visual Basic)</span></span>
 <span data-ttu-id="500a6-103">Especifica uma seção de comentários do membro.</span><span class="sxs-lookup"><span data-stu-id="500a6-103">Specifies a remarks section for the member.</span></span>  

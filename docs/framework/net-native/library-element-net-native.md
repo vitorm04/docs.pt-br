@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311969"
 ---
 # <a name="ltlibrarygt-element-net-native"></a><span data-ttu-id="25800-102">Elemento &lt;Library&gt; (.NET Nativo)</span><span class="sxs-lookup"><span data-stu-id="25800-102">&lt;Library&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="25800-103">Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="25800-103">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>  

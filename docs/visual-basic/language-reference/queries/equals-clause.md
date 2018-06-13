@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597328"
 ---
 # <a name="equals-clause-visual-basic"></a><span data-ttu-id="5f285-102">Cláusula Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f285-102">Equals Clause (Visual Basic)</span></span>
 <span data-ttu-id="5f285-103">Compara chaves das coleções sendo associadas.</span><span class="sxs-lookup"><span data-stu-id="5f285-103">Compares keys from collections being joined.</span></span>  

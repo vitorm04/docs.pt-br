@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: 829f33aba14d79d7d9003d1ac7472a19060d401a
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957996"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a><span data-ttu-id="bc1ad-103">Implantar aplicativos .NET existentes como contêineres do Windows</span><span class="sxs-lookup"><span data-stu-id="bc1ad-103">Deploy existing .NET apps as Windows containers</span></span>
 

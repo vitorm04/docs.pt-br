@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
 ms.openlocfilehash: 33be64420eb2c42ed1c8b680985609ceca241b4e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645220"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a><span data-ttu-id="eb0d8-102">Projeções e transformações (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb0d8-102">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="eb0d8-103">Esta seção fornece exemplos de projeções e transformações do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="eb0d8-103">This section provides examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] projections and transformations.</span></span>  

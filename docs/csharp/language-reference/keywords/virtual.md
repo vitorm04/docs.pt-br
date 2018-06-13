@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172640"
 ---
 # <a name="virtual-c-reference"></a><span data-ttu-id="b8b7c-102">virtual (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="b8b7c-102">virtual (C# Reference)</span></span>
 <span data-ttu-id="b8b7c-103">A palavra-chave `virtual` é usada para modificar uma declaração de método, propriedade, indexador ou evento e permitir que ela seja substituída em uma classe derivada.</span><span class="sxs-lookup"><span data-stu-id="b8b7c-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="b8b7c-104">Por exemplo, esse método pode ser substituído por qualquer classe que o herde:</span><span class="sxs-lookup"><span data-stu-id="b8b7c-104">For example, this method can be overridden by any class that inherits it:</span></span>  

@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
 ms.openlocfilehash: c8ff993c1066dfd4bc94f68f2d7753c09d6eabe1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598392"
 ---
 # <a name="then-statement"></a><span data-ttu-id="f1a6c-102">Instrução Then</span><span class="sxs-lookup"><span data-stu-id="f1a6c-102">Then Statement</span></span>
 <span data-ttu-id="f1a6c-103">Apresenta um bloco de instruções a ser compilado ou executado se uma condição testada for verdadeira.</span><span class="sxs-lookup"><span data-stu-id="f1a6c-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  

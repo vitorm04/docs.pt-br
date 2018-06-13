@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460402"
 ---
 # <a name="compareto-function"></a><span data-ttu-id="922c9-103">Função CompareTo</span><span class="sxs-lookup"><span data-stu-id="922c9-103">CompareTo function</span></span>
 <span data-ttu-id="922c9-104">Compara a um objeto para outro objeto de gerenciamento do Windows.</span><span class="sxs-lookup"><span data-stu-id="922c9-104">Compares an object to another Windows management object.</span></span>  

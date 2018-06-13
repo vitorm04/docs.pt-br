@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
 ms.openlocfilehash: 86608811d42134a27af27fc3d2dd2c6f3bfbbe98
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597680"
 ---
 # <a name="else-statement-visual-basic"></a><span data-ttu-id="f810f-102">Instrução Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f810f-102">Else Statement (Visual Basic)</span></span>
 <span data-ttu-id="f810f-103">Apresenta um grupo de instruções para ser executado ou compilado se nenhum outro grupo condicional de instruções foi executado ou compilado.</span><span class="sxs-lookup"><span data-stu-id="f810f-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457464"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a><span data-ttu-id="ea4c8-102">Como converter bool? em bool com segurança (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="ea4c8-102">How to: Safely Cast from bool? to bool (C# Programming Guide)</span></span>
 <span data-ttu-id="ea4c8-103">O tipo que permite valor nulo `bool?` pode conter três valores diferentes: `true`, `false` e `null`.</span><span class="sxs-lookup"><span data-stu-id="ea4c8-103">The `bool?` nullable type can contain three different values: `true`, `false`, and `null`.</span></span> <span data-ttu-id="ea4c8-104">Portanto, o tipo `bool?` não pode ser usado em condicionais como com `if`, `for` ou `while`.</span><span class="sxs-lookup"><span data-stu-id="ea4c8-104">Therefore, the `bool?` type cannot be used in conditionals such as with `if`, `for`, or `while`.</span></span> <span data-ttu-id="ea4c8-105">Por exemplo, o código a seguir gera um erro de compilador.</span><span class="sxs-lookup"><span data-stu-id="ea4c8-105">For example, the following code causes a compiler error.</span></span>  

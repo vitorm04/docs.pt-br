@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 ms.openlocfilehash: ded92d8cb7cb2d2aa6c6342c3ddec347e25ff79a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642830"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="36ffd-102">Como: nós irmãos de alterações (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36ffd-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="36ffd-103">Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico.</span><span class="sxs-lookup"><span data-stu-id="36ffd-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="36ffd-104">A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.</span><span class="sxs-lookup"><span data-stu-id="36ffd-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  

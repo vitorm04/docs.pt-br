@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
 ms.openlocfilehash: 46f9174e78cc67c1e352d02ac6b5038f5da01086
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651094"
 ---
 # <a name="creating-xml-in-visual-basic"></a><span data-ttu-id="51023-102">Criando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="51023-102">Creating XML in Visual Basic</span></span>
 <span data-ttu-id="51023-103">Visual Basic permite que você use *literais XML* diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="51023-103">Visual Basic enables you to use *XML literals* directly in your code.</span></span> <span data-ttu-id="51023-104">A sintaxe de literais XML representa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos e é semelhante à sintaxe XML 1.0.</span><span class="sxs-lookup"><span data-stu-id="51023-104">The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax.</span></span> <span data-ttu-id="51023-105">Isso torna mais fácil criar elementos XML, documentos e fragmentos por programação porque seu código tem a mesma estrutura que o XML final.</span><span class="sxs-lookup"><span data-stu-id="51023-105">This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.</span></span>  

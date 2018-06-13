@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172627"
 ---
 # <a name="readonly-c-reference"></a><span data-ttu-id="4357a-102">readonly (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="4357a-102">readonly (C# Reference)</span></span>
 <span data-ttu-id="4357a-103">A palavra-chave `readonly` é um modificador que pode ser usado nos campos.</span><span class="sxs-lookup"><span data-stu-id="4357a-103">The `readonly` keyword is a modifier that you can use on fields.</span></span> <span data-ttu-id="4357a-104">Quando uma declaração de campo incluir um modificador `readonly`, atribuições aos campos introduzidas pela declaração podem ocorrer apenas como parte da declaração ou em um construtor na mesma classe.</span><span class="sxs-lookup"><span data-stu-id="4357a-104">When a field declaration includes a `readonly` modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.</span></span>  

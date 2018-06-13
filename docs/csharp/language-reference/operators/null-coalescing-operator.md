@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458093"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="91c0f-103">??</span><span class="sxs-lookup"><span data-stu-id="91c0f-103">??</span></span> <span data-ttu-id="91c0f-104">Operador (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="91c0f-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="91c0f-105">O operador `??` é chamado operador de coalescência nula.</span><span class="sxs-lookup"><span data-stu-id="91c0f-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="91c0f-106">Ele retornará o operando esquerdo se o operando não for nulo; caso contrário, ele retornará o operando direito.</span><span class="sxs-lookup"><span data-stu-id="91c0f-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

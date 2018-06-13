@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577080"
 ---
 # <a name="property-design"></a><span data-ttu-id="275db-102">Design de propriedade</span><span class="sxs-lookup"><span data-stu-id="275db-102">Property Design</span></span>
 <span data-ttu-id="275db-103">Embora tecnicamente muito semelhantes aos métodos de propriedades, eles são muito diferentes em termos de seus cenários de uso.</span><span class="sxs-lookup"><span data-stu-id="275db-103">Although properties are technically very similar to methods, they are quite different in terms of their usage scenarios.</span></span> <span data-ttu-id="275db-104">Eles devem ser considerados como campos inteligentes.</span><span class="sxs-lookup"><span data-stu-id="275db-104">They should be seen as smart fields.</span></span> <span data-ttu-id="275db-105">Eles têm a sintaxe de chamada de campos e a flexibilidade de métodos.</span><span class="sxs-lookup"><span data-stu-id="275db-105">They have the calling syntax of fields, and the flexibility of methods.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
 ms.openlocfilehash: 3701592fd6160e8f0f858aed15618a6dbcfb3c22
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645233"
 ---
 # <a name="parsing-xml-visual-basic"></a><span data-ttu-id="9acb3-102">Análise de XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9acb3-102">Parsing XML (Visual Basic)</span></span>
 <span data-ttu-id="9acb3-103">Os tópicos nesta seção descrevem como analisar documentos XML.</span><span class="sxs-lookup"><span data-stu-id="9acb3-103">The topics in this section describe how to parse XML documents.</span></span>  
