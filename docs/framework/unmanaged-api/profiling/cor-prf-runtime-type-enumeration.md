@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 28e6e95bbcca35ad39f30adcf100519748c02838
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449992"
 ---
 # <a name="corprfruntimetype-enumeration"></a><span data-ttu-id="5d6f4-102">Enumeração COR_PRF_RUNTIME_TYPE</span><span class="sxs-lookup"><span data-stu-id="5d6f4-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
 <span data-ttu-id="5d6f4-103">Contém valores que indicam a versão do common language runtime (CLR): CoreCLR, que é usado no Silverlight ou área de trabalho.</span><span class="sxs-lookup"><span data-stu-id="5d6f4-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  

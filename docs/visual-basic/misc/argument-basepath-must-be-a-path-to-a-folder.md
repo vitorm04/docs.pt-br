@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602061"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a><span data-ttu-id="64471-102">Argumento BasePath deve ser um caminho para uma pasta</span><span class="sxs-lookup"><span data-stu-id="64471-102">Argument BasePath must be a path to a folder</span></span>
 <span data-ttu-id="64471-103">O argumento `BasePath` deve consistir em um caminho para uma pasta.</span><span class="sxs-lookup"><span data-stu-id="64471-103">The argument `BasePath` must consist of a path to a folder.</span></span> <span data-ttu-id="64471-104">Você pode analisar uma cadeia de caracteres incorretamente e fornecendo um valor que não é reconhecido como um caminho válido.</span><span class="sxs-lookup"><span data-stu-id="64471-104">You may be parsing a string incorrectly and supplying a value that is not recognized as a valid path.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2fbedb7b1c10dcc2b9b9940db10aae7e4101436b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426205"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a><span data-ttu-id="c51bb-102">Método ISymUnmanagedMethod::GetParameters</span><span class="sxs-lookup"><span data-stu-id="c51bb-102">ISymUnmanagedMethod::GetParameters Method</span></span>
 <span data-ttu-id="c51bb-103">Obtém os parâmetros para este método.</span><span class="sxs-lookup"><span data-stu-id="c51bb-103">Gets the parameters for this method.</span></span> <span data-ttu-id="c51bb-104">Os parâmetros são retornados na ordem em que eles estão definidos na assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="c51bb-104">The parameters are returned in the order in which they are defined within the method's signature.</span></span>  

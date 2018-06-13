@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524674"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a><span data-ttu-id="2ae8b-102">Como adicionar um ToolStripContainer a um formulário</span><span class="sxs-lookup"><span data-stu-id="2ae8b-102">How to: Add a ToolStripContainer to a Form</span></span>
 <span data-ttu-id="2ae8b-103">Você pode adicionar programaticamente um <xref:System.Windows.Forms.ToolStripContainer> a um formulário do Windows e preenchê-lo com controles.</span><span class="sxs-lookup"><span data-stu-id="2ae8b-103">You can programmatically add a <xref:System.Windows.Forms.ToolStripContainer> to a Windows Form and populate it with controls.</span></span>  

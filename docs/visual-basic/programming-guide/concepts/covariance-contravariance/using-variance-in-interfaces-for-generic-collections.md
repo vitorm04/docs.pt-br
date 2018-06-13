@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
 ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642682"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="b656b-102">Usando variação em Interfaces para coleções genéricas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b656b-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
 <span data-ttu-id="b656b-103">Uma interface de covariante permite que seus métodos retornem mais tipos derivados daquelas especificadas na interface.</span><span class="sxs-lookup"><span data-stu-id="b656b-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="b656b-104">Uma interface de contravariante permite que seus métodos aceitem parâmetros de tipos menos derivados do que os especificados na interface.</span><span class="sxs-lookup"><span data-stu-id="b656b-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  

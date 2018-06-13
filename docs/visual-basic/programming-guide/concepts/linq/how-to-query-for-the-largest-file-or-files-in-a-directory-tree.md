@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: fd1ec163685af539e644d9fb4a0845fdcb3e1b5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643337"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a><span data-ttu-id="c180e-102">Como: consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c180e-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="c180e-103">Este exemplo mostra cinco consultas relacionadas ao tamanho do arquivo em bytes:</span><span class="sxs-lookup"><span data-stu-id="c180e-103">This example shows five queries related to file size in bytes:</span></span>  

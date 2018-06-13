@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
 ms.openlocfilehash: e524088ac6ccde3a46de7547379eb82f9760fd57
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645610"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a><span data-ttu-id="140d7-102">Modificando árvores XML (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="140d7-102">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="140d7-103">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é um repositório na memória para uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="140d7-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is an in-memory store for an XML tree.</span></span> <span data-ttu-id="140d7-104">Depois que você carrega ou analisa uma árvore XML de uma fonte, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite modificar essa árvore no lugar e, em seguida, serializar a árvore, talvez salvando-a em um arquivo ou enviando-a a um servidor remoto.</span><span class="sxs-lookup"><span data-stu-id="140d7-104">After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562505"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a><span data-ttu-id="bdd3b-102">Como criar um giro do elemento in-loco</span><span class="sxs-lookup"><span data-stu-id="bdd3b-102">How to: Make an Element Spin in Place</span></span>
 <span data-ttu-id="bdd3b-103">Este exemplo mostra como fazer um elemento girar usando um <xref:System.Windows.Media.RotateTransform> e um <xref:System.Windows.Media.Animation.DoubleAnimation>.</span><span class="sxs-lookup"><span data-stu-id="bdd3b-103">This example shows how to make an element spin by using a <xref:System.Windows.Media.RotateTransform> and a <xref:System.Windows.Media.Animation.DoubleAnimation>.</span></span>  

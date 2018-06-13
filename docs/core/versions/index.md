@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219008"
 ---
 # <a name="net-core-versioning"></a><span data-ttu-id="b3d80-103">Controle de versão do .NET Core</span><span class="sxs-lookup"><span data-stu-id="b3d80-103">.NET Core versioning</span></span>
 

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4419e49eecb3cae037115472b4a9893d2eb5b89c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454499"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="4b313-102">Método ICorProfilerInfo::SetFunctionReJIT</span><span class="sxs-lookup"><span data-stu-id="4b313-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
 <span data-ttu-id="4b313-103">Não implementado.</span><span class="sxs-lookup"><span data-stu-id="4b313-103">Not implemented.</span></span> <span data-ttu-id="4b313-104">Não use.</span><span class="sxs-lookup"><span data-stu-id="4b313-104">Do not use.</span></span>  

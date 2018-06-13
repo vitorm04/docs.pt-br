@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445816"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="4a10c-102">Método IMetaDataAssemblyImport::GetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="4a10c-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
 <span data-ttu-id="4a10c-103">Obtém o conjunto de propriedades para a referência de assembly com a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="4a10c-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  

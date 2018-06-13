@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763690"
 ---
 # <a name="-not-equal-to-entity-sql"></a><span data-ttu-id="d3039-102">!= (Não é igual a) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d3039-102">!= (Not Equal To) (Entity SQL)</span></span>
 <span data-ttu-id="d3039-103">Compara duas expressões para determinar se a expressão da esquerda não é igual a expressão da direita.</span><span class="sxs-lookup"><span data-stu-id="d3039-103">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span> <span data-ttu-id="d3039-104">O operador != (não é igual a) é funcionalmente equivalente ao operador <>.</span><span class="sxs-lookup"><span data-stu-id="d3039-104">The != (Not Equal To) operator is functionally equivalent to the <> operator.</span></span>  

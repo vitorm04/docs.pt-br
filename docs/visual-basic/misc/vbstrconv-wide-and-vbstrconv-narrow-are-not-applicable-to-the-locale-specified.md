@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641954"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a><span data-ttu-id="16bcc-102">VbStrConv. Wide e VbStrConv. Narrow não são aplicáveis para a localidade especificada</span><span class="sxs-lookup"><span data-stu-id="16bcc-102">VbStrConv.Wide and VbStrConv.Narrow are not applicable to the locale specified</span></span>
 <span data-ttu-id="16bcc-103">O aplicativo está tentando usar o `VbStrConv` os membros da enumeração `Wide` ou `Narrow`, que não são aplicável para a localidade especificada.</span><span class="sxs-lookup"><span data-stu-id="16bcc-103">The application is attempting to use the `VbStrConv` enumeration members `Wide` or `Narrow`, which are not applicable to the specified locale.</span></span>  

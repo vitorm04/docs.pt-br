@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531811"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a><span data-ttu-id="2a352-102">Como dar ao controle uma tela de fundo transparente</span><span class="sxs-lookup"><span data-stu-id="2a352-102">How to: Give Your Control a Transparent Background</span></span>
 <span data-ttu-id="2a352-103">Em versões anteriores do .NET Framework, os controles não oferece suporte à configuração transparente backcolors sem primeiro definir o <xref:System.Windows.Forms.Control.SetStyle%2A> método no construtor de formulários.</span><span class="sxs-lookup"><span data-stu-id="2a352-103">In earlier versions of the .NET Framework, controls didn't support setting transparent backcolors without first setting the <xref:System.Windows.Forms.Control.SetStyle%2A> method in the forms's constructor.</span></span> <span data-ttu-id="2a352-104">A cor de fundo para a maioria dos controles na versão atual do framework, pode ser definido como <xref:System.Drawing.Color.Transparent%2A> no **propriedades** janela no tempo de design ou em código no construtor do formulário.</span><span class="sxs-lookup"><span data-stu-id="2a352-104">In the current framework version, the backcolor for most controls can be set to <xref:System.Drawing.Color.Transparent%2A> in the **Properties** window at design time, or in code in the form's constructor.</span></span>  

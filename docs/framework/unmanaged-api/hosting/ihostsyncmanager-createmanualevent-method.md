@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecf53606dd12b517d9ec31ab25f98452d35bdf98
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443437"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a><span data-ttu-id="b088c-102">Método IHostSyncManager::CreateManualEvent</span><span class="sxs-lookup"><span data-stu-id="b088c-102">IHostSyncManager::CreateManualEvent Method</span></span>
 <span data-ttu-id="b088c-103">Cria um objeto de evento de redefinição manual.</span><span class="sxs-lookup"><span data-stu-id="b088c-103">Creates a manual-reset event object.</span></span>  

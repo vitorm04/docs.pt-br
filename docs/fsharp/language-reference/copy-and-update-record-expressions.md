@@ -5,8 +5,10 @@ author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: 000746b6e76349ae6d8f338519a58034f4e29020
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563053"
 ---
 # <a name="copy-and-update-record-expressions"></a><span data-ttu-id="8d109-103">Copiar e atualizar expressões de registro</span><span class="sxs-lookup"><span data-stu-id="8d109-103">Copy and Update Record Expressions</span></span>
 

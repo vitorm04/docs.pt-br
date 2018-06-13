@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
 ms.openlocfilehash: 77e6e6db321b5f8ef338706e5f938daa02d115eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642021"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a><span data-ttu-id="99781-102">Localizando o estilo de parágrafo padrão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99781-102">Finding the Default Paragraph Style (Visual Basic)</span></span>
 <span data-ttu-id="99781-103">A primeira tarefa no tutorial Manipulando informações em um documento de WordprocessingML é localizar o estilo padrão dos parágrafos no documento.</span><span class="sxs-lookup"><span data-stu-id="99781-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  

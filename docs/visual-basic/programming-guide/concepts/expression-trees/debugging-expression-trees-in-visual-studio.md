@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
 ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644232"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a><span data-ttu-id="0bced-102">Depurando árvores de expressão no Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0bced-102">Debugging Expression Trees in Visual Studio (Visual Basic)</span></span>
 <span data-ttu-id="0bced-103">Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão.</span><span class="sxs-lookup"><span data-stu-id="0bced-103">You can analyze the structure and content of expression trees when you debug your applications.</span></span> <span data-ttu-id="0bced-104">Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração.</span><span class="sxs-lookup"><span data-stu-id="0bced-104">To get a quick overview of the expression tree structure, you can use the `DebugView` property, which is available only in debug mode.</span></span> <span data-ttu-id="0bced-105">Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="0bced-105">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>  

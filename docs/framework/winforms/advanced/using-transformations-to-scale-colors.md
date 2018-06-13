@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525961"
 ---
 # <a name="using-transformations-to-scale-colors"></a><span data-ttu-id="fc3ec-102">Usando transformações para ajustar a escala de cores</span><span class="sxs-lookup"><span data-stu-id="fc3ec-102">Using Transformations to Scale Colors</span></span>
 <span data-ttu-id="fc3ec-103">Uma transformação de dimensionamento multiplica um ou mais dos quatro componentes de cor por um número.</span><span class="sxs-lookup"><span data-stu-id="fc3ec-103">A scaling transformation multiplies one or more of the four color components by a number.</span></span> <span data-ttu-id="fc3ec-104">As entradas de matriz de cores que representam o dimensionamento são dadas na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="fc3ec-104">The color matrix entries that represent scaling are given in the following table.</span></span>  

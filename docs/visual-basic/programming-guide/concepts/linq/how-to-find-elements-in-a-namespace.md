@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
 ms.openlocfilehash: 417ff63408ea640bbbd5cc4863193e769a2ec444
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641021"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="162a0-102">Como: localizar elementos em um Namespace (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="162a0-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="162a0-103">As expressões XPath pode localizar nós em um namespace específico.</span><span class="sxs-lookup"><span data-stu-id="162a0-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="162a0-104">Prefixos de namespace do uso de expressões XPath para especificar namespaces.</span><span class="sxs-lookup"><span data-stu-id="162a0-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="162a0-105">Para analisar uma expressão XPath que contém prefixos de namespace, você deve passar um objeto para os métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="162a0-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="162a0-106">Este exemplo usa <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="162a0-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f756a6e80eee0998398b4955d1d091d97b2ad73f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426153"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a><span data-ttu-id="a35bb-102">Método ISymUnmanagedReader::GetMethodFromDocumentPosition</span><span class="sxs-lookup"><span data-stu-id="a35bb-102">ISymUnmanagedReader::GetMethodFromDocumentPosition Method</span></span>
 <span data-ttu-id="a35bb-103">Retorna o método que contém o ponto de interrupção na posição fornecida em um documento.</span><span class="sxs-lookup"><span data-stu-id="a35bb-103">Returns the method that contains the breakpoint at the given position in a document.</span></span>  

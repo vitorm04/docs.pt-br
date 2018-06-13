@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fba01c1dfdea83b2580f45b7dbcef91fb7b73fb2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452898"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a><span data-ttu-id="7ee10-102">Método ICorProfilerInfo::GetFunctionFromIP</span><span class="sxs-lookup"><span data-stu-id="7ee10-102">ICorProfilerInfo::GetFunctionFromIP Method</span></span>
 <span data-ttu-id="7ee10-103">Mapeia um ponteiro de instrução do código gerenciado para um `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="7ee10-103">Maps a managed code instruction pointer to a `FunctionID`.</span></span>  

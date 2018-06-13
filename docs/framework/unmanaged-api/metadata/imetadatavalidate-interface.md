@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c067ee16c8e64a1996b7267069dada4052b39db2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452030"
 ---
 # <a name="imetadatavalidate-interface"></a><span data-ttu-id="fd82a-102">Interface IMetaDataValidate</span><span class="sxs-lookup"><span data-stu-id="fd82a-102">IMetaDataValidate Interface</span></span>
 <span data-ttu-id="fd82a-103">Fornece métodos para validar assinaturas de metadados.</span><span class="sxs-lookup"><span data-stu-id="fd82a-103">Provides methods to validate metadata signatures.</span></span>  

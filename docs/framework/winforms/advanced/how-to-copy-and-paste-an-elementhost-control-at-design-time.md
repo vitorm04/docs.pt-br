@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524845"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="70cd1-102">Como copiar e colar um controle ElementHost em tempo de design</span><span class="sxs-lookup"><span data-stu-id="70cd1-102">How to: Copy and Paste an ElementHost Control at Design Time</span></span>
 <span data-ttu-id="70cd1-103">Este procedimento mostra como copiar um controle Windows Presentation Foundation (WPF) em um Windows Form.</span><span class="sxs-lookup"><span data-stu-id="70cd1-103">This procedure shows you how to copy a Windows Presentation Foundation (WPF) control on a Windows Form.</span></span>  

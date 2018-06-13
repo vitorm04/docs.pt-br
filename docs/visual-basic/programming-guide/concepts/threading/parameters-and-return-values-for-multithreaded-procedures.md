@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648093"
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a><span data-ttu-id="b46e7-102">Parâmetros e valores de retorno para procedimentos multithread (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b46e7-102">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>
 <span data-ttu-id="b46e7-103">Fornecer e retornar valores em um aplicativo multithread é complicado porque o construtor para a classe thread deve ser passado como uma referência para um procedimento que não leva argumentos e não retorna nenhum valor.</span><span class="sxs-lookup"><span data-stu-id="b46e7-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="b46e7-104">As seções a seguir mostram algumas maneiras simples de fornecer parâmetros e retornar valores de procedimentos em threads separados.</span><span class="sxs-lookup"><span data-stu-id="b46e7-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  

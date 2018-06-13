@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
 ms.openlocfilehash: b6e41f61358563472f49b22df389df00e721503e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644817"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="49812-102">Como: trabalhar com dicionários usando LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49812-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
 <span data-ttu-id="49812-103">É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados.</span><span class="sxs-lookup"><span data-stu-id="49812-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="49812-104">Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.</span><span class="sxs-lookup"><span data-stu-id="49812-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  

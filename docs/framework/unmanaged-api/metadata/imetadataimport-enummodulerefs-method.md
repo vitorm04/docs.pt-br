@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 294156983507476b7ddfda3bc3cad16bb32f422b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445403"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="a07b0-102">Método IMetaDataImport::EnumModuleRefs</span><span class="sxs-lookup"><span data-stu-id="a07b0-102">IMetaDataImport::EnumModuleRefs Method</span></span>
 <span data-ttu-id="a07b0-103">Enumera ModuleRef tokens que representam os módulos importados.</span><span class="sxs-lookup"><span data-stu-id="a07b0-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  

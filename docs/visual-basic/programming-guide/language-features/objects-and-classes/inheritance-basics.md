@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655183"
 ---
 # <a name="inheritance-basics-visual-basic"></a><span data-ttu-id="fb06c-102">Noções básicas de herança (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb06c-102">Inheritance Basics (Visual Basic)</span></span>
 <span data-ttu-id="fb06c-103">O `Inherits` instrução é usada para declarar uma nova classe chamada um *classe derivada*, com base em uma classe existente, conhecida como uma *classe base*.</span><span class="sxs-lookup"><span data-stu-id="fb06c-103">The `Inherits` statement is used to declare a new class, called a *derived class*, based on an existing class, known as a *base class*.</span></span> <span data-ttu-id="fb06c-104">Classes derivadas herdam e podem estender, propriedades, métodos, eventos, campos e constantes definidas na classe base.</span><span class="sxs-lookup"><span data-stu-id="fb06c-104">Derived classes inherit, and can extend, the properties, methods, events, fields, and constants defined in the base class.</span></span> <span data-ttu-id="fb06c-105">A seção a seguir descreve algumas das regras de herança e os modificadores que você pode usar para alterar as classes de maneira herdam ou são herdados:</span><span class="sxs-lookup"><span data-stu-id="fb06c-105">The following section describes some of the rules for inheritance, and the modifiers you can use to change the way classes inherit or are inherited:</span></span>  

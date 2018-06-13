@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
 ms.openlocfilehash: 0b8e9ac1596c369fc8f4b91fb77248536a9630f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643409"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a><span data-ttu-id="951a2-102">Avançada LINQ to XML programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="951a2-102">Advanced LINQ to XML Programming (Visual Basic)</span></span>
 <span data-ttu-id="951a2-103">Esta seção especifica informações somente aplicáveis a desenvolvedores avançados em determinados cenários do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="951a2-103">This section provides information that will only be applicable to advanced developers in certain [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.</span></span>  

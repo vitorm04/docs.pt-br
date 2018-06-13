@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526827"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="4a44c-102">Trabalhando com imagens, bitmaps, ícones e metarquivos</span><span class="sxs-lookup"><span data-stu-id="4a44c-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
 <span data-ttu-id="4a44c-103">O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece a classe `Bitmap` para trabalhar com imagens de varredura e a classe `Metafile` para trabalhar com imagens vetoriais.</span><span class="sxs-lookup"><span data-stu-id="4a44c-103">[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="4a44c-104">as classes `Bitmap` e `Metafile` são herdadas da classe `Image`.</span><span class="sxs-lookup"><span data-stu-id="4a44c-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  

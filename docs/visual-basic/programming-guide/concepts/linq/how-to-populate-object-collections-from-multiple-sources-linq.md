@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
 ms.openlocfilehash: e890900cd2f53e62a55adef56bfdb27b9787d598
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643309"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="f2808-102">Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2808-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="f2808-103">Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de novos tipos.</span><span class="sxs-lookup"><span data-stu-id="f2808-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  

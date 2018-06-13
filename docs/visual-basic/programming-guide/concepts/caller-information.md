@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
 ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644206"
 ---
 # <a name="caller-information-visual-basic"></a><span data-ttu-id="25666-102">Informações de chamador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25666-102">Caller Information (Visual Basic)</span></span>
 <span data-ttu-id="25666-103">Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método.</span><span class="sxs-lookup"><span data-stu-id="25666-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="25666-104">Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador.</span><span class="sxs-lookup"><span data-stu-id="25666-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="25666-105">Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="25666-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  

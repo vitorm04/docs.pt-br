@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544775"
 ---
 # <a name="how-to-create-a-data-object"></a><span data-ttu-id="897da-102">Como criar um objeto de dados</span><span class="sxs-lookup"><span data-stu-id="897da-102">How to: Create a Data Object</span></span>
 <span data-ttu-id="897da-103">Os exemplos a seguir mostram várias maneiras de criar um objeto de dados usando os construtores fornecidos pelo <xref:System.Windows.DataObject> classe.</span><span class="sxs-lookup"><span data-stu-id="897da-103">The following examples show various ways to create a data object using the constructors provided by the <xref:System.Windows.DataObject> class.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560218"
 ---
 # <a name="how-to-interactively-control-a-clock"></a><span data-ttu-id="adab7-102">Como controlar interativamente um relógio</span><span class="sxs-lookup"><span data-stu-id="adab7-102">How to: Interactively Control a Clock</span></span>
 <span data-ttu-id="adab7-103">Um <xref:System.Windows.Media.Animation.Clock> do objeto <xref:System.Windows.Media.Animation.ClockController> propriedade permite que você interativamente Iniciar, pausar, retomar, busca, Avançar o relógio para completar seu período e parar o relógio.</span><span class="sxs-lookup"><span data-stu-id="adab7-103">A <xref:System.Windows.Media.Animation.Clock> object's <xref:System.Windows.Media.Animation.ClockController> property enables you to interactively start, pause, resume, seek, advance the clock to its fill period, and stop the clock.</span></span> <span data-ttu-id="adab7-104">Somente o relógio raiz de uma árvore de tempo pode ser controlado interativamente.</span><span class="sxs-lookup"><span data-stu-id="adab7-104">Only the root clock of a timing tree can be interactively controlled.</span></span>  

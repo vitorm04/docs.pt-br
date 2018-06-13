@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
 ms.openlocfilehash: 8ddff802c1332f837428fca52bd803d0672c9e3d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641793"
 ---
 # <a name="generation-operations-visual-basic"></a><span data-ttu-id="d4f33-102">Operações de geração (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4f33-102">Generation Operations (Visual Basic)</span></span>
 <span data-ttu-id="d4f33-103">Geração refere-se à criação de uma nova sequência de valores.</span><span class="sxs-lookup"><span data-stu-id="d4f33-103">Generation refers to creating a new sequence of values.</span></span>  

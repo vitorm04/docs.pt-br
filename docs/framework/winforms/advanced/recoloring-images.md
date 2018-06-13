@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525948"
 ---
 # <a name="recoloring-images"></a><span data-ttu-id="66bd7-102">Recolorindo imagens</span><span class="sxs-lookup"><span data-stu-id="66bd7-102">Recoloring Images</span></span>
 <span data-ttu-id="66bd7-103">Recolorir é o processo de ajustar as cores da imagem.</span><span class="sxs-lookup"><span data-stu-id="66bd7-103">Recoloring is the process of adjusting image colors.</span></span> <span data-ttu-id="66bd7-104">Alguns exemplos são alterar de uma cor para outra, ajustar a intensidade da cor em relação a outra cor, ajustar o brilho ou o contraste de todas as cores e converter cores em tons de cinza.</span><span class="sxs-lookup"><span data-stu-id="66bd7-104">Some examples of recoloring are changing one color to another, adjusting a color's intensity relative to another color, adjusting the brightness or contrast of all colors, and converting colors to shades of gray.</span></span>  

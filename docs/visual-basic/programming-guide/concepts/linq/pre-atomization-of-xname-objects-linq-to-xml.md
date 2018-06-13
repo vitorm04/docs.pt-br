@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
 ms.openlocfilehash: 141aa5e19e75e4a09b2d7aa04d83e8a24d2a27f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645714"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a><span data-ttu-id="b33ea-102">A pré-compilação Atomização de XName objetos (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b33ea-102">Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="b33ea-103">Uma maneira para melhorar o desempenho em LINQ to XML é pré-compilação atomizar objetos de <xref:System.Xml.Linq.XName> .</span><span class="sxs-lookup"><span data-stu-id="b33ea-103">One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects.</span></span> <span data-ttu-id="b33ea-104">a pré-compilação atomização significa que você atribuir uma cadeia de caracteres a um objeto de <xref:System.Xml.Linq.XName> antes de criar a árvore XML usando os construtores de classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XAttribute> .</span><span class="sxs-lookup"><span data-stu-id="b33ea-104">Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and  <xref:System.Xml.Linq.XAttribute> classes.</span></span> <span data-ttu-id="b33ea-105">Em seguida, em vez de passar uma cadeia de caracteres para o construtor, que usaria a conversão implícita de cadeia de caracteres a <xref:System.Xml.Linq.XName>, você passa o objeto inicializado de <xref:System.Xml.Linq.XName> .</span><span class="sxs-lookup"><span data-stu-id="b33ea-105">Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.</span></span>  

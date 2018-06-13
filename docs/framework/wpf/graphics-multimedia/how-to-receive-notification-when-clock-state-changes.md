@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561167"
 ---
 # <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a><span data-ttu-id="2e77a-102">Como receber notificação quando o estado de um relógio mudar</span><span class="sxs-lookup"><span data-stu-id="2e77a-102">How to: Receive Notification When a Clock&#39;s State Changes</span></span>
 <span data-ttu-id="2e77a-103">Um relógio <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento ocorre quando seu <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> torna-se inválida, como quando o relógio inicia ou termina.</span><span class="sxs-lookup"><span data-stu-id="2e77a-103">A clock's <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> event occurs when its <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> becomes invalid, such as when the clock starts or stops.</span></span> <span data-ttu-id="2e77a-104">Você pode registrar este evento com diretamente usando um <xref:System.Windows.Media.Animation.Clock>, ou você pode registrar usando um <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="2e77a-104">You can register for this event with directly using a <xref:System.Windows.Media.Animation.Clock>, or you can register using a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  

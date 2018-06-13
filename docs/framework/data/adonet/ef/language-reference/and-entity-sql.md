@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763781"
 ---
 # <a name="ampamp-and-entity-sql"></a><span data-ttu-id="0da80-102">&amp;&amp; (E) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0da80-102">&amp;&amp; (AND) (Entity SQL)</span></span>
 <span data-ttu-id="0da80-103">Retorna `true` se as duas expressões são `true`; caso contrário, `false` ou `NULL`.</span><span class="sxs-lookup"><span data-stu-id="0da80-103">Returns `true` if both expressions are `true`; otherwise, `false` or `NULL`.</span></span>  

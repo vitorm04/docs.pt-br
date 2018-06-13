@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525208"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="c9c28-102">Como determinar quando os atributos de formatação mudam no controle RichTextBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c9c28-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
 <span data-ttu-id="c9c28-103">Um uso comum de Windows Forms <xref:System.Windows.Forms.RichTextBox> controle está formatando texto com atributos como opções de fonte ou estilos de parágrafo.</span><span class="sxs-lookup"><span data-stu-id="c9c28-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="c9c28-104">Seu aplicativo pode precisar controlar as alterações no texto de formatação para fins de exibição de uma barra de ferramentas, como muitos aplicativos de processamento de texto.</span><span class="sxs-lookup"><span data-stu-id="c9c28-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  

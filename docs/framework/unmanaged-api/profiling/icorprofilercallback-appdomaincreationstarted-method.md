@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 141fd99ab0a96b20bfe06f1eb8612dd92b6cccc0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451484"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="7c426-102">Método ICorProfilerCallback::AppDomainCreationStarted</span><span class="sxs-lookup"><span data-stu-id="7c426-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
 <span data-ttu-id="7c426-103">Notifica o criador de perfil que está sendo criado um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="7c426-103">Notifies the profiler that an application domain is being created.</span></span>  

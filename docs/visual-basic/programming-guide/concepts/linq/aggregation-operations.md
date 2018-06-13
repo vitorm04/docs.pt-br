@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644063"
 ---
 # <a name="aggregation-operations-visual-basic"></a><span data-ttu-id="261f4-102">Operações de agregação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="261f4-102">Aggregation Operations (Visual Basic)</span></span>
 <span data-ttu-id="261f4-103">Uma operação de agregação computa um único valor de uma coleção de valores.</span><span class="sxs-lookup"><span data-stu-id="261f4-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="261f4-104">Um exemplo de uma operação de agregação é o cálculo da temperatura média diária dos valores válidos de temperatura diária de um mês.</span><span class="sxs-lookup"><span data-stu-id="261f4-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  

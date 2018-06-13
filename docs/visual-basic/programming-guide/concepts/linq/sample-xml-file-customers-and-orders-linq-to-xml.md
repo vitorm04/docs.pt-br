@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
 ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647739"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="94497-102">Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="94497-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
 <span data-ttu-id="94497-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="94497-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="94497-104">Este arquivo contém clientes e pedidos.</span><span class="sxs-lookup"><span data-stu-id="94497-104">This file contains customers and orders.</span></span>  
