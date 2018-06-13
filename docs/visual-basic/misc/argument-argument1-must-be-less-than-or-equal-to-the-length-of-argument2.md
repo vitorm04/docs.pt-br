@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600682"
 ---
 # <a name="argument-39ltargument1gt39-must-be-less-than-or-equal-to-the-length-of-argument-39ltargument2gt39"></a>Argumento &#39; &lt;argument1&gt; &#39; deve ser menor ou igual ao comprimento do argumento &#39; &lt;argument2&gt;&#39;
 Comprimento de um argumento excede o limite permitido, que é determinado pelo comprimento do segundo argumento.  

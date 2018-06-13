@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636559"
 ---
 # <a name="get-not-supported-at-run-time"></a>Obter não tem suporte em tempo de execução
 Você tentou ler uma propriedade em tempo de execução que é acessível apenas em tempo de design.  

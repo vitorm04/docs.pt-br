@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602627"
 ---
 # <a name="visual-basic-language-reference"></a>Referência da linguagem Visual Basic
 Esta seção fornece informações de referência para vários aspectos da linguagem do Visual Basic.  

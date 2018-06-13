@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636494"
 ---
 # <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>ID de localidade &#39; &lt;nome&gt; &#39; não tem suporte neste sistema
 Você está tentando usar `VbStrConv`, mas o sistema não oferece suporte para a localidade especificada.  
