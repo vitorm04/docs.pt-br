@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547401"
 ---
 # <a name="themedictionary-markup-extension"></a><span data-ttu-id="e6c0a-102">Extensão de marcação ThemeDictionary</span><span class="sxs-lookup"><span data-stu-id="e6c0a-102">ThemeDictionary Markup Extension</span></span>
 <span data-ttu-id="e6c0a-103">Fornece uma maneira para autores de controles personalizados ou aplicativos que integram controles de terceiros de carregar os dicionários de recursos específicos de temas para uso ao aplicar estilo ao controle.</span><span class="sxs-lookup"><span data-stu-id="e6c0a-103">Provides a way for custom control authors or applications that integrate third-party controls to load theme-specific resource dictionaries to use in styling the control.</span></span>  

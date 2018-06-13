@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545581"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a><span data-ttu-id="cd3e6-102">Como: retornar o resultado de uma caixa de diálogo</span><span class="sxs-lookup"><span data-stu-id="cd3e6-102">How to: Return a Dialog Box Result</span></span>
 <span data-ttu-id="cd3e6-103">Este exemplo mostra como recuperar o resultado da caixa de diálogo para uma janela que é aberta, chamando <xref:System.Windows.Window.ShowDialog%2A>.</span><span class="sxs-lookup"><span data-stu-id="cd3e6-103">This example shows how to retrieve the dialog result for a window that is opened by calling <xref:System.Windows.Window.ShowDialog%2A>.</span></span>  

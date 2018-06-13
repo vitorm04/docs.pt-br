@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550474"
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="97eef-102">Como converter uma imagem em escala de cinza</span><span class="sxs-lookup"><span data-stu-id="97eef-102">How to: Convert an Image to Greyscale</span></span>
 <span data-ttu-id="97eef-103">Este exemplo mostra como converter uma imagem em escala de cinza usando <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="97eef-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  

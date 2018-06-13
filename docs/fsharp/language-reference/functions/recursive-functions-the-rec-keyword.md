@@ -4,8 +4,10 @@ description: "Saiba como a palavra-chave F # 'rec' é usada com a palavra-chave 
 ms.date: 05/16/2016
 ms.openlocfilehash: 6039a48eae2b16aa1d82617176460d727a878d87
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562915"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="d68bc-103">Funções recursivas: a palavra-chave rec</span><span class="sxs-lookup"><span data-stu-id="d68bc-103">Recursive Functions: The rec Keyword</span></span>
 

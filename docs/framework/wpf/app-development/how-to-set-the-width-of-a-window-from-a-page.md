@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545984"
 ---
 # <a name="how-to-set-the-width-of-a-window-from-a-page"></a><span data-ttu-id="45e15-102">Como: definir a largura de uma janela de uma página</span><span class="sxs-lookup"><span data-stu-id="45e15-102">How to: Set the Width of a Window from a Page</span></span>
 <span data-ttu-id="45e15-103">Este exemplo ilustra como definir a largura da janela de um <xref:System.Windows.Controls.Page>.</span><span class="sxs-lookup"><span data-stu-id="45e15-103">This example illustrates how to set the width of the window from a <xref:System.Windows.Controls.Page>.</span></span>  

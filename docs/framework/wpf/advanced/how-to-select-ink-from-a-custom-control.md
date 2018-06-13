@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548359"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a><span data-ttu-id="fdd86-102">Como selecionar tinta em um controle personalizado</span><span class="sxs-lookup"><span data-stu-id="fdd86-102">How to: Select Ink from a Custom Control</span></span>
 <span data-ttu-id="fdd86-103">Adicionando um <xref:System.Windows.Ink.IncrementalLassoHitTester> para o controle personalizado, você pode habilitar o controle para que um usuário possa selecionar ink com a ferramenta de Laço, semelhante à forma como o <xref:System.Windows.Controls.InkCanvas> seleciona ink com um laço.</span><span class="sxs-lookup"><span data-stu-id="fdd86-103">By adding an <xref:System.Windows.Ink.IncrementalLassoHitTester> to your custom control, you can enable your control so that a user can select ink with a lasso tool, similar to the way the <xref:System.Windows.Controls.InkCanvas> selects ink with a lasso.</span></span>  

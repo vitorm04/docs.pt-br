@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549364"
 ---
 # <a name="table-overview"></a><span data-ttu-id="c5035-102">Visão geral da tabela</span><span class="sxs-lookup"><span data-stu-id="c5035-102">Table Overview</span></span>
 <span data-ttu-id="c5035-103"><xref:System.Windows.Documents.Table> é um elemento de nível de bloco que suporta a apresentação baseada em grade do conteúdo de documento de fluxo.</span><span class="sxs-lookup"><span data-stu-id="c5035-103"><xref:System.Windows.Documents.Table> is a block level element that supports grid-based presentation of Flow document content.</span></span> <span data-ttu-id="c5035-104">A flexibilidade deste elemento o torna muito útil, mas também o deixa mais difícil de entender e usar corretamente.</span><span class="sxs-lookup"><span data-stu-id="c5035-104">The flexibility of this element makes it very useful, but also makes it more complicated to understand and use correctly.</span></span>  

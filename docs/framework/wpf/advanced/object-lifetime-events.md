@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547528"
 ---
 # <a name="object-lifetime-events"></a><span data-ttu-id="7683d-102">Eventos de tempo de vida do objeto</span><span class="sxs-lookup"><span data-stu-id="7683d-102">Object Lifetime Events</span></span>
 <span data-ttu-id="7683d-103">Este tópico descreve os eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] específicos que indicam os estágios de criação, uso e destruição no tempo de vida do objeto.</span><span class="sxs-lookup"><span data-stu-id="7683d-103">This topic describes the specific [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] events that signify stages in an object lifetime of creation, use, and destruction.</span></span>  

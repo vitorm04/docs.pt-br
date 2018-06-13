@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546735"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a><span data-ttu-id="8b427-102">Como diagnosticar um trabalho de impressão problemático</span><span class="sxs-lookup"><span data-stu-id="8b427-102">How to: Diagnose Problematic Print Job</span></span>
 <span data-ttu-id="8b427-103">Administradores de rede frequentemente recebem reclamações de usuários sobre trabalhos de impressão que não são impressos ou são impressos lentamente.</span><span class="sxs-lookup"><span data-stu-id="8b427-103">Network administrators often field complaints from users about print jobs that do not print or print slowly.</span></span> <span data-ttu-id="8b427-104">Um conjunto sofisticado de propriedades do trabalho de impressão expostas no [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] do Microsoft .NET Framework fornece um meio para executar um diagnóstico remoto rápido dos trabalhos de impressão.</span><span class="sxs-lookup"><span data-stu-id="8b427-104">The rich set of print job properties exposed in the [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] of Microsoft .NET Framework provide a means for performing a rapid remote diagnosis of print jobs.</span></span>  

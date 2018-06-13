@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b55b27d45ef3efea10215c8a4163b5981f9d145
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422840"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a><span data-ttu-id="1c004-102">Interface ICorDebugUnmanagedCallback</span><span class="sxs-lookup"><span data-stu-id="1c004-102">ICorDebugUnmanagedCallback Interface</span></span>
 <span data-ttu-id="1c004-103">Fornece notificação de eventos nativo que não estão diretamente relacionados para o common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="1c004-103">Provides notification of native events that are not directly related to the common language runtime (CLR).</span></span>  

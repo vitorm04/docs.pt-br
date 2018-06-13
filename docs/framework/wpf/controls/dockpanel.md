@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
 ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550807"
 ---
 # <a name="dockpanel"></a><span data-ttu-id="ead69-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="ead69-102">DockPanel</span></span>
 <span data-ttu-id="ead69-103">O <xref:System.Windows.Controls.DockPanel> elemento é usado para posicionar o conteúdo filho ao longo da borda de um contêiner de layout.</span><span class="sxs-lookup"><span data-stu-id="ead69-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  

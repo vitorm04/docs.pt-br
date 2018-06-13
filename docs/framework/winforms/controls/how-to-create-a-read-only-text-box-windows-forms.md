@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530140"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a><span data-ttu-id="6b504-102">Como criar uma caixa de texto somente leitura (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="6b504-102">How to: Create a Read-Only Text Box (Windows Forms)</span></span>
 <span data-ttu-id="6b504-103">Você pode transformar uma caixa de texto Windows Forms editável em um controle somente leitura.</span><span class="sxs-lookup"><span data-stu-id="6b504-103">You can transform an editable Windows Forms text box into a read-only control.</span></span> <span data-ttu-id="6b504-104">Por exemplo, a caixa de texto pode exibir um valor que não estejam no momento, devido ao estado do aplicativo, mas geralmente é editado.</span><span class="sxs-lookup"><span data-stu-id="6b504-104">For example, the text box may display a value that is usually edited but may not be currently, due to the state of the application.</span></span>  

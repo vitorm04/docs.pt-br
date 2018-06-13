@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543749"
 ---
 # <a name="how-to-enumerate-system-fonts"></a><span data-ttu-id="06977-102">Como enumerar fontes de sistema</span><span class="sxs-lookup"><span data-stu-id="06977-102">How to: Enumerate System Fonts</span></span>
 ## <a name="example"></a><span data-ttu-id="06977-103">Exemplo</span><span class="sxs-lookup"><span data-stu-id="06977-103">Example</span></span>  

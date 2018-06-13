@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547044"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a><span data-ttu-id="5a6ad-102">Como usar um dicionário de recursos de escopo do aplicativo</span><span class="sxs-lookup"><span data-stu-id="5a6ad-102">How to: Use an Application-Scope Resource Dictionary</span></span>
 <span data-ttu-id="5a6ad-103">Este exemplo mostra como definir e usar um dicionário de recursos personalizado de escopo do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5a6ad-103">This example shows how to define and use an application-scope custom resource dictionary.</span></span>  

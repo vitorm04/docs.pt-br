@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548864"
 ---
 # <a name="optimizing-performance-text"></a><span data-ttu-id="03e82-102">Otimizando desempenho: texto</span><span class="sxs-lookup"><span data-stu-id="03e82-102">Optimizing Performance: Text</span></span>
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="03e82-103"> inclui suporte para a apresentação do conteúdo de texto com o uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com recursos sofisticados.</span><span class="sxs-lookup"><span data-stu-id="03e82-103"> includes support for the presentation of text content through the use of feature-rich [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controls.</span></span> <span data-ttu-id="03e82-104">Em geral, você pode dividir a renderização de texto em três camadas:</span><span class="sxs-lookup"><span data-stu-id="03e82-104">In general you can divide text rendering in three layers:</span></span>  

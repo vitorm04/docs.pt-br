@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544304"
 ---
 # <a name="how-to-handle-a-routed-event"></a><span data-ttu-id="96242-102">Como identificar um evento roteado</span><span class="sxs-lookup"><span data-stu-id="96242-102">How to: Handle a Routed Event</span></span>
 <span data-ttu-id="96242-103">Este exemplo mostra como os eventos de propagação funcionam e como escrever um manipulador que pode processar os dados de eventos roteados.</span><span class="sxs-lookup"><span data-stu-id="96242-103">This example shows how bubbling events work and how to write a handler that can process the routed event data.</span></span>  

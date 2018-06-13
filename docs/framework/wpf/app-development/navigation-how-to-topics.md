@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550105"
 ---
 # <a name="navigation-how-to-topics"></a><span data-ttu-id="f00e1-102">Tópicos explicativos de navegação</span><span class="sxs-lookup"><span data-stu-id="f00e1-102">Navigation How-to Topics</span></span>
 <span data-ttu-id="f00e1-103">Os tópicos a seguir mostram como usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navegação.</span><span class="sxs-lookup"><span data-stu-id="f00e1-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  

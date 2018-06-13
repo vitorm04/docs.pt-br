@@ -4,8 +4,10 @@ description: "Saiba mais sobre F # 'val' palavra-chave, que é usada para declar
 ms.date: 05/16/2016
 ms.openlocfilehash: 2bd1aae24a5823ddcd6bb8f121d8110f4a211a6a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565815"
 ---
 # <a name="explicit-fields-the-val-keyword"></a><span data-ttu-id="095e5-103">Campos explícitos: a palavra-chave val</span><span class="sxs-lookup"><span data-stu-id="095e5-103">Explicit Fields: The val Keyword</span></span>
 

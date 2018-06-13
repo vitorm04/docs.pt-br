@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544629"
 ---
 # <a name="how-to-use-systemparameters"></a><span data-ttu-id="d77e9-102">Como usar SystemParameters</span><span class="sxs-lookup"><span data-stu-id="d77e9-102">How to: Use SystemParameters</span></span>
 <span data-ttu-id="d77e9-103">Este exemplo mostra como acessar e usar as propriedades de <xref:System.Windows.SystemParameters> para estilizar ou personalizar um botão.</span><span class="sxs-lookup"><span data-stu-id="d77e9-103">This example shows how to access and use the properties of <xref:System.Windows.SystemParameters> in order to style or customize a button.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548640"
 ---
 # <a name="getcustomui"></a><span data-ttu-id="92ca3-102">GetCustomUI</span><span class="sxs-lookup"><span data-stu-id="92ca3-102">GetCustomUI</span></span>
 <span data-ttu-id="92ca3-103">Chamado por PresentationHost.exe para obter mensagens de erro e andamento personalizadas do host, se implementado.</span><span class="sxs-lookup"><span data-stu-id="92ca3-103">Called by PresentationHost.exe to get custom progress and error messages from the host, if implemented.</span></span>  

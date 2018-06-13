@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422465"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a><span data-ttu-id="5268d-102">Método ICorDebugRemoteTarget::GetHostName</span><span class="sxs-lookup"><span data-stu-id="5268d-102">ICorDebugRemoteTarget::GetHostName Method</span></span>
 <span data-ttu-id="5268d-103">Retorna o nome de domínio totalmente qualificado ou o endereço IPv4 do computador de destino de depuração remota.</span><span class="sxs-lookup"><span data-stu-id="5268d-103">Returns the fully qualified domain name or IPv4 address of the remote debugging target machine.</span></span> <span data-ttu-id="5268d-104">Não há suporte para IPv6 neste momento.</span><span class="sxs-lookup"><span data-stu-id="5268d-104">IPV6 is not supported at this time.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546638"
 ---
 # <a name="wpf-xaml-extensions"></a><span data-ttu-id="fd9ff-102">Extensões XAML WPF</span><span class="sxs-lookup"><span data-stu-id="fd9ff-102">WPF XAML Extensions</span></span>
 ## <a name="in-this-section"></a><span data-ttu-id="fd9ff-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="fd9ff-103">In This Section</span></span>  

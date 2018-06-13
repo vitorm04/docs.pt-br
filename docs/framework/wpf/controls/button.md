@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551694"
 ---
 # <a name="button"></a><span data-ttu-id="38f11-102">Botão</span><span class="sxs-lookup"><span data-stu-id="38f11-102">Button</span></span>
 <span data-ttu-id="38f11-103">Um <xref:System.Windows.Controls.Button> controle reage a entrada do usuário de um mouse, teclado, caneta, ou outro dispositivo de entrada e gera um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.</span><span class="sxs-lookup"><span data-stu-id="38f11-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="38f11-104">Um <xref:System.Windows.Controls.Button> é básico [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] componente que pode conter conteúdo simple, como texto e também pode conter conteúdo complexo, como imagens e <xref:System.Windows.Controls.Panel> controles.</span><span class="sxs-lookup"><span data-stu-id="38f11-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  

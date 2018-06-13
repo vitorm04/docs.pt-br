@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529734"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a><span data-ttu-id="cfeb1-102">Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cfeb1-102">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>
 <span data-ttu-id="cfeb1-103">A experiência de tempo de design para um controle personalizado pode ser aprimorada por meio da criação de um designer personalizado associado.</span><span class="sxs-lookup"><span data-stu-id="cfeb1-103">The design-time experience for a custom control can be enhanced by authoring an associated custom designer.</span></span>  

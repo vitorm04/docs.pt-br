@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545208"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a><span data-ttu-id="2f126-102">Como usar o layout automático para criar um botão</span><span class="sxs-lookup"><span data-stu-id="2f126-102">How to: Use Automatic Layout to Create a Button</span></span>
 <span data-ttu-id="2f126-103">Este exemplo descreve como usar a abordagem de layout automático para criar um botão em um aplicativo localizável.</span><span class="sxs-lookup"><span data-stu-id="2f126-103">This example describes how to use the automatic layout approach to create a button in a localizable application.</span></span>  

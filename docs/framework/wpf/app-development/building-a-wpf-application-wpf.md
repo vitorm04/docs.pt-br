@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549377"
 ---
 # <a name="building-a-wpf-application-wpf"></a><span data-ttu-id="cfe11-102">Compilando um aplicativo WPF (WPF)</span><span class="sxs-lookup"><span data-stu-id="cfe11-102">Building a WPF Application (WPF)</span></span>
 <span data-ttu-id="cfe11-103">Aplicativos do Windows Presentation Foundation (WPF) podem ser criados como [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] executáveis (.exe), bibliotecas (. dll), ou uma combinação de ambos os tipos de assemblies.</span><span class="sxs-lookup"><span data-stu-id="cfe11-103">Windows Presentation Foundation (WPF) applications can be built as [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] executables (.exe), libraries (.dll), or a combination of both types of assemblies.</span></span> <span data-ttu-id="cfe11-104">Este tópico apresenta como compilar aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve as principais etapas no processo de build.</span><span class="sxs-lookup"><span data-stu-id="cfe11-104">This topic introduces how to build [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications and describes the key steps in the build process.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548380"
 ---
 # <a name="how-to-navigate-to-a-page"></a><span data-ttu-id="90e78-102">Como: navegar para uma página</span><span class="sxs-lookup"><span data-stu-id="90e78-102">How to: Navigate to a Page</span></span>
 <span data-ttu-id="90e78-103">Este exemplo ilustra várias maneiras em que uma página pode ser acessada de um <xref:System.Windows.Navigation.NavigationWindow>.</span><span class="sxs-lookup"><span data-stu-id="90e78-103">This example illustrates several ways in which a page can be navigated to from a <xref:System.Windows.Navigation.NavigationWindow>.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550079"
 ---
 # <a name="adorners-how-to-topics"></a><span data-ttu-id="39803-102">Tópicos explicativos de adornos</span><span class="sxs-lookup"><span data-stu-id="39803-102">Adorners How-to Topics</span></span>
 <span data-ttu-id="39803-103">Os exemplos a seguir demonstram como realizar tarefas comuns usando o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework adorno.</span><span class="sxs-lookup"><span data-stu-id="39803-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  

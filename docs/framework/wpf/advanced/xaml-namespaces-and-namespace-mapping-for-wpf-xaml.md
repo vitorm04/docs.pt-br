@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549390"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a><span data-ttu-id="d7440-102">Namespaces XAML e mapeamento de namespace para XAML WPF</span><span class="sxs-lookup"><span data-stu-id="d7440-102">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>
 <span data-ttu-id="d7440-103">Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF.</span><span class="sxs-lookup"><span data-stu-id="d7440-103">This topic further explains the presence and purpose of the two XAML namespace mappings as often found in the root tag of a WPF XAML file.</span></span> <span data-ttu-id="d7440-104">Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.</span><span class="sxs-lookup"><span data-stu-id="d7440-104">It also describes how to produce similar mappings for using elements that are defined in your own code, and/or within separate assemblies.</span></span>  

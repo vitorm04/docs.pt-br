@@ -1,14 +1,6 @@
 ---
 title: Como imprimir com um controle WebBrowser
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,36 +13,31 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f72ba017870bfccbb7c0e404c57cab77a96ab8b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2ddb362100d5678d678a71707d8959a3be25853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532843"
 ---
-# <a name="how-to-print-with-a-webbrowser-control"></a><span data-ttu-id="1ffd5-102">Como imprimir com um controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="1ffd5-102">How to: Print with a WebBrowser Control</span></span>
-<span data-ttu-id="1ffd5-103">O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.WebBrowser> controle para imprimir uma página da Web sem exibi-lo.</span><span class="sxs-lookup"><span data-stu-id="1ffd5-103">The following code example demonstrates how use the <xref:System.Windows.Forms.WebBrowser> control to print a Web page without displaying it.</span></span>  
+# <a name="how-to-print-with-a-webbrowser-control"></a><span data-ttu-id="2e8a4-102">Como imprimir com um controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="2e8a4-102">How to: Print with a WebBrowser Control</span></span>
+<span data-ttu-id="2e8a4-103">O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.WebBrowser> controle para imprimir uma página da Web sem exibi-lo.</span><span class="sxs-lookup"><span data-stu-id="2e8a4-103">The following code example demonstrates how use the <xref:System.Windows.Forms.WebBrowser> control to print a Web page without displaying it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ffd5-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1ffd5-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2e8a4-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2e8a4-104">Example</span></span>  
  [!code-csharp[WebBrowserMisc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
  [!code-vb[WebBrowserMisc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1ffd5-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="1ffd5-105">Compiling the Code</span></span>  
- <span data-ttu-id="1ffd5-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="1ffd5-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2e8a4-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="2e8a4-105">Compiling the Code</span></span>  
+ <span data-ttu-id="2e8a4-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="2e8a4-106">This example requires:</span></span>  
   
--   <span data-ttu-id="1ffd5-107">Referências aos assemblies `System` e `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="1ffd5-107">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+-   <span data-ttu-id="2e8a4-107">Referências aos assemblies `System` e `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="2e8a4-107">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ffd5-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1ffd5-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2e8a4-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2e8a4-108">See Also</span></span>  
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowser.Print%2A>  
  <xref:System.Windows.Forms.WebBrowser.Url%2A>  
- [<span data-ttu-id="1ffd5-109">Como navegar até uma URL com o controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="1ffd5-109">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [<span data-ttu-id="1ffd5-110">Como adicionar recursos do navegador da Web a um Aplicativo dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1ffd5-110">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [<span data-ttu-id="1ffd5-111">Como criar um visualizador de documento HTML em um Aplicativo dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1ffd5-111">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [<span data-ttu-id="1ffd5-112">Visão geral do controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="1ffd5-112">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [<span data-ttu-id="1ffd5-113">Segurança do WebBrowser</span><span class="sxs-lookup"><span data-stu-id="1ffd5-113">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+ [<span data-ttu-id="2e8a4-109">Como navegar até uma URL com o controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="2e8a4-109">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [<span data-ttu-id="2e8a4-110">Como adicionar recursos do navegador da Web a um Aplicativo dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2e8a4-110">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [<span data-ttu-id="2e8a4-111">Como criar um visualizador de documento HTML em um Aplicativo dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2e8a4-111">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="2e8a4-112">Visão geral do controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="2e8a4-112">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [<span data-ttu-id="2e8a4-113">Segurança do WebBrowser</span><span class="sxs-lookup"><span data-stu-id="2e8a4-113">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)
