@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807847"
 ---
 # <a name="hosting-services"></a><span data-ttu-id="b0cee-102">Serviços de hospedagem</span><span class="sxs-lookup"><span data-stu-id="b0cee-102">Hosting Services</span></span>
 <span data-ttu-id="b0cee-103">Para se tornar ativa, um serviço deve ser hospedado em um ambiente de tempo de execução que cria e controla o contexto e o tempo de vida.</span><span class="sxs-lookup"><span data-stu-id="b0cee-103">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="b0cee-104">Serviços Windows Communication Foundation (WCF) são projetados para funcionar em qualquer processo do Windows que dá suporte a código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="b0cee-104">Windows Communication Foundation (WCF) services are designed to run in any Windows process that supports managed code.</span></span>  

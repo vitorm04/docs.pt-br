@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: 4b1d588f0ebbfec6d5cf7a58b63f92005db75acc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649377"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a><span data-ttu-id="8cf2a-102">Conteúdo válido de objetos XElement e XDocument</span><span class="sxs-lookup"><span data-stu-id="8cf2a-102">Valid Content of XElement and XDocument Objects</span></span>
 <span data-ttu-id="8cf2a-103">Este tópico descreve os argumentos válidos que podem ser passados para os construtores e os métodos que você usa para adicionar conteúdo a elementos e documentos.</span><span class="sxs-lookup"><span data-stu-id="8cf2a-103">This topic describes the valid arguments that can be passed to constructors and methods that you use to add content to elements and documents.</span></span>  

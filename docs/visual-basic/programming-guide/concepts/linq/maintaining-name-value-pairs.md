@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
 ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646871"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a><span data-ttu-id="97d69-102">Mantendo pares de nome/valor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97d69-102">Maintaining Name/Value Pairs (Visual Basic)</span></span>
 <span data-ttu-id="97d69-103">Muitos aplicativos devem manter informações que são melhor armazenadas como pares de valor/nome.</span><span class="sxs-lookup"><span data-stu-id="97d69-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="97d69-104">Essas informações podem ser informações de configuração ou configurações globais.</span><span class="sxs-lookup"><span data-stu-id="97d69-104">This information might be configuration information or global settings.</span></span> <span data-ttu-id="97d69-105">O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém alguns métodos que facilitam o trabalho de manter um conjunto de pares de valor/nome.</span><span class="sxs-lookup"><span data-stu-id="97d69-105">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="97d69-106">É possível manter informações como atributos ou como um conjunto de elementos filho.</span><span class="sxs-lookup"><span data-stu-id="97d69-106">You can either keep the information as attributes or as a set of child elements.</span></span>  

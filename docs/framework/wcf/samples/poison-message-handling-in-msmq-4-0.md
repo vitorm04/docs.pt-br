@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809499"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="d68f8-102">Tratamento de mensagens suspeitas no MSMQ 4.0</span><span class="sxs-lookup"><span data-stu-id="d68f8-102">Poison Message Handling in MSMQ 4.0</span></span>
 <span data-ttu-id="d68f8-103">Este exemplo demonstra como executar manipulação em um serviço de mensagens suspeitas.</span><span class="sxs-lookup"><span data-stu-id="d68f8-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="d68f8-104">Este exemplo se baseia o [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="d68f8-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="d68f8-105">Este exemplo usa `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="d68f8-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="d68f8-106">O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.</span><span class="sxs-lookup"><span data-stu-id="d68f8-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809908"
 ---
 # <a name="configuration-based-activation"></a><span data-ttu-id="ef0e2-102">Ativação com base em configuração</span><span class="sxs-lookup"><span data-stu-id="ef0e2-102">Configuration-Based Activation</span></span>
 <span data-ttu-id="ef0e2-103">Este exemplo demonstra como ativar serviços Windows Communication Foundation (WCF) sem a necessidade de um arquivo. svc.</span><span class="sxs-lookup"><span data-stu-id="ef0e2-103">This sample demonstrates how to activate Windows Communication Foundation (WCF) services without requiring a .svc file.</span></span>  

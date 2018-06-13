@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809219"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="86f32-102">Como definir um contrato de serviço do Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="86f32-102">How to: Define a Windows Communication Foundation Service Contract</span></span>
 <span data-ttu-id="86f32-103">Este é o primeiro de seis tarefas necessárias para criar um aplicativo básico do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="86f32-103">This is the first of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="86f32-104">Para obter uma visão geral de todos os seis das tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.</span><span class="sxs-lookup"><span data-stu-id="86f32-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

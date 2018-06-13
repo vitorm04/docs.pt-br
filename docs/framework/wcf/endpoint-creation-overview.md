@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809164"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="47f7c-102">Visão geral de criação de ponto de extremidade</span><span class="sxs-lookup"><span data-stu-id="47f7c-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="47f7c-103">Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de *pontos de extremidade* do serviço.</span><span class="sxs-lookup"><span data-stu-id="47f7c-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="47f7c-104">Pontos de extremidade fornecem os clientes acessem a funcionalidade que oferece um serviço WCF.</span><span class="sxs-lookup"><span data-stu-id="47f7c-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="47f7c-105">Esta seção descreve a estrutura de um ponto de extremidade e descreve como definir um ponto de extremidade na configuração e no código.</span><span class="sxs-lookup"><span data-stu-id="47f7c-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

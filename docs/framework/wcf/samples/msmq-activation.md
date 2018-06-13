@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808124"
 ---
 # <a name="msmq-activation"></a><span data-ttu-id="bff78-102">Ativação de MSMQ</span><span class="sxs-lookup"><span data-stu-id="bff78-102">MSMQ Activation</span></span>
 <span data-ttu-id="bff78-103">Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processo para Windows (WAS) que são lidos a partir de uma fila de mensagens.</span><span class="sxs-lookup"><span data-stu-id="bff78-103">This sample demonstrates how to host applications in Windows Process Activation Service (WAS) that are read from a message queue.</span></span> <span data-ttu-id="bff78-104">Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="bff78-104">This sample uses the `netMsmqBinding` and is based on the [Two-Way Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) sample.</span></span> <span data-ttu-id="bff78-105">Nesse caso, o serviço é um aplicativo Web hospedado e o cliente é auto-hospedado e saídas para o console para observar o status das ordens de compra enviada.</span><span class="sxs-lookup"><span data-stu-id="bff78-105">The service in this case is a Web-hosted application and the client is self-hosted and outputs to the console to observe the status of purchase orders submitted.</span></span>  

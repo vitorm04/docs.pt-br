@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643477"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="7dcce-102">Como: erros (Visual Basic) de análise de captura</span><span class="sxs-lookup"><span data-stu-id="7dcce-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
 <span data-ttu-id="7dcce-103">Este tópico mostra como detectar XML mal formado ou inválido.</span><span class="sxs-lookup"><span data-stu-id="7dcce-103">This topic shows how to detect badly formed or invalid XML.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
 ms.openlocfilehash: 3f75377502b30b03090bb2a5fe720faf4e12a028
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655452"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a><span data-ttu-id="afae9-102">Segurança LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="afae9-102">LINQ to XML Security (Visual Basic)</span></span>
 <span data-ttu-id="afae9-103">Este tópico descreve problemas de segurança associadas LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="afae9-103">This topic describes security issues associated with LINQ to XML.</span></span> <span data-ttu-id="afae9-104">Além disso, fornece alguma orientação para a exposição de segurança de abrandamento.</span><span class="sxs-lookup"><span data-stu-id="afae9-104">In addition, it provides some guidance for mitigating security exposure.</span></span>  

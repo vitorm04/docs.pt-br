@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647161"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a><span data-ttu-id="f277c-102">Como declarar eventos personalizados para conservar memória (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f277c-102">How to: Declare Custom Events To Conserve Memory (Visual Basic)</span></span>
 <span data-ttu-id="f277c-103">Há várias circunstâncias quando é importante que um aplicativo mantenha seu uso de memória baixa.</span><span class="sxs-lookup"><span data-stu-id="f277c-103">There are several circumstances when it is important that an application keep its memory usage low.</span></span> <span data-ttu-id="f277c-104">Eventos personalizados permitem que o aplicativo use memória somente para os eventos que trata.</span><span class="sxs-lookup"><span data-stu-id="f277c-104">Custom events allow the application to use memory only for the events that it handles.</span></span>  

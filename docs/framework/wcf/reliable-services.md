@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803748"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="946ea-102">Serviços confiáveis</span><span class="sxs-lookup"><span data-stu-id="946ea-102">Reliable Services</span></span>
 <span data-ttu-id="946ea-103">Sessões confiáveis e filas são os recursos do Windows Communication Foundation (WCF) que implementa o sistema de mensagens confiável.</span><span class="sxs-lookup"><span data-stu-id="946ea-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="946ea-104">Este tópico explica os recursos de mensagens confiáveis do WCF.</span><span class="sxs-lookup"><span data-stu-id="946ea-104">This topic explains the reliable messaging features of WCF.</span></span>  

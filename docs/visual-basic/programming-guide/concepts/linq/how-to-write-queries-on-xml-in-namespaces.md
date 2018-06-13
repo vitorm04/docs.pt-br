@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
 ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645558"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="65324-102">Como: escrever consultas no XML nos Namespaces (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65324-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
 <span data-ttu-id="65324-103">Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.</span><span class="sxs-lookup"><span data-stu-id="65324-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  

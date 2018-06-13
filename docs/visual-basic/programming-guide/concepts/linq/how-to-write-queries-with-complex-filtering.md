@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645857"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="9c372-102">Como: escrever consultas com filtragem complexa (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9c372-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
 <span data-ttu-id="9c372-103">Muitas vezes, você deseja escrever consultas LINQ to XML com filtros complexos.</span><span class="sxs-lookup"><span data-stu-id="9c372-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="9c372-104">Por exemplo, você pode ter que localizar todos os elementos que têm um elemento filho com um nome e um valor específicos.</span><span class="sxs-lookup"><span data-stu-id="9c372-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="9c372-105">Este tópico dá um exemplo de como escrever uma consulta com filtragem complexa.</span><span class="sxs-lookup"><span data-stu-id="9c372-105">This topic gives an example of writing a query with complex filtering.</span></span>  

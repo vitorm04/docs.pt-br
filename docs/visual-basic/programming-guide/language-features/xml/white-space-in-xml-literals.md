@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 60ee90c69aeda38f95107a6043801a4994972079
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649744"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a><span data-ttu-id="2a14b-102">Espaço em branco em literais XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a14b-102">White Space in XML Literals (Visual Basic)</span></span>
 <span data-ttu-id="2a14b-103">O compilador do Visual Basic incorpora somente os caracteres de espaço em branco significativo de um literal XML quando ele cria uma [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto.</span><span class="sxs-lookup"><span data-stu-id="2a14b-103">The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="2a14b-104">Os caracteres de espaço em branco insignificante não são incorporados.</span><span class="sxs-lookup"><span data-stu-id="2a14b-104">The insignificant white space characters are not incorporated.</span></span>  

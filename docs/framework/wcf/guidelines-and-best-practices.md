@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803660"
 ---
 # <a name="guidelines-and-best-practices"></a><span data-ttu-id="98db3-102">Diretrizes e práticas recomendadas</span><span class="sxs-lookup"><span data-stu-id="98db3-102">Guidelines and Best Practices</span></span>
 <span data-ttu-id="98db3-103">Esta seção contém tópicos que fornecem diretrizes para criação de aplicativos do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="98db3-103">This section contains topics that provide guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  

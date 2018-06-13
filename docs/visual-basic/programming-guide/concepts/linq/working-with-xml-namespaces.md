@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
 ms.openlocfilehash: 9408034173be9bba4ad11b86eef2d2a86b51b403
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647395"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a><span data-ttu-id="296f2-102">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="296f2-102">Working with XML Namespaces (Visual Basic)</span></span>
 <span data-ttu-id="296f2-103">Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte a namespaces.</span><span class="sxs-lookup"><span data-stu-id="296f2-103">The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.</span></span>  

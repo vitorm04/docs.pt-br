@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808137"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a><span data-ttu-id="91c23-102">Como criar um serviço que utiliza um validador de certificado personalizado</span><span class="sxs-lookup"><span data-stu-id="91c23-102">How to: Create a Service that Employs a Custom Certificate Validator</span></span>
 <span data-ttu-id="91c23-103">Este tópico mostra como implementar um validador de certificado personalizado e como configurar credenciais de cliente ou serviço para substituir a lógica de validação de certificado padrão com o validador de certificado personalizado.</span><span class="sxs-lookup"><span data-stu-id="91c23-103">This topic shows how to implement a custom certificate validator and how to configure client or service credentials to replace the default certificate validation logic with the custom certificate validator.</span></span>  

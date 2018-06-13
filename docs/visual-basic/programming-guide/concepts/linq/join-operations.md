@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645597"
 ---
 # <a name="join-operations-visual-basic"></a><span data-ttu-id="fbbdb-102">Unir operações (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbbdb-102">Join Operations (Visual Basic)</span></span>
 <span data-ttu-id="fbbdb-103">Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte de dados, com objetos que compartilham um atributo comum em outra fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="fbbdb-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  

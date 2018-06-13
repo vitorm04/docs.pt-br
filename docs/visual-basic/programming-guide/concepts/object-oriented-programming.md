@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655961"
 ---
 # <a name="object-oriented-programming-visual-basic"></a><span data-ttu-id="c61ff-102">Programação orientada a objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c61ff-102">Object-Oriented Programming (Visual Basic)</span></span>
 <span data-ttu-id="c61ff-103">Visual Basic oferece suporte completo para programação orientada a objeto, como encapsulamento, herança e polimorfismo.</span><span class="sxs-lookup"><span data-stu-id="c61ff-103">Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
 ms.openlocfilehash: 69509eb0bbc28045b71ad44c178d042367f3c03e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644102"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="c0627-102">Como: classificar os elementos em múltiplas chaves (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0627-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
 <span data-ttu-id="c0627-103">Este tópico mostra como classificar em múltiplas chaves.</span><span class="sxs-lookup"><span data-stu-id="c0627-103">This topic shows how to sort on multiple keys.</span></span>  

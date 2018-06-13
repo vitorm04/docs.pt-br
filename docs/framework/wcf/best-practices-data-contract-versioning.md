@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808530"
 ---
 # <a name="best-practices-data-contract-versioning"></a><span data-ttu-id="39193-102">Práticas recomendadas: controle de versão de contrato de dados</span><span class="sxs-lookup"><span data-stu-id="39193-102">Best Practices: Data Contract Versioning</span></span>
 <span data-ttu-id="39193-103">Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="39193-103">This topic lists the best practices for creating data contracts that can evolve easily over time.</span></span> <span data-ttu-id="39193-104">Para obter mais informações sobre contratos de dados, consulte os tópicos [usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="39193-104">For more information about data contracts, see the topics in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  

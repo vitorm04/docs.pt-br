@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807398"
 ---
 # <a name="tcp-activation"></a><span data-ttu-id="e4a4c-102">Ativação TCP</span><span class="sxs-lookup"><span data-stu-id="e4a4c-102">TCP Activation</span></span>
 <span data-ttu-id="e4a4c-103">Este exemplo demonstra como hospedar um serviço que usa serviços de ativação de processos do Windows (WAS) para ativar um serviço que se comunica através do protocolo NET. TCP.</span><span class="sxs-lookup"><span data-stu-id="e4a4c-103">This sample demonstrates hosting a service that uses Windows Process Activation Services (WAS) to activate a service that communicates over the net.tcp protocol.</span></span> <span data-ttu-id="e4a4c-104">Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="e4a4c-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

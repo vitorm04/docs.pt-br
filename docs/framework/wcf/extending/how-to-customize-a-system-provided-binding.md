@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803661"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a><span data-ttu-id="91120-102">Como personalizar uma associação fornecida pelo sistema</span><span class="sxs-lookup"><span data-stu-id="91120-102">How to: Customize a System-Provided Binding</span></span>
 <span data-ttu-id="91120-103">Windows Communication Foundation (WCF) inclui várias associações fornecidas pelo sistema que permitem configurar algumas das propriedades dos elementos de associação subjacente, mas não todas as propriedades.</span><span class="sxs-lookup"><span data-stu-id="91120-103">Windows Communication Foundation (WCF) includes several system-provided bindings that allow you to configure some of the properties of the underlying binding elements, but not all of the properties.</span></span> <span data-ttu-id="91120-104">Este tópico demonstra como definir propriedades nos elementos de associação para criar uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="91120-104">This topic demonstrates how to set properties on the binding elements to create a custom binding.</span></span>  

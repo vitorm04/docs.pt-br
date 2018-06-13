@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649390"
 ---
 # <a name="generic-procedures-in-visual-basic"></a><span data-ttu-id="89dd9-102">Procedimentos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="89dd9-102">Generic Procedures in Visual Basic</span></span>
 <span data-ttu-id="89dd9-103">Um *procedimento genérico*, também chamado um *método genérico*, é um procedimento definido pelo menos um parâmetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="89dd9-103">A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter.</span></span> <span data-ttu-id="89dd9-104">Isso permite que o código de chamada personalizar os tipos de dados para seus requisitos de cada vez que ele chama o procedimento.</span><span class="sxs-lookup"><span data-stu-id="89dd9-104">This allows the calling code to tailor the data types to its requirements each time it calls the procedure.</span></span>  

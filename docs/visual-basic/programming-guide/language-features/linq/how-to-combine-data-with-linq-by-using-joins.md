@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
 ms.openlocfilehash: f0279cc13e938b6f7853ef11fee1ef046f192316
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653449"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a><span data-ttu-id="559f3-102">Como combinar dados a LINQ com junções (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="559f3-102">How to: Combine Data with LINQ by Using Joins (Visual Basic)</span></span>
 <span data-ttu-id="559f3-103">Visual Basic fornece o `Join` e `Group Join` cláusulas para que você possa combinar o conteúdo de várias coleções com base em valores comuns entre as coleções de consulta.</span><span class="sxs-lookup"><span data-stu-id="559f3-103">Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections.</span></span> <span data-ttu-id="559f3-104">Esses valores são conhecidos como *chave* valores.</span><span class="sxs-lookup"><span data-stu-id="559f3-104">These values are known as *key* values.</span></span> <span data-ttu-id="559f3-105">Os desenvolvedores familiarizados com conceitos de banco de dados relacional reconhecerá o `Join` cláusula como um INNER JOIN e o `Group Join` cláusula as, efetivamente, uma junção externa esquerda.</span><span class="sxs-lookup"><span data-stu-id="559f3-105">Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.</span></span>  

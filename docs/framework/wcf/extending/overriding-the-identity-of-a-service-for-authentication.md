@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806936"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a><span data-ttu-id="29a31-102">Substituindo a identidade de um serviço pela autenticação</span><span class="sxs-lookup"><span data-stu-id="29a31-102">Overriding the Identity of a Service for Authentication</span></span>
 <span data-ttu-id="29a31-103">Normalmente, você não precisa definir a identidade de um serviço porque a seleção de um tipo de credencial de cliente determina o tipo de identidade exposto nos metadados do serviço.</span><span class="sxs-lookup"><span data-stu-id="29a31-103">Typically, you do not have to set the identity on a service because the selection of a client credential type dictates the type of identity exposed in the service metadata.</span></span> <span data-ttu-id="29a31-104">Por exemplo, o código de configuração a seguir usa o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento e define o `clientCredentialType` de atributo para o Windows.</span><span class="sxs-lookup"><span data-stu-id="29a31-104">For example, the following configuration code uses the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element and sets the `clientCredentialType` attribute to Windows.</span></span>  

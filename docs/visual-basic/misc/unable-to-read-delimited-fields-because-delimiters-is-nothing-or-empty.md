@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640177"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a><span data-ttu-id="d0a2e-102">Não é possível ler campos delimitados porque Delimiters é Nothing ou vazio</span><span class="sxs-lookup"><span data-stu-id="d0a2e-102">Unable to read delimited fields because Delimiters is Nothing or empty</span></span>
 <span data-ttu-id="d0a2e-103">O `TextFieldParser` não pode ler o arquivo porque o `Delimiters` está definida como `Nothing` ou está vazia.</span><span class="sxs-lookup"><span data-stu-id="d0a2e-103">The `TextFieldParser` is unable to read from the file because the `Delimiters` property is set to `Nothing` or is empty.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810103"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="18eb3-102">Usando um cliente WCF para acessar um serviço</span><span class="sxs-lookup"><span data-stu-id="18eb3-102">Accessing Services Using a WCF Client</span></span>
 <span data-ttu-id="18eb3-103">Depois de criar um serviço, a próxima etapa é criar um proxy de cliente do WCF.</span><span class="sxs-lookup"><span data-stu-id="18eb3-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="18eb3-104">Um aplicativo cliente usa o proxy de cliente do WCF para se comunicar com o serviço.</span><span class="sxs-lookup"><span data-stu-id="18eb3-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="18eb3-105">Aplicativos cliente geralmente importar metadados de um serviço para gerar o código do cliente WCF que pode ser usado para chamar o serviço.</span><span class="sxs-lookup"><span data-stu-id="18eb3-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>  

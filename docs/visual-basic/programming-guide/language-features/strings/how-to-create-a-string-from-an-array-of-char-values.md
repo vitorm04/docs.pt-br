@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
 ms.openlocfilehash: 104b329011d69e10a2926f31ce5d296759a3cce8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647157"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a><span data-ttu-id="8e71d-102">Como criar uma cadeia de caracteres a partir de uma matriz de valores de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e71d-102">How to: Create a String from An Array of Char Values (Visual Basic)</span></span>
 <span data-ttu-id="8e71d-103">Este exemplo cria a cadeia de caracteres "abcd" de caracteres individuais.</span><span class="sxs-lookup"><span data-stu-id="8e71d-103">This example creates the string "abcd" from individual characters.</span></span>  

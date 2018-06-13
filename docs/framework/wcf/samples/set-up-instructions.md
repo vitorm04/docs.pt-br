@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809099"
 ---
 # <a name="set-up-instructions"></a><span data-ttu-id="abddb-102">Instruções de configuração</span><span class="sxs-lookup"><span data-stu-id="abddb-102">Set-Up Instructions</span></span>
 <span data-ttu-id="abddb-103">Este conjunto de tópicos descreve como configurar os serviços que são necessários para executar um serviço do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="abddb-103">This set of topics describes how to set up services that are required to run a Windows Communication Foundation (WCF) service.</span></span>  

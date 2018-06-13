@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804619"
 ---
 # <a name="bindings-and-binding-elements"></a><span data-ttu-id="4bd06-102">Associações e elementos de associações</span><span class="sxs-lookup"><span data-stu-id="4bd06-102">Bindings and Binding Elements</span></span>
 <span data-ttu-id="4bd06-103">Associações são coleções de elementos de configuração especial, chamados *elementos de associação*, que é avaliado pelo tempo de execução do serviço sempre que um cliente ou o ponto de extremidade de serviço está sendo construído.</span><span class="sxs-lookup"><span data-stu-id="4bd06-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="4bd06-104">O tipo e a ordem dos elementos de associação dentro de uma associação determina a seleção e a ordem de empilhamento dos canais de transporte e protocolo na pilha de canais de um ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="4bd06-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  
