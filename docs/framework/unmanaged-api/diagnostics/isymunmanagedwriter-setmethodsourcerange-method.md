@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428996"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="969f5-102">Método ISymUnmanagedWriter::SetMethodSourceRange</span><span class="sxs-lookup"><span data-stu-id="969f5-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
 <span data-ttu-id="969f5-103">Especifica os verdadeiros início e término de um método de dentro de um arquivo de origem.</span><span class="sxs-lookup"><span data-stu-id="969f5-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="969f5-104">Use esse método para especificar a extensão de um método independentemente dos pontos de sequência que existe dentro do método.</span><span class="sxs-lookup"><span data-stu-id="969f5-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  

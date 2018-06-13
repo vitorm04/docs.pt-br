@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432650"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="7f557-102">Método ISymENCUnmanagedMethod::GetFileNameFromOffset</span><span class="sxs-lookup"><span data-stu-id="7f557-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
 <span data-ttu-id="7f557-103">Obtém o nome do arquivo para a linha associada a um deslocamento.</span><span class="sxs-lookup"><span data-stu-id="7f557-103">Gets the file name for the line associated with an offset.</span></span>  

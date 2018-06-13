@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e160b014b7aa7586566073b800084d44be15ccaf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474396"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="ebe17-102">Serviço: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="ebe17-102">Service: Security Validation and Authentication Failures</span></span>
 <span data-ttu-id="ebe17-103">Nome do contador: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="ebe17-103">Counter name: Security Validation and Authentication Failures</span></span>  

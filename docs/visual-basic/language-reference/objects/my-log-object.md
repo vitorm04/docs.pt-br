@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
 ms.openlocfilehash: d37c42bc7d67c66a3aa29a425a86a7fd7cd0349c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596015"
 ---
 # <a name="mylog-object"></a><span data-ttu-id="0be63-102">Objeto My.Log</span><span class="sxs-lookup"><span data-stu-id="0be63-102">My.Log Object</span></span>
 <span data-ttu-id="0be63-103">Fornece uma propriedade e métodos para gravar informações de evento e de exceção para os ouvintes de log do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0be63-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  

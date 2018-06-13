@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429808"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="05f49-102">Método ISymUnmanagedWriter::DefineField</span><span class="sxs-lookup"><span data-stu-id="05f49-102">ISymUnmanagedWriter::DefineField Method</span></span>
 <span data-ttu-id="05f49-103">Define uma única variável que não está dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="05f49-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="05f49-104">Esse método é usado para determinados campos em classes, campos de bits e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="05f49-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475609"
 ---
 # <a name="systemidentitymodelauthorizationcontextcreated"></a><span data-ttu-id="cfecb-102">System.IdentityModel.AuthorizationContextCreated</span><span class="sxs-lookup"><span data-stu-id="cfecb-102">System.IdentityModel.AuthorizationContextCreated</span></span>
 <span data-ttu-id="cfecb-103">System.IdentityModel.AuthorizationContextCreated</span><span class="sxs-lookup"><span data-stu-id="cfecb-103">System.IdentityModel.AuthorizationContextCreated</span></span>  

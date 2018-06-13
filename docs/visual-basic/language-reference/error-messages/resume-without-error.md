@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597869"
 ---
 # <a name="resume-without-error"></a><span data-ttu-id="dd975-102">Retomar sem erro</span><span class="sxs-lookup"><span data-stu-id="dd975-102">Resume without error</span></span>
 <span data-ttu-id="dd975-103">Um `Resume` instrução apareceu fora do código de tratamento de erros ou o código pular para um manipulador de erro, embora nenhum erro.</span><span class="sxs-lookup"><span data-stu-id="dd975-103">A `Resume` statement appeared outside error-handling code, or the code jumped into an error handler even though there was no error.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104dfcaa4120d72f3aa758b66134050f178fef75
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453415"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="7884a-102">Método ICorProfilerInfo::GetClassFromObject</span><span class="sxs-lookup"><span data-stu-id="7884a-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
 <span data-ttu-id="7884a-103">Obtém o `ClassID` de um objeto, considerando seus `ObjectID`.</span><span class="sxs-lookup"><span data-stu-id="7884a-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  

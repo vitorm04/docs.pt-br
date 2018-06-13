@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 53c71914d8938067ceb5d580d42ffe7d7d8dc1df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450659"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a><span data-ttu-id="4fb20-102">Método ICorProfilerCallback::ExceptionOSHandlerLeave</span><span class="sxs-lookup"><span data-stu-id="4fb20-102">ICorProfilerCallback::ExceptionOSHandlerLeave Method</span></span>
 <span data-ttu-id="4fb20-103">Não implementado.</span><span class="sxs-lookup"><span data-stu-id="4fb20-103">Not implemented.</span></span> <span data-ttu-id="4fb20-104">Um criador de perfil que precisa de informações de exceção não gerenciado deve obter essas informações por outros meios.</span><span class="sxs-lookup"><span data-stu-id="4fb20-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  

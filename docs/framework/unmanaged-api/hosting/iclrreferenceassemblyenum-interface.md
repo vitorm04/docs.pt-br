@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d66177c57acf2f41198ea37169756bc1629a2854
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432996"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a><span data-ttu-id="57a63-102">Interface ICLRReferenceAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="57a63-102">ICLRReferenceAssemblyEnum Interface</span></span>
 <span data-ttu-id="57a63-103">Fornece métodos que permitem que o host manipular o conjunto de assemblies referenciados por um arquivo ou um fluxo usando dados de identidade do assembly que são internos para o common language runtime (CLR), sem a necessidade de criar ou entender essas identidades.</span><span class="sxs-lookup"><span data-stu-id="57a63-103">Provides methods that allow the host to manipulate the set of assemblies referenced by a file or stream using assembly identity data that is internal to the common language runtime (CLR), without needing to create or understand those identities.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb2a7a6650da03796628b647bc0b06174c576538
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447350"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a><span data-ttu-id="3f1e2-102">Método IHostSyncManager::CreateRWLockReaderEvent</span><span class="sxs-lookup"><span data-stu-id="3f1e2-102">IHostSyncManager::CreateRWLockReaderEvent Method</span></span>
 <span data-ttu-id="3f1e2-103">Cria um objeto de evento de redefinição manual para a implementação de um bloqueio de leitor.</span><span class="sxs-lookup"><span data-stu-id="3f1e2-103">Creates a manual-reset event object for the implementation of a reader lock.</span></span>  

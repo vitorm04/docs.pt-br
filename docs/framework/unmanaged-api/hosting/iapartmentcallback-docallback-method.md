@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ba1dc2a1ec8b0b3b5ec25036cab6362237efe98f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430750"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a><span data-ttu-id="a1967-102">Método IApartmentCallback::DoCallback</span><span class="sxs-lookup"><span data-stu-id="a1967-102">IApartmentCallback::DoCallback Method</span></span>
 <span data-ttu-id="a1967-103">Executa a função especificada em um apartment.</span><span class="sxs-lookup"><span data-stu-id="a1967-103">Executes the specified function within an apartment.</span></span>  

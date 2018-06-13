@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523036"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a><span data-ttu-id="9e881-102">Como melhorar o desempenho evitando o dimensionamento automático</span><span class="sxs-lookup"><span data-stu-id="9e881-102">How to: Improve Performance by Avoiding Automatic Scaling</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="9e881-103"> pode ajustar a escala automaticamente de uma imagem à medida que você a desenha, o que poderia diminuir o desempenho.</span><span class="sxs-lookup"><span data-stu-id="9e881-103"> may automatically scale an image as you draw it, which would decrease performance.</span></span> <span data-ttu-id="9e881-104">Como alternativa, você pode controlar o dimensionamento da imagem, passando as dimensões do retângulo de destino para o <xref:System.Drawing.Graphics.DrawImage%2A> método.</span><span class="sxs-lookup"><span data-stu-id="9e881-104">Alternatively, you can control the scaling of the image by passing the dimensions of the destination rectangle to the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  

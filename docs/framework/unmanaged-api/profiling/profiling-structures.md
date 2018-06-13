@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456492"
 ---
 # <a name="profiling-structures"></a><span data-ttu-id="ae213-102">Estruturas de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="ae213-102">Profiling Structures</span></span>
 <span data-ttu-id="ae213-103">Esta seção descreve as estruturas não gerenciadas que a API de perfil utiliza.</span><span class="sxs-lookup"><span data-stu-id="ae213-103">This section describes the unmanaged structures that the profiling API uses.</span></span>  

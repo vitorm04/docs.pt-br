@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
 ms.openlocfilehash: 563010efc4f3049d330ee2b38b7f59e23292e630
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595128"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="70143-102">Não é possível usar parâmetros de tipo como qualificadores</span><span class="sxs-lookup"><span data-stu-id="70143-102">Type parameters cannot be used as qualifiers</span></span>
 <span data-ttu-id="70143-103">Um elemento de programação está qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="70143-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd1a55d4100d74b769b2bc1b8fe33d2042f5e739
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428295"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a><span data-ttu-id="3488f-102">Método ISymUnmanagedWriter::SetSymAttribute</span><span class="sxs-lookup"><span data-stu-id="3488f-102">ISymUnmanagedWriter::SetSymAttribute Method</span></span>
 <span data-ttu-id="3488f-103">Define um atributo personalizado com base no seu nome.</span><span class="sxs-lookup"><span data-stu-id="3488f-103">Defines a custom attribute based upon its name.</span></span> <span data-ttu-id="3488f-104">Esses atributos são mantidos no repositório de símbolos, ao contrário de atributos personalizados de metadados.</span><span class="sxs-lookup"><span data-stu-id="3488f-104">These attributes are held in the symbol store, unlike metadata custom attributes.</span></span>  

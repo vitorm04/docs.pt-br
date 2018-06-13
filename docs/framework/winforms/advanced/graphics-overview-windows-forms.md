@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521749"
 ---
 # <a name="graphics-overview-windows-forms"></a><span data-ttu-id="ca836-102">Visão geral de elementos gráficos (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ca836-102">Graphics Overview (Windows Forms)</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ca836-103"> é uma Interface gráfica de dispositivo que permite que os programadores criem aplicativos independentes de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="ca836-103"> is a Graphics Device Interface that enables programmers to write device-independent applications.</span></span> <span data-ttu-id="ca836-104">Os serviços de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] são expostas por meio de um conjunto de classes gerenciadas.</span><span class="sxs-lookup"><span data-stu-id="ca836-104">The services of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] are exposed through a set of managed classes.</span></span>  

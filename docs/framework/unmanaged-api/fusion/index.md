@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428583"
 ---
 # <a name="fusion-unmanaged-api-reference"></a><span data-ttu-id="e8cae-102">Fusion (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="e8cae-102">Fusion (Unmanaged API Reference)</span></span>
 <span data-ttu-id="e8cae-103">A API de fusão permite que um host de tempo de execução acessar as propriedades de recursos do aplicativo para localizar as versões corretas desses recursos para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e8cae-103">The fusion API enables a runtime host to access the properties of an application's resources in order to locate the correct versions of those resources for the application.</span></span>  

@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
 ms.openlocfilehash: d173843c17a1881224cffadcfd1538547ce763b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550888"
 ---
 # <a name="gridsplitter"></a><span data-ttu-id="80481-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="80481-102">GridSplitter</span></span>
 <span data-ttu-id="80481-103">O <xref:System.Windows.Controls.GridSplitter> redistribui espaço entre colunas ou linhas de um <xref:System.Windows.Controls.Grid> controle.</span><span class="sxs-lookup"><span data-stu-id="80481-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5d541f834e829305fa2b091c45d0dc8f387bb55
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431663"
 ---
 # <a name="cordllmain-function"></a><span data-ttu-id="f2d70-102">Função _CorDllMain</span><span class="sxs-lookup"><span data-stu-id="f2d70-102">_CorDllMain Function</span></span>
 <span data-ttu-id="f2d70-103">Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly DLL e começa a ser executada.</span><span class="sxs-lookup"><span data-stu-id="f2d70-103">Initializes the common language runtime (CLR), locates the managed entry point in the DLL assembly's CLR header, and begins execution.</span></span>  

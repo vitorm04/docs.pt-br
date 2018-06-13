@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456795"
 ---
 # <a name="1442---receiveretrycountreached"></a><span data-ttu-id="badea-102">1442 - ReceiveRetryCountReached</span><span class="sxs-lookup"><span data-stu-id="badea-102">1442 - ReceiveRetryCountReached</span></span>
 ## <a name="properties"></a><span data-ttu-id="badea-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="badea-103">Properties</span></span>  

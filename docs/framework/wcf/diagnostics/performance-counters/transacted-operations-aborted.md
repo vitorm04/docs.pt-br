@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473288"
 ---
 # <a name="transacted-operations-aborted"></a><span data-ttu-id="565d8-102">Operações de transação abortadas</span><span class="sxs-lookup"><span data-stu-id="565d8-102">Transacted Operations Aborted</span></span>
 <span data-ttu-id="565d8-103">Nome do contador: Operações transacionadas anuladas.</span><span class="sxs-lookup"><span data-stu-id="565d8-103">Counter Name: Transacted Operations Aborted.</span></span>  

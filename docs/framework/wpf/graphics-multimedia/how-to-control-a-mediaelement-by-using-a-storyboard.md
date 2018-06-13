@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561576"
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a><span data-ttu-id="bfb98-102">Como controlar um MediaElement usando um storyboard</span><span class="sxs-lookup"><span data-stu-id="bfb98-102">How to: Control a MediaElement by Using a Storyboard</span></span>
 <span data-ttu-id="bfb98-103">Este exemplo mostra como controlar um <xref:System.Windows.Controls.MediaElement> usando um <xref:System.Windows.Media.MediaTimeline> em um <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="bfb98-103">This example shows how to control a <xref:System.Windows.Controls.MediaElement> by using a <xref:System.Windows.Media.MediaTimeline> in a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  

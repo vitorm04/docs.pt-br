@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 73d4cc609694610aead2a3bfaeed1f5cca5f33fe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426411"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="ebcf4-102">Método ISymUnmanagedScope2::GetConstants</span><span class="sxs-lookup"><span data-stu-id="ebcf4-102">ISymUnmanagedScope2::GetConstants Method</span></span>
 <span data-ttu-id="ebcf4-103">Obtém as constantes locais definidas dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="ebcf4-103">Gets the local constants defined within this scope.</span></span>  

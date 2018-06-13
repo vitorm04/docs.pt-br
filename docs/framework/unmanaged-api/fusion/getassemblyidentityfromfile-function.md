@@ -1,14 +1,6 @@
 ---
-title: "Função GetAssemblyIdentityFromFile"
-ms.custom: 
+title: Função GetAssemblyIdentityFromFile
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetAssemblyIdentityFromFile
 api_location:
@@ -24,22 +16,19 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56d7fb4ee74e40ecd29ee276665ff43ab9fd56be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5ea151417a1cb53104ec29fff1e76e21f82ec9bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431637"
 ---
-# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="7cb99-102">Função GetAssemblyIdentityFromFile</span><span class="sxs-lookup"><span data-stu-id="7cb99-102">GetAssemblyIdentityFromFile Function</span></span>
-<span data-ttu-id="7cb99-103">Obtém um ponteiro para um `IUnknown` objeto com especificado `IID` no assembly no caminho de arquivo especificado.</span><span class="sxs-lookup"><span data-stu-id="7cb99-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
+# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="6b9e8-102">Função GetAssemblyIdentityFromFile</span><span class="sxs-lookup"><span data-stu-id="6b9e8-102">GetAssemblyIdentityFromFile Function</span></span>
+<span data-ttu-id="6b9e8-103">Obtém um ponteiro para um `IUnknown` objeto com especificado `IID` no assembly no caminho de arquivo especificado.</span><span class="sxs-lookup"><span data-stu-id="6b9e8-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7cb99-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7cb99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b9e8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6b9e8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyIdentityFromFile (  
@@ -49,23 +38,23 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7cb99-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7cb99-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6b9e8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6b9e8-105">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="7cb99-106">[in] Um caminho válido para o assembly solicitado.</span><span class="sxs-lookup"><span data-stu-id="7cb99-106">[in] A valid path to the requested assembly.</span></span>  
+ <span data-ttu-id="6b9e8-106">[in] Um caminho válido para o assembly solicitado.</span><span class="sxs-lookup"><span data-stu-id="6b9e8-106">[in] A valid path to the requested assembly.</span></span>  
   
  `riid`  
- <span data-ttu-id="7cb99-107">[in] O `IID` da interface para retornar.</span><span class="sxs-lookup"><span data-stu-id="7cb99-107">[in] The `IID` of the interface to return.</span></span>  
+ <span data-ttu-id="6b9e8-107">[in] O `IID` da interface para retornar.</span><span class="sxs-lookup"><span data-stu-id="6b9e8-107">[in] The `IID` of the interface to return.</span></span>  
   
  `ppIdentity`  
- <span data-ttu-id="7cb99-108">[out] O ponteiro de interface retornado.</span><span class="sxs-lookup"><span data-stu-id="7cb99-108">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="6b9e8-108">[out] O ponteiro de interface retornado.</span><span class="sxs-lookup"><span data-stu-id="6b9e8-108">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7cb99-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7cb99-109">Requirements</span></span>  
- <span data-ttu-id="7cb99-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cb99-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b9e8-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6b9e8-109">Requirements</span></span>  
+ <span data-ttu-id="6b9e8-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b9e8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7cb99-111">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7cb99-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="6b9e8-111">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="6b9e8-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="7cb99-112">**Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cb99-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6b9e8-112">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b9e8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cb99-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7cb99-113">See Also</span></span>  
- <span data-ttu-id="7cb99-114"><<!--zzxref:IUnknown --> `IUnknown`></span><span class="sxs-lookup"><span data-stu-id="7cb99-114"><<!--zzxref:IUnknown --> `IUnknown`></span></span>  
- [<span data-ttu-id="7cb99-115">Funções estáticas globais de fusão</span><span class="sxs-lookup"><span data-stu-id="7cb99-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="6b9e8-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6b9e8-113">See Also</span></span>  
+ <span data-ttu-id="6b9e8-114"><<!--zzxref:IUnknown --> `IUnknown`></span><span class="sxs-lookup"><span data-stu-id="6b9e8-114"><<!--zzxref:IUnknown --> `IUnknown`></span></span>  
+ [<span data-ttu-id="6b9e8-115">Funções estáticas globais de fusão</span><span class="sxs-lookup"><span data-stu-id="6b9e8-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

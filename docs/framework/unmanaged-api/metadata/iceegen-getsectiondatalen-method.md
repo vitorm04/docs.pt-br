@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b85cdee4a65e91c51fdb014bdcc4797b99214daf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446125"
 ---
 # <a name="iceegengetsectiondatalen-method"></a><span data-ttu-id="732cf-102">Método ICeeGen::GetSectionDataLen</span><span class="sxs-lookup"><span data-stu-id="732cf-102">ICeeGen::GetSectionDataLen Method</span></span>
 <span data-ttu-id="732cf-103">Obtém o comprimento da seção especificada.</span><span class="sxs-lookup"><span data-stu-id="732cf-103">Gets the length of the specified section.</span></span>  
