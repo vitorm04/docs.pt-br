@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497965"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a><span data-ttu-id="6a511-102">Como usar o Moniker de serviço do Windows Communication Foundation sem registro</span><span class="sxs-lookup"><span data-stu-id="6a511-102">How to: Use the Windows Communication Foundation Service Moniker without Registration</span></span>
 <span data-ttu-id="6a511-103">Para se conectar ao e se comunicar com um serviço do Windows Communication Foundation (WCF), um aplicativo cliente WCF deve ter os detalhes do contrato de serviço, a configuração de associação e o endereço do serviço.</span><span class="sxs-lookup"><span data-stu-id="6a511-103">To connect to and communicate with a Windows Communication Foundation (WCF) service, a WCF client application must have the details of the service address, the binding configuration, and the service contract.</span></span>  

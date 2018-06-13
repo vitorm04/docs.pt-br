@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500258"
 ---
 # <a name="asynchronous-find-sample"></a><span data-ttu-id="1f80c-102">Exemplo de assíncrono encontrado</span><span class="sxs-lookup"><span data-stu-id="1f80c-102">Asynchronous Find Sample</span></span>
 <span data-ttu-id="1f80c-103">Este exemplo mostra como usar a operação de localização assíncrona de um aplicativo cliente.</span><span class="sxs-lookup"><span data-stu-id="1f80c-103">This sample shows how to use the asynchronous find operation from a client application.</span></span>  

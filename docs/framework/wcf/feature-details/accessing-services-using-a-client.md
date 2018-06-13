@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495990"
 ---
 # <a name="accessing-services-using-a-client"></a><span data-ttu-id="4a999-102">Usando um cliente para acessar um serviço</span><span class="sxs-lookup"><span data-stu-id="4a999-102">Accessing Services Using a Client</span></span>
 <span data-ttu-id="4a999-103">Aplicativos cliente devem criar, configurar e usar objetos de canal ou de cliente do WCF para se comunicar com os serviços.</span><span class="sxs-lookup"><span data-stu-id="4a999-103">Client applications must create, configure, and use WCF client or channel objects to communicate with services.</span></span> <span data-ttu-id="4a999-104">O [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md) tópico fornece uma visão geral de objetos e as etapas envolvidas na criação de objetos de cliente e o canal básico e usá-los.</span><span class="sxs-lookup"><span data-stu-id="4a999-104">The [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) topic provides an overview of the objects and steps involved in creating basic client and channel objects and using them.</span></span>  

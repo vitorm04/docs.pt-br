@@ -4,8 +4,10 @@ description: 'Saiba como começar com a programação F # linguagem .NET.'
 ms.date: 09/06/2016
 ms.openlocfilehash: 6c419ce8f05096566012b7b6a0b8601350c938a8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562538"
 ---
 # <a name="getting-started-with-f"></a><span data-ttu-id="2424c-103">Guia de Introdução com F #</span><span class="sxs-lookup"><span data-stu-id="2424c-103">Getting Started with F#</span></span> #
 

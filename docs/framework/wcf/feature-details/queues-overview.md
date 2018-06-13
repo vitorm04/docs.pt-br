@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497007"
 ---
 # <a name="queues-overview"></a><span data-ttu-id="efce5-102">Visão geral de filas</span><span class="sxs-lookup"><span data-stu-id="efce5-102">Queues Overview</span></span>
 <span data-ttu-id="efce5-103">Esta seção apresenta o geral e principais conceitos por trás de comunicação em fila.</span><span class="sxs-lookup"><span data-stu-id="efce5-103">This section introduces the general and core concepts behind queued communication.</span></span> <span data-ttu-id="efce5-104">As seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui são manifestados no Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="efce5-104">Subsequent sections go into details about how the queuing concepts described here are manifested in Windows Communication Foundation (WCF).</span></span>  

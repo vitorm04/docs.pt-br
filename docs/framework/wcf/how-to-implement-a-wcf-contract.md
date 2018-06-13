@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499305"
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="188de-102">Como implementar um contrato de serviço do Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="188de-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
 <span data-ttu-id="188de-103">Este é o segundo de seis tarefas necessárias para criar um serviço básico do Windows Communication Foundation (WCF) e um cliente que possa chamar o serviço.</span><span class="sxs-lookup"><span data-stu-id="188de-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="188de-104">Para obter uma visão geral de todos os seis tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.</span><span class="sxs-lookup"><span data-stu-id="188de-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

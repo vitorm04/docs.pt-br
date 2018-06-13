@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508976"
 ---
 # <a name="using-the-message-class"></a><span data-ttu-id="76666-102">Usando a classe de mensagens</span><span class="sxs-lookup"><span data-stu-id="76666-102">Using the Message Class</span></span>
 <span data-ttu-id="76666-103">O <xref:System.ServiceModel.Channels.Message> classe é fundamental para o Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="76666-103">The <xref:System.ServiceModel.Channels.Message> class is fundamental to Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="76666-104">Toda a comunicação entre clientes e serviços, por fim, resulta em <xref:System.ServiceModel.Channels.Message> instâncias que estão sendo enviadas e recebidas.</span><span class="sxs-lookup"><span data-stu-id="76666-104">All communication between clients and services ultimately results in <xref:System.ServiceModel.Channels.Message> instances being sent and received.</span></span>  

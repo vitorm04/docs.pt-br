@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496657"
 ---
 # <a name="understanding-state-changes"></a><span data-ttu-id="ea9e0-102">Noções básicas de alterações de estado</span><span class="sxs-lookup"><span data-stu-id="ea9e0-102">Understanding State Changes</span></span>
 <span data-ttu-id="ea9e0-103">Este tópico discute os estados e transições que tem canais, os tipos usados para estados de canal de estrutura e como implementá-los.</span><span class="sxs-lookup"><span data-stu-id="ea9e0-103">This topic discusses the states and transitions that channels have, the types used to structure channel states, and how to implement them.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745260"
 ---
 # <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="a7cbb-102">Esquema de configurações de rastreamento e depuração</span><span class="sxs-lookup"><span data-stu-id="a7cbb-102">Trace and Debug Settings Schema</span></span>
 <span data-ttu-id="a7cbb-103">As configurações de rastreamento e depuração especificam ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.</span><span class="sxs-lookup"><span data-stu-id="a7cbb-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  

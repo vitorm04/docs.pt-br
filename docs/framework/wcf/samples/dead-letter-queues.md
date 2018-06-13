@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507975"
 ---
 # <a name="dead-letter-queues"></a><span data-ttu-id="89ee6-102">Filas de mensagens de inatividade</span><span class="sxs-lookup"><span data-stu-id="89ee6-102">Dead Letter Queues</span></span>
 <span data-ttu-id="89ee6-103">Este exemplo demonstra como manipular e processar mensagens com falha na entrega.</span><span class="sxs-lookup"><span data-stu-id="89ee6-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="89ee6-104">Ele se baseia o [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="89ee6-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="89ee6-105">Este exemplo usa o `netMsmqBinding` associação.</span><span class="sxs-lookup"><span data-stu-id="89ee6-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="89ee6-106">O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.</span><span class="sxs-lookup"><span data-stu-id="89ee6-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

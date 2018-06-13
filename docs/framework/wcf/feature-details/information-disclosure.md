@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495977"
 ---
 # <a name="information-disclosure"></a><span data-ttu-id="835f4-102">Divulgação de informações</span><span class="sxs-lookup"><span data-stu-id="835f4-102">Information Disclosure</span></span>
 <span data-ttu-id="835f4-103">Divulgação de informações permite que um invasor obtenha informações valiosas sobre um sistema.</span><span class="sxs-lookup"><span data-stu-id="835f4-103">Information disclosure enables an attacker to gain valuable information about a system.</span></span> <span data-ttu-id="835f4-104">Portanto, sempre considere quais informações são revelar e se ele pode ser usado por um usuário mal-intencionado.</span><span class="sxs-lookup"><span data-stu-id="835f4-104">Therefore, always consider what information you are revealing and whether it can be used by a malicious user.</span></span> <span data-ttu-id="835f4-105">A seguir lista os ataques de divulgação de informações possíveis e fornece atenuantes para cada.</span><span class="sxs-lookup"><span data-stu-id="835f4-105">The following lists possible information disclosure attacks and provides mitigations for each.</span></span>  

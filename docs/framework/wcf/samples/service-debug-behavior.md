@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503675"
 ---
 # <a name="service-debug-behavior"></a><span data-ttu-id="13b43-102">Comportamento de depuração de serviço</span><span class="sxs-lookup"><span data-stu-id="13b43-102">Service Debug Behavior</span></span>
 <span data-ttu-id="13b43-103">Este exemplo demonstra como as configurações de comportamento de serviço podem ser configuradas.</span><span class="sxs-lookup"><span data-stu-id="13b43-103">This sample demonstrates how service debug behavior settings can be configured.</span></span> <span data-ttu-id="13b43-104">O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço.</span><span class="sxs-lookup"><span data-stu-id="13b43-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="13b43-105">Este exemplo define explicitamente o comportamento de depuração de serviço no arquivo de configuração.</span><span class="sxs-lookup"><span data-stu-id="13b43-105">This sample explicitly defines service debug behavior in the configuration file.</span></span> <span data-ttu-id="13b43-106">Ele também pode ser feito imperativa no código.</span><span class="sxs-lookup"><span data-stu-id="13b43-106">It can also be done imperatively in code.</span></span>  

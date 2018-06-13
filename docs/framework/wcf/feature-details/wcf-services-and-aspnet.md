@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506157"
 ---
 # <a name="wcf-services-and-aspnet"></a><span data-ttu-id="0a0da-102">Serviços WCF e ASP.NET</span><span class="sxs-lookup"><span data-stu-id="0a0da-102">WCF Services and ASP.NET</span></span>
 <span data-ttu-id="0a0da-103">Este tópico discute hospedagem Windows Communication Foundation (WCF) serviços-lado a lado com o ASP.NET e hospedá-los no modo de compatibilidade do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="0a0da-103">This topic discusses hosting Windows Communication Foundation (WCF) services side-by-side with ASP.NET and hosting them in ASP.NET compatibility mode.</span></span>  

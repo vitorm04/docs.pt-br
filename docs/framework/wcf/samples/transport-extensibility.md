@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500780"
 ---
 # <a name="transport-extensibility"></a><span data-ttu-id="dbe30-102">Extensibilidade de transporte</span><span class="sxs-lookup"><span data-stu-id="dbe30-102">Transport Extensibility</span></span>
 <span data-ttu-id="dbe30-103">Esta seção contém exemplos que demonstram os transportes personalizados no Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="dbe30-103">This section contains samples that demonstrate custom transports in Windows Communication Foundation (WCF).</span></span>  

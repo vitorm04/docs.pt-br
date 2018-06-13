@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541558"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a><span data-ttu-id="4e2ab-102">GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo</span><span class="sxs-lookup"><span data-stu-id="4e2ab-102">Known Folder GUIDs for File Dialog Custom Places</span></span>
 <span data-ttu-id="4e2ab-103">Você usa um <xref:System.Guid> para especificar um [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pasta conhecidos quando você adicionar pastas para um <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção.</span><span class="sxs-lookup"><span data-stu-id="4e2ab-103">You use a <xref:System.Guid> to specify a [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] Known Folder when you add folders to a <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.</span></span> <span data-ttu-id="4e2ab-104">GUIDs de pasta conhecida não diferenciam maiúsculas de minúsculas e são definidas no arquivo KnownFolders.h no [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4e2ab-104">Known Folder GUIDs are not case sensitive and are defined in the KnownFolders.h file in the [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].</span></span>  

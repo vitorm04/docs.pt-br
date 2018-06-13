@@ -4,8 +4,10 @@ description: "Saiba como F # 'do' associação é usado para executar código se
 ms.date: 05/16/2016
 ms.openlocfilehash: 6fd084090a204beab0da1c2deb5b5ae2a86281c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562330"
 ---
 # <a name="do-bindings"></a><span data-ttu-id="be929-103">Associações do</span><span class="sxs-lookup"><span data-stu-id="be929-103">do Bindings</span></span>
 

@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
 ms.openlocfilehash: 7b318bc40892d38a942e4a1048b0d9c16da813dc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537584"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a><span data-ttu-id="6eaec-102">Entrada do mouse em um aplicativo do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6eaec-102">Mouse Input in a Windows Forms Application</span></span>
 <span data-ttu-id="6eaec-103">Windows Forms inclui uma variedade de eventos de mouse e suporte adicional para cursores personalizados do mouse, captura do mouse e o comportamento de arrastar e soltar.</span><span class="sxs-lookup"><span data-stu-id="6eaec-103">Windows Forms includes a variety of mouse events and additional support for customized mouse cursors, mouse capture, and drag-and-drop behavior.</span></span>  

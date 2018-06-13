@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745673"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="ad7e9-102">&lt;disableCachingBindingFailures&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="ad7e9-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
 <span data-ttu-id="ad7e9-103">Especifica se é necessário desabilitar o cache de associação de falhas que ocorrem porque o assembly não foi encontrado por sondagem.</span><span class="sxs-lookup"><span data-stu-id="ad7e9-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  

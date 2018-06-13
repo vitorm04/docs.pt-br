@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496595"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a><span data-ttu-id="0c4a6-102">Segurança de mensagem com um cliente Windows sem negociação de credencial</span><span class="sxs-lookup"><span data-stu-id="0c4a6-102">Message Security with a Windows Client without Credential Negotiation</span></span>
 <span data-ttu-id="0c4a6-103">O cenário a seguir mostra um serviço protegido pelo protocolo Kerberos e o cliente do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0c4a6-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by the Kerberos protocol.</span></span>  

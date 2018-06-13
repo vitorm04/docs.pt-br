@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760473"
 ---
 # <a name="adonet-entity-framework"></a><span data-ttu-id="ae3c6-102">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="ae3c6-102">ADO.NET Entity Framework</span></span>
 <span data-ttu-id="ae3c6-103">Agora, o site [msdn.com/data/ef](http://msdn.microsoft.com/data/ef) é o local principal para o conteúdo do Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="ae3c6-103">The [msdn.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  

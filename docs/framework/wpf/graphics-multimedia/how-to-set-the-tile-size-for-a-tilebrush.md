@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561742"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a><span data-ttu-id="32f5c-102">Como definir o tamanho de lado para um TileBrush</span><span class="sxs-lookup"><span data-stu-id="32f5c-102">How to: Set the Tile Size for a TileBrush</span></span>
 <span data-ttu-id="32f5c-103">Este exemplo mostra como definir o tamanho de bloco para um <xref:System.Windows.Media.TileBrush>.</span><span class="sxs-lookup"><span data-stu-id="32f5c-103">This example shows how to set the tile size for a <xref:System.Windows.Media.TileBrush>.</span></span> <span data-ttu-id="32f5c-104">Por padrão, um <xref:System.Windows.Media.TileBrush> produz um único bloco que preenche completamente a área que você estiver pintando.</span><span class="sxs-lookup"><span data-stu-id="32f5c-104">By default, a <xref:System.Windows.Media.TileBrush> produces a single tile that completely fills the area that you are painting.</span></span> <span data-ttu-id="32f5c-105">Você pode substituir esse comportamento, definindo a <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriedades.</span><span class="sxs-lookup"><span data-stu-id="32f5c-105">You can override this behavior by setting the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties.</span></span>  

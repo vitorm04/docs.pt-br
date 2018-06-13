@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498936"
 ---
 # <a name="basic-binding"></a><span data-ttu-id="92f8a-102">Associações básicas</span><span class="sxs-lookup"><span data-stu-id="92f8a-102">Basic Binding</span></span>
 <span data-ttu-id="92f8a-103">Esta seção contém exemplos básicos que demonstram o uso do atributo de associação de um elemento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="92f8a-103">This section contains basic samples that demonstrate using the binding attribute of an endpoint element.</span></span>  

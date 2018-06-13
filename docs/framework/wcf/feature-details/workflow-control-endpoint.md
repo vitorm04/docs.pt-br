@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502586"
 ---
 # <a name="workflow-control-endpoint"></a><span data-ttu-id="65226-102">Ponto de extremidade de controle de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="65226-102">Workflow Control Endpoint</span></span>
 <span data-ttu-id="65226-103">O ponto de extremidade de controle de fluxo de trabalho permite aos desenvolvedores chamar as operações de controle para controlar remotamente as instâncias de fluxo de trabalho hospedadas usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="65226-103">The workflow control endpoint allows developers to call control operations to remotely control workflow instances hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="65226-104">Esse recurso pode ser usado para executar programaticamente as operações de controle como suspender, continuar e encerrar.</span><span class="sxs-lookup"><span data-stu-id="65226-104">This feature can be used to programmatically perform control operations like suspend, resume, and terminate.</span></span>  

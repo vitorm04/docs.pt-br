@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501210"
 ---
 # <a name="basic-data-contract"></a><span data-ttu-id="4b277-102">Contrato de dados básicos</span><span class="sxs-lookup"><span data-stu-id="4b277-102">Basic Data Contract</span></span>
 <span data-ttu-id="4b277-103">Este exemplo demonstra como implementar um contrato de dados.</span><span class="sxs-lookup"><span data-stu-id="4b277-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="4b277-104">Contratos de dados permitem que você transmita dados estruturados para e de serviços.</span><span class="sxs-lookup"><span data-stu-id="4b277-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="4b277-105">Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) , mas usa números complexos em vez de tipos numéricos básicos.</span><span class="sxs-lookup"><span data-stu-id="4b277-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496188"
 ---
 # <a name="elevation-of-privilege"></a><span data-ttu-id="90d52-102">Elevação de privilégio</span><span class="sxs-lookup"><span data-stu-id="90d52-102">Elevation of Privilege</span></span>
 <span data-ttu-id="90d52-103">*Elevação de privilégio* os resultados de conceder autorização um invasor permissões além desses inicialmente concedida.</span><span class="sxs-lookup"><span data-stu-id="90d52-103">*Elevation of privilege* results from giving an attacker authorization permissions beyond those initially granted.</span></span> <span data-ttu-id="90d52-104">Por exemplo, um invasor com um conjunto de privilégios de permissões "somente leitura" de alguma forma eleva o conjunto para incluir "leitura e gravação."</span><span class="sxs-lookup"><span data-stu-id="90d52-104">For example, an attacker with a privilege set of "read only" permissions somehow elevates the set to include "read and write."</span></span>  

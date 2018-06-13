@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: 458b67de57be2bd0847ceccbc8a3aebd3b025f64
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496146"
 ---
 # <a name="routing-scenarios"></a><span data-ttu-id="948c0-102">Cenários de roteamento</span><span class="sxs-lookup"><span data-stu-id="948c0-102">Routing Scenarios</span></span>
 <span data-ttu-id="948c0-103">Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para criar lógica de roteamento eficiente, ao criar uma nova configuração do zero.</span><span class="sxs-lookup"><span data-stu-id="948c0-103">While the Routing Service is highly customizable, it can be a challenge to design efficient routing logic when creating a new configuration from scratch.</span></span>  <span data-ttu-id="948c0-104">No entanto, há vários cenários comuns que siga a maioria das configurações de serviço de roteamento.</span><span class="sxs-lookup"><span data-stu-id="948c0-104">However, there are several common scenarios that most Routing Service configurations follow.</span></span> <span data-ttu-id="948c0-105">Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.</span><span class="sxs-lookup"><span data-stu-id="948c0-105">While these scenarios may not apply directly to your specific configuration, understanding how the Routing Service can be configured to handle these scenarios will aid you in understanding the Routing Service.</span></span>  

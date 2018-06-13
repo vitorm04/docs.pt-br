@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509095"
 ---
 # <a name="stand-alone-json-serialization"></a><span data-ttu-id="90c6b-102">Serialização JSON autônoma</span><span class="sxs-lookup"><span data-stu-id="90c6b-102">Stand-Alone JSON Serialization</span></span>
 <span data-ttu-id="90c6b-103">JSON (JavaScript Object Notation) é um formato de dados que é projetado especificamente para ser usado pelo código JavaScript em execução em páginas da Web dentro do navegador.</span><span class="sxs-lookup"><span data-stu-id="90c6b-103">JSON (JavaScript Object Notation) is a data format that is specifically designed to be used by JavaScript code running on Web pages inside the browser.</span></span> <span data-ttu-id="90c6b-104">É o formato de dados padrão usado pelos serviços do ASP.NET AJAX criados no Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="90c6b-104">It is the default data format used by ASP.NET AJAX services created in Windows Communication Foundation (WCF).</span></span>  

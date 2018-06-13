@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537999"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a><span data-ttu-id="9aca0-102">Como criar manipuladores de eventos em tempo de execução para formulários do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9aca0-102">How to: Create Event Handlers at Run Time for Windows Forms</span></span>
 <span data-ttu-id="9aca0-103">Além de criar eventos usando o Designer de Formulários do Windows, também é possível criar um manipulador de eventos no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9aca0-103">In addition to creating events using the Windows Forms Designer, you can also create an event handler at run time.</span></span> <span data-ttu-id="9aca0-104">Essa ação permite que você conecte manipuladores de eventos com base em condições no código no tempo de execução em vez de conectá-los quando o programa inicia.</span><span class="sxs-lookup"><span data-stu-id="9aca0-104">This action allows you to connect event handlers based on conditions in code at run time as opposed to having them connected when the program initially starts.</span></span>  

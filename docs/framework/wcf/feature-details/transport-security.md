@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498209"
 ---
 # <a name="transport-security"></a><span data-ttu-id="a63ec-102">Segurança de transporte</span><span class="sxs-lookup"><span data-stu-id="a63ec-102">Transport Security</span></span>
 <span data-ttu-id="a63ec-103">Segurança de transporte no Windows Communication Foundation (WCF) depende da associação selecionada.</span><span class="sxs-lookup"><span data-stu-id="a63ec-103">Transport security in Windows Communication Foundation (WCF) depends on the binding selected.</span></span> <span data-ttu-id="a63ec-104">O transporte que implementa a associação determina o mecanismo de segurança real.</span><span class="sxs-lookup"><span data-stu-id="a63ec-104">The transport that the binding implements determines the actual security mechanism.</span></span> <span data-ttu-id="a63ec-105">Os tópicos nesta seção explicam os mecanismos que são implementados e suas opções.</span><span class="sxs-lookup"><span data-stu-id="a63ec-105">The topics in this section explain the mechanisms that are implemented and their options.</span></span>  

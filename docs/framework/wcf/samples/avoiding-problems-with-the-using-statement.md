@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503892"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a><span data-ttu-id="61480-102">Evitando problemas com a instrução Using</span><span class="sxs-lookup"><span data-stu-id="61480-102">Avoiding Problems with the Using Statement</span></span>
 <span data-ttu-id="61480-103">Este exemplo demonstra como você não deve usar o c# "using" instrução para limpar automaticamente os recursos ao usar um cliente tipado.</span><span class="sxs-lookup"><span data-stu-id="61480-103">This sample demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span> <span data-ttu-id="61480-104">Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo.</span><span class="sxs-lookup"><span data-stu-id="61480-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="61480-105">Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado por serviços de informações da Internet (IIS).</span><span class="sxs-lookup"><span data-stu-id="61480-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  

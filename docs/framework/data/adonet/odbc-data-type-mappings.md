@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765419"
 ---
 # <a name="odbc-data-type-mappings"></a><span data-ttu-id="aaceb-102">Mapeamentos de tipo de dados ODBC</span><span class="sxs-lookup"><span data-stu-id="aaceb-102">ODBC Data Type Mappings</span></span>
 <span data-ttu-id="aaceb-103">A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipo para tipos de dados do .NET Framework Data Provider para ODBC (<xref:System.Data.Odbc>).</span><span class="sxs-lookup"><span data-stu-id="aaceb-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>).</span></span> <span data-ttu-id="aaceb-104">Os métodos de acessador tipado para o <xref:System.Data.Odbc.OdbcDataReader> também são listados.</span><span class="sxs-lookup"><span data-stu-id="aaceb-104">The typed accessor methods for the <xref:System.Data.Odbc.OdbcDataReader> are also listed.</span></span>  

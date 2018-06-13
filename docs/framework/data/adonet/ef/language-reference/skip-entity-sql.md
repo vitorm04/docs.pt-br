@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766576"
 ---
 # <a name="skip-entity-sql"></a><span data-ttu-id="f7d1f-102">IGNORAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f7d1f-102">SKIP (Entity SQL)</span></span>
 <span data-ttu-id="f7d1f-103">Você pode executar a físico paginação usando a cláusula subpropriedades de SKIP na cláusula GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="f7d1f-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="f7d1f-104">A SKIP não pode ser usada separada de cláusula GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="f7d1f-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  

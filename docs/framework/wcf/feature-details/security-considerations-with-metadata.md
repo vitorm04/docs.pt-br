@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498537"
 ---
 # <a name="security-considerations-with-metadata"></a><span data-ttu-id="56fb4-102">Considerações de segurança com metadados</span><span class="sxs-lookup"><span data-stu-id="56fb4-102">Security Considerations with Metadata</span></span>
 <span data-ttu-id="56fb4-103">Ao usar os recursos de metadados no Windows Communication Foundation (WCF), considere as implicações de segurança de publicação, recuperar e usando metadados de serviço.</span><span class="sxs-lookup"><span data-stu-id="56fb4-103">When using the metadata features in Windows Communication Foundation (WCF), consider the security implications of publishing, retrieving, and using service metadata.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498508"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a><span data-ttu-id="5aee0-102">Encontrar ferramenta de chave privada (FindPrivateKey.exe)</span><span class="sxs-lookup"><span data-stu-id="5aee0-102">Find Private Key Tool (FindPrivateKey.exe)</span></span>
 

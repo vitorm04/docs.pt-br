@@ -4,8 +4,10 @@ description: "Saiba como a função 'invalidArg' F # gera uma exceção de argum
 ms.date: 05/16/2016
 ms.openlocfilehash: 43e1b6f3f36774ac50aeff147f75f133d6e3e5dc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564502"
 ---
 # <a name="exceptions-the-invalidarg-function"></a><span data-ttu-id="85a46-103">Exceções: a função invalidArg</span><span class="sxs-lookup"><span data-stu-id="85a46-103">Exceptions: The invalidArg Function</span></span>
 

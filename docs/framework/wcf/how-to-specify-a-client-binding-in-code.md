@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498365"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a><span data-ttu-id="8f9af-102">Como especificar uma associação de cliente em código</span><span class="sxs-lookup"><span data-stu-id="8f9af-102">How to: Specify a Client Binding in Code</span></span>
 <span data-ttu-id="8f9af-103">Neste exemplo, um cliente é criado para usar um serviço de cálculo e a associação para esse cliente é especificada imperativa no código.</span><span class="sxs-lookup"><span data-stu-id="8f9af-103">In this example, a client is created to use a calculator service and the binding for that client is specified imperatively in code.</span></span> <span data-ttu-id="8f9af-104">O cliente acessa o `CalculatorService`, que implementa o `ICalculator` interface e o serviço e o cliente use o <xref:System.ServiceModel.BasicHttpBinding> classe.</span><span class="sxs-lookup"><span data-stu-id="8f9af-104">The client accesses the `CalculatorService`, which implements the `ICalculator` interface, and both the service and the client use the <xref:System.ServiceModel.BasicHttpBinding> class.</span></span>  

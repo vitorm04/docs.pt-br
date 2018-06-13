@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748494"
 ---
 # <a name="ltsystemruntimeserializationgt"></a><span data-ttu-id="5d04c-102">&lt;Serialization&gt;</span><span class="sxs-lookup"><span data-stu-id="5d04c-102">&lt;system.runtime.serialization&gt;</span></span>
 <span data-ttu-id="5d04c-103">Representa o elemento raiz para o <xref:System.Runtime.Serialization> seção de namespace e contém elementos para configurar as opções do <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="5d04c-103">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  

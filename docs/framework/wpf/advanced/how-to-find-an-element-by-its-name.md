@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543570"
 ---
 # <a name="how-to-find-an-element-by-its-name"></a><span data-ttu-id="8859f-102">Como localizar um elemento pelo nome</span><span class="sxs-lookup"><span data-stu-id="8859f-102">How to: Find an Element by Its Name</span></span>
 <span data-ttu-id="8859f-103">Este exemplo descreve como usar o <xref:System.Windows.FrameworkElement.FindName%2A> método para encontrar um elemento por seu <xref:System.Windows.FrameworkElement.Name%2A> valor.</span><span class="sxs-lookup"><span data-stu-id="8859f-103">This example describes how to use the <xref:System.Windows.FrameworkElement.FindName%2A> method to find an element by its <xref:System.Windows.FrameworkElement.Name%2A> value.</span></span>  
