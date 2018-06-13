@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648522"
 ---
 # <a name="-codepage-visual-basic"></a>-página de código (Visual Basic)
 Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.  

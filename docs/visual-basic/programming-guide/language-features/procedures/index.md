@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655124"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimentos no Visual Basic
 Um *procedimento* é um bloco de instruções do Visual Basic delimitada por uma instrução de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e uma correspondência `End` declaração. Todas as instruções executáveis no Visual Basic devem estar dentro de algum procedimento.  

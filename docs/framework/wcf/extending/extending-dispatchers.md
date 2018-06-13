@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808232"
 ---
 # <a name="extending-dispatchers"></a>Estendendo distribuidores
 Distribuidores são responsáveis por recebendo mensagens de entrada fora dos canais subjacentes, convertendo-os em invocações do método no código do aplicativo e enviar os resultados de volta para o chamador. Extensões de distribuidores permitem que você modifique esse processamento.  Você pode implementar inspetores de mensagem ou parâmetro que inspecionar ou modifiquem o conteúdo de mensagens ou parâmetros.  Você pode alterar o modo como as mensagens são roteadas para operações ou fornecem algumas outras funcionalidades.  

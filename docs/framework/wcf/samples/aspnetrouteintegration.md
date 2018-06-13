@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804398"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Este exemplo demonstra como hospedar um serviço REST do Windows Communication Foundation (WCF) usando o ASP.NET rotas. O [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo mostra uma versão auto-hospedado deste cenário e descreve a implementação do serviço em camadas. Este tópico enfoca o recurso de integração do ASP.NET. Para obter mais informações sobre roteamento ASP.NET, consulte <xref:System.Web.Routing>.  

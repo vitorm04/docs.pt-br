@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807782"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Solução de problemas do tutorial de introdução
 Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutorial de Introdução e como resolvê-los.  

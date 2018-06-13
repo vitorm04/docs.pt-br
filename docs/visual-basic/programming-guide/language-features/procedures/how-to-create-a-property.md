@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656237"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Como criar uma propriedade (Visual Basic)
 Coloque uma definição de propriedade entre uma `Property` instrução e um `End Property` instrução. Nessa definição você define um `Get` procedimento, uma `Set` procedimento, ou ambos. Todo o código da propriedade está situado nesses procedimentos.  

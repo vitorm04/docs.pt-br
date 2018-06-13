@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808631"
 ---
 # <a name="analytic-trace-event-reference"></a>Referência de evento de rastreamento analítico
 A tabela a seguir define os níveis de eventos, identificadores e mensagens associadas com o rastreamento analítico do WCF.  

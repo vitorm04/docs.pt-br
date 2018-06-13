@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806026"
 ---
 # <a name="custom-stream-upgrades"></a>Atualizações de fluxo personalizadas
 Transportes orientado por fluxo, como TCP e Pipes nomeados operam em um fluxo contínuo de bytes entre o cliente e servidor. Esse fluxo é realizado por um <xref:System.IO.Stream> objeto. Em uma atualização de fluxo, o cliente deseja adicionar uma camada de protocolo opcional para a pilha de canais e solicita que a outra extremidade do canal de comunicação para fazer isso. A atualização de fluxo consiste na substituição original <xref:System.IO.Stream> objeto com um atualizado.  
