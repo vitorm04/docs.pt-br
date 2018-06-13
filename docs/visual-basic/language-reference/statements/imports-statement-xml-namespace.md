@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
 ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604556"
 ---
 # <a name="imports-statement-xml-namespace"></a><span data-ttu-id="271a3-102">Instrução Imports (namespace XML)</span><span class="sxs-lookup"><span data-stu-id="271a3-102">Imports Statement (XML Namespace)</span></span>
 <span data-ttu-id="271a3-103">Importa os prefixos de namespace XML para uso em literais XML e propriedades de eixo XML.</span><span class="sxs-lookup"><span data-stu-id="271a3-103">Imports XML namespace prefixes for use in XML literals and XML axis properties.</span></span>  

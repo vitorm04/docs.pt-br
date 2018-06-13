@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605336"
 ---
 # <a name="raiseevent-statement"></a><span data-ttu-id="cbefc-102">Instrução RaiseEvent</span><span class="sxs-lookup"><span data-stu-id="cbefc-102">RaiseEvent Statement</span></span>
 <span data-ttu-id="cbefc-103">Gatilhos de um evento declarado no nível de módulo dentro de uma classe, formulário ou documento.</span><span class="sxs-lookup"><span data-stu-id="cbefc-103">Triggers an event declared at module level within a class, form, or document.</span></span>  

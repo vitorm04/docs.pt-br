@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602048"
 ---
 # <a name="static-visual-basic"></a><span data-ttu-id="cc148-102">Estático (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc148-102">Static (Visual Basic)</span></span>
 <span data-ttu-id="cc148-103">Especifica que um ou mais variáveis locais declaradas devem continuar a existir e manter seus valores mais recentes após o término do procedimento no qual eles são declarados.</span><span class="sxs-lookup"><span data-stu-id="cc148-103">Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.</span></span>  

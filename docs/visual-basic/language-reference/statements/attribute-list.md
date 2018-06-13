@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604062"
 ---
 # <a name="attribute-list-visual-basic"></a><span data-ttu-id="0c1b8-102">Lista de atributos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c1b8-102">Attribute List (Visual Basic)</span></span>
 <span data-ttu-id="0c1b8-103">Especifica os atributos a serem aplicadas a um elemento de programação declarado.</span><span class="sxs-lookup"><span data-stu-id="0c1b8-103">Specifies the attributes to be applied to a declared programming element.</span></span> <span data-ttu-id="0c1b8-104">Vários atributos são separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="0c1b8-104">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="0c1b8-105">Esta é a sintaxe para um atributo.</span><span class="sxs-lookup"><span data-stu-id="0c1b8-105">Following is the syntax for one attribute.</span></span>  

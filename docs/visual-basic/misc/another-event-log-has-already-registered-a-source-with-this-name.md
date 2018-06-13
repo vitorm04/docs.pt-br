@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598914"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a><span data-ttu-id="fcac5-102">Outro log de eventos já registrou uma fonte com esse nome</span><span class="sxs-lookup"><span data-stu-id="fcac5-102">Another event log has already registered a source with this name</span></span>
 <span data-ttu-id="fcac5-103">Foi feita uma tentativa para gravar uma entrada para um log de eventos onde a origem especificada é registrada com outro log de eventos.</span><span class="sxs-lookup"><span data-stu-id="fcac5-103">An attempt was made to write an entry to an event log where the specified source is registered with another event log.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605271"
 ---
 # <a name="exit-statement-visual-basic"></a><span data-ttu-id="a2971-102">Instrução Exit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2971-102">Exit Statement (Visual Basic)</span></span>
 <span data-ttu-id="a2971-103">Sai de um procedimento ou bloco e transfere controle imediatamente para a instrução após a chamada de procedimento ou a definição do bloco.</span><span class="sxs-lookup"><span data-stu-id="a2971-103">Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.</span></span>  

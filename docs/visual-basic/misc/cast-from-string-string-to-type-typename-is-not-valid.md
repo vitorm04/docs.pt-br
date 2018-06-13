@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
 ms.openlocfilehash: 68addaa09696502b2b98f6f3bba622cf37975a45
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635691"
 ---
 # <a name="cast-from-string-quotltstringgtquot-to-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="e1adf-102">Conversão de cadeia de caracteres &quot; &lt;cadeia de caracteres&gt; &quot; digitar &#39; &lt;typename&gt; &#39; não é válido</span><span class="sxs-lookup"><span data-stu-id="e1adf-102">Cast from string &quot;&lt;string&gt;&quot; to type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="e1adf-103">Uma tentativa de converter uma variável de cadeia de caracteres para outro tipo não é válida.</span><span class="sxs-lookup"><span data-stu-id="e1adf-103">An attempt to convert a string variable to another type is not valid.</span></span>  

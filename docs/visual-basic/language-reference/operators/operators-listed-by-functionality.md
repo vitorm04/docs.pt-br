@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599057"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a><span data-ttu-id="6f757-102">Operadores listados por funcionalidade (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f757-102">Operators Listed by Functionality (Visual Basic)</span></span>
 <span data-ttu-id="6f757-103">Consulte uma das categorias listadas abaixo, ou abra essa parte da tabela de ajuda de conteúdo para ver uma lista alfabética de operadores do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="6f757-103">See one of the categories listed below, or open this portion of the Help table of contents to see an alphabetical list of Visual Basic operators.</span></span>  

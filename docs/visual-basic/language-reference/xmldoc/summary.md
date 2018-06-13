@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
 ms.openlocfilehash: cf320b61a2ca1c54b22e3c3d31ae51d003366efd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602641"
 ---
 # <a name="ltsummarygt-visual-basic"></a><span data-ttu-id="312be-102">&lt;Resumo&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="312be-102">&lt;summary&gt; (Visual Basic)</span></span>
 <span data-ttu-id="312be-103">Especifica o resumo do membro.</span><span class="sxs-lookup"><span data-stu-id="312be-103">Specifies the summary of the member.</span></span>  

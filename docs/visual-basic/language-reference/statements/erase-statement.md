@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601787"
 ---
 # <a name="erase-statement-visual-basic"></a><span data-ttu-id="66b02-102">Instrução Erase (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66b02-102">Erase Statement (Visual Basic)</span></span>
 <span data-ttu-id="66b02-103">Usado para liberar variáveis de matriz e desalocar a memória usada para seus elementos.</span><span class="sxs-lookup"><span data-stu-id="66b02-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  

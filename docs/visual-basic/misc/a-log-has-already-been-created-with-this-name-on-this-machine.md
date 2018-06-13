@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603418"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a><span data-ttu-id="2aa83-102">Um log já foi criado com este nome nesta máquina</span><span class="sxs-lookup"><span data-stu-id="2aa83-102">A log has already been created with this name on this machine</span></span>
 <span data-ttu-id="2aa83-103">Foi feita uma tentativa para criar um log com um nome que já está em uso.</span><span class="sxs-lookup"><span data-stu-id="2aa83-103">An attempt has been made to create a log with a name that is already in use.</span></span>  

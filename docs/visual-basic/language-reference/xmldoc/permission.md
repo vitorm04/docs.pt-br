@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
 ms.openlocfilehash: 4fafebf94be350951672f01f2d17bd00d4bab69a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601989"
 ---
 # <a name="ltpermissiongt-visual-basic"></a><span data-ttu-id="01986-102">&lt;permissão&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01986-102">&lt;permission&gt; (Visual Basic)</span></span>
 <span data-ttu-id="01986-103">Especifica uma permissão necessária para o membro.</span><span class="sxs-lookup"><span data-stu-id="01986-103">Specifies a required permission for the member.</span></span>  

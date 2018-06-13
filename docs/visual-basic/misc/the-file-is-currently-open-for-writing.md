@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637563"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a><span data-ttu-id="c6000-102">O arquivo está atualmente aberto para gravação</span><span class="sxs-lookup"><span data-stu-id="c6000-102">The file is currently open for writing</span></span>
 <span data-ttu-id="c6000-103">Foi feita uma tentativa para acessar um arquivo que está atualmente aberto para gravação.</span><span class="sxs-lookup"><span data-stu-id="c6000-103">An attempt has been made to access a file that is currently open for writing.</span></span>  
