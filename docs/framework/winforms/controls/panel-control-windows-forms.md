@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536716"
 ---
 # <a name="panel-control-windows-forms"></a>Controle de painel (Windows Forms)
 Windows Forms `Panel` controles são usados para fornecer um agrupamento de identificação para outros controles. Normalmente, você usa painéis para subdividir um formulário por função. O `Panel` controle é semelhante ao <xref:System.Windows.Forms.GroupBox> controlar; no entanto, somente o `Panel` controle pode ter barras de rolagem e somente o <xref:System.Windows.Forms.GroupBox> controle exibe uma legenda.  

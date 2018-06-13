@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0986645a8ce4076c27f39f2ae8004ef20bb4bdb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437746"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>Método IGCThreadControl::SuspensionEnding
 Notifica o host que o tempo de execução está retomando threads após uma coleta de lixo ou outros suspensão.  

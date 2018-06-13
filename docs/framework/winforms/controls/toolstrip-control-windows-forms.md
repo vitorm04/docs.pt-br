@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540700"
 ---
 # <a name="toolstrip-control-windows-forms"></a>Controle ToolStrip (Windows Forms)
 <xref:System.Windows.Forms.ToolStrip> os controles são barras de ferramentas que podem hospedar menus, controles e controles de usuário em seus aplicativos de formulários do Windows.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7322b4d0fce36f5dbef7e82f35cf9e2a1cae24a3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444324"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>Método IMetaDataAssemblyImport::GetAssemblyFromScope
 Obtém um ponteiro para o assembly no escopo atual.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536921"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Como mostrar uma paleta de cores com o componente ColorDialog
 O [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) componente exibe uma paleta de cores e retorna uma propriedade que contém a cor que o usuário selecionado.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536755"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Controle TabControl (Windows Forms)
 Windows Forms `TabControl` exibe várias guias, como divisores em um bloco de anotações ou rótulos em um conjunto de pastas em um arquivo convencional. As guias podem conter imagens e outros controles. Use o `TabControl` para criar páginas de propriedades.  
