@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398889"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidade baseada em declarações
 Quando você cria aplicativos com reconhecimento de declarações, a identidade do usuário é representada em seu aplicativo como um conjunto de declarações. Uma declaração pode ser o nome do usuário, outra pode ser um endereço de email. A ideia é que um sistema externo de identidade seja configurado para dar ao seu aplicativo tudo que ele precisa saber sobre o usuário com cada solicitação que ele faz, juntamente com a segurança criptográfica que os dados de identidade você recebe de uma fonte confiável.  

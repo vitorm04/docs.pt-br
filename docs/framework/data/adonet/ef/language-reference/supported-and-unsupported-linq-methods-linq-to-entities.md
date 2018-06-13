@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766628"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos suportados e sem suporte LINQ (LINQ to Entities)
 Esta seção fornece informações sobre os operadores padrões integrados linguagem de consulta de consulta (LINQ) que são suportados ou sem suporte em consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . Muitos dos operadores de consulta padrão LINQ têm uma versão sobrecarregada que aceita um argumento integer. O argumento de inteiro corresponde a um índice com base em zero na sequência que está sendo operada, um <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Salvo indicação caso contrário, essas versões sobrecarregadas dos operadores de consulta padrão LINQ não são suportadas, e tentar usá-los irá acionar uma exceção.  

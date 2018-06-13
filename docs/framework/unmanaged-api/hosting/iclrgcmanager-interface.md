@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 045b924033630ea98d5a532a62f1037a5972df90
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433918"
 ---
 # <a name="iclrgcmanager-interface"></a>Interface ICLRGCManager
 Fornece métodos que permitem que um host interagir com o sistema de coleta de lixo do common language runtime.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332849"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (Guia de Programação em C#)
 É possível converter uma [string](../../../csharp/language-reference/keywords/string.md) em um número usando os métodos na classe <xref:System.Convert> ou usando o método `TryParse` encontrado nos diversos tipos numéricos (int, long, float, etc.).  

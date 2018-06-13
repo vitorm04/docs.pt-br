@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398785"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexão no .NET Framework para aplicativos da Windows Store
 Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](http://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  

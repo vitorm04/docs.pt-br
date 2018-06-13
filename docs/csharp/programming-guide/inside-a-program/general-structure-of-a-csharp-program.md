@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331208"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estrutura geral de um programa em C# (Guia de Programação em C#)
 Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter zero ou mais namespaces. Um namespace pode conter tipos como classes, estruturas, interfaces, enumerações e delegados, além de outros namespaces. A seguir está o esqueleto de um programa em C# que contém todos esses elementos.  
