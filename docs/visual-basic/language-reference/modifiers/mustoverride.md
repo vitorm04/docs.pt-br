@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599864"
 ---
 # <a name="mustoverride-visual-basic"></a><span data-ttu-id="3d1ac-102">MustOverride (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d1ac-102">MustOverride (Visual Basic)</span></span>
 <span data-ttu-id="3d1ac-103">Especifica que uma propriedade ou procedimento não é implementado dessa classe e deve ser substituído em uma classe derivada antes que ele possa ser usado.</span><span class="sxs-lookup"><span data-stu-id="3d1ac-103">Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.</span></span>  

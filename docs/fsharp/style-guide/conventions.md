@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457976"
 ---
 # <a name="f-coding-conventions"></a><span data-ttu-id="da4c3-103">Convenções de codificação do F #</span><span class="sxs-lookup"><span data-stu-id="da4c3-103">F# coding conventions</span></span>
 

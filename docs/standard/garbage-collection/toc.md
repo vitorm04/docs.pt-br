@@ -4,6 +4,7 @@
 ### [Usando objetos que implementam IDisposable](using-objects.md)
 ## [Coleta de lixo](index.md)
 ### [Conceitos básicos da coleta de lixo](fundamentals.md)
+### [O heap de objetos grandes](large-object-heap.md)
 ### [Coleta de lixo e desempenho](performance.md)
 ### [Coletas Induzidas](induced.md)
 ### [Modos de latência](latency.md)
