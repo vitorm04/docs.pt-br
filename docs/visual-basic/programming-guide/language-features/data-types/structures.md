@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647248"
 ---
 # <a name="structures-visual-basic"></a>Estruturas (Visual Basic)
 Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT) suportado por versões anteriores do Visual Basic. Além de campos, estruturas podem expor propriedades, métodos e eventos. Uma estrutura pode implementar uma ou mais interfaces, e você pode declarar níveis de acesso individuais para cada campo.  

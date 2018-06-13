@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f37630c9631e2e76d9b98730b84086b8b86ec55d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427828"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>Método ISymUnmanagedWriter::RemapToken
 Notifica o gravador de símbolo que um token de metadados foi remapeado como os metadados foi emitido. Se o gravador de símbolo armazenou o token antigo no repositório de símbolos, ele deverá atualizar que o token armazenado com o novo valor, ou salve o mapa para o leitor de símbolo correspondente remapear durante a fase de leitura.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656276"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Declaração de variável do objeto (Visual Basic)
 Você pode usar uma declaração comum para declarar uma variável de objeto. O tipo de dados, especifique o `Object` (ou seja, o [tipo de dados de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md)) ou uma classe mais específica da qual o objeto será criado.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642047"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>A pasta não pode ser criada porque já existe um arquivo com o mesmo caminho
 Foi feita uma tentativa para criar um diretório, mas já existe um arquivo com esse caminho. Isso pode ser resultado da análise incorreta de caminhos, especialmente ao trabalhar com caminhos relativos.  

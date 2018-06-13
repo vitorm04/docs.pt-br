@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562252"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Como definir uma propriedade depois de animá-la com um storyboard
 Em alguns casos, pode parecer que não é possível alterar o valor de uma propriedade depois dela ter sido animada.  

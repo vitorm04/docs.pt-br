@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644349"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Instruções passo a passo: chamando APIs do Windows (Visual Basic)
 APIs do Windows são bibliotecas de vínculo dinâmico (DLLs) que fazem parte do sistema operacional Windows. Você pode usá-los para executar tarefas quando é difícil escrever procedimentos equivalentes de sua preferência. Por exemplo, o Windows fornece uma função chamada `FlashWindowEx` que permite que você crie a barra de título para um aplicativo alternativo entre tonalidades claras e escuras.  

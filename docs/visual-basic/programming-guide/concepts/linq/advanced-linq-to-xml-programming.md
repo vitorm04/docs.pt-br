@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643409"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>Avançada LINQ to XML programação (Visual Basic)
 Esta seção especifica informações somente aplicáveis a desenvolvedores avançados em determinados cenários do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

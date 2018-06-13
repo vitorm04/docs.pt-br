@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 656f5ee20e50ea9ac5c03711adfd0b8264fbcca0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444952"
 ---
 # <a name="imetadataemitsavetostream-method"></a>Método IMetaDataEmit::SaveToStream
 Salva todos os metadados no escopo atual especificado `IStream`.  

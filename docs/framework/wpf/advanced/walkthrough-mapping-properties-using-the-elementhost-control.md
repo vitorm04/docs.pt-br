@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549185"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Instruções passo a passo: mapeando propriedades usando o controle ElementHost
 Este passo a passo mostra como usar o <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> propriedade mapear [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propriedades às propriedades correspondentes em hospedado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento.  

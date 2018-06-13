@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644076"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de retorno assíncronos (Visual Basic)
 Os métodos assíncronos ter três tipos de retorno possíveis: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>e void. No Visual Basic, o tipo de retorno void é gravado como um procedimento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obter mais informações sobre os métodos assíncronos, consulte [programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  

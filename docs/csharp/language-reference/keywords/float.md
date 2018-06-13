@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219239"
 ---
 # <a name="float-c-reference"></a>float (Referência de C#)
 A palavra-chave `float` indica um tipo simples que armazena valores de ponto flutuante de 32 bits. A tabela a seguir mostra a precisão e o intervalo aproximado do tipo `float`.  

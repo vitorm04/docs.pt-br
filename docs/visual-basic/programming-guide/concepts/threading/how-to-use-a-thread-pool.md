@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648145"
 ---
 # <a name="how-to-use-a-thread-pool-visual-basic"></a>Como: usar um Pool de threads (Visual Basic)
 O *pooling de threads* é uma forma de multithreading em que as tarefas são adicionadas a uma fila e iniciadas automaticamente quando os threads são criados. Para obter mais informações, consulte [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  

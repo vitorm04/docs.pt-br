@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557403"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Teclado padrão e comportamento do mouse no controle DataGrid
 Este tópico descreve como os usuários podem interagir com o <xref:System.Windows.Controls.DataGrid> controle usando o teclado e mouse.  

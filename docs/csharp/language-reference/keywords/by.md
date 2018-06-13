@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213432"
 ---
 # <a name="by-c-reference"></a>by (Referência de C#)
 A palavra-chave contextual `by` é usada na cláusula `group` de uma expressão de consulta para especificar como os itens retornados devem ser agrupados. Para obter mais informações, consulte [Cláusula group](../../../csharp/language-reference/keywords/group-clause.md).  

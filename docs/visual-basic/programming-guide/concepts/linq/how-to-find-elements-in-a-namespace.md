@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641021"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Como: localizar elementos em um Namespace (XPath-LINQ para XML) (Visual Basic)
 As expressões XPath pode localizar nós em um namespace específico. Prefixos de namespace do uso de expressões XPath para especificar namespaces. Para analisar uma expressão XPath que contém prefixos de namespace, você deve passar um objeto para os métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>. Este exemplo usa <xref:System.Xml.XmlNamespaceManager>.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6cdfa9f3717e4025ff6f4fe6da3c1457cdebf7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422325"
 ---
 # <a name="icordebugreferencevalue-interface1"></a>ICorDebugReferenceValue Interface1
 Fornece métodos que gerenciar um valor que é uma referência a um objeto. (Ou seja, essa interface fornece métodos que gerencia um ponteiro). Essa interface implementa "ICorDebugValue".  

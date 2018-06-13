@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641954"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv. Wide e VbStrConv. Narrow não são aplicáveis para a localidade especificada
 O aplicativo está tentando usar o `VbStrConv` os membros da enumeração `Wide` ou `Narrow`, que não são aplicável para a localidade especificada.  

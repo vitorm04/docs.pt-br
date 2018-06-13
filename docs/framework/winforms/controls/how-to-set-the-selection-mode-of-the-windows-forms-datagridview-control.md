@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533550"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Como definir o modo de seleção do controle DataGridView dos Windows Forms
 O exemplo de código a seguir demonstra como configurar um <xref:System.Windows.Forms.DataGridView> controle para que clicar em qualquer lugar dentro de uma linha automaticamente seleciona a linha inteira e portanto pode ser selecionada para que somente uma linha por vez.  

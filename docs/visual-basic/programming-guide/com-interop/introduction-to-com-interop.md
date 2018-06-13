@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644388"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introdução à interoperabilidade COM (Visual Basic)
 O modelo de objeto de componente (COM) permite que um objeto expor sua funcionalidade a outros componentes e aplicativos do host. Enquanto COM objetos foram fundamentais para o Windows programação por muitos anos, aplicativos criados para o common language runtime (CLR) oferecem muitas vantagens.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548487"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Como validar e mesclar PrintTickets
 O [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) inclui flexíveis e extensíveis <xref:System.Printing.PrintCapabilities> e <xref:System.Printing.PrintTicket> elementos. O primeiro lista os recursos de um dispositivo de impressão e o último especifica como o dispositivo deve usar esses recursos em relação a uma sequência específica de documentos, a um documento individual ou a uma página individual.  

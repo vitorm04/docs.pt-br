@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764132"
 ---
 # <a name="entity-set"></a>conjunto de entidades
 Um *conjunto de entidades* é um contêiner lógico para instâncias de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) e instâncias de qualquer tipo derivado desse tipo de entidade. (Para obter informações sobre tipos derivados, consulte [modelo de dados de entidade: herança](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) A relação entre um tipo de entidade e um conjunto de entidades é análoga a relação entre uma linha e uma tabela em uma base de dados relacional: Como uma linha, um tipo de entidade descreve a estrutura de dados, e, como uma tabela, um conjunto de entidades contém instâncias de uma estrutura fornecida. Um conjunto de entidades não é um dados que modelam a compilação; não descreve a estrutura de dados. Em vez disso, um conjunto de entidades fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados do SQL Server) instâncias de tipo de entidade do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
