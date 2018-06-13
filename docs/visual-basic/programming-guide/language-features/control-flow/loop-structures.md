@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647885"
 ---
 # <a name="loop-structures-visual-basic"></a>Estruturas de loop (Visual Basic)
 Estruturas de loop do Visual Basic permite que você execute uma ou mais linhas de código repetidamente. Você pode repetir as instruções em uma estrutura de loop até que uma condição seja `True`, até que uma condição seja `False`, um especificado o número de vezes, ou uma vez para cada elemento em uma coleção.  

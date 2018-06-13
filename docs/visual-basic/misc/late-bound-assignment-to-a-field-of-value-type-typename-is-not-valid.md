@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637631"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a>Atribuição de associação tardia a um campo de tipo de valor &#39; &lt;typename&gt; &#39; não é válida quando &#39; &lt;nome&gt; &#39; é o resultado de uma expressão de associação tardia
 Você tentou uma atribuição de associação tardia que não é válida.  

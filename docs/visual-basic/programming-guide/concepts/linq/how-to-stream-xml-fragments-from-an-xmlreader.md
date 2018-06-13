@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643327"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Como: fragmentos XML de um XmlReader (Visual Basic) de fluxo
 Quando você tem que processa grandes arquivos XML, talvez não seja possível carregar a árvore inteira XML na memória. Este tópico mostra como passar informações usando <xref:System.Xml.XmlReader>.  

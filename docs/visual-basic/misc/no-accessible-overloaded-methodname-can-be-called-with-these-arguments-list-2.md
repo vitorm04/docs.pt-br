@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636533"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão de restrição: &lt;lista&gt;
 Um método sobrecarregado foi chamado, mas o método não pode ser compatível com a lista dos argumentos fornecidos sem uma conversão de restrição.  

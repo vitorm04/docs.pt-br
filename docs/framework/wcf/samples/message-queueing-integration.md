@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804827"
 ---
 # <a name="message-queueing-integration"></a>Integração de enfileiramento de mensagem
 Esta seção contém exemplos que demonstram a integração entre o enfileiramento de mensagens e o Windows Communication Foundation (WCF).  
