@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359309"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserindo uma imagem de um arquivo
 Você pode gravar um objeto binário grande (BLOB) em um banco de dados como dados binários ou de caracteres, dependendo do tipo de campo na fonte de dados. BLOB é um termo genérico que faz referência aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.  
