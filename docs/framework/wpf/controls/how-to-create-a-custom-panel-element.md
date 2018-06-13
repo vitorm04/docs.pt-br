@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552394"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a><span data-ttu-id="5d043-102">Como criar um elemento de painel personalizado</span><span class="sxs-lookup"><span data-stu-id="5d043-102">How to: Create a Custom Panel Element</span></span>
 ## <a name="example"></a><span data-ttu-id="5d043-103">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5d043-103">Example</span></span>  

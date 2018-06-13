@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515890"
 ---
 # <a name="simple-policy"></a><span data-ttu-id="efb2a-102">Diretiva simples</span><span class="sxs-lookup"><span data-stu-id="efb2a-102">Simple Policy</span></span>
 <span data-ttu-id="efb2a-103">Este exemplo mostra como usar uma atividade de <xref:System.Workflow.Activities.PolicyActivity> em um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="efb2a-103">This sample shows how to use a <xref:System.Workflow.Activities.PolicyActivity> activity in a workflow.</span></span>  

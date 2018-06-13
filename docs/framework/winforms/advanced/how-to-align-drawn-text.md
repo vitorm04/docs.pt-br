@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522751"
 ---
 # <a name="how-to-align-drawn-text"></a><span data-ttu-id="0af35-102">Como alinhar um texto desenhado</span><span class="sxs-lookup"><span data-stu-id="0af35-102">How to: Align Drawn Text</span></span>
 <span data-ttu-id="0af35-103">Quando você executa o desenho personalizado, geralmente convém centralizar o texto desenhado em um formulário ou controle.</span><span class="sxs-lookup"><span data-stu-id="0af35-103">When you perform custom drawing, you may often want to center drawn text on a form or control.</span></span> <span data-ttu-id="0af35-104">Você pode facilmente alinhar texto desenhado com a <xref:System.Drawing.Graphics.DrawString%2A> ou <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos ao criar o objeto de formatação correto e definir os sinalizadores de formato apropriado.</span><span class="sxs-lookup"><span data-stu-id="0af35-104">You can easily align text drawn with the <xref:System.Drawing.Graphics.DrawString%2A> or <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods by creating the correct formatting object and setting the appropriate format flags.</span></span>  

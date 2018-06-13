@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550784"
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a><span data-ttu-id="c4b61-102">Como exibir dados usando GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="c4b61-102">How to: Display Data by Using GridViewRowPresenter</span></span>
 <span data-ttu-id="c4b61-103">Este exemplo mostra como usar o <xref:System.Windows.Controls.GridViewRowPresenter> e <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objetos para exibir dados em colunas.</span><span class="sxs-lookup"><span data-stu-id="c4b61-103">This example shows how to use the <xref:System.Windows.Controls.GridViewRowPresenter> and <xref:System.Windows.Controls.GridViewHeaderRowPresenter> objects to display data in columns.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742238"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="d0bd0-102">Encaminhamento de tipo no Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="d0bd0-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="d0bd0-103">O encaminhamento de tipo permite que você mova um tipo para outro assembly sem ter que recompilar os aplicativos que usam o assembly original.</span><span class="sxs-lookup"><span data-stu-id="d0bd0-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518343"
 ---
 # <a name="application-settings-attributes"></a><span data-ttu-id="46ff8-102">Atributos de configurações do aplicativo</span><span class="sxs-lookup"><span data-stu-id="46ff8-102">Application Settings Attributes</span></span>
 <span data-ttu-id="46ff8-103">A arquitetura de Configurações de Aplicativo fornece muitos atributos que podem ser aplicados à classe wrapper de configurações de aplicativos ou suas propriedades individuais.</span><span class="sxs-lookup"><span data-stu-id="46ff8-103">The Application Settings architecture provides many attributes that can be applied either to the applications settings wrapper class or its individual properties.</span></span> <span data-ttu-id="46ff8-104">Esses atributos são examinados no tempo de execução pela infraestrutura de configurações de aplicativo, geralmente especificamente pelo provedor de configurações, a fim de adaptar seu funcionamento às necessidades declaradas do wrapper personalizado.</span><span class="sxs-lookup"><span data-stu-id="46ff8-104">These attributes are examined at run time by the application settings infrastructure, often specifically the settings provider, in order to tailor its functioning to the stated needs of the custom wrapper.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520780"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a><span data-ttu-id="55493-102">Como converter uma imagem BMP em uma imagem PNG</span><span class="sxs-lookup"><span data-stu-id="55493-102">How to: Convert a BMP image to a PNG image</span></span>
 <span data-ttu-id="55493-103">Muitas vezes, você deve converter do formato de arquivo de uma imagem para outra.</span><span class="sxs-lookup"><span data-stu-id="55493-103">Oftentimes, you will want to convert from one image file format to another.</span></span> <span data-ttu-id="55493-104">Você pode fazer essa conversão facilmente chamando o <xref:System.Drawing.Image.Save%2A> método o <xref:System.Drawing.Image> classe e especificando o <xref:System.Drawing.Imaging.ImageFormat> para o formato de arquivo da imagem desejada.</span><span class="sxs-lookup"><span data-stu-id="55493-104">You can do this conversion easily by calling the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class and specifying the <xref:System.Drawing.Imaging.ImageFormat> for the desired image file format.</span></span>  

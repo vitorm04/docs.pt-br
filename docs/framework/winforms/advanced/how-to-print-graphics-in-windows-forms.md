@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521492"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="a934b-102">Como imprimir elementos gráficos no Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a934b-102">How to: Print Graphics in Windows Forms</span></span>
 <span data-ttu-id="a934b-103">Frequentemente, você desejará imprimir elementos gráficos no seu aplicativo do Windows.</span><span class="sxs-lookup"><span data-stu-id="a934b-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="a934b-104">O <xref:System.Drawing.Graphics> classe fornece métodos para desenhar objetos em um dispositivo, como uma tela ou impressora.</span><span class="sxs-lookup"><span data-stu-id="a934b-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  

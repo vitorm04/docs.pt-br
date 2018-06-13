@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61e8a8d1a923a52b678771f79122e5ab36a99706
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415309"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="e93e7-102">Método ICorDebugObjectValue::GetContext</span><span class="sxs-lookup"><span data-stu-id="e93e7-102">ICorDebugObjectValue::GetContext Method</span></span>
 <span data-ttu-id="e93e7-103">`GetContext` não está implementado nesta versão do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e93e7-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  

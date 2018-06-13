@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518571"
 ---
 # <a name="using-a-custom-expression-editor"></a><span data-ttu-id="8c8ed-102">Usando um editor de expressão personalizado</span><span class="sxs-lookup"><span data-stu-id="8c8ed-102">Using a Custom Expression Editor</span></span>
 <span data-ttu-id="8c8ed-103">Um editor de expressão personalizado pode ser implementada para fornecer uma experiência de edição de uma expressão mais rica ou mais simples.</span><span class="sxs-lookup"><span data-stu-id="8c8ed-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="8c8ed-104">Há várias situações em que você talvez queira usar um editor de expressão personalizado:</span><span class="sxs-lookup"><span data-stu-id="8c8ed-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  

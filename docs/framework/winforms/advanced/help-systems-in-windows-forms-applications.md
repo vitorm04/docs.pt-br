@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520715"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a><span data-ttu-id="fabfc-102">Sistemas de Ajuda em aplicativos do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fabfc-102">Help Systems in Windows Forms Applications</span></span>
 <span data-ttu-id="fabfc-103">Uma das cortesias mais importantes que você, como desenvolvedor de aplicativos, pode fornecer aos seus usuários com é um sistema de Ajuda competente.</span><span class="sxs-lookup"><span data-stu-id="fabfc-103">One of the most important courtesies you, as a developer of applications, can furnish your users with is a competent Help system.</span></span> <span data-ttu-id="fabfc-104">Esse é o local que eles procuram quando ficam confusos ou desorientados.</span><span class="sxs-lookup"><span data-stu-id="fabfc-104">This is where they will turn when they become confused or disoriented.</span></span> <span data-ttu-id="fabfc-105">É fácil fornecer um sistema de Ajuda em um aplicativo baseado no Windows usando o [componente HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="fabfc-105">Providing a Help system in a Windows-based application is easily done by using the [HelpProvider Component](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).</span></span>  

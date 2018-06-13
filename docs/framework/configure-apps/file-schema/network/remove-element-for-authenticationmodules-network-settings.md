@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742384"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="4562e-102">&lt;remover&gt; elemento authenticationModules (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="4562e-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="4562e-103">Remove um módulo de autenticação do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="4562e-103">Removes an authentication module from the application.</span></span>  

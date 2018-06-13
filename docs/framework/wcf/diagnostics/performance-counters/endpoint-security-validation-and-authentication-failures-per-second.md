@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: bc68f49326818f0e6687c06a38e5e51fd6960c9f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474728"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="b1b44-102">Ponto de extremidade: falhas de autenticação e validação de segurança por segundo</span><span class="sxs-lookup"><span data-stu-id="b1b44-102">Endpoint: Security Validation and Authentication Failures Per Second</span></span>
 <span data-ttu-id="b1b44-103">Nome do contador: validação de segurança e autenticação de falhas por segundo</span><span class="sxs-lookup"><span data-stu-id="b1b44-103">Counter name: Security Validation and Authentication Failures Per Second</span></span>  

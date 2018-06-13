@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524027"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="704ac-102">Definindo um evento em controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="704ac-102">Defining an Event in Windows Forms Controls</span></span>
 <span data-ttu-id="704ac-103">Para obter detalhes sobre como definir eventos personalizados, consulte [eventos](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="704ac-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="704ac-104">Se você definir um evento que não tenha dados associados, use o tipo de base para dados de eventos, <xref:System.EventArgs> e use <xref:System.EventHandler> como o delegado do evento.</span><span class="sxs-lookup"><span data-stu-id="704ac-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="704ac-105">Tudo o que resta fazer é definir um membro de evento e um protegido `On` *EventName* método que gera o evento.</span><span class="sxs-lookup"><span data-stu-id="704ac-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  

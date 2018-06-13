@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520377"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a><span data-ttu-id="6b37b-102">Suavização com linhas e curvas</span><span class="sxs-lookup"><span data-stu-id="6b37b-102">Antialiasing with Lines and Curves</span></span>
 <span data-ttu-id="6b37b-103">Ao usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar uma linha, você deverá fornecer o ponto inicial e final da linha, mas não será necessário fornecer todas as informações sobre os pixels individuais nela.</span><span class="sxs-lookup"><span data-stu-id="6b37b-103">When you use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw a line, you provide the starting point and ending point of the line, but you do not have to provide any information about the individual pixels on the line.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="6b37b-104"> funciona junto com o software de driver de vídeo para determinar quais pixels serão ativados para mostrar a linha em um dispositivo de vídeo específico.</span><span class="sxs-lookup"><span data-stu-id="6b37b-104"> works in conjunction with the display driver software to determine which pixels will be turned on to show the line on a particular display device.</span></span>  

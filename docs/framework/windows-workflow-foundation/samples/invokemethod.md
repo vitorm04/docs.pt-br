@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517732"
 ---
 # <a name="invokemethod"></a><span data-ttu-id="1cd73-102">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="1cd73-102">InvokeMethod</span></span>
 <span data-ttu-id="1cd73-103">Este exemplo mostra as diferentes maneiras de usar a atividade de <xref:System.Activities.Statements.InvokeMethod> para chamar métodos de uma classe.</span><span class="sxs-lookup"><span data-stu-id="1cd73-103">This sample shows the different ways of using the <xref:System.Activities.Statements.InvokeMethod> activity to invoke methods of a class.</span></span>  

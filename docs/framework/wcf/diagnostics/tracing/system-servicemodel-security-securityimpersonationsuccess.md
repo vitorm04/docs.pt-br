@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33484706"
 ---
 # <a name="systemservicemodelsecuritysecurityimpersonationsuccess"></a><span data-ttu-id="e05be-102">System.ServiceModel.Security.SecurityImpersonationSuccess</span><span class="sxs-lookup"><span data-stu-id="e05be-102">System.ServiceModel.Security.SecurityImpersonationSuccess</span></span>
 <span data-ttu-id="e05be-103">System.ServiceModel.Security.SecurityImpersonationSuccess</span><span class="sxs-lookup"><span data-stu-id="e05be-103">System.ServiceModel.Security.SecurityImpersonationSuccess</span></span>  

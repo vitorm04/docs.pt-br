@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522454"
 ---
 # <a name="how-to-create-a-linear-gradient"></a><span data-ttu-id="37bcc-102">Como criar um gradiente linear</span><span class="sxs-lookup"><span data-stu-id="37bcc-102">How to: Create a Linear Gradient</span></span>
 <span data-ttu-id="37bcc-103">O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gradientes lineares horizontais, verticais e diagonais.</span><span class="sxs-lookup"><span data-stu-id="37bcc-103">[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides horizontal, vertical, and diagonal linear gradients.</span></span> <span data-ttu-id="37bcc-104">Por padrão, a cor em um gradiente linear muda uniformemente.</span><span class="sxs-lookup"><span data-stu-id="37bcc-104">By default, the color in a linear gradient changes uniformly.</span></span> <span data-ttu-id="37bcc-105">No entanto, você pode personalizar um gradiente linear para que a cor mude de maneira não uniforme.</span><span class="sxs-lookup"><span data-stu-id="37bcc-105">However, you can customize a linear gradient so that the color changes in a non-uniform fashion.</span></span>  

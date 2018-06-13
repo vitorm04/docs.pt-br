@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742943"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a><span data-ttu-id="22a92-102">&lt;remover&gt; elemento bypasslist (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="22a92-102">&lt;remove&gt; Element for bypasslist (Network Settings)</span></span>
 <span data-ttu-id="22a92-103">Remove a lista de proxies um endereço IP ou nome DNS.</span><span class="sxs-lookup"><span data-stu-id="22a92-103">Removes an IP address or DNS name from the proxy bypass list.</span></span>  

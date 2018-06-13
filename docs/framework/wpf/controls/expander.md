@@ -12,8 +12,10 @@ helpviewer_keywords:
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551961"
 ---
 # <a name="expander"></a><span data-ttu-id="82871-102">Expansor</span><span class="sxs-lookup"><span data-stu-id="82871-102">Expander</span></span>
 <span data-ttu-id="82871-103">Um <xref:System.Windows.Controls.Expander> permite que um usuário exibir um cabeçalho e expanda esse cabeçalho para ver mais detalhes, ou para recolher uma seção em um cabeçalho.</span><span class="sxs-lookup"><span data-stu-id="82871-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  

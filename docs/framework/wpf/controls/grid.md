@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
 ms.openlocfilehash: cffc1d078bffaa14326d279eb82f8ff040187145
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551015"
 ---
 # <a name="grid"></a><span data-ttu-id="29f9b-102">Grade</span><span class="sxs-lookup"><span data-stu-id="29f9b-102">Grid</span></span>
 <span data-ttu-id="29f9b-103">O <xref:System.Windows.Controls.Grid> elemento é usado para posicionar precisamente o conteúdo em linhas e colunas.</span><span class="sxs-lookup"><span data-stu-id="29f9b-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  

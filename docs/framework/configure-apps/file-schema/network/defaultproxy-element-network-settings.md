@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742712"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a><span data-ttu-id="eaaec-102">&lt;defaultProxy&gt; elemento (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="eaaec-102">&lt;defaultProxy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="eaaec-103">Configura o servidor de proxy do protocolo HTTP (Hypertext Transfer).</span><span class="sxs-lookup"><span data-stu-id="eaaec-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522566"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="2879b-102">Operações de arrastar e soltar e suporte à área de transferência</span><span class="sxs-lookup"><span data-stu-id="2879b-102">Drag-and-Drop Operations and Clipboard Support</span></span>
 <span data-ttu-id="2879b-103">Você pode habilitar operações arrastar e soltar do usuário dentro de um aplicativo baseado em Windows manipulando uma série de eventos, particularmente o <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventos.</span><span class="sxs-lookup"><span data-stu-id="2879b-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  

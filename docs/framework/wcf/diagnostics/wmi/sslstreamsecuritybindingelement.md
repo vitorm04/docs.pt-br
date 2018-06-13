@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 75e85cad482e19dcdc8c472df250c5595461085f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486454"
 ---
 # <a name="sslstreamsecuritybindingelement"></a><span data-ttu-id="d1d6b-102">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="d1d6b-102">SslStreamSecurityBindingElement</span></span>
 <span data-ttu-id="d1d6b-103">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="d1d6b-103">SslStreamSecurityBindingElement</span></span>  
