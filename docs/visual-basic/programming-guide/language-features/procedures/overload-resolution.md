@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653423"
 ---
 # <a name="overload-resolution-visual-basic"></a>Resolução de sobrecarga (Visual Basic)
 Quando o compilador do Visual Basic encontra uma chamada para um procedimento que é definido em várias versões sobrecarregadas, o compilador deve decidir qual das sobrecargas para chamar. Ele faz isso executando as seguintes etapas:  

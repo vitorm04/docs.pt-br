@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650209"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedimentos recursivos (Visual Basic)
 Um *recursiva* procedimento é aquele que chama a mesmo. Em geral, isso não é a maneira mais eficiente para gravar o código do Visual Basic.  

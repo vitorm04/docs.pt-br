@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654054"
 ---
 # <a name="string-basics-in-visual-basic"></a>Noções básicas de cadeias de caracteres no Visual Basic
 O `String` tipo de dados representa uma série de caracteres (cada uma instância de uma vez representando o `Char` tipo de dados). Este tópico apresenta os conceitos básicos de cadeias de caracteres no Visual Basic.  

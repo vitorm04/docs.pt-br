@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656308"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Instruções passo a passo: implementando IEnumerable(Of T) no Visual Basic
 O <xref:System.Collections.Generic.IEnumerable%601> interface é implementada por classes que podem retornar uma sequência de um item de valores de cada vez. A vantagem de retornando dados de um item por vez é que você não precisa carregar o conjunto completo de dados na memória para trabalhar com ele. Você só precisa usar memória suficiente para carregar um único item de dados. As classes que implementam o `IEnumerable(T)` interface pode ser usada com `For Each` loops ou consultas LINQ.  

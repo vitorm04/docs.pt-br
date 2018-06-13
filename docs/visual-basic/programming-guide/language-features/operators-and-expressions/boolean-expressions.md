@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655792"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expressões boolianas (Visual Basic)
 Um *expressão booleana* é uma expressão que é avaliada como um valor de [tipo de dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` ou `False`. `Boolean` expressões podem ter várias formas. A forma mais simples é a comparação direta do valor de um `Boolean` variável para um `Boolean` literal, conforme mostrado no exemplo a seguir.  

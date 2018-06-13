@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473507"
 ---
 # <a name="com"></a>COM+
 A figura a seguir mostra como você pode usar o rastreamento de atividades em um aplicativo COM+. Em vez de executar o código do usuário no servidor, podemos definir uma atividade COM+ para cada chamada de método para o modelo de objeto do COM+.  

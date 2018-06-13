@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654936"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Estrutura do programa e convenções de código (Visual Basic)
 Esta seção apresenta a estrutura do programa Visual Basic típica, fornece um programa simple do Visual Basic, "Olá, mundo" e discute as convenções de código do Visual Basic. Convenções de código são sugestões que se concentrar não na lógica de um programa, mas em sua estrutura física e aparência. -Los a seguir torna o código mais fácil de ler, compreender e manter. Convenções de código podem incluir, entre outros:  

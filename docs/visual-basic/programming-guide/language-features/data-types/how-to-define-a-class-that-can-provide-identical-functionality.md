@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650342"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)
 Você pode definir uma classe da qual você pode criar objetos que fornecem funcionalidade idêntica em tipos de dados diferentes. Para fazer isso, você especifica um ou mais *parâmetros de tipo* na definição. A classe, em seguida, pode servir como um modelo para objetos que usam vários tipos de dados. Uma classe definida dessa maneira é chamada uma *classe genérica*.  

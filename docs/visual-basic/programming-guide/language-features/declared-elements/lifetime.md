@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654223"
 ---
 # <a name="lifetime-in-visual-basic"></a>Tempo de vida no Visual Basic
 O *tempo de vida* de um elemento declarado é o período de tempo durante o qual ele está disponível para uso. Variáveis são os únicos elementos que têm tempo de vida. Para essa finalidade, o compilador trata parâmetros de procedimento e função retorna como casos especiais de variáveis. O tempo de vida de uma variável representa o período de tempo durante o qual ele pode conter um valor. Seu valor pode alterar durante sua vida útil, mas ele sempre contém algum valor.  

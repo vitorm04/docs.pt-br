@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651460"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversões de matriz (Visual Basic)
 Você pode converter um tipo de matriz para um tipo de matriz diferente desde que atendem às seguintes condições:  

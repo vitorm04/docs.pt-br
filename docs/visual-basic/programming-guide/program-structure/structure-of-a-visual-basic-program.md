@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654824"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estrutura de um programa Visual Basic
 Um programa do Visual Basic é criado de blocos de construção padrão. Um *solução* consiste em um ou mais projetos. Um *projeto* por sua vez, pode conter um ou mais assemblies. Cada *assembly* é compilada a partir de um ou mais arquivos de origem. Um *arquivo de origem* fornece a definição e a implementação de classes, estruturas, módulos e interfaces, que contêm, por fim, todo o seu código.  

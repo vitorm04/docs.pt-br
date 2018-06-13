@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650433"
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipos de dados compostos (Visual Basic)
 Além das fontes de Visual Basic de tipos de dados elementares, você também pode montar itens de tipos diferentes de criar *tipos de dados compostos* como classes, matrizes e estruturas. Você pode criar tipos de dados compostos de tipos elementares e de outros tipos compostos. Por exemplo, você pode definir uma matriz de elementos de estrutura, ou uma estrutura com membros de matriz.  

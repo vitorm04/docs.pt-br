@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651071"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Como forçar um argumento a ser passado por valor (Visual Basic)
 A declaração do procedimento determina o mecanismo de passagem. Se um parâmetro for declarado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic espera passar o argumento correspondente por referência. Isso permite que o procedimento alterar o valor do elemento de programação subjacente do argumento no código de chamada. Se você desejar proteger o elemento subjacente contra alteração, você pode substituir o `ByRef` mecanismo de passagem no procedimento de chamada colocando o nome do argumento entre parênteses. Esses parênteses são além de parênteses delimitando a lista de argumentos na chamada.  

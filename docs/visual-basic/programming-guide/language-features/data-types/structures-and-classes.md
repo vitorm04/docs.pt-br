@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654116"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Estruturas e classes (Visual Basic)
 Visual Basic unifica a sintaxe para estruturas e classes, com o resultado que ambas as entidades suportam a maioria dos mesmos recursos. No entanto, também há diferenças importantes entre as estruturas e classes.  

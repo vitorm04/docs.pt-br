@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650599"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Como usar uma classe que define operadores (Visual Basic)
 Se você estiver usando uma classe ou estrutura que define suas própria operadores, você pode acessar os operadores do Visual Basic.  

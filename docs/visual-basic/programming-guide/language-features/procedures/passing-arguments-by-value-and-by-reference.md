@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654171"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passando argumentos por valor e por referência (Visual Basic)
 No Visual Basic, você pode passar um argumento para um procedimento *pelo valor* ou *por referência*. Isso é conhecido como o *mecanismo de passagem*, e determina se o procedimento pode modificar o elemento de programação subjacente do argumento no código de chamada. A declaração do procedimento determina o mecanismo de passagem para cada parâmetro, especificando o [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palavra-chave.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653264"
 ---
 # <a name="serialization-visual-basic"></a>Serialização (Visual Basic)
 A serialização é o processo de converter um objeto em um fluxo de bytes para armazenar o objeto ou transmiti-los na memória, um banco de dados ou um arquivo. Sua finalidade principal é salvar o estado de um objeto para recriá-lo quando necessário. O processo inverso é chamado desserialização.  

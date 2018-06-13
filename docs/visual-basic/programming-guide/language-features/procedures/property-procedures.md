@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656078"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedimentos de propriedade (Visual Basic)
 Um procedimento de propriedade é uma série de instruções do Visual Basic que manipulam uma propriedade personalizada em um módulo, classe ou estrutura. Procedimentos de propriedade são também conhecidos como *acessadores de propriedade*.  

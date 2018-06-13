@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651844"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Referências e a instrução Imports (Visual Basic)
 Você pode disponibilizar objetos externos ao seu projeto, escolhendo o **adicionar referência** comando o **projeto** menu. Referências no Visual Basic poderá apontar para assemblies, que são como bibliotecas mas contêm mais informações.  

@@ -4,11 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 80400cc1eae697c931833a5444969a231e23c06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172310"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Usando construtores (Guia de Programação em C#)
 Quando uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criado, seu construtor é chamado. Os construtores têm o mesmo nome que a classe ou struct e eles geralmente inicializam os membros de dados do novo objeto.  
@@ -29,7 +30,7 @@ Quando uma [classe](../../../csharp/language-reference/keywords/class.md) ou [st
   
  Os construtores de tipos [struct](../../../csharp/language-reference/keywords/struct.md) são semelhantes aos construtores de classe, mas `structs` não podem conter um construtor padrão explícito porque um é fornecido automaticamente pelo compilador. Este construtor inicializa todos os campos no `struct` com os valores padrão. Para obter mais informações, consulte [Tabela de opções padrão](../../../csharp/language-reference/keywords/default-values-table.md). No entanto, esse construtor padrão é invocado apenas se o `struct` é instanciado com `new`. Por exemplo, esse código usa o construtor padrão para <xref:System.Int32>, de modo que você tenha certeza de que o inteiro é inicializado:  
   
-```  
+```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  

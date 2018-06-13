@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652676"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Como chamar um manipulador de eventos no Visual Basic
 Um *evento* é uma ação ou ocorrência — como um mouse clique ou um limite de crédito excedido — que é reconhecida pelo componente algum de programa, e para o qual você pode escrever código para responder. Um *manipulador de eventos* é o código que você escreve para responder a um evento.  

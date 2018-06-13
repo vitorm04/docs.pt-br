@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652146"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimento principal no Visual Basic
 Cada aplicativo do Visual Basic deve conter um procedimento chamado `Main`. Esse procedimento serve como a partir do ponto e controle geral para seu aplicativo. O .NET Framework chama o `Main` procedimento quando ele carregar seu aplicativo e está pronto para passá-lo para controle. A menos que você estiver criando um aplicativo Windows Forms, você deve escrever o `Main` procedimento para aplicativos que são executados em seus próprios.  

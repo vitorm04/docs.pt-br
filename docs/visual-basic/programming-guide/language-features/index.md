@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652006"
 ---
 # <a name="visual-basic-language-features"></a>Funcionalidades da linguagem do Visual Basic
 Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Assim como acontece com qualquer linguagem de programação moderna, Visual Basic oferece suporte a um número de construções de programação comuns e elementos de linguagem.  

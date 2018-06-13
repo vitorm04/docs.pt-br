@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650849"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Como recolher e ocultar seções do código (Visual Basic)
 O `#Region` diretiva permite que você recolher e ocultar seções de código em arquivos do Visual Basic. O `#Region` diretiva permite especificar um bloco de código que você pode expandir ou recolher ao usar o editor de códigos do Visual Studio. A capacidade de ocultar código seletivamente torna os arquivos mais gerenciáveis e mais fáceis de ler. Para obter mais informações, consulte [Estrutura de tópicos](/visualstudio/ide/outlining).  

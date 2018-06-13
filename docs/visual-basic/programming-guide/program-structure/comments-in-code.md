@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650963"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentários no código (Visual Basic)
 À medida que você lê os exemplos de código, você encontra geralmente o símbolo de comentário (`'`). Este símbolo informa ao compilador do Visual Basic para ignorar o texto a seguir, ou o *comentário*. Os comentários são uma breve explicação e/ou anotações adicionadas ao código para o benefício de quem os lê.  

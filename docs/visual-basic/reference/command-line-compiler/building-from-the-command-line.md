@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654129"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilando a partir da linha de comando (Visual Basic)
 Um projeto do Visual Basic é composto por um ou mais arquivos de origem separados. Durante o processo conhecido como compilação, esses arquivos são agrupados em um pacote — um único arquivo executável que pode ser executado como um aplicativo.  
