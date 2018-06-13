@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583949"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Como criar um diretório no Visual Basic
 Use o método `CreateDirectory` do objeto `My.Computer.FileSystem` para criar diretórios.  

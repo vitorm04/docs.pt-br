@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585509"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe&#39; deve finalizar com uma correspondência &#39;End Class&#39;
 `Class` é usado para iniciar um `Class` bloco; portanto, ele só pode aparecer no início do bloco, com uma correspondência `End Class` terminando o bloco de instrução. Ou você tem uma redundância `Class` instrução, ou você não encerrou o `Class` bloco com `End Class`.  

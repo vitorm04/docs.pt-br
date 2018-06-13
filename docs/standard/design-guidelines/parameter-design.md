@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578268"
 ---
 # <a name="parameter-design"></a>Design de parâmetro
 Esta seção fornece diretrizes gerais sobre o design de parâmetro, incluindo seções com as diretrizes para a verificação de argumentos. Além disso, consulte as diretrizes descritas em [parâmetros de nomeação de](../../../docs/standard/design-guidelines/naming-parameters.md).  

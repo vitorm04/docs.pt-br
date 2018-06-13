@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578034"
 ---
 # <a name="general-naming-conventions"></a>Convenções de nomenclatura gerais
 Esta seção descreve gerais convenções de nomenclatura relacionadas à escolha de palavra, diretrizes sobre o uso de abreviações e acrônimos e recomendações sobre como evitar o uso de nomes específicos do idioma.  

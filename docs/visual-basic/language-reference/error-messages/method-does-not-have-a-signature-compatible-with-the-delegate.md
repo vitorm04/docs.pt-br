@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593243"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>O método não tem uma assinatura compatível com o delegado
 Há uma incompatibilidade entre as assinaturas do método e o representante que você está tentando usar. O `Delegate` instrução define os tipos de parâmetro e tipos de retorno de uma classe delegate. Qualquer procedimento que possui parâmetros de tipos compatíveis e retorna tipos podem ser usados para criar uma instância do tipo delegado.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582921"
 ---
 # <a name="destroying-threads"></a>Destruindo threads
 O método <xref:System.Threading.Thread.Abort%2A> é usado para interromper um thread gerenciado permanentemente. Quando você chama <xref:System.Threading.Thread.Abort%2A>, o CLR lança um <xref:System.Threading.ThreadAbortException> no thread de destino, que o thread de destino pode capturar. Para obter mais informações, consulte <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
