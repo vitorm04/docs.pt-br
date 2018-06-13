@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555958"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>Como implementar lógica de validação em objetos personalizados
 Este exemplo mostra como implementar a lógica de validação em um objeto personalizado e, em seguida, associar a ele.  

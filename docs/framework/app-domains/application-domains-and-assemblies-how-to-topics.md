@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743089"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Tópicos explicativos sobre domínios do aplicativo e assemblies
 As seções a seguir contém links para todos os tópicos explicativos encontrados na documentação conceitual para programação com domínios do aplicativo e assemblies.  

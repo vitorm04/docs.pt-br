@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362621"
 ---
 # <a name="query-examples"></a>Exemplos de consulta
 Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores usando o Visual Studio podem localizar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359683"
 ---
 # <a name="retrieving-database-schema-information"></a>Recuperando informações de esquema de banco de dados
 A obtenção de informações de esquema de um banco de dados é realizada com o processo de descoberta de esquema. Descoberta de esquema permite que os aplicativos solicitar que os provedores gerenciados localizar e retornam informações sobre o esquema de banco de dados, também conhecido como *metadados*, de um determinado banco de dados. Os diferentes elementos de esquema de banco de dados, como tabelas, colunas e procedimentos armazenados, são expostos por meio de coleções de esquema. Cada coleção de esquema contém uma variedade de informações de esquema específicas ao provedor em uso.  

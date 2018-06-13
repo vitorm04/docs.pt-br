@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558649"
 ---
 # <a name="how-to-repeat-media-playback"></a>Como repetir reprodução de mídia
 Este exemplo mostra como reproduzir uma mídia indefinidamente, isto é, configurar a mídia de modo que ele seja executado em um loop infinito.  

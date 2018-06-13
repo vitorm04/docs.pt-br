@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444486"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>Enumeração CorCheckDuplicatesFor
 Especifica os tokens de metadados que serão verificados para duplicatas.  

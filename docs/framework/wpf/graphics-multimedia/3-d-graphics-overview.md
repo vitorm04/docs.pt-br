@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558311"
 ---
 # <a name="3-d-graphics-overview"></a>Visão geral de elementos gráficos 3D
 <a name="introduction"></a> A funcionalidade [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] permite aos desenvolvedores desenhar, transformar e animar elementos gráficos 3D na marcação e no código de procedimento. Os desenvolvedores podem combinar elementos gráficos [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] e [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] para criar controles sofisticados, fornecer ilustrações complexas de dados ou melhorar a experiência do usuário de uma interface do aplicativo. O suporte de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] não foi projetado para fornecer uma plataforma completa de desenvolvimento de jogos. Este tópico fornece uma visão geral da funcionalidade [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] do sistema de elementos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

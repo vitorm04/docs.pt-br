@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8934a2a51ea4bc86166bf99a6087124d03ab11d9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434110"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>Método ICLRRuntimeInfo::IsStarted
 Indica se o tempo de execução foi iniciado (ou seja, se o [método Iclrruntimehost::](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) foi chamado e teve êxito).  

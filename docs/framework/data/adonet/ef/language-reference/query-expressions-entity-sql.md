@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763547"
 ---
 # <a name="query-expressions-entity-sql"></a>Consulte expressões (Entity SQL)
 Uma expressão de consulta combina muitos diferentes operadores de consulta em uma única sintaxe. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece vários tipos de expressões, incluindo o seguinte: [literais](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parâmetros](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variáveis](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operadores, [funções](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), operadores de conjunto e assim por diante. Para obter mais informações, consulte [referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  

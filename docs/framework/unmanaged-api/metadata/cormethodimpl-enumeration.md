@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443483"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumeração CorMethodImpl
 Contém valores que descrevem os recursos de implementação de método.  

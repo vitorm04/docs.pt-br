@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358850"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Retornar o valor médio de uma sequência numérica
 O operador de <xref:System.Linq.Enumerable.Average%2A> calcula a média de uma sequência de valores numéricos.  

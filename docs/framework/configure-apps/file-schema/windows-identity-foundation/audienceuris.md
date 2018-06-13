@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755988"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Especifica o conjunto de URIs que são aceitáveis identificadores da terceira parte confiável (RP). Tokens não serão aceitas, a menos que eles têm o escopo para uma das URIs de audiência permitidas.  

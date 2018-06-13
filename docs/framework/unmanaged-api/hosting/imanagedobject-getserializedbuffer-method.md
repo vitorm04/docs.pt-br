@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53e8180fb55336eb05d0737110fd2fe07a4c5894
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441595"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>Método IManagedObject::GetSerializedBuffer
 Obtém a representação de cadeia de caracteres do objeto gerenciado.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359927"
 ---
 # <a name="creating-the-object-model"></a>Criando o modelo de objeto
 Você pode criar seu modelo de objeto de um banco de dados existente e usar o modelo em seu estado padrão. Você também pode personalizar vários aspectos do modelo e seu comportamento.  

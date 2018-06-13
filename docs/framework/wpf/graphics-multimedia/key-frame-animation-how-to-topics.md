@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561957"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Tópicos explicativos de animação do quadro-chave
 Os tópicos nesta seção demonstram como usar animações de quadro-chave para animar mais de dois valores de propriedade e controlar a interpolação.  
