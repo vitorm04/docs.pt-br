@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b11cf0fadc9142ee291115cf9f0d84e6429834fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455111"
 ---
 # <a name="imethodmalloc-interface"></a><span data-ttu-id="da4b3-102">Interface IMethodMalloc</span><span class="sxs-lookup"><span data-stu-id="da4b3-102">IMethodMalloc Interface</span></span>
 <span data-ttu-id="da4b3-103">Fornece um método para alocar memória para um novo corpo de função do Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="da4b3-103">Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.</span></span>  

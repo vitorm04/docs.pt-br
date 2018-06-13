@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
 ms.openlocfilehash: 9039376fc4d1f67ca9b526e46eaf28a0b1a3943c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587476"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a><span data-ttu-id="09103-102">As constantes devem ser do tipo intrínseco ou enumerado, e não classe, estrutura, parâmetro de tipo ou tipo de matriz</span><span class="sxs-lookup"><span data-stu-id="09103-102">Constants must be of an intrinsic or enumerated type, not a class, structure, type parameter, or array type</span></span>
 <span data-ttu-id="09103-103">Você tentou declarar uma constante como uma classe, estrutura ou o tipo de matriz, ou como um parâmetro de tipo definido por um tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="09103-103">You have attempted to declare a constant as a class, structure, or array type, or as a type parameter defined by a containing generic type.</span></span>  

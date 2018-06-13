@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460835"
 ---
 # <a name="resolvetypelib-method"></a><span data-ttu-id="cb55e-102">Método ResolveTypeLib</span><span class="sxs-lookup"><span data-stu-id="cb55e-102">ResolveTypeLib Method</span></span>
 <span data-ttu-id="cb55e-103">Resolve o nome simple de uma biblioteca de tipos, retornando o caminho totalmente qualificado.</span><span class="sxs-lookup"><span data-stu-id="cb55e-103">Resolves the simple name of a type library by returning its fully qualified path.</span></span>  

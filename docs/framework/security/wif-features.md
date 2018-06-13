@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: a4c1f4b454b52168935e63e763f331ea04f0dc2f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398505"
 ---
 # <a name="wif-features"></a><span data-ttu-id="97e51-102">Recursos do WIF</span><span class="sxs-lookup"><span data-stu-id="97e51-102">WIF Features</span></span>
 -   [<span data-ttu-id="97e51-103">Ferramenta de identidade e acesso para o Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="97e51-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  

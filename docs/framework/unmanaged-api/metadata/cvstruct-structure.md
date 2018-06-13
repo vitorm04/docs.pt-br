@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 195f311d58f2169d715bb33986ee6e591622f377
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445037"
 ---
 # <a name="cvstruct-structure"></a><span data-ttu-id="3ec76-102">Estrutura CVStruct</span><span class="sxs-lookup"><span data-stu-id="3ec76-102">CVStruct Structure</span></span>
 <span data-ttu-id="3ec76-103">Contém informações que são usadas durante a instalação de um módulo ou uma imagem composta.</span><span class="sxs-lookup"><span data-stu-id="3ec76-103">Contains information that is used when installing a module or a composite image.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446077"
 ---
 # <a name="lockclrversion-function"></a><span data-ttu-id="0656a-102">Função LockClrVersion</span><span class="sxs-lookup"><span data-stu-id="0656a-102">LockClrVersion Function</span></span>
 <span data-ttu-id="0656a-103">Permite que o host determinar qual versão do common language runtime (CLR) será usado no processo antes de inicializar explicitamente o CLR.</span><span class="sxs-lookup"><span data-stu-id="0656a-103">Allows the host to determine which version of the common language runtime (CLR) will be used within the process before explicitly initializing the CLR.</span></span>  

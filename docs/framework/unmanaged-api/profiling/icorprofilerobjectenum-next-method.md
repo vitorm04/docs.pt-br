@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af896b67cda885613ffb268172c7773f2be17133
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455137"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="07f38-102">Método ICorProfilerObjectEnum::Next</span><span class="sxs-lookup"><span data-stu-id="07f38-102">ICorProfilerObjectEnum::Next Method</span></span>
 <span data-ttu-id="07f38-103">Obtém o número especificado de contíguos objetos de uma coleção sequencial de objetos, a posição atual do enumerador na sequência.</span><span class="sxs-lookup"><span data-stu-id="07f38-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  

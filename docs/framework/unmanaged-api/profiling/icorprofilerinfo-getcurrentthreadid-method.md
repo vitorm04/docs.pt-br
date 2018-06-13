@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89f7ff2c213dc510268f9e6c802813a48e870d99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453839"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="b726b-102">Método ICorProfilerInfo::GetCurrentThreadID</span><span class="sxs-lookup"><span data-stu-id="b726b-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
 <span data-ttu-id="b726b-103">Obtém a ID do thread atual, caso se trate de um thread gerenciado.</span><span class="sxs-lookup"><span data-stu-id="b726b-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  

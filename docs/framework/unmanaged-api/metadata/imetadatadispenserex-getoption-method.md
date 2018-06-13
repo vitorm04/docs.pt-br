@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a117fcdf2ba9d37fb5483cc85fb575e5d3476794
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447668"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a><span data-ttu-id="d984e-102">Método IMetaDataDispenserEx::GetOption</span><span class="sxs-lookup"><span data-stu-id="d984e-102">IMetaDataDispenserEx::GetOption Method</span></span>
 <span data-ttu-id="d984e-103">Obtém o valor da opção especificada para o escopo de metadados atual.</span><span class="sxs-lookup"><span data-stu-id="d984e-103">Gets the value of the specified option for the current metadata scope.</span></span> <span data-ttu-id="d984e-104">A opção controla como as chamadas para o escopo de metadados atual são tratadas.</span><span class="sxs-lookup"><span data-stu-id="d984e-104">The option controls how calls to the current metadata scope are handled.</span></span>  

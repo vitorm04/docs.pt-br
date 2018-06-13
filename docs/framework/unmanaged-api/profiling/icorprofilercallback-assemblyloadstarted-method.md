@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af40d8b603d3bd13abbc5a1c06464583bfa7842d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450213"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a><span data-ttu-id="90cdf-102">Método ICorProfilerCallback::AssemblyLoadStarted</span><span class="sxs-lookup"><span data-stu-id="90cdf-102">ICorProfilerCallback::AssemblyLoadStarted Method</span></span>
 <span data-ttu-id="90cdf-103">Notifica o criador de perfil que está sendo carregado um assembly.</span><span class="sxs-lookup"><span data-stu-id="90cdf-103">Notifies the profiler that an assembly is being loaded.</span></span>  

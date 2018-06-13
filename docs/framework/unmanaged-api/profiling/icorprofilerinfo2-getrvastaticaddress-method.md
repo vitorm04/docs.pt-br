@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ee12131cfa323d4426ab06ea31be4a8dd7b4583
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455459"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="c760a-102">Método ICorProfilerInfo2::GetRVAStaticAddress</span><span class="sxs-lookup"><span data-stu-id="c760a-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
 <span data-ttu-id="c760a-103">Obtém o endereço do campo estático especificado endereço virtual relativo (RVA).</span><span class="sxs-lookup"><span data-stu-id="c760a-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  

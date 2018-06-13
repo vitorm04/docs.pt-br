@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91e1697366bd3ee95fd040ee261d68417a8125e3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423602"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="12e35-102">Método ICorPublishProcess::GetProcessID</span><span class="sxs-lookup"><span data-stu-id="12e35-102">ICorPublishProcess::GetProcessID Method</span></span>
 <span data-ttu-id="12e35-103">Obtém o identificador de sistema operacional para que esse processo.</span><span class="sxs-lookup"><span data-stu-id="12e35-103">Gets the operating system identifier for this process.</span></span>  

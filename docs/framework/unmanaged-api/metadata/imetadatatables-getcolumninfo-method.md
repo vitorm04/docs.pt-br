@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 79f08109f1ad267c4898cc0789859b55f534d1b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448075"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="ef71e-102">Método IMetaDataTables::GetColumnInfo</span><span class="sxs-lookup"><span data-stu-id="ef71e-102">IMetaDataTables::GetColumnInfo Method</span></span>
 <span data-ttu-id="ef71e-103">Obtém dados sobre a coluna especificada na tabela especificada.</span><span class="sxs-lookup"><span data-stu-id="ef71e-103">Gets data about the specified column in the specified table.</span></span>  

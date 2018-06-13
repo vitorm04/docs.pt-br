@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b9662ccb854345d41bb73a5cf01a94b9949891d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457189"
 ---
 # <a name="icorprofilerthreadenum-interface"></a><span data-ttu-id="2c5f5-102">Interface ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="2c5f5-102">ICorProfilerThreadEnum Interface</span></span>
 <span data-ttu-id="2c5f5-103">Fornece métodos para iterar em sequência por meio de uma coleção de segmentos no common language runtime.</span><span class="sxs-lookup"><span data-stu-id="2c5f5-103">Provides methods to sequentially iterate through a collection of threads in the common language runtime.</span></span>  

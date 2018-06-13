@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459160"
 ---
 # <a name="strongnamekeygen-function"></a><span data-ttu-id="27156-102">Função StrongNameKeyGen</span><span class="sxs-lookup"><span data-stu-id="27156-102">StrongNameKeyGen Function</span></span>
 <span data-ttu-id="27156-103">Cria um novo par de chaves pública/privada para uso de nome forte.</span><span class="sxs-lookup"><span data-stu-id="27156-103">Creates a new public/private key pair for strong name use.</span></span>  

@@ -31,8 +31,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461907"
 ---
 # <a name="profiling-overview"></a><span data-ttu-id="0cc18-102">Visão geral da criação de perfil</span><span class="sxs-lookup"><span data-stu-id="0cc18-102">Profiling Overview</span></span>
 <a name="top"></a> <span data-ttu-id="0cc18-103">Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0cc18-103">A profiler is a tool that monitors the execution of another application.</span></span> <span data-ttu-id="0cc18-104">Um criador de perfil de tempo de execução (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens e enviam mensagens para o CLR usando a API de criação de perfil.</span><span class="sxs-lookup"><span data-stu-id="0cc18-104">A common language runtime (CLR) profiler is a dynamic link library (DLL) that consists of functions that receive messages from, and send messages to, the CLR by using the profiling API.</span></span> <span data-ttu-id="0cc18-105">O criador de perfil DLL é carregado pelo CLR em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="0cc18-105">The profiler DLL is loaded by the CLR at run time.</span></span>  

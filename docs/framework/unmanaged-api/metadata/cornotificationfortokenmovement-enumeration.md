@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448250"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="06822-102">Enumeração CorNotificationForTokenMovement</span><span class="sxs-lookup"><span data-stu-id="06822-102">CorNotificationForTokenMovement Enumeration</span></span>
 <span data-ttu-id="06822-103">Especifica as notificações serão enviadas para o cliente de API de metadados quando um token remapeamento ocorre.</span><span class="sxs-lookup"><span data-stu-id="06822-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  

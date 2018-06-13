@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449058"
 ---
 # <a name="ihosttaskmanager-interface"></a><span data-ttu-id="f3750-102">Interface IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="f3750-102">IHostTaskManager Interface</span></span>
 <span data-ttu-id="f3750-103">Fornece métodos que permitem que o common language runtime (CLR) para trabalhar com tarefas por meio do host em vez de usar as funções de threading ou fibra do sistema operacional padrão.</span><span class="sxs-lookup"><span data-stu-id="f3750-103">Provides methods that allow the common language runtime (CLR) to work with tasks through the host instead of using the standard operating system threading or fiber functions.</span></span>  

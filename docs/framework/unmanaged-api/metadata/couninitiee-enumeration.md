@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dcd7dc7c51caa94308760c0086384c8eea184ee9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443591"
 ---
 # <a name="couninitiee-enumeration"></a><span data-ttu-id="b9985-102">Enumeração COUNINITIEE</span><span class="sxs-lookup"><span data-stu-id="b9985-102">COUNINITIEE Enumeration</span></span>
 <span data-ttu-id="b9985-103">Especifica constantes usadas pelo [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ao inicializar o common language runtime.</span><span class="sxs-lookup"><span data-stu-id="b9985-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458641"
 ---
 # <a name="qualifiersetget-function"></a><span data-ttu-id="c6365-103">Função QualifierSet_Get</span><span class="sxs-lookup"><span data-stu-id="c6365-103">QualifierSet_Get function</span></span>
 <span data-ttu-id="c6365-104">Obtém o qualificador nomeado especificado.</span><span class="sxs-lookup"><span data-stu-id="c6365-104">Gets the specified named qualifier.</span></span>  

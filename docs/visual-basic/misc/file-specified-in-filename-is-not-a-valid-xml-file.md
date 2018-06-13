@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639182"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a><span data-ttu-id="619f8-102">Arquivo especificado no nome do arquivo não é um arquivo XML válido</span><span class="sxs-lookup"><span data-stu-id="619f8-102">File specified in FileName is not a valid XML file</span></span>
 <span data-ttu-id="619f8-103">O nome do arquivo que você forneceu não é um arquivo XML válido.</span><span class="sxs-lookup"><span data-stu-id="619f8-103">The file name that you supplied is not a valid XML file.</span></span> <span data-ttu-id="619f8-104">Para especificar a estrutura permitida e o conteúdo de um documento XML, você pode usar uma definição de tipo de documento (DTD), um esquema Microsoft XML-Data Reduced (XDR) ou um esquema de linguagem XSD de definição de esquema XML.</span><span class="sxs-lookup"><span data-stu-id="619f8-104">To specify the allowed structure and content of an XML document, you can use a Document Type Definition (DTD), a Microsoft XML-Data Reduced (XDR) schema, or an XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="619f8-105">Esquemas XSD são a melhor maneira de especificar gramáticas XML no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="619f8-105">XSD schemas are the preferred way to specify XML grammars in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  

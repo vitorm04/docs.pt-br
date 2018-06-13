@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426681"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="59a76-102">Método ISymUnmanagedWriter::SetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="59a76-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
 <span data-ttu-id="59a76-103">Especifica o método definido pelo usuário que é o ponto de entrada para este módulo.</span><span class="sxs-lookup"><span data-stu-id="59a76-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="59a76-104">Por exemplo, esse ponto de entrada pode ser o método do usuário principal, em vez de gerado pelo compilador stubs antes de principal.</span><span class="sxs-lookup"><span data-stu-id="59a76-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  

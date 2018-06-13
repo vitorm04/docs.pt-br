@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: be42fea034be4fe5d48874b00db86977a3039a34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448214"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="12771-102">Método IMetaDataEmit::GetTokenFromSig</span><span class="sxs-lookup"><span data-stu-id="12771-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
 <span data-ttu-id="12771-103">Obtém um token para a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="12771-103">Gets a token for the specified metadata signature.</span></span>  

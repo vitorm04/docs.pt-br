@@ -14,8 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b8b6ba429a45c92dc6b6b5dcaa7c8a35b47385f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458290"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="64eea-102">Método ICorProfilerInfo7::ApplyMetaData</span><span class="sxs-lookup"><span data-stu-id="64eea-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
 <span data-ttu-id="64eea-103">[Com suporte no .NET Framework 4.6.1 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="64eea-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  

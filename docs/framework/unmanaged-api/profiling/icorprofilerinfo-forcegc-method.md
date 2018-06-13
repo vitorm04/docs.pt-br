@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454467"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="23064-102">Método ICorProfilerInfo::ForceGC</span><span class="sxs-lookup"><span data-stu-id="23064-102">ICorProfilerInfo::ForceGC Method</span></span>
 <span data-ttu-id="23064-103">Coleta de lixo de força para ocorrer no common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="23064-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
