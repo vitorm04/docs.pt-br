@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449979"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a><span data-ttu-id="48c00-102">Estrutura COR_PRF_FUNCTION_ARGUMENT_INFO</span><span class="sxs-lookup"><span data-stu-id="48c00-102">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>
 <span data-ttu-id="48c00-103">Representa os argumentos de uma função, em ordem da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="48c00-103">Represents a function's arguments, in left-to-right order.</span></span>  

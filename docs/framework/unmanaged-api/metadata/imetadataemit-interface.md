@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449138"
 ---
 # <a name="imetadataemit-interface"></a><span data-ttu-id="b3bbb-102">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="b3bbb-102">IMetaDataEmit Interface</span></span>
 <span data-ttu-id="b3bbb-103">Fornece métodos para criar, modificar e salvar metadados sobre o assembly no escopo definido no momento.</span><span class="sxs-lookup"><span data-stu-id="b3bbb-103">Provides methods to create, modify, and save metadata about the assembly in the currently defined scope.</span></span> <span data-ttu-id="b3bbb-104">Os metadados podem ser armazenado na memória ou salvo em disco.</span><span class="sxs-lookup"><span data-stu-id="b3bbb-104">The metadata can be stored in memory or saved to disk.</span></span>  

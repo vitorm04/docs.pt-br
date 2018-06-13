@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ebe2cf95f5637e6924b85c2389f1c59679580298
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449164"
 ---
 # <a name="corelementtype-enumeration1"></a><span data-ttu-id="af430-102">CorElementType Enumeration1</span><span class="sxs-lookup"><span data-stu-id="af430-102">CorElementType Enumeration1</span></span>
 <span data-ttu-id="af430-103">Especifica um tempo de execução de linguagem comum <xref:System.Type>, um modificador de tipo ou informações sobre um tipo em uma assinatura de tipo de metadados.</span><span class="sxs-lookup"><span data-stu-id="af430-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  

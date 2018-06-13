@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488264"
 ---
 # <a name="how-to-import-custom-wsdl"></a><span data-ttu-id="48bdb-102">Como importar WSDL personalizado</span><span class="sxs-lookup"><span data-stu-id="48bdb-102">How to: Import Custom WSDL</span></span>
 <span data-ttu-id="48bdb-103">Este tópico descreve como importar WSDL personalizado.</span><span class="sxs-lookup"><span data-stu-id="48bdb-103">This topic describes how to import custom WSDL.</span></span> <span data-ttu-id="48bdb-104">Para tratar o WSDL personalizado, você deve implementar o <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span><span class="sxs-lookup"><span data-stu-id="48bdb-104">To handle the custom WSDL, you must implement the <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span></span>  

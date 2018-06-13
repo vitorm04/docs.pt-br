@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446314"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="6f71a-102">Método IMetaDataAssemblyImport::GetExportedTypeProps</span><span class="sxs-lookup"><span data-stu-id="6f71a-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
 <span data-ttu-id="6f71a-103">Obtém o conjunto de propriedades do tipo exportado com a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="6f71a-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  

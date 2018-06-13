@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488797"
 ---
 # <a name="clients"></a><span data-ttu-id="c2dbe-102">Clientes</span><span class="sxs-lookup"><span data-stu-id="c2dbe-102">Clients</span></span>
 <span data-ttu-id="c2dbe-103">Os tópicos nesta seção abordam a arquitetura do cliente, como para acessar o serviço de um Windows Communication Foundation (WCF), como configurar um cliente WCF e algumas considerações de segurança para clientes do WCF.</span><span class="sxs-lookup"><span data-stu-id="c2dbe-103">The topics in this section cover the client architecture, how to access a Windows Communication Foundation (WCF) service, how to configure a WCF client, and some security consideration for WCF clients.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171987"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="370ef-102">public (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="370ef-102">public (C# Reference)</span></span>
 <span data-ttu-id="370ef-103">A palavra-chave `public` é um modificador de acesso para tipos e membros de tipo.</span><span class="sxs-lookup"><span data-stu-id="370ef-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="370ef-104">Acesso público é o nível de acesso mais permissivo.</span><span class="sxs-lookup"><span data-stu-id="370ef-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="370ef-105">Não há nenhuma restrição quanto ao acesso a membros públicos, como neste exemplo:</span><span class="sxs-lookup"><span data-stu-id="370ef-105">There are no restrictions on accessing public members, as in this example:</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447405"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="86452-102">Método IMetaDataAssemblyImport::EnumAssemblyRefs</span><span class="sxs-lookup"><span data-stu-id="86452-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
 <span data-ttu-id="86452-103">Enumera o `mdAssemblyRef` instâncias que são definidas no manifesto do assembly.</span><span class="sxs-lookup"><span data-stu-id="86452-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  

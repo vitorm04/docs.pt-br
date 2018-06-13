@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eea43e5eaa037a3b70f482b0602d8d8d3d594f75
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449843"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="ddb24-102">Método IMetaDataTables::GetNextString</span><span class="sxs-lookup"><span data-stu-id="ddb24-102">IMetaDataTables::GetNextString Method</span></span>
 <span data-ttu-id="ddb24-103">Obtém o índice da seguinte cadeia de caracteres na coluna da tabela atual.</span><span class="sxs-lookup"><span data-stu-id="ddb24-103">Gets the index of the next string in the current table column.</span></span>  

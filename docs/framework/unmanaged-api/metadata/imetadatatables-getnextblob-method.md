@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caf7faeea4bcec9b73f3c43f0923d308baebf6d0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447614"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="162c1-102">Método IMetaDataTables::GetNextBlob</span><span class="sxs-lookup"><span data-stu-id="162c1-102">IMetaDataTables::GetNextBlob Method</span></span>
 <span data-ttu-id="162c1-103">Obtém o índice do objeto binário grande (BLOB) Avançar na tabela.</span><span class="sxs-lookup"><span data-stu-id="162c1-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  

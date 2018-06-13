@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446614"
 ---
 # <a name="corfieldattr-enumeration"></a><span data-ttu-id="9993d-102">Enumeração CorFieldAttr</span><span class="sxs-lookup"><span data-stu-id="9993d-102">CorFieldAttr Enumeration</span></span>
 <span data-ttu-id="9993d-103">Contém valores que descrevem os metadados sobre um campo.</span><span class="sxs-lookup"><span data-stu-id="9993d-103">Contains values that describe metadata about a field.</span></span>  

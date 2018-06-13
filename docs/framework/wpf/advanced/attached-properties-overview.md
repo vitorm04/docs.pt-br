@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542165"
 ---
 # <a name="attached-properties-overview"></a><span data-ttu-id="9a5dc-102">Visão geral das propriedades anexadas</span><span class="sxs-lookup"><span data-stu-id="9a5dc-102">Attached Properties Overview</span></span>
 <span data-ttu-id="9a5dc-103">Uma propriedade anexada é um conceito definido por XAML.</span><span class="sxs-lookup"><span data-stu-id="9a5dc-103">An attached property is a concept defined by XAML.</span></span> <span data-ttu-id="9a5dc-104">Uma propriedade anexada deve ser utilizada como um tipo de propriedade global configurável em qualquer objeto.</span><span class="sxs-lookup"><span data-stu-id="9a5dc-104">An attached property is intended to be used as a type of global property that is settable on any object.</span></span> <span data-ttu-id="9a5dc-105">No [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], as propriedades anexadas normalmente são definidas como uma forma especializada de propriedade de dependência que não tem a propriedade “wrapper” convencional.</span><span class="sxs-lookup"><span data-stu-id="9a5dc-105">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], attached properties are typically defined as a specialized form of dependency property that does not have the conventional property "wrapper".</span></span>  

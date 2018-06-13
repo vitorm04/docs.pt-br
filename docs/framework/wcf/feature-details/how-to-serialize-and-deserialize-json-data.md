@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492584"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a><span data-ttu-id="61523-102">Como serializar e desserializar dados JSON</span><span class="sxs-lookup"><span data-stu-id="61523-102">How to: Serialize and Deserialize JSON Data</span></span>
 <span data-ttu-id="61523-103">JSON (JavaScript Object Notation) é um formato eficiente de codificação de dados que permite a troca rápida de pequenas quantidades de dados entre navegadores cliente e serviços Web habilitados para AJAX.</span><span class="sxs-lookup"><span data-stu-id="61523-103">JSON (JavaScript Object Notation) is an efficient data encoding format that enables fast exchanges of small amounts of data between client browsers and AJAX-enabled Web services.</span></span>  

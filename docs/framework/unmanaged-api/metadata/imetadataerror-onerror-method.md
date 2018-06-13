@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1ed9e097dccd0fcb81ea9023cc9b84906589ccb0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446252"
 ---
 # <a name="imetadataerroronerror-method"></a><span data-ttu-id="cec50-102">Método IMetaDataError::OnError</span><span class="sxs-lookup"><span data-stu-id="cec50-102">IMetaDataError::OnError Method</span></span>
 <span data-ttu-id="cec50-103">Fornece notificação de erros que ocorrem durante a mesclagem de metadados.</span><span class="sxs-lookup"><span data-stu-id="cec50-103">Provides notification of errors that occur during the metadata merge.</span></span>  

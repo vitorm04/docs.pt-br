@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 3adc721dd8ad0fb706e172373e5da70fe6032db6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485889"
 ---
 # <a name="servicesecurityauditbehavior"></a><span data-ttu-id="0f275-102">ServiceSecurityAuditBehavior</span><span class="sxs-lookup"><span data-stu-id="0f275-102">ServiceSecurityAuditBehavior</span></span>
 <span data-ttu-id="0f275-103">ServiceSecurityAuditBehavior</span><span class="sxs-lookup"><span data-stu-id="0f275-103">ServiceSecurityAuditBehavior</span></span>  
