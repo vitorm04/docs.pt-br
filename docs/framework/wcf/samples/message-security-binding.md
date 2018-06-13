@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805035"
 ---
 # <a name="message-security-binding"></a>Associação de segurança de mensagem
 Esta seção contém exemplos que demonstram a associação de segurança de mensagem nos serviços do Windows no WCF.  
