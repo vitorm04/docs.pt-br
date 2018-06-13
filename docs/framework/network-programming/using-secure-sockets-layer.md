@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396240"
 ---
 # <a name="using-secure-sockets-layer"></a><span data-ttu-id="8619d-102">Usando o protocolo SSL</span><span class="sxs-lookup"><span data-stu-id="8619d-102">Using Secure Sockets Layer</span></span>
 <span data-ttu-id="8619d-103">As classes <xref:System.Net> usam o protocolo SSL para criptografar a conexão para vários protocolos de rede.</span><span class="sxs-lookup"><span data-stu-id="8619d-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  

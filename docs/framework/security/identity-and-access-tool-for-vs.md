@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 107028b89d576b27a2559fd0ae5298c849da2c94
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398603"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a><span data-ttu-id="046b0-102">Ferramenta de Identidade e Acesso para o Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="046b0-102">Identity and Access Tool for Visual Studio 2012</span></span>
 <span data-ttu-id="046b0-103">Este tópico descreve a nova Ferramenta de Identidade e Acesso para o Visual Studio 11.</span><span class="sxs-lookup"><span data-stu-id="046b0-103">This topic describes the new Identity and Access Tool for Visual Studio 11.</span></span> <span data-ttu-id="046b0-104">Você pode baixar a ferramenta da seguinte URL: [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) ou diretamente de dentro do Visual Studio 11 pesquisando por "identity" diretamente no Gerenciador de extensões.</span><span class="sxs-lookup"><span data-stu-id="046b0-104">You can download this tool from the following URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) or directly from within Visual Studio 11 by searching for "identity" directly in the Extensions Manager.</span></span>  

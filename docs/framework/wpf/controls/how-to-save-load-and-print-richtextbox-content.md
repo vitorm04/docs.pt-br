@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552913"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a><span data-ttu-id="e47f7-102">Como salvar, carregar e imprimir conteúdo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="e47f7-102">How to: Save, Load, and Print RichTextBox Content</span></span>
 <span data-ttu-id="e47f7-103">O exemplo a seguir mostra como salvar o conteúdo de um <xref:System.Windows.Controls.RichTextBox> para um arquivo, carregar esse conteúdo de volta para o <xref:System.Windows.Controls.RichTextBox>e imprimir o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="e47f7-103">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span>  

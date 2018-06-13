@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05fc295d394dca7a4f0edead64d326032958b070
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435758"
 ---
 # <a name="hosting-enumerations"></a><span data-ttu-id="7eb4d-102">Hospedando enumerações</span><span class="sxs-lookup"><span data-stu-id="7eb4d-102">Hosting Enumerations</span></span>
 <span data-ttu-id="7eb4d-103">Esta seção descreve as enumerações não gerenciadas que usa a API de hospedagem.</span><span class="sxs-lookup"><span data-stu-id="7eb4d-103">This section describes the unmanaged enumerations that the hosting API uses.</span></span>  

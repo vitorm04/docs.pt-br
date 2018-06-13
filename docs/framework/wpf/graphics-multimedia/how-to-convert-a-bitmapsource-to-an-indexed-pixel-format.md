@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560845"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="db18c-102">Como converter um BitmapSource em um formato de pixel indexado</span><span class="sxs-lookup"><span data-stu-id="db18c-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
 <span data-ttu-id="db18c-103">Este exemplo mostra como converter um <xref:System.Windows.Media.Imaging.BitmapSource> em um formato de pixel indexado.</span><span class="sxs-lookup"><span data-stu-id="db18c-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  

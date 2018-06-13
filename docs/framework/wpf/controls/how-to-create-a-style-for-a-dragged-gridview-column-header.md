@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554567"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a><span data-ttu-id="26ee9-102">Como criar um estilo para um cabeçalho de coluna GridView arrastado</span><span class="sxs-lookup"><span data-stu-id="26ee9-102">How to: Create a Style for a Dragged GridView Column Header</span></span>
 <span data-ttu-id="26ee9-103">Este exemplo mostra como alterar a aparência de um arrastado <xref:System.Windows.Controls.GridViewColumnHeader> quando o usuário altera a posição de uma coluna.</span><span class="sxs-lookup"><span data-stu-id="26ee9-103">This example shows how to change the appearance of a dragged <xref:System.Windows.Controls.GridViewColumnHeader> when the user changes the position of a column.</span></span>  

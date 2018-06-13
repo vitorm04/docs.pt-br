@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489103"
 ---
 # <a name="authentication-in-wcf"></a><span data-ttu-id="dbe4a-102">Autenticação no WCF</span><span class="sxs-lookup"><span data-stu-id="dbe4a-102">Authentication in WCF</span></span>
 <span data-ttu-id="dbe4a-103">Os tópicos a seguir mostram um número de mecanismos diferentes no Windows Communication Foundation (WCF) que fornecem autenticação, por exemplo, a autenticação do Windows, certificados x. 509 e o nome de usuário e senhas.</span><span class="sxs-lookup"><span data-stu-id="dbe4a-103">The following topics show a number of different mechanisms in Windows Communication Foundation (WCF) that provide authentication, for example, Windows authentication, X.509 certificates, and user name and passwords.</span></span>  

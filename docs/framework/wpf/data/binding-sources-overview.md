@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558129"
 ---
 # <a name="binding-sources-overview"></a><span data-ttu-id="a0515-102">Visão geral das fontes de associação</span><span class="sxs-lookup"><span data-stu-id="a0515-102">Binding Sources Overview</span></span>
 <span data-ttu-id="a0515-103">Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados.</span><span class="sxs-lookup"><span data-stu-id="a0515-103">In data binding, the binding source object refers to the object you obtain data from.</span></span> <span data-ttu-id="a0515-104">Este tópico discute os tipos de objetos que você pode usar como a origem da associação.</span><span class="sxs-lookup"><span data-stu-id="a0515-104">This topic discusses the types of objects you can use as the binding source.</span></span>  

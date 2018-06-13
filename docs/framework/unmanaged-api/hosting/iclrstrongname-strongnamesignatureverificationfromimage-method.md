@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60dbb8d8461015c791a70d6c2617b1c81e5ba17f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434262"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a><span data-ttu-id="d01b4-102">Método ICLRStrongName::StrongNameSignatureVerificationFromImage</span><span class="sxs-lookup"><span data-stu-id="d01b4-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Method</span></span>
 <span data-ttu-id="d01b4-103">Verifica se um assembly que já foi mapeado para a memória é válido para a chave pública associada.</span><span class="sxs-lookup"><span data-stu-id="d01b4-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  

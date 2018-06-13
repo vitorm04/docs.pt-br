@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398619"
 ---
 # <a name="claims-based-authorization-using-wif"></a><span data-ttu-id="162e2-102">Autorização baseada em declarações usando o WIF</span><span class="sxs-lookup"><span data-stu-id="162e2-102">Claims Based Authorization Using WIF</span></span>
 <span data-ttu-id="162e2-103">Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos.</span><span class="sxs-lookup"><span data-stu-id="162e2-103">In a relying party application, authorization determines what resources an authenticated identity is allowed to access and what operations it is allowed to perform on those resources.</span></span> <span data-ttu-id="162e2-104">A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados.</span><span class="sxs-lookup"><span data-stu-id="162e2-104">Improper or weak authorization leads to information disclosure and data tampering.</span></span> <span data-ttu-id="162e2-105">Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="162e2-105">This topic outlines the available approaches to implementing authorization for claims-aware ASP.NET web applications and services using Windows Identity Foundation (WIF) and a Security Token Service (STS), for example, the Windows Azure Access Control Service (ACS).</span></span>  

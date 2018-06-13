@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545159"
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a><span data-ttu-id="f88b5-102">Como manipular grupos de linhas de uma tabela por meio da propriedade RowGroups</span><span class="sxs-lookup"><span data-stu-id="f88b5-102">How to: Manipulate a Table&#39;s Row Groups through the RowGroups Property</span></span>
 <span data-ttu-id="f88b5-103">Este exemplo demonstra algumas das operações mais comuns que podem ser executadas em grupos de linhas da tabela por meio de <xref:System.Windows.Documents.Table.RowGroups%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="f88b5-103">This example demonstrates some of the more common operations that can be performed on a table's row groups through the <xref:System.Windows.Documents.Table.RowGroups%2A> property.</span></span>  

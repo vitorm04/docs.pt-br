@@ -6,8 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b010307baa8634a4bb62310318d1d718a2525d4a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397735"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a><span data-ttu-id="9dd55-102">Medindo o aprimoramento da inicialização com o .NET Nativo</span><span class="sxs-lookup"><span data-stu-id="9dd55-102">Measuring Startup Improvement with .NET Native</span></span>
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="9dd55-103"> melhora significativamente o tempo de inicialização dos aplicativos.</span><span class="sxs-lookup"><span data-stu-id="9dd55-103"> significantly improves the launch time of apps.</span></span> <span data-ttu-id="9dd55-104">Esse aprimoramento é particularmente perceptível em dispositivos portáteis, de baixa energia e com aplicativos complexos.</span><span class="sxs-lookup"><span data-stu-id="9dd55-104">This improvement is particularly noticeable on portable, low-powered devices and with complex apps.</span></span> <span data-ttu-id="9dd55-105">Este tópico ajuda você a começar a trabalhar com a instrumentação básica necessária para medir essa melhoria de inicialização.</span><span class="sxs-lookup"><span data-stu-id="9dd55-105">This topic helps you get started with the basic instrumentation needed to measure this startup improvement.</span></span>  

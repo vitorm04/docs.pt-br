@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e0ffbfcbf40a415fd6f53d97ef3fb9c78c94902
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440824"
 ---
 # <a name="itypenamebuilderclear-method"></a><span data-ttu-id="a57a8-102">Método ITypeNameBuilder::Clear</span><span class="sxs-lookup"><span data-stu-id="a57a8-102">ITypeNameBuilder::Clear Method</span></span>
 <span data-ttu-id="a57a8-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="a57a8-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

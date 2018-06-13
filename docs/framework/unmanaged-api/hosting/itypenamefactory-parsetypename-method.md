@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: adc72eb1b50369e5219798cdb99618abc5e08a00
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440383"
 ---
 # <a name="itypenamefactoryparsetypename-method"></a><span data-ttu-id="0bf05-102">Método ITypeNameFactory::ParseTypeName</span><span class="sxs-lookup"><span data-stu-id="0bf05-102">ITypeNameFactory::ParseTypeName Method</span></span>
 <span data-ttu-id="0bf05-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="0bf05-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

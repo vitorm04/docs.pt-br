@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444311"
 ---
 # <a name="loadstringrcex-function"></a><span data-ttu-id="b1685-102">Função LoadStringRCEx</span><span class="sxs-lookup"><span data-stu-id="b1685-102">LoadStringRCEx Function</span></span>
 <span data-ttu-id="b1685-103">Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.</span><span class="sxs-lookup"><span data-stu-id="b1685-103">Translates an HRESULT value to an appropriate error message for the specified culture.</span></span>  

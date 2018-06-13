@@ -1,28 +1,21 @@
 ---
 title: Como baixar arquivos com FTP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6309bf4885b7a0f2ab7cedfb48af70dc76bf31f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a3e0b5773a98b42411e4dd76668dafb834b5cbd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394843"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="8adcc-102">Como baixar arquivos com FTP</span><span class="sxs-lookup"><span data-stu-id="8adcc-102">How to: Download Files with FTP</span></span>
-<span data-ttu-id="8adcc-103">Este exemplo mostra como baixar um arquivo de um servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="8adcc-103">This sample shows how to download a file from an FTP server.</span></span>  
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="62dd5-102">Como baixar arquivos com FTP</span><span class="sxs-lookup"><span data-stu-id="62dd5-102">How to: Download Files with FTP</span></span>
+<span data-ttu-id="62dd5-103">Este exemplo mostra como baixar um arquivo de um servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="62dd5-103">This sample shows how to download a file from an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8adcc-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8adcc-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="62dd5-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="62dd5-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -58,11 +51,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8adcc-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="8adcc-105">Compiling the Code</span></span>  
- <span data-ttu-id="8adcc-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="8adcc-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="62dd5-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="62dd5-105">Compiling the Code</span></span>  
+ <span data-ttu-id="62dd5-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="62dd5-106">This example requires:</span></span>  
   
--   <span data-ttu-id="8adcc-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="8adcc-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="62dd5-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="62dd5-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="8adcc-108">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="8adcc-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="62dd5-108">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="62dd5-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="8adcc-109">Segurança do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8adcc-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="62dd5-109">Segurança do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="62dd5-109">.NET Framework Security</span></span>

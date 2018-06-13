@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f92667191cad163998d233e1110365de65c0340c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437684"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a><span data-ttu-id="9751b-102">Método IGCHost2::SetGCStartupLimitsEx</span><span class="sxs-lookup"><span data-stu-id="9751b-102">IGCHost2::SetGCStartupLimitsEx Method</span></span>
 <span data-ttu-id="9751b-103">Define o tamanho do segmento e o tamanho máximo de geração 0.</span><span class="sxs-lookup"><span data-stu-id="9751b-103">Sets the segment size and the maximum size for generation 0.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e851cf16e4b23b1f8510c4d96b23c01eb726a77
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438048"
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a><span data-ttu-id="66453-102">Método ICorRuntimeHost::CreateDomainEx</span><span class="sxs-lookup"><span data-stu-id="66453-102">ICorRuntimeHost::CreateDomainEx Method</span></span>
 <span data-ttu-id="66453-103">Cria um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="66453-103">Creates an application domain.</span></span> <span data-ttu-id="66453-104">O chamador recebe um ponteiro de interface do tipo <xref:System._AppDomain>, para uma instância do tipo <xref:System.AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="66453-104">The caller receives an interface pointer, of type <xref:System._AppDomain>, to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span> <span data-ttu-id="66453-105">Esse método permite que o chamador passar uma instância de IAppDomainSetup para configurar recursos adicionais do retornado <xref:System._AppDomain> instância.</span><span class="sxs-lookup"><span data-stu-id="66453-105">This method allows the caller to pass an IAppDomainSetup instance to configure additional features of the returned <xref:System._AppDomain> instance.</span></span>  

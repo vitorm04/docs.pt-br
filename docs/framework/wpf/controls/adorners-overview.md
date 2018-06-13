@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557115"
 ---
 # <a name="adorners-overview"></a><span data-ttu-id="105f6-102">Visão geral de adornos</span><span class="sxs-lookup"><span data-stu-id="105f6-102">Adorners Overview</span></span>
 <span data-ttu-id="105f6-103">Adornos são um tipo especial de <xref:System.Windows.FrameworkElement>, usado para fornecer dicas visuais para um usuário.</span><span class="sxs-lookup"><span data-stu-id="105f6-103">Adorners are a special type of <xref:System.Windows.FrameworkElement>, used to provide visual cues to a user.</span></span> <span data-ttu-id="105f6-104">Entre outros usos, adornos podem ser usados para adicionar alças funcionais a elementos ou para fornecer informações de estado sobre um controle.</span><span class="sxs-lookup"><span data-stu-id="105f6-104">Among other uses, Adorners can be used to add functional handles to elements or provide state information about a control.</span></span>  

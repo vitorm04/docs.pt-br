@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561021"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a><span data-ttu-id="f2b11-102">Como aplicar uma transformação a um BitmapImage</span><span class="sxs-lookup"><span data-stu-id="f2b11-102">How to: Apply a Transform to a BitmapImage</span></span>
 <span data-ttu-id="f2b11-103">Este exemplo demonstra como aplicar uma <xref:System.Windows.Media.Transform> para um <xref:System.Windows.Media.Imaging.BitmapImage>.</span><span class="sxs-lookup"><span data-stu-id="f2b11-103">This example demonstrates how to apply a <xref:System.Windows.Media.Transform> to a <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span>  

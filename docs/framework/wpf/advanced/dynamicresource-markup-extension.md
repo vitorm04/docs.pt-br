@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545318"
 ---
 # <a name="dynamicresource-markup-extension"></a><span data-ttu-id="dd9e5-102">Extensão de marcação DynamicResource</span><span class="sxs-lookup"><span data-stu-id="dd9e5-102">DynamicResource Markup Extension</span></span>
 <span data-ttu-id="dd9e5-103">Fornece um valor para qualquer atributo da propriedade [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] adiando esse valor para ser uma referência para um recurso definido.</span><span class="sxs-lookup"><span data-stu-id="dd9e5-103">Provides a value for any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property attribute by deferring that value to be a reference to a defined resource.</span></span> <span data-ttu-id="dd9e5-104">O comportamento de pesquisa desse recurso é análogo à pesquisa em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="dd9e5-104">Lookup behavior for that resource is analogous to run-time lookup.</span></span>  

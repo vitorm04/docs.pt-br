@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 089aaf96a164be7eaa258dec65807bd75c998eb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440964"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="b55fe-102">Método IHostTaskManager::GetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="b55fe-102">IHostTaskManager::GetStackGuarantee Method</span></span>
 <span data-ttu-id="b55fe-103">Obtém a quantidade de espaço de pilha é a garantia de estar disponível após a conclusão de uma operação de pilha, mas antes do fechamento de um processo.</span><span class="sxs-lookup"><span data-stu-id="b55fe-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  

@@ -11,8 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: db4a5ee5673ef96c9fb7f39798ab32dd8c910f43
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398164"
 ---
 # <a name="security-and-remoting-considerations"></a><span data-ttu-id="92107-102">Considerações sobre segurança e comunicação remota</span><span class="sxs-lookup"><span data-stu-id="92107-102">Security and Remoting Considerations</span></span>
 <span data-ttu-id="92107-103">Comunicação remota permite que você configure transparente chamadas entre domínios de aplicativo, processos ou computadores.</span><span class="sxs-lookup"><span data-stu-id="92107-103">Remoting allows you to set up transparent calling between application domains, processes, or computers.</span></span> <span data-ttu-id="92107-104">No entanto, a movimentação da pilha código acesso segurança não pode ultrapassar os limites de processo ou máquinas (Aplicar entre domínios de aplicativos do mesmo processo).</span><span class="sxs-lookup"><span data-stu-id="92107-104">However, the code access security stack walk cannot cross process or machine boundaries (it does apply between application domains of the same process).</span></span>  

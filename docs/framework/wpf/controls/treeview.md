@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
 ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556247"
 ---
 # <a name="treeview"></a><span data-ttu-id="b165f-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="b165f-102">TreeView</span></span>
 <span data-ttu-id="b165f-103">O <xref:System.Windows.Controls.TreeView> controle exibe informações em uma estrutura hierárquica usando nós recolhíveis.</span><span class="sxs-lookup"><span data-stu-id="b165f-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  

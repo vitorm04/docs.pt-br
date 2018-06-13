@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556673"
 ---
 # <a name="how-to-create-a-binding-in-code"></a><span data-ttu-id="2472d-102">Como criar uma associação em código</span><span class="sxs-lookup"><span data-stu-id="2472d-102">How to: Create a Binding in Code</span></span>
 <span data-ttu-id="2472d-103">Este exemplo mostra como criar e definir um <xref:System.Windows.Data.Binding> no código.</span><span class="sxs-lookup"><span data-stu-id="2472d-103">This example shows how to create and set a <xref:System.Windows.Data.Binding> in code.</span></span>  

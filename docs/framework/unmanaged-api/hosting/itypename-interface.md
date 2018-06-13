@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 924708957f02055d1cf20739f8642f0e924d6210
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440652"
 ---
 # <a name="itypename-interface"></a><span data-ttu-id="66993-102">Interface ITypeName</span><span class="sxs-lookup"><span data-stu-id="66993-102">ITypeName Interface</span></span>
 <span data-ttu-id="66993-103">Fornece métodos para obter informações de nome de tipo.</span><span class="sxs-lookup"><span data-stu-id="66993-103">Provides methods for obtaining type name information.</span></span>  

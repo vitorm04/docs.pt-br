@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398177"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a><span data-ttu-id="178e5-102">Eventos ETW de monitoramento de recursos de domínio de aplicativo (ARM)</span><span class="sxs-lookup"><span data-stu-id="178e5-102">Application Domain Resource Monitoring (ARM) ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="178e5-103">Esses eventos fornecem informações de diagnóstico detalhadas sobre o estado de um domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="178e5-103">These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="178e5-104">Use esses eventos ou o recurso ARM (monitoramento de recursos do domínio do aplicativo) para obter as mesmas informações.</span><span class="sxs-lookup"><span data-stu-id="178e5-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>  

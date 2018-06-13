@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398099"
 ---
 # <a name="method-etw-events"></a><span data-ttu-id="13a8c-102">Eventos ETW de método</span><span class="sxs-lookup"><span data-stu-id="13a8c-102">Method ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="13a8c-103">Esses eventos coletam informações que são específicas para métodos.</span><span class="sxs-lookup"><span data-stu-id="13a8c-103">These events collect information that is specific to methods.</span></span> <span data-ttu-id="13a8c-104">A carga desses eventos é necessária para resolução de símbolos.</span><span class="sxs-lookup"><span data-stu-id="13a8c-104">The payload of these events is required for symbol resolution.</span></span> <span data-ttu-id="13a8c-105">Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.</span><span class="sxs-lookup"><span data-stu-id="13a8c-105">In addition, these events provide helpful information such as the number of times a method was called.</span></span>  

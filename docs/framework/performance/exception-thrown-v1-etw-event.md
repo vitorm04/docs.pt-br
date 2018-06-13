@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dafa5846f779276ab81e8e30e7c7a50b9fbff853
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393849"
 ---
 # <a name="exception-thrownv1-etw-event"></a><span data-ttu-id="cc257-102">Evento ETW Exception Thrown_V1</span><span class="sxs-lookup"><span data-stu-id="cc257-102">Exception Thrown_V1 ETW Event</span></span>
 <span data-ttu-id="cc257-103">Esse evento captura informações sobre as exceções geradas.</span><span class="sxs-lookup"><span data-stu-id="cc257-103">This event captures information about the exceptions that are thrown.</span></span>  

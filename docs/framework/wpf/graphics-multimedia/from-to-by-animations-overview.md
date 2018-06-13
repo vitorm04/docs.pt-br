@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557791"
 ---
 # <a name="fromtoby-animations-overview"></a><span data-ttu-id="060ed-102">Visão geral de animações de/para/por</span><span class="sxs-lookup"><span data-stu-id="060ed-102">From/To/By Animations Overview</span></span>
 <span data-ttu-id="060ed-103">Este tópico descreve como usar animações de/para/por para animar propriedades de dependência.</span><span class="sxs-lookup"><span data-stu-id="060ed-103">This topic describes how to use From/To/By animations to animate dependency properties.</span></span> <span data-ttu-id="060ed-104">Uma animação de/para/por cria uma transição entre dois valores.</span><span class="sxs-lookup"><span data-stu-id="060ed-104">A From/To/By animation creates a transition between two values.</span></span>  

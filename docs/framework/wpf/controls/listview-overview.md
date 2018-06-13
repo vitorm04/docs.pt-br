@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557375"
 ---
 # <a name="listview-overview"></a><span data-ttu-id="15012-102">Visão geral de ListView</span><span class="sxs-lookup"><span data-stu-id="15012-102">ListView Overview</span></span>
 <span data-ttu-id="15012-103">O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição.</span><span class="sxs-lookup"><span data-stu-id="15012-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span> <span data-ttu-id="15012-104">Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.</span><span class="sxs-lookup"><span data-stu-id="15012-104">For example, a user may want to display data items in a table and also to sort its columns.</span></span>  

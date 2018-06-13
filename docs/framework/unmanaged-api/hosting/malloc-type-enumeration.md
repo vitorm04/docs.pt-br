@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442534"
 ---
 # <a name="malloctype-enumeration"></a><span data-ttu-id="ecdde-102">Enumeração MALLOC_TYPE</span><span class="sxs-lookup"><span data-stu-id="ecdde-102">MALLOC_TYPE Enumeration</span></span>
 <span data-ttu-id="ecdde-103">Contém valores que especificam as características da memória alocada.</span><span class="sxs-lookup"><span data-stu-id="ecdde-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  

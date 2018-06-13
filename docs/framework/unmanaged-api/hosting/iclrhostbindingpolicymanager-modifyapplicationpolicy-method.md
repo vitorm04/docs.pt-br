@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436248"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a><span data-ttu-id="9adc5-102">Método ICLRHostBindingPolicyManager::ModifyApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="9adc5-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Method</span></span>
 <span data-ttu-id="9adc5-103">Modifica a política de associação para o assembly especificado e cria uma nova versão da política.</span><span class="sxs-lookup"><span data-stu-id="9adc5-103">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>  

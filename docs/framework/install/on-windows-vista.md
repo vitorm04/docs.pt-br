@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397839"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a><span data-ttu-id="df5b4-103">Instalar o .NET Framework no Windows Vista e Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="df5b4-103">Install the .NET Framework on Windows Vista and Windows Server 2008</span></span>
 

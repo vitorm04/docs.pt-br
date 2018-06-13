@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aeb0415395a59e59b4d5dc78c11d8b8f0902bad8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397553"
 ---
 # <a name="jit-tracing-etw-events"></a><span data-ttu-id="bd3ae-102">Eventos ETW de rastreamento JIT</span><span class="sxs-lookup"><span data-stu-id="bd3ae-102">JIT Tracing ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="bd3ae-103">Esses eventos coletam informações sobre o êxito ou falha de inlining JIT (Just-In-Time) e chamadas tail JIT.</span><span class="sxs-lookup"><span data-stu-id="bd3ae-103">These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  

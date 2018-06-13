@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554022"
 ---
 # <a name="wrappanel"></a><span data-ttu-id="97084-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="97084-102">WrapPanel</span></span>
 <span data-ttu-id="97084-103">O <xref:System.Windows.Controls.WrapPanel> elemento Posiciona elementos filho em ordem sequencial da esquerda para a direita, quebrando o conteúdo para a próxima linha na borda da sua caixa de conteúdo.</span><span class="sxs-lookup"><span data-stu-id="97084-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  

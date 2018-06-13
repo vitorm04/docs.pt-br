@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7d557e2111a26c0865c20d8eb952c4d42b5604e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436053"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="f489a-102">Método ISymUnmanagedENCUpdate::GetLocalVariableCount</span><span class="sxs-lookup"><span data-stu-id="f489a-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
 <span data-ttu-id="f489a-103">Obtém o número de variáveis locais.</span><span class="sxs-lookup"><span data-stu-id="f489a-103">Gets the number of local variables.</span></span>  

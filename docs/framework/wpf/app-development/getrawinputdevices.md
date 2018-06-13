@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546781"
 ---
 # <a name="getrawinputdevices"></a><span data-ttu-id="96c1b-102">GetRawInputDevices</span><span class="sxs-lookup"><span data-stu-id="96c1b-102">GetRawInputDevices</span></span>
 <span data-ttu-id="96c1b-103">Permite ao PresentationHost.exe descobrir e registrar os dispositivos de dados brutos (dispositivos de interface humana) no qual o aplicativo host está interessado.</span><span class="sxs-lookup"><span data-stu-id="96c1b-103">Allows PresentationHost.exe to discover the raw input devices (Human Interface Devices) that the host application is interested in.</span></span>  

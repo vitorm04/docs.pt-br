@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555828"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a><span data-ttu-id="e782b-102">Como configurar notificação das atualizações de associação</span><span class="sxs-lookup"><span data-stu-id="e782b-102">How to: Set Up Notification of Binding Updates</span></span>
 <span data-ttu-id="e782b-103">Este exemplo mostra como configurar para ser notificado quando o destino de associação (destino) ou a origem da associação (origem) de uma associação foi atualizada.</span><span class="sxs-lookup"><span data-stu-id="e782b-103">This example shows how to set up to be notified when the binding target (target) or the binding source (source) property of a binding has been updated.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
 ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555893"
 ---
 # <a name="textblock"></a><span data-ttu-id="32862-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="32862-102">TextBlock</span></span>
 <span data-ttu-id="32862-103">O <xref:System.Windows.Controls.TextBlock> controle oferece suporte flexível de texto para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="32862-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="32862-104">O elemento é voltado principalmente para basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] cenários que não necessitam de mais de um parágrafo de texto.</span><span class="sxs-lookup"><span data-stu-id="32862-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  

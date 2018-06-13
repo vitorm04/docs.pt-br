@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553362"
 ---
 # <a name="styles-and-templates"></a><span data-ttu-id="9b8bf-102">Estilos e modelos </span><span class="sxs-lookup"><span data-stu-id="9b8bf-102">Styles and Templates</span></span>
 <span data-ttu-id="9b8bf-103">Estilos e Windows Presentation Foundation (WPF) se referem a um conjunto de recursos (estilos, modelos, disparadores e storyboards) que permitem que um aplicativo, documento ou designer de interface de usuário criar aplicativos visualmente atraentes e Padronize em uma determinada aparência para seus produtos.</span><span class="sxs-lookup"><span data-stu-id="9b8bf-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  

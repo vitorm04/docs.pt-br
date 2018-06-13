@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553865"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a><span data-ttu-id="470a4-102">Visão geral dos estilos e dos modelos de cabeçalho da coluna GridView</span><span class="sxs-lookup"><span data-stu-id="470a4-102">GridView Column Header Styles and Templates Overview</span></span>
 <span data-ttu-id="470a4-103">Esta visão geral discute a ordem de precedência para as propriedades que você usar para personalizar um cabeçalho de coluna no <xref:System.Windows.Controls.GridView> modo de exibição de um <xref:System.Windows.Controls.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="470a4-103">This overview discusses the order of precedence for properties that you use to customize a column header in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  

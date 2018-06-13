@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe54aed47d240be37ab9dbc5381235c4e962f1f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440308"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a><span data-ttu-id="1d667-102">Método IHostMemoryManager::VirtualAlloc</span><span class="sxs-lookup"><span data-stu-id="1d667-102">IHostMemoryManager::VirtualAlloc Method</span></span>
 <span data-ttu-id="1d667-103">Serve como um wrapper lógico para a função Win32 correspondente.</span><span class="sxs-lookup"><span data-stu-id="1d667-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="1d667-104">A implementação do Win32 de `VirtualAlloc` reserva ou confirma uma região de páginas no espaço de endereço virtual do processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="1d667-104">The Win32 implementation of `VirtualAlloc` reserves or commits a region of pages in the virtual address space of the calling process.</span></span>  

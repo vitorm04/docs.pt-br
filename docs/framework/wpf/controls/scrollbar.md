@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 60f27d35-8f7b-4285-89d2-28336a4c073a
 ms.openlocfilehash: 9ae7334172b5cbc4ea7fb6be3caebcf2c47589ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555997"
 ---
 # <a name="scrollbar"></a><span data-ttu-id="df5f4-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="df5f4-102">ScrollBar</span></span>
 <span data-ttu-id="df5f4-103">Um <xref:System.Windows.Controls.Primitives.ScrollBar> permite que você exiba o conteúdo que está fora da área de exibição atual deslizando o <xref:System.Windows.Controls.Primitives.Thumb> para tornar o conteúdo visível.</span><span class="sxs-lookup"><span data-stu-id="df5f4-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
