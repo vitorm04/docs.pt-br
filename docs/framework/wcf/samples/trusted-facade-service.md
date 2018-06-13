@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807655"
 ---
 # <a name="trusted-facade-service"></a>Serviço de fachada confiável
 Este cenário demonstra como fluxo de informações de identidade do chamador, de um serviço para outro usando o Windows Communication Foundation (WCF) a infraestrutura de segurança.  

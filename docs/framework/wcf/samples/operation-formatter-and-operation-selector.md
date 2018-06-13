@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808654"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formatador de operação e seletor de operação
 Este exemplo demonstra como pontos de extensibilidade do Windows Communication Foundation (WCF) podem ser usados para permitir que os dados de mensagem em um formato diferente de espera que o WCF. Por padrão, os formatadores WCF esperam parâmetros do método a ser incluído no `soap:body` elemento. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET em vez disso e invoca métodos usando esses dados.  

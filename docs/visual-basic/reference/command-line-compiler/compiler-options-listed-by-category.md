@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655818"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opções de compilador do Visual Basic listadas por categoria
 O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio. A seguir está uma lista de opções de compilador de linha de comando do Visual Basic classificadas por categoria funcional.  

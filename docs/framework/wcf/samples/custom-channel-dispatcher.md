@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809973"
 ---
 # <a name="custom-channel-dispatcher"></a>Distribuidor de canal personalizado
 Este exemplo demonstra como criar a pilha de canais de forma personalizada implementando <xref:System.ServiceModel.ServiceHostBase> diretamente e como criar um distribuidor de canal personalizado no ambiente de host da Web. O dispatcher do canal interage com <xref:System.ServiceModel.Channels.IChannelListener> para aceitar mensagens de canais e recupera da pilha de canais. Este exemplo também fornece um exemplo básico para mostrar como criar uma pilha de canais em um ambiente de host da Web usando <xref:System.ServiceModel.Activation.VirtualPathExtension>.  

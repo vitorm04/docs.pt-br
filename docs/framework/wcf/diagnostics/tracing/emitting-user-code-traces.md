@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807115"
 ---
 # <a name="emitting-user-code-traces"></a>Emitindo traços de código de usuário
 Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados pelo Windows Communication Foundation (WCF), você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente dados de instrumentação que você pode examinar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.  

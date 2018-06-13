@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807183"
 ---
 # <a name="creating-a-bindingelement"></a>Criando um BindingElement
 Associações e elementos de associação (objetos que estendem <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) são o local onde o modelo de aplicativo do Windows Communication Foundation (WCF) é associado fábricas de canais e ouvintes de canais. Sem associações, usar os canais personalizados exige a programação no nível do canal como descrito em [programação de nível de serviço de canal](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) e [programação de nível de canal cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tópico discute o requisito mínimo para habilitar o uso do seu canal no WCF, o desenvolvimento de um <xref:System.ServiceModel.Channels.BindingElement> de canal e habilitar o uso do aplicativo conforme descrito na etapa 4 do [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  

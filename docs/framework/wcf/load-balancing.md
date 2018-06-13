@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807519"
 ---
 # <a name="load-balancing"></a>Balanceamento de carga
 É uma maneira de aumentar a capacidade de aplicativos do Windows Communication Foundation (WCF) dimensioná-los por implantá-los em um farm de servidores com balanceamento de carga. Aplicativos WCF podem ser usando técnicas, incluindo os balanceadores de carga de software, como balanceamento de carga de rede do Windows de balanceamento de carga padrão, bem como soluções de balanceamento de carga com base em hardware de balanceamento de carga.  

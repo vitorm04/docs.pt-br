@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649406"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Como chamar um procedimento que retorna um valor (Visual Basic)
 Um `Function` procedimento retorna um valor para o código de chamada. Você chama, incluindo seu nome e argumentos no lado direito de uma instrução de atribuição ou em uma expressão.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804565"
 ---
 # <a name="jsonp"></a>JSONP
 Este exemplo demonstra como dar suporte a JSON com preenchimento (JSONP) em serviços WCF REST. JSONP é uma convenção usada para chamar scripts de domínio cruzado por gerar marcações de script no documento atual. O resultado é retornado em uma função de retorno de chamada especificada. JSONP baseia-se a ideia marcas como `<script src="http://..." >` pode avaliar qualquer domínio de scripts e o script recuperado por essas marcas é avaliado em um escopo no qual outras funções já podem ser definidas.  

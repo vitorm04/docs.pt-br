@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806624"
 ---
 # <a name="hierarchical-configuration-model"></a>Modelo de configuração hierárquica
 Este exemplo demonstra como implementar uma hierarquia de arquivos de configuração para serviços. Ele também mostra como as associações, comportamentos de serviço e comportamentos de ponto de extremidade são herdados de níveis mais altos na hierarquia.  

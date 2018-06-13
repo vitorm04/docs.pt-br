@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809382"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Como criar um autenticador de token de segurança personalizado
 Este tópico mostra como criar um autenticador de token de segurança personalizada e como integrá-lo com um Gerenciador de token de segurança personalizada. Um autenticador de token de segurança valida o conteúdo de um token de segurança fornecido com uma mensagem de entrada. Se a validação for bem-sucedida, o autenticador retorna uma coleção de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instâncias que, quando avaliado, retorna um conjunto de declarações.  

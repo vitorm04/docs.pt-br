@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803362"
 ---
 # <a name="channels-extensibility"></a>Extensibilidade de canais
 Esta seção contém exemplos que demonstram os canais personalizados.  

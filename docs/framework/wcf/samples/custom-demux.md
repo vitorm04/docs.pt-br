@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805558"
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este exemplo demonstra como cabeçalhos de mensagens MSMQ podem ser mapeados para operações de serviço diferentes, para que o Windows Communication Foundation (WCF) serviços que usam <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> não está limitado a usar uma operação de serviço, conforme demonstrado no [ Mensagens do enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation para enfileiramento](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemplos.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810207"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Agilidade criptográfica de segurança do WCF
 Este exemplo mostra como especificar um algoritmo de standard/personalizada para fornecer uma implementação criptográfica agile em um cliente Windows Communication Foundation (WCF) e o serviço. O exemplo é composto dos seguintes projetos:  

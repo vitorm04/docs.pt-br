@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806639"
 ---
 # <a name="extending-clients"></a>Estendendo clientes
 Em um aplicativo de chamada, a camada de modelo de serviço é responsável pela conversão de invocações do método no código do aplicativo em mensagens de saída, enviar por push para os canais subjacentes, converter resultados de volta para valores de retorno e parâmetros out em código do aplicativo e retornar os resultados de volta ao chamador. Extensões do modelo de serviço modificam ou implementam a execução ou o comportamento de comunicação e recursos que envolvem a funcionalidade de cliente ou o distribuidor, comportamentos personalizados, mensagem e interceptação de parâmetro e outras funcionalidades de extensibilidade.  
