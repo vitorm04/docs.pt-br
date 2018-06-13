@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74b0fc10b7d838265a6ccd9e2581f67a432f2c9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417791"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="3da12-102">Método ICorDebugEditAndContinueErrorInfo::GetString</span><span class="sxs-lookup"><span data-stu-id="3da12-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
 <span data-ttu-id="3da12-103">`GetString` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="3da12-103">`GetString` is obsolete.</span></span> <span data-ttu-id="3da12-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="3da12-104">Do not call this method.</span></span>  

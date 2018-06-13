@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588977"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a><span data-ttu-id="46165-102">Acesso de membro compartilhado por meio de uma instância; a expressão de qualificação não será avaliada</span><span class="sxs-lookup"><span data-stu-id="46165-102">Access of shared member through an instance; qualifying expression will not be evaluated</span></span>
 <span data-ttu-id="46165-103">Uma variável de instância de uma classe ou estrutura é usada para acessar um `Shared` variável, propriedade, procedimento ou evento definido na classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="46165-103">An instance variable of a class or structure is used to access a `Shared` variable, property, procedure, or event defined in that class or structure.</span></span> <span data-ttu-id="46165-104">Esse aviso também pode ocorrer se uma variável de instância é usada para acessar um membro implicitamente compartilhado de uma classe ou estrutura, como uma constante de enumeração, ou uma classe aninhada ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="46165-104">This warning can also occur if an instance variable is used to access an implicitly shared member of a class or structure, such as a constant or enumeration, or a nested class or structure.</span></span>  

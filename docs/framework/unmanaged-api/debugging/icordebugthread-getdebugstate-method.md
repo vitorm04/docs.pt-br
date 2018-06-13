@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419624"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a><span data-ttu-id="702b2-102">Método ICorDebugThread::GetDebugState</span><span class="sxs-lookup"><span data-stu-id="702b2-102">ICorDebugThread::GetDebugState Method</span></span>
 <span data-ttu-id="702b2-103">Obtém o estado de depuração atual deste objeto ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="702b2-103">Gets the current debug state of this ICorDebugThread object.</span></span>  

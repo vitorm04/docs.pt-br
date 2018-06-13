@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
 ms.openlocfilehash: cc1abba46224772e733780800dd104dfc7ebe9ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588824"
 ---
 # <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a><span data-ttu-id="6dc90-102">Classe delegate &#39; &lt;classname&gt; &#39; não tem método Invoke, portanto uma expressão desse tipo não pode ser o destino de uma chamada de método</span><span class="sxs-lookup"><span data-stu-id="6dc90-102">Delegate class &#39;&lt;classname&gt;&#39; has no Invoke method, so an expression of this type cannot be the target of a method call</span></span>
 <span data-ttu-id="6dc90-103">Uma chamada para `Invoke` através de um delegado falhou porque `Invoke` não está implementado na classe de delegado.</span><span class="sxs-lookup"><span data-stu-id="6dc90-103">A call to `Invoke` through a delegate has failed because `Invoke` is not implemented on the delegate class.</span></span>  

@@ -12,8 +12,10 @@ helpviewer_keywords:
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
 ms.openlocfilehash: 555e15110c7af501de05d1f395a72ca4b7800054
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595129"
 ---
 # <a name="default-visual-basic"></a><span data-ttu-id="815ae-102">Padrão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="815ae-102">Default (Visual Basic)</span></span>
 <span data-ttu-id="815ae-103">Identifica uma propriedade como a propriedade padrão de sua classe, estrutura ou interface.</span><span class="sxs-lookup"><span data-stu-id="815ae-103">Identifies a property as the default property of its class, structure, or interface.</span></span>  

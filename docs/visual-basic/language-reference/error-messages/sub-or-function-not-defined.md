@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 58e90d769d5a7f2d88b5c27d1ec7d0d28c8d7b03
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593695"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="0711e-102">Sub ou função não definida (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0711e-102">Sub or Function not defined (Visual Basic)</span></span>
 <span data-ttu-id="0711e-103">Um `Sub` ou `Function` deve ser definido para ser chamado.</span><span class="sxs-lookup"><span data-stu-id="0711e-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="0711e-104">Possíveis causas do erro incluem:</span><span class="sxs-lookup"><span data-stu-id="0711e-104">Possible causes of this error include:</span></span>  

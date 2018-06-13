@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409462"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a><span data-ttu-id="d9191-102">Implementação do provedor de automação de interface do usuário no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="d9191-102">Server-Side UI Automation Provider Implementation</span></span>
 > [!NOTE]

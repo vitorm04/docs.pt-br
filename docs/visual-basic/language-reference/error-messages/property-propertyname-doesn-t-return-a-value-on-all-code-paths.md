@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
 ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594208"
 ---
 # <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a><span data-ttu-id="f1591-102">Propriedade &#39; &lt;propertyname&gt; &#39; &#39;t retorna um valor em todos os caminhos de código</span><span class="sxs-lookup"><span data-stu-id="f1591-102">Property &#39;&lt;propertyname&gt;&#39; doesn&#39;t return a value on all code paths</span></span>
 <span data-ttu-id="f1591-103">Propriedade '\<propertyname >' não retorna um valor em todos os caminhos de código.</span><span class="sxs-lookup"><span data-stu-id="f1591-103">Property '\<propertyname>' doesn't return a value on all code paths.</span></span> <span data-ttu-id="f1591-104">Uma exceção de referência nula pode ocorrer em tempo de execução quando o resultado é usado.</span><span class="sxs-lookup"><span data-stu-id="f1591-104">A null reference exception could occur at run time when the result is used.</span></span>  

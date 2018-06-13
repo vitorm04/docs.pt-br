@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: d40a19aefdca65773d3d8e37a43d99178586fb1c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593430"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="f5d09-102">O número de índices excede o número de dimensões da matriz indexada</span><span class="sxs-lookup"><span data-stu-id="f5d09-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
 <span data-ttu-id="f5d09-103">O número de índices usado para acessar um elemento de matriz deve ser exatamente o mesmo que a classificação da matriz, ou seja, o número de dimensões declarada para ela.</span><span class="sxs-lookup"><span data-stu-id="f5d09-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  

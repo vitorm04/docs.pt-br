@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585763"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a><span data-ttu-id="2db4f-102">Expressão de constante não representável no tipo &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="2db4f-102">Constant expression not representable in type &#39;&lt;typename&gt;&#39;</span></span>
 <span data-ttu-id="2db4f-103">Você está tentando avaliar uma constante que não cabe no tipo de destino, normalmente porque ela está estourando os limites.</span><span class="sxs-lookup"><span data-stu-id="2db4f-103">You are trying to evaluate a constant that will not fit into the target type, usually because it is overflowing the range.</span></span>  

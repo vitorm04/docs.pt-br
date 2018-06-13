@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
 ms.openlocfilehash: 5d2d001ead33957c15e1ab088c79822621e4be1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595206"
 ---
 # <a name="collection-object-summary-visual-basic"></a><span data-ttu-id="7e439-102">Resumo do objeto de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e439-102">Collection Object Summary (Visual Basic)</span></span>
 <span data-ttu-id="7e439-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="7e439-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  

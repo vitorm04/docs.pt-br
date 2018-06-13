@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6d30a9f03d8717486be7cd89bb182d350a82df7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411630"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a><span data-ttu-id="c7a80-102">Método ICorDebugGenericValue::GetValue</span><span class="sxs-lookup"><span data-stu-id="c7a80-102">ICorDebugGenericValue::GetValue Method</span></span>
 <span data-ttu-id="c7a80-103">Copia o valor nesse genérico para o buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="c7a80-103">Copies the value of this generic into the specified buffer.</span></span>  

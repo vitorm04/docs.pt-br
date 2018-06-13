@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586780"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a><span data-ttu-id="365c9-102">Não foi especificado um formulário de inicialização</span><span class="sxs-lookup"><span data-stu-id="365c9-102">A startup form has not been specified</span></span>
 <span data-ttu-id="365c9-103">O aplicativo usa o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> de classe, mas não especifica o formulário de inicialização.</span><span class="sxs-lookup"><span data-stu-id="365c9-103">The application uses the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class but does not specify the startup form.</span></span>  

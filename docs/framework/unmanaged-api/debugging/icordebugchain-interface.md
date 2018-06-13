@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32889a8e8867fc42b48413463095dda423f26b85
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409835"
 ---
 # <a name="icordebugchain-interface1"></a><span data-ttu-id="48204-102">ICorDebugChain Interface1</span><span class="sxs-lookup"><span data-stu-id="48204-102">ICorDebugChain Interface1</span></span>
 <span data-ttu-id="48204-103">Representa um segmento de uma pilha de chamadas física ou lógica.</span><span class="sxs-lookup"><span data-stu-id="48204-103">Represents a segment of a physical or logical call stack.</span></span>  

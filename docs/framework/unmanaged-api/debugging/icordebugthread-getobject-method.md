@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418253"
 ---
 # <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="ec76e-102">Método ICorDebugThread::GetObject</span><span class="sxs-lookup"><span data-stu-id="ec76e-102">ICorDebugThread::GetObject Method</span></span>
 <span data-ttu-id="ec76e-103">Obtém um ponteiro de interface para o thread de runtime (CLR) de linguagem comum.</span><span class="sxs-lookup"><span data-stu-id="ec76e-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  

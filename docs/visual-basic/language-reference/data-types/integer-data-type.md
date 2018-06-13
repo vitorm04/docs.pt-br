@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591723"
 ---
 # <a name="integer-data-type-visual-basic"></a><span data-ttu-id="cb0e1-102">Tipo de dados inteiro (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb0e1-102">Integer data type (Visual Basic)</span></span>
 <span data-ttu-id="cb0e1-103">Armazena inteiros de 32 bits (4 bytes) com sinal que variam em valor de -2.147.483.648 a 2.147.483.647.</span><span class="sxs-lookup"><span data-stu-id="cb0e1-103">Holds signed 32-bit (4-byte) integers that range in value from -2,147,483,648 through 2,147,483,647.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
 ms.openlocfilehash: f4f62a9ac97c6dbd8d2426f8bfd17afa66c4001a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587463"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="632cc-102">O nome do membro de tipo anônimo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos</span><span class="sxs-lookup"><span data-stu-id="632cc-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
 <span data-ttu-id="632cc-103">Não é possível inferir um nome de membro de tipo anônimo de uma expressão complexa.</span><span class="sxs-lookup"><span data-stu-id="632cc-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  

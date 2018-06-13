@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407513"
 ---
 # <a name="icordebugassemblygetname-method"></a><span data-ttu-id="ff5d4-102">Método ICorDebugAssembly::GetName</span><span class="sxs-lookup"><span data-stu-id="ff5d4-102">ICorDebugAssembly::GetName Method</span></span>
 <span data-ttu-id="ff5d4-103">Obtém o nome do assembly que isso `ICorDebugAssembly` instância representa.</span><span class="sxs-lookup"><span data-stu-id="ff5d4-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  

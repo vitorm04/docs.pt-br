@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c6d4244ce72dedee50b65ba19978149ce86b9e87
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595642"
 ---
 # <a name="39lttypenamegt39-is-a-delegate-type"></a><span data-ttu-id="1c35b-102">&#39;&lt;TypeName&gt; &#39; é um tipo delegado</span><span class="sxs-lookup"><span data-stu-id="1c35b-102">&#39;&lt;typename&gt;&#39; is a delegate type</span></span>
 <span data-ttu-id="1c35b-103">'\<typename >' é um tipo delegado.</span><span class="sxs-lookup"><span data-stu-id="1c35b-103">'\<typename>' is a delegate type.</span></span> <span data-ttu-id="1c35b-104">A construção Delegate permite somente uma única expressão AddressOf como uma lista de argumentos.</span><span class="sxs-lookup"><span data-stu-id="1c35b-104">Delegate construction permits only a single AddressOf expression as an argument list.</span></span> <span data-ttu-id="1c35b-105">Geralmente, uma expressão AddressOf pode ser usada em vez de uma construção de delegado.</span><span class="sxs-lookup"><span data-stu-id="1c35b-105">Often an AddressOf expression can be used instead of a delegate construction.</span></span>  

@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
 ms.openlocfilehash: 8a9d89cc96e5b5875d0286becbf5b20d6895ae34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593961"
 ---
 # <a name="too-many-files"></a><span data-ttu-id="4e1af-102">Muitos arquivos</span><span class="sxs-lookup"><span data-stu-id="4e1af-102">Too many files</span></span>
 <span data-ttu-id="4e1af-103">O mais arquivos foram criados no diretório raiz que o sistema operacional permite, ou mais arquivos foram abertos que o número especificado no **arquivos =** configuração na sua configuração. Arquivo SYS.</span><span class="sxs-lookup"><span data-stu-id="4e1af-103">Either more files have been created in the root directory than the operating system permits, or more files have been opened than the number specified in the **files=** setting in your CONFIG.SYS file.</span></span>  

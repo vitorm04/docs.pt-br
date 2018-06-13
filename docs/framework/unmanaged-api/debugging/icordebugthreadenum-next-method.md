@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419598"
 ---
 # <a name="icordebugthreadenumnext-method"></a><span data-ttu-id="ef1b1-102">Método ICorDebugThreadEnum::Next</span><span class="sxs-lookup"><span data-stu-id="ef1b1-102">ICorDebugThreadEnum::Next Method</span></span>
 <span data-ttu-id="ef1b1-103">Obtém o número de instâncias de ICorDebugThread especificados de enumeração, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="ef1b1-103">Gets the number of specified ICorDebugThread instances from the enumeration, starting at the current position.</span></span>  

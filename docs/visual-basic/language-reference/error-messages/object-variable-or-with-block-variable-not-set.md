@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597657"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="04c76-102">Variável de objeto ou variável com bloco não definida</span><span class="sxs-lookup"><span data-stu-id="04c76-102">Object variable or With block variable not set</span></span>
 <span data-ttu-id="04c76-103">Uma variável de objeto inválida está sendo referenciada.</span><span class="sxs-lookup"><span data-stu-id="04c76-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="04c76-104">Esse erro pode ocorrer por várias razões:</span><span class="sxs-lookup"><span data-stu-id="04c76-104">This error can occur for several reasons:</span></span>  

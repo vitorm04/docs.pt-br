@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594602"
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a><span data-ttu-id="4952c-102">Tipo &lt;typename&gt; não é compatível com CLS</span><span class="sxs-lookup"><span data-stu-id="4952c-102">Type &lt;typename&gt; is not CLS-compliant</span></span>
 <span data-ttu-id="4952c-103">Uma variável, propriedade ou função de retorno é declarada com um tipo de dados que não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="4952c-103">A variable, property, or function return is declared with a data type that is not CLS-compliant.</span></span>  

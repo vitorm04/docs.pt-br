@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
 ms.openlocfilehash: 365ce6ece1d964d3fac2a44f7ed4c1e16f44c95d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586393"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="2fd35-102">As classes derivadas não podem acionar eventos de classe base</span><span class="sxs-lookup"><span data-stu-id="2fd35-102">Derived classes cannot raise base class events</span></span>
 <span data-ttu-id="2fd35-103">Um evento pode ser gerado somente do espaço de declaração no qual ela é declarada.</span><span class="sxs-lookup"><span data-stu-id="2fd35-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="2fd35-104">Portanto, uma classe não pode disparar eventos de qualquer outra classe, até mesmo uma da qual ela é derivada.</span><span class="sxs-lookup"><span data-stu-id="2fd35-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  

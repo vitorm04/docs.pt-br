@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533829"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a><span data-ttu-id="f8ed4-102">Como reatribuir controles existentes a um pai diferente</span><span class="sxs-lookup"><span data-stu-id="f8ed4-102">How to: Reassign Existing Controls to a Different Parent</span></span>
 <span data-ttu-id="f8ed4-103">Você pode atribuir controles que existem em seu formulário para um novo controle de contêiner.</span><span class="sxs-lookup"><span data-stu-id="f8ed4-103">You can assign controls that exist on your form to a new container control.</span></span>  

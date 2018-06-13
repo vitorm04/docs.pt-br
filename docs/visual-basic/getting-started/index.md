@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589835"
 ---
 # <a name="get-started-with-visual-basic"></a><span data-ttu-id="c2f41-102">Introdução ao Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c2f41-102">Get started with Visual Basic</span></span>
 <span data-ttu-id="c2f41-103">Esta seção da documentação ajuda você a começar o desenvolvimento de aplicativos do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c2f41-103">This section of the documentation helps you get started with Visual Basic application development.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac34fbca56c8a0f00ee3a7e0f898b8ee03287b11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412279"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a><span data-ttu-id="67842-102">Método ICorDebugFunction::GetILCode</span><span class="sxs-lookup"><span data-stu-id="67842-102">ICorDebugFunction::GetILCode Method</span></span>
 <span data-ttu-id="67842-103">Obtém a instância de ICorDebugCode que representa o código do Microsoft intermediate language (MSIL) associado ao objeto ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="67842-103">Gets the ICorDebugCode instance that represents the Microsoft intermediate language (MSIL) code associated with this ICorDebugFunction object.</span></span>  

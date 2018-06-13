@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 7144a5fd4a197fddaf1ac4132df0ff70995ad067
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594156"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a><span data-ttu-id="c38fc-102">O uso de uma variável de iteração em uma expressão lambda pode ter resultados inesperados</span><span class="sxs-lookup"><span data-stu-id="c38fc-102">Using the iteration variable in a lambda expression may have unexpected results</span></span>
 <span data-ttu-id="c38fc-103">Uso da variável de iteração em uma expressão lambda pode ter resultados inesperados.</span><span class="sxs-lookup"><span data-stu-id="c38fc-103">Using the iteration variable in a lambda expression may have unexpected results.</span></span> <span data-ttu-id="c38fc-104">Em vez disso, crie uma variável local no loop e atribua o valor da variável de iteração.</span><span class="sxs-lookup"><span data-stu-id="c38fc-104">Instead, create a local variable within the loop and assign it the value of the iteration variable.</span></span>  

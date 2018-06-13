@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
 ms.openlocfilehash: 9d786fd1e929129c420b7bec62efd0bd445d85eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586380"
 ---
 # <a name="initializer-expected"></a><span data-ttu-id="af4e5-102">Inicializador esperado</span><span class="sxs-lookup"><span data-stu-id="af4e5-102">Initializer expected</span></span>
 <span data-ttu-id="af4e5-103">Você tentou declarar uma instância de uma classe usando um inicializador de objeto no qual a lista de inicialização está vazia, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="af4e5-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  

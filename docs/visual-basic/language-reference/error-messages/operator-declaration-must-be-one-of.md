@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
 ms.openlocfilehash: eb1e7e8088ec8661be2469aff043c0f1a96e4d01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595014"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="4d1e8-102">Declaração do operador deve ser um dos: +,-, \*,\,/, ^, &amp;, Like, Mod e, Or, Xor, não, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="4d1e8-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="4d1e8-103">Você pode declarar somente um operador que é qualificado para a sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="4d1e8-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="4d1e8-104">A tabela a seguir lista os operadores que você pode declarar.</span><span class="sxs-lookup"><span data-stu-id="4d1e8-104">The following table lists the operators you can declare.</span></span>  

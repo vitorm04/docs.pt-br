@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
 ms.openlocfilehash: c195c6892097818f4292f0732c2444644fdcb96a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594800"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a><span data-ttu-id="e5046-102">As constantes da cadeia de caracteres devem terminar com aspas duplas</span><span class="sxs-lookup"><span data-stu-id="e5046-102">String constants must end with a double quote</span></span>
 <span data-ttu-id="e5046-103">Constantes de cadeia de caracteres devem começar e terminar com aspas.</span><span class="sxs-lookup"><span data-stu-id="e5046-103">String constants must begin and end with quotation marks.</span></span>  

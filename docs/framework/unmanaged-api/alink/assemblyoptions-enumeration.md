@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406261"
 ---
 # <a name="assemblyoptions-enumeration"></a><span data-ttu-id="3dc5a-102">Enumeração AssemblyOptions</span><span class="sxs-lookup"><span data-stu-id="3dc5a-102">AssemblyOptions Enumeration</span></span>
 <span data-ttu-id="3dc5a-103">Enumera as opções de assembly.</span><span class="sxs-lookup"><span data-stu-id="3dc5a-103">Enumerates the assembly options.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
 ms.openlocfilehash: 53199c2d7081445dc5490d5c54c98f93ee7522eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593159"
 ---
 # <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a><span data-ttu-id="8bd8a-102">&#39;Módulo&#39; instruções só podem ocorrer no nível de namespace ou arquivo</span><span class="sxs-lookup"><span data-stu-id="8bd8a-102">&#39;Module&#39; statements can occur only at file or namespace level</span></span>
 <span data-ttu-id="8bd8a-103">`Module` instruções devem aparecer na parte superior do seu arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.</span><span class="sxs-lookup"><span data-stu-id="8bd8a-103">`Module` statements must appear at the top of your source file immediately after `Option` and `Imports` statements, global attributes, and namespace declarations, but before all other declarations.</span></span>  

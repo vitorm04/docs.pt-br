@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91d653587d5b7c35a2a43c7eed7c4bf33e5401f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416745"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a><span data-ttu-id="11fdd-102">Interface ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="11fdd-102">ICorDebugGuidToTypeEnum Interface</span></span>
 <span data-ttu-id="11fdd-103">Fornece um enumerador que define o mapeamento entre um conjunto de GUIDs e seus tipos correspondentes, são representados por instâncias de ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="11fdd-103">Provides an enumerator that defines the mapping between a set of GUIDs and their corresponding types, which are represented by ICorDebugType instances.</span></span> <span data-ttu-id="11fdd-104">Esta interface herda os métodos da interface ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="11fdd-104">This interface inherits the methods from the ICorDebugEnum interface.</span></span>  
