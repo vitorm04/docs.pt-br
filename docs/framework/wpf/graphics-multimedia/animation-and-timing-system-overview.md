@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557960"
 ---
 # <a name="animation-and-timing-system-overview"></a>Visão geral da animação e do sistema de tempo
 Este tópico descreve como o sistema de tempo usa a animação, <xref:System.Windows.Media.Animation.Timeline>, e <xref:System.Windows.Media.Animation.Clock> classes para animar propriedades.  

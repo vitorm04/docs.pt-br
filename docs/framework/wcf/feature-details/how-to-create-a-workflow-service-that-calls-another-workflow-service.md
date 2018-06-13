@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497185"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Como criar um serviço de fluxo de trabalho que chama outro serviço de fluxo de trabalho
 Às vezes, é necessário para um serviço de fluxo de trabalho obter informações de outro serviço de fluxo de trabalho.  Este tópico demonstra como chamar um serviço de fluxo de trabalho de outro. Neste tópico, vamos criar dois serviços de fluxo de trabalho; um que tenha um método que reverte a cadeia de caracteres de entrada e outra que converte a cadeia de caracteres de entrada em maiusculas depois de reverter a cadeia de caracteres que usa o serviço primeiro.  

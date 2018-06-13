@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504205"
 ---
 # <a name="service-description"></a>Descrição do serviço
 A descrição do serviço demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com uma operação de serviço adicionais definida para retornar informações descritivas sobre o serviço. As informações retornadas listam os endereços base e os pontos de extremidade para o serviço. O serviço fornece essas informações usando o <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, e <xref:System.ServiceModel.Description.ServiceDescription> classes.  

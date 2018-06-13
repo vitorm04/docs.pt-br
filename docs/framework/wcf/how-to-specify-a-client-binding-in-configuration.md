@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499054"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Como especificar uma associação de cliente em configuração
 Neste exemplo, um aplicativo de console do cliente é criado para usar um serviço de cálculo e a associação para que o cliente é especificada declarativamente na configuração. O cliente acessa o `CalculatorService`, que implementa o `ICalculator` interface e o serviço e o cliente use o <xref:System.ServiceModel.BasicHttpBinding> classe.  
