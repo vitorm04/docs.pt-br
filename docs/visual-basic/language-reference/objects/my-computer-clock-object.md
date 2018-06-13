@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595952"
 ---
 # <a name="mycomputerclock-object"></a>Objeto My.Computer.Clock
 Fornece propriedades para acessar a hora local atual e o Tempo Universal Coordenado (equivalente ao Horário do Meridiano de Greenwich) no relógio do sistema.  

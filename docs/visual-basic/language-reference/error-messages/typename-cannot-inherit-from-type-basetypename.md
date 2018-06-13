@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598418"
 ---
 # <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;TypeName&gt; &#39; não pode herdar de &lt;tipo&gt; &#39; &lt;NomeDoTipoBase&gt; &#39; porque ele expande o acesso da base de &lt;tipo&gt; fora do assembly
 Uma classe ou interface herda de uma classe base ou interface, mas tem um nível de acesso menos restritivo.  

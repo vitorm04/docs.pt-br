@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e70a1c66baff2d91554dea47e248a7003e30c498
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414606"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>Método ICorDebugManagedCallback::UnloadClass
 Notifica o depurador que uma classe está sendo descarregada.  

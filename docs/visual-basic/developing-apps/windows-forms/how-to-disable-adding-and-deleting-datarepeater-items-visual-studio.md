@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590776"
 ---
 # <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a>Como desabilitar a adição e a exclusão de itens DataRepeater (Visual Studio)
 Por padrão, os usuários podem adicionar e excluir itens em um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle. Os usuários podem adicionar um novo item, pressionando CTRL + N quando um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> tem foco ou clicando o **AddNewItem** botão o <xref:System.Windows.Forms.BindingNavigator> controle. Os usuários podem excluir um item pressionando excluir quando um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> tem foco ou clicando o **DeleteItem** botão o <xref:System.Windows.Forms.BindingNavigator> controle.  

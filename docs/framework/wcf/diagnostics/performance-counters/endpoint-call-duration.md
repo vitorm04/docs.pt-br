@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467787"
 ---
 # <a name="endpoint-call-duration"></a>Ponto de extremidade: duração de chamada
 A duração média das chamadas para esse ponto de extremidade.  A duração média é calculada com base na equação: (N1-N0)/(D1-D0).  
