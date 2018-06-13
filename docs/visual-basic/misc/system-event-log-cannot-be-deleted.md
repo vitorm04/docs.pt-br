@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639292"
 ---
 # <a name="system-event-log-cannot-be-deleted"></a><span data-ttu-id="9dae0-102">Não é possível excluir o log de eventos do sistema</span><span class="sxs-lookup"><span data-stu-id="9dae0-102">System event log cannot be deleted</span></span>
 <span data-ttu-id="9dae0-103">Foi feita uma tentativa para excluir o log de eventos do sistema, que não pode ser excluído.</span><span class="sxs-lookup"><span data-stu-id="9dae0-103">An attempt has been made to delete the system event log, which cannot be deleted.</span></span> <span data-ttu-id="9dae0-104">O log do sistema rastreia eventos do sistema, como falhas de hardware e de inicialização do sistema.</span><span class="sxs-lookup"><span data-stu-id="9dae0-104">The system log tracks system events such as system startup and hardware failures.</span></span>  

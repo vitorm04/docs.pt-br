@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: f4d1f7531ee69ebdbfb4ccd283f9f5dcb2f000af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647638"
 ---
 # <a name="projection-operations-visual-basic"></a><span data-ttu-id="41cae-102">Operações de projeção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41cae-102">Projection Operations (Visual Basic)</span></span>
 <span data-ttu-id="41cae-103">Projeção refere-se à operação de transformar um objeto em um novo formulário que geralmente consiste apenas nas propriedades que serão usadas posteriormente.</span><span class="sxs-lookup"><span data-stu-id="41cae-103">Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used.</span></span> <span data-ttu-id="41cae-104">Usando a projeção, você pode construir um novo tipo que é criado de cada objeto.</span><span class="sxs-lookup"><span data-stu-id="41cae-104">By using projection, you can construct a new type that is built from each object.</span></span> <span data-ttu-id="41cae-105">É possível projetar uma propriedade e executar uma função matemática nela.</span><span class="sxs-lookup"><span data-stu-id="41cae-105">You can project a property and perform a mathematical function on it.</span></span> <span data-ttu-id="41cae-106">Também é possível projetar o objeto original sem alterá-lo.</span><span class="sxs-lookup"><span data-stu-id="41cae-106">You can also project the original object without changing it.</span></span>  

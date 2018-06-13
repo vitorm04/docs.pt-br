@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643340"
 ---
 # <a name="attributeusage-visual-basic"></a><span data-ttu-id="8310a-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8310a-102">AttributeUsage (Visual Basic)</span></span>
 <span data-ttu-id="8310a-103">Determina como uma classe de atributo personalizado pode ser usada.</span><span class="sxs-lookup"><span data-stu-id="8310a-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="8310a-104">`AttributeUsage` é um atributo que pode ser aplicado às definições de atributo personalizado para controlar como o novo atributo pode ser aplicado.</span><span class="sxs-lookup"><span data-stu-id="8310a-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="8310a-105">As configurações padrão têm essa aparência quando aplicadas explicitamente:</span><span class="sxs-lookup"><span data-stu-id="8310a-105">The default settings look like this when applied explicitly:</span></span>  

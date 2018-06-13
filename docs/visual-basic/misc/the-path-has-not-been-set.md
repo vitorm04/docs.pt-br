@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638324"
 ---
 # <a name="the-path-has-not-been-set"></a><span data-ttu-id="b3612-102">O caminho não foi definido</span><span class="sxs-lookup"><span data-stu-id="b3612-102">The path has not been set</span></span>
 <span data-ttu-id="b3612-103">Foi tentada uma operação de arquivo, como mover ou copiar um arquivo, sem fornecer o caminho necessário.</span><span class="sxs-lookup"><span data-stu-id="b3612-103">A file operation, such as moving or copying a file, has been attempted without supplying the necessary path.</span></span> <span data-ttu-id="b3612-104">Isso pode resultar da análise incorreta do caminho.</span><span class="sxs-lookup"><span data-stu-id="b3612-104">This may result from incorrectly parsing the path.</span></span>  

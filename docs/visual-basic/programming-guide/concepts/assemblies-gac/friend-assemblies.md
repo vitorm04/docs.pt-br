@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644375"
 ---
 # <a name="friend-assemblies-visual-basic"></a><span data-ttu-id="a6e59-102">Assemblies amigáveis (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6e59-102">Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="a6e59-103">Um *assembly friend* é um assembly que pode acessar outro assembly [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) tipos e membros.</span><span class="sxs-lookup"><span data-stu-id="a6e59-103">A *friend assembly* is an assembly that can access another assembly's [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) types and members.</span></span> <span data-ttu-id="a6e59-104">Se você identificar um assembly como um assembly amigável, não precisará marcar os tipos e membros como públicos para que eles sejam acessados por outros assemblies.</span><span class="sxs-lookup"><span data-stu-id="a6e59-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="a6e59-105">Isso é especialmente conveniente nos seguintes cenários:</span><span class="sxs-lookup"><span data-stu-id="a6e59-105">This is especially convenient in the following scenarios:</span></span>  

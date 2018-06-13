@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
 ms.openlocfilehash: 6b7351d85dab997ba6cb0ef023972e9e4e4fca14
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645250"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a><span data-ttu-id="b51fd-102">Serializando com uma declaração XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b51fd-102">Serializing with an XML Declaration (Visual Basic)</span></span>
 <span data-ttu-id="b51fd-103">Este tópico descreve como controlar se a serialização gera uma declaração XML.</span><span class="sxs-lookup"><span data-stu-id="b51fd-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  

@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
 ms.openlocfilehash: d03781209f0f9b021d540bd251c6c6025ad21422
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647158"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="eaa9a-102">Nada e cadeias de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="eaa9a-102">Nothing and Strings in Visual Basic</span></span>
 <span data-ttu-id="eaa9a-103">O tempo de execução do Visual Basic e o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] avaliar `Nothing` diferente quando se trata de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="eaa9a-103">The Visual Basic runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  

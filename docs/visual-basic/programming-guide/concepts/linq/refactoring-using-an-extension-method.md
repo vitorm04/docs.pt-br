@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
 ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647898"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="ff57c-102">Refatoração usando um método de extensão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff57c-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
 <span data-ttu-id="ff57c-103">Este exemplo é baseado no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), pela concatenação de cadeias de caracteres usando uma função pura é implementada como um método de extensão de refatoração.</span><span class="sxs-lookup"><span data-stu-id="ff57c-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
