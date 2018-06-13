@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603971"
 ---
 # <a name="distinct-clause-visual-basic"></a>Cláusula Distinct (Visual Basic)
 Restringe os valores da variável de intervalo atual para eliminar valores duplicados nas cláusulas de consulta subsequentes.  

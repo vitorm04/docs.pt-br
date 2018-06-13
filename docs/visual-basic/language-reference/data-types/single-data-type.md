@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590760"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo de dados único (Visual Basic)
 Mantém conectado IEEE de 32 bits (4 bytes) de precisão simples números de ponto flutuante cujo valor varia de - 3, 4028235E + 38 a - 1, 401298E-45 para valores negativos e de 1, 401298E-45 a 3, 4028235E + 38 para valores positivos. Números de precisão simples armazenam uma aproximação de um número real.  

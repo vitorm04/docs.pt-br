@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581749"
 ---
 # <a name="security-and-user-input"></a>Segurança e entrada do usuário
 Dados de usuário, que pode ser qualquer tipo de entrada (dados de uma solicitação da Web ou a URL de entrada para controles de um aplicativo do Microsoft Windows Forms e assim por diante), negativamente pode influenciar o código porque geralmente usados diretamente como parâmetros para chamar outro código. Essa situação é semelhante a chamar seu código com parâmetros estranhos um código mal-intencionado, e as mesmas precauções devem ser tomadas. Entrada do usuário é realmente difícil fazer seguro porque não há nenhum quadro de pilha para rastrear a presença de dados potencialmente não confiáveis.  

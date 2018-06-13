@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589799"
 ---
 # <a name="cryptographic-signatures"></a>Assinaturas criptográficas
 <a name="top"></a> Assinaturas digitais criptográficas usam algoritmos de chave pública para fornecer a integridade dos dados. Quando você assinar dados com uma assinatura digital, alguém pode verificar a assinatura e pode provar que os dados origem de você e não foi alterados depois que você assinou. Para obter mais informações sobre assinaturas digitais, consulte [serviços criptográficos](../../../docs/standard/security/cryptographic-services.md).  
