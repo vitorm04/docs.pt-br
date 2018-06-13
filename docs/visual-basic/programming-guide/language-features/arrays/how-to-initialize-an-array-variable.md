@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651564"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Como inicializar uma variável de matriz no Visual Basic
 Inicializar uma variável de matriz, incluindo uma matriz literal em uma `New` cláusula e especificando os valores iniciais da matriz. Você pode especificar o tipo ou permitir que ele ser deduzido dos valores na matriz literal. Para obter mais informações sobre como o tipo é inferido, consulte "Preencher uma matriz com valores iniciais" [matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

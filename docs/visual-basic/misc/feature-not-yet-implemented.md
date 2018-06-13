@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634892"
 ---
 # <a name="feature-not-yet-implemented"></a>Recurso ainda não implementado
 Você tentou acessar um recurso que não ainda está implementado no Visual Basic.  

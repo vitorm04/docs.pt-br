@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634912"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a>E/s de uma estrutura com campo de arquivo &#39; &lt;fieldname&gt; &#39; do tipo &#39; &lt;typename&gt; &#39; não é válido
 A estrutura que você está tentando gravar em um arquivo contém um tipo sem suporte.  

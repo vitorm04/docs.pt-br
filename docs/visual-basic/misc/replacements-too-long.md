@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634827"
 ---
 # <a name="replacements-too-long"></a>Substituições muito longos
 Você especificou uma substituição que excede o comprimento permitido.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650118"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Como rotular instruções (Visual Basic)
 Blocos de instrução são compostos de linhas de código delimitado por vírgulas. Linhas de código precedido por uma cadeia de caracteres ou inteiro de identificação são consideradas *rotulada*. Rótulos de instruções são usados para marcar uma linha de código para identificá-lo para uso com instruções de como `On Error Goto`.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651912"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenções de nomenclatura do Visual Basic
 Quando você nomeia um elemento em seu aplicativo do Visual Basic, o primeiro caractere do nome deve ser um caractere alfabético ou um sublinhado. No entanto, observe que os nomes que começam com um sublinhado não são compatíveis com o [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
