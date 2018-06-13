@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27e4abcd5e8dfe253ba8a7ea1ba5022561ed9ae7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581567"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a><span data-ttu-id="96e75-102">Assegurando a integridade dos dados com códigos hash</span><span class="sxs-lookup"><span data-stu-id="96e75-102">Ensuring Data Integrity with Hash Codes</span></span>
 <span data-ttu-id="96e75-103">Um valor de hash é um valor numérico de comprimento fixo que identifica exclusivamente a dados.</span><span class="sxs-lookup"><span data-stu-id="96e75-103">A hash value is a numeric value of a fixed length that uniquely identifies data.</span></span> <span data-ttu-id="96e75-104">Valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que eles são usados com assinaturas digitais.</span><span class="sxs-lookup"><span data-stu-id="96e75-104">Hash values represent large amounts of data as much smaller numeric values, so they are used with digital signatures.</span></span> <span data-ttu-id="96e75-105">Você pode assinar um valor de hash de forma mais eficiente que o maior valor de assinatura.</span><span class="sxs-lookup"><span data-stu-id="96e75-105">You can sign a hash value more efficiently than signing the larger value.</span></span> <span data-ttu-id="96e75-106">Valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguras.</span><span class="sxs-lookup"><span data-stu-id="96e75-106">Hash values are also useful for verifying the integrity of data sent through insecure channels.</span></span> <span data-ttu-id="96e75-107">O valor de hash de dados recebidos pode ser comparado com o valor de hash de dados como ele foi enviado para determinar se os dados foi alterados.</span><span class="sxs-lookup"><span data-stu-id="96e75-107">The hash value of received data can be compared to the hash value of data as it was sent to determine whether the data was altered.</span></span>  

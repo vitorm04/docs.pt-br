@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 736847d1-5e03-44c8-95e4-3ed2cef2746b
 ms.openlocfilehash: 118f567c16cde0675b73c6e1fa56c3b4cd16e664
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583413"
 ---
 # <a name="expression-too-complex"></a><span data-ttu-id="56280-102">Expressão muito complexa</span><span class="sxs-lookup"><span data-stu-id="56280-102">Expression too complex</span></span>
 <span data-ttu-id="56280-103">Uma expressão de ponto flutuante contém subexpressões aninhadas demais.</span><span class="sxs-lookup"><span data-stu-id="56280-103">A floating-point expression contains too many nested subexpressions.</span></span>  

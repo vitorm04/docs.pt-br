@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 757483f1e88276dd9db82de1c2a7e47b5c975b0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598224"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a><span data-ttu-id="1f9c9-102">Não foi possível inferir argumentos de tipo a partir do delegado</span><span class="sxs-lookup"><span data-stu-id="1f9c9-102">Type arguments could not be inferred from the delegate</span></span>
 <span data-ttu-id="1f9c9-103">Usa uma instrução de atribuição `AddressOf` para atribuir o endereço de um generic procedimento como um delegado, mas não fornece nenhum argumento de tipo para o procedimento genérico.</span><span class="sxs-lookup"><span data-stu-id="1f9c9-103">An assignment statement uses `AddressOf` to assign the address of a generic procedure to a delegate, but it does not supply any type arguments to the generic procedure.</span></span>  

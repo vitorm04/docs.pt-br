@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579542"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a><span data-ttu-id="93053-103">Organizar microservices e multicontainer aplicativos de alto desempenho e disponibilidade</span><span class="sxs-lookup"><span data-stu-id="93053-103">Orchestrating microservices and multicontainer applications for high scalability and availability</span></span>
 

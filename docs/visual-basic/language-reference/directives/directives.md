@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
 ms.openlocfilehash: 38d54feae5cf7bf41a825d1f6000811e2b56f319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584631"
 ---
 # <a name="directives-visual-basic"></a><span data-ttu-id="bca7b-102">Diretivas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bca7b-102">Directives (Visual Basic)</span></span>
 <span data-ttu-id="bca7b-103">Os tópicos nesta seção documentam as diretivas de compilador de código de origem do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bca7b-103">The topics in this section document the Visual Basic source code compiler directives.</span></span>  

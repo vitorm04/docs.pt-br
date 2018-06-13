@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605284"
 ---
 # <a name="type-list-visual-basic"></a><span data-ttu-id="b6223-102">Lista de tipos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6223-102">Type List (Visual Basic)</span></span>
 <span data-ttu-id="b6223-103">Especifica o *parâmetros de tipo* para um *genérico* elemento de programação.</span><span class="sxs-lookup"><span data-stu-id="b6223-103">Specifies the *type parameters* for a *generic* programming element.</span></span> <span data-ttu-id="b6223-104">Vários parâmetros são separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="b6223-104">Multiple parameters are separated by commas.</span></span> <span data-ttu-id="b6223-105">Esta é a sintaxe para um parâmetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="b6223-105">Following is the syntax for one type parameter.</span></span>  

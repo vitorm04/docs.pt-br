@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604582"
 ---
 # <a name="visual-basic-runtime-library-members"></a><span data-ttu-id="18dfd-102">Membros da biblioteca em tempo de execução do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="18dfd-102">Visual Basic Runtime Library Members</span></span>
 <span data-ttu-id="18dfd-103">O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e enumerações que constituem a biblioteca de tempo de execução do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="18dfd-103">The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library.</span></span> <span data-ttu-id="18dfd-104">Esses membros de biblioteca fornecem procedimentos, propriedades e valores constantes que você pode usar em seu código.</span><span class="sxs-lookup"><span data-stu-id="18dfd-104">These library members provide procedures, properties, and constant values you can use in your code.</span></span> <span data-ttu-id="18dfd-105">Cada módulo e a classe representam uma categoria específica de funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="18dfd-105">Each module and class represents a particular category of functionality.</span></span>  

@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
 ms.openlocfilehash: 1f36526eab1bc0964bf89398b6e0f3e74d09fdc6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583819"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a><span data-ttu-id="c9f21-102">Uma chamada de propriedade ou método não pode incluir uma referência a um objeto particular, como um argumento ou um valor de retorno</span><span class="sxs-lookup"><span data-stu-id="c9f21-102">A property or method call cannot include a reference to a private object, either as an argument or as a return value</span></span>
 <span data-ttu-id="c9f21-103">Entre as causas possíveis desse erro são:</span><span class="sxs-lookup"><span data-stu-id="c9f21-103">Among the possible causes of this error are:</span></span>  

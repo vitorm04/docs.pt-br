@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581310"
 ---
 # <a name="serialization-in-net"></a><span data-ttu-id="153b4-102">Serialização no .NET</span><span class="sxs-lookup"><span data-stu-id="153b4-102">Serialization in .NET</span></span>
 <span data-ttu-id="153b4-103">A serialização é o processo de conversão do estado de um objeto em um formulário que possa ser persistido ou transportado.</span><span class="sxs-lookup"><span data-stu-id="153b4-103">Serialization is the process of converting the state of an object into a form that can be persisted or transported.</span></span> <span data-ttu-id="153b4-104">O complemento de serialização é desserialização, que converte um fluxo em um objeto.</span><span class="sxs-lookup"><span data-stu-id="153b4-104">The complement of serialization is deserialization, which converts a stream into an object.</span></span> <span data-ttu-id="153b4-105">Juntos, esses processos permitem que os dados sejam facilmente armazenados e transferidos.</span><span class="sxs-lookup"><span data-stu-id="153b4-105">Together, these processes allow data to be easily stored and transferred.</span></span>  

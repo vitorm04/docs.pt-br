@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581723"
 ---
 # <a name="ltdatetimeserializationgt-element"></a><span data-ttu-id="85e06-102">Elemento &lt;dateTimeSerialization&gt;</span><span class="sxs-lookup"><span data-stu-id="85e06-102">&lt;dateTimeSerialization&gt; Element</span></span>
 <span data-ttu-id="85e06-103">Determina o modo de serialização de objetos <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="85e06-103">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>  

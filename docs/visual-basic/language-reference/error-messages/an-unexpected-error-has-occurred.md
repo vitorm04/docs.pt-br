@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 313128d5511ddd0f3b75c58e2c10a74eb967d130
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587639"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="cfc2d-102">Ocorreu um erro inesperado porque não foi possível adquirir um recurso do sistema operacional obrigatório para a inicialização de instância única</span><span class="sxs-lookup"><span data-stu-id="cfc2d-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
 <span data-ttu-id="cfc2d-103">O aplicativo não pôde adquirir um recurso do sistema operacional necessário.</span><span class="sxs-lookup"><span data-stu-id="cfc2d-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="cfc2d-104">Algumas das causas possíveis para esse problema são:</span><span class="sxs-lookup"><span data-stu-id="cfc2d-104">Some of the possible causes for this problem are:</span></span>  

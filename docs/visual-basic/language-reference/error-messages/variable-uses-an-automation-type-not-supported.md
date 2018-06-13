@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594336"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="fb280-102">A variável usa um tipo de automação sem suporte no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fb280-102">Variable uses an Automation type not supported in Visual Basic</span></span>
 <span data-ttu-id="fb280-103">Você tentou usar uma variável definida em uma biblioteca de tipos ou biblioteca de objeto que tem um tipo de dados não suportado pelo Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fb280-103">You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.</span></span>  

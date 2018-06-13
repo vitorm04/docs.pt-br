@@ -18,8 +18,10 @@ helpviewer_keywords:
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
 ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604478"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a><span data-ttu-id="ccb38-102">Instrução Imports (tipo e namespace .NET)</span><span class="sxs-lookup"><span data-stu-id="ccb38-102">Imports Statement (.NET Namespace and Type)</span></span>
 <span data-ttu-id="ccb38-103">Permite digitar os nomes para se referir a qualificação de namespace.</span><span class="sxs-lookup"><span data-stu-id="ccb38-103">Enables type names to be referenced without namespace qualification.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: 07838e62bd6b180f7dece79355ea7aa1d6c4527a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585574"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a><span data-ttu-id="784be-102">&#39;É&#39; requer operandos que tenham tipos de referência, mas este operando tem o tipo de valor &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="784be-102">&#39;Is&#39; requires operands that have reference types, but this operand has the value type &#39;&lt;typename&gt;&#39;</span></span>
 <span data-ttu-id="784be-103">O `Is` operador de comparação que determina se duas variáveis de objeto se referem à mesma instância.</span><span class="sxs-lookup"><span data-stu-id="784be-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="784be-104">Essa comparação não está definida para tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="784be-104">This comparison is not defined for value types.</span></span>  

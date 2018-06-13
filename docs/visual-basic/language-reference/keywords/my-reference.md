@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
 ms.openlocfilehash: f9940c67d86263f3a7e25823464b08f714a7645c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597315"
 ---
 # <a name="my-reference-visual-basic"></a><span data-ttu-id="43b42-102">Minha referência (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43b42-102">My Reference (Visual Basic)</span></span>
 <span data-ttu-id="43b42-103">O `My` recurso torna a programação mais rápida e fácil, oferecendo a você acesso intuitivo comumente usados métodos, propriedades e eventos.</span><span class="sxs-lookup"><span data-stu-id="43b42-103">The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events.</span></span> <span data-ttu-id="43b42-104">Esta tabela lista os objetos contidos no `My`e as ações que podem ser executadas com cada.</span><span class="sxs-lookup"><span data-stu-id="43b42-104">This table lists the objects contained in `My`, and the actions that can be performed with each.</span></span>  

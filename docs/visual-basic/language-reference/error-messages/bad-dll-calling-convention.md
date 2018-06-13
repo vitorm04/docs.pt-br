@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
 ms.openlocfilehash: d8c7f7aea46162215115689305f4010cb513b020
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583832"
 ---
 # <a name="bad-dll-calling-convention"></a><span data-ttu-id="8ddca-102">Convenção de chamada de DLL inválida</span><span class="sxs-lookup"><span data-stu-id="8ddca-102">Bad DLL calling convention</span></span>
 <span data-ttu-id="8ddca-103">Argumentos passados para uma biblioteca de vínculo dinâmico (DLL) devem corresponder exatamente àqueles esperado pela rotina.</span><span class="sxs-lookup"><span data-stu-id="8ddca-103">Arguments passed to a dynamic-link library (DLL) must exactly match those expected by the routine.</span></span> <span data-ttu-id="8ddca-104">Convenções de chamada lidam com número, tipo e ordem dos argumentos.</span><span class="sxs-lookup"><span data-stu-id="8ddca-104">Calling conventions deal with number, type, and order of arguments.</span></span> <span data-ttu-id="8ddca-105">Seu programa pode chamar uma rotina em uma DLL que está sendo passada o tipo incorreto ou o número de argumentos.</span><span class="sxs-lookup"><span data-stu-id="8ddca-105">Your program may be calling a routine in a DLL that is being passed the wrong type or number of arguments.</span></span>  

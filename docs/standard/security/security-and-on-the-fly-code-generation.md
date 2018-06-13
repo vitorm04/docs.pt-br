@@ -12,8 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2cfc93e1c8d3d9e878d96de164b0d646e62c0998
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583962"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a><span data-ttu-id="0314f-102">Segurança e geração de código durante a execução</span><span class="sxs-lookup"><span data-stu-id="0314f-102">Security and On-the-Fly Code Generation</span></span>
 <span data-ttu-id="0314f-103">Algumas bibliotecas operam por geração de código e executá-lo para executar alguma operação para o chamador.</span><span class="sxs-lookup"><span data-stu-id="0314f-103">Some libraries operate by generating code and running it to perform some operation for the caller.</span></span> <span data-ttu-id="0314f-104">O problema básico está gerando o código em nome do código de confiança menor e executá-lo em uma relação de confiança superior.</span><span class="sxs-lookup"><span data-stu-id="0314f-104">The basic problem is generating code on behalf of lesser-trust code and running it at a higher trust.</span></span> <span data-ttu-id="0314f-105">O problema piora quando o chamador pode influenciar a geração de código, portanto certifique-se de que somente o código que você considerar seguros é gerado.</span><span class="sxs-lookup"><span data-stu-id="0314f-105">The problem worsens when the caller can influence code generation, so you must ensure that only code you consider safe is generated.</span></span>  

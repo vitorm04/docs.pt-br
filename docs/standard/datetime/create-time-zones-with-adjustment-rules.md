@@ -14,8 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c63b93e0dc587571605edb305979b8f97bf54cb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576488"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a><span data-ttu-id="ccd78-102">Como: criar fusos horários com regras de ajuste</span><span class="sxs-lookup"><span data-stu-id="ccd78-102">How to: Create time zones with adjustment rules</span></span>
 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605427"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a><span data-ttu-id="4a151-102">Tipos de dados de resultados do operador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4a151-102">Data Types of Operator Results (Visual Basic)</span></span>
 <span data-ttu-id="4a151-103">Visual Basic determina o tipo de dados de resultado de uma operação com base nos tipos de dados dos operandos.</span><span class="sxs-lookup"><span data-stu-id="4a151-103">Visual Basic determines the result data type of an operation based on the data types of the operands.</span></span> <span data-ttu-id="4a151-104">Em alguns casos, isso pode ser um tipo de dados com um intervalo maior do que o operando.</span><span class="sxs-lookup"><span data-stu-id="4a151-104">In some cases this might be a data type with a greater range than that of either operand.</span></span>  

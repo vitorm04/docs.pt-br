@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580959"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a><span data-ttu-id="0fe31-102">Ordem de serialização personalizada com o XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="0fe31-102">Custom Serialization Order With XmlSerializer</span></span>
 [<span data-ttu-id="0fe31-103">Baixar Exemplo</span><span class="sxs-lookup"><span data-stu-id="0fe31-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635146"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a><span data-ttu-id="301d7-102">Linha &lt;número&gt; não pode ser lido porque ele excede o tamanho máximo da linha.</span><span class="sxs-lookup"><span data-stu-id="301d7-102">Line &lt;number&gt; cannot be read because it exceeds the maximum line size.</span></span>
 <span data-ttu-id="301d7-103">A linha não pode ser lido porque ele excede o tamanho máximo da linha.</span><span class="sxs-lookup"><span data-stu-id="301d7-103">The line cannot be read because it exceeds the maximum line size.</span></span> <span data-ttu-id="301d7-104">Geralmente, isso significa que há uma aspa de abertura do arquivo, mas não há aspas de fechamento.</span><span class="sxs-lookup"><span data-stu-id="301d7-104">Usually this means that there is an opening quotation mark in the file, but no closing quotation mark.</span></span>  

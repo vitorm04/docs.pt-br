@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
 ms.openlocfilehash: 32edc55220acdbe547bd8808f32bd2508c6e319f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585110"
 ---
 # <a name="argument-not-optional-visual-basic"></a><span data-ttu-id="748f8-102">Argumento não opcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="748f8-102">Argument not optional (Visual Basic)</span></span>
 <span data-ttu-id="748f8-103">O número e tipos de argumentos devem corresponder aos esperados.</span><span class="sxs-lookup"><span data-stu-id="748f8-103">The number and types of arguments must match those expected.</span></span> <span data-ttu-id="748f8-104">Há um número incorreto de argumentos, ou um argumento omitido não é opcional.</span><span class="sxs-lookup"><span data-stu-id="748f8-104">Either there is an incorrect number of arguments, or an omitted argument is not optional.</span></span> <span data-ttu-id="748f8-105">Um argumento só pode ser omitido de uma chamada para um procedimento definido pelo usuário se ele foi declarado `Optional` na definição do procedimento.</span><span class="sxs-lookup"><span data-stu-id="748f8-105">An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.</span></span>  

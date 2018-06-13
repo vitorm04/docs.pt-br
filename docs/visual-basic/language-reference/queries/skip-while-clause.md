@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602012"
 ---
 # <a name="skip-while-clause-visual-basic"></a><span data-ttu-id="9b72e-102">Ignorar cláusula While (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b72e-102">Skip While Clause (Visual Basic)</span></span>
 <span data-ttu-id="9b72e-103">Ignora elementos em uma coleção desde que uma condição especificada seja `true` e, em seguida, retorna os elementos restantes.</span><span class="sxs-lookup"><span data-stu-id="9b72e-103">Bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span></span>  

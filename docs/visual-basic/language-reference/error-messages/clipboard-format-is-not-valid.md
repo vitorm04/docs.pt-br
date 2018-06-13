@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
 ms.openlocfilehash: eef16096b269902dbaca6a344abf4c5f6a504fb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586215"
 ---
 # <a name="clipboard-format-is-not-valid"></a><span data-ttu-id="8d8ad-102">Formato inválido de área de transferência</span><span class="sxs-lookup"><span data-stu-id="8d8ad-102">Clipboard format is not valid</span></span>
 <span data-ttu-id="8d8ad-103">O formato de área de transferência especificado é incompatível com o método que está sendo executado.</span><span class="sxs-lookup"><span data-stu-id="8d8ad-103">The specified Clipboard format is incompatible with the method being executed.</span></span> <span data-ttu-id="8d8ad-104">Entre as causas possíveis desse erro são:</span><span class="sxs-lookup"><span data-stu-id="8d8ad-104">Among the possible causes for this error are:</span></span>  

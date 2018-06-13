@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597141"
 ---
 # <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a><span data-ttu-id="9f3a9-102">Tipo de &#39; &lt;variablename&gt; &#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo</span><span class="sxs-lookup"><span data-stu-id="9f3a9-102">Type of &#39;&lt;variablename&gt;&#39; cannot be inferred because the loop bounds and the step variable do not widen to the same type</span></span>
 <span data-ttu-id="9f3a9-103">Você escreveu uma `For...Next` loop no qual o compilador não é possível inferir um tipo de dados para a variável de controle de loop porque as seguintes condições forem verdadeiras:</span><span class="sxs-lookup"><span data-stu-id="9f3a9-103">You have written a `For...Next` loop in which the compiler cannot infer a data type for the loop control variable because the following conditions are true:</span></span>  

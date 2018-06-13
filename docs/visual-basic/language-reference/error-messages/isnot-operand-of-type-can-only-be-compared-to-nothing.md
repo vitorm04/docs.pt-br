@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
 ms.openlocfilehash: 44cc17c73b476e5e322b9b58b021bc7bcd63167f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587590"
 ---
 # <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a><span data-ttu-id="c6497-102">&#39;IsNot&#39; operando do tipo &#39;typename&#39; só pode ser comparado a &#39;nada&#39;, pois &#39;typename&#39; é um tipo anulável</span><span class="sxs-lookup"><span data-stu-id="c6497-102">&#39;IsNot&#39; operand of type &#39;typename&#39; can only be compared to &#39;Nothing&#39;, because &#39;typename&#39; is a nullable type</span></span>
 <span data-ttu-id="c6497-103">Uma variável declarada como anulável foi comparada com uma expressão diferente de `Nothing` usando o `IsNot` operador.</span><span class="sxs-lookup"><span data-stu-id="c6497-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  

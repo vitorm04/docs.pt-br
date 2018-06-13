@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
 ms.openlocfilehash: 9b7a585dbe6b1da5e0f3b17e61e6407b52439601
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595040"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a><span data-ttu-id="af3be-102">Não é possível criar o assembly de nome forte do arquivo de chave &#39; &lt;filename&gt;&#39;: &lt;erro&gt;</span><span class="sxs-lookup"><span data-stu-id="af3be-102">Unable to create strong-named assembly from key file &#39;&lt;filename&gt;&#39;: &lt;error&gt;</span></span>
 <span data-ttu-id="af3be-103">Não foi possível criar um assembly de nome forte do arquivo de chave especificado.</span><span class="sxs-lookup"><span data-stu-id="af3be-103">A strong-named assembly could not be created from the specified key file.</span></span>  

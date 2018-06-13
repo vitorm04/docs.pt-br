@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
 ms.openlocfilehash: 99901432375c02e6a0e500cb772f8fd029276b2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587427"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="9b62a-102">A cláusula de identificadores requer uma variável WithEvents definida no tipo recipiente ou em um de seus tipos base</span><span class="sxs-lookup"><span data-stu-id="9b62a-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
 <span data-ttu-id="9b62a-103">Você não forneceu um `WithEvents` variável no seu `Handles` cláusula.</span><span class="sxs-lookup"><span data-stu-id="9b62a-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="9b62a-104">O `Handles` palavra-chave no final de uma declaração de procedimento faz com que ele manipule eventos gerados por uma variável de objeto declarada usando o `WithEvents` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="9b62a-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>  

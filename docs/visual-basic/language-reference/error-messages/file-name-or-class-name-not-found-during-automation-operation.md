@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 6883c208-de5e-44da-a525-b50122e5a170
 ms.openlocfilehash: 44706779abd005ee35bcd6d28b12ad2f889f6215
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584586"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a><span data-ttu-id="8d5fd-102">O nome do arquivo ou da classe não foi localizado durante a operação de automação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d5fd-102">File name or class name not found during Automation operation (Visual Basic)</span></span>
 <span data-ttu-id="8d5fd-103">O nome especificado para nome de arquivo ou classe em uma chamada para o `GetObject` não foi possível encontrar a função.</span><span class="sxs-lookup"><span data-stu-id="8d5fd-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span></span>  

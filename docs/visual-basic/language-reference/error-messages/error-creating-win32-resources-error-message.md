@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584573"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a><span data-ttu-id="fa4c8-102">Erro ao criar recursos do Win32: &lt;mensagem de erro&gt;</span><span class="sxs-lookup"><span data-stu-id="fa4c8-102">Error creating Win32 resources: &lt;error message&gt;</span></span>
 <span data-ttu-id="fa4c8-103">O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto.</span><span class="sxs-lookup"><span data-stu-id="fa4c8-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="fa4c8-104">O vinculador relatou um erro ao criar um recurso em memória.</span><span class="sxs-lookup"><span data-stu-id="fa4c8-104">The linker has reported an error creating an in-memory resource.</span></span> <span data-ttu-id="fa4c8-105">Isso pode ser um problema com o ambiente ou o computador pode estar com pouca memória.</span><span class="sxs-lookup"><span data-stu-id="fa4c8-105">This might be a problem with the environment, or your computer might be low on memory.</span></span>  

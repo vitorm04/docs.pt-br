@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597504"
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a><span data-ttu-id="35c64-102">Não é possível gravar no arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;</span><span class="sxs-lookup"><span data-stu-id="35c64-102">Unable to write to output file &#39;&lt;filename&gt;&#39;: &lt;error&gt;</span></span>
 <span data-ttu-id="35c64-103">Ocorreu um problema na criação do arquivo.</span><span class="sxs-lookup"><span data-stu-id="35c64-103">There was a problem creating the file.</span></span>  

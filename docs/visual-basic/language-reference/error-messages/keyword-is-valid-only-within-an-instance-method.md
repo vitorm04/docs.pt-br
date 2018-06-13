@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 2d9e26aa7dccf1b9c6390a20a59b10a0d248969d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586354"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a><span data-ttu-id="0bc4a-102">&#39;&lt;palavra-chave&gt; &#39; é válido somente dentro de um método de instância</span><span class="sxs-lookup"><span data-stu-id="0bc4a-102">&#39;&lt;keyword&gt;&#39; is valid only within an instance method</span></span>
 <span data-ttu-id="0bc4a-103">O `Me`, `MyClass`, e `MyBase` palavras-chave se referem a instâncias de classe específica.</span><span class="sxs-lookup"><span data-stu-id="0bc4a-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="0bc4a-104">Você não pode usá-las dentro de um compartilhado `Function` ou `Sub` procedimento.</span><span class="sxs-lookup"><span data-stu-id="0bc4a-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  

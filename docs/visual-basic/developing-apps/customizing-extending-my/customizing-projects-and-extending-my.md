@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586832"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a><span data-ttu-id="b6adb-102">Personalizando projetos e estendendo My com o Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b6adb-102">Customizing Projects and Extending My with Visual Basic</span></span>
 <span data-ttu-id="b6adb-103">Você pode personalizar modelos de projeto para fornecer mais `My` objetos.</span><span class="sxs-lookup"><span data-stu-id="b6adb-103">You can customize project templates to provide additional `My` objects.</span></span> <span data-ttu-id="b6adb-104">Isso facilita para outros desenvolvedores localizar e usar seus objetos.</span><span class="sxs-lookup"><span data-stu-id="b6adb-104">This makes it easy for other developers to find and use your objects.</span></span>  

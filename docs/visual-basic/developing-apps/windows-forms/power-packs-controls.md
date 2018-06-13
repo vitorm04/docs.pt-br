@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 5e53a2d2-f200-4357-8b20-430f8f4860a4
 ms.openlocfilehash: 8a55b2ecf1271c364c897a6baa88558acc57f104
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584192"
 ---
 # <a name="visual-basic-power-packs-controls"></a><span data-ttu-id="f612b-102">Controles do Visual Basic Power Packs</span><span class="sxs-lookup"><span data-stu-id="f612b-102">Visual Basic Power Packs Controls</span></span>
 <span data-ttu-id="f612b-103">Controles do Visual Basic Power Packs são adicionais aos controles do Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="f612b-103">Visual Basic Power Packs controls are additional Windows Forms controls.</span></span> <span data-ttu-id="f612b-104">Eles não são incluídos no Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f612b-104">They are not included in Visual Studio.</span></span>  <span data-ttu-id="f612b-105">Você pode [baixá-los](http://go.microsoft.com/fwlink/?LinkId=321343), mas eles são fornecidos como-está sem suporte.</span><span class="sxs-lookup"><span data-stu-id="f612b-105">You can [download them](http://go.microsoft.com/fwlink/?LinkId=321343), but they are provided as-is, without support.</span></span>  

@@ -17,8 +17,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c0d5b72e9067a5a6304d88d1e09716088637cbfd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581710"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a><span data-ttu-id="341af-102">Como acessar dispositivos de criptografia de hardware</span><span class="sxs-lookup"><span data-stu-id="341af-102">How to: Access Hardware Encryption Devices</span></span>
 <span data-ttu-id="341af-103">Você pode usar o <xref:System.Security.Cryptography.CspParameters> classe acessem dispositivos de criptografia de hardware.</span><span class="sxs-lookup"><span data-stu-id="341af-103">You can use the <xref:System.Security.Cryptography.CspParameters> class to access hardware encryption devices.</span></span> <span data-ttu-id="341af-104">Por exemplo, você pode usar esta classe para integrar seu aplicativo com um cartão inteligente, um gerador de número aleatório de hardware ou uma implementação de um determinado algoritmo de criptografia de hardware.</span><span class="sxs-lookup"><span data-stu-id="341af-104">For example, you can use this class to integrate your application with a smart card, a hardware random number generator, or a hardware implementation of a particular cryptographic algorithm.</span></span>  

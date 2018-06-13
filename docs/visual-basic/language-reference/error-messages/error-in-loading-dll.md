@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
 ms.openlocfilehash: ac21c4d52b248025ee26bac3e511bb5b0a0b668e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584677"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a><span data-ttu-id="8ad9b-102">Erro no carregamento da DLL (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ad9b-102">Error in loading DLL (Visual Basic)</span></span>
 <span data-ttu-id="8ad9b-103">Uma biblioteca de vínculo dinâmico (DLL) é uma biblioteca especificada no `Lib` cláusula de um `Declare` instrução.</span><span class="sxs-lookup"><span data-stu-id="8ad9b-103">A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement.</span></span> <span data-ttu-id="8ad9b-104">Possíveis causas para esse erro incluem:</span><span class="sxs-lookup"><span data-stu-id="8ad9b-104">Possible causes for this error include:</span></span>  
