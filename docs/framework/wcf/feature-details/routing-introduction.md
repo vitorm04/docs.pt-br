@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496858"
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço de roteamento fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica complexa de roteamento que permite que você implemente cenários como agregação de serviço, controle de versão do serviço, o roteamento de prioridade e roteamento de multicast. O serviço de roteamento também fornece erro tratamento que permite que você configure listas de pontos de extremidade de backup, para que as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  

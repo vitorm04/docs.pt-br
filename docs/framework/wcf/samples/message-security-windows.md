@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502355"
 ---
 # <a name="message-security-windows"></a>Segurança de mensagens do Windows
 Este exemplo demonstra como configurar um <xref:System.ServiceModel.WSHttpBinding> associação para usar a segurança de nível de mensagem com a autenticação do Windows. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é hospedado no Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).  

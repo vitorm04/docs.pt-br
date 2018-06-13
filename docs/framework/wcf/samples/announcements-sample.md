@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500032"
 ---
 # <a name="announcements-sample"></a>Exemplo de anúncios
 Este exemplo mostra como usar a funcionalidade de lançamento do recurso de descoberta. Anúncios de permitir que os serviços enviar mensagens de aviso que contém metadados sobre o serviço. Por padrão, um anúncio de saudação é enviado quando o serviço é iniciado e um anúncio bye é enviado quando o serviço foi desligado. Esses anúncios podem ser multicast ou eles podem ser enviados ponto a ponto. Este exemplo consiste de cliente e o serviço de dois projetos.  

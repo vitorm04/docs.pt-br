@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500136"
 ---
 # <a name="understanding-http-authentication"></a>Noções básicas de autenticação HTTP
 A autenticação é o processo de identificar se um cliente tem permissão para acessar um recurso. O protocolo HTTP oferece suporte à autenticação como um meio de negociação de acesso a um recurso seguro.  

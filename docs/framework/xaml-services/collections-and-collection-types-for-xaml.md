@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562970"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>Coleções e tipos de coleção para XAML
 Este tópico descreve como definir propriedades de tipos que se destinam para dar suporte a uma coleção e para dar suporte a sintaxe XAML para criar uma instância de coleção de itens como elementos filho de um elemento do objeto pai ou um elemento de propriedade.  

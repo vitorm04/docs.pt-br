@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497952"
 ---
 # <a name="wcf-discovery"></a>Descoberta de WCF
 Windows Communication Foundation (WCF) oferece suporte para habilitar o serviço seja detectável em tempo de execução de uma maneira interoperável usando o protocolo WS-Discovery. Serviços WCF podem anunciar a disponibilidade de rede usando uma mensagem de multicast ou em um servidor de proxy de descoberta. Aplicativos cliente podem pesquisar a rede ou um servidor de proxy de descoberta para localizar os serviços que atendem a um conjunto de critérios. Os tópicos nesta seção fornecem uma visão geral e descrevem o modelo de programação para esse recurso em detalhes.  

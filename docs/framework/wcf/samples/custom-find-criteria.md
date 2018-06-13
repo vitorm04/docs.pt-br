@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503204"
 ---
 # <a name="custom-find-criteria"></a>Critérios de localização personalizados
 Este exemplo demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizado. Os clientes usam a funcionalidade de correspondência de escopo personalizado para refinar e tê ainda mais a funcionalidade de localização fornecida pelo sistema de descoberta do WCF. O cenário que abrange a este exemplo é o seguinte:  

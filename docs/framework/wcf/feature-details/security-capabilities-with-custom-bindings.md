@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497419"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Recursos de segurança com associações personalizadas
 Você pode executar tarefas mais comuns de segurança usando uma das associações fornecidas pelo sistema. Se você precisar de mais controle, no entanto, você pode criar uma associação personalizada com um <xref:System.ServiceModel.Channels.SecurityBindingElement>, conforme explicado nestes tópicos. Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  

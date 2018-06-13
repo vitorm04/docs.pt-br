@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500364"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confiança
 Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web são projetados para que o acesso aos recursos adicionais (como bancos de dados ou outros serviços da Web) é encapsulado na lógica de negócios do serviço Web. Esses recursos devem ser protegidos contra acesso não autorizado. A ilustração a seguir mostra um processo de subsistema confiável.  

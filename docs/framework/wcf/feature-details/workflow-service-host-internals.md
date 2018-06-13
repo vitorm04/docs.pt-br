@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505499"
 ---
 # <a name="workflow-service-host-internals"></a>Internos do host de serviço de fluxo de trabalho
 <xref:System.ServiceModel.WorkflowServiceHost> Fornece um host para os serviços de fluxo de trabalho. Ele é responsável por escutar mensagens de entrada e roteá-los para a instância do serviço de fluxo de trabalho apropriado, ele controla descarregar e persistentes de fluxos de trabalho ociosos e muito mais. Este tópico descreve como WorkflowServiceHost processa mensagens de entrada.  

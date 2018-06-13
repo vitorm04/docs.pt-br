@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506487"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de pontos de extremidade padrão
 Este exemplo demonstra como usar pontos de extremidade padrão em arquivos de configuração de serviço. Um ponto de extremidade padrão permite que o usuário simplificar as definições de ponto de extremidade usando uma única propriedade para descrever um endereço, associação e contrato combinação com propriedades adicionais associadas a ele. Este exemplo demonstra como definir e implementar um ponto de extremidade padrão personalizado e como definir propriedades específicas no ponto de extremidade.  

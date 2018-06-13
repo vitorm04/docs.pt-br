@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502826"
 ---
 # <a name="http-acknowledgement-channel"></a>Canal de reconhecimento de HTTP
 O canal de reconhecimento de HTTP é um exemplo de um canal em camadas que altera o padrão de mensagens unidirecional, permitindo que um serviço para confirmar ou recusar as mensagens de entrada em vez de enviar automaticamente uma confirmação no recebimento. O canal de reconhecimento de HTTP também permite que o serviço de confirmação de atraso até que ele pode tornar uma garantia de nível de negócios que a mensagem seja processada.  

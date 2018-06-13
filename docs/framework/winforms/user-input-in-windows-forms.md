@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537727"
 ---
 # <a name="user-input-in-windows-forms"></a>Entrada do usuário no Windows Forms
 O Windows Forms inclui um modelo de entrada do usuário com base em eventos que são gerados durante o processamento de mensagens do Windows relacionadas. Os tópicos nesta seção fornecem informações sobre entrada do usuário com mouse e teclado, incluindo exemplos de código que demonstram como realizar tarefas específicas.  

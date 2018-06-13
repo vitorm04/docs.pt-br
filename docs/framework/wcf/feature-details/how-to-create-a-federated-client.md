@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496965"
 ---
 # <a name="how-to-create-a-federated-client"></a>Como criar um cliente federado
 No Windows Communication Foundation (WCF), criando um cliente para um *serviço federado* consiste em três etapas principais:  

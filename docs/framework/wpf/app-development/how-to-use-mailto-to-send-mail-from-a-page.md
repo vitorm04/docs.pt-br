@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544811"
 ---
 # <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>Como: usar mailto: para enviar email de uma página
 Este exemplo mostra como usar <xref:System.Windows.Documents.Hyperlink> em conjunto com um **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  

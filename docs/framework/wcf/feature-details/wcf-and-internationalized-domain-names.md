@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498030"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF e nomes de domínio internacionalizados
 Foi adicionado suporte para permitir que os serviços WCF com nomes de domínio internacionalizados (IDNS). Um nome de domínio internacionalizados é um nome de domínio que contém caracteres não-ASCII. Esse suporte inclui a capacidade de hospedar um serviço WCF com um nome IDN e um cliente WCF para se comunicar com um serviço web com um nome IDN.  

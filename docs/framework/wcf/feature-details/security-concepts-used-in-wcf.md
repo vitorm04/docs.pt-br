@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497627"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceitos de segurança utilizados no WCF
 Segurança do Windows Communication Foundation (WCF) é criada nos conceitos já está em uso e implantada em várias infraestruturas de segurança.  

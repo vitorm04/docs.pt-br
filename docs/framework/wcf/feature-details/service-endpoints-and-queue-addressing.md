@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504936"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leem de filas e como pontos de extremidade de serviço são mapeados para filas. Como um lembrete, a ilustração a seguir mostra clássica, implantação de aplicativo na fila do Windows Communication Foundation (WCF).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536989"
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>Visão geral do controle PrintPreviewControl (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> é usado para exibir um [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) como ele aparecerá quando impresso. Este controle tem botões não ou outros elementos de interface do usuário, normalmente você usar o <xref:System.Windows.Forms.PrintPreviewControl> apenas se você quiser escrever sua própria interface de usuário de visualização de impressão. Se quiser que a interface de usuário padrão, use um <xref:System.Windows.Forms.PrintPreviewDialog> controlar; consulte [visão geral do controle PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md) para obter uma visão geral.  

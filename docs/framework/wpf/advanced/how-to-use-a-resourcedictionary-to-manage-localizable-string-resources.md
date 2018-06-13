@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544492"
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Como usar um ResourceDictionary para gerenciar recursos da cadeia de caracteres localizáveis
 Este exemplo mostra como usar um <xref:System.Windows.ResourceDictionary> para recursos do pacote de cadeia de caracteres localizáveis para aplicativos do Windows Presentation Foundation (WPF).  

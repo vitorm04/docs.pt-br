@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501043"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 Este exemplo mostra como inserir metadados XML personalizado para os metadados de descoberta para um ponto de extremidade detectável exposto por um serviço. O exemplo e mostra como um cliente pode procurar o serviço e extrair esses dados. Este exemplo consiste em dois projetos, serviço e cliente.  

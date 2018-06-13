@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501731"
 ---
 # <a name="multiple-contracts"></a>Vários contratos
 O exemplo de vários contratos demonstra como implementar mais de um contrato de um serviço e como configurar pontos de extremidade de comunicação com cada um dos contratos implementados. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). O serviço foi modificado para definir dois contratos, o `ICalculator` contrato e o `ICalculatorSession` contrato.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498365"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Como especificar uma associação de cliente em código
 Neste exemplo, um cliente é criado para usar um serviço de cálculo e a associação para esse cliente é especificada imperativa no código. O cliente acessa o `CalculatorService`, que implementa o `ICalculator` interface e o serviço e o cliente use o <xref:System.ServiceModel.BasicHttpBinding> classe.  

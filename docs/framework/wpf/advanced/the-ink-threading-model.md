@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547873"
 ---
 # <a name="the-ink-threading-model"></a>O modelo de threading da tinta
 Um dos benefícios da tinta em um Tablet PC é que ela se parece muito com escrever com uma caneta comum e papel.  Para fazer isso, a caneta eletrônica coleta dados de entrada a uma taxa muito maior do que um mouse e renderiza a tinta enquanto o usuário escreve.  O thread da interface do usuário do aplicativo não é suficiente para coletar dados da caneta e renderizar a tinta, porque ele pode ser bloqueado.  Para resolver isso, um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa dois threads adicionais quando um usuário escreve com tinta.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496819"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cache com suporte para serviços HTTP Web do WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] permite que você use o mecanismo de cache declarativo já disponível em ASP.NET em seus serviços WCF Web HTTP. Isso permite que você para respostas de cache de suas operações de serviço WCF Web HTTP. Quando um usuário envia um HTTP GET para o serviço que está configurado para armazenar em cache, ASP.NET envia a resposta armazenada em cache e o método de serviço não for chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET é chamado o método de serviço e uma vez é armazenado em cache a resposta. Para obter mais informações sobre o cache do ASP.NET, consulte [visão geral de cache do ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  

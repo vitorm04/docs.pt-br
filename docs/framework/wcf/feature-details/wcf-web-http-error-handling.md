@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498479"
 ---
 # <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF
 Tratamento de erros do Windows Communication Foundation (WCF) HTTP da Web permite que você retorne erros dos serviços WCF Web HTTP que especifique um código de status HTTP e retornam detalhes do erro usando o mesmo formato que a operação (por exemplo, XML ou JSON).  

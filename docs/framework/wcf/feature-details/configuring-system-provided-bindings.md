@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496832"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurando associações fornecidas pelo sistema
 Associações de especificar o mecanismo de comunicação para usar ao conversar com um ponto de extremidade e indicar como se conectar a um ponto de extremidade. Associações consistem em elementos que definem como os canais do Windows Communication Foundation (WCF) são colocados para fornecer os recursos de comunicação solicitado. Uma associação contém três tipos de elementos:  

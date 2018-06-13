@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497484"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Considerações de segurança para sessões seguras
 Você deve considerar os itens a seguir que afetam a segurança ao implementar sessões seguras. Para obter mais informações sobre considerações de segurança, consulte [considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) e [práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  

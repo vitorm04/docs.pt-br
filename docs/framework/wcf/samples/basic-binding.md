@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498936"
 ---
 # <a name="basic-binding"></a>Associações básicas
 Esta seção contém exemplos básicos que demonstram o uso do atributo de associação de um elemento de ponto de extremidade.  

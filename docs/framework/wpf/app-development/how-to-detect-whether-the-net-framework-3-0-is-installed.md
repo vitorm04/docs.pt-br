@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546485"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Como detectar se o .NET Framework 3.0 está instalado
 Antes dos administradores podem implantar aplicativos do Microsoft .NET Framework em um sistema, eles devem primeiro confirmar que o tempo de execução do .NET Framework está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework está presente em um sistema.  

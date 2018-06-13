@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503675"
 ---
 # <a name="service-debug-behavior"></a>Comportamento de depuração de serviço
 Este exemplo demonstra como as configurações de comportamento de serviço podem ser configuradas. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define explicitamente o comportamento de depuração de serviço no arquivo de configuração. Ele também pode ser feito imperativa no código.  

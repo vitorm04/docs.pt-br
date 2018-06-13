@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504192"
 ---
 # <a name="uritemplate-table-sample"></a>Exemplo de tabela de UriTemplate
 O <xref:System.UriTemplateTable> classe fornece uma estrutura de tabela associativa dicionário semelhante para trabalhar com um conjunto de `UriTemplate` instâncias. Específico URIs Uniform Resource Identifier () pode ser correspondida com eficiência todos os modelos de tabela e dados associados ao modelo correspondente podem ser recuperados.  

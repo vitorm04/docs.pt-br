@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505225"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Como hospedar um serviço do WCF em um aplicativo gerenciado
 Para hospedar um serviço dentro de um aplicativo gerenciado, o código inserido para o serviço dentro do código de aplicativo gerenciado, definir um ponto de extremidade para o serviço de imperativa no código, declarativamente por meio de configuração ou usando os pontos de extremidade padrão e, em seguida, criar um instância do <xref:System.ServiceModel.ServiceHost>.  

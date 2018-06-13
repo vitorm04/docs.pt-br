@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563591"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Como definir o alinhamento horizontal e vertical de um TileBrush
 Este exemplo mostra como controlar o alinhamento horizontal e vertical do conteúdo em um bloco. Para controlar o alinhamento horizontal e vertical de um <xref:System.Windows.Media.TileBrush>, use seu <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriedades.  

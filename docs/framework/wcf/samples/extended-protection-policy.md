@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504352"
 ---
 # <a name="extended-protection-policy"></a>Política de proteção estendida
 Proteção estendida é uma iniciativa de segurança para proteger contra ataques man-in-the-middle (MITM). Um ataque MITM é uma ameaça de segurança no qual um MITM usa credenciais do cliente e as encaminha para um servidor.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496146"
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
 Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para criar lógica de roteamento eficiente, ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que siga a maioria das configurações de serviço de roteamento. Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.  

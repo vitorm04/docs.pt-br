@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501210"
 ---
 # <a name="basic-data-contract"></a>Contrato de dados básicos
 Este exemplo demonstra como implementar um contrato de dados. Contratos de dados permitem que você transmita dados estruturados para e de serviços. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) , mas usa números complexos em vez de tipos numéricos básicos.  

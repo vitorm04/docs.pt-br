@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496188"
 ---
 # <a name="elevation-of-privilege"></a>Elevação de privilégio
 *Elevação de privilégio* os resultados de conceder autorização um invasor permissões além desses inicialmente concedida. Por exemplo, um invasor com um conjunto de privilégios de permissões "somente leitura" de alguma forma eleva o conjunto para incluir "leitura e gravação."  

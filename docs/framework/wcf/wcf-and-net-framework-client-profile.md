@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500972"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>Perfil de cliente WCF e .NET Framework
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] é uma versão leve do completo .net Framework criado para clientes que não é necessário a estrutura inteira. Nem todos os Windows Communication Foundation é suportado pela estrutura do cliente.  

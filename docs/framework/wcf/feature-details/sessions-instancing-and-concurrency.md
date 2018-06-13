@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506568"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Um *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos de extremidade. *Instanciação* refere-se para controlar o tempo de vida de objetos de serviço definido pelo usuário e seus relacionados <xref:System.ServiceModel.InstanceContext> objetos. *Simultaneidade* é o termo dado ao controle do número de threads em execução em um <xref:System.ServiceModel.InstanceContext> ao mesmo tempo.  

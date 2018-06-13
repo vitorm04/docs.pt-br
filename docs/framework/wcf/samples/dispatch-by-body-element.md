@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507870"
 ---
 # <a name="dispatch-by-body-element"></a>Expedição por elemento Body
 Este exemplo demonstra como implementar um algoritmo alternativo para a atribuição de mensagens de entrada para as operações.  

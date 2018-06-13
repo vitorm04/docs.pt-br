@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497007"
 ---
 # <a name="queues-overview"></a>Visão geral de filas
 Esta seção apresenta o geral e principais conceitos por trás de comunicação em fila. As seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui são manifestados no Windows Communication Foundation (WCF).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507107"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação da WEB do Windows Communication Foundation (WCF) HTTP fornece os elementos básicos necessários para criar serviços WEB HTTP com o WCF. Serviços WCF WEB HTTP são projetados para ser acessado por mais ampla variedade de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  

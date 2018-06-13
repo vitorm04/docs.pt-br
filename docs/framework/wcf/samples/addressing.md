@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502232"
 ---
 # <a name="addressing"></a>Endereçando
 O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidade relativas e absolutas.  

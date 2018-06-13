@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537584"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Entrada do mouse em um aplicativo do Windows Forms
 Windows Forms inclui uma variedade de eventos de mouse e suporte adicional para cursores personalizados do mouse, captura do mouse e o comportamento de arrastar e soltar.  

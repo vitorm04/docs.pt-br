@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497020"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades têm permissão para alterar, exibir ou, caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente os gerentes podem permitidos para acessar os arquivos de seus funcionários. Windows Communication Foundation (WCF) oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando existente construções de runtime (CLR) de linguagem comum. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. WCF usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidos para dar suporte a novos tipos de declaração para esquemas de autorização personalizada. Este tópico apresenta uma visão geral de como os principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  

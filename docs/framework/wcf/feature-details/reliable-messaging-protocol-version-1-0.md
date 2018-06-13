@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497046"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Protocolo de mensagens confiável versão 1.0
 Este tópico abrange detalhes de implementação do Windows Communication Foundation (WCF) para mensagens WS-Reliable protocolo de fevereiro de 2005 (versão 1.0) necessário para a interoperação usando o transporte HTTP. WCF segue a especificação de mensagens WS-Reliable com as restrições e esclarecimentos explicados neste tópico. Observe que o protocolo do WS-ReliableMessaging versão 1.0 é implementado começando com o [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

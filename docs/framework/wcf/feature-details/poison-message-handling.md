@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496462"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não é possível processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo em fila recebe mensagens em uma transação. Anulando a transação na qual foi recebida uma mensagem na fila deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo receptor pode preso em um loop de recebimento e anule a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  

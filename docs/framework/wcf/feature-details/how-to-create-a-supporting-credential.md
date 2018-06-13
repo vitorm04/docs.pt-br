@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495880"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Como criar uma credencial de suporte
 É possível ter um esquema de segurança personalizado que requer mais de uma credencial. Por exemplo, um serviço pode demandar do cliente não apenas um nome de usuário e senha, mas também uma credencial que comprove o cliente é com mais de 18. A credencial de segundo é um *suporte credencial*. Este tópico explica como implementar essas credenciais em um cliente Windows Communication Foundation (WCF).  

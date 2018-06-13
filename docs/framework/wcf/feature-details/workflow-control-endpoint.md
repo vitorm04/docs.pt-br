@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502586"
 ---
 # <a name="workflow-control-endpoint"></a>Ponto de extremidade de controle de fluxo de trabalho
 O ponto de extremidade de controle de fluxo de trabalho permite aos desenvolvedores chamar as operações de controle para controlar remotamente as instâncias de fluxo de trabalho hospedadas usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Esse recurso pode ser usado para executar programaticamente as operações de controle como suspender, continuar e encerrar.  

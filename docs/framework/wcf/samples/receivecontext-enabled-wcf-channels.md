@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502928"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Canais de WCF habilitado ReceiveContext
 Este exemplo demonstra a utilidade de <xref:System.ServiceModel.Channels.ReceiveContext>-habilitado canais do WCF. O exemplo implementa um serviço para localizar o produto de dois números usando um canal de NetMSMQ.  

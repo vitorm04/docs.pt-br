@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502271"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding padrão
 Este exemplo demonstra o uso de <xref:System.ServiceModel.NetTcpBinding> associação. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console.  
