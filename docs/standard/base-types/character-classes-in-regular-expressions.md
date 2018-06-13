@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579685"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="4319f-102">Classes de caracteres em expressões regulares</span><span class="sxs-lookup"><span data-stu-id="4319f-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a> <span data-ttu-id="4319f-103">Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="4319f-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="4319f-104">A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:</span><span class="sxs-lookup"><span data-stu-id="4319f-104">The regular expression language in .NET supports the following character classes:</span></span>  
