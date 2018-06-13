@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568778"
 ---
 # <a name="inferring-an-xml-schema"></a>Inferindo um esquema XML
 Descreve como usar a classe de (SOM) <xref:System.Xml.Schema.XmlSchemaInference> o modelo de objeto de esquema para inferir um esquema de linguagem de definição de esquema XML (XSD) da estrutura de um documento XML.  

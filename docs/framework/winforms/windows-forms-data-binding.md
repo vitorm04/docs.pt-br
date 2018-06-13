@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540638"
 ---
 # <a name="windows-forms-data-binding"></a>Associação de dados do Windows Forms
 A associação de dados no Windows Forms oferece os meios para exibir e realizar alterações nas informações de uma fonte de dados em controles no formulário. É possível associar a fontes de dados tradicionais e a praticamente qualquer estrutura que contém dados.  

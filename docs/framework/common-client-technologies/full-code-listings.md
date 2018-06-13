@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742017"
 ---
 # <a name="full-code-listings"></a>Listagens de códigos completas
 Este tópico contém a listagem de código completa para um aplicativo que usa os processadores de [Manipulações e inércia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md).  

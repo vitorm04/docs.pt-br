@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362179"
 ---
 # <a name="data-types-and-functions"></a>Tipos de dados e funções
 Os tópicos listados na tabela a seguir descrevem o suporte LINQ to SQL para membros, construções e conversões do CLR (Common Language Runtime). Os membros e as construções com suporte estão disponíveis para uso em suas consultas LINQ to SQL.  

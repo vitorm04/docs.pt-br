@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395847"
 ---
 # <a name="socket-code-examples"></a>Exemplos de código de soquete
 Os exemplos de código a seguir demonstram como usar a classe <xref:System.Net.Sockets.Socket> como um cliente para se conectar aos serviços de rede remota e como um servidor para escutar conexões de clientes remotos.  

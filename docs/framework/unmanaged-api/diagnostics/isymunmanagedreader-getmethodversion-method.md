@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 76d850363940ff53135fc66ec057ee67822fa40d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424658"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Método ISymUnmanagedReader::GetMethodVersion
 Obtém a versão do método. A versão do método começa em 1 e é incrementada toda vez que o método é recompilado. A recompilação pode ocorrer sem alterações para o método.  

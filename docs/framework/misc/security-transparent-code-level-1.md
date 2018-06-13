@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393731"
 ---
 # <a name="security-transparent-code-level-1"></a>Código transparente de segurança, nível 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

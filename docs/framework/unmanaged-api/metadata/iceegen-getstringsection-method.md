@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443031"
 ---
 # <a name="iceegengetstringsection-method"></a>Método ICeeGen::GetStringSection
 Obtém uma representação de cadeia de caracteres da seção de código referenciada pelo identificador especificado.  
