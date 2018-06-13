@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b408654f367bc846dc878fb8412eb3e896dd192a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417080"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="d1453-102">Método ICorDebugNativeFrame::GetLocalRegisterValue</span><span class="sxs-lookup"><span data-stu-id="d1453-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
 <span data-ttu-id="d1453-103">Obtém o valor de um argumento ou uma variável local que é armazenado no registro para este quadro nativo especificado.</span><span class="sxs-lookup"><span data-stu-id="d1453-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
