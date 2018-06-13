@@ -1,27 +1,16 @@
 ---
-title: "Ponto de extremidade: mensagens descartadas na transmissão de mensagens confiáveis"
-ms.custom: 
+title: 'Ponto de extremidade: mensagens descartadas na transmissão de mensagens confiáveis'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d0c5b842-3b75-4cd1-91c4-a702ae17bdcd
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3183424b08907459c8660390149bd35441528e0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0630b2e3c2d83a64729e1af58c639d8abef39552
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33469317"
 ---
-# <a name="endpoint-reliable-messaging-messages-dropped"></a><span data-ttu-id="d30ed-102">Ponto de extremidade: mensagens descartadas na transmissão de mensagens confiáveis</span><span class="sxs-lookup"><span data-stu-id="d30ed-102">Endpoint: Reliable Messaging Messages Dropped</span></span>
-<span data-ttu-id="d30ed-103">Nome do contador: Sessões de mensagens confiáveis descartadas.</span><span class="sxs-lookup"><span data-stu-id="d30ed-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
+# <a name="endpoint-reliable-messaging-messages-dropped"></a><span data-ttu-id="77eae-102">Ponto de extremidade: mensagens descartadas na transmissão de mensagens confiáveis</span><span class="sxs-lookup"><span data-stu-id="77eae-102">Endpoint: Reliable Messaging Messages Dropped</span></span>
+<span data-ttu-id="77eae-103">Nome do contador: Sessões de mensagens confiáveis descartadas.</span><span class="sxs-lookup"><span data-stu-id="77eae-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d30ed-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="d30ed-104">Description</span></span>  
- <span data-ttu-id="d30ed-105">Número total de mensagens confiáveis que foram ignoradas neste ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="d30ed-105">Total number of reliable messaging messages that have been dropped at this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="77eae-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="77eae-104">Description</span></span>  
+ <span data-ttu-id="77eae-105">Número total de mensagens confiáveis que foram ignoradas neste ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="77eae-105">Total number of reliable messaging messages that have been dropped at this endpoint.</span></span>

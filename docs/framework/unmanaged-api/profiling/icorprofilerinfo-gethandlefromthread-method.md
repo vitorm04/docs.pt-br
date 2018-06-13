@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9658ad8a1963d3747fb7c23dce84790a30b17db3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453216"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="5bd96-102">Método ICorProfilerInfo::GetHandleFromThread</span><span class="sxs-lookup"><span data-stu-id="5bd96-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
 <span data-ttu-id="5bd96-103">A ID de um thread é mapeado para um identificador de thread Win32.</span><span class="sxs-lookup"><span data-stu-id="5bd96-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  

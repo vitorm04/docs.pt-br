@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522894"
 ---
 # <a name="how-to-inherit-windows-forms"></a><span data-ttu-id="c9511-102">Como herdar Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c9511-102">How to: Inherit Windows Forms</span></span>
 <span data-ttu-id="c9511-103">Criar novo Windows Forms herdando de formulários base é uma maneira prática de duplicar seus melhores esforços sem passar pelo processo de recriar inteiramente um formulário toda vez que precisar dele.</span><span class="sxs-lookup"><span data-stu-id="c9511-103">Creating new Windows Forms by inheriting from base forms is a handy way to duplicate your best efforts without going through the process of entirely recreating a form every time you require it.</span></span>  

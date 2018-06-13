@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516721"
 ---
 # <a name="collection-activities-in-wf"></a><span data-ttu-id="afe59-102">Atividades de coleção em WF</span><span class="sxs-lookup"><span data-stu-id="afe59-102">Collection Activities in WF</span></span>
 <span data-ttu-id="afe59-103">As atividades de coleção são usadas para trabalhar com objetos de coleção em um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="afe59-103">Collection activities are used to work with collection objects in a workflow.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="afe59-104"> tem sistema forneceu atividades adicionando e removendo itens de uma coleção, testando a existência de um item em uma coleção, e desmarcando uma coleção.</span><span class="sxs-lookup"><span data-stu-id="afe59-104"> has system-provided activities for adding and removing items from a collection, testing for the existence of an item in a collection, and clearing a collection.</span></span> <span data-ttu-id="afe59-105">`ExistsInCollection` e `RemoveFromCollection` tem um <xref:System.Activities.OutArgument%601> do tipo <xref:System.Boolean>, que indica o resultado.</span><span class="sxs-lookup"><span data-stu-id="afe59-105">`ExistsInCollection` and `RemoveFromCollection` have an <xref:System.Activities.OutArgument%601> of type <xref:System.Boolean>, which indicates the result.</span></span>  

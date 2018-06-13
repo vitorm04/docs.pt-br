@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
 ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585295"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="cd09b-102">&#39;&lt;membername&gt; &#39; é ambíguo nas interfaces herdadas &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="cd09b-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
 <span data-ttu-id="cd09b-103">A interface herda dois ou mais membros com o mesmo nome de várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="cd09b-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  

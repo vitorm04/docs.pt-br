@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583361"
 ---
 # <a name="attributes-visual-basic"></a><span data-ttu-id="8ad07-102">Atributos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ad07-102">Attributes (Visual Basic)</span></span>
 <span data-ttu-id="8ad07-103">Visual Basic fornece vários atributos que permitem que objetos interoperem com código não gerenciado e um atributo que permite que os membros de módulo sejam acessados sem o nome do módulo.</span><span class="sxs-lookup"><span data-stu-id="8ad07-103">Visual Basic provides several attributes that allow objects interoperate with unmanaged code, and one attribute that enables module members to be accessed without the module name.</span></span> <span data-ttu-id="8ad07-104">A tabela a seguir lista os atributos usados pelo Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8ad07-104">The following table lists the attributes used by Visual Basic.</span></span>  

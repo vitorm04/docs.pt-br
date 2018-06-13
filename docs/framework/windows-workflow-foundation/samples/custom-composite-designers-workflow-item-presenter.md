@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517112"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="6f4ef-102">Designer de compostos personalizados - apresentador de item de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="6f4ef-102">Custom Composite Designers - Workflow Item Presenter</span></span>
 <span data-ttu-id="6f4ef-103">O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chave no WF designer modelo de programação que permite a criação de uma "zona para soltar" onde uma atividade arbitrária pode ser colocada.</span><span class="sxs-lookup"><span data-stu-id="6f4ef-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="6f4ef-104">Este exemplo mostra como criar um designer de atividade que superfícies tal uma "zona de descarte."</span><span class="sxs-lookup"><span data-stu-id="6f4ef-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  

@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450395"
 ---
 # <a name="corprfgcrootflags-enumeration"></a><span data-ttu-id="54f09-102">Enumeração COR_PRF_GC_ROOT_FLAGS</span><span class="sxs-lookup"><span data-stu-id="54f09-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
 <span data-ttu-id="54f09-103">Indica uma propriedade de uma raiz de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="54f09-103">Indicates a property of a garbage collection root.</span></span>  

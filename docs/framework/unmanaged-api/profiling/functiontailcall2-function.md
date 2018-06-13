@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a515c2622f81c666523aa012fa1e34e5251c074
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452475"
 ---
 # <a name="functiontailcall2-function"></a><span data-ttu-id="f08d0-102">Função FunctionTailcall2</span><span class="sxs-lookup"><span data-stu-id="f08d0-102">FunctionTailcall2 Function</span></span>
 <span data-ttu-id="f08d0-103">Notifica o criador de perfil que a função atualmente em execução está prestes a realizar uma chamada tail para outra função e fornece informações sobre o quadro de pilhas.</span><span class="sxs-lookup"><span data-stu-id="f08d0-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  

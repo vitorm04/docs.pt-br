@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467161"
 ---
 # <a name="501---compilationstart"></a><span data-ttu-id="fe109-102">501 - CompilationStart</span><span class="sxs-lookup"><span data-stu-id="fe109-102">501 - CompilationStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="fe109-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="fe109-103">Properties</span></span>  

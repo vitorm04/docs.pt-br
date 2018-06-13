@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 8c46354fac11f5f0b46ef1b5629157f6da455fcb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471801"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures"></a><span data-ttu-id="a042c-102">Ponto de extremidade: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="a042c-102">Endpoint: Security Validation and Authentication Failures</span></span>
 <span data-ttu-id="a042c-103">Nome do contador: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="a042c-103">Counter name: Security Validation and Authentication Failures</span></span>  

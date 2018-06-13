@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470270"
 ---
 # <a name="queued-poison-messages"></a><span data-ttu-id="26017-102">Mensagens Suspeitas em Fila</span><span class="sxs-lookup"><span data-stu-id="26017-102">Queued Poison Messages</span></span>
 <span data-ttu-id="26017-103">Nome do contador: Mensagens suspeitas em fila.</span><span class="sxs-lookup"><span data-stu-id="26017-103">Counter Name: Queued Poison Messages.</span></span>  

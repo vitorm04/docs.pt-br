@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f0c06f9b04c5f15171464b93dc93765625d6f19
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418136"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a><span data-ttu-id="b217d-102">Método ICorDebugReferenceValue::SetValue</span><span class="sxs-lookup"><span data-stu-id="b217d-102">ICorDebugReferenceValue::SetValue Method</span></span>
 <span data-ttu-id="b217d-103">Define o endereço de memória especificado.</span><span class="sxs-lookup"><span data-stu-id="b217d-103">Sets the specified memory address.</span></span> <span data-ttu-id="b217d-104">Ou seja, esse método define esse ICorDebugReferenceValue para apontar para um objeto.</span><span class="sxs-lookup"><span data-stu-id="b217d-104">That is, this method sets this ICorDebugReferenceValue to point to an object.</span></span>  

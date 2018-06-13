@@ -12,8 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 488af069e7798fde650abb1473df256eed2d692f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452371"
 ---
 # <a name="icorprofilercallback9-interface"></a><span data-ttu-id="e1d46-102">Interface ICorProfilerCallback9</span><span class="sxs-lookup"><span data-stu-id="e1d46-102">ICorProfilerCallback9 Interface</span></span>
 <span data-ttu-id="e1d46-103">[Com suporte nas versões posteriores e 4.7.2 do .NET Framework]</span><span class="sxs-lookup"><span data-stu-id="e1d46-103">[Supported in the .NET Framework 4.7.2 and later versions]</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: beb0e4d3e22ffc3619a6c5281ab5d72efeda921d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450597"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a><span data-ttu-id="28abd-102">Método ICorProfilerCallback::ExceptionSearchCatcherFound</span><span class="sxs-lookup"><span data-stu-id="28abd-102">ICorProfilerCallback::ExceptionSearchCatcherFound Method</span></span>
 <span data-ttu-id="28abd-103">Notifica o criador de perfil que a fase de pesquisa de tratamento de exceção foi localizado um manipulador para a exceção foi lançada.</span><span class="sxs-lookup"><span data-stu-id="28abd-103">Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.</span></span>  

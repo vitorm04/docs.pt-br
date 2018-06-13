@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468768"
 ---
 # <a name="3809---routingservicemessageroutedtoendpoints"></a><span data-ttu-id="87c07-102">3809 - RoutingServiceMessageRoutedToEndpoints</span><span class="sxs-lookup"><span data-stu-id="87c07-102">3809 - RoutingServiceMessageRoutedToEndpoints</span></span>
 ## <a name="properties"></a><span data-ttu-id="87c07-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="87c07-103">Properties</span></span>  

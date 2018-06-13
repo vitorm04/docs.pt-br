@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451939"
 ---
 # <a name="corprfmoduleflags-enumeration"></a><span data-ttu-id="57a52-102">Enumeração COR_PRF_MODULE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="57a52-102">COR_PRF_MODULE_FLAGS Enumeration</span></span>
 <span data-ttu-id="57a52-103">Especifica as propriedades de um módulo.</span><span class="sxs-lookup"><span data-stu-id="57a52-103">Specifies the properties of a module.</span></span>  
