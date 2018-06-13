@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560952"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a><span data-ttu-id="7552d-102">Como pintar uma área com uma imagem</span><span class="sxs-lookup"><span data-stu-id="7552d-102">How to: Paint an Area with an Image</span></span>
 <span data-ttu-id="7552d-103">Este exemplo mostra como usar o <xref:System.Windows.Media.ImageBrush> classe para pintar uma área com uma imagem.</span><span class="sxs-lookup"><span data-stu-id="7552d-103">This example shows how to use the <xref:System.Windows.Media.ImageBrush> class to paint an area with an image.</span></span> <span data-ttu-id="7552d-104">Um <xref:System.Windows.Media.ImageBrush> exibe uma única imagem, que é especificada pelo seu <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="7552d-104">An <xref:System.Windows.Media.ImageBrush> displays a single image, which is specified by its <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property.</span></span>  

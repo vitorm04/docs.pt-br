@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556969"
 ---
 # <a name="tooltip"></a><span data-ttu-id="96c71-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="96c71-102">ToolTip</span></span>
 <span data-ttu-id="96c71-103">Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, tal como em um <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="96c71-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  

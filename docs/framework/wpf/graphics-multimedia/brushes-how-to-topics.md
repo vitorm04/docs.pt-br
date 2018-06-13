@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557531"
 ---
 # <a name="brushes-how-to-topics"></a><span data-ttu-id="245a6-102">Tópicos explicativos de pincéis</span><span class="sxs-lookup"><span data-stu-id="245a6-102">Brushes How-to Topics</span></span>
 <span data-ttu-id="245a6-103">Os tópicos a seguir demonstram como usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pincéis para pintar o conteúdo na tela.</span><span class="sxs-lookup"><span data-stu-id="245a6-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  

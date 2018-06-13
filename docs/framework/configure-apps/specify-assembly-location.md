@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758263"
 ---
 # <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="adff4-102">Especificando um Assembly&#39;s local</span><span class="sxs-lookup"><span data-stu-id="adff4-102">Specifying an Assembly&#39;s Location</span></span>
 <span data-ttu-id="adff4-103">Há duas maneiras de especificar o local de um assembly:</span><span class="sxs-lookup"><span data-stu-id="adff4-103">There are two ways to specify an assembly's location:</span></span>  

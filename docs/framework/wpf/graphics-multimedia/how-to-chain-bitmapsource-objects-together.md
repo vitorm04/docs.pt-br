@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558859"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a><span data-ttu-id="fdbfb-102">Como encadear objetos BitmapSource</span><span class="sxs-lookup"><span data-stu-id="fdbfb-102">How to: Chain BitmapSource Objects Together</span></span>
 <span data-ttu-id="fdbfb-103">Este exemplo mostra como você pode aplicar uma variedade de efeitos em uma fonte de imagem ao encadear vários <xref:System.Windows.Media.Imaging.BitmapSource> objetos derivados.</span><span class="sxs-lookup"><span data-stu-id="fdbfb-103">This example shows how you can apply a variety of effects to an image source by chaining multiple <xref:System.Windows.Media.Imaging.BitmapSource> derived objects together.</span></span>  

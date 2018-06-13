@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555971"
 ---
 # <a name="tabcontrol"></a><span data-ttu-id="95439-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="95439-102">TabControl</span></span>
 <span data-ttu-id="95439-103"><xref:System.Windows.Controls.TabControl> elementos de exibem o conteúdo em páginas distintas acessadas selecionando a guia apropriada. Cada guia contém um <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="95439-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  

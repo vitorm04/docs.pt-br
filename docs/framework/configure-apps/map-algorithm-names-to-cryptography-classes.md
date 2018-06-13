@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758250"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a><span data-ttu-id="9b875-102">Mapeando nomes de algoritmo para classes de criptografia</span><span class="sxs-lookup"><span data-stu-id="9b875-102">Mapping Algorithm Names to Cryptography Classes</span></span>
 <span data-ttu-id="9b875-103">Há quatro maneiras que um desenvolvedor pode criar um objeto de criptografia usando o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="9b875-103">There are four ways a developer can create a cryptography object using the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:</span></span>  

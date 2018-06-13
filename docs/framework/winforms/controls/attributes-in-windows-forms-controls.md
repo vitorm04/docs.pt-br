@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525772"
 ---
 # <a name="attributes-in-windows-forms-controls"></a><span data-ttu-id="71270-102">Atributos em controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="71270-102">Attributes in Windows Forms Controls</span></span>
 <span data-ttu-id="71270-103">O .NET Framework fornece uma variedade de atributos que podem se aplicados aos membros de seus controles personalizados e componentes.</span><span class="sxs-lookup"><span data-stu-id="71270-103">The .NET Framework provides a variety of attributes you can apply to the members of your custom controls and components.</span></span> <span data-ttu-id="71270-104">Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.</span><span class="sxs-lookup"><span data-stu-id="71270-104">Some of these attributes affect the run-time behavior of a class, and others affect the design-time behavior.</span></span>  

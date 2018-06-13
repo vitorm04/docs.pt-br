@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764012"
 ---
 # <a name="operator-precedence-entity-sql"></a><span data-ttu-id="5cbf1-102">Precedência do operador (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5cbf1-102">Operator Precedence (Entity SQL)</span></span>
 <span data-ttu-id="5cbf1-103">Quando um [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta tem vários operadores, a precedência de operador determina a sequência na qual as operações são executadas.</span><span class="sxs-lookup"><span data-stu-id="5cbf1-103">When an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query has multiple operators, operator precedence determines the sequence in which the operations are performed.</span></span> <span data-ttu-id="5cbf1-104">A ordem de execução pode impactar significativamente no resultado da consulta.</span><span class="sxs-lookup"><span data-stu-id="5cbf1-104">The order of execution can significantly affect the query result.</span></span>  

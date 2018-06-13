@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756677"
 ---
 # <a name="lttrackinggt"></a><span data-ttu-id="be590-102">&lt;controle&gt;</span><span class="sxs-lookup"><span data-stu-id="be590-102">&lt;tracking&gt;</span></span>
 <span data-ttu-id="be590-103">Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="be590-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  

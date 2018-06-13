@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754243"
 ---
 # <a name="ltendpointdiscoverygt"></a><span data-ttu-id="d04d6-102">&lt;endpointDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="d04d6-102">&lt;endpointDiscovery&gt;</span></span>
 <span data-ttu-id="d04d6-103">Especifica as várias configurações de descoberta para um ponto de extremidade, como sua capacidade de descoberta, escopos e quaisquer extensões personalizadas para seus metadados.</span><span class="sxs-lookup"><span data-stu-id="d04d6-103">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  

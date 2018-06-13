@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762316"
 ---
 # <a name="query-results"></a><span data-ttu-id="cfc55-102">Resultados da Consulta</span><span class="sxs-lookup"><span data-stu-id="cfc55-102">Query Results</span></span>
 <span data-ttu-id="cfc55-103">Depois que uma consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] é convertida para o comando árvores e executada, os resultados da consulta geralmente são retornados como um dos seguintes:</span><span class="sxs-lookup"><span data-stu-id="cfc55-103">After a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is converted to command trees and executed, the query results are usually returned as one of the following:</span></span>  

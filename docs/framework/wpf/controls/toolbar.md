@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
 ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555423"
 ---
 # <a name="toolbar"></a><span data-ttu-id="f7b5f-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="f7b5f-102">ToolBar</span></span>
 <span data-ttu-id="f7b5f-103">O <xref:System.Windows.Controls.ToolBar> controle é um contêiner para um grupo de comandos ou controles que são geralmente relacionados em sua função.</span><span class="sxs-lookup"><span data-stu-id="f7b5f-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  

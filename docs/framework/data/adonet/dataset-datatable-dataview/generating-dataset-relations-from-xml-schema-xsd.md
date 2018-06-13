@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758432"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="e03c3-102">Gerar relações de conjunto de dados de esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="e03c3-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
 <span data-ttu-id="e03c3-103">Em um <xref:System.Data.DataSet>, formam uma associação entre duas ou mais colunas, criando uma relação pai-filho.</span><span class="sxs-lookup"><span data-stu-id="e03c3-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="e03c3-104">Há três maneiras para representar um **DataSet** relação dentro de um esquema de linguagem XSD de definição de esquema XML:</span><span class="sxs-lookup"><span data-stu-id="e03c3-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  

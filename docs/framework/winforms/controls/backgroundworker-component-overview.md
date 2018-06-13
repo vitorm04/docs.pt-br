@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528851"
 ---
 # <a name="backgroundworker-component-overview"></a><span data-ttu-id="3dd69-102">Visão geral do componente BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="3dd69-102">BackgroundWorker Component Overview</span></span>
 <span data-ttu-id="3dd69-103">Há muitas operações realizadas com frequência que podem levar muito tempo para serem executadas.</span><span class="sxs-lookup"><span data-stu-id="3dd69-103">There are many commonly performed operations that can take a long time to execute.</span></span> <span data-ttu-id="3dd69-104">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="3dd69-104">For example:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760564"
 ---
 # <a name="flatten-entity-sql"></a><span data-ttu-id="c4314-102">ACHATAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="c4314-102">FLATTEN (Entity SQL)</span></span>
 <span data-ttu-id="c4314-103">Converte uma coleção de coleções em uma coleção combinada.</span><span class="sxs-lookup"><span data-stu-id="c4314-103">Converts a collection of collections into a flattened collection.</span></span> <span data-ttu-id="c4314-104">A nova coleção contém todos os mesmos elementos que a coleção antiga, mas sem uma estrutura aninhada.</span><span class="sxs-lookup"><span data-stu-id="c4314-104">The new collection contains all the same elements as the old collection, but without a nested structure.</span></span>  

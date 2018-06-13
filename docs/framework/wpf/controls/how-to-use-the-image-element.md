@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555906"
 ---
 # <a name="how-to-use-the-image-element"></a><span data-ttu-id="69ff4-102">Como usar o elemento de imagem</span><span class="sxs-lookup"><span data-stu-id="69ff4-102">How to: Use the Image Element</span></span>
 <span data-ttu-id="69ff4-103">Este exemplo mostra como incluir imagens em um aplicativo usando o <xref:System.Windows.Controls.Image> elemento.</span><span class="sxs-lookup"><span data-stu-id="69ff4-103">This example shows how to include images in an application by using the <xref:System.Windows.Controls.Image> element.</span></span>  

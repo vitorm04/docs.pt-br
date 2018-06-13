@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
 ms.openlocfilehash: 5b61255d19340152cd17d12eb60224dc90231607
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554470"
 ---
 # <a name="statusbar"></a><span data-ttu-id="7650e-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="7650e-102">StatusBar</span></span>
 <span data-ttu-id="7650e-103">A <xref:System.Windows.Controls.Primitives.StatusBar> é uma área horizontal na parte inferior de uma janela onde um aplicativo pode exibir informações de status.</span><span class="sxs-lookup"><span data-stu-id="7650e-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  

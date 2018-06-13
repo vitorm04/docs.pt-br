@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557323"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a><span data-ttu-id="29f8e-102">Como disponibilizar dados para associação em XAML</span><span class="sxs-lookup"><span data-stu-id="29f8e-102">How to: Make Data Available for Binding in XAML</span></span>
 <span data-ttu-id="29f8e-103">Este tópico discute as diferentes maneiras de disponibilizar os dados para associação no [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], dependendo das necessidades do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="29f8e-103">This topic discusses the different ways you can make data available for binding in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], depending on the needs of your application.</span></span>  

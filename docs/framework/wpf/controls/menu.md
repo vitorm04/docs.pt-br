@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
 ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555776"
 ---
 # <a name="menu"></a><span data-ttu-id="e06f3-102">Menu</span><span class="sxs-lookup"><span data-stu-id="e06f3-102">Menu</span></span>
 <span data-ttu-id="e06f3-103">Um <xref:System.Windows.Controls.Menu> é um controle que permite a organização hierárquica de elementos associados com comandos ou manipuladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="e06f3-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="e06f3-104">Cada <xref:System.Windows.Controls.Menu> pode conter vários <xref:System.Windows.Controls.MenuItem> controles.</span><span class="sxs-lookup"><span data-stu-id="e06f3-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="e06f3-105">Cada <xref:System.Windows.Controls.MenuItem> pode invocar um comando ou chamar um `Click` manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="e06f3-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="e06f3-106">Um <xref:System.Windows.Controls.MenuItem> também pode ter vários <xref:System.Windows.Controls.MenuItem> elementos como filhos, formando um submenu.</span><span class="sxs-lookup"><span data-stu-id="e06f3-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  

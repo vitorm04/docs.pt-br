@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556959"
 ---
 # <a name="how-to-implement-binding-validation"></a><span data-ttu-id="8bccd-102">Como implementar validação de associação</span><span class="sxs-lookup"><span data-stu-id="8bccd-102">How to: Implement Binding Validation</span></span>
 <span data-ttu-id="8bccd-103">Este exemplo mostra como usar um <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e um gatilho de estilo para fornecer comentários visuais para informar ao usuário quando um valor inválido for digitado, com base em uma regra de validação personalizada.</span><span class="sxs-lookup"><span data-stu-id="8bccd-103">This example shows how to use an <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> and a style trigger to provide visual feedback to inform the user when an invalid value is entered, based on a custom validation rule.</span></span>  

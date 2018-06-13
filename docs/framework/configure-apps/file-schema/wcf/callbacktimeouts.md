@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749560"
 ---
 # <a name="ltcallbacktimeoutsgt"></a><span data-ttu-id="3009c-102">&lt;callbackTimeouts&gt;</span><span class="sxs-lookup"><span data-stu-id="3009c-102">&lt;callbackTimeouts&gt;</span></span>
 <span data-ttu-id="3009c-103">Especifica o valor de tempo limite ao fluir transações de servidor para chmada um cenário de contrato de retorno de chamada dúplex.</span><span class="sxs-lookup"><span data-stu-id="3009c-103">Specifies the timeout value when flowing transactions from server to client.in a duplex callback contract scenario.</span></span>  

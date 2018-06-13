@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553774"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="a0fbe-102">Como criar um controle que tenha uma tecla de acesso e disposição do texto</span><span class="sxs-lookup"><span data-stu-id="a0fbe-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
 <span data-ttu-id="a0fbe-103">Este exemplo mostra como criar um controle que tenha uma tecla de acesso e dê suporte à disposição do texto.</span><span class="sxs-lookup"><span data-stu-id="a0fbe-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="a0fbe-104">O exemplo usa um <xref:System.Windows.Controls.Label> controle para ilustrar esses conceitos.</span><span class="sxs-lookup"><span data-stu-id="a0fbe-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  

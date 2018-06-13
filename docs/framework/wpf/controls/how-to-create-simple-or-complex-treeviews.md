@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552992"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a><span data-ttu-id="320da-102">Como criar TreeViews simples ou complexos</span><span class="sxs-lookup"><span data-stu-id="320da-102">How to: Create Simple or Complex TreeViews</span></span>
 <span data-ttu-id="320da-103">Este exemplo mostra como criar simples ou complexa <xref:System.Windows.Controls.TreeView> controles.</span><span class="sxs-lookup"><span data-stu-id="320da-103">This example shows how to create simple or complex <xref:System.Windows.Controls.TreeView> controls.</span></span>  

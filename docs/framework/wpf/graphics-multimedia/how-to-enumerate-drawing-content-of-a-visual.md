@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559396"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a><span data-ttu-id="16bb1-102">Como enumerar conteúdo de desenho de um visual</span><span class="sxs-lookup"><span data-stu-id="16bb1-102">How to: Enumerate Drawing Content of a Visual</span></span>
 <span data-ttu-id="16bb1-103">O <xref:System.Windows.Media.Drawing> objeto fornece um modelo de objeto para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="16bb1-103">The <xref:System.Windows.Media.Drawing> object provide an object model for enumerating the contents of a <xref:System.Windows.Media.Visual>.</span></span>  

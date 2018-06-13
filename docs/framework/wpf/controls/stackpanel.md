@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553735"
 ---
 # <a name="stackpanel"></a><span data-ttu-id="d60f5-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="d60f5-102">StackPanel</span></span>
 <span data-ttu-id="d60f5-103">O <xref:System.Windows.Controls.StackPanel> elemento é usado para empilhar elementos filho horizontal ou verticalmente.</span><span class="sxs-lookup"><span data-stu-id="d60f5-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  

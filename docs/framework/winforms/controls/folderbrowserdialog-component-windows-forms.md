@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
 ms.openlocfilehash: 211391d0d84beadf3dcca41f98c395bd89d07cc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524446"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a><span data-ttu-id="465d3-102">Componente FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="465d3-102">FolderBrowserDialog Component (Windows Forms)</span></span>
 <span data-ttu-id="465d3-103">Windows Forms `FolderBrowserDialog` componente exibe uma interface com a qual os usuários podem procurar e selecione uma pasta ou criar um novo.</span><span class="sxs-lookup"><span data-stu-id="465d3-103">The Windows Forms `FolderBrowserDialog` component displays an interface with which users can browse and select a folder or create a new one.</span></span> <span data-ttu-id="465d3-104">É um complemento para o [componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) componente, que é usada para navegar e selecionar os arquivos.</span><span class="sxs-lookup"><span data-stu-id="465d3-104">It is a complement to the [OpenFileDialog Component](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) component, which is used for browsing and selecting files.</span></span>  

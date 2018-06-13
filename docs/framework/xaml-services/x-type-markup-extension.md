@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563114"
 ---
 # <a name="xtype-markup-extension"></a><span data-ttu-id="8598a-102">Extensão de marcação x:Type</span><span class="sxs-lookup"><span data-stu-id="8598a-102">x:Type Markup Extension</span></span>
 <span data-ttu-id="8598a-103">Fornece o CLR <xref:System.Type> objeto que é o tipo base para um tipo XAML especificado.</span><span class="sxs-lookup"><span data-stu-id="8598a-103">Supplies the CLR <xref:System.Type> object that is the underlying type for a specified XAML type.</span></span>  

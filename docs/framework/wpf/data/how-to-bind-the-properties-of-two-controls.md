@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555575"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a><span data-ttu-id="e5334-102">Como associar as propriedades de dois controles</span><span class="sxs-lookup"><span data-stu-id="e5334-102">How to: Bind the Properties of Two Controls</span></span>
 <span data-ttu-id="e5334-103">Este exemplo mostra como associar a propriedade de um controle instanciado a de outro usando o <xref:System.Windows.Data.Binding.ElementName%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="e5334-103">This example shows how to bind the property of one instantiated control to that of another using the <xref:System.Windows.Data.Binding.ElementName%2A> property.</span></span>  
