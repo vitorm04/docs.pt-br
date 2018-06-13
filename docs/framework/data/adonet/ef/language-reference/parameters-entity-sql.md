@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765068"
 ---
 # <a name="parameters-entity-sql"></a>Parâmetros (Entity SQL)
 Os parâmetros são variáveis que são definidos fora de [!INCLUDE[esql](../../../../../../includes/esql-md.md)], geralmente através de uma associação API que é usada por uma linguagem de host. Cada parâmetro tem um nome e um tipo. Nomes de parâmetro são definidos em expressões de consulta com o em (@) símbolo como um prefixo. Isso remove a ambiguidade dos-los de nomes de propriedades ou outros nomes que são definidos na consulta.  

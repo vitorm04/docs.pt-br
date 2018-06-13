@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749108"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Especifica o endereço e a associação do emissor local a ser usado para obter um token de segurança.  

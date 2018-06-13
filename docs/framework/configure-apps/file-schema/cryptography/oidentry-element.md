@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746349"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; elemento
 Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.  

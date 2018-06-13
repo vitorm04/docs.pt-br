@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749088"
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 Este elemento de configuração especifica todos os importadores de políticas que controlam a importação de declarações de políticas personalizadas sobre associações. Cada elemento filho é um <`policyImporter`> que é usado para pesquisar asserções de políticas personalizadas sobre recursos de associação, bem como anexar um elemento de associação personalizada que implementa os recursos requer a declaração.  

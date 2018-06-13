@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747506"
 ---
 # <a name="ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt;
 Esta seção de configuração representa todos os comportamentos definidos para um ponto de extremidade específico. Para obter mais informações sobre comportamentos de configuração do cliente, consulte [especificando comportamento de tempo de execução do cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md) e [Configurando comportamentos do cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604010"
 ---
 # <a name="-operator-visual-basic"></a>Operador += (Visual Basic)
 Adiciona o valor de uma expressão numérica para o valor de uma variável numérica ou propriedade e atribui o resultado à variável ou propriedade. Também pode ser usado para concatenar uma `String` expressão para uma `String` variável ou propriedade e atribui o resultado à variável ou propriedade.  

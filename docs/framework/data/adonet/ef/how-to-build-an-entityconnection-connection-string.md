@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759953"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Como compilar uma cadeia de conexão EntityConnection
 Este tópico fornece um exemplo de como criar um <xref:System.Data.EntityClient.EntityConnection>.  
