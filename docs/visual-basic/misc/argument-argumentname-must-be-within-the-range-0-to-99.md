@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
 ms.openlocfilehash: 9d4c504819505df730cc7c527f8887dd6d5b7a89
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600465"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-0-to-99"></a><span data-ttu-id="ff919-102">Argumento &#39; &lt;argumentname&gt; &#39; deve estar no intervalo de 0 a 99</span><span class="sxs-lookup"><span data-stu-id="ff919-102">Argument &#39;&lt;argumentname&gt;&#39; must be within the range 0 to 99</span></span>
 <span data-ttu-id="ff919-103">Um argumento não é válido porque está fora do intervalo de 0 a 99.</span><span class="sxs-lookup"><span data-stu-id="ff919-103">An argument is not valid because it falls outside of the range 0 to 99.</span></span>  

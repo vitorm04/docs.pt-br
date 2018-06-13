@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767044"
 ---
 # <a name="using-annotation-in-queries"></a><span data-ttu-id="3407e-102">Usando a anotação em consultas</span><span class="sxs-lookup"><span data-stu-id="3407e-102">Using Annotation in Queries</span></span>
 <span data-ttu-id="3407e-103">As anotações permitem que você marca arbitrariamente registros de rastreamento com um valor que pode ser configurado após tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="3407e-103">Annotations allow you to arbitrarily tag tracking records with a value that can be configured after build time.</span></span> <span data-ttu-id="3407e-104">Por exemplo, convém vários registros de rastreamento em vários fluxos de trabalho sejam marcados com "Servidor de email" = = "Email Server1".</span><span class="sxs-lookup"><span data-stu-id="3407e-104">For example, you might want several tracking records across several workflows to be tagged with "Mail Server" == "Mail Server1".</span></span> <span data-ttu-id="3407e-105">Isso facilita localizar todos os registros com essa marca ao consultar o rastreamento registra posteriormente.</span><span class="sxs-lookup"><span data-stu-id="3407e-105">This makes it easy to find all records with this tag when querying tracking records later.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526996"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a><span data-ttu-id="831d9-102">Como usar o modo de composição para controlar a combinação alfa</span><span class="sxs-lookup"><span data-stu-id="831d9-102">How to: Use Compositing Mode to Control Alpha Blending</span></span>
 <span data-ttu-id="831d9-103">Pode haver ocasiões em que é útil criar um bitmap fora da tela com as seguintes características:</span><span class="sxs-lookup"><span data-stu-id="831d9-103">There may be times when you want to create an off-screen bitmap that has the following characteristics:</span></span>  

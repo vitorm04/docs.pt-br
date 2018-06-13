@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599987"
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing"></a><span data-ttu-id="f16ac-102">Argumento &#39; &lt;argumentname&gt; &#39; nada</span><span class="sxs-lookup"><span data-stu-id="f16ac-102">Argument &#39;&lt;argumentname&gt;&#39; is Nothing</span></span>
 <span data-ttu-id="f16ac-103">Uma expressão contém um argumento nulo.</span><span class="sxs-lookup"><span data-stu-id="f16ac-103">An expression contains a null argument.</span></span>  

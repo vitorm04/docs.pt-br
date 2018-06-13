@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764535"
 ---
 # <a name="modulo-entity-sql"></a><span data-ttu-id="3870e-102">(Módulo) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3870e-102">(Modulo) (Entity SQL)</span></span>
 <span data-ttu-id="3870e-103">Retorna o resto de uma expressão dividida por outra.</span><span class="sxs-lookup"><span data-stu-id="3870e-103">Returns the remainder of one expression divided by another.</span></span>  

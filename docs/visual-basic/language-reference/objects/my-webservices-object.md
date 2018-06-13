@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
 ms.openlocfilehash: 9519638c7609b9b1d0f5e07397c46975e2696c94
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604686"
 ---
 # <a name="mywebservices-object"></a><span data-ttu-id="21a0e-102">Objeto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="21a0e-102">My.WebServices Object</span></span>
 <span data-ttu-id="21a0e-103">Fornece propriedades para criar e acessar uma única instância de cada serviço Web XML referenciado pelo projeto atual.</span><span class="sxs-lookup"><span data-stu-id="21a0e-103">Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.</span></span>  

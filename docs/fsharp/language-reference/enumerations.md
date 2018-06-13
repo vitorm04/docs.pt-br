@@ -4,8 +4,10 @@ description: 'Saiba como usar o F # enumerações em vez de literais para tornar
 ms.date: 05/16/2016
 ms.openlocfilehash: 00faf6e2ad08a7b232a8ae35aa0f7deb1ba3e76a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562986"
 ---
 # <a name="enumerations"></a><span data-ttu-id="185ea-103">Enumerações</span><span class="sxs-lookup"><span data-stu-id="185ea-103">Enumerations</span></span>
 

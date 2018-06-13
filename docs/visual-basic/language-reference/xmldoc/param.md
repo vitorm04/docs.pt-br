@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
 ms.openlocfilehash: c992c96303eb1441eaf667693b7aefb5361b196c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602915"
 ---
 # <a name="ltparamgt-visual-basic"></a><span data-ttu-id="bdd96-102">&lt;param&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdd96-102">&lt;param&gt; (Visual Basic)</span></span>
 <span data-ttu-id="bdd96-103">Define um nome de parâmetro e uma descrição.</span><span class="sxs-lookup"><span data-stu-id="bdd96-103">Defines a parameter name and description.</span></span>  

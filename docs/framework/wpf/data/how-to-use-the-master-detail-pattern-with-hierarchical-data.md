@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556790"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a><span data-ttu-id="30c77-102">Como usar o padrão de detalhes mestre com dados hierárquicos</span><span class="sxs-lookup"><span data-stu-id="30c77-102">How to: Use the Master-Detail Pattern with Hierarchical Data</span></span>
 <span data-ttu-id="30c77-103">Este exemplo mostra como implementar o cenário de detalhes mestre.</span><span class="sxs-lookup"><span data-stu-id="30c77-103">This example shows how to implement the master-detail scenario.</span></span>  

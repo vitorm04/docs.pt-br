@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566789"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a><span data-ttu-id="959ab-102">Namespaces XAML para serviços XAML do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="959ab-102">XAML Namespaces for .NET Framework XAML Services</span></span>
 <span data-ttu-id="959ab-103">Um namespace XAML é um conceito que se expande na definição de um namespace XML.</span><span class="sxs-lookup"><span data-stu-id="959ab-103">A XAML namespace is a concept that expands on the definition of an XML namespace.</span></span> <span data-ttu-id="959ab-104">Semelhante a um namespace XML, você pode definir um namespace XAML usando um `xmlns` atributo na marcação.</span><span class="sxs-lookup"><span data-stu-id="959ab-104">Similar to an XML namespace, you can define a XAML namespace using an `xmlns` attribute in markup.</span></span> <span data-ttu-id="959ab-105">Namespaces XAML também são representados no fluxo do nó XAML e outras APIs de serviços de XAML.</span><span class="sxs-lookup"><span data-stu-id="959ab-105">XAML namespaces are also represented in the XAML node stream and other XAML Services APIs.</span></span> <span data-ttu-id="959ab-106">Este tópico define o conceito de namespace XAML e descreve como namespaces XAML podem ser definidos e são usados por contextos de esquema XAML e outros aspectos de serviços XAML do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="959ab-106">This topic defines the XAML namespace concept, and describes how XAML namespaces can be defined and are used by XAML schema contexts and other aspects of .NET Framework XAML Services.</span></span>  

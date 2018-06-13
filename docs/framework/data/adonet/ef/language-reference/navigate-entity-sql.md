@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764730"
 ---
 # <a name="navigate-entity-sql"></a><span data-ttu-id="d2baf-102">NAVEGAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d2baf-102">NAVIGATE (Entity SQL)</span></span>
 <span data-ttu-id="d2baf-103">Navega sobre a relação entre estabelecida entidades.</span><span class="sxs-lookup"><span data-stu-id="d2baf-103">Navigates over the relationship established between entities.</span></span>  

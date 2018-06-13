@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602259"
 ---
 # <a name="mid-statement"></a><span data-ttu-id="5c366-102">Instrução Mid</span><span class="sxs-lookup"><span data-stu-id="5c366-102">Mid Statement</span></span>
 <span data-ttu-id="5c366-103">Substitui um número especificado de caracteres em um `String` variável com caracteres de outra cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="5c366-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  

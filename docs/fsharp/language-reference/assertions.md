@@ -4,8 +4,10 @@ description: "Saiba como usar a expressão 'assert' como um recurso de depuraç�
 ms.date: 05/16/2016
 ms.openlocfilehash: 83e6cd77bbbb2c32e9b778e5bf6dd9d2e9c8fe32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563140"
 ---
 # <a name="assertions"></a><span data-ttu-id="3aa7c-103">Asserções</span><span class="sxs-lookup"><span data-stu-id="3aa7c-103">Assertions</span></span>
 

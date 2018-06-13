@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558821"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a><span data-ttu-id="3a5d3-102">Como codificar e decodificar uma imagem PNG</span><span class="sxs-lookup"><span data-stu-id="3a5d3-102">How to: Encode and Decode a PNG Image</span></span>
 <span data-ttu-id="3a5d3-103">Os exemplos a seguir mostram como decodificar e codificar um [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] imagem usando específico <xref:System.Windows.Media.Imaging.PngBitmapDecoder> e <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objetos.</span><span class="sxs-lookup"><span data-stu-id="3a5d3-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] image using the specific <xref:System.Windows.Media.Imaging.PngBitmapDecoder> and <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objects.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746755"
 ---
 # <a name="ltdynamicendpointgt"></a><span data-ttu-id="c8fdc-102">&lt;DynamicEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="c8fdc-102">&lt;dynamicEndpoint&gt;</span></span>
 <span data-ttu-id="c8fdc-103">Este elemento de configuração define um ponto de extremidade padrão que contém informações para permitir que um aplicativo funcione como um programa cliente que pode encontrar o endereço de ponto de extremidade dinamicamente em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="c8fdc-103">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  

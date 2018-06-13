@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754487"
 ---
 # <a name="ltcompilergt-element"></a><span data-ttu-id="6beb2-102">&lt;compilador&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="6beb2-102">&lt;compiler&gt; Element</span></span>
 <span data-ttu-id="6beb2-103">Especifica os atributos de configuração do compilador para um provedor de linguagem.</span><span class="sxs-lookup"><span data-stu-id="6beb2-103">Specifies the compiler configuration attributes for a language provider.</span></span>  

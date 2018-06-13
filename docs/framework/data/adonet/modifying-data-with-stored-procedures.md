@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758147"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="7f525-102">Modificando dados com procedimentos armazenados</span><span class="sxs-lookup"><span data-stu-id="7f525-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="7f525-103">Os procedimentos armazenados podem aceitar dados como parâmetros de entrada e podem retornar dados como parâmetros de saída, conjuntos de resultados ou valores de retorno.</span><span class="sxs-lookup"><span data-stu-id="7f525-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="7f525-104">O exemplo a seguir ilustra como o ADO.NET envia e recebe parâmetros de entrada, parâmetros de saída e valores de retorno.</span><span class="sxs-lookup"><span data-stu-id="7f525-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="7f525-105">O exemplo insere um novo registro em uma tabela onde a coluna de chave primária é uma coluna de identidade em um banco de dados do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="7f525-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

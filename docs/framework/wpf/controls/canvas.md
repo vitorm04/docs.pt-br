@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
 ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553268"
 ---
 # <a name="canvas"></a><span data-ttu-id="e8081-102">Tela</span><span class="sxs-lookup"><span data-stu-id="e8081-102">Canvas</span></span>
 <span data-ttu-id="e8081-103"><xref:System.Windows.Controls.Canvas> é um controle de layout que permite que o posicionamento absoluto de elementos filho.</span><span class="sxs-lookup"><span data-stu-id="e8081-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  

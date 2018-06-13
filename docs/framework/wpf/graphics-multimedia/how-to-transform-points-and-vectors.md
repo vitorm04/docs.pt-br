@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559958"
 ---
 # <a name="how-to-transform-points-and-vectors"></a><span data-ttu-id="44616-102">Como transformar pontos e vetores</span><span class="sxs-lookup"><span data-stu-id="44616-102">How to: Transform Points and Vectors</span></span>
 <span data-ttu-id="44616-103">Este exemplo mostra como usar um <xref:System.Windows.Media.Matrix> para transformar <xref:System.Windows.Point> e <xref:System.Windows.Vector> objetos.</span><span class="sxs-lookup"><span data-stu-id="44616-103">This example shows how to use a <xref:System.Windows.Media.Matrix> to transform <xref:System.Windows.Point> and <xref:System.Windows.Vector> objects.</span></span>  

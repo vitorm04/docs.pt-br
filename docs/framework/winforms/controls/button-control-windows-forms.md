@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525077"
 ---
 # <a name="button-control-windows-forms"></a><span data-ttu-id="267ed-102">Controle de botão (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="267ed-102">Button Control (Windows Forms)</span></span>
 <span data-ttu-id="267ed-103">O controle `Button` dos Windows Forms permite que o usuário clique nele para realizar uma ação.</span><span class="sxs-lookup"><span data-stu-id="267ed-103">The Windows Forms `Button` control allows the user to click it to perform an action.</span></span> <span data-ttu-id="267ed-104">O controle `Button` pode exibir texto e imagens.</span><span class="sxs-lookup"><span data-stu-id="267ed-104">The `Button` control can display both text and images.</span></span> <span data-ttu-id="267ed-105">Quando o botão é clicado, ele se parece como se estivesse sendo empurrado e solto.</span><span class="sxs-lookup"><span data-stu-id="267ed-105">When the button is clicked, it looks as if it is being pushed in and released.</span></span>  

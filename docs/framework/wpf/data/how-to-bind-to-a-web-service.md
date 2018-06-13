@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557284"
 ---
 # <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="d8105-102">Como associar a um serviço Web</span><span class="sxs-lookup"><span data-stu-id="d8105-102">How to: Bind to a Web Service</span></span>
 <span data-ttu-id="d8105-103">Este exemplo mostra como associar a objetos retornados por chamadas de método de serviço Web.</span><span class="sxs-lookup"><span data-stu-id="d8105-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  

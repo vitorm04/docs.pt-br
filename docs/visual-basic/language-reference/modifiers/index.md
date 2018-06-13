@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
 ms.openlocfilehash: 5e4a37a53d04174c53fdbdc30139d61ecd9998cc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600627"
 ---
 # <a name="modifiers-visual-basic"></a><span data-ttu-id="c9f6c-102">Modificadores (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9f6c-102">Modifiers (Visual Basic)</span></span>
 <span data-ttu-id="c9f6c-103">Os tópicos nesta seção documentam modificadores de tempo de execução do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c9f6c-103">The topics in this section document Visual Basic run-time modifiers.</span></span>  

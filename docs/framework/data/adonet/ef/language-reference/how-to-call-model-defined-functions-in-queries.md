@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761643"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a><span data-ttu-id="6d760-102">Como: o chamar funções definidas em consultas</span><span class="sxs-lookup"><span data-stu-id="6d760-102">How to: Call Model-Defined Functions in Queries</span></span>
 <span data-ttu-id="6d760-103">Este tópico descreve como chamar funções que são definidas no modelo conceitual de dentro das consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="6d760-103">This topic describes how to call functions that are defined in the conceptual model from within [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  

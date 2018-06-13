@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752566"
 ---
 # <a name="ltsourcegt-element"></a><span data-ttu-id="76d64-102">&lt;origem&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="76d64-102">&lt;source&gt; Element</span></span>
 <span data-ttu-id="76d64-103">Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="76d64-103">Specifies a trace source that initiates tracing messages.</span></span>  

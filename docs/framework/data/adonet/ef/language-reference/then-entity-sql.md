@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762878"
 ---
 # <a name="then-entity-sql"></a><span data-ttu-id="4a9a5-102">ENTÃO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4a9a5-102">THEN (Entity SQL)</span></span>
 <span data-ttu-id="4a9a5-103">O resultado de QUANDO cláusula quando avaliar a `true`.</span><span class="sxs-lookup"><span data-stu-id="4a9a5-103">The result of a WHEN clause when it evaluates to `true`.</span></span>  

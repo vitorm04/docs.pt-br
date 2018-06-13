@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756287"
 ---
 # <a name="ltactivityscheduledqueriesgt"></a><span data-ttu-id="9cbf4-102">&lt;activityScheduledQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="9cbf4-102">&lt;activityScheduledQueries&gt;</span></span>
 <span data-ttu-id="9cbf4-103">Representa uma coleção de consultas que são usados para controlar uma atividade agendada para execução por uma atividade pai.</span><span class="sxs-lookup"><span data-stu-id="9cbf4-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="9cbf4-104">A consulta é necessária para um participante de rastreamento assinar os registros de atividade agendada.</span><span class="sxs-lookup"><span data-stu-id="9cbf4-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  

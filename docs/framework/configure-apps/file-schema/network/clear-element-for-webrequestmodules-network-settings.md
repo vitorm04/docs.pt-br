@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752722"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="fecef-102">&lt;Limpar&gt; elemento webRequestModules (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="fecef-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="fecef-103">Remove todos os módulos de solicitação da Web registrados do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fecef-103">Removes all registered Web request modules from the application.</span></span>  

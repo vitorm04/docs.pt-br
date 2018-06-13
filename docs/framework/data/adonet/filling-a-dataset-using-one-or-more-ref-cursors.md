@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761604"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a><span data-ttu-id="78838-102">Preenchendo um DataSet usando um ou mais REF CURSORs</span><span class="sxs-lookup"><span data-stu-id="78838-102">Filling a DataSet Using One or More REF CURSORs</span></span>
 <span data-ttu-id="78838-103">Este exemplo do Microsoft Visual Basic executa um procedimento armazenado PL/SQL que retorna dois parâmetros REF CURSOR e preenche uma <xref:System.Data.DataSet> com as linhas que são retornadas.</span><span class="sxs-lookup"><span data-stu-id="78838-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and fills a <xref:System.Data.DataSet> with the rows that are returned.</span></span>  

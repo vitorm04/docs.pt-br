@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558807"
 ---
 # <a name="how-to-animate-in-a-style"></a><span data-ttu-id="f471e-102">Como animar em um estilo</span><span class="sxs-lookup"><span data-stu-id="f471e-102">How to: Animate in a Style</span></span>
 <span data-ttu-id="f471e-103">Este exemplo mostra como animar propriedades em um estilo.</span><span class="sxs-lookup"><span data-stu-id="f471e-103">This example shows how to animate properties within a style.</span></span> <span data-ttu-id="f471e-104">Ao animar em um estilo, somente o elemento de estrutura para o qual o estilo está definido pode ser alvo diretamente.</span><span class="sxs-lookup"><span data-stu-id="f471e-104">When animating within a style, only the framework element for which the style is defined can be targeted directly.</span></span> <span data-ttu-id="f471e-105">Para direcionar um objeto freezable, é preciso fazer a "marcação" de uma propriedade do elemento.</span><span class="sxs-lookup"><span data-stu-id="f471e-105">To target a freezable object, you must "dot down" from a property of the styled element.</span></span>  
