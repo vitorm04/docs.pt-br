@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c25f39cf64f462ac319803354e6a2a54ea482b9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436930"
 ---
 # <a name="icorthreadpoolcorgetmaxthreads-method"></a><span data-ttu-id="d0781-102">Método ICorThreadpool::CorGetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="d0781-102">ICorThreadpool::CorGetMaxThreads Method</span></span>
 <span data-ttu-id="d0781-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="d0781-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

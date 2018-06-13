@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71f5cdfaf47c55107980edf089f8964c5936fb23
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440980"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a><span data-ttu-id="fd25b-102">Método IHostSecurityManager::SetThreadToken</span><span class="sxs-lookup"><span data-stu-id="fd25b-102">IHostSecurityManager::SetThreadToken Method</span></span>
 <span data-ttu-id="fd25b-103">Define um identificador para o thread em execução no momento.</span><span class="sxs-lookup"><span data-stu-id="fd25b-103">Sets a handle for the currently executing thread.</span></span>  

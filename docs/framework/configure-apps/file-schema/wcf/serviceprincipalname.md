@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750720"
 ---
 # <a name="ltserviceprincipalnamegt"></a><span data-ttu-id="f31a5-102">&lt;ServicePrincipalName&gt;</span><span class="sxs-lookup"><span data-stu-id="f31a5-102">&lt;servicePrincipalName&gt;</span></span>
 <span data-ttu-id="f31a5-103">Especifica a identidade de um serviço por seu serviço Nome Principal (SPN).</span><span class="sxs-lookup"><span data-stu-id="f31a5-103">Specifies the identity of a service by its Service Principal Name (SPN).</span></span>  

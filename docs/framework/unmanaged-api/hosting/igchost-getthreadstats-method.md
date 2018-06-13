@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74827fac102ee6045965f4ba9d74dd3b1aa0af86
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437564"
 ---
 # <a name="igchostgetthreadstats-method"></a><span data-ttu-id="58359-102">Método IGCHost::GetThreadStats</span><span class="sxs-lookup"><span data-stu-id="58359-102">IGCHost::GetThreadStats Method</span></span>
 <span data-ttu-id="58359-103">Obtém as estatísticas por thread de coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="58359-103">Gets the per-thread statistics for garbage collection.</span></span>  

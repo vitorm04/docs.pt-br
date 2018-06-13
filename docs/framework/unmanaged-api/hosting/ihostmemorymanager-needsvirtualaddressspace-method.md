@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87c97a678fce4c25a113670a4668515a898e5251
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438412"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a><span data-ttu-id="de7d6-102">Método IHostMemoryManager::NeedsVirtualAddressSpace</span><span class="sxs-lookup"><span data-stu-id="de7d6-102">IHostMemoryManager::NeedsVirtualAddressSpace Method</span></span>
 <span data-ttu-id="de7d6-103">Notifica o host que o common language runtime (CLR) vai tentar usar a memória especificada.</span><span class="sxs-lookup"><span data-stu-id="de7d6-103">Notifies the host that the common language runtime (CLR) is going to attempt to use the specified memory.</span></span>  

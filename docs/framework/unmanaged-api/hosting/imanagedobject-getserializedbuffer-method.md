@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53e8180fb55336eb05d0737110fd2fe07a4c5894
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441595"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a><span data-ttu-id="920ff-102">Método IManagedObject::GetSerializedBuffer</span><span class="sxs-lookup"><span data-stu-id="920ff-102">IManagedObject::GetSerializedBuffer Method</span></span>
 <span data-ttu-id="920ff-103">Obtém a representação de cadeia de caracteres do objeto gerenciado.</span><span class="sxs-lookup"><span data-stu-id="920ff-103">Gets the string representation of this managed object.</span></span>  

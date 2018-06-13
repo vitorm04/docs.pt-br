@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558649"
 ---
 # <a name="how-to-repeat-media-playback"></a><span data-ttu-id="f990b-102">Como repetir reprodução de mídia</span><span class="sxs-lookup"><span data-stu-id="f990b-102">How to: Repeat Media Playback</span></span>
 <span data-ttu-id="f990b-103">Este exemplo mostra como reproduzir uma mídia indefinidamente, isto é, configurar a mídia de modo que ele seja executado em um loop infinito.</span><span class="sxs-lookup"><span data-stu-id="f990b-103">This example shows how to playback media indefinitely, that is, to set media so that it plays in an infinite loop.</span></span>  

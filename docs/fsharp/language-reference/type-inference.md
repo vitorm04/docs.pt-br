@@ -4,8 +4,10 @@ description: 'Saiba como o compilador F # infere os tipos de valores, variáveis
 ms.date: 05/16/2016
 ms.openlocfilehash: 93e1568ebe71436ad8f7119ac9d9628cdf58012a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563688"
 ---
 # <a name="type-inference"></a><span data-ttu-id="5ffca-103">Inferência de tipos</span><span class="sxs-lookup"><span data-stu-id="5ffca-103">Type Inference</span></span>
 

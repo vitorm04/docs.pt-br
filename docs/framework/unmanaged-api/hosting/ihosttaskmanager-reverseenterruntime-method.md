@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0945a4b32a155e99e0402dfcdcc826d1eff3eb4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442014"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a><span data-ttu-id="ef1f7-102">Método IHostTaskManager::ReverseEnterRuntime</span><span class="sxs-lookup"><span data-stu-id="ef1f7-102">IHostTaskManager::ReverseEnterRuntime Method</span></span>
 <span data-ttu-id="ef1f7-103">Notifica o host que está sendo feita uma chamada para o common language runtime (CLR) do código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="ef1f7-103">Notifies the host that a call is being made into the common language runtime (CLR) from unmanaged code.</span></span>  

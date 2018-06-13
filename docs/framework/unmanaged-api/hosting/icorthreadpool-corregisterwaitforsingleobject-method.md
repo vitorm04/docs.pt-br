@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8198bef4a479499724b07da245f40aa9d9f4c265
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437093"
 ---
 # <a name="icorthreadpoolcorregisterwaitforsingleobject-method"></a><span data-ttu-id="dac4c-102">Método ICorThreadpool::CorRegisterWaitForSingleObject</span><span class="sxs-lookup"><span data-stu-id="dac4c-102">ICorThreadpool::CorRegisterWaitForSingleObject Method</span></span>
 <span data-ttu-id="dac4c-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="dac4c-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4fba8dabc09c5586a92a12cf8b9e7239c564b795
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437499"
 ---
 # <a name="icorruntimehostcreatelogicalthreadstate-method"></a><span data-ttu-id="49b8d-102">Método ICorRuntimeHost::CreateLogicalThreadState</span><span class="sxs-lookup"><span data-stu-id="49b8d-102">ICorRuntimeHost::CreateLogicalThreadState Method</span></span>
 <span data-ttu-id="49b8d-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="49b8d-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

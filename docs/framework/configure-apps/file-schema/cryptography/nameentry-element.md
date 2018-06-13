@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743047"
 ---
 # <a name="ltnameentrygt-element"></a><span data-ttu-id="6efa1-102">&lt;nameEntry&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="6efa1-102">&lt;nameEntry&gt; Element</span></span>
 <span data-ttu-id="6efa1-103">Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que uma classe tenha vários nomes amigáveis.</span><span class="sxs-lookup"><span data-stu-id="6efa1-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  

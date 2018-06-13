@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756898"
 ---
 # <a name="ltworkflowidlegt"></a><span data-ttu-id="b98d1-102">&lt;workflowIdle&gt;</span><span class="sxs-lookup"><span data-stu-id="b98d1-102">&lt;workflowIdle&gt;</span></span>
 <span data-ttu-id="b98d1-103">Um comportamento de serviço que controla quando instâncias de fluxo de trabalho ocioso são descarregadas e persistidas.</span><span class="sxs-lookup"><span data-stu-id="b98d1-103">A service behavior that controls when idle workflow instances are unloaded and persisted.</span></span>  

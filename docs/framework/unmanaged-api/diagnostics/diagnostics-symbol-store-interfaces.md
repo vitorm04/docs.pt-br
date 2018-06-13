@@ -13,9 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435806"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a><span data-ttu-id="ff9d5-102">Interfaces de armazenamento de símbolo de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="ff9d5-102">Diagnostics Symbol Store Interfaces</span></span>
 <span data-ttu-id="ff9d5-103">Este tópico descreve as interfaces não gerenciadas que permitem que um compilador para gerar informações de símbolo para uso por um depurador.</span><span class="sxs-lookup"><span data-stu-id="ff9d5-103">This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.</span></span>  

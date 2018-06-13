@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 1f2fcf87-6f52-4830-b9af-861f9ad999dc
 ms.openlocfilehash: 5f90259e694a1d81fc26c82c061ca780b838f482
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640209"
 ---
 # <a name="equality-operations-visual-basic"></a><span data-ttu-id="27e38-102">Operações de igualdade (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27e38-102">Equality Operations (Visual Basic)</span></span>
 <span data-ttu-id="27e38-103">Duas sequências cujos elementos correspondentes são iguais e que têm o mesmo número de elementos são consideradas iguais.</span><span class="sxs-lookup"><span data-stu-id="27e38-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  

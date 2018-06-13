@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e605859a3049abc0c17d9d6792ade78f4ad2bd78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417356"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a><span data-ttu-id="b1e2d-102">Método ICorDebugModule2::SetJITCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="b1e2d-102">ICorDebugModule2::SetJITCompilerFlags Method</span></span>
 <span data-ttu-id="b1e2d-103">Define os sinalizadores que controlam a compilação just-in-time (JIT) deste ICorDebugModule2.</span><span class="sxs-lookup"><span data-stu-id="b1e2d-103">Sets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  

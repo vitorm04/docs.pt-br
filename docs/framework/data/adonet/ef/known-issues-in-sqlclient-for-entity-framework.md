@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765653"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a><span data-ttu-id="4f249-102">Problemas conhecidos em SqlClient para Entity Framework</span><span class="sxs-lookup"><span data-stu-id="4f249-102">Known Issues in SqlClient for Entity Framework</span></span>
 <span data-ttu-id="4f249-103">Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).</span><span class="sxs-lookup"><span data-stu-id="4f249-103">This section describes known issues related to the .NET Framework Data Provider for SQL Server (SqlClient).</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557635"
 ---
 # <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="cda22-102">Tópicos explicativos de animação e tempo</span><span class="sxs-lookup"><span data-stu-id="cda22-102">Animation and Timing How-to Topics</span></span>
 <span data-ttu-id="cda22-103">Os tópicos a seguir demonstram como usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animação e sistema de tempo em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="cda22-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  

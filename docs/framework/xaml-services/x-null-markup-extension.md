@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562343"
 ---
 # <a name="xnull-markup-extension"></a><span data-ttu-id="14b1d-102">Extensão de marcação x:Null</span><span class="sxs-lookup"><span data-stu-id="14b1d-102">x:Null Markup Extension</span></span>
 <span data-ttu-id="14b1d-103">Especifica `null` como um valor para um membro XAML.</span><span class="sxs-lookup"><span data-stu-id="14b1d-103">Specifies `null` as a value for a XAML member.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45e45abd531c779b77c1f0a4b3946420037ee02b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443398"
 ---
 # <a name="imetadatafilterunmarkall-method"></a><span data-ttu-id="3ff00-102">Método IMetaDataFilter::UnmarkAll</span><span class="sxs-lookup"><span data-stu-id="3ff00-102">IMetaDataFilter::UnmarkAll Method</span></span>
 <span data-ttu-id="3ff00-103">Remove as marcas de processamento de todos os tokens no escopo atual de metadados.</span><span class="sxs-lookup"><span data-stu-id="3ff00-103">Removes the processing marks from all the tokens in the current metadata scope.</span></span>  

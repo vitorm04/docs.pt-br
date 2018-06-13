@@ -17,8 +17,10 @@ helpviewer_keywords:
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
 ms.openlocfilehash: 15c359a9a7f9797fc03ce20c453905af01f925d7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564346"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a><span data-ttu-id="c86a3-102">Tipos inseridos para primitivos de linguagem XML comuns</span><span class="sxs-lookup"><span data-stu-id="c86a3-102">Built-in Types for Common XAML Language Primitives</span></span>
 <span data-ttu-id="c86a3-103">XAML 2009 introduz o suporte ao nível de linguagem XAML vários tipos de dados que são usados com frequência primitivos no common language runtime (CLR) e em outras linguagens de programação.</span><span class="sxs-lookup"><span data-stu-id="c86a3-103">XAML 2009 introduces XAML language-level support for several data types that are frequently used primitives in the common language runtime (CLR) and in other programming languages.</span></span> <span data-ttu-id="c86a3-104">XAML 2009 adiciona suporte para esses primitivos: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, e `x:Array`</span><span class="sxs-lookup"><span data-stu-id="c86a3-104">XAML 2009 adds support for these primitives: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, and `x:Array`</span></span>  

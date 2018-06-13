@@ -4,8 +4,10 @@ description: 'Veja como o F # loop for... na expressão de construção de loop 
 ms.date: 05/16/2016
 ms.openlocfilehash: 926f0a9940021b3dc0deefc12ea158c35975e949
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564068"
 ---
 # <a name="loops-forin-expression"></a><span data-ttu-id="dd692-103">Loops: expressão for...in</span><span class="sxs-lookup"><span data-stu-id="dd692-103">Loops: for...in Expression</span></span>
 

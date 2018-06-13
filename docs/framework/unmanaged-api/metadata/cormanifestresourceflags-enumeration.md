@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440704"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="2fa5c-102">Enumeração CorManifestResourceFlags</span><span class="sxs-lookup"><span data-stu-id="2fa5c-102">CorManifestResourceFlags Enumeration</span></span>
 <span data-ttu-id="2fa5c-103">Indica a visibilidade de recursos codificados em um manifesto do assembly.</span><span class="sxs-lookup"><span data-stu-id="2fa5c-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  

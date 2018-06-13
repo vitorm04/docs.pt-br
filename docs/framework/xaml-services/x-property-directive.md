@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
 ms.openlocfilehash: 0d554d8ba4d69b4c2d4cc01f3965ade7e508bb0e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563687"
 ---
 # <a name="xproperty-directive"></a><span data-ttu-id="cebdb-102">Diretiva x:Property</span><span class="sxs-lookup"><span data-stu-id="cebdb-102">x:Property Directive</span></span>
 <span data-ttu-id="cebdb-103">Declara uma propriedade XAML na marcação.</span><span class="sxs-lookup"><span data-stu-id="cebdb-103">Declares a XAML property in markup.</span></span>  

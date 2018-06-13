@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554762"
 ---
 # <a name="printdialog"></a><span data-ttu-id="6259f-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="6259f-102">PrintDialog</span></span>
 <span data-ttu-id="6259f-103">O <xref:System.Windows.Controls.PrintDialog> controle é usado para instanciar uma caixa de diálogo de impressão padrão que configura automaticamente uma <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintQueue> de acordo com a entrada do usuário.</span><span class="sxs-lookup"><span data-stu-id="6259f-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
