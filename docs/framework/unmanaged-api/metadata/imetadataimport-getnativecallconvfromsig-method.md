@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 963d46aea4ab31e770cb845fe699208f6c8f9ac7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447234"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="59617-102">Método IMetaDataImport::GetNativeCallConvFromSig</span><span class="sxs-lookup"><span data-stu-id="59617-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
 <span data-ttu-id="59617-103">Obtém o nativo convenção de chamada para o método que é representado pelo ponteiro de assinatura especificada.</span><span class="sxs-lookup"><span data-stu-id="59617-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  

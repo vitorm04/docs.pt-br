@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b7f106e2b79a2c6bb24733debf7f4828505d66a6
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958166"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a><span data-ttu-id="faef9-103">Quando implantar contêineres do Windows para serviço de contêiner do Azure (ou seja, Kubernetes)</span><span class="sxs-lookup"><span data-stu-id="faef9-103">When to deploy Windows Containers to Azure Container Service (that is, Kubernetes)</span></span>
 

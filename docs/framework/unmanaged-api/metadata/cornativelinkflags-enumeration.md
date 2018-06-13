@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442563"
 ---
 # <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="cbf66-102">Enumeração CorNativeLinkFlags</span><span class="sxs-lookup"><span data-stu-id="cbf66-102">CorNativeLinkFlags Enumeration</span></span>
 <span data-ttu-id="cbf66-103">Fornece valores de sinalizador usados pelo vinculador ao vincular o código nativo.</span><span class="sxs-lookup"><span data-stu-id="cbf66-103">Provides flag values used by the linker when linking native code.</span></span>  

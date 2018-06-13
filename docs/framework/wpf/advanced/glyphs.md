@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543060"
 ---
 # <a name="glyphs"></a><span data-ttu-id="b471e-102">Glifos</span><span class="sxs-lookup"><span data-stu-id="b471e-102">Glyphs</span></span>
 <span data-ttu-id="b471e-103">Glifos são uma representação de nível baixo de um caractere a ser desenhada na tela.</span><span class="sxs-lookup"><span data-stu-id="b471e-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="b471e-104"> fornece acesso direto a glifos para clientes que desejam interceptar e persistir texto após a formatação.</span><span class="sxs-lookup"><span data-stu-id="b471e-104"> provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  

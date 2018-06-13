@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 92e3a0a930a4e4b91cac27cbed1b745dea4207a9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450018"
 ---
 # <a name="corprffunctionargumentrange-structure"></a><span data-ttu-id="7c70a-102">Estrutura COR_PRF_FUNCTION_ARGUMENT_RANGE</span><span class="sxs-lookup"><span data-stu-id="7c70a-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
 <span data-ttu-id="7c70a-103">Representa um bloco de argumentos de função armazenados de forma contígua em ordem da esquerda para a direita na memória.</span><span class="sxs-lookup"><span data-stu-id="7c70a-103">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  

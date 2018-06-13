@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 68a9d6ad7470ffaf1143a4a8e3134f20edb9e3c5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439212"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a><span data-ttu-id="fd506-102">Método IHostMemoryManager::VirtualQuery</span><span class="sxs-lookup"><span data-stu-id="fd506-102">IHostMemoryManager::VirtualQuery Method</span></span>
 <span data-ttu-id="fd506-103">Serve como um wrapper lógico para a função Win32 correspondente.</span><span class="sxs-lookup"><span data-stu-id="fd506-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="fd506-104">A implementação do Win32 de `VirtualQuery` recupera informações sobre um intervalo de páginas no espaço de endereço virtual do processo de chamada.</span><span class="sxs-lookup"><span data-stu-id="fd506-104">The Win32 implementation of `VirtualQuery` retrieves information about a range of pages in the virtual address space of the calling process.</span></span>  

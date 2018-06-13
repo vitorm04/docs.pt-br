@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520936"
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a><span data-ttu-id="36ef7-102">Instruções passo a passo: copiando e colando um controle ElementHost nos Windows Forms separados</span><span class="sxs-lookup"><span data-stu-id="36ef7-102">Walkthrough: Copying and Pasting an ElementHost Control into Separate Windows Forms</span></span>
 <span data-ttu-id="36ef7-103">Este passo a passo mostra como copiar um controle WPF (Windows Presentation Foundation) de um formulário do Windows para outro.</span><span class="sxs-lookup"><span data-stu-id="36ef7-103">This walkthrough shows you how to copy a Windows Presentation Foundation (WPF) control from one Windows Form to another.</span></span>  

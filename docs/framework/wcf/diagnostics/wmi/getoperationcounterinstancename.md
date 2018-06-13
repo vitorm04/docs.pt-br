@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486515"
 ---
 # <a name="getoperationcounterinstancename"></a><span data-ttu-id="feb1f-102">GetOperationCounterInstanceName</span><span class="sxs-lookup"><span data-stu-id="feb1f-102">GetOperationCounterInstanceName</span></span>
 <span data-ttu-id="feb1f-103">Recupera o nome de instância do contador de desempenho de operação.</span><span class="sxs-lookup"><span data-stu-id="feb1f-103">Retrieves the operation performance counter instance name.</span></span>  

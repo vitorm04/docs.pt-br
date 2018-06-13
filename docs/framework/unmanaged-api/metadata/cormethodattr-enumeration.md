@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444660"
 ---
 # <a name="cormethodattr-enumeration"></a><span data-ttu-id="4b113-102">Enumeração CorMethodAttr</span><span class="sxs-lookup"><span data-stu-id="4b113-102">CorMethodAttr Enumeration</span></span>
 <span data-ttu-id="4b113-103">Contém valores que descrevem os recursos de um método.</span><span class="sxs-lookup"><span data-stu-id="4b113-103">Contains values that describe the features of a method.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494889"
 ---
 # <a name="how-to-service-versioning"></a><span data-ttu-id="e717d-102">Como controlar a versão de serviço</span><span class="sxs-lookup"><span data-stu-id="e717d-102">How To: Service Versioning</span></span>
 <span data-ttu-id="e717d-103">Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que roteia mensagens para diferentes versões do mesmo serviço.</span><span class="sxs-lookup"><span data-stu-id="e717d-103">This topic outlines the basic steps required to create a routing configuration that routes messages to different versions of the same service.</span></span> <span data-ttu-id="e717d-104">Neste exemplo, as mensagens são roteadas para duas versões diferentes de um serviço de cálculo, `roundingCalc` (v1) e `regularCalc` (v2).</span><span class="sxs-lookup"><span data-stu-id="e717d-104">In this example, messages are routed to two different versions of a calculator service, `roundingCalc` (v1) and `regularCalc` (v2).</span></span> <span data-ttu-id="e717d-105">Suportam a ambas as implementações as mesmas operações; No entanto o serviço mais antigo, `roundingCalc`, Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar.</span><span class="sxs-lookup"><span data-stu-id="e717d-105">Both implementations support the same operations; however the older service, `roundingCalc`, rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="e717d-106">Um aplicativo cliente deve ser capaz de indicar se deseja usar o novo `regularCalc` serviço.</span><span class="sxs-lookup"><span data-stu-id="e717d-106">A client application must be able to indicate whether to use the newer `regularCalc` service.</span></span>  

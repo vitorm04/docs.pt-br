@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544916"
 ---
 # <a name="how-to-apply-transforms-to-text"></a><span data-ttu-id="424a2-102">Como aplicar transformações ao texto</span><span class="sxs-lookup"><span data-stu-id="424a2-102">How to: Apply Transforms to Text</span></span>
 <span data-ttu-id="424a2-103">As transformações podem alterar a exibição do texto no seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="424a2-103">Transforms can alter the display of text in your application.</span></span> <span data-ttu-id="424a2-104">Os exemplos a seguir usam diferentes tipos de transformações de renderização para afetar a exibição do texto em uma <xref:System.Windows.Controls.TextBlock> controle.</span><span class="sxs-lookup"><span data-stu-id="424a2-104">The following examples use different types of rendering transforms to affect the display of text in a <xref:System.Windows.Controls.TextBlock> control.</span></span>  

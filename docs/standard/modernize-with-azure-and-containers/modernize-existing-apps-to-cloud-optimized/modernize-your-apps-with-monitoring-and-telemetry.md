@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 8f5f9bfebf46db7b98bedc4b5b8204d23357c72e
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957966"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a><span data-ttu-id="35224-103">Modernizar seus aplicativos com o monitoramento e telemetria</span><span class="sxs-lookup"><span data-stu-id="35224-103">Modernize your apps with monitoring and telemetry</span></span>
 

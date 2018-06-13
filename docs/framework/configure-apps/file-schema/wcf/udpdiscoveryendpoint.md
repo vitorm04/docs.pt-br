@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767616"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a><span data-ttu-id="00ca2-102">&lt;UdpDiscoveryEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="00ca2-102">&lt;udpDiscoveryEndpoint&gt;</span></span>
 <span data-ttu-id="00ca2-103">Este elemento de configuração define um ponto de extremidade padrão que é pré-configurado para operações de descoberta através de um UDP associação multicast.</span><span class="sxs-lookup"><span data-stu-id="00ca2-103">This configuration element defines a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="00ca2-104">Esse ponto de extremidade tem um contrato fixo e dá suporte a duas versões do protocolo WS-Discovery.</span><span class="sxs-lookup"><span data-stu-id="00ca2-104">This endpoint has a fixed contract and supports two WS-Discovery protocol versions.</span></span> <span data-ttu-id="00ca2-105">Além disso, ele tem uma associação fixa do UDP e um endereço padrão conforme especificado nas especificações do WS-Discovery (WS-Discovery de abril de 2005 ou v 1.1 do WS-Discovery).</span><span class="sxs-lookup"><span data-stu-id="00ca2-105">In addition, it has a fixed UDP binding and a default address as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery V1.1)..</span></span>  

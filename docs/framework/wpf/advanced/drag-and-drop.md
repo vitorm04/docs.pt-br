@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
 ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542568"
 ---
 # <a name="drag-and-drop"></a><span data-ttu-id="5a35e-102">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="5a35e-102">Drag and Drop</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="5a35e-103"> Fornece um arraste altamente flexível e a infraestrutura de soltar que dá suporte a arrastar e soltar de dados dentro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, bem como outros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="5a35e-103"> provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  

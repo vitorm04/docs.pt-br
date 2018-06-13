@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449778"
 ---
 # <a name="corprfcodeinfo-structure"></a><span data-ttu-id="e3cb7-102">Estrutura COR_PRF_CODE_INFO</span><span class="sxs-lookup"><span data-stu-id="e3cb7-102">COR_PRF_CODE_INFO Structure</span></span>
 <span data-ttu-id="e3cb7-103">Representa um bloco contíguo de código nativo armazenado na memória.</span><span class="sxs-lookup"><span data-stu-id="e3cb7-103">Represents one contiguous block of native code stored in memory.</span></span>  

@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442238"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a><span data-ttu-id="fe816-102">Enumeração CorLocalRefPreservation</span><span class="sxs-lookup"><span data-stu-id="fe816-102">CorLocalRefPreservation Enumeration</span></span>
 <span data-ttu-id="fe816-103">Contém valores de sinalizador para o tratamento de referências de locais.</span><span class="sxs-lookup"><span data-stu-id="fe816-103">Contains flag values for the treatment of local references.</span></span>  

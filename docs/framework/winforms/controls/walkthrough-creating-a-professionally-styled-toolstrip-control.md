@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541600"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a><span data-ttu-id="09611-102">Instruções passo a passo: criando um controle ToolStrip com estilo profissional</span><span class="sxs-lookup"><span data-stu-id="09611-102">Walkthrough: Creating a Professionally Styled ToolStrip Control</span></span>
 <span data-ttu-id="09611-103">Você pode dar a seu aplicativo <xref:System.Windows.Forms.ToolStrip> controla uma aparência profissional e o comportamento ao escrever sua própria classe que deriva de <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.</span><span class="sxs-lookup"><span data-stu-id="09611-103">You can give your application’s <xref:System.Windows.Forms.ToolStrip> controls a professional appearance and behavior by writing your own class derived from the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.</span></span>  

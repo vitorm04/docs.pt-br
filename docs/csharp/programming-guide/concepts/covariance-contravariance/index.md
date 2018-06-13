@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334081"
 ---
 # <a name="covariance-and-contravariance-c"></a><span data-ttu-id="b5785-102">Covariância e contravariância (C#)</span><span class="sxs-lookup"><span data-stu-id="b5785-102">Covariance and Contravariance (C#)</span></span>
 <span data-ttu-id="b5785-103">No C#, a covariância e a contravariância habilitam a conversão de referência implícita para tipos de matriz, tipos de delegados e argumentos de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="b5785-103">In C#, covariance and contravariance enable implicit reference conversion for array types, delegate types, and generic type arguments.</span></span> <span data-ttu-id="b5785-104">A covariância preserva a compatibilidade de atribuição, e a contravariância reverte.</span><span class="sxs-lookup"><span data-stu-id="b5785-104">Covariance preserves assignment compatibility and contravariance reverses it.</span></span>  

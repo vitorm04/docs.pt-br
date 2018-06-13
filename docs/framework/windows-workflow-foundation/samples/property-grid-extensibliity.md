@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519588"
 ---
 # <a name="property-grid-extensibliity"></a><span data-ttu-id="adeb6-102">Extensibliity grade de propriedade</span><span class="sxs-lookup"><span data-stu-id="adeb6-102">Property Grid Extensibliity</span></span>
 <span data-ttu-id="adeb6-103">Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando uma determinada atividade é selecionada no designer.</span><span class="sxs-lookup"><span data-stu-id="adeb6-103">A developer can customize the property grid that is displayed when a given activity is selected within the designer.</span></span> <span data-ttu-id="adeb6-104">Isso pode ser feito para criar uma experiência rica de edição.</span><span class="sxs-lookup"><span data-stu-id="adeb6-104">This can be done to create a rich editing experience.</span></span> <span data-ttu-id="adeb6-105">Este exemplo mostra como isso pode ser feito.</span><span class="sxs-lookup"><span data-stu-id="adeb6-105">This sample shows how this can be done.</span></span>  

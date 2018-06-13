@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541223"
 ---
 # <a name="varieties-of-custom-controls"></a><span data-ttu-id="2a6c6-102">Variedades de controles personalizados</span><span class="sxs-lookup"><span data-stu-id="2a6c6-102">Varieties of Custom Controls</span></span>
 <span data-ttu-id="2a6c6-103">Com o .NET Framework, você pode desenvolver e implementar novos controles.</span><span class="sxs-lookup"><span data-stu-id="2a6c6-103">With the .NET Framework, you can develop and implement new controls.</span></span> <span data-ttu-id="2a6c6-104">Você pode estender a funcionalidade do controle de usuário familiar, além dos controles existentes, por herança.</span><span class="sxs-lookup"><span data-stu-id="2a6c6-104">You can extend the functionality of the familiar user control as well as existing controls through inheritance.</span></span> <span data-ttu-id="2a6c6-105">Você também pode escrever controles personalizados que executam suas próprias pinturas.</span><span class="sxs-lookup"><span data-stu-id="2a6c6-105">You can also write custom controls that perform their own painting.</span></span>  

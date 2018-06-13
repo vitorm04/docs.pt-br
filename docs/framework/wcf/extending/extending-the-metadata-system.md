@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488950"
 ---
 # <a name="extending-the-metadata-system"></a><span data-ttu-id="68fcb-102">Estendendo o sistema de metadados</span><span class="sxs-lookup"><span data-stu-id="68fcb-102">Extending the Metadata System</span></span>
 <span data-ttu-id="68fcb-103">O sistema de metadados do Windows Communication Foundation (WCF) é um grupo de interfaces e classes que representam os metadados necessários para implementar aplicativos baseados em serviço.</span><span class="sxs-lookup"><span data-stu-id="68fcb-103">The Windows Communication Foundation (WCF) metadata system is a group of classes and interfaces that represent metadata required to implement service-based applications.</span></span> <span data-ttu-id="68fcb-104">Modificar ou estender as classes de ou implementar e configurar as interfaces para exportar e importar metadados personalizados, como extensões WSDL Web Services Description Language () ou asserções de WS-PolicyAttachments personalizadas.</span><span class="sxs-lookup"><span data-stu-id="68fcb-104">Modify or extend the classes or implement and configure the interfaces to export and import custom metadata such as Web Services Description Language (WSDL) extensions or custom WS-PolicyAttachments assertions.</span></span>  

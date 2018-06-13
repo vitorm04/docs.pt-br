@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523215"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a><span data-ttu-id="c451a-102">Como desenhar uma linha com terminações</span><span class="sxs-lookup"><span data-stu-id="c451a-102">How to: Draw a Line with Line Caps</span></span>
 <span data-ttu-id="c451a-103">Você pode desenhar o início ou término de uma linha em uma das várias formas chamadas terminações de linha.</span><span class="sxs-lookup"><span data-stu-id="c451a-103">You can draw the start or end of a line in one of several shapes called line caps.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="c451a-104"> oferece suporte a várias terminações de linha, como round, quadrado, losango e ponta de seta.</span><span class="sxs-lookup"><span data-stu-id="c451a-104"> supports several line caps, such as round, square, diamond, and arrowhead.</span></span>  

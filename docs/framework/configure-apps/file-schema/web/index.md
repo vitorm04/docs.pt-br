@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767473"
 ---
 # <a name="web-settings-schema"></a><span data-ttu-id="2a7c6-102">Esquema de configurações Web</span><span class="sxs-lookup"><span data-stu-id="2a7c6-102">Web Settings Schema</span></span>
 <span data-ttu-id="2a7c6-103">As configurações de Web especificam as configurações do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="2a7c6-103">Web settings specify CPU and execution-level ASP.NET settings that apply to process-wide behavior managed by the ASP.NET hosting layer.</span></span> <span data-ttu-id="2a7c6-104">Essas configurações são diferentes das configurações de tipo de domínio do aplicativo que são especificadas no arquivo Web.config de um aplicativo ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="2a7c6-104">These settings differ from application domain-type settings that are specified in the Web.config file of an ASP.NET application.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441923"
 ---
 # <a name="waitoption-enumeration"></a><span data-ttu-id="99996-102">Enumeração WAIT_OPTION</span><span class="sxs-lookup"><span data-stu-id="99996-102">WAIT_OPTION Enumeration</span></span>
 <span data-ttu-id="99996-103">Contém valores que indicam que a ação que um host deve executar se uma operação solicitada pelos blocos de runtime (CLR) de linguagem comum.</span><span class="sxs-lookup"><span data-stu-id="99996-103">Contains values that indicate the action a host should take if an operation requested by the common language runtime (CLR) blocks.</span></span>  

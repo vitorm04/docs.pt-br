@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519058"
 ---
 # <a name="task-2-host-the-workflow-designer"></a><span data-ttu-id="07634-102">Tarefa 2: Hospedar Designer de Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="07634-102">Task 2: Host the Workflow Designer</span></span>
 <span data-ttu-id="07634-103">Este tópico descreve o procedimento para hospedar uma instância do [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo do Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="07634-103">This topic describes the procedure for hosting an instance of the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in a Windows Presentation Foundation (WPF) application.</span></span>  

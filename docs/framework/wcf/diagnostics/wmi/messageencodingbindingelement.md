@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485714"
 ---
 # <a name="messageencodingbindingelement"></a><span data-ttu-id="8111b-102">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="8111b-102">MessageEncodingBindingElement</span></span>
 <span data-ttu-id="8111b-103">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="8111b-103">MessageEncodingBindingElement</span></span>  

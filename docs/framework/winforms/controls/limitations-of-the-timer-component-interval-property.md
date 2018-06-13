@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536020"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a><span data-ttu-id="2254b-102">Limitações da propriedade de intervalo do componente de temporizador dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2254b-102">Limitations of the Windows Forms Timer Component&#39;s Interval Property</span></span>
 <span data-ttu-id="2254b-103">Windows Forms <xref:System.Windows.Forms.Timer> componente tem um <xref:System.Windows.Forms.Timer.Interval%2A> propriedade que especifica o número de milissegundos que passam entre o evento de um timer e a próxima.</span><span class="sxs-lookup"><span data-stu-id="2254b-103">The Windows Forms <xref:System.Windows.Forms.Timer> component has an <xref:System.Windows.Forms.Timer.Interval%2A> property that specifies the number of milliseconds that pass between one timer event and the next.</span></span> <span data-ttu-id="2254b-104">A menos que o componente está desativado, um temporizador continua a receber o <xref:System.Windows.Forms.Timer.Tick> evento aproximadamente igual intervalos de tempo.</span><span class="sxs-lookup"><span data-stu-id="2254b-104">Unless the component is disabled, a timer continues to receive the <xref:System.Windows.Forms.Timer.Tick> event at roughly equal intervals of time.</span></span>  

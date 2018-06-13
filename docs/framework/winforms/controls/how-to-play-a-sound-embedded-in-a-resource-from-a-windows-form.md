@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532129"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a><span data-ttu-id="6c4bb-102">Como executar um som inserido em um recurso a partir de um Windows Form</span><span class="sxs-lookup"><span data-stu-id="6c4bb-102">How to: Play a Sound Embedded in a Resource from a Windows Form</span></span>
 <span data-ttu-id="6c4bb-103">Você pode usar o <xref:System.Media.SoundPlayer> classe tocar um som de um recurso inserido.</span><span class="sxs-lookup"><span data-stu-id="6c4bb-103">You can use the <xref:System.Media.SoundPlayer> class to play a sound from an embedded resource.</span></span>  

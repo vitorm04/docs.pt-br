@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171615"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="1418f-102">Operador /= (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="1418f-102">/= Operator (C# Reference)</span></span>
 <span data-ttu-id="1418f-103">O operador de atribuição de divisão.</span><span class="sxs-lookup"><span data-stu-id="1418f-103">The division assignment operator.</span></span>  

@@ -1,51 +1,45 @@
 ---
 title: Como obter o endereço de uma variável (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - variables [C#], address of
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-caps.latest.revision: 19
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 63a49490effb8b7d365492e8518b7558ec03a705
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bb52aee3341194697b40b30ec14afced61a200be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340119"
 ---
-# <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a><span data-ttu-id="a670f-102">Como obter o endereço de uma variável (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="a670f-102">How to: Obtain the Address of a Variable (C# Programming Guide)</span></span>
-<span data-ttu-id="a670f-103">Para obter o endereço de uma expressão unária, que é avaliada como uma variável fixa, use o operador address-of `&`:</span><span class="sxs-lookup"><span data-stu-id="a670f-103">To obtain the address of a unary expression, which evaluates to a fixed variable, use the address-of operator `&`:</span></span>  
+# <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a><span data-ttu-id="1ada3-102">Como obter o endereço de uma variável (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="1ada3-102">How to: Obtain the Address of a Variable (C# Programming Guide)</span></span>
+<span data-ttu-id="1ada3-103">Para obter o endereço de uma expressão unária, que é avaliada como uma variável fixa, use o operador address-of `&`:</span><span class="sxs-lookup"><span data-stu-id="1ada3-103">To obtain the address of a unary expression, which evaluates to a fixed variable, use the address-of operator `&`:</span></span>  
   
 ```csharp  
 int number;  
 int* p = &number; //address-of operator &  
 ```  
   
- <span data-ttu-id="a670f-104">O operador address-of pode ser aplicado somente a uma variável.</span><span class="sxs-lookup"><span data-stu-id="a670f-104">The address-of operator can only be applied to a variable.</span></span> <span data-ttu-id="a670f-105">Se a variável for uma variável móvel, é possível usar a [instrução fixa](../../../csharp/language-reference/keywords/fixed-statement.md) para corrigir temporariamente a variável antes de obter seu endereço.</span><span class="sxs-lookup"><span data-stu-id="a670f-105">If the variable is a moveable variable, you can use the [fixed statement](../../../csharp/language-reference/keywords/fixed-statement.md) to temporarily fix the variable before obtaining its address.</span></span>  
+ <span data-ttu-id="1ada3-104">O operador address-of pode ser aplicado somente a uma variável.</span><span class="sxs-lookup"><span data-stu-id="1ada3-104">The address-of operator can only be applied to a variable.</span></span> <span data-ttu-id="1ada3-105">Se a variável for uma variável móvel, é possível usar a [instrução fixa](../../../csharp/language-reference/keywords/fixed-statement.md) para corrigir temporariamente a variável antes de obter seu endereço.</span><span class="sxs-lookup"><span data-stu-id="1ada3-105">If the variable is a moveable variable, you can use the [fixed statement](../../../csharp/language-reference/keywords/fixed-statement.md) to temporarily fix the variable before obtaining its address.</span></span>  
   
- <span data-ttu-id="a670f-106">É sua responsabilidade assegurar que a variável seja inicializada.</span><span class="sxs-lookup"><span data-stu-id="a670f-106">It's your responsibility to ensure that the variable is initialized.</span></span> <span data-ttu-id="a670f-107">O compilador não emitirá uma mensagem de erro se a variável não for inicializada.</span><span class="sxs-lookup"><span data-stu-id="a670f-107">The compiler doesn't issue an error message if the variable is not initialized.</span></span>  
+ <span data-ttu-id="1ada3-106">É sua responsabilidade assegurar que a variável seja inicializada.</span><span class="sxs-lookup"><span data-stu-id="1ada3-106">It's your responsibility to ensure that the variable is initialized.</span></span> <span data-ttu-id="1ada3-107">O compilador não emitirá uma mensagem de erro se a variável não for inicializada.</span><span class="sxs-lookup"><span data-stu-id="1ada3-107">The compiler doesn't issue an error message if the variable is not initialized.</span></span>  
   
- <span data-ttu-id="a670f-108">Não é possível obter o endereço de uma constante nem de um valor.</span><span class="sxs-lookup"><span data-stu-id="a670f-108">You can't get the address of a constant or a value.</span></span>  
+ <span data-ttu-id="1ada3-108">Não é possível obter o endereço de uma constante nem de um valor.</span><span class="sxs-lookup"><span data-stu-id="1ada3-108">You can't get the address of a constant or a value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a670f-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a670f-109">Example</span></span>  
- <span data-ttu-id="a670f-110">Neste exemplo, um ponteiro para `int`, `p`, é declarado e atribuído ao endereço de uma variável de inteiro, `number`.</span><span class="sxs-lookup"><span data-stu-id="a670f-110">In this example, a pointer to `int`, `p`, is declared and assigned the address of an integer variable, `number`.</span></span> <span data-ttu-id="a670f-111">A variável `number` é inicializada como resultado da atribuição a `*p`.</span><span class="sxs-lookup"><span data-stu-id="a670f-111">The variable `number` is initialized as a result of the assignment to `*p`.</span></span> <span data-ttu-id="a670f-112">Se você comentar esta instrução de atribuição, a inicialização da variável `number` será removida, mas não será emitido nenhum erro em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="a670f-112">If you comment out this assignment statement, the initialization of the variable `number` is removed, but no compile-time error is issued.</span></span>  
+## <a name="example"></a><span data-ttu-id="1ada3-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1ada3-109">Example</span></span>  
+ <span data-ttu-id="1ada3-110">Neste exemplo, um ponteiro para `int`, `p`, é declarado e atribuído ao endereço de uma variável de inteiro, `number`.</span><span class="sxs-lookup"><span data-stu-id="1ada3-110">In this example, a pointer to `int`, `p`, is declared and assigned the address of an integer variable, `number`.</span></span> <span data-ttu-id="1ada3-111">A variável `number` é inicializada como resultado da atribuição a `*p`.</span><span class="sxs-lookup"><span data-stu-id="1ada3-111">The variable `number` is initialized as a result of the assignment to `*p`.</span></span> <span data-ttu-id="1ada3-112">Se você comentar esta instrução de atribuição, a inicialização da variável `number` será removida, mas não será emitido nenhum erro em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="1ada3-112">If you comment out this assignment statement, the initialization of the variable `number` is removed, but no compile-time error is issued.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="a670f-113">Compile este exemplo com a opção do compilador [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="a670f-113">Compile this example with the [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span>
+> <span data-ttu-id="1ada3-113">Compile este exemplo com a opção do compilador [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="1ada3-113">Compile this example with the [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span>
   
  [!code-csharp[address-of-a-variable](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#8)]  
   
-## <a name="see-also"></a><span data-ttu-id="a670f-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a670f-114">See Also</span></span>  
- [<span data-ttu-id="a670f-115">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="a670f-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="a670f-116">Expressões de ponteiro</span><span class="sxs-lookup"><span data-stu-id="a670f-116">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [<span data-ttu-id="a670f-117">Tipos de ponteiro</span><span class="sxs-lookup"><span data-stu-id="a670f-117">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [<span data-ttu-id="a670f-118">Tipos</span><span class="sxs-lookup"><span data-stu-id="a670f-118">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
- [<span data-ttu-id="a670f-119">unsafe</span><span class="sxs-lookup"><span data-stu-id="a670f-119">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
- [<span data-ttu-id="a670f-120">Instrução fixed</span><span class="sxs-lookup"><span data-stu-id="a670f-120">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [<span data-ttu-id="a670f-121">stackalloc</span><span class="sxs-lookup"><span data-stu-id="a670f-121">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a><span data-ttu-id="1ada3-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1ada3-114">See Also</span></span>  
+ [<span data-ttu-id="1ada3-115">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="1ada3-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="1ada3-116">Expressões de ponteiro</span><span class="sxs-lookup"><span data-stu-id="1ada3-116">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [<span data-ttu-id="1ada3-117">Tipos de ponteiro</span><span class="sxs-lookup"><span data-stu-id="1ada3-117">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+ [<span data-ttu-id="1ada3-118">Tipos</span><span class="sxs-lookup"><span data-stu-id="1ada3-118">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
+ [<span data-ttu-id="1ada3-119">unsafe</span><span class="sxs-lookup"><span data-stu-id="1ada3-119">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
+ [<span data-ttu-id="1ada3-120">Instrução fixed</span><span class="sxs-lookup"><span data-stu-id="1ada3-120">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [<span data-ttu-id="1ada3-121">stackalloc</span><span class="sxs-lookup"><span data-stu-id="1ada3-121">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)

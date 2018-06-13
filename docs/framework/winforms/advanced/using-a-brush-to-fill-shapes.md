@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523725"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a><span data-ttu-id="0dfbf-102">Usando um pincel para preencher formas</span><span class="sxs-lookup"><span data-stu-id="0dfbf-102">Using a Brush to Fill Shapes</span></span>
 <span data-ttu-id="0dfbf-103">Um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto é usado para preencher o interior de uma forma fechada.</span><span class="sxs-lookup"><span data-stu-id="0dfbf-103">A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> object is used to fill the interior of a closed shape.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="0dfbf-104"> define vários estilos de preenchimento: cor sólida, o padrão de hachura, textura de imagem e gradiente de cores.</span><span class="sxs-lookup"><span data-stu-id="0dfbf-104"> defines several fill styles: solid color, hatch pattern, image texture, and color gradient.</span></span>  

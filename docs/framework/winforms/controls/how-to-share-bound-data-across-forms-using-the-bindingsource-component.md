@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536586"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a><span data-ttu-id="7be42-102">Como compartilhar dados associados entre formulários usando o componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="7be42-102">How to: Share Bound Data Across Forms Using the BindingSource Component</span></span>
 <span data-ttu-id="7be42-103">Você pode facilmente compartilhar dados entre formulários usando o <xref:System.Windows.Forms.BindingSource> componente.</span><span class="sxs-lookup"><span data-stu-id="7be42-103">You can easily share data across forms using the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="7be42-104">Por exemplo, talvez você queira exibir um formulário de somente leitura que resume os dados de origem de dados e outro formulário editável que contém informações detalhadas sobre o item atualmente selecionado na fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="7be42-104">For example, you may want to display one read-only form that summarizes the data-source data and another editable form that contains detailed information about the currently selected item in the data source.</span></span> <span data-ttu-id="7be42-105">Este exemplo demonstra esse cenário.</span><span class="sxs-lookup"><span data-stu-id="7be42-105">This example demonstrates this scenario.</span></span>  

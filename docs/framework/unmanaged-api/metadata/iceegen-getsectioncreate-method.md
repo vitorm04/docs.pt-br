@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443333"
 ---
 # <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="78e76-102">Método ICeeGen::GetSectionCreate</span><span class="sxs-lookup"><span data-stu-id="78e76-102">ICeeGen::GetSectionCreate Method</span></span>
 <span data-ttu-id="78e76-103">Gera e obtém uma seção de código usando o nome especificado e os valores de sinalizador.</span><span class="sxs-lookup"><span data-stu-id="78e76-103">Generates and gets a code section using the specified name and flag values.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445625"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="a6b23-102">Método IMetaDataAssemblyImport::EnumExportedTypes</span><span class="sxs-lookup"><span data-stu-id="a6b23-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
 <span data-ttu-id="a6b23-103">Enumera os tipos exportados referenciados no manifesto do assembly no escopo atual de metadados.</span><span class="sxs-lookup"><span data-stu-id="a6b23-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  

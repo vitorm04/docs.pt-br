@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 8f80af782c474ccf3a232ab353125fa223d4f5d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486891"
 ---
 # <a name="localservicesecuritysettings"></a><span data-ttu-id="79689-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="79689-102">LocalServiceSecuritySettings</span></span>
 <span data-ttu-id="79689-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="79689-103">LocalServiceSecuritySettings</span></span>  

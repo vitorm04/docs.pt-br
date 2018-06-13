@@ -4,8 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
 ms.openlocfilehash: 891caf2570ea4f843f20f95ac347b66ef84569f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493289"
 ---
 # <a name="how-to-dynamic-update"></a><span data-ttu-id="2f6a4-102">Como atualizar dinamicamente</span><span class="sxs-lookup"><span data-stu-id="2f6a4-102">How To: Dynamic Update</span></span>
 <span data-ttu-id="2f6a4-103">Este tópico descreve as etapas básicas necessárias para criar e atualizar dinamicamente a configuração de roteamento.</span><span class="sxs-lookup"><span data-stu-id="2f6a4-103">This topic outlines the basic steps required to create and dynamically update the routing configuration.</span></span> <span data-ttu-id="2f6a4-104">Neste exemplo, a configuração de roteamento inicial é obtida do arquivo de configuração e encaminha todas as mensagens para o serviço da Calculadora regularCalc; No entanto, ele é subsequentemente atualizado por meio de programação para alterar o ponto de extremidade de destino o serviço roundingCalc.</span><span class="sxs-lookup"><span data-stu-id="2f6a4-104">In this example, the initial routing configuration is obtained from the configuration file and routes all messages to the regularCalc calculator service; however, it is subsequently updated programmatically in order to change the destination endpoint the roundingCalc service.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535594"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a><span data-ttu-id="8e777-102">Como navegar em dados com o controle BindingNavigator dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8e777-102">How to: Navigate Data with the Windows Forms BindingNavigator Control</span></span>
 <span data-ttu-id="8e777-103">O surgimento do <xref:System.Windows.Forms.BindingNavigator> controle em formulários do Windows permite que os desenvolvedores fornecer aos usuários finais com dados simples navegação e manipulação de interface do usuário em formulários de criar.</span><span class="sxs-lookup"><span data-stu-id="8e777-103">The advent of the <xref:System.Windows.Forms.BindingNavigator> control in Windows Forms enables developers to provide end users with a simple data navigation and manipulation user interface on the forms they create.</span></span>  
