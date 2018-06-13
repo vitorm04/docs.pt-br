@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495867"
 ---
 # <a name="debugging-windows-authentication-errors"></a><span data-ttu-id="178e2-102">Depurando erros de autenticação do Windows</span><span class="sxs-lookup"><span data-stu-id="178e2-102">Debugging Windows Authentication Errors</span></span>
 <span data-ttu-id="178e2-103">Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface de provedor de suporte de segurança (SSPI) gerencia os processos de segurança.</span><span class="sxs-lookup"><span data-stu-id="178e2-103">When using Windows authentication as a security mechanism, the Security Support Provider Interface (SSPI) handles security processes.</span></span> <span data-ttu-id="178e2-104">Quando ocorrem erros de segurança na camada de SSPI, eles são apresentados pelo Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="178e2-104">When security errors occur at the SSPI layer, they are surfaced by Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="178e2-105">Este tópico fornece uma estrutura e um conjunto de perguntas para ajudar a diagnosticar os erros.</span><span class="sxs-lookup"><span data-stu-id="178e2-105">This topic provides a framework and set of questions to help diagnose the errors.</span></span>  

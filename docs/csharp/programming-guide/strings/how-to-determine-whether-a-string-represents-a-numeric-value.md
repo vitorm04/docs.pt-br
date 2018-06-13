@@ -1,25 +1,20 @@
 ---
-title: "Como determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)"
+title: Como determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 850c5d0e7a246b2319ba841dae9884c90390d38c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1e5efca7fb3088064b3f252675b8cae965717f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336580"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a><span data-ttu-id="771de-102">Como determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="771de-102">How to: Determine Whether a String Represents a Numeric Value (C# Programming Guide)</span></span>
-<span data-ttu-id="771de-103">Para determinar se uma cadeia de caracteres é uma representação válida de um tipo numérico especificado, use o método estático `TryParse` implementado por todos os tipos numéricos primitivos e também por tipos como <xref:System.DateTime> e <xref:System.Net.IPAddress>.</span><span class="sxs-lookup"><span data-stu-id="771de-103">To determine whether a string is a valid representation of a specified numeric type, use the static `TryParse` method that is implemented by all primitive numeric types and also by types such as <xref:System.DateTime> and <xref:System.Net.IPAddress>.</span></span> <span data-ttu-id="771de-104">O exemplo a seguir mostra como determinar se "108" é um [int](../../../csharp/language-reference/keywords/int.md) válido.</span><span class="sxs-lookup"><span data-stu-id="771de-104">The following example shows how to determine whether "108" is a valid [int](../../../csharp/language-reference/keywords/int.md).</span></span>  
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a><span data-ttu-id="ab7cc-102">Como determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="ab7cc-102">How to: Determine Whether a String Represents a Numeric Value (C# Programming Guide)</span></span>
+<span data-ttu-id="ab7cc-103">Para determinar se uma cadeia de caracteres é uma representação válida de um tipo numérico especificado, use o método estático `TryParse` implementado por todos os tipos numéricos primitivos e também por tipos como <xref:System.DateTime> e <xref:System.Net.IPAddress>.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-103">To determine whether a string is a valid representation of a specified numeric type, use the static `TryParse` method that is implemented by all primitive numeric types and also by types such as <xref:System.DateTime> and <xref:System.Net.IPAddress>.</span></span> <span data-ttu-id="ab7cc-104">O exemplo a seguir mostra como determinar se "108" é um [int](../../../csharp/language-reference/keywords/int.md) válido.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-104">The following example shows how to determine whether "108" is a valid [int](../../../csharp/language-reference/keywords/int.md).</span></span>  
   
 ```  
 int i = 0;   
@@ -27,25 +22,25 @@ string s = "108";
 bool result = int.TryParse(s, out i); //i now = 108  
 ```  
   
- <span data-ttu-id="771de-105">Se a cadeia de caracteres contiver caracteres não numéricos ou o valor numérico for muito grande ou muito pequeno para o tipo especificado, `TryParse` retornará false e definirá o parâmetro de saída como zero.</span><span class="sxs-lookup"><span data-stu-id="771de-105">If the string contains nonnumeric characters or the numeric value is too large or too small for the particular type you have specified, `TryParse` returns false and sets the out parameter to zero.</span></span> <span data-ttu-id="771de-106">Caso contrário, ele retornará true e definirá o parâmetro de saída como o valor numérico da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="771de-106">Otherwise, it returns true and sets the out parameter to the numeric value of the string.</span></span>  
+ <span data-ttu-id="ab7cc-105">Se a cadeia de caracteres contiver caracteres não numéricos ou o valor numérico for muito grande ou muito pequeno para o tipo especificado, `TryParse` retornará false e definirá o parâmetro de saída como zero.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-105">If the string contains nonnumeric characters or the numeric value is too large or too small for the particular type you have specified, `TryParse` returns false and sets the out parameter to zero.</span></span> <span data-ttu-id="ab7cc-106">Caso contrário, ele retornará true e definirá o parâmetro de saída como o valor numérico da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-106">Otherwise, it returns true and sets the out parameter to the numeric value of the string.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="771de-107">Uma cadeia de caracteres pode conter apenas caracteres numéricos e ainda não ser válida para o método `TryParse` do tipo usado.</span><span class="sxs-lookup"><span data-stu-id="771de-107">A string may contain only numeric characters and still not be valid for the type whose `TryParse` method that you use.</span></span> <span data-ttu-id="771de-108">Por exemplo, "256" não é um valor válido para `byte`, mas é válido para `int`.</span><span class="sxs-lookup"><span data-stu-id="771de-108">For example, "256" is not a valid value for `byte` but it is valid for `int`.</span></span> <span data-ttu-id="771de-109">“98,6” não é um valor válido para `int`, mas é válido para `decimal`.</span><span class="sxs-lookup"><span data-stu-id="771de-109">"98.6" is not a valid value for `int` but it is a valid `decimal`.</span></span>  
+>  <span data-ttu-id="ab7cc-107">Uma cadeia de caracteres pode conter apenas caracteres numéricos e ainda não ser válida para o método `TryParse` do tipo usado.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-107">A string may contain only numeric characters and still not be valid for the type whose `TryParse` method that you use.</span></span> <span data-ttu-id="ab7cc-108">Por exemplo, "256" não é um valor válido para `byte`, mas é válido para `int`.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-108">For example, "256" is not a valid value for `byte` but it is valid for `int`.</span></span> <span data-ttu-id="ab7cc-109">“98,6” não é um valor válido para `int`, mas é válido para `decimal`.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-109">"98.6" is not a valid value for `int` but it is a valid `decimal`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="771de-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="771de-110">Example</span></span>  
- <span data-ttu-id="771de-111">Os exemplos a seguir mostram como usar `TryParse` com representações de cadeia de caracteres dos valores `long`, `byte` e `decimal`.</span><span class="sxs-lookup"><span data-stu-id="771de-111">The following examples show how to use `TryParse` with string representations of `long`, `byte`, and `decimal` values.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab7cc-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ab7cc-110">Example</span></span>  
+ <span data-ttu-id="ab7cc-111">Os exemplos a seguir mostram como usar `TryParse` com representações de cadeia de caracteres dos valores `long`, `byte` e `decimal`.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-111">The following examples show how to use `TryParse` with string representations of `long`, `byte`, and `decimal` values.</span></span>  
   
  [!code-csharp[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="771de-112">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="771de-112">Robust Programming</span></span>  
- <span data-ttu-id="771de-113">Os tipos numéricos primitivos também implementam o método estático `Parse`, que lançará uma exceção se a cadeia de caracteres não for um número válido.</span><span class="sxs-lookup"><span data-stu-id="771de-113">Primitive numeric types also implement the `Parse` static method, which throws an exception if the string is not a valid number.</span></span> <span data-ttu-id="771de-114">Geralmente, `TryParse` é mais eficiente, pois retornará false apenas se o número não for válido.</span><span class="sxs-lookup"><span data-stu-id="771de-114">`TryParse` is generally more efficient because it just returns false if the number is not valid.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="ab7cc-112">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="ab7cc-112">Robust Programming</span></span>  
+ <span data-ttu-id="ab7cc-113">Os tipos numéricos primitivos também implementam o método estático `Parse`, que lançará uma exceção se a cadeia de caracteres não for um número válido.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-113">Primitive numeric types also implement the `Parse` static method, which throws an exception if the string is not a valid number.</span></span> <span data-ttu-id="ab7cc-114">Geralmente, `TryParse` é mais eficiente, pois retornará false apenas se o número não for válido.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-114">`TryParse` is generally more efficient because it just returns false if the number is not valid.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="771de-115">Segurança do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="771de-115">.NET Framework Security</span></span>  
- <span data-ttu-id="771de-116">Sempre use os métodos `TryParse` ou `Parse` para validar entradas de usuário em controles como caixas de texto e caixas de combinação.</span><span class="sxs-lookup"><span data-stu-id="771de-116">Always use the `TryParse` or `Parse` methods to validate user input from controls such as text boxes and combo boxes.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="ab7cc-115">Segurança do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ab7cc-115">.NET Framework Security</span></span>  
+ <span data-ttu-id="ab7cc-116">Sempre use os métodos `TryParse` ou `Parse` para validar entradas de usuário em controles como caixas de texto e caixas de combinação.</span><span class="sxs-lookup"><span data-stu-id="ab7cc-116">Always use the `TryParse` or `Parse` methods to validate user input from controls such as text boxes and combo boxes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="771de-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="771de-117">See Also</span></span>  
- [<span data-ttu-id="771de-118">Como converter uma matriz de bytes em um int</span><span class="sxs-lookup"><span data-stu-id="771de-118">How to: Convert a byte Array to an int</span></span>](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
- [<span data-ttu-id="771de-119">Como converter uma cadeia de caracteres em um número</span><span class="sxs-lookup"><span data-stu-id="771de-119">How to: Convert a String to a Number</span></span>](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
- [<span data-ttu-id="771de-120">Como converter entre cadeias de caracteres hexadecimais e tipos numéricos</span><span class="sxs-lookup"><span data-stu-id="771de-120">How to: Convert Between Hexadecimal Strings and Numeric Types</span></span>](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
- [<span data-ttu-id="771de-121">Analisando cadeias de caracteres numéricas</span><span class="sxs-lookup"><span data-stu-id="771de-121">Parsing Numeric Strings</span></span>](../../../standard/base-types/parsing-numeric.md)  
- [<span data-ttu-id="771de-122">Formatando Tipos</span><span class="sxs-lookup"><span data-stu-id="771de-122">Formatting Types</span></span>](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="ab7cc-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ab7cc-117">See Also</span></span>  
+ [<span data-ttu-id="ab7cc-118">Como converter uma matriz de bytes em um int</span><span class="sxs-lookup"><span data-stu-id="ab7cc-118">How to: Convert a byte Array to an int</span></span>](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)  
+ [<span data-ttu-id="ab7cc-119">Como converter uma cadeia de caracteres em um número</span><span class="sxs-lookup"><span data-stu-id="ab7cc-119">How to: Convert a String to a Number</span></span>](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)  
+ [<span data-ttu-id="ab7cc-120">Como converter entre cadeias de caracteres hexadecimais e tipos numéricos</span><span class="sxs-lookup"><span data-stu-id="ab7cc-120">How to: Convert Between Hexadecimal Strings and Numeric Types</span></span>](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)  
+ [<span data-ttu-id="ab7cc-121">Analisando cadeias de caracteres numéricas</span><span class="sxs-lookup"><span data-stu-id="ab7cc-121">Parsing Numeric Strings</span></span>](../../../standard/base-types/parsing-numeric.md)  
+ [<span data-ttu-id="ab7cc-122">Formatando Tipos</span><span class="sxs-lookup"><span data-stu-id="ab7cc-122">Formatting Types</span></span>](../../../standard/base-types/formatting-types.md)

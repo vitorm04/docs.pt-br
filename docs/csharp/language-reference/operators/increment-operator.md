@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275058"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="6e182-102">Operador ++ (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="6e182-102">++ Operator (C# Reference)</span></span>
 <span data-ttu-id="6e182-103">O operador de incremento (`++`) incrementa seu operando em 1.</span><span class="sxs-lookup"><span data-stu-id="6e182-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="6e182-104">O operador de incremento pode ser exibido antes ou depois de seu operando: `++variable` e `variable++`.</span><span class="sxs-lookup"><span data-stu-id="6e182-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  

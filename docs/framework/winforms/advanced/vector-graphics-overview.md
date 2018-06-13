@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528331"
 ---
 # <a name="vector-graphics-overview"></a><span data-ttu-id="cd4e0-102">Visão geral de gráficos vetoriais</span><span class="sxs-lookup"><span data-stu-id="cd4e0-102">Vector Graphics Overview</span></span>
 <span data-ttu-id="cd4e0-103">O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha linhas, retângulos e outras formas em um sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="cd4e0-103">[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] draws lines, rectangles, and other shapes on a coordinate system.</span></span> <span data-ttu-id="cd4e0-104">Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo.</span><span class="sxs-lookup"><span data-stu-id="cd4e0-104">You can choose from a variety of coordinate systems, but the default coordinate system has the origin in the upper-left corner with the x-axis pointing to the right and the y-axis pointing down.</span></span> <span data-ttu-id="cd4e0-105">A unidade de medida no sistema de coordenadas padrão é o pixel.</span><span class="sxs-lookup"><span data-stu-id="cd4e0-105">The unit of measure in the default coordinate system is the pixel.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749313"
 ---
 # <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="a3292-102">&lt;rastreamento&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="a3292-102">&lt;tracking&gt; of WCF</span></span>
 <span data-ttu-id="a3292-103">Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="a3292-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  

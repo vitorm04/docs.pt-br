@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79b7684d6dad5ffecaf9c359ac004d7ecc982f0b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437437"
 ---
 # <a name="icorthreadpool-interface"></a><span data-ttu-id="b5b5f-102">Interface ICorThreadpool</span><span class="sxs-lookup"><span data-stu-id="b5b5f-102">ICorThreadpool Interface</span></span>
 <span data-ttu-id="b5b5f-103">Fornece métodos para acessar o pool de threads.</span><span class="sxs-lookup"><span data-stu-id="b5b5f-103">Provides methods for accessing the thread pool.</span></span>  

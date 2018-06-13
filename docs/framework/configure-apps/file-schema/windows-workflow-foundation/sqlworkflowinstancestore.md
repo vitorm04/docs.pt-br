@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757873"
 ---
 # <a name="ltsqlworkflowinstancestoregt"></a><span data-ttu-id="ecb63-102">&lt;sqlWorkflowInstanceStore&gt;</span><span class="sxs-lookup"><span data-stu-id="ecb63-102">&lt;sqlWorkflowInstanceStore&gt;</span></span>
 <span data-ttu-id="ecb63-103">Um comportamento de serviço que permite configurar o recurso <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que dá suporte a informações de estado persistentes para instâncias de serviço de fluxo de trabalho em um banco de dados do SQL Server 2005 ou do SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="ecb63-103">A service behavior that allows you to configure the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> feature, which supports persisting state information for workflow service instances into an SQL Server 2005 or SQL Server 2008 database.</span></span> <span data-ttu-id="ecb63-104">Para obter mais informações sobre esse recurso, consulte [armazenamento de instância de fluxo de trabalho do SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="ecb63-104">For more information on this feature, see [SQL Workflow Instance Store](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span></span>  

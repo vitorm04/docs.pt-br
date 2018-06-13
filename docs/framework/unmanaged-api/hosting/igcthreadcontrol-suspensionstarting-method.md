@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95cbda3729c02b95557f9f700f1ea7c68aa450a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438009"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a><span data-ttu-id="d6614-102">Método IGCThreadControl::SuspensionStarting</span><span class="sxs-lookup"><span data-stu-id="d6614-102">IGCThreadControl::SuspensionStarting Method</span></span>
 <span data-ttu-id="d6614-103">Notifica o host que o tempo de execução está começando a suspensão de um thread para uma coleta de lixo ou outros suspensão.</span><span class="sxs-lookup"><span data-stu-id="d6614-103">Notifies the host that the runtime is beginning a thread suspension for a garbage collection or other suspension.</span></span>  

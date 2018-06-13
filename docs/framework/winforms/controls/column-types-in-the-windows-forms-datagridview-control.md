@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529997"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="16312-102">Tipos de coluna no controle DataGridView dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="16312-102">Column Types in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="16312-103">O <xref:System.Windows.Forms.DataGridView> controle usa vários tipos de coluna para exibir as informações e permitir que os usuários modificar ou adicionar informações.</span><span class="sxs-lookup"><span data-stu-id="16312-103">The <xref:System.Windows.Forms.DataGridView> control uses several column types to display its information and enable users to modify or add information.</span></span>  
