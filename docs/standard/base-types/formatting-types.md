@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579841"
 ---
 # <a name="formatting-types-in-net"></a>Tipos de formatação no .NET
 <a name="Introduction"></a> Formatação é o processo de conversão de uma instância de classe, estrutura ou valor de enumeração em sua representação de cadeia de caracteres, de forma que a cadeia de caracteres resultante possa ser exibida aos usuários ou desserializada para restaurar o tipo de dados original. Essa conversão pode apresentar uma série de desafios:  

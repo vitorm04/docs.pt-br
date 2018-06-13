@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572015"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Acessando atributos no DOM
 Os atributos são propriedades do elemento, não filhos do elemento. Essa distinção é importante por causa dos métodos usados para navegar por nós irmãos, pai e filho do DOM (Document Object Model) XML. Por exemplo, os métodos **PreviousSibling** e **NextSibling** não são usados para navegar de um elemento para um atributo ou entre atributos. Em vez disso, um atributo é uma propriedade de um elemento e pertence a um elemento, possui uma propriedade **OwnerElement**, não uma propriedade **parentNode**, e possui métodos distintos de navegação.  

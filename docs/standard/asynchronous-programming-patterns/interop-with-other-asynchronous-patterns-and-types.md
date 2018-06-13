@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571092"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidade com outros tipos e padrões assíncronos
 O .NET Framework 1.0 introduziu o padrão <xref:System.IAsyncResult>, também conhecido como o [Modelo de programação assíncrona (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) ou o padrão `Begin/End`.  O .NET Framework 2.0 adicionou o [EAP (Padrão Assíncrono Baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir do .NET Framework 4, o [TAP (Padrão Assíncrono Baseado em Tarefa)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) substitui o APM e o EAP, mas oferece a capacidade de criar facilmente as rotinas de migração dos padrões anteriores.  

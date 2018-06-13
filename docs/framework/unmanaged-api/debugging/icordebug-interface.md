@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408665"
 ---
 # <a name="icordebug-interface"></a>Interface ICorDebug
 Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambiente do common language runtime (CLR).  

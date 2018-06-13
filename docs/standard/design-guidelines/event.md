@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575382"
 ---
 # <a name="event-design"></a>Design de eventos
 Os eventos são a forma mais usada de retornos de chamada (construções que permitem que a estrutura chamar o código de usuário). Outros mecanismos de retorno de chamada incluem membros colocar delegados, membros virtuais e plug-ins com base em interface. Dados de estudos de usabilidade indicam que a maioria dos desenvolvedores são mais familiarizado com o uso de eventos que estão usando outros mecanismos de retorno de chamada. Eventos são integrados perfeitamente com o Visual Studio e muitos idiomas.  

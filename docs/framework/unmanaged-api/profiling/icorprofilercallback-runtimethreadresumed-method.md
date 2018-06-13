@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4f971c5175307c1e1df6890c136b306860e54d23
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452703"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>Método ICorProfilerCallback::RuntimeThreadResumed
 Notifica o criador de perfil que o thread especificado foi retomado após ter sido suspenso.  

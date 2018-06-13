@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571885"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Usando manipuladores de exceções filtrados pelo usuário
 Atualmente, o Visual Basic dá suporte a exceções filtradas pelo usuário. Os manipuladores de exceção filtrados por usuário capturam e tratam exceções com base nos requisitos que você define para a exceção. Esses manipuladores usam a instrução **Catch** com a palavra-chave **When**.  

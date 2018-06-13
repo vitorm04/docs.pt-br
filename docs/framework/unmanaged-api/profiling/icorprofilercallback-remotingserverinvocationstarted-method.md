@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de2a831e310ac7f770200a70cb793bc19645e31d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451592"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>Método ICorProfilerCallback::RemotingServerInvocationStarted
 Notifica o criador de perfil que o processo está invocando um método em resposta a uma solicitação de invocação de método remoto.  

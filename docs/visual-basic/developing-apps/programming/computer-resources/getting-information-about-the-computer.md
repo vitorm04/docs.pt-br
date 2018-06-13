@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582194"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Obtendo informações sobre o computador (Visual Basic)
 O objeto `My.Computer.Info` fornece propriedades para obter informações sobre memória, assemblies carregados, nome e sistema operacional do computador.  

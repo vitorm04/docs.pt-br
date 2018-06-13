@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573614"
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> é uma classe de coleção thread-safe que fornece os seguintes recursos:  

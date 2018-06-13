@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579561"
 ---
 # <a name="globalization"></a>Globalização
 A globalização envolve projetar e desenvolver um aplicativo preparado para o mundo que dá suporte a interfaces localizadas e dados regionais para usuários em várias culturas. Antes de iniciar a fase de design, você deve determinar a quais culturas seu aplicativo dará suporte. Embora um aplicativo seja direcionado para uma única cultura ou região por padrão, você pode projetá-lo e gravá-lo para que ele possa ser facilmente estendido para usuários em outras culturas ou regiões.  

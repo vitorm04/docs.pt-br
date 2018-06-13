@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454812"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Método ICorProfilerCallback4::ReJITError
 Notifica o criador de perfil que o compilador just-in-time (JIT) encontrou um erro no processo de recompilação.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566815"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Visão geral de conversores de tipo para XAML
 Tipo conversores lógica de fonte para um gravador de objeto que converte de uma cadeia de caracteres na marcação XAML em objetos específicos em um gráfico de objeto. Serviços XAML do .NET Framework, o conversor de tipo deve ser uma classe que deriva de <xref:System.ComponentModel.TypeConverter>. Alguns conversores também oferecem suporte a XAML caminho de salvamento e podem ser usados para serializar um objeto em um formulário de cadeia de caracteres na marcação de serialização. Este tópico descreve como e quando conversores de tipo em XAML são invocados e fornece recomendações sobre a implementação para o método de substituições do <xref:System.ComponentModel.TypeConverter>.  

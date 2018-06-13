@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557869"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Como implementar validação com o controle DataGrid
 O <xref:System.Windows.Controls.DataGrid> controle permite que você execute a validação no nível de linha e célula. Com a validação no nível da célula, você valida propriedades individuais de um objeto com associação de dados quando um usuário atualiza um valor. Com a validação no nível da linha, você valida objetos de dados inteiros quando um usuário confirma alterações em uma linha. Você também pode fornecer comentários visuais personalizados para erros de validação ou usar o comentário visual padrão que o <xref:System.Windows.Controls.DataGrid> fornece controle.  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450496"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Metadados (referência de API não gerenciada)
 Os metadados de API permite que um cliente, como um compilador gerar ou acessar metadados do componente sem os tipos que estão sendo carregados pelo common language runtime (CLR).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573627"
 ---
 # <a name="events-and-callbacks"></a>Eventos e retornos de chamada
 Retornos de chamada são os pontos de extensibilidade que permitem que uma estrutura de retorno de chamada no código de usuário por meio de um representante. Esses representantes geralmente são passados para o framework por meio de um parâmetro de um método.  
