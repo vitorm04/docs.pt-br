@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495126"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
 A ilustração a seguir mostra um serviço do Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado x. 509. O cliente é autenticado usando um nome de usuário e senha.  

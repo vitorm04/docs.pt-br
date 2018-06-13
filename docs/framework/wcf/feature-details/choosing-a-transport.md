@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495529"
 ---
 # <a name="choosing-a-transport"></a>Selecionando um transporte
 Este tópico discute os critérios para escolher entre os três transportes principais que estão incluídos no Windows Communication Foundation (WCF): HTTP, TCP e pipes nomeados. O WCF também inclui um (também conhecido como MSMQ) de enfileiramento de mensagens de transporte, mas este documento não aborda o enfileiramento de mensagens.  

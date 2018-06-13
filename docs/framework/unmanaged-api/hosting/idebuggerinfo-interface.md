@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e5a7d0555b026340ec53363a7cd054532d1491c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438734"
 ---
 # <a name="idebuggerinfo-interface"></a>Interface IDebuggerInfo
 Fornece métodos para obter informações sobre o estado dos serviços de depuração.  

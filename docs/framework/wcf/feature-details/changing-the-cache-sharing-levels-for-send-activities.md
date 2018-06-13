@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494524"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Alterando os níveis de compartilhamento de cache para enviar atividades
 O <xref:System.ServiceModel.Activities.SendMessageChannelCache> extensão permite que você personalize o cache compartilhamento níveis, as configurações de cache da fábrica de canal, e as configurações do canal de cache para fluxos de trabalho que enviam mensagens a pontos de extremidade de serviço usando <xref:System.ServiceModel.Activities.Send> atividades de mensagens. Esses fluxos de trabalho normalmente são fluxos de trabalho do cliente, mas também pode ser o serviços de fluxo de trabalho que são hospedados em um <xref:System.ServiceModel.WorkflowServiceHost>. O cache de fábrica de canal contém em cache <xref:System.ServiceModel.ChannelFactory%601> objetos. O cache de canal contém canais armazenadas em cache.  

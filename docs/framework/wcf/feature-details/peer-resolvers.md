@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494602"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para conectar a uma malha, um nó ponto requer que os endereços IP de outros nós. Endereços IP são obtidos entrando em contato com um serviço de resolução, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrado com esse ID de malha. O resolvedor mantém uma lista de endereços de registrado, ele cria, fazendo com que cada nó na malha registrar com o serviço.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d447bd9712fc925cd738bd0c530d8329f510a5f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437372"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>Método ICLRTaskManager::GetCurrentTask
 Obtém o [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância que está em execução no thread do sistema operacional que originou a chamada do método.  

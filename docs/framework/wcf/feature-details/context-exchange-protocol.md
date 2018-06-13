@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493173"
 ---
 # <a name="context-exchange-protocol"></a>Protocolo de intercâmbio de contexto
 Esta seção descreve o protocolo de intercâmbio de contexto introduzido na versão do Windows Communication Foundation (WCF) do .NET Framework versão 3.5. Este protocolo permite que o canal do cliente aceitar um contexto fornecido por um serviço e aplicá-lo a todas as solicitações subsequentes para esse serviço enviados pela mesma instância de canal do cliente. A implementação do protocolo de troca de contexto pode usar um dos seguintes dois mecanismos para propagar contexto entre o servidor e o cliente: cookies HTTP ou um cabeçalho SOAP.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429277"
 ---
 # <a name="callfunctionshim-function"></a>Função CallFunctionShim
 Faz uma chamada para a função que tem o nome especificado e os parâmetros na biblioteca especificada.  

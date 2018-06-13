@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492978"
 ---
 # <a name="peer-channel-scenarios"></a>Cenários de canal par
 As APIs de canal par suporte aos seguintes cenários de desenvolvimento.  

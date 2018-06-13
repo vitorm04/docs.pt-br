@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494929"
 ---
 # <a name="routing"></a>Roteamento
 Os tópicos nesta seção abordam o serviço de roteamento. O serviço de roteamento é um genérico intermediário SOAP configurável que permite que você configure com base em conteúdo roteamento, configurar a ponte de protocolo, lidar com erros de comunicação e atualizar dinamicamente a lógica de roteamento em tempo de execução.  
