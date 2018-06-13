@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 403adfbfe96558196e5ba64ddcbe0be637ba1b1c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403247"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a>Método ICorDebugArrayValue::GetElementType
 Obtém um valor que indica o tipo simple de elementos na matriz.  

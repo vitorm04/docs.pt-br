@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405584"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Tópicos de Instrução sobre Padrões de Controle de Automação de Interface do usuário
 > [!NOTE]

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551811"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>Como criar controles em um ToolBar
 O <xref:System.Windows.Controls.ToolBar> define <xref:System.Windows.ResourceKey> objetos para especificar o estilo dos controles dentro de <xref:System.Windows.Controls.ToolBar>.  Para estilizar um controle em um <xref:System.Windows.Controls.ToolBar>, defina o `x:key` atributo de estilo para um <xref:System.Windows.ResourceKey> definido em <xref:System.Windows.Controls.ToolBar>.  

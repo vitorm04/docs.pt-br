@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538959"
 ---
 # <a name="getting-started-with-windows-forms"></a>Guia de introdução ao Windows Forms
 Com o Windows Forms você pode criar aplicativos potentes baseados em Windows. Os tópicos a seguir mostram a fundo como aproveitar a capacidade dos Windows Forms para exibir dados, manipular entradas do usuário e implantar seus aplicativos com facilidade e maior segurança.  

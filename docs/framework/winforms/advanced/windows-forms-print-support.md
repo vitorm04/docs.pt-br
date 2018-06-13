@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528548"
 ---
 # <a name="windows-forms-print-support"></a>Suporte à impressão no Windows Forms
 A impressão nos Windows Forms consiste principalmente em usar o [Componente PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) para permitir que o usuário imprima e o [Controle PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md), o [Componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) e o [Componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) para fornecer uma interface gráfica familiar aos usuários acostumados com o sistema operacional Windows.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553775"
 ---
 # <a name="panel-how-to-topics"></a>Tópicos explicativos do painel
 Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Panel> elemento e relacionados [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  

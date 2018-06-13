@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408455"
 ---
 # <a name="ialink2-interface"></a>Interface IALink2
 Complementa o [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) declarando métodos que operam em interfaces de metadados mais recentes, como [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Além disso, IALink2 declara os métodos que fornecem flexibilidade de uso adicionais sobre as interfaces IALink originais.  

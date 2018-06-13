@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e557cc0da7bc684843ae3969242ffb84d811c44
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405340"
 ---
 # <a name="setassemblyfile-method"></a>Método SetAssemblyFile
 Atribui o nome do assembly a ser criado. Não para uso durante a produção de módulos não associados.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f4735103f277d710dd23adfa19c475c425feaa36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403325"
 ---
 # <a name="addfile2-method"></a>Método AddFile2
 Adiciona arquivos ao assembly. Também pode ser usado para criar os módulos não associados.  
