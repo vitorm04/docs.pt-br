@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766264"
 ---
 # <a name="edm-generator-edmgenexe"></a><span data-ttu-id="22353-102">Gerador de EDM (EdmGen.exe)</span><span class="sxs-lookup"><span data-stu-id="22353-102">EDM Generator (EdmGen.exe)</span></span>
 <span data-ttu-id="22353-103">A EdmGen.exe é uma ferramenta de linha de comando utilizada ao se trabalhar com o modelo e arquivos de mapeamento do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="22353-103">EdmGen.exe is a command-line tool used for working with [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model and mapping files.</span></span> <span data-ttu-id="22353-104">Você pode usar a ferramenta EdmGen.exe para:</span><span class="sxs-lookup"><span data-stu-id="22353-104">You can use the EdmGen.exe tool to do the following:</span></span>  
