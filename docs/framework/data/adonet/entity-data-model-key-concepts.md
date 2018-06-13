@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765627"
 ---
 # <a name="entity-data-model-key-concepts"></a><span data-ttu-id="abbde-102">Conceitos chave do Modelo de Dados de Entidade</span><span class="sxs-lookup"><span data-stu-id="abbde-102">Entity Data Model Key Concepts</span></span>
 <span data-ttu-id="abbde-103">O modelo de dados de entidade (EDM) usa três conceitos fundamentais para descrever a estrutura de dados: *tipo de entidade*, *tipo de associação*, e *propriedade*.</span><span class="sxs-lookup"><span data-stu-id="abbde-103">The Entity Data Model (EDM) uses three key concepts to describe the structure of data: *entity type*, *association type*, and *property*.</span></span> <span data-ttu-id="abbde-104">Esses são os conceitos mais importantes para descrever a estrutura dos dados em qualquer implementação do EDM.</span><span class="sxs-lookup"><span data-stu-id="abbde-104">These are the most important concepts in describing the structure of data in any implementation of the EDM.</span></span>  

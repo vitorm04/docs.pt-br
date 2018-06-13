@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507568"
 ---
 # <a name="internet-information-service-hosting-instructions"></a><span data-ttu-id="371de-102">Instruções de hospedagem de serviço de informação de internet</span><span class="sxs-lookup"><span data-stu-id="371de-102">Internet Information Service Hosting Instructions</span></span>
 <span data-ttu-id="371de-103">Para executar os exemplos que são hospedados por serviços de informações da Internet (IIS), você deve garantir que o IIS está instalado corretamente e está em execução.</span><span class="sxs-lookup"><span data-stu-id="371de-103">To run the samples that are hosted by Internet Information Services (IIS), you must make sure that IIS is properly installed and is running.</span></span>  

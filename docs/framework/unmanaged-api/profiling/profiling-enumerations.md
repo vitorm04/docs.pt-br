@@ -10,8 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461754"
 ---
 # <a name="profiling-enumerations"></a><span data-ttu-id="96f10-102">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="96f10-102">Profiling Enumerations</span></span>
 <span data-ttu-id="96f10-103">Esta seção descreve as enumerações não gerenciadas que a API de criação de perfis utiliza.</span><span class="sxs-lookup"><span data-stu-id="96f10-103">This section describes the unmanaged enumerations that the profiling API uses.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463775"
 ---
 # <a name="3360---securityimpersonationfailure"></a><span data-ttu-id="30279-102">3360 - SecurityImpersonationFailure</span><span class="sxs-lookup"><span data-stu-id="30279-102">3360 - SecurityImpersonationFailure</span></span>
 ## <a name="properties"></a><span data-ttu-id="30279-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="30279-103">Properties</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765237"
 ---
 # <a name="entity-data-model"></a><span data-ttu-id="09fec-102">Modelo de Dados de Entidade</span><span class="sxs-lookup"><span data-stu-id="09fec-102">Entity Data Model</span></span>
 <span data-ttu-id="09fec-103">O EDM (Modelo de Dados de Entidade) é um conjunto de conceitos que descrevem a estrutura de dados, independentemente do formato armazenado.</span><span class="sxs-lookup"><span data-stu-id="09fec-103">The Entity Data Model (EDM) is a set of concepts that describe the structure of data, regardless of its stored form.</span></span> <span data-ttu-id="09fec-104">O EDM pede emprestado o modelo de relacionamento entre entidades descrito por Peter Chen em 1976, mas também cria a partir desse modelo e estende seus usos tradicionais.</span><span class="sxs-lookup"><span data-stu-id="09fec-104">The EDM borrows from the Entity-Relationship Model described by Peter Chen in 1976, but it also builds on the Entity-Relationship Model and extends its traditional uses.</span></span>  

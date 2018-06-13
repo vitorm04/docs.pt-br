@@ -6,8 +6,10 @@ author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: c1360a5b9e4b96c66b4bb7809fc139d1306730dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499510"
 ---
 # <a name="behavior-security"></a><span data-ttu-id="b8cfa-102">Segurança de comportamento</span><span class="sxs-lookup"><span data-stu-id="b8cfa-102">Behavior Security</span></span>
 <span data-ttu-id="b8cfa-103">Esta seção inclui exemplos que demonstram como configurar segurança de comportamentos de serviço.</span><span class="sxs-lookup"><span data-stu-id="b8cfa-103">This section includes samples that demonstrate configuring security for service behaviors.</span></span>  
