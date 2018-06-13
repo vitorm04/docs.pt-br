@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446568"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Método IMetaDataEmit::DefineField
 Cria uma definição de um campo com a assinatura de metadados especificado e recebe um token para essa definição de campo.  

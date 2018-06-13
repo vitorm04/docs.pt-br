@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640474"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Pasta de origem e destino são os mesmos
 Foi feita uma tentativa para copiar ou mover um arquivo, mas o diretório de origem especificado e o diretório de destino são os mesmos. Isso pode ser resultado da análise incorreta de um caminho de arquivo.  

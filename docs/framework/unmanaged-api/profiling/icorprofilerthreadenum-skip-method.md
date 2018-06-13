@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af6aab2483f0e92dc20936fe2b01e12590d99ca7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455364"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>Método ICorProfilerThreadEnum::Skip
 Avança o cursor do enumerador de sua posição atual para ignorar o número especificado de elementos.  

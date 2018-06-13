@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397475"
 ---
 # <a name="pnrp-caches"></a>Caches PNRP
 Caches de protocolo PNRP são coleções locais de pontos de extremidade de par selecionados de maneira algorítmica mantidos no par.  

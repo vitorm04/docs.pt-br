@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398505"
 ---
 # <a name="wif-features"></a>Recursos do WIF
 -   [Ferramenta de identidade e acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  

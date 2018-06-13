@@ -22,9 +22,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455413"
 ---
 # <a name="strongnameerrorinfo-function"></a>Função StrongNameErrorInfo
 Obtém o último código de erro que foi gerado por uma das funções de nome forte.  

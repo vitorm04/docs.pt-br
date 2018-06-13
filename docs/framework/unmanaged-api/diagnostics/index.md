@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424996"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Armazenamento do símbolo de diagnóstico (referência de api não gerenciada)
 A API de armazenamento de símbolo de diagnóstico permite que um compilador para gerar informações de símbolo para uso por um depurador.  

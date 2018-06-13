@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553891"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Como alterar o alinhamento horizontal de uma coluna em um ListView
 Por padrão, o conteúdo de cada coluna em um <xref:System.Windows.Controls.ListViewItem> alinhado à esquerda. Você pode alterar o alinhamento de cada coluna, fornecendo um <xref:System.Windows.DataTemplate> e configuração o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propriedade no elemento dentro do <xref:System.Windows.DataTemplate>. Este tópico mostra como um <xref:System.Windows.Controls.ListView> alinha seu conteúdo por padrão e como alterar o alinhamento de uma coluna em um <xref:System.Windows.Controls.ListView>.  

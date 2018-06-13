@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 66f9f95b0cf19acb677daf7f7401d21cc81864a0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447601"
 ---
 # <a name="corsavesize-enumeration"></a>Enumeração CorSaveSize
 Contém valores que indica o nível de precisão necessária ao consultar o tamanho de um salvamento operação.  

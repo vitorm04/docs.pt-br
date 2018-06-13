@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458641"
 ---
 # <a name="qualifiersetget-function"></a>Função QualifierSet_Get
 Obtém o qualificador nomeado especificado.  
