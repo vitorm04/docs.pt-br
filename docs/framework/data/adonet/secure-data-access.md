@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362705"
 ---
 # <a name="secure-data-access"></a>Proteger o acesso a dados
 Para escrever código ADO.NET seguro, você precisa entender os mecanismos de segurança disponíveis no repositório de dados subjacente ou banco de dados. Você também precisa considerar as implicações de segurança de outros recursos ou componentes que seu aplicativo pode conter.  

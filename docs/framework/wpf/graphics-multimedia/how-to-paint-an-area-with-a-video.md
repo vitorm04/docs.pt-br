@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560771"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Como pintar uma área com um vídeo
 Este exemplo mostra como pintar uma área com mídia. Uma maneira de pintar uma área com a mídia é usar um <xref:System.Windows.Controls.MediaElement> junto com um <xref:System.Windows.Media.VisualBrush>. Use o <xref:System.Windows.Controls.MediaElement> para carregar e executar a mídia e, em seguida, usá-lo para definir o <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade o <xref:System.Windows.Media.VisualBrush>. Você pode usar o <xref:System.Windows.Media.VisualBrush> para pintar uma área com a mídia carregada.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742147"
 ---
 # <a name="manipulations-and-inertia"></a>Manipulações e inércia
 As classes de processador *manipulações* e *inércia* ajudam seu aplicativo a mover elementos da interface do usuário na tela de uma maneira natural e intuitiva. As manipulações permitem aos usuários mover, girar e redimensionar os componentes usando manipuladores, como um dispositivo de mouse, uma caneta, ou (em um cenário direto sensível ao toque) seus dedos. A *inércia* emula o comportamento do mundo real para elementos de interface do usuário que estão em movimento simulando forças de atrito nos elementos. Isso permite que elementos reduzam gradualmente a movimentação (linear e angular) antes de uma parada.  

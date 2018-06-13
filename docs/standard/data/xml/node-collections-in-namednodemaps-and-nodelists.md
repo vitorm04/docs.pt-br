@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568518"
 ---
 # <a name="node-collections-in-namednodemaps-and-nodelists"></a>Coleções de nó em NamedNodeMaps e em NodeLists
 Você pode recuperar um conjunto de nós e coloque-o em uma coleção ordenada ou desordenada. Para colocar um conjunto de nós em uma coleção não ordenada, o conjunto é chamado um NamedNodeMap pelo World Wide Web Consortium (W3C); você pode recuperar os dados por nome ou o índice neste tipo de coleção. Colocando um conjunto de nós em uma coleção ordenada é chamado um NodeList pelo W3C, e os dados podem ser recuperados por um índice com base zero. NamedNodeMaps e NodeLists são descritos pelo W3C. As implementações no Microsoft .NET Framework para o NamedNodeMap são **XmlNamedNodeMap**, e NodeList é implementado por **XmlNodeList**.  

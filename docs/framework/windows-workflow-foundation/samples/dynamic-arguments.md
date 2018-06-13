@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517972"
 ---
 # <a name="dynamic-arguments"></a>Argumentos dinâmicos
 Este exemplo demonstra como implementar uma atividade para os argumentos são definidos pelo consumidor da atividade em vez do autor de atividade. Isso substituindo a maneira que o tempo de execução constrói os metadados de atividade.  

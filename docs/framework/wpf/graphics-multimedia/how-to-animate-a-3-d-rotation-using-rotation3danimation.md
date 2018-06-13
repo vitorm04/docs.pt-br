@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557193"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>Como animar uma rotação 3D usando Rotation3DAnimation
 O exemplo a seguir mostra como fazer com que um objeto 3D gire enquanto ele "chacoalha" usando <xref:System.Windows.Media.Animation.Rotation3DAnimation> para animar a <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> propriedade o <xref:System.Windows.Media.Media3D.RotateTransform3D> objeto aplicadas ao objeto 3D.  

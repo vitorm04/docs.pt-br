@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566763"
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
 Caminhos são discutidos em [formas e desenho básico no WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), no entanto, este tópico descreve detalhadamente poderoso e complexo minivocê idioma pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

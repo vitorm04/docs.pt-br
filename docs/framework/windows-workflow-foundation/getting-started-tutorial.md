@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512434"
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Esta seção contém um conjunto de tópicos de instruções passo a passo que apresentam para programação de aplicativos do Windows Workflow Foundation (WF). Siga os procedimentos deste tópico para criar um aplicativo que é um jogo de adivinhação de números. O primeiro tópico no tutorial conduziu pelas etapas para criar as atividades personalizadas necessárias para o fluxo de trabalho. No segundo tópico, estas atividades são montadas junto com atividades internas de fluxo de trabalho em um fluxo de trabalho de fluxograma. No terceiro tópico, o aplicativo host é configurado para executar o fluxo de trabalho e, no tópico final, é apresentada a persistência. Cada etapa neste processo depende das etapas anteriores. Portanto, é recomendável que você as conclua na ordem.  

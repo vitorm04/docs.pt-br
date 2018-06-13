@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563578"
 ---
 # <a name="generics-in-xaml"></a>Genéricos em XAML
 Os serviços do .NET Framework XAML conforme implementado no System. XAML fornece suporte ao uso de tipos genéricos do CLR. Esse suporte inclui especificando as restrições de genéricos como um argumento de tipo e impõe a restrição chamando apropriada `Add` método para casos de coleção genérica. Este tópico descreve os aspectos de usar e fazer referência a tipos genéricos em XAML.  

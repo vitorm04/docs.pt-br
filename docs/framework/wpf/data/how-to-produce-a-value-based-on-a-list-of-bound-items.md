@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556829"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Como produzir um valor com base em uma lista de itens associados
 <xref:System.Windows.Data.MultiBinding> permite associar uma propriedade de destino da associação a uma lista de propriedades de fonte e, em seguida, aplicar lógica para produzir um valor com as entradas disponíveis. Este exemplo demonstra como usar <xref:System.Windows.Data.MultiBinding>.  

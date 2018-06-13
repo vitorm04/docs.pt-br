@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518430"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>O que&#39;novo no Windows Workflow Foundation
 Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera várias paradigmas de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

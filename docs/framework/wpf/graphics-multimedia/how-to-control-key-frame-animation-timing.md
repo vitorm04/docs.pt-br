@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562280"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Como controlar o tempo de animação do quadro-chave
 Este exemplo mostra como controlar o intervalo de quadros chave em uma animação de quadro chave. Assim como outras animações, animações de quadro-chave têm um <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriedade. Além de especificar a duração de uma animação, é necessário especificar qual parte da duração é atribuída a cada um de seus quadros chave. Ínterim, você deve especificar um <xref:System.Windows.Media.Animation.KeyTime> para cada quadro chave na animação.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 30d1e80d05344448c19c9f8f2d261442e4041487
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451711"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>Método ICorProfilerCallback::COMClassicVTableDestroyed
 Notifica o criador de perfil que está sendo destruída uma vtable interoperabilidade COM.  

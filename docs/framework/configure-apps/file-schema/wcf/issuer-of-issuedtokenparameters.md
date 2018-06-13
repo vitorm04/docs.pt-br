@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748566"
 ---
 # <a name="ltissuergt-of-ltissuedtokenparametersgt"></a>&lt;emissor&gt; de &lt;issuedTokenParameters&gt;
 Especifica o Token de segurança Service (STS) que emite tokens de segurança.  

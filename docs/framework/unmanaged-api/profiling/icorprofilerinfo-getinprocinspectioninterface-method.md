@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453151"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>Método ICorProfilerInfo::GetInprocInspectionInterface
 Obtém um objeto que pode ser consultado para uma interface de "ICorDebugProcess". Este método está obsoleto no .NET Framework versão 2.0.  

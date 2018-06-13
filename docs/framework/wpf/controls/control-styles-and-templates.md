@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556907"
 ---
 # <a name="control-styles-and-templates"></a>Estilos e modelos de controle
 Controles em Windows Presentation Foundation (WPF) têm um <xref:System.Windows.Controls.ControlTemplate> que contém a árvore visual do controle. Você pode alterar a estrutura e a aparência de um controle modificando o <xref:System.Windows.Controls.ControlTemplate> desse controle. Não é possível substituir apenas parte da árvore visual de um controle; Para modificar a árvore visual de um controle, você deve definir o <xref:System.Windows.Controls.Control.Template%2A> propriedade do controle como sua nova e completa <xref:System.Windows.Controls.ControlTemplate>.  

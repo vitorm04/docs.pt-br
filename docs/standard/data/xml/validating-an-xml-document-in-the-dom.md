@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576305"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validando um documento XML no DOM
 A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objeto de Documento) em um esquema da linguagem XSD ou uma DTD (definição de tipo de documento) por padrão; o XML é verificado somente se está bem-formado.  

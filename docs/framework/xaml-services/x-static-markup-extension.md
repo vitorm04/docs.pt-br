@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565568"
 ---
 # <a name="xstatic-markup-extension"></a>Extensão de marcação x:Static
 Faz referência a qualquer entidade de código estático por-valor que é definida em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– compatível. A propriedade estática que é referenciada pode ser usada para fornecer o valor de uma propriedade em XAML.  

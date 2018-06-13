@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6a36f9b54ce7ac6a0a5a22b33a4d07150a96f40b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452537"
 ---
 # <a name="functionenter3withinfo-function"></a>Função FunctionEnter3WithInfo
 Notifica o criador de perfil que o controle está sendo passado para uma função e fornece um identificador que pode ser passado para o [ICorProfilerInfo3::GetFunctionEnter3Info método](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar os argumentos de quadro e função de pilha.  

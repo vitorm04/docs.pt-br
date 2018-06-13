@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560463"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>Como criar uma linha usando um LineGeometry
 Este exemplo mostra como usar o <xref:System.Windows.Media.LineGeometry> classe para descrever uma linha. Um <xref:System.Windows.Media.LineGeometry> é definida por seus pontos de início e término.  

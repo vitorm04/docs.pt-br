@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361553"
 ---
 # <a name="secure-client-applications"></a>Proteger aplicativos cliente
 Aplicativos normalmente consistem em muitas partes que precisam ser protegidos contra vulnerabilidades que podem resultar na perda de dados ou comprometer o sistema. Criando interfaces de usuário segura pode impedir que muitos problemas bloqueando os invasores antes que possam acessar dados ou recursos do sistema.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559312"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>Como criar vários subcaminhos dentro de um PathGeometry
 Este exemplo mostra como criar vários subcaminhos em um <xref:System.Windows.Media.PathGeometry>. Para criar vários subcaminhos, você cria um <xref:System.Windows.Media.PathFigure> para cada subcaminho.  

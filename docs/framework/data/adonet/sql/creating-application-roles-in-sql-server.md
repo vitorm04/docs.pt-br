@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362521"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Criando funções de aplicativo no SQL Server
 As funções de aplicativo fornecem uma maneira de atribuir permissões para um aplicativo em vez de uma função ou usuário do banco de dados. Os usuários podem se conectar ao banco de dados, ativar a função de aplicativo e presumir as permissões concedidas ao aplicativo. As permissões concedidas para a função de aplicativo são impostas para a duração da conexão.  

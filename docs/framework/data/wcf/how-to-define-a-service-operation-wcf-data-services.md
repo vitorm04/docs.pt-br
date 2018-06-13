@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360877"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Como: definir uma operação de serviço (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expor os métodos que são definidos no servidor como operações de serviço. Operações de serviço é permitir que um serviço de dados fornecer acesso por meio de um URI para um método que é definido no servidor. Para definir uma operação de serviço, se aplicam a [`WebGet]` ou `[WebInvoke]` atributo ao método. Para dar suporte a operadores de consulta, a operação de serviço deve retornar um <xref:System.Linq.IQueryable%601> instância. Operações de serviço podem acessar a fonte de dados por meio de <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> propriedade o <xref:System.Data.Services.DataService%601>. Para obter mais informações, consulte [operações de serviço](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

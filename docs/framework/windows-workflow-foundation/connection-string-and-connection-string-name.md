@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511924"
 ---
 # <a name="connection-string-and-connection-string-name"></a>Cadeia de conexão e nome de cadeia de conexão
 **Cadeia de caracteres de Conexão** propriedade especifica a cadeia de caracteres de conexão que o armazenamento de instância de fluxo de trabalho do SQL deve usar para se conectar a um banco de dados de persistência. Esse parâmetro é um parâmetro opcional. **Nome da cadeia de Conexão** propriedade especifica o nome da cadeia de conexão nomeada deve usar o armazenamento de instância de fluxo de trabalho do SQL para se conectar ao banco de dados de persistência. Esse parâmetro é um parâmetro opcional. Você deve especificar um valor para a propriedade de nome de cadeia de caracteres de Conexão ou a propriedade de cadeia de caracteres de Conexão se você não quiser que o armazenamento de instância de fluxo de trabalho do SQL para usar o padrão de cadeia de caracteres de conexão de chamada **DefaultSqlWorkflowInstanceStoreConnectionString** .

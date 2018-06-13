@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515246"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Expõem dados com CacheMetadata
 Antes de executar uma atividade, o tempo de execução de fluxo de trabalho obtém qualquer informação sobre a atividade que precisa para manter sua execução. O tempo de execução de fluxo de trabalho obtém essas informações durante a execução do método de <xref:System.Activities.Activity.CacheMetadata%2A> . A implementação padrão desse método oferece o tempo de execução com todos os argumentos públicos, variáveis, e atividades filhos exposto pela atividade é então executada; se a atividade precisará fornecer mais informações em tempo de execução desta (como membros particulares, ou atividades a ser agendadas pela atividade), esse método pode ser substituído para oferece.  

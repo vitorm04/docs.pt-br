@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565857"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Conversores de tipo e extensões de marcação para XAML
 Conversores de tipo e extensões de marcação são duas técnicas que sistemas de tipo XAML e gravadores XAML usam para gerar os componentes de gráfico de objeto. Embora eles compartilham algumas características, conversores de tipo e extensões de marcação são representadas diferentemente em um fluxo do nó XAML. Nesta documentação conjunto, conversores de tipo, extensões de marcação e construções semelhantes são às vezes chamadas, coletivamente como conversores de valor.  

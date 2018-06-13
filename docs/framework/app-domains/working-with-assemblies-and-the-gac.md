@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744298"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
 Se você pretender compartilhar um assembly com vários aplicativos, será necessário instalá-lo no cache de assembly global. Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador. O cache de assembly global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador. Um assembly deve ter um nome forte para ser instalado no cache de assembly global.  

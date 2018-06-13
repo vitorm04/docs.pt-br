@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559409"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a>Como gravar metadados em um bitmap
 Este exemplo mostra como gravar metadados em um bitmap usando a linguagem de consulta de metadados.  
