@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545403"
 ---
 # <a name="how-to-create-a-text-decoration"></a><span data-ttu-id="71e9b-102">Como criar uma decoração de texto</span><span class="sxs-lookup"><span data-stu-id="71e9b-102">How to: Create a Text Decoration</span></span>
 <span data-ttu-id="71e9b-103">Um <xref:System.Windows.TextDecoration> objeto é um Ornamento visual que você pode adicionar ao texto.</span><span class="sxs-lookup"><span data-stu-id="71e9b-103">A <xref:System.Windows.TextDecoration> object is a visual ornamentation you can add to text.</span></span> <span data-ttu-id="71e9b-104">Há quatro tipos de decoração de texto: sublinhado, linha de base, tachado e linha sobreposta.</span><span class="sxs-lookup"><span data-stu-id="71e9b-104">There are four types of text decorations: underline, baseline, strikethrough, and overline.</span></span> <span data-ttu-id="71e9b-105">O exemplo a seguir mostra os locais da decoração de texto em relação ao texto.</span><span class="sxs-lookup"><span data-stu-id="71e9b-105">The following example shows the locations of the text decorations relative to the text.</span></span>  

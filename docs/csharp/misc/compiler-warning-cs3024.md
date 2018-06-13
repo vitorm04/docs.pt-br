@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
 ms.openlocfilehash: c4c2f915d6172e3c30fc32c5c57fe9921c3f915d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280339"
 ---
 # <a name="compiler-warning-cs3024"></a><span data-ttu-id="203f3-102">CS3024 de aviso do compilador</span><span class="sxs-lookup"><span data-stu-id="203f3-102">Compiler Warning CS3024</span></span>
 <span data-ttu-id="203f3-103">Tipo de restrição 'type' não é compatível com CLS.</span><span class="sxs-lookup"><span data-stu-id="203f3-103">Constraint type 'type' is not CLS-compliant.</span></span>  

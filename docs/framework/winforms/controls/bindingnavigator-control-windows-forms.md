@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
 ms.openlocfilehash: c44d338bbe026726abe77d41812363b9b10851f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526058"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a><span data-ttu-id="b8f77-102">Controle BindingNavigator (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b8f77-102">BindingNavigator Control (Windows Forms)</span></span>
 <span data-ttu-id="b8f77-103">O `BindingNavigator` controle é a navegação e manipulação de interface do usuário (UI) para controles associados a dados.</span><span class="sxs-lookup"><span data-stu-id="b8f77-103">The `BindingNavigator` control is the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span> <span data-ttu-id="b8f77-104">O `BindingNavigator` controle permite aos usuários navegar e manipular dados em um Windows Form.</span><span class="sxs-lookup"><span data-stu-id="b8f77-104">The `BindingNavigator` control enables users to navigate through and manipulate data on a Windows Form.</span></span>  

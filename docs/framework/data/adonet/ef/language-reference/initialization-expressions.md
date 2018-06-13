@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762202"
 ---
 # <a name="initialization-expressions"></a><span data-ttu-id="8a6c2-102">Expressões de inicialização</span><span class="sxs-lookup"><span data-stu-id="8a6c2-102">Initialization Expressions</span></span>
 <span data-ttu-id="8a6c2-103">Uma expressão de inicialização inicializa um novo objeto.</span><span class="sxs-lookup"><span data-stu-id="8a6c2-103">An initialization expression initializes a new object.</span></span> <span data-ttu-id="8a6c2-104">A maioria das expressões de inicialização são suportadas, incluindo a maioria novo C# 3,0 e Visual Basic 9,0 expressões de inicialização.</span><span class="sxs-lookup"><span data-stu-id="8a6c2-104">Most initialization expressions are supported, including most new C# 3.0 and Visual Basic 9.0 initialization expressions.</span></span> <span data-ttu-id="8a6c2-105">Os seguintes tipos podem ser inicializados e retornado por uma consulta LINQ to Entities:</span><span class="sxs-lookup"><span data-stu-id="8a6c2-105">The following types can be initialized and returned by a LINQ to Entities query:</span></span>  

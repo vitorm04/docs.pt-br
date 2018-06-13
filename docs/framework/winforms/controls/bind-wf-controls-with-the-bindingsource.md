@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527555"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a><span data-ttu-id="ba11b-102">Como associar controles dos Windows Forms ao componente BindingSource usando o designer</span><span class="sxs-lookup"><span data-stu-id="ba11b-102">How to: Bind Windows Forms Controls with the BindingSource Component Using the Designer</span></span>
 <span data-ttu-id="ba11b-103">Depois de adicionar controles ao formulário e determinar a interface do usuário para seu aplicativo, você pode associar os controles a uma fonte de dados, para que os usuários possam alterar e salvar dados relacionados ao aplicativo no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="ba11b-103">After you have added controls to your form and determined the user interface for your application, you can bind the controls to a data source, so that, at run time, users can alter and save data related to the application.</span></span>  

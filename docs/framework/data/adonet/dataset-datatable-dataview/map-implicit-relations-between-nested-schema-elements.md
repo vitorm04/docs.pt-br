@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763622"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="aead2-102">Mapear relações implícita entre elementos de esquema aninhada</span><span class="sxs-lookup"><span data-stu-id="aead2-102">Map Implicit Relations Between Nested Schema Elements</span></span>
 <span data-ttu-id="aead2-103">Um esquema de linguagem XSD de definição de esquema XML pode ter tipos complexos aninhados dentro de uma outra.</span><span class="sxs-lookup"><span data-stu-id="aead2-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="aead2-104">Nesse caso, o processo de mapeamento aplica-se o mapeamento padrão e cria o seguinte o <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="aead2-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527294"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="591cc-102">Como exibir ícones de erro para validação do formulário com o componente ErrorProvider dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="591cc-102">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>
 <span data-ttu-id="591cc-103">Você pode usar um Windows Forms <xref:System.Windows.Forms.ErrorProvider> componente para exibir um ícone de erro quando o usuário insere dados inválidos.</span><span class="sxs-lookup"><span data-stu-id="591cc-103">You can use a Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to display an error icon when the user enters invalid data.</span></span> <span data-ttu-id="591cc-104">Você deve ter pelo menos dois controles no formulário para alternar entre eles e, portanto, invocar o código de validação.</span><span class="sxs-lookup"><span data-stu-id="591cc-104">You must have at least two controls on the form in order to tab between them and thereby invoke the validation code.</span></span>  
