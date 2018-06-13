@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de976f4241fcf1305b4c07befe8c82c99c27d210
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429618"
 ---
 # <a name="iassemblyenumreset-method"></a><span data-ttu-id="62564-102">Método IAssemblyEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="62564-102">IAssemblyEnum::Reset Method</span></span>
 <span data-ttu-id="62564-103">Redefine isso [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) objeto para sua posição inicial.</span><span class="sxs-lookup"><span data-stu-id="62564-103">Resets this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object to its starting position.</span></span>  

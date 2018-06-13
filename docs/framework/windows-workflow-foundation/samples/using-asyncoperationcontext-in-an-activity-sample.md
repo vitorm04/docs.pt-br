@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515491"
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a><span data-ttu-id="c6671-102">Usando AsyncOperationContext em um exemplo de atividades</span><span class="sxs-lookup"><span data-stu-id="c6671-102">Using AsyncOperationContext in an Activity Sample</span></span>
 <span data-ttu-id="c6671-103">Este exemplo demonstra como desenvolver um personalizado <xref:System.Activities.CodeActivity> que usa <xref:System.Activities.AsyncCodeActivityContext> para executar o trabalho de forma assíncrona fora de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="c6671-103">This sample demonstrates how to develop a custom <xref:System.Activities.CodeActivity> that uses <xref:System.Activities.AsyncCodeActivityContext> to perform work asynchronously outside of the workflow.</span></span>  

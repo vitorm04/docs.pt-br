@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2bef9e1671b8487a6702cce71106c84a2984317
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436154"
 ---
 # <a name="hosting-interfaces"></a><span data-ttu-id="8983a-102">Interfaces de hospedagem</span><span class="sxs-lookup"><span data-stu-id="8983a-102">Hosting Interfaces</span></span>
 <span data-ttu-id="8983a-103">Esta seção descreve as interfaces não gerenciadas hosts podem usar para integrar o common language runtime (CLR) em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="8983a-103">This section describes the interfaces that unmanaged hosts can use to integrate the common language runtime (CLR) into their applications.</span></span>  

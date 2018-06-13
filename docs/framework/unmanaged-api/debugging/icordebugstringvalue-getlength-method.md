@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e62539304817432fcab8f3e0958e5a70b371b83d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416940"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a><span data-ttu-id="ec2d9-102">Método ICorDebugStringValue::GetLength</span><span class="sxs-lookup"><span data-stu-id="ec2d9-102">ICorDebugStringValue::GetLength Method</span></span>
 <span data-ttu-id="ec2d9-103">Obtém o número de caracteres na cadeia de caracteres referenciada por este ICorDebugStringValue.</span><span class="sxs-lookup"><span data-stu-id="ec2d9-103">Gets the number of characters in the string referenced by this ICorDebugStringValue.</span></span>  

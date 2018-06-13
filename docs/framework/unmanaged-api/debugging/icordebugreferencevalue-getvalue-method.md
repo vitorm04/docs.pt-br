@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92df7bbcc2c391dd28f4075a97595762403d8def
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416309"
 ---
 # <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="792cd-102">Método ICorDebugReferenceValue::GetValue</span><span class="sxs-lookup"><span data-stu-id="792cd-102">ICorDebugReferenceValue::GetValue Method</span></span>
 <span data-ttu-id="792cd-103">Obtém o endereço de memória atual do objeto referenciado.</span><span class="sxs-lookup"><span data-stu-id="792cd-103">Gets the current memory address of the referenced object.</span></span>  

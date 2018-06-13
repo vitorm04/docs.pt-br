@@ -13,8 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f681001b610f42fef28181ffe3b47d702aabdf6e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452684"
 ---
 # <a name="icorprofilercallback7-interface"></a><span data-ttu-id="e3d98-102">Interface ICorProfilerCallback7</span><span class="sxs-lookup"><span data-stu-id="e3d98-102">ICorProfilerCallback7 Interface</span></span>
 <span data-ttu-id="e3d98-103">[Com suporte no .NET Framework 4.6.1 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="e3d98-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  

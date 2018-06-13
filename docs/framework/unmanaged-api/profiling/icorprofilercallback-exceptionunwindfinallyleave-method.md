@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ce413ba184cfec731c6bac0d7f561c345bf53181
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452004"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="945ff-102">Método ICorProfilerCallback::ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="945ff-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
 <span data-ttu-id="945ff-103">Notifica o criador de perfil que a fase de desenrolamento da exceção tratamento deixou um `finally` cláusula.</span><span class="sxs-lookup"><span data-stu-id="945ff-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  

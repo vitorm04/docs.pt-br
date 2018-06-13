@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513029"
 ---
 # <a name="runtime-activities-in-wf"></a><span data-ttu-id="2c66c-102">Atividades em tempo de execução de WF</span><span class="sxs-lookup"><span data-stu-id="2c66c-102">Runtime Activities in WF</span></span>
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<span data-ttu-id="2c66c-103"> fornece vários sistema forneceu atividades acessando recursos de tempo de execução de fluxo de trabalho, como a persistência e o encerramento.</span><span class="sxs-lookup"><span data-stu-id="2c66c-103"> provides several system-provided activities for accessing the features of the workflow runtime, such as persistence and termination.</span></span>  

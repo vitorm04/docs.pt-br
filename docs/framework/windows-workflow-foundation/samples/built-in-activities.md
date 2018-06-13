@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519305"
 ---
 # <a name="built-in-activities"></a><span data-ttu-id="e35b6-102">Atividades internos</span><span class="sxs-lookup"><span data-stu-id="e35b6-102">Built-in Activities</span></span>
 <span data-ttu-id="e35b6-103">Esta seção contém exemplos que demonstram atividades internas do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="e35b6-103">This section contains samples that demonstrate built-in Windows Workflow Foundation (WF) activities.</span></span>  

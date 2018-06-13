@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513208"
 ---
 # <a name="creating-custom-flow-control-activities"></a><span data-ttu-id="21862-102">Criando atividades personalizados de controle de fluxo</span><span class="sxs-lookup"><span data-stu-id="21862-102">Creating custom flow control activities</span></span>
 <span data-ttu-id="21862-103">. .NET Framework contém uma variedade de atividades de controle de fluxo que funcionam da mesma forma as estruturas abstratos de programação (como <xref:System.Activities.Statements.Flowchart>) ou as instruções de programação padrão (como <xref:System.Activities.Statements.If>).</span><span class="sxs-lookup"><span data-stu-id="21862-103">The .Net Framework contains a variety of flow-control activities that function similarly to abstract programming structures (such as <xref:System.Activities.Statements.Flowchart>)   or to standard programming statements (such as <xref:System.Activities.Statements.If>).</span></span> <span data-ttu-id="21862-104">Este tópico aborda a arquitetura de um dos projetos de exemplo, [ForEach não genéricos](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).</span><span class="sxs-lookup"><span data-stu-id="21862-104">This topic discusses the architecture of one of the sample projects, [Non-Generic ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).</span></span>  

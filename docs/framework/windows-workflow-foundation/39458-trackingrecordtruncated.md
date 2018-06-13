@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514476"
 ---
 # <a name="39458---trackingrecordtruncated"></a><span data-ttu-id="4e3be-102">39458 - TrackingRecordTruncated</span><span class="sxs-lookup"><span data-stu-id="4e3be-102">39458 - TrackingRecordTruncated</span></span>
 ## <a name="properties"></a><span data-ttu-id="4e3be-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="4e3be-103">Properties</span></span>  

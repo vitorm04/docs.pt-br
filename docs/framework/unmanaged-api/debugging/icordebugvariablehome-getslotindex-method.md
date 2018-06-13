@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420694"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a><span data-ttu-id="20e50-102">Método ICorDebugVariableHome::GetSlotIndex</span><span class="sxs-lookup"><span data-stu-id="20e50-102">ICorDebugVariableHome::GetSlotIndex Method</span></span>
 <span data-ttu-id="20e50-103">Obtém o índice de slot gerenciado de uma variável local.</span><span class="sxs-lookup"><span data-stu-id="20e50-103">Gets the managed slot-index of a local variable.</span></span>  

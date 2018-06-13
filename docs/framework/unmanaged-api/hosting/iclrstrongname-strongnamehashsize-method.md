@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ebf2e0225cf497a0b89a46ecdb3e203d5b9a4cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432008"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="b77e5-102">Método ICLRStrongName::StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="b77e5-102">ICLRStrongName::StrongNameHashSize Method</span></span>
 <span data-ttu-id="b77e5-103">Obtém o tamanho do buffer necessário para um hash, usando o algoritmo de hash especificado.</span><span class="sxs-lookup"><span data-stu-id="b77e5-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  

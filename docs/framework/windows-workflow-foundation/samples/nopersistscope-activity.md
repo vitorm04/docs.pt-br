@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516433"
 ---
 # <a name="nopersistscope-activity"></a><span data-ttu-id="97dc3-102">Atividade de NoPersistScope</span><span class="sxs-lookup"><span data-stu-id="97dc3-102">NoPersistScope Activity</span></span>
 <span data-ttu-id="97dc3-103">Este exemplo mostra como manipular um estado não-serializáveis e descartável em um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="97dc3-103">This sample shows how to manipulate a non-serializable and disposable state within a workflow.</span></span> <span data-ttu-id="97dc3-104">É importante que fluxos de trabalho não tentam manter o estado não-serializáveis e também é importante para objetos descartáveis ser limpado depois que são usados no fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="97dc3-104">It is important that workflows do not attempt to persist non-serializable state and it is also important for disposable objects to be cleaned up after they are used in workflow.</span></span>  

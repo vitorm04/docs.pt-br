@@ -21,8 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431884"
 ---
 # <a name="coeeshutdowncom-function"></a><span data-ttu-id="cd486-102">Função CoEEShutDownCOM</span><span class="sxs-lookup"><span data-stu-id="cd486-102">CoEEShutDownCOM Function</span></span>
 <span data-ttu-id="cd486-103">Força o common language runtime (CLR) para liberar todos os ponteiros de interface mantém em runtime callable wrappers (RCW).</span><span class="sxs-lookup"><span data-stu-id="cd486-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="cd486-104">Isso tem o efeito de liberar todos os caches RCW.</span><span class="sxs-lookup"><span data-stu-id="cd486-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="cd486-105">Essa função global foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd486-105">This global function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="cd486-106">Em vez disso, use o ponto de entrada para um tempo de execução específico.</span><span class="sxs-lookup"><span data-stu-id="cd486-106">Instead, use the entry point for a specific runtime.</span></span>  

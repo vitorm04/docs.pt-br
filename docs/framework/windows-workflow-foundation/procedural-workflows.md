@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515223"
 ---
 # <a name="procedural-workflows"></a><span data-ttu-id="11960-102">Fluxos de trabalho procedurais</span><span class="sxs-lookup"><span data-stu-id="11960-102">Procedural Workflows</span></span>
 <span data-ttu-id="11960-103">Fluxos de trabalho procedurais usam métodos de controle de fluxo semelhantes a esses elementos encontrados em idiomas procedurais.</span><span class="sxs-lookup"><span data-stu-id="11960-103">Procedural workflows use flow-control methods similar to those found in procedural languages.</span></span> <span data-ttu-id="11960-104">Essas construções incluem `While` e `If`.</span><span class="sxs-lookup"><span data-stu-id="11960-104">These constructs include `While` and `If`.</span></span> <span data-ttu-id="11960-105">Esses fluxos de trabalho podem ser compostos livremente usando outras atividades de controle de fluxo como <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="11960-105">These workflows can be freely composed using other flow control activities such as <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Sequence>.</span></span>  

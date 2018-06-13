@@ -1,36 +1,23 @@
 ---
 title: Semântica nula
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c4daa5fd37158f1af31f33ba743a56cf76670d8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b80d198b81e28b0fe1d0107dd04a9694c3069868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357696"
 ---
-# <a name="null-semantics"></a><span data-ttu-id="86e32-102">Semântica nula</span><span class="sxs-lookup"><span data-stu-id="86e32-102">Null Semantics</span></span>
-<span data-ttu-id="86e32-103">A tabela a seguir fornece links para diversas partes do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação onde `null` (`Nothing` no Visual Basic) problemas são discutidos.</span><span class="sxs-lookup"><span data-stu-id="86e32-103">The following table provides links to various parts of the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation where `null` (`Nothing` in Visual Basic) issues are discussed.</span></span>  
+# <a name="null-semantics"></a><span data-ttu-id="c684f-102">Semântica nula</span><span class="sxs-lookup"><span data-stu-id="c684f-102">Null Semantics</span></span>
+<span data-ttu-id="c684f-103">A tabela a seguir fornece links para diversas partes do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação onde `null` (`Nothing` no Visual Basic) problemas são discutidos.</span><span class="sxs-lookup"><span data-stu-id="c684f-103">The following table provides links to various parts of the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation where `null` (`Nothing` in Visual Basic) issues are discussed.</span></span>  
   
-|<span data-ttu-id="86e32-104">Tópico</span><span class="sxs-lookup"><span data-stu-id="86e32-104">Topic</span></span>|<span data-ttu-id="86e32-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="86e32-105">Description</span></span>|  
+|<span data-ttu-id="c684f-104">Tópico</span><span class="sxs-lookup"><span data-stu-id="c684f-104">Topic</span></span>|<span data-ttu-id="c684f-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="c684f-105">Description</span></span>|  
 |-----------|-----------------|  
-|[<span data-ttu-id="86e32-106">Tipos incompatíveis CLR do SQL</span><span class="sxs-lookup"><span data-stu-id="86e32-106">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|<span data-ttu-id="86e32-107">A seção "Semântica nula" deste tópico inclui discussões de três estados SQL booliano versus o dois estados common language runtime (CLR) <xref:System.Boolean>, o literal `Nothing` (Visual Basic) e `null` (c#) e outros problemas semelhantes.</span><span class="sxs-lookup"><span data-stu-id="86e32-107">The "Null Semantics" section of this topic includes discussion of the three-state SQL Boolean versus the two-state common language runtime (CLR) <xref:System.Boolean>, the literal `Nothing` (Visual Basic) and `null` (C#), and other similar issues.</span></span>|  
-|[<span data-ttu-id="86e32-108">Conversão de operador de consulta padrão</span><span class="sxs-lookup"><span data-stu-id="86e32-108">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|<span data-ttu-id="86e32-109">“A seção de semântica nula” neste tópico descreve as semânticas nula de comparação em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="86e32-109">The "Null Semantics" section of this topic describes null comparison semantics in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
-|[<span data-ttu-id="86e32-110">Métodos de System.String</span><span class="sxs-lookup"><span data-stu-id="86e32-110">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="86e32-111">As “diferenças a seção .NET” neste tópico descrevem como um retorno de 0 de <xref:System.String.LastIndexOf%2A> pode significar qualquer pessoa que a cadeia de caracteres é nula ou que a posição encontrada é 0.</span><span class="sxs-lookup"><span data-stu-id="86e32-111">The "Differences from .NET" section of this topic describes how a return of 0 from <xref:System.String.LastIndexOf%2A> might mean either that the string is null or that the found position is 0.</span></span>|  
-|[<span data-ttu-id="86e32-112">Calcular a soma dos valores em uma sequência numérica</span><span class="sxs-lookup"><span data-stu-id="86e32-112">Compute the Sum of Values in a Numeric Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|<span data-ttu-id="86e32-113">Descreve como o <xref:System.Linq.Enumerable.Sum%2A> operador é avaliada como `null` (`Nothing` no Visual Basic) em vez de 0 para uma sequência que contém apenas valores nulos ou para uma sequência vazia.</span><span class="sxs-lookup"><span data-stu-id="86e32-113">Describes how the <xref:System.Linq.Enumerable.Sum%2A> operator evaluates to `null` (`Nothing` in Visual Basic) instead of 0 for a sequence that contains only nulls or for an empty sequence.</span></span>|  
+|[<span data-ttu-id="c684f-106">Tipos incompatíveis CLR do SQL</span><span class="sxs-lookup"><span data-stu-id="c684f-106">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|<span data-ttu-id="c684f-107">A seção "Semântica nula" deste tópico inclui discussões de três estados SQL booliano versus o dois estados common language runtime (CLR) <xref:System.Boolean>, o literal `Nothing` (Visual Basic) e `null` (c#) e outros problemas semelhantes.</span><span class="sxs-lookup"><span data-stu-id="c684f-107">The "Null Semantics" section of this topic includes discussion of the three-state SQL Boolean versus the two-state common language runtime (CLR) <xref:System.Boolean>, the literal `Nothing` (Visual Basic) and `null` (C#), and other similar issues.</span></span>|  
+|[<span data-ttu-id="c684f-108">Conversão de operador de consulta padrão</span><span class="sxs-lookup"><span data-stu-id="c684f-108">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|<span data-ttu-id="c684f-109">“A seção de semântica nula” neste tópico descreve as semânticas nula de comparação em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c684f-109">The "Null Semantics" section of this topic describes null comparison semantics in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
+|[<span data-ttu-id="c684f-110">Métodos de System.String</span><span class="sxs-lookup"><span data-stu-id="c684f-110">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="c684f-111">As “diferenças a seção .NET” neste tópico descrevem como um retorno de 0 de <xref:System.String.LastIndexOf%2A> pode significar qualquer pessoa que a cadeia de caracteres é nula ou que a posição encontrada é 0.</span><span class="sxs-lookup"><span data-stu-id="c684f-111">The "Differences from .NET" section of this topic describes how a return of 0 from <xref:System.String.LastIndexOf%2A> might mean either that the string is null or that the found position is 0.</span></span>|  
+|[<span data-ttu-id="c684f-112">Calcular a soma dos valores em uma sequência numérica</span><span class="sxs-lookup"><span data-stu-id="c684f-112">Compute the Sum of Values in a Numeric Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|<span data-ttu-id="c684f-113">Descreve como o <xref:System.Linq.Enumerable.Sum%2A> operador é avaliada como `null` (`Nothing` no Visual Basic) em vez de 0 para uma sequência que contém apenas valores nulos ou para uma sequência vazia.</span><span class="sxs-lookup"><span data-stu-id="c684f-113">Describes how the <xref:System.Linq.Enumerable.Sum%2A> operator evaluates to `null` (`Nothing` in Visual Basic) instead of 0 for a sequence that contains only nulls or for an empty sequence.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="86e32-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="86e32-114">See Also</span></span>  
- [<span data-ttu-id="86e32-115">Funções e tipos de dados</span><span class="sxs-lookup"><span data-stu-id="86e32-115">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="c684f-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c684f-114">See Also</span></span>  
+ [<span data-ttu-id="c684f-115">Funções e tipos de dados</span><span class="sxs-lookup"><span data-stu-id="c684f-115">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

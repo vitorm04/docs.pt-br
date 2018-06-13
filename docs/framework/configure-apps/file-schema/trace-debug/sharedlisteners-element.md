@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745569"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="f72cd-102">&lt;sharedListeners&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="f72cd-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="f72cd-103">Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="f72cd-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="f72cd-104">Esses ouvintes não recebem qualquer rastreamentos por padrão e não é possível recuperar esses ouvintes em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="f72cd-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="f72cd-105">Ouvintes identificados como ouvintes compartilhados podem ser adicionados com fontes ou os rastreamentos por nome.</span><span class="sxs-lookup"><span data-stu-id="f72cd-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

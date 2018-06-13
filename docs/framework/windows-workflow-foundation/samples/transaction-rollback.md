@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517151"
 ---
 # <a name="transaction-rollback"></a><span data-ttu-id="12df5-102">Reversão de transação</span><span class="sxs-lookup"><span data-stu-id="12df5-102">Transaction Rollback</span></span>
 <span data-ttu-id="12df5-103">Este exemplo mostra como criar um personalizado <xref:System.Activities.NativeActivity> que acessa <xref:System.Activities.RuntimeTransactionHandle> ambiente para obter a transação e ambiente para rolar explicitamente novamente.</span><span class="sxs-lookup"><span data-stu-id="12df5-103">This sample shows how to create a custom <xref:System.Activities.NativeActivity> that accesses the ambient <xref:System.Activities.RuntimeTransactionHandle> to get the ambient transaction and explicitly roll it back.</span></span>  

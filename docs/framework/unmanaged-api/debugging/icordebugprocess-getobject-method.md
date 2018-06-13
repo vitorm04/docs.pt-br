@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416387"
 ---
 # <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="cd0df-102">Método ICorDebugProcess::GetObject</span><span class="sxs-lookup"><span data-stu-id="cd0df-102">ICorDebugProcess::GetObject Method</span></span>
 <span data-ttu-id="cd0df-103">Esse método não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="cd0df-103">This method has not been implemented.</span></span>  

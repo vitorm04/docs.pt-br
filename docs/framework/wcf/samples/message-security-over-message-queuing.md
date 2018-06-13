@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507815"
 ---
 # <a name="message-security-over-message-queuing"></a><span data-ttu-id="5d4d4-102">Segurança de mensagem através do enfileiramento de mensagem</span><span class="sxs-lookup"><span data-stu-id="5d4d4-102">Message Security over Message Queuing</span></span>
 <span data-ttu-id="5d4d4-103">Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com autenticação de certificado x. 509v3 para o cliente e requer a autenticação de servidor usando o certificado do servidor x. 509v3 em relação ao MSMQ.</span><span class="sxs-lookup"><span data-stu-id="5d4d4-103">This sample demonstrates how to implement an application that uses WS-Security with X.509v3 certificate authentication for the client and requires server authentication using the server's X.509v3 certificate over MSMQ.</span></span> <span data-ttu-id="5d4d4-104">Mensagem de segurança às vezes é desejável mais para garantir que as mensagens no armazenamento de MSMQ permanecem criptografadas e o aplicativo pode executar sua própria autenticação da mensagem.</span><span class="sxs-lookup"><span data-stu-id="5d4d4-104">Message security is sometimes more desirable to ensure that the messages in the MSMQ store stay encrypted and the application can perform its own authentication of the message.</span></span>  

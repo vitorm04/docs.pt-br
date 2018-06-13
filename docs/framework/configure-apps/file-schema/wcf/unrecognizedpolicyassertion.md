@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766914"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="d9a77-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="d9a77-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="d9a77-103">Representa um elemento de associação que especifica a declaração de política.</span><span class="sxs-lookup"><span data-stu-id="d9a77-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="d9a77-104">Esse elemento não tem nenhum atributo e está presente como uma chave vazia.</span><span class="sxs-lookup"><span data-stu-id="d9a77-104">This element has no attribute and is present as an empty switch.</span></span>  

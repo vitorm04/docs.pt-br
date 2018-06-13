@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6f5cbb7c0b4e3ce6d66d30e812008fc3419d7d7d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429086"
 ---
 # <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="fcb32-102">Método IAssemblyCacheItem::Commit</span><span class="sxs-lookup"><span data-stu-id="fcb32-102">IAssemblyCacheItem::Commit Method</span></span>
 <span data-ttu-id="fcb32-103">Confirma a referência de assembly em cache na memória.</span><span class="sxs-lookup"><span data-stu-id="fcb32-103">Commits the cached assembly reference to memory.</span></span>  

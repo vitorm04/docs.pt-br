@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428893"
 ---
 # <a name="corgcstattypes-enumeration"></a><span data-ttu-id="cdac4-102">Enumeração COR_GC_STAT_TYPES</span><span class="sxs-lookup"><span data-stu-id="cdac4-102">COR_GC_STAT_TYPES Enumeration</span></span>
 <span data-ttu-id="cdac4-103">Especifica as estatísticas sejam registradas para uma coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="cdac4-103">Specifies the statistics to be recorded for a garbage collection.</span></span>  

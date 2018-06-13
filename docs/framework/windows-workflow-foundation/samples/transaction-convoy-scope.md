@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516559"
 ---
 # <a name="transaction-convoy-scope"></a><span data-ttu-id="c41e8-102">Escopo de trem de transação</span><span class="sxs-lookup"><span data-stu-id="c41e8-102">Transaction Convoy Scope</span></span>
 <span data-ttu-id="c41e8-103">Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem de trem em conjunto com <xref:System.ServiceModel.Activities.TransactedReceiveScope> para modelar um protocolo onde um número de operações podem ocorrer em qualquer ordem todo na mesma transação.</span><span class="sxs-lookup"><span data-stu-id="c41e8-103">This sample demonstrates how to create a Parallel Convoy messaging activity pattern in conjunction with a <xref:System.ServiceModel.Activities.TransactedReceiveScope> to model a protocol where a number of operations can happen in any order all under the same transaction.</span></span> <span data-ttu-id="c41e8-104">Este exemplo também demonstra como <xref:System.ServiceModel.Activities.TransactedReceiveScope> automaticamente cria uma nova quando uma transação não é fluído para o servidor, portanto o cliente não usa nenhuma transações.</span><span class="sxs-lookup"><span data-stu-id="c41e8-104">This sample also demonstrates how a <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatically creates a new transaction when one is not flowed to the server, so the client does not make use of any transactions.</span></span>  

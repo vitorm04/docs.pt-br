@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429631"
 ---
 # <a name="getrealprocaddress-function"></a><span data-ttu-id="bfc65-102">Função GetRealProcAddress</span><span class="sxs-lookup"><span data-stu-id="bfc65-102">GetRealProcAddress Function</span></span>
 <span data-ttu-id="bfc65-103">Obtém o endereço da função especificada é exportado da versão instalada mais recente do common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="bfc65-103">Gets the address of the specified function that is exported from the latest installed version of the common language runtime (CLR).</span></span>  

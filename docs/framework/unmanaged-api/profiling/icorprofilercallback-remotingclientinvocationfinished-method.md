@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec45b73b496efdbe6328985b5f77f731d8a78cc7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453399"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a><span data-ttu-id="db58f-102">Método ICorProfilerCallback::RemotingClientInvocationFinished</span><span class="sxs-lookup"><span data-stu-id="db58f-102">ICorProfilerCallback::RemotingClientInvocationFinished Method</span></span>
 <span data-ttu-id="db58f-103">Notifica o criador de perfil que uma chamada de comunicação remota foi executado para conclusão no cliente.</span><span class="sxs-lookup"><span data-stu-id="db58f-103">Notifies the profiler that a remoting call has run to completion on the client.</span></span>  

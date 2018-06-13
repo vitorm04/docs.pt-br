@@ -12,8 +12,10 @@ api_type:
 author: stevewhims
 ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356193"
 ---
 # <a name="httpwebrequestcoreresponse-field"></a><span data-ttu-id="628d1-102">HttpWebRequest. \_CoreResponse campo</span><span class="sxs-lookup"><span data-stu-id="628d1-102">HttpWebRequest.\_CoreResponse Field</span></span>
 

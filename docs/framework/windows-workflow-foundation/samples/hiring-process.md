@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519757"
 ---
 # <a name="hiring-process"></a><span data-ttu-id="7ff86-102">Processo de aluguer</span><span class="sxs-lookup"><span data-stu-id="7ff86-102">Hiring Process</span></span>
 <span data-ttu-id="7ff86-103">Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7ff86-103">This sample demonstrates how to implement a business process using messaging activities and two workflows hosted as workflow services.</span></span> <span data-ttu-id="7ff86-104">Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.</span><span class="sxs-lookup"><span data-stu-id="7ff86-104">These workflows are part of the IT infrastructure of a fictional company called Contoso, Inc.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517087"
 ---
 # <a name="workflow-management-endpoint-sample"></a><span data-ttu-id="b9c9f-102">Exemplo de ponto de extremidade de gerenciamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="b9c9f-102">Workflow Management Endpoint Sample</span></span>
 <span data-ttu-id="b9c9f-103">Este exemplo mostra como um ponto de extremidade de controle de fluxo de trabalho pode ser usado para criar localmente e remotamente e executar fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="b9c9f-103">This sample shows how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span> <span data-ttu-id="b9c9f-104">O exemplo demonstra como hospedar um ponto final do controle e escrever os clientes que chamam o ponto final do controle para criar e executar a instância de um fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="b9c9f-104">The sample demonstrates how to host a control endpoint and write clients that call the control endpoint to create and run the instance of a workflow.</span></span> <span data-ttu-id="b9c9f-105">O fluxo de trabalho não é um serviço.</span><span class="sxs-lookup"><span data-stu-id="b9c9f-105">The workflow is not a service.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767161"
 ---
 # <a name="creating-a-datatable"></a><span data-ttu-id="c4e1c-102">Criando uma DataTable</span><span class="sxs-lookup"><span data-stu-id="c4e1c-102">Creating a DataTable</span></span>
 <span data-ttu-id="c4e1c-103">Uma <xref:System.Data.DataTable>, que representa uma tabela de dados relacionais de memória, pode ser criada e usada independentemente ou pode ser usada por outros objetos do .NET Framework, mais comumente como membro de um <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="c4e1c-103">A <xref:System.Data.DataTable>, which represents one table of in-memory relational data, can be created and used independently, or can be used by other .NET Framework objects, most commonly as a member of a <xref:System.Data.DataSet>.</span></span>  

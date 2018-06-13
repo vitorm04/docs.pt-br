@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515831"
 ---
 # <a name="hello-world-custom-activity"></a><span data-ttu-id="750fc-102">Hello atividade personalizado</span><span class="sxs-lookup"><span data-stu-id="750fc-102">Hello World Custom Activity</span></span>
 <span data-ttu-id="750fc-103">Este exemplo demonstra vários recursos importantes do Windows Workflow Foundation (WF), incluindo como criar uma atividade personalizada simple.</span><span class="sxs-lookup"><span data-stu-id="750fc-103">This sample demonstrates several key features of Windows Workflow Foundation (WF), including how to create a simple custom activity.</span></span> <span data-ttu-id="750fc-104">Alguns dos recursos demonstrados nesse exemplo são criando uma atividade personalizado em C# e estão usando `in` e argumentos de `out` (<xref:System.Activities.InArgument> e <xref:System.Activities.OutArgument>).</span><span class="sxs-lookup"><span data-stu-id="750fc-104">Some of the features demonstrated in this sample are creating a custom activity in C# and using `in` and `out` arguments (<xref:System.Activities.InArgument> and <xref:System.Activities.OutArgument>).</span></span>  

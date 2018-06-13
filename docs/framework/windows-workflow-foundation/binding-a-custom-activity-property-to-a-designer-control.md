@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513543"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="2fce0-102">Associando uma propriedade personalizada de atividade a um controle de designer</span><span class="sxs-lookup"><span data-stu-id="2fce0-102">Binding a custom activity property to a designer control</span></span>
 <span data-ttu-id="2fce0-103">Associar um controle de designer caixa de texto para um argumento de atividade é relativamente simples; associar um controle complexo do designer (como uma caixa combo) para um argumento de atividade pode apresentar desafios, no entanto.</span><span class="sxs-lookup"><span data-stu-id="2fce0-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="2fce0-104">Este tópico discute como associar um argumento de atividade a um controle caixa de combinação em um designer personalizado de atividade.</span><span class="sxs-lookup"><span data-stu-id="2fce0-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  

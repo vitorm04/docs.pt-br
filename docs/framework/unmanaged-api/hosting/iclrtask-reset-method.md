@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435936"
 ---
 # <a name="iclrtaskreset-method"></a><span data-ttu-id="b2e4f-102">Método ICLRTask::Reset</span><span class="sxs-lookup"><span data-stu-id="b2e4f-102">ICLRTask::Reset Method</span></span>
 <span data-ttu-id="b2e4f-103">Informa o common language runtime (CLR) que o host concluiu uma tarefa e habilita o CLR reutilizar atual [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instância para representar outra tarefa.</span><span class="sxs-lookup"><span data-stu-id="b2e4f-103">Informs the common language runtime (CLR) that the host has completed a task, and enables the CLR to reuse the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance to represent another task.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516407"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a><span data-ttu-id="2220f-102">Ajustando o tamanho e a escala de formulários do Windows</span><span class="sxs-lookup"><span data-stu-id="2220f-102">Adjusting the size and scale of Windows Forms</span></span>
 <span data-ttu-id="2220f-103">Este tópico fornece links para informações sobre o redimensionamento de formulários do Windows.</span><span class="sxs-lookup"><span data-stu-id="2220f-103">This topic provides links to information about resizing Windows Forms.</span></span>  

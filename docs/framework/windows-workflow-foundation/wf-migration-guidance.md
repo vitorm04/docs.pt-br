@@ -6,8 +6,10 @@ author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 3726f05fde6923fcc2bad192183e1e182efb9332
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515939"
 ---
 # <a name="windows-workflow-foundation-wf-migration-guidance"></a><span data-ttu-id="f65ab-102">Orientação de migração do Windows Workflow Foundation (WF)</span><span class="sxs-lookup"><span data-stu-id="f65ab-102">Windows Workflow Foundation (WF) Migration Guidance</span></span>
 

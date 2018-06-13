@@ -11,8 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426231"
 ---
 # <a name="diagnostics-symbol-store-structures"></a><span data-ttu-id="595a6-102">Estruturas de armazenamento de símbolo de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="595a6-102">Diagnostics Symbol Store Structures</span></span>
 <span data-ttu-id="595a6-103">Este tópico descreve as estruturas não gerenciadas que usa o armazenamento de símbolo de diagnóstico API.</span><span class="sxs-lookup"><span data-stu-id="595a6-103">This topic describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>  

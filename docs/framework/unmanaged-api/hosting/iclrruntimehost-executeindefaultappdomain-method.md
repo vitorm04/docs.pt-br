@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dcddb5766894a30f1ccb2552a09abe7153c6eea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434946"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a><span data-ttu-id="2d721-102">Método ICLRRuntimeHost::ExecuteInDefaultAppDomain</span><span class="sxs-lookup"><span data-stu-id="2d721-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain Method</span></span>
 <span data-ttu-id="2d721-103">Chama o método especificado do tipo especificado no assembly gerenciado especificado.</span><span class="sxs-lookup"><span data-stu-id="2d721-103">Calls the specified method of the specified type in the specified managed assembly.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9b9b8a728932caa085bba1665dc97faf02be8fe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431374"
 ---
 # <a name="corruntimehost-coclass"></a><span data-ttu-id="7627b-102">Coclass CorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="7627b-102">CorRuntimeHost Coclass</span></span>
 <span data-ttu-id="7627b-103">Fornece interfaces de gerenciamento de aplicativos que estão sendo executados pelo common language runtime.</span><span class="sxs-lookup"><span data-stu-id="7627b-103">Provides interfaces for managing applications that are being executed by the common language runtime.</span></span>  

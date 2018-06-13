@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416160"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a><span data-ttu-id="e4c36-102">Método ICorDebugEval2::CallParameterizedFunction</span><span class="sxs-lookup"><span data-stu-id="e4c36-102">ICorDebugEval2::CallParameterizedFunction Method</span></span>
 <span data-ttu-id="e4c36-103">Configura uma chamada para o ICorDebugFunction especificado, que pode ser aninhado dentro de uma classe cujo construtor obtém <xref:System.Type> parâmetros, ou podem ser próprio levar <xref:System.Type> parâmetros.</span><span class="sxs-lookup"><span data-stu-id="e4c36-103">Sets up a call to the specified ICorDebugFunction, which can be nested inside a class whose constructor takes <xref:System.Type> parameters, or can itself take <xref:System.Type> parameters.</span></span>  

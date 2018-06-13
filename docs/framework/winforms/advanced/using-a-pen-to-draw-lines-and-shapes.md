@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524336"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a><span data-ttu-id="54420-102">Usando uma caneta para desenhar linhas e formas</span><span class="sxs-lookup"><span data-stu-id="54420-102">Using a Pen to Draw Lines and Shapes</span></span>
 <span data-ttu-id="54420-103">Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objetos para desenhar o contorno de formas, curvas e segmentos de linha.</span><span class="sxs-lookup"><span data-stu-id="54420-103">Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objects to draw line segments, curves, and the outlines of shapes.</span></span> <span data-ttu-id="54420-104">Nesta seção, *linha* refere-se a qualquer uma dessas opções, a menos que especificado como um segmento de linha.</span><span class="sxs-lookup"><span data-stu-id="54420-104">In this section, *line* refers to any of these, unless specified to mean only a line segment.</span></span> <span data-ttu-id="54420-105">Defina as propriedades de uma caneta para controlar a cor, largura, alinhamento e o estilo das linhas desenhadas com essa caneta.</span><span class="sxs-lookup"><span data-stu-id="54420-105">Set the properties of a pen to control the color, width, alignment, and style of lines drawn with that pen.</span></span>  

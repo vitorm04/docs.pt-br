@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c8e1886a3e33b533eb525f5b35480a8a7d326da0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454586"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="60060-102">Método ICorProfilerInfo2::GetAppDomainStaticAddress</span><span class="sxs-lookup"><span data-stu-id="60060-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
 <span data-ttu-id="60060-103">Obtém o endereço do campo estático de domínio especificado de aplicativo que está no escopo do domínio do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="60060-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
