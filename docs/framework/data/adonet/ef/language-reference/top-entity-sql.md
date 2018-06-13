@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764652"
 ---
 # <a name="top-entity-sql"></a><span data-ttu-id="d408e-102">TOPO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d408e-102">TOP (Entity SQL)</span></span>
 <span data-ttu-id="d408e-103">A cláusula SELECT pode ter uma cláusula as subjanelas TOP opcional após o modificador opcional de ALL/DISTINCT.</span><span class="sxs-lookup"><span data-stu-id="d408e-103">The SELECT clause can have an optional TOP sub-clause following the optional ALL/DISTINCT modifier.</span></span> <span data-ttu-id="d408e-104">A cláusula subpropriedades TOP especifica que apenas definir primeiro as linhas será retornado do resultado da consulta.</span><span class="sxs-lookup"><span data-stu-id="d408e-104">The TOP sub-clause specifies that only the first set of rows will be returned from the query result.</span></span>  

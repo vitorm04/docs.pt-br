@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323229"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="603a8-102">Como consultar um ArrayList com LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="603a8-102">How to: Query an ArrayList with LINQ (C#)</span></span>
 <span data-ttu-id="603a8-103">Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção.</span><span class="sxs-lookup"><span data-stu-id="603a8-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="603a8-104">Por exemplo, se você tiver um <xref:System.Collections.ArrayList> de objetos `Student`, sua [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md) deverá ter uma aparência semelhante a esta:</span><span class="sxs-lookup"><span data-stu-id="603a8-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../../csharp/language-reference/keywords/from-clause.md) should look like this:</span></span>  

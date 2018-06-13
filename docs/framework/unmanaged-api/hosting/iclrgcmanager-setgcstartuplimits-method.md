@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cbcd3ae758add4beec24959314d2cf806c2a2b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435687"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a><span data-ttu-id="51e61-102">Método ICLRGCManager::SetGCStartupLimits</span><span class="sxs-lookup"><span data-stu-id="51e61-102">ICLRGCManager::SetGCStartupLimits Method</span></span>
 <span data-ttu-id="51e61-103">Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração do sistema de coleta de lixo 0.</span><span class="sxs-lookup"><span data-stu-id="51e61-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765601"
 ---
 # <a name="row-entity-sql"></a><span data-ttu-id="442f7-102">LINHA (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="442f7-102">ROW (Entity SQL)</span></span>
 <span data-ttu-id="442f7-103">Constrói registros anônimos e tipados estruturalmente de um ou mais valores.</span><span class="sxs-lookup"><span data-stu-id="442f7-103">Constructs anonymous, structurally typed records from one or more values.</span></span>  

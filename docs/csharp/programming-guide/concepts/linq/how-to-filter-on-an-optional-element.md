@@ -1,27 +1,19 @@
 ---
 title: Como filtrar em um elemento opcional (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc1b5384add88db209a71ec56dc1c5edf4caecb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aa6eb5c9f661a27729c409edcc44b75377498925
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320164"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="72672-102">Como filtrar em um elemento opcional (C#)</span><span class="sxs-lookup"><span data-stu-id="72672-102">How to: Filter on an Optional Element (C#)</span></span>
-<span data-ttu-id="72672-103">Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML.</span><span class="sxs-lookup"><span data-stu-id="72672-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="72672-104">A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele.</span><span class="sxs-lookup"><span data-stu-id="72672-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="72672-105">No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.</span><span class="sxs-lookup"><span data-stu-id="72672-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
+# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="beab0-102">Como filtrar em um elemento opcional (C#)</span><span class="sxs-lookup"><span data-stu-id="beab0-102">How to: Filter on an Optional Element (C#)</span></span>
+<span data-ttu-id="beab0-103">Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML.</span><span class="sxs-lookup"><span data-stu-id="beab0-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="beab0-104">A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele.</span><span class="sxs-lookup"><span data-stu-id="beab0-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="beab0-105">No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.</span><span class="sxs-lookup"><span data-stu-id="beab0-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="72672-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="72672-106">Example</span></span>  
- <span data-ttu-id="72672-107">Este exemplo usa o método de extensão de <xref:System.Xml.Linq.Extensions.Elements%2A> .</span><span class="sxs-lookup"><span data-stu-id="72672-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
+## <a name="example"></a><span data-ttu-id="beab0-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="beab0-106">Example</span></span>  
+ <span data-ttu-id="beab0-107">Este exemplo usa o método de extensão de <xref:System.Xml.Linq.Extensions.Elements%2A> .</span><span class="sxs-lookup"><span data-stu-id="beab0-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -53,7 +45,7 @@ foreach(string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="72672-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="72672-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="beab0-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="beab0-108">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -61,8 +53,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a><span data-ttu-id="72672-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="72672-109">Example</span></span>  
- <span data-ttu-id="72672-110">O exemplo a seguir mostra a mesma consulta para XML que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="72672-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="72672-111">Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="72672-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="beab0-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="beab0-109">Example</span></span>  
+ <span data-ttu-id="beab0-110">O exemplo a seguir mostra a mesma consulta para XML que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="beab0-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="beab0-111">Para obter mais informações, consulte [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="beab0-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -95,7 +87,7 @@ foreach (string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="72672-112">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="72672-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="beab0-112">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="beab0-112">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -103,10 +95,10 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72672-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="72672-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="beab0-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="beab0-113">See Also</span></span>  
  <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
  <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
  <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="72672-114">Consultas básicas (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="72672-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [<span data-ttu-id="72672-115">Visão geral de operadores de consulta padrão (C#)</span><span class="sxs-lookup"><span data-stu-id="72672-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [<span data-ttu-id="72672-116">Operações de projeção (C#)</span><span class="sxs-lookup"><span data-stu-id="72672-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+ [<span data-ttu-id="beab0-114">Consultas básicas (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="beab0-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [<span data-ttu-id="beab0-115">Visão geral de operadores de consulta padrão (C#)</span><span class="sxs-lookup"><span data-stu-id="beab0-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="beab0-116">Operações de projeção (C#)</span><span class="sxs-lookup"><span data-stu-id="beab0-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

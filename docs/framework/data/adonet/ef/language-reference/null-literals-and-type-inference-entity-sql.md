@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764210"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="0a4a1-102">Literais nulos e inferência de tipo (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0a4a1-102">Null Literals and Type Inference (Entity SQL)</span></span>
 <span data-ttu-id="0a4a1-103">Literais nulos são compatíveis com qualquer no sistema de tipos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0a4a1-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="0a4a1-104">No entanto, para o tipo de um literal nulo para ser inferido corretamente, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impõe determinadas restrições em um literal nulo pode ser usado.</span><span class="sxs-lookup"><span data-stu-id="0a4a1-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  

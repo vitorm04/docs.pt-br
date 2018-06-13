@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765718"
 ---
 # <a name="system-functions"></a><span data-ttu-id="edb34-102">Funções do sistema</span><span class="sxs-lookup"><span data-stu-id="edb34-102">System Functions</span></span>
 <span data-ttu-id="edb34-103">O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as seguintes funções do sistema:</span><span class="sxs-lookup"><span data-stu-id="edb34-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides the following system functions:</span></span>  

@@ -4,52 +4,49 @@ description: Saiba mais sobre o RID (Identificador de tempo de execução) e com
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 81f9e5f65385bbd81c7fdae7f75c62d11b6f6319
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215899"
 ---
-# <a name="net-core-rid-catalog"></a><span data-ttu-id="b7c8e-103">Catálogo de RIDs do .NET Core</span><span class="sxs-lookup"><span data-stu-id="b7c8e-103">.NET Core RID Catalog</span></span>
+# <a name="net-core-rid-catalog"></a><span data-ttu-id="42c02-103">Catálogo de RIDs do .NET Core</span><span class="sxs-lookup"><span data-stu-id="42c02-103">.NET Core RID Catalog</span></span>
 
-<span data-ttu-id="b7c8e-104">RID é a abreviação de *Identificador de Tempo de Execução*.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="b7c8e-105">Os valores do RID são usados para identificar plataformas de destino onde o aplicativo é executado.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-105">RID values are used to identify target platforms where the application runs.</span></span>
-<span data-ttu-id="b7c8e-106">Eles são usados por pacotes .NET para representar ativos específicos de plataforma em pacotes NuGet.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="b7c8e-107">Os seguintes valores são exemplos de RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` ou `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
-<span data-ttu-id="b7c8e-108">Para os pacotes com dependências nativas, o RID designará as plataformas em que o pacote pode ser restaurado.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
+<span data-ttu-id="42c02-104">RID é a abreviação de *Identificador de Tempo de Execução*.</span><span class="sxs-lookup"><span data-stu-id="42c02-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="42c02-105">Os valores do RID são usados para identificar plataformas de destino onde o aplicativo é executado.</span><span class="sxs-lookup"><span data-stu-id="42c02-105">RID values are used to identify target platforms where the application runs.</span></span>
+<span data-ttu-id="42c02-106">Eles são usados por pacotes .NET para representar ativos específicos de plataforma em pacotes NuGet.</span><span class="sxs-lookup"><span data-stu-id="42c02-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="42c02-107">Os seguintes valores são exemplos de RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` ou `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="42c02-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
+<span data-ttu-id="42c02-108">Para os pacotes com dependências nativas, o RID designará as plataformas em que o pacote pode ser restaurado.</span><span class="sxs-lookup"><span data-stu-id="42c02-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
 
-<span data-ttu-id="b7c8e-109">Um único RID pode ser definido no elemento `<RuntimeIdentifier>` do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="b7c8e-110">Vários RIDs podem ser definidos como uma lista separada por ponto-e-vírgula no elemento `<RuntimeIdentifiers>` do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="b7c8e-111">Eles também são usados por meio da opção `--runtime` com os seguintes [comandos da CLI do .NET Core](./tools/index.md):</span><span class="sxs-lookup"><span data-stu-id="b7c8e-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
+<span data-ttu-id="42c02-109">Um único RID pode ser definido no elemento `<RuntimeIdentifier>` do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="42c02-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="42c02-110">Vários RIDs podem ser definidos como uma lista separada por ponto-e-vírgula no elemento `<RuntimeIdentifiers>` do arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="42c02-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="42c02-111">Eles também são usados por meio da opção `--runtime` com os seguintes [comandos da CLI do .NET Core](./tools/index.md):</span><span class="sxs-lookup"><span data-stu-id="42c02-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
 
-- [<span data-ttu-id="b7c8e-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="b7c8e-112">dotnet build</span></span>](./tools/dotnet-build.md)
-- [<span data-ttu-id="b7c8e-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="b7c8e-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
-- [<span data-ttu-id="b7c8e-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="b7c8e-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
-- [<span data-ttu-id="b7c8e-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="b7c8e-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
-- [<span data-ttu-id="b7c8e-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="b7c8e-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
-- [<span data-ttu-id="b7c8e-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="b7c8e-117">dotnet run</span></span>](./tools/dotnet-run.md)
-- [<span data-ttu-id="b7c8e-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="b7c8e-118">dotnet store</span></span>](./tools/dotnet-store.md)
+- [<span data-ttu-id="42c02-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="42c02-112">dotnet build</span></span>](./tools/dotnet-build.md)
+- [<span data-ttu-id="42c02-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="42c02-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
+- [<span data-ttu-id="42c02-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="42c02-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
+- [<span data-ttu-id="42c02-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="42c02-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
+- [<span data-ttu-id="42c02-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="42c02-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
+- [<span data-ttu-id="42c02-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="42c02-117">dotnet run</span></span>](./tools/dotnet-run.md)
+- [<span data-ttu-id="42c02-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="42c02-118">dotnet store</span></span>](./tools/dotnet-store.md)
 
-<span data-ttu-id="b7c8e-119">RIDs que representem sistemas operacionais concretos geralmente seguem este padrão: `[os].[version]-[architecture]-[additional qualifiers]` em que:</span><span class="sxs-lookup"><span data-stu-id="b7c8e-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
+<span data-ttu-id="42c02-119">RIDs que representem sistemas operacionais concretos geralmente seguem este padrão: `[os].[version]-[architecture]-[additional qualifiers]` em que:</span><span class="sxs-lookup"><span data-stu-id="42c02-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
 
-- <span data-ttu-id="b7c8e-120">`[os]` é o moniker do sistema operacional/plataforma.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="b7c8e-121">Por exemplo, `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-121">For example, `ubuntu`.</span></span>
+- <span data-ttu-id="42c02-120">`[os]` é o moniker do sistema operacional/plataforma.</span><span class="sxs-lookup"><span data-stu-id="42c02-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="42c02-121">Por exemplo, `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="42c02-121">For example, `ubuntu`.</span></span>
 
-- <span data-ttu-id="b7c8e-122">`[version]` é a versão do sistema operacional na forma de um separado de versão separado por ponto (`.`).</span><span class="sxs-lookup"><span data-stu-id="b7c8e-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="b7c8e-123">Por exemplo, `15.10`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-123">For example, `15.10`.</span></span>
+- <span data-ttu-id="42c02-122">`[version]` é a versão do sistema operacional na forma de um separado de versão separado por ponto (`.`).</span><span class="sxs-lookup"><span data-stu-id="42c02-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="42c02-123">Por exemplo, `15.10`.</span><span class="sxs-lookup"><span data-stu-id="42c02-123">For example, `15.10`.</span></span>
 
-  - <span data-ttu-id="b7c8e-124">A versão **não deve** ser uma versão de marketing, pois essas geralmente representam várias versões distintas do sistema operacional com diferentes áreas de superfície de API da plataforma.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
+  - <span data-ttu-id="42c02-124">A versão **não deve** ser uma versão de marketing, pois essas geralmente representam várias versões distintas do sistema operacional com diferentes áreas de superfície de API da plataforma.</span><span class="sxs-lookup"><span data-stu-id="42c02-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
 
-- <span data-ttu-id="b7c8e-125">`[architecture]` é a arquitetura do processador.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="b7c8e-126">Por exemplo: `x86`, `x64`, `arm` ou `arm64`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
+- <span data-ttu-id="42c02-125">`[architecture]` é a arquitetura do processador.</span><span class="sxs-lookup"><span data-stu-id="42c02-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="42c02-126">Por exemplo: `x86`, `x64`, `arm` ou `arm64`.</span><span class="sxs-lookup"><span data-stu-id="42c02-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
 
-- <span data-ttu-id="b7c8e-127">`[additional qualifiers]` distingue diferentes plataformas.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="b7c8e-128">Por exemplo `aot` ou `corert`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-128">For example: `aot` or `corert`.</span></span>
+- <span data-ttu-id="42c02-127">`[additional qualifiers]` distingue diferentes plataformas.</span><span class="sxs-lookup"><span data-stu-id="42c02-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="42c02-128">Por exemplo `aot` ou `corert`.</span><span class="sxs-lookup"><span data-stu-id="42c02-128">For example: `aot` or `corert`.</span></span>
 
-## <a name="rid-graph"></a><span data-ttu-id="b7c8e-129">Gráfico RID</span><span class="sxs-lookup"><span data-stu-id="b7c8e-129">RID graph</span></span>
+## <a name="rid-graph"></a><span data-ttu-id="42c02-129">Gráfico RID</span><span class="sxs-lookup"><span data-stu-id="42c02-129">RID graph</span></span>
 
-<span data-ttu-id="b7c8e-130">O gráfico RID ou gráfico de fallback de tempo de execução é uma lista de RIDs que são compatíveis entre si.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="b7c8e-131">Os RIDs são definidos no pacote [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/).</span><span class="sxs-lookup"><span data-stu-id="b7c8e-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="b7c8e-132">Você pode ver a lista de RIDs suportados e o gráfico RID no arquivo [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json), que está localizado no repositório CoreFX.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="b7c8e-133">Nesse arquivo, você pode ver todos os RIDs, exceto para a base um, que contém uma instrução `"#import"`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="b7c8e-134">Essas instruções indicam RIDs compatíveis.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-134">These statements indicate compatible RIDs.</span></span>
+<span data-ttu-id="42c02-130">O gráfico RID ou gráfico de fallback de tempo de execução é uma lista de RIDs que são compatíveis entre si.</span><span class="sxs-lookup"><span data-stu-id="42c02-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="42c02-131">Os RIDs são definidos no pacote [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/).</span><span class="sxs-lookup"><span data-stu-id="42c02-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="42c02-132">Você pode ver a lista de RIDs suportados e o gráfico RID no arquivo [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json), que está localizado no repositório CoreFX.</span><span class="sxs-lookup"><span data-stu-id="42c02-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="42c02-133">Nesse arquivo, você pode ver todos os RIDs, exceto para a base um, que contém uma instrução `"#import"`.</span><span class="sxs-lookup"><span data-stu-id="42c02-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="42c02-134">Essas instruções indicam RIDs compatíveis.</span><span class="sxs-lookup"><span data-stu-id="42c02-134">These statements indicate compatible RIDs.</span></span>
 
-<span data-ttu-id="b7c8e-135">Quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para o tempo de execução especificado.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
-<span data-ttu-id="b7c8e-136">Se uma correspondência exata não for encontrada, o NuGet voltará ao gráfico até encontrar o sistema compatível mais próximo de acordo com o gráfico RID.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
+<span data-ttu-id="42c02-135">Quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para o tempo de execução especificado.</span><span class="sxs-lookup"><span data-stu-id="42c02-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
+<span data-ttu-id="42c02-136">Se uma correspondência exata não for encontrada, o NuGet voltará ao gráfico até encontrar o sistema compatível mais próximo de acordo com o gráfico RID.</span><span class="sxs-lookup"><span data-stu-id="42c02-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
 
-<span data-ttu-id="b7c8e-137">O exemplo a seguir é a entrada real para o RID `osx.10.12-x64`:</span><span class="sxs-lookup"><span data-stu-id="b7c8e-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
+<span data-ttu-id="42c02-137">O exemplo a seguir é a entrada real para o RID `osx.10.12-x64`:</span><span class="sxs-lookup"><span data-stu-id="42c02-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
 
 ```json
 "osx.10.12-x64": {
@@ -57,9 +54,9 @@ ms.lasthandoff: 04/28/2018
 }
 ```
 
-<span data-ttu-id="b7c8e-138">O RID acima especifica que `osx.10.12-x64` importa `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="b7c8e-139">Desse modo, quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para `osx.10.12-x64` no pacote.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="b7c8e-140">Se o NuGet não puder encontrar o tempo de execução específico, ele poderá restaurar pacotes que especificam tempos de execução `osx.10.11-x64`, por exemplo.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
+<span data-ttu-id="42c02-138">O RID acima especifica que `osx.10.12-x64` importa `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="42c02-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="42c02-139">Desse modo, quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para `osx.10.12-x64` no pacote.</span><span class="sxs-lookup"><span data-stu-id="42c02-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="42c02-140">Se o NuGet não puder encontrar o tempo de execução específico, ele poderá restaurar pacotes que especificam tempos de execução `osx.10.11-x64`, por exemplo.</span><span class="sxs-lookup"><span data-stu-id="42c02-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
 
-<span data-ttu-id="b7c8e-141">O seguinte exemplo mostra um gráfico RID ligeiramente maior, também definido no arquivo *runtime.json*:</span><span class="sxs-lookup"><span data-stu-id="b7c8e-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
+<span data-ttu-id="42c02-141">O seguinte exemplo mostra um gráfico RID ligeiramente maior, também definido no arquivo *runtime.json*:</span><span class="sxs-lookup"><span data-stu-id="42c02-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
 
 ```
     win7-x64    win7-x86
@@ -73,85 +70,85 @@ ms.lasthandoff: 04/28/2018
             any
 ```
 
-<span data-ttu-id="b7c8e-142">Todos os RIDs eventualmente mapeiam para a raiz de `any` RID.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-142">All RIDs eventually map back to the root `any` RID.</span></span>
+<span data-ttu-id="42c02-142">Todos os RIDs eventualmente mapeiam para a raiz de `any` RID.</span><span class="sxs-lookup"><span data-stu-id="42c02-142">All RIDs eventually map back to the root `any` RID.</span></span>
 
-<span data-ttu-id="b7c8e-143">Há algumas considerações sobre RIDs das quais você precisa se lembrar ao trabalhar com eles:</span><span class="sxs-lookup"><span data-stu-id="b7c8e-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
+<span data-ttu-id="42c02-143">Há algumas considerações sobre RIDs das quais você precisa se lembrar ao trabalhar com eles:</span><span class="sxs-lookup"><span data-stu-id="42c02-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
 
-- <span data-ttu-id="b7c8e-144">Os RIDs são **cadeias de caracteres opacas** e devem ser tratados como caixas pretas.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
-- <span data-ttu-id="b7c8e-145">Não crie RIDs de modo programático.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-145">Don't build RIDs programmatically.</span></span>
-- <span data-ttu-id="b7c8e-146">Use RIDs que já estão definidos para a plataforma.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-146">Use RIDs that are already defined for the platform.</span></span>
-- <span data-ttu-id="b7c8e-147">Os RIDs precisam ser específicos, portanto, não presuma nada usando o valor RID real.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
+- <span data-ttu-id="42c02-144">Os RIDs são **cadeias de caracteres opacas** e devem ser tratados como caixas pretas.</span><span class="sxs-lookup"><span data-stu-id="42c02-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
+- <span data-ttu-id="42c02-145">Não crie RIDs de modo programático.</span><span class="sxs-lookup"><span data-stu-id="42c02-145">Don't build RIDs programmatically.</span></span>
+- <span data-ttu-id="42c02-146">Use RIDs que já estão definidos para a plataforma.</span><span class="sxs-lookup"><span data-stu-id="42c02-146">Use RIDs that are already defined for the platform.</span></span>
+- <span data-ttu-id="42c02-147">Os RIDs precisam ser específicos, portanto, não presuma nada usando o valor RID real.</span><span class="sxs-lookup"><span data-stu-id="42c02-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
 
-## <a name="using-rids"></a><span data-ttu-id="b7c8e-148">Usando RIDs</span><span class="sxs-lookup"><span data-stu-id="b7c8e-148">Using RIDs</span></span>
+## <a name="using-rids"></a><span data-ttu-id="42c02-148">Usando RIDs</span><span class="sxs-lookup"><span data-stu-id="42c02-148">Using RIDs</span></span>
 
-<span data-ttu-id="b7c8e-149">Para poder usar RIDs, você precisa saber quais RIDs existem.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="b7c8e-150">Novos RIDs são adicionados regularmente à plataforma.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-150">New values are added regularly to the platform.</span></span>
-<span data-ttu-id="b7c8e-151">Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
+<span data-ttu-id="42c02-149">Para poder usar RIDs, você precisa saber quais RIDs existem.</span><span class="sxs-lookup"><span data-stu-id="42c02-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="42c02-150">Novos RIDs são adicionados regularmente à plataforma.</span><span class="sxs-lookup"><span data-stu-id="42c02-150">New values are added regularly to the platform.</span></span>
+<span data-ttu-id="42c02-151">Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.</span><span class="sxs-lookup"><span data-stu-id="42c02-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
 
-<span data-ttu-id="b7c8e-152">O SDK do .NET Core 2.0 apresenta o conceito de RIDs portáteis.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="b7c8e-153">Eles são novos valores adicionados ao gráfico RID que não estão associados a uma versão específica ou distribuição de SO.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="b7c8e-154">Eles são particularmente úteis ao lidar com várias distribuições Linux.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
+<span data-ttu-id="42c02-152">O SDK do .NET Core 2.0 apresenta o conceito de RIDs portáteis.</span><span class="sxs-lookup"><span data-stu-id="42c02-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="42c02-153">Eles são novos valores adicionados ao gráfico RID que não estão associados a uma versão específica ou distribuição de SO.</span><span class="sxs-lookup"><span data-stu-id="42c02-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="42c02-154">Eles são particularmente úteis ao lidar com várias distribuições Linux.</span><span class="sxs-lookup"><span data-stu-id="42c02-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
 
-<span data-ttu-id="b7c8e-155">A lista a seguir mostra os RIDs mais comuns usados para cada SO.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="b7c8e-156">Ela não cobre os valores `arm` ou `corert`.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-156">It doesn't cover `arm` or `corert` values.</span></span>
+<span data-ttu-id="42c02-155">A lista a seguir mostra os RIDs mais comuns usados para cada SO.</span><span class="sxs-lookup"><span data-stu-id="42c02-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="42c02-156">Ela não cobre os valores `arm` ou `corert`.</span><span class="sxs-lookup"><span data-stu-id="42c02-156">It doesn't cover `arm` or `corert` values.</span></span>
 
-## <a name="windows-rids"></a><span data-ttu-id="b7c8e-157">RIDs do Windows</span><span class="sxs-lookup"><span data-stu-id="b7c8e-157">Windows RIDs</span></span>
+## <a name="windows-rids"></a><span data-ttu-id="42c02-157">RIDs do Windows</span><span class="sxs-lookup"><span data-stu-id="42c02-157">Windows RIDs</span></span>
 
-- <span data-ttu-id="b7c8e-158">Portáteis</span><span class="sxs-lookup"><span data-stu-id="b7c8e-158">Portable</span></span>
+- <span data-ttu-id="42c02-158">Portáteis</span><span class="sxs-lookup"><span data-stu-id="42c02-158">Portable</span></span>
   - `win-x86`
   - `win-x64`
-- <span data-ttu-id="b7c8e-159">Windows 7 / Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="b7c8e-159">Windows 7 / Windows Server 2008 R2</span></span>
+- <span data-ttu-id="42c02-159">Windows 7 / Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="42c02-159">Windows 7 / Windows Server 2008 R2</span></span>
   - `win7-x64`
   - `win7-x86`
-- <span data-ttu-id="b7c8e-160">Windows 8 / Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="b7c8e-160">Windows 8 / Windows Server 2012</span></span>
+- <span data-ttu-id="42c02-160">Windows 8 / Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="42c02-160">Windows 8 / Windows Server 2012</span></span>
   - `win8-x64`
   - `win8-x86`
   - `win8-arm`
-- <span data-ttu-id="b7c8e-161">Windows 8.1 / Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="b7c8e-161">Windows 8.1 / Windows Server 2012 R2</span></span>
+- <span data-ttu-id="42c02-161">Windows 8.1 / Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="42c02-161">Windows 8.1 / Windows Server 2012 R2</span></span>
   - `win81-x64`
   - `win81-x86`
   - `win81-arm`
-- <span data-ttu-id="b7c8e-162">Windows 10 / Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="b7c8e-162">Windows 10 / Windows Server 2016</span></span>
+- <span data-ttu-id="42c02-162">Windows 10 / Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="42c02-162">Windows 10 / Windows Server 2016</span></span>
   - `win10-x64`
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
 
-<span data-ttu-id="b7c8e-163">Consulte [Pré-requisitos para o .NET Core no Windows](windows-prerequisites.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="42c02-163">Consulte [Pré-requisitos para o .NET Core no Windows](windows-prerequisites.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="42c02-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
 
-## <a name="linux-rids"></a><span data-ttu-id="b7c8e-164">RIDs do Linux</span><span class="sxs-lookup"><span data-stu-id="b7c8e-164">Linux RIDs</span></span>
+## <a name="linux-rids"></a><span data-ttu-id="42c02-164">RIDs do Linux</span><span class="sxs-lookup"><span data-stu-id="42c02-164">Linux RIDs</span></span>
 
-- <span data-ttu-id="b7c8e-165">Portáteis</span><span class="sxs-lookup"><span data-stu-id="b7c8e-165">Portable</span></span>
+- <span data-ttu-id="42c02-165">Portáteis</span><span class="sxs-lookup"><span data-stu-id="42c02-165">Portable</span></span>
   - `linux-x64`
-- <span data-ttu-id="b7c8e-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="b7c8e-166">CentOS</span></span>
+- <span data-ttu-id="42c02-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="42c02-166">CentOS</span></span>
   - `centos-x64`
   - `centos.7-x64`
-- <span data-ttu-id="b7c8e-167">Debian</span><span class="sxs-lookup"><span data-stu-id="b7c8e-167">Debian</span></span>
+- <span data-ttu-id="42c02-167">Debian</span><span class="sxs-lookup"><span data-stu-id="42c02-167">Debian</span></span>
   - `debian-x64`
   - `debian.8-x64`
-- <span data-ttu-id="b7c8e-168">Fedora</span><span class="sxs-lookup"><span data-stu-id="b7c8e-168">Fedora</span></span>
+- <span data-ttu-id="42c02-168">Fedora</span><span class="sxs-lookup"><span data-stu-id="42c02-168">Fedora</span></span>
   - `fedora-x64`
   - `fedora.24-x64`
-  - <span data-ttu-id="b7c8e-169">`fedora.25-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-169">`fedora.25-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="b7c8e-170">`fedora.26-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-170">`fedora.26-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="b7c8e-171">Gentoo (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="42c02-169">`fedora.25-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-169">`fedora.25-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="42c02-170">`fedora.26-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-170">`fedora.26-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="42c02-171">Gentoo (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
   - `gentoo-x64`
-- <span data-ttu-id="b7c8e-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="b7c8e-172">openSUSE</span></span>
+- <span data-ttu-id="42c02-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="42c02-172">openSUSE</span></span>
   - `opensuse-x64`
   - `opensuse.42.1-x64`
-- <span data-ttu-id="b7c8e-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="b7c8e-173">Oracle Linux</span></span>
+- <span data-ttu-id="42c02-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="42c02-173">Oracle Linux</span></span>
   - `ol-x64`
   - `ol.7-x64`
   - `ol.7.0-x64`
   - `ol.7.1-x64`
   - `ol.7.2-x64`
-- <span data-ttu-id="b7c8e-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="b7c8e-174">Red Hat Enterprise Linux</span></span>
+- <span data-ttu-id="42c02-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="42c02-174">Red Hat Enterprise Linux</span></span>
   - `rhel-x64`
-  - <span data-ttu-id="b7c8e-175">`rhel.6-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="42c02-175">`rhel.6-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
   - `rhel.7-x64`
   - `rhel.7.1-x64`
   - `rhel.7.2-x64`
-  - <span data-ttu-id="b7c8e-176">`rhel.7.3-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="b7c8e-177">`rhel.7.4-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="b7c8e-178">Tizen (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-178">Tizen (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="42c02-176">`rhel.7.3-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="42c02-177">`rhel.7.4-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="42c02-178">Tizen (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-178">Tizen (.NET Core 2.0 or later versions)</span></span>
   - `tizen`
-- <span data-ttu-id="b7c8e-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="b7c8e-179">Ubuntu</span></span>
+- <span data-ttu-id="42c02-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="42c02-179">Ubuntu</span></span>
   - `ubuntu-x64`
   - `ubuntu.14.04-x64`
   - `ubuntu.14.10-x64`
@@ -159,33 +156,33 @@ ms.lasthandoff: 04/28/2018
   - `ubuntu.15.10-x64`
   - `ubuntu.16.04-x64`
   - `ubuntu.16.10-x64`
-- <span data-ttu-id="b7c8e-180">Derivados do Ubuntu</span><span class="sxs-lookup"><span data-stu-id="b7c8e-180">Ubuntu derivatives</span></span>
+- <span data-ttu-id="42c02-180">Derivados do Ubuntu</span><span class="sxs-lookup"><span data-stu-id="42c02-180">Ubuntu derivatives</span></span>
   - `linuxmint.17-x64`
   - `linuxmint.17.1-x64`
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
   - `linuxmint.18-x64`
-  - <span data-ttu-id="b7c8e-181">`linuxmint.18.1-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-181">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="42c02-181">`linuxmint.18.1-x64` (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-181">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
 
-<span data-ttu-id="b7c8e-182">Consulte [Pré-requisitos para o .NET Core no Linux](linux-prerequisites.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-182">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="42c02-182">Consulte [Pré-requisitos para o .NET Core no Linux](linux-prerequisites.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="42c02-182">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
 
-## <a name="macos-rids"></a><span data-ttu-id="b7c8e-183">RIDs do macOS</span><span class="sxs-lookup"><span data-stu-id="b7c8e-183">macOS RIDs</span></span>
+## <a name="macos-rids"></a><span data-ttu-id="42c02-183">RIDs do macOS</span><span class="sxs-lookup"><span data-stu-id="42c02-183">macOS RIDs</span></span>
 
-<span data-ttu-id="b7c8e-184">Os RIDs do macOS usam a identidade visual “OSX” mais antiga.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-184">macOS RIDs use the older "OSX" branding.</span></span>
+<span data-ttu-id="42c02-184">Os RIDs do macOS usam a identidade visual “OSX” mais antiga.</span><span class="sxs-lookup"><span data-stu-id="42c02-184">macOS RIDs use the older "OSX" branding.</span></span>
 
-- <span data-ttu-id="b7c8e-185">`osx-x64` (.NET Core 2.0 ou versões posteriores; a versão mínima é `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-185">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
+- <span data-ttu-id="42c02-185">`osx-x64` (.NET Core 2.0 ou versões posteriores; a versão mínima é `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="42c02-185">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
 - `osx.10.10-x64`
 - `osx.10.11-x64`
-- <span data-ttu-id="b7c8e-186">`osx.10.12-x64` (.NET Core 1.1 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-186">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
+- <span data-ttu-id="42c02-186">`osx.10.12-x64` (.NET Core 1.1 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-186">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
 - `osx.10.13-x64`
 
-<span data-ttu-id="b7c8e-187">Consulte [Pré-requisitos para o .NET Core no macOS](macos-prerequisites.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="b7c8e-187">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="42c02-187">Consulte [Pré-requisitos para o .NET Core no macOS](macos-prerequisites.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="42c02-187">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
 
-## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="b7c8e-188">RIDs Android (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="b7c8e-188">Android RIDs (.NET Core 2.0 or later versions)</span></span>
+## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="42c02-188">RIDs Android (.NET Core 2.0 ou versões posteriores)</span><span class="sxs-lookup"><span data-stu-id="42c02-188">Android RIDs (.NET Core 2.0 or later versions)</span></span>
 
 - `android`
 - `android.21`
 
-## <a name="see-also"></a><span data-ttu-id="b7c8e-189">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b7c8e-189">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42c02-189">Consulte também</span><span class="sxs-lookup"><span data-stu-id="42c02-189">See also</span></span>
 
-[<span data-ttu-id="b7c8e-190">IDs de Tempo de Execução</span><span class="sxs-lookup"><span data-stu-id="b7c8e-190">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+[<span data-ttu-id="42c02-190">IDs de Tempo de Execução</span><span class="sxs-lookup"><span data-stu-id="42c02-190">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
