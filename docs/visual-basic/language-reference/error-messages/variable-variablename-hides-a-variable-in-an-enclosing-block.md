@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595086"
 ---
 # <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Variável &#39; &lt;variablename&gt; &#39; oculta uma variável em um bloco delimitador
 Uma variável incluída em um bloco tem o mesmo nome que outra variável local.  

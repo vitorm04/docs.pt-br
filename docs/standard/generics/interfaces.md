@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575967"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 Este tópico fornece uma visão geral de interfaces genéricas que fornecem funcionalidade comum entre famílias de tipos genéricos.  

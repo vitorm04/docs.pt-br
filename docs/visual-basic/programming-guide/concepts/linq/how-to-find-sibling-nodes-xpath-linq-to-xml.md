@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642830"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Como: nós irmãos de alterações (XPath-LINQ para XML) (Visual Basic)
 Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico. A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.  

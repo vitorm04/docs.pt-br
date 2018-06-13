@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574872"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Como localizar arquivos e diretórios existentes no armazenamento isolado
 Para procurar um diretório no armazenamento isolado, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Esse método usa uma cadeia de caracteres que representa um padrão de pesquisa. Você pode usar o caractere único (?) e vários caracteres (*) caracteres curinga no padrão de pesquisa, mas os caracteres curinga devem aparecer na parte final do nome. Por exemplo, `directory1/*ect*` é uma cadeia de caracteres de pesquisa válida, mas `*ect*/directory2` não é.  

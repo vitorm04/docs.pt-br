@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457210"
 ---
 # <a name="-operator-c-reference"></a>Operador ?: (Referência de C#)
 O operador condicional (`?:`), comumente conhecido como o operador condicional ternário, retorna um de dois valores dependendo do valor de uma expressão booliana. Esta é a sintaxe do operador condicional.  

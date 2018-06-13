@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172029"
 ---
 # <a name="this-c-reference"></a>this (Referência de C#)
 A palavra-chave `this` refere-se à instância atual da classe e também é usada como um modificador do primeiro parâmetro de um método de extensão.  

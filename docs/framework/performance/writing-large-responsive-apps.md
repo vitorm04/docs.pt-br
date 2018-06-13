@@ -9,6 +9,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457544"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#.  

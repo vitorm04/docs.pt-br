@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598392"
 ---
 # <a name="then-statement"></a>Instrução Then
 Apresenta um bloco de instruções a ser compilado ou executado se uma condição testada for verdadeira.  

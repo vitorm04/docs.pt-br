@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171974"
 ---
 # <a name="-gt-operator-c-reference"></a>Operador -&gt; (Referência de C#)
 O operador `->` combina a desreferência de ponteiro e o acesso de membro.  

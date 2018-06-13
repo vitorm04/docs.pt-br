@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440863"
 ---
 # <a name="stackoverflowtype-enumeration"></a>Enumeração StackOverflowType
 Contém valores que indicam a causa subjacente de um evento de estouro de pilha.  

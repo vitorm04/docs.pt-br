@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595989"
 ---
 # <a name="permission-denied-visual-basic"></a>Permissão negada (Visual Basic)
 Foi feita uma tentativa para gravar em um disco protegido contra gravação ou para acessar um arquivo bloqueado.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576511"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em tarefa
 Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação dos métodos de compilador e manual. As seções a seguir discutem cada método em detalhes. Você pode usar o padrão TAP para implementar operações assíncronas associadas ao cálculo e associadas à E/S. A seção [Cargas de trabalho](#workloads) descreve cada tipo de operação.

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454024"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>Método ICorProfilerCallback::JITCachedFunctionSearchStarted
 Notifica o criador de perfil que uma pesquisa foi iniciada por uma função que foi compilada anteriormente usando o gerador de imagem nativa (NGen.exe).  

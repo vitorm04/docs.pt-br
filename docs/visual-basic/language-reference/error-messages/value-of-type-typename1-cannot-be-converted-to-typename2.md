@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595232"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>O valor do tipo &#39; &lt;typename1&gt; &#39; não pode ser convertido em &#39; &lt;typename2&gt;&#39;
 O valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incompatibilidade de tipo pode se dever à combinação de uma referência de arquivo com uma referência ao assembly '\<assemblyname >'. Tente substituir a referência de arquivo para '\<filepath >' no projeto '\<projectname1 >' com uma referência de projeto para '\<projectname2 >'.  

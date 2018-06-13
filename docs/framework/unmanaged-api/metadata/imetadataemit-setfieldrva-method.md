@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0447a44c555e141c96d6a52ba330e181151a7bc7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445884"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>Método IMetaDataEmit::SetFieldRVA
 Define um valor de variável global para o endereço virtual relativo do campo referenciado por token especificado.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577080"
 ---
 # <a name="property-design"></a>Design de propriedade
 Embora tecnicamente muito semelhantes aos métodos de propriedades, eles são muito diferentes em termos de seus cenários de uso. Eles devem ser considerados como campos inteligentes. Eles têm a sintaxe de chamada de campos e a flexibilidade de métodos.  

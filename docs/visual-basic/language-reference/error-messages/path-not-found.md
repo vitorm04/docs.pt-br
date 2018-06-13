@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593887"
 ---
 # <a name="path-not-found"></a>Caminho não localizado
 Durante uma operação de acesso a arquivos ou o acesso ao disco, o sistema operacional não pôde localizar o caminho especificado. O caminho para um arquivo inclui a especificação da unidade e os diretórios e subdiretórios que devem ser percorridos para localizar o arquivo. Um caminho pode ser relativo ou absoluto.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172309"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como Declarar e Usar Propriedades de Leitura e Gravação (Guia de Programação em C#)
 As propriedades oferecem a conveniência de membros de dados públicos sem os riscos associados ao acesso sem proteção, sem controle e não verificado aos dados de um objeto. Isso é feito por meio de *acessadores*: métodos especiais que atribuem e recuperam valores do membro de dados subjacente. O acessador [set](../../../csharp/language-reference/keywords/set.md) habilita a atribuição de membros de dados e o acessador [get](../../../csharp/language-reference/keywords/get.md) recupera valores do membro de dados.  

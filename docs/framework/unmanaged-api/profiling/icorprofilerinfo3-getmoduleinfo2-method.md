@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d461f5dc85c7107e36fc1492ac88f37d42ba9f24
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459460"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>Método ICorProfilerInfo3::GetModuleInfo2
 Especificado um ID de módulo, retorna o nome do arquivo do módulo, a ID do pai do módulo assembly e uma máscara de bits que descreve as propriedades do módulo.  

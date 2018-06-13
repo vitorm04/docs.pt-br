@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68e6f7599db55ed9429f159b380a8a9f8ae3f034
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447480"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>Método IMetaDataEmit::DefineImportType
 Cria uma referência para o tipo especificado que está definido fora do escopo atual e define um token para essa referência.  

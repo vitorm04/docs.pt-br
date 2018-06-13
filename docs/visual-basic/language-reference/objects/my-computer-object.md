@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597341"
 ---
 # <a name="mycomputer-object"></a>Objeto My.Computer
 Fornece propriedades para manipular componentes do computador, como o áudio, o relógio, o teclado, o sistema de arquivos e assim por diante.  

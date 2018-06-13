@@ -23,6 +23,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457572"
 ---
 # <a name="c-operators"></a>Operadores em C#
 O C# fornece muitos operadores, que são símbolos que especificam as operações (matemática, indexação, chamada de função, etc.) para executar em uma expressão. Você pode [sobrecarregar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muitos operadores para alterar seu significado quando aplicados a um tipo definido pelo usuário.  

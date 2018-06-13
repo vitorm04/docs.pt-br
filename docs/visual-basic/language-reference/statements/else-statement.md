@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597680"
 ---
 # <a name="else-statement-visual-basic"></a>Instrução Else (Visual Basic)
 Apresenta um grupo de instruções para ser executado ou compilado se nenhum outro grupo condicional de instruções foi executado ou compilado.  

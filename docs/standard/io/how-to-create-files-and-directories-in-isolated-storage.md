@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575181"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Como criar arquivos e diretórios no armazenamento isolado
 Depois de obter um repositório isolado, você pode criar diretórios e arquivos para armazenar dados. Em um repositório, nomes de arquivo e diretório são especificados com relação à raiz do sistema de arquivos virtual.  

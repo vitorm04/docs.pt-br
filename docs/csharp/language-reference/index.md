@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472497"
 ---
 # <a name="c-reference"></a>Referência de C#
 Esta seção fornece o material de referência sobre palavras-chave do C#, operadores, caracteres especiais, diretivas de pré-processador, opções de compilador e erros de compilador e avisos.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312034"
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  

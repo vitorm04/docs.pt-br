@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641208"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a>TextFieldParser não dá suporte a tokens de comentário que contêm espaços em branco
 Foi fornecido um token de comentário que contém espaço em branco. O `TextFieldParser` não oferece suporte a tokens de comentário que contenham espaços em branco, a menos que o espaço em branco ocorra no início do token. Espaço em branco ocorrendo no início de um token é ignorado.  

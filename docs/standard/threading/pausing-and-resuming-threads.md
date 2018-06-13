@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589117"
 ---
 # <a name="pausing-and-resuming-threads"></a>Pausando e retomando threads
 As formas mais comuns para sincronizar as atividades de threads são segmentos de bloco e versão ou objetos de bloqueio ou regiões de código. Para saber mais sobre esse bloqueio e os mecanismos de bloqueio, confira [Visão geral de primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
