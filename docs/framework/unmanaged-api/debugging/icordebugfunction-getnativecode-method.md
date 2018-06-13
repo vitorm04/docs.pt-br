@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1cb073c1f93c6d60d86e5160dcfb0cbdaf1cd33
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414565"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a><span data-ttu-id="586e4-102">Método ICorDebugFunction::GetNativeCode</span><span class="sxs-lookup"><span data-stu-id="586e4-102">ICorDebugFunction::GetNativeCode Method</span></span>
 <span data-ttu-id="586e4-103">Obtém o código nativo para a função que é representada por esta instância de ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="586e4-103">Gets the native code for the function that is represented by this ICorDebugFunction instance.</span></span>  

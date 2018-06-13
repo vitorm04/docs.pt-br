@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0922a27dff8d7958d60b4cf225143a96f1a6c351
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411746"
 ---
 # <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="601f5-102">Interface ICorDebugEditAndContinueErrorInfo</span><span class="sxs-lookup"><span data-stu-id="601f5-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
 <span data-ttu-id="601f5-103">`ICorDebugEditAndContinueErrorInfo` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="601f5-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="601f5-104">Não use essa interface.</span><span class="sxs-lookup"><span data-stu-id="601f5-104">Do not use this interface.</span></span>  

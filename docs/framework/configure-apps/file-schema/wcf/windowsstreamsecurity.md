@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755104"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a><span data-ttu-id="6a491-102">&lt;windowsstreamsecurity está&gt;</span><span class="sxs-lookup"><span data-stu-id="6a491-102">&lt;windowsStreamSecurity&gt;</span></span>
 <span data-ttu-id="6a491-103">Especifica configurações de segurança de fluxo do Windows da associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="6a491-103">Specify Windows stream security settings of the custom binding.</span></span>  

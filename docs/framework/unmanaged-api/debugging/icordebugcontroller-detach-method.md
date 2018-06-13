@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cad8b305de580ce7cf4876939b95cc05d0fd11f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411477"
 ---
 # <a name="icordebugcontrollerdetach-method"></a><span data-ttu-id="58aac-102">Método ICorDebugController::Detach</span><span class="sxs-lookup"><span data-stu-id="58aac-102">ICorDebugController::Detach Method</span></span>
 <span data-ttu-id="58aac-103">Desanexa o depurador do domínio de aplicativo ou processo.</span><span class="sxs-lookup"><span data-stu-id="58aac-103">Detaches the debugger from the process or application domain.</span></span>  

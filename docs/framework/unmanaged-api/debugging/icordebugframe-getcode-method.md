@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411912"
 ---
 # <a name="icordebugframegetcode-method"></a><span data-ttu-id="deda8-102">Método ICorDebugFrame::GetCode</span><span class="sxs-lookup"><span data-stu-id="deda8-102">ICorDebugFrame::GetCode Method</span></span>
 <span data-ttu-id="deda8-103">Obtém um ponteiro para o código associado deste quadro de pilhas.</span><span class="sxs-lookup"><span data-stu-id="deda8-103">Gets a pointer to the code associated with this stack frame.</span></span>  

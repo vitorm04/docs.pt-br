@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750395"
 ---
 # <a name="ltservicecredentialsgt"></a><span data-ttu-id="24df7-102">&lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="24df7-102">&lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="24df7-103">Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.</span><span class="sxs-lookup"><span data-stu-id="24df7-103">Specifies the credential to be used in authenticating the service and the client credential validation-related settings.</span></span>  

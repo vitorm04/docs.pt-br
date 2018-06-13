@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550053"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="21e6d-102">Como adicionar uma marca d'água a um TextBox</span><span class="sxs-lookup"><span data-stu-id="21e6d-102">How to: Add a Watermark to a TextBox</span></span>
 <span data-ttu-id="21e6d-103">O exemplo a seguir mostra como auxiliar usabilidade de um <xref:System.Windows.Controls.TextBox> ao exibir uma imagem de plano de fundo explicativos dentro do <xref:System.Windows.Controls.TextBox> até que o usuário insere texto, no ponto em que a imagem será removida.</span><span class="sxs-lookup"><span data-stu-id="21e6d-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="21e6d-104">Além disso, a imagem de plano de fundo é restaurada novamente se o usuário remove suas entradas.</span><span class="sxs-lookup"><span data-stu-id="21e6d-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="21e6d-105">Consulte a ilustração a seguir.</span><span class="sxs-lookup"><span data-stu-id="21e6d-105">See illustration below.</span></span>  

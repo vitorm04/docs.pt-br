@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542217"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a><span data-ttu-id="b12a7-102">Atalhos de teclado para o controle DataGrid dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b12a7-102">Keyboard Shortcuts for the Windows Forms DataGrid Control</span></span>
 > [!NOTE]

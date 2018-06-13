@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761760"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a><span data-ttu-id="b6fa7-102">Como: Executar uma consulta que retorna aninhados coleções</span><span class="sxs-lookup"><span data-stu-id="b6fa7-102">How to: Execute a Query that Returns Nested Collections</span></span>
 <span data-ttu-id="b6fa7-103">Isso mostra como executar um comando em um modelo conceitual usando um objeto de <xref:System.Data.EntityClient.EntityCommand> , e como recuperar a coleção aninhada resultados usando <xref:System.Data.EntityClient.EntityDataReader>.</span><span class="sxs-lookup"><span data-stu-id="b6fa7-103">This shows how to execute a command against a conceptual model by using an <xref:System.Data.EntityClient.EntityCommand> object, and how to retrieve the nested collection results by using an <xref:System.Data.EntityClient.EntityDataReader>.</span></span>  

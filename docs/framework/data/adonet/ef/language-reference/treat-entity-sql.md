@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763970"
 ---
 # <a name="treat-entity-sql"></a><span data-ttu-id="babf0-102">TRATAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="babf0-102">TREAT (Entity SQL)</span></span>
 <span data-ttu-id="babf0-103">Trata um objeto de um tipo base específico como um objeto do tipo derivado especificado.</span><span class="sxs-lookup"><span data-stu-id="babf0-103">Treats an object of a particular base type as an object of the specified derived type.</span></span>  

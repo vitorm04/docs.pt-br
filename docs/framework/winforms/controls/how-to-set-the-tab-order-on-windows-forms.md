@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539845"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a><span data-ttu-id="cc5c8-102">Como definir a ordem de tabulação nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc5c8-102">How to: Set the Tab Order on Windows Forms</span></span>
 <span data-ttu-id="cc5c8-103">A ordem de tabulação é a ordem em que um usuário move o foco de um controle para outro pressionando a tecla TAB.</span><span class="sxs-lookup"><span data-stu-id="cc5c8-103">The tab order is the order in which a user moves focus from one control to another by pressing the TAB key.</span></span> <span data-ttu-id="cc5c8-104">Cada formulário tem sua própria ordem de tabulação.</span><span class="sxs-lookup"><span data-stu-id="cc5c8-104">Each form has its own tab order.</span></span> <span data-ttu-id="cc5c8-105">Por padrão, a ordem de tabulação é igual à ordem em que você criou os controles.</span><span class="sxs-lookup"><span data-stu-id="cc5c8-105">By default, the tab order is the same as the order in which you created the controls.</span></span> <span data-ttu-id="cc5c8-106">A numeração da ordem de tabulação começa com zero.</span><span class="sxs-lookup"><span data-stu-id="cc5c8-106">Tab-order numbering begins with zero.</span></span>  

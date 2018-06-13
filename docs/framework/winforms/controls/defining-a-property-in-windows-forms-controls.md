@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528317"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a><span data-ttu-id="2a9e9-102">Definindo uma propriedade em controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2a9e9-102">Defining a Property in Windows Forms Controls</span></span>
 <span data-ttu-id="2a9e9-103">Para obter uma visão geral das propriedades, consulte [Visão geral das propriedades](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span><span class="sxs-lookup"><span data-stu-id="2a9e9-103">For an overview of properties, see [Properties Overview](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span></span> <span data-ttu-id="2a9e9-104">Há algumas considerações importantes ao definir uma propriedade:</span><span class="sxs-lookup"><span data-stu-id="2a9e9-104">There are a few important considerations when defining a property:</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aca1d77ace512ca84cda3b6844d214e4c8d6cad7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412059"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="a83c5-102">Método ICorDebugFunctionBreakpoint::GetOffset</span><span class="sxs-lookup"><span data-stu-id="a83c5-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
 <span data-ttu-id="a83c5-103">Obtém o deslocamento do ponto de interrupção na função.</span><span class="sxs-lookup"><span data-stu-id="a83c5-103">Gets the offset of the breakpoint within the function.</span></span>  

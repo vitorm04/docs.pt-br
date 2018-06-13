@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdfcd45b15ddc1491b12de0fa42901b6d3f7fe9b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413147"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a><span data-ttu-id="d2fdc-102">Método ICorDebugCode2::GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="d2fdc-102">ICorDebugCode2::GetCodeChunks Method</span></span>
 <span data-ttu-id="d2fdc-103">Obtém as partes do código que é composto por esse objeto de código.</span><span class="sxs-lookup"><span data-stu-id="d2fdc-103">Gets the chunks of code that this code object is composed of.</span></span>  

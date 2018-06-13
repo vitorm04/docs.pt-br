@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3f37fe2628fd9a6217ba8aa4964addbfe56a69b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412452"
 ---
 # <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="bd95b-102">Método ICorDebugEditAndContinueSnapshot::CopyMetaData</span><span class="sxs-lookup"><span data-stu-id="bd95b-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
 <span data-ttu-id="bd95b-103">`CopyMetaData` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="bd95b-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="bd95b-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="bd95b-104">Do not call this method.</span></span>  

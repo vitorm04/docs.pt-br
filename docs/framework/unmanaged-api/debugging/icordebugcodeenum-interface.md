@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1af5184881c7d357e084e40ac79e2ebd349c4cfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413179"
 ---
 # <a name="icordebugcodeenum-interface1"></a><span data-ttu-id="95bba-102">ICorDebugCodeEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="95bba-102">ICorDebugCodeEnum Interface1</span></span>
 <span data-ttu-id="95bba-103">Implementa métodos "ICorDebugEnum" e enumera matrizes "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="95bba-103">Implements "ICorDebugEnum" methods, and enumerates "ICorDebugCode" arrays.</span></span>  

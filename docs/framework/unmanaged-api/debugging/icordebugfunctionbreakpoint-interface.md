@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6cd4c430798333dd22c36ce30e7c9ce05bdc8f56
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414177"
 ---
 # <a name="icordebugfunctionbreakpoint-interface1"></a><span data-ttu-id="d686c-102">ICorDebugFunctionBreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="d686c-102">ICorDebugFunctionBreakpoint Interface1</span></span>
 <span data-ttu-id="d686c-103">Estende a interface ICorDebugBreakpoint para dar suporte a pontos de interrupção em funções.</span><span class="sxs-lookup"><span data-stu-id="d686c-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546078"
 ---
 # <a name="performance"></a><span data-ttu-id="80302-102">Desempenho</span><span class="sxs-lookup"><span data-stu-id="80302-102">Performance</span></span>
 <span data-ttu-id="80302-103">Para obter melhor desempenho dos aplicativos necessário previsão na estrutura de aplicativo e um entendimento de práticas recomendadas para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] desenvolvimento de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="80302-103">Achieving optimal application performance requires forethought in application design and an understanding of best practices for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application development.</span></span> <span data-ttu-id="80302-104">Os tópicos nesta seção fornecem informações adicionais sobre a criação de alto desempenho [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="80302-104">The topics in this section provide additional information on building high performance [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  

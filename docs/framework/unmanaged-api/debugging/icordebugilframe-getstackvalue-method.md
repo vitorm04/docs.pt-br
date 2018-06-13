@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411668"
 ---
 # <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="7ccd3-102">Método ICorDebugILFrame::GetStackValue</span><span class="sxs-lookup"><span data-stu-id="7ccd3-102">ICorDebugILFrame::GetStackValue Method</span></span>
 <span data-ttu-id="7ccd3-103">Esse método não foi implementado.</span><span class="sxs-lookup"><span data-stu-id="7ccd3-103">This method has not been implemented.</span></span>  

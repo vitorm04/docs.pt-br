@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7872a13dea7746b40d5525e4d758c1d8cd7117a5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411064"
 ---
 # <a name="icordebugerrorinfoenum-interface1"></a><span data-ttu-id="cccee-102">ICorDebugErrorInfoEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="cccee-102">ICorDebugErrorInfoEnum Interface1</span></span>
 <span data-ttu-id="cccee-103">`ICorDebugErrorInfoEnum` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="cccee-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="cccee-104">Não use essa interface.</span><span class="sxs-lookup"><span data-stu-id="cccee-104">Do not use this interface.</span></span>  

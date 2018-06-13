@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1cd0753b1ebcda3de33953b96e9dcedd26a2cc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411681"
 ---
 # <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="4685f-102">Método ICorDebugEditAndContinueErrorInfo::GetErrorCode</span><span class="sxs-lookup"><span data-stu-id="4685f-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
 <span data-ttu-id="4685f-103">`GetErrorCode` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="4685f-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="4685f-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="4685f-104">Do not call this method.</span></span>  

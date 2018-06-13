@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538804"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a><span data-ttu-id="6076b-102">Como criar um controle associado simples em um Windows Form</span><span class="sxs-lookup"><span data-stu-id="6076b-102">How to: Create a Simple-Bound Control on a Windows Form</span></span>
 <span data-ttu-id="6076b-103">Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle.</span><span class="sxs-lookup"><span data-stu-id="6076b-103">With *simple binding*, you can display a single data element, such as a column value from a dataset table, in a control.</span></span> <span data-ttu-id="6076b-104">Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.</span><span class="sxs-lookup"><span data-stu-id="6076b-104">You can simple-bind any property of a control to a data value.</span></span>  

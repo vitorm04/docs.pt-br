@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541327"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a><span data-ttu-id="b629d-102">Retornos de chamada da propriedade de dependência e validação</span><span class="sxs-lookup"><span data-stu-id="b629d-102">Dependency Property Callbacks and Validation</span></span>
 <span data-ttu-id="b629d-103">Este tópico descreve como criar propriedades de dependência usando implementações alternativas personalizadas para recursos relacionados a propriedade como validação de determinação, callbacks que são chamadas sempre que o valor efetivo da propriedade é alterado e substituindo possíveis influências externas na determinação do valor.</span><span class="sxs-lookup"><span data-stu-id="b629d-103">This topic describes how to create dependency properties using alternative custom implementations for property-related features such as validation determination, callbacks that are invoked whenever the property's effective value is changed, and overriding possible outside influences on value determination.</span></span> <span data-ttu-id="b629d-104">Este tópico também aborda os cenários em que é apropriado expandir os comportamentos padrões do sistema usando essas técnicas.</span><span class="sxs-lookup"><span data-stu-id="b629d-104">This topic also discusses scenarios where expanding on the default property system behaviors by using these techniques is appropriate.</span></span>  

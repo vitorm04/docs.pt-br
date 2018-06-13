@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528471"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="d1e9b-102">Como adicionar controles aos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d1e9b-102">How to: Add Controls to Windows Forms</span></span>
 <span data-ttu-id="d1e9b-103">A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU).</span><span class="sxs-lookup"><span data-stu-id="d1e9b-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="d1e9b-104">Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário.</span><span class="sxs-lookup"><span data-stu-id="d1e9b-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="d1e9b-105">Para obter mais informações sobre controles, consulte [Controles do Windows Forms](../../../../docs/framework/winforms/controls/index.md).</span><span class="sxs-lookup"><span data-stu-id="d1e9b-105">For more information about controls, see [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).</span></span>  

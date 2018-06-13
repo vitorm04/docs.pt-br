@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: add7239feb1cf6dab0fabe12e178336921211190
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414200"
 ---
 # <a name="icordebugmodulegetprocess-method"></a><span data-ttu-id="7e97b-102">Método ICorDebugModule::GetProcess</span><span class="sxs-lookup"><span data-stu-id="7e97b-102">ICorDebugModule::GetProcess Method</span></span>
 <span data-ttu-id="7e97b-103">Obtém o processo que contém este módulo.</span><span class="sxs-lookup"><span data-stu-id="7e97b-103">Gets the containing process of this module.</span></span>  
