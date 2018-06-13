@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549403"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcando eventos roteados como manipulados e tratamento de classes
 Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados do evento. Efetivamente, a manipulação do evento reduzirá a rota. A manipulação de classes é um conceito de programação com suporte nos eventos roteados. Um manipulador de classes tem a oportunidade de manipular um evento roteado específico no nível de uma classe com um manipulador que é invocado antes de qualquer manipulador de instâncias em uma instância da classe.  

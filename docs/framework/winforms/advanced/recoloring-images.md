@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525948"
 ---
 # <a name="recoloring-images"></a>Recolorindo imagens
 Recolorir é o processo de ajustar as cores da imagem. Alguns exemplos são alterar de uma cor para outra, ajustar a intensidade da cor em relação a outra cor, ajustar o brilho ou o contraste de todas as cores e converter cores em tons de cinza.  

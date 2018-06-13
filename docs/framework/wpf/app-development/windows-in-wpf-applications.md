@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550771"
 ---
 # <a name="windows-in-wpf-applications"></a>Windows em aplicativos WPF
 Os usuários interagem com aplicativos por meio do windows. O objetivo fundamental de uma janela é hospedar e exibir o conteúdo. O tipo de conteúdo que uma janela hospeda depende do tipo de dados que um aplicativo opera, que podem incluir mídia, páginas de aplicativo linguagem XAML (Extensible Markup), páginas da Web, documentos, tabelas de banco de dados e registros e informações do sistema.  

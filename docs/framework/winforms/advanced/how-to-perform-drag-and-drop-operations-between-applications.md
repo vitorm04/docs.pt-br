@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525224"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Como executar operações de arrastar e soltar entre aplicativos
 Executar operações de arrastar e soltar entre aplicativos é não diferente de ativar esta ação dentro de um aplicativo, como os dois aplicativos envolvidos se comportem de acordo com o "contrato" estabelecido entre o <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A> Propriedades.  

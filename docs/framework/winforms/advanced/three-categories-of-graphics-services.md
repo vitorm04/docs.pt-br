@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525041"
 ---
 # <a name="three-categories-of-graphics-services"></a>Três categorias de serviços gráficos
 As ofertas de elementos gráficos no Windows Forms se enquadram nas três categorias amplas a seguir:  

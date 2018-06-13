@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526524"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Como fornecer ajuda em um aplicativo do Windows
 Você pode usar o <xref:System.Windows.Forms.HelpProvider> componente anexar tópicos da Ajuda em um arquivo de ajuda a controles específicos em formulários do Windows. O arquivo de Ajuda pode ser HTML ou HTMLHelp 1.x ou formato maior.  

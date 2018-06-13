@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547830"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Otimizando desempenho: layout and design
 O design de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode afetar o desempenho criando sobrecarga desnecessária no cálculo de layout e validando referências de objetos. A construção de objetos, particularmente no tempo de execução, pode afetar as características de desempenho do seu aplicativo.  

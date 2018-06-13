@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522182"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Como desenhar uma linha preenchida com uma textura
 Em vez de desenhar uma linha com uma cor sólida, você pode desenhar uma linha com uma textura. Para desenhar linhas e curvas com uma textura, crie um <xref:System.Drawing.TextureBrush> do objeto e passá-lo <xref:System.Drawing.TextureBrush> o objeto para um <xref:System.Drawing.Pen.%23ctor%2A> construtor. O bitmap associado ao pincel de textura é usado para organizar lado a lado o plano (modo invisível) e quando a caneta desenha uma linha ou curva, o traço de caneta revela determinados pixels da textura lado a lado.  

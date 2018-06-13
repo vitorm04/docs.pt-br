@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533582"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Como ocultar colunas no controle DataGridView dos Windows Forms
 Às vezes, você desejará exibir somente algumas das colunas que estão disponíveis em um Windows Forms <xref:System.Windows.Forms.DataGridView> controle. Por exemplo, você talvez queira mostrar um funcionário coluna de salário para usuários com credenciais de gerenciamento ao ocultá-lo de outros usuários. Como alternativa, você talvez queira associar o controle a uma fonte de dados que contém várias colunas, que apenas algumas das quais você deseja exibir. Nesse caso, você normalmente removerá as colunas que você não estiver interessado na exibição em vez de ocultá-las.  

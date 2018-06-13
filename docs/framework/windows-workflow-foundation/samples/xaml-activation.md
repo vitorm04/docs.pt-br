@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517706"
 ---
 # <a name="xaml-activation"></a>Ativação de XAML
 Este exemplo demonstra como hospedar um fluxo de trabalho declarativo no IIS. O exemplo é um fluxo de trabalho básico chamado `EchoService` que tenha uma operação.  

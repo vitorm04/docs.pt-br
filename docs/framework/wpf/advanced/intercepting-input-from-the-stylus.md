@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547610"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptando entrada a partir da caneta
 O <xref:System.Windows.Input.StylusPlugIns> arquitetura fornece um mecanismo para implementar o controle de baixo nível sobre <xref:System.Windows.Input.Stylus> de entrada e a criação de tinta digital <xref:System.Windows.Ink.Stroke> objetos. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornece um mecanismo para implementar o comportamento personalizado e aplicá-lo para o fluxo de dados provenientes do dispositivo de estilo para o desempenho ideal.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524301"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Visão geral do controle CheckedListBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> controle estende o <xref:System.Windows.Forms.ListBox> controle. Ele faz quase tudo o que uma caixa de listagem e também pode exibir uma marca de seleção ao lado de itens na lista. Outras diferenças entre os dois controles são que check só há suporte para caixas de lista <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; e que marcadas caixas de listagem podem ter apenas um item ou nenhum selecionado. Observe que um item selecionado é realçado no formulário e não é o mesmo que um item marcado.  

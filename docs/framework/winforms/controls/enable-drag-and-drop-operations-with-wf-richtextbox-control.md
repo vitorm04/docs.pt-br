@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529760"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Como habilitar operações arrastar e soltar com o controle RichTextBox dos Windows Forms
 Operações de arrastar e soltar com o Windows Forms <xref:System.Windows.Forms.RichTextBox> controle são feitos pelo tratamento de <xref:System.Windows.Forms.RichTextBox.DragEnter> e <xref:System.Windows.Forms.RichTextBox.DragDrop> eventos. Portanto, operações de arrastar e soltar são extremamente simples com o <xref:System.Windows.Forms.RichTextBox> controle.  

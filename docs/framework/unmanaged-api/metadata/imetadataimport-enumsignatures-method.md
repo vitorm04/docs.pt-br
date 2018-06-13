@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d36270047c8af0580a1cc3b44aa303e5907f33fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448114"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>Método IMetaDataImport::EnumSignatures
 Enumera os tokens de assinatura que representa as assinaturas autônomas no escopo atual.  

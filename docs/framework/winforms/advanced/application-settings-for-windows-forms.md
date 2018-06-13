@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517164"
 ---
 # <a name="application-settings-for-windows-forms"></a>Configurações do aplicativo para o Windows Forms
 O recurso Configurações de aplicativo dos Windows Forms facilita a criação, o repositório e a manutenção de aplicativos personalizados e preferências do usuário no cliente. Com as Configurações de aplicativo, é possível armazenar não apenas dados do aplicativo, como cadeias de conexão de banco de dados, mas também dados específicos do usuário, como posições da barra de ferramentas e as listas mais recentemente usadas.  

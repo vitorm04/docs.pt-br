@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742504"
 ---
 # <a name="multifile-assemblies"></a>Assemblies de vários arquivos
 Você pode criar assemblies de vários arquivos usando os compiladores de linha de comando ou o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] com o Visual C++. Um arquivo no assembly deve conter o manifesto do assembly. Um assembly que inicia um aplicativo também deve conter um ponto de entrada, como um método Main ou WinMain.  

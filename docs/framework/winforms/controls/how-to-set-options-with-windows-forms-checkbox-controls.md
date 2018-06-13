@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534080"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Como definir opções com controles CheckBox dos Windows Forms
 Um Windows Forms <xref:System.Windows.Forms.CheckBox> controle é usado para fornecer aos usuários True/False ou Yes/No opções. O controle exibe uma marca de seleção quando ele é selecionado.  

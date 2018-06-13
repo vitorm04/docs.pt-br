@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522276"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Como definir a largura e o alinhamento de uma caneta
 Quando você cria um <xref:System.Drawing.Pen>, você pode fornecer a largura da caneta como um dos argumentos para o construtor. Você também pode alterar a largura da caneta com o <xref:System.Drawing.Pen.Width%2A> propriedade o <xref:System.Drawing.Pen> classe.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63699f0af69b3a7623c5e9da156c2ff8ae83ccfc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437501"
 ---
 # <a name="icorconfiguration-interface"></a>Interface ICorConfiguration
 Fornece métodos para configurar o common language runtime (CLR).  

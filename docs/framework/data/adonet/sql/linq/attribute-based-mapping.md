@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358174"
 ---
 # <a name="attribute-based-mapping"></a>Mapeamento baseado em atributos
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia um banco de dados do SQL Server para um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objeto ou aplicar atributos ou usando um arquivo de mapeamento externos. Este tópico descreve a abordagem baseada em atributos.  

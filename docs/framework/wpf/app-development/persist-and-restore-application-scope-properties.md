@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550092"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Como persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo
 Este exemplo mostra como persistir as propriedades de escopo de aplicativo quando um aplicativo é desligado e como restaurar propriedades de escopo de aplicativo quando um aplicativo é a próximo inicialização.  

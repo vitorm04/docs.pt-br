@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bada01e910397adcf0fe59286d90774a0ab24ffa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439870"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Método IHostMemoryManager::VirtualProtect
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualProtect` altera a proteção em uma região de páginas confirmadas no espaço de endereço virtual do processo de chamada.  

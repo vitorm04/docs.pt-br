@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2df33e3edebbf558bf78986e737c4f7bb9b2f0f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437151"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>Método IGCHostControl::RequestVirtualMemLimit
 Solicitações do host para alterar os limites de memória virtual.  

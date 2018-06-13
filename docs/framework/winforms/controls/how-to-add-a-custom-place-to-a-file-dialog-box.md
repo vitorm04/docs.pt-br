@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525733"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Como adicionar um local personalizado a uma caixa de diálogo Arquivo
 O padrão abrir e salvar caixas de diálogo em [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] tem uma área no lado esquerdo da caixa de diálogo intitulada **Links Favoritos**. Essa área é denominada locais personalizados. O <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> classes permitem que você adicione pastas para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção.  

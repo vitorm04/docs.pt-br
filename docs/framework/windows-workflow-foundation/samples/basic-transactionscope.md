@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516793"
 ---
 # <a name="basic-transactionscope"></a>TransactionScope básico
 Esse exemplo consiste em quatro cenários que executam a visualização como aninhar instâncias de <xref:System.Activities.Statements.TransactionScope> . O primeiro cenário mostra aninhar uma atividade de terceiro parte do autor não tem nenhum conhecimento de compilação. O segundo e terceiro cenários mostram como os intervalos são respeitados e mostra finais cenário de configuração de <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> .  

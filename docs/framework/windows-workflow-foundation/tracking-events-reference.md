@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520208"
 ---
 # <a name="tracking-events-reference"></a>Referência de eventos de rastreamento
 Durante a execução um fluxo de trabalho aumenta de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que acompanham eventos como se move por várias etapas no tempo de vida. O host pode assinar esses eventos e ter atualizado no status de progresso de fluxo de trabalho durante seu ciclo de vida. Os eventos de rastreamento gerados são discutidos nesta seção.  

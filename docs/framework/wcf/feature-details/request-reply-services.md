@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490939"
 ---
 # <a name="request-reply-services"></a>Serviços de resposta por solicitação
 Serviços de solicitação-resposta são o tipo de padrão de contrato de operação no Windows Communication Foundation (WCF). Os clientes fazer chamadas para operações de serviço e aguardar uma resposta do serviço. Você pode realizar chamadas para uma operação de serviço ou sincronicamente, onde o cliente bloqueia até ele recebe uma resposta do serviço ou os tempos de chamada ou de forma assíncrona, em que o cliente faz uma chamada para a operação de serviço, continua a trabalhar e recebe o resposta do serviço em outro thread.  

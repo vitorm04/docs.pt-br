@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518985"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pincéis e formas preenchidas no GDI+
 Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutura de tópicos e um interior. A estrutura de tópicos é desenhada com uma caneta e o interior é preenchido com um pincel. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece várias classes de pincel para preencher os interiores das formas fechadas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas essas classes herdam o <xref:System.Drawing.Brush> classe. A ilustração a seguir mostra um retângulo preenchido com um pincel sólido e uma elipse preenchida com um pincel de hachura.  

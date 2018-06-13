@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514834"
 ---
 # <a name="code-bodied"></a>o corpóreo
 Esta seção contém exemplos de atividade personalizados criados declarativamente no código.  

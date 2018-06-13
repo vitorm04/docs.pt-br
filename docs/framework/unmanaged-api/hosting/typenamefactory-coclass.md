@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440876"
 ---
 # <a name="typenamefactory-coclass"></a>Coclass TypeNameFactory
 Fornece uma interface de gerenciamento deconstruction de um nome de tipo.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514341"
 ---
 # <a name="migration-activity-in-wf"></a>Atividade de migração em WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fornece o <xref:System.Activities.Statements.Interop> atividade para executar atividades derivam da atividade em um fluxo de trabalho se baseia em <xref:System.Activities.Activity>. Para obter mais informações, consulte o [orientação](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) seção.  
