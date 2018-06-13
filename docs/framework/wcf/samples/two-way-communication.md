@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508339"
 ---
 # <a name="two-way-communication"></a><span data-ttu-id="54785-102">Comunicação bidirecional</span><span class="sxs-lookup"><span data-stu-id="54785-102">Two-Way Communication</span></span>
 <span data-ttu-id="54785-103">Este exemplo demonstra como executar transacionado uma comunicação bidirecional em fila em relação ao MSMQ.</span><span class="sxs-lookup"><span data-stu-id="54785-103">This sample demonstrates how to perform transacted two-way queued communication over MSMQ.</span></span> <span data-ttu-id="54785-104">Este exemplo usa o `netMsmqBinding` associação.</span><span class="sxs-lookup"><span data-stu-id="54785-104">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="54785-105">Nesse caso, o serviço é um aplicativo de console auto-hospedado que permite que você observe o serviço de recebimento de mensagens na fila.</span><span class="sxs-lookup"><span data-stu-id="54785-105">In this case, the service is a self-hosted console application that allows you to observe the service receiving queued messages.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524697"
 ---
 # <a name="lines-curves-and-shapes"></a><span data-ttu-id="e26b7-102">Linhas, curvas e formas</span><span class="sxs-lookup"><span data-stu-id="e26b7-102">Lines, Curves, and Shapes</span></span>
 <span data-ttu-id="e26b7-103">A parte de gráficos vetoriais de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] é usada para desenhar linhas, curvas e para desenhar e preencher formas.</span><span class="sxs-lookup"><span data-stu-id="e26b7-103">The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.</span></span>  

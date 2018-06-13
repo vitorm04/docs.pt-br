@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430374"
 ---
 # <a name="idefinitionappid-interface"></a><span data-ttu-id="e6137-102">Interface IDefinitionAppId</span><span class="sxs-lookup"><span data-stu-id="e6137-102">IDefinitionAppId Interface</span></span>
 <span data-ttu-id="e6137-103">Representa um identificador exclusivo para o código que define o aplicativo no escopo atual.</span><span class="sxs-lookup"><span data-stu-id="e6137-103">Represents a unique identifier for the code that defines the application in the current scope.</span></span>  

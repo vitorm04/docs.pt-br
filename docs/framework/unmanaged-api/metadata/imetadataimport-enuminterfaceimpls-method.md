@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 824337a8a87282e59c9fc5df18c71800339e8d7b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447445"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a><span data-ttu-id="14841-102">Método IMetaDataImport::EnumInterfaceImpls</span><span class="sxs-lookup"><span data-stu-id="14841-102">IMetaDataImport::EnumInterfaceImpls Method</span></span>
 <span data-ttu-id="14841-103">Enumera MethodDef tokens que representam as implementações de interface.</span><span class="sxs-lookup"><span data-stu-id="14841-103">Enumerates MethodDef tokens representing interface implementations.</span></span>  

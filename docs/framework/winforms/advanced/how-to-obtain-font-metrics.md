@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524203"
 ---
 # <a name="how-to-obtain-font-metrics"></a><span data-ttu-id="432b0-102">Como obter métricas de fontes</span><span class="sxs-lookup"><span data-stu-id="432b0-102">How to: Obtain Font Metrics</span></span>
 <span data-ttu-id="432b0-103">O <xref:System.Drawing.FontFamily> classe fornece os seguintes métodos que recuperam várias métricas para uma combinação de família/estilo específico:</span><span class="sxs-lookup"><span data-stu-id="432b0-103">The <xref:System.Drawing.FontFamily> class provides the following methods that retrieve various metrics for a particular family/style combination:</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 775f5a2129a635c79a48d5218d5eb91ee83ee779
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427877"
 ---
 # <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="2edab-102">Método ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="2edab-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
 <span data-ttu-id="2edab-103">Obtém o HRESULT.</span><span class="sxs-lookup"><span data-stu-id="2edab-103">Gets the HRESULT.</span></span>  

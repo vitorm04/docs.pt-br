@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a63700abf77d56134ca30620033c398af735599
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426733"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="d1e47-102">Interface ISymUnmanagedSourceServerModule</span><span class="sxs-lookup"><span data-stu-id="d1e47-102">ISymUnmanagedSourceServerModule Interface</span></span>
 <span data-ttu-id="d1e47-103">Fornece dados de servidor de origem para um módulo.</span><span class="sxs-lookup"><span data-stu-id="d1e47-103">Provides source server data for a module.</span></span> <span data-ttu-id="d1e47-104">Obter essa interface chamando `QueryInterface` em um objeto que implementa o [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="d1e47-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  

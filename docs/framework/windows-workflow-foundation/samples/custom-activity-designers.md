@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514282"
 ---
 # <a name="custom-activity-designers"></a><span data-ttu-id="44c13-102">Designers personalizados de atividades</span><span class="sxs-lookup"><span data-stu-id="44c13-102">Custom Activity Designers</span></span>
 <span data-ttu-id="44c13-103">Esta seção contém exemplos de atividade que usam designer personalizadas para exibição no designer de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="44c13-103">This section contains activity samples that use custom designers for display in the workflow designer.</span></span>  

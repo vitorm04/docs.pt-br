@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c786cd43a25aa0c69c19e57452a3b190c7bfb167
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426835"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="99abc-102">Método ISymUnmanagedScope::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="99abc-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
 <span data-ttu-id="99abc-103">Obtém os namespaces que estão sendo usados dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="99abc-103">Gets the namespaces that are being used within this scope.</span></span>  

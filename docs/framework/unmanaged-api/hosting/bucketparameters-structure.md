@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b5e4db8e385baefe3067755bbdc4555c5887ab6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429949"
 ---
 # <a name="bucketparameters-structure"></a><span data-ttu-id="f86e2-102">Estrutura BucketParameters</span><span class="sxs-lookup"><span data-stu-id="f86e2-102">BucketParameters Structure</span></span>
 <span data-ttu-id="f86e2-103">Armazena o nome de um evento e os parâmetros de tipo para a exceção atual que está associado com o evento.</span><span class="sxs-lookup"><span data-stu-id="f86e2-103">Stores the type name of an event and the parameters for the current exception that is associated with the event.</span></span>  

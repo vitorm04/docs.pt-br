@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ee16193c95c9e754f5bff9aeaf37ff74c456891e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428462"
 ---
 # <a name="iassemblynameclone-method"></a><span data-ttu-id="de551-102">Método IAssemblyName::Clone</span><span class="sxs-lookup"><span data-stu-id="de551-102">IAssemblyName::Clone Method</span></span>
 <span data-ttu-id="de551-103">Cria uma cópia superficial deste [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="de551-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  

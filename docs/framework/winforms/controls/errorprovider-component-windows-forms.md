@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525864"
 ---
 # <a name="errorprovider-component-windows-forms"></a><span data-ttu-id="486ca-102">Componente ErrorProvider (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="486ca-102">ErrorProvider Component (Windows Forms)</span></span>
 <span data-ttu-id="486ca-103">Windows Forms `ErrorProvider` componente é usado para mostrar ao usuário de forma não intrusiva que algo está errado.</span><span class="sxs-lookup"><span data-stu-id="486ca-103">The Windows Forms `ErrorProvider` component is used to show the user in a non-intrusive way that something is wrong.</span></span> <span data-ttu-id="486ca-104">Ele é normalmente usado junto com a validação de entrada do usuário em um formulário ou para exibir erros dentro de um conjunto de dados.</span><span class="sxs-lookup"><span data-stu-id="486ca-104">It is typically used in conjunction with validating user input on a form, or displaying errors within a dataset.</span></span>  

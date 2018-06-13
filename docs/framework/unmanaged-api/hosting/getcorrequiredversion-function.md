@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430041"
 ---
 # <a name="getcorrequiredversion-function"></a><span data-ttu-id="3ccb4-102">Função GetCORRequiredVersion</span><span class="sxs-lookup"><span data-stu-id="3ccb4-102">GetCORRequiredVersion Function</span></span>
 <span data-ttu-id="3ccb4-103">Obtém o número de versão do common language runtime (CLR) necessário.</span><span class="sxs-lookup"><span data-stu-id="3ccb4-103">Gets the required common language runtime (CLR) version number.</span></span>  

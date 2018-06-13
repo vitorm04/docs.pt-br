@@ -1,14 +1,6 @@
 ---
-title: "Função CoUninitializeEE"
-ms.custom: 
+title: Função CoUninitializeEE
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoUninitializeEE
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5f5a311a-839a-465f-89d9-ff1c74da9736
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4125a76ae50a293e35e326f775500c06120420d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429176"
 ---
-# <a name="couninitializeee-function"></a><span data-ttu-id="b82c4-102">Função CoUninitializeEE</span><span class="sxs-lookup"><span data-stu-id="b82c4-102">CoUninitializeEE Function</span></span>
-<span data-ttu-id="b82c4-103">`CoUninitializeEE`está obsoleto e não fornece nenhuma funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="b82c4-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  
+# <a name="couninitializeee-function"></a><span data-ttu-id="179eb-102">Função CoUninitializeEE</span><span class="sxs-lookup"><span data-stu-id="179eb-102">CoUninitializeEE Function</span></span>
+<span data-ttu-id="179eb-103">`CoUninitializeEE` está obsoleto e não fornece nenhuma funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="179eb-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b82c4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b82c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="179eb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="179eb-104">Syntax</span></span>  
   
 ```  
 void CoUninitializeEE (  
@@ -45,9 +34,9 @@ void CoUninitializeEE (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="b82c4-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="b82c4-105">Remarks</span></span>  
- <span data-ttu-id="b82c4-106">O mecanismo de execução do common language runtime não pode ser descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="b82c4-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="b82c4-107">Para desligar a chamada de mecanismo de execução [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span><span class="sxs-lookup"><span data-stu-id="b82c4-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="179eb-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="179eb-105">Remarks</span></span>  
+ <span data-ttu-id="179eb-106">O mecanismo de execução do common language runtime não pode ser descarregado de um processo.</span><span class="sxs-lookup"><span data-stu-id="179eb-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="179eb-107">Para desligar a chamada de mecanismo de execução [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span><span class="sxs-lookup"><span data-stu-id="179eb-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b82c4-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b82c4-108">See Also</span></span>  
- [<span data-ttu-id="b82c4-109">Função CoInitializeEE</span><span class="sxs-lookup"><span data-stu-id="b82c4-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- [<span data-ttu-id="b82c4-110">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="b82c4-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="179eb-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="179eb-108">See Also</span></span>  
+ [<span data-ttu-id="179eb-109">Função CoInitializeEE</span><span class="sxs-lookup"><span data-stu-id="179eb-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
+ [<span data-ttu-id="179eb-110">Funções estáticas globais de metadados</span><span class="sxs-lookup"><span data-stu-id="179eb-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
