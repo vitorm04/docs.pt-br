@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766222"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="162a3-102">Simultaneidade otimista</span><span class="sxs-lookup"><span data-stu-id="162a3-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="162a3-103">Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco de dados: simultaneidade otimista e simultaneidade pessimista.</span><span class="sxs-lookup"><span data-stu-id="162a3-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="162a3-104">O objeto <xref:System.Data.DataSet> é criado para incentivar o uso da simultaneidade otimista para atividades de execução longa, como a comunicação remota de dados e a interação com dados.</span><span class="sxs-lookup"><span data-stu-id="162a3-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

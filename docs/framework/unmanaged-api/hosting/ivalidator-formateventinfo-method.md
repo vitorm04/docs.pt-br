@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440639"
 ---
 # <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="20361-102">Método IValidator::FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="20361-102">IValidator::FormatEventInfo Method</span></span>
 <span data-ttu-id="20361-103">Obtém a mensagem de erro correspondente para o erro de validação especificado.</span><span class="sxs-lookup"><span data-stu-id="20361-103">Gets the error message corresponding to the specified validation error.</span></span>  

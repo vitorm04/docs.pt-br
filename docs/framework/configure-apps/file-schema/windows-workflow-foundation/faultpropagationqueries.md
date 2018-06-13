@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755143"
 ---
 # <a name="ltfaultpropagationqueriesgt"></a><span data-ttu-id="75da7-102">&lt;faultPropagationQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="75da7-102">&lt;faultPropagationQueries&gt;</span></span>
 <span data-ttu-id="75da7-103">Representa uma coleção de consultas que são usados para controlar o tratamento de falhas que ocorrem dentro de uma atividade.</span><span class="sxs-lookup"><span data-stu-id="75da7-103">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="75da7-104">Esse evento ocorre sempre que um FaultHandler processa uma falha.</span><span class="sxs-lookup"><span data-stu-id="75da7-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="75da7-105">Você deve usar essa consulta para controlar o tratamento de falhas que ocorrem dentro de uma atividade.</span><span class="sxs-lookup"><span data-stu-id="75da7-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="75da7-106">A consulta é necessária para um participante de rastreamento assinar os registros de propagação de falhas.</span><span class="sxs-lookup"><span data-stu-id="75da7-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8bbd25909e70826f8cd29076c1eb62a4da6779cd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435395"
 ---
 # <a name="coinitializeee-function"></a><span data-ttu-id="641e1-102">Função CoInitializeEE</span><span class="sxs-lookup"><span data-stu-id="641e1-102">CoInitializeEE Function</span></span>
 <span data-ttu-id="641e1-103">Garante que o mecanismo de execução do common language runtime está carregado em um processo.</span><span class="sxs-lookup"><span data-stu-id="641e1-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="641e1-104">Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="641e1-104">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="641e1-105">Use o [Iclrruntimehost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="641e1-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  

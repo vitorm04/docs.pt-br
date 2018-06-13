@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d497fd8e659a24add25df63c4ce48e710dcb0c6d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403787"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a><span data-ttu-id="4163b-102">Método ICorDebugAppDomain2::GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="4163b-102">ICorDebugAppDomain2::GetFunctionPointerType Method</span></span>
 <span data-ttu-id="4163b-103">Obtém um ponteiro para uma função que tem uma assinatura fornecida.</span><span class="sxs-lookup"><span data-stu-id="4163b-103">Gets a pointer to a function that has a given signature.</span></span>  

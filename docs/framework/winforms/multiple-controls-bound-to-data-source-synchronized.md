@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539534"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a><span data-ttu-id="ee7c4-102">Como assegurar que vários controles associados à mesma fonte de dados permaneçam sincronizados</span><span class="sxs-lookup"><span data-stu-id="ee7c4-102">How to: Ensure Multiple Controls Bound to the Same Data Source Remain Synchronized</span></span>
 <span data-ttu-id="ee7c4-103">Muitas vezes, ao trabalhar com vinculação de dados nos Windows Forms, vários controles são associados à mesma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="ee7c4-103">Oftentimes when working with data binding in Windows Forms, multiple controls are bound to the same data source.</span></span> <span data-ttu-id="ee7c4-104">Em alguns casos, pode ser necessário executar etapas adicionais para garantir que as propriedades associadas dos controles permaneçam sincronizadas entre si e à fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="ee7c4-104">In some cases, it may be necessary to take extra steps to ensure that the bound properties of the controls remain synchronized with each other and the data source.</span></span> <span data-ttu-id="ee7c4-105">Essas etapas são necessárias em duas situações:</span><span class="sxs-lookup"><span data-stu-id="ee7c4-105">These steps are necessary in two situations:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539394"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a><span data-ttu-id="1a795-102">Funcionalidade de arrastar e soltar no Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1a795-102">Drag-and-Drop Functionality in Windows Forms</span></span>
 <span data-ttu-id="1a795-103">O Windows Forms incluem um conjunto de métodos, eventos e classes que implementam o comportamento do tipo "arrastar e soltar".</span><span class="sxs-lookup"><span data-stu-id="1a795-103">Windows Forms includes a set of methods, events, and classes that implement drag-and-drop behavior.</span></span> <span data-ttu-id="1a795-104">Este tópico fornece uma visão geral do suporte a arrastar e soltar no Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="1a795-104">This topic provides an overview of the drag-and-drop support in Windows Forms.</span></span>  <span data-ttu-id="1a795-105">Consulte também [Operações do tipo "arrastar e soltar" e suporte à área de transferência](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="1a795-105">Also see [Drag-and-Drop Operations and Clipboard Support](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span></span>  

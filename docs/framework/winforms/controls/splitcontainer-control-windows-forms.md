@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
 ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539195"
 ---
 # <a name="splitcontainer-control-windows-forms"></a><span data-ttu-id="f1cb8-102">Controle SplitContainer (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f1cb8-102">SplitContainer Control (Windows Forms)</span></span>
 <span data-ttu-id="f1cb8-103">O controle `SplitContainer` dos Windows Forms pode ser considerado uma composição; são dois painéis separados por uma barra móvel.</span><span class="sxs-lookup"><span data-stu-id="f1cb8-103">The Windows Forms `SplitContainer` control can be thought of as a composite; it is two panels separated by a movable bar.</span></span> <span data-ttu-id="f1cb8-104">Quando o ponteiro do mouse passa sobre a barra, ele muda de forma para mostrar que a barra é móvel.</span><span class="sxs-lookup"><span data-stu-id="f1cb8-104">When the mouse pointer is over the bar, the pointer changes shape to show that the bar is movable.</span></span>  

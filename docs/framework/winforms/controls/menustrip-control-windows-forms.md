@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540184"
 ---
 # <a name="menustrip-control-windows-forms"></a><span data-ttu-id="3d1bc-102">Controle MenuStrip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="3d1bc-102">MenuStrip Control (Windows Forms)</span></span>
 <span data-ttu-id="3d1bc-103">Esse controle agrupa comandos do aplicativo e os torna facilmente acessíveis.</span><span class="sxs-lookup"><span data-stu-id="3d1bc-103">This control groups application commands and makes them easily accessible.</span></span>  

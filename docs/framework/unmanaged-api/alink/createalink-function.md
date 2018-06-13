@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400660"
 ---
 # <a name="createalink-function"></a><span data-ttu-id="5744e-102">Função CreateALink</span><span class="sxs-lookup"><span data-stu-id="5744e-102">CreateALink Function</span></span>
 <span data-ttu-id="5744e-103">Cria uma instância de Assembly Linker e define um ponteiro para a interface especificada.</span><span class="sxs-lookup"><span data-stu-id="5744e-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  

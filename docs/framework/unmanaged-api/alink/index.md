@@ -10,8 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a1056e1b8d544e514063c6c1ad20b447815960ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403949"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a><span data-ttu-id="6368e-102">API ALink (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="6368e-102">ALink API (Unmanaged API Reference)</span></span>
 <span data-ttu-id="6368e-103">Oferece suporte à criação de assemblies do .NET Framework e módulos não associados.</span><span class="sxs-lookup"><span data-stu-id="6368e-103">Supports creating .NET Framework assemblies and unbound modules.</span></span>  

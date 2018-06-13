@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401710"
 ---
 # <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="2fcf3-102">Método ICorDebugAssembly::GetCodeBase</span><span class="sxs-lookup"><span data-stu-id="2fcf3-102">ICorDebugAssembly::GetCodeBase Method</span></span>
 <span data-ttu-id="2fcf3-103">Este método não está implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2fcf3-103">This method is not implemented in the current version of the .NET Framework.</span></span>  

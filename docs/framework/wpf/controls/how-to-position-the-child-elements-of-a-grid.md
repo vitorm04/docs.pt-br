@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552138"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a><span data-ttu-id="71836-102">Como posicionar os elementos filhos de uma grade</span><span class="sxs-lookup"><span data-stu-id="71836-102">How to: Position the Child Elements of a Grid</span></span>
 <span data-ttu-id="71836-103">Este exemplo mostra como usar o get e métodos definidos no conjunto de <xref:System.Windows.Controls.Grid> para posicionar elementos filho.</span><span class="sxs-lookup"><span data-stu-id="71836-103">This example shows how to use the get and set methods that are defined on <xref:System.Windows.Controls.Grid> to position child elements.</span></span>  

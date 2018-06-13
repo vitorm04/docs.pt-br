@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767057"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="72a5e-102">&lt;windows&gt; do elemento &lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="72a5e-102">&lt;windows&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="72a5e-103">Especifica as configurações para uma credencial do Windows a ser usado para representar o cliente.</span><span class="sxs-lookup"><span data-stu-id="72a5e-103">Specifies the settings for a Windows credential to be used to represent the client.</span></span>  

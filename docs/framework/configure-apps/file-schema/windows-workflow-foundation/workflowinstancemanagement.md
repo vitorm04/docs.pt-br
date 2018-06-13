@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767096"
 ---
 # <a name="ltworkflowinstancemanagementgt"></a><span data-ttu-id="8b72c-102">&lt;workflowInstanceManagement&gt;</span><span class="sxs-lookup"><span data-stu-id="8b72c-102">&lt;workflowInstanceManagement&gt;</span></span>
 <span data-ttu-id="8b72c-103">Um comportamento de serviço que permite que você especifique as configurações que controlam como as instâncias de fluxo de trabalho são executadas, incluindo persistência, o comportamento de exceção sem tratamento e o comportamento ocioso.</span><span class="sxs-lookup"><span data-stu-id="8b72c-103">A service behavior that enables you to specify settings that control how workflow instances are run, including persistence, unhandled Exception behavior and idle behavior.</span></span>  

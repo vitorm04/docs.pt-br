@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757938"
 ---
 # <a name="adonet-overview"></a><span data-ttu-id="5e672-102">Visão geral do ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5e672-102">ADO.NET Overview</span></span>
 <span data-ttu-id="5e672-103">O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML, e a fontes de dados expostas através do OLE DB e do ODBC.</span><span class="sxs-lookup"><span data-stu-id="5e672-103">ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC.</span></span> <span data-ttu-id="5e672-104">Os aplicativos do consumidor de compartilhamento de dados podem usar o ADO.NET para se conectar a essas fontes de dados, e para recuperar, manipular e atualizar os dados nelas contidos.</span><span class="sxs-lookup"><span data-stu-id="5e672-104">Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.</span></span>  

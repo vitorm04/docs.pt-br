@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7921f0361d7369cddf14dd1ab477529d1bbac481
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439355"
 ---
 # <a name="ihostautoeventwait-method"></a><span data-ttu-id="6ce72-102">Método IHostAutoEvent::Wait</span><span class="sxs-lookup"><span data-stu-id="6ce72-102">IHostAutoEvent::Wait Method</span></span>
 <span data-ttu-id="6ce72-103">Faz com que o atual [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instância para aguardar até que ele é de propriedade ou um período de tempo especificado.</span><span class="sxs-lookup"><span data-stu-id="6ce72-103">Causes the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to wait until it is owned or a specified amount of time elapses.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84137e7163101f7eaa54a45df0fbaa4e7bcf70fa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404580"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="165ea-102">Método ICorDebug::DebugActiveProcess</span><span class="sxs-lookup"><span data-stu-id="165ea-102">ICorDebug::DebugActiveProcess Method</span></span>
 <span data-ttu-id="165ea-103">Anexa o depurador a um processo existente.</span><span class="sxs-lookup"><span data-stu-id="165ea-103">Attaches the debugger to an existing process.</span></span>  

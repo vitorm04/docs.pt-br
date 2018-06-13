@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754152"
 ---
 # <a name="ltperformancecountersgt-element"></a><span data-ttu-id="550bb-102">&lt;performanceCounters&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="550bb-102">&lt;performanceCounters&gt; Element</span></span>
 <span data-ttu-id="550bb-103">Especifica o tamanho da memória global compartilhada por contadores de desempenho.</span><span class="sxs-lookup"><span data-stu-id="550bb-103">Specifies the size of the global memory shared by performance counters.</span></span>  
