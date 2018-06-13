@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 449546a0f774a241efd035190d43de103199edbf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436800"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a><span data-ttu-id="d1c94-102">Método ICorConfiguration::SetDebuggerThreadControl</span><span class="sxs-lookup"><span data-stu-id="d1c94-102">ICorConfiguration::SetDebuggerThreadControl Method</span></span>
 <span data-ttu-id="d1c94-103">Define a interface de retorno de chamada que os serviços de depuração serão chamada como tempo de execução de linguagem comum threads (CLR) são bloqueados e desbloqueados para depuração.</span><span class="sxs-lookup"><span data-stu-id="d1c94-103">Sets the callback interface that the debugging services will call as common language runtime (CLR) threads are blocked and unblocked for debugging.</span></span>  

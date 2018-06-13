@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a472b686799bfec4b53b8880a0c52c6f0846b03a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442371"
 ---
 # <a name="ihostcrstenter-method"></a><span data-ttu-id="2191a-102">Método IHostCrst::Enter</span><span class="sxs-lookup"><span data-stu-id="2191a-102">IHostCrst::Enter Method</span></span>
 <span data-ttu-id="2191a-103">Entrar na seção crítica que é representada por atual [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instância.</span><span class="sxs-lookup"><span data-stu-id="2191a-103">Enters the critical section that is represented by the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  

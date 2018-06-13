@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77b3a898dd929a6eeadc466a04a0fdb10571ed7b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440155"
 ---
 # <a name="itypenamegettypearguments-method"></a><span data-ttu-id="14ba8-102">Método ITypeName::GetTypeArguments</span><span class="sxs-lookup"><span data-stu-id="14ba8-102">ITypeName::GetTypeArguments Method</span></span>
 <span data-ttu-id="14ba8-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="14ba8-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

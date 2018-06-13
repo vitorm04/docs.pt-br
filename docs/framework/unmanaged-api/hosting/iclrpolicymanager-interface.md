@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8e8a1b1bcf4470f5e754775b1137b8221ae1d0b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435141"
 ---
 # <a name="iclrpolicymanager-interface"></a><span data-ttu-id="6e30f-102">Interface ICLRPolicyManager</span><span class="sxs-lookup"><span data-stu-id="6e30f-102">ICLRPolicyManager Interface</span></span>
 <span data-ttu-id="6e30f-103">Fornece métodos que permitem que o host especificar ações de política a ser executada no caso de falhas e tempos limite.</span><span class="sxs-lookup"><span data-stu-id="6e30f-103">Provides methods that allow the host to specify policy actions to be taken in the event of failures and timeouts.</span></span>  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434680"
 ---
 # <a name="hosting-structures"></a><span data-ttu-id="e18f7-102">Estruturas de hospedagem</span><span class="sxs-lookup"><span data-stu-id="e18f7-102">Hosting Structures</span></span>
 <span data-ttu-id="e18f7-103">Esta seção descreve as estruturas não gerenciadas que usa a API de hospedagem.</span><span class="sxs-lookup"><span data-stu-id="e18f7-103">This section describes the unmanaged structures that the hosting API uses.</span></span>  

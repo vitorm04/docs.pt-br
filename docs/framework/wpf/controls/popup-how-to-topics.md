@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553709"
 ---
 # <a name="popup-how-to-topics"></a><span data-ttu-id="8b6b2-102">Tópicos explicativos de pop-up</span><span class="sxs-lookup"><span data-stu-id="8b6b2-102">Popup How-to Topics</span></span>
 <span data-ttu-id="8b6b2-103">Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Primitives.Popup> controle para exibir o conteúdo em uma janela separada que flutua sobre a janela atual do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="8b6b2-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  

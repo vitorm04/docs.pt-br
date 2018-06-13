@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4db96133315b23a2d0b4bd32b597ee03f5d697b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438110"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="7c91e-102">Método ICorRuntimeHost::UnloadDomain</span><span class="sxs-lookup"><span data-stu-id="7c91e-102">ICorRuntimeHost::UnloadDomain Method</span></span>
 <span data-ttu-id="7c91e-103">Descarrega o domínio de aplicativo especificado do processo atual.</span><span class="sxs-lookup"><span data-stu-id="7c91e-103">Unloads the specified application domain from the current process.</span></span>  

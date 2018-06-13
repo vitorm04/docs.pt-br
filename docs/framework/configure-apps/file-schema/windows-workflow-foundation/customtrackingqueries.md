@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755884"
 ---
 # <a name="ltcustomtrackingqueriesgt"></a><span data-ttu-id="1d164-102">&lt;customTrackingQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="1d164-102">&lt;customTrackingQueries&gt;</span></span>
 <span data-ttu-id="1d164-103">Representa uma coleção de consultas que são usados para controlar os eventos que você define em suas atividades de código.</span><span class="sxs-lookup"><span data-stu-id="1d164-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="1d164-104">A consulta é necessária para um participante de rastreamento assinar registros personalizados de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="1d164-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  

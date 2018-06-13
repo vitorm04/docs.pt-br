@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ca6bf185297cbafb4450271ddcd6093d7e62515
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415368"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="19b08-102">Método ICorDebugEditAndContinueErrorInfo::GetModule</span><span class="sxs-lookup"><span data-stu-id="19b08-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
 <span data-ttu-id="19b08-103">`GetModule` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="19b08-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="19b08-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="19b08-104">Do not call this method.</span></span>  

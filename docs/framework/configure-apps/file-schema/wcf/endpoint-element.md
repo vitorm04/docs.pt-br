@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749498"
 ---
 # <a name="ltendpointgt-element"></a><span data-ttu-id="b78ae-102">elemento de &lt;ponto de extremidade&gt;</span><span class="sxs-lookup"><span data-stu-id="b78ae-102">&lt;endpoint&gt; element</span></span>
 <span data-ttu-id="b78ae-103">Especifica a associação, contrato e propriedades de endereço de um ponto de extremidade de serviço, que é usado para expor serviços.</span><span class="sxs-lookup"><span data-stu-id="b78ae-103">Specifies binding, contract, and address properties for a service endpoint, which is used to expose services.</span></span>  

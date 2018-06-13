@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8bf9a94c55258193e3172459da129ba16f9c3265
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435431"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a><span data-ttu-id="d6f87-102">Método ICLRStrongName::StrongNameSignatureGenerationEx</span><span class="sxs-lookup"><span data-stu-id="d6f87-102">ICLRStrongName::StrongNameSignatureGenerationEx Method</span></span>
 <span data-ttu-id="d6f87-103">Gera uma assinatura de nome forte para o assembly especificado, de acordo com os sinalizadores especificados.</span><span class="sxs-lookup"><span data-stu-id="d6f87-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  

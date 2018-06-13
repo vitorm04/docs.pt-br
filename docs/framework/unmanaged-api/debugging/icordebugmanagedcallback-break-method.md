@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d7120e092b422b755ecbde9e48236b42e67636fc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414932"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a><span data-ttu-id="91f83-102">Método ICorDebugManagedCallback::Break</span><span class="sxs-lookup"><span data-stu-id="91f83-102">ICorDebugManagedCallback::Break Method</span></span>
 <span data-ttu-id="91f83-103">Notifica o depurador quando um <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.</span><span class="sxs-lookup"><span data-stu-id="91f83-103">Notifies the debugger when a <xref:System.Reflection.Emit.OpCodes.Break> instruction in the code stream is executed.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97f184bae4628f2aa357644188594396468671ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444145"
 ---
 # <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="edf17-102">Método IMetaDataFilter::MarkToken</span><span class="sxs-lookup"><span data-stu-id="edf17-102">IMetaDataFilter::MarkToken Method</span></span>
 <span data-ttu-id="edf17-103">Define um valor que indica se o token de metadados especificado foi processado.</span><span class="sxs-lookup"><span data-stu-id="edf17-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  

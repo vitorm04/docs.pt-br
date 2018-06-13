@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435858"
 ---
 # <a name="deprecated-clr-hosting-functions"></a><span data-ttu-id="fd21e-102">Funções de hospedagem CLR reprovadas</span><span class="sxs-lookup"><span data-stu-id="fd21e-102">Deprecated CLR Hosting Functions</span></span>
 <span data-ttu-id="fd21e-103">Esta seção descreve as funções estáticas globais não gerenciadas usados por versões anteriores da API de hospedagem.</span><span class="sxs-lookup"><span data-stu-id="fd21e-103">This section describes the unmanaged global static functions that earlier versions of the hosting API used.</span></span>  

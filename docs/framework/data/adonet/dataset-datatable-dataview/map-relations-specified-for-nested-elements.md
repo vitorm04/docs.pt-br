@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756690"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="378ad-102">Mapear relações definidas para elementos aninhados</span><span class="sxs-lookup"><span data-stu-id="378ad-102">Map Relations Specified for Nested Elements</span></span>
 <span data-ttu-id="378ad-103">Um esquema pode incluir um **msdata:Relationship** anotação para especificar explicitamente o mapeamento entre quaisquer dois elementos no esquema.</span><span class="sxs-lookup"><span data-stu-id="378ad-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="378ad-104">Os dois elementos especificados na **msdata:Relationship** podem ser aninhados no esquema, mas não precisa ser.</span><span class="sxs-lookup"><span data-stu-id="378ad-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="378ad-105">O processo de mapeamento usa **msdata:Relationship** no esquema para gerar a primária/chave relação de chave estrangeira entre as duas colunas.</span><span class="sxs-lookup"><span data-stu-id="378ad-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  

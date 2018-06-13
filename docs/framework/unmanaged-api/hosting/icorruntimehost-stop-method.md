@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1aea8cb4c180477fdd763a8af2f251db2d37d066
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436631"
 ---
 # <a name="icorruntimehoststop-method"></a><span data-ttu-id="556b4-102">Método ICorRuntimeHost::Stop</span><span class="sxs-lookup"><span data-stu-id="556b4-102">ICorRuntimeHost::Stop Method</span></span>
 <span data-ttu-id="556b4-103">Interrompe a execução de código em tempo de execução para o processo atual.</span><span class="sxs-lookup"><span data-stu-id="556b4-103">Stops the execution of code in the runtime for the current process.</span></span>  

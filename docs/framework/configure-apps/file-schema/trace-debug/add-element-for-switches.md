@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747448"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="1846b-102">&lt;Adicionar&gt; elemento para &lt;switches&gt;</span><span class="sxs-lookup"><span data-stu-id="1846b-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
 <span data-ttu-id="1846b-103">Especifica o nível em que uma opção de rastreamento é definida.</span><span class="sxs-lookup"><span data-stu-id="1846b-103">Specifies the level where a trace switch is set.</span></span>  

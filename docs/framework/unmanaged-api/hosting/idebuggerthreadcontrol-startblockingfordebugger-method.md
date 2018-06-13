@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48aa7452373f83465b3e5ec8a09a9a00c902a22c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437928"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a><span data-ttu-id="4e16f-102">Método IDebuggerThreadControl::StartBlockingForDebugger</span><span class="sxs-lookup"><span data-stu-id="4e16f-102">IDebuggerThreadControl::StartBlockingForDebugger Method</span></span>
 <span data-ttu-id="4e16f-103">Notifica o host que os serviços de depuração estão prestes a começar a bloquear todos os threads.</span><span class="sxs-lookup"><span data-stu-id="4e16f-103">Notifies the host that the debugging services are about to start blocking all threads.</span></span>  
