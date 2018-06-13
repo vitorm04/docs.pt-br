@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
 ms.openlocfilehash: b00eeabe51798b2529360f95bcb81f1b6c1c2bb4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636673"
 ---
 # <a name="39before39-and-39after39-arguments-cannot-be-combined"></a><span data-ttu-id="45db6-102">&#39;Antes de&#39; e &#39;após&#39; argumentos não podem ser combinados</span><span class="sxs-lookup"><span data-stu-id="45db6-102">&#39;Before&#39; and &#39;After&#39; arguments cannot be combined</span></span>
 <span data-ttu-id="45db6-103">Uma lista de argumentos inclui tanto o `Before` e `After` argumentos que são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="45db6-103">An argument list includes both the `Before` and `After` arguments, which are mutually exclusive.</span></span>  

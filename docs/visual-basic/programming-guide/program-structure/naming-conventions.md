@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651912"
 ---
 # <a name="visual-basic-naming-conventions"></a><span data-ttu-id="5b9ec-102">Convenções de nomenclatura do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5b9ec-102">Visual Basic Naming Conventions</span></span>
 <span data-ttu-id="5b9ec-103">Quando você nomeia um elemento em seu aplicativo do Visual Basic, o primeiro caractere do nome deve ser um caractere alfabético ou um sublinhado.</span><span class="sxs-lookup"><span data-stu-id="5b9ec-103">When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore.</span></span> <span data-ttu-id="5b9ec-104">No entanto, observe que os nomes que começam com um sublinhado não são compatíveis com o [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span><span class="sxs-lookup"><span data-stu-id="5b9ec-104">Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span></span>  

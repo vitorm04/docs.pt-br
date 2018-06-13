@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634912"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="94c94-102">E/s de uma estrutura com campo de arquivo &#39; &lt;fieldname&gt; &#39; do tipo &#39; &lt;typename&gt; &#39; não é válido</span><span class="sxs-lookup"><span data-stu-id="94c94-102">File I/O of a structure with field &#39;&lt;fieldname&gt;&#39; of type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="94c94-103">A estrutura que você está tentando gravar em um arquivo contém um tipo sem suporte.</span><span class="sxs-lookup"><span data-stu-id="94c94-103">The structure you are attempting to write to a file contains an unsupported type.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
 ms.openlocfilehash: df368bdba73ca35dd70bdd2f4e88cc10af894b5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650118"
 ---
 # <a name="how-to-label-statements-visual-basic"></a><span data-ttu-id="5d7a9-102">Como rotular instruções (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d7a9-102">How to: Label Statements (Visual Basic)</span></span>
 <span data-ttu-id="5d7a9-103">Blocos de instrução são compostos de linhas de código delimitado por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="5d7a9-103">Statement blocks are made up of lines of code delimited by colons.</span></span> <span data-ttu-id="5d7a9-104">Linhas de código precedido por uma cadeia de caracteres ou inteiro de identificação são consideradas *rotulada*.</span><span class="sxs-lookup"><span data-stu-id="5d7a9-104">Lines of code preceded by an identifying string or integer are said to be *labeled*.</span></span> <span data-ttu-id="5d7a9-105">Rótulos de instruções são usados para marcar uma linha de código para identificá-lo para uso com instruções de como `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="5d7a9-105">Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.</span></span>  

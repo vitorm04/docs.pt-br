@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650193"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="077fa-102">Como agilizar o acesso a um objeto com um demarcador de qualificação longo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="077fa-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
 <span data-ttu-id="077fa-103">Se você acessar frequentemente um objeto que requer um caminho de qualificação de vários métodos e propriedades, você pode acelerar o seu código não repetindo o caminho de qualificação.</span><span class="sxs-lookup"><span data-stu-id="077fa-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  

@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
 ms.openlocfilehash: 9ec9d23f1f62358dc272f9764f88e3bb2ba41f78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599746"
 ---
 # <a name="ltcodegt-visual-basic"></a><span data-ttu-id="3d9f1-102">&lt;código&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d9f1-102">&lt;code&gt; (Visual Basic)</span></span>
 <span data-ttu-id="3d9f1-103">Indica que o texto tem várias linhas de código.</span><span class="sxs-lookup"><span data-stu-id="3d9f1-103">Indicates that the text is multiple lines of code.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651370"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a><span data-ttu-id="64967-102">Como criar uma variável que não se altera no valor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64967-102">How to: Create a Variable that Does Not Change in Value (Visual Basic)</span></span>
 <span data-ttu-id="64967-103">A noção de uma variável que não altera seu valor pode parecer ser contraditórias.</span><span class="sxs-lookup"><span data-stu-id="64967-103">The notion of a variable that does not change its value might appear to be contradictory.</span></span> <span data-ttu-id="64967-104">Mas há situações quando uma constante não é viável e é útil ter uma variável com um valor fixo.</span><span class="sxs-lookup"><span data-stu-id="64967-104">But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value.</span></span> <span data-ttu-id="64967-105">Nesse caso, você pode definir uma variável de membro com o [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="64967-105">In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.</span></span>  

@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
 ms.openlocfilehash: a2e5f411b0e3aefa3444e52296c45732f7458f04
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635678"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a><span data-ttu-id="bd0d5-102">Conexão para o tipo de biblioteca de objetos para processo remoto foi perdida</span><span class="sxs-lookup"><span data-stu-id="bd0d5-102">Connection to type library or object library for remote process has been lost</span></span>
 <span data-ttu-id="bd0d5-103">Você perdeu sua conexão à biblioteca de objetos do processo remoto ou biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="bd0d5-103">You lost your connection to the remote process's object library or type library.</span></span>  

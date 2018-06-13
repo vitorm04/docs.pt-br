@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476044"
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipant"></a><span data-ttu-id="41169-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span><span class="sxs-lookup"><span data-stu-id="41169-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span></span>
 <span data-ttu-id="41169-103">O serviço de protocolo WS-AT registrou com êxito um participante para um protocolo de controle.</span><span class="sxs-lookup"><span data-stu-id="41169-103">The WS-Atomic Transaction protocol service successfully registered a participant for a control protocol.</span></span>  

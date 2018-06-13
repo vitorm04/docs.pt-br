@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
 ms.openlocfilehash: 7d8bf87150fa6e05021dd430217ae130a6baa208
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634840"
 ---
 # <a name="device-unavailable"></a><span data-ttu-id="a81bf-102">Dispositivo não disponível</span><span class="sxs-lookup"><span data-stu-id="a81bf-102">Device unavailable</span></span>
 <span data-ttu-id="a81bf-103">Você perdeu sua conexão de rede ou o dispositivo que você está tentando acessar está offline ou não existe.</span><span class="sxs-lookup"><span data-stu-id="a81bf-103">Either you have lost your network connection, or the device that you are trying to access is offline or does not exist.</span></span>  

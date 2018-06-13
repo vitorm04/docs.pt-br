@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600894"
 ---
 # <a name="take-while-clause-visual-basic"></a><span data-ttu-id="cc9d1-102">Cláusula Take While (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc9d1-102">Take While Clause (Visual Basic)</span></span>
 <span data-ttu-id="cc9d1-103">Inclui elementos em uma coleção desde que uma condição especificada seja `true` e ignora os elementos restantes.</span><span class="sxs-lookup"><span data-stu-id="cc9d1-103">Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  

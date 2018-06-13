@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
 ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654210"
 ---
 # <a name="collection-initializers-visual-basic"></a><span data-ttu-id="9a189-102">Inicializadores de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a189-102">Collection Initializers (Visual Basic)</span></span>
 <span data-ttu-id="9a189-103">Os *inicializadores de coleção* fornecem uma sintaxe abreviada que permite criar uma coleção e preenchê-la com um conjunto inicial de valores.</span><span class="sxs-lookup"><span data-stu-id="9a189-103">*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values.</span></span> <span data-ttu-id="9a189-104">Os inicializadores de coleção são úteis quando você está criando uma coleção de um conjunto de valores conhecidos, por exemplo, uma lista de opções de menu ou de categorias, um conjunto inicial de valores numéricos, uma lista estática de cadeias de caracteres, como nomes de mês ou de dias, ou localizações geográficas, como uma lista de estados usada para validação.</span><span class="sxs-lookup"><span data-stu-id="9a189-104">Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.</span></span>  

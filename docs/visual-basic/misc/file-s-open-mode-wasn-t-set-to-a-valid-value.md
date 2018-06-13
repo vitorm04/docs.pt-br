@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635900"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a><span data-ttu-id="e3d35-102">Arquivo&#39;s abrir modo era&#39;definida como um valor válido</span><span class="sxs-lookup"><span data-stu-id="e3d35-102">File&#39;s open mode wasn&#39;t set to a valid value</span></span>
 <span data-ttu-id="e3d35-103">O valor fornecido para o modo de abertura do arquivo não é válido.</span><span class="sxs-lookup"><span data-stu-id="e3d35-103">The value supplied for the file's open mode was not valid.</span></span> <span data-ttu-id="e3d35-104">A tabela a seguir mostra os valores válidos para o <xref:Microsoft.VisualBasic.OpenMode> enumeração.</span><span class="sxs-lookup"><span data-stu-id="e3d35-104">The following table shows valid values for the <xref:Microsoft.VisualBasic.OpenMode> enumeration.</span></span>  

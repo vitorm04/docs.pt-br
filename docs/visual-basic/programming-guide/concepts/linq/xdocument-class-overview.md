@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
 ms.openlocfilehash: 98ab095d67add2375eaf912ade71114c022b2ebb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651178"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a><span data-ttu-id="4e13c-102">Visão geral da classe XDocument (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4e13c-102">XDocument Class Overview (Visual Basic)</span></span>
 <span data-ttu-id="4e13c-103">Este tópico apresenta a classe <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="4e13c-103">This topic introduces the <xref:System.Xml.Linq.XDocument> class.</span></span>  

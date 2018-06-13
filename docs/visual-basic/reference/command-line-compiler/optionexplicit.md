@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653592"
 ---
 # <a name="-optionexplicit"></a><span data-ttu-id="44c42-102">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="44c42-102">-optionexplicit</span></span>
 <span data-ttu-id="44c42-103">Faz com que o compilador para relatar erros se variáveis não são declaradas antes de serem usadas.</span><span class="sxs-lookup"><span data-stu-id="44c42-103">Causes the compiler to report errors if variables are not declared before they are used.</span></span>  
