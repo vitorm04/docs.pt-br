@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591428"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída
 Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere a possibilidade de aplicar o operador 'Await' para o resultado da chamada.  

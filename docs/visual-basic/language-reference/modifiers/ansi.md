@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595073"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
 Especifica que o Visual Basic deve empacotar todas as cadeias de caracteres para valores American National Standards Institute (ANSI), independentemente do nome do procedimento externo que está sendo declarado.  

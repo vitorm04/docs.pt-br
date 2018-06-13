@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591827"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Estendendo o namespace My no Visual Basic
 O `My` namespace em Visual Basic expõe propriedades e métodos que permitem que você facilmente aproveite a potência do .NET Framework. O `My` namespace simplifica problemas comuns de programação, reduzindo frequentemente uma tarefa difícil para uma única linha de código. Além disso, o `My` namespace é totalmente extensível para que você pode personalizar o comportamento de `My` e adicionar novos serviços para sua hierarquia para adaptar-se às necessidades de aplicativos específicos. Este tópico aborda como personalizar membros existentes da `My` namespace e como adicionar suas próprias classes personalizadas para o `My` namespace.  

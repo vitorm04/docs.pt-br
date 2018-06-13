@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365336"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Operações de transação e de cópia em massa
 As operações de cópia em massa podem ser executadas como operações isoladas ou como parte de uma transação de várias etapas. Esta última opção permite executar mais de uma operação de cópia em massa dentro da mesma transação, bem como executar outras operações de banco de dados (como inserções, atualizações e exclusões), podendo ainda confirmar ou reverter toda a transação.  

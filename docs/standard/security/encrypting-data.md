@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589822"
 ---
 # <a name="encrypting-data"></a>Criptografando dados
 Criptografias simétrica e assimétrica são executadas usando processos diferentes. A criptografia simétrica é executada em fluxos e, portanto, é útil para criptografar grandes quantidades de dados. A criptografia assimétrica é executada em um pequeno número de bytes e, portanto, só é útil para pequenas quantidades de dados.  

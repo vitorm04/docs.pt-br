@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593682"
 ---
 # <a name="property-or-method-not-found"></a>Propriedade ou método não localizado
 O método do objeto referenciado ou propriedade de objeto não está definida.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591814"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo de dados Data (Visual Basic)
 Contém os valores de (8 bytes) do IEEE de 64 bits que representam datas desde 1 de janeiro do ano de 0001 até 31 de dezembro do ano 9999 e tempos de 12:00:00 AM (meia-noite) por meio de 11:59:59.9999999 PM. Cada incremento representa 100 nanossegundos de tempo decorrido desde o início de 1º de janeiro do ano 1 no calendário gregoriano. O valor máximo representa 100 nanossegundos antes do início do dia 1º de janeiro do ano 10000.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503718"
 ---
 # <a name="using-data-contracts"></a>Usando contratos de dados
 Um *contrato de dados* é um contrato formal entre um serviço e um cliente que abstrata descreve os dados sejam trocados. Ou seja, para se comunicar, o cliente e o serviço não precisa compartilham os mesmos tipos, apenas os mesmos contratos de dados. Um contrato de dados define precisamente, para cada tipo de parâmetro ou retornado, quais dados são serializáveis (transformado em XML) sejam trocados.  

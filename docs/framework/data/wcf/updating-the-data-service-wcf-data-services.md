@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365651"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Atualizando o serviço de dados (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são controladas por meio de <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla alterações para entidades que relatam usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastrear entidades adicionadas e excluídas e também as alterações feitas nos valores de propriedade ou relações entre instâncias de entidade. As alterações controladas são enviadas para o serviço de dados como operações baseadas em REST ao chamar o <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> método.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474026"
 ---
 # <a name="message-logging"></a>Registro em log de mensagens
 Windows Communication Foundation (WCF) fornece a capacidade de registrar em log mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja quais a mensagem e é de corpo de mensagem semelhante. Esse tipo de log é particularmente útil para que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem foi recebida. Você também pode examinar a segurança tokens utilizados, partes criptografado e assinado e partes permanecem intactas.  

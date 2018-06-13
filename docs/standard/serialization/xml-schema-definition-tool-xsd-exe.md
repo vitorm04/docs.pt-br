@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592451"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou classes de common language runtime de arquivos XDR, XML e XSD files, ou de classes em um assembly de tempo de execução.  

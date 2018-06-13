@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397930"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como conectar um delegado usando a reflexão
 Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365054"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Cenários de aplicativos (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oferece suporte a um conjunto principal de cenários para expor e consumir dados como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Este tópico aponta os tópicos relevantes a esses cenários.  

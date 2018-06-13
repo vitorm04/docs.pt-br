@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508482"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Especificando transferência de dados em contratos de serviço
 O Windows Communication Foundation (WCF) pode ser pensada como uma infraestrutura de mensagens. Operações de serviço podem receber mensagens, processá-los e enviar mensagens. As mensagens são descritas usando contratos de operação. Por exemplo, considere o seguinte contrato.  

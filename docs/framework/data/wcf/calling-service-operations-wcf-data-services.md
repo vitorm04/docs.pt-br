@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364850"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Chamar operações de serviço (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define as operações de serviço para um serviço de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina essas operações como métodos no serviço de dados. Como outros recursos do serviço de dados, essas operações são resolvidas usando URIs. Uma operação de serviço pode retornar coleções de tipos de entidade, instâncias de tipo de entidade única e os tipos primitivos, como integer e string. Uma operação de serviço também pode retornar `null` (`Nothing` no Visual Basic). O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente pode ser usada para acessar as operações de serviço que dá suporte a solicitações HTTP GET. Esses tipos de operações de serviço são definidos como métodos que têm o <xref:System.ServiceModel.Web.WebGetAttribute> aplicado. Para obter mais informações, consulte [operações de serviço](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365924"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Recursos fornecidos pelo System. Transactions
 Esta seção descreve como você pode usar os recursos fornecidos pelo <xref:System.Transactions> namespace para escrever seu próprio Gerenciador de recursos e dos aplicativos transacional. Especificamente, esta seção aborda como criar e participar de uma transação (local ou distribuída) com um ou vários participantes.  

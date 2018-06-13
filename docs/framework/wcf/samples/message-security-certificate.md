@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508431"
 ---
 # <a name="message-security-certificate"></a>Certificado de mensagem de segurança
 Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com autenticação de certificado x. 509 v3 para o cliente e requer a autenticação de servidor usando o certificado do servidor x. 509 v3. Este exemplo usa as configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Este exemplo se baseia o [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) e consiste em um programa de console de cliente e uma biblioteca de serviços hospedados pelo Internet Information Services (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507857"
 ---
 # <a name="datacontract-surrogate"></a>Alternativa de DataContract
 Este exemplo demonstra como processos como a serialização, desserialização, exportação de esquema e importação de esquema podem ser personalizados usando um contrato de dados alternativos classe. Este exemplo mostra como usar um substituto em um cenário de cliente e servidor onde os dados são serializados e transmitidos entre um cliente do Windows Communication Foundation (WCF) e o serviço.  

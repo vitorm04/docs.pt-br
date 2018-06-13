@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590706"
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de dados curto (Visual Basic)
 Armazena inteiros de 16 bits (2 bytes) que variam de -32.768 a 32.767.  

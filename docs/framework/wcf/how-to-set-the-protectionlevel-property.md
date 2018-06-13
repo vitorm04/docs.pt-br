@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501527"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Como definir a propriedade ProtectionLevel
 Você pode definir o nível de proteção, aplicando um atributo apropriado e definindo a propriedade. Você pode configurar a proteção no nível de serviço para afetar todas as partes de todas as mensagens, ou você pode definir a proteção nos níveis de cada vez mais granulares de métodos para partes da mensagem. Para obter mais informações sobre o `ProtectionLevel` propriedade, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md).  

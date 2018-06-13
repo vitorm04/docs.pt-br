@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592009"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Visão geral dos primitivos de sincronização
 <a name="top"></a>O .NET Framework fornece uma variedade de primitivos de sincronização para controlar as interações de threads e evitar condições de corrida. Eles podem ser divididos em três categorias: operações interliconectadas, sinalização e bloqueio.  

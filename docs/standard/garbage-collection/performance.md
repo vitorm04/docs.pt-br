@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579789"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 <a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.  

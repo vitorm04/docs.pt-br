@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362844"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospeda o serviço de dados (WCF Data Services)
 Usando [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar um serviço que expõe dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Esse serviço de dados é definido como uma classe que herda de <xref:System.Data.Services.DataService%601>. Essa classe fornece a funcionalidade necessária para processar mensagens de solicitação, executar atualizações em relação à fonte de dados e gerar mensagens de respostas, conforme exigido pelo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. No entanto, um serviço de dados não é possível vincular e escutar em um soquete de rede para solicitações HTTP de entrada. Para essa funcionalidade necessária, o serviço de dados se baseia em um componente de hospedagem.  

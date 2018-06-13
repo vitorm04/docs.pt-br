@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365287"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usando um serviço de dados em um aplicativo cliente (WCF Data Services)
 Você pode acessar um serviço que expõe um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed fornecendo um URI para um navegador da Web. O URI fornece o endereço de um recurso e, em seguida, são enviadas a esses endereços mensagens de solicitação para acessar ou alterar os dados subjacentes que o recurso representa. O navegador emite um comando HTTP GET e retorna o recurso solicitado como um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Para obter mais informações, consulte [acessando o serviço de um navegador da Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  

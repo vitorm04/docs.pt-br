@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398216"
 ---
 # <a name="basic-and-digest-authentication"></a>Autenticação Básica e Digest
 A implementação <xref:System.Net> da autenticação básica e digest está em conformidade com o RFC2617 – autenticação HTTP: autenticação básica e digest (disponível no site da World Wide Web Consortium em www.w3.org).  

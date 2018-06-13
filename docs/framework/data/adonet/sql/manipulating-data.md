@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363108"
 ---
 # <a name="manipulating-data"></a>Manipulando dados
 Antes da introdução de Multiple Active Result Sets (MARS), os desenvolvedores precisavam usar várias conexões ou cursores de servidor para solucionar determinados cenários. Além disso, quando várias conexões foram usadas em uma situação transacional, associações de saída (com **sp_getbindtoken** e **sp_bindsession**) foi necessária. Os cenários a seguir mostram como usar uma conexão habilitada para MARS em vez de várias conexões.  

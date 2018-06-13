@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591007"
 ---
 # <a name="datarepeater-control-visual-studio"></a>Controles DataRepeater (Visual Studio)
 O Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle é um contêiner rolável para repetido de controles que exibem dados, por exemplo, as linhas em uma tabela de banco de dados. Ele pode ser usado como uma alternativa para o <xref:System.Windows.Forms.DataGridView> controlar quando precisar de mais controle sobre o layout dos dados.  

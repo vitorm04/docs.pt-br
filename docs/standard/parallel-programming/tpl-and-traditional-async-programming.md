@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591749"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
 O .NET Framework fornece os dois padrões a seguir para executar operações assíncronas vinculadas a E/S e a computação:  

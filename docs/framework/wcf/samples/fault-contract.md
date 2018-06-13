@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504153"
 ---
 # <a name="fault-contract"></a>Contrato de falha
 O contrato de falha demonstra como comunicar informações de erro de um serviço para um cliente. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com um código adicional adicionado para o serviço para converter uma exceção interna para uma falha. O cliente tenta executar divisão por zero para forçar uma condição de erro no serviço.  

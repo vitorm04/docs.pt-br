@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362637"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizando permissões com representação no SQL Server
 Muitos aplicativos usam procedimentos armazenados para acessar os dados, dependendo do encadeamento de propriedade para restringir o acesso a tabelas base. Você pode conceder permissões EXECUTE em procedimentos armazenados, revogando ou negando permissões nas tabelas base. O SQL Server não verifica as permissões do chamador se o procedimento armazenado e as tabelas têm o mesmo proprietário. No entanto, o encadeamento de propriedades não funcionará se os objetos tiverem proprietários diferentes ou no caso de SQL dinâmico.  

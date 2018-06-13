@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505059"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 O exemplo de Http dupla demonstra como configurar o `WSDualHttpBinding` associação. Este exemplo consiste em um programa de console de cliente (.exe) e uma biblioteca de serviço (. dll) hospedada pelo Internet Information Services (IIS). O serviço implementa um contrato duplex. O contrato é definido pelo `ICalculatorDuplex` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir). Neste exemplo, o `ICalculatorDuplex` interface permite que o cliente executar operações matemáticas, calcular um resultado de execução ao longo da sessão. Independentemente, o serviço retorna resultados sobre o `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviados entre cliente e serviço. O `WSDualHttpBinding` ligação oferece suporte à comunicação duplex.  

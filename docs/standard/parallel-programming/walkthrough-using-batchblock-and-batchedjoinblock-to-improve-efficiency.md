@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591840"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Explicação passo a passo: Usando BatchBlock e BatchedJoinBlock para aumentar a eficiência
 A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para que você possa receber e armazenar em buffer os dados de uma ou mais fontes e, depois, propagar esses dados armazenados em buffer como uma coleção. Este mecanismo de envio em lote é útil quando você coleta dados de uma ou mais fontes e, em seguida, processa vários elementos de dados como um lote. Por exemplo, considere um aplicativo que usa o fluxo de dados para inserir registros em um banco de dados. Essa operação pode ser mais eficiente se vários itens forem inseridos ao mesmo tempo, em vez de um de cada vez sequencialmente. Este documento descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para melhorar a eficiência dessas operações de inserção de banco de dados. Também descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar os resultados e todas as exceções que ocorrem quando o programa lê de um banco de dados.

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e9cd423bd351d9e4b12f21fe3a4a52c9909b7ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432054"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>Método ICLRStrongName::StrongNameKeyDelete
 Exclui o contêiner de chave especificado.  

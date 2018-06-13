@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364173"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativado quando um thread tenta introduzir uma anulação assíncrona em outro thread. Anulações de thread síncronas não ativam o MDA `asynchronousThreadAbort`.

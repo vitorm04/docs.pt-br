@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364201"
 ---
 # <a name="sql-server-security"></a>Segurança do SQL Server
 SQL Server tem muitos recursos que oferecem suporte à criação de aplicativos de banco de dados seguro.  

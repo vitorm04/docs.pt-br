@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365872"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código. As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade. As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado. As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.  

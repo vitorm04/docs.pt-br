@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364217"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorização e permissões no SQL Server
 Ao criar objetos de banco de dados, você deve conceder permissões explicitamente para torná-los acessíveis aos usuários. Cada objeto protegível tem permissões que podem ser concedidas a uma entidade de segurança usando declarações de permissão.  

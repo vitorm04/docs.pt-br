@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364249"
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos sempre participarem alguns *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo cria é desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  

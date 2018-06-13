@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393913"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW no CLR
 Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para Windows). Cada evento tem uma palavra-chave e um nível associados, que são descritos no tópico [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). O CLR tem dois provedores para os eventos:  

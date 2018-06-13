@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396253"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Como detectar a disponibilidade de rede e alterações de endereço
 Este exemplo mostra como detectar alterações no endereço de rede de uma interface.  

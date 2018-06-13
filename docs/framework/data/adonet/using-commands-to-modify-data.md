@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365038"
 ---
 # <a name="using-commands-to-modify-data"></a>Usando os comandos para modificar dados
 Usando um provedor de dados do .NET Framework, você pode executar os procedimentos armazenados ou instruções definição de dados idioma (por exemplo, CREATE TABLE e ALTER COLUMN) para executar a manipulação de esquema em um banco de dados ou catálogo. Esses comandos não retornam linhas como uma consulta, portanto, o **comando** objeto fornece um **ExecuteNonQuery** para processá-las.  

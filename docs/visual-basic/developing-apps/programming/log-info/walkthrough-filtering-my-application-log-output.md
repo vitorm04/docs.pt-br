@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591879"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.  

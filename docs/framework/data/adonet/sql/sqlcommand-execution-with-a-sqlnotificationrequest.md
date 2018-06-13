@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365547"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Execução de SqlCommand com um SqlNotificationRequest
 Um <xref:System.Data.SqlClient.SqlCommand> pode ser configurado para gerar uma notificação quando as alterações de dados depois que ele foi buscado do servidor e o conjunto de resultados deve ser diferente se a consulta foi executada novamente. Isso é útil para situações em que você deseja usar filas de notificação personalizada no servidor ou quando você não desejar manter objetos vivos.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386165"
 ---
 # <a name="wcf-directive-syntax"></a>Sintaxe de diretiva do WCF
 Especifica as configurações usadas pelas diretivas do Windows Communication Foundation (WCF) em arquivos. svc para direcionar os compiladores. Cada diretiva pode conter um ou mais atributos (combinados com valores) que são específicos dessa diretiva. O WCF possui apenas o [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva.  

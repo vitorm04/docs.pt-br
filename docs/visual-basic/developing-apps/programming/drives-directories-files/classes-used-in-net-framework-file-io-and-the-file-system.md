@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590693"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .NET Framework, categorizadas em classes de E/S de arquivos, classes usadas para criar fluxos e classes usadas para ler e gravar em fluxos.  

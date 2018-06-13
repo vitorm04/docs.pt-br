@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394066"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Como fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo
 Este exemplo mostra como fazer a conversão de tipo de uma WebRequest para que você possa acessar propriedades específicas de protocolo.  

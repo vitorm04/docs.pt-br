@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359791"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Suporte do SqlClient para LocalDB
 A partir do SQL Server Codinome Denali, uma versão leve do SQL Server, denominada LocalDB, estarão disponível. Este tópico discute como se conectar a um banco de dados LocalDB.  
