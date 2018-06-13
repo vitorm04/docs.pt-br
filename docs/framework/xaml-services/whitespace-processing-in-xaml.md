@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565539"
 ---
 # <a name="whitespace-processing-in-xaml"></a>Processamento de Espaço em branco em XAML
 As regras de linguagem XAML de estado que espaço em branco significativo deve ser processado por um [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementação do processador. Este tópico documenta essas regras da linguagem XAML. Ele também documenta o tratamento de espaço em branco adicional que é definido pelo [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementação do processador XAML e o gravador XAML para serialização.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351934"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Como: Use os procedimentos armazenados mapeados para formas sequenciais de resultado
 Esse tipo de procedimento armazenado pode gerar mais de uma forma de resultado, mas você souber ordem em que os resultados são retornados. Compare este cenário com o cenário onde você não souber a sequência de retorna. Para obter mais informações, consulte [como: Use procedimentos armazenados mapeados para várias formas de resultado](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  

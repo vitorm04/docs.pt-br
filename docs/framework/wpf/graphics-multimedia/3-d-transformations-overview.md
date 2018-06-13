@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557973"
 ---
 # <a name="3-d-transformations-overview"></a>Visão geral de transformações 3D
 Este tópico descreve como aplicar transformações a modelos 3D no sistema de elementos gráficos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. As transformações permitem ao desenvolvedor reposicionar, redimensionar e reorientar modelos sem alterar os valores base que os definem.  

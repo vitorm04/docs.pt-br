@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362215"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprendendo com explicações passo a passo
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação fornece várias instruções passo a passo. Este tópico aborda alguns problemas gerais da explicação passo a passo (incluindo solução de problemas) e fornece links para várias explicações passo a passo para iniciantes aprenderem sobre o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

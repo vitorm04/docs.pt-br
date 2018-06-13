@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557401"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Como associar a uma coleção e exibir informações com base na seleção
 Em um cenário mestre-detalhes simples, você tem uma associação de dados <xref:System.Windows.Controls.ItemsControl> como um <xref:System.Windows.Controls.ListBox>. Com base na seleção do usuário, se exibe mais informações sobre o item selecionado. Este exemplo mostra como implementar este cenário.  

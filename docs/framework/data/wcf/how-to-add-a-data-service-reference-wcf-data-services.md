@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356225"
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Como: adicionar uma referência de serviço de dados (WCF Data Services)
 Você pode usar o **adicionar referência de serviço** caixa de diálogo no Visual Studio para adicionar uma referência a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Isso permite que você acesse mais facilmente um serviço de dados em um aplicativo cliente que você desenvolver no Visual Studio. Quando você concluir este procedimento, classes de dados são gerados com base nos metadados que é obtido do serviço de dados. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  

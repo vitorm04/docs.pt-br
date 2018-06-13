@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362156"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Como: Validar DBML e arquivos de mapeamento externos
 Os arquivos de mapeamento externos e os arquivos .dbml que você altera devem ser validadas contra suas respectivas definições de esquema. Este tópico fornece aos usuários do Visual Studio com as etapas para implementar o processo de validação.  

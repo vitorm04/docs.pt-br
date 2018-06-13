@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554801"
 ---
 # <a name="clocks-how-to-topics"></a>Tópicos explicativos de relógios
 Os tópicos a seguir descrevem como usar um <xref:System.Windows.Media.Animation.Clock> objeto para manter informações de estado de tempo para um <xref:System.Windows.Media.Animation.Timeline>.  

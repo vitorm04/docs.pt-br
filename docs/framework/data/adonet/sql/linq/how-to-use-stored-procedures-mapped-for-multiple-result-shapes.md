@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356779"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Como: Use os procedimentos armazenados mapeados para várias formas de resultado
 Quando um procedimento armazenado pode retornar várias formas de resultado, o tipo de retorno não pode ser fortemente tipado a uma única forma de projeção. Embora [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pode gerar todos os tipos possíveis de projeção, ela não é possível saber a ordem na qual eles serão retornados.  

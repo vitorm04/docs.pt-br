@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360446"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Como excluir linhas do banco de dados
 Você pode excluir linhas em um banco de dados, removendo correspondente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] objetos de sua coleção de tabela relacionada. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Converte as alterações para o SQL apropriado `DELETE` comandos.  

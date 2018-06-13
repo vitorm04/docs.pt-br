@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533147"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>Controles HScrollBar e VScrollBar (Windows Forms)
 Controles de barra de rolagem de formulários do Windows são usados para fornecer fácil navegação por uma longa lista de itens ou uma grande quantidade de informações por qualquer um de rolagem horizontal ou verticalmente dentro de um aplicativo ou controle. Barras de rolagem são um elemento comum da interface do Windows.  

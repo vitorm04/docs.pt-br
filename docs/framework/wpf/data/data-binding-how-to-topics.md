@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557680"
 ---
 # <a name="data-binding-how-to-topics"></a>Tópicos explicativos de vinculação de dados
 Os tópicos nesta seção descrevem como usar associação de dados para associar elementos aos dados de uma variedade de fontes de dados na forma de objetos common language runtime (CLR) e XML.  

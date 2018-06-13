@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556023"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Como posicionar o cursor no início ou no término do texto em um controle TextBox
 Este exemplo mostra como posicionar o cursor no início ou no final do conteúdo do texto de um <xref:System.Windows.Controls.TextBox> controle.  

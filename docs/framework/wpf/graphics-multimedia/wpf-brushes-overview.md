@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566594"
 ---
 # <a name="wpf-brushes-overview"></a>Visão geral de pincéis do WPF
 Tudo o que é visível na tela é visível porque foi pintado por um pincel. Por exemplo, um pincel é usado para descrever a tela de fundo de um botão, o primeiro plano do texto e o preenchimento de uma forma. Este tópico apresenta os conceitos de pintura com pincéis [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e fornece exemplos. Os pincéis permitem que você pinte objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com qualquer coisa, desde cores simples e sólidas a conjuntos complexos de padrões e imagens.  
