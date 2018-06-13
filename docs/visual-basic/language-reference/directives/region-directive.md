@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588429"
 ---
 # <a name="region-directive"></a>Diretiva #Region
 Recolhe e oculta seções de código em arquivos do Visual Basic.  

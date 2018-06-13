@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418900"
 ---
 # <a name="icordebugmodulegetname-method"></a>Método ICorDebugModule::GetName
 Obtém o nome do arquivo do módulo.  

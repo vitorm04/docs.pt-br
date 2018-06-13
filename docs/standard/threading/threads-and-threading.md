@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592178"
 ---
 # <a name="threads-and-threading"></a>Threads e threading
 Os sistemas operacionais usam processos para separar os diferentes aplicativos que eles estão executando. Os threads são a unidade básica à qual um sistema operacional aloca tempo de processador, e mais de um thread pode estar executando código dentro desse processo. Cada thread mantém manipuladores de exceção, uma prioridade de agendamento e um conjunto de estruturas que o sistema usa para salvar o contexto do thread até que ele seja agendado. O contexto de thread inclui todas as informações que o thread precisa para continuar a execução perfeitamente, incluindo o conjunto de registros de CPU e pilha do thread, no espaço de endereço do processo de host do thread.  

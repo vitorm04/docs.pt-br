@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531616"
 ---
 # <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Como habilitar a reorganização de itens ToolStrip em tempo de execução no Windows Forms
 Você pode habilitar o usuário reorganizar <xref:System.Windows.Forms.ToolStripItem> controles a <xref:System.Windows.Forms.ToolStrip>.  

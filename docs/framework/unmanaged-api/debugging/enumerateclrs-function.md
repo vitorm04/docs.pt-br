@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408223"
 ---
 # <a name="enumerateclrs-function"></a>Função EnumerateCLRs
 Fornece um mecanismo para enumerar CLRs em um processo.  

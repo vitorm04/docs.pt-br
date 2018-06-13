@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598121"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Argumento &lt;argumentname&gt; não pode ser uma cadeia de caracteres vazia ou Nothing
 O argumento requer um valor diferente de uma cadeia de caracteres vazia ("") ou `Nothing`. Isso pode ser resultado de calcular incorretamente o valor.  

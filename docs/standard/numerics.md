@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588691"
 ---
 # <a name="numerics-in-the-net-framework"></a>Numéricos no  .NET Framework
 O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de ponto flutuante, bem como <xref:System.Numerics.BigInteger>, um tipo integral sem limite teórico superior ou inferior <xref:System.Numerics.Complex>, um tipo que representa números complexos e um conjunto de tipos de vetores habilitados por SIMD no namespace <xref:System.Numerics>.  

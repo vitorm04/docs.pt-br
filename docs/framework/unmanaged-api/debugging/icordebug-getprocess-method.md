@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc095b2c9f546e8b75d4330024c8c593f7ada8b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404765"
 ---
 # <a name="icordebuggetprocess-method"></a>Método ICorDebug::GetProcess
 Obtém um ponteiro para a instância de "ICorDebugProcess" para o processo especificado.  

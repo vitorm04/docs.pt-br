@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594787"
 ---
 # <a name="some-subkeys-cannot-be-deleted"></a>Não é possível excluir algumas subchaves
 Foi feita uma tentativa para excluir uma chave do registro, mas a operação falhou porque não não possível excluir algumas subchaves. Geralmente, isso é devido à falta de permissões.  

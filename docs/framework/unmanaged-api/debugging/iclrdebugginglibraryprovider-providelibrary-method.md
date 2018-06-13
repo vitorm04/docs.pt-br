@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407217"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Método ICLRDebuggingLibraryProvider::ProvideLibrary
 Obtém um provedor de biblioteca de interface de retorno de chamada que permite common language runtime (CLR) específicos da versão depuração bibliotecas de ser localizada e carregada na demanda.  

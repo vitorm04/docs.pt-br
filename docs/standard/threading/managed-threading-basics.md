@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586507"
 ---
 # <a name="managed-threading-basics"></a>Noções básicas de threading gerenciado
 Os cinco primeiros tópicos desta seção foram projetados para ajudá-lo a determinar quando usar threading gerenciado e explicar alguns recursos básicos. Para obter informações sobre as classes que fornecem recursos adicionais, confira [Recursos e objetos de threading](../../../docs/standard/threading/threading-objects-and-features.md) e [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
