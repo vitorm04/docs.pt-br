@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751669"
 ---
 # <a name="ltnetmsmqbindinggt"></a><span data-ttu-id="1a240-102">&lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="1a240-102">&lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="1a240-103">Define uma associação enfileirada adequada para comunicação entre computadores.</span><span class="sxs-lookup"><span data-stu-id="1a240-103">Defines a queued binding suitable for cross-machine communication.</span></span>  

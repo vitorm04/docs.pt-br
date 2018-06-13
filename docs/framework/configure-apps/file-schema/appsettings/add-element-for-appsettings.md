@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753632"
 ---
 # <a name="add-element-for-appsettings"></a><span data-ttu-id="c59fd-102">\<Adicionar > elemento \<appSettings ></span><span class="sxs-lookup"><span data-stu-id="c59fd-102">\<add> element for \<appSettings></span></span>
 

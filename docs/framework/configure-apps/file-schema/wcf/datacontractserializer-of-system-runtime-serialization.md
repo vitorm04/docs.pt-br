@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747701"
 ---
 # <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a><span data-ttu-id="c2e32-102">&lt;dataContractSerializer&gt; of &lt;system.runtime.serialization&gt;</span><span class="sxs-lookup"><span data-stu-id="c2e32-102">&lt;dataContractSerializer&gt; of &lt;system.runtime.serialization&gt;</span></span>
 <span data-ttu-id="c2e32-103">Contém dados de configuração para o <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="c2e32-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  

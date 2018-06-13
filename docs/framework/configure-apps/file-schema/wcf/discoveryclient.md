@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753161"
 ---
 # <a name="ltdiscoveryclientgt"></a><span data-ttu-id="53fed-102">&lt;DiscoveryClient&gt;</span><span class="sxs-lookup"><span data-stu-id="53fed-102">&lt;discoveryClient&gt;</span></span>
 <span data-ttu-id="53fed-103">Um elemento de configuração para criar uma associação personalizada que permite que um aplicativo cliente para procurar por um serviço detectável e encontre seu endereço em tempo de execução automaticamente.</span><span class="sxs-lookup"><span data-stu-id="53fed-103">A configuration element for creating a custom binding that enables a client application to automatically search for a discoverable service and find its address at runtime.</span></span>  

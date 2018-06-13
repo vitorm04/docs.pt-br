@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752488"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="836ce-102">Decodificador de mensagens</span><span class="sxs-lookup"><span data-stu-id="836ce-102">Message Encoding</span></span>
 <span data-ttu-id="836ce-103">Codificação é o processo de transformar um conjunto de caracteres Unicode em uma sequência de bytes.</span><span class="sxs-lookup"><span data-stu-id="836ce-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="836ce-104">Decodificação de é o processo inverso.</span><span class="sxs-lookup"><span data-stu-id="836ce-104">Decoding is the reverse process.</span></span> <span data-ttu-id="836ce-105">Windows Communication Foundation (WCF) inclui três tipos de codificação para mensagens SOAP: texto, binária e mecanismo de otimização de transmissão mensagem (MTOM).</span><span class="sxs-lookup"><span data-stu-id="836ce-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

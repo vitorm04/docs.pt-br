@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748004"
 ---
 # <a name="ltclaimtyperequirementsgt-element"></a><span data-ttu-id="a0eb5-102">elemento &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="a0eb5-102">&lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="a0eb5-103">Especifica uma coleção de tipos de declaração necessária.</span><span class="sxs-lookup"><span data-stu-id="a0eb5-103">Specifies a collection of required claim types.</span></span>  

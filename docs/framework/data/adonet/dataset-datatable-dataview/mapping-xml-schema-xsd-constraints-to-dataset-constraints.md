@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760980"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="61a41-102">Restrições de esquema (XSD) de XML de mapeamento para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="61a41-102">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="61a41-103">A linguagem de definição de esquema XML (XSD) permite que sejam especificadas em elementos e atributos que define as restrições.</span><span class="sxs-lookup"><span data-stu-id="61a41-103">The XML Schema definition language (XSD) allows constraints to be specified on the elements and attributes it defines.</span></span> <span data-ttu-id="61a41-104">Ao mapear um esquema XML para esquema relacional em um <xref:System.Data.DataSet>, restrições de esquema XML são mapeadas para restrições relacionais apropriadas em tabelas e colunas dentro de **conjunto de dados**.</span><span class="sxs-lookup"><span data-stu-id="61a41-104">When mapping an XML Schema to relational schema in a <xref:System.Data.DataSet>, XML Schema constraints are mapped to appropriate relational constraints on the tables and columns within the **DataSet**.</span></span>  

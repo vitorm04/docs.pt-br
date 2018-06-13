@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747743"
 ---
 # <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="b5195-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="b5195-102">&lt;bindingElementExtensions&gt;</span></span>
 <span data-ttu-id="b5195-103">Esta seção permite o uso de um elemento de associação personalizada de um computador ou arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b5195-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="b5195-104">Você pode adicionar um elemento de associação personalizada para esta coleção usando o `add` palavra-chave e a configuração a `type` atributo do elemento para uma extensão de elemento de associação, bem como a `name` de atributo para o elemento de associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="b5195-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  

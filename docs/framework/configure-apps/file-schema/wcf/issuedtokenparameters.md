@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749381"
 ---
 # <a name="ltissuedtokenparametersgt"></a><span data-ttu-id="f5649-102">&lt;issuedTokenParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="f5649-102">&lt;issuedTokenParameters&gt;</span></span>
 <span data-ttu-id="f5649-103">Especifica os parâmetros para um token de segurança emitido em um cenário de segurança federada.</span><span class="sxs-lookup"><span data-stu-id="f5649-103">Specifies the parameters for a security token issued in a Federated security scenario.</span></span>  

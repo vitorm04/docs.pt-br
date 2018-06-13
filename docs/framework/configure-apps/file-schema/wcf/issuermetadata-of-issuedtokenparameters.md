@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746508"
 ---
 # <a name="ltissuermetadatagt-of-ltissuedtokenparametersgt"></a><span data-ttu-id="46b76-102">&lt;issuerMetadata&gt; de &lt;issuedTokenParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="46b76-102">&lt;issuerMetadata&gt; of &lt;issuedTokenParameters&gt;</span></span>
 <span data-ttu-id="46b76-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="46b76-103">\<system.serviceModel></span></span>  

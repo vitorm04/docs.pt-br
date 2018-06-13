@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747119"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="1001f-102">&lt;limpar&gt; elemento &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="1001f-102">&lt;clear&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="1001f-103">Especifica que todas as declarações de tipos a serem removidos na credencial federada.</span><span class="sxs-lookup"><span data-stu-id="1001f-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="1001f-104">Isso garante que a coleção começa vazia.</span><span class="sxs-lookup"><span data-stu-id="1001f-104">This ensures that the collection starts empty.</span></span>  

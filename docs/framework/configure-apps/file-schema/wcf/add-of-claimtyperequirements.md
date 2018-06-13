@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750590"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a><span data-ttu-id="0b22c-102">&lt;adicionar&gt; &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="0b22c-102">&lt;add&gt; of &lt;claimTypeRequirements&gt;</span></span>
 <span data-ttu-id="0b22c-103">Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada.</span><span class="sxs-lookup"><span data-stu-id="0b22c-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="0b22c-104">Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.</span><span class="sxs-lookup"><span data-stu-id="0b22c-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

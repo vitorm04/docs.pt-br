@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754139"
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a><span data-ttu-id="19ad9-102">&lt;adicionar&gt; &lt;baseAddresses&gt;</span><span class="sxs-lookup"><span data-stu-id="19ad9-102">&lt;add&gt; of &lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="19ad9-103">Representa um elemento de configuração que especifica os endereços base usados pelo host de serviço.</span><span class="sxs-lookup"><span data-stu-id="19ad9-103">Represents a configuration element that specifies the base addresses used by the service host.</span></span>  

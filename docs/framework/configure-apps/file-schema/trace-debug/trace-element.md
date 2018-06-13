@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746053"
 ---
 # <a name="lttracegt-element"></a><span data-ttu-id="159e4-102">&lt;rastreamento&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="159e4-102">&lt;trace&gt; Element</span></span>
 <span data-ttu-id="159e4-103">Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="159e4-103">Contains listeners that collect, store, and route tracing messages.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748055"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a><span data-ttu-id="9135a-102">&lt;ponto de extremidade&gt; do &lt;cliente&gt;</span><span class="sxs-lookup"><span data-stu-id="9135a-102">&lt;endpoint&gt; of &lt;client&gt;</span></span>
 <span data-ttu-id="9135a-103">Especifica o contrato, associação e propriedades de endereço do ponto de extremidade de canal, que é usado pelos clientes para se conectar a pontos de extremidade de serviço no servidor.</span><span class="sxs-lookup"><span data-stu-id="9135a-103">Specifies contract, binding, and address properties of the channel endpoint, which is used by clients to connect to service endpoints on the server.</span></span>  

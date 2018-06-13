@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749615"
 ---
 # <a name="ltscopesgt"></a><span data-ttu-id="1e3e9-102">&lt;Escopos&gt;</span><span class="sxs-lookup"><span data-stu-id="1e3e9-102">&lt;scopes&gt;</span></span>
 <span data-ttu-id="1e3e9-103">Contém uma coleção de elementos de configuração que especificam Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.</span><span class="sxs-lookup"><span data-stu-id="1e3e9-103">Contains a collection of configuration elements that specify custom scope Uris that can be used to filter service endpoints during query.</span></span>  
