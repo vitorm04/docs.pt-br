@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747519"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a><span data-ttu-id="397fd-102">&lt;AppContextSwitchOverrides&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="397fd-102">&lt;AppContextSwitchOverrides&gt; Element</span></span>
 <span data-ttu-id="397fd-103">Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="397fd-103">Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.</span></span>  

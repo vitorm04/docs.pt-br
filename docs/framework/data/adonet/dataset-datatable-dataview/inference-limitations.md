@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760044"
 ---
 # <a name="inference-limitations"></a><span data-ttu-id="f0a51-102">Limitações de inferência</span><span class="sxs-lookup"><span data-stu-id="f0a51-102">Inference Limitations</span></span>
 <span data-ttu-id="f0a51-103">O processo de inferir um <xref:System.Data.DataSet> esquema do XML pode resultar em esquemas diferentes dependendo das elementos XML de cada documento.</span><span class="sxs-lookup"><span data-stu-id="f0a51-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="f0a51-104">Por exemplo, considere os seguintes documentos XML.</span><span class="sxs-lookup"><span data-stu-id="f0a51-104">For example, consider the following XML documents.</span></span>  

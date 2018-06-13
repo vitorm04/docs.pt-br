@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760200"
 ---
 # <a name="except-entity-sql"></a><span data-ttu-id="4c180-102">EXCETO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4c180-102">EXCEPT (Entity SQL)</span></span>
 <span data-ttu-id="4c180-103">Retorna uma coleção de todos os valores distintos da expressão de consulta para a esquerda do operando EXCEPT que também não são retornados da expressão de consulta à direita do operando EXCEPT.</span><span class="sxs-lookup"><span data-stu-id="4c180-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="4c180-104">Todas as expressões devem ser do mesmo tipo ou de uma base comum ou um tipo derivado que `expression`.</span><span class="sxs-lookup"><span data-stu-id="4c180-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

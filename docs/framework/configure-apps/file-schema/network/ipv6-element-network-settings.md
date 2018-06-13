@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742478"
 ---
 # <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="6ea9b-102">&lt;IPv6&gt; elemento (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="6ea9b-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="6ea9b-103">Permite que o protocolo IP versão 6 (IPv6) respostas de membros obsoletos do <xref:System.Net.Dns> classe.</span><span class="sxs-lookup"><span data-stu-id="6ea9b-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  

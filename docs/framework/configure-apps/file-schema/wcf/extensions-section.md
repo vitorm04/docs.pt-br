@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750132"
 ---
 # <a name="ltextensionsgt-section"></a><span data-ttu-id="b6724-102">seção de &lt;extensões&gt;</span><span class="sxs-lookup"><span data-stu-id="b6724-102">&lt;extensions&gt; section</span></span>
 <span data-ttu-id="b6724-103">Esta seção de configuração contém uma coleção de extensões, que permitem que o usuário crie associações definidas pelo usuário, comportamentos e outros aspectos de extensões.</span><span class="sxs-lookup"><span data-stu-id="b6724-103">This configuration section contains a collection of extensions, which enable the user to create user-defined bindings, behaviors, and other aspects of extensions.</span></span>  

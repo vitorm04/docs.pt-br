@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394586"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="21a4c-102">Como registrar um protocolo personalizado usando WebRequest</span><span class="sxs-lookup"><span data-stu-id="21a4c-102">How to: Register a Custom Protocol Using WebRequest</span></span>
 <span data-ttu-id="21a4c-103">Este exemplo mostra como registrar uma classe específica de protocolo que é definido em outro local.</span><span class="sxs-lookup"><span data-stu-id="21a4c-103">This example shows how to register a protocol specific classthat is defined elsewhere.</span></span> <span data-ttu-id="21a4c-104">Neste exemplo, `CustomWebRequestCreator` é o objeto implementado pelo usuário que implementa o método **create** que retorna o objeto `CustomWebRequest`.</span><span class="sxs-lookup"><span data-stu-id="21a4c-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="21a4c-105">O exemplo de código pressupõe que você tenha escrito o código `CustomWebRequest` que implementa o protocolo personalizado.</span><span class="sxs-lookup"><span data-stu-id="21a4c-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  

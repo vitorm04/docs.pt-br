@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
 ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590823"
 ---
 # <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a><span data-ttu-id="4958e-102">O primeiro operando em um binário &#39;se&#39; expressão deve ser nulo ou uma referência de tipo</span><span class="sxs-lookup"><span data-stu-id="4958e-102">First operand in a binary &#39;If&#39; expression must be nullable or a reference type</span></span>
 <span data-ttu-id="4958e-103">Um `If` expressão pode levar dois ou três argumentos.</span><span class="sxs-lookup"><span data-stu-id="4958e-103">An `If` expression can take either two or three arguments.</span></span> <span data-ttu-id="4958e-104">Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo anulável.</span><span class="sxs-lookup"><span data-stu-id="4958e-104">When you send only two arguments, the first argument must be a reference type or a nullable type.</span></span> <span data-ttu-id="4958e-105">Se o primeiro argumento for avaliado como algo diferente de `Nothing`, seu valor será retornado.</span><span class="sxs-lookup"><span data-stu-id="4958e-105">If the first argument evaluates to anything other than `Nothing`, its value is returned.</span></span> <span data-ttu-id="4958e-106">Se o primeiro argumento for avaliado como `Nothing`, o segundo argumento é avaliado e retornado.</span><span class="sxs-lookup"><span data-stu-id="4958e-106">If the first argument evaluates to `Nothing`, the second argument is evaluated and returned.</span></span>  

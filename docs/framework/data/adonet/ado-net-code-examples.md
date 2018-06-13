@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759134"
 ---
 # <a name="adonet-code-examples"></a><span data-ttu-id="0d156-102">Exemplos de código ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0d156-102">ADO.NET code examples</span></span>
 <span data-ttu-id="0d156-103">As listagens de código neste tópico demonstram como recuperar dados de um banco de dados usando as seguintes tecnologias do ADO.NET:</span><span class="sxs-lookup"><span data-stu-id="0d156-103">The code listings in this topic demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>

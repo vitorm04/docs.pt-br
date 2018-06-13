@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761761"
 ---
 # <a name="between-entity-sql"></a><span data-ttu-id="29f9c-102">ENTRE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="29f9c-102">BETWEEN (Entity SQL)</span></span>
 <span data-ttu-id="29f9c-103">Determina se uma expressão resulta em um valor em um intervalo especificado.</span><span class="sxs-lookup"><span data-stu-id="29f9c-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="29f9c-104">O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] entre a expressão tem a mesma funcionalidade que a expressão Transact-SQL entre.</span><span class="sxs-lookup"><span data-stu-id="29f9c-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  

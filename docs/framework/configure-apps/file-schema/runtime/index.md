@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747939"
 ---
 # <a name="runtime-settings-schema"></a><span data-ttu-id="59b0d-102">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="59b0d-102">Runtime Settings Schema</span></span>
 <span data-ttu-id="59b0d-103">As configurações de tempo de execução são usadas pelo Common Language Runtime para configurar os aplicativos direcionados ao .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="59b0d-103">Runtime settings are used by the common language runtime to configure applications that target the .NET Framework.</span></span>  

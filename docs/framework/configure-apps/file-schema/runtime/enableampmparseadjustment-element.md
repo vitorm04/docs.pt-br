@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752813"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a><span data-ttu-id="8d2cf-102">&lt;EnableAmPmParseAdjustment&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="8d2cf-102">&lt;EnableAmPmParseAdjustment&gt; Element</span></span>
 <span data-ttu-id="8d2cf-103">Determina se a data e hora métodos usam um conjunto de regras de ajustada para analisar cadeias de caracteres de data que contêm um dia, mês, hora e designator AM/PM.</span><span class="sxs-lookup"><span data-stu-id="8d2cf-103">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain a day, month, hour, and AM/PM designator.</span></span>  

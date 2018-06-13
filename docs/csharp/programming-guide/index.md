@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333265"
 ---
 # <a name="c-programming-guide"></a><span data-ttu-id="c5812-102">Guia de programação em C#</span><span class="sxs-lookup"><span data-stu-id="c5812-102">C# programming guide</span></span>
 <span data-ttu-id="c5812-103">Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c5812-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  

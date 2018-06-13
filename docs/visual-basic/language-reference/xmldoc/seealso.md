@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
 ms.openlocfilehash: 1d45c0c5fa95de9cfa345c0bdbf496aa227b9af5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604673"
 ---
 # <a name="ltseealsogt-visual-basic"></a><span data-ttu-id="f5927-102">&lt;Consulte também&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5927-102">&lt;seealso&gt; (Visual Basic)</span></span>
 <span data-ttu-id="f5927-103">Especifica um link que aparece na seção Consulte também.</span><span class="sxs-lookup"><span data-stu-id="f5927-103">Specifies a link that appears in the See Also section.</span></span>  

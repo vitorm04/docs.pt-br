@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749433"
 ---
 # <a name="ltcommonparametersgt"></a><span data-ttu-id="db1c4-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="db1c4-102">&lt;commonParameters&gt;</span></span>
 <span data-ttu-id="db1c4-103">Representa uma coleção de parâmetros que são usados globalmente em vários serviços.</span><span class="sxs-lookup"><span data-stu-id="db1c4-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="db1c4-104">Normalmente, essa coleção incluirá a cadeia de caracteres de conexão de banco de dados que pode ser compartilhada com serviços duráveis.</span><span class="sxs-lookup"><span data-stu-id="db1c4-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  

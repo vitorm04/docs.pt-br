@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750642"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="0bb77-102">&lt;transporte&gt; de &lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0bb77-102">&lt;transport&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="0bb77-103">Define as configurações de segurança para o transporte de integração de enfileiramento de mensagens.</span><span class="sxs-lookup"><span data-stu-id="0bb77-103">Defines the security settings for the Message Queuing integration transport.</span></span>  

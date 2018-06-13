@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759082"
 ---
 # <a name="ltws2007httpbindinggt"></a><span data-ttu-id="9794d-102">&lt;ws2007HttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="9794d-102">&lt;ws2007HttpBinding&gt;</span></span>
 <span data-ttu-id="9794d-103">Define uma associação interoperável que fornece suporte para as versões corretas do <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, e <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementos de associação.</span><span class="sxs-lookup"><span data-stu-id="9794d-103">Defines an interoperable binding that provides support for the correct versions of the <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, and <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> binding elements.</span></span>  

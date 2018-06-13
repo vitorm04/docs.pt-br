@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748705"
 ---
 # <a name="lttransactionflowgt"></a><span data-ttu-id="cf023-102">&lt;TransactionFlow&gt;</span><span class="sxs-lookup"><span data-stu-id="cf023-102">&lt;transactionFlow&gt;</span></span>
 <span data-ttu-id="cf023-103">Especifica o suporte de fluxo de transação para a associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="cf023-103">Specifies transaction flow support for the custom binding.</span></span>  

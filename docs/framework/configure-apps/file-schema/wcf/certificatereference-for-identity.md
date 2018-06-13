@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747636"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a><span data-ttu-id="48870-102">&lt;certificateReference&gt; para &lt;identidade&gt;</span><span class="sxs-lookup"><span data-stu-id="48870-102">&lt;certificateReference&gt; for &lt;identity&gt;</span></span>
 <span data-ttu-id="48870-103">Especifica configurações para validação do certificado x. 509.</span><span class="sxs-lookup"><span data-stu-id="48870-103">Specifies settings for X.509 certificate validation.</span></span> <span data-ttu-id="48870-104">Um cliente seguro do Windows Communication Foundation (WCF) que se conecta a um ponto de extremidade com esta identidade verifica que as declarações apresentadas pelo servidor contém a declaração de identidade usada para construir essa identidade.</span><span class="sxs-lookup"><span data-stu-id="48870-104">A secure Windows Communication Foundation (WCF) client that connects to an endpoint with this identity verifies that the claims presented by the server contain the identity claim used to construct this identity.</span></span>  

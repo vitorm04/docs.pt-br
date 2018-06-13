@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748653"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="3ee41-102">&lt;Limpar&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;</span><span class="sxs-lookup"><span data-stu-id="3ee41-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="3ee41-103">Limpa a coleção `Listeners` do rastreamento.</span><span class="sxs-lookup"><span data-stu-id="3ee41-103">Clears the `Listeners` collection for trace.</span></span>  

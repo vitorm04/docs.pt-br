@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762917"
 ---
 # <a name="multiset-entity-sql"></a><span data-ttu-id="36bec-102">MULTICONJUNTO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="36bec-102">MULTISET (Entity SQL)</span></span>
 <span data-ttu-id="36bec-103">Cria uma instância de um multiset de uma lista de valores.</span><span class="sxs-lookup"><span data-stu-id="36bec-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="36bec-104">Todos os valores no construtor MULTISET devem ser de um tipo compatível `T`.</span><span class="sxs-lookup"><span data-stu-id="36bec-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="36bec-105">Não são permitidos construtores vazios de multiset.</span><span class="sxs-lookup"><span data-stu-id="36bec-105">Empty multiset constructors are not allowed.</span></span>  

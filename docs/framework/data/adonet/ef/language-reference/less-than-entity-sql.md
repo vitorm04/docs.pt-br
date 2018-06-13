@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760967"
 ---
 # <a name="lt-less-than-entity-sql"></a><span data-ttu-id="96af9-102">&lt; (Menor que) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="96af9-102">&lt; (Less Than) (Entity SQL)</span></span>
 <span data-ttu-id="96af9-103">Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que a expressão da direita.</span><span class="sxs-lookup"><span data-stu-id="96af9-103">Compares two expressions to determine whether the left expression has a value less than the right expression.</span></span>  

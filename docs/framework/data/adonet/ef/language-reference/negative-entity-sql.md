@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765146"
 ---
 # <a name="--negative-entity-sql"></a><span data-ttu-id="4feb6-102">- (Negativo) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4feb6-102">- (Negative) (Entity SQL)</span></span>
 <span data-ttu-id="4feb6-103">Retorna o negativo o valor de uma expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="4feb6-103">Returns the negative of the value of a numeric expression.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760187"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="4f86b-102">Gerando SQL das árvores de comando - práticas recomendadas</span><span class="sxs-lookup"><span data-stu-id="4f86b-102">Generating SQL from Command Trees - Best Practices</span></span>
 <span data-ttu-id="4f86b-103">O modelo das árvores de comando de consulta de saída a consulta expressável no SQL.</span><span class="sxs-lookup"><span data-stu-id="4f86b-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="4f86b-104">No entanto, há determinados desafios comum para criadores de provedor para gerar o SQL de uma árvore de comando de saída.</span><span class="sxs-lookup"><span data-stu-id="4f86b-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="4f86b-105">Este tópico discute esses desafios.</span><span class="sxs-lookup"><span data-stu-id="4f86b-105">This topic discusses these challenges.</span></span> <span data-ttu-id="4f86b-106">No próximo tópico, o provedor exemplo mostra como resolver esses desafios.</span><span class="sxs-lookup"><span data-stu-id="4f86b-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750769"
 ---
 # <a name="ltbindingextensionsgt"></a><span data-ttu-id="3379c-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="3379c-102">&lt;bindingExtensions&gt;</span></span>
 <span data-ttu-id="3379c-103">Esta seção permite o uso de uma associação definida pelo usuário de um computador ou arquivo de configuração do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3379c-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="3379c-104">Você pode adicionar uma associação definida pelo usuário para esta coleção usando o `add` palavra-chave e a configuração de `type` atributo do elemento para uma associação definida pelo usuário, bem como a `name` atributo para o nome do usuário definido associação.</span><span class="sxs-lookup"><span data-stu-id="3379c-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  

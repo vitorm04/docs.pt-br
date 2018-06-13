@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759628"
 ---
 # <a name="limit-entity-sql"></a><span data-ttu-id="86a3b-102">LIMITAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="86a3b-102">LIMIT (Entity SQL)</span></span>
 <span data-ttu-id="86a3b-103">A paginação física pode ser executada usando a subcláusula LIMIT em uma ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="86a3b-103">Physical paging can be performed by using LIMIT sub-clause in ORDER BY clause.</span></span> <span data-ttu-id="86a3b-104">LIMIT não pode ser usada separadamente da cláusula ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="86a3b-104">LIMIT can not be used separately from ORDER BY clause.</span></span>  
