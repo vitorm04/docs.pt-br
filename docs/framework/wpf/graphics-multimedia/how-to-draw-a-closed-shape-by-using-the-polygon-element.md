@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559455"
 ---
 # <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Como desenhar uma forma fechada usando o elemento Polygon
 Este exemplo mostra como desenhar uma forma fechada, usando o <xref:System.Windows.Shapes.Polygon> elemento. Para desenhar uma forma fechada, crie um <xref:System.Windows.Shapes.Polygon> elemento e use seu <xref:System.Windows.Shapes.Polygon.Points%2A> propriedade para especificar os vértices de uma forma. Uma linha é desenhada automaticamente que conecta o primeiro e último pontos. Finalmente, especifique um <xref:System.Windows.Shapes.Shape.Fill%2A>, um <xref:System.Windows.Shapes.Shape.Stroke%2A>, ou ambos.  

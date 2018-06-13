@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514658"
 ---
 # <a name="sql-server-persistence-database"></a>A base de dados do SQL Server
 Esta seção fornece detalhes sobre as exibições públicas de base de dados suportadas por instância Store de fluxo de trabalho SQL e mostra como deserializar propriedades primitivas de instância de dados e como consultar instâncias são persistentes.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505336"
 ---
 # <a name="untyped-requestreply"></a>Solicitações/Respostas não digitadas
 Este exemplo demonstra como definir contratos de operação que usam a classe de mensagem.  

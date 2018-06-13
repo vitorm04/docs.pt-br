@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505964"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atributos de ServiceModel e referência de ServiceDescription
 O *árvore descrição* é a hierarquia de tipos (começando com o <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) que juntas descrevem todos os aspectos de um serviço. Windows Communication Foundation (WCF) usa uma árvore de descrição para criar um tempo de execução de serviço válido, para publicar Web Services Description Language (WSDL), linguagem de definição de esquema XML (XSD) e declarações de política (metadados) sobre o serviço que os clientes podem usar para conectar e usar o serviço e para gerar várias representações de arquivo de código e configuração dos valores de árvore de descrição.  

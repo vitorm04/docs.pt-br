@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521736"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Como preencher uma forma com um padrão em hachura
 Um padrão de hachura é feito de duas cores: um para o plano de fundo e outro para as linhas que formam o padrão no plano de fundo. Para preencher uma forma fechada com um padrão de hachura, use um <xref:System.Drawing.Drawing2D.HatchBrush> objeto. O exemplo a seguir demonstra como preencher uma elipse com um padrão de hachura:  

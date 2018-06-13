@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513712"
 ---
 # <a name="host-lock-renewal-period"></a>Período de renovação de bloqueio de host
 O **período de renovação de bloqueio de Host** propriedade do repositório de instância de fluxo de trabalho de SQL permite que você especifique o período de tempo no qual o host renova o bloqueio em uma instância de fluxo de trabalho. O bloqueio permaneça válido para o período de renovação de bloqueio host + 30 segundos. Se o host não renova o bloqueio (ou seja estender o aluguer) dentro desse período de tempo, o bloqueio expirar e o provedor de persistência desbloqueia a instância. O valor dessa propriedade é do tipo TimeSpan no formato "hh". O mínimo permitido valor é "00: 00:01" (1 segundo). O valor padrão dessa propriedade é "00: 00:30" (30 segundos).  
