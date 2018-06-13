@@ -11,8 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8f6c15084ac9b1a07aef8a0311edfcc4a93337c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653040"
 ---
 # <a name="-refonly-visual-basic"></a><span data-ttu-id="49d92-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49d92-102">-refonly (Visual Basic)</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806663"
 ---
 # <a name="securing-workflow-services"></a><span data-ttu-id="04219-102">Protegendo serviços de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="04219-102">Securing Workflow Services</span></span>
 <span data-ttu-id="04219-103">O exemplo protegido de Serviço de Fluxo de Trabalho mostra os seguintes procedimentos:</span><span class="sxs-lookup"><span data-stu-id="04219-103">The Secured Workflow Service sample shows the following procedures:</span></span>  

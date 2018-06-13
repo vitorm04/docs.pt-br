@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
 ms.openlocfilehash: 009bd3e229ad6debb0f4176c18fc9cb712154197
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645337"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a><span data-ttu-id="fed6c-102">Serializando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fed6c-102">Serializing XML Trees (Visual Basic)</span></span>
 <span data-ttu-id="fed6c-103">Serializar uma árvore XML significa gerar o XML a partir da árvore XML.</span><span class="sxs-lookup"><span data-stu-id="fed6c-103">Serializing an XML tree means generating XML from the XML tree.</span></span> <span data-ttu-id="fed6c-104">Você pode fazer a serialização para um arquivo, para uma implementação concreta da classe <xref:System.IO.TextWriter> ou a uma implementação concreta de um <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="fed6c-104">You can serialize to a file, to a concrete implementation of the <xref:System.IO.TextWriter> class, or to a concrete implementation of an <xref:System.Xml.XmlWriter>.</span></span>  

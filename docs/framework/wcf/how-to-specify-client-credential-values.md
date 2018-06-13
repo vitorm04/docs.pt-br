@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806637"
 ---
 # <a name="how-to-specify-client-credential-values"></a><span data-ttu-id="5a315-102">Como especificar valores de credenciais de cliente</span><span class="sxs-lookup"><span data-stu-id="5a315-102">How to: Specify Client Credential Values</span></span>
 <span data-ttu-id="5a315-103">Usando o Windows Communication Foundation (WCF), o serviço pode especificar como um cliente é autenticado para o serviço.</span><span class="sxs-lookup"><span data-stu-id="5a315-103">Using Windows Communication Foundation (WCF), the service can specify how a client is authenticated to the service.</span></span> <span data-ttu-id="5a315-104">Por exemplo, um serviço pode estipular que o cliente seja autenticado com um certificado.</span><span class="sxs-lookup"><span data-stu-id="5a315-104">For example, a service can stipulate that the client be authenticated with a certificate.</span></span>  

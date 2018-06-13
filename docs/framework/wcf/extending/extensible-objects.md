@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805191"
 ---
 # <a name="extensible-objects"></a><span data-ttu-id="aa967-102">Objetos extensíveis</span><span class="sxs-lookup"><span data-stu-id="aa967-102">Extensible Objects</span></span>
 <span data-ttu-id="aa967-103">O padrão de objeto extensível é usado para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar o novo estado para um objeto.</span><span class="sxs-lookup"><span data-stu-id="aa967-103">The extensible object pattern is used to either extend existing runtime classes with new functionality or to add new state to an object.</span></span> <span data-ttu-id="aa967-104">Extensões, anexadas a um dos objetos extensíveis, habilitar comportamentos em diferentes estágios de processamento para acessar o estado compartilhado e anexado a um objeto extensível comum que eles possam acessar a funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="aa967-104">Extensions, attached to one of the extensible objects, enable behaviors at very different stages in processing to access shared state and functionality attached to a common extensible object that they can access.</span></span>  

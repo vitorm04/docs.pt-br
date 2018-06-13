@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808956"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a><span data-ttu-id="603d6-102">Como criar um fornecedor de token de segurança personalizado</span><span class="sxs-lookup"><span data-stu-id="603d6-102">How to: Create a Custom Security Token Provider</span></span>
 <span data-ttu-id="603d6-103">Este tópico mostra como criar novos tipos de token com um provedor de token de segurança personalizada e como integrar o provedor de um Gerenciador de token de segurança personalizada.</span><span class="sxs-lookup"><span data-stu-id="603d6-103">This topic shows how to create new token types with a custom security token provider and how to integrate the provider with a custom security token manager.</span></span>  

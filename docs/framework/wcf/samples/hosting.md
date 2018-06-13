@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809801"
 ---
 # <a name="hosting"></a><span data-ttu-id="fba2d-102">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="fba2d-102">Hosting</span></span>
 <span data-ttu-id="fba2d-103">Esta seção contém exemplos que demonstram os serviços de hospedagem de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="fba2d-103">This section contains samples that demonstrate hosting Windows Communication Foundation (WCF) services.</span></span>  

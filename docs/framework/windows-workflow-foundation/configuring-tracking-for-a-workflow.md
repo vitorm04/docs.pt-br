@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809697"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="a0b0f-102">Configurando o rastreamento para um fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="a0b0f-102">Configuring Tracking for a Workflow</span></span>
 <span data-ttu-id="a0b0f-103">Um fluxo de trabalho pode executar em três maneiras:</span><span class="sxs-lookup"><span data-stu-id="a0b0f-103">A workflow can execute in three ways:</span></span>  

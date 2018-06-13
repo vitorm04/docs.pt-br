@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805883"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="3e51c-102">Escolhendo um padrão de troca de mensagens</span><span class="sxs-lookup"><span data-stu-id="3e51c-102">Choosing a Message Exchange Pattern</span></span>
 <span data-ttu-id="3e51c-103">A primeira etapa na composição de um transporte personalizado é decidir qual *padrões de troca de mensagens* (ou MEPs) são necessários para o canal que você está desenvolvendo.</span><span class="sxs-lookup"><span data-stu-id="3e51c-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="3e51c-104">Este tópico descreve as opções disponíveis e aborda os diversos requisitos.</span><span class="sxs-lookup"><span data-stu-id="3e51c-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="3e51c-105">Essa é a primeira tarefa na lista de tarefas de desenvolvimento canal descrita em [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).</span><span class="sxs-lookup"><span data-stu-id="3e51c-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  

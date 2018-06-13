@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809024"
 ---
 # <a name="pii-security-lockdown"></a><span data-ttu-id="c51f2-102">Bloqueio de segurança PII</span><span class="sxs-lookup"><span data-stu-id="c51f2-102">PII Security Lockdown</span></span>
 <span data-ttu-id="c51f2-103">Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço do Windows Communication Foundation (WCF) por:</span><span class="sxs-lookup"><span data-stu-id="c51f2-103">This sample demonstrates how to control several security-related features of a Windows Communication Foundation (WCF) service by:</span></span>  

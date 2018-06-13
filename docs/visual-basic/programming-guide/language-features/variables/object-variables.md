@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649107"
 ---
 # <a name="object-variables-in-visual-basic"></a><span data-ttu-id="f9dd7-102">Variáveis de objeto no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f9dd7-102">Object Variables in Visual Basic</span></span>
 <span data-ttu-id="f9dd7-103">Além de armazenar valores diretamente, uma variável pode se referir a um objeto.</span><span class="sxs-lookup"><span data-stu-id="f9dd7-103">In addition to storing values directly, a variable can refer to an object.</span></span> <span data-ttu-id="f9dd7-104">Você pode atribuir um objeto a uma variável pelos mesmos motivos que você atribui qualquer valor a uma variável:</span><span class="sxs-lookup"><span data-stu-id="f9dd7-104">You assign an object to a variable for the same reasons you assign any value to a variable:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804509"
 ---
 # <a name="syndication"></a><span data-ttu-id="008a4-102">Sindicalização</span><span class="sxs-lookup"><span data-stu-id="008a4-102">Syndication</span></span>
 <span data-ttu-id="008a4-103">Esta seção contém exemplos que demonstram a distribuição do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="008a4-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) syndication.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
 ms.openlocfilehash: cf6540506c1a50bb10884e4aed5edc1d9c851ac6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645870"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a><span data-ttu-id="cf195-102">Tutorial: Adiada execução (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf195-102">Tutorial: Deferred Execution (Visual Basic)</span></span>
 <span data-ttu-id="cf195-103">Este tutorial mostra o modelo de processamento quando você encadea consultas juntos.</span><span class="sxs-lookup"><span data-stu-id="cf195-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="cf195-104">Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais.</span><span class="sxs-lookup"><span data-stu-id="cf195-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="cf195-105">É importante compreender exatamente como as consultas encadeadas funcionam.</span><span class="sxs-lookup"><span data-stu-id="cf195-105">It is important to understand exactly how chained queries work.</span></span>  

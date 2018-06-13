@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808719"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a><span data-ttu-id="aea94-102">Desempenho do Windows Workflow Foundation 4</span><span class="sxs-lookup"><span data-stu-id="aea94-102">Windows Workflow Foundation 4 Performance</span></span>
 <span data-ttu-id="aea94-103">Dustin Metzgar</span><span class="sxs-lookup"><span data-stu-id="aea94-103">Dustin Metzgar</span></span>  

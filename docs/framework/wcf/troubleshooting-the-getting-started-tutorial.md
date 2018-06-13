@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807782"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a><span data-ttu-id="72c3b-102">Solução de problemas do tutorial de introdução</span><span class="sxs-lookup"><span data-stu-id="72c3b-102">Troubleshooting the Getting Started Tutorial</span></span>
 <span data-ttu-id="72c3b-103">Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutorial de Introdução e como resolvê-los.</span><span class="sxs-lookup"><span data-stu-id="72c3b-103">This topic lists the most common problems encountered when working through the Getting Started Tutorial and how to resolve them.</span></span>  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647911"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a><span data-ttu-id="f3c0d-102">Como usar uma classe genérica (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3c0d-102">How to: Use a Generic Class (Visual Basic)</span></span>
 <span data-ttu-id="f3c0d-103">Uma classe que usa *parâmetros de tipo* é chamado um *classe genérica*.</span><span class="sxs-lookup"><span data-stu-id="f3c0d-103">A class that takes *type parameters* is called a *generic class*.</span></span> <span data-ttu-id="f3c0d-104">Se você estiver usando uma classe genérica, você pode gerar um *classe construída* dele, fornecendo um *argumento de tipo* para cada um desses parâmetros.</span><span class="sxs-lookup"><span data-stu-id="f3c0d-104">If you are using a generic class, you can generate a *constructed class* from it by supplying a *type argument* for each of these parameters.</span></span> <span data-ttu-id="f3c0d-105">Em seguida, você pode declarar uma variável do tipo de classe construído, e você pode criar uma instância da classe construída e atribuí-la para a variável.</span><span class="sxs-lookup"><span data-stu-id="f3c0d-105">You can then declare a variable of the constructed class type, and you can create an instance of the constructed class and assign it to that variable.</span></span>  

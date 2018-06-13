@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808059"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a><span data-ttu-id="e7c14-102">Codificador personalizado de mensagem: codificador personalizado de texto</span><span class="sxs-lookup"><span data-stu-id="e7c14-102">Custom Message Encoder: Custom Text Encoder</span></span>
 <span data-ttu-id="e7c14-103">Este exemplo demonstra como implementar um codificador de mensagem de texto personalizado usando o Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e7c14-103">This sample demonstrates how to implement a custom text message encoder using Windows Communication Foundation (WCF).</span></span>  

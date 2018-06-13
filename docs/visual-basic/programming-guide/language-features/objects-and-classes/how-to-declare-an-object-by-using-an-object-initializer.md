@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649159"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a><span data-ttu-id="97a73-102">Como declarar um objeto usando um inicializador de objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97a73-102">How to: Declare an Object by Using an Object Initializer (Visual Basic)</span></span>
 <span data-ttu-id="97a73-103">Inicializadores de objeto permitem que você declarar e criar uma instância de uma classe em uma única instrução.</span><span class="sxs-lookup"><span data-stu-id="97a73-103">Object initializers enable you to declare and instantiate an instance of a class in a single statement.</span></span> <span data-ttu-id="97a73-104">Além disso, você pode inicializar um ou mais membros da instância ao mesmo tempo, sem chamar um construtor com parâmetros.</span><span class="sxs-lookup"><span data-stu-id="97a73-104">In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.</span></span>  

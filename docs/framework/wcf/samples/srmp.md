@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805493"
 ---
 # <a name="srmp"></a><span data-ttu-id="2c5b6-102">SRMP</span><span class="sxs-lookup"><span data-stu-id="2c5b6-102">SRMP</span></span>
 <span data-ttu-id="2c5b6-103">Este exemplo demonstra como executar transacionada comunicação em fila por meio do serviço de enfileiramento de mensagens (MSMQ) em HTTP.</span><span class="sxs-lookup"><span data-stu-id="2c5b6-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ) over HTTP.</span></span>  

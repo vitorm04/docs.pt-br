@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807170"
 ---
 # <a name="wsstreamedhttpbinding"></a><span data-ttu-id="33f91-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="33f91-102">WSStreamedHttpBinding</span></span>
 <span data-ttu-id="33f91-103">O exemplo demonstra como criar uma associação que foi projetada para oferecer suporte a cenários de streaming quando o transporte HTTP é usado.</span><span class="sxs-lookup"><span data-stu-id="33f91-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655355"
 ---
 # <a name="visual-basic-coding-conventions"></a><span data-ttu-id="f6ecc-102">Convenções de codificação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6ecc-102">Visual Basic Coding Conventions</span></span>
 <span data-ttu-id="f6ecc-103">A Microsoft desenvolve amostras e documentação que siga as diretrizes neste tópico.</span><span class="sxs-lookup"><span data-stu-id="f6ecc-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="f6ecc-104">Se você seguir as mesmas convenções de codificação, você pode obter os seguintes benefícios:</span><span class="sxs-lookup"><span data-stu-id="f6ecc-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  

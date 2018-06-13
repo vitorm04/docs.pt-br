@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
 ms.openlocfilehash: 871755ef0293513f07c60b1d5735c47692163b78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648340"
 ---
 # <a name="programming-with-nodes-visual-basic"></a><span data-ttu-id="15f22-102">Programando conosco (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15f22-102">Programming with Nodes (Visual Basic)</span></span>
 <span data-ttu-id="15f22-103">desenvolvedores de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que precisam geralmente escrever programas como um editor XML, um sistema uma transformação, ou uma necessidade o gravador de relatório escrever programas que funcionam no nível mais fino de granularidade dos elementos e atributos.</span><span class="sxs-lookup"><span data-stu-id="15f22-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] developers who need to write programs such as an XML editor, a transform system, or a report writer often need to write programs that work at a finer level of granularity than elements and attributes.</span></span> <span data-ttu-id="15f22-104">Freqüentemente necessitam de trabalhar no nível de nó, em nós de manipulação de texto, as instruções de processamento, e os comentários.</span><span class="sxs-lookup"><span data-stu-id="15f22-104">They often need to work at the node level, manipulating text nodes, processing instructions, and comments.</span></span> <span data-ttu-id="15f22-105">Este tópico fornece alguns detalhes sobre programação no nível do nó.</span><span class="sxs-lookup"><span data-stu-id="15f22-105">This topic provides some details about programming at the node level.</span></span>  

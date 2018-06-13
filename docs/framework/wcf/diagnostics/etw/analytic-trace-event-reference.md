@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808631"
 ---
 # <a name="analytic-trace-event-reference"></a><span data-ttu-id="797c4-102">Referência de evento de rastreamento analítico</span><span class="sxs-lookup"><span data-stu-id="797c4-102">Analytic Trace Event Reference</span></span>
 <span data-ttu-id="797c4-103">A tabela a seguir define os níveis de eventos, identificadores e mensagens associadas com o rastreamento analítico do WCF.</span><span class="sxs-lookup"><span data-stu-id="797c4-103">The following table defines the event levels, identifiers, and messages associated with the WCF Analytic Tracing.</span></span>  

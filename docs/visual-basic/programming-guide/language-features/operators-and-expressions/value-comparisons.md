@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649601"
 ---
 # <a name="value-comparisons-visual-basic"></a><span data-ttu-id="36554-102">Comparações de valor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36554-102">Value Comparisons (Visual Basic)</span></span>
 <span data-ttu-id="36554-103">Operadores de comparação podem ser usados para construir expressões que comparam os valores das variáveis numéricas.</span><span class="sxs-lookup"><span data-stu-id="36554-103">Comparison operators can be used to construct expressions that compare the values of numeric variables.</span></span> <span data-ttu-id="36554-104">Essas expressões retornam um `Boolean` valor com base em se a comparação é verdadeira ou falsa.</span><span class="sxs-lookup"><span data-stu-id="36554-104">These expressions return a `Boolean` value based on whether the comparison is true or false.</span></span> <span data-ttu-id="36554-105">Estes são exemplos de tal uma expressão.</span><span class="sxs-lookup"><span data-stu-id="36554-105">Examples of such an expression are as follows.</span></span>  

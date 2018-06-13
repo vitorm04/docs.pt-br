@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652520"
 ---
 # <a name="set-operations-visual-basic"></a><span data-ttu-id="3e2d1-102">Operações de conjunto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3e2d1-102">Set Operations (Visual Basic)</span></span>
 <span data-ttu-id="3e2d1-103">As operações de conjunto na LINQ referem-se a operações de consulta que geram um conjunto de resultados baseado na presença ou ausência de elementos equivalentes dentro da mesma ou de coleções (ou conjuntos) separadas.</span><span class="sxs-lookup"><span data-stu-id="3e2d1-103">Set operations in LINQ refer to query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate collections (or sets).</span></span>  

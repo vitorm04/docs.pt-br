@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809421"
 ---
 # <a name="durable-duplex"></a><span data-ttu-id="58d82-102">Frente e verso durável</span><span class="sxs-lookup"><span data-stu-id="58d82-102">Durable Duplex</span></span>
 <span data-ttu-id="58d82-103">Este exemplo demonstra como instalar e configurar o exchange mensagem duplex durável usando as atividades de mensagens no Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="58d82-103">This sample demonstrates how to set up and configure durable duplex message exchange using the messaging activities in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="58d82-104">Uma troca frente e verso durável de mensagem é uma troca bidirecional de mensagem que ocorra um longo período de tempo.</span><span class="sxs-lookup"><span data-stu-id="58d82-104">A durable duplex message exchange is a two-way message exchange that takes place over a long period of time.</span></span> <span data-ttu-id="58d82-105">O tempo de vida de troca de mensagem pode ser maior que o tempo de vida do canal de comunicação e o tempo de vida de memória das instâncias de serviço.</span><span class="sxs-lookup"><span data-stu-id="58d82-105">The lifetime of the message exchange may be longer than the lifetime of the communication channel and the in-memory lifetime of the service instances.</span></span>  
