@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5304496da992b44c171ca3c6ffa3fffa35d6f9cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425360"
 ---
 # <a name="ibindingdisplay-interface"></a>Interface IBindingDisplay
 Fornece métodos que exibem as informações de associação atuais sobre o aplicativo em execução.  

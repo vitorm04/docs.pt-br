@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460483"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Adicione uma referência de serviço em um projeto de subconjunto portátil
 Projetos de subconjunto portátil permitem que os programadores do assembly .NET manter uma árvore de origem única e sistema de compilação e ainda dar suporte a várias implementações de .NET (área de trabalho, Silverlight, Windows Phone e XBOX). Projetos de subconjunto portátil só fazem referência a bibliotecas portáteis do .NET que são um assembly do framework .NET que pode ser usado em qualquer implementação do .NET.  

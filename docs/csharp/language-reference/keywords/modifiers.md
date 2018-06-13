@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272676"
 ---
 # <a name="modifiers-c-reference"></a>Modificadores (Referência de C#)
 Os modificadores são usados para alterar declarações de tipos e membros de tipos. Esta seção apresenta os modificadores C#.  

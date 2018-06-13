@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1da526ac133604fa43081f86988459c4238517c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421497"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>Método ICorDebugSymbolProvider::GetObjectSize
 Retorna o tamanho do objeto para um objeto com base em sua assinatura typespec.  

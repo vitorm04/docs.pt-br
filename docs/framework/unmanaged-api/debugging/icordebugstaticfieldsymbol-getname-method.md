@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 095c84a5cb448803bbfa45e0fad8a494343ca7f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422312"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>Método ICorDebugStaticFieldSymbol::GetName
 Obtém o nome do campo estático.  

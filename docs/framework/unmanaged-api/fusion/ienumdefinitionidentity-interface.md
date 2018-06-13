@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432348"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>Interface IEnumDefinitionIdentity
 Serve como o enumerador para uma coleção de `IDefinitionIdentity` objetos.  

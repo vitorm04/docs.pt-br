@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556699"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>Como animar uma rotação 3D usando storyboards
 O exemplo a seguir mostra como fazer com que um objeto 3D gire enquanto ele "vibra" pela animação de <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> e <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> propriedades de uma <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto. Isso <xref:System.Windows.Media.Media3D.AxisAngleRotation3D> objeto Especifica a transformação de rotação do objeto 3D e suas propriedades de animação assim cria o efeito de rotação desejado. Dentro do Storyboard, <xref:System.Windows.Media.Animation.DoubleAnimation> é usado para animar a <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A> propriedade ao <xref:System.Windows.Media.Animation.Vector3DAnimation> é usado para animar a <xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A> propriedade.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 02f57fdbbc1ea9a391d9c58c7ab49af0ef02f001
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426944"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>Método ISymUnmanagedWriter::OpenNamespace
 Abre um novo namespace. Chame este método antes de definir métodos ou variáveis que ocupam um namespace. Namespaces podem ser aninhados.  

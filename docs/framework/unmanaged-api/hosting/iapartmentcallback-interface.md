@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffa06fd42b5cfa09817bae9f0b3a3810e30f99c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430961"
 ---
 # <a name="iapartmentcallback-interface"></a>Interface IApartmentCallback
 Fornece métodos para fazer retornos de chamada em um apartment. Um *apartment* é um contêiner lógico em um processo para objetos que compartilham os mesmos requisitos de acesso de thread.  

@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423709"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Depuração (referência de API não gerenciada)
 A depuração da API permite que um depurador depurar o código que é executado no ambiente do common language runtime (CLR). O código a ser depurado pode ser qualquer tipo de código que o CLR dá suporte.  

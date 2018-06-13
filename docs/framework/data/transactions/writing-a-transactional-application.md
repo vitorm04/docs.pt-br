@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357183"
 ---
 # <a name="writing-a-transactional-application"></a>Escrevendo um aplicativo transacional
 Como um programador de aplicativo transacional, você pode tirar proveito dos dois modelos de programação fornecidas pelo <xref:System.Transactions> namespace para criar uma transação. Você pode utilizar o modelo de programação explícito usando o <xref:System.Transactions.Transaction> classe ou o modelo de programação implícito na qual as transações são automaticamente gerenciadas pela infraestrutura, usando o <xref:System.Transactions.TransactionScope> classe. É recomendável que você use o modelo de transação implícita para o desenvolvimento. Você pode encontrar mais informações sobre como usar um escopo de transação no [implementando uma transação implícita, usando o escopo da transação](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tópico.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457555"
 ---
 # <a name="strongnamecompareassemblies-function"></a>Função StrongNameCompareAssemblies
 Determina se os dois assemblies diferem somente por suas assinaturas de nome forte.  

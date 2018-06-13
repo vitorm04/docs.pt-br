@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457802"
 ---
 # <a name="deletemethod-function"></a>Função DeleteMethod
 Exclui o método especificado de uma definição de classe do CIM.

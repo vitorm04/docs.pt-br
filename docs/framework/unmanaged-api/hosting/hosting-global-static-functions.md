@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430419"
 ---
 # <a name="hosting-global-static-functions"></a>Hospedando funções estáticas globais
 Esta seção descreve as funções de hospedagem não gerenciadas usadas pelas APIs de hospedagem do .NET Framework.  

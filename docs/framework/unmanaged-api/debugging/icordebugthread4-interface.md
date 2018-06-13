@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf486be306e149e2350e7239884c8f05b84f3a86
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422078"
 ---
 # <a name="icordebugthread4-interface"></a>Interface ICorDebugThread4
 Fornece informações de bloqueio de thread.  

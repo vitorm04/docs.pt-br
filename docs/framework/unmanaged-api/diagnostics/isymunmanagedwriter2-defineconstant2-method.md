@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6f9f198fc1115aed7b531515ab07ddc35d36ba8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427330"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>Método ISymUnmanagedWriter2::DefineConstant2
 Define um nome para um valor constante.  

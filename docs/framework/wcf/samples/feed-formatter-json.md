@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501423"
 ---
 # <a name="feed-formatter-json"></a>Formatador do feed (JSON)
 Este exemplo mostra como serializar uma instância de um <xref:System.ServiceModel.Syndication.SyndicationFeed> classe no formato de notação JSON (JavaScript Object) usando um personalizado <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  

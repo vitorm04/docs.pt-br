@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423436"
 ---
 # <a name="icordebugprocessgethandle-method"></a>Método ICorDebugProcess::GetHandle
 Obtém um identificador para o processo.  
