@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0e922273a7d4e5b98c1321992e5e89e01adb437
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431487"
 ---
 # <a name="getcorversion-function"></a><span data-ttu-id="8eb4b-102">Função GetCORVersion</span><span class="sxs-lookup"><span data-stu-id="8eb4b-102">GetCORVersion Function</span></span>
 <span data-ttu-id="8eb4b-103">Retorna o número de versão do common language runtime (CLR) que está em execução no processo atual.</span><span class="sxs-lookup"><span data-stu-id="8eb4b-103">Returns the version number of the common language runtime (CLR) that is running in the current process.</span></span>  

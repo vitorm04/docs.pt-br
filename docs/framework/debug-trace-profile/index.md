@@ -17,8 +17,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 481360f731297e1c287c969e6524c68e0c9c0b7e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386464"
 ---
 # <a name="debugging-tracing-and-profiling"></a><span data-ttu-id="18685-102">Depuração, rastreamento e criação de perfil</span><span class="sxs-lookup"><span data-stu-id="18685-102">Debugging, Tracing, and Profiling</span></span>
 <span data-ttu-id="18685-103">Para depurar um aplicativo do .NET Framework, o compilador e o ambiente de tempo de execução devem ser configurados para habilitar um depurador a anexar ao aplicativo e gerar símbolos e mapas de linha, se possível, para o aplicativo a respectiva MSIL (Microsoft Intermediate Language) correspondente.</span><span class="sxs-lookup"><span data-stu-id="18685-103">To debug a .NET Framework application, the compiler and runtime environment must be configured to enable a debugger to attach to the application and to produce both symbols and line maps, if possible, for the application and its corresponding Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="18685-104">Após um aplicativo gerenciado ter sido depurado, o perfil dele pode ser criado para aprimorar o desempenho.</span><span class="sxs-lookup"><span data-stu-id="18685-104">After a managed application has been debugged, it can be profiled to boost performance.</span></span> <span data-ttu-id="18685-105">A criação de perfil avalia e descreve as linhas do código-fonte que geram o código executado com mais frequência e quanto tempo demora para executá-las.</span><span class="sxs-lookup"><span data-stu-id="18685-105">Profiling evaluates and describes the lines of source code that generate the most frequently executed code, and how much time it takes to execute them.</span></span>  

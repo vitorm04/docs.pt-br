@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496003"
 ---
 # <a name="data-contract-known-types"></a><span data-ttu-id="ee130-102">Tipos de contratos de dados conhecidos</span><span class="sxs-lookup"><span data-stu-id="ee130-102">Data Contract Known Types</span></span>
 <span data-ttu-id="ee130-103">O <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que você especificar com antecedência, os tipos que devem ser incluídos para consideração durante a desserialização.</span><span class="sxs-lookup"><span data-stu-id="ee130-103">The <xref:System.Runtime.Serialization.KnownTypeAttribute> class allows you to specify, in advance, the types that should be included for consideration during deserialization.</span></span> <span data-ttu-id="ee130-104">Para obter um exemplo de funcionamento, consulte o [tipos conhecidos](../../../../docs/framework/wcf/samples/known-types.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="ee130-104">For a working example, see the [Known Types](../../../../docs/framework/wcf/samples/known-types.md) example.</span></span>  

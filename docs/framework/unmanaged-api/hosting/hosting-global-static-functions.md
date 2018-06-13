@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430419"
 ---
 # <a name="hosting-global-static-functions"></a><span data-ttu-id="a7851-102">Hospedando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="a7851-102">Hosting Global Static Functions</span></span>
 <span data-ttu-id="a7851-103">Esta seção descreve as funções de hospedagem não gerenciadas usadas pelas APIs de hospedagem do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a7851-103">This section describes the unmanaged hosting functions used by the .NET Framework hosting APIs.</span></span>  

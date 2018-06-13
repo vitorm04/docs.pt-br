@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425533"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="8a26b-102">Método ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="8a26b-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
 <span data-ttu-id="8a26b-103">Obtém o menor início linha e maior final para o método em um documento específico.</span><span class="sxs-lookup"><span data-stu-id="8a26b-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  

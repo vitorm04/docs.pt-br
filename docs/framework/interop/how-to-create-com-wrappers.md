@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391219"
 ---
 # <a name="how-to-create-com-wrappers"></a><span data-ttu-id="5e5bf-102">Como criar wrappers COM</span><span class="sxs-lookup"><span data-stu-id="5e5bf-102">How to: Create COM Wrappers</span></span>
 <span data-ttu-id="5e5bf-103">Crie wrappers COM (Component Object Model) usando recursos do [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] ou as ferramentas Tlbimp.exe e Regasm.exe do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5e5bf-103">You can create Component Object Model (COM) wrappers by using [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] features or the .NET Framework tools Tlbimp.exe and Regasm.exe.</span></span> <span data-ttu-id="5e5bf-104">Ambos os métodos geram dois tipos de wrappers COM:</span><span class="sxs-lookup"><span data-stu-id="5e5bf-104">Both methods generate two types of COM wrappers:</span></span>  

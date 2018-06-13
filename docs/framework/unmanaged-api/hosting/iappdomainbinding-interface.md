@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430815"
 ---
 # <a name="iappdomainbinding-interface"></a><span data-ttu-id="a7368-102">Interface IAppDomainBinding</span><span class="sxs-lookup"><span data-stu-id="a7368-102">IAppDomainBinding Interface</span></span>
 <span data-ttu-id="a7368-103">Fornece um método que é chamado pelo common language runtime (CLR) para notificar o aplicativo host que um domínio de aplicativo foi criado.</span><span class="sxs-lookup"><span data-stu-id="a7368-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  

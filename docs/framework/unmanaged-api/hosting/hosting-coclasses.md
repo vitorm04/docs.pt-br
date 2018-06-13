@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8dbe16c1bd9293cd109e9ce7f1211d6651551bc5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430509"
 ---
 # <a name="hosting-coclasses"></a><span data-ttu-id="ef6a6-102">Hospedando coclasses</span><span class="sxs-lookup"><span data-stu-id="ef6a6-102">Hosting Coclasses</span></span>
 <span data-ttu-id="ef6a6-103">Esta seção descreve os coclasses API não gerenciadas que usa a API de hospedagem.</span><span class="sxs-lookup"><span data-stu-id="ef6a6-103">This section describes the unmanaged API coclasses that the hosting API uses.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561843"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a><span data-ttu-id="32cd9-102">Como obter o deslocamento de um visual</span><span class="sxs-lookup"><span data-stu-id="32cd9-102">How to: Get the Offset of a Visual</span></span>
 <span data-ttu-id="32cd9-103">Esses exemplos mostram como recuperar o valor de deslocamento de um objeto visual que é relativo a seu pai ou a qualquer ancestral ou descendente.</span><span class="sxs-lookup"><span data-stu-id="32cd9-103">These examples show how to retrieve the offset value of a visual object that is relative to its parent, or any ancestor or descendant.</span></span>  

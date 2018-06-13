@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6641490908b1f384bf8192fd46b7dadb4ff5e23
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431936"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a><span data-ttu-id="cc7a2-102">Método ICLRStrongName::StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="cc7a2-102">ICLRStrongName::StrongNameSignatureSize Method</span></span>
 <span data-ttu-id="cc7a2-103">Retorna o tamanho da assinatura de nome forte.</span><span class="sxs-lookup"><span data-stu-id="cc7a2-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="cc7a2-104">Esse método é normalmente usado por compiladores para determinar a quantidade de espaço para reservar o arquivo durante a criação de um assembly assinado com atraso.</span><span class="sxs-lookup"><span data-stu-id="cc7a2-104">This method is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  

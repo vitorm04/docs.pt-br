@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561931"
 ---
 # <a name="how-to-translate-an-element"></a><span data-ttu-id="46be0-102">Como converter um elemento</span><span class="sxs-lookup"><span data-stu-id="46be0-102">How to: Translate an Element</span></span>
 <span data-ttu-id="46be0-103">Este exemplo mostra como transladar (mover) um elemento usando um <xref:System.Windows.Media.TranslateTransform>.</span><span class="sxs-lookup"><span data-stu-id="46be0-103">This example shows how to translate (move) an element by using a <xref:System.Windows.Media.TranslateTransform>.</span></span>  

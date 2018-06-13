@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2b63dbcaa54e03e5603e06545f8b4fec393d8268
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424603"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="aa470-102">Método ISymUnmanagedNamespace::GetVariables</span><span class="sxs-lookup"><span data-stu-id="aa470-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
 <span data-ttu-id="aa470-103">Retorna todas as variáveis definidas no escopo global dentro desse namespace.</span><span class="sxs-lookup"><span data-stu-id="aa470-103">Returns all variables defined at global scope within this namespace.</span></span>  

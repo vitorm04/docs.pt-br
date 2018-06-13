@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576289"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a><span data-ttu-id="7cf15-102">Delegados genéricos para manipulação de matrizes e listas</span><span class="sxs-lookup"><span data-stu-id="7cf15-102">Generic Delegates for Manipulating Arrays and Lists</span></span>
 <span data-ttu-id="7cf15-103">Este tópico fornece uma visão geral de delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.</span><span class="sxs-lookup"><span data-stu-id="7cf15-103">This topic provides an overview of generic delegates for conversions, search predicates, and actions to be taken on elements of an array or collection.</span></span>  

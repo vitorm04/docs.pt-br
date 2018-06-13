@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429044"
 ---
 # <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="65251-102">Enumeração CLSID_RESOLUTION_FLAGS</span><span class="sxs-lookup"><span data-stu-id="65251-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
 <span data-ttu-id="65251-103">Contém valores que indicam como o common language runtime (CLR) deve resolver uma `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="65251-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  

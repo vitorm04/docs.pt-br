@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423709"
 ---
 # <a name="debugging-unmanaged-api-reference"></a><span data-ttu-id="9de7b-102">Depuração (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="9de7b-102">Debugging (Unmanaged API Reference)</span></span>
 <span data-ttu-id="9de7b-103">A depuração da API permite que um depurador depurar o código que é executado no ambiente do common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="9de7b-103">The debugging API enables a debugger to debug code that runs in the common language runtime (CLR) environment.</span></span> <span data-ttu-id="9de7b-104">O código a ser depurado pode ser qualquer tipo de código que o CLR dá suporte.</span><span class="sxs-lookup"><span data-stu-id="9de7b-104">The code to be debugged can be any type of code that the CLR supports.</span></span>  

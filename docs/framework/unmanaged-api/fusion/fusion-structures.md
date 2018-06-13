@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431474"
 ---
 # <a name="fusion-structures"></a><span data-ttu-id="25e32-102">Estruturas de fusão</span><span class="sxs-lookup"><span data-stu-id="25e32-102">Fusion Structures</span></span>
 <span data-ttu-id="25e32-103">Esta seção descreve as estruturas não gerenciadas que usa a API de fusão.</span><span class="sxs-lookup"><span data-stu-id="25e32-103">This section describes the unmanaged structures that the fusion API uses.</span></span>  

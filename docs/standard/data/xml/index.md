@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576084"
 ---
 # <a name="xml-documents-and-data"></a><span data-ttu-id="3bf82-102">Documentos e dados XML</span><span class="sxs-lookup"><span data-stu-id="3bf82-102">XML Documents and Data</span></span>
 <span data-ttu-id="3bf82-103">O .NET Framework fornece um conjunto de classes abrangente e integrado que permite que você crie aplicativos com reconhecimento de XML facilmente.</span><span class="sxs-lookup"><span data-stu-id="3bf82-103">The .NET Framework provides a comprehensive and integrated set of classes that enable you to build XML-aware apps easily.</span></span> <span data-ttu-id="3bf82-104">As classes nos namespaces a seguir suportam a análise e gravação de XML, edição de dados XML na memória, validação de dados e transformação de XSLT.</span><span class="sxs-lookup"><span data-stu-id="3bf82-104">The classes in the following namespaces support parsing and writing XML, editing XML data in memory, data validation, and XSLT transformation.</span></span>  

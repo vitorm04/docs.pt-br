@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
 ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554402"
 ---
 # <a name="slider"></a><span data-ttu-id="1a838-102">Controle deslizante</span><span class="sxs-lookup"><span data-stu-id="1a838-102">Slider</span></span>
 <span data-ttu-id="1a838-103">O <xref:System.Windows.Controls.Slider> permite que você seleciona um intervalo de valores movendo um <xref:System.Windows.Controls.Primitives.Thumb> ao longo de um <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="1a838-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426179"
 ---
 # <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="c9381-102">Método IDebugAutoAttach::AutoAttach</span><span class="sxs-lookup"><span data-stu-id="c9381-102">IDebugAutoAttach::AutoAttach Method</span></span>
 <span data-ttu-id="c9381-103">Executa automaticamente do servidor chamado depurador anexar.</span><span class="sxs-lookup"><span data-stu-id="c9381-103">Performs server-invoked debugger auto attach.</span></span>  

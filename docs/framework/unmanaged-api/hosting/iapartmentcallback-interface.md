@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffa06fd42b5cfa09817bae9f0b3a3810e30f99c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430961"
 ---
 # <a name="iapartmentcallback-interface"></a><span data-ttu-id="1e1de-102">Interface IApartmentCallback</span><span class="sxs-lookup"><span data-stu-id="1e1de-102">IApartmentCallback Interface</span></span>
 <span data-ttu-id="1e1de-103">Fornece métodos para fazer retornos de chamada em um apartment.</span><span class="sxs-lookup"><span data-stu-id="1e1de-103">Provides methods for making callbacks within an apartment.</span></span> <span data-ttu-id="1e1de-104">Um *apartment* é um contêiner lógico em um processo para objetos que compartilham os mesmos requisitos de acesso de thread.</span><span class="sxs-lookup"><span data-stu-id="1e1de-104">An *apartment* is a logical container within a process for objects that share the same thread access requirements.</span></span>  

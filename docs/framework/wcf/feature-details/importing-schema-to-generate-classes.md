@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497033"
 ---
 # <a name="importing-schema-to-generate-classes"></a><span data-ttu-id="95a6a-102">Importando esquema para gerar classes</span><span class="sxs-lookup"><span data-stu-id="95a6a-102">Importing Schema to Generate Classes</span></span>
 <span data-ttu-id="95a6a-103">Para gerar classes de esquemas que podem ser usados com o Windows Communication Foundation (WCF), use o <xref:System.Runtime.Serialization.XsdDataContractImporter> classe.</span><span class="sxs-lookup"><span data-stu-id="95a6a-103">To generate classes from schemas that are usable with Windows Communication Foundation (WCF), use the <xref:System.Runtime.Serialization.XsdDataContractImporter> class.</span></span> <span data-ttu-id="95a6a-104">Este tópico descreve o processo e variações.</span><span class="sxs-lookup"><span data-stu-id="95a6a-104">This topic describes the process and variations.</span></span>  

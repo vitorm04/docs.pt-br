@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20f65218928ee07d67ea742154469ac3cbea9241
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421759"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a><span data-ttu-id="372e9-102">Método ICorDebugVariableHome::GetArgumentIndex</span><span class="sxs-lookup"><span data-stu-id="372e9-102">ICorDebugVariableHome::GetArgumentIndex Method</span></span>
 <span data-ttu-id="372e9-103">Obtém o índice de um argumento de função.</span><span class="sxs-lookup"><span data-stu-id="372e9-103">Gets the index of a function argument.</span></span>  

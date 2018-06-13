@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746833"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="d26b6-102">&lt;ouvintes de&gt; elemento para &lt;fonte&gt;</span><span class="sxs-lookup"><span data-stu-id="d26b6-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
 <span data-ttu-id="d26b6-103">Adiciona ou remove ouvintes no <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção para um <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="d26b6-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="d26b6-104">Um ouvinte direciona a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.</span><span class="sxs-lookup"><span data-stu-id="d26b6-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  

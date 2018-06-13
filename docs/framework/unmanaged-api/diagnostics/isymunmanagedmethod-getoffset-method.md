@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424385"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="74a4f-102">Método ISymUnmanagedMethod::GetOffset</span><span class="sxs-lookup"><span data-stu-id="74a4f-102">ISymUnmanagedMethod::GetOffset Method</span></span>
 <span data-ttu-id="74a4f-103">Retorna o deslocamento dentro desse método que corresponde à posição especificada dentro de um documento.</span><span class="sxs-lookup"><span data-stu-id="74a4f-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  

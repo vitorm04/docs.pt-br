@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b7b0d5ec61ddf81c39e2d58dc972db119b06417
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427776"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="4e605-102">Método IAssemblyCacheItem::AbortItem</span><span class="sxs-lookup"><span data-stu-id="4e605-102">IAssemblyCacheItem::AbortItem Method</span></span>
 <span data-ttu-id="4e605-103">Permite que o assembly no cache de assembly global executar operações de limpeza antes que ele seja liberado.</span><span class="sxs-lookup"><span data-stu-id="4e605-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  

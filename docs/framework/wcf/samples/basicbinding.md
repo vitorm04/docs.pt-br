@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500188"
 ---
 # <a name="basicbinding"></a><span data-ttu-id="5d5ca-102">BasicBinding</span><span class="sxs-lookup"><span data-stu-id="5d5ca-102">BasicBinding</span></span>
 <span data-ttu-id="5d5ca-103">Este exemplo demonstra o uso de `basicHttpBinding` que fornece interoperabilidade de comunicação e o máximo HTTP com o primeiro - e second - generation serviços da Web.</span><span class="sxs-lookup"><span data-stu-id="5d5ca-103">This sample demonstrates the use of `basicHttpBinding` that provides HTTP communication and maximum interoperability with first- and second-generation Web services.</span></span>  

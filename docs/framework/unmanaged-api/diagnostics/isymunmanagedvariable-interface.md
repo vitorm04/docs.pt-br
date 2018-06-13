@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3db4fc691637c049e0374416cb92a2056555ad11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428694"
 ---
 # <a name="isymunmanagedvariable-interface"></a><span data-ttu-id="846dc-102">Interface ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="846dc-102">ISymUnmanagedVariable Interface</span></span>
 <span data-ttu-id="846dc-103">Representa uma variável, como um parâmetro, uma variável local ou um campo.</span><span class="sxs-lookup"><span data-stu-id="846dc-103">Represents a variable, such as a parameter, a local variable, or a field.</span></span>  

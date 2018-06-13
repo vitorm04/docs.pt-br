@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427425"
 ---
 # <a name="isymunmanagedmethod-interface"></a><span data-ttu-id="df451-102">Interface ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="df451-102">ISymUnmanagedMethod Interface</span></span>
 <span data-ttu-id="df451-103">Representa um método no repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="df451-103">Represents a method within the symbol store.</span></span> <span data-ttu-id="df451-104">Essa interface fornece acesso a apenas os atributos relacionados ao símbolo de um método, em vez dos atributos de tipo.</span><span class="sxs-lookup"><span data-stu-id="df451-104">This interface provides access to only the symbol-related attributes of a method, instead of the type-related attributes.</span></span>  

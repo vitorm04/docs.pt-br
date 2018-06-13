@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496929"
 ---
 # <a name="message-filters"></a><span data-ttu-id="4c179-102">Filtros de mensagem</span><span class="sxs-lookup"><span data-stu-id="4c179-102">Message Filters</span></span>
 <span data-ttu-id="4c179-103">Para implementar roteamento baseado em conteúdo, o serviço de roteamento usa <xref:System.ServiceModel.Dispatcher.MessageFilter> implementações que inspecionam seções específicas de uma mensagem, como o endereço, nome do ponto de extremidade ou uma instrução XPath específica.</span><span class="sxs-lookup"><span data-stu-id="4c179-103">To implement content-based routing, the Routing Service uses <xref:System.ServiceModel.Dispatcher.MessageFilter> implementations that inspect specific sections of a message, such as the address, endpoint name, or a specific XPath statement.</span></span> <span data-ttu-id="4c179-104">Se nenhum dos filtros de mensagem fornecido com [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] atender às suas necessidades, você pode criar um filtro personalizado, criando uma nova implementação de base de <xref:System.ServiceModel.Dispatcher.MessageFilter> classe.</span><span class="sxs-lookup"><span data-stu-id="4c179-104">If none of the message filters provided with [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] meet your needs, you can create a custom filter by creating a new implementation of the base <xref:System.ServiceModel.Dispatcher.MessageFilter> class.</span></span>  

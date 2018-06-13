@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef5888c33e9532e5fc132fe571d59699d6f80c49
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425162"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="4c8ea-102">Método ISymUnmanagedReader::GetMethodByVersion</span><span class="sxs-lookup"><span data-stu-id="4c8ea-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
 <span data-ttu-id="4c8ea-103">Obtém um método de leitor de símbolo, considerando um token de método e um número de versão de editar e copiar.</span><span class="sxs-lookup"><span data-stu-id="4c8ea-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="4c8ea-104">Números de versão começam em 1 e são incrementados cada vez que o método é alterado como resultado de uma operação de cópia e de edição.</span><span class="sxs-lookup"><span data-stu-id="4c8ea-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  

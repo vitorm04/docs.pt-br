@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430005"
 ---
 # <a name="guidmanagedname-attribute"></a><span data-ttu-id="503c0-102">Atributo GUID_ManagedName</span><span class="sxs-lookup"><span data-stu-id="503c0-102">GUID_ManagedName Attribute</span></span>
 <span data-ttu-id="503c0-103">Define um atributo de interface personalizada que especifica o nome do namespace gerenciado para uma biblioteca de modelo (COM) do objeto de componente.</span><span class="sxs-lookup"><span data-stu-id="503c0-103">Defines a custom interface attribute that specifies the managed namespace name for a component object model (COM) library.</span></span>  

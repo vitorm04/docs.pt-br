@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6aad2df19ec5563d8d48b0c286ab888a727c21ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428154"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a><span data-ttu-id="5b7d3-102">Método ISymUnmanagedWriter::OpenScope</span><span class="sxs-lookup"><span data-stu-id="5b7d3-102">ISymUnmanagedWriter::OpenScope Method</span></span>
 <span data-ttu-id="5b7d3-103">Abre um novo escopo léxico no método atual.</span><span class="sxs-lookup"><span data-stu-id="5b7d3-103">Opens a new lexical scope in the current method.</span></span> <span data-ttu-id="5b7d3-104">O escopo se torna o novo escopo atual e é enviada por push para uma pilha de escopos.</span><span class="sxs-lookup"><span data-stu-id="5b7d3-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="5b7d3-105">Escopos devem formar uma hierarquia.</span><span class="sxs-lookup"><span data-stu-id="5b7d3-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="5b7d3-106">Irmãos não podem se sobrepor.</span><span class="sxs-lookup"><span data-stu-id="5b7d3-106">Siblings are not allowed to overlap.</span></span>  

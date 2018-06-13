@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ebd7ef3b329eae8e35b680f3d8c74864e2a0f4d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428681"
 ---
 # <a name="corimageunloading-function"></a><span data-ttu-id="85052-102">Função _CorImageUnloading</span><span class="sxs-lookup"><span data-stu-id="85052-102">_CorImageUnloading Function</span></span>
 <span data-ttu-id="85052-103">Notifica o carregador quando as imagens do módulo gerenciado são descarregadas.</span><span class="sxs-lookup"><span data-stu-id="85052-103">Notifies the loader when the managed module images are unloaded.</span></span>  

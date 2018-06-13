@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac3c6698e4ca127257b7682f1f55acd663375280
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423722"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="8662b-102">Método ICorPublishAppDomainEnum::Next</span><span class="sxs-lookup"><span data-stu-id="8662b-102">ICorPublishAppDomainEnum::Next Method</span></span>
 <span data-ttu-id="8662b-103">Obtém o número especificado de domínios de aplicativo que existem atualmente no processo, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="8662b-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  

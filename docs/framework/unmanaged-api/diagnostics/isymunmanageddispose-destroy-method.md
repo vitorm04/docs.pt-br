@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d4b5f94bdbb7319cef14c8b86f8ea995df7ff21
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424476"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="a53f4-102">Método ISymUnmanagedDispose::Destroy</span><span class="sxs-lookup"><span data-stu-id="a53f4-102">ISymUnmanagedDispose::Destroy Method</span></span>
 <span data-ttu-id="a53f4-103">Faz com que o objeto subjacente liberar todas as referências internas e retornar falha em todas as chamadas método subsequentes.</span><span class="sxs-lookup"><span data-stu-id="a53f4-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  

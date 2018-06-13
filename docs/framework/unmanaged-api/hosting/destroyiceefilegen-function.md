@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8e108dd925432b8ec193863de4cb085dad50cdd1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429067"
 ---
 # <a name="destroyiceefilegen-function"></a><span data-ttu-id="537eb-102">Função DestroyICeeFileGen</span><span class="sxs-lookup"><span data-stu-id="537eb-102">DestroyICeeFileGen Function</span></span>
 <span data-ttu-id="537eb-103">Destrói um [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="537eb-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  

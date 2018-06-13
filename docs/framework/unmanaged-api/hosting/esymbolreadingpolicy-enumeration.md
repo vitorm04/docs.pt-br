@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 28f6bdbc3e382f82b7fdd632b9fc8c4d422629c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429719"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a><span data-ttu-id="cf4b8-102">Enumeração ESymbolReadingPolicy</span><span class="sxs-lookup"><span data-stu-id="cf4b8-102">ESymbolReadingPolicy Enumeration</span></span>
 <span data-ttu-id="cf4b8-103">Contém valores que defina a política para ler os arquivos do programa (PDB) de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="cf4b8-103">Contains values that set the policy for reading program database (PDB) files.</span></span>  

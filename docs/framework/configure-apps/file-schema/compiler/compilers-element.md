@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742985"
 ---
 # <a name="ltcompilersgt-element"></a><span data-ttu-id="cec66-102">&lt;compiladores&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="cec66-102">&lt;compilers&gt; Element</span></span>
 <span data-ttu-id="cec66-103">Contêiner de elementos de configuração do compilador. Contém zero ou mais elementos [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).</span><span class="sxs-lookup"><span data-stu-id="cec66-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  

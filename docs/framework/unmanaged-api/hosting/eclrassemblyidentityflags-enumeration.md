@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f26a049c68b62ee09a569d741f0c1ab03a3f331a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428665"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="8fdf1-102">Enumeração ECLRAssemblyIdentityFlags</span><span class="sxs-lookup"><span data-stu-id="8fdf1-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
 <span data-ttu-id="8fdf1-103">Indica o tipo de identidade de um assembly.</span><span class="sxs-lookup"><span data-stu-id="8fdf1-103">Indicates the type of an assembly's identity.</span></span>  

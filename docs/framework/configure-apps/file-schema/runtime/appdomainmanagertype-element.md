@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743479"
 ---
 # <a name="ltappdomainmanagertypegt-element"></a><span data-ttu-id="c8b3a-102">&lt;appDomainManagerType&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="c8b3a-102">&lt;appDomainManagerType&gt; Element</span></span>
 <span data-ttu-id="c8b3a-103">Especifica o tipo que serve como o gerenciador de domínio do aplicativo para o domínio do aplicativo padrão.</span><span class="sxs-lookup"><span data-stu-id="c8b3a-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  

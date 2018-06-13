@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431001"
 ---
 # <a name="notifyfilter-enumeration"></a><span data-ttu-id="c58e5-102">Enumeração NOTIFY_FILTER</span><span class="sxs-lookup"><span data-stu-id="c58e5-102">NOTIFY_FILTER Enumeration</span></span>
 <span data-ttu-id="c58e5-103">Identifica os retornos de chamada para funções do depurador.</span><span class="sxs-lookup"><span data-stu-id="c58e5-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="c58e5-104">Para obter mais informações, consulte o [Inotifysource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="c58e5-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  

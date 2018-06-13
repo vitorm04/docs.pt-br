@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743557"
 ---
 # <a name="ltmscorlibgt-element-for-cryptography-settings"></a><span data-ttu-id="531a1-102">&lt;mscorlib&gt; elemento para configurações de criptografia</span><span class="sxs-lookup"><span data-stu-id="531a1-102">&lt;mscorlib&gt; Element for Cryptography Settings</span></span>
 <span data-ttu-id="531a1-103">Contém o [ \<cryptographySettings > elemento](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span><span class="sxs-lookup"><span data-stu-id="531a1-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  

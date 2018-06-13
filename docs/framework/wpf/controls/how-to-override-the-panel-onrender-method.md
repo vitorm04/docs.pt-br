@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554866"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a><span data-ttu-id="6a492-102">Como substituir o método OnRender do painel</span><span class="sxs-lookup"><span data-stu-id="6a492-102">How to: Override the Panel OnRender Method</span></span>
 <span data-ttu-id="6a492-103">Este exemplo mostra como substituir o <xref:System.Windows.Controls.Panel.OnRender%2A> método <xref:System.Windows.Controls.Panel> para adicionar efeitos gráficos personalizados a um elemento de layout.</span><span class="sxs-lookup"><span data-stu-id="6a492-103">This example shows how to override the <xref:System.Windows.Controls.Panel.OnRender%2A> method of <xref:System.Windows.Controls.Panel> in order to add custom graphical effects to a layout element.</span></span>  

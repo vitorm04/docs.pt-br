@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8e50a018016b885a3513cbd885b8e5115f18113
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432915"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a><span data-ttu-id="27c04-102">Método ICLRRuntimeInfo::GetProcAddress</span><span class="sxs-lookup"><span data-stu-id="27c04-102">ICLRRuntimeInfo::GetProcAddress Method</span></span>
 <span data-ttu-id="27c04-103">Obtém o endereço de uma função específica que foi exportado do common language runtime (CLR) associado a esta interface.</span><span class="sxs-lookup"><span data-stu-id="27c04-103">Gets the address of a specified function that was exported from the common language runtime (CLR) associated with this interface.</span></span>  

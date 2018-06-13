@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a5ff52a95fd6ebaec05439cbc702d5513d0cc78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427763"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a><span data-ttu-id="92366-102">Método ISymUnmanagedWriter::UsingNamespace</span><span class="sxs-lookup"><span data-stu-id="92366-102">ISymUnmanagedWriter::UsingNamespace Method</span></span>
 <span data-ttu-id="92366-103">Especifica que o nome totalmente qualificado de namespace fornecido está sendo usado dentro do escopo léxico aberto no momento.</span><span class="sxs-lookup"><span data-stu-id="92366-103">Specifies that the given fully qualified namespace name is being used within the currently open lexical scope.</span></span> <span data-ttu-id="92366-104">O namespace será usado em todos os escopos que herdam do escopo aberto no momento.</span><span class="sxs-lookup"><span data-stu-id="92366-104">The namespace will be used within all scopes that inherit from the currently open scope.</span></span> <span data-ttu-id="92366-105">Fechar o escopo atual também vai interromper o uso do namespace.</span><span class="sxs-lookup"><span data-stu-id="92366-105">Closing the current scope will also stop the use of the namespace.</span></span>  

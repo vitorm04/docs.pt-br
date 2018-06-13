@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497172"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a><span data-ttu-id="84a8f-102">Como proteger pontos de extremidade de metadados</span><span class="sxs-lookup"><span data-stu-id="84a8f-102">How to: Secure Metadata Endpoints</span></span>
 <span data-ttu-id="84a8f-103">Metadados para um serviço podem conter informações confidenciais sobre seu aplicativo que um usuário mal-intencionado pode aproveitar.</span><span class="sxs-lookup"><span data-stu-id="84a8f-103">Metadata for a service can contain sensitive information about your application that a malicious user can leverage.</span></span> <span data-ttu-id="84a8f-104">Os consumidores de serviço também podem exigir um mecanismo seguro para obtenção de metadados sobre o serviço.</span><span class="sxs-lookup"><span data-stu-id="84a8f-104">Consumers of your service may also require a secure mechanism for obtaining metadata about your service.</span></span> <span data-ttu-id="84a8f-105">Portanto, às vezes, é necessário publicar seus metadados usando um ponto de extremidade seguro.</span><span class="sxs-lookup"><span data-stu-id="84a8f-105">Therefore, it is sometimes necessary to publish your metadata using a secure endpoint.</span></span>  

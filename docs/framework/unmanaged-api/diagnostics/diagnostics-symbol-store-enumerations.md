@@ -11,8 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427288"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a><span data-ttu-id="d4300-102">Enumerações de armazenamento de símbolo de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="d4300-102">Diagnostics Symbol Store Enumerations</span></span>
 <span data-ttu-id="d4300-103">Este tópico descreve as enumerações não gerenciadas que usa o armazenamento de símbolo de diagnóstico API.</span><span class="sxs-lookup"><span data-stu-id="d4300-103">This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  

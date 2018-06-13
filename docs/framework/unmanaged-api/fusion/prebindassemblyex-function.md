@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431995"
 ---
 # <a name="prebindassemblyex-function"></a><span data-ttu-id="7fe88-102">Função PreBindAssemblyEx</span><span class="sxs-lookup"><span data-stu-id="7fe88-102">PreBindAssemblyEx Function</span></span>
 <span data-ttu-id="7fe88-103">Obtém o nome de exibição de pós-política para um assembly.</span><span class="sxs-lookup"><span data-stu-id="7fe88-103">Gets the post-policy display name for an assembly.</span></span>  

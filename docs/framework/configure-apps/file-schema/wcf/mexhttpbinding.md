@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748806"
 ---
 # <a name="ltmexhttpbindinggt"></a><span data-ttu-id="aa39b-102">&lt;mexHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="aa39b-102">&lt;mexHttpBinding&gt;</span></span>
 <span data-ttu-id="aa39b-103">Especifica as configurações de uma associação usada para a troca de mensagens WS-MetadataExchange (WS-MEX) sobre HTTP.</span><span class="sxs-lookup"><span data-stu-id="aa39b-103">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over HTTP.</span></span>  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ec66e0064a8d6e8d4664dd8c727aa87621cfd8e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427301"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a><span data-ttu-id="563a4-102">Interface ISymUnmanagedAsyncMethodPropertiesWriter</span><span class="sxs-lookup"><span data-stu-id="563a4-102">ISymUnmanagedAsyncMethodPropertiesWriter Interface</span></span>
 <span data-ttu-id="563a4-103">Permite que você defina informações do método assíncrono opcional para o símbolo de cada método.</span><span class="sxs-lookup"><span data-stu-id="563a4-103">Allows you to define optional async method information for each method symbol.</span></span> <span data-ttu-id="563a4-104">Sempre use um método aberto; ou seja, entre as chamadas para o [método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) e [método CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).</span><span class="sxs-lookup"><span data-stu-id="563a4-104">Always use with an opened method; that is, between calls to the [OpenMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) and the [CloseMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).</span></span>  

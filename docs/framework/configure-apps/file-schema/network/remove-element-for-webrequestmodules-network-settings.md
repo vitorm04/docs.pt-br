@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743021"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="ebb87-102">&lt;remover&gt; elemento webRequestModules (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="ebb87-102">&lt;remove&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="ebb87-103">Remove um módulo personalizado de solicitação da Web do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ebb87-103">Removes a custom Web request module from the application.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428756"
 ---
 # <a name="corlaunchapplication-function"></a><span data-ttu-id="cc2b7-102">Função CorLaunchApplication</span><span class="sxs-lookup"><span data-stu-id="cc2b7-102">CorLaunchApplication Function</span></span>
 <span data-ttu-id="cc2b7-103">Inicia o aplicativo no caminho de rede especificado, usando os manifestos especificados e outros dados de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="cc2b7-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  

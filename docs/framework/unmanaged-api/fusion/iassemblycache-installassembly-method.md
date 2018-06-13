@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 726a4ed8ee3d451687e0af671d948eb7648f7f58
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430018"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="198de-102">Método IAssemblyCache::InstallAssembly</span><span class="sxs-lookup"><span data-stu-id="198de-102">IAssemblyCache::InstallAssembly Method</span></span>
 <span data-ttu-id="198de-103">Instala o assembly especificado no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="198de-103">Installs the specified assembly in the global assembly cache.</span></span>  

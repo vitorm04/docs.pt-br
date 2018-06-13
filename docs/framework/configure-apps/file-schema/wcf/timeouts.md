@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752995"
 ---
 # <a name="lttimeoutsgt"></a><span data-ttu-id="bb668-102">&lt;tempos limite&gt;</span><span class="sxs-lookup"><span data-stu-id="bb668-102">&lt;timeOuts&gt;</span></span>
 <span data-ttu-id="bb668-103">Representa um elemento de configuração que especifica o intervalo de tempo permitido para o host de serviço abrir ou fechar.</span><span class="sxs-lookup"><span data-stu-id="bb668-103">Represents a configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>  
