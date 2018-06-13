@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
 ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590232"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a><span data-ttu-id="76384-102">Expressão é um valor e, por isso, não pode ser o destino de uma atribuição</span><span class="sxs-lookup"><span data-stu-id="76384-102">Expression is a value and therefore cannot be the target of an assignment</span></span>
 <span data-ttu-id="76384-103">Uma instrução tenta atribuir um valor a uma expressão.</span><span class="sxs-lookup"><span data-stu-id="76384-103">A statement attempts to assign a value to an expression.</span></span> <span data-ttu-id="76384-104">Você pode atribuir um valor apenas para uma variável gravável, propriedade ou elemento de matriz em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="76384-104">You can assign a value only to a writable variable, property, or array element at run time.</span></span> <span data-ttu-id="76384-105">O exemplo a seguir ilustra como esse erro pode ocorrer.</span><span class="sxs-lookup"><span data-stu-id="76384-105">The following example illustrates how this error can occur.</span></span>  

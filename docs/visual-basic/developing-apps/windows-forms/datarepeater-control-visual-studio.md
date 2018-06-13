@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
 ms.openlocfilehash: 91a0f8c3dcb4999d2b3d4491106c978de940344a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591007"
 ---
 # <a name="datarepeater-control-visual-studio"></a><span data-ttu-id="04f35-102">Controles DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="04f35-102">DataRepeater Control (Visual Studio)</span></span>
 <span data-ttu-id="04f35-103">O Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle é um contêiner rolável para repetido de controles que exibem dados, por exemplo, as linhas em uma tabela de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="04f35-103">The Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control is a scrollable container for controls that display repeated data, for example, rows in a database table.</span></span> <span data-ttu-id="04f35-104">Ele pode ser usado como uma alternativa para o <xref:System.Windows.Forms.DataGridView> controlar quando precisar de mais controle sobre o layout dos dados.</span><span class="sxs-lookup"><span data-stu-id="04f35-104">It can be used as an alternative to the <xref:System.Windows.Forms.DataGridView> control when you need more control over the layout of the data.</span></span>  

@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397423"
 ---
 # <a name="loader-etw-events"></a><span data-ttu-id="9071f-102">Eventos ETW de carregador</span><span class="sxs-lookup"><span data-stu-id="9071f-102">Loader ETW Events</span></span>
 <a name="top"></a> <span data-ttu-id="9071f-103">Esses eventos coletam informações relacionadas ao carregamento e descarregamento de domínios do aplicativo, assemblies e módulos.</span><span class="sxs-lookup"><span data-stu-id="9071f-103">These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  

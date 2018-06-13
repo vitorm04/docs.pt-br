@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 3e2ef617ecf5f5618007f2b12247afc8b9505021
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596574"
 ---
 # <a name="mycomputeraudio-object"></a><span data-ttu-id="35387-102">Objeto My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="35387-102">My.Computer.Audio Object</span></span>
 <span data-ttu-id="35387-103">Fornece métodos para reproduzir sons.</span><span class="sxs-lookup"><span data-stu-id="35387-103">Provides methods for playing sounds.</span></span>  

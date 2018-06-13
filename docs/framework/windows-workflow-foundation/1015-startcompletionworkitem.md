@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509615"
 ---
 # <a name="1015---startcompletionworkitem"></a><span data-ttu-id="15f3c-102">1015 - StartCompletionWorkItem</span><span class="sxs-lookup"><span data-stu-id="15f3c-102">1015 - StartCompletionWorkItem</span></span>
 ## <a name="properties"></a><span data-ttu-id="15f3c-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="15f3c-103">Properties</span></span>  

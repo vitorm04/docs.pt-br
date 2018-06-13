@@ -11,8 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365872"
 ---
 # <a name="code-contracts"></a><span data-ttu-id="177e3-102">Contratos de código</span><span class="sxs-lookup"><span data-stu-id="177e3-102">Code Contracts</span></span>
 <span data-ttu-id="177e3-103">Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código.</span><span class="sxs-lookup"><span data-stu-id="177e3-103">Code contracts provide a way to specify preconditions, postconditions, and object invariants in your code.</span></span> <span data-ttu-id="177e3-104">As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="177e3-104">Preconditions are requirements that must be met when entering a method or property.</span></span> <span data-ttu-id="177e3-105">As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado.</span><span class="sxs-lookup"><span data-stu-id="177e3-105">Postconditions describe expectations at the time the method or property code exits.</span></span> <span data-ttu-id="177e3-106">As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.</span><span class="sxs-lookup"><span data-stu-id="177e3-106">Object invariants describe the expected state for a class that is in a good state.</span></span>  

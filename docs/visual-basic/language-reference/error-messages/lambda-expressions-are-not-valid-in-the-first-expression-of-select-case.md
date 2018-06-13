@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588915"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a><span data-ttu-id="49288-102">Expressões lambda não são válidas na primeira expressão de uma &#39;Select Case&#39; instrução</span><span class="sxs-lookup"><span data-stu-id="49288-102">Lambda expressions are not valid in the first expression of a &#39;Select Case&#39; statement</span></span>
 <span data-ttu-id="49288-103">Você não pode usar uma expressão lambda para a expressão de teste em um `Select Case` instrução.</span><span class="sxs-lookup"><span data-stu-id="49288-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="49288-104">Definições de expressão lambda retornam funções e a expressão de teste de um `Select Case` instrução deve ser um tipo de dados elementares.</span><span class="sxs-lookup"><span data-stu-id="49288-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  

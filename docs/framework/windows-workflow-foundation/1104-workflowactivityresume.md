@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511050"
 ---
 # <a name="1104---workflowactivityresume"></a><span data-ttu-id="30341-102">1104 - WorkflowActivityResume</span><span class="sxs-lookup"><span data-stu-id="30341-102">1104 - WorkflowActivityResume</span></span>
 ## <a name="properties"></a><span data-ttu-id="30341-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="30341-103">Properties</span></span>  

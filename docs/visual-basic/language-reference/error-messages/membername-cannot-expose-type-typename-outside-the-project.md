@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
 ms.openlocfilehash: 36add48ebee2d1804921eeeec0b59cdd4cbafecc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588087"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a><span data-ttu-id="306fe-102">&#39;&lt;membername&gt; &#39; não pode expor o tipo &#39; &lt;typename&gt; &#39; fora do projeto por meio de &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="306fe-102">&#39;&lt;membername&gt;&#39; cannot expose type &#39;&lt;typename&gt;&#39; outside the project through &lt;containertype&gt; &#39;&lt;containertypename&gt;&#39;</span></span>
 <span data-ttu-id="306fe-103">Uma variável, parâmetro de procedimento ou função de retorno é exposta fora de seu contêiner, mas ele é declarado como um tipo que não deve ser exposto fora do contêiner.</span><span class="sxs-lookup"><span data-stu-id="306fe-103">A variable, procedure parameter, or function return is exposed outside its container, but it is declared as a type that must not be exposed outside the container.</span></span>  

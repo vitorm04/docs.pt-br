@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475459"
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedsocketerror"></a><span data-ttu-id="fd50f-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="fd50f-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span></span>
 <span data-ttu-id="fd50f-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="fd50f-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span></span>  

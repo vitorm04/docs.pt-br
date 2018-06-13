@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
 ms.openlocfilehash: 93b208b2119942f939a3af223c2f562c6097f7a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587554"
 ---
 # <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a><span data-ttu-id="bdc92-102">&#39;&lt;atributo&gt; &#39; não pode ser aplicado porque o formato do GUID &#39; &lt;número&gt; &#39; não está correto</span><span class="sxs-lookup"><span data-stu-id="bdc92-102">&#39;&lt;attribute&gt;&#39; cannot be applied because the format of the GUID &#39;&lt;number&gt;&#39; is not correct</span></span>
 <span data-ttu-id="bdc92-103">Um `COMClassAttribute` bloco de atributo especifica um identificador globalmente exclusivo (GUID) que não está de acordo com o formato adequado para um GUID.</span><span class="sxs-lookup"><span data-stu-id="bdc92-103">A `COMClassAttribute` attribute block specifies a globally unique identifier (GUID) that does not conform to the proper format for a GUID.</span></span> <span data-ttu-id="bdc92-104">`COMClassAttribute` usa GUIDs para identificar exclusivamente a classe, a interface e o evento de criação.</span><span class="sxs-lookup"><span data-stu-id="bdc92-104">`COMClassAttribute` uses GUIDs to uniquely identify the class, the interface, and the creation event.</span></span>  

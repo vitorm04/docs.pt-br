@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587404"
 ---
 # <a name="programming-in-visual-basic"></a><span data-ttu-id="0c641-102">Programando no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0c641-102">Programming in Visual Basic</span></span>
 <span data-ttu-id="0c641-103">Esta seção aborda tarefas de programação que você talvez queira saber mais sobre como criar seu aplicativo Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="0c641-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  

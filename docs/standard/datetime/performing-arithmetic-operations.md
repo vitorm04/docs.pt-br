@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5bbd5afb89d2b992e06583c7427c1a25a5b8f273
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577539"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a><span data-ttu-id="1473e-102">Executando operações aritméticas com datas e horários</span><span class="sxs-lookup"><span data-stu-id="1473e-102">Performing arithmetic operations with dates and times</span></span>
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579035"
 ---
 # <a name="file-and-stream-io"></a><span data-ttu-id="6c563-102">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="6c563-102">File and Stream I/O</span></span>
 <span data-ttu-id="6c563-103">E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="6c563-103">File and stream I/O (input/output) refers to the transfer of data either to or from a storage medium.</span></span> <span data-ttu-id="6c563-104">No .NET Framework, os namespaces `System.IO` contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos.</span><span class="sxs-lookup"><span data-stu-id="6c563-104">In the .NET Framework, the `System.IO` namespaces contain types that enable reading and writing, both synchronously and asynchronously, on data streams and files.</span></span> <span data-ttu-id="6c563-105">Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.</span><span class="sxs-lookup"><span data-stu-id="6c563-105">These namespaces also contain types that perform compression and decompression on files, and types that enable communication through pipes and serial ports.</span></span>  

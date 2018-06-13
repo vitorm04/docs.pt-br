@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593107"
 ---
 # <a name="textfieldparser-is-unable-to-complete-the-read-operation-because-maximum-buffer-size-has-been-exceeded"></a><span data-ttu-id="8ae06-102">TextFieldParser não pode concluir a operação de leitura porque o tamanho máximo do buffer foi excedido</span><span class="sxs-lookup"><span data-stu-id="8ae06-102">TextFieldParser is unable to complete the read operation because maximum buffer size has been exceeded</span></span>
 <span data-ttu-id="8ae06-103">A operação não pode ser concluída porque o tamanho máximo do buffer (10.000.000 bytes) foi excedido.</span><span class="sxs-lookup"><span data-stu-id="8ae06-103">The operation cannot be completed because the maximum buffer size (10,000,000 bytes) has been exceeded.</span></span>  

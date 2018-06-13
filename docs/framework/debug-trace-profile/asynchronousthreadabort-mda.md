@@ -12,8 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd759a4167a667919a443bc6492c049631ad222c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364173"
 ---
 # <a name="asynchronousthreadabort-mda"></a><span data-ttu-id="621b4-102">MDA asynchronousThreadAbort</span><span class="sxs-lookup"><span data-stu-id="621b4-102">asynchronousThreadAbort MDA</span></span>
 <span data-ttu-id="621b4-103">O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativado quando um thread tenta introduzir uma anulação assíncrona em outro thread.</span><span class="sxs-lookup"><span data-stu-id="621b4-103">The `asynchronousThreadAbort` managed debugging assistant (MDA) is activated when a thread attempts to introduce an asynchronous abort into another thread.</span></span> <span data-ttu-id="621b4-104">Anulações de thread síncronas não ativam o MDA `asynchronousThreadAbort`.</span><span class="sxs-lookup"><span data-stu-id="621b4-104">Synchronous thread aborts do not activate the `asynchronousThreadAbort` MDA.</span></span>

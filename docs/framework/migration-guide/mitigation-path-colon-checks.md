@@ -1,41 +1,30 @@
 ---
-title: "Mitigação: verificações de dois-pontos no caminho"
-ms.custom: 
+title: 'Mitigação: verificações de dois-pontos no caminho'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a976e4491924f91e97f01a9b98db945699655196
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a54220a90a5120d13c89232d30ab40140c324097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387374"
 ---
-# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="0d09e-102">Mitigação: verificações de dois-pontos no caminho</span><span class="sxs-lookup"><span data-stu-id="0d09e-102">Mitigation: Path Colon Checks</span></span>
-<span data-ttu-id="0d09e-103">Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], várias alterações foram feitas para dar suporte aos caminhos anteriormente sem suporte (em termos de comprimento e formato).</span><span class="sxs-lookup"><span data-stu-id="0d09e-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="0d09e-104">Em particular, as verificações da sintaxe adequada do separador de unidade (os dois-pontos) foram corrigidas.</span><span class="sxs-lookup"><span data-stu-id="0d09e-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
+# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="8ded2-102">Mitigação: verificações de dois-pontos no caminho</span><span class="sxs-lookup"><span data-stu-id="8ded2-102">Mitigation: Path Colon Checks</span></span>
+<span data-ttu-id="8ded2-103">Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], várias alterações foram feitas para dar suporte aos caminhos anteriormente sem suporte (em termos de comprimento e formato).</span><span class="sxs-lookup"><span data-stu-id="8ded2-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="8ded2-104">Em particular, as verificações da sintaxe adequada do separador de unidade (os dois-pontos) foram corrigidas.</span><span class="sxs-lookup"><span data-stu-id="8ded2-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="0d09e-105">Impacto</span><span class="sxs-lookup"><span data-stu-id="0d09e-105">Impact</span></span>  
- <span data-ttu-id="0d09e-106">Essas alterações bloqueiam alguns caminhos de URI aos quais esses os métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> anteriormente davam suporte.</span><span class="sxs-lookup"><span data-stu-id="0d09e-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods previously supported.</span></span>  
+## <a name="impact"></a><span data-ttu-id="8ded2-105">Impacto</span><span class="sxs-lookup"><span data-stu-id="8ded2-105">Impact</span></span>  
+ <span data-ttu-id="8ded2-106">Essas alterações bloqueiam alguns caminhos de URI aos quais esses os métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> anteriormente davam suporte.</span><span class="sxs-lookup"><span data-stu-id="8ded2-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods previously supported.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="0d09e-107">Redução</span><span class="sxs-lookup"><span data-stu-id="0d09e-107">Mitigation</span></span>  
- <span data-ttu-id="0d09e-108">Para contornar o problema de um caminho aceitável anteriormente que não tem mais suporte pelos métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>, é possível fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="0d09e-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods, you can do the following:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="8ded2-107">Redução</span><span class="sxs-lookup"><span data-stu-id="8ded2-107">Mitigation</span></span>  
+ <span data-ttu-id="8ded2-108">Para contornar o problema de um caminho aceitável anteriormente que não tem mais suporte pelos métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>, é possível fazer o seguinte:</span><span class="sxs-lookup"><span data-stu-id="8ded2-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> methods, you can do the following:</span></span>  
   
--   <span data-ttu-id="0d09e-109">Remova manualmente o esquema de uma URL.</span><span class="sxs-lookup"><span data-stu-id="0d09e-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="0d09e-110">Por exemplo, remova `file://` de uma URL.</span><span class="sxs-lookup"><span data-stu-id="0d09e-110">For example, remove `file://` from a URL.</span></span>  
+-   <span data-ttu-id="8ded2-109">Remova manualmente o esquema de uma URL.</span><span class="sxs-lookup"><span data-stu-id="8ded2-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="8ded2-110">Por exemplo, remova `file://` de uma URL.</span><span class="sxs-lookup"><span data-stu-id="8ded2-110">For example, remove `file://` from a URL.</span></span>  
   
--   <span data-ttu-id="0d09e-111">Passe o URI para um construtor <xref:System.Uri> e recupere o valor da propriedade <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d09e-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> property.</span></span>  
+-   <span data-ttu-id="8ded2-111">Passe o URI para um construtor <xref:System.Uri> e recupere o valor da propriedade <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8ded2-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> property.</span></span>  
   
--   <span data-ttu-id="0d09e-112">Recuse a normalização do novo caminho definindo a opção `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> como `true`.</span><span class="sxs-lookup"><span data-stu-id="0d09e-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
+-   <span data-ttu-id="8ded2-112">Recuse a normalização do novo caminho definindo a opção `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> como `true`.</span><span class="sxs-lookup"><span data-stu-id="8ded2-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
   
     ```xml  
     <runtime>  
@@ -43,5 +32,5 @@ ms.lasthandoff: 12/22/2017
     </runtime>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0d09e-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0d09e-113">See Also</span></span>  
- [<span data-ttu-id="0d09e-114">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="0d09e-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a><span data-ttu-id="8ded2-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ded2-113">See Also</span></span>  
+ [<span data-ttu-id="8ded2-114">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="8ded2-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

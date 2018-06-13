@@ -1,12 +1,6 @@
 ---
 title: Lendo a partir de arquivos no Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - data [Visual Basic], reading from files
 - I/O [Visual Basic], reading from files
@@ -14,62 +8,60 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 29eddd4abbadd2b4dfa12c19213612f4822bbb3f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590765"
 ---
-# <a name="reading-from-files-in-visual-basic"></a><span data-ttu-id="1afbc-102">Lendo a partir de arquivos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1afbc-102">Reading from Files in Visual Basic</span></span>
-<span data-ttu-id="1afbc-103">Esta seção explica como executar tarefas que estão associadas à leitura de arquivos.</span><span class="sxs-lookup"><span data-stu-id="1afbc-103">This section explains how to perform tasks that are associated with reading from files.</span></span>  
+# <a name="reading-from-files-in-visual-basic"></a><span data-ttu-id="c4969-102">Lendo a partir de arquivos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c4969-102">Reading from Files in Visual Basic</span></span>
+<span data-ttu-id="c4969-103">Esta seção explica como executar tarefas que estão associadas à leitura de arquivos.</span><span class="sxs-lookup"><span data-stu-id="c4969-103">This section explains how to perform tasks that are associated with reading from files.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1afbc-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1afbc-104">In This Section</span></span>  
- [<span data-ttu-id="1afbc-105">Como ler em arquivos de texto</span><span class="sxs-lookup"><span data-stu-id="1afbc-105">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
- <span data-ttu-id="1afbc-106">Demonstra como ler em um arquivo de texto.</span><span class="sxs-lookup"><span data-stu-id="1afbc-106">Demonstrates how to read from a text file.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c4969-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c4969-104">In This Section</span></span>  
+ [<span data-ttu-id="c4969-105">Como ler em arquivos de texto</span><span class="sxs-lookup"><span data-stu-id="c4969-105">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ <span data-ttu-id="c4969-106">Demonstra como ler em um arquivo de texto.</span><span class="sxs-lookup"><span data-stu-id="c4969-106">Demonstrates how to read from a text file.</span></span>  
   
- [<span data-ttu-id="1afbc-107">Como ler a partir de arquivos de texto separados por vírgulas</span><span class="sxs-lookup"><span data-stu-id="1afbc-107">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- <span data-ttu-id="1afbc-108">Demonstra como ler em um arquivo de texto delimitado.</span><span class="sxs-lookup"><span data-stu-id="1afbc-108">Demonstrates how to read from a delimited text file.</span></span>  
+ [<span data-ttu-id="c4969-107">Como ler a partir de arquivos de texto separados por vírgulas</span><span class="sxs-lookup"><span data-stu-id="c4969-107">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ <span data-ttu-id="c4969-108">Demonstra como ler em um arquivo de texto delimitado.</span><span class="sxs-lookup"><span data-stu-id="c4969-108">Demonstrates how to read from a delimited text file.</span></span>  
   
- [<span data-ttu-id="1afbc-109">Como ler a partir de arquivos de texto de largura fixa</span><span class="sxs-lookup"><span data-stu-id="1afbc-109">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
- <span data-ttu-id="1afbc-110">Demonstra como ler em um arquivo de texto de largura fixa.</span><span class="sxs-lookup"><span data-stu-id="1afbc-110">Demonstrates how to read from a fixed-width text file.</span></span>  
+ [<span data-ttu-id="c4969-109">Como ler a partir de arquivos de texto de largura fixa</span><span class="sxs-lookup"><span data-stu-id="c4969-109">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ <span data-ttu-id="c4969-110">Demonstra como ler em um arquivo de texto de largura fixa.</span><span class="sxs-lookup"><span data-stu-id="c4969-110">Demonstrates how to read from a fixed-width text file.</span></span>  
   
- [<span data-ttu-id="1afbc-111">Como ler a partir de arquivos de texto com vários formatos</span><span class="sxs-lookup"><span data-stu-id="1afbc-111">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- <span data-ttu-id="1afbc-112">Demonstra como ler em um arquivo de texto com vários formatos.</span><span class="sxs-lookup"><span data-stu-id="1afbc-112">Demonstrates how to read from a text file with multiple formats.</span></span>  
+ [<span data-ttu-id="c4969-111">Como ler a partir de arquivos de texto com vários formatos</span><span class="sxs-lookup"><span data-stu-id="c4969-111">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ <span data-ttu-id="c4969-112">Demonstra como ler em um arquivo de texto com vários formatos.</span><span class="sxs-lookup"><span data-stu-id="c4969-112">Demonstrates how to read from a text file with multiple formats.</span></span>  
   
- [<span data-ttu-id="1afbc-113">Como ler a partir de arquivos binários</span><span class="sxs-lookup"><span data-stu-id="1afbc-113">How to: Read From Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
- <span data-ttu-id="1afbc-114">Demonstra como ler em um arquivo binário.</span><span class="sxs-lookup"><span data-stu-id="1afbc-114">Demonstrates how to read from a binary file.</span></span>  
+ [<span data-ttu-id="c4969-113">Como ler a partir de arquivos binários</span><span class="sxs-lookup"><span data-stu-id="c4969-113">How to: Read From Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ <span data-ttu-id="c4969-114">Demonstra como ler em um arquivo binário.</span><span class="sxs-lookup"><span data-stu-id="c4969-114">Demonstrates how to read from a binary file.</span></span>  
   
- [<span data-ttu-id="1afbc-115">Como ler texto a partir de arquivos com um StreamReader</span><span class="sxs-lookup"><span data-stu-id="1afbc-115">How to: Read Text from Files with a StreamReader</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
- <span data-ttu-id="1afbc-116">Demonstra como usar um <xref:System.IO.StreamReader> para ler de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="1afbc-116">Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.</span></span>  
+ [<span data-ttu-id="c4969-115">Como ler texto a partir de arquivos com um StreamReader</span><span class="sxs-lookup"><span data-stu-id="c4969-115">How to: Read Text from Files with a StreamReader</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ <span data-ttu-id="c4969-116">Demonstra como usar um <xref:System.IO.StreamReader> para ler de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="c4969-116">Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="1afbc-117">Referência</span><span class="sxs-lookup"><span data-stu-id="1afbc-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c4969-117">Referência</span><span class="sxs-lookup"><span data-stu-id="c4969-117">Reference</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <span data-ttu-id="1afbc-118">Descreve o objeto `My.Computer.FileSystem` e seus membros.</span><span class="sxs-lookup"><span data-stu-id="1afbc-118">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
+ <span data-ttu-id="c4969-118">Descreve o objeto `My.Computer.FileSystem` e seus membros.</span><span class="sxs-lookup"><span data-stu-id="c4969-118">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
- <span data-ttu-id="1afbc-119">Descreve o método `ReadAllText`.</span><span class="sxs-lookup"><span data-stu-id="1afbc-119">Describes the `ReadAllText` method.</span></span>  
+ <span data-ttu-id="c4969-119">Descreve o método `ReadAllText`.</span><span class="sxs-lookup"><span data-stu-id="c4969-119">Describes the `ReadAllText` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
- <span data-ttu-id="1afbc-120">Descreve o método `ReadAllBytes`.</span><span class="sxs-lookup"><span data-stu-id="1afbc-120">Describes the `ReadAllBytes` method.</span></span>  
+ <span data-ttu-id="c4969-120">Descreve o método `ReadAllBytes`.</span><span class="sxs-lookup"><span data-stu-id="c4969-120">Describes the `ReadAllBytes` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>  
- <span data-ttu-id="1afbc-121">Descreve o método `OpenTextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="1afbc-121">Describes the `OpenTextFieldParser` method.</span></span>  
+ <span data-ttu-id="c4969-121">Descreve o método `OpenTextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="c4969-121">Describes the `OpenTextFieldParser` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
- <span data-ttu-id="1afbc-122">Descreve o método `OpenTextFileReader`.</span><span class="sxs-lookup"><span data-stu-id="1afbc-122">Describes the `OpenTextFileReader` method.</span></span>  
+ <span data-ttu-id="c4969-122">Descreve o método `OpenTextFileReader`.</span><span class="sxs-lookup"><span data-stu-id="c4969-122">Describes the `OpenTextFileReader` method.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="1afbc-123">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="1afbc-123">Related Sections</span></span>  
- [<span data-ttu-id="1afbc-124">Armazenando Dados e Lendo da Área de Transferência</span><span class="sxs-lookup"><span data-stu-id="1afbc-124">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- <span data-ttu-id="1afbc-125">Explica como realizar tarefas associadas ao `My.Computer.Clipboard`, como leitura e gravação de dados na área de transferência.</span><span class="sxs-lookup"><span data-stu-id="1afbc-125">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="c4969-123">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="c4969-123">Related Sections</span></span>  
+ [<span data-ttu-id="c4969-124">Armazenando Dados e Lendo da Área de Transferência</span><span class="sxs-lookup"><span data-stu-id="c4969-124">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ <span data-ttu-id="c4969-125">Explica como realizar tarefas associadas ao `My.Computer.Clipboard`, como leitura e gravação de dados na área de transferência.</span><span class="sxs-lookup"><span data-stu-id="c4969-125">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
   
- [<span data-ttu-id="1afbc-126">Analisando arquivos de texto com o objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="1afbc-126">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- <span data-ttu-id="1afbc-127">Fornece uma visão geral de leitura de arquivos de texto com o objeto `TextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="1afbc-127">Provides an overview of reading text files with the `TextFieldParser` object.</span></span>  
+ [<span data-ttu-id="c4969-126">Analisando arquivos de texto com o objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="c4969-126">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ <span data-ttu-id="c4969-127">Fornece uma visão geral de leitura de arquivos de texto com o objeto `TextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="c4969-127">Provides an overview of reading text files with the `TextFieldParser` object.</span></span>  
   
- [<span data-ttu-id="1afbc-128">Passo a passo: manipulando arquivos e diretórios no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1afbc-128">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- <span data-ttu-id="1afbc-129">Demonstra como usar o recurso `My` com arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="1afbc-129">Demonstrates how to use the `My` feature with files and directories.</span></span>  
+ [<span data-ttu-id="c4969-128">Passo a passo: manipulando arquivos e diretórios no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c4969-128">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ <span data-ttu-id="c4969-129">Demonstra como usar o recurso `My` com arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="c4969-129">Demonstrates how to use the `My` feature with files and directories.</span></span>  
   
- [<span data-ttu-id="1afbc-130">Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1afbc-130">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- <span data-ttu-id="1afbc-131">Demonstra como usar os métodos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] com arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="1afbc-131">Demonstrates how to use [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] methods with files and directories.</span></span>
+ [<span data-ttu-id="c4969-130">Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c4969-130">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ <span data-ttu-id="c4969-131">Demonstra como usar os métodos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] com arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="c4969-131">Demonstrates how to use [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] methods with files and directories.</span></span>

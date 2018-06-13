@@ -15,8 +15,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590914"
 ---
 # <a name="key-security-concepts"></a><span data-ttu-id="cf816-102">Conceitos principais de segurança</span><span class="sxs-lookup"><span data-stu-id="cf816-102">Key Security Concepts</span></span>
 <span data-ttu-id="cf816-103">O Microsoft .NET Framework oferece segurança baseada em função para ajudar a resolver problemas de segurança sobre código móvel e fornecer suporte que permite que os componentes para determinar quais usuários estão autorizados a fazer.</span><span class="sxs-lookup"><span data-stu-id="cf816-103">The Microsoft .NET Framework offers role-based security to help address security concerns about mobile code and to provide support that enables components to determine what users are authorized to do.</span></span>  

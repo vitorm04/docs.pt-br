@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591428"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a><span data-ttu-id="ea785-102">Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída</span><span class="sxs-lookup"><span data-stu-id="ea785-102">Because this call is not awaited, the current method continues to run before the call is completed</span></span>
 <span data-ttu-id="ea785-103">Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída.</span><span class="sxs-lookup"><span data-stu-id="ea785-103">Because this call is not awaited, execution of the current method continues before the call is completed.</span></span> <span data-ttu-id="ea785-104">Considere a possibilidade de aplicar o operador 'Await' para o resultado da chamada.</span><span class="sxs-lookup"><span data-stu-id="ea785-104">Consider applying the 'Await' operator to the result of the call.</span></span>  

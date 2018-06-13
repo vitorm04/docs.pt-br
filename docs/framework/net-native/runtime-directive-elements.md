@@ -6,8 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b4e8f0902e0d3ebd010ff639b329707881c29fd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398008"
 ---
 # <a name="runtime-directive-elements"></a><span data-ttu-id="e7b1e-102">Elementos da diretiva de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="e7b1e-102">Runtime Directive Elements</span></span>
 <span data-ttu-id="e7b1e-103">O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="e7b1e-103">The runtime directives (rd.xml) file format supports the following runtime directive elements.</span></span> <span data-ttu-id="e7b1e-104">Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.</span><span class="sxs-lookup"><span data-stu-id="e7b1e-104">See [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) for a hierarchical representation.</span></span>  

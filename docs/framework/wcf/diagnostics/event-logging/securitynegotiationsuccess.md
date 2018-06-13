@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472876"
 ---
 # <a name="securitynegotiationsuccess"></a><span data-ttu-id="e8189-102">SecurityNegotiationSuccess</span><span class="sxs-lookup"><span data-stu-id="e8189-102">SecurityNegotiationSuccess</span></span>
 <span data-ttu-id="e8189-103">ID: 171</span><span class="sxs-lookup"><span data-stu-id="e8189-103">Id: 171</span></span>  

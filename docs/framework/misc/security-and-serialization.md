@@ -14,8 +14,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a30e80b1b4a412405787c0c14ad58995a2d7fffc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394242"
 ---
 # <a name="security-and-serialization"></a><span data-ttu-id="59bba-102">Segurança e serialização</span><span class="sxs-lookup"><span data-stu-id="59bba-102">Security and Serialization</span></span>
 <span data-ttu-id="59bba-103">Como a serialização pode permitir que outro código ver ou modificar dados de instância de objeto que possa ser acessados, uma permissão especial é necessária de código para executar a serialização: <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> sinalizador especificado.</span><span class="sxs-lookup"><span data-stu-id="59bba-103">Because serialization can allow other code to see or modify object instance data that would otherwise be inaccessible, a special permission is required of code performing serialization: <xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> flag specified.</span></span> <span data-ttu-id="59bba-104">De acordo com a política padrão, essa permissão não é dada ao código da intranet ou baixado da Internet; somente o código no computador local recebe essa permissão.</span><span class="sxs-lookup"><span data-stu-id="59bba-104">Under default policy, this permission is not given to Internet-downloaded or intranet code; only code on the local computer is granted this permission.</span></span>  

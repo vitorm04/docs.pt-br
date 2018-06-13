@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592334"
 ---
 # <a name="version-tolerant-serialization"></a><span data-ttu-id="938f7-102">Serialização tolerante a versão</span><span class="sxs-lookup"><span data-stu-id="938f7-102">Version tolerant serialization</span></span>
 <span data-ttu-id="938f7-103">Na versão 1.0 e 1.1 do .NET Framework, criar tipos serializáveis que fossem reutilizáveis de uma versão de um aplicativo para a outra era problemático.</span><span class="sxs-lookup"><span data-stu-id="938f7-103">In version 1.0 and 1.1 of the .NET Framework, creating serializable types that would be reusable from one version of an application to the next was problematic.</span></span> <span data-ttu-id="938f7-104">Se um tipo tivesse sido modificado adicionando campos extras, o seguinte problema ocorreria.</span><span class="sxs-lookup"><span data-stu-id="938f7-104">If a type was modified by adding extra fields, the following problems would occur:</span></span>  
