@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
 ms.openlocfilehash: 2c8175e4a3d2ddf08bcfc603b5d0fe40917bc37e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538777"
 ---
 # <a name="tooltip-component-windows-forms"></a><span data-ttu-id="ab1eb-102">Componente ToolTip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ab1eb-102">ToolTip Component (Windows Forms)</span></span>
 <span data-ttu-id="ab1eb-103">Windows Forms <xref:System.Windows.Forms.ToolTip> componente exibe texto quando o usuário aponta para controles.</span><span class="sxs-lookup"><span data-stu-id="ab1eb-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="ab1eb-104">Uma dica de ferramenta pode ser associada a qualquer controle.</span><span class="sxs-lookup"><span data-stu-id="ab1eb-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="ab1eb-105">Um exemplo de uso deste controle: para economizar espaço em um formulário, você pode exibir um pequeno ícone em um botão e use uma dica de ferramenta para explicar a função do botão.</span><span class="sxs-lookup"><span data-stu-id="ab1eb-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  

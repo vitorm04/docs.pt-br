@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482180"
 ---
 # <a name="systemservicemodelchannelsrequestchannelreplyreceived"></a><span data-ttu-id="3600f-102">System.ServiceModel.Channels.RequestChannelReplyReceived</span><span class="sxs-lookup"><span data-stu-id="3600f-102">System.ServiceModel.Channels.RequestChannelReplyReceived</span></span>
 <span data-ttu-id="3600f-103">System.ServiceModel.Channels.RequestChannelReplyReceived</span><span class="sxs-lookup"><span data-stu-id="3600f-103">System.ServiceModel.Channels.RequestChannelReplyReceived</span></span>  

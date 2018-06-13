@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7247dddc2d3313948fe6f49fbaa1440b141c4cf3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440759"
 ---
 # <a name="ihostpolicymanager-interface"></a><span data-ttu-id="998fc-102">Interface IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="998fc-102">IHostPolicyManager Interface</span></span>
 <span data-ttu-id="998fc-103">Fornece métodos que notificam o host das ações que executa o common language runtime (CLR) no caso do anula, tempos limites ou falhas.</span><span class="sxs-lookup"><span data-stu-id="998fc-103">Provides methods that notify the host of the actions the common language runtime (CLR) performs in case of aborts, timeouts, or failures.</span></span>  

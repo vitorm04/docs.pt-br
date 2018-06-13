@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 5583386a31b9a76a8413703ec611e8452d452eb1
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958156"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a><span data-ttu-id="65d04-103">Quando implantar contêineres do Windows em seu local infraestrutura de IaaS VM</span><span class="sxs-lookup"><span data-stu-id="65d04-103">When to deploy Windows Containers in your on-premises IaaS VM infrastructure</span></span>
 

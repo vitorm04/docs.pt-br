@@ -11,8 +11,10 @@ helpviewer_keywords:
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
 ms.openlocfilehash: 286117cc0cce9fb54ea2c372360b13865fba77ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540557"
 ---
 # <a name="datetime-xaml-syntax"></a><span data-ttu-id="2caa7-102">Sintaxe DateTime (XAML)</span><span class="sxs-lookup"><span data-stu-id="2caa7-102">DateTime XAML Syntax</span></span>
 <span data-ttu-id="2caa7-103">Alguns controles, como <xref:System.Windows.Controls.Calendar> e <xref:System.Windows.Controls.DatePicker>, têm propriedades que usam o <xref:System.DateTime> tipo.</span><span class="sxs-lookup"><span data-stu-id="2caa7-103">Some controls, such as <xref:System.Windows.Controls.Calendar> and <xref:System.Windows.Controls.DatePicker>, have properties that use the <xref:System.DateTime> type.</span></span> <span data-ttu-id="2caa7-104">Embora você normalmente especifique uma data ou horário inicial para esses controles no code-behind no tempo de execução, você poderá especificar uma data ou horário inicial na linguagem XAML.</span><span class="sxs-lookup"><span data-stu-id="2caa7-104">Although you typically specify an initial date or time for these controls in the code-behind at run time, you can specify an initial date or time in XAML.</span></span> <span data-ttu-id="2caa7-105">O analisador de WPF XAML lida com a análise de <xref:System.DateTime> valores usando uma sintaxe de texto interno do XAML.</span><span class="sxs-lookup"><span data-stu-id="2caa7-105">The WPF XAML parser handles parsing of <xref:System.DateTime> values using a built-in XAML text syntax.</span></span> <span data-ttu-id="2caa7-106">Este tópico descreve as especificações de <xref:System.DateTime> sintaxe de texto XAML.</span><span class="sxs-lookup"><span data-stu-id="2caa7-106">This topic describes the specifics of the <xref:System.DateTime> XAML text syntax.</span></span>  

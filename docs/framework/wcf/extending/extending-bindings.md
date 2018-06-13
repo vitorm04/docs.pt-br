@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485745"
 ---
 # <a name="extending-bindings"></a><span data-ttu-id="85080-102">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="85080-102">Extending Bindings</span></span>
 <span data-ttu-id="85080-103">Associações de especificar o transporte, a codificação e protocolo necessárias para se conectar a um ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="85080-103">Bindings specify the transport, encoding, and protocol required to connect to an endpoint.</span></span> <span data-ttu-id="85080-104">Extensões de associação e associações personalizadas implementam a funcionalidade de comunicação personalizados necessária para dar suporte a recursos do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="85080-104">Binding extensions and custom bindings implement custom communication functionality required to support application features.</span></span>  

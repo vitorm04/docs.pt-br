@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 ms.openlocfilehash: ed9869045270cdc51388b192e8d6ab38005eba8e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641074"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="a8038-102">Como: Filtrar em um atributo (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8038-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="a8038-103">Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.</span><span class="sxs-lookup"><span data-stu-id="a8038-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  

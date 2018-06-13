@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c630fcd4667c8b19c4e21335549674d32508e439
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432830"
 ---
 # <a name="iclrhostprotectionmanager-interface"></a><span data-ttu-id="085b2-102">Interface ICLRHostProtectionManager</span><span class="sxs-lookup"><span data-stu-id="085b2-102">ICLRHostProtectionManager Interface</span></span>
 <span data-ttu-id="085b2-103">Permite que o host bloquear as classes gerenciadas específicos, métodos, propriedades e campos da execução de código parcialmente confiável.</span><span class="sxs-lookup"><span data-stu-id="085b2-103">Enables the host to block specific managed classes, methods, properties, and fields from running in partially trusted code.</span></span>  

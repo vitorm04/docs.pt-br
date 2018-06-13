@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541135"
 ---
 # <a name="windows-forms-control-development-basics"></a><span data-ttu-id="f94a8-102">Noções básicas sobre o desenvolvimento de controle dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f94a8-102">Windows Forms Control Development Basics</span></span>
 <span data-ttu-id="f94a8-103">Um controle de formulários do Windows é uma classe que deriva diretamente ou indiretamente de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f94a8-103">A Windows Forms control is a class that derives directly or indirectly from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f94a8-104">A lista a seguir descreve os cenários comuns para o desenvolvimento de controles do Windows Forms:</span><span class="sxs-lookup"><span data-stu-id="f94a8-104">The following list describes common scenarios for developing Windows Forms controls:</span></span>  

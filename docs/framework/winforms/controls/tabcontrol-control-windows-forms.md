@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536755"
 ---
 # <a name="tabcontrol-control-windows-forms"></a><span data-ttu-id="07944-102">Controle TabControl (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="07944-102">TabControl Control (Windows Forms)</span></span>
 <span data-ttu-id="07944-103">Windows Forms `TabControl` exibe várias guias, como divisores em um bloco de anotações ou rótulos em um conjunto de pastas em um arquivo convencional.</span><span class="sxs-lookup"><span data-stu-id="07944-103">The Windows Forms `TabControl` displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="07944-104">As guias podem conter imagens e outros controles.</span><span class="sxs-lookup"><span data-stu-id="07944-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="07944-105">Use o `TabControl` para criar páginas de propriedades.</span><span class="sxs-lookup"><span data-stu-id="07944-105">Use the `TabControl` to create property pages.</span></span>  

@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444009"
 ---
 # <a name="corcallingconvention-enumeration"></a><span data-ttu-id="9783a-102">Enumeração CorCallingConvention</span><span class="sxs-lookup"><span data-stu-id="9783a-102">CorCallingConvention Enumeration</span></span>
 <span data-ttu-id="9783a-103">Contém valores que descrevem os tipos de convenções de chamada que são feitas no código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="9783a-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  

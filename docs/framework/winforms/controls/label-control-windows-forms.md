@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
 ms.openlocfilehash: 5a4dd320b4242b1e557b5fc5edfca1a1baf7c954
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536140"
 ---
 # <a name="label-control-windows-forms"></a><span data-ttu-id="80f25-102">Controle Label (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="80f25-102">Label Control (Windows Forms)</span></span>
 > [!IMPORTANT]

@@ -1,12 +1,6 @@
 ---
-title: "Exemplo de soquete de servidor síncrono"
-ms.custom: 
+title: Exemplo de soquete de servidor síncrono
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,18 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7a249277a82a1b234f83e2fe17510e997425f278
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8b5dc8ed718402a128add375cc1adfb6d17713e8
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955947"
 ---
-# <a name="synchronous-server-socket-example"></a><span data-ttu-id="7ad5b-102">Exemplo de soquete de servidor síncrono</span><span class="sxs-lookup"><span data-stu-id="7ad5b-102">Synchronous Server Socket Example</span></span>
-<span data-ttu-id="7ad5b-103">O programa de exemplo a seguir cria um servidor que recebe solicitações de conexão de clientes.</span><span class="sxs-lookup"><span data-stu-id="7ad5b-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="7ad5b-104">O servidor é criado com um soquete síncrono e, portanto, a execução do aplicativo para servidores é suspensa enquanto ele aguarda uma conexão de um cliente.</span><span class="sxs-lookup"><span data-stu-id="7ad5b-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="7ad5b-105">O aplicativo recebe uma cadeia de caracteres do cliente, exibe a cadeia de caracteres no console e, em seguida, retorna-a ao cliente.</span><span class="sxs-lookup"><span data-stu-id="7ad5b-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="7ad5b-106">A cadeia de caracteres do cliente deve conter a cadeia de caracteres “\<EOF>” para sinalizar o final da mensagem.</span><span class="sxs-lookup"><span data-stu-id="7ad5b-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="2c901-102">Exemplo de soquete de servidor síncrono</span><span class="sxs-lookup"><span data-stu-id="2c901-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="2c901-103">O programa de exemplo a seguir cria um servidor que recebe solicitações de conexão de clientes.</span><span class="sxs-lookup"><span data-stu-id="2c901-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="2c901-104">O servidor é criado com um soquete síncrono e, portanto, a execução do aplicativo para servidores é suspensa enquanto ele aguarda uma conexão de um cliente.</span><span class="sxs-lookup"><span data-stu-id="2c901-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="2c901-105">O aplicativo recebe uma cadeia de caracteres do cliente, exibe a cadeia de caracteres no console e, em seguida, retorna-a ao cliente.</span><span class="sxs-lookup"><span data-stu-id="2c901-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="2c901-106">A cadeia de caracteres do cliente deve conter a cadeia de caracteres “\<EOF>” para sinalizar o final da mensagem.</span><span class="sxs-lookup"><span data-stu-id="2c901-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -71,7 +64,6 @@ Public Class SynchronousSocketListener
   
             ' An incoming connection needs to be processed.  
             While True  
-                bytes = New Byte(1024) {}  
                 Dim bytesRec As Integer = handler.Receive(bytes)  
                 data += Encoding.ASCII.GetString(bytes, 0, bytesRec)  
                 If data.IndexOf("<EOF>") > -1 Then  
@@ -132,7 +124,6 @@ public class SynchronousSocketListener {
   
                 // An incoming connection needs to be processed.  
                 while (true) {  
-                    bytes = new byte[1024];  
                     int bytesRec = handler.Receive(bytes);  
                     data += Encoding.ASCII.GetString(bytes,0,bytesRec);  
                     if (data.IndexOf("<EOF>") > -1) {  
@@ -167,7 +158,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7ad5b-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7ad5b-107">See Also</span></span>  
- [<span data-ttu-id="7ad5b-108">Exemplo de soquete de cliente síncrono</span><span class="sxs-lookup"><span data-stu-id="7ad5b-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- [<span data-ttu-id="7ad5b-109">Usando um soquete de servidor síncrono</span><span class="sxs-lookup"><span data-stu-id="7ad5b-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="7ad5b-110">Exemplos de código de soquete</span><span class="sxs-lookup"><span data-stu-id="7ad5b-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="2c901-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2c901-107">See Also</span></span>  
+ [<span data-ttu-id="2c901-108">Exemplo de soquete de cliente síncrono</span><span class="sxs-lookup"><span data-stu-id="2c901-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ [<span data-ttu-id="2c901-109">Usando um soquete de servidor síncrono</span><span class="sxs-lookup"><span data-stu-id="2c901-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="2c901-110">Exemplos de código de soquete</span><span class="sxs-lookup"><span data-stu-id="2c901-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

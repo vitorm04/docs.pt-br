@@ -6,8 +6,10 @@ ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 63907a1911b4c95f0dbecb2af33964225cf3e7b1
 ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957896"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a><span data-ttu-id="ce711-103">Modernizar ciclo de vida do aplicativo com pipelines de CI/CD e ferramentas do DevOps na nuvem</span><span class="sxs-lookup"><span data-stu-id="ce711-103">Modernize your app's lifecycle with CI/CD pipelines and DevOps tools in the cloud</span></span>
 

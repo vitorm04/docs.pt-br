@@ -17,8 +17,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387855"
 ---
 # <a name="reentrancy-mda"></a><span data-ttu-id="25dc9-102">MDA reentrancy</span><span class="sxs-lookup"><span data-stu-id="25dc9-102">reentrancy MDA</span></span>
 <span data-ttu-id="25dc9-103">O MDA (Assistente de Depuração Gerenciado) de `reentrancy` é ativado quando é feita uma tentativa de transição de código nativo para gerenciado em casos nos quais um comutador anterior do código gerenciado para nativo não foi executado por meio de uma transição ordenada.</span><span class="sxs-lookup"><span data-stu-id="25dc9-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
