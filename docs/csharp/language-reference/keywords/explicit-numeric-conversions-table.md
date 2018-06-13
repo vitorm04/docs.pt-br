@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218378"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas explícitas (Referência de C#)
 A conversão numérica explícita é usada para converter qualquer tipo numérico para outro tipo numérico para o qual não há conversão implícita, por meio de uma expressão de conversão. A tabela a seguir mostra essas conversões.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393836"
 ---
 # <a name="pnrp-clouds"></a>Nuvens PNRP
 A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si através da rede. O termo "nuvem" é sinônimo de "malha ponto a ponto" e "grafo ponto a ponto".  

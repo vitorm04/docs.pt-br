@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541853"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Como fazer chamadas thread-safe para controles dos Windows Forms
 Se você usar multithreading para melhorar o desempenho de seus aplicativos do Windows Forms, deverá garantir que faça chamadas para os controles de uma maneira thread-safe.  

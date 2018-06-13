@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393303"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
 O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e acompanhar seu progresso enquanto mostra o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o inspetor ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

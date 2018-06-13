@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7996d5800e99d8e6161e24f34604aff3e4e906bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421997"
 ---
 # <a name="icordebugnativeframe-interface1"></a>ICorDebugNativeFrame Interface1
 Uma implementação especializada de ICorDebugFrame usado para quadros nativos.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391401"
 ---
 # <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
 Esta seção da documentação do .NET Framework fornece informações para desenvolvedores que desejam instalar o .NET Framework com seus aplicativos e administradores que desejam implantar o .NET Framework em uma rede. Ele também aborda os problemas de ativação e reinicialização associados à implantação e como monitorar o andamento da instalação do .NET Framework.  

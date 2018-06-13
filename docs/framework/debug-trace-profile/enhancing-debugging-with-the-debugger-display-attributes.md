@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389489"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Melhorando a depuração com os atributos de exibição do depurador
 Os atributos de exibição do depurador permitem ao desenvolvedor do tipo, que especifica e entende melhor o comportamento de tempo de execução desse tipo, especificar também a aparência desse tipo quando ele é exibido em um depurador. Além disso, os atributos de exibição do depurador que fornecem uma propriedade `Target` podem ser aplicados no nível do assembly pelos usuários sem conhecimento do código-fonte. O atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla como um tipo ou um membro é exibido nas janelas de variáveis do depurador. O atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina se e como um campo ou uma propriedade é exibida nas janelas de variáveis do depurador. O atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica um tipo substituto ou um proxy, para um tipo e altera o modo como o tipo é exibido nas janelas do depurador. Quando você exibe uma variável que tem um proxy ou um tipo substituto, o proxy substitui o tipo original na janela de exibição do depurador **.** A janela de variáveis do depurador exibe apenas os membros públicos do tipo de proxy. Os membros particulares não são exibidos.  

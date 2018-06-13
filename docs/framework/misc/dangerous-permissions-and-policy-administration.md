@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390715"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Permissões perigosas e administração de políticas
 Várias das operações protegidas para o qual o .NET Framework fornece permissões potencialmente podem permitir que o sistema de segurança ser contornadas. Essas permissões perigosas devem ser fornecidas apenas para o código confiável e, em seguida, somente quando necessário. Geralmente, há nenhuma defesa contra um código mal-intencionado se essas permissões é concedido.  

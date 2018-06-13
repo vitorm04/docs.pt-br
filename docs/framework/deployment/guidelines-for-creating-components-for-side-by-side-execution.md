@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391027"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Diretrizes para criação de componentes para execução lado a lado
 Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes projetados para execução lado a lado:  

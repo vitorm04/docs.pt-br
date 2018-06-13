@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391645"
 ---
 # <a name="deploying-net-framework-applications"></a>Implantando aplicativos .NET Framework
 Esta seção da documentação do .NET Framework fornece informações essenciais sobre a implantação de aplicativos .NET Framework, incluindo diretrizes para carregar assemblies, resolver referências de assembly e melhorar o desempenho de seu aplicativo por meio da geração de imagem nativa.  

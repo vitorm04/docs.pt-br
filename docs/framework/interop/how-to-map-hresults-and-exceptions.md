@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393543"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Como mapear HRESULTs e exceções
 Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando exceções. O tempo de execução manipula a transição entre os dois. Cada classe de exceção do .NET Framework mapeia para um HRESULT.  

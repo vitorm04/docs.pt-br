@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542581"
 ---
 # <a name="events-wpf"></a>Eventos (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta os eventos roteados que podem invocar manipuladores que existem em vários ouvintes na árvore de elementos de um aplicativo.  

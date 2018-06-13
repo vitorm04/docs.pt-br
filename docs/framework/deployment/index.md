@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396523"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicativo. A maioria das informações destina-se a desenvolvedores, OEMs e administradores corporativos. Os usuários que desejam instalar o .NET Framework nos respectivos computadores devem ler o artigo [Instalando o .NET Framework](~/docs/framework/install/index.md).  

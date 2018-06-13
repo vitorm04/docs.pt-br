@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389562"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigação: renderização de janela WPF
 No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows 8 e superior, a janela inteira é renderizada sem distorção quando ela se estende para fora da exibição única em um cenário de vários monitores.  

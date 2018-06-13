@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395350"
 ---
 # <a name="network-programming-how-to-topics"></a>Tópicos explicativos de programação de rede
 A lista a seguir inclui links para os tópicos Como fazer encontrados na documentação conceitual para programação de rede.  

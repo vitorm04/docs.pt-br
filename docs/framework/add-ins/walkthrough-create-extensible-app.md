@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744818"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Instruções passo a passo: criando um aplicativo extensível
 Este passo a passo descreve como criar um pipeline para um suplemento que executa funções de cálculo simples. Não demonstra um cenário do mundo real; em vez disso, ele demonstra a funcionalidade básica de um pipeline e como um suplemento pode fornecer serviços para um host.  

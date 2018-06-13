@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535640"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Como classificar o conteúdo de um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms
 Controles de formulários do Windows não classificados quando elas são associadas a dados. Para exibir os dados classificados, usar uma fonte de dados que dá suporte à classificação e ter a fonte de dados para classificá-los. Fontes de dados que dão suporte à classificação são modos de exibição de dados, exibir gerenciadores de dados e classificados matrizes.  

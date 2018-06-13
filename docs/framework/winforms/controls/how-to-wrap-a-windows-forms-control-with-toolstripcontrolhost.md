@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538298"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Como encapsular um controle dos Windows Forms com ToolStripControlHost
 <xref:System.Windows.Forms.ToolStripControlHost> foi projetado para permitir a hospedagem de controles de Windows Forms arbitrários usando o <xref:System.Windows.Forms.ToolStripControlHost> construtor ou estendendo <xref:System.Windows.Forms.ToolStripControlHost> em si. É mais fácil ajustar o controle estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando propriedades e métodos que expõem frequentemente usadas propriedades e métodos do controle. Você também pode expor os eventos para o controle de <xref:System.Windows.Forms.ToolStripControlHost> nível.  

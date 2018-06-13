@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389948"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigação: período de bloqueio de pool
 O pool de conexão no período de bloqueio foi removido para conexões com bancos de dados SQL do Azure.  

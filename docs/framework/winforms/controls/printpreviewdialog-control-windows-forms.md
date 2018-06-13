@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538373"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Controle PrintPreviewDialog (Windows Forms)
 Windows Forms `PrintPreviewDialog` controle é uma caixa de diálogo pré-configurada usada para exibir como um documento aparecerá quando impresso. Use-a em seu aplicativo baseado no Windows como uma solução simples em vez de configurar sua própria caixa de diálogo. O controle contém botões para imprimir, aumentar o zoom, exibir uma ou várias páginas e fechar a caixa de diálogo.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759147"
 ---
 # <a name="handling-dataadapter-events"></a>Manipulação de eventos DataAdapter
 O ADO.NET <xref:System.Data.Common.DataAdapter> expõe três eventos que você pode usar para responder às alterações feitas nos dados na fonte de dados. A tabela a seguir mostra o `DataAdapter` eventos.  

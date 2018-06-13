@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744311"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Como compilar um assembly de arquivo único
 Um assembly de arquivo único, que é o tipo mais simples de assembly, contém informações sobre o tipo e a implementação, bem como o [manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md). Você pode usar compiladores de linha de comando ou [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para criar um assembly de arquivo único. Por padrão, o compilador cria um arquivo do assembly com uma extensão de .exe.  
