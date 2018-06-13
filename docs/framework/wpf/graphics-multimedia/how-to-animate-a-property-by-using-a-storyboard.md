@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561066"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Como animar uma propriedade usando um storyboard
 Este exemplo mostra como usar um <xref:System.Windows.Media.Animation.Storyboard> para animar propriedades. Para animar uma propriedade usando um <xref:System.Windows.Media.Animation.Storyboard>, criar uma animação para cada propriedade que você deseja animar e também criar um <xref:System.Windows.Media.Animation.Storyboard> para conter as animações.  

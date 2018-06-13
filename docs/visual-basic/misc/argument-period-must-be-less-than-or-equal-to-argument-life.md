@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599025"
 ---
 # <a name="argument-39period39-must-be-less-than-or-equal-to-argument-39life39"></a>Argumento &#39;período&#39; deve ser menor ou igual ao argumento &#39;vida&#39;
 O valor da `Period` argumento, que especifica o período para o ativo a depreciação é calculada, é maior que o valor da `Life` argumento.  

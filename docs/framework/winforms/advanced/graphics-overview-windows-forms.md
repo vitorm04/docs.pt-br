@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521749"
 ---
 # <a name="graphics-overview-windows-forms"></a>Visão geral de elementos gráficos (Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] é uma Interface gráfica de dispositivo que permite que os programadores criem aplicativos independentes de dispositivo. Os serviços de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] são expostas por meio de um conjunto de classes gerenciadas.  

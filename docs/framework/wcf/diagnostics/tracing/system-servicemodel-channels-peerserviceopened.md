@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477546"
 ---
 # <a name="systemservicemodelchannelspeerserviceopened"></a>System.ServiceModel.Channels.PeerServiceOpened
 O módulo de serviço de ponto a ponto foi aberto e iniciado a escuta no endereço especificado.  

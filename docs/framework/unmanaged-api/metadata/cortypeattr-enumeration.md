@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449267"
 ---
 # <a name="cortypeattr-enumeration"></a>Enumeração CorTypeAttr
 Contém valores que indicam o tipo de metadados.  

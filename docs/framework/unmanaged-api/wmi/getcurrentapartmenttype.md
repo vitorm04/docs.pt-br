@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461718"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Função GetCurrentApartmentType
 Recupera o tipo do compartimento em que o chamador está em execução.   

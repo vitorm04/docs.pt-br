@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572964"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
 Um conjunto de convenções de nomenclatura no desenvolvimento de uma estrutura consistente a seguir pode ser uma contribuição principais a usabilidade do framework. Ele permite que a estrutura a ser usada por muitos desenvolvedores em projetos amplamente separados. Além da consistência do formulário, nomes de elementos do framework devem ser facilmente compreendidos e devem transmitir a função de cada elemento.  

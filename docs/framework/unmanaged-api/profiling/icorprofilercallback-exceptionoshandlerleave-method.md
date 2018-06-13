@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 53c71914d8938067ceb5d580d42ffe7d7d8dc1df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450659"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>Método ICorProfilerCallback::ExceptionOSHandlerLeave
 Não implementado. Um criador de perfil que precisa de informações de exceção não gerenciado deve obter essas informações por outros meios.  

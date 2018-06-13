@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461523"
 ---
 # <a name="putclasswmi-function"></a>Função PutClassWmi
 Cria uma nova classe ou atualiza uma existente.  

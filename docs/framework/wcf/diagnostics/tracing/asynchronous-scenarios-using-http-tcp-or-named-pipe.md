@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474702"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Cenários assíncronos usando HTTP, TCP ou pipe nomeado
 Este tópico descreve as atividades e transferências para cenários diferentes de solicitação/resposta assíncrono, com multithread solicitações usando HTTP, TCP ou pipe nomeado.  

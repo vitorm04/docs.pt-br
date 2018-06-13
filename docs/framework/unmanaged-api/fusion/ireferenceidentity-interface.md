@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4708fa173725e4c91a13f5b92cdbb1fdf8a8a4d1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432097"
 ---
 # <a name="ireferenceidentity-interface"></a>Interface IReferenceIdentity
 Representa uma referência para a assinatura exclusiva de um objeto de código.  

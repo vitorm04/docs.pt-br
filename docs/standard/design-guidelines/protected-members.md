@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571070"
 ---
 # <a name="protected-members"></a>Membros protegidos
 Membros protegidos por si só não fornecem nenhuma extensibilidade, mas eles podem tornar a extensibilidade por meio de subclassificação mais eficiente. Eles podem ser usados para expor as opções avançadas de personalização sem desnecessariamente complicar a principal interface pública.  
