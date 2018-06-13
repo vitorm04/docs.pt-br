@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540612"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente
 Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar o código existente do aplicativo Web DHTML (HTML) dinâmico para seus aplicativos de cliente de formulários do Windows. Isso é útil quando você tiver investido tempo de desenvolvimento significativo na criação de controles com base em DHTML e quiser aproveitar os recursos de interface do usuário avançada dos Windows Forms sem reescrever o código existente.  

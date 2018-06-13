@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abb2e2902737749fd9dc1f148a340e28da772e59
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439014"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>Método ICorRuntimeHost::NextDomain
 Obtém um ponteiro de interface para o próximo domínio na enumeração.  

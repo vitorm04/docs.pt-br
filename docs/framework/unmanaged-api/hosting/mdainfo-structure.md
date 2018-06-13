@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5164e85ecc97de99dcc493c2ba5efa8fc3468471
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443174"
 ---
 # <a name="mdainfo-structure"></a>Estrutura MDAInfo
 Fornece detalhes sobre o `Event_MDAFired` evento que dispara a criação de um Assistente de depuração gerenciado (MDA).  

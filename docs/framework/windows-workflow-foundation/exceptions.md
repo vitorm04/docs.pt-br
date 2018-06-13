@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520153"
 ---
 # <a name="exceptions"></a>Exceções
 Fluxos de trabalho podem usar a atividade de <xref:System.Activities.Statements.TryCatch> para manipular exceções que são geradas durante a execução de um fluxo de trabalho. Essas exceções podem ser tratados ou que podem ser lançadas usando a atividade de <xref:System.Activities.Statements.Rethrow> . As atividades na seção de <xref:System.Activities.Statements.TryCatch.Finally%2A> são executadas quando a seção de <xref:System.Activities.Statements.TryCatch.Try%2A> ou a seção de <xref:System.Activities.Statements.TryCatch.Catches%2A> concluírem. Fluxos de trabalho hospedados por um <xref:System.Activities.WorkflowApplication> instância também pode usar o <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador de eventos para lidar com exceções não manipuladas por um <xref:System.Activities.Statements.TryCatch> atividade.  

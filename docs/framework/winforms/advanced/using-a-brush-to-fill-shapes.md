@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523725"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Usando um pincel para preencher formas
 Um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto é usado para preencher o interior de uma forma fechada. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] define vários estilos de preenchimento: cor sólida, o padrão de hachura, textura de imagem e gradiente de cores.  

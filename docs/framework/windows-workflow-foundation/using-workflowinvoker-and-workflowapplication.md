@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519620"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Usando WorkflowInvoker e WorkflowApplication
 Windows Workflow Foundation (WF) fornece vários métodos de hospedar fluxos de trabalho. <xref:System.Activities.WorkflowInvoker> fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado somente para os fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> fornece um modelo mais rico para executar fluxos de trabalho que inclui notificação de eventos de ciclo de vida, controle de execução, de ressunção do indexador, e de persistência. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornece suporte para atividades de mensagem e é basicamente usado com serviços de fluxo de trabalho. Este tópico apresenta o fluxo de trabalho que hospeda com <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. Para obter mais informações sobre como hospedar fluxos de trabalho com <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consulte [serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md) e [visão geral dos serviços de fluxo de trabalho de hospedagem](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

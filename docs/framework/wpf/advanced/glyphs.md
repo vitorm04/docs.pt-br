@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543060"
 ---
 # <a name="glyphs"></a>Glifos
 Glifos são uma representação de nível baixo de um caractere a ser desenhada na tela. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece acesso direto a glifos para clientes que desejam interceptar e persistir texto após a formatação.  

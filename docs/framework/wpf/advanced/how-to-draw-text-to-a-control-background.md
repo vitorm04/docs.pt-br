@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542971"
 ---
 # <a name="how-to-draw-text-to-a-control39s-background"></a>Como desenhar texto para a tela de fundo de um controle
 Você pode desenhar texto diretamente para o plano de fundo de um controle ao converter uma cadeia de caracteres de texto para um <xref:System.Windows.Media.FormattedText> de objeto e, em seguida, o objeto de desenho para o controle <xref:System.Windows.Media.DrawingContext>. Você também pode usar essa técnica para desenhar o plano de fundo dos objetos derivados da <xref:System.Windows.Controls.Panel>, como <xref:System.Windows.Controls.Canvas> e <xref:System.Windows.Controls.StackPanel>.  

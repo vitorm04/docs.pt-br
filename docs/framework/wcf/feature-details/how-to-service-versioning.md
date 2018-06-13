@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494889"
 ---
 # <a name="how-to-service-versioning"></a>Como controlar a versão de serviço
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que roteia mensagens para diferentes versões do mesmo serviço. Neste exemplo, as mensagens são roteadas para duas versões diferentes de um serviço de cálculo, `roundingCalc` (v1) e `regularCalc` (v2). Suportam a ambas as implementações as mesmas operações; No entanto o serviço mais antigo, `roundingCalc`, Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar o novo `regularCalc` serviço.  

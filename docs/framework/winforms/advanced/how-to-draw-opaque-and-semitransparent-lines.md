@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524216"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Como desenhar linhas opacas e semitransparentes
 Quando você desenha uma linha, você deve passar um <xref:System.Drawing.Pen> o objeto para o <xref:System.Drawing.Graphics.DrawLine%2A> método do <xref:System.Drawing.Graphics> classe. Um dos parâmetros do <xref:System.Drawing.Pen.%23ctor%2A> construtor é um <xref:System.Drawing.Color> objeto. Para desenhar uma linha opaca, defina o componente alfa da cor como 255. Para desenhar uma linha semitransparente, defina o componente alfa para qualquer valor de 1 a 254.  

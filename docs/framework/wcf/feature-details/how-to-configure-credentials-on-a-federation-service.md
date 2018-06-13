@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495603"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Como configurar credenciais em um serviço de federação
 No Windows Communication Foundation (WCF), criar um serviço federado consiste dos seguintes procedimentos principais:  

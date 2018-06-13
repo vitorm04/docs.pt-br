@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233945"
 ---
 # <a name="application-domains"></a>Domínios do aplicativo
 Sistemas operacionais e ambientes em tempo de execução normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  

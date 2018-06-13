@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495590"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Como criar um serviço de fluxo de trabalho com atividades de mensagens
 Este tópico descreve como criar um serviço de fluxo de trabalho simples usando atividades de mensagem. Este tópico enfoca a mecânica de criação de um serviço de fluxo de trabalho em que o serviço que consiste exclusivamente atividades de mensagens. Em um serviço do mundo real, o fluxo de trabalho contém muitas outras atividades. O serviço implementa uma operação chamada Echo, que usa uma cadeia de caracteres e retorna a cadeia de caracteres para o chamador. Este tópico é o primeiro em uma série de tópicos de dois. O próximo tópico [como: acessar um fluxo de trabalho do aplicativo de serviço de um](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) discute como criar um aplicativo de fluxo de trabalho que possa chamar o serviço criado neste tópico.  

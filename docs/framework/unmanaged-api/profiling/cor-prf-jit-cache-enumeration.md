@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450698"
 ---
 # <a name="corprfjitcache-enumeration"></a>Enumeração COR_PRF_JIT_CACHE
 Indica o resultado de uma busca de função armazenada em cache.  

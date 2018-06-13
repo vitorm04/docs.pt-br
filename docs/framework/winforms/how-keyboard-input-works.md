@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541340"
 ---
 # <a name="how-keyboard-input-works"></a>Como a entrada do teclado funciona
 O Windows Forms processa a entrada do teclado ao gerar eventos de teclado em resposta às mensagens do Windows. A maioria dos aplicativos Windows Forms processa a entrada do teclado exclusivamente ao manipular eventos de teclado. No entanto, você precisa entender como as mensagens do teclado funcionam para que você possa implementar cenários mais avançados de entrada do teclado, como interceptar teclas antes que elas atinjam um controle. Este tópico descreve os tipos de dados da chave que o Windows Forms reconhece e fornece uma visão geral de como as mensagens do teclado são roteadas. Para obter informações sobre eventos de teclado, consulte [Usando eventos do teclado](../../../docs/framework/winforms/using-keyboard-events.md).  

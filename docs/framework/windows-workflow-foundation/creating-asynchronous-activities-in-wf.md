@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520062"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Criando atividades assíncrono em WF
 fornece<xref:System.Activities.AsyncCodeActivity> autores de atividade de uma classe base para usar que permite atividades derivados para implementar a lógica assíncrona de execução. Isso é útil para as atividades personalizados que devem realizar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente. Este tópico fornece uma visão geral sobre como criar atividades assíncronos personalizados usando <xref:System.Activities.AsyncCodeActivity>.  

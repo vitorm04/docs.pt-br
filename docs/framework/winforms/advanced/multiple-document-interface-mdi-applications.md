@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523962"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Aplicativos de Interface de Documentos Múltiplos (MDI)
 Aplicativos de interface de documentos múltiplos (MDI) permitem que você exiba vários documentos ao mesmo tempo, com cada documento exibido em sua própria janela. Aplicativos MDI geralmente têm um item de menu de Janela com submenus para alternar entre janelas ou documentos.  

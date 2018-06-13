@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d6713a7f54f6a6d8dbf261ad45304e6ddbe24c0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450711"
 ---
 # <a name="corprfsnapshotinfo-enumeration"></a>Enumeração COR_PRF_SNAPSHOT_INFO
 Especifica o quanto os dados a serem passados novamente com um instantâneo de pilha em cada chamada para o criador de perfil [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) função.  

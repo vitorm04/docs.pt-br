@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543241"
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>Como apagar tinta em um controle personalizado
 O <xref:System.Windows.Ink.IncrementalStrokeHitTester> determina se o atualmente intersecta outra pincelada.  Isso é útil para criar um controle que permite que um usuário apagar partes de um traço, a maneira como um usuário pode em um <xref:System.Windows.Controls.InkCanvas> quando o <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> é definido como <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  

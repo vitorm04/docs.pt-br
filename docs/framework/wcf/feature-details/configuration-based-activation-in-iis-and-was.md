@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488937"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Ativação com base em configuração no ISS e WAS
 Normalmente, ao hospedar um serviço do Windows Communication Foundation (WCF) em serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS), você deve fornecer um arquivo. svc. O arquivo. svc contém o nome do serviço e uma fábrica de host de serviço personalizada opcional. Esse arquivo adicional aumenta a sobrecarga de gerenciamento. O recurso de ativação com base em configuração remove a necessidade de ter um arquivo. svc e, portanto, os respectivos sobrecarga.  

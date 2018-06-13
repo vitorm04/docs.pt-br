@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488693"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como configurar uma associação de intercâmbio de WS-Metadata
 Este tópico explicará como configurar um personalizado WS-Metadata exchange associação. Windows Communication Foundation (WCF) inclui quatro associações de metadados definidos pelo sistema, mas você pode publicar metadados usando a associação que você deseja. Neste tópico mostram como publicar metadados usando o `wsHttpBinding`. Essa associação oferece a opção de exposição de metadados de forma segura. O código neste artigo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

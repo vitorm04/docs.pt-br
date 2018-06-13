@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495545"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Como migrar serviços habilitados para AJAX ASP.NET para o WCF
 Este tópico descreve procedimentos para migrar um serviço básico do ASP.NET AJAX para um serviço habilitado para AJAX Windows Communication Foundation (WCF) equivalente. Ele mostra como criar uma versão WCF funcionalmente equivalente de um serviço ASP.NET AJAX. Os dois serviços podem ser usados lado a lado, ou o serviço WCF pode ser usado para substituir o serviço de AJAX do ASP.NET.  

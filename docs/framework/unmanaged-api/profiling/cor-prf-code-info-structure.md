@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449778"
 ---
 # <a name="corprfcodeinfo-structure"></a>Estrutura COR_PRF_CODE_INFO
 Representa um bloco contíguo de código nativo armazenado na memória.  

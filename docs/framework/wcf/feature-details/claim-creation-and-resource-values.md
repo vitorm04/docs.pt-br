@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488046"
 ---
 # <a name="claim-creation-and-resource-values"></a>Valores de recursos e criação de declarações
 O <xref:System.IdentityModel.Claims.Claim> classe fornece vários métodos para criar instâncias de interna de tipos de declarações. Desses métodos, o seguinte executar não semântico ou formatar a verificação do recurso fornecido:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487666"
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
 O conteúdo em uma mensagem é geralmente na forma de XML, geralmente que não é um formato conveniente para um aplicativo. Aplicativos manipulam objetos, obtendo e definindo suas propriedades. Windows Communication Foundation (WCF) usa o *contrato de dados* para converter um <xref:System.ServiceModel.Channels.Message> objeto em um objeto facilmente manipulado por um aplicativo. Esses processos são chamados de serialização e desserialização. Observe que esses mesmos termos são usados para descrever a serialização e desserialização feito pela camada de transporte de e para o formato de transmissão de mensagem, que é um processo relacionado.  

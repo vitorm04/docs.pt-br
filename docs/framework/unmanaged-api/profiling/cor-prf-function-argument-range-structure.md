@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 92e3a0a930a4e4b91cac27cbed1b745dea4207a9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450018"
 ---
 # <a name="corprffunctionargumentrange-structure"></a>Estrutura COR_PRF_FUNCTION_ARGUMENT_RANGE
 Representa um bloco de argumentos de função armazenados de forma contígua em ordem da esquerda para a direita na memória.  
