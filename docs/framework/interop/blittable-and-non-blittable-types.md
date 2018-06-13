@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392285"
 ---
 # <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="0a862-102">Tipos blittable e não blittable</span><span class="sxs-lookup"><span data-stu-id="0a862-102">Blittable and Non-Blittable Types</span></span>
 <span data-ttu-id="0a862-103">A maioria dos tipos de dados tem uma representação comum na memória gerenciada e não gerenciada e não exige manipulação especial pelo marshaler de interoperabilidade.</span><span class="sxs-lookup"><span data-stu-id="0a862-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="0a862-104">Esses tipos são chamados *tipos blittable* porque não exigem conversão quando são passados entre o código gerenciado e não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="0a862-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  

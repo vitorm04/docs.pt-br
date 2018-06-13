@@ -15,8 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393049"
 ---
 # <a name="runtime-profiling"></a><span data-ttu-id="cd224-102">Criação de perfil do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="cd224-102">Runtime Profiling</span></span>
 <span data-ttu-id="cd224-103">Criação de perfil é um método de coleta de dados de desempenho em qualquer cenário de desenvolvimento ou de implantação.</span><span class="sxs-lookup"><span data-stu-id="cd224-103">Profiling is a method of gathering performance data in any development or deployment scenario.</span></span> <span data-ttu-id="cd224-104">Esta seção é para desenvolvedores e administradores de sistema que desejam coletar informações sobre o desempenho do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="cd224-104">This section is for developers and system administrators who want to gather information about application performance.</span></span>  

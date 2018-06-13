@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540973"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a><span data-ttu-id="cdd16-102">Solucionando problemas de criação do controle e do componente</span><span class="sxs-lookup"><span data-stu-id="cdd16-102">Troubleshooting Control and Component Authoring</span></span>
 <span data-ttu-id="cdd16-103">Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver componentes e controles.</span><span class="sxs-lookup"><span data-stu-id="cdd16-103">This topic lists the following common problems that arise when developing components and controls.</span></span> <span data-ttu-id="cdd16-104">Para obter mais informações, consulte [Programando com componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span><span class="sxs-lookup"><span data-stu-id="cdd16-104">For more information, see [Programming with Components](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span></span>  

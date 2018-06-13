@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389483"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a><span data-ttu-id="466b4-103">Instalar o .NET Framework no Windows 10 e no Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="466b4-103">Install the .NET Framework on Windows 10 and Windows Server 2016</span></span>
 

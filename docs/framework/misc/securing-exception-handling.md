@@ -13,8 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393036"
 ---
 # <a name="securing-exception-handling"></a><span data-ttu-id="6f225-102">Protegendo a manipulação de exceções</span><span class="sxs-lookup"><span data-stu-id="6f225-102">Securing Exception Handling</span></span>
 <span data-ttu-id="6f225-103">No Visual C++ e Visual Basic, uma expressão de filtro mais acima na pilha é executado antes de qualquer **finalmente** instrução.</span><span class="sxs-lookup"><span data-stu-id="6f225-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="6f225-104">O **catch** bloco associado que o filtro é executado após o **finalmente** instrução.</span><span class="sxs-lookup"><span data-stu-id="6f225-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="6f225-105">Para obter mais informações, consulte [Using User-Filtered exceções](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="6f225-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="6f225-106">Esta seção examina as implicações de segurança desse pedido.</span><span class="sxs-lookup"><span data-stu-id="6f225-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="6f225-107">Considere o seguinte exemplo de pseudocódigo que ilustra a ordem na qual instruções de filtro e **finalmente** declarações são executadas.</span><span class="sxs-lookup"><span data-stu-id="6f225-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  

@@ -14,8 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392012"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a><span data-ttu-id="b9023-102">Contadores de desempenho e aplicativos lado a lado em processo</span><span class="sxs-lookup"><span data-stu-id="b9023-102">Performance Counters and In-Process Side-By-Side Applications</span></span>
 <span data-ttu-id="b9023-103">Usando o Monitor de Desempenho (Perfmon.exe), é possível diferenciar os contadores de desempenho por tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="b9023-103">Using the Performance Monitor (Perfmon.exe), it is possible to differentiate the performance counters on a per-runtime basis.</span></span> <span data-ttu-id="b9023-104">Este tópico descreve a alteração do Registro necessária para habilitar essa funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="b9023-104">This topic describes the registry change needed to enable this functionality.</span></span>  

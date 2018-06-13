@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745182"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a><span data-ttu-id="6b71f-102">&lt;legacyImpersonationPolicy&gt; Element</span><span class="sxs-lookup"><span data-stu-id="6b71f-102">&lt;legacyImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="6b71f-103">Especifica que a identidade do Windows não flua entre pontos assíncronos, independentemente das configurações de fluxo para o contexto de execução no thread atual.</span><span class="sxs-lookup"><span data-stu-id="6b71f-103">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>  

@@ -9,8 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4244196a957c67a807cdb705f6d74ee2b41869d7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391596"
 ---
 # <a name="runtime-information-etw-events"></a><span data-ttu-id="a5d48-102">Eventos ETW de informações de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="a5d48-102">Runtime Information ETW Events</span></span>
 <span data-ttu-id="a5d48-103">Esses eventos ETW registram informações sobre o tempo de execução, incluindo a SKU, o número de versão, a maneira pela qual o tempo de execução foi ativado, os parâmetros de linha de comando com os quais ele foi iniciado, o GUID (se aplicável) e outras informações relevantes.</span><span class="sxs-lookup"><span data-stu-id="a5d48-103">These ETW events log information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span> <span data-ttu-id="a5d48-104">Se vários tempos de execução estiverem sendo executados dentro de um processo, as informações fornecidas por esses eventos (o ClrInstanceID) ajudarão a desfazer a ambiguidade entre os tempos de execução.</span><span class="sxs-lookup"><span data-stu-id="a5d48-104">If multiple runtimes are executing within a process, the information provided by these events (the ClrInstanceID) helps disambiguate the runtimes.</span></span>  

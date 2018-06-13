@@ -12,8 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b89792f9579da2d72c0a7f90a983308b172093fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390715"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a><span data-ttu-id="14a77-102">Permissões perigosas e administração de políticas</span><span class="sxs-lookup"><span data-stu-id="14a77-102">Dangerous Permissions and Policy Administration</span></span>
 <span data-ttu-id="14a77-103">Várias das operações protegidas para o qual o .NET Framework fornece permissões potencialmente podem permitir que o sistema de segurança ser contornadas.</span><span class="sxs-lookup"><span data-stu-id="14a77-103">Several of the protected operations for which the .NET Framework provides permissions can potentially allow the security system to be circumvented.</span></span> <span data-ttu-id="14a77-104">Essas permissões perigosas devem ser fornecidas apenas para o código confiável e, em seguida, somente quando necessário.</span><span class="sxs-lookup"><span data-stu-id="14a77-104">These dangerous permissions should be given only to trustworthy code, and then only as necessary.</span></span> <span data-ttu-id="14a77-105">Geralmente, há nenhuma defesa contra um código mal-intencionado se essas permissões é concedido.</span><span class="sxs-lookup"><span data-stu-id="14a77-105">There is usually no defense against malicious code if it is granted these permissions.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741835"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="afa4b-102">&lt;defaultHttpCachePolicy&gt; elemento (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="afa4b-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="afa4b-103">Descreve se o cache de HTTP está ativo e descreve a política de cache padrão.</span><span class="sxs-lookup"><span data-stu-id="afa4b-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  

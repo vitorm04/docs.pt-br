@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750993"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="75be5-102">&lt;transporte&gt; de &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="75be5-102">&lt;transport&gt; of &lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="75be5-103">Define as configurações de segurança de transporte.</span><span class="sxs-lookup"><span data-stu-id="75be5-103">Defines the transport security settings.</span></span>  
