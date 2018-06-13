@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498164"
 ---
 # <a name="transactions-in-wcf"></a>Transações do WCF
 O recurso de transações do Windows Communication Foundation (WCF) permite que vários componentes participar de uma operação de dados simultaneamente. Os tópicos nesta seção examinam o recurso em detalhes.  

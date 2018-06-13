@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502638"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
 Este exemplo demonstra a necessidade e implicações de usar Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (como `ConcurencyMode.Single`). Para garantir a segurança do thread, o Windows Communication Foundation (WCF) bloqueia o `InstanceContext` processar uma mensagem para que nenhuma outra mensagem pode ser processada. No caso do modo reentrante, o `InstanceContext` está desbloqueada antes do serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante conforme demonstrado no exemplo) ao obter o bloqueio a próxima vez que se trata para o serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e um cliente podem enviar mensagens entre si usando um contrato duplex.  

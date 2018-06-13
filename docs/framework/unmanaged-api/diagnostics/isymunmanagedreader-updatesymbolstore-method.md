@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427376"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Método ISymUnmanagedReader::UpdateSymbolStore
 Atualiza o repositório de símbolos existente com um repositório de símbolos delta. Esse método é usado em cenários de editar e continuar para atualizar o repositório de símbolos para corresponder deltas para o arquivo executável (PE) portátil original.  

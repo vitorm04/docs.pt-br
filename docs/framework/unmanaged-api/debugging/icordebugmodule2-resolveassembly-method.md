@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417772"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>Método ICorDebugModule2::ResolveAssembly
 Resolve o assembly referenciado pelo token de metadados especificado.  

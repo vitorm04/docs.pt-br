@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bb624c0ad3d74fa86c19233cbac303ffffc122c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428006"
 ---
 # <a name="cleardownloadcache-function"></a>Função ClearDownloadCache
 Limpa o cache de assembly global de assemblies baixados.  

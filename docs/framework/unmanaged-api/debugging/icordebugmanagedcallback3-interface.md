@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6aab35aa5580b53dda513369066ff77f55230265
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419845"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>Interface ICorDebugManagedCallback3
 Fornece um método de retorno de chamada que indica que uma notificação personalizada ativada do depurador foi gerada.  

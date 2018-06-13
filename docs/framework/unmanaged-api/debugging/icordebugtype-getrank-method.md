@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f112e0d064041a877963939b78029da08bbbed1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417648"
 ---
 # <a name="icordebugtypegetrank-method"></a>Método ICorDebugType::GetRank
 Obtém o número de dimensões em um tipo de matriz.  

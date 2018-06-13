@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73072dd9564853852b4d57e73c810680fdbcc4f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421331"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>Interface ICorDebugVariableSymbol
 Recupera as informações de símbolo de depuração para uma variável.  

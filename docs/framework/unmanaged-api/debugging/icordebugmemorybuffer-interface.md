@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4a1bc8e1206b8a82127645362cfe0a124074271c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414396"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>Interface ICorDebugMemoryBuffer
 Representa um buffer na memória.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa8c3160dc779b2475dec63be896af5283cf5346
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418159"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>Interface ICorDebugGCReferenceEnum
 Fornece um enumerador para objetos que serão coletados do lixo.  

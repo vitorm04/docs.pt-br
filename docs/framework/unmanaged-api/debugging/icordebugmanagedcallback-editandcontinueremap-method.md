@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e8aa71a79bee45d5a8e1f3448c781e6ba1ec605
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414132"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>Método ICorDebugManagedCallback::EditAndContinueRemap
 Esse método foi substituído. Notifica o depurador que um evento remapear foi enviado para o ambiente de desenvolvimento integrado (IDE).  

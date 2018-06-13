@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500874"
 ---
 # <a name="net-msmq-binding"></a>Associação de MSMQ de rede
 Esta seção contém exemplos que demonstram o uso de atributos de associação de MSMQ de um elemento de ponto de extremidade.  

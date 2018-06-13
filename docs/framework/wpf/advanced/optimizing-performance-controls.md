@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549257"
 ---
 # <a name="optimizing-performance-controls"></a>Otimizando desempenho: controles
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui muitos dos componentes comuns de interface do usuário que são usados na maioria dos aplicativos do Windows. Este tópico contém técnicas para melhorar o desempenho de sua interface do usuário.  

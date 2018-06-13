@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 537023cf117477b54117799fc9ea62e894bb6591
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419134"
 ---
 # <a name="icordebugmodule2-interface1"></a>Interface1 ICorDebugModule2
 Serve como uma extensão lógica para a interface ICorDebugModule.  

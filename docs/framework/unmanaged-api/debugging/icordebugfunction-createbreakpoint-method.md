@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2881b1f420d8e177e093969b2cdd9f2ff36883f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412509"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>Método ICorDebugFunction::CreateBreakpoint
 Cria um ponto de interrupção no início dessa função.  

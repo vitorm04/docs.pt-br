@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413134"
 ---
 # <a name="icordebugerrorinfoenumnext-method"></a>Método ICorDebugErrorInfoEnum::Next
 `ICorDebugErrorInfoEnum::Next` é obsoleto. Não chame este método.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498440"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Using Multiple Authentication Schemes with WCF
 WCF agora permite que você especifique vários esquemas de autenticação em um único ponto de extremidade. Além disso serviços da web hospedado podem herdar as configurações de autenticação diretamente no IIS. Serviços de hospedagem interna podem especificar qual autenticação esquemas podem ser usadas. Para obter mais informações sobre como definir configurações de autenticação no IIS, consulte [autenticação IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  

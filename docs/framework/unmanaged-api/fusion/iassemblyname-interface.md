@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa12252c4f2a8e710a4a880af103aa324f8118ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432394"
 ---
 # <a name="iassemblyname-interface"></a>Interface IAssemblyName
 Fornece métodos para descrever e trabalhar com uma identidade exclusiva de assembly.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538484"
 ---
 # <a name="toolstrippanel-control-overview"></a>Visão geral do controle ToolStripPanel
 Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área de posicionamento e rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles pilha vertical ou horizontalmente, dependendo do <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> do <xref:System.Windows.Forms.ToolStripPanel>.  

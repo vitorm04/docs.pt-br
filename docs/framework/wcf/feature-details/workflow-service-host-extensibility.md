@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504062"
 ---
 # <a name="workflow-service-host-extensibility"></a>Extensibilidade de host de serviço do fluxo de trabalho
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fornece o <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe para hospedar os serviços de fluxo de trabalho. Essa classe é usada quando você usa a auto-hospedagem um serviço de fluxo de trabalho em um aplicativo gerenciado ou um serviço do Windows. Essa classe também é usada ao hospedar um serviço de fluxo de trabalho com serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS). O <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe fornece pontos de extensão que permitem adicionar extensões personalizadas, alterar o comportamento ocioso e hospedar fluxos de trabalho sem serviço (fluxos de trabalho que não usam atividades de mensagens).  

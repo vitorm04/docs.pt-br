@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418191"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>Método ICorDebugStepper2::SetJMC
 Define um valor que especifica se este ICorDebugStepper etapas somente através de código que é criado pelo desenvolvedor do aplicativo. Esse processo também é conhecido apenas como meu depuração de código (JMC).  

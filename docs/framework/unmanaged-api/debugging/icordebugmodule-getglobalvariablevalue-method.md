@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa558bf58f3033cc39a2b52d99e3a5329d9e99bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413027"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a>Método ICorDebugModule::GetGlobalVariableValue
 Obtém o valor da variável global especificada.  

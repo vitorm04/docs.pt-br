@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d765f87e36c98b5f664e84d85b883bc949fccf54
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415328"
 ---
 # <a name="icordebugfunction2-interface1"></a>Interface1 ICorDebugFunction2
 Logicamente estende a interface ICorDebugFunction para fornecer suporte para apenas meu código passo a passo de depuração, que ignora o código não-usuário.  
