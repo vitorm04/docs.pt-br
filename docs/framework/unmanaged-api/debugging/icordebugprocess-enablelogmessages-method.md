@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0dbac6570fc0af0452a0e44f838124afbf6a4fe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419878"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>Método ICorDebugProcess::EnableLogMessages
 Habilita e desabilita a transmissão de mensagens de log para o depurador.  

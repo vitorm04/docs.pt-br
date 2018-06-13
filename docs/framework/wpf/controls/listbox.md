@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551681"
 ---
 # <a name="listbox"></a>ListBox
 Um <xref:System.Windows.Controls.ListBox> controle fornece aos usuários uma lista de itens selecionáveis.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490591"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como implementar um serviço de descoberta que registra usando o proxy de descoberta
 Este tópico é a segunda de quatro tópicos que descreve como implementar um proxy de descoberta. No tópico anterior, [como: implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementado um proxy de descoberta. Neste tópico, você cria um serviço WCF que envia mensagens de aviso (`Hello` e `Bye`) para o proxy de descoberta, deixá-lo registrar e cancelar seu registro com o proxy de descoberta.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77ffb53e3a2b3802d3fcc1319397c8f51c5b127c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416105"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>Método ICorDebugProcess2::GetDesiredNGENCompilerFlags
 Obtém o compilador atual configurações de sinalizador que usa o common language runtime (CLR) para selecionar o pré-compilado correto (ou seja, nativo) imagem a ser carregado nesse processo.  

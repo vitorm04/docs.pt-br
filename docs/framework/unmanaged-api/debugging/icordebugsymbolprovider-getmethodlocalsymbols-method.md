@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c590944c321050c9ecca330a2961a2a7b7f31e6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420008"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>Método ICorDebugSymbolProvider::GetMethodLocalSymbols
 Obtém os símbolos do local do método recebe o endereço virtual relativo (RVA) do método.  

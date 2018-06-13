@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536563"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Como baixar um arquivo no segundo plano
 Baixar um arquivo é uma tarefa comum e costuma ser útil executar esta operação potencialmente demorada em um thread separado. Use o <xref:System.ComponentModel.BackgroundWorker> componente para realizar essa tarefa com muito pouco código.  

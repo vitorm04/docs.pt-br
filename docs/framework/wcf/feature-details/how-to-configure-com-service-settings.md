@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490098"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Como configurar configurações de serviço de COM+
 Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração do serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo de hospedados pelo COM+, o arquivo de config é colocado no diretório raiz do aplicativo (aplicativos de %PROGRAMFILES%\ComPlus\\{appid} é o padrão). Em ambos os modos hospedado na Web, o arquivo Web. config é colocado no diretório raiz virtual especificado.  
