@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365599"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Inscrição de recursos como participantes em uma transação
 Cada recurso que participa de uma transação é gerenciado por um Gerenciador de recursos, as ações são coordenadas por um Gerenciador de transações. A coordenação é feita por meio de notificações para assinantes que tem se inscrito em uma transação por meio do Gerenciador de transações.  

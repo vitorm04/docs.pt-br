@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361067"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Assinando procedimentos armazenados no SQL Server
  Uma assinatura digital é um resumo dos dados criptografados com a chave privada do assinante. A chave privada garante que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar assemblies, gatilhos, procedimentos armazenados e funções (exceto funções com valor de tabela embutida).  

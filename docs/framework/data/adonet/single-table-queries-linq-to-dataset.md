@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360472"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabela única (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] as consultas funcionam em fontes de dados que implementam o <xref:System.Collections.Generic.IEnumerable%601> interface ou <xref:System.Linq.IQueryable%601> interface. O <xref:System.Data.DataTable> a classe não implementa a interface, portanto você deve chamar o <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método se você quiser usar o <xref:System.Data.DataTable> como uma fonte no `From` cláusula de um [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  

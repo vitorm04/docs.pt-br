@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360606"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Como: habilitar a paginação de resultados do serviço de dados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você limite o número de entidades retornadas por uma consulta de serviço de dados. Limites de página são definidos no método chamado quando o serviço é inicializado e pode ser definido separadamente para cada conjunto de entidades.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365534"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Define um elemento de associação que é usado para configurar pontos de extremidade para serviços Web do Windows Communication Foundation (WCF) que respondem às solicitações HTTP em vez de mensagens SOAP.  

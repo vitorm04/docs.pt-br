@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539819"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Usando o designer com o controle DataGridView dos Windows Forms
 O Visual Studio dá suporte de designer ao controle `DataGridView` que permite que você execute várias tarefas de instalação sem escrever código. Essas tarefas incluem associar o controle a uma fonte de dados, modificando as colunas usadas para exibir dados e ajustando a aparência e o comportamento básico do controle.  

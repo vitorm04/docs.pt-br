@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440808"
 ---
 # <a name="stackoverflowinfo-structure"></a>Estrutura StackOverflowInfo
 Armazena o tipo de estouro ocorreu e informações sobre a exceção que foi gerada devido ao estouro.  

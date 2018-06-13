@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541931"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
 <a name="introduction"></a> Este tópico explica como o funcionamento do sistema de propriedades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode afetar o valor de uma propriedade de dependência e descreve a precedência pela qual os aspectos do sistema de propriedades são aplicados ao valor efetivo de uma propriedade.  

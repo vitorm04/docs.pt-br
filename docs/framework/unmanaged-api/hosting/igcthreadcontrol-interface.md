@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9296aedf24979624c3d7357a4d51be835716a16f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438022"
 ---
 # <a name="igcthreadcontrol-interface"></a>Interface IGCThreadControl
 Fornece métodos para participação no agendamento de threads que outra forma seriam bloqueados para uma coleta de lixo.  

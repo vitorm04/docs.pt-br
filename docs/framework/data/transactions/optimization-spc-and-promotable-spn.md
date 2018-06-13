@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363280"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Otimização de uso único de fase de confirmação e notificação de fase única passível de promoção
 Este tópico descreve os mecanismos fornecidos pelo <xref:System.Transactions> infra-estrutura para otimizar o desempenho.  

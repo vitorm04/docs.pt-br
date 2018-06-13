@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536612"
 ---
 # <a name="printdocument-component-windows-forms"></a>Componente PrintDocument (Windows Forms)
 O componente `PrintDocument` dos Windows Forms é usado para definir as propriedades que descrevem o que imprimir e, em seguida, imprime o documento em aplicativos baseados no Windows. Ele pode ser usado em conjunto com o <xref:System.Windows.Forms.PrintDialog> componente no comando de todos os aspectos da impressão de documentos.  

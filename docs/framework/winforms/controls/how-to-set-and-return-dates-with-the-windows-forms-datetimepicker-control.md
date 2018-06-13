@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535663"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Como definir e retornar datas com o controle DateTimePicker dos Windows Forms
 A data atualmente selecionada ou a hora em Windows Forms <xref:System.Windows.Forms.DateTimePicker> controle é determinado pelo <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade. Você pode definir o <xref:System.Windows.Forms.DateTimePicker.Value%2A> propriedade antes do controle é exibido (por exemplo, em tempo de design ou do formulário <xref:System.Windows.Forms.Form.Load> eventos) para determinar qual data será inicialmente selecionada no controle. Por padrão, o controle <xref:System.Windows.Forms.DateTimePicker.Value%2A> é definida como a data atual. Se você alterar o controle <xref:System.Windows.Forms.DateTimePicker.Value%2A> no código, o controle é atualizado automaticamente para refletir a nova configuração do formulário.  

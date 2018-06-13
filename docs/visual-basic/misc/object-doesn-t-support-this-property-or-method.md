@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638701"
 ---
 # <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>Objeto&#39;não oferece suporte a esta propriedade ou método (Visual Basic)
 Você especificou um método ou propriedade não existe para esse objeto de automação.  

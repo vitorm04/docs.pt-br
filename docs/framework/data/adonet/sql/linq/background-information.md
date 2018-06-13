@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363211"
 ---
 # <a name="background-information"></a>Informações gerais
 Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que estendem além dos fundamentos sobre o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

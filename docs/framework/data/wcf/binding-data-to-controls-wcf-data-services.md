@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365560"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Associando dados a controles (WCF Data Services)
 Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode vincular controles, como o `ComboBox` e `ListView` controles a uma instância do <xref:System.Data.Services.Client.DataServiceCollection%601> classe. Esta coleção, que herda do <xref:System.Collections.ObjectModel.ObservableCollection%601> de classe, que contém os dados de um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Essa classe representa uma coleção de dados dinâmicos que fornece notificações quando itens são adicionados ou removidos. Quando você usa uma instância de <xref:System.Data.Services.Client.DataServiceCollection%601> para associação de dados, o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente lidar com esses eventos para garantir que os objetos rastreados pelo <xref:System.Data.Services.Client.DataServiceContext> permanecerem sincronizados com os dados no elemento de interface do usuário associado.  

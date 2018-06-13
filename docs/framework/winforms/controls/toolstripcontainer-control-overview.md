@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536335"
 ---
 # <a name="toolstripcontainer-control-overview"></a>Visão geral do controle ToolStripContainer
 Um <xref:System.Windows.Forms.ToolStripContainer> tem painéis em sua esquerda, direita, superior e lados da parte inferior para posicionamento e rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles de pilha verticalmente se colocá-los na esquerda ou direita <xref:System.Windows.Forms.ToolStripContainer>. Horizontalmente pilha se colocá-los na parte superior ou inferior <xref:System.Windows.Forms.ToolStripContainer>. Você pode usar o centro <xref:System.Windows.Forms.ToolStripContentPanel> do <xref:System.Windows.Forms.ToolStripContainer> para posicionar tradicionais controles no formulário.  

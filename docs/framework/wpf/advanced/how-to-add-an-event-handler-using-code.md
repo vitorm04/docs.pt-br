@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542617"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Como adicionar um manipulador de eventos usando código
 Esse exemplo mostra como adicionar um manipulador de eventos a um elemento usando código.  

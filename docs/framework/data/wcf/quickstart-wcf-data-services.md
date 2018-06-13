@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365391"
 ---
 # <a name="quickstart-wcf-data-services"></a>Guia de Início Rápido (WCF Data Services)
 Este guia de início rápido ajuda você a se familiarizar com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] por meio de uma série de tarefas que oferecem suporte os tópicos [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  

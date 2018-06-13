@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c34d9243e4ed7ed2492784154b157189c7d22cd2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440574"
 ---
 # <a name="ihostsecuritymanagerreverttoself-method"></a>Método IHostSecurityManager::RevertToSelf
 Finaliza a representação da identidade do usuário atual e retorna o token de thread original.  

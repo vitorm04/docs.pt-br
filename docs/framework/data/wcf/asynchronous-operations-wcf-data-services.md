@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365911"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operações assíncronas (WCF Data Services)
 Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor do que os aplicativos que são executados dentro das redes internas. Para otimizar o desempenho e a experiência do usuário do seu aplicativo, recomendamos usar os métodos assíncronos das classes <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> ao acessar servidores do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pela Web.  

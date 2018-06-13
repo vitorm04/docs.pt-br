@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362812"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Confirmar uma transação de fase única e de várias fases
 Cada recurso usado em uma transação é gerenciado por um Gerenciador de recursos (RM), as ações são coordenadas por um Gerenciador de transações (TM). O [inscrição recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) tópico discute como um recurso (ou vários recursos) podem ser inscrita em uma transação. Este tópico discute como confirmação de transação pode ser coordenada entre recursos.  
