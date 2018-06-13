@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
 ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552890"
 ---
 # <a name="progressbar"></a><span data-ttu-id="aad29-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="aad29-102">ProgressBar</span></span>
 <span data-ttu-id="aad29-103">A <xref:System.Windows.Controls.ProgressBar> indica o progresso de uma operação.</span><span class="sxs-lookup"><span data-stu-id="aad29-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="aad29-104">O <xref:System.Windows.Controls.ProgressBar> controle consiste em uma janela que é preenchida com a cor de realce de sistema como uma operação progride.</span><span class="sxs-lookup"><span data-stu-id="aad29-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  

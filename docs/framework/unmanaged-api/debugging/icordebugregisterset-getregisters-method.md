@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421344"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="b1aa9-102">Método ICorDebugRegisterSet::GetRegisters</span><span class="sxs-lookup"><span data-stu-id="b1aa9-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
 <span data-ttu-id="b1aa9-103">Obtém o valor de cada registro (no computador que está executando código) que é especificado pela máscara de bits.</span><span class="sxs-lookup"><span data-stu-id="b1aa9-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  

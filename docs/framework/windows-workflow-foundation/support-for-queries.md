@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517985"
 ---
 # <a name="support-for-queries"></a><span data-ttu-id="dfed5-102">Suporte para consultas</span><span class="sxs-lookup"><span data-stu-id="dfed5-102">Support for Queries</span></span>
 <span data-ttu-id="dfed5-103">A instância Store de fluxo de trabalho do SQL registra um conjunto de propriedades conhecidos no armazenamento.</span><span class="sxs-lookup"><span data-stu-id="dfed5-103">The SQL Workflow Instance Store records a set of well-known properties in the store.</span></span> <span data-ttu-id="dfed5-104">Os usuários podem ver para as instâncias com base nessas propriedades.</span><span class="sxs-lookup"><span data-stu-id="dfed5-104">Users can query for instances based on these properties.</span></span> <span data-ttu-id="dfed5-105">A lista a seguir contém algumas dessas propriedades conhecidas:</span><span class="sxs-lookup"><span data-stu-id="dfed5-105">The following list contains some of these well-known properties:</span></span>  

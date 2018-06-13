@@ -1,38 +1,28 @@
 ---
 title: Criando novos atributos para elementos no DOM
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fb1a337c2795627b82125c8c29335c52b5fb332c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570374"
 ---
-# <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="bb540-102">Criando novos atributos para elementos no DOM</span><span class="sxs-lookup"><span data-stu-id="bb540-102">Creating New Attributes for Elements in the DOM</span></span>
-<span data-ttu-id="bb540-103">Criar novos atributos é diferente de criar outros tipos de nó, pois os atributos não são nós, mas propriedades de um nó de elemento e estão contidos em um **XmlAttributeCollection** associado ao elemento.</span><span class="sxs-lookup"><span data-stu-id="bb540-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="bb540-104">Há várias maneiras de criar um atributo e anexá-lo a um elemento:</span><span class="sxs-lookup"><span data-stu-id="bb540-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  
+# <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="bb397-102">Criando novos atributos para elementos no DOM</span><span class="sxs-lookup"><span data-stu-id="bb397-102">Creating New Attributes for Elements in the DOM</span></span>
+<span data-ttu-id="bb397-103">Criar novos atributos é diferente de criar outros tipos de nó, pois os atributos não são nós, mas propriedades de um nó de elemento e estão contidos em um **XmlAttributeCollection** associado ao elemento.</span><span class="sxs-lookup"><span data-stu-id="bb397-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="bb397-104">Há várias maneiras de criar um atributo e anexá-lo a um elemento:</span><span class="sxs-lookup"><span data-stu-id="bb397-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  
   
--   <span data-ttu-id="bb540-105">Obter o nó de elemento e usar **SetAttribute** para adicionar um atributo à coleção de atributos do elemento.</span><span class="sxs-lookup"><span data-stu-id="bb540-105">Get the element node and use **SetAttribute** to add an attribute to the attribute collection of that element.</span></span>  
+-   <span data-ttu-id="bb397-105">Obter o nó de elemento e usar **SetAttribute** para adicionar um atributo à coleção de atributos do elemento.</span><span class="sxs-lookup"><span data-stu-id="bb397-105">Get the element node and use **SetAttribute** to add an attribute to the attribute collection of that element.</span></span>  
   
--   <span data-ttu-id="bb540-106">Criar um nó **XmlAttribute** usando o método **CreateAttribute**, obter o nó do elemento e usar **SetAttributeNode** para adicionar o nó à coleção de atributos desse elemento.</span><span class="sxs-lookup"><span data-stu-id="bb540-106">Create an **XmlAttribute** node using the **CreateAttribute** method, get the element node, then use **SetAttributeNode** to add the node to the attribute collection of that element.</span></span>  
+-   <span data-ttu-id="bb397-106">Criar um nó **XmlAttribute** usando o método **CreateAttribute**, obter o nó do elemento e usar **SetAttributeNode** para adicionar o nó à coleção de atributos desse elemento.</span><span class="sxs-lookup"><span data-stu-id="bb397-106">Create an **XmlAttribute** node using the **CreateAttribute** method, get the element node, then use **SetAttributeNode** to add the node to the attribute collection of that element.</span></span>  
   
- <span data-ttu-id="bb540-107">O exemplo a seguir mostra como adicionar um atributo a um elemento usando o método **SetAttribute**.</span><span class="sxs-lookup"><span data-stu-id="bb540-107">The following example shows how to add an attribute to an element using the **SetAttribute** method.</span></span>  
+ <span data-ttu-id="bb397-107">O exemplo a seguir mostra como adicionar um atributo a um elemento usando o método **SetAttribute**.</span><span class="sxs-lookup"><span data-stu-id="bb397-107">The following example shows how to add an attribute to an element using the **SetAttribute** method.</span></span>  
   
 ```vb  
 Imports System  
@@ -82,9 +72,9 @@ public class Sample
   }  
 ```  
   
- <span data-ttu-id="bb540-108">O exemplo a seguir mostra um novo atributo criado usando o método **CreateAttribute**.</span><span class="sxs-lookup"><span data-stu-id="bb540-108">The following example shows a new attribute being created using the **CreateAttribute** method.</span></span> <span data-ttu-id="bb540-109">Em seguida, ele mostra o atributo adicionado à coleção de atributos do elemento **book** usando o método **SetAttributeNode**.</span><span class="sxs-lookup"><span data-stu-id="bb540-109">It then shows the attribute added to the attribute collection of the **book** element using the **SetAttributeNode** method.</span></span>  
+ <span data-ttu-id="bb397-108">O exemplo a seguir mostra um novo atributo criado usando o método **CreateAttribute**.</span><span class="sxs-lookup"><span data-stu-id="bb397-108">The following example shows a new attribute being created using the **CreateAttribute** method.</span></span> <span data-ttu-id="bb397-109">Em seguida, ele mostra o atributo adicionado à coleção de atributos do elemento **book** usando o método **SetAttributeNode**.</span><span class="sxs-lookup"><span data-stu-id="bb397-109">It then shows the attribute added to the attribute collection of the **book** element using the **SetAttributeNode** method.</span></span>  
   
- <span data-ttu-id="bb540-110">Com o seguinte XML:</span><span class="sxs-lookup"><span data-stu-id="bb540-110">Given the following XML:</span></span>  
+ <span data-ttu-id="bb397-110">Com o seguinte XML:</span><span class="sxs-lookup"><span data-stu-id="bb397-110">Given the following XML:</span></span>  
   
 ```xml  
 <book genre='novel' ISBN='1-861001-57-5'>  
@@ -92,7 +82,7 @@ public class Sample
 </book>  
 ```  
   
- <span data-ttu-id="bb540-111">crie um novo atributo e atribua um valor a ele:</span><span class="sxs-lookup"><span data-stu-id="bb540-111">create a new attribute and give it a value:</span></span>  
+ <span data-ttu-id="bb397-111">crie um novo atributo e atribua um valor a ele:</span><span class="sxs-lookup"><span data-stu-id="bb397-111">create a new attribute and give it a value:</span></span>  
   
 ```vb  
 Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
@@ -104,7 +94,7 @@ XmlAttribute attr = doc.CreateAttribute("publisher");
 attr.Value = "WorldWide Publishing";  
 ```  
   
- <span data-ttu-id="bb540-112">e anexe-o ao elemento:</span><span class="sxs-lookup"><span data-stu-id="bb540-112">and attach it to the element:</span></span>  
+ <span data-ttu-id="bb397-112">e anexe-o ao elemento:</span><span class="sxs-lookup"><span data-stu-id="bb397-112">and attach it to the element:</span></span>  
   
 ```vb  
 doc.DocumentElement.SetAttributeNode(attr)  
@@ -114,7 +104,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);  
 ```  
   
- <span data-ttu-id="bb540-113">**Saída**</span><span class="sxs-lookup"><span data-stu-id="bb540-113">**Output**</span></span>  
+ <span data-ttu-id="bb397-113">**Saída**</span><span class="sxs-lookup"><span data-stu-id="bb397-113">**Output**</span></span>  
   
 ```xml  
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
@@ -122,17 +112,17 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>  
 ```  
   
- <span data-ttu-id="bb540-114">O exemplo de código completo pode ser encontrado em <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span><span class="sxs-lookup"><span data-stu-id="bb540-114">The full code sample can be found at <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span></span>  
+ <span data-ttu-id="bb397-114">O exemplo de código completo pode ser encontrado em <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span><span class="sxs-lookup"><span data-stu-id="bb397-114">The full code sample can be found at <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span></span>  
   
- <span data-ttu-id="bb540-115">Você também pode criar um nó **XmlAttribute** e usar o método **InsertBefore** ou **InsertAfter** para colocá-lo na posição apropriada na coleção.</span><span class="sxs-lookup"><span data-stu-id="bb540-115">You can also create an **XmlAttribute** node and use the **InsertBefore** or **InsertAfter** methods to place it in the appropriate position in the collection.</span></span> <span data-ttu-id="bb540-116">Se um atributo com o mesmo nome já estiver presente na coleção de atributos, o nó **XmlAttribute** existente será removido da coleção, e o novo nó **XmlAttribute** será inserido.</span><span class="sxs-lookup"><span data-stu-id="bb540-116">If an attribute with the same name is already present in the attribute collection, the existing **XmlAttribute** node is removed from the collection and the new **XmlAttribute** node is inserted.</span></span> <span data-ttu-id="bb540-117">Isso é executado da mesma forma que o método **SetAttribute**.</span><span class="sxs-lookup"><span data-stu-id="bb540-117">This performs the same way as the **SetAttribute** method.</span></span> <span data-ttu-id="bb540-118">Esses métodos usam, como parâmetro, um nó existente como um ponto de referência para fazer **InsertBefore** e **InsertAfter**.</span><span class="sxs-lookup"><span data-stu-id="bb540-118">These methods take, as a parameter, an existing node as a reference point to do the **InsertBefore** and **InsertAfter**.</span></span> <span data-ttu-id="bb540-119">Se você não fornecer um nó de referência indicando onde inserir o novo nó, o padrão para o método **InsertAfter** será inserir o novo nó no início da coleção.</span><span class="sxs-lookup"><span data-stu-id="bb540-119">If you do not provide a reference node indicating where to insert the new node, the default for the **InsertAfter** method is to insert the new node at the beginning of the collection.</span></span> <span data-ttu-id="bb540-120">A posição padrão de **InsertBefore**, se nenhum nó de referência for fornecido, será no final da coleção.</span><span class="sxs-lookup"><span data-stu-id="bb540-120">The default position for the **InsertBefore**, if no reference node is provided, is at the end of the collection.</span></span>  
+ <span data-ttu-id="bb397-115">Você também pode criar um nó **XmlAttribute** e usar o método **InsertBefore** ou **InsertAfter** para colocá-lo na posição apropriada na coleção.</span><span class="sxs-lookup"><span data-stu-id="bb397-115">You can also create an **XmlAttribute** node and use the **InsertBefore** or **InsertAfter** methods to place it in the appropriate position in the collection.</span></span> <span data-ttu-id="bb397-116">Se um atributo com o mesmo nome já estiver presente na coleção de atributos, o nó **XmlAttribute** existente será removido da coleção, e o novo nó **XmlAttribute** será inserido.</span><span class="sxs-lookup"><span data-stu-id="bb397-116">If an attribute with the same name is already present in the attribute collection, the existing **XmlAttribute** node is removed from the collection and the new **XmlAttribute** node is inserted.</span></span> <span data-ttu-id="bb397-117">Isso é executado da mesma forma que o método **SetAttribute**.</span><span class="sxs-lookup"><span data-stu-id="bb397-117">This performs the same way as the **SetAttribute** method.</span></span> <span data-ttu-id="bb397-118">Esses métodos usam, como parâmetro, um nó existente como um ponto de referência para fazer **InsertBefore** e **InsertAfter**.</span><span class="sxs-lookup"><span data-stu-id="bb397-118">These methods take, as a parameter, an existing node as a reference point to do the **InsertBefore** and **InsertAfter**.</span></span> <span data-ttu-id="bb397-119">Se você não fornecer um nó de referência indicando onde inserir o novo nó, o padrão para o método **InsertAfter** será inserir o novo nó no início da coleção.</span><span class="sxs-lookup"><span data-stu-id="bb397-119">If you do not provide a reference node indicating where to insert the new node, the default for the **InsertAfter** method is to insert the new node at the beginning of the collection.</span></span> <span data-ttu-id="bb397-120">A posição padrão de **InsertBefore**, se nenhum nó de referência for fornecido, será no final da coleção.</span><span class="sxs-lookup"><span data-stu-id="bb397-120">The default position for the **InsertBefore**, if no reference node is provided, is at the end of the collection.</span></span>  
   
- <span data-ttu-id="bb540-121">Se você criou um **XmlNamedNodeMap** de atributos, poderá adicionar um atributo pelo nome usando <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="bb540-121">If you created an **XmlNamedNodeMap** of attributes, you can add an attribute by name using the <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span></span> <span data-ttu-id="bb540-122">Para saber mais, confira [Coleções de nó em NamedNodeMaps e em NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span><span class="sxs-lookup"><span data-stu-id="bb540-122">For more information, see [Node Collections in NamedNodeMaps and NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span></span>  
+ <span data-ttu-id="bb397-121">Se você criou um **XmlNamedNodeMap** de atributos, poderá adicionar um atributo pelo nome usando <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="bb397-121">If you created an **XmlNamedNodeMap** of attributes, you can add an attribute by name using the <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span></span> <span data-ttu-id="bb397-122">Para saber mais, confira [Coleções de nó em NamedNodeMaps e em NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span><span class="sxs-lookup"><span data-stu-id="bb397-122">For more information, see [Node Collections in NamedNodeMaps and NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span></span>  
   
-## <a name="default-attributes"></a><span data-ttu-id="bb540-123">Atributos padrão</span><span class="sxs-lookup"><span data-stu-id="bb540-123">Default Attributes</span></span>  
- <span data-ttu-id="bb540-124">Se você criar um elemento que está declarado para ter um atributo padrão, um novo atributo padrão com seu valor padrão será criado pelo DOM (Document Object Model) XML e anexado ao elemento.</span><span class="sxs-lookup"><span data-stu-id="bb540-124">If you create an element that is declared to have a default attribute, then a new default attribute with its default value is created by the XML Document Object Model (DOM) and attached to the element.</span></span> <span data-ttu-id="bb540-125">Os nós filhos do atributo padrão também são criados neste momento.</span><span class="sxs-lookup"><span data-stu-id="bb540-125">The child nodes of the default attribute are also created at this time.</span></span>  
+## <a name="default-attributes"></a><span data-ttu-id="bb397-123">Atributos padrão</span><span class="sxs-lookup"><span data-stu-id="bb397-123">Default Attributes</span></span>  
+ <span data-ttu-id="bb397-124">Se você criar um elemento que está declarado para ter um atributo padrão, um novo atributo padrão com seu valor padrão será criado pelo DOM (Document Object Model) XML e anexado ao elemento.</span><span class="sxs-lookup"><span data-stu-id="bb397-124">If you create an element that is declared to have a default attribute, then a new default attribute with its default value is created by the XML Document Object Model (DOM) and attached to the element.</span></span> <span data-ttu-id="bb397-125">Os nós filhos do atributo padrão também são criados neste momento.</span><span class="sxs-lookup"><span data-stu-id="bb397-125">The child nodes of the default attribute are also created at this time.</span></span>  
   
-## <a name="attribute-child-nodes"></a><span data-ttu-id="bb540-126">Nós filhos do atributo</span><span class="sxs-lookup"><span data-stu-id="bb540-126">Attribute Child Nodes</span></span>  
- <span data-ttu-id="bb540-127">O valor de um nó de atributo se torna os seus nós filhos.</span><span class="sxs-lookup"><span data-stu-id="bb540-127">The value of an attribute node becomes its child nodes.</span></span> <span data-ttu-id="bb540-128">Há apenas dois tipos de nós filhos válidos: nós **XmlText** e nós **XmlEntityReference**.</span><span class="sxs-lookup"><span data-stu-id="bb540-128">There are only two types of valid child nodes: **XmlText** nodes, and **XmlEntityReference** nodes.</span></span> <span data-ttu-id="bb540-129">Esses são nós filhos no sentido de que métodos como **FirstChild** e **LastChild** os processam como nós filhos.</span><span class="sxs-lookup"><span data-stu-id="bb540-129">These are child nodes in the sense that methods such as **FirstChild** and **LastChild** process them as child nodes.</span></span> <span data-ttu-id="bb540-130">Essa distinção de um atributo que possui nós filhos é importante ao tentar remover atributos ou nós filhos do atributo.</span><span class="sxs-lookup"><span data-stu-id="bb540-130">This distinction of an attribute having child nodes is important when trying to remove attributes or attribute child nodes.</span></span> <span data-ttu-id="bb540-131">Para saber mais, confira [Removendo atributos de um nó de elemento no DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="bb540-131">For more information, see [Removing Attributes from an Element Node in the DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span></span>  
+## <a name="attribute-child-nodes"></a><span data-ttu-id="bb397-126">Nós filhos do atributo</span><span class="sxs-lookup"><span data-stu-id="bb397-126">Attribute Child Nodes</span></span>  
+ <span data-ttu-id="bb397-127">O valor de um nó de atributo se torna os seus nós filhos.</span><span class="sxs-lookup"><span data-stu-id="bb397-127">The value of an attribute node becomes its child nodes.</span></span> <span data-ttu-id="bb397-128">Há apenas dois tipos de nós filhos válidos: nós **XmlText** e nós **XmlEntityReference**.</span><span class="sxs-lookup"><span data-stu-id="bb397-128">There are only two types of valid child nodes: **XmlText** nodes, and **XmlEntityReference** nodes.</span></span> <span data-ttu-id="bb397-129">Esses são nós filhos no sentido de que métodos como **FirstChild** e **LastChild** os processam como nós filhos.</span><span class="sxs-lookup"><span data-stu-id="bb397-129">These are child nodes in the sense that methods such as **FirstChild** and **LastChild** process them as child nodes.</span></span> <span data-ttu-id="bb397-130">Essa distinção de um atributo que possui nós filhos é importante ao tentar remover atributos ou nós filhos do atributo.</span><span class="sxs-lookup"><span data-stu-id="bb397-130">This distinction of an attribute having child nodes is important when trying to remove attributes or attribute child nodes.</span></span> <span data-ttu-id="bb397-131">Para saber mais, confira [Removendo atributos de um nó de elemento no DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="bb397-131">For more information, see [Removing Attributes from an Element Node in the DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb540-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bb540-132">See Also</span></span>  
- [<span data-ttu-id="bb540-133">DOM (Modelo de Objeto do Documento) de XML</span><span class="sxs-lookup"><span data-stu-id="bb540-133">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="bb397-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bb397-132">See Also</span></span>  
+ [<span data-ttu-id="bb397-133">DOM (Modelo de Objeto do Documento) de XML</span><span class="sxs-lookup"><span data-stu-id="bb397-133">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

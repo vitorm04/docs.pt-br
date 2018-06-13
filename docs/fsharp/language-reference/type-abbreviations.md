@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058946"
 ---
 # <a name="type-abbreviations"></a><span data-ttu-id="e5c2f-103">Abreviações de tipo</span><span class="sxs-lookup"><span data-stu-id="e5c2f-103">Type Abbreviations</span></span>
 

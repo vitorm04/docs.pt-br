@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515669"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a><span data-ttu-id="7e6b9-102">Indexador de resumo de WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="7e6b9-102">WorkflowHostingEndpoint Resume Bookmark</span></span>
 <span data-ttu-id="7e6b9-103">Este exemplo demonstra como <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> pode ser usado com <xref:System.ServiceModel.Activities.WorkflowServiceHost> para criar instâncias de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="7e6b9-103">This sample demonstrates how the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> can be used with <xref:System.ServiceModel.Activities.WorkflowServiceHost> to create workflow instances.</span></span>  

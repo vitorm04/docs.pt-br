@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517654"
 ---
 # <a name="declarative-constraints"></a><span data-ttu-id="54dcb-102">Restrições declarativas</span><span class="sxs-lookup"><span data-stu-id="54dcb-102">Declarative Constraints</span></span>
 <span data-ttu-id="54dcb-103">As restrições declarativas fornecem um método poderoso de validação para uma atividade e suas relações com outras atividades.</span><span class="sxs-lookup"><span data-stu-id="54dcb-103">Declarative constraints provide a powerful method of validation for an activity and its relationships with other activities.</span></span> <span data-ttu-id="54dcb-104">As restrições são configuradas para uma atividade durante o processo de design, mas as restrições adicionais podem também ser especificadas pelo host de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="54dcb-104">Constraints are configured for an activity during the authoring process, but additional constraints can also be specified by the workflow host.</span></span> <span data-ttu-id="54dcb-105">Este tópico fornece uma visão geral do uso de restrições declarativas para fornecer validação de atividade.</span><span class="sxs-lookup"><span data-stu-id="54dcb-105">This topic provides an overview of using declarative constraints to provide activity validation.</span></span>  

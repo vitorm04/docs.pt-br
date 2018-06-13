@@ -4,8 +4,10 @@ description: 'Saiba como extensões de tipo de F # permitem que você adiciona n
 ms.date: 05/16/2016
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566880"
 ---
 # <a name="type-extensions"></a><span data-ttu-id="d8ef1-103">Extensões de tipo</span><span class="sxs-lookup"><span data-stu-id="d8ef1-103">Type Extensions</span></span>
 

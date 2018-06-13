@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9812fa4248533ccb898c98082e42e288c091f776
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420578"
 ---
 # <a name="icordebugtypeenumnext-method"></a><span data-ttu-id="6833e-102">Método ICorDebugTypeEnum::Next</span><span class="sxs-lookup"><span data-stu-id="6833e-102">ICorDebugTypeEnum::Next Method</span></span>
 <span data-ttu-id="6833e-103">Obtém o número de instâncias de "ICorDebugType" especificado pelo `celt` de enumeração, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="6833e-103">Gets the number of "ICorDebugType" instances specified by `celt` from the enumeration, starting at the current position.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
 ms.openlocfilehash: 4905f74683989d8e1a2b041a8af4af4d7432ffab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635639"
 ---
 # <a name="invalid-pattern-string"></a><span data-ttu-id="3c1e4-102">Cadeia de caracteres de padrão inválido</span><span class="sxs-lookup"><span data-stu-id="3c1e4-102">Invalid pattern string</span></span>
 <span data-ttu-id="3c1e4-103">A cadeia de caracteres padrão especificada no `Like` operação de uma pesquisa é inválida.</span><span class="sxs-lookup"><span data-stu-id="3c1e4-103">The pattern string specified in the `Like` operation of a search is invalid.</span></span>  

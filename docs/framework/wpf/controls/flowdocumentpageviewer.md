@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551218"
 ---
 # <a name="flowdocumentpageviewer"></a><span data-ttu-id="7656c-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="7656c-102">FlowDocumentPageViewer</span></span>
 <span data-ttu-id="7656c-103">O <xref:System.Windows.Controls.FlowDocumentPageViewer> controle é usado para exibir <xref:System.Windows.Documents.FlowDocument> conteúdo em uma base por página.</span><span class="sxs-lookup"><span data-stu-id="7656c-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="7656c-104">Compare com o <xref:System.Windows.Controls.FlowDocumentScrollViewer>, que apresenta <xref:System.Windows.Documents.FlowDocument> conteúdo em um visualizador de rolagem.</span><span class="sxs-lookup"><span data-stu-id="7656c-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  

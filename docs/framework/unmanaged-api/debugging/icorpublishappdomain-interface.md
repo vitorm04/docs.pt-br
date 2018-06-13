@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 572930022d44e6f0882ee02ecb837404c409f720
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423566"
 ---
 # <a name="icorpublishappdomain-interface"></a><span data-ttu-id="a465d-102">Interface ICorPublishAppDomain</span><span class="sxs-lookup"><span data-stu-id="a465d-102">ICorPublishAppDomain Interface</span></span>
 <span data-ttu-id="a465d-103">Representa e fornece informações sobre um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a465d-103">Represents and provides information about an application domain.</span></span>  
