@@ -17,9 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a431283386f847c5fb0e7e8ac9d5a1d3d5875181
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460558"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a><span data-ttu-id="41cbe-102">ICorProfilerCallback6::Método GetAssemblyReferences</span><span class="sxs-lookup"><span data-stu-id="41cbe-102">ICorProfilerCallback6::GetAssemblyReferences Method</span></span>
 <span data-ttu-id="41cbe-103">[Com suporte no .NET Framework 4.5.2 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="41cbe-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

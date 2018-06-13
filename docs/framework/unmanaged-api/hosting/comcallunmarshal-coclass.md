@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7884d53630ca13a30d7b4efd55d46684a9dd7d30
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427636"
 ---
 # <a name="comcallunmarshal-coclass"></a><span data-ttu-id="da377-102">Coclass ComCallUnmarshal</span><span class="sxs-lookup"><span data-stu-id="da377-102">ComCallUnmarshal Coclass</span></span>
 <span data-ttu-id="da377-103">Fornece interfaces para gerenciar o marshaling de ponteiros de interface.</span><span class="sxs-lookup"><span data-stu-id="da377-103">Provides interfaces for managing the marshaling of interface pointers.</span></span>  

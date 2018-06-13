@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428075"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a><span data-ttu-id="16ba0-102">Método ISymUnmanagedReader::GetDocument</span><span class="sxs-lookup"><span data-stu-id="16ba0-102">ISymUnmanagedReader::GetDocument Method</span></span>
 <span data-ttu-id="16ba0-103">Localiza um documento.</span><span class="sxs-lookup"><span data-stu-id="16ba0-103">Finds a document.</span></span> <span data-ttu-id="16ba0-104">O idioma do documento, o fornecedor e o tipo são opcionais.</span><span class="sxs-lookup"><span data-stu-id="16ba0-104">The document language, vendor, and type are optional.</span></span>  

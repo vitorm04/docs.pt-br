@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 591b3e43712832156283baf16e3d65b09172fe14
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428488"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="96d47-102">Enumeração EHostApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="96d47-102">EHostApplicationPolicy Enumeration</span></span>
 <span data-ttu-id="96d47-103">Indica como modificar um [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) objeto de interface.</span><span class="sxs-lookup"><span data-stu-id="96d47-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="96d47-104">Esta enumeração foi preterida.</span><span class="sxs-lookup"><span data-stu-id="96d47-104">This enumeration has been deprecated.</span></span>  

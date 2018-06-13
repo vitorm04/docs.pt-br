@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 736b9efa1abf0c8ce10d15465b1742879db04ab7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428170"
 ---
 # <a name="iassemblynamefinalize-method"></a><span data-ttu-id="acf08-102">Método IAssemblyName::Finalize</span><span class="sxs-lookup"><span data-stu-id="acf08-102">IAssemblyName::Finalize Method</span></span>
 <span data-ttu-id="acf08-103">Permite que este [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto para liberar recursos e executar outras operações de limpeza antes do destruidor é chamado.</span><span class="sxs-lookup"><span data-stu-id="acf08-103">Allows this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object to release resources and perform other cleanup operations before its destructor is called.</span></span>  

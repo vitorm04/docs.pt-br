@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 29990ad6a94f063577236bdbc84d02d4d2b4b2f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426127"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="0fe83-102">Método ISymENCUnmanagedMethod::GetLineFromOffset</span><span class="sxs-lookup"><span data-stu-id="0fe83-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
 <span data-ttu-id="0fe83-103">Obtém as informações de linha associadas com um deslocamento.</span><span class="sxs-lookup"><span data-stu-id="0fe83-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="0fe83-104">Se o parâmetro de deslocamento (`dwOffset`) não é um ponto de sequência, esse método obtém as informações de linha associadas com o deslocamento anterior.</span><span class="sxs-lookup"><span data-stu-id="0fe83-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
