@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526814"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Entrada de dados no controle DataGridView dos Windows Forms
 O controle `DataGridView` oferece vários recursos que permitem a você alterar como os usuários adicionam ou modificam dados no controle. Por exemplo, é possível tornar a entrada de dados mais eficiente fornecendo os valores padrão para novas linhas e alertando usuários quando ocorrem erros.  

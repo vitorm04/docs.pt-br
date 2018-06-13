@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522289"
 ---
 # <a name="how-to-write-user-settings-at-run-time-with-c"></a>Como gravar configurações do usuário em tempo de execução com C# #
 As configurações que estão no escopo do aplicativo são somente leitura e só podem ser alteradas em tempo de design ou alterando o arquivo. config entre as sessões do aplicativo. Configurações que estão no escopo do usuário, no entanto, podem ser gravadas em tempo de execução assim como qualquer valor de propriedade deve ser alterada. Persiste o novo valor para a duração da sessão do aplicativo. Você pode manter as alterações das configurações entre sessões do aplicativo chamando o método de salvar.  

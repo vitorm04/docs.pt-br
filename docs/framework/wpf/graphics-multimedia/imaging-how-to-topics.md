@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563367"
 ---
 # <a name="imaging-how-to-topics"></a>Tópicos explicativos da geração de imagens
 Os tópicos nesta seção demonstram como usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para exibir ou alterar as imagens de bitmap.  

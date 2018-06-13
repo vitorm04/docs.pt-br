@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519675"
 ---
 # <a name="transacted-queues"></a>Filas transacionadas
 Este exemplo mostra como integrar a filas e transações no Windows Workflow Foundation (WF) para criar serviços escalonáveis e confiáveis. Um <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` é usado no fluxo de trabalho cliente para enviar a mensagem para uma fila em uma transação usando o <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> é usado no servidor para receber mensagens de fila e para atualizar o estado de fluxo de trabalho na mesma transação.  

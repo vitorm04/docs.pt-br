@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519906"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerações adicionais sobre Segurança do Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo para execução de maneira diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [arquivo mais seguro e acesso a dados em formulários do Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão no Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  

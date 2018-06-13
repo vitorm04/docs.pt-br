@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521317"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Como preencher uma forma com uma cor sólida
 Para preencher uma forma com uma cor sólida, criar um <xref:System.Drawing.SolidBrush> do objeto e, em seguida, passar que <xref:System.Drawing.SolidBrush> objeto como um argumento para um dos métodos de preenchimento de <xref:System.Drawing.Graphics> classe. O exemplo a seguir mostra como preencher uma elipse com a cor vermelha.  

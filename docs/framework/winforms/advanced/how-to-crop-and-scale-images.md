@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521632"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Como cortar e dimensionar imagens
 O <xref:System.Drawing.Graphics> classe fornece vários <xref:System.Drawing.Graphics.DrawImage%2A> métodos, alguns dos quais têm parâmetros de retângulo de origem e de destino que você pode usar para cortar e dimensionar imagens.  

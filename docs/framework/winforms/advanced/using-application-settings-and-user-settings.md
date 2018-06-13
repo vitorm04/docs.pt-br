@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523836"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Usando configurações do aplicativo e configurações do usuário
 Ao começar com o .NET Framework 2.0, é possível criar e acessar valores mantidos entre as sessões de execução do aplicativo. Esses valores são chamados de *configurações*. Configurações podem representar preferências do usuário ou informações valiosas que o aplicativo precisar usar. Por exemplo, é possível criar uma série de configurações que armazenam as preferências do usuário para o esquema de cores de um aplicativo. Ou, então, você pode armazenar a cadeia de conexão que especifica um banco de dados usado pelo aplicativo. As configurações lhe permitem manter informações críticas ao aplicativo fora do código e criar perfis que armazenam as preferências dos usuários individualmente.  

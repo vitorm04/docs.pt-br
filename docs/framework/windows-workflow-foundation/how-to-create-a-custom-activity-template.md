@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517843"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Como: Crie um modelo personalizado de atividades
 Modelos personalizados de atividade são usados para personalizar a configuração de atividades, incluindo atividades compostas personalizados, para que os usuários não tem que criar cada atividade individualmente e configurar suas propriedades e outras configurações manualmente. Esses modelos personalizados podem ser disponibilizados no **caixa de ferramentas** no [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] ou de um designer de rehosted, do qual os usuários podem arrastá-los na superfície de design pré-configurado. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] acompanha Bons exemplos de tais modelos: o [Designer de modelo de SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e [Designer de modelo de ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) no [Designersdeatividadedemensagens](/visualstudio/workflow-designer/messaging-activity-designers) categoria.  

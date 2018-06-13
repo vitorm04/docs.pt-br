@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521772"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Sistemas de coordenadas e transformações
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornece uma transformação do mundo e uma transformação de página para que você pode transformar (girar, dimensionar, traduzir e assim por diante) os itens que você desenhar. As duas transformações também permitem que você trabalhe em uma variedade de sistemas de coordenadas.  

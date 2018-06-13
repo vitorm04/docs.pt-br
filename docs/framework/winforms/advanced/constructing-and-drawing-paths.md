@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520650"
 ---
 # <a name="constructing-and-drawing-paths"></a>Construindo e desenhando demarcadores
 Um caminho é uma sequência de primitivos de gráficos (linhas, retângulos, curvas, texto e assim por diante) que podem ser manipulados e desenhada como uma única unidade. Um caminho pode ser dividido em *figuras* que são abertos ou fechados. Uma figura pode conter vários primitivos.  
