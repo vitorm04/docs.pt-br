@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494510"
 ---
 # <a name="enumeration-types-in-data-contracts"></a><span data-ttu-id="3228e-102">Tipos de enumeração em contratos de dados</span><span class="sxs-lookup"><span data-stu-id="3228e-102">Enumeration Types in Data Contracts</span></span>
 <span data-ttu-id="3228e-103">Enumerações podem ser expressos no modelo de contrato de dados.</span><span class="sxs-lookup"><span data-stu-id="3228e-103">Enumerations can be expressed in the data contract model.</span></span> <span data-ttu-id="3228e-104">Este tópico explica vários exemplos que explicam o modelo de programação.</span><span class="sxs-lookup"><span data-stu-id="3228e-104">This topic walks through several examples that explain the programming model.</span></span>  

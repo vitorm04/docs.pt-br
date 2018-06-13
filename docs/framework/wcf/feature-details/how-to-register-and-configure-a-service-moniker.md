@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493304"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="8862f-102">Como registrar e configurar um Moniker de serviço</span><span class="sxs-lookup"><span data-stu-id="8862f-102">How to: Register and Configure a Service Moniker</span></span>
 <span data-ttu-id="8862f-103">Antes de usar o moniker de serviço do Windows Communication Foundation (WCF) dentro de um aplicativo COM um contrato com tipo, você deve registrar os tipos de atributo necessários com e configurar o aplicativo COM e o moniker com a associação necessária configuração.</span><span class="sxs-lookup"><span data-stu-id="8862f-103">Before using the Windows Communication Foundation (WCF) service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>  

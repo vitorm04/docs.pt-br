@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754474"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="085e2-102">&lt;remover&gt; elemento connectionManagement (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="085e2-102">&lt;remove&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="085e2-103">Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.</span><span class="sxs-lookup"><span data-stu-id="085e2-103">Removes an IP address or DNS name from the connection management list.</span></span>  

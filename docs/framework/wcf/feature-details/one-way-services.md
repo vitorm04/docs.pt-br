@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494368"
 ---
 # <a name="one-way-services"></a><span data-ttu-id="c0ffb-102">Serviços unidirecionais</span><span class="sxs-lookup"><span data-stu-id="c0ffb-102">One-Way Services</span></span>
 <span data-ttu-id="c0ffb-103">O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-103">The default behavior of a service operation is the request-reply pattern.</span></span> <span data-ttu-id="c0ffb-104">Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-104">In a request-reply pattern, the client waits for the reply message, even if the service operation is represented in code as a `void` method.</span></span> <span data-ttu-id="c0ffb-105">Com uma operação unidirecional, somente uma mensagem é transmitida.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-105">With a one-way operation, only one message is transmitted.</span></span> <span data-ttu-id="c0ffb-106">O receptor não envia uma mensagem de resposta, nem o remetente esperado um.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-106">The receiver does not send a reply message, nor does the sender expect one.</span></span>  
