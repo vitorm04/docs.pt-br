@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641335"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a><span data-ttu-id="5b547-102">TextFieldParser não dá suporte a delimitadores que contenham caracteres de fim de linha</span><span class="sxs-lookup"><span data-stu-id="5b547-102">TextFieldParser does not support delimiters that contain endline characters</span></span>
 <span data-ttu-id="5b547-103">Um delimitador que contém um caractere de fim de linha foi fornecido, mas o `TextFieldParser` não dá suporte a delimitadores que contenham caracteres de fim de linha.</span><span class="sxs-lookup"><span data-stu-id="5b547-103">A delimiter that contains an endline character has been supplied, but the `TextFieldParser` does not support delimiters that contain endline characters.</span></span>  

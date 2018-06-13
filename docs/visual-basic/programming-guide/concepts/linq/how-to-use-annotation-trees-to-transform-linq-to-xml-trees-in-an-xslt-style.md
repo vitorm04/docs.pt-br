@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650251"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a><span data-ttu-id="79c7a-102">Como: Use anotações para transformar árvores LINQ to XML em um estilo XSLT (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79c7a-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)</span></span>
 <span data-ttu-id="79c7a-103">As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="79c7a-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  

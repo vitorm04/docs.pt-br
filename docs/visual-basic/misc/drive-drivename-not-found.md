@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637511"
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a><span data-ttu-id="a7657-102">Unidade &#39; &lt;drivename&gt; &#39; não encontrado</span><span class="sxs-lookup"><span data-stu-id="a7657-102">Drive &#39;&lt;drivename&gt;&#39; not found</span></span>
 <span data-ttu-id="a7657-103">A unidade não pode ser encontrada.</span><span class="sxs-lookup"><span data-stu-id="a7657-103">The drive cannot be found.</span></span> <span data-ttu-id="a7657-104">Sua conexão de rede foi perdida ou a unidade que você está tentando acessar está offline ou não existe.</span><span class="sxs-lookup"><span data-stu-id="a7657-104">Either your network connection has been lost, or the drive you are trying to access is offline or does not exist.</span></span>  

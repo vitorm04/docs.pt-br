@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
 ms.openlocfilehash: 0a0a5fae35a14ab6451f2f56fb2eedd92ac437e7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645823"
 ---
 # <a name="quantifier-operations-visual-basic"></a><span data-ttu-id="5126a-102">Operações de quantificador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5126a-102">Quantifier Operations (Visual Basic)</span></span>
 <span data-ttu-id="5126a-103">As operações de quantificador retornam um valor <xref:System.Boolean> que indica se alguns ou todos os elementos em uma sequência satisfazem uma condição.</span><span class="sxs-lookup"><span data-stu-id="5126a-103">Quantifier operations return a <xref:System.Boolean> value that indicates whether some or all of the elements in a sequence satisfy a condition.</span></span>  

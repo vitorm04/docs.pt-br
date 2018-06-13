@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
 ms.openlocfilehash: 32654012343fc919dbadbfa4515c1e8e2b686ed1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646533"
 ---
 # <a name="visual-basic-programming-guide"></a><span data-ttu-id="b838e-102">Guia de programação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b838e-102">Visual Basic Programming Guide</span></span>
 <span data-ttu-id="b838e-103">Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic oferece suporte a muitas construções de programação comuns e elementos de linguagem.</span><span class="sxs-lookup"><span data-stu-id="b838e-103">As with any modern programming language, Visual Basic supports many common programming constructs and language elements.</span></span> <span data-ttu-id="b838e-104">Este guia descreve todos os principais elementos de programação com o Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b838e-104">This guide describes all the major elements of programming with Visual Basic.</span></span>  

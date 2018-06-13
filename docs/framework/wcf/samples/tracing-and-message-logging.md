@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807977"
 ---
 # <a name="tracing-and-message-logging"></a><span data-ttu-id="393a4-102">Registro de mensagem e rastreamento</span><span class="sxs-lookup"><span data-stu-id="393a4-102">Tracing and Message Logging</span></span>
 <span data-ttu-id="393a4-103">Este exemplo demonstra como habilitar o rastreamento e o registro de mensagem.</span><span class="sxs-lookup"><span data-stu-id="393a4-103">This sample demonstrates how to enable tracing and message logging.</span></span> <span data-ttu-id="393a4-104">Os rastreamentos resultantes e os logs de mensagem são exibidos usando o [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span><span class="sxs-lookup"><span data-stu-id="393a4-104">The resulting traces and message logs are viewed using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="393a4-105">Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="393a4-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

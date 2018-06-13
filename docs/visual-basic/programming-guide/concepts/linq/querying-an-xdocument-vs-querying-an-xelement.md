@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
 ms.openlocfilehash: 6bc7af08544f00a87246b748d0419f11b57ed2da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645997"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a><span data-ttu-id="9e3e1-102">Consultar um XDocument versus Consultando um XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e3e1-102">Querying an XDocument vs. Querying an XElement (Visual Basic)</span></span>
 <span data-ttu-id="9e3e1-103">Ao carregar um documento por meio do <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, você observará que precisa escrever consultas um pouco diferentes do que ao carregar por meio do <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9e3e1-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
