@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752189"
 ---
 # <a name="setting-assembly-attributes"></a>Configuração de atributos de assembly
 Os atributos de assembly são valores que fornecem informações sobre um assembly. Os atributos são divididos nos seguintes conjuntos de informações:  

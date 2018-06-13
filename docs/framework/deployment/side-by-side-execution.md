@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395155"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  

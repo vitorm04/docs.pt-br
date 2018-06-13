@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529585"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Como adicionar um controle a uma página de guia usando o designer
 O uso de formulários do Windows <xref:System.Windows.Forms.TabControl> é exibir outros controles de forma organizada. Você pode usar essas instruções para exibir uma imagem na parte principal de uma página da guia. Para obter informações sobre como adicionar um ícone à parte do rótulo de uma página da guia, veja [Como alterar a aparência do TabControl dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

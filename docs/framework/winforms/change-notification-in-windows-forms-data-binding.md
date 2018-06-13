@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527726"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificação de alteração na associação de dados do Windows Forms
 Um dos mais importantes conceitos de associação de dados de formulários do Windows é *de notificação de alteração*. Para garantir que sua fonte de dados e controles associados sempre tenham os dados mais recentes, você deve adicionar notificação de alteração para associação de dados. Especificamente, para garantir que os controles associados são notificados das alterações que foram feitas para sua fonte de dados, e a fonte de dados é notificada sobre as alterações feitas às propriedades de um controle associadas.  

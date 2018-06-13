@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526931"
 ---
 # <a name="filedialog-class"></a>Classe FileDialog
 Windows Forms <xref:System.Windows.Forms.FileDialog> classe é a classe base comum para o <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> componentes. Você pode fazer alterações para o <xref:System.Windows.Forms.FileDialog> classe que afetam a aparência e o comportamento dessas caixas de diálogo, dependendo da versão do Windows que o aplicativo está em execução no.  

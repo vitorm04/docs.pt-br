@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265266"
 ---
 # <a name="value-c-reference"></a>value (Referência de C#)
 A palavra-chave contextual `value` é usada no acessador definido em declarações de propriedade comuns. Ela é semelhante a um parâmetro de entrada em um método. A palavra `value` referencia o valor que o código cliente está tentando atribuir à propriedade. No exemplo a seguir, `MyDerivedClass` tem uma propriedade chamada `Name` que usa o parâmetro `value` para atribuir uma nova cadeia de caracteres ao campo de suporte `name`. Do ponto de vista do código cliente, a operação é gravada como uma atribuição simples.  

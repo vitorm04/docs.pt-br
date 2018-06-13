@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270572"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (Referência de C#)
 Usado para obter o tamanho, em bytes, de um tipo não gerenciado. Tipos não gerenciados incluem os tipos internos listados na tabela a seguir e também o seguinte:  

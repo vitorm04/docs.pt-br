@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529617"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Instruções passo a passo: criando um aplicativo baseado no Windows acessível
 A criação de um aplicativo acessível tem implicações importantes nos negócios. Muitos órgãos governamentais tem regulamentos de acessibilidade para a compra de software. O logotipo Certified for Windows inclui requisitos de acessibilidade. Estima-se que 30 milhões de moradores, apenas dos EUA, muitos deles clientes potenciais, são afetados pela acessibilidade do software.  

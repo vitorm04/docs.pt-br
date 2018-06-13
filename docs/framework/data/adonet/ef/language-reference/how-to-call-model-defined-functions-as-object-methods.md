@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763365"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: o chamar funções definidas como métodos de objeto
 Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Um *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas em LINQ para consultas de entidades, consulte [como: Call Model-Defined funções em consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

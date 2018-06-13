@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394830"
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
 No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um motivo para um espaço de endereço tão grande é subdividir os endereços disponíveis em uma hierarquia de domínios de roteamento que reflitam a topologia da Internet. Outro motivo é mapear os endereços de adaptadores de rede (ou interfaces) que conectam dispositivos à rede. O IPv6 tem uma capacidade inerente de resolver endereços no nível mais baixo deles, que é o nível de adaptador de rede e também tem capacidades de configuração automática.  

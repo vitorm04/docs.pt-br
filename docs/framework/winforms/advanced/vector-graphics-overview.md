@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528331"
 ---
 # <a name="vector-graphics-overview"></a>Visão geral de gráficos vetoriais
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desenha linhas, retângulos e outras formas em um sistema de coordenadas. Você pode escolher entre uma variedade de sistemas de coordenadas, mas o sistema de coordenadas padrão tem origem no canto superior esquerdo, com o eixo x apontando para a direita e o eixo y apontando para baixo. A unidade de medida no sistema de coordenadas padrão é o pixel.  

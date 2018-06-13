@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496280"
 ---
 # <a name="data-contract-versioning"></a>Controle de versão de contrato de dados
 Como desenvolvem aplicativos, você também terá que alterar o uso de serviços de contratos de dados. Este tópico explica como contratos de dados de versão. Este tópico descreve os mecanismos de controle de versão do contrato de dados. Para obter uma visão geral completa e orientação prescritiva do controle de versão, consulte [práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

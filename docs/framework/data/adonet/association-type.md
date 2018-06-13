@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756505"
 ---
 # <a name="association-type"></a>tipo de associação
 Um *tipo de associação* (também chamado de uma associação) é o bloco de construção fundamental para descrever relações no modelo de dados entidade (EDM). Em um modelo conceitual, uma associação representa uma relação entre duas [tipos de entidade](../../../../docs/framework/data/adonet/entity-type.md) (como `Customer` e `Order`). Em um aplicativo, uma instância de uma associação representa uma associação específica (como uma associação entre uma instância de `Customer` e uma instância de `Order`). Instâncias de associação são agrupadas logicamente em um [conjunto de associações](../../../../docs/framework/data/adonet/association-set.md).  

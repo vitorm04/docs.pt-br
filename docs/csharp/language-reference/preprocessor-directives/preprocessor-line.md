@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289263"
 ---
 # <a name="line-c-reference"></a>#line (Referência de C#)
 O `#line` permite modificar o número de linha do compilador e (opcionalmente) a saída do nome de arquivo para erros e avisos. Este exemplo mostra como relatar dois avisos associados aos números de linha. A diretiva `#line 200` força o número de linha a ser 200 (embora o padrão seja #7) e até a próxima diretiva #line, o nome de arquivo será relatado como "Especial". A diretiva padrão #line retorna a numeração de linhas à sua numeração padrão, que conta as linhas que foram renumeradas pela diretiva anterior.  
