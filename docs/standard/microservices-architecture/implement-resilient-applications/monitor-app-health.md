@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578866"
 ---
 # <a name="health-monitoring"></a><span data-ttu-id="267a1-103">Monitoramento de integridade</span><span class="sxs-lookup"><span data-stu-id="267a1-103">Health monitoring</span></span>
 

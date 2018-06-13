@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
 ms.openlocfilehash: 556c00fa761a1bce5e922a304706c78893550901
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599600"
 ---
 # <a name="ltcgt-visual-basic"></a><span data-ttu-id="f15b6-102">&lt;c&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f15b6-102">&lt;c&gt; (Visual Basic)</span></span>
 <span data-ttu-id="f15b6-103">Indica que o texto dentro de uma descrição é o código.</span><span class="sxs-lookup"><span data-stu-id="f15b6-103">Indicates that text within a description is code.</span></span>  

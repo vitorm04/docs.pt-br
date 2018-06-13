@@ -17,8 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 368884e7f61f4504c8ca714165c543b19b3a1171
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578255"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a><span data-ttu-id="95305-102">Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo</span><span class="sxs-lookup"><span data-stu-id="95305-102">Choosing between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo</span></span>
 

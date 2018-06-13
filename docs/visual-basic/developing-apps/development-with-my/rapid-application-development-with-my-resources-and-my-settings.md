@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582266"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a><span data-ttu-id="16035-102">Desenvolvimento de aplicativo rápido com My.Resources e My.Settings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16035-102">Rapid Application Development with My.Resources and My.Settings (Visual Basic)</span></span>
 <span data-ttu-id="16035-103">O `My.Resources` objeto fornece acesso aos recursos do aplicativo e permite que você recupere dinamicamente recursos para seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="16035-103">The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.</span></span>  

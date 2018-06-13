@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
 ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591944"
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a><span data-ttu-id="967ac-102">Introdução ao controle DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="967ac-102">Introduction to the DataRepeater Control (Visual Studio)</span></span>
 <span data-ttu-id="967ac-103">O Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle é um contêiner rolável para repetido de controles que exibem dados, por exemplo, as linhas em uma tabela de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="967ac-103">The Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control is a scrollable container for controls that display repeated data, for example, rows in a database table.</span></span> <span data-ttu-id="967ac-104">Ele pode ser usado como uma alternativa para o <xref:System.Windows.Forms.DataGridView> controlar quando precisar de mais controle sobre o layout dos dados.</span><span class="sxs-lookup"><span data-stu-id="967ac-104">It can be used as an alternative to the <xref:System.Windows.Forms.DataGridView> control when you need more control over the layout of the data.</span></span> <span data-ttu-id="967ac-105">O <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "repete" de um grupo de controles relacionados com a criação de várias instâncias em uma exibição da rolagem.</span><span class="sxs-lookup"><span data-stu-id="967ac-105">The <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> "repeats" a group of related controls by creating multiple instances in a scrolling view.</span></span> <span data-ttu-id="967ac-106">Isso permite aos usuários exibir vários registros ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="967ac-106">This enables users to view several records at the same time.</span></span>  

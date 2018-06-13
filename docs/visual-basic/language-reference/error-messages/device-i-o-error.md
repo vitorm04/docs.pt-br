@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 17d22252-f374-400b-9ddb-be5367dd7278
 ms.openlocfilehash: 2da6482e30a7dee43c31aec0da5b1f69c30711ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585522"
 ---
 # <a name="device-io-error"></a><span data-ttu-id="3acdb-102">Erro de E/S do dispositivo</span><span class="sxs-lookup"><span data-stu-id="3acdb-102">Device I/O error</span></span>
 <span data-ttu-id="3acdb-103">Ocorreu um erro de entrada ou saído enquanto o programa estava usando um dispositivo, como uma impressora ou a unidade de disco.</span><span class="sxs-lookup"><span data-stu-id="3acdb-103">An input or output error occurred while your program was using a device such as a printer or disk drive.</span></span>  

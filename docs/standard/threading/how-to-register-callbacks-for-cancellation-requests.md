@@ -1,45 +1,35 @@
 ---
-title: "Como registrar retornos de chamada para solicitações de cancelamento"
-ms.custom: 
+title: Como registrar retornos de chamada para solicitações de cancelamento
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b71ebee3a28fb6a829edf657f56e54799097f351
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a8df4c73af81580d1b242ce0ede8f8bcb4cad4fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583286"
 ---
-# <a name="how-to-register-callbacks-for-cancellation-requests"></a><span data-ttu-id="7809a-102">Como registrar retornos de chamada para solicitações de cancelamento</span><span class="sxs-lookup"><span data-stu-id="7809a-102">How to: Register Callbacks for Cancellation Requests</span></span>
-<span data-ttu-id="7809a-103">O exemplo a seguir mostra como registrar um delegado que será invocado quando uma propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> tornar-se verdadeira, devido a uma chamada para <xref:System.Threading.CancellationTokenSource.Cancel%2A> no objeto que criou o token.</span><span class="sxs-lookup"><span data-stu-id="7809a-103">The following example shows how to register a delegate that will be invoked when a <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> property becomes true due to a call to <xref:System.Threading.CancellationTokenSource.Cancel%2A> on the object that created the token.</span></span> <span data-ttu-id="7809a-104">Use essa técnica para cancelar operações assíncronas que não dão suporte nativo à estrutura de cancelamento unificada e a métodos de desbloqueio que podem estar aguardando a conclusão de uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="7809a-104">Use this technique for cancelling asynchronous operations that do not natively support the unified cancellation framework, and for unblocking methods that might be waiting for an asynchronous operation to finish.</span></span>  
+# <a name="how-to-register-callbacks-for-cancellation-requests"></a><span data-ttu-id="634f0-102">Como registrar retornos de chamada para solicitações de cancelamento</span><span class="sxs-lookup"><span data-stu-id="634f0-102">How to: Register Callbacks for Cancellation Requests</span></span>
+<span data-ttu-id="634f0-103">O exemplo a seguir mostra como registrar um delegado que será invocado quando uma propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> tornar-se verdadeira, devido a uma chamada para <xref:System.Threading.CancellationTokenSource.Cancel%2A> no objeto que criou o token.</span><span class="sxs-lookup"><span data-stu-id="634f0-103">The following example shows how to register a delegate that will be invoked when a <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> property becomes true due to a call to <xref:System.Threading.CancellationTokenSource.Cancel%2A> on the object that created the token.</span></span> <span data-ttu-id="634f0-104">Use essa técnica para cancelar operações assíncronas que não dão suporte nativo à estrutura de cancelamento unificada e a métodos de desbloqueio que podem estar aguardando a conclusão de uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="634f0-104">Use this technique for cancelling asynchronous operations that do not natively support the unified cancellation framework, and for unblocking methods that might be waiting for an asynchronous operation to finish.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7809a-105">Se a opção "Apenas Meu Código" estiver habilitada, o Visual Studio em alguns casos interromperá na linha que lança a exceção e exibirá uma mensagem de erro que diz "exceção não tratada pelo código do usuário".</span><span class="sxs-lookup"><span data-stu-id="7809a-105">When "Just My Code" is enabled, Visual Studio in some cases will break on the line that throws the exception and display an error message that says "exception not handled by user code."</span></span> <span data-ttu-id="7809a-106">Esse erro é benigno.</span><span class="sxs-lookup"><span data-stu-id="7809a-106">This error is benign.</span></span> <span data-ttu-id="7809a-107">Você pode pressionar F5 para continuar a partir daí e ver o comportamento de tratamento de exceção, demonstrado nos exemplos a seguir.</span><span class="sxs-lookup"><span data-stu-id="7809a-107">You can press F5 to continue from it, and see the exception-handling behavior that is demonstrated in the examples below.</span></span> <span data-ttu-id="7809a-108">Para impedir que o Visual Studio seja interrompido no primeiro erro, basta desmarcar a caixa de seleção "Apenas Meu Código" em **Ferramentas, Opções, Depuração, Geral**.</span><span class="sxs-lookup"><span data-stu-id="7809a-108">To prevent Visual Studio from breaking on the first error, just uncheck the "Just My Code" checkbox under **Tools, Options, Debugging, General**.</span></span>  
+>  <span data-ttu-id="634f0-105">Se a opção "Apenas Meu Código" estiver habilitada, o Visual Studio em alguns casos interromperá na linha que lança a exceção e exibirá uma mensagem de erro que diz "exceção não tratada pelo código do usuário".</span><span class="sxs-lookup"><span data-stu-id="634f0-105">When "Just My Code" is enabled, Visual Studio in some cases will break on the line that throws the exception and display an error message that says "exception not handled by user code."</span></span> <span data-ttu-id="634f0-106">Esse erro é benigno.</span><span class="sxs-lookup"><span data-stu-id="634f0-106">This error is benign.</span></span> <span data-ttu-id="634f0-107">Você pode pressionar F5 para continuar a partir daí e ver o comportamento de tratamento de exceção, demonstrado nos exemplos a seguir.</span><span class="sxs-lookup"><span data-stu-id="634f0-107">You can press F5 to continue from it, and see the exception-handling behavior that is demonstrated in the examples below.</span></span> <span data-ttu-id="634f0-108">Para impedir que o Visual Studio seja interrompido no primeiro erro, basta desmarcar a caixa de seleção "Apenas Meu Código" em **Ferramentas, Opções, Depuração, Geral**.</span><span class="sxs-lookup"><span data-stu-id="634f0-108">To prevent Visual Studio from breaking on the first error, just uncheck the "Just My Code" checkbox under **Tools, Options, Debugging, General**.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7809a-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7809a-109">Example</span></span>  
- <span data-ttu-id="7809a-110">No exemplo a seguir, o método <xref:System.Net.WebClient.CancelAsync%2A> é registrado como o método a ser invocado quando o cancelamento é solicitado por meio do token de cancelamento.</span><span class="sxs-lookup"><span data-stu-id="7809a-110">In the following example, the <xref:System.Net.WebClient.CancelAsync%2A> method is registered as the method to be invoked when cancellation is requested through the cancellation token.</span></span>  
+## <a name="example"></a><span data-ttu-id="634f0-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="634f0-109">Example</span></span>  
+ <span data-ttu-id="634f0-110">No exemplo a seguir, o método <xref:System.Net.WebClient.CancelAsync%2A> é registrado como o método a ser invocado quando o cancelamento é solicitado por meio do token de cancelamento.</span><span class="sxs-lookup"><span data-stu-id="634f0-110">In the following example, the <xref:System.Net.WebClient.CancelAsync%2A> method is registered as the method to be invoked when cancellation is requested through the cancellation token.</span></span>  
   
  [!code-csharp[Conceptual.Cancellation.Callback#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.cancellation.callback/cs/howtoexample1.cs#1)]
  [!code-vb[Conceptual.Cancellation.Callback#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.cancellation.callback/vb/howtoexample1.vb#1)]  
   
- <span data-ttu-id="7809a-111">Se o cancelamento já tiver sido solicitado quando o retorno de chamada for registrado, ainda haverá garantia de chamada do retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="7809a-111">If cancellation has already been requested when the callback is registered, the callback is still guaranteed to be called.</span></span> <span data-ttu-id="7809a-112">Nesse caso específico, o método <xref:System.Net.WebClient.CancelAsync%2A> não fará nada se nenhuma operação assíncrona estiver em andamento, portanto, é seguro sempre chamar o método.</span><span class="sxs-lookup"><span data-stu-id="7809a-112">In this particular case, the <xref:System.Net.WebClient.CancelAsync%2A> method will do nothing if no asynchronous operation is in progress, so it is always safe to call the method.</span></span>  
+ <span data-ttu-id="634f0-111">Se o cancelamento já tiver sido solicitado quando o retorno de chamada for registrado, ainda haverá garantia de chamada do retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="634f0-111">If cancellation has already been requested when the callback is registered, the callback is still guaranteed to be called.</span></span> <span data-ttu-id="634f0-112">Nesse caso específico, o método <xref:System.Net.WebClient.CancelAsync%2A> não fará nada se nenhuma operação assíncrona estiver em andamento, portanto, é seguro sempre chamar o método.</span><span class="sxs-lookup"><span data-stu-id="634f0-112">In this particular case, the <xref:System.Net.WebClient.CancelAsync%2A> method will do nothing if no asynchronous operation is in progress, so it is always safe to call the method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7809a-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7809a-113">See Also</span></span>  
- [<span data-ttu-id="7809a-114">Cancelamento em threads gerenciados</span><span class="sxs-lookup"><span data-stu-id="7809a-114">Cancellation in Managed Threads</span></span>](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a><span data-ttu-id="634f0-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="634f0-113">See Also</span></span>  
+ [<span data-ttu-id="634f0-114">Cancelamento em threads gerenciados</span><span class="sxs-lookup"><span data-stu-id="634f0-114">Cancellation in Managed Threads</span></span>](../../../docs/standard/threading/cancellation-in-managed-threads.md)

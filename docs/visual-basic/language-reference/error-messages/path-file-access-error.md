@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 ms.openlocfilehash: 83ce8615b173a6f5835347ebc561a793655ec8f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598577"
 ---
 # <a name="pathfile-access-error"></a><span data-ttu-id="80d5f-102">Erro de acesso ao demarcador/arquivo</span><span class="sxs-lookup"><span data-stu-id="80d5f-102">Path/File access error</span></span>
 <span data-ttu-id="80d5f-103">Durante uma operação de acesso a arquivos ou o acesso ao disco, o sistema operacional não pôde fazer uma conexão entre o caminho e o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="80d5f-103">During a file-access or disk-access operation, the operating system could not make a connection between the path and the file name.</span></span>  

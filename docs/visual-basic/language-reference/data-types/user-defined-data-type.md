@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590667"
 ---
 # <a name="user-defined-data-type"></a><span data-ttu-id="9afc3-102">Tipo de dados definido pelo usuário</span><span class="sxs-lookup"><span data-stu-id="9afc3-102">User-Defined Data Type</span></span>
 <span data-ttu-id="9afc3-103">Contém dados em um formato que você definir.</span><span class="sxs-lookup"><span data-stu-id="9afc3-103">Holds data in a format you define.</span></span> <span data-ttu-id="9afc3-104">O `Structure` instrução define o formato.</span><span class="sxs-lookup"><span data-stu-id="9afc3-104">The `Structure` statement defines the format.</span></span>  

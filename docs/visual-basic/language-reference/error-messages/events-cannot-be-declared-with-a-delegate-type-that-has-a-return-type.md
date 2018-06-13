@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
 ms.openlocfilehash: 33cef19d91445fa39c19ad1cdd6ef4f73b6b5319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586458"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="5515d-102">Os eventos não podem ser declarados com um tipo delegado que tenha um tipo de retorno</span><span class="sxs-lookup"><span data-stu-id="5515d-102">Events cannot be declared with a delegate type that has a return type</span></span>
 <span data-ttu-id="5515d-103">Um delegado foi especificado para um procedimento function.</span><span class="sxs-lookup"><span data-stu-id="5515d-103">A delegate was specified for a function procedure.</span></span>  

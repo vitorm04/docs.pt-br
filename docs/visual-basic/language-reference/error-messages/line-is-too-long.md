@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
 ms.openlocfilehash: bed3a2b19baf28d759ac31ad5e156a769aba5a5f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584785"
 ---
 # <a name="line-is-too-long"></a><span data-ttu-id="78508-102">A linha é muito longa</span><span class="sxs-lookup"><span data-stu-id="78508-102">Line is too long</span></span>
 <span data-ttu-id="78508-103">Linhas de texto de origem não podem exceder 65535 caracteres.</span><span class="sxs-lookup"><span data-stu-id="78508-103">Source text lines cannot exceed 65535 characters.</span></span>  
