@@ -4,8 +4,10 @@ description: "Saiba como usar a palavra-chave F # 'fun' para definir uma express
 ms.date: 05/16/2016
 ms.openlocfilehash: 433451fb9bf89bfabdcd8e71560105317771d251
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563844"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a><span data-ttu-id="ab14f-103">Expressões lambda: a palavra-chave fun (F#)</span><span class="sxs-lookup"><span data-stu-id="ab14f-103">Lambda Expressions: The fun Keyword (F#)</span></span>
 

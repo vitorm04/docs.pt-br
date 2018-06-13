@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444133"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="acf77-102">Enumeração CorValidatorModuleType</span><span class="sxs-lookup"><span data-stu-id="acf77-102">CorValidatorModuleType Enumeration</span></span>
 <span data-ttu-id="acf77-103">Especifica o tipo de um módulo.</span><span class="sxs-lookup"><span data-stu-id="acf77-103">Specifies the type of a module.</span></span>  

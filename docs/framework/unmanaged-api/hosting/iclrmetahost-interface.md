@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e4db5f3c7deb300a9666182cb6b712eacf42cfa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436222"
 ---
 # <a name="iclrmetahost-interface"></a><span data-ttu-id="bd5a4-102">Interface ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="bd5a4-102">ICLRMetaHost Interface</span></span>
 <span data-ttu-id="bd5a4-103">Fornece métodos para retornam uma versão específica do common language runtime (CLR) com base em seu número de versão, listam todos os CLRs instalados, listam de todos os tempos de execução que são carregados em um processo especificado, descobrir a versão CLR usada para compilar um assembly, sair de um processo com um desligamento normal do tempo de execução e associação de API herdada da consulta.</span><span class="sxs-lookup"><span data-stu-id="bd5a4-103">Provides methods that return a specific version of the common language runtime (CLR) based on its version number, list all installed CLRs, list all runtimes that are loaded in a specified process, discover the CLR version used to compile an assembly, exit a process with a clean runtime shutdown, and query legacy API binding.</span></span>  

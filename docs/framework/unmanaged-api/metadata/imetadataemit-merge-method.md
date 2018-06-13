@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98997bfbb7d3c9343f78438b1195222565c5b9ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444545"
 ---
 # <a name="imetadataemitmerge-method"></a><span data-ttu-id="689d8-102">Método IMetaDataEmit::Merge</span><span class="sxs-lookup"><span data-stu-id="689d8-102">IMetaDataEmit::Merge Method</span></span>
 <span data-ttu-id="689d8-103">Adiciona o escopo importado especificado à lista de escopos a serem mesclados.</span><span class="sxs-lookup"><span data-stu-id="689d8-103">Adds the specified imported scope to the list of scopes to be merged.</span></span>  

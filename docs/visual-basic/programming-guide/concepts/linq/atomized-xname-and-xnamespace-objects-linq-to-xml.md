@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
 ms.openlocfilehash: e311de901a9a54bd4fc6ee56d425cc16b4978e8f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643267"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a><span data-ttu-id="c7426-102">Atomizado XName e XNamespace objeto (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7426-102">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="c7426-103">Os objetos <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> são *atomizados*, isto é, se eles contêm o mesmo nome qualificado, referem-se ao mesmo objeto.</span><span class="sxs-lookup"><span data-stu-id="c7426-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="c7426-104">Este benefícios de desempenho das para consultas: Quando você compara dois nomes atomizados para igualdade, o linguagem intermediária subjacente só precisa determinar se o ponto de duas referências para o mesmo objeto.</span><span class="sxs-lookup"><span data-stu-id="c7426-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="c7426-105">O código subjacente não tem que fazer as comparações de cadeias de caracteres, que poderiam demoradas.</span><span class="sxs-lookup"><span data-stu-id="c7426-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  

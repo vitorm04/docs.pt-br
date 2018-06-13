@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8350140bb0871acc560163848ac50eafef42f01
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441209"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a><span data-ttu-id="11a10-102">Método IHostThreadPoolManager::GetAvailableThreads</span><span class="sxs-lookup"><span data-stu-id="11a10-102">IHostThreadPoolManager::GetAvailableThreads Method</span></span>
 <span data-ttu-id="11a10-103">Obtém o número de threads no pool de threads que não estão em processamento itens de trabalho.</span><span class="sxs-lookup"><span data-stu-id="11a10-103">Gets the number of threads in the thread pool that are not currently processing work items.</span></span>  

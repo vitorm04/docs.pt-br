@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572883"
 ---
 # <a name="type-design-guidelines"></a><span data-ttu-id="77f94-102">Diretrizes de Design de tipo</span><span class="sxs-lookup"><span data-stu-id="77f94-102">Type Design Guidelines</span></span>
 <span data-ttu-id="77f94-103">Da perspectiva do CLR, há apenas duas categorias de tipos — referenciar tipos e tipos de valor —, mas com a finalidade de uma discussão sobre o design de estrutura, dividimos tipos em grupos mais lógicos, cada um com suas próprias regras de design específico.</span><span class="sxs-lookup"><span data-stu-id="77f94-103">From the CLR perspective, there are only two categories of types—reference types and value types—but for the purpose of a discussion about framework design, we divide types into more logical groups, each with its own specific design rules.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
 ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646959"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a><span data-ttu-id="55dd7-102">Visão geral da classe de XAttribute (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55dd7-102">XAttribute Class Overview (Visual Basic)</span></span>
 <span data-ttu-id="55dd7-103">Os atributos são pares nome/valor que são associados a um elemento.</span><span class="sxs-lookup"><span data-stu-id="55dd7-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="55dd7-104">A classe de <xref:System.Xml.Linq.XAttribute> representa atributos XML.</span><span class="sxs-lookup"><span data-stu-id="55dd7-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  

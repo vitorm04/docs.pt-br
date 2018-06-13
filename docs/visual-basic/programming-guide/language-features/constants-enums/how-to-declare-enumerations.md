@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650797"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a><span data-ttu-id="dac08-102">Como declarar enumerações (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dac08-102">How to: Declare Enumerations (Visual Basic)</span></span>
 <span data-ttu-id="dac08-103">Você cria uma enumeração com o `Enum` instrução na seção de declarações de uma classe ou um módulo.</span><span class="sxs-lookup"><span data-stu-id="dac08-103">You create an enumeration with the `Enum` statement in the declarations section of a class or module.</span></span> <span data-ttu-id="dac08-104">Você não pode declarar uma enumeração dentro de um método.</span><span class="sxs-lookup"><span data-stu-id="dac08-104">You cannot declare an enumeration within a method.</span></span> <span data-ttu-id="dac08-105">Para especificar o nível apropriado de acesso, use `Private`, `Protected`, `Friend`, ou `Public`.</span><span class="sxs-lookup"><span data-stu-id="dac08-105">To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.</span></span>  

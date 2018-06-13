@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650459"
 ---
 # <a name="-win32icon"></a><span data-ttu-id="49901-102">-win32icon</span><span class="sxs-lookup"><span data-stu-id="49901-102">-win32icon</span></span>
 <span data-ttu-id="49901-103">Insere um arquivo. ico no arquivo de saída.</span><span class="sxs-lookup"><span data-stu-id="49901-103">Inserts an .ico file in the output file.</span></span> <span data-ttu-id="49901-104">Esse arquivo. ico representa o arquivo de saída em **Explorador de arquivos**.</span><span class="sxs-lookup"><span data-stu-id="49901-104">This .ico file represents the output file in **File Explorer**.</span></span>  

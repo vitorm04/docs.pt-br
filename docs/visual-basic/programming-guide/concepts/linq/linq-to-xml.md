@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645071"
 ---
 # <a name="linq-to-xml-visual-basic"></a><span data-ttu-id="16f93-102">LINQ para XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16f93-102">LINQ to XML (Visual Basic)</span></span>
 <span data-ttu-id="16f93-103">O LINQ to XML fornece uma interface de programação XML na memória que aproveita a .NET LINQ (Consulta Integrada à Linguagem) Framework.</span><span class="sxs-lookup"><span data-stu-id="16f93-103">LINQ to XML provides an in-memory XML programming interface that leverages the .NET Language-Integrated Query (LINQ) Framework.</span></span> <span data-ttu-id="16f93-104">O LINQ to XML usa os recursos de linguagem do .NET Framework mais recentes e pode ser comparado a uma interface de programação XML de DOM (Modelo de Objeto do Documento) atualizada e reprojetada.</span><span class="sxs-lookup"><span data-stu-id="16f93-104">LINQ to XML uses the latest .NET Framework language capabilities and is comparable to an updated, redesigned Document Object Model (DOM) XML programming interface.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
 ms.openlocfilehash: 467a9a5f529111b45fccda79437ccc6538f1372a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643595"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="b38fd-102">Como: localizar os atributos de seus irmãos com um nome específico (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b38fd-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="b38fd-103">Este tópico mostra como localizar todos os atributos de seus irmãos o nó de contexto.</span><span class="sxs-lookup"><span data-stu-id="b38fd-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="b38fd-104">Somente os atributos com um nome específico são retornados na coleção.</span><span class="sxs-lookup"><span data-stu-id="b38fd-104">Only attributes with a specific name are returned in the collection.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
 ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644466"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a><span data-ttu-id="e134a-102">Como: fragmentos XML com acesso a informações de cabeçalho (Visual Basic) de fluxo</span><span class="sxs-lookup"><span data-stu-id="e134a-102">How to: Stream XML Fragments with Access to Header Information (Visual Basic)</span></span>
 <span data-ttu-id="e134a-103">Às vezes você precisará ler arbitrariamente grandes arquivos XML, e escreve seu aplicativo para que os vestígio de memória do aplicativo seja previsível.</span><span class="sxs-lookup"><span data-stu-id="e134a-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="e134a-104">Se você tentar preencher uma árvore XML com um grande arquivo XML, seu uso de memória será proporcionalmente o tamanho do arquivo que é, excessivo.</span><span class="sxs-lookup"><span data-stu-id="e134a-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="e134a-105">Portanto, você deve usar uma técnica de streaming em vez disso.</span><span class="sxs-lookup"><span data-stu-id="e134a-105">Therefore, you should use a streaming technique instead.</span></span>  

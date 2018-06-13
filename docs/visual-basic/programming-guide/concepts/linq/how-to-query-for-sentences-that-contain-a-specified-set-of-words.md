@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
 ms.openlocfilehash: 0b61b75c5f26c48d817b8f51c740cc1758607838
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643141"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="ee318-102">Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee318-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="ee318-103">Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado.</span><span class="sxs-lookup"><span data-stu-id="ee318-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="ee318-104">Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="ee318-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="ee318-105">Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".</span><span class="sxs-lookup"><span data-stu-id="ee318-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3709547e4f2d50e74d8aa7e3d4f46c7bb0fdb87e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439960"
 ---
 # <a name="itypenamegettypeargumentcount-method"></a><span data-ttu-id="81760-102">Método ITypeName::GetTypeArgumentCount</span><span class="sxs-lookup"><span data-stu-id="81760-102">ITypeName::GetTypeArgumentCount Method</span></span>
 <span data-ttu-id="81760-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="81760-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  

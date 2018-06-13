@@ -10,8 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434887"
 ---
 # <a name="fusion-interfaces"></a><span data-ttu-id="f914e-102">Interfaces de fusão</span><span class="sxs-lookup"><span data-stu-id="f914e-102">Fusion Interfaces</span></span>
 <span data-ttu-id="f914e-103">Esta seção descreve as interfaces não gerenciadas que a fusão API usa para acessar as propriedades de recursos do aplicativo e para localizar as versões corretas desses recursos para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f914e-103">This section describes the unmanaged interfaces that the fusion API uses to access the properties of an application's resources and to locate the correct versions of those resources for the application.</span></span>  

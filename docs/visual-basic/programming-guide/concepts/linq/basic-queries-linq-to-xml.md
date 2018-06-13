@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
 ms.openlocfilehash: 25f0e49e57f03cbde190125ca2d24a01f208fda6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643712"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a><span data-ttu-id="28539-102">Consultas básicas (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28539-102">Basic Queries (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="28539-103">Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] básicas.</span><span class="sxs-lookup"><span data-stu-id="28539-103">This section provides examples of basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  

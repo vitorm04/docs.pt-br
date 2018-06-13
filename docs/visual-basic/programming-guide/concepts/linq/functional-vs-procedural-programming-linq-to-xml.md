@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 55f1e354f71e58c3592f91e198925c0fd5f0da71
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643673"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a><span data-ttu-id="8fdd4-102">Programação funcional versus Programação de procedimento (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fdd4-102">Functional vs. Procedural Programming (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="8fdd4-103">Há vários tipos de aplicativos XML:</span><span class="sxs-lookup"><span data-stu-id="8fdd4-103">There are various types of XML applications:</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
 ms.openlocfilehash: fa607cea999ec484ccdd47829d4b96b2d73b060a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645370"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a><span data-ttu-id="0c82a-102">Como: validar usando XSD (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c82a-102">How to: Validate Using XSD (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="0c82a-103">O namespace <xref:System.Xml.Schema> contém métodos de extensão que facilitam a validação de uma árvore XML em um arquivo XSD.</span><span class="sxs-lookup"><span data-stu-id="0c82a-103">The <xref:System.Xml.Schema> namespace contains extension methods that make it easy to validate an XML tree against an XML Schema Definition Language (XSD) file.</span></span> <span data-ttu-id="0c82a-104">Para obter mais informações, consulte a documentação do método <xref:System.Xml.Schema.Extensions.Validate%2A>.</span><span class="sxs-lookup"><span data-stu-id="0c82a-104">For more information, see the <xref:System.Xml.Schema.Extensions.Validate%2A> method documentation.</span></span>  

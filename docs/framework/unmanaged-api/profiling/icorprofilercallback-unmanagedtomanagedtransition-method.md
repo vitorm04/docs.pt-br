@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6bd0c9796fa2c5d8eff8dfb9d3fa3f707ce4761
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453239"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="34aa7-102">Método ICorProfilerCallback::UnmanagedToManagedTransition</span><span class="sxs-lookup"><span data-stu-id="34aa7-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
 <span data-ttu-id="34aa7-103">Notifica o criador de perfil que ocorreu uma transição de código não gerenciado para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="34aa7-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  

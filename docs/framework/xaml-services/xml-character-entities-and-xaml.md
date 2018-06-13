@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564733"
 ---
 # <a name="xml-character-entities-and-xaml"></a><span data-ttu-id="696e5-102">Entidades e XAML de caractere XML</span><span class="sxs-lookup"><span data-stu-id="696e5-102">XML Character Entities and XAML</span></span>
 <span data-ttu-id="696e5-103">XAML usa entidades de caractere definidas no XML para caracteres especiais.</span><span class="sxs-lookup"><span data-stu-id="696e5-103">XAML uses character entities defined in XML for special characters.</span></span> <span data-ttu-id="696e5-104">Este tópico descreve algumas entidades de caractere específico e considerações gerais para outros conceitos XML em XAML.</span><span class="sxs-lookup"><span data-stu-id="696e5-104">This topic describes some specific character entities and general considerations for other XML concepts in XAML.</span></span>  

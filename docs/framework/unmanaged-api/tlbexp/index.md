@@ -11,8 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f41a233e9b5338bdb0a324ff9af267a97821d4e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455867"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a><span data-ttu-id="74fcf-102">Funções auxiliares Tlbexp (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="74fcf-102">Tlbexp Helper Functions (Unmanaged API Reference)</span></span>
 <span data-ttu-id="74fcf-103">O [ferramenta exportador da biblioteca](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe) carrega uma biblioteca de vínculo dinâmico chamada TlbRef.dll.</span><span class="sxs-lookup"><span data-stu-id="74fcf-103">The [Type Library Exporter tool](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe) loads a dynamic link library named TlbRef.dll.</span></span> <span data-ttu-id="74fcf-104">Essa DLL contém duas funções auxiliares e uma interface que usa a ferramenta de exportação durante o processo de conversão de assembly a biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="74fcf-104">This DLL contains two helper functions and an interface that the exporter tool uses during the assembly-to-type-library conversion process.</span></span>  

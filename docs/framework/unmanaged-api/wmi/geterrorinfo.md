@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ef52a4e503597e08eae407571f02bf63adafc4e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455948"
 ---
 # <a name="geterrorinfo-function"></a><span data-ttu-id="86376-103">Função GetErrorInfo</span><span class="sxs-lookup"><span data-stu-id="86376-103">GetErrorInfo function</span></span>
 <span data-ttu-id="86376-104">Recupera informações de erro na chamada de função anterior.</span><span class="sxs-lookup"><span data-stu-id="86376-104">Retrieves error information from the previous function call.</span></span>  

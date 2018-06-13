@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
 ms.openlocfilehash: 02f05f540afb9dcb398cc63a16f0fbbb80a7f4cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643907"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="f92e9-102">Como: comparar o conteúdo de duas pastas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f92e9-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="f92e9-103">Este exemplo demonstra três modos de se comparar duas listagens de arquivo:</span><span class="sxs-lookup"><span data-stu-id="f92e9-103">This example demonstrates three ways to compare two file listings:</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1975e5bf20453a3bcd6761d9734be7ddd2ceef7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440321"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="cc53c-102">Método IManagedObject::GetObjectIdentity</span><span class="sxs-lookup"><span data-stu-id="cc53c-102">IManagedObject::GetObjectIdentity Method</span></span>
 <span data-ttu-id="cc53c-103">Obtém a identidade do objeto gerenciado.</span><span class="sxs-lookup"><span data-stu-id="cc53c-103">Gets the identity of this managed object.</span></span>  

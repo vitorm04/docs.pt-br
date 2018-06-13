@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516572"
 ---
 # <a name="rangeenumeration-activity"></a><span data-ttu-id="27898-102">Atividade de RangeEnumeration</span><span class="sxs-lookup"><span data-stu-id="27898-102">RangeEnumeration Activity</span></span>
 <span data-ttu-id="27898-103">Este exemplo demonstra como criar uma atividade personalizado que executa iterações sobre uma coleção de números. A tabela a seguir detalha os arquivos de chave incluídos no exemplo.</span><span class="sxs-lookup"><span data-stu-id="27898-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91acfa5545f3115c9e95207f05708ff32530994f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437275"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a><span data-ttu-id="05bd0-102">Método IDebuggerInfo::IsDebuggerAttached</span><span class="sxs-lookup"><span data-stu-id="05bd0-102">IDebuggerInfo::IsDebuggerAttached Method</span></span>
 <span data-ttu-id="05bd0-103">Obtém um valor que indica se um depurador gerenciado está anexado a este processo.</span><span class="sxs-lookup"><span data-stu-id="05bd0-103">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>  

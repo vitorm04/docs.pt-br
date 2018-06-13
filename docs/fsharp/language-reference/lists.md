@@ -4,8 +4,10 @@ description: 'Saiba mais sobre listas de F #, uma série de imutável, ordenada 
 ms.date: 05/16/2016
 ms.openlocfilehash: ea86b3ca94c6414bf5ab60406452f3604838075a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566620"
 ---
 # <a name="lists"></a><span data-ttu-id="4e0c3-103">Listas</span><span class="sxs-lookup"><span data-stu-id="4e0c3-103">Lists</span></span>
 

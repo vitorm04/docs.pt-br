@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5da2936a46dcf3d8f69acc3367db64712165b0cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444038"
 ---
 # <a name="iceegengetsectionblock-method"></a><span data-ttu-id="7e1a6-102">Método ICeeGen::GetSectionBlock</span><span class="sxs-lookup"><span data-stu-id="7e1a6-102">ICeeGen::GetSectionBlock Method</span></span>
 <span data-ttu-id="7e1a6-103">Obtém um bloco de seção da base de código.</span><span class="sxs-lookup"><span data-stu-id="7e1a6-103">Gets a section block of the code base.</span></span>  

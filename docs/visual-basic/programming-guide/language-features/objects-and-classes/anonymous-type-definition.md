@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
 ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649614"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a><span data-ttu-id="e9770-102">Definição do tipo anônimo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9770-102">Anonymous Type Definition (Visual Basic)</span></span>
 <span data-ttu-id="e9770-103">Em resposta à declaração de uma instância de um tipo anônimo, o compilador cria uma nova definição de classe que contém as propriedades especificadas para o tipo.</span><span class="sxs-lookup"><span data-stu-id="e9770-103">In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643660"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a><span data-ttu-id="0294a-102">Como: Criar Assemblies amigáveis assinados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0294a-102">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="0294a-103">Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes.</span><span class="sxs-lookup"><span data-stu-id="0294a-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="0294a-104">Os dois assemblies devem ter nomes fortes.</span><span class="sxs-lookup"><span data-stu-id="0294a-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="0294a-105">Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.</span><span class="sxs-lookup"><span data-stu-id="0294a-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

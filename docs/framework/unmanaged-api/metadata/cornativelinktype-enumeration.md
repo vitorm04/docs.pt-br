@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443255"
 ---
 # <a name="cornativelinktype-enumeration"></a><span data-ttu-id="dc2cc-102">Enumeração CorNativeLinkType</span><span class="sxs-lookup"><span data-stu-id="dc2cc-102">CorNativeLinkType Enumeration</span></span>
 <span data-ttu-id="dc2cc-103">Fornece valores que indicam o tipo vinculado em código nativo.</span><span class="sxs-lookup"><span data-stu-id="dc2cc-103">Provides values that indicate the type linked in native code.</span></span>  

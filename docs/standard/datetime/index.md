@@ -13,8 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575421"
 ---
 # <a name="dates-times-and-time-zones"></a><span data-ttu-id="18b8c-102">Datas, horas e fusos horários</span><span class="sxs-lookup"><span data-stu-id="18b8c-102">Dates, times, and time zones</span></span>
 

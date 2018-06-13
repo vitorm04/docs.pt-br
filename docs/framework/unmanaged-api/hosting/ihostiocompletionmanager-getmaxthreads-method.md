@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8544466edcaca1198d7a7ca92a3f9b9a16847193
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442473"
 ---
 # <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="46520-102">Método IHostIoCompletionManager::GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="46520-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
 <span data-ttu-id="46520-103">Obtém o número máximo de threads que o host pode alocar solicitações de e/s.</span><span class="sxs-lookup"><span data-stu-id="46520-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  

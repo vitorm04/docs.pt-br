@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5620df2ab2b2530332df02cf3f11a00d6b6c8fb4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441608"
 ---
 # <a name="ihostassemblystore-interface"></a><span data-ttu-id="4b908-102">Interface IHostAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="4b908-102">IHostAssemblyStore Interface</span></span>
 <span data-ttu-id="4b908-103">Fornece métodos que permitem que um host ao carregar assemblies e módulos independentemente do common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="4b908-103">Provides methods that allow a host to load assemblies and modules independently of the common language runtime (CLR).</span></span>  

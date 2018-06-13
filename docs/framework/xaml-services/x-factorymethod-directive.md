@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563409"
 ---
 # <a name="xfactorymethod-directive"></a><span data-ttu-id="a2e0c-102">Diretiva x:FactoryMethod</span><span class="sxs-lookup"><span data-stu-id="a2e0c-102">x:FactoryMethod Directive</span></span>
 <span data-ttu-id="a2e0c-103">Especifica um método diferente de um construtor que um processador XAML deve usar para inicializar um objeto depois de resolver o tipo de backup.</span><span class="sxs-lookup"><span data-stu-id="a2e0c-103">Specifies a method other than a constructor that a XAML processor should use to initialize an object after resolving its backing type.</span></span>  

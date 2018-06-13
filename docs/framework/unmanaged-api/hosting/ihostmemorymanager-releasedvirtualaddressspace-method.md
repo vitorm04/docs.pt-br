@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f6a3d425d4c2ae2146723a6acfc5ab9893f0fe0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438435"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a><span data-ttu-id="5a42d-102">Método IHostMemoryManager::ReleasedVirtualAddressSpace</span><span class="sxs-lookup"><span data-stu-id="5a42d-102">IHostMemoryManager::ReleasedVirtualAddressSpace Method</span></span>
 <span data-ttu-id="5a42d-103">Notifica o host que o common language runtime (CLR) terminou de usar a memória especificada.</span><span class="sxs-lookup"><span data-stu-id="5a42d-103">Notifies the host that the common language runtime (CLR) has finished using the specified memory.</span></span>  

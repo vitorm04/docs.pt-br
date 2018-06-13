@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c281d03c6e3774938cfa6e4b4b3a541738b38489
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444337"
 ---
 # <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="57434-102">Método ICeeGen::AddSectionReloc</span><span class="sxs-lookup"><span data-stu-id="57434-102">ICeeGen::AddSectionReloc Method</span></span>
 <span data-ttu-id="57434-103">Adiciona uma instrução de .reloc para a base de código.</span><span class="sxs-lookup"><span data-stu-id="57434-103">Adds a .reloc instruction to the code base.</span></span>  

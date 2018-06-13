@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a093b18f72cc99c53951b3dc588ce0cff3c7fefd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442602"
 ---
 # <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="a2b91-102">Método ICeeGen::GetMethodBuffer</span><span class="sxs-lookup"><span data-stu-id="a2b91-102">ICeeGen::GetMethodBuffer Method</span></span>
 <span data-ttu-id="a2b91-103">Obtém um buffer de tamanho apropriado para o método no endereço virtual relativo especificado.</span><span class="sxs-lookup"><span data-stu-id="a2b91-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  

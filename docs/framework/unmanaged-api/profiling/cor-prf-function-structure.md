@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1bc8d588641163ccf98054fdf1930a72a04c770c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452056"
 ---
 # <a name="corprffunction-structure"></a><span data-ttu-id="30f37-102">Estrutura COR_PRF_FUNCTION</span><span class="sxs-lookup"><span data-stu-id="30f37-102">COR_PRF_FUNCTION Structure</span></span>
 <span data-ttu-id="30f37-103">Fornece uma representação única de uma função pela combinação de sua ID com a ID de sua versão recompilada.</span><span class="sxs-lookup"><span data-stu-id="30f37-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  

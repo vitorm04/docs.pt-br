@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b2ad9ef473a498804e5b3ac0469b5b68697c49f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439167"
 ---
 # <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="a4e49-102">Método ICLRValidator::Validate</span><span class="sxs-lookup"><span data-stu-id="a4e49-102">ICLRValidator::Validate Method</span></span>
 <span data-ttu-id="a4e49-103">Valida o PE (executável portátil) ou Microsoft intermediate language (MSIL) no arquivo especificado.</span><span class="sxs-lookup"><span data-stu-id="a4e49-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  

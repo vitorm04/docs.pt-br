@@ -4,8 +4,10 @@ description: 'Saiba como criar e usar matrizes em F # linguagem de programação
 ms.date: 05/16/2016
 ms.openlocfilehash: 2cd887b8385235185afb9099c3142a572efe3f41
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566529"
 ---
 # <a name="arrays"></a><span data-ttu-id="16ea8-103">Matrizes</span><span class="sxs-lookup"><span data-stu-id="16ea8-103">Arrays</span></span>
 

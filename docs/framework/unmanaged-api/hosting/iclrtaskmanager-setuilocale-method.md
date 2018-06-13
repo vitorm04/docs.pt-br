@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1380864a66d904c26ece14899de78b1b5b7f0408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437138"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a><span data-ttu-id="98bdc-102">Método ICLRTaskManager::SetUILocale</span><span class="sxs-lookup"><span data-stu-id="98bdc-102">ICLRTaskManager::SetUILocale Method</span></span>
 <span data-ttu-id="98bdc-103">Notifica o common language runtime (CLR) que o host tiver modificado a localidade de interface do usuário ou a cultura, a tarefa em execução no momento.</span><span class="sxs-lookup"><span data-stu-id="98bdc-103">Notifies the common language runtime (CLR) that the host has modified the user interface (UI) locale, or culture, on the currently executing task.</span></span>  

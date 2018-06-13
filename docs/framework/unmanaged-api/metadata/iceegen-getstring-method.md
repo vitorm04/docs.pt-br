@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7ac5ef95ca3705b11cfda51d7fd1aca7400abc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443067"
 ---
 # <a name="iceegengetstring-method"></a><span data-ttu-id="84ecd-102">Método ICeeGen::GetString</span><span class="sxs-lookup"><span data-stu-id="84ecd-102">ICeeGen::GetString Method</span></span>
 <span data-ttu-id="84ecd-103">Obtém a cadeia de caracteres armazenada no endereço virtual relativo especificado.</span><span class="sxs-lookup"><span data-stu-id="84ecd-103">Gets the string stored at the specified relative virtual address.</span></span>  

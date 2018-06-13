@@ -14,8 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a27c96a7be9b5d868e07da11f1a239b9dd5fe2f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402846"
 ---
 # <a name="cordebugrecordformat-enumeration"></a><span data-ttu-id="df691-102">Enumeração CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="df691-102">CorDebugRecordFormat Enumeration</span></span>
 <span data-ttu-id="df691-103">Descreve o formato dos dados em uma matriz de bytes que contém informações sobre um evento de depuração de exceção nativo.</span><span class="sxs-lookup"><span data-stu-id="df691-103">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  

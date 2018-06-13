@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: bee661ea2a3261d25ed9f9d1aabdc656c898610f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646585"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="458e9-102">Usando XSLT para transformar uma árvore XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="458e9-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="458e9-103">Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento.</span><span class="sxs-lookup"><span data-stu-id="458e9-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="458e9-104">Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação.</span><span class="sxs-lookup"><span data-stu-id="458e9-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="458e9-105">Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.</span><span class="sxs-lookup"><span data-stu-id="458e9-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  

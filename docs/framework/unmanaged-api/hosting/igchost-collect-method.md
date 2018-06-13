@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436901"
 ---
 # <a name="igchostcollect-method"></a><span data-ttu-id="60d91-102">Método IGCHost::Collect</span><span class="sxs-lookup"><span data-stu-id="60d91-102">IGCHost::Collect Method</span></span>
 <span data-ttu-id="60d91-103">Força uma coleta ocorra para determinada geração, independentemente do estado da coleção atual de lixo.</span><span class="sxs-lookup"><span data-stu-id="60d91-103">Forces a collection to occur for the given generation, regardless of the state of the current garbage collection.</span></span>  

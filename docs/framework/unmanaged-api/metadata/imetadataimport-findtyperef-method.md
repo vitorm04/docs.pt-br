@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444432"
 ---
 # <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="bcb6b-102">Método IMetaDataImport::FindTypeRef</span><span class="sxs-lookup"><span data-stu-id="bcb6b-102">IMetaDataImport::FindTypeRef Method</span></span>
 <span data-ttu-id="bcb6b-103">Obtém um ponteiro para o TypeRef token para o <xref:System.Type> referência que está no escopo especificado e que tem o nome especificado.</span><span class="sxs-lookup"><span data-stu-id="bcb6b-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  

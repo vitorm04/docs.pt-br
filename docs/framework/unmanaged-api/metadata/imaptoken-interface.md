@@ -18,8 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 661aeff56955f729a5728f00f563bb2bef971a9f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444386"
 ---
 # <a name="imaptoken-interface"></a><span data-ttu-id="55bab-102">Interface IMapToken</span><span class="sxs-lookup"><span data-stu-id="55bab-102">IMapToken Interface</span></span>
 <span data-ttu-id="55bab-103">Fornece recursos de mapeamento entre assemblies.</span><span class="sxs-lookup"><span data-stu-id="55bab-103">Provides mapping capabilities between assemblies.</span></span>  

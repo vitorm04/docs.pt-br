@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5477578491c3cbc3f5fce694820971e99b45079
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444094"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="99383-102">Método IMetaDataAssemblyImport::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="99383-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
 <span data-ttu-id="99383-103">Libera uma referência para a instância de enumeração especificado.</span><span class="sxs-lookup"><span data-stu-id="99383-103">Releases a reference to the specified enumeration instance.</span></span>  

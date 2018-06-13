@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577649"
 ---
 # <a name="common-io-tasks"></a><span data-ttu-id="e6205-102">Tarefas comuns de E/S</span><span class="sxs-lookup"><span data-stu-id="e6205-102">Common I/O Tasks</span></span>
 <span data-ttu-id="e6205-103">O namespace <xref:System.IO> fornece várias classes que permitem que várias ações, como leitura e gravação, sejam realizadas em arquivos, diretórios e fluxos.</span><span class="sxs-lookup"><span data-stu-id="e6205-103">The <xref:System.IO> namespace provides several classes that allow for various actions, such as reading and writing, to be performed on files, directories, and streams.</span></span> <span data-ttu-id="e6205-104">Para obter mais informações, confira [E/S de arquivo e fluxo](../../../docs/standard/io/index.md).</span><span class="sxs-lookup"><span data-stu-id="e6205-104">For more information, see [File and Stream I/O](../../../docs/standard/io/index.md).</span></span>  
