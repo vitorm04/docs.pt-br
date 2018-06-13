@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528269"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Desenvolvendo um controle dos Windows Forms composto
 Você pode desenvolver um controle Windows Forms composto combinando outros controles de formulários do Windows. Controles compostos que derivam de <xref:System.Web.UI.UserControl> são chamados de controles de usuário. A classe base, <xref:System.Windows.Forms.UserControl>, fornece o teclado do roteamento para os controles filho, garantindo que os controles filho podem receber foco. Para obter um exemplo de um controle de usuário, consulte o <xref:System.Windows.Forms.UserControl> exemplo em [como: aplicar atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  

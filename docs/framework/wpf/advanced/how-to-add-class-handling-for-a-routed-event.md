@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545357"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Como adicionar tratamento de classes para um evento roteado
 Eventos roteados podem ser manipulados por manipuladores de classe ou de instância em qualquer nó da rota. Manipuladores de classe são invocados primeiro e podem ser usados pelas implementações de classe para suprimir eventos da manipulação de instâncias ou apresentar outros comportamentos específicos de evento em eventos pertencentes a classes base. Este exemplo ilustra duas técnicas intimamente relacionadas para implementar manipuladores de classe.  

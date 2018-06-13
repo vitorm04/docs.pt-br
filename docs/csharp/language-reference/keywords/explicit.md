@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216471"
 ---
 # <a name="explicit-c-reference"></a>explicit (Referência de C#)
 A palavra-chave `explicit` declara um operador de conversão de tipo definido pelo usuário que deve ser invocado com uma conversão. Por exemplo, esse operador converte de uma classe chamada Fahrenheit para uma classe chamada Celsius:  

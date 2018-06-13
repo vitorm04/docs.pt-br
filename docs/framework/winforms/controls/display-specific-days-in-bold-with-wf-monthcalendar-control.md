@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528525"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Como exibir dados específicos em negrito com o controle MonthCalendar dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> controle pode exibir dias em negrito, como datas singulares ou em uma base de repetição. Você pode fazer isso para chamar atenção para datas especiais, como feriados e fins de semana.  

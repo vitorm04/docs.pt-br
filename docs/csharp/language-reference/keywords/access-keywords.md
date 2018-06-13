@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216004"
 ---
 # <a name="access-keywords-c-reference"></a>Palavras-chave de acesso (Referência de C#)
 Esta seção apresenta as seguintes palavras-chave de acesso:  

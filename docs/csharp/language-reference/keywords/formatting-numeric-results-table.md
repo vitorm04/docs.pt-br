@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216906"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabela de formatação de resultados numéricos (Referência de C#)
 Você pode formatar resultados numéricos usando o método <xref:System.String.Format%2A?displayProperty=nameWithType>, por meio dos métodos <xref:System.Console.Write%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que chamam `String.Format`, ou usando a [interpolação de cadeia de caracteres](../tokens/interpolated.md). O formato é especificado usando cadeias de caracteres de formato. A tabela a seguir contém as cadeias de caracteres de formato padrão com suporte. A cadeia de caracteres de formato usa o seguinte formato: `Axx`, em que `A` é o especificador de formato e `xx` é o especificador de precisão. O especificador de formato controla o tipo de formatação aplicada ao valor numérico e o especificador de precisão controla o número de dígitos significativos ou casas decimais do resultado formatado. O valor do especificador de precisão varia de 0 a 99.  

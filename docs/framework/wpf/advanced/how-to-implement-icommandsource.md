@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547021"
 ---
 # <a name="how-to-implement-icommandsource"></a>Como implementar ICommandSource
 Este exemplo mostra como criar uma fonte de comandos, implementando <xref:System.Windows.Input.ICommandSource>.  Uma fonte de comando é um objeto que sabe como invocar um comando.  O <xref:System.Windows.Input.ICommandSource> interface expõe três membros: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, e <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> é o comando que será chamado. O <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> é um tipo de dados definido pelo usuário que é passado da fonte de comandos para o método que trata o comando. O <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> é o objeto que o comando está sendo executado.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216850"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opções do compilador C#)
 A opção **-lib** especifica o local dos assemblies referenciados por meio da opção [-reference (Opções do Compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  

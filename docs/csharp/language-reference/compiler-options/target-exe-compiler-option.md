@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218823"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opções do compilador C#)
 A opção **-target:exe** faz com que o compilador crie um aplicativo de console executável (EXE).  

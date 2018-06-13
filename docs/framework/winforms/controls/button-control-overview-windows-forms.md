@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526016"
 ---
 # <a name="button-control-overview-windows-forms"></a>Visão geral do controle Button (Windows Forms)
 O controle <xref:System.Windows.Forms.Button> dos Windows Forms permite que o usuário clique nele para realizar uma ação. Quando o botão é clicado, ele se parece como se estivesse sendo empurrado e solto. Sempre que o usuário clica em um botão, o <xref:System.Windows.Forms.Control.Click> manipulador de eventos é chamado. Coloque o código de <xref:System.Windows.Forms.Control.Click> manipulador de eventos para realizar qualquer ação que você escolher.  

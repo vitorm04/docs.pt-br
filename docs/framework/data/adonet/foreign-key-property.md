@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762644"
 ---
 # <a name="foreign-key-property"></a>propriedade de chave estrangeira
 Um *propriedade de chave estrangeira* modelo de dados na entidade (EDM) é um tipo primitivo [propriedade](../../../../docs/framework/data/adonet/property.md) (ou um conjunto de propriedades de tipo primitivo) em um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) que contém o [chave da entidade](../../../../docs/framework/data/adonet/entity-key.md) de outro tipo de entidade.  

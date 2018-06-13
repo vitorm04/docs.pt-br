@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764116"
 ---
 # <a name="oftype-entity-sql"></a>DOTIPO (Entity SQL)
 Retorna uma coleção de objetos de uma expressão de consulta que é de um tipo específico.  

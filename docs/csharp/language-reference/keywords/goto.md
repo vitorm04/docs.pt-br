@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216798"
 ---
 # <a name="goto-c-reference"></a>goto (Referência de C#)
 A declaração `goto` transfere o controle do programa diretamente para uma instrução rotulada.  
