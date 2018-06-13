@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568011"
 ---
 # <a name="copying-document-fragments"></a>Copiando partes do documento
 Você pode criar um nó de **XmlDocumentFragment** e adicionar nós nele. Quando **XmlDocumentFragment** é inserido com o método **InsertNode**, o nó **XmlDocumentFragment** não é copiado, mas os nós filhos são inseridos no DOM (Modelo de Objeto do Documento) XML.  

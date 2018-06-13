@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569942"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Validação de XDR com XmlSchemaCollection
 Se o Esquema Reduzido de Dados XML (XDR) com o qual você está validando estiver armazenado em **XmlSchemaCollection**, ele terá sido associado ao URI do namespace especificado quando o esquema foi adicionado à coleção. **XmlValidatingReader** mapeia o URI de namespace no documento XML para esquema que corresponde ao URI na coleção.  

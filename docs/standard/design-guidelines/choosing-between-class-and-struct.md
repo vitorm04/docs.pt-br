@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573575"
 ---
 # <a name="choosing-between-class-and-struct"></a>Escolhendo entre a classe e Struct
 Uma das decisões de design básico que faces cada designer de estrutura é um tipo de design como uma classe (um tipo de referência) ou como uma estrutura (um tipo de valor). Boa compreensão das diferenças no comportamento de tipos de referência e tipos de valor é crucial para essa opção.  

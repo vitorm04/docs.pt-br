@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576676"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Como obter repositórios para o armazenamento isolado
 Um repositório isolado expõe um sistema de arquivos virtual dentro de um compartimento de dados. A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece vários métodos para interagir com um repositório isolado. Para criar e recuperar repositórios, o <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece três métodos estáticos:  

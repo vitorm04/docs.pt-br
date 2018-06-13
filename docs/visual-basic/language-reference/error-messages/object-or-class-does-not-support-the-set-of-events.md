@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593198"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>O objeto ou a classe não dá suporte ao conjunto de eventos
 Você tentou usar um `WithEvents` variável com um componente que não pode funcionar como uma fonte de evento para o conjunto de eventos especificado. Por exemplo, se desejar coletar eventos de um objeto, então criar outro objeto que `Implements` o primeiro objeto. Embora você possa pensar que você pode coletar os eventos do objeto implementado, isso não é sempre o caso. `Implements` apenas implementa uma interface para métodos e propriedades. `WithEvents` Não há suporte para privada `UserControls`, porque as informações de tipo necessária elevar o `ObjectEvent` não está disponível em tempo de execução.  

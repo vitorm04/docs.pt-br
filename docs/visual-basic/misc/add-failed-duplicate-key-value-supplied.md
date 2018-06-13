@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599769"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>Falha ao adicione. Valor de chave duplicado fornecido
 Um `Add` Falha na operação porque o valor da chave é igual a outro valor de chave. Valores de chave devem ser exclusivos.  

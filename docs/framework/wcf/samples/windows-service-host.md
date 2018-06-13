@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807961"
 ---
 # <a name="windows-service-host"></a>Host de serviço do Windows
 Este exemplo demonstra um serviço do Windows Communication Foundation (WCF) hospedado em um serviço Windows gerenciado. Serviços do Windows são controlados usando o miniaplicativo Serviços no **painel de controle** e pode ser configurado para iniciar automaticamente após a reinicialização do sistema. O exemplo consiste em um programa do cliente e um programa de serviço do Windows. O serviço é implementado como um programa .exe e contém o seu próprio código de hospedagem. Em outros ambientes de hospedagem, como serviços de ativação de processos do Windows (WAS) ou serviços de informações da Internet (IIS), não é necessário para gravar o código de hospedagem.  

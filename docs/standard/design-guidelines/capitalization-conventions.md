@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575278"
 ---
 # <a name="capitalization-conventions"></a>Convenções de maiusculas e minúsculas
 As diretrizes neste capítulo dispor de um método simples para o uso de caso que, quando aplicadas de forma consistente, criar identificadores de tipos, membros e parâmetros de fácil leitura.  

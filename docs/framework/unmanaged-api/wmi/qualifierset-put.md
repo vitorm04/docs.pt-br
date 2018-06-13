@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462183"
 ---
 # <a name="qualifiersetput-function"></a>Função QualifierSet_Put
 Grava o qualificador de nome e o valor. O novo qualificador substitui o valor anterior do mesmo nome. Se o qualificador não existir, ele será criado. 

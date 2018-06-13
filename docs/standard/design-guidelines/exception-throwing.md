@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573715"
 ---
 # <a name="exception-throwing"></a>Lançando exceções
 Lançando exceções diretrizes descritas nesta seção exigem uma definição válida do significado da falha de execução. Falha na execução ocorre sempre que um membro não é possível fazer o que ele foi projetado para fazer (o que o nome de membro implica). Por exemplo, se o `OpenFile` método não pode retornar um identificador de arquivo aberto ao chamador, ele será considerado uma falha na execução.  

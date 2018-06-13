@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589003"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>A expressão do tipo &lt;tipo&gt; não é passível de consulta
 A expressão do tipo \<tipo > não é passível de consulta. Certifique-se de que não está faltando uma importação de referência e/ou namespace do assembly para o provedor LINQ.  

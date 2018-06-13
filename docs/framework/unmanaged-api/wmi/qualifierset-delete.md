@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460039"
 ---
 # <a name="qualifiersetdelete-function"></a>Função QualifierSet_Delete
 Exclui um qualificador especificado por nome.  

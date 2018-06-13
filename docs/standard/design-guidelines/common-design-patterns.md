@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570325"
 ---
 # <a name="common-design-patterns"></a>Padrões comuns de Design
 Há diversos livros em padrões de software, os idiomas padrão e antipatterns que o assunto muito amplo de padrões de endereço. Portanto, este capítulo fornece diretrizes e discussões relacionadas a um conjunto muito limitado de padrões que são usados com frequência no design de APIs do .NET Framework.  

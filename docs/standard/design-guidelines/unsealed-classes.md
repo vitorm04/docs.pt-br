@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571655"
 ---
 # <a name="unsealed-classes"></a>Classes não lacradas
 Classes sealed não podem ser herdadas e impedem que extensibilidade. Por outro lado, que podem ser herdadas de classes são chamados de classes sem lacre.  

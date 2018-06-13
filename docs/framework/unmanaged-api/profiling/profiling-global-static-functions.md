@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461829"
 ---
 # <a name="profiling-global-static-functions"></a>Criando perfil de funções estáticas globais
 Esta seção descreve as funções de API não gerenciadas que usa a API de criação de perfil.  
