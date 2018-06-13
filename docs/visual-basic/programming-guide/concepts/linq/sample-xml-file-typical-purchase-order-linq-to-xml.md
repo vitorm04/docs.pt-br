@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
 ms.openlocfilehash: 4a0d16013ba85eace6cca374f2f284c4a6e39f69
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644895"
 ---
 # <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="80939-102">Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="80939-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
 <span data-ttu-id="80939-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="80939-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="80939-104">Este arquivo é uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="80939-104">This file is a typical purchase order.</span></span>  

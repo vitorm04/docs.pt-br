@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
 ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644840"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="7b2a5-102">Arquivo XML de Exemplo: Pedidos de compra consolidados</span><span class="sxs-lookup"><span data-stu-id="7b2a5-102">Sample XML File: Consolidated Purchase Orders</span></span>
 <span data-ttu-id="7b2a5-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b2a5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7b2a5-104">Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas.</span><span class="sxs-lookup"><span data-stu-id="7b2a5-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="7b2a5-105">Os pedidos de compra de cada empresa em namespaces são separadas.</span><span class="sxs-lookup"><span data-stu-id="7b2a5-105">Purchase orders from each company are in separate namespaces.</span></span>  

@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
 ms.openlocfilehash: 11903e067c064f129ecd2df80244edb6741c73be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648688"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a><span data-ttu-id="5fc4d-102">Tipos de métodos de manipulação da cadeia de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5fc4d-102">Types of String Manipulation Methods in Visual Basic</span></span>
 <span data-ttu-id="5fc4d-103">Há várias maneiras diferentes de analisar e manipular suas cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="5fc4d-103">There are several different ways to analyze and manipulate your strings.</span></span> <span data-ttu-id="5fc4d-104">Alguns dos métodos fazem parte da linguagem do Visual Basic e outros são inerentes a `String` classe.</span><span class="sxs-lookup"><span data-stu-id="5fc4d-104">Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.</span></span>  

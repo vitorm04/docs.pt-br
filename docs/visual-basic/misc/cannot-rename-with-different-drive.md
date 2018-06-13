@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633169"
 ---
 # <a name="cannot-rename-with-different-drive"></a><span data-ttu-id="683d1-102">Não é possível renomear com unidade diferente</span><span class="sxs-lookup"><span data-stu-id="683d1-102">Cannot rename with different drive</span></span>
 <span data-ttu-id="683d1-103">O `Rename` instrução não é possível especificar uma letra de unidade no caminho do arquivo.</span><span class="sxs-lookup"><span data-stu-id="683d1-103">The `Rename` statement cannot specify a drive letter in the file path.</span></span>  

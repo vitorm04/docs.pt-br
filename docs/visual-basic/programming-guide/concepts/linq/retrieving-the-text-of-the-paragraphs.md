@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
 ms.openlocfilehash: f1a7bc607fb51a8dca6121ee950af0252ab4722e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647144"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a><span data-ttu-id="85497-102">Recuperando o texto dos parágrafos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85497-102">Retrieving the Text of the Paragraphs (Visual Basic)</span></span>
 <span data-ttu-id="85497-103">Este exemplo é baseado no exemplo anterior, [recuperando os parágrafos e seus estilos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span><span class="sxs-lookup"><span data-stu-id="85497-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="85497-104">Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="85497-104">This new example retrieves the text of each paragraph as a string.</span></span>  

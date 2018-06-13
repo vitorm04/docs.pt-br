@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803131"
 ---
 # <a name="endpoint-performance-counters"></a><span data-ttu-id="e71d9-102">Contadores de desempenho de ponto de extremidade</span><span class="sxs-lookup"><span data-stu-id="e71d9-102">Endpoint Performance Counters</span></span>
 <span data-ttu-id="e71d9-103">Contadores de desempenho do ponto de extremidade capturar dados revela como um ponto de extremidade é aceitar mensagens.</span><span class="sxs-lookup"><span data-stu-id="e71d9-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="e71d9-104">Eles podem ser encontrados no `ServiceModelEndpoint 4.0.0.0` objeto de desempenho durante a exibição com o Monitor de desempenho.</span><span class="sxs-lookup"><span data-stu-id="e71d9-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="e71d9-105">As instâncias são nomeadas usando esse padrão:</span><span class="sxs-lookup"><span data-stu-id="e71d9-105">The instances are named using this pattern:</span></span>  

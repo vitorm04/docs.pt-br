@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 809cba93-cc93-4e21-afda-f299f9a39818
 ms.openlocfilehash: 019b8372be63b9a9fdbcee134834a34f6bef2b74
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646885"
 ---
 # <a name="thread-timers-visual-basic"></a><span data-ttu-id="bc874-102">Timers de thread (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc874-102">Thread Timers (Visual Basic)</span></span>
 <span data-ttu-id="bc874-103">A classe <xref:System.Threading.Timer?displayProperty=nameWithType> é útil para executar periodicamente uma tarefa em um thread separado.</span><span class="sxs-lookup"><span data-stu-id="bc874-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="bc874-104">Por exemplo, você pode usar um temporizador de thread para verificar o status e a integridade de um banco de dados ou para fazer backup de arquivos críticos.</span><span class="sxs-lookup"><span data-stu-id="bc874-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  

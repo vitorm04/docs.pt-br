@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
 ms.openlocfilehash: 07700aa526866729f1ba1a8d846f22ce333c356d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654285"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a><span data-ttu-id="75930-102">Passo a passo: Multithreading com o componente BackgroundWorker (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75930-102">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>
 <span data-ttu-id="75930-103">Este passo a passo demonstra como criar um aplicativo Windows Forms com multithread que pesquisa um arquivo de texto para ocorrências de uma palavra.</span><span class="sxs-lookup"><span data-stu-id="75930-103">This walkthrough demonstrates how to create a multithreaded Windows Forms application that searches a text file for occurrences of a word.</span></span> <span data-ttu-id="75930-104">Ele demonstra:</span><span class="sxs-lookup"><span data-stu-id="75930-104">It demonstrates:</span></span>  

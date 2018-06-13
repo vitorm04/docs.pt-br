@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
 ms.openlocfilehash: 47ba557343d0f691c2ee0f2c56102df313ecfb30
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641101"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="c94d0-102">Como: localizar o irmão anterior imediato (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c94d0-102">How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="c94d0-103">Às vezes você deseja encontrar o irmão anterior imediato a um nó.</span><span class="sxs-lookup"><span data-stu-id="c94d0-103">Sometimes you want to find the immediate preceding sibling to a node.</span></span> <span data-ttu-id="c94d0-104">Devido a diferença na semântica de predicados posicionais para os eixos anterior irmãos no XPath ao contrário de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], essa é uma das comparações mais interessantes.</span><span class="sxs-lookup"><span data-stu-id="c94d0-104">Due to the difference in the semantics of positional predicates for the preceding sibling axes in XPath as opposed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], this is one of the more interesting comparisons.</span></span>  

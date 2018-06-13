@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
 ms.openlocfilehash: f52000d37df45c97754463de1e81cd523806e9c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646858"
 ---
 # <a name="sorting-data-visual-basic"></a><span data-ttu-id="a0e7f-102">Classificando dados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0e7f-102">Sorting Data (Visual Basic)</span></span>
 <span data-ttu-id="a0e7f-103">Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos.</span><span class="sxs-lookup"><span data-stu-id="a0e7f-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="a0e7f-104">O primeiro critério de classificação executa uma classificação primária dos elementos.</span><span class="sxs-lookup"><span data-stu-id="a0e7f-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="a0e7f-105">Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.</span><span class="sxs-lookup"><span data-stu-id="a0e7f-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  

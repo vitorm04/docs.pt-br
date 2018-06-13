@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458015"
 ---
 # <a name="whats-new-in-the-net-framework"></a><span data-ttu-id="f3ccc-102">Novidades no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f3ccc-102">What's new in the .NET Framework</span></span>
 <a name="introduction"></a> <span data-ttu-id="f3ccc-103">Este artigo resume os principais recursos novos e aprimoramentos nas seguintes versões do .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f3ccc-103">This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>  

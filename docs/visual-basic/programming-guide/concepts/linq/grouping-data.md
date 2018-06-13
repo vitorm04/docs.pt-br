@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644193"
 ---
 # <a name="grouping-data-visual-basic"></a><span data-ttu-id="8cb94-102">Agrupando dados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8cb94-102">Grouping Data (Visual Basic)</span></span>
 <span data-ttu-id="8cb94-103">O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.</span><span class="sxs-lookup"><span data-stu-id="8cb94-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  

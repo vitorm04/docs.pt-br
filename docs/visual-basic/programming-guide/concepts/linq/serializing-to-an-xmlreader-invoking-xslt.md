@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
 ms.openlocfilehash: 05754593f4f30683ffabecaa8e16c35bf836a3f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645584"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a><span data-ttu-id="817dc-102">Serializando um XmlReader (invocando XSLT) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="817dc-102">Serializing to an XmlReader (Invoking XSLT) (Visual Basic)</span></span>
 <span data-ttu-id="817dc-103">Quando você usa os recursos de interoperabilidade de <xref:System.Xml?displayProperty=nameWithType> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para criar um <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="817dc-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="817dc-104">O módulo que lê deste <xref:System.Xml.XmlReader> lê os nós da árvore XML e processa-os de acordo.</span><span class="sxs-lookup"><span data-stu-id="817dc-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  

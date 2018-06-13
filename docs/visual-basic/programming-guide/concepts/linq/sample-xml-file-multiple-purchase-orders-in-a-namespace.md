@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
 ms.openlocfilehash: 20d1807b58e0cf9302413cf9007c62d0fbec9c16
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645571"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="a6a31-102">Arquivo XML de Exemplo: Vários pedidos de compra em um namespace</span><span class="sxs-lookup"><span data-stu-id="a6a31-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
 <span data-ttu-id="a6a31-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a6a31-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a6a31-104">Este arquivo contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="a6a31-104">This file contains several purchase orders.</span></span> <span data-ttu-id="a6a31-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="a6a31-105">The XML is in a namespace.</span></span>  

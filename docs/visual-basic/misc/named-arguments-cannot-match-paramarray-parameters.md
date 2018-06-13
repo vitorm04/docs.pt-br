@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636611"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a><span data-ttu-id="69caf-102">Argumentos nomeados não correspondem aos parâmetros ParamArray</span><span class="sxs-lookup"><span data-stu-id="69caf-102">Named arguments cannot match ParamArray parameters</span></span>
 <span data-ttu-id="69caf-103">Matrizes de parâmetros devem ser transmitidos por valor.</span><span class="sxs-lookup"><span data-stu-id="69caf-103">Parameter arrays must be passed by value.</span></span>  

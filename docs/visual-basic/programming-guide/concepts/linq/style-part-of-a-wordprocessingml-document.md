@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
 ms.openlocfilehash: 58767c51595a5a2c4c262df133c393dc700e0b10
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645948"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="3881d-102">Parte de estilo de um documento de WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="3881d-102">Style Part of a WordprocessingML Document</span></span>
 <span data-ttu-id="3881d-103">Este tópico mostra um exemplo de parte de estilo de documento do Office Open XML WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="3881d-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  

@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
 ms.openlocfilehash: 363da08b7185d42c464dd927bcbbf5d0af4c1899
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646345"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="a7425-102">Arquivo XML de Exemplo: Clientes e pedidos em um namespace</span><span class="sxs-lookup"><span data-stu-id="a7425-102">Sample XML File: Customers and Orders in a Namespace</span></span>
 <span data-ttu-id="a7425-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a7425-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a7425-104">Este arquivo contém clientes e pedidos.</span><span class="sxs-lookup"><span data-stu-id="a7425-104">This file contains customers and orders.</span></span> <span data-ttu-id="a7425-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="a7425-105">The XML is in a namespace.</span></span>  

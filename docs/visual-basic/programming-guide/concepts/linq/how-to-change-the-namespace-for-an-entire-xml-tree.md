@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
 ms.openlocfilehash: 1ef5ae9a2a8c4e69687809c117451d70dbfe211b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642981"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a><span data-ttu-id="814eb-102">Como: alterar o Namespace de uma árvore XML inteira (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="814eb-102">How to: Change the Namespace for an Entire XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="814eb-103">Às vezes você tem que alterar programaticamente ao namespace para um elemento ou atributo.</span><span class="sxs-lookup"><span data-stu-id="814eb-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="814eb-104">LINQ to XML faz isso fácil.</span><span class="sxs-lookup"><span data-stu-id="814eb-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="814eb-105">A propriedade de <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> pode ser definida.</span><span class="sxs-lookup"><span data-stu-id="814eb-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="814eb-106">A propriedade de <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> não pode ser definida, mas você pode facilmente copiar os atributos em <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remover os atributos existentes, e então adiciona novos atributos que estão no novo namespace desejada.</span><span class="sxs-lookup"><span data-stu-id="814eb-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  

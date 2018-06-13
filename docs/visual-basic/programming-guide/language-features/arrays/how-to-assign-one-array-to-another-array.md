@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647924"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a><span data-ttu-id="27793-102">Como atribuir uma matriz a outra matriz (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27793-102">How to: Assign One Array to Another Array (Visual Basic)</span></span>
 <span data-ttu-id="27793-103">Como matrizes são objetos, você pode usá-los em instruções de atribuição como outros tipos de objeto.</span><span class="sxs-lookup"><span data-stu-id="27793-103">Because arrays are objects, you can use them in assignment statements like other object types.</span></span> <span data-ttu-id="27793-104">Uma variável de matriz contém um ponteiro para os dados que constituem os elementos da matriz e as informações de classificação e comprimento, e uma atribuição copia somente esse ponteiro.</span><span class="sxs-lookup"><span data-stu-id="27793-104">An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.</span></span>  

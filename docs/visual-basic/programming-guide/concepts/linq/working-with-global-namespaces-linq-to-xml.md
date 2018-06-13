@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
 ms.openlocfilehash: c1f34b374f956ec0a8b9658742e529d7ccb1b2ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648899"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a><span data-ttu-id="e1556-102">Trabalhar com namespaces globais (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e1556-102">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>
 <span data-ttu-id="e1556-103">Um dos principais recursos dos literais XML no Visual Basic é a capacidade de declarar namespaces XML usando o `Imports` instrução.</span><span class="sxs-lookup"><span data-stu-id="e1556-103">One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement.</span></span> <span data-ttu-id="e1556-104">Usando esse recurso, você pode declarar um namespace XML que usa um prefixo, ou você pode declarar um namespace XML padrão.</span><span class="sxs-lookup"><span data-stu-id="e1556-104">Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.</span></span>  

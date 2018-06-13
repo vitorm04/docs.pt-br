@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
 ms.openlocfilehash: 1be067db9c248ae7f51d79f1193e185f9c1fe564
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643530"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="9a49d-102">Como: associar o conteúdo de arquivos diferentes (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a49d-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="9a49d-103">Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente.</span><span class="sxs-lookup"><span data-stu-id="9a49d-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="9a49d-104">Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo.</span><span class="sxs-lookup"><span data-stu-id="9a49d-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="9a49d-105">Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.</span><span class="sxs-lookup"><span data-stu-id="9a49d-105">You can modify the example to work with any kind of structured text.</span></span>  

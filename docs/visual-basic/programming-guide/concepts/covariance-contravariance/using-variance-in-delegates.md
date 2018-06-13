@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
 ms.openlocfilehash: c2390d95bd6bab9f5625c6ec08c374f469f1fc55
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644128"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a><span data-ttu-id="439df-102">Usando variação em delegações (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="439df-102">Using Variance in Delegates (Visual Basic)</span></span>
 <span data-ttu-id="439df-103">Quando você atribui um método a um delegado, a *covariância* e a *contravariância* fornece flexibilidade para corresponder um tipo de delegado a uma assinatura de método.</span><span class="sxs-lookup"><span data-stu-id="439df-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="439df-104">A covariância permite que um método tenha o tipo de retorno mais derivado do que o definido no delegado.</span><span class="sxs-lookup"><span data-stu-id="439df-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="439df-105">A contravariância permite que um método que tem tipos de parâmetro menos derivados do que no tipo delegado.</span><span class="sxs-lookup"><span data-stu-id="439df-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  

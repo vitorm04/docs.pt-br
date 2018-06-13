@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
 ms.openlocfilehash: b92423d6d690b10ae8aa1a9f0373547f378f88ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640313"
 ---
 # <a name="stop-statement-encountered"></a><span data-ttu-id="275d8-102">Instrução Stop encontrada</span><span class="sxs-lookup"><span data-stu-id="275d8-102">Stop statement encountered</span></span>
 <span data-ttu-id="275d8-103">Um `Stop` instrução, que suspende a execução, foi encontrada.</span><span class="sxs-lookup"><span data-stu-id="275d8-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  

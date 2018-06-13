@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
 ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647411"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a><span data-ttu-id="e9595-102">Guia de programação (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9595-102">Programming Guide (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="e9595-103">Esta seção fornece informações e instruções conceituais sobre como programar com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e9595-103">This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  

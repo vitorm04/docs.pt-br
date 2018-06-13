@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
 ms.openlocfilehash: 7a8314ba6109f25b4bc5f5952b358695844eadab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642903"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="f2828-102">Como: consultar arquivos com um atributo especificado ou o nome (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2828-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
 <span data-ttu-id="f2828-103">Este exemplo mostra como localizar todos os arquivos que têm uma extensão de nome de arquivo especificada (por exemplo ".txt") em uma árvore de diretório especificada.</span><span class="sxs-lookup"><span data-stu-id="f2828-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="f2828-104">Ele também mostra como retornar tanto os arquivos mais recentes como os mais antigo na árvore com base na hora de criação.</span><span class="sxs-lookup"><span data-stu-id="f2828-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  

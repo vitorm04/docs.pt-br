@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: 08a005f2927a76c9b29c1ff0092ea8282188b2b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647677"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a><span data-ttu-id="64c93-102">Como pesquisar em uma cadeia de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64c93-102">How to: Search Within a String (Visual Basic)</span></span>
 <span data-ttu-id="64c93-103">Este exemplo chama o <xref:System.String.IndexOf%2A> método em um <xref:System.String> objeto para relatar o índice da primeira ocorrência de uma subcadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="64c93-103">This example calls the <xref:System.String.IndexOf%2A> method on a <xref:System.String> object to report the index of the first occurrence of a substring.</span></span>  

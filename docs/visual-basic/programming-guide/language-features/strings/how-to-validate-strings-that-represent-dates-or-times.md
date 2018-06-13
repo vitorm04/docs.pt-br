@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647856"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a><span data-ttu-id="6c640-102">Como validar cadeias de caracteres que representam datas ou horas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c640-102">How to: Validate Strings That Represent Dates or Times (Visual Basic)</span></span>
 <span data-ttu-id="6c640-103">O seguinte exemplo de código define uma `Boolean` valor que indica se uma cadeia de caracteres representa uma data ou hora válida.</span><span class="sxs-lookup"><span data-stu-id="6c640-103">The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.</span></span>  

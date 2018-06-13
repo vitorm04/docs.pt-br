@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 ms.openlocfilehash: b77be0d9b1f9f6c5dcfe7aed90b0e16b614f26aa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645662"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a><span data-ttu-id="f677a-102">Como: gravar um LINQ para o método de eixo XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f677a-102">How to: Write a LINQ to XML Axis Method (Visual Basic)</span></span>
 <span data-ttu-id="f677a-103">Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="f677a-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="f677a-104">Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos.</span><span class="sxs-lookup"><span data-stu-id="f677a-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="f677a-105">Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f677a-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  

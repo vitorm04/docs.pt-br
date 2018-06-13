@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
 ms.openlocfilehash: 0e8a3313a41338f28a225a6d94fe5a4eb5210b8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645883"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="5bc60-102">Visão geral sobre namespaces (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5bc60-102">Namespaces Overview (LINQ to XML)</span></span>
 <span data-ttu-id="5bc60-103">Este tópico apresenta namespaces, a classe <xref:System.Xml.Linq.XName> e a classe <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="5bc60-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  

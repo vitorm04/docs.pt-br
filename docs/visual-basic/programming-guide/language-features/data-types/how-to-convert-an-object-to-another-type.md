@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
 ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647612"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a><span data-ttu-id="7d6ce-102">Como converter um objeto em outro tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7d6ce-102">How to: Convert an Object to Another Type in Visual Basic</span></span>
 <span data-ttu-id="7d6ce-103">Converter um `Object` variável para outro tipo de dados usando uma palavra-chave de conversão, como [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md).</span><span class="sxs-lookup"><span data-stu-id="7d6ce-103">You convert an `Object` variable to another data type by using a conversion keyword such as [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).</span></span>  

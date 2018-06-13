@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
 ms.openlocfilehash: 13500bc606cb99a4264e04657f4a0a8090f07174
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643556"
 ---
 # <a name="how-to-project-an-anonymous-type-visual-basic"></a><span data-ttu-id="d60a3-102">Como: projeto de um tipo anônimo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d60a3-102">How to: Project an Anonymous Type (Visual Basic)</span></span>
 <span data-ttu-id="d60a3-103">Em alguns casos você pode querer projetar uma consulta a um novo tipo, mesmo que você soubesse que você usará apenas este tipo para um curto quando.</span><span class="sxs-lookup"><span data-stu-id="d60a3-103">In some cases you might want to project a query to a new type, even though you know you will only use this type for a short while.</span></span> <span data-ttu-id="d60a3-104">É muito trabalho adicional para criar apenas um novo tipo para usar na projeção.</span><span class="sxs-lookup"><span data-stu-id="d60a3-104">It is a lot of extra work to create a new type just to use in the projection.</span></span> <span data-ttu-id="d60a3-105">Uma abordagem mais eficiente nesse caso é projeto para um tipo anônimo.</span><span class="sxs-lookup"><span data-stu-id="d60a3-105">A more efficient approach in this case is to project to an anonymous type.</span></span> <span data-ttu-id="d60a3-106">Tipos anônimos permitem que você defina uma classe, então declare e inicialize um objeto de aquela classe, sem dar um nome para a classe.</span><span class="sxs-lookup"><span data-stu-id="d60a3-106">Anonymous types allow you to define a class, then declare and initialize an object of that class, without giving the class a name.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472381"
 ---
 # <a name="authentication-in-sql-server"></a><span data-ttu-id="a8582-102">Autenticação no SQL Server</span><span class="sxs-lookup"><span data-stu-id="a8582-102">Authentication in SQL Server</span></span>
 <span data-ttu-id="a8582-103">SQL Server dá suporte a dois modos de autenticação, o modo de autenticação do Windows e o modo misto.</span><span class="sxs-lookup"><span data-stu-id="a8582-103">SQL Server supports two authentication modes, Windows authentication mode and mixed mode.</span></span>  

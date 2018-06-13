@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643469"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a><span data-ttu-id="b0477-102">Como: Filtrar em um elemento opcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0477-102">How to: Filter on an Optional Element (Visual Basic)</span></span>
 <span data-ttu-id="b0477-103">Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML.</span><span class="sxs-lookup"><span data-stu-id="b0477-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="b0477-104">A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele.</span><span class="sxs-lookup"><span data-stu-id="b0477-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="b0477-105">No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.</span><span class="sxs-lookup"><span data-stu-id="b0477-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  

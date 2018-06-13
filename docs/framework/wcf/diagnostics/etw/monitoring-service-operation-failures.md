@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803761"
 ---
 # <a name="monitoring-service-operation-failures"></a><span data-ttu-id="9b486-102">Monitorando operações de serviços com falha</span><span class="sxs-lookup"><span data-stu-id="9b486-102">Monitoring Service Operation Failures</span></span>
 <span data-ttu-id="9b486-103">Se o rastreamento analítico é habilitado para um aplicativo, falhas de serviço podem facilmente ser monitoradas no Visualizador de eventos.</span><span class="sxs-lookup"><span data-stu-id="9b486-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="9b486-104">Este tópico demonstra como determinar quando uma operação de serviço falha e como determinar o que causou a falha.</span><span class="sxs-lookup"><span data-stu-id="9b486-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549585"
 ---
 # <a name="iteration-statements-c-reference"></a><span data-ttu-id="cc8a4-102">Instruções de iteração (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="cc8a4-102">Iteration Statements (C# Reference)</span></span>
 

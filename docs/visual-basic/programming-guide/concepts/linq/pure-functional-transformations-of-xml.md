@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
 ms.openlocfilehash: 25719fc53235424b6a1e2b779ab4e6bdfbe6b4d3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645165"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a><span data-ttu-id="a1a9c-102">Transformações e puras XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a1a9c-102">Pure Functional Transformations of XML (Visual Basic)</span></span>
 <span data-ttu-id="a1a9c-103">Esta seção fornece um tutorial funcional de transformação para XML.</span><span class="sxs-lookup"><span data-stu-id="a1a9c-103">This section provides a functional transformation tutorial for XML.</span></span> <span data-ttu-id="a1a9c-104">Isso inclui explicações sobre conceitos e as compilações de idioma que você deve compreender para usar transformações funcionais, e os exemplos chave de usar transformações e para manipular um documento XML.</span><span class="sxs-lookup"><span data-stu-id="a1a9c-104">This includes explanations of the main concepts and language constructs that you must understand to use functional transformations, and examples of using functional transformations to manipulate an XML document.</span></span> <span data-ttu-id="a1a9c-105">Embora este tutorial fornece exemplos de código LINQ to XML, todos os conceitos fundamentais também se aplicam ao outro LINQ tecnologias.</span><span class="sxs-lookup"><span data-stu-id="a1a9c-105">Although this tutorial provides LINQ to XML code examples, all of the underlying concepts also apply to other LINQ technologies.</span></span>  

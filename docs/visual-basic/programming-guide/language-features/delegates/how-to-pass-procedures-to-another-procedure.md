@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647179"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="1243d-102">Como passar procedimentos para outro procedimento no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1243d-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
 <span data-ttu-id="1243d-103">Este exemplo mostra como usar delegados para passar um procedimento para outro procedimento.</span><span class="sxs-lookup"><span data-stu-id="1243d-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  

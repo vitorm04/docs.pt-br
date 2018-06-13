@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
 ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646803"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="1a44e-102">Introdução a literais XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1a44e-102">Introduction to XML Literals in Visual Basic</span></span>
 <span data-ttu-id="1a44e-103">Esta seção fornece informações sobre como criar árvores XML no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1a44e-103">This section provides information about creating XML trees in Visual Basic.</span></span>  

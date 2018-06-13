@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636481"
 ---
 # <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="53f4a-102">E/s de arquivo com o tipo &#39; &lt;typename&gt; &#39; não é válido</span><span class="sxs-lookup"><span data-stu-id="53f4a-102">File I/O with type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="53f4a-103">Você está tentando gravar um tipo sem suporte em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="53f4a-103">You are attempting to write an unsupported type to a file.</span></span>  
