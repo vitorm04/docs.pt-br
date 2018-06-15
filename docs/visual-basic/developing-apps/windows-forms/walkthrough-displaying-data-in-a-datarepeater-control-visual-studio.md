@@ -7,21 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231497"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Instruções passo a passo: exibindo dados em um controle DataRepeater (Visual Studio)
 Este passo a passo fornece um cenário básico do início ao fim para exibir dados associados em um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controle.  
   
-## <a name="prerequisite"></a>Pré-requisitos  
+## <a name="prerequisite"></a>Pré-requisito  
  Este passo a passo requer o banco de dados de exemplo Northwind.  
   
- Se você não tiver esse banco de dados no computador de desenvolvimento, você pode baixá-lo do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Para obter instruções, consulte [baixando bancos de dados de exemplo](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Se você não tiver esse banco de dados no computador de desenvolvimento, você pode baixá-lo do Microsoft Download Center. Para obter instruções, consulte [baixando bancos de dados de exemplo](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  A primeira parte deste passo a passo consiste em quatro tarefas principais:  
   
 -   Criando uma solução.  
