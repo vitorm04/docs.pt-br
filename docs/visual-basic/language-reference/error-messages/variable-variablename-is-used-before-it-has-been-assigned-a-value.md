@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596913"
 ---
 # <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a><span data-ttu-id="9ea1e-102">Variável &#39; &lt;variablename&gt; &#39; é usada antes de receber um valor</span><span class="sxs-lookup"><span data-stu-id="9ea1e-102">Variable &#39;&lt;variablename&gt;&#39; is used before it has been assigned a value</span></span>
 <span data-ttu-id="9ea1e-103">Variável '\<variablename >' é usada antes de receber um valor.</span><span class="sxs-lookup"><span data-stu-id="9ea1e-103">Variable '\<variablename>' is used before it has been assigned a value.</span></span> <span data-ttu-id="9ea1e-104">Uma exceção de referência nula pode ocorrer em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9ea1e-104">A null reference exception could result at run time.</span></span>  

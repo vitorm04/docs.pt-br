@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604751"
 ---
 # <a name="group-join-clause-visual-basic"></a><span data-ttu-id="66cc0-102">Cláusula Join Group (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66cc0-102">Group Join Clause (Visual Basic)</span></span>
 <span data-ttu-id="66cc0-103">Combina duas coleções em uma única coleção hierárquica.</span><span class="sxs-lookup"><span data-stu-id="66cc0-103">Combines two collections into a single hierarchical collection.</span></span> <span data-ttu-id="66cc0-104">A operação de junção é baseada em chaves correspondentes.</span><span class="sxs-lookup"><span data-stu-id="66cc0-104">The join operation is based on matching keys.</span></span>  

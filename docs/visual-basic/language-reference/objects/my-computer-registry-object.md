@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596064"
 ---
 # <a name="mycomputerregistry-object"></a><span data-ttu-id="898c3-102">Objeto My.Computer.Registry</span><span class="sxs-lookup"><span data-stu-id="898c3-102">My.Computer.Registry Object</span></span>
 <span data-ttu-id="898c3-103">Fornece propriedades e métodos para manipular o Registro.</span><span class="sxs-lookup"><span data-stu-id="898c3-103">Provides properties and methods for manipulating the registry.</span></span>  

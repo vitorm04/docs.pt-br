@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560524"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a><span data-ttu-id="ad852-102">Como especificar HandoffBehavior entre animações de storyboard</span><span class="sxs-lookup"><span data-stu-id="ad852-102">How to: Specify HandoffBehavior Between Storyboard Animations</span></span>
 <span data-ttu-id="ad852-103">Este exemplo mostra como especificar o comportamento de entrega entre animações de storyboard.</span><span class="sxs-lookup"><span data-stu-id="ad852-103">This example shows how to specify handoff behavior between storyboard animations.</span></span> <span data-ttu-id="ad852-104">O <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> propriedade <xref:System.Windows.Media.Animation.BeginStoryboard> Especifica como novas animações interagem com quaisquer outras existentes já aplicadas a uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="ad852-104">The <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> property of <xref:System.Windows.Media.Animation.BeginStoryboard> specifies how new animations interact with any existing ones that are already applied to a property.</span></span>  

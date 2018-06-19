@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540456"
 ---
 # <a name="base-elements-how-to-topics"></a><span data-ttu-id="2e175-102">Tópicos explicativos de elementos base</span><span class="sxs-lookup"><span data-stu-id="2e175-102">Base Elements How-to Topics</span></span>
 <span data-ttu-id="2e175-103">Os tópicos nesta seção descrevem como usar os quatro elementos base WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>.</span><span class="sxs-lookup"><span data-stu-id="2e175-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  

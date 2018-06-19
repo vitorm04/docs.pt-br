@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561469"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="b7d6a-102">Como disparar reprodução de mídia com um evento de usuário</span><span class="sxs-lookup"><span data-stu-id="b7d6a-102">How to: Trigger Media Playback with a User Event</span></span>
 <span data-ttu-id="b7d6a-103">Este exemplo mostra como sincronizar reprodução de mídia com um evento.</span><span class="sxs-lookup"><span data-stu-id="b7d6a-103">This example shows how to synchronize media playback with an event.</span></span>  

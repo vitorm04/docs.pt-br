@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596224"
 ---
 # <a name="byref-visual-basic"></a><span data-ttu-id="bcbc7-102">ByRef (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bcbc7-102">ByRef (Visual Basic)</span></span>
 <span data-ttu-id="bcbc7-103">Especifica que um argumento é passado de tal forma que o procedimento chamado pode alterar o valor de uma variável subjacente ao argumento no código de chamada.</span><span class="sxs-lookup"><span data-stu-id="bcbc7-103">Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.</span></span>  

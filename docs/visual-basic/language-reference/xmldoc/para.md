@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
 ms.openlocfilehash: cb80f4b39bee128790b311732adf1202dbbc6993
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601719"
 ---
 # <a name="ltparagt-visual-basic"></a><span data-ttu-id="08724-102">&lt;para&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08724-102">&lt;para&gt; (Visual Basic)</span></span>
 <span data-ttu-id="08724-103">Especifica que o conteúdo é formatado como um parágrafo.</span><span class="sxs-lookup"><span data-stu-id="08724-103">Specifies that the content is formatted as a paragraph.</span></span>  

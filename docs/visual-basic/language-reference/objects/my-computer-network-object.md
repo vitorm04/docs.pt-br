@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
 ms.openlocfilehash: 542d4af063e48314982f8e3a5c4e265a5ef4166d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596958"
 ---
 # <a name="mycomputernetwork-object"></a><span data-ttu-id="50151-102">Objeto My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="50151-102">My.Computer.Network Object</span></span>
 <span data-ttu-id="50151-103">Fornece uma propriedade, um evento e métodos para interagir com a rede à qual o computador está conectado.</span><span class="sxs-lookup"><span data-stu-id="50151-103">Provides a property, event, and methods for interacting with the network to which the computer is connected.</span></span>  
