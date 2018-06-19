@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638506"
 ---
 # <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a><span data-ttu-id="b2fa6-102">Não foi possível concluir a operação porque o diretório de destino está no diretório de origem</span><span class="sxs-lookup"><span data-stu-id="b2fa6-102">Could not complete operation since target directory is under source directory</span></span>
 <span data-ttu-id="b2fa6-103">Uma operação cíclica falhou.</span><span class="sxs-lookup"><span data-stu-id="b2fa6-103">A cyclic operation has failed.</span></span> <span data-ttu-id="b2fa6-104">Ciclo de operações cíclicas e, portanto, não é possível concluir.</span><span class="sxs-lookup"><span data-stu-id="b2fa6-104">Cyclic operations cycle and therefore cannot complete.</span></span> <span data-ttu-id="b2fa6-105">Por exemplo, o objeto A pode tentar herdar do objeto B, que por sua vez, herda do objeto A.</span><span class="sxs-lookup"><span data-stu-id="b2fa6-105">For example, Object A may attempt to inherit from Object B, which in turn inherits from Object A.</span></span>  

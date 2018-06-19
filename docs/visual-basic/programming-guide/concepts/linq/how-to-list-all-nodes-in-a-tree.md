@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: b7bd2f3cebbf660209c47f5a4797f343b2b1e4e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643738"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a><span data-ttu-id="88f19-102">Como: lista todos os nós em uma árvore (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88f19-102">How to: List All Nodes in a Tree (Visual Basic)</span></span>
 <span data-ttu-id="88f19-103">Às vezes é útil listar todos os nós em uma árvore.</span><span class="sxs-lookup"><span data-stu-id="88f19-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="88f19-104">Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore.</span><span class="sxs-lookup"><span data-stu-id="88f19-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="88f19-105">Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="88f19-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  

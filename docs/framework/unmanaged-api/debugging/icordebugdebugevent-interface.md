@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a2543a9629c60fde2b2f14c11898ba3e9df3c82
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419306"
 ---
 # <a name="icordebugdebugevent-interface"></a><span data-ttu-id="53dda-102">Interface ICorDebugDebugEvent</span><span class="sxs-lookup"><span data-stu-id="53dda-102">ICorDebugDebugEvent Interface</span></span>
 <span data-ttu-id="53dda-103">Define a interface base da qual derivam todos os eventos de depuração `ICorDebug`.</span><span class="sxs-lookup"><span data-stu-id="53dda-103">Defines the base interface from which all `ICorDebug` debug events derive.</span></span>  

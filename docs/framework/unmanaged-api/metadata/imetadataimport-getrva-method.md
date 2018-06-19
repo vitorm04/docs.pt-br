@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1232e8c574f263f709a9b66c7b1b3d06cca5e4da
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447205"
 ---
 # <a name="imetadataimportgetrva-method"></a><span data-ttu-id="f4cf4-102">Método IMetaDataImport::GetRVA</span><span class="sxs-lookup"><span data-stu-id="f4cf4-102">IMetaDataImport::GetRVA Method</span></span>
 <span data-ttu-id="f4cf4-103">Obtém o endereço virtual relativo (RVA) e os sinalizadores de implementação do método ou campo representado pelo token especificado.</span><span class="sxs-lookup"><span data-stu-id="f4cf4-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span></span>  

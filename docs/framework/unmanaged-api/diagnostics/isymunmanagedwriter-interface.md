@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 86aa8d3d23d82d51cfe4e6ce6b15b554704ad41c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435466"
 ---
 # <a name="isymunmanagedwriter-interface"></a><span data-ttu-id="d4fb6-102">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="d4fb6-102">ISymUnmanagedWriter Interface</span></span>
 <span data-ttu-id="d4fb6-103">Representa um gravador de símbolo e fornece métodos para definir documentos, pontos de sequência, escopos de léxicos e variáveis.</span><span class="sxs-lookup"><span data-stu-id="d4fb6-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span>  

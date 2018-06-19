@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1982226e90792d4bbda1cb023d80dec96fcb2060
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418100"
 ---
 # <a name="icordebugilcode2-interface"></a><span data-ttu-id="e5665-102">Interface ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="e5665-102">ICorDebugILCode2 Interface</span></span>
 <span data-ttu-id="e5665-103">[Com suporte no .NET Framework 4.5.2 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="e5665-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

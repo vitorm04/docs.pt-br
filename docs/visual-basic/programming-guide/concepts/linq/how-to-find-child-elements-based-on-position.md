@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
 ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641034"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="d2ebf-102">Como: localizar elementos filho com base na posição (XPath-LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2ebf-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="d2ebf-103">Às vezes você deseja localizar elementos com base em sua posição.</span><span class="sxs-lookup"><span data-stu-id="d2ebf-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="d2ebf-104">Você pode desejar localizar o segundo elemento, ou você talvez queira localizar o terceiro através do quinto elemento.</span><span class="sxs-lookup"><span data-stu-id="d2ebf-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  

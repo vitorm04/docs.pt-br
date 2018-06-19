@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a38c8323157cee866ac0ecab97532b9b72a932b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454118"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a><span data-ttu-id="5db03-102">Método ICorProfilerInfo2::GetThreadStaticAddress</span><span class="sxs-lookup"><span data-stu-id="5db03-102">ICorProfilerInfo2::GetThreadStaticAddress Method</span></span>
 <span data-ttu-id="5db03-103">Obtém o endereço do campo de thread estático especificado está no escopo do thread especificado.</span><span class="sxs-lookup"><span data-stu-id="5db03-103">Gets the address of the specified thread-static field that is in the scope of the specified thread.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1f4c8e9a7ce5eddde18c1266cb724d5c3b0d5f41
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450315"
 ---
 # <a name="corprfgcgenerationrange-structure"></a><span data-ttu-id="5ec79-102">Estrutura COR_PRF_GC_GENERATION_RANGE</span><span class="sxs-lookup"><span data-stu-id="5ec79-102">COR_PRF_GC_GENERATION_RANGE Structure</span></span>
 <span data-ttu-id="5ec79-103">Descreve um intervalo (ou seja, um bloco) de memória que está passando por coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="5ec79-103">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  

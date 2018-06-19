@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640564"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a><span data-ttu-id="01c30-102">Como: carregar e descarregar Assemblies (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01c30-102">How to: Load and Unload Assemblies (Visual Basic)</span></span>
 <span data-ttu-id="01c30-103">Os assemblies referenciados pelo seu programa serão automaticamente carregados e tempo de build, mas também é possível carregar assemblies específicos no domínio do aplicativo atual em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="01c30-103">The assemblies referenced by your program will automatically be loaded at build time, but it is also possible to load specific assemblies into the current application domain at runtime.</span></span> <span data-ttu-id="01c30-104">Para obter mais informações, consulte [Como carregar assemblies em um domínio do aplicativo](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span><span class="sxs-lookup"><span data-stu-id="01c30-104">For more information, see [How to: Load Assemblies into an Application Domain](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).</span></span>  
