@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487141"
 ---
 # <a name="service"></a><span data-ttu-id="c3532-102">Serviço</span><span class="sxs-lookup"><span data-stu-id="c3532-102">Service</span></span>
 <span data-ttu-id="c3532-103">Serviço</span><span class="sxs-lookup"><span data-stu-id="c3532-103">Service</span></span>  

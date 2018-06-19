@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604452"
 ---
 # <a name="ltlt-operator-visual-basic"></a><span data-ttu-id="1b756-102">&lt;&lt; Operador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b756-102">&lt;&lt; Operator (Visual Basic)</span></span>
 <span data-ttu-id="1b756-103">Executa um deslocamento aritmético à esquerda em um padrão de bit.</span><span class="sxs-lookup"><span data-stu-id="1b756-103">Performs an arithmetic left shift on a bit pattern.</span></span>  

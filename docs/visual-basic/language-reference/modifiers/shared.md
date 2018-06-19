@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604543"
 ---
 # <a name="shared-visual-basic"></a><span data-ttu-id="ff147-102">Compartilhado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff147-102">Shared (Visual Basic)</span></span>
 <span data-ttu-id="ff147-103">Especifica que um ou mais elementos de programação declarados estão associados com uma classe ou estrutura em geral e não com uma instância específica da classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="ff147-103">Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.</span></span>  

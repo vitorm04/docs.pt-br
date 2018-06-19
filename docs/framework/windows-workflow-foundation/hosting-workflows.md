@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514537"
 ---
 # <a name="hosting-workflows"></a><span data-ttu-id="c08a6-102">Hospedando fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="c08a6-102">Hosting Workflows</span></span>
 <span data-ttu-id="c08a6-103">Os tópicos desta seção discutem a hospedagem de fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="c08a6-103">The topics in this section discuss hosting workflows.</span></span>  
