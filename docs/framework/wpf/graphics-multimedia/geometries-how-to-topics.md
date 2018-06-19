@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557154"
 ---
 # <a name="geometries-how-to-topics"></a><span data-ttu-id="8c037-102">Tópicos explicativos de geometrias</span><span class="sxs-lookup"><span data-stu-id="8c037-102">Geometries How-to Topics</span></span>
 <span data-ttu-id="8c037-103">Os tópicos nesta seção demonstram como usar <xref:System.Windows.Media.Geometry> objetos em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="8c037-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  

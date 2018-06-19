@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561755"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a><span data-ttu-id="ee243-102">Como desenhar uma polilinha usando o elemento Polyline</span><span class="sxs-lookup"><span data-stu-id="ee243-102">How to: Draw a Polyline by Using the Polyline Element</span></span>
 <span data-ttu-id="ee243-103">Este exemplo mostra como desenhar uma polilinha, que é uma série de linhas conectadas, usando o <xref:System.Windows.Shapes.Polyline> elemento.</span><span class="sxs-lookup"><span data-stu-id="ee243-103">This example shows how to draw a polyline, which is a series of connected lines, by using the <xref:System.Windows.Shapes.Polyline> element.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566802"
 ---
 # <a name="xclass-directive"></a><span data-ttu-id="b3284-102">Diretiva x:Class</span><span class="sxs-lookup"><span data-stu-id="b3284-102">x:Class Directive</span></span>
 <span data-ttu-id="b3284-103">Configura a compilação da marcação XAML para unir classes parciais entre marcação e código.</span><span class="sxs-lookup"><span data-stu-id="b3284-103">Configures XAML markup compilation to join partial classes between markup and code-behind.</span></span> <span data-ttu-id="b3284-104">A classe código parcial é definida em um arquivo de código separado em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] idioma, enquanto a classe parcial da marcação é geralmente criada por geração de código durante a compilação de XAML.</span><span class="sxs-lookup"><span data-stu-id="b3284-104">The code partial class is defined in a separate code file in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, whereas the markup partial class is typically created by code generation during XAML compilation.</span></span>  

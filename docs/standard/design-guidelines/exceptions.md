@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570511"
 ---
 # <a name="design-guidelines-for-exceptions"></a><span data-ttu-id="5e318-102">Diretrizes de design para exceções</span><span class="sxs-lookup"><span data-stu-id="5e318-102">Design Guidelines for Exceptions</span></span>
 <span data-ttu-id="5e318-103">Manipulação de exceção tem muitas vantagens em relação a relatórios de erros com base em valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="5e318-103">Exception handling has many advantages over return-value-based error reporting.</span></span> <span data-ttu-id="5e318-104">Design de boa estrutura ajuda o desenvolvedor do aplicativo perceber os benefícios de exceções.</span><span class="sxs-lookup"><span data-stu-id="5e318-104">Good framework design helps the application developer realize the benefits of exceptions.</span></span> <span data-ttu-id="5e318-105">Esta seção aborda os benefícios de exceções e apresenta diretrizes para usá-las com eficiência.</span><span class="sxs-lookup"><span data-stu-id="5e318-105">This section discusses the benefits of exceptions and presents guidelines for using them effectively.</span></span>  
