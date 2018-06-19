@@ -72,6 +72,8 @@
 ## [Pré-requisitos do macOS](core/macos-prerequisites.md)
 ## [Pré-requisitos do Linux](core/linux-prerequisites.md)
 ## [Novidades do .NET Core](core/whats-new/index.md)
+### [Novidades do .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
+### [Novidades do .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Tutoriais](core/tutorials/index.md)
 ### [Compilar uma solução completa do .NET Core no Windows usando o Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Introdução ao .NET Core no macOS](core/tutorials/using-on-macos.md)
@@ -96,6 +98,7 @@
 ### [Implantar aplicativos com ferramentas CLI](core/deploying/deploy-with-cli.md)
 ### [Implantar aplicativos com o Visual Studio](core/deploying/deploy-with-vs.md)
 ### [Criando um pacote NuGet com várias Ferramentas de Plataforma Cruzada](core/deploying/creating-nuget-packages.md)
+### [Roll forward independente de tempo de execução de implantação](core/deploying/runtime-patch-selection.md)
 ### [Repositório de pacote de tempo de execução](core/deploying/runtime-store.md)
 ## [Docker](core/docker/index.md)
 ### [Introdução ao .NET e ao Docker](core/docker/intro-net-docker.md)
@@ -122,20 +125,23 @@
 ## [Visão geral do SDK do .NET Core](core/sdk.md)
 ## [Ferramentas da CLI do .NET Core](core/tools/index.md)
 ### [Telemetria](core/tools/telemetry.md)
+### [Ferramentas globais](core/tools/global-tools.md)
 ### [Modelo de Extensibilidade](core/tools/extensibility.md)
 ### [Integração Contínua](core/tools/using-ci-with-cli.md)
 ### [Modelos personalizados](core/tools/custom-templates.md)
 ### [dotnet](core/tools/dotnet.md)
 ### [dotnet build](core/tools/dotnet-build.md)
+### [dotnet build-server](core/tools/dotnet-build-server.md)
 ### [dotnet clean](core/tools/dotnet-clean.md)
 ### [dotnet help](core/tools/dotnet-help.md)
 ### [dotnet install-script](core/tools/dotnet-install-script.md)
 ### [dotnet migrate](core/tools/dotnet-migrate.md)
 ### [dotnet msbuild](core/tools/dotnet-msbuild.md)
 ### [dotnet new](core/tools/dotnet-new.md)
-### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
-### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
-### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
+### dotnet nuget
+#### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
+#### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
+#### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
 ### [dotnet pack](core/tools/dotnet-pack.md)
 ### [dotnet publish](core/tools/dotnet-publish.md)
 ### [dotnet restore](core/tools/dotnet-restore.md)
@@ -143,6 +149,11 @@
 ### [dotnet sln](core/tools/dotnet-sln.md)
 ### [dotnet store](core/tools/dotnet-store.md)
 ### [dotnet test](core/tools/dotnet-test.md)
+### dotnet tool
+#### [dotnet tool install](core/tools/dotnet-tool-install.md)
+#### [dotnet tool list](core/tools/dotnet-tool-list.md)
+#### [dotnet tool uninstall](core/tools/dotnet-tool-uninstall.md)
+#### [dotnet tool update](core/tools/dotnet-tool-update.md)
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### Comandos de modificação de projeto
 #### Referências
@@ -155,6 +166,7 @@
 ### [global.json](core/tools/global-json.md)
 ## [Ferramentas adicionais do .NET Core](core/additional-tools/index.md)
 ### [Provedor de Referência de Serviço Web do WCF](core/additional-tools/wcf-web-service-reference-guide.md)
+### [dotnet-svcutil](core/additional-tools/dotnet-svcutil-guide.md)
 ### [XML Serializer Generator](core/additional-tools/xml-serializer-generator.md)
 ## [Portabilidade do .NET Framework](core/porting/index.md)
 ### [Organizando projetos para o .NET Core](core/porting/project-structure.md)
@@ -215,10 +227,11 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [Novidades no C#](csharp/whats-new/index.md)
-### [Novidades no C# 7.2](csharp/whats-new/csharp-7-2.md)
-### [Novidades no C# 7.1](csharp/whats-new/csharp-7-1.md)
-### [Novidades no C# 7.0](csharp/whats-new/csharp-7.md)
-### [Novidades no C# 6](csharp/whats-new/csharp-6.md)
+### [C# 7.3](csharp/whats-new/csharp-7-3.md)
+### [C# 7.2](csharp/whats-new/csharp-7-2.md)
+### [C# 7.1](csharp/whats-new/csharp-7-1.md)
+### [C# 7.0](csharp/whats-new/csharp-7.md)
+### [C# 6](csharp/whats-new/csharp-6.md)
 ### [Histórico de versão do C#](csharp/whats-new/csharp-version-history.md)
 ### [Relações entre linguagem e estrutura](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
@@ -549,6 +562,7 @@
 ### [Instruções passo a passo: implementando a herança com objetos COM](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [Referência de Linguagem](visual-basic/language-reference/index.md)
+### [Configurar versão da linguagem](visual-basic/language-reference/configure-language-version.md)
 ### [Convenções Tipográficas e de Código](visual-basic/language-reference/typographic-and-code-conventions.md)
 ### [Membros da Biblioteca em Tempo de Execução do Visual Basic](visual-basic/language-reference/runtime-library-members.md)
 ### [Palavras-chave](visual-basic/language-reference/keywords/index.md)
@@ -1117,11 +1131,12 @@
 <!-- ML.NET Content -->
 # [Guia do ML.NET](machine-learning/index.md)
 ## [Tutoriais](machine-learning/tutorials/index.md)
-### [Análise de Sentimento (classificação)](machine-learning/tutorials/sentiment-analysis.md)
+### [Análise de sentimento (classificação binária)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Previsão do valor da corrida do táxi (regressão)](machine-learning/tutorials/taxi-fare.md)
 ## [Recursos](machine-learning/resources/index.md)
-### [Glossário do Machine Learning](machine-learning/resources/glossary.md)
-### [Noções básicas do Machine Learning](machine-learning/resources/basics.md)
+### [Glossário do machine learning](machine-learning/resources/glossary.md)
+### [Noções básicas do machine learning](machine-learning/resources/basics.md)
+### [Tarefas do machine learning](machine-learning/resources/tasks.md)
 
 <!-- End ML.NET Content -->
 

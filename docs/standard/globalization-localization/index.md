@@ -1,25 +1,26 @@
 ---
-title: Globalização e localização de aplicativos do .NET Framework
-ms.date: 03/30/2017
+title: Globalizando e localizando aplicativos do .NET
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35250993"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>Globalização e localização de aplicativos do .NET Framework
+# <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
 O desenvolvimento de um [aplicativo pronto para o mundo](http://msdn.microsoft.com/goglobal/bb978433.aspx), incluindo um aplicativo que possa ser localizado em um ou mais idiomas, envolve três etapas: globalização, análise de possibilidade de localização e localização.  
   
  [Globalização](../../../docs/standard/globalization-localization/globalization.md)  
@@ -37,7 +38,7 @@ O desenvolvimento de um [aplicativo pronto para o mundo](http://msdn.microsoft.c
   
 -   Isso resulta em aplicativos localizados que são mais estáveis e possuem menos bugs.  
   
- O .NET Framework fornece suporte abrangente ao desenvolvimento de aplicativos preparados para o mundo e localizados. Em particular, muitos tipos membros de tipos na biblioteca de classes do .NET Framework auxiliam na globalização ao retornarem valores que refletem as convenções da cultura do usuário atual ou de uma cultura específica. Além disso, o .NET Framework oferece suporte assemblies satélites que facilitam o processo de localizar um aplicativo.  
+ O .NET fornece suporte abrangente ao desenvolvimento de aplicativos preparados para o mundo e localizados. Em particular, muitos membros de tipos na biblioteca de classes do .NET auxiliam na globalização ao retornarem valores que refletem as convenções da cultura do usuário atual ou de uma cultura específica. Além disso, o .NET Framework dá suporte a assemblies satélites que facilitam o processo de localizar um aplicativo.  
   
  Confira mais informações na [Documentação de globalização](/globalization/).  
   
@@ -51,10 +52,10 @@ O desenvolvimento de um [aplicativo pronto para o mundo](http://msdn.microsoft.c
  [Localização](../../../docs/standard/globalization-localization/localization.md)  
  Discute o estágio final da criação de um aplicativo localizado, o que envolve a personalização da interface de usuário de um aplicativo para regiões ou culturas específicas.  
   
- [Operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Descreve como usar métodos e classes do .NET Framework sensíveis a culturas por padrão para obter resultados que não diferenciam culturas.  
+ [Operações de cadeia de caracteres sem diferenciação de cultura](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ Descreve como usar métodos e classes do .NET sensíveis a culturas por padrão para obter resultados sem diferenciação de cultura.  
   
- [Melhores práticas para o desenvolvimento de aplicativos prontos para o mundo](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ [Práticas recomendadas para o desenvolvimento de aplicativos prontos para o mundo](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Descreve as práticas recomendadas a serem seguidas para globalização, localização e desenvolvimento de aplicativos ASP.NET prontos para o mundo.  
   
 ## <a name="reference"></a>Referência  
