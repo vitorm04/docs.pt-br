@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565893"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207541"
 ---
 # <a name="xkey-directive"></a>Diretiva x:Key
 Identifica os elementos que são criados e referenciados em um dicionário definido em XAML. Adicionando um `x:Key` valor para um elemento de objeto XAML é a maneira mais comum para identificar um recurso em um dicionário de recurso, por exemplo, em um WPF <xref:System.Windows.ResourceDictionary>.  
@@ -73,7 +73,7 @@ Identifica os elementos que são criados e referenciados em um dicionário defin
   
  Chaves e nomes de usam diretivas diferentes e elementos de linguagem (`x:Key` versus `x:Name`) na definição de XAML básico. Chaves e nomes também são usados em situações diferentes pela definição do WPF e aplicativo desses conceitos. Para obter detalhes, consulte [WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- Como mencionado anteriormente, o valor de uma chave pode ser fornecido por meio de uma extensão de marcação e pode ser diferente de um valor de cadeia de caracteres. Um exemplo de cenário WPF que é o valor de `x:Key` pode ser um[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Certos controles expõem uma chave de estilo de tipo para um recurso de estilo personalizado que influencia a parte da aparência e comportamento do controle sem substituir totalmente o estilo. Um exemplo de tal chave é <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Como mencionado anteriormente, o valor de uma chave pode ser fornecido por meio de uma extensão de marcação e pode ser diferente de um valor de cadeia de caracteres. Um exemplo de cenário WPF que é o valor de `x:Key` pode ser um [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Certos controles expõem uma chave de estilo de tipo para um recurso de estilo personalizado que influencia a parte da aparência e comportamento do controle sem substituir totalmente o estilo. Um exemplo de tal chave é <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  O recurso de dicionário mesclado WPF apresenta considerações adicionais para exclusividade de chave e o comportamento de pesquisa de chave. Para obter mais informações, consulte [Dicionários de recursos mesclados](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   

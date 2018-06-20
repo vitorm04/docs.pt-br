@@ -2,12 +2,12 @@
 title: Expressões de computação (F#)
 description: 'Saiba como criar uma sintaxe conveniente para escrever computações em F # que podem ser ordenadas e combinadas que usam construções de fluxo de controle e associações.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566607"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207427"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -15,6 +15,7 @@ Expressões de computação em F # fornecem uma sintaxe conveniente para criar c
 
 
 ## <a name="built-in-workflows"></a>Fluxos de trabalho internos
+
 Expressões de sequência são um exemplo de uma expressão de computação, assim como fluxos de trabalho assíncronos e expressões de consulta. Para obter mais informações, consulte [sequências](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de consulta](query-expressions.md).
 
 Alguns recursos comuns a expressões de sequência e fluxos de trabalho assíncronos e ilustram a sintaxe básica de uma expressão de computação:

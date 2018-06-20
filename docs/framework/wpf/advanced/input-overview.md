@@ -24,15 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 00a1f25546bb8dd4f8a587c8a5f03f1043632e08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77f69fb73d40c76257accc989d4a9a57ed992cf6
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549523"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207645"
 ---
 # <a name="input-overview"></a>Visão geral da entrada
-<a name="introduction"></a> O subsistema [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um poderoso [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obter entrada de uma variedade de dispositivos, incluindo o mouse, teclado, toque e caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.  
+<a name="introduction"></a> O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] subsistema fornece uma poderosa [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obter a entrada de uma variedade de dispositivos, incluindo o mouse, teclado, toque e caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.  
   
   
 <a name="input_api"></a>   

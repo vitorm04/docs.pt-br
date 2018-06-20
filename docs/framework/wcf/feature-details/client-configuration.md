@@ -2,12 +2,12 @@
 title: Configuração do cliente
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26557b6cbbe33626152878eccab62de11d22660d
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493124"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207411"
 ---
 # <a name="client-configuration"></a>Configuração do cliente
 Você pode usar a configuração do cliente Windows Communication Foundation (WCF) para especificar o endereço, associação, comportamento e contrato, as propriedades de "ABC" do ponto de extremidade de cliente, que os clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cujos atributos são usados para configurar o ponto de extremidade ABC. Esses atributos são discutidos na seção "Configurando pontos de extremidade" deste tópico.  
@@ -91,7 +91,7 @@ Você pode usar a configuração do cliente Windows Communication Foundation (WC
  O `contract` atributo especifica qual contrato que o ponto de extremidade está expondo. Esse valor é mapeado para o <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> do <xref:System.ServiceModel.ServiceContractAttribute>. O valor padrão é o nome de tipo completo da classe que implementa o serviço.  
   
 ### <a name="configuring-metadata"></a>Configuração de metadados  
- O [ \<metadados >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento é usado para especificar configurações usadas para registrar metadados importar extensões. Para obter mais informações sobre como estender o sistema de metadados, consulte[estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ O [ \<metadados >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento é usado para especificar configurações usadas para registrar metadados importar extensões. Para obter mais informações sobre como estender o sistema de metadados, consulte [estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

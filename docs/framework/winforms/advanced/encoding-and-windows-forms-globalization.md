@@ -19,11 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: e610b4fc5506043835377bf9f5750550d8aec694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208540"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Codificação e globalização de formulários do Windows Forms
 Aplicativos dos Windows Forms são totalmente habilitados para Unicode, o que significa que cada caractere é representado por um número exclusivo, independente da plataforma, programa ou linguagem. Para obter mais informações sobre Unicode, consulte o [site da Unicode Consortium](http://www.unicode.org).  
@@ -35,5 +36,6 @@ Aplicativos dos Windows Forms são totalmente habilitados para Unicode, o que si
   
  Para alternativas cientes do Unicode para a <xref:System.Windows.Forms.ToolBar> e <xref:System.Windows.Forms.StatusBar> controles, use o <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.StatusStrip> controles, que substituem estes controles mais antigos. Para manter uma aparência semelhante entre elementos visuais em seu aplicativo, use o <xref:System.Windows.Forms.MenuStrip> controle menus de renderização, em vez de <xref:System.Windows.Forms.MainMenu>. Como <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.StatusStrip>, <xref:System.Windows.Forms.MenuStrip> também pode processar e exibir os caracteres Unicode.  
   
-## <a name="see-also"></a>Consulte também  
- [Globalizando o Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+
+[Globalizando aplicativos do Windows Forms](globalizing-windows-forms.md)

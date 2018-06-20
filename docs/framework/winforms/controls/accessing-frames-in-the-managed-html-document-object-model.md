@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: a9bd6bb730ff84a48c180c7f1ac435afbf75fbc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b48a93cef2ea8fd2d39f58d8f458c4b287a10154
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525511"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207502"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  
@@ -38,7 +38,7 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
   
  Esta regra também se aplica ao windows que você abre usando o <xref:System.Windows.Forms.HtmlWindow.Open%2A> e <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> métodos. Se a janela abrir está em um domínio diferente da página hospedada no <xref:System.Windows.Forms.WebBrowser> controle, você não poderá mover a janela ou examinar o conteúdo. Essas restrições são aplicadas também se você usar o <xref:System.Windows.Forms.WebBrowser> controle para exibir um site que é diferente do site da Web usado para implantar seu aplicativo com base em formulários do Windows. Se você usar [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] tecnologia de implantação para instalar o aplicativo do site da Web A e você usar o <xref:System.Windows.Forms.WebBrowser> para exibir o site da Web B, não será capaz de dados do site de acesso do B.  
   
- Para obter mais informações sobre a segurança de scripts entre sites, consulte[Sobre Scripts Entre Quadros e Segurança](http://msdn.microsoft.com/library/ms533028.aspx).  
+ Para obter mais informações sobre a criação de scripts entre sites, consulte [sobre Cross-Frame Scripting e segurança](http://msdn.microsoft.com/library/ms533028.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de quadro &#124; objeto do quadro](http://msdn.microsoft.com/library/ms535250.aspx)  

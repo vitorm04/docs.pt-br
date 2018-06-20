@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208548"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Aprimorando aplicativos do Windows Forms
 O Windows Forms contém muitos recursos que você pode usar para aprimorar seus aplicativos do Windows para atender às necessidades específicas dos seus usuários. Os tópicos a seguir descrevem esses recursos e como usá-los.  
@@ -30,7 +31,7 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Rede em Aplicativos dos Windows Forms](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  Contém links para tópicos que descrevem e mostram como usar redes nos Windows Forms.  
   
- [Globalizando o Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Globalizando aplicativos do Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  Contém links para tópicos que mostram como globalizar aplicativos dos Windows Forms.  
   
  [Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

@@ -2,12 +2,12 @@
 title: Atualização dinâmica
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520351"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207515"
 ---
 # <a name="dynamic-update"></a>Atualização dinâmica
 A atualização dinâmica fornece um mecanismo para que os desenvolvedores de aplicativos de fluxo de trabalho atualizem a definição de fluxo de trabalho de uma instância do fluxo de trabalho persistida. Isso pode ser implementar uma correção de bug, novos requisitos ou acomodar alterações inesperadas. Este tópico fornece uma visão geral da funcionalidade de atualização dinâmica introduzida no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Assim que a atualização dinâmica tiver sido aplicada, a instância do fluxo de trabalho poderá ser retomada. Observe que a nova definição atualizada e o <xref:System.Activities.WorkflowIdentity> devem ser usados.  
   
 > [!NOTE]
->  Para obter mais informações sobre como trabalhar com <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, consulte[usando WorkflowIdentity e controle de versão](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Para obter mais informações sobre como trabalhar com <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, consulte [usando WorkflowIdentity e controle de versão](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  No exemplo a seguir, o fluxo de trabalho do `MortgageWorkflow_v1.1.xaml` do exemplo anterior foi compilado, e foi carregado e retomado usando a definição atualizada do fluxo de trabalho.  
   

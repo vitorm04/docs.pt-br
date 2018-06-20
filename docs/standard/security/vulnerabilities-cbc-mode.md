@@ -4,16 +4,16 @@ description: Saiba como detectar e reduzir as vulnerabilidades de tempo com a de
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327446"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208679"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de tempo com a descriptografia simétrica de modo CBC usando preenchimento
 
-Microsoft, com base na pesquisa de criptografia conhecida no momento, acredita que, exceto circunstâncias muito específicas, ele não é mais seguro descriptografar dados criptografados com o encadeamento de blocos de codificação modo CBC () de criptografia simétrica quando preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto codificado.
+A Microsoft acredita que não é seguro descriptografar dados criptografados com o encadeamento de blocos de codificação modo CBC () de criptografia simétrica quando preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto codificado, exceto para muito específica circunstâncias. Este julgamento baseia-se a pesquisa de criptografia conhecida no momento. 
 
 ## <a name="introduction"></a>Introdução
 

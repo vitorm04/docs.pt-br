@@ -2,12 +2,12 @@
 title: Cadeias de caracteres (F#)
 description: "Saiba como o tipo 'string' F # representa texto imutável como uma sequência de caracteres Unicode."
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564846"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207099"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
@@ -17,7 +17,7 @@ Os links de referência da API neste artigo levarão você até o MSDN.  A refer
 O `string` tipo representa texto imutável como uma sequência de caracteres Unicode. `string` é um alias para `System.String` no .NET Framework.
 
 ## <a name="remarks"></a>Comentários
-Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida (\) é usado para codificar alguns caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como um *sequência de escape*. Suportada em F # de cadeia de caracteres literais são mostrados na tabela a seguir de sequências de escape.
+Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar alguns caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como um *sequência de escape*. Suportada em F # de cadeia de caracteres literais são mostrados na tabela a seguir de sequências de escape.
 
 |Caractere|Sequência de escape|
 |---------|---------------|
