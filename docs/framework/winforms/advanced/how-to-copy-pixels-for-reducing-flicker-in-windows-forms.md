@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522038"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270429"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Como copiar pixels para reduzir a cintilação no Windows Forms
 Ao animar um gráfico simples, os usuários podem encontrar cintilação ou outro efeito visual indesejado. Uma forma de limitar esse problema é usar um processo de “transferência de bits” no gráfico. Transferência de bits é a "transferência de blocos de bit" dos dados de cor de um retângulo de pixels de origem para um retângulo de pixels de destino.  
@@ -28,7 +28,7 @@ Ao animar um gráfico simples, os usuários podem encontrar cintilação ou outr
  No exemplo a seguir, uma forma será desenhada no formulário no seu <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Em seguida, o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método é usado para duplicar a forma.  
   
 > [!NOTE]
->  Configuração do formulário <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriedade `true` fará o código de elementos gráficos no <xref:System.Windows.Forms.Control.Paint> evento ser armazenada em buffer duplo. Embora isso não traga nenhum ganho de desempenho considerável ao usar o código abaixo, é algo para se levar em consideração ao trabalhar com códigos de manipulação de gráficos mais complexos.  
+>  Configuração do formulário <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriedade `true` fará o código de elementos gráficos no <xref:System.Windows.Forms.Control.Paint> evento ser armazenada em buffer duplo. Embora isso não terá nenhum ganho de desempenho perceptível ao usar o código a seguir, é algo para ter em mente ao trabalhar com o código de manipulação de gráficos mais complexo.  
   
 ## <a name="example"></a>Exemplo  
   
