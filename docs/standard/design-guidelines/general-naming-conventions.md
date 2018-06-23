@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578034"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338098"
 ---
 # <a name="general-naming-conventions"></a>Convenções de nomenclatura gerais
 Esta seção descreve gerais convenções de nomenclatura relacionadas à escolha de palavra, diretrizes sobre o uso de abreviações e acrônimos e recomendações sobre como evitar o uso de nomes específicos do idioma.  
@@ -85,7 +85,7 @@ Esta seção descreve gerais convenções de nomenclatura relacionadas à escolh
   
  **FAZER ✓** preferir adicionando um sufixo, em vez de um prefixo para indicar uma nova versão de uma API existente.  
   
- Isso ajudará a descoberta ao procurar a documentação, ou usando o Intellisense. A versão antiga da API será organizada perto de novas APIs, como a maioria dos navegadores e Intellisense mostram identificadores em ordem alfabética.  
+ Isso ajudará a descoberta ao procurar a documentação, ou usando o IntelliSense. A versão antiga da API será organizada perto de novas APIs, como a maioria dos navegadores e IntelliSense mostram identificadores em ordem alfabética.  
   
  **✓ CONSIDERE** usando um identificador de novo, mas significativo, em vez de adicionar um prefixo ou um sufixo.  
   
