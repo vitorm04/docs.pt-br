@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529877"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314757"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Dimensionamento automático em Windows Forms
 Dimensionamento automático permite que um formulário e seus controles criados em uma máquina com uma determinada exibição resolução ou sistema de fonte, a ser exibido corretamente em outro computador com uma fonte de sistema ou resolução de exibição diferente. Ela garante que o formulário e seus controles serão inteligentemente redimensionados para ser consistente com nativos do windows e outros aplicativos em computadores dos usuários e outros desenvolvedores. O suporte a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para dimensionamento automático e estilos visuais permite [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplicativos para manter uma aparência consistente quando comparado a aplicativos nativos do Windows na máquina de cada usuário.
@@ -42,14 +42,6 @@ Enquanto esse mecanismo estava suficiente para a maioria das finalidades, ele so
 - O dimensionamento automático foi implementado somente o <xref:System.Windows.Forms.Form> classe, não de <xref:System.Windows.Forms.ContainerControl> classe. Como resultado, os controles de usuário seriam dimensionar corretamente somente quando o controle de usuário foi criado com a mesma resolução do formulário e ele foi colocado no formulário em tempo de design.
 
 - Formulários e seus controles filhos podem somente ser criados simultaneamente por vários desenvolvedores se suas soluções de máquina eram os mesmos. Da mesma forma ela também torna a herança de um formulário depende da resolução associada ao formulário pai.
-
-> [!NOTE]
-> Com as diferenças extremas na exibição DPIs, especialmente em dispositivos modernos de 2-em-1, isso ainda poderá ocorrer com as versões mais recentes do .NET Framework e do Visual Studio. Para resolver isso em uma equipe usando diferentes exibições DPI, certifique-se de que o Visual Studio sempre inicia em um modo sem reconhecimento de DPI, para que o designer de formulários do Windows sempre baseia o cálculo do layout em 96 DPI. Para esse fim, basta defina a seguinte chave do registro para desabilitar o reconhecimento de HighDPI do Visual Studio:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - Não é compatível com os gerentes de layout mais recentes introduzidos com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versão 2.0, como <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>.
 

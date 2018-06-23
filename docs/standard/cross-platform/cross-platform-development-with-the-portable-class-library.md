@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579659"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314933"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  
@@ -51,8 +51,8 @@ O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual St
 |Versões do Visual Studio Express 2010|Não.|  
 |Visual Studio 2012 Professional, Premium ou Ultimate|Sim. Para obter suporte do Windows Phone 8.0, instale o [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Versões do Visual Studio Express 2012|Não.|  
-|Visual Studio 2013 Professional, Premium ou Ultimate|Sim. Para obter suporte do Windows Phone 8.1, instale o [versão mais recente do Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
-|Comunidade do Visual Studio 2013 para Windows|Sim, quando você instala o [versão mais recente do Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), que inclui a atualização 2.|  
+|Visual Studio 2013 Professional, Premium ou Ultimate|Sim. Para obter suporte do Windows Phone 8.1, instale o [versão mais recente do Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/).|  
+|Comunidade do Visual Studio 2013 para Windows|Sim, quando você instala o [versão mais recente do Visual Studio Community 2013](https://visualstudio.microsoft.com/vs/older-downloads/), que inclui a atualização 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Criando um projeto de Biblioteca de Classes Portátil  
