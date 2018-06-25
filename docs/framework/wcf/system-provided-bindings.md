@@ -1,91 +1,95 @@
 ---
 title: Associações fornecidas pelo sistema
-ms.date: 03/30/2017
+description: Saiba mais sobre todas as associações do WCF (Windows Communication Foundation) fornecidas pelo sistema.
+ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805640"
 ---
 # <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema
-Associações de especificar o mecanismo de comunicação para usar ao conversar com um ponto de extremidade e indicar como se conectar a um ponto de extremidade. Uma associação contém os seguintes elementos:  
-  
--   A pilha do protocolo determina a segurança, confiabilidade e as configurações de fluxo de contexto a ser usado para mensagens que são enviadas para o ponto de extremidade.  
-  
--   O transporte determina o protocolo de transporte subjacente para usar ao enviar mensagens para o ponto de extremidade, por exemplo, HTTP ou TCP.  
-  
--   A codificação determina a codificação a ser usada para mensagens que são enviadas ao ponto de extremidade, por exemplo, text/XML, binário ou mecanismo de otimização de transmissão mensagem (MTOM) durante a transmissão.  
-  
- Este tópico apresenta todas as associações fornecidas pelo sistema do Windows Communication Foundation (WCF). Se nenhuma delas atende aos critérios exatos para seu aplicativo, você pode criar uma associação personalizada. Para obter mais informações sobre como criar associações personalizadas, consulte [associações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md).  
-  
- Uma associação segura e interoperável que oferece suporte ao protocolo WS-Federation permite que as organizações que estão em uma federação para autenticar e autorizar usuários com eficiência.  
-  
+
+As associações especificam o mecanismo de comunicação a ser usado ao se comunicar com um ponto de extremidade e indicam como se conectar a um ponto de extremidade. Uma associação contém os seguintes elementos:
+
+- A pilha do protocolo determina a segurança, a confiabilidade e as configurações de fluxo de contexto a serem usadas para as mensagens que são enviadas ao ponto de extremidade.
+
+- O transporte determina o protocolo de transporte subjacente a ser usado ao enviar mensagens para o ponto de extremidade, por exemplo, TCP ou HTTP.
+
+- A codificação determina a codificação de transmissão a ser usada para as mensagens que são enviadas para o ponto de extremidade. Por exemplo, texto/XML, binário ou MTOM (Mecanismo de Otimização de Transmissão de Mensagem).
+
+ Este artigo apresenta todas as associações do WCF (Windows Communication Foundation) fornecidas pelo sistema. Se nenhuma dessas associações atender aos critérios exatos de seu aplicativo, crie uma associação personalizada. Para obter mais informações sobre como criar associações personalizadas, confira [Associações personalizadas](./extending/custom-bindings.md).
+
+ Uma associação segura e interoperável que dá suporte ao protocolo WS-Federation permite às organizações que estão em uma federação autenticar e autorizar usuários com eficiência.
+
 > [!IMPORTANT]
->  Sempre selecione uma associação que inclui a segurança. Por padrão, todas as associações, exceto o [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento ter segurança habilitada. Se você não selecionar uma associação de segurança ou desativar a segurança, certifique-se de proteger seus dados em alguma outra forma, como o armazenamento em um data center protegido ou em uma rede isolada.  
-  
+> Sempre selecione uma associação que inclua a segurança. Por padrão, todas as associações, exceto o elemento [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md), têm a segurança habilitada. Se você não selecionar uma associação segura ou desabilitar a segurança, proteja seus dados de alguma outra forma, como armazená-los em um data center protegido ou em uma rede isolada.
+
 > [!IMPORTANT]
->  Nunca use contratos duplex com associações que não dão suporte à segurança ou que possuem segurança desabilitada a menos que você protege os dados por outros meios.  
-  
-## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
- As seguintes associações fornecidas com o WCF.  
-  
-|Associação|Elemento de configuração|Descrição|  
-|-------------|---------------------------|-----------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Uma associação que é adequada para se comunicar com o perfil básico WS compatível com serviços da Web, por exemplo, serviços Web do ASP.NET (ASMX)-serviços baseados em. Esta associação usa HTTP como o transporte e texto/XML como a codificação de mensagem padrão.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Uma associação segura e interoperável que é adequada para contratos de serviço não-duplex.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Uma associação segura e interoperável que é adequada para contratos de serviço duplex ou comunicação através de intermediários SOAP.|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Uma associação segura e interoperável que suporta o protocolo de WS-Federation que permite que as organizações que estão em uma federação para autenticar e autorizar usuários com eficiência.|  
-|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|Uma associação projetada para consumir serviços HTTP ou WebSocket que usa a codificação binária por padrão.|  
-|<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|Uma associação de segurança criada para consumir serviços HTTP ou WebSocket que usa a codificação binária por padrão.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Uma associação segura e otimizada adequada para comunicação entre computadores entre os aplicativos do WCF.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Uma associação segura, confiável e otimizada adequada para a comunicação entre aplicativos WCF na máquina.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Uma associação enfileirada adequada para comunicação entre computadores entre os aplicativos do WCF.|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Uma associação que permite proteger, comunicação de vários computadores.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Uma associação que é adequada para comunicação entre computadores entre um aplicativo WCF e aplicativos de enfileiramento de mensagens existente.|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Uma associação que é adequada para se comunicar com o perfil básico WS compatível serviços Web que permite que os cookies HTTP a ser usado para a troca de contexto.|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Seguro e otimizada binding adequada para comunicação entre computadores entre os aplicativos do WCF que permite cabeçalhos SOAP a ser usado para a troca de contexto.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Uma associação usada para configurar pontos de extremidade para serviços Web WCF que são expostos por meio de solicitações HTTP em vez de mensagens SOAP.|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Seguro e |<xref:System.ServiceModel.UdpBinding>|\<udpBinding>|Uma associação para usar ao enviar uma intermitência de mensagens simples para um grande número de clientes ao mesmo tempo.|  
-  
- A tabela a seguir mostra os recursos de cada uma das associações fornecidas pelo sistema. As associações são encontradas nas colunas da tabela; os recursos estão listados nas linhas e descritos em uma segunda tabela. A tabela a seguir fornece uma chave para as abreviações de associação usado. Para selecionar uma associação, determine qual coluna atenda a todos os recursos de linha que é necessário.  
-  
-|Associação|Interoperabilidade|Segurança (padrão)|Session<br /><br /> (Padrão)|Transações|Duplex|Codificação (padrão)|Streaming<br /><br /> (Padrão)|  
-|-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Nenhum), transporte, mensagem, misto|(Nenhum)|(Nenhum)|N/D|Texto, (MTOM)|Sim<br /><br /> (em buffer)|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Misto de transporte, (mensagem)|(Nenhum), a sessão confiável, sessão de segurança|(Nenhum), Sim|N/D|(Texto), MTOM|Não|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Mensagem), nenhum|(Sessão confiável), a sessão de segurança|(Nenhum), Sim|Sim|(Texto), MTOM|Não|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Mensagem), misto, None|(Nenhum), a sessão confiável, sessão de segurança|(Nenhum), Sim|Não|(Texto), MTOM|Não|  
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Nenhum), transporte, mensagem, TransportWithMessageCredential, TransportCredentialOnly|Consulte a observação abaixo|Nenhum|Consulte a observação abaixo|(Binário), texto, MTOM|Sim (em buffer)|  
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transporte), TransportWithMessageCredential|Consulte a observação abaixo|Nenhum|Consulte a observação abaixo|(Binário), texto, MTOM|Sim (em buffer)|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transporte), mensagem, None, misto|(Transporte), a sessão confiável, sessão de segurança|(Nenhum), Sim|Sim|Binário|Sim<br /><br /> (em buffer)|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transporte), nenhum|Nenhum (transporte)|(Nenhum), Sim|Sim|Binário|Sim<br /><br /> (em buffer)|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Mensagem (transporte), nenhum|(Nenhum), de transporte|Nenhum (Sim)|Não|Binário|Não|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|ponto a ponto|(Transporte)|(Nenhum)|(Nenhum)|Sim||Não|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transporte)|(Nenhum)|Nenhum (Sim)|N/D|N/D|Não|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Nenhum), transporte, mensagem, misto|(Nenhum)|(Nenhum)|N/D|Texto, (MTOM)|Sim<br /><br /> (em buffer)|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transporte), mensagem, None, misto|(Transporte), a sessão confiável, sessão de segurança|(Nenhum), Sim|Sim|Binário|Sim<br /><br /> (em buffer)|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Misto de transporte, (mensagem)|(Nenhum), a sessão confiável, sessão de segurança|(Nenhum), Sim|N/D|Texto, (MTOM)|Não|  
-|<xref:System.ServiceModel.UdpBinding>|.NET **Observação:** interoperabilidade pode ser obtida ao implementar a especificação de SOAP-over-UDP padrão que implementa essa associação.|(Nenhum)|(Nenhum)|(Nenhum)|N/D|(Texto)|Não|  
-  
+> Nunca use contratos duplex com associações que não dão suporte à segurança ou que têm a segurança desabilitada, a menos que você proteja os dados por outros meios.
+
+As seguintes associações são fornecidas com o WCF:
+
+|Associação|Elemento de configuração|Descrição|
+|-------------|---------------------------|-----------------|
+|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)|Uma associação adequada para comunicação com serviços Web em conformidade com o WS-Basic Profile, por exemplo, serviços baseados em serviços Web do ASP.NET (ASMX). Essa associação usa HTTP como o transporte e texto/XML como a codificação de mensagem padrão.|
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md)|Uma associação segura e interoperável que é adequada para contratos de serviço não duplex.|
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Uma associação segura e interoperável que é adequada para contratos de serviços duplex ou para comunicação por intermediários SOAP.|
+|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Uma associação segura e interoperável que dá suporte ao protocolo WS-Federation, que permite às organizações que estão em uma federação autenticar e autorizar usuários com eficiência.|
+|<xref:System.ServiceModel.NetHttpBinding>|[\<netHttpBinding>](../configure-apps/file-schema/wcf/nethttpbinding.md)|Uma associação criada para consumir serviços HTTP ou WebSocket que usa a codificação binária por padrão.|
+|<xref:System.ServiceModel.NetHttpsBinding>|[\<netHttpsBinding>](../configure-apps/file-schema/wcf/nethttpsbinding.md)|Uma associação segura criada para consumir serviços HTTP ou WebSocket que usa a codificação binária por padrão.|
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../configure-apps/file-schema/wcf/nettcpbinding.md)|Uma associação segura e otimizada, adequada para comunicação de computadores entre aplicativos do WCF.|
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../configure-apps/file-schema/wcf/netnamedpipebinding.md)|Uma associação segura, confiável e otimizada, que é adequada para comunicação no computador entre aplicativos do WCF.|
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../configure-apps/file-schema/wcf/netmsmqbinding.md)|Uma associação na fila que é adequada para comunicação de computadores entre aplicativos do WCF.|
+|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../configure-apps/file-schema/wcf/netpeertcpbinding.md)|Uma associação que permite uma comunicação segura entre vários computadores.|
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Uma associação adequada para comunicação de computadores entre um aplicativo do WCF e os aplicativos existentes do Enfileiramento de Mensagens.|
+|<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding>](../configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Uma associação adequada para comunicação com os serviços Web em conformidade com o WS-Basic Profile, que permite o uso de cookies HTTP para a troca de contexto.|
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding>](../configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Uma associação segura e otimizada, adequada para comunicação de computadores entre aplicativos do WCF que permite o uso de cabeçalhos SOAP para a troca de contexto.|
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../configure-apps/file-schema/wcf/webhttpbinding.md)|Uma associação usada para configurar pontos de extremidade para serviços Web WCF expostos por meio de solicitações HTTP, em vez de mensagens SOAP.|
+|<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding>](../configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Uma associação segura e interoperável, adequada para contratos de serviço não duplex, que permite o uso de cabeçalhos SOAP para a troca de contexto.|
+|<xref:System.ServiceModel.UdpBinding>|[\<udpBinding>](../configure-apps/file-schema/wcf/udpbinding.md)|Uma associação a ser usada ao enviar uma intermitência de mensagens simples para um grande número de clientes simultaneamente.|
+
+ A tabela a seguir mostra as funcionalidades de cada uma das associações fornecidas pelo sistema. As associações encontram-se nas colunas da tabela; as funcionalidades são listadas nas linhas e descritas em uma segunda tabela. A tabela a seguir fornece um código para as abreviações de associação usadas. Para escolher uma associação, determine qual coluna atende a todas as funcionalidades de linha necessárias.
+
+|Associação|Interoperabilidade|Segurança (padrão)|Session<br />(Padrão)|Transações|Duplex|Codificação (padrão)|Streaming<br />(Padrão)|
+|-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Nenhum), Transporte, Mensagem, Misto|(Nenhum)|(Nenhum)|N/D|Texto, (MTOM)|Sim<br />(em buffer)|
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Transporte, (Mensagem), Misto|(Nenhum), Sessão Confiável, Sessão de Segurança|(Nenhum), Sim|N/D|(Texto), MTOM|Não|
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Mensagem), Nenhum|(Sessão Confiável), Sessão de Segurança|(Nenhum), Sim|Sim|(Texto), MTOM|Não|
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Mensagem), Misto, Nenhum|(Nenhum), Sessão Confiável, Sessão de Segurança|(Nenhum), Sim|Não|(Texto), MTOM|Não|
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Nenhum), Transporte, Mensagem, TransportWithMessageCredential, TransportCredentialOnly|Veja a observação abaixo|Nenhum|Veja a observação abaixo|(Binário), Texto, MTOM|Sim (em buffer)|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transporte), TransportWithMessageCredential|Veja a observação abaixo|Nenhum|Veja a observação abaixo|(Binário), Texto, MTOM|Sim<br />(em buffer)|
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transporte), Mensagem, Nenhum, Misto|(Transporte), Sessão Confiável, Sessão de Segurança|(Nenhum), Sim|Sim|Binário|Sim<br />(em buffer)|
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transporte), Nenhum|Nenhum, (Transporte)|(Nenhum), Sim|Sim|Binário|Sim<br />(em buffer)|
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Mensagem, (Transporte), Nenhum|(Nenhum), Transporte|Nenhum, (Sim)|Não|Binário|Não|
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Par|(Transporte)|(Nenhum)|(Nenhum)|Sim||Não|
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transporte)|(Nenhum)|Nenhum, (Sim)|N/D|N/D|Não|
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Nenhum), Transporte, Mensagem, Misto|(Nenhum)|(Nenhum)|N/D|Texto, (MTOM)|Sim<br />(em buffer)|
+|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transporte), Mensagem, Nenhum, Misto|(Transporte), Sessão Confiável, Sessão de Segurança|(Nenhum), Sim|Sim|Binário|Sim<br />(em buffer)|
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transporte, (Mensagem), Misto|(Nenhum), Sessão Confiável, Sessão de Segurança|(Nenhum), Sim|N/D|Texto, (MTOM)|Não|
+|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Observação:** a interoperabilidade pode ser obtida com a implementação da especificação SOAP-over-UDP padrão implementada por essa associação.|.NET|(Nenhum)|(Nenhum)|(Nenhum)|N/D|(Texto)|Não|
+
 > [!IMPORTANT]
->  O <xref:System.ServiceModel.NetHttpBinding> é uma associação criada para consumir HTTP ou serviços WebSocket e usa a codificação binária por padrão. <xref:System.ServiceModel.NetHttpBinding> detecta se ele é usado com um contrato de solicitação-resposta ou um contrato duplex e alterar seu comportamento para corresponder - ele usará o HTTP para a solicitação-resposta e WebSockets para duplex. Esse comportamento pode ser substituído usando o <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` configuração de associação: permitida - este é o valor padrão e se comporta conforme descrito acima. Não permitido - Isso impede que o WebSocket que está sendo usado. Tentativa de usar um contrato duplex com essa configuração resultará em uma exceção. Necessária – isso força o WebSocket a ser usado até mesmo para contratos de solicitação-resposta. NetHttpBinding dá suporte a sessões confiáveis em modo de HTTP e o modo de WebSocket. No modo WebSocket as sessões são fornecidas pelo transporte.  
-  
- A tabela a seguir explica os recursos listados na tabela anterior.  
-  
-|Recurso|Descrição|  
-|-------------|-----------------|  
-|Tipo de interoperabilidade|Nomeia o protocolo ou a tecnologia com a qual a associação garante interoperação.|  
-|Segurança|Especifica como o canal é protegido:<br /><br /> -Nenhum: A mensagem SOAP não é protegida e o cliente não está autenticado.<br />-Transporte: Requisitos de segurança são satisfeitos na camada de transporte.<br />-Mensagem: Requisitos de segurança são satisfeitos na camada de mensagem.<br />-Misto: Declarações são executadas na mensagem; requisitos de integridade e confidencialidade são atendidos pela camada de transporte.|  
-|Session|Especifica se essa associação oferece suporte a contratos de sessão.|  
-|Transações|Especifica se as transações estão habilitadas.|  
-|Duplex|Especifica se os contratos duplex têm suporte. Observe que esse recurso exige suporte para sessões na associação.|  
-|Codificando|Especifica o formato de transmissão da mensagem. Valores permitidos são:<br /><br /> -Texto: por exemplo, UTF-8.<br />-Binário<br />-Mecanismo de otimização de transmissão mensagem (MTOM): Um método de codificação com eficiência os elementos XML binários de dentro do contexto de um envelope SOAP.|  
-|Streaming|Especifica se o fluxo tem suporte para mensagens de entrada e saídas. Use o `TransferMode` propriedade na associação para definir o valor. Os valores possíveis incluem:<br /><br /> -   <xref:System.ServiceModel.TransferMode.Buffered>: As mensagens de solicitação e resposta são buffer.<br />-   <xref:System.ServiceModel.TransferMode.Streamed>: As mensagens de solicitação e resposta são transmitidas.<br />-   <xref:System.ServiceModel.TransferMode.StreamedRequest>: A mensagem de solicitação é transmitida e a mensagem de resposta é armazenada em buffer.<br />-   <xref:System.ServiceModel.TransferMode.StreamedResponse>: A mensagem de solicitação é armazenado em buffer e a mensagem de resposta é transmitida.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+> O <xref:System.ServiceModel.NetHttpBinding> é uma associação criada para consumir HTTP ou serviços WebSocket e usa a codificação binária por padrão. <xref:System.ServiceModel.NetHttpBinding> detecta se ela é usada com um contrato de solicitação-resposta ou um contrato duplex e altera seu comportamento para fins de correspondência; ela usa o HTTP para a solicitação-resposta e o WebSockets para o duplex. Esse comportamento pode ser substituído usando a configuração de associação <xref:System.ServiceModel.Channels.WebSocketTransportUsage>: WhenDuplex – esse é o valor padrão e ele se comporta conforme descrito acima. Nunca - isso impede que o WebSockets seja usado. A tentativa de usar um contrato duplex com essa configuração resulta em uma exceção. Sempre - isso força o WebSockets a ser usado mesmo para contratos de solicitação-resposta. NetHttpBinding dá suporte a sessões confiáveis nos modos HTTP e WebSocket. No modo WebSocket as sessões são fornecidas pelo transporte.
+
+ A tabela a seguir explica as funcionalidades listadas na tabela anterior.
+
+|Recurso|Descrição|
+|-------------|-----------------|
+|Tipo de interoperabilidade|Nomeia a tecnologia ou o protocolo com o qual a associação garante a interoperação.|
+|Segurança|Especifica como o canal é protegido:<br />- Nenhum: a mensagem SOAP não é protegida e o cliente não é autenticado.<br />- Transporte: os requisitos de segurança são atendidos na camada de transporte.<br />- Mensagem: os requisitos de segurança são atendidos na camada de mensagem.<br />- Misto: as declarações são levadas na mensagem; os requisitos de integridade e confidencialidade são atendidos pela camada de transporte.|
+|Session|Especifica se essa associação dá suporte a contratos de sessão.|
+|Transações|Especifica se as transações estão habilitadas.|
+|Duplex|Especifica se há suporte para os contratos duplex. Observe que essa funcionalidade exige suporte para Sessões na associação.|
+|Codificando|Especifica o formato de transmissão da mensagem. Os valores permitidos incluem:<br />- Texto: por exemplo, UTF-8.<br />- Binário<br />- MTOM (Mecanismo de Otimização de Transmissão de Mensagem): um método de codificação eficiente de elementos XML binários no contexto de um envelope SOAP.|
+|Streaming|Especifica se há suporte para streaming em mensagens de entrada e de saída. Use a propriedade `TransferMode` na associação para definir o valor. Os valores permitidos incluem:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: as mensagens de solicitação e resposta são armazenadas em buffer.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: as mensagens de solicitação e resposta são transmitidas.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: a mensagem de solicitação é transmitida e a mensagem de resposta é armazenada em buffer.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: a mensagem de solicitação é armazenada em buffer e a mensagem de resposta é transmitida.|
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral de criação de ponto de extremidade](endpoint-creation-overview.md)  
+[Usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md)  
+[Programação básica do WCF](basic-wcf-programming.md)  

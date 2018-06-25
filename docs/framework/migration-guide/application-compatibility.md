@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728635"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
@@ -25,7 +26,7 @@ Cada aplicativo se destina a uma versão específica do .NET Framework, que pode
 * Especificação da estrutura de destino em um arquivo de projeto.
 * Aplicação de um <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ao código-fonte.
 
-Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade.
+Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade. A versão do .NET Framework para a qual um aplicativo é direcionado é determinada pela versão de destino do assembly de entrada para o domínio do aplicativo no qual o código está em execução. Todos os assemblies adicionais carregados nesse domínio do aplicativo são direcionados a essa versão do .NET Framework. Por exemplo, no caso de um executável, a estrutura à qual o executável é direcionado é o modo de compatibilidade no qual todos os assemblies desse AppDomain serão executados.
 
 ## <a name="runtime-changes"></a>Alterações em tempo de execução
 

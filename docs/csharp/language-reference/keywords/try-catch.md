@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696433"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referência de C#)
 A instrução try-catch consiste em um bloco `try` seguido por uma ou mais cláusulas `catch`, que especificam os manipuladores para diferentes exceções.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  É possível usar mais de uma cláusula `catch` específica na mesma instrução try-catch. Nesse caso, a ordem das cláusulas `catch` é importante porque as cláusulas `catch` são examinadas em ordem. Capture as exceções mais específicas antes das menos específicas. O compilador gerará um erro se você ordenar os blocos catch de forma que um bloco posterior nunca possa ser alcançado.  
   
- Usar argumentos `catch` é uma maneira de filtrar as exceções que deseja manipular.  Você também pode usar uma expressão de predicado que examina ainda mais a exceção para decidir se deve manipulá-la.  Se a expressão de predicado retornar false, a pesquisa para um manipulador continua.  
+ Usar argumentos `catch` é uma maneira de filtrar as exceções que deseja manipular.  Use também um filtro de exceção que examina melhor a exceção para decidir se ela deve ser manipulada.  Se o filtro de exceção retornar falso, a pesquisa por um manipulador continuará.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Os filtros de exceção são preferíveis em relação à captura e relançamento (explicados abaixo) porque os filtros deixam a pilha intacta.  Se um manipulador posterior despeja a pilha, você pode ver de onde a exceção originalmente veio, em vez de apenas o último lugar em que ela foi relançada.  Um uso comum de expressões de filtro de exceção é o registro em log.  Você pode criar uma função de predicado que sempre retorna false que também gera um log, pode registrar exceções conforme elas ocorrem sem precisar manipulá-las e relançá-las.  
+ Os filtros de exceção são preferíveis em relação à captura e relançamento (explicados abaixo) porque os filtros deixam a pilha intacta.  Se um manipulador posterior despeja a pilha, você pode ver de onde a exceção originalmente veio, em vez de apenas o último lugar em que ela foi relançada.  Um uso comum de expressões de filtro de exceção é o registro em log.  Crie um filtro que sempre retorna falso e que também gera um log; você pode registrar exceções conforme elas ocorrem sem precisar manipulá-las e gerá-las novamente.  
   
  Uma instrução [throw](../../../csharp/language-reference/keywords/throw.md) pode ser usada em um bloco `catch` para relançar a exceção que foi capturada pela instrução `catch`. O exemplo a seguir extrai informações de origem de uma exceção <xref:System.IO.IOException> e, em seguida, lança a exceção para o método pai.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> Também é possível usar um filtro de exceção para obter um resultado semelhante em um modo geralmente mais limpo (além de não modificar a pilha, conforme explicado anteriormente neste documento). O exemplo a seguir tem um comportamento semelhante para chamadores como no exemplo anterior. A função gera a `InvalidCastException` novamente para o chamador quando `e.Data` é `null`.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  De dentro de um bloco `try`, inicialize somente as variáveis que são declaradas nele. Caso contrário, uma exceção pode ocorrer antes da conclusão da execução do bloco. Por exemplo, no exemplo de código a seguir, a variável `n` é inicializada dentro do bloco `try`. Uma tentativa de usar essa variável fora do bloco `try` na instrução `Write(n)` gerará um erro de compilador.  
   
 ```csharp  

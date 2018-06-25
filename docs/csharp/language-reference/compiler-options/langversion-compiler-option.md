@@ -8,11 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 299ff121bab87482b7cdcaebc8b43cb8a1b559ec
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 2a9501c883fec7478932b22ea2cdcad70865e0fd
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696280"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opções do compilador C#)
 Faz com que o compilador aceite somente a sintaxe incluída na especificação de linguagem C# escolhida.  
@@ -52,19 +53,11 @@ Faz com que o compilador aceite somente a sintaxe incluída na especificação d
   
  Como cada versão do compilador do C# contém extensões para a especificação de linguagem, **-langversion** não dá a funcionalidade equivalente de uma versão anterior do compilador.  
  
- Além disso, embora as atualizações de versão C# geralmente coincidam com os principais lançamentos do .NET Framework, a nova sintaxe e os recursos não estão necessariamente vinculados a essa versão específica da estrutura. Embora os novos recursos definitivamente exigirão uma nova atualização de compilador que também é lançada junto com a revisão do C#, cada recurso específico tem seus próprios requisitos mínimos de .NET API ou de Common Language Runtime que podem permitir que ele seja executado em estruturas de nível inferior, incluindo pacotes do NuGet ou outras bibliotecas.
+ Além disso, embora as atualizações de versão do C# geralmente coincidam com as versões principais do .NET Framework, a nova sintaxe e as funcionalidades não estão necessariamente vinculadas a essa versão de estrutura específica. Embora as novas funcionalidades definitivamente exijam uma nova atualização do compilador que também é liberada junto com a revisão do C#, cada funcionalidade específica tem seus próprios requisitos mínimos de API ou do Common Language Runtime do .NET que podem permitir que ela seja executada em estruturas de nível inferior com a inclusão de pacotes NuGet ou de outras bibliotecas.
   
  Independentemente de qual configuração **-langversion** for usada, você usará a versão atual do Common Language Runtime para criar seu .exe ou .dll. Uma exceção são os assemblies amigáveis e [-moduleassemblyname (Opção do compilador do C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), que funcionarão em **-langversion:ISO-1**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a página **Propriedades** do projeto.  
-  
-2.  Clique na página de propriedades **Compilar**.  
-  
-3.  Clique no botão **Avançado**.  
-  
-4.  Modifique a propriedade **Versão da Linguagem**.  
+ 
+ Para descobrir outras maneiras de especificar a versão da linguagem do C#, confira o tópico [Selecionar a versão da linguagem do C#](../configure-language-version.md).
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
     

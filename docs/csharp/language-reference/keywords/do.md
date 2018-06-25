@@ -1,38 +1,44 @@
 ---
 title: do (Referência de C#)
-ms.date: 07/20/2015
+ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
 - do
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 5599f079e29fd094c4d6a6a75afba89fb562a166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566079"
 ---
 # <a name="do-c-reference"></a>do (Referência de C#)
-A instrução `do` executa uma instrução ou um bloco de instruções repetidamente até que uma expressão especificada seja avaliada como `false`. O corpo do loop deve ser colocado entre chaves, `{}`, a menos que ele consista em uma única instrução. Nesse caso, as chaves são opcionais.  
-  
-## <a name="example"></a>Exemplo  
- No exemplo a seguir, as instruções de loop `do-while` são executadas desde que a variável `x` seja menor que 5.  
-  
- [!code-csharp[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
-  
- Diferente da instrução [while](../../../csharp/language-reference/keywords/while.md), um loop `do-while` é executado uma vez antes que a expressão condicional seja avaliada.  
-  
- Em qualquer momento no bloco `do-while`, você pode interromper o loop usando a instrução [break](../../../csharp/language-reference/keywords/break.md). Você pode entrar diretamente na instrução de avaliação de expressão `while` usando a instrução [continue](../../../csharp/language-reference/keywords/continue.md). Se a expressão `while` for avaliada como verdadeira, a execução continuará na primeira instrução no loop. Se a expressão for avaliada como falsa, a execução continuará na primeira instrução após o loop `do-while`.  
-  
- Um loop `do-while` também pode ser encerrado pelas instruções [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
-  
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+
+A instrução `do` executa uma instrução ou um bloco de instruções enquanto uma expressão booliana especificada é avaliada como `true`. Como essa expressão é avaliada após cada execução do loop, um loop `do-while` é executado uma ou mais vezes. Isso é diferente do loop [while](while.md), que é executado zero ou mais vezes.
+
+A qualquer momento dentro do bloco de instruções `do`, interrompa o loop usando a instrução [break](break.md).
+
+Você pode seguir diretamente para a avaliação da expressão `while` usando a instrução [continue](continue.md). Se a expressão for avaliada como `true`, a execução continuará na primeira instrução do loop. Caso contrário, a execução continuará na primeira instrução após o loop.
+
+Você também pode sair de um loop `do-while` com a instrução [goto](goto.md), [return](return.md) ou [throw](throw.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir mostra o uso da instrução `do`. Selecione **Executar** para executar o código de exemplo. Depois disso, você pode modificar o código e executá-lo novamente.
+
+[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+
+## <a name="c-language-specification"></a>especificação da linguagem C#
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Consulte também
+
+ [Referência de C#](../index.md)  
+ [Guia de Programação em C#](../../programming-guide/index.md)  
+ [Palavras-chave do C#](index.md)  
  [Instrução do-while (C++)](/cpp/cpp/do-while-statement-cpp)  
- [Instruções de iteração](../../../csharp/language-reference/keywords/iteration-statements.md)
+ [Instruções de iteração](iteration-statements.md)  
+ [instrução while](while.md)  

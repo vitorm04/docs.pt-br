@@ -3,12 +3,12 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483483"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565872"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -38,6 +38,8 @@ A versão 6.0 do C# tinha muitos recursos para melhorar a produtividade para des
     - Os inicializadores de coleção podem depender de métodos de extensão acessíveis, além dos métodos de membro.
 * [Resolução de sobrecarga aprimorada](#improved-overload-resolution):
     - Alguns constructos, que antes geravam chamadas de método ambíguas, agora resolvem corretamente.
+* [Opção do compilador `deterministic`](#deterministic-compiler-output):
+    - A opção do compilador deterministic garante que as compilações seguintes da mesma origem gerem a mesma saída binária.
 
 O efeito geral desses recursos é que você escreve código mais conciso e também mais legível. A sintaxe contém menos cerimônia para várias práticas comuns. É mais fácil de ver a intenção do design com menos cerimônia. Aprenda bem esses recursos e você será mais produtivo, escreverá um código mais legível e se concentrará mais em seus recursos principais que nos constructos da linguagem.
 
@@ -388,3 +390,12 @@ O compilador anterior não podia distinguir corretamente entre `Task.Run(Action)
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 O compilador do C# 6 determina corretamente que `Task.Run(Func<Task>())` é uma opção melhor.
+
+### <a name="deterministic-compiler-output"></a>Saída do compilador determinístico
+
+A opção `-deterministic` instrui o compilador a produzir um assembly de saída idêntico byte a byte para compilações sucessivas dos mesmos arquivos de origem.
+
+Por padrão, cada compilação produz uma saída exclusiva em cada compilação. O compilador adiciona um carimbo de data/hora e um GUID gerado com base em números aleatórios. Use essa opção se desejar comparar a saída byte a byte para garantir a consistência nos builds.
+
+Para obter mais informações, confira o artigo [Opção do compilador -deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
+

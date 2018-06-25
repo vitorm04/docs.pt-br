@@ -3,12 +3,13 @@ title: Comando dotnet store
 description: O comando "dotnet store" armazena os assemblies especificados no repositório de pacotes de tempo de execução.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696319"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ Especifica a [estrutura de destino](../../standard/frameworks.md).
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que contém a lista de pacotes a serem armazenados. O formato do arquivo de manifesto é compatível com o formato *csproj*. Portanto, um arquivo de projeto *csproj* que referencia os pacotes desejados pode ser usado com a opção `-m|--manifest` para armazenar os assemblies no repositório de pacotes de tempo de execução. Para especificar vários arquivos de manifesto, repita a opção e o caminho para cada arquivo: `--manifest packages1.csproj --manifest packages2.csproj`.
+O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que contém a lista de pacotes a serem armazenados. O formato do arquivo de manifesto é compatível com o formato de projeto de estilo SDK. Portanto, um arquivo de projeto que referencia os pacotes desejados pode ser usado com a opção `-m|--manifest` para armazenar assemblies no repositório de pacotes de tempo de execução. Para especificar vários arquivos de manifesto, repita a opção e o caminho para cada arquivo. Por exemplo: `--manifest packages1.csproj --manifest packages2.csproj`.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ Armazene os pacotes especificados no *packages.csproj* sem otimização:
 
 ## <a name="see-also"></a>Consulte também
 
-[Repositório de pacote de tempo de execução](../deploying/runtime-store.md)   
+[Repositório de pacote de tempo de execução](../deploying/runtime-store.md)

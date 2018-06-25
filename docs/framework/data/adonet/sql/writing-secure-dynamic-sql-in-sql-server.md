@@ -2,11 +2,12 @@
 title: Escrevendo SQL dinâmico seguro no SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753468"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escrevendo SQL dinâmico seguro no SQL Server
 A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere instruções Transact-SQL em vez de entrada válida. Se a entrada for passada diretamente para o servidor sem ser validada e se o aplicativo executa inadvertidamente o código injetado, o ataque terá o potencial de danificar ou destruir dados.  
@@ -45,9 +46,9 @@ A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere i
   
  O SQL Server tem métodos para conceder aos usuários acesso aos dados usando procedimentos armazenados e funções definidas pelo usuário que executa o SQL dinâmico.  
   
--   Usando a representação com o Transact-SQL EXECUTE AS cláusula, conforme descrito em [personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+-   Usar a representação com a cláusula Transact-SQL EXECUTE AS, conforme descrito em [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Assinando procedimentos armazenados com certificados, conforme descrito em [assinatura de procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+-   Assinar procedimentos armazenados com certificados, conforme descrito em [Assinando procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  A cláusula EXECUTE AS substitui as permissões do chamador com relação pelas do usuário especificado na cláusula EXECUTE AS. Os procedimentos armazenados aninhados ou gatilhos são executados sob o contexto de segurança do usuário do proxy. Isso pode interromper aplicativos que dependem de segurança em nível de linha ou exigem auditoria. Algumas funções que retornam a identidade do usuário retornam o usuário especificado na cláusula EXECUTE AS, não o chamador original. O contexto de execução é revertido para o chamador original somente após a execução do procedimento ou quando uma instrução REVERT for emitida.  
@@ -56,15 +57,14 @@ A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere i
  Quando um procedimento armazenado que foi assinado com um certificado é executado, as permissões concedidas para o usuário do certificado são mescladas com as do chamador. O contexto de execução permanece o mesmo; o usuário do certificado não representa o chamador. Assinar procedimentos armazenados exige várias etapas para implementar. Cada vez que o procedimento é modificado, ele deve ser assinado novamente.  
   
 ### <a name="cross-database-access"></a>Acesso entre bancos de dados  
- O encadeamento de propriedades entre bancos de dados não funciona nos casos em que as instruções SQL criadas dinamicamente são executadas. Você pode contornar isso no SQL Server criando um procedimento armazenado que acessa dados em outro banco de dados e o procedimento com um certificado que existe em ambos os bancos de dados de assinatura. Isso concede acesso de usuários aos recursos de banco de dados usados pelo procedimento sem conceder-lhes o acesso ao banco de dados ou permissões.  
+ O encadeamento de propriedades entre bancos de dados não funciona nos casos em que as instruções SQL criadas dinamicamente são executadas. Resolva isso no SQL Server criando um procedimento armazenado que acessa os dados em outro banco de dados e assinando o procedimento armazenado com um certificado existente em ambos os bancos de dados. Isso concede acesso de usuários aos recursos de banco de dados usados pelo procedimento sem conceder-lhes o acesso ao banco de dados ou permissões.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Procedimentos armazenados](http://go.microsoft.com/fwlink/?LinkId=98233) e [injeção SQL](http://go.microsoft.com/fwlink/?LinkId=98234) nos Manuais Online do SQL Server|Os tópicos descrevem como criar procedimentos armazenados e como a injeção de SQL funciona.|  
-|[Novos ataques por truncamento de SQL e como evitá-los](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) na MSDN Magazine.|Descreve como delimitar caracteres e cadeias de caracteres, injeção de SQL e modificação por ataques de truncamento.|  
+|[Procedimentos armazenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Injeção de SQL](/sql/relational-databases/security/sql-injection) nos Manuais Online do SQL Server|Os tópicos descrevem como criar procedimentos armazenados e como a injeção de SQL funciona.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  

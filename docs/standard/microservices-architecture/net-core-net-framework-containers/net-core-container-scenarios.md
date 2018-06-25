@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580166"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314920"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando escolher o .NET Core para os contêineres do Docker
 
@@ -25,9 +25,9 @@ Claramente, se sua meta for ter um aplicativo (serviço ou aplicativo Web) que p
 
 O .NET Core também é compatível com o macOS como uma plataforma de desenvolvimento. No entanto, quando você implanta contêineres em um host do Docker, esse host deve (atualmente) ser baseado em Linux ou Windows. Por exemplo, em um ambiente de desenvolvimento, você pode usar uma VM Linux em execução em um Mac.
 
-O [Visual Studio](https://www.visualstudio.com/) fornece um IDE (ambiente de desenvolvimento integrado) para Windows e é compatível com o desenvolvimento do Docker. 
+O [Visual Studio](https://visualstudio.microsoft.com/) fornece um IDE (ambiente de desenvolvimento integrado) para Windows e é compatível com o desenvolvimento do Docker. 
 
-O [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) é um IDE, evolução de Xamarin Studio, em execução no macOS e é compatível com o Docker desde meados de 2017.
+O [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) é um IDE, evolução de Xamarin Studio, em execução no macOS e é compatível com o Docker desde meados de 2017.
 
 Também é possível usar o [Visual Studio Code](https://code.visualstudio.com/) (VS Code) no macOS, Linux e Windows. O VS Code é totalmente compatível com o .NET Core, incluindo IntelliSense e depuração. Como o VS Code é um editor leve, é possível usá-lo para desenvolver aplicativos em contêineres no Mac em conjunto com a CLI do Docker e com as [ferramentas de CLI (interface de linha de comando) do .NET Core](../../../core/tools/index.md). Também é possível direcionar o .NET Core com a maioria dos editores de terceiros, como Sublime Text, Emacs, vi e o projeto OmniSharp de software livre, que fornece suporte ao IntelliSense para linguagens .NET. Além dos IDEs e dos editores, é possível usar a CLI do .NET Core para todas as plataformas compatíveis.
 

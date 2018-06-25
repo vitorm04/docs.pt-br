@@ -3,12 +3,13 @@ title: Comando dotnet new – CLI do .NET Core
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/26/2018
-ms.openlocfilehash: 5ebf77377360662242fbf345d9fe76eee7a1316f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34570457"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +21,14 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopse
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
+    [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [-l|--list] [--type]
+dotnet new [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -47,7 +55,33 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 O modelo para o qual criar uma instância quando o comando é invocado. Cada modelo pode ter opções específicas que podem ser passadas. Para obter mais informações, consulte [Opções de modelo](#template-options).
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.1.300. O idioma padrão do modelo é mostrado entre parênteses.
+
+|Descrição do modelo                          | Nome do modelo   | Linguagens     |
+|----------------------------------------------|-----------------|---------------|
+| Aplicativo de console                          | `console`       | [C#], F#, VB  |
+| Biblioteca de classes                                | `classlib`      | [C#], F#, VB  |
+| Projeto de teste de unidade                            | `mstest`        | [C#], F#, VB  |
+| Projeto de teste de xUnit                           | `xunit`         | [C#], F#, VB  |
+| Página do Razor                                   | `page`          | [C#]          |
+| Importações de Exibição do MVC                              | `viewimports`   | [C#]          |
+| MVC ViewStart                                | `viewstart`     | [C#]          |
+| ASP.NET Core vazio                           | `web`           | [C#], F#      |
+| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`           | [C#], F#      |
+| Aplicativo Web ASP.NET Core                         | `razor`         | [C#]          |
+| ASP.NET Core com Angular                    | `angular`       | [C#]          |
+| ASP.NET Core com React.js                   | `react`         | [C#]          |
+| ASP.NET Core com React.js e Redux         | `reactredux`    | [C#]          |
+| API Web do ASP.NET Core                         | `webapi`        | [C#], F#      |
+| Biblioteca de classes Razor                          | `razorclasslib` | [C#]          |
+| Arquivo global.json                             | `globaljson`    |               |
+| Configuração do NuGet                                 | `nugetconfig`   |               |
+| Configuração da Web                                   | `webconfig`     |               |
+| Arquivo de solução                                | `sln`           |               |
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.0. O idioma padrão do modelo é mostrado entre parênteses.
 
@@ -93,7 +127,58 @@ O comando contém uma lista padrão de modelos. Use `dotnet new -all` para obter
 
 ## <a name="options"></a>Opções
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`--force`
+
+Força o conteúdo a ser gerado mesmo se ele alterasse os arquivos existentes. Isso é necessário quando o diretório de saída já contiver um projeto.
+
+`-h|--help`
+
+Imprime uma ajuda para o comando. Ele pode ser invocado para o próprio comando `dotnet new` ou para qualquer modelo, como `dotnet new mvc --help`.
+
+`-i|--install <PATH|NUGET_ID>`
+
+Instala um pacote de origem ou de modelo do `PATH` ou `NUGET_ID` fornecido. Se você deseja instalar uma versão de pré-lançamento de um pacote de modelo, é necessário especificar a versão no formato `<package-name>::<package-version>`. Por padrão, `dotnet new` passa \* para a versão, o que representa a última versão estável do pacote. Veja um exemplo na seção [Exemplos](#examples).
+
+Para obter informações sobre a criação de modelos personalizados, consulte [Custom templates for dotnet new](custom-templates.md) (Modelos personalizados para dotnet new).
+
+`-l|--list`
+
+Lista os modelos que contêm o nome especificado. Se for invocado para o comando `dotnet new`, listará os possíveis modelos disponíveis para o diretório especificado. Por exemplo, se o diretório já contiver um projeto, ele não listará todos os modelos de projeto.
+
+`-lang|--language {C#|F#|VB}`
+
+A linguagem do modelo a ser criada. A linguagem aceita varia de acordo com o modelo (consulte os padrões na seção [Argumentos](#arguments)). Não é válida para alguns modelos.
+
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+
+`-n|--name <OUTPUT_NAME>`
+
+O nome para a saída criada. Se nenhum nome for especificado, o nome do diretório atual será usado.
+
+`--nuget-source`
+
+Especifica uma origem do NuGet a ser usada durante a instalação.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Local para colocar a saída gerada. O padrão é o diretório atual.
+
+`--type`
+
+Filtra modelos com base em tipos disponíveis. Os valores predefinidos são "projeto", "item" ou "outro".
+
+`-u|--uninstall <PATH|NUGET_ID>`
+
+Desinstala um pacote de origem ou de modelo no `PATH` ou `NUGET_ID` fornecido.
+
+> [!NOTE]
+> Para desinstalar um modelo usando um `PATH`, você precisa qualificar totalmente o caminho. Por exemplo, *C:/Usuários/\<USUÁRIO>/Documentos/Modelos/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, mas *./GarciaSoftware.ConsoleTemplate.CSharp* da pasta que o contém, não.
+> Além disso, não inclua uma barra final de encerramento de diretório no caminho do modelo.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--force`
 
@@ -175,7 +260,113 @@ Local para colocar a saída gerada. O padrão é o diretório atual.
 
 Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais modelos têm as seguintes opções adicionais:
 
-# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+**console, angular, react, reactredux, razorclasslib**
+
+  `--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**classlib**
+
+`-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp2.0` para criar uma Biblioteca de classes do .NET Core ou `netstandard2.0` para criar uma Biblioteca de classes .NET Standard. O valor padrão é `netstandard2.0`.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**mstest, xunit**
+
+`-p|--enable-pack` – Habilita empacotamento para o projeto usando [dotnet pack](dotnet-pack.md).
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**globaljson**
+
+`--sdk-version <VERSION_NUMBER>` – Especifica a versão do SDK do .NET Core a ser usada no arquivo *global.json*.
+
+**web**
+
+`--use-launch-settings` – Inclui *launchSettings.json* na saída do modelo gerado.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**webapi**
+
+`-au|--auth <AUTHENTICATION_TYPE>` – O tipo de autenticação usado. Os valores possíveis são:
+
+- `None` – Nenhuma autenticação (Padrão).
+- `IndividualB2C` – Autenticação individual com o Azure AD B2C.
+- `SingleOrg` – Autenticação organizacional para um único locatário.
+- `Windows` – Autenticação do Windows.
+
+`--aad-b2c-instance <INSTANCE>` – A instância do Azure Active Directory B2C à qual se conectar. Use com a autenticação do `IndividualB2C`. O valor padrão é `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` – A ID da política de credenciais e de inscrição desse projeto. Use com a autenticação do `IndividualB2C`.
+
+`--aad-instance <INSTANCE>` – A instância do Azure Active Directory à qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` – A ID do cliente deste projeto. Use com a autenticação `IndividualB2C` ou `SingleOrg`. O valor padrão é `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` – O domínio do locatário de diretório. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `qualified.domain.name`.
+
+`--tenant-id <ID>` – A ID TenantId do diretório ao qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `22222222-2222-2222-2222-222222222222`.
+
+`-r|--org-read-access` – Permite que esse aplicativo tenha acesso de leitura ao diretório. Aplicável apenas à autenticação `SingleOrg` ou `MultiOrg`.
+
+`--use-launch-settings` – Inclui *launchSettings.json* na saída do modelo gerado.
+
+`-uld|--use-local-db` – Especifica que LocalDB deve ser usado em vez de SQLite. Aplicável apenas à autenticação `Individual` ou `IndividualB2C`.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**mvc, razor**
+
+`-au|--auth <AUTHENTICATION_TYPE>` – O tipo de autenticação usado. Os valores possíveis são:
+
+- `None` – Nenhuma autenticação (Padrão).
+- `Individual` – Autenticação individual.
+- `IndividualB2C` – Autenticação individual com o Azure AD B2C.
+- `SingleOrg` – Autenticação organizacional para um único locatário.
+- `MultiOrg` – Autenticação organizacional para vários locatários.
+- `Windows` – Autenticação do Windows.
+
+`--aad-b2c-instance <INSTANCE>` – A instância do Azure Active Directory B2C à qual se conectar. Use com a autenticação do `IndividualB2C`. O valor padrão é `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` – A ID da política de credenciais e de inscrição desse projeto. Use com a autenticação do `IndividualB2C`.
+
+`-rp|--reset-password-policy-id <ID>` – A ID da política de senha de redefinição para este projeto. Use com a autenticação do `IndividualB2C`.
+
+`-ep|--edit-profile-policy-id <ID>` – A ID da política de perfil de edição para este projeto. Use com a autenticação do `IndividualB2C`.
+
+`--aad-instance <INSTANCE>` – A instância do Azure Active Directory à qual se conectar. Use com a autenticação `SingleOrg` ou `MultiOrg`. O valor padrão é `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` – A ID do cliente deste projeto. Use com a autenticação `IndividualB2C`, `SingleOrg` ou `MultiOrg`. O valor padrão é `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` – O domínio do locatário de diretório. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `qualified.domain.name`.
+
+`--tenant-id <ID>` – A ID TenantId do diretório ao qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `22222222-2222-2222-2222-222222222222`.
+
+`--callback-path <PATH>` – O caminho da solicitação dentro do caminho base do aplicativo do URI de redirecionamento. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `/signin-oidc`.
+
+`-r|--org-read-access` – Permite que esse aplicativo tenha acesso de leitura ao diretório. Aplicável apenas à autenticação `SingleOrg` ou `MultiOrg`.
+
+`--use-launch-settings` – Inclui *launchSettings.json* na saída do modelo gerado.
+
+`--use-browserlink` – Inclui BrowserLink no projeto.
+
+`-uld|--use-local-db` – Especifica que LocalDB deve ser usado em vez de SQLite. Aplicável apenas à autenticação `Individual` ou `IndividualB2C`.
+
+`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+
+**page**
+
+`-na|--namespace <NAMESPACE_NAME>` – Namespace do código gerado. O valor padrão é `MyApp.Namespace`.
+
+`-np|--no-pagemodel` – Cria a página sem um PageModel.
+
+**viewimports**
+
+`-na|--namespace <NAMESPACE_NAME>` – Namespace do código gerado. O valor padrão é `MyApp.Namespace`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 **console, angular, react, reactredux**
 
@@ -257,7 +448,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 `--domain <DOMAIN>` – O domínio do locatário de diretório. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `qualified.domain.name`.
 
-`--tenant-id <ID>` – A ID TenantId do diretório ao qual se conectar. Use com a autenticação `SingleOrg`. O valor padrão é `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` – A ID TenantId do diretório ao qual se conectar. Use com a autenticação do `SingleOrg`. O valor padrão é `22222222-2222-2222-2222-222222222222`.
 
 `--callback-path <PATH>` – O caminho da solicitação dentro do caminho base do aplicativo do URI de redirecionamento. Use com a autenticação `SingleOrg` ou `IndividualB2C`. O valor padrão é `/signin-oidc`.
 
@@ -307,7 +498,7 @@ Crie um projeto de aplicativo de console F# no diretório atual:
 
 `dotnet new console -lang F#`
 
-Crie um projeto de biblioteca de classes do .NET Standard no diretório especificado (disponível somente com o SDK do .NET Core 2.0 ou versões posteriores):
+Crie um projeto de biblioteca de classes .NET Standard no diretório especificado (disponível somente no SDK do .NET Core 2.0 ou em versões posteriores):
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
@@ -326,6 +517,10 @@ Lista todos os modelos disponíveis para o MVC:
 Instale a versão 2.0 dos modelos de aplicativo de página única do ASP.NET Core (opção de comando disponível somente para o SDK do .NET Core 1.1 e versões posteriores):
 
 `dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
+
+Crie um *global.json* no diretório atual definindo a versão do SDK como 2.0.0 (disponível somente no SDK do .NET Core 2.0 ou em versões posteriores):
+
+`dotnet new globaljson --sdk-version 2.0.0`
 
 ## <a name="see-also"></a>Consulte também
 

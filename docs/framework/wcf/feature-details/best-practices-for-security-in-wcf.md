@@ -9,55 +9,54 @@ helpviewer_keywords:
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c1588fa48631aec4e185fd8362a02505aa15e58
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753455"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Práticas recomendadas para segurança no WCF
-As seções a seguir listam as práticas recomendadas a serem considerados durante a criação de aplicativos seguros usando o Windows Communication Foundation (WCF). Para obter mais informações sobre segurança, consulte [considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), e [considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+As seções a seguir listam as melhores práticas a serem consideradas durante a criação de aplicativos seguros usando o WCF (Windows Communication Foundation). Para obter mais informações sobre segurança, confira [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considerações sobre segurança de dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) e [Considerações sobre segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
-## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identificar os serviços para executar a autenticação do Windows com os SPNs  
- Os serviços podem ser identificados com nomes principais de usuário (UPNs) ou nomes principais de serviço (SPNs). Serviços executados em contas de computador como serviço de rede tem uma identidade SPN correspondente para o computador que está sendo executado. Serviços executados em contas de usuário tem uma identidade UPN correspondente para o usuário que está sendo executado, embora o `setspn` ferramenta pode ser usada para atribuir um SPN para a conta de usuário. Configurar um serviço para que ele possa ser identificado por meio de SPN e configurar os clientes que se conectar ao serviço para usar esse SPN pode fazer certas ataques mais difícil. Essas diretrizes se aplicam às associações usando Kerberos ou SSPI negociação.  Os clientes ainda devem especificar um SPN no caso onde SSPI reverterá para NTLM.  
+## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identificar os serviços que executam a Autenticação do Windows com SPNs  
+ Os serviços podem ser identificados com nomes UPN ou SPNs. Os serviços executados em contas de computador como um serviço de rede têm uma identidade do SPN correspondente ao computador que eles estão executando. Os serviços executados em contas de usuário têm uma identidade do UPN correspondente ao usuário como quem eles estão sendo executados, embora a ferramenta `setspn` possa ser usada para atribuir um SPN à conta de usuário. A configuração de um serviço para que ele possa ser identificado por meio do SPN e a configuração dos clientes que se conectam ao serviço para que eles usem esse SPN pode dificultar alguns ataques. Essas diretrizes se aplicam às associações que usam o Kerberos ou a negociação SSPI.  Os clientes ainda devem especificar um SPN quando o SSPI faz fallback para o NTLM.  
   
-## <a name="verify-service-identities-in-wsdl"></a>Verificar as identidades de serviço em WSDL  
- O WS-SecurityPolicy permite que os serviços publicar informações sobre suas próprias identidades nos metadados. Quando recuperados por meio de `svcutil` ou outros métodos, como <xref:System.ServiceModel.Description.WsdlImporter>, essas informações de identidade são convertidas para as propriedades de identidade dos endereços de ponto de extremidade de serviço do WCF. Os clientes que não verificam se essas identidades de serviço estão corretas e válido efetivamente ignoram a autenticação de serviço. Um serviço mal-intencionado pode explorar esses clientes para executar o encaminhamento de credenciais e outros ataques "man no meio" alterando a identidade declarada em seu WSDL.  
+## <a name="verify-service-identities-in-wsdl"></a>Verificar as identidades de serviço no WSDL  
+ O WS-SecurityPolicy permite que os serviços publiquem informações sobre suas próprias identidades nos metadados. Quando recuperadas por meio de `svcutil` ou por outros métodos, como <xref:System.ServiceModel.Description.WsdlImporter>, essas informações de identidade são convertidas nas propriedades de identidade dos endereços do ponto de extremidade de serviço WCF. Os clientes que não verificam se essas identidades de serviço estão corretas e válidas ignoram efetivamente a autenticação de serviço. Um serviço mal-intencionado pode explorar esses clientes para executar o encaminhamento de credenciais e outros ataques "man-in-the-middle" alterando a identidade declarada em seu WSDL.  
   
-## <a name="use-x509-certificates-instead-of-ntlm"></a>Use X509 certificados em vez de NTLM  
- O WCF oferece dois mecanismos para autenticação de ponto a ponto: X509 certificados (usados pelo canal de ponto a ponto) e autenticação do Windows em que uma negociação de SSPI fazer downgrade do Kerberos para NTLM.  Autenticação baseada em certificado usando tamanhos de chave de 1024 bits ou mais é preferencial para NTLM por vários motivos:  
+## <a name="use-x509-certificates-instead-of-ntlm"></a>Usar certificados X509 em vez do NTLM  
+ O WCF oferece dois mecanismos para a autenticação ponto a ponto: os certificados X509 (usados pelo canal par) e a autenticação do Windows, em que uma negociação SSPI faz downgrade do Kerberos para o NTLM.  A autenticação baseada em certificado usando tamanhos de chave de 1.024 bits ou superior é preferencial para o NTLM por vários motivos:  
   
--   a disponibilidade de autenticação mútua,  
+-   a disponibilidade da autenticação mútua;  
   
--   o uso de algoritmos de criptografia mais fortes, e  
+-   o uso de algoritmos de criptografia mais fortes; e  
   
--   a maior dificuldade de utilizando encaminhados X509 credenciais.  
-  
- Para obter uma visão geral do NTLM ataques de encaminhamento, vá para [ http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx ](http://go.microsoft.com/fwlink/?LinkId=109571).  
-  
-## <a name="always-revert-after-impersonation"></a>Reverter sempre depois de representação  
- Ao usar APIs que permitem a representação de um cliente, certifique-se de reverter para a identidade original. Por exemplo, ao usar o <xref:System.Security.Principal.WindowsIdentity> e <xref:System.Security.Principal.WindowsImpersonationContext>, usar o c# `using` instrução ou o Visual Basic`Using` instrução, conforme mostrado no código a seguir. O <xref:System.Security.Principal.WindowsImpersonationContext> classe implementa o <xref:System.IDisposable> interface e, portanto, o common language runtime (CLR) é revertida automaticamente para a identidade original depois que o código deixa o `using` bloco.  
+-   a maior dificuldade em utilizar credenciais X509 encaminhadas.  
+   
+## <a name="always-revert-after-impersonation"></a>Sempre reverter após representação  
+ Ao usar APIs que permitem a representação de um cliente, lembre-se de revertê-lo para a identidade original. Por exemplo, ao usar o <xref:System.Security.Principal.WindowsIdentity> e o <xref:System.Security.Principal.WindowsImpersonationContext>, use a instrução `using` do C# ou a instrução `Using` do Visual Basic, conforme mostrado no código a seguir. A classe <xref:System.Security.Principal.WindowsImpersonationContext> implementa a interface <xref:System.IDisposable> e, portanto, o CLR (Common Language Runtime) é revertido automaticamente para a identidade original depois que o código deixa o bloco `using`.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
   
 ## <a name="impersonate-only-as-needed"></a>Representar apenas conforme necessário  
- Usando o <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> método o <xref:System.Security.Principal.WindowsIdentity> classe, é possível usar a representação em um escopo muito controlado. Isso é diferente de usar o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade do <xref:System.ServiceModel.OperationBehaviorAttribute>, que permite a representação para o escopo da operação inteira. Sempre que possível, controlar o escopo da representação usando o mais preciso <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> método.  
+ Usando o método <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> da classe <xref:System.Security.Principal.WindowsIdentity>, é possível usar a representação em um escopo muito controlado. Isso é diferente de usar a propriedade <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> do <xref:System.ServiceModel.OperationBehaviorAttribute>, que permite a representação para o escopo da operação inteira. Sempre que possível, controle o escopo da representação usando o método <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> mais preciso.  
   
 ## <a name="obtain-metadata-from-trusted-sources"></a>Obter metadados de fontes confiáveis  
- Certifique-se de que você confia na origem dos metadados e certifique-se de que ninguém tenha violado os metadados. Metadados recuperados usando o protocolo HTTP é enviado em texto não criptografado e podem ser violados. Se o serviço usa o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> propriedades, use a URL fornecida pelo criador do serviço para baixar os dados usando o protocolo HTTPS.  
+ Garanta que você confie na origem dos metadados e garanta que ninguém tenha adulterado os metadados. Os metadados recuperados usando o protocolo HTTP são enviados em texto não criptografado e podem ser adulterados. Se o serviço usa as propriedades <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, use a URL fornecida pelo criador do serviço para baixar os dados usando o protocolo HTTPS.  
   
-## <a name="publish-metadata-using-security"></a>Publicar usando a segurança de metadados  
- Para evitar a violação com metadados de um serviço publicado, proteger o ponto de extremidade de troca de metadados com transporte ou segurança em nível de mensagem. Para obter mais informações, consulte [pontos de extremidade de metadados de publicação](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) e [como: publicar metadados para um serviço usando código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+## <a name="publish-metadata-using-security"></a>Publicar metadados usando a segurança  
+ Para evitar a adulteração dos metadados publicados de um serviço, proteja o ponto de extremidade de troca de metadados com segurança em nível da mensagem ou do transporte. Para obter mais informações, confira [Publicando pontos de extremidade de metadados](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) e [Como publicar metadados para um serviço usando o código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
-## <a name="ensure-use-of-local-issuer"></a>Certifique-se de uso do emissor Local  
- Se um endereço do emissor e a associação especificadas para uma associação de determinado, o emissor local não é usado para pontos de extremidade que utilizam essa associação. Clientes que pretende usar sempre o emissor local devem garantir que eles não usam essa associação ou que eles modificarem a associação, de modo que o endereço do emissor é nulo.  
+## <a name="ensure-use-of-local-issuer"></a>Garantir o uso do emissor local  
+ Se um endereço do emissor e a associação são especificados para uma associação fornecida, o emissor local não é usado para os pontos de extremidade que usam essa associação. Os clientes que pretendem sempre usar o emissor local devem garantir que não usem uma associação como essa ou que modifiquem a associação, de modo que o endereço do emissor seja nulo.  
   
-## <a name="saml-token-size-quotas"></a>Cotas de tamanho de Token SAML  
- Quando os tokens de segurança asserções Markup Language (SAML) são serializados em mensagens, quando eles são emitidos por um Token de segurança Service (STS) ou quando os clientes apresentação-los para serviços como parte da autenticação, a cota de tamanho máximo da mensagem deve ser suficientemente grande para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas de tamanho de mensagem padrão são suficientes. No entanto, nos casos em que um token SAML é grande porque ele contém centenas de declarações, as cotas devem ser aumentadas para acomodar o token serializado. Para obter mais informações sobre cotas, consulte [considerações de segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+## <a name="saml-token-size-quotas"></a>Cotas de tamanho do token SAML  
+ Quando os tokens SAML (Security Assertions Markup Language) são serializados em mensagens, quando são emitidos por um STS (Serviço de Token de Segurança) ou quando os clientes apresentam esses tokens para serviços como parte da autenticação, a cota máxima de tamanho da mensagem precisa ser suficientemente grande para acomodar o token SAML e as outras partes da mensagem. Em casos normais, as cotas padrão de tamanho da mensagem são suficientes. No entanto, nos casos em que um token SAML é grande porque contém centenas de declarações, as cotas devem ser aumentadas para acomodar o token serializado. Para obter mais informações sobre cotas, confira [Considerações sobre segurança de dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
-## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Defina SecurityBindingElement.IncludeTimestamp como True em associações personalizadas  
- Quando você cria uma associação personalizada, você deve definir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> para `true`. Caso contrário, se <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> é definido como `false`, e o cliente está usando um token com chave assimétrico como X509 certificado, a mensagem não será assinada.  
+## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Definir SecurityBindingElement.IncludeTimestamp como True em associações personalizadas  
+ Ao criar uma associação personalizada, você deverá definir <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> como `true`. Caso contrário, se <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> for definido como `false` e o cliente estiver usando um token baseado em chave assimétrica como um certificado X509, a mensagem não será assinada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

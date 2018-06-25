@@ -3,13 +3,13 @@ title: Comando dotnet publish – CLI do .NET Core
 description: O comando dotnet publish publica seu projeto .NET Core em um diretório.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.date: 05/29/2018
+ms.openlocfilehash: 38224aa8472f99df107e523667e18892384a20b0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472624"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696654"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -21,32 +21,36 @@ ms.locfileid: "34472624"
 
 ## <a name="synopsis"></a>Sinopse
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+    [--version-suffix]
 dotnet publish [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>Descrição
 
-`dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída conterá o seguinte:
+`dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
 * Código IL (Linguagem Intermediária) em um assembly com uma extensão *dll*.
-* Arquivo *.deps.json* que contém todas as dependências do projeto.
+* Arquivo *.deps.json* que inclui todas as dependências do projeto.
 * Arquivo *.runtime.config.json* que especifica o tempo de execução compartilhado esperado pelo aplicativo, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
-* As dependências do aplicativo. Elas são copiadas do cache NuGet para a pasta de saída.
+* As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
 
-A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, PC, Mac, laptop) para execução, e é a única maneira com suporte oficial para preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o tempo de execução compartilhado do .NET Core instalado. Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md). Para a estrutura de diretórios de um aplicativo publicado, veja [Estrutura do diretório](/aspnet/core/hosting/directory-structure).
+A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o tempo de execução compartilhado do .NET Core instalado. Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md). Para a estrutura de diretórios de um aplicativo publicado, veja [Estrutura do diretório](/aspnet/core/hosting/directory-structure).
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -54,11 +58,11 @@ A saída do comando `dotnet publish` está pronta para implantação em um siste
 
 `PROJECT`
 
-O projeto a ser publicado, cujo padrão será o diretório atual se não for especificado.
+O projeto a ser publicado. Se não é especificado, ele usa como padrão o diretório atual.
 
 ## <a name="options"></a>Opções
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -70,7 +74,62 @@ Publica o aplicativo para a [estrutura de destino](../../standard/frameworks.md)
 
 `--force`
 
-Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. Isso é equivalente a excluir o arquivo *project.assets.json*.
+Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
+
+`-h|--help`
+
+Imprime uma ajuda breve para o comando.
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+Especifica um ou vários [manifestos de destino](../deploying/runtime-store.md) a serem usados para cortar o conjunto de pacotes publicados com o aplicativo. O arquivo de manifesto faz parte da saída do [comando `dotnet store`](dotnet-store.md). Para especificar vários manifestos, adicione uma opção `--manifest` para cada manifesto. Essa opção está disponível a partir do SDK do .NET Core 2.0.
+
+`--no-build`
+
+Não compila o projeto antes da publicação. Também define o sinalizador `--no-restore` implicitamente.
+
+`--no-dependencies`
+
+Ignora as referências projeto a projeto e só restaura o projeto raiz.
+
+`--no-restore`
+
+Não executa uma restauração implícita ao executar o comando.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuration]/[framework]/publish/* para uma implantação dependente da estrutura ou *./bin/[configuration]/[framework]/[runtime]/publish/* para implantações autocontidas.
+Se o caminho for relativo, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
+
+`--self-contained`
+
+Publica o tempo de execução do .NET Core com seu aplicativo para que não seja necessário instalar o tempo de execução no computador de destino. Se um identificador de tempo de execução for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Publica o aplicativo para um determinado tempo de execução. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+
+`-v|--verbosity <LEVEL>`
+
+Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+`--version-suffix <VERSION_SUFFIX>`
+
+Define o sufixo da versão para substituir o asterisco (`*`) no campo de versão do arquivo de projeto.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`-c|--configuration {Debug|Release}`
+
+Define a configuração da compilação. O valor padrão é `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Publica o aplicativo para a [estrutura de destino](../../standard/frameworks.md) especificada. Especifique a estrutura de destino no arquivo de projeto.
+
+`--force`
+
+Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
 `-h|--help`
 

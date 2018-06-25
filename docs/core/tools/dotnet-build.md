@@ -3,12 +3,13 @@ title: Comando dotnet build – CLI do .NET Core
 description: O comando dotnet build compila um projeto e todas as suas dependências.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697125"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -40,15 +41,15 @@ O comando `dotnet build` compila o projeto e suas dependências em um conjunto d
 
 Se o projeto tiver dependências de terceiros, como bibliotecas do NuGet, elas serão resolvidas no cache NuGet e não estarão disponíveis com a saída de build do projeto. Com isso em mente, o produto de `dotnet build` não está pronto para ser transferido para outro computador para execução. Isso é diferente do comportamento do .NET Framework, no qual compilar um projeto executável (um aplicativo) produz uma saída executável em qualquer computador que tenha o .NET Framework instalado. Para ter uma experiência semelhante com o .NET Core, é necessário usar o comando [dotnet publish](dotnet-publish.md). Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md).
 
-A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo. O arquivo é criado quando [`dotnet restore`](dotnet-restore.md) é executado. Sem o arquivo de ativos, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros. Com o SDK do .NET Core 1.x, era necessário executar explicitamente o `dotnet restore` antes de executar `dotnet build`. Começando com o SDK do .NET Core 2.0, o `dotnet restore` é executado implicitamente ao executar `dotnet build`. Se você deseja desabilitar a restauração implícita ao executar o comando de build, é possível passar a opção `--no-restore`.
+A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo. O arquivo é criado quando [`dotnet restore`](dotnet-restore.md) é executado. Sem o arquivo de ativos, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros. Com o SDK do .NET Core 1.x, você precisava executar explicitamente o `dotnet restore` antes de executar `dotnet build`. Começando pelo SDK do .NET Core 2.0, o `dotnet restore` é executado implicitamente quando você executa `dotnet build`. Se você deseja desabilitar a restauração implícita ao executar o comando de build, é possível passar a opção `--no-restore`.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para saber mais, veja [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
+O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
 
-Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `/p` para configurar propriedades ou `/l` para definir um agente. Saiba mais sobre essas opções na [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
+Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `/p` para configurar propriedades ou `/l` para definir um agente. Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
-O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto. O seguinte exemplo mostra um projeto que produzirá um código executável:
+O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto. O seguinte exemplo mostra um projeto que produz um código executável:
 
 ```xml
 <PropertyGroup>
@@ -56,7 +57,7 @@ O fato de o projeto ser executável ou não é determinado pela propriedade `<Ou
 </PropertyGroup>
 ```
 
-Para produzir uma biblioteca, omita a propriedade `<OutputType>`. A diferença principal na saída da compilação é que a DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada. 
+Para produzir uma biblioteca, omita a propriedade `<OutputType>`. A diferença principal na saída da compilação é que a DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.
 
 ## <a name="arguments"></a>Arguments
 
@@ -78,7 +79,7 @@ Compila para uma [estrutura](../../standard/frameworks.md) específica. A estrut
 
 `--force`
 
- Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. Isso é equivalente a excluir o arquivo *project.assets.json*.
+Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
 `-h|--help`
 
@@ -86,11 +87,11 @@ Imprime uma ajuda breve para o comando.
 
 `--no-dependencies`
 
-Ignora as referências projeto a projeto (P2P) e só compila o projeto raiz especificado para o build.
+Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
 
 `--no-incremental`
 
-Marca o build como não segura para build incremental. Isso desativa a compilação incremental e força uma nova recompilação do grafo de dependência de projeto.
+Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
 
 `--no-restore`
 
@@ -128,11 +129,11 @@ Imprime uma ajuda breve para o comando.
 
 `--no-dependencies`
 
-Ignora as referências projeto a projeto (P2P) e só compila o projeto raiz especificado para o build.
+Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
 
 `--no-incremental`
 
-Marca o build como não segura para build incremental. Isso desativa a compilação incremental e força uma nova recompilação do gráfico de dependência de projeto.
+Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

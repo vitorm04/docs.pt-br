@@ -3,11 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696969"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -53,7 +54,7 @@ O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, p
 
 Numa retrospectiva, muitos desses recursos parecerem inevitáveis e inseparáveis. Todos eles se encaixam estrategicamente. Costuma-se pensar que o recurso irresistível dessa versão do C# foi a expressão de consulta, também conhecida como LINQ (consulta integrada à linguagem).
 
-Um exame mais detalhado analisa árvores de expressão, tipos anônimos e expressões lambda como a base na qual a LINQ é construída. Mas, de uma forma ou de outra, o C# 3.0 apresentou um conceito revolucionário. O C# 3.0 começou a definir as bases para transformar o C# em uma linguagem híbrida: orientada a objeto e funcional.
+Uma exibição mais detalhada analisa árvores de expressão, expressões lambda e tipos anônimos como a base na qual o LINQ é construído. Mas, de uma forma ou de outra, o C# 3.0 apresentou um conceito revolucionário. O C# 3.0 começou a definir as bases para transformar o C# em uma linguagem híbrida: orientada a objeto e funcional.
 
 Especificamente, agora você pode escrever consultas declarativas no estilo SQL para executar operações em coleções, entre outras coisas. Em vez de escrever um loop `for` para calcular a média de uma lista de inteiros, agora você pode fazer isso simplesmente como `list.Average()`. A combinação de expressões de consulta e métodos de extensão fez parecer que essa lista de inteiros se tornasse muito mais inteligente.
 
@@ -98,7 +99,7 @@ Com as versões 3.0 e 5.0, o C# adicionou alguns recursos impressionantes em uma
 - [Propagador nulo](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md)
 - [Operador nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Inicializador de dicionário](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [Inicializadores de índice](csharp-6.md#index-initializers)
 
 Cada um desses recursos é interessante em seus próprios méritos. Mas, se você os observar em conjunto, verá um padrão interessante. Nesta versão, o C# eliminou o clichê de linguagem para tornar o código mais conciso e legível. Portanto, para os fãs de código simples e conciso, essa versão da linguagem foi um grande benefício.
 

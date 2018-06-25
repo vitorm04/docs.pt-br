@@ -3,26 +3,19 @@ title: Semântica de referência com tipos de valores
 description: Compreenda os recursos de linguagem que minimizam, com segurança, a cópia de estruturas
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566274"
 ---
 # <a name="reference-semantics-with-value-types"></a>Semântica de referência com tipos de valores
 
 Uma vantagem de usar os tipos de valor é que eles normalmente evitam alocações de heap.
 A desvantagem é que eles são copiados por valor. Essa compensação dificulta a otimização de algoritmos que operam em grandes quantidades de dados. Os novos recursos de linguagem em C# 7.2 fornecem mecanismos que habilitam a semântica de transmissão por referência com tipos de valor. Use esses recursos criteriosamente para minimizar tanto as alocações quanto as operações de cópia. Este artigo explora esses novos recursos.
 
-Grande parte do código de exemplo neste artigo demonstra os recursos adicionados em C# 7.2. Para usar esses recursos, você deve configurar seu projeto para usar o C# 7.2 ou posterior. Você pode usar o Visual Studio para selecioná-lo. Para cada projeto, selecione **Projeto** no menu e, em seguida, **Propriedades**. Selecione a guia **Compilar** e clique em **Avançado**. Nesse local, configure a versão da linguagem. Escolha “7.2” ou “mais recente”.  Ou você pode editar o arquivo *csproj* e adicionar o seguinte nó:
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-Você pode usar “7.2” ou “mais recente” para o valor.
+Grande parte do código de exemplo neste artigo demonstra os recursos adicionados em C# 7.2. Para usar esses recursos, você deve configurar seu projeto para usar o C# 7.2 ou posterior. Para obter mais informações sobre como definir a versão da linguagem, confira [Configurar a versão da linguagem](language-reference/configure-language-version.md).
 
 ## <a name="passing-arguments-by-readonly-reference"></a>Passando argumentos por referência readonly
 

@@ -3,12 +3,13 @@ title: Comando dotnet nuget locals – CLI do .NET Core
 description: O comando nuget dotnet locals limpa ou lista os recursos locais do NuGet, como cache de solicitação http-, cache temporário ou pasta de pacotes globais em todo o computador.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696865"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>Descrição
 
@@ -30,14 +34,18 @@ O comando `dotnet nuget locals` limpa ou lista os recursos locais do NuGet no ca
 
 `CACHE_LOCATION`
 
-Um dos seguintes valores:
+O local do cache a ser listado ou limpo. Aceita um dos seguintes valores:
 
 * `all` – Indica que a operação especificada aplica-se a todos os tipos cache: o cache de solicitação http, cache de pacotes globais e o cache temporário.
-* `http-cache` – Indica que a operação especificada aplica-se apenas ao cache de solicitação http. Outros locais de cache não são afetados.
-* `global-packages` – Indica que a operação especificada aplica-se apenas ao cache de pacotes globais. Outros locais de cache não são afetados.
-* `temp` – Indica que a operação especificada aplica-se apenas ao cache temporário. Outros locais de cache não são afetados.
+* `http-cache` – Indica que a operação especificada aplica-se apenas ao cache de solicitação http. Os outros locais do cache não são afetados.
+* `global-packages` – Indica que a operação especificada aplica-se apenas ao cache de pacotes globais. Os outros locais do cache não são afetados.
+* `temp` – Indica que a operação especificada aplica-se apenas ao cache temporário. Os outros locais do cache não são afetados.
 
 ## <a name="options"></a>Opções
+
+`--force-english-output`
+
+Força a execução do aplicativo usando uma cultura invariável com base em inglês.
 
 `-h|--help`
 
@@ -45,15 +53,11 @@ Imprime uma ajuda breve para o comando.
 
 `-c|--clear`
 
-A opção clear executa uma operação de limpeza no tipo de cache especificado. O conteúdo dos diretórios de cache é excluído recursivamente. O usuário/grupo executor deve ter permissão nos arquivos nos diretórios de cache. Se não tiver, um erro será exibido indicando que os arquivos/pastas que não foram limpos.
+A opção clear executa uma operação de limpeza no tipo de cache especificado. O conteúdo dos diretórios de cache é excluído recursivamente. O usuário/grupo executor deve ter permissão nos arquivos nos diretórios de cache. Caso contrário, um erro é exibido, indicando as pastas/os arquivos que não foram limpos.
 
 `-l|--list`
 
-A opção de lista é usada para exibir a localização do tipo de cache especificado. 
-
-`--force-english-output`
-
-Força a saída da linha de comando em inglês.
+A opção de lista é usada para exibir a localização do tipo de cache especificado.
 
 ## <a name="examples"></a>Exemplos
 

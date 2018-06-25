@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592256"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314637"
 ---
 # <a name="tour-of-net"></a>Tour do .NET
 
@@ -25,7 +25,7 @@ Para saber como configurar um ambiente de desenvolvimento para executar os exemp
 
 ## <a name="programming-languages"></a>Linguagens de programação
 
-O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um tempo de execução independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
+O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um tempo de execução independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
 
 A Microsoft desenvolve ativamente e dá suporte a três linguagens de .NET: C#, F# e VB (Visual Basic). 
 
