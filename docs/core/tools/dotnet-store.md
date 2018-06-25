@@ -3,88 +3,84 @@ title: Comando dotnet store
 description: O comando "dotnet store" armazena os assemblies especificados no repositório de pacotes de tempo de execução.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 6baa28256535d6a9d653d9df743cd3cdf45ab910
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696319"
 ---
-# <a name="dotnet-store"></a><span data-ttu-id="57d5a-103">dotnet store</span><span class="sxs-lookup"><span data-stu-id="57d5a-103">dotnet store</span></span>
+# <a name="dotnet-store"></a><span data-ttu-id="4d782-103">dotnet store</span><span class="sxs-lookup"><span data-stu-id="4d782-103">dotnet store</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a><span data-ttu-id="57d5a-104">Nome</span><span class="sxs-lookup"><span data-stu-id="57d5a-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="4d782-104">Nome</span><span class="sxs-lookup"><span data-stu-id="4d782-104">Name</span></span>
 
-<span data-ttu-id="57d5a-105">`dotnet store` – Armazena os assemblies especificados no [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).</span><span class="sxs-lookup"><span data-stu-id="57d5a-105">`dotnet store` - Stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span>
+<span data-ttu-id="4d782-105">`dotnet store` – Armazena os assemblies especificados no [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).</span><span class="sxs-lookup"><span data-stu-id="4d782-105">`dotnet store` - Stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="57d5a-106">Sinopse</span><span class="sxs-lookup"><span data-stu-id="57d5a-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="4d782-106">Sinopse</span><span class="sxs-lookup"><span data-stu-id="4d782-106">Synopsis</span></span>
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a><span data-ttu-id="57d5a-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="57d5a-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="4d782-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="4d782-107">Description</span></span>
 
-<span data-ttu-id="57d5a-108">`dotnet store` armazena os assemblies especificados no [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).</span><span class="sxs-lookup"><span data-stu-id="57d5a-108">`dotnet store` stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span> <span data-ttu-id="57d5a-109">Por padrão, os assemblies são otimizados para a estrutura e o tempo de execução de destino.</span><span class="sxs-lookup"><span data-stu-id="57d5a-109">By default, assemblies are optimized for the target runtime and framework.</span></span> <span data-ttu-id="57d5a-110">Para obter mais informações, consulte o tópico [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).</span><span class="sxs-lookup"><span data-stu-id="57d5a-110">For more information, see the [runtime package store](../deploying/runtime-store.md) topic.</span></span>
+<span data-ttu-id="4d782-108">`dotnet store` armazena os assemblies especificados no [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).</span><span class="sxs-lookup"><span data-stu-id="4d782-108">`dotnet store` stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span> <span data-ttu-id="4d782-109">Por padrão, os assemblies são otimizados para a estrutura e o tempo de execução de destino.</span><span class="sxs-lookup"><span data-stu-id="4d782-109">By default, assemblies are optimized for the target runtime and framework.</span></span> <span data-ttu-id="4d782-110">Para obter mais informações, consulte o tópico [repositório de pacotes de tempo de execução](../deploying/runtime-store.md).</span><span class="sxs-lookup"><span data-stu-id="4d782-110">For more information, see the [runtime package store](../deploying/runtime-store.md) topic.</span></span>
 
-## <a name="required-options"></a><span data-ttu-id="57d5a-111">Opções obrigatórias</span><span class="sxs-lookup"><span data-stu-id="57d5a-111">Required options</span></span>
+## <a name="required-options"></a><span data-ttu-id="4d782-111">Opções obrigatórias</span><span class="sxs-lookup"><span data-stu-id="4d782-111">Required options</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="57d5a-112">Especifica a [estrutura de destino](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="57d5a-112">Specifies the [target framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="4d782-112">Especifica a [estrutura de destino](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="4d782-112">Specifies the [target framework](../../standard/frameworks.md).</span></span>
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-<span data-ttu-id="57d5a-113">O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que contém a lista de pacotes a serem armazenados.</span><span class="sxs-lookup"><span data-stu-id="57d5a-113">The *package store manifest file* is an XML file that contains the list of packages to store.</span></span> <span data-ttu-id="57d5a-114">O formato do arquivo de manifesto é compatível com o formato *csproj*.</span><span class="sxs-lookup"><span data-stu-id="57d5a-114">The format of the manifest file is compatible with the *csproj* format.</span></span> <span data-ttu-id="57d5a-115">Portanto, um arquivo de projeto *csproj* que referencia os pacotes desejados pode ser usado com a opção `-m|--manifest` para armazenar os assemblies no repositório de pacotes de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="57d5a-115">So, a *csproj* project file that references the desired packages can be used with the `-m|--manifest` option to store assemblies in the runtime package store.</span></span> <span data-ttu-id="57d5a-116">Para especificar vários arquivos de manifesto, repita a opção e o caminho para cada arquivo: `--manifest packages1.csproj --manifest packages2.csproj`.</span><span class="sxs-lookup"><span data-stu-id="57d5a-116">To specify multiple manifest files, repeat the option and path for each file: `--manifest packages1.csproj --manifest packages2.csproj`.</span></span>
+<span data-ttu-id="4d782-113">O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que contém a lista de pacotes a serem armazenados.</span><span class="sxs-lookup"><span data-stu-id="4d782-113">The *package store manifest file* is an XML file that contains the list of packages to store.</span></span> <span data-ttu-id="4d782-114">O formato do arquivo de manifesto é compatível com o formato de projeto de estilo SDK.</span><span class="sxs-lookup"><span data-stu-id="4d782-114">The format of the manifest file is compatible with the SDK-style project format.</span></span> <span data-ttu-id="4d782-115">Portanto, um arquivo de projeto que referencia os pacotes desejados pode ser usado com a opção `-m|--manifest` para armazenar assemblies no repositório de pacotes de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="4d782-115">So, a project file that references the desired packages can be used with the `-m|--manifest` option to store assemblies in the runtime package store.</span></span> <span data-ttu-id="4d782-116">Para especificar vários arquivos de manifesto, repita a opção e o caminho para cada arquivo.</span><span class="sxs-lookup"><span data-stu-id="4d782-116">To specify multiple manifest files, repeat the option and path for each file.</span></span> <span data-ttu-id="4d782-117">Por exemplo: `--manifest packages1.csproj --manifest packages2.csproj`.</span><span class="sxs-lookup"><span data-stu-id="4d782-117">For example: `--manifest packages1.csproj --manifest packages2.csproj`.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="57d5a-117">O [identificador do tempo de execução](../rid-catalog.md) a ser usado como destino.</span><span class="sxs-lookup"><span data-stu-id="57d5a-117">The [runtime identifier](../rid-catalog.md) to target.</span></span>
+<span data-ttu-id="4d782-118">O [identificador do tempo de execução](../rid-catalog.md) a ser usado como destino.</span><span class="sxs-lookup"><span data-stu-id="4d782-118">The [runtime identifier](../rid-catalog.md) to target.</span></span>
 
-## <a name="optional-options"></a><span data-ttu-id="57d5a-118">Opções opcionais</span><span class="sxs-lookup"><span data-stu-id="57d5a-118">Optional options</span></span>
+## <a name="optional-options"></a><span data-ttu-id="4d782-119">Opções opcionais</span><span class="sxs-lookup"><span data-stu-id="4d782-119">Optional options</span></span>
 
 `--framework-version <FRAMEWORK_VERSION>`
 
-<span data-ttu-id="57d5a-119">Especifica a versão do SDK do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="57d5a-119">Specifies the .NET Core SDK version.</span></span> <span data-ttu-id="57d5a-120">Essa opção permite que você selecione uma versão da estrutura específica, além da estrutura especificada pela opção `-f|--framework`.</span><span class="sxs-lookup"><span data-stu-id="57d5a-120">This option enables you to select a specific framework version beyond the framework specified by the `-f|--framework` option.</span></span>
+<span data-ttu-id="4d782-120">Especifica a versão do SDK do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="4d782-120">Specifies the .NET Core SDK version.</span></span> <span data-ttu-id="4d782-121">Essa opção permite que você selecione uma versão da estrutura específica, além da estrutura especificada pela opção `-f|--framework`.</span><span class="sxs-lookup"><span data-stu-id="4d782-121">This option enables you to select a specific framework version beyond the framework specified by the `-f|--framework` option.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="57d5a-121">Mostra informações de ajuda.</span><span class="sxs-lookup"><span data-stu-id="57d5a-121">Shows help information.</span></span>
+<span data-ttu-id="4d782-122">Mostra informações de ajuda.</span><span class="sxs-lookup"><span data-stu-id="4d782-122">Shows help information.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="57d5a-122">Especifica o caminho para o repositório de pacotes de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="57d5a-122">Specifies the path to the runtime package store.</span></span> <span data-ttu-id="57d5a-123">Se não for especificado, o padrão será o subdiretório *repositório* do diretório de instalação do .NET Core do perfil do usuário.</span><span class="sxs-lookup"><span data-stu-id="57d5a-123">If not specified, it defaults to the *store* subdirectory of the user profile .NET Core installation directory.</span></span>
+<span data-ttu-id="4d782-123">Especifica o caminho para o repositório de pacotes de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="4d782-123">Specifies the path to the runtime package store.</span></span> <span data-ttu-id="4d782-124">Se não for especificado, o padrão será o subdiretório *repositório* do diretório de instalação do .NET Core do perfil do usuário.</span><span class="sxs-lookup"><span data-stu-id="4d782-124">If not specified, it defaults to the *store* subdirectory of the user profile .NET Core installation directory.</span></span>
 
 `--skip-optimization`
 
-<span data-ttu-id="57d5a-124">Ignora a fase de otimização.</span><span class="sxs-lookup"><span data-stu-id="57d5a-124">Skips the optimization phase.</span></span>
+<span data-ttu-id="4d782-125">Ignora a fase de otimização.</span><span class="sxs-lookup"><span data-stu-id="4d782-125">Skips the optimization phase.</span></span>
 
 `--skip-symbols`
 
-<span data-ttu-id="57d5a-125">Ignora a geração de símbolos.</span><span class="sxs-lookup"><span data-stu-id="57d5a-125">Skips symbol generation.</span></span> <span data-ttu-id="57d5a-126">No momento, só é possível gerar símbolos no Windows e no Linux.</span><span class="sxs-lookup"><span data-stu-id="57d5a-126">Currently, you can only generate symbols on Windows and Linux.</span></span>
+<span data-ttu-id="4d782-126">Ignora a geração de símbolos.</span><span class="sxs-lookup"><span data-stu-id="4d782-126">Skips symbol generation.</span></span> <span data-ttu-id="4d782-127">No momento, só é possível gerar símbolos no Windows e no Linux.</span><span class="sxs-lookup"><span data-stu-id="4d782-127">Currently, you can only generate symbols on Windows and Linux.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="57d5a-127">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="57d5a-127">Sets the verbosity level of the command.</span></span> <span data-ttu-id="57d5a-128">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="57d5a-128">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="4d782-128">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="4d782-128">Sets the verbosity level of the command.</span></span> <span data-ttu-id="4d782-129">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="4d782-129">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
 
-<span data-ttu-id="57d5a-129">O diretório de trabalho usado pelo comando.</span><span class="sxs-lookup"><span data-stu-id="57d5a-129">The working directory used by the command.</span></span> <span data-ttu-id="57d5a-130">Se não for especificado, ele usará o subdiretório *obj* do diretório atual.</span><span class="sxs-lookup"><span data-stu-id="57d5a-130">If not specified, it uses the *obj* subdirectory of the current directory.</span></span>
+<span data-ttu-id="4d782-130">O diretório de trabalho usado pelo comando.</span><span class="sxs-lookup"><span data-stu-id="4d782-130">The working directory used by the command.</span></span> <span data-ttu-id="4d782-131">Se não for especificado, ele usará o subdiretório *obj* do diretório atual.</span><span class="sxs-lookup"><span data-stu-id="4d782-131">If not specified, it uses the *obj* subdirectory of the current directory.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="57d5a-131">Exemplos</span><span class="sxs-lookup"><span data-stu-id="57d5a-131">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="4d782-132">Exemplos</span><span class="sxs-lookup"><span data-stu-id="4d782-132">Examples</span></span>
 
-<span data-ttu-id="57d5a-132">Armazene os pacotes especificados no arquivo de projeto *packages.csproj* para .NET Core 2.0.0:</span><span class="sxs-lookup"><span data-stu-id="57d5a-132">Store the packages specified in the *packages.csproj* project file for .NET Core 2.0.0:</span></span>
+<span data-ttu-id="4d782-133">Armazene os pacotes especificados no arquivo de projeto *packages.csproj* para .NET Core 2.0.0:</span><span class="sxs-lookup"><span data-stu-id="4d782-133">Store the packages specified in the *packages.csproj* project file for .NET Core 2.0.0:</span></span>
 
 `dotnet store --manifest packages.csproj --framework-version 2.0.0`
 
-<span data-ttu-id="57d5a-133">Armazene os pacotes especificados no *packages.csproj* sem otimização:</span><span class="sxs-lookup"><span data-stu-id="57d5a-133">Store the packages specified in the *packages.csproj* without optimization:</span></span>
+<span data-ttu-id="4d782-134">Armazene os pacotes especificados no *packages.csproj* sem otimização:</span><span class="sxs-lookup"><span data-stu-id="4d782-134">Store the packages specified in the *packages.csproj* without optimization:</span></span>
 
 `dotnet store --manifest packages.csproj --skip-optimization`
 
-## <a name="see-also"></a><span data-ttu-id="57d5a-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="57d5a-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d782-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4d782-135">See also</span></span>
 
-[<span data-ttu-id="57d5a-135">Repositório de pacote de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="57d5a-135">Runtime package store</span></span>](../deploying/runtime-store.md)   
+[<span data-ttu-id="4d782-136">Repositório de pacote de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="4d782-136">Runtime package store</span></span>](../deploying/runtime-store.md)
