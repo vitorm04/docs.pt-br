@@ -51,7 +51,7 @@ Este tópico descreve as etapas necessárias para configurar o serviço de ativa
     ```  
   
     > [!NOTE]
-    >  Esse comando é uma única linha de texto. Este comando habilita o /\<*aplicativo WCF*> aplicativo seja acessado usando http://localhost  */ \<aplicativo WCF >* e net.tcp:// localhost /*\<aplicativo WCF >*.  
+    >  Esse comando é uma única linha de texto. Este comando habilita o /\<*aplicativo WCF*> aplicativo seja acessado usando http://localhost*/\<aplicativo WCF>* e net.tcp:// localhost /*\<aplicativo WCF >*.  
   
      Remova a associação de site do NET. TCP adicionado para este exemplo.  
   
