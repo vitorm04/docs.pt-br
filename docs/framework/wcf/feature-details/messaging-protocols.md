@@ -2,12 +2,12 @@
 title: Protocolos de mensagens
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496631"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072716"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 A pilha de canais do Windows Communication Foundation (WCF) emprega canais de codificação e transporte para transformar a representação interna de mensagem em seu formato de transmissão e enviá-lo usando um transporte particular. O transporte mais comuns usado para interoperabilidade de serviços da Web é HTTP e as codificações mais comuns usadas pelos serviços da Web são baseadas em XML SOAP 1.1, SOAP 1.2 e mecanismo de otimização de transmissão mensagem (MTOM).  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132: Um cabeçalho HTTP conteúdo-tipo deve ter um parâmetro de tipo com o valor `application/xop+xml` entre aspas duplas.  
   
- Embora o requisito para usar aspas duplas não seja explícito no RFC 2387, o texto observa que todo o tipo de mídia com diversas partes/relacionado que contêm parâmetros provavelmente reservada caracteres, como "@" or "/" e, portanto, precisam de aspas duplas.  
+ Embora o requisito para usar aspas duplas não seja explícito no RFC 2387, o texto observa que todos os parâmetros de tipo de mídia com diversas partes/relacionado provavelmente contêm caracteres reservados como "\@" ou "/" e, portanto, precisam de aspas duplas marca.  
   
 -   R4133: Um cabeçalho HTTP conteúdo-tipo deve ter um parâmetro de inicialização com o valor do cabeçalho Content-ID da parte MIME que contém o SOAP 1. x Envelope, entre aspas duplas. Se o parâmetro start for omitido, a primeira parte MIME deve conter o SOAP Envelope de 1. x.  
   

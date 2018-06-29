@@ -1,18 +1,19 @@
 ---
 title: 'Como: associar o conteúdo de arquivos diferentes (LINQ) (Visual Basic)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 1be067db9c248ae7f51d79f1193e185f9c1fe564
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643530"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072040"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Como: associar o conteúdo de arquivos diferentes (LINQ) (Visual Basic)
+
 Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
   
-### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
+## <a name="to-create-the-data-files"></a>Para criar os arquivos de dados
   
 1.  Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
   
@@ -49,8 +50,11 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
     ```  
   
 ## <a name="example"></a>Exemplo  
-  
-```vb  
+
+```vb
+Imports System.Collections.Generic
+Imports System.Linq
+
 Class JoinStrings  
   
     Shared Sub Main()  
@@ -77,7 +81,7 @@ Class JoinStrings
                          Let n = name.Split(New Char() {","})   
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
-                            Where n(2) = n2(0)   
+                            Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
                             Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
                               n2(2) & "," & n2(3)  
   
@@ -101,25 +105,31 @@ Class JoinStrings
     End Sub  
 End Class  
 ' Output:  
-'Merge two spreadsheets:  
-'Adams,Terry,120, 99, 82, 81  
-'Fakhouri,Fadi,116, 99, 86, 90  
-'Feng,Hanying,117, 93, 92, 80  
-'Garcia,Cesar,114, 97, 89, 85  
-'Garcia,Debra,115, 35, 72, 91  
-'Garcia,Hugo,118, 92, 90, 83  
-'Mortensen,Sven,113, 88, 94, 65  
-'O'Donnell,Claire,112, 75, 84, 91  
-'Omelchenko,Svetlana,111, 97, 92, 81  
-'Tucker,Lance,119, 68, 79, 88  
-'Tucker,Michael,122, 94, 92, 91  
-'Zabokritski,Eugene,121, 96, 85, 91  
-'12 total names in list  
+' Merge two spreadsheets:
+' Omelchenko, 97, 92, 81, 60
+' O'Donnell, 75, 84, 91, 39
+' Mortensen, 88, 94, 65, 91
+' Garcia, 97, 89, 85, 82
+' Garcia, 35, 72, 91, 70
+' Fakhouri, 99, 86, 90, 94
+' Feng, 93, 92, 80, 87
+' Garcia, 92, 90, 83, 78
+' Tucker, 68, 79, 88, 92
+' Adams, 99, 82, 81, 79
+' Zabokritski, 96, 85, 91, 60
+' Tucker, 94, 92, 91, 91
+' 12 total names in list 
 ```  
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+Criar e compilar um projeto que tem como alvo uma das opções a seguir:
+
+- .NET framework versão 3.5 com uma referência a System.Core.dll.
+- .NET framework versão 4.0 ou superior.
+- Versão do .NET core 1.0 ou superior.
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
-  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
+
  [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

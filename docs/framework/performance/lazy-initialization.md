@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398021"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073210"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
@@ -140,7 +140,7 @@ ms.locfileid: "33398021"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variáveis locais de thread em Parallel.For e ForEach  
- Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, consulte [Como escrever um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como escrever um loop Parallel.ForEach com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, consulte [como: gravar um Loop Parallel. for com variáveis locais de Thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [como: gravar um Loop Parallel. ForEach com variáveis locais de partição](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usando inicialização lenta para cenários de baixa sobrecarga  
  Em cenários em que você precisa fazer inicialização lenta de um grande número de objetos, você pode decidir que encapsular cada objeto em um <xref:System.Lazy%601> requer memória ou recursos de computação demais. Ou então, você pode ter requisitos rigorosos para como a inicialização lenta é exposta. Nesses casos, você pode usar os métodos `static` (`Shared` no Visual Basic) da classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para fazer inicialização lenta de cada objeto sem encapsulá-lo em uma instância de <xref:System.Lazy%601>.  

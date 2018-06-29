@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744441"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072508"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; elemento (configurações de rede)
 Define um servidor proxy.  
@@ -46,7 +46,7 @@ Define um servidor proxy.
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
 |`autoDetect`|Especifica se o proxy é detectado automaticamente. O valor padrão é `unspecified`.|  
-|`bypassonlocal`|Especifica se o proxy é ignorado para os recursos locais. Recursos locais incluem o servidor local (http://localhost, http://loopback, ou http://127.0.0.1) e um URI sem um período (http://webserver). O valor padrão é `unspecified`.|  
+|`bypassonlocal`|Especifica se o proxy é ignorado para os recursos locais. Recursos locais incluem o servidor local (`http://localhost`, `http://loopback`, ou `http://127.0.0.1`) e um URI sem um período (`http://webserver`). O valor padrão é `unspecified`.|  
 |`proxyaddress`|Especifica o URI para usar proxy.|  
 |`scriptLocation`|Especifica o local do script de configuração.|  
 |`usesystemdefault`|Especifica se deve usar configurações de proxy do Internet Explorer. Se definido como `true`, os atributos subsequentes substituirão as configurações de proxy do Internet Explorer. O valor padrão é `unspecified`.|  

@@ -2,12 +2,12 @@
 title: 'Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948443"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070850"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)
 
@@ -25,7 +25,6 @@ Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de
 O exemplo a seguir mostra como usar um tipo nomeado `Student` para armazenar dados mesclados, de duas coleções na memória de cadeias de caracteres, que simulam dados de planilha no formato .csv. A primeira coleção de cadeias de caracteres representa os nomes e as IDs dos alunos e a segunda coleção, representa a ID do aluno (na primeira coluna) e quatro pontuações de exames. A ID é usada como a chave estrangeira.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 Criar e compilar um projeto que tem como alvo uma das opções a seguir:
 
-- .NET framework versão 3.5 ou superior com uma referência a System.Core.dll.
+- .NET framework versão 3.5 com uma referência a System.Core.dll.
+- .NET framework versão 4.0 ou superior.
 - Versão do .NET core 1.0 ou superior.
 
 ## <a name="see-also"></a>Consulte também

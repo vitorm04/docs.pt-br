@@ -2,12 +2,12 @@
 title: Geração de alteração SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766654"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071946"
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.  
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Gerando um comando SQL de inserção  
  Para um DbInsertCommandTree determinado no provedor de exemplo, o comando gerado de inserção segue um dos dois modelos de inserção abaixo.  
   
- O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento predicado "@@ROWCOUNT > 0" ocorre quando uma linha foi inserida. O elemento predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume a forma "keyMemberI = SCOPE_IDENTITY ()" somente se keyMemeberI é uma chave gerada pelo repositório, pois SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo repositório).  
+ O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento predicado "\@ @ROWCOUNT > 0" é true se uma linha foi inserida. O elemento predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume a forma "keyMemberI = SCOPE_IDENTITY ()" somente se keyMemeberI é uma chave gerada pelo repositório, pois SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo repositório).  
   
 ```  
 -- first insert Template  
