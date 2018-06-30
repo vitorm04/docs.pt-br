@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ef8e0b08c7ba4ddb78144df54d407998cd40fc55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577183"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105752"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
 
@@ -70,4 +70,5 @@ Treinamento em DDD
 
 
 >[!div class="step-by-step"]
-[Anterior] (../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md) [Próximo] (apply-simplified-microservice-cqrs-ddd-patterns.md)
+[Anterior](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+[Próximo](apply-simplified-microservice-cqrs-ddd-patterns.md)

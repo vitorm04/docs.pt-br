@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578827"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106509"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migrando aplicativos monolíticos herdados do Framework .NET para contêineres do Windows
 
@@ -186,4 +186,5 @@ Há algumas diferenças entre a configuração de desenvolvimento e uma configur
 No ambiente de desenvolvimento, você deve executar todos os contêineres no mesmo sistema operacional. O Docker CE para Windows não dá suporte para execução de contêineres baseados em Windows e em Linux ao mesmo tempo. Em produção, você pode decidir se deseja executar o microsserviço de catálogo em um contêiner do Windows em um único host (ou cluster) do Docker ou fazer com que o aplicativo Web Forms se comunique com uma instância de microsserviço de catálogo em execução em um contêiner do Linux em um host do Docker diferente. Isso depende de como você deseja otimizar a latência da rede. Na maioria dos casos, convém que os microsserviços dos quais os aplicativos dependem sejam executado no mesmo host (ou nuvem) do Docker para facilitar a implantação e reduzir a latência de comunicação. Nessas configurações, as únicas comunicações de alto custo são as que ocorrem entre as instâncias de microsserviços e os servidores de alta disponibilidade do armazenamento de dados persistentes.
 
 >[!div class="step-by-step"]
-[Previous] (../net-core-single-containers-linux-windows-server-hosts/index.md) [Next] (../multi-container-microservice-net-applications/index.md)
+[Anterior](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[Próximo](../multi-container-microservice-net-applications/index.md)

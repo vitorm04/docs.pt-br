@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579204"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105583"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos de Docker
 
@@ -122,7 +122,7 @@ Há outras linhas de configuração que você pode adicionar o DockerFile depend
 
 **Obter mais informações** para obter informações sobre como criar imagens do Docker para aplicativos .NET Core, vá para <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Para saber mais sobre como criar suas próprias imagens, vá para [ https://docs.docker.com/engine/\tutoriais/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Para saber mais sobre como criar suas próprias imagens, vá para [ https://docs.docker.com/engine/\ tutoriais/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Repositórios de imagens em várias plataformas**
 
@@ -259,4 +259,5 @@ Você também pode depurar recipientes de núcleo do .NET do Docker ao usar o Vi
 
 
 >[!div class="step-by-step"]
-[Anterior] (docker-aplicativos-desenvolvimento-environment.md) [Avançar] (visual-studio-ferramentas-para-docker.md)
+[Anterior](docker-apps-development-environment.md)
+[Próximo](visual-studio-tools-for-docker.md)

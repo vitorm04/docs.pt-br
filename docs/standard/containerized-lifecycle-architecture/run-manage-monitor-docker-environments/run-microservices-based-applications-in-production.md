@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 47685bfd8dca50c5e93be7574ea6ef30a49cbede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4192ff1d67a3f70bb5eeb9a36245cfd35bafb53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568791"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105625"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e microservices em ambientes de produção
 
@@ -35,4 +35,5 @@ Os recursos fornecidos pelo orchestrators e agendadores são muito complexos par
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Avançar] (gerenciar-produção-docker-environments.md)
+[Anterior](index.md)
+[Próximo](manage-production-docker-environments.md)

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b483214e7bd039a71ae642aa26e69d63222af8ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580121"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104436"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Escolhendo entre o .NET Core e do .NET Framework para contêineres do Docker
 
@@ -17,4 +17,5 @@ Há duas implementações com suporte para criar aplicativos do Docker em contê
 
 
 >[!div class="step-by-step"]
-[Previous] (../container-docker-introduction/docker-containers-images-registries.md) [Next] (general-guidance.md)
+[Anterior](../container-docker-introduction/docker-containers-images-registries.md)
+[Próximo](general-guidance.md)

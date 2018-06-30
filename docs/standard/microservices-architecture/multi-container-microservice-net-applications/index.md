@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 297a53d6d6d37b1fa4a0e021919c9df86edeca03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571950"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104472"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres
 
@@ -21,4 +21,5 @@ No entanto, se você souber como projetar e desenvolver um aplicativo baseado em
 
 
 >[!div class="step-by-step"]
-[Previous] (../containerize-net-framework-applications/index.md) [Next] (microservice-application-design.md)
+[Anterior](../containerize-net-framework-applications/index.md)
+[Próximo](microservice-application-design.md)

@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314705"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104886"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Usando ferramentas do Visual Studio para Docker (Visual Studio no Windows)
 
@@ -71,4 +71,5 @@ Implante um contêiner do ASP.NET em um host remoto do Docker: [https://docs.mic
 
 
 >[!div class="step-by-step"]
-[Anterior] (docker-aplicativos-interna-loop-workflow.md) [Avançar] (set-up-windows-containers-with-powershell.md)
+[Anterior](docker-apps-inner-loop-workflow.md)
+[Próximo](set-up-windows-containers-with-powershell.md)

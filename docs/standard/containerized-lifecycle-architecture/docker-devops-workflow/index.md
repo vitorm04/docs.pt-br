@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicativo do Docker em contêineres com a platafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b4a88725de78f59c62aac1bd33764db6b2e0887e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b915c53b70192139c64c63d8b47110263e1621d0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768483"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104459"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 
@@ -35,4 +35,5 @@ A complexidade do desenvolvimento de aplicativos em contêineres aumenta de mane
 
 
 >[!div class="step-by-step"]
-[Previous] (../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md) [Next] (docker-application-outer-loop-devops-workflow.md)
+[Anterior](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+[Próximo](docker-application-outer-loop-devops-workflow.md)

@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: fe25fa8772c60625c5564d5e7194957366a6010a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572743"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106613"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -71,4 +71,5 @@ Figura 4-4 também mostra o fluxo de publicação envia uma imagem por meio de u
 
 
 >[!div class="step-by-step"]
-[Anterior] (comum-contêiner-design-principles.md) [Avançar] (state-and-data-in-docker-applications.md)
+[Anterior](common-container-design-principles.md)
+[Próximo](state-and-data-in-docker-applications.md)

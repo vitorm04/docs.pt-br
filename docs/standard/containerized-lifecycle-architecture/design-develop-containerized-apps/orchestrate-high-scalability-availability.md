@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 3a505e10b2a37032a7ccfefdf4a6f4bb64d65486
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7016fa8b731170a63f5d0f9d9bed3b72090be4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579542"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106373"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Organizar microservices e multicontainer aplicativos de alto desempenho e disponibilidade
 
@@ -181,4 +181,5 @@ Observe que os contêineres do Docker são sem estado. Se você desejar implemen
 
 
 >[!div class="step-by-step"]
-[Anterior] (soa-applications.md) [Avançar] (docker-aplicativos-desenvolvimento-environment.md)
+[Anterior](soa-applications.md)
+[Próximo](docker-apps-development-environment.md)

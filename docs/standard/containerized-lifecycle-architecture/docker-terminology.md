@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7a8ec2233b7927c1e3f85f5a3536a889a6a55e22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b13f28f4314ef72fbcaffe894bf823486665d3f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574014"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106091"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -47,4 +47,5 @@ Esta seção lista os termos e definições com a qual você deve se familiariza
 
 
 >[!div class="step-by-step"]
-[Anterior] (e-for-docker.md) [Avançar] (docker-contêineres-imagens-e-registries.md)
+[Anterior](what-is-docker.md)
+[Próximo](docker-containers-images-and-registries.md)

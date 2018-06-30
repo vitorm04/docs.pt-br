@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575538"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106118"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorar serviços de aplicativos em contêineres
 
@@ -97,4 +97,5 @@ Salvar consultas também é um recurso padrão do Operations Management Suite e 
 **Obter mais informações** para encontrar informações sobre como instalar e configurar o Docker solução contêiner [Operations Management Suite](http://microsoft.com/oms), vá para <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Anterior] (gerenciar-produção-docker-environments.md) [Avançar] (... /Key-takeaways/index.MD)
+[Anterior](manage-production-docker-environments.md)
+[Próximo](../key-takeaways/index.md)

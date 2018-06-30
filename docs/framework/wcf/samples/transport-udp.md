@@ -2,12 +2,12 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 64452e36f34f87aef491cf66f6dd94ddc3a59f34
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808410"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106032"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 O transporte UDP demonstra como implementar UDP unicast e multicast como um transporte personalizado do Windows Communication Foundation (WCF). O exemplo descreve o procedimento recomendado para a criação de um transporte personalizado no WCF, usando a estrutura de canais e seguir as práticas recomendadas do WCF. As etapas para criar um transporte personalizado são da seguinte maneira:  
@@ -72,9 +72,9 @@ O transporte UDP demonstra como implementar UDP unicast e multicast como um tran
   
 -   O <xref:System.ServiceModel.Channels.CommunicationObject> classe implementa <xref:System.ServiceModel.ICommunicationObject> e impõe a máquina de estado descrita anteriormente na etapa 2. 
 
--   O '<xref:System.ServiceModel.Channels.ChannelManagerBase> classe implementa <xref:System.ServiceModel.Channels.CommunicationObject> e fornece uma classe base unificada para <xref:System.ServiceModel.Channels.ChannelFactoryBase> e <xref:System.ServiceModel.Channels.ChannelListenerBase>. O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe funciona em conjunto com <xref:System.ServiceModel.Channels.ChannelBase>, que é uma classe base que implementa <xref:System.ServiceModel.Channels.IChannel>.  
+-   O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe implementa <xref:System.ServiceModel.Channels.CommunicationObject> e fornece uma classe base unificada para <xref:System.ServiceModel.Channels.ChannelFactoryBase> e <xref:System.ServiceModel.Channels.ChannelListenerBase>. O <xref:System.ServiceModel.Channels.ChannelManagerBase> classe funciona em conjunto com <xref:System.ServiceModel.Channels.ChannelBase>, que é uma classe base que implementa <xref:System.ServiceModel.Channels.IChannel>.  
   
--   O '<xref:System.ServiceModel.Channels.ChannelFactoryBase> classe implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> e <xref:System.ServiceModel.Channels.IChannelFactory> e consolida o `CreateChannel` sobrecargas em uma `OnCreateChannel` método abstract.  
+-   O <xref:System.ServiceModel.Channels.ChannelFactoryBase> classe implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> e <xref:System.ServiceModel.Channels.IChannelFactory> e consolida o `CreateChannel` sobrecargas em uma `OnCreateChannel` método abstract.  
   
 -   O <xref:System.ServiceModel.Channels.ChannelListenerBase> classe implementa <xref:System.ServiceModel.Channels.IChannelListener>. Cuida do gerenciamento de estado básica.  
   
@@ -109,13 +109,13 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>O UdpChannelListener  
- O ' UdpChannelListener que implementa o exemplo deriva o <xref:System.ServiceModel.Channels.ChannelListenerBase> classe. Ele usa um único soquete UDP para receber datagramas. O `OnOpen` método recebe dados usando o soquete UDP em um loop assíncrono. Os dados, em seguida, são convertidos em mensagens usando a estrutura de codificação de mensagem.  
+ O `UdpChannelListener` que implementa o exemplo deriva o <xref:System.ServiceModel.Channels.ChannelListenerBase> classe. Ele usa um único soquete UDP para receber datagramas. O `OnOpen` método recebe dados usando o soquete UDP em um loop assíncrono. Os dados, em seguida, são convertidos em mensagens usando a estrutura de codificação de mensagem.  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- Como o mesmo canal de datagrama representa mensagens que chegam de várias fontes, o `UdpChannelListener` um ouvinte de singleton. Há, a maioria, um ativo <xref:System.ServiceModel.Channels.IChannel>' associado a este ouvinte de cada vez. O exemplo gera outra somente se um canal que é retornado pelo `AcceptChannel` método subsequentemente é descartado. Quando uma mensagem é recebida, ele é enfileirado para este canal de singleton.  
+ Como o mesmo canal de datagrama representa mensagens que chegam de várias fontes, o `UdpChannelListener` um ouvinte de singleton. Há, a maioria, um ativo <xref:System.ServiceModel.Channels.IChannel> associado a este ouvinte de cada vez. O exemplo gera outra somente se um canal que é retornado pelo `AcceptChannel` método subsequentemente é descartado. Quando uma mensagem é recebida, ele é enfileirado para este canal de singleton.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
  O `UdpInputChannel` classe implementa `IInputChannel`. Ele consiste em uma fila de mensagens de entrada que é preenchida pelo `UdpChannelListener`do soquete. Essas mensagens são removidas da fila pelo `IInputChannel.Receive` método.  
