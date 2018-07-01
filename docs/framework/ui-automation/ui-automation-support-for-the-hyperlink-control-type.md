@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409975"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140236"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Hyperlink
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "33409975"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Sim|Todos os controles de hiperlink devem dar suporte ao padrão Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Controles de hiperlink devem dar suporte o padrão de controle de valor quando o link contém informações úteis e significativo para o usuário.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Por exemplo, "http://www...."|Uma URL para um endereço de Internet ou Intranet é um exemplo de um hyperlink que contém informações significativas para o usuário. Um link de programação, no entanto, é significativo apenas a um aplicativo e não é recomendado para a propriedade de valor.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Por exemplo, `"http://www...."`|Uma URL para um endereço de Internet ou Intranet é um exemplo de um hyperlink que contém informações significativas para o usuário. Um link de programação, no entanto, é significativo apenas a um aplicativo e não é recomendado para a propriedade de valor.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação de interface do usuário necessário  

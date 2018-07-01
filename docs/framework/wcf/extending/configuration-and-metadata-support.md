@@ -2,12 +2,12 @@
 title: Configuração e suporte de metadados
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486718"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140145"
 ---
 # <a name="configuration-and-metadata-support"></a>Configuração e suporte de metadados
 Este tópico descreve como habilitar o suporte de configuração e metadados para associações e elementos de associação.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  O elemento de associação personalizada pode exportar declarações de política na associação WSDL para um ponto de extremidade de serviço para expressar os recursos desse elemento de associação. O exemplo de código a seguir é obtido a [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemplo.  
   
 #### <a name="policy-export"></a>Exportação de diretivas  
- O `UdpTransportBindingElement` tipo implementa '<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> para adicionar suporte para exportação de política. Como resultado, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> inclui `UdpTransportBindingElement` na geração de política para qualquer associação que o inclua.  
+ O `UdpTransportBindingElement` tipo implementa <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> para adicionar suporte para exportação de política. Como resultado, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> inclui `UdpTransportBindingElement` na geração de política para qualquer associação que o inclua.  
   
  Em <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, adicionar uma asserção para UDP e outra asserção se o canal estiver no modo de multicast. Isso ocorre porque o modo multicast afeta como a pilha de comunicação é construída e, portanto, deve ser coordenada entre os dois lados.  
   
