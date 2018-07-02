@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Microsoft 
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 943163ca4c82ad75f177ebe73559d909e7292c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb9a1d68d4c7c66c6adab3a5e932ee37c3ea22b0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592490"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106417"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -225,4 +225,5 @@ Embora os aplicativos monolíticos possam se beneficiar com o Docker, a divisão
 > - **Livro eletrônico Architecting Microservices** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Anterior] (architectural-principles.md) [Próximo] (common-client-side-web-technologies.md)
+[Anterior](architectural-principles.md)
+[Próximo](common-client-side-web-technologies.md)

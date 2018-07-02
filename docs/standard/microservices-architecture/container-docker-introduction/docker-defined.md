@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576180"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106795"
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
@@ -58,4 +58,5 @@ Uma imagem de contêiner é uma maneira de empacotar um aplicativo ou serviço e
 Os desenvolvedores do Docker não dizem "Funciona no meu computador, por que não em produção?" Eles dizem, "É executado no Docker". Os aplicativos empacotados pelo Docker podem ser executados em qualquer ambiente compatível do Docker. Os aplicativos empacotado do Docker são executados consistentemente em todos os destinos de implantação (desenvolvimento, garantia de qualidade, processo de preparo, produção).
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Próximo] (docker-terminology.md)
+[Anterior](index.md)
+[Próximo](docker-terminology.md)

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848496"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106441"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -414,4 +414,5 @@ A Figura 8-10 mostra os metadados JSON do Swagger gerados por meio do microsserv
 
 
 >[!div class="step-by-step"]
-[Anterior] (microservice-application-design.md) [Próximo] (multi-container-applications-docker-compose.md)
+[Anterior](microservice-application-design.md)
+[Próximo](multi-container-applications-docker-compose.md)

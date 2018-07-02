@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: f2bdc34400215ad24d5dcec2e1e9f314a01430d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 106b832801a373ca387be455ef1c0df4233621d0
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288448"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027818"
 ---
 # <a name="long-c-reference"></a>long (Referência de C#)
 
 `long` indica um tipo integral que armazena valores de acordo com o tamanho e o intervalo mostrados na tabela a seguir.  
   
-|Tipo|Intervalo|Tamanho|Tipo do .NET Framework|  
+|Tipo|Intervalo|Tamanho|Tipo .NET|  
 |----------|-----------|----------|-------------------------|  
 |`long`|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Inteiro de 64 bits com sinal|<xref:System.Int64?displayProperty=nameWithType>|  
   

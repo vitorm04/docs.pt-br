@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44fbe79c9ed7cfd4a79daf6ee9b3d39afd33a910
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697190"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106019"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -366,4 +366,5 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
 
 
 >[!div class="step-by-step"]
-[Anterior] (client-side-validation.md) [Próximo] (infrastructure-persistence-layer-design.md)
+[Anterior](client-side-validation.md)
+[Próximo](infrastructure-persistence-layer-design.md)

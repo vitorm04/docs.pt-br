@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582669"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104394"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -124,4 +124,5 @@ Existem algumas abordagens que você pode usar. No arquivo docker-compose.yml ut
 Se o Visual Studio estiver em execução, será possível aproveitar pontos de interrupção e exceções após o aplicativo do Compose entrar em funcionamento. Outra opção é executar os testes de integração automaticamente no pipeline de CI no Visual Studio Team Services ou em qualquer outro sistema CI/CD compatível com contêineres do Docker.
 
 >[!div class="step-by-step"]
-[Anterior] (subscribe-events.md) [Próximo] (../microservice-ddd-cqrs-patterns/index.md)
+[Anterior](subscribe-events.md)
+[Próximo](../microservice-ddd-cqrs-patterns/index.md)

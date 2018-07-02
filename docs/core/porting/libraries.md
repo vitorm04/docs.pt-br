@@ -4,12 +4,12 @@ description: Saiba como realizar a portabilidade de projetos de biblioteca do .N
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218352"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028039"
 ---
 # <a name="porting-to-net-core---libraries"></a>Portabilidade para o .NET Core – Bibliotecas
 
@@ -72,18 +72,6 @@ Use limites de segurança fornecidos pelo sistema operacional, como virtualizaç
 Assim como a CAS, a Transparência de Segurança permite a separação do código em área restrita do código crítico de segurança de uma forma declarativa, mas [não têm mais suporte como um limite de segurança](~/docs/framework/misc/security-transparent-code.md). Esse recurso é amplamente usado pelo Silverlight. 
 
 Use limites de segurança fornecidos pelo sistema operacional, como virtualização, contêineres ou contas de usuário para executar processos com o conjunto mínimo de privilégios.
-
-### <a name="globaljson"></a>global.json
-
-O arquivo *global.json* é um arquivo opcional que permite a definição da versão das ferramentas do .NET Core de um projeto. Se você estiver usando compilações noturnas do .NET Core e quiser definir uma versão específica do SDK, especifique a versão com um arquivo *global.json*. Ele geralmente está no diretório de trabalho atual ou em um de seus diretórios pai. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>Converter um projeto de PCL
 

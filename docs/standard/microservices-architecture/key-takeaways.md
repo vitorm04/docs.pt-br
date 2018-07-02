@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578177"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105508"
 ---
 # <a name="key-takeaways"></a>Principais aspectos a serem lembrados
 
@@ -38,4 +38,4 @@ A seguir, encontram-se as conclusões mais importantes deste guia, que servem co
 **Orquestradores.** Orquestradores baseados em contêineres como os fornecidos no Serviço de Contêiner do Azure (Kubernetes, Mesos DC/OS e Docker Swarm) e no Azure Service Fabric são indispensáveis para qualquer aplicativo pronto para produção baseado em microsserviço e com vários contêineres com necessidades significativas de complexidade, escalabilidade e em constante evolução. Este guia apresentou os orquestradores e sua função em soluções baseadas em microsserviços e contêineres. Se suas necessidades apontam para aplicativos complexos em contêineres, pode ser útil procurar outros recursos para saber mais sobre os orquestradores
 
 >[!div class="step-by-step"]
-[Anterior] (secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+[Anterior](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

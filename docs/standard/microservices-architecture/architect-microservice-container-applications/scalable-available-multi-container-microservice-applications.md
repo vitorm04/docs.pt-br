@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: e8552f79a4196c161ec70d7ea46156215e52db26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578879"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105456"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -135,4 +135,5 @@ Atualmente, o ACS está disponível para Máquinas Virtuais do Linux das séries
 
 
 >[!div class="step-by-step"]
-[Anterior] (resilient-high-availability-microservices.md) [Próximo] (using-azure-service-fabric.md)
+[Anterior](resilient-high-availability-microservices.md)
+[Próximo](using-azure-service-fabric.md)
