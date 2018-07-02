@@ -4,7 +4,7 @@
 #### [Como escrever um loop Parallel.For simples](how-to-write-a-simple-parallel-for-loop.md)
 #### [Como escrever um loop Parallel.ForEach simples](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [Como escrever um loop Parallel.For com variáveis locais de thread](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [Como escrever um loop Parallel.ForEach com variáveis locais de thread](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [Como escrever um loop Parallel.ForEach com variáveis locais de partição](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [Como cancelar um loop Parallel.For ou ForEach](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [Como manipular exceções em loops paralelos](how-to-handle-exceptions-in-parallel-loops.md)
 #### [Como agilizar corpos de loop pequenos](how-to-speed-up-small-loop-bodies.md)

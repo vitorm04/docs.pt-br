@@ -1,24 +1,24 @@
 ---
-title: Manipulando e lançando exceções
-ms.date: 03/30/2017
+title: Tratando e gerando exceções no .NET
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- exceptions [.NET Framework], handling
+- exceptions [.NET], handling
 - runtime, exceptions
 - filtering exceptions
-- errors [.NET Framework], exceptions
-- exceptions [.NET Framework], throwing
-- exceptions [.NET Framework]
+- errors [.NET], exceptions
+- exceptions [.NET], throwing
+- exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b71ffd9bfcfcb048f148ac1a3a418c03b9834ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575447"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298338"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Tratando e gerando exceções no .NET
 
@@ -42,32 +42,31 @@ Tradicionalmente, o modelo de tratamento de erro da linguagem confiava na forma 
 
 - O código de tratamento de exceção pode ser adicionado a um aplicativo para aumentar a confiabilidade do programa.
 
-As exceções oferecem vantagens sobre outros métodos de notificação de erro, como códigos de retorno. Falhas não passam despercebidas porque se uma exceção for lançada e você não tratar dela, o tempo de execução encerra o aplicativo. Valores inválidos não continuam a se propagar através do sistema como resultado do código que não consegue verificar se há um código de retorno de falha. 
+As exceções oferecem vantagens sobre outros métodos de notificação de erro, como códigos de retorno. Falhas não passam despercebidas porque se uma exceção for lançada e você não tratar dela, o tempo de execução encerra o aplicativo. Valores inválidos não continuam a se propagar através do sistema como resultado do código que não consegue verificar se há um código de retorno de falha.
 
 ## <a name="common-exceptions"></a>Exceções comuns
 
 A tabela a seguir lista algumas exceções comuns com exemplos do que pode causá-las.
 
-| Tipo de exceção | Tipo base | Descrição | Exemplo |
-| -------------- | --------- | ----------- | ------- |
-| <xref:System.Exception> | <xref:System.Object> | A classe base para todas as exceções. | Nenhuma (use uma classe derivada dessa exceção). |
-| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Gerada pelo tempo de execução somente quando uma matriz é indexada incorretamente. | Indexar uma matriz fora do intervalo válido: `arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | <xref:System.Exception> | Gerada pelo tempo de execução somente quando um objeto nulo é referenciado. | `object o = null; o.ToString();` |
-| <xref:System.InvalidOperationException> | <xref:System.Exception> | Gerada por métodos quando em um estado inválido. | Chamar `Enumerator.GetNext()` após a remoção de um item da coleção subjacente. |
-| <xref:System.ArgumentException> | <xref:System.Exception> | A classe base para todas as exceções de argumento. | Nenhuma (use uma classe derivada dessa exceção). |
-| <xref:System.ArgumentNullException> | <xref:System.Exception> | Gerada por métodos que não permitem que um argumento seja nulo. | `String s = null; "Calculate".IndexOf (s);` |
-| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Gerada por métodos que verificam se os argumentos estão em um determinado intervalo. | `String s = "string"; s.Substring(s.Length+1);` |
+| Tipo de exceção | Descrição | Exemplo |
+| -------------- | ----------- | ------- |
+| <xref:System.Exception> | A classe base para todas as exceções. | Nenhuma (use uma classe derivada dessa exceção). |
+| <xref:System.IndexOutOfRangeException> | Gerada pelo tempo de execução somente quando uma matriz é indexada incorretamente. | Indexar uma matriz fora do intervalo válido: <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | Gerada pelo tempo de execução somente quando um objeto nulo é referenciado. | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | Gerada por métodos quando em um estado inválido. | Chamar `Enumerator.MoveNext()` após a remoção de um item da coleção subjacente. |
+| <xref:System.ArgumentException> | A classe base para todas as exceções de argumento. | Nenhuma (use uma classe derivada dessa exceção). |
+| <xref:System.ArgumentNullException> | Gerada por métodos que não permitem que um argumento seja nulo. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | Gerada por métodos que verificam se os argumentos estão em um determinado intervalo. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Consulte também
 
-* [Classe e propriedades da exceção](exception-class-and-properties.md)
-* [Como usar o bloco try-catch para capturar exceções](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [Como usar exceções específicas em um bloco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [Como gerar exceções explicitamente](how-to-explicitly-throw-exceptions.md)
-* [Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)
-* [Usando manipuladores de exceção filtrados por usuário](using-user-filtered-exception-handlers.md)
-* [Como usar blocos finally](how-to-use-finally-blocks.md)
-* [Manipulando exceções de interoperabilidade COM](handling-com-interop-exceptions.md)
-* [Práticas recomendadas para exceções](best-practices-for-exceptions.md)
-
-Para saber mais sobre o funcionamento de exceções no .NET, veja [O que todo desenvolvedor precisa saber sobre exceções no tempo de execução](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
+[Classe e propriedades da exceção](exception-class-and-properties.md)  
+[Como usar o bloco try-catch para capturar exceções](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+[Como usar exceções específicas em um bloco catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
+[Como gerar exceções explicitamente](how-to-explicitly-throw-exceptions.md)  
+[Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)  
+[Usando manipuladores de exceção filtrados por usuário](using-user-filtered-exception-handlers.md)  
+[Como usar blocos finally](how-to-use-finally-blocks.md)  
+[Manipulando exceções de interoperabilidade COM](handling-com-interop-exceptions.md)  
+[Práticas recomendadas para exceções](best-practices-for-exceptions.md)  
+[O que todo desenvolvedor precisa saber sobre exceções no tempo de execução](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).

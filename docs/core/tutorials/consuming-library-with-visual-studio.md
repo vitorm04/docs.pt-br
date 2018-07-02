@@ -1,21 +1,22 @@
 ---
-title: Consumindo uma biblioteca de classes com .NET Core no Visual Studio 2017
+title: Consumir uma biblioteca .NET Standard no Visual Studio 2017
 description: Saiba como chamar os membros em uma biblioteca de classes com o Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827307"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Consumindo uma biblioteca de classes com .NET Core no Visual Studio 2017
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Consumir uma biblioteca .NET Standard no Visual Studio 2017
 
-Depois de criar uma biblioteca de classes seguindo as etapas em [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Compilação de uma biblioteca de classes em C# com o .NET Core no Visual Studio 2017) ou [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Compilação de uma biblioteca de classes em Visual Basic com o .NET Core no Visual Studio 2017), testá-la em [Testar uma biblioteca de classes com .NET Core no Visual Studio 2017](testing-library-with-visual-studio.md), compilar uma versão de liberação da biblioteca, a próxima etapa é disponibilizá-la aos chamadores. Você pode fazer isso de duas maneiras:
+Depois de criar uma biblioteca de classes .NET Standard, siga as etapas em [Criar uma biblioteca de classes C# com o .NET Core no Visual Studio 2017](./library-with-visual-studio.md) ou [Criar uma biblioteca de classes do Visual Basic com o .NET Core no Visual Studio 2017](vb-library-with-visual-studio.md), testá-la em [Testar uma biblioteca de classes com .NET Core no Visual Studio 2017](testing-library-with-visual-studio.md), e construído uma Versão de Lançamento da biblioteca, a próxima etapa é disponibilizá-la para os chamadores. Você pode fazer isso de duas maneiras:
 
 * Se a biblioteca for usada por uma única solução (por exemplo, se for um componente em um único aplicativo grande), você poderá incluí-la como um projeto de sua solução.
 
@@ -48,7 +49,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   O código usa a propriedade [Console.WindowHeight](xref:System.Console.WindowHeight) para determinar o número de linhas na janela do console. Sempre que a propriedade [Console.CursorTop](xref:System.Console.CursorTop) for maior ou igual ao número de linhas na janela do console, o código limpará a janela do console e exibirá novamente uma mensagem para o usuário.
+   O código usa a variável `row` ​​para manter uma contagem do número de linhas de dados gravadas na janela do console. Sempre que for maior ou igual a 25, o código limpa a janela do console e exibe uma mensagem para o usuário.
 
    O programa solicita que o usuário insira uma cadeia de caracteres. Ele indica se a cadeia de caracteres começa com um caractere maiúsculo. Se o usuário pressionar a tecla Enter sem inserir uma cadeia de caracteres, o aplicativo será encerrado e a janela do console será fechada.
 
@@ -78,7 +79,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   O código usa a propriedade [Console.WindowHeight](xref:System.Console.WindowHeight) para determinar o número de linhas na janela do console. Sempre que a propriedade [Console.CursorTop](xref:System.Console.CursorTop) for maior ou igual ao número de linhas na janela do console, o código limpará a janela do console e exibirá novamente uma mensagem para o usuário.
+   O código usa a variável `row` ​​para manter uma contagem do número de linhas de dados gravadas na janela do console. Sempre que for maior ou igual a 25, o código limpa a janela do console e exibe uma mensagem para o usuário.
 
    O programa solicita que o usuário insira uma cadeia de caracteres. Ele indica se a cadeia de caracteres começa com um caractere maiúsculo. Se o usuário pressionar a tecla Enter sem inserir uma cadeia de caracteres, o aplicativo será encerrado e a janela do console será fechada.
 

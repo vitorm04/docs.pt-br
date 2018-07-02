@@ -2,11 +2,12 @@
 title: Protegendo aplicativos ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 5e4363ada4ebdb94801378bc61139f68085b462d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728596"
 ---
 # <a name="securing-adonet-applications"></a>Protegendo aplicativos ADO.NET
 Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas comuns de codificação como não validar a entrada do usuário. Um aplicativo que acessa dados tem vários pontos possíveis de falha que um invasor pode explorar para recuperar, manipular ou destruir dados confidenciais. Portanto, é importante compreender todos os aspectos de segurança, do processo de modelagem de ameaças durante a fase de projeto do aplicativo até a sua eventual implantação e manutenção contínua.  
@@ -39,12 +40,12 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  Descreve a segurança para aplicativos do Entity Framework.  
   
  [Segurança](../../../../docs/standard/security/index.md)  
- Contém links para tópicos que descrevem todos os aspectos de segurança no .NET Framework.  
+ Contém links para tópicos que descrevem todos os aspectos de segurança no .NET.  
   
  [Ferramentas de segurança](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  As ferramentas do .NET Framework para proteger e administrar a política de segurança.  
   
- [Recursos para a criação de aplicativos seguros](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Recursos para criar aplicativos seguros](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Fornece links para tópicos para criar aplicativos seguros.  
   
  [Bibliografia de segurança](/visualstudio/ide/security-bibliography)  

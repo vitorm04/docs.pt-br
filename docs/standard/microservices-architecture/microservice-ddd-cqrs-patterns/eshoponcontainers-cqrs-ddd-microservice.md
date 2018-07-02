@@ -4,17 +4,18 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805468"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicando abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 
 O design do microsserviço de ordenação no aplicativo de referência eShopOnContainers é baseado nos princípios CQRS. No entanto, ele usa a abordagem mais simples, que está separando as consultas dos comandos e usando o mesmo banco de dados para ambas as ações.
 
-A essência desses padrões, e o ponto importante aqui, é que as consultas são idempotentes: não importa quantas vezes você consulta um sistema, o estado desse sistema não será alterado Você poderia até mesmo usar um modelo de dados de "leituras" diferente do modelo de domínio de "gravações" de lógica tradicional, embora os microsserviços de ordenação estejam usando o mesmo banco de dados. Portanto, essa é uma abordagem CQRS simplificada.
+A essência desses padrões, e o ponto importante aqui, é que as consultas são idempotentes: não importa quantas vezes você consulte um sistema, o estado desse sistema não será alterado. Você pode até mesmo usar um modelo de dados de "leituras" diferente do modelo de domínio de "gravações" de lógica transacional, embora os microsserviços de ordenação estejam usando o mesmo banco de dados. Portanto, essa é uma abordagem CQRS simplificada.
 
 Por outro lado, comandos, que disparam transações e atualizações de dados, alteram o estado no sistema. Com os comandos, é necessário ter cuidado ao lidar com a complexidade e com regras de negócio em constante mudança. É aí que você aplica as técnicas DDD para ter um sistema modelado melhor.
 
@@ -46,7 +47,7 @@ Há apenas uma arquitetura de aplicativo: a arquitetura do sistema ou o aplicati
 -   **Greg Young. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. Documentos do CQRS**
+-   **Greg Young. Documentos CQRS**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
 -   **Greg Young. CQRS, interfaces do usuário baseadas em tarefa e Fornecimento de Eventos**
