@@ -1,78 +1,76 @@
 ---
-title: "dynamic (Referência de C#)"
+title: dynamic (Referência de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - dynamic_CSharpKeyword
 helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e3bf51ab62e195f7a5d1f0641f62380977c731ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: de54b3ea663738f5b7af9e6100e0b69571d4caf9
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948391"
 ---
-# <a name="dynamic-c-reference"></a><span data-ttu-id="fbbd2-102">dynamic (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="fbbd2-102">dynamic (C# Reference)</span></span>
-<span data-ttu-id="fbbd2-103">O tipo `dynamic` habilita operações nas quais ele ocorre para ignorar a verificação de tipo em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="fbbd2-104">Em vez disso, essas operações são resolvidas em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="fbbd2-105">O tipo `dynamic` simplifica o acesso a APIs COM, como as APIs de Automação do Office e também às APIs dinâmicas, como bibliotecas do IronPython e ao Modelo de Objeto do Documento (DOM) do HTML.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>  
-  
- <span data-ttu-id="fbbd2-106">O tipo `dynamic` se comporta como o tipo `object` na maioria das circunstâncias.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-106">Type `dynamic` behaves like type `object` in most circumstances.</span></span> <span data-ttu-id="fbbd2-107">No entanto, as operações que contêm expressões do tipo `dynamic` não são resolvidas ou verificadas pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-107">However, operations that contain expressions of type `dynamic` are not resolved or type checked by the compiler.</span></span> <span data-ttu-id="fbbd2-108">O compilador junta as informações sobre a operação em pacotes e, posteriormente, essas informações são usadas para avaliar a operação em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-108">The compiler packages together information about the operation, and that information is later used to evaluate the operation at run time.</span></span> <span data-ttu-id="fbbd2-109">Como parte do processo, as variáveis do tipo `dynamic` são compiladas em variáveis do tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-109">As part of the process, variables of type `dynamic` are compiled into variables of type `object`.</span></span> <span data-ttu-id="fbbd2-110">Portanto, o tipo `dynamic` existe somente em tempo de compilação e não em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-110">Therefore, type `dynamic` exists only at compile time, not at run time.</span></span>  
-  
- <span data-ttu-id="fbbd2-111">O exemplo a seguir compara uma variável do tipo `dynamic` a uma variável do tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-111">The following example contrasts a variable of type `dynamic` to a variable of type `object`.</span></span> <span data-ttu-id="fbbd2-112">Para verificar o tipo de cada variável no tempo de compilação, coloque o ponteiro do mouse sobre `dyn` ou `obj` nas instruções `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-112">To verify the type of each variable at compile time, place the mouse pointer over `dyn` or `obj` in the `WriteLine` statements.</span></span> <span data-ttu-id="fbbd2-113">O IntelliSense mostra **dinâmico** para `dyn` e **objeto** para `obj`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-113">IntelliSense shows **dynamic** for `dyn` and **object** for `obj`.</span></span>  
-  
- [!code-csharp[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
-  
- <span data-ttu-id="fbbd2-114">As instruções `WriteLine` exibem os tipos de tempo de execução de `dyn` e `obj`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-114">The `WriteLine` statements display the run-time types of `dyn` and `obj`.</span></span> <span data-ttu-id="fbbd2-115">Nesse ponto, ambos têm o mesmo tipo, inteiro.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-115">At that point, both have the same type, integer.</span></span> <span data-ttu-id="fbbd2-116">A saída a seguir será produzida:</span><span class="sxs-lookup"><span data-stu-id="fbbd2-116">The following output is produced:</span></span>  
-  
- `System.Int32`  
-  
- `System.Int32`  
-  
- <span data-ttu-id="fbbd2-117">Para ver a diferença entre `dyn` e `obj` em tempo de compilação, adicione as duas linhas a seguir entre as declarações e as instruções `WriteLine` no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-117">To see the difference between `dyn` and `obj` at compile time, add the following two lines between the declarations and the `WriteLine` statements in the previous example.</span></span>  
-  
-```csharp  
-dyn = dyn + 3;  
-obj = obj + 3;  
-```  
-  
- <span data-ttu-id="fbbd2-118">Um erro de compilador será relatado em virtude da tentativa de adição de um inteiro e um objeto à expressão `obj + 3`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-118">A compiler error is reported for the attempted addition of an integer and an object in expression `obj + 3`.</span></span> <span data-ttu-id="fbbd2-119">No entanto, nenhum erro será relatado para `dyn + 3`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-119">However, no error is reported for `dyn + 3`.</span></span> <span data-ttu-id="fbbd2-120">A expressão contém `dyn` não é verificada em tempo de compilação, pois o tipo de `dyn` é `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-120">The expression that contains `dyn` is not checked at compile time because the type of `dyn` is `dynamic`.</span></span>  
-  
-## <a name="context"></a><span data-ttu-id="fbbd2-121">Contexto</span><span class="sxs-lookup"><span data-stu-id="fbbd2-121">Context</span></span>  
- <span data-ttu-id="fbbd2-122">A palavra-chave `dynamic` pode aparecer diretamente ou como um componente de um tipo construído nas seguintes situações:</span><span class="sxs-lookup"><span data-stu-id="fbbd2-122">The `dynamic` keyword can appear directly or as a component of a constructed type in the following situations:</span></span>  
-  
--   <span data-ttu-id="fbbd2-123">Em declarações, como o tipo de uma propriedade, campo, indexador, parâmetro, valor retornado, variável local ou restrição de tipo.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-123">In declarations, as the type of a property, field, indexer, parameter, return value, local variable, or type constraint.</span></span> <span data-ttu-id="fbbd2-124">A definição de classe a seguir usa `dynamic` em várias declarações diferentes.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-124">The following class definition uses `dynamic` in several different declarations.</span></span>  
-  
-     [!code-csharp[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
-  
--   <span data-ttu-id="fbbd2-125">Em conversões explícitas de tipo, como o tipo de destino de uma conversão.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-125">In explicit type conversions, as the target type of a conversion.</span></span>  
-  
-     [!code-csharp[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
-  
--   <span data-ttu-id="fbbd2-126">Em qualquer contexto em que tipos sirvam como valores, como no lado direito de um operador `is` ou um operador `as` ou como o argumento para `typeof` como parte de um tipo construído.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-126">In any context where types serve as values, such as on the right side of an `is` operator or an `as` operator, or as the argument to `typeof` as part of a constructed type.</span></span> <span data-ttu-id="fbbd2-127">Por exemplo, `dynamic` pode ser usado nas expressões a seguir.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-127">For example, `dynamic` can be used in the following expressions.</span></span>  
-  
-     [!code-csharp[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="fbbd2-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fbbd2-128">Example</span></span>  
- <span data-ttu-id="fbbd2-129">O exemplo a seguir usa `dynamic` em várias declarações.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-129">The following example uses `dynamic` in several declarations.</span></span> <span data-ttu-id="fbbd2-130">O método `Main` também compara a verificação de tipo em tempo de compilação com a verificação de tipo em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="fbbd2-130">The `Main` method also contrasts compile-time type checking with run-time type checking.</span></span>  
-  
- [!code-csharp[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
-  
- <span data-ttu-id="fbbd2-131">Para obter mais informações e exemplos, consulte [Usando o Tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span><span class="sxs-lookup"><span data-stu-id="fbbd2-131">For more information and examples, see [Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fbbd2-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fbbd2-132">See Also</span></span>  
- <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
- [<span data-ttu-id="fbbd2-133">Usando o tipo dynamic</span><span class="sxs-lookup"><span data-stu-id="fbbd2-133">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [<span data-ttu-id="fbbd2-134">object</span><span class="sxs-lookup"><span data-stu-id="fbbd2-134">object</span></span>](../../../csharp/language-reference/keywords/object.md)  
- [<span data-ttu-id="fbbd2-135">is</span><span class="sxs-lookup"><span data-stu-id="fbbd2-135">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
- [<span data-ttu-id="fbbd2-136">as</span><span class="sxs-lookup"><span data-stu-id="fbbd2-136">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
- [<span data-ttu-id="fbbd2-137">typeof</span><span class="sxs-lookup"><span data-stu-id="fbbd2-137">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
- [<span data-ttu-id="fbbd2-138">Como executar a conversão cast com segurança usando operadores as e is</span><span class="sxs-lookup"><span data-stu-id="fbbd2-138">How to: Safely Cast by Using as and is Operators</span></span>](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
- [<span data-ttu-id="fbbd2-139">Passo a passo: Criando e usando objetos dinâmicos</span><span class="sxs-lookup"><span data-stu-id="fbbd2-139">Walkthrough: Creating and Using Dynamic Objects</span></span>](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+# <a name="dynamic-c-reference"></a><span data-ttu-id="9f5cb-102">dynamic (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="9f5cb-102">dynamic (C# Reference)</span></span>
+
+<span data-ttu-id="9f5cb-103">O tipo `dynamic` habilita operações nas quais ele ocorre para ignorar a verificação de tipo em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="9f5cb-104">Em vez disso, essas operações são resolvidas em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="9f5cb-105">O tipo `dynamic` simplifica o acesso a APIs COM, como as APIs de Automação do Office e também às APIs dinâmicas, como bibliotecas do IronPython e ao Modelo de Objeto do Documento (DOM) do HTML.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>
+
+<span data-ttu-id="9f5cb-106">O tipo `dynamic` se comporta como o tipo `object` na maioria das circunstâncias.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-106">Type `dynamic` behaves like type `object` in most circumstances.</span></span> <span data-ttu-id="9f5cb-107">No entanto, as operações que contêm expressões do tipo `dynamic` não são resolvidas ou verificadas pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-107">However, operations that contain expressions of type `dynamic` are not resolved or type checked by the compiler.</span></span> <span data-ttu-id="9f5cb-108">O compilador junta as informações sobre a operação em pacotes e, posteriormente, essas informações são usadas para avaliar a operação em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-108">The compiler packages together information about the operation, and that information is later used to evaluate the operation at run time.</span></span> <span data-ttu-id="9f5cb-109">Como parte do processo, as variáveis do tipo `dynamic` são compiladas em variáveis do tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-109">As part of the process, variables of type `dynamic` are compiled into variables of type `object`.</span></span> <span data-ttu-id="9f5cb-110">Portanto, o tipo `dynamic` existe somente em tempo de compilação e não em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-110">Therefore, type `dynamic` exists only at compile time, not at run time.</span></span>
+
+<span data-ttu-id="9f5cb-111">O exemplo a seguir compara uma variável do tipo `dynamic` a uma variável do tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-111">The following example contrasts a variable of type `dynamic` to a variable of type `object`.</span></span> <span data-ttu-id="9f5cb-112">Para verificar o tipo de cada variável no tempo de compilação, coloque o ponteiro do mouse sobre `dyn` ou `obj` nas instruções `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-112">To verify the type of each variable at compile time, place the mouse pointer over `dyn` or `obj` in the `WriteLine` statements.</span></span> <span data-ttu-id="9f5cb-113">O IntelliSense mostra **dinâmico** para `dyn` e **objeto** para `obj`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-113">IntelliSense shows **dynamic** for `dyn` and **object** for `obj`.</span></span>
+
+[!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
+
+<span data-ttu-id="9f5cb-114">As instruções `WriteLine` exibem os tipos de tempo de execução de `dyn` e `obj`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-114">The `WriteLine` statements display the run-time types of `dyn` and `obj`.</span></span> <span data-ttu-id="9f5cb-115">Nesse ponto, ambos têm o mesmo tipo, inteiro.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-115">At that point, both have the same type, integer.</span></span> <span data-ttu-id="9f5cb-116">A saída a seguir será produzida:</span><span class="sxs-lookup"><span data-stu-id="9f5cb-116">The following output is produced:</span></span>
+
+`System.Int32`
+
+`System.Int32`
+
+<span data-ttu-id="9f5cb-117">Para ver a diferença entre `dyn` e `obj` em tempo de compilação, adicione as duas linhas a seguir entre as declarações e as instruções `WriteLine` no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-117">To see the difference between `dyn` and `obj` at compile time, add the following two lines between the declarations and the `WriteLine` statements in the previous example.</span></span>
+
+```csharp
+dyn = dyn + 3;
+obj = obj + 3;
+```
+
+ <span data-ttu-id="9f5cb-118">Um erro de compilador será relatado em virtude da tentativa de adição de um inteiro e um objeto à expressão `obj + 3`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-118">A compiler error is reported for the attempted addition of an integer and an object in expression `obj + 3`.</span></span> <span data-ttu-id="9f5cb-119">No entanto, nenhum erro será relatado para `dyn + 3`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-119">However, no error is reported for `dyn + 3`.</span></span> <span data-ttu-id="9f5cb-120">A expressão contém `dyn` não é verificada em tempo de compilação, pois o tipo de `dyn` é `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-120">The expression that contains `dyn` is not checked at compile time because the type of `dyn` is `dynamic`.</span></span>
+
+## <a name="context"></a><span data-ttu-id="9f5cb-121">Contexto</span><span class="sxs-lookup"><span data-stu-id="9f5cb-121">Context</span></span>
+
+<span data-ttu-id="9f5cb-122">A palavra-chave `dynamic` pode aparecer diretamente ou como um componente de um tipo construído nas seguintes situações:</span><span class="sxs-lookup"><span data-stu-id="9f5cb-122">The `dynamic` keyword can appear directly or as a component of a constructed type in the following situations:</span></span>
+
+- <span data-ttu-id="9f5cb-123">Em declarações, como o tipo de uma propriedade, campo, indexador, parâmetro, valor retornado, variável local ou restrição de tipo.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-123">In declarations, as the type of a property, field, indexer, parameter, return value, local variable, or type constraint.</span></span> <span data-ttu-id="9f5cb-124">A definição de classe a seguir usa `dynamic` em várias declarações diferentes.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-124">The following class definition uses `dynamic` in several different declarations.</span></span>
+
+    [!code-csharp[csrefKeywordsTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#22)]
+
+- <span data-ttu-id="9f5cb-125">Em conversões explícitas de tipo, como o tipo de destino de uma conversão.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-125">In explicit type conversions, as the target type of a conversion.</span></span>
+
+    [!code-csharp[csrefKeywordsTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#23)]
+
+- <span data-ttu-id="9f5cb-126">Em qualquer contexto em que tipos sirvam como valores, como no lado direito de um operador `is` ou um operador `as` ou como o argumento para `typeof` como parte de um tipo construído.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-126">In any context where types serve as values, such as on the right side of an `is` operator or an `as` operator, or as the argument to `typeof` as part of a constructed type.</span></span> <span data-ttu-id="9f5cb-127">Por exemplo, `dynamic` pode ser usado nas expressões a seguir.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-127">For example, `dynamic` can be used in the following expressions.</span></span>
+
+    [!code-csharp[csrefKeywordsTypes#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#24)]
+
+## <a name="example"></a><span data-ttu-id="9f5cb-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9f5cb-128">Example</span></span>
+
+<span data-ttu-id="9f5cb-129">O exemplo a seguir usa `dynamic` em várias declarações.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-129">The following example uses `dynamic` in several declarations.</span></span> <span data-ttu-id="9f5cb-130">O método `Main` também compara a verificação de tipo em tempo de compilação com a verificação de tipo em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="9f5cb-130">The `Main` method also contrasts compile-time type checking with run-time type checking.</span></span>
+
+[!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
+
+<span data-ttu-id="9f5cb-131">Para obter mais informações e exemplos, consulte [Usando o Tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span><span class="sxs-lookup"><span data-stu-id="9f5cb-131">For more information and examples, see [Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="9f5cb-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9f5cb-132">See also</span></span>
+
+<xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
+<xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+[<span data-ttu-id="9f5cb-133">Usando o tipo dynamic</span><span class="sxs-lookup"><span data-stu-id="9f5cb-133">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+[<span data-ttu-id="9f5cb-134">object</span><span class="sxs-lookup"><span data-stu-id="9f5cb-134">object</span></span>](../../../csharp/language-reference/keywords/object.md)  
+[<span data-ttu-id="9f5cb-135">is</span><span class="sxs-lookup"><span data-stu-id="9f5cb-135">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
+[<span data-ttu-id="9f5cb-136">as</span><span class="sxs-lookup"><span data-stu-id="9f5cb-136">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
+[<span data-ttu-id="9f5cb-137">typeof</span><span class="sxs-lookup"><span data-stu-id="9f5cb-137">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
+[<span data-ttu-id="9f5cb-138">Como executar a conversão cast com segurança usando operadores as e is</span><span class="sxs-lookup"><span data-stu-id="9f5cb-138">How to: Safely Cast by Using as and is Operators</span></span>](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+[<span data-ttu-id="9f5cb-139">Passo a passo: Criando e usando objetos dinâmicos</span><span class="sxs-lookup"><span data-stu-id="9f5cb-139">Walkthrough: Creating and Using Dynamic Objects</span></span>](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
