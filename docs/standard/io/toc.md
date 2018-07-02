@@ -1,4 +1,5 @@
 # [E/S de arquivo e de fluxo](index.md)
+## [Formatos de caminho de arquivo em sistemas Windows](file-path-formats.md)
 ## [Tarefas comuns de E/S](common-i-o-tasks.md)
 ### [Como copiar diretórios](how-to-copy-directories.md)
 ### [Como enumerar diretórios e arquivos](how-to-enumerate-directories-and-files.md)

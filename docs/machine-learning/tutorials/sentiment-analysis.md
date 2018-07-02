@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de classificação biná
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6c9ae0eb91fcb570209ce25d4a18a4dcd104724
-ms.sourcegitcommit: 5b0802832fb9ad684d34e69b8644a16a5b7c4810
+ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34860632"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314832"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Usar o ML.NET em um cenário de classificação binária de análise de sentimento
 
@@ -35,7 +35,7 @@ A amostra é um aplicativo de console que usa o ML.NET para treinar um modelo qu
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 15.6 ou posterior](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
 * [Arquivo separado de guia de dados de linha detox da Wikipédia (wikiPedia-detox-250-line-data.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv).
 * [Arquivo separado de guia de teste de linha detox da Wikipédia (wikipedia-detox-250-line-test.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv).
@@ -167,7 +167,7 @@ O método `Train` executa as seguintes tarefas:
 Crie o método `Train`, logo após o método `Main`, usando o seguinte código:
 
 ```csharp
-public static PredictionModel<SentimentData, SentimentPrediction> Train()
+public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
 {
 
 }
@@ -179,7 +179,7 @@ Inicialize uma nova instância de <xref:Microsoft.ML.LearningPipeline> que inclu
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-O objeto <xref:Microsoft.ML.TextLoader%601> é a primeira parte do pipeline e carrega os dados do arquivo de treinamento.
+O objeto <xref:Microsoft.ML.Data.TextLoader> é a primeira parte do pipeline e carrega os dados do arquivo de treinamento.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -239,7 +239,7 @@ Adicione uma chamada ao novo método a partir do método `Main`, logo abaixo da 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-A classe <xref:Microsoft.ML.TextLoader%601> carrega o novo conjunto de dados de teste com o mesmo esquema. Você pode avaliar o modelo usando esse conjunto de dados como uma verificação de qualidade. Adicione o seguinte código ao método `Evaluate`:
+A classe <xref:Microsoft.ML.Data.TextLoader> carrega o novo conjunto de dados de teste com o mesmo esquema. Você pode avaliar o modelo usando esse conjunto de dados como uma verificação de qualidade. Adicione o seguinte código ao método `Evaluate`:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 

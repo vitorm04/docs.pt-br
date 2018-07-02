@@ -120,7 +120,6 @@
 ### [Testes de unidade de saída publicada](core/testing/unit-testing-published-output.md)
 ### [Testando projetos do .NET Core em unidade ao vivo com o Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Controle de versão](core/versions/index.md)
-### [Suporte do .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Catálogo de Identificador de Tempo de Execução](core/rid-catalog.md)
 ## [Visão geral do SDK do .NET Core](core/sdk.md)

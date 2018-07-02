@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579035"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105648"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces `System.IO` contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
@@ -26,6 +26,8 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
 ## <a name="files-and-directories"></a>Arquivos e Diretórios  
  Você pode usar os tipos no namespace <xref:System.IO?displayProperty=nameWithType> para interagir com arquivos e diretórios. Por exemplo, você pode obter e definir propriedades para arquivos e diretórios e recuperar coleções de arquivos e diretórios com base em critérios de pesquisa.  
+
+Para convenções de nomenclatura de caminhos e os modos de expressar um caminho de arquivo para sistemas Windows, incluindo a sintaxe de dispositivo DOS compatível com o .NET Core 1.1 e posterior e o .NET Framework 4.6.2 e posterior, veja [Formatos de caminho de arquivo em sistemas Windows](file-path-formats.md). 
   
  Aqui estão algumas classes de arquivos e diretórios comumente usadas:  
   

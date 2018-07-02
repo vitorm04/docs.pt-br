@@ -4,12 +4,12 @@ description: Explore as diferentes tarefas de aprendizado de máquina com suport
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34860625"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207711"
 ---
 # <a name="machine-learning-tasks"></a>Tarefas de aprendizado de máquina
 
@@ -29,13 +29,17 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 * Diagnosticar se um paciente tem uma determinada doença ou não.
 * Tomar a decisão de marcar um email como "spam" ou não.
 
-## <a name="multi-class-classification"></a>Classificação multiclasse
+Para obter mais informações, consulte o artigo [Classificação binária](https://en.wikipedia.org/wiki/Binary_classification) na Wikipédia.
+
+## <a name="multiclass-classification"></a>Classificação multiclasse
 
 Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-machine-learning) que é usada para prever a classe (categoria) de uma instância de dados. A entrada de um algoritmo de classificação é um conjunto de exemplos rotulados. Cada rótulo é um inteiro entre 0 e k-1, onde k é o número de classes. A saída de um algoritmo de classificação é um classificador, que pode ser usado para prever a classe de novas instâncias sem rótulo. Exemplos de cenários de classificação multiclasse incluem:
 
 * Determinar a raça de um cão como um "Husky Siberiano", "Golden Retriever", "Poodle", etc.
 * Entender as resenhas de filmes como "positivas", "neutras" ou "negativas".
 * Categorizar as avaliações de hotel como "local", "preço", "limpeza", etc.
+
+Para obter mais informações, consulte o artigo [Classificação multiclasse](https://en.wikipedia.org/wiki/Multiclass_classification) na Wikipédia.
 
 ## <a name="regression"></a>Regressão
 
