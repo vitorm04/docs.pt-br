@@ -1,6 +1,6 @@
 ---
 title: Como ler texto de um arquivo
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574524"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298156"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Como ler texto de um arquivo
 Os exemplos a seguir mostram como ler de forma síncrona e assíncrona o texto de um arquivo de texto usando o .NET para aplicativos de área de trabalho. Nos dois exemplos, ao criar uma instância da classe <xref:System.IO.StreamReader>, você fornece o caminho relativo ou absoluto para o arquivo. Os exemplos a seguir supõem que o arquivo denominado TestFile.txt está na mesma pasta que o aplicativo.  
   
- Esses exemplos de código não se aplicam a aplicativos da Windows Store porque o Tempo de Execução do Windows fornece tipos diferentes de fluxos lendo e gravando em arquivos. Para obter um exemplo que mostra como ler o texto de um arquivo no contexto de um aplicativo da Windows Store, consulte [Início rápido: ler e gravar arquivos](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). Para obter exemplos que mostram como converter entre fluxos do .NET Framework e fluxos do Windows Runtime, confira [Como converter entre fluxos do .NET Framework e do Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Esses exemplos de código não se aplicam ao desenvolvimento para Aplicativos da Windows Store porque o Windows Runtime fornece tipos diferentes de fluxos para ler e gravar em arquivos. Para obter um exemplo que mostra como ler o texto de um arquivo em um aplicativo da Windows Store, veja [Início rápido: ler e gravar arquivos](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)). Para obter exemplos que mostram como converter entre fluxos do .NET Framework e fluxos do Windows Runtime, veja [Como converter entre fluxos do .NET Framework e do Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Exemplo  
- O primeiro exemplo mostra uma operação de leitura síncrona em um aplicativo de console. Neste exemplo, o arquivo de texto é aberto usando um leitor de fluxo, o conteúdo é copiado para uma cadeia de caracteres e cadeia de caracteres é a saída do console.  
+ O primeiro exemplo mostra uma operação de leitura síncrona em um aplicativo de console. Neste exemplo, o arquivo de texto é aberto usando um leitor de fluxo, o conteúdo é copiado para uma cadeia de caracteres e a cadeia de caracteres é enviada para o console.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
- O segundo exemplo mostra uma operação de leitura assíncrona em um aplicativo do Windows Presentation Foundation (WPF).  
+ O exemplo a seguir mostra uma operação de leitura assíncrona em um aplicativo do WPF (Windows Presentation Foundation).  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  

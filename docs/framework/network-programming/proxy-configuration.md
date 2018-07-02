@@ -1,6 +1,6 @@
 ---
 title: Configuração de proxy
-ms.date: 03/30/2017
+ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -14,12 +14,12 @@ ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 41e1dcee90531de605b6bddc1eedc1c44235d8eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cf25d3d7dcde963f06729794716b75dffdb64ae
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397527"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207359"
 ---
 # <a name="proxy-configuration"></a>Configuração de proxy
 Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy pode retornar um recurso solicitado do seu cache ou encaminhar a solicitação para o servidor na qual o recurso reside. Proxies podem melhorar o desempenho da rede, reduzindo o número de solicitações enviadas a servidores remotos. Proxies também podem ser usados para restringir o acesso aos recursos.  
@@ -29,38 +29,16 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
   
  Proxies adaptáveis são configurados por um script de configuração (consulte [Detecção automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)). O script gera um conjunto de protocolos de aplicativo e um proxy para cada protocolo.  
   
- Várias opções de controlam a maneira como o script de configuração é executado. Você pode especificar o seguinte:  
-  
--   A frequência com que o script de configuração é baixado e executado.  
-  
--   Tempo de espera para o download do script.  
-  
--   Quais credenciais seu sistema deve usar para acessar o proxy.  
-  
--   Quais credenciais seu sistema deve usar para baixar o script de configuração.  
-  
  Alterações no ambiente de rede podem exigir que o sistema use um novo conjunto de proxies. Se uma conexão de rede ficar inoperante ou uma nova conexão de rede for inicializada, o sistema deve descobrir a origem correta do script de configuração no novo ambiente e executar o novo script.  
   
- A tabela a seguir mostra as opções de configuração para um proxy adaptável.  
-  
-|Definição do arquivo de configuração, propriedade ou atributo|Descrição|  
-|--------------------------------------------------------|-----------------|  
-|`scriptDownloadInterval`|Tempo decorrido em segundos entre downloads de script.|  
-|`scriptDownloadTimeout`|Tempo de espera (em segundos) para baixar o script.|  
-|`useDefaultCredentials` ou <xref:System.Net.WebProxy.UseDefaultCredentials>|Controla se o sistema usa as credenciais de rede padrão para acessar um proxy.|  
-|`useDefaultCredentialForScriptDownload`|Controla se o sistema usa as credenciais de rede padrão para baixar o script de configuração.|  
-|`usesystemdefaults`|Controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lido das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como "true", as configurações de proxy estático do Internet Explorer serão usadas.<br /><br /> Se esse valor for "false" ou se não estiver definido, as configurações de proxy estático podem ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como "false" ou não estar configurado para habilitar proxies adaptáveis.|  
+ Você pode usar o atributo `usesystemdefault` do elemento [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) no seu arquivo de configuração. O atributo `usesystemdefault` controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lidas das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como `true`, as configurações de proxy estático do Internet Explorer serão usadas. Se esse valor for `false` ou não estiver definido, as configurações de proxy estático poderão ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como `false` ou não estar definido para que proxies adaptáveis sejam habilitados.  
   
  O exemplo a seguir mostra uma configuração de proxy adaptável típica.  
   
 ```xml  
 <system.net>  
     <defaultProxy>  
-      <proxy  scriptDownloadInterval="600"  
-              scriptDownloadTimeout="30"  
-              useDefaultCredentials="true"  
-              usesystemdefaults="true"  
-      />  
+      <proxy usesystemdefault="false" />
     </defaultProxy>  
 </system.net>  
 ```  
@@ -83,7 +61,7 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
 |`proxyaddress` ou <xref:System.Net.WebProxy.Address>|O endereço do proxy a ser usado.|  
 |`bypassonlocal` ou <xref:System.Net.WebProxy.BypassProxyOnLocal>|Controla se o proxy é ignorado para endereços locais.|  
 |`bypasslist` ou <xref:System.Net.WebProxy.BypassArrayList>|Descreve, com expressões regulares, um conjunto de endereços que ignora o proxy.|  
-|`usesystemdefaults`|Controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lido das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como "true", as configurações de proxy estático do Internet Explorer serão usadas. No .NET Framework 2.0, quando esse valor é definido como "true", as configurações de proxy do Internet Explorer não são substituídas por outras configurações de proxy no arquivo de configurações. No .NET Framework 1.1, as configurações de proxy do Internet Explorer podem ser substituídas por outras configurações de proxy no arquivo de configuração.<br /><br /> Se esse valor for "false" ou se não estiver definido, as configurações de proxy estático podem ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como "false" ou não estar configurado para habilitar proxies adaptáveis.|  
+|`usesystemdefault`|Controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lido das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como `true`, então as configurações de proxy estático do Internet Explorer serão usadas. No .NET Framework 2.0, quando esse valor é definido como `true`, as configurações de proxy do Internet Explorer não são substituídas por outras configurações de proxy no arquivo de configuração. No .NET Framework 1.1, as configurações de proxy do Internet Explorer podem ser substituídas por outras configurações de proxy no arquivo de configuração.<br /><br /> Se esse valor for `false` ou não estiver definido, então as configurações de proxy estático poderão ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como `false` ou não estar definido para que proxies adaptáveis sejam habilitados.|  
   
  O exemplo a seguir mostra uma configuração de proxy estático típica.  
   

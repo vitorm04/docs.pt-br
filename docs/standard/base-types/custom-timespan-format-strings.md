@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f65e8bb1a61bad458cb33a3bf9d2553479c750e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208135"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan personalizado
 Uma cadeia de caracteres de formato <xref:System.TimeSpan> define a representação de cadeia de caracteres de um valor de <xref:System.TimeSpan> que é resultante de uma operação de formatação. Uma cadeia de caracteres de formato personalizado consiste em um ou mais O especificadores de formato <xref:System.TimeSpan> em conjunto com qualquer número de caracteres literais. Qualquer cadeia de caracteres que não é uma cadeia de caracteres de formato [TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md) é interpretada como uma cadeia de caracteres de formato <xref:System.TimeSpan> personalizada.  
@@ -66,7 +67,7 @@ Uma cadeia de caracteres de formato <xref:System.TimeSpan> define a representaç
 |"FFFFFF"|Os milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são exibidos.<br /><br /> Mais informações: [Especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|Os décimos de milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais ou sete dígitos zero não são exibidos.<br /><br /> Mais informações: [Especificador de formato personalizado "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*'string*'|Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|O caractere de escape.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\\|O caractere de escape.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |Qualquer outro caractere|Qualquer outro caractere sem escape é interpretado como um especificador de formato personalizado.<br /><br /> Para saber mais: [Outros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

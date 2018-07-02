@@ -1,113 +1,107 @@
 ---
 title: for (Referência de C#)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306521"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207842"
 ---
 # <a name="for-c-reference"></a>for (referência de C#)
 
-Ao usar um loop `for`, você pode executar uma instrução ou um bloco de instruções repetidamente até que uma expressão especificada seja avaliada como `false`. Esse tipo de loop é útil para a iteração em matrizes e para outras aplicações nas quais você sabe com antecedência quantas vezes deseja que o loop itere.
-  
-## <a name="example"></a>Exemplo
+A instrução `for` executa uma instrução ou um bloco de instruções enquanto uma expressão booliana especificada é avaliada como `true`.
 
-No exemplo a seguir, o valor de `i` é gravado no console e é incrementado em 1 durante cada iteração do loop:
+Em qualquer ponto dentro do bloco de instrução `for`, você pode sair do loop usando a instrução [break](break.md) ou seguir para a próxima iteração no loop usando a instrução [continue](continue.md). Você também pode sair de um loop `for` com a instrução [goto](goto.md), [return](return.md) ou [throw](throw.md).
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-A [instrução for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) no exemplo anterior realiza as seguintes ações:
-  
-1.  Primeiro, o valor inicial da variável `i` é estabelecido. Esta etapa ocorre apenas uma vez, independentemente de quantas vezes o loop se repete. Você pode pensar nessa inicialização como ocorrendo fora do processo de loop.
-  
-2.  Para avaliar a condição (`i <= 5`), o valor de `i` é comparado com 5.
-  
-    -   Se `i` é menor ou igual a 5, a condição é avaliada como `true` e ocorrem as seguintes ações.  
-  
-        1.  A instrução `Console.WriteLine` no corpo do loop exibe o valor de `i`.  
-  
-        2.  O valor de `i` é incrementado em 1.  
-  
-        3.  O loop retorna para o início da etapa 2 para avaliar a condição novamente.  
-  
-    -   Se `i` é maior que 5, a condição é avaliada como `false` e você sai do loop.  
-  
-Observe que, se o valor inicial de `i` é maior que 5, o corpo do loop não é executado nenhuma vez.
+## <a name="structure-of-the-for-statement"></a>Estrutura da instrução `for`
 
-## <a name="sections-of-a-for-statement"></a>Seções de uma instrução for
+A instrução `for` define as seções de *inicializador*, *condição* e *iterador*:
   
-Cada [instrução for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) define seções de *inicializador*, de *condição* e de *iterador*. Essas seções geralmente determinam quantas vezes o loop vai iterar.  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-As seções atendem às seguintes finalidades:
-  
--   A seção de inicializador define as condições iniciais. As instruções nesta seção são executadas apenas uma vez, antes de entrar no loop. A seção pode conter apenas uma das duas opções a seguir.  
-  
-    -   A declaração e inicialização de uma variável de loop local, como mostrado no primeiro exemplo (`int i = 1`). A variável é local para o loop e não pode ser acessada de fora do loop.  
-  
-    -   Zero ou mais expressões de instrução da lista a seguir, separadas por vírgulas.  
-  
-        -   instrução de [atribuição](../../../csharp/language-reference/operators/assignment-operator.md)  
-  
-        -   invocação de um método  
-  
-        -   prefixo ou sufixo da expressão [incrementar](../../../csharp/language-reference/operators/increment-operator.md), como `++i` ou `i++`  
-  
-        -   prefixo ou sufixo da expressão [decrementar](../../../csharp/language-reference/operators/decrement-operator.md), como `--i` ou `i--`  
-  
-        -   criação de um objeto usando [new](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-        -   expressão [await](../../../csharp/language-reference/keywords/await.md)  
-  
--   A seção de condição contém uma expressão booliana que é avaliada para determinar se o loop deve sair ou deve ser executado novamente.  
-  
--   A seção de iterador define o que acontece depois de cada iteração do corpo do loop. A seção de iterador contém zero ou mais das seguintes expressões de instrução, separadas por vírgulas:  
-  
-    -   instrução de [atribuição](../../../csharp/language-reference/operators/assignment-operator.md)  
-  
-    -   invocação de um método  
-  
-    -   prefixo ou sufixo da expressão [incrementar](../../../csharp/language-reference/operators/increment-operator.md), como `++i` ou `i++`  
-  
-    -   prefixo ou sufixo da expressão [decrementar](../../../csharp/language-reference/operators/decrement-operator.md), como `--i` ou `i--`  
-  
-    -   criação de um objeto usando [new](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-    -   expressão [await](../../../csharp/language-reference/keywords/await.md)  
-  
--   O corpo do loop consiste em uma instrução, uma instrução vazia ou um bloco de instruções que você cria colocando zero ou mais instruções entre chaves.  
-  
-     Você pode sair de um loop `for` usando a palavra-chave [break](../../../csharp/language-reference/keywords/break.md) ou você pode passar para a próxima iteração, usando a palavra-chave [continue](../../../csharp/language-reference/keywords/continue.md). Você também pode sair qualquer loop usando uma instrução [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
-  
-O primeiro exemplo neste tópico mostra o tipo mais comum de loop `for`, que faz as seguintes opções para as seções:
-  
--   O inicializador declara e inicializa uma variável de loop local `i`, que mantém uma contagem das iterações do loop.  
-  
--   A condição verifica o valor da variável de loop em relação a um valor final conhecido, 5.  
-  
--   A seção de iterador usa uma instrução de incremento de sufixo, `i++`, para calcular cada iteração do loop.
+```
 
-## <a name="more-examples"></a>Mais exemplos
+Todas as três seções são opcionais. O corpo do loop é uma instrução ou um bloco de instruções.
+
+A exemplo a seguir mostra a instrução `for` com todas as seções definidas:
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a>A seção *inicializador*
+
+As instruções na seção de *inicializador* são executadas apenas uma vez, antes de entrar no loop. A seção *inicializador* é uma das seguintes:
+
+- A declaração e a inicialização de uma variável de loop local, que não pode ser acessada de fora do loop.
+
+- Zero ou mais expressões de instrução da lista a seguir, separadas por vírgulas:
+
+  - instrução de [atribuição](../operators/assignment-operator.md)
+
+  - invocação de um método  
+
+  - prefixo ou sufixo da expressão [incrementar](../operators/increment-operator.md), como `++i` ou `i++`  
+
+  - prefixo ou sufixo da expressão [decrementar](../operators/decrement-operator.md), como `--i` ou `i--`  
+
+  - criação de um objeto usando a palavra-chave [novo](new-operator.md)
+
+  - expressão [await](await.md)
+
+A seção *inicializador* no exemplo acima declara e inicializa a variável de loop local `i`:
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a>A seção *condição*
+
+A seção *condição*, se presente, deverá ser uma expressão booliana. Essa expressão é avaliada antes de cada iteração do loop. Se a seção *condição* não estiver presente ou a expressão booliana for avaliada como `true`, a próxima iteração do loop será executada; caso contrário, o loop será finalizado.
+
+A seção *condição* no exemplo acima determina se o loop será encerrado com base no valor da variável de loop local:
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a>A seção *iterador*
+
+A seção *iterador* define o que acontece depois de cada iteração do corpo do loop. A seção *iterador* contém zero ou mais das seguintes expressões de instrução, separadas por vírgulas:  
+
+- instrução de [atribuição](../operators/assignment-operator.md)
+
+- invocação de um método  
+
+- prefixo ou sufixo da expressão [incrementar](../operators/increment-operator.md), como `++i` ou `i++`  
+
+- prefixo ou sufixo da expressão [decrementar](../operators/decrement-operator.md), como `--i` ou `i--`  
+
+- criação de um objeto usando a palavra-chave [novo](new-operator.md)
+
+- expressão [await](await.md)
+
+A seção *iterador* no exemplo acima incrementa a variável de loop local:
+
+```csharp
+i++
+```
+
+## <a name="examples"></a>Exemplos
+
+O exemplo a seguir ilustra vários usos menos comuns das seções de instrução `for`: atribuir um valor a uma variável de loop externa na seção *inicializador*, invocar um método inicializa nas seções de *inicializador* e de *iterador* e alterar os valores de duas variáveis na seção de *iterador*. Selecione **Executar** para executar o código de exemplo. Depois disso, você pode modificar o código e executá-lo novamente.
   
-O exemplo a seguir ilustra várias opções menos comuns: atribuir um valor a uma variável de loop externa na seção inicializador, invocar o método `Console.WriteLine` nas seções de inicializador e de iterador e alterar os valores de duas variáveis na seção de iterador.
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+O exemplo a seguir define o loop `for` infinito:
   
-Todas as expressões que definem um instrução `for` são opcionais. Por exemplo, a instrução a seguir cria um loop infinito:
-  
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
 ## <a name="c-language-specification"></a>especificação da linguagem C#  
 
@@ -116,9 +110,9 @@ Todas as expressões que definem um instrução `for` são opcionais. Por exempl
 ## <a name="see-also"></a>Consulte também
 
 [A instrução for (especificação da linguagem C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[Referência de C#](../../../csharp/language-reference/index.md)  
-[Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-[Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[Referência de C#](../index.md)  
+[Guia de Programação em C#](../../programming-guide/index.md)  
+[Palavras-chave do C#](index.md)  
+[foreach, in](foreach-in.md)  
 [Instrução for (C++)](/cpp/cpp/for-statement-cpp)  
-[Instruções de iteração](../../../csharp/language-reference/keywords/iteration-statements.md)
+[Instruções de iteração](iteration-statements.md)

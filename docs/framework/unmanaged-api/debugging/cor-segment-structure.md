@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406501"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207398"
 ---
 # <a name="corsegment-structure"></a>Estrutura COR_SEGMENT
 Contém informações sobre uma região da memória no heap gerenciado.  
@@ -43,22 +43,22 @@ typedef struct _COR_SEGMENT {
 |------------|-----------------|  
 |`start`|O endereço inicial da região de memória.|  
 |`end`|O endereço final da região de memória.|  
-|`gen`|Um [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) membro de enumeração que indica a geração da região de memória.|  
+|`gen`|Um membro de enumeração [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) que indica a geração da região de memória.|  
 |`heap`|O número de heap no qual reside a região de memória. Consulte a seção Comentários para obter mais informações.|  
   
 ## <a name="remarks"></a>Comentários  
- O `COR_SEGMENTS` estrutura representa uma região de memória no heap gerenciado.  `COR_SEGMENTS` objetos são membros de [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de coleção, que é preenchido com a chamada a[ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) método.  
+ A estrutura `COR_SEGMENTS` representa uma região da memória no heap gerenciado.  Objetos `COR_SEGMENTS` são membros do objeto da coleção [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md), que é preenchido chamando o método [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md).  
   
- O `heap` campo é o número de processadores, que corresponde ao heap está sendo relatado. Para Coletores de lixo de estação de trabalho, seu valor é sempre zero, como estações de trabalho têm apenas um heap de coleta de lixo. Para Coletores de lixo do servidor, seu valor corresponde ao processador de que heap está associado. Observe que pode haver mais ou menos a coleta de lixo heaps que o número de processadores reais devido a detalhes de implementação do coletor de lixo.  
+ O campo `heap` é o número de processadores, que corresponde ao heap que está sendo relatado. Para os coletores de lixo de estação de trabalho, seu valor é sempre zero, uma vez que estações de trabalho têm apenas um heap de coleta de lixo. Para os coletores de lixo do servidor, seu valor corresponde ao processador ao qual o heap está anexado. Observe que pode haver mais ou menos heaps de coleta de lixo que o número real de processadores devido a detalhes de implementação do coletor de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

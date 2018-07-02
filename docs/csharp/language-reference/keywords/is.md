@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289211"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207840"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#) #
 
@@ -75,7 +75,7 @@ Ao usar o padrão de tipo para realizar a correspondência de padrões, `is` tes
 
 em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, *type* é o nome do tipo no qual o resultado de *expr* será convertido e *varname* é o objeto no qual o resultado de *expr* será convertido se o teste `is` for `true`. 
 
-A expressão `is` será `true` se qualquer uma das condições seguintes for verdadeira:
+A expressão `is` será `true` se *expr* não for `null` e qualquer um dos seguintes for verdadeiro:
 
 - *expr* for uma instância do mesmo tipo que *type*.
 
@@ -85,7 +85,7 @@ A expressão `is` será `true` se qualquer uma das condições seguintes for ver
 
 - *expr* é uma instância de um tipo que implementa a interface de *type*.
 
-Se *exp* for `true` e `is` for usado com uma instrução `if`, *varname* será atribuído e terá escopo local somente dentro da instrução `if`.
+Se *expr* for `true` e `is` for usado com uma instrução `if`, *varname* será atribuído e terá escopo local somente dentro da instrução `if`.
 
 O exemplo a seguir usa o padrão de tipo `is` para fornecer a implementação do método <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> de um tipo.
 

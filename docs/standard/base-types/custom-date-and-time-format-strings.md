@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208136"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.  
@@ -90,7 +91,7 @@ Uma cadeia de caracteres de formato de data e hora define a representação de t
 |"/"|O separador de data.<br /><br /> Mais informações: [Especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*string*"<br /><br /> '*string*'|Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|Define o caractere seguinte como um especificador de formato personalizado.<br /><br /> Mais informações:[Usar especificadores de formato personalizado simples](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
-|\|O caractere de escape.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals) e [Como usar o caractere de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\\|O caractere de escape.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals) e [Como usar o caractere de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |Qualquer outro caractere|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  As seções a seguir oferecem informações adicionais sobre cada especificador de formato de data e hora personalizado. A menos que observado do contrário, cada especificador produz uma representação de cadeia de caracteres idêntica independente de ela ser usada com um valor <xref:System.DateTime> ou um valor <xref:System.DateTimeOffset>.  

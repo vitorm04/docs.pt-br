@@ -1,5 +1,5 @@
 ---
-title: Visão geral da Biblioteca de classes do .NET
+title: Visão geral da biblioteca de classes do .NET
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -39,14 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577300"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207450"
 ---
-# <a name="net-class-library-overview"></a>Visão geral da Biblioteca de classes do .NET
+# <a name="net-class-library-overview"></a>Visão geral da biblioteca de classes do .NET
+
 As implementações do .NET incluem classes, interfaces, delegados e tipos de valor que agilizam e otimizam o processo de desenvolvimento e dão acesso à funcionalidade do sistema. Para facilitar a interoperabilidade entre linguagens, os tipos do .NET têm conformidade com CLS e, assim, podem ser usados por qualquer linguagem de programação cujo compilador esteja de acordo com a CLS (Common Language Specification).  
   
  Os tipos do .NET são a base na qual os aplicativos, os componentes e os controles do .NET são criados. As implementações do .NET incluem tipos que realizam as seguintes funções:  
@@ -63,22 +64,24 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
   
 -   Fornecem acesso a dados, uma GUI detalhada do lado do cliente e uma GUI do lado do cliente controlada pelo servidor.  
   
- O .NET fornece um conjunto avançado de interfaces, bem como classes abstratas e concretas (não abstratas). Você pode usar as classes concretas como estão ou, em muitos casos, pode derivar suas próprias classes a partir delas. Para usar a funcionalidade de uma interface, você pode criar uma classe que implementa a interface ou derivar uma classe de uma das classes do .NET Framework que implementa a interface.  
+ O .NET fornece um conjunto avançado de interfaces, bem como classes abstratas e concretas (não abstratas). Você pode usar as classes concretas como estão ou, em muitos casos, pode derivar suas próprias classes a partir delas. Para usar a funcionalidade de uma interface, você pode criar uma classe que implementa a interface ou derivar uma classe de uma das classes do .NET que implementa a interface.  
   
-## <a name="naming-conventions"></a>Convenções de nomenclatura  
- Os tipos do .NET usam um esquema de nomenclatura de sintaxe por ponto que denota uma hierarquia. Essa técnica agrupa tipos relacionados em namespaces para que eles possam ser pesquisados e referenciados com mais facilidade. A primeira parte do nome completo — até o ponto mais à direita — é o nome do namespace. A última parte do nome é o nome do tipo. Por exemplo, **System.Collections.ArrayList** representa o tipo **ArrayList**, que pertence ao namespace **System.Collections**. Os tipos em **System.Collections** podem ser usados para manipular coleções de objetos.  
+## <a name="naming-conventions"></a>Convenções de nomenclatura
+
+ Os tipos do .NET usam um esquema de nomenclatura de sintaxe por ponto que denota uma hierarquia. Essa técnica agrupa tipos relacionados em namespaces para que eles possam ser pesquisados e referenciados com mais facilidade. A primeira parte do nome completo — até o ponto mais à direita — é o nome do namespace. A última parte do nome é o nome do tipo. Por exemplo, `System.Collections.Generic.List<T>` representa o tipo `List<T>`, que pertence ao namespace `System.Collections.Generic`. Os tipos em <xref:System.Collections.Generic> podem ser usados para trabalhar com coleções genéricas.  
   
  Esse esquema de nomenclatura facilita para desenvolvedores de bibliotecas estender o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para criar grupos hierárquicos de tipos e nomeá-los de maneira consistente e informativa. Ele também permite que tipos sejam identificados sem ambiguidades por seu nome completo (ou seja, pelo namespace e pelo nome de tipo), o que impede conflitos de nomes de tipo. Os desenvolvedores de bibliotecas devem usar a seguinte convenção para criar nomes para seus namespaces:  
   
  *CompanyName*.*TechnologyName*  
   
- Por exemplo, o namespace Microsoft.Word está de acordo com essa diretriz.  
+ Por exemplo, o namespace `Microsoft.Word` segue esta diretriz.  
   
  O uso de padrões de nomenclatura para agrupar tipos relacionados em namespaces é uma forma muito útil de compilar e documentar bibliotecas de classes. No entanto, esse esquema de nomenclatura não afeta visibilidade, acesso a membro, herança, segurança ou associação. Um namespace pode ser particionado em vários assemblies e um único assembly pode conter tipos de vários namespaces. O assembly fornece a estrutura formal para criação de versão, implantação, segurança, carregamento e visibilidade no Common Language Runtime.  
   
  Para obter mais informações sobre namespaces e nomes de tipos, consulte [Common Type System](../../docs/standard/base-types/common-type-system.md).  
   
-## <a name="system-namespace"></a>Namespace System  
+## <a name="system-namespace"></a>namespace System
+
  O <xref:System> é o namespace raiz para tipos fundamentais no.NET. Esse namespace contém classes que representam os tipos de dados base usados por todos os aplicativos: <xref:System.Object> (a raiz da hierarquia de herança), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> etc. Muitos desses tipos correspondem aos tipos de dados primitivos que sua linguagem de programação usa. Ao gravar códigos usando tipos .NET Framework, você pode usar a palavra-chave correspondente da sua linguagem quando um tipo de dados base do .NET Framework é esperado.  
   
  A tabela a seguir lista os tipos base que o .NET fornece, descreve resumidamente cada tipo e indica o tipo correspondente em Visual Basic, C#, C++ e F#.  

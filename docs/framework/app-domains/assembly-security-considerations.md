@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743414"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270416"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre segurança de assemblies
 <a name="top"></a> Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
@@ -45,9 +45,13 @@ ms.locfileid: "32743414"
  No momento do carregamento, a evidência do assembly é usada como entrada para uma política de segurança. A política de segurança é estabelecida pela empresa e pelo administrador do computador, bem como por configurações de política do usuário e determina o conjunto de permissões concedido a todo o código gerenciado quando executado. A política de segurança pode ser estabelecida para o editor do assembly (se ele tiver uma assinatura gerada por uma ferramenta de assinatura), para o site e a zona (em termos do Internet Explorer) de onde o assembly foi baixado, ou para o nome forte do assembly. Por exemplo, um administrador de computador pode estabelecer uma política de segurança que permite que todo código baixado de um site e assinado por uma determinada empresa de software acesse um banco de dados em um computador, mas não dê acesso para gravar no disco do computador.  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>Assemblies de nome forte e ferramentas de assinatura  
+
+ > [!WARNING]
+ > Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.
+
  Você pode assinar um assembly de duas maneiras diferentes, mas complementares: com um nome forte ou usando [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md). Assinar um assembly com um nome forte adiciona uma criptografia de chave pública ao arquivo que contém o manifesto do assembly. Assinatura de nome forte ajuda a verificar a exclusividade do nome, a evitar falsificação de nome e a fornecer chamadores com uma identidade quando uma referência é resolvida.  
   
- No entanto, nenhum nível de confiança está associado a um nome forte, o que torna o [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) importantes. As duas ferramentas de assinatura exigem um editor para comprovar sua identidade para uma autoridade de terceiros e obter um certificado. Assim, esse certificado é inserido no seu arquivo e pode ser usado por um administrador para decidir se confia na autenticidade do código.  
+ Nenhum nível de confiança está associado a um nome forte, o que torna a [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md) importante. As duas ferramentas de assinatura exigem um editor para comprovar sua identidade para uma autoridade de terceiros e obter um certificado. Assim, esse certificado é inserido no seu arquivo e pode ser usado por um administrador para decidir se confia na autenticidade do código.  
   
  Você pode fornecer tanto um nome forte quanto uma assinatura digital criada usando-se o [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) a um assembly, ou pode usar qualquer um sozinho. As duas ferramentas de assinatura podem assinar somente um arquivo por vez; para um assembly com vários arquivos, você assina o arquivo que contém o manifesto do assembly. Um nome forte é armazenado no arquivo que contém o manifesto do assembly, mas uma assinatura criada com o [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) é armazenada em um slot reservado no arquivo PE (Portable Executable) contendo a manifesto do assembly. A assinatura de um assembly usando o [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) pode ser usada (com ou sem um nome forte) quando você já tem uma hierarquia de confiança que se baseia em assinaturas geradas por [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) ou quando a sua política usa somente a parte da chave e não verifica uma cadeia de confiança.  
   

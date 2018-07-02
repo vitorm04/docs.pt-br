@@ -1,19 +1,19 @@
 ---
-title: Bibliotecas de Classe do .NET
+title: Bibliotecas de classes do .NET
 description: Saiba como as bibliotecas de classes do .NET permitem que você agrupe funcionalidades úteis em módulos que podem ser usados por vários aplicativos.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570514"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207167"
 ---
-# <a name="net-class-libraries"></a>Bibliotecas de Classe do .NET
+# <a name="net-class-libraries"></a>Bibliotecas de classes do .NET
 
 As bibliotecas de classe são o conceito de [biblioteca compartilhada](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) para .NET. Elas permitem que você componentize funcionalidades úteis em módulos que podem ser usados por vários aplicativos. Elas também podem ser usadas como um meio de carregar a funcionalidade não necessária ou não conhecida na inicialização do aplicativo. Bibliotecas de classe são descritas usando o [formato de arquivo do Assembly .NET](assembly-format.md).
 
@@ -31,7 +31,7 @@ Os desenvolvedores que criam bibliotecas específicas de plataforma podem aprove
 
 Bibliotecas específicas da plataforma são o tipo de biblioteca de classes principal para o .NET Framework. Mesmo que outras implementações do .NET tenham surgido, as bibliotecas específicas da plataforma permaneceram o tipo de biblioteca dominante.
 
-## <a name="portable-class-libraries"></a>Bibliotecas de Classes Portáteis
+## <a name="portable-class-libraries"></a>Bibliotecas de classes portáteis
 
 Há suporte para bibliotecas portáteis em várias implementações do .NET. Elas ainda podem assumir dependências em um ambiente de execução conhecido, no entanto, o ambiente é sintético e é gerado pela intersecção de um conjunto de implementações de .NET concretas. Isso significa que suposições de plataforma e APIs expostas são um subconjunto que estaria disponível em uma biblioteca específica da plataforma.
 
@@ -39,11 +39,11 @@ Você escolhe uma configuração de plataforma ao criar uma biblioteca portátil
 
 Muitos desenvolvedores de biblioteca mudam de produzir várias bibliotecas específicas de plataforma de uma origem (usando as diretivas de compilação condicional) para bibliotecas portáteis. Há [várias abordagens](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) para acessar a funcionalidade específica da plataforma nas bibliotecas portáteis com a técnica [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/), a mais amplamente aceita neste momento.
 
-### <a name="net-standard-class-libraries"></a>Bibliotecas de classes do .NET Standard
+## <a name="net-standard-class-libraries"></a>Bibliotecas de classe do .NET Standard
 
 As bibliotecas do .NET Standard são uma substituição dos conceitos de bibliotecas específicas da plataforma e portáteis. Elas são específicas da plataforma no sentido de que expõem toda a funcionalidade da plataforma subjacente (sem plataformas sintéticas ou interseções de plataforma). Elas são portáteis no sentido de que funcionam em todas as plataformas de suporte.
 
-O .NET Standard expõe um conjunto de _contratos_ de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas que dão suporte às dependências de contrato.
+O .NET Standard expõe um conjunto de _contratos_ de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas compatíveis com suas dependências de contrato.
 
 O .NET Standard não expõe toda a funcionalidade do .NET Framework (isso nem é uma meta), no entanto, ele expõe mais APIs que as Bibliotecas de classes portáteis. Mais APIs serão adicionadas ao longo do tempo.
 
@@ -60,6 +60,6 @@ As seguintes plataformas dão suporte às bibliotecas de classes do .NET Standar
 
 Para obter mais informações, consulte o tópico [.NET Standard](net-standard.md).
 
-### <a name="mono-class-libraries"></a>Bibliotecas de Classe do Mono
+## <a name="mono-class-libraries"></a>Bibliotecas de classes do Mono
 
 Há suporte para as bibliotecas de classe no Mono, incluindo os três tipos de bibliotecas descritas acima. Mono era geralmente visto (corretamente) como uma implementação de plataforma cruzada do Microsoft .NET Framework. Em parte, isso acontecia porque bibliotecas do .NET Framework específicas da plataforma podiam ser executadas no tempo de execução do Mono sem modificação ou recompilação. Essa característica estava em vigor antes da criação de bibliotecas de classes portáteis, portanto, era uma opção óbvia para habilitar a portabilidade binária entre o .NET Framework e o Mono (embora ele funcionasse apenas em uma direção).

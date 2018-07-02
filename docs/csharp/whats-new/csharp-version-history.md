@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696969"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207528"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -16,11 +16,24 @@ Qual era a aparência da linguagem nas primeiras versões? E como ela evoluiu co
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
-Ao olhar para o passado, a C# versão 1.0 parecia muito com o Java. Como [parte de suas metas de design declaradas para a ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objetos".  No momento, parece que o Java alcançou essas metas de design iniciais.
+Ao olhar para o passado, a C# versão 1.0 parecia muito com o Java. Como [parte de suas metas de design declaradas para ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
 
-Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Ela não tinha os recursos internos assíncronos e algumas das ótimas funcionalidades relacionadas a genéricos que atualmente temos como algo óbvio. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Isso demoraria alguns anos para ser lançada.
+Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Carecia das funcionalidades assíncronas internas e algumas das funcionalidades relacionadas a genéricos que você nem valoriza. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam alguns anos para sair.
 
 A versão 1.0 do C# parecia ter poucos recursos, em comparação com os dias de hoje. Você teria que escrever código um tanto detalhado. Mas, ainda assim, você poderia iniciar em algum lugar. A versão 1.0 do C# era uma alternativa viável ao Java na plataforma Windows.
+
+Os principais recursos do C# 1.0 incluíam:
+
+- [Classes](../programming-guide/classes-and-structs/classes.md)
+- [Estruturas](../programming-guide/classes-and-structs/structs.md)
+- [Interfaces](../programming-guide/interfaces/index.md)
+- [Eventos](../events-overview.md)
+- [Propriedades](../properties.md)
+- [Delegados](../delegates-overview.md)
+- [Expressões](../programming-guide/statements-expressions-operators/expressions.md)
+- [Instruções](../programming-guide/statements-expressions-operators/statements.md)
+- [Atributos](../programming-guide/concepts/attributes/index.md)
+- Literais
 
 ## <a name="c-version-20"></a>C# versão 2.0
 
@@ -33,11 +46,18 @@ Neste momento, as coisas começam a ficar interessantes. Vamos dar uma olhada em
 - [Iteradores](../programming-guide/concepts/iterators.md)
 - [Covariância e contravariância](../programming-guide/concepts/covariance-contravariance/index.md)
 
-Embora a C# possa ter sido iniciada como uma linguagem OO (orientada a objeto) bastante genérica, a versão 2.0 do C# tratou de alterar isso rapidamente. Depois de se acostumarem com a ideia da linguagem OO, os desenvolvedores começaram a sofrer com vários pontos problemáticos graves. E eles sofreram muito com isso.
+Outros recursos do C# 2.0 adicionaram funcionalidades a recursos existentes:
 
-Com os genéricos, você tem tipos e métodos que podem operar em um tipo arbitrário, mantendo a segurança de tipo ao mesmo tempo. Portanto, por exemplo, ter um <xref:System.Collections.Generic.List%601> permite que você tenha `List<string>` ou `List<int>` e execute operações de segurança de tipo nessas cadeias de caracteres ou nesses inteiros enquanto itera neles. Isso é melhor do que criar herdeiros `ListInt` ou conversão de `Object` para cada operação.
+- Acessibilidade separada getter/setter
+- Conversões de grupo de método (delegados)
+- Classes estáticas
+- Inferência de delegado
 
-A versão 2.0 do C# trouxe iteradores. Para colocar de maneira sucinta, isso permite que você itere nos itens em uma `List` (ou outros tipos Enumerable) com um loop `foreach`. Ter isso como uma parte importante da linguagem aprimorou drasticamente a legibilidade da linguagem e a capacidade das pessoas de raciocinar a respeito do código.
+Embora C# possa ter começado como uma linguagem OO (orientada a objeto) genérica, a versão 2.0 do C# tratou de mudar isso rapidamente. Depois de se acostumarem com a ideia da linguagem OO, os desenvolvedores começaram a sofrer com vários pontos problemáticos graves. E os procuraram de maneira significativa.
+
+Com genéricos, tipos e métodos podem operar em um tipo arbitrário enquanto ainda mantêm a segurança de tipos. Por exemplo, ter um <xref:System.Collections.Generic.List%601> permite que você tenha `List<string>` ou `List<int>` e execute operações fortemente tipadas nessas cadeias de caracteres ou inteiros enquanto itera neles. Usar genéricos é melhor que criar `ListInt` que deriva de `ArrayList` ou converter de `Object` para cada operação.
+
+A versão 2.0 do C# trouxe iteradores. Em resumo, o iteradores permitem que você examine todos os itens em um `List` (ou outros tipos Enumeráveis) com um loop `foreach`. Ter iteradores como uma parte importante da linguagem aprimorou drasticamente a legibilidade da linguagem e a capacidade das pessoas de raciocinar a respeito do código.
 
 E ainda assim, o C# continuava na tentativa de alcançar o mesmo nível do Java. O Java já tinha liberado versões que incluíam genéricos e iteradores. Mas isso seria alterado logo, pois as linguagens continuaram a evoluir separadamente.
 
@@ -51,10 +71,13 @@ O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, p
 - [Expressão lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [Árvores de expressão](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Métodos de extensão](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Variáveis locais implicitamente tipadas](../language-reference/keywords/var.md)
+- [Métodos parciais](../language-reference/keywords/partial-method.md)
+- Inicializadores de coleção e de objeto
 
 Numa retrospectiva, muitos desses recursos parecerem inevitáveis e inseparáveis. Todos eles se encaixam estrategicamente. Costuma-se pensar que o recurso irresistível dessa versão do C# foi a expressão de consulta, também conhecida como LINQ (consulta integrada à linguagem).
 
-Uma exibição mais detalhada analisa árvores de expressão, expressões lambda e tipos anônimos como a base na qual o LINQ é construído. Mas, de uma forma ou de outra, o C# 3.0 apresentou um conceito revolucionário. O C# 3.0 começou a definir as bases para transformar o C# em uma linguagem híbrida: orientada a objeto e funcional.
+Uma exibição mais detalhada analisa árvores de expressão, expressões lambda e tipos anônimos como a base na qual o LINQ é construído. Mas, de uma forma ou de outra, o C# 3.0 apresentou um conceito revolucionário. O C# 3.0 começou a definir as bases para transformar o C# em uma linguagem híbrida orientada a objeto e funcional.
 
 Especificamente, agora você pode escrever consultas declarativas no estilo SQL para executar operações em coleções, entre outras coisas. Em vez de escrever um loop `for` para calcular a média de uma lista de inteiros, agora você pode fazer isso simplesmente como `list.Average()`. A combinação de expressões de consulta e métodos de extensão fez parecer que essa lista de inteiros se tornasse muito mais inteligente.
 
@@ -75,11 +98,11 @@ Os tipos de interoperabilidade inseridos atenuaram um problema de implantação.
 
 O recurso principal foi a introdução da palavra-chave `dynamic`. A palavra-chave `dynamic` introduziu na versão 4.0 do C# a capacidade de substituir o compilador na tipagem em tempo de compilação. Com o uso da palavra-chave dinâmica, você pode criar constructos semelhantes a linguagens dinamicamente tipadas, como JavaScript. Você pode criar um `dynamic x = "a string"` e, em seguida, adicionar seis a ela, deixando que o tempo de execução decida o que acontece em seguida.
 
-Isso ocasiona a possibilidade de erros, mas também confere muita capacidade à linguagem.
+Associação dinâmica tem potencial de erros, mas também grande eficiência na linguagem.
 
 ## <a name="c-version-50"></a>C# versão 5.0
 
-O C# versão 5.0 era uma versão bastante focada da linguagem. Quase todo o esforço dessa versão foi na direção de outro conceito inovador da linguagem.  Aqui está a lista dos recursos principais:
+O C# versão 5.0 era uma versão focada da linguagem. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
 
 - [Membros assíncronos](../async.md)
 - [Atributos de informações do chamador](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
@@ -90,7 +113,7 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 ## <a name="c-version-60"></a>C# versão 6.0
 
-Com as versões 3.0 e 5.0, o C# adicionou alguns recursos impressionantes em uma linguagem orientada a objeto. Na versão 6.0, ele deixou de criar um recurso irresistível dominante e, em vez disso, lançou muitos recursos que agradaram os usuários da linguagem. Aqui estão alguns deles:
+Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Na versão 6.0, ele abre mão de um recurso arrasador dominante liberando, em vez disso, muitos recursos menores que tornam a programação em C# mais produtiva. Aqui estão alguns deles:
 
 - [Importações estáticas](../language-reference/keywords/using-static.md)
 - [Filtros de exceção](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
@@ -100,6 +123,11 @@ Com as versões 3.0 e 5.0, o C# adicionou alguns recursos impressionantes em uma
 - [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md)
 - [Operador nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
 - [Inicializadores de índice](csharp-6.md#index-initializers)
+
+Outros novos recursos incluem:
+
+- Await em blocos catch/finally
+- Valores padrão para propriedades somente getter
 
 Cada um desses recursos é interessante em seus próprios méritos. Mas, se você os observar em conjunto, verá um padrão interessante. Nesta versão, o C# eliminou o clichê de linguagem para tornar o código mais conciso e legível. Portanto, para os fãs de código simples e conciso, essa versão da linguagem foi um grande benefício.
 
@@ -116,8 +144,16 @@ A versão principal mais recente do C# é a versão 7.0. Esta versão tem alguma
 - [Membros aptos para expressão expandidos](./csharp-7.md#more-expression-bodied-members)
 - [Locais e retornos de ref](./csharp-7.md#ref-locals-and-returns)
 
+Outros recursos incluíam:
+
+- [Descarta](../discards.md)
+- [Literais binários](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
+- [Separadores de dígito](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
+- Locais e retornos de ref
+- [Expressões throw](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+
 Todas essas funcionalidades oferecem novos recursos interessantes para desenvolvedores e a oportunidade de escrever um código mais limpo do que nunca. Um ponto alto é a condensação da declaração de variáveis a serem usadas com a palavra-chave `out` e a permissão de vários valores retornados por meio de tupla.
 
-Mas o C# está sendo colocado para um uso cada vez mais amplo. Agora o .NET Core tem qualquer sistema operacional como destino e tem a visão firme na nuvem e na portabilidade.  Isso certamente ocupa as ideias e o tempo dos designers da linguagem, além da criação de novos recursos.
+Mas o C# está sendo colocado para um uso cada vez mais amplo. Agora o .NET Core tem qualquer sistema operacional como destino e tem a visão firme na nuvem e na portabilidade.  Essas novas funcionalidades certamente ocupam a mente e o tempo dos designers da linguagem, além de levarem a novos recursos.
 
 _Artigo_ [_originalmente publicado no blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, cortesia de Erik Dietrich e Patrick Smacchia._

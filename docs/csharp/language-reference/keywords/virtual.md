@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 5a188e9a7cbb7a1c497d577039c2b2578eaa7526
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: af5b7e3efdc98910ebbe7e061eba250cbe2d0c50
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172640"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207343"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referência de C#)
 A palavra-chave `virtual` é usada para modificar uma declaração de método, propriedade, indexador ou evento e permitir que ela seja substituída em uma classe derivada. Por exemplo, esse método pode ser substituído por qualquer classe que o herde:  
@@ -42,7 +42,7 @@ public virtual double Area()
 -   Uma propriedade herdada virtual pode ser substituída em uma classe derivada incluindo uma declaração de propriedade que usa o modificador `override`.  
   
 ## <a name="example"></a>Exemplo  
- Neste exemplo, a classe `Shape` contém as duas coordenadas `x`, `y` e o método virtual `Area()`. Classes de forma diferentes como `Circle`, `Cylinder` e `Sphere` herdam a classe `Shape` e a área de superfície é calculada para cada figura. Cada classe derivada tem a própria implementação de substituição de `Area()`.  
+ Neste exemplo, a classe `Shape` contém as duas coordenadas `x`, `y` e o método virtual `Area()`. Classes de forma diferentes como `Circle`, `Cylinder` e `Sphere` herdam a classe `Shape` e a área de superfície é calculada para cada figura. Cada classe derivada tem a própria implementação de substituição do `Area()`.  
   
  Observe que as classes herdadas `Circle`, `Sphere` e `Cylinder` usam construtores que inicializam a classe base, conforme mostrado na declaração a seguir.  
   

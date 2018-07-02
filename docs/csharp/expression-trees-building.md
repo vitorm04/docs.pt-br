@@ -3,12 +3,12 @@ title: Criando árvores de expressão
 description: Saiba mais sobre técnicas de criação de árvores de expressão.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216308"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207183"
 ---
 # <a name="building-expression-trees"></a>Criando árvores de expressão
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 Depois que tiver a expressão de adição, você pode criar a expressão lambda:
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-Trata-se de uma LambdaExpression muito simples, pois não contém argumentos.
+Essa é uma expressão lambda muito simples, pois não contém argumentos.
 Posteriormente nesta seção, você verá como mapear argumentos para parâmetros e criar expressões mais complicadas.
 
 Para expressões que são simples como essa, você pode combinar todas as chamadas em uma única instrução:

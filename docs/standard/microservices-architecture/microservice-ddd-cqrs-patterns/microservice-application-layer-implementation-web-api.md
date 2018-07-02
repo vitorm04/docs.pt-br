@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7c785814c4726dd805ad7b0dccb6a3584118cc65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572540f17e5628d7f71c94ee68f7cba17d64d07
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579750"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207632"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementando a camada de aplicativos de microsserviço usando a API Web
 
@@ -667,7 +667,7 @@ public class CreateOrderCommandHandler
 
 Esse é o código que correlaciona comandos com manipuladores de comandos. O manipulador é apenas uma classe simples, mas ele herda da RequestHandler&lt;T&gt;, e o MediatR garante que ele seja invocado com o conteúdo correto.
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>Aplicando interesses transversais ao processar comandos com os Comportamentos no MeadiatR
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Aplicando questões abrangentes ao processar comandos com os Comportamentos no MediatR
 
 Há mais um assunto para discutir: a capacidade de aplicar interesses transversais ao pipeline mediador. Você também pode ver, no final do código do módulo de registro do Autofac, como ele registra um tipo de comportamento, especificamente uma classe LoggingBehavior personalizada e uma classe ValidatorBehavior. Mas você também pode adicionar outros comportamentos personalizados.
 
@@ -827,12 +827,12 @@ De maneira semelhante, você pode implementar outros comportamentos para aspecto
 
 ##### <a name="the-mediator-pattern"></a>O padrão mediador
 
--   **O padrão mediador**
+-   **Padrão de mediador**
     [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>O padrão decorador
 
--   **O padrão decorador**
+-   **Padrão de decorador**
     [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
