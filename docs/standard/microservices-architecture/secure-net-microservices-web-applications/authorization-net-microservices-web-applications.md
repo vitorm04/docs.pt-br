@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582815"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105495"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Sobre a autorização em aplicativos Web e em microsserviços .NET
 
@@ -129,4 +129,5 @@ Um exemplo de requisito de autorização personalizado e manipulador para verifi
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Próximo] (developer-app-secrets-storage.md)
+[Anterior](index.md)
+[Próximo](developer-app-secrets-storage.md)

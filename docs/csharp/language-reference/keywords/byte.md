@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 28acbe67b85637550fdb1f5e290a9abb60bf5c65
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172170"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027883"
 ---
 # <a name="byte-c-reference"></a>byte (Referência de C#)
 
 `byte` indica um tipo integral que armazena valores conforme indicado na tabela a seguir.  
   
-|Tipo|Intervalo|Tamanho|Tipo do .NET Framework|  
+|Tipo|Intervalo|Tamanho|Tipo .NET|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 a 255|Inteiro de 8 bits sem sinal|<xref:System.Byte?displayProperty=nameWithType>|  
   
