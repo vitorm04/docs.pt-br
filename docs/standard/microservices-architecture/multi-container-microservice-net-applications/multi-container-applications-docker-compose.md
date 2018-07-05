@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592347"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106298"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml 
 
@@ -431,7 +431,7 @@ Observe que os valores definidos no ambiente do tempo de execução sempre subst
 -   **Visão geral do Docker Compose**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Vários arquivos do Compose**
+-   **Vários arquivos Compose**
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Criando imagens do Docker do ASP.NET Core otimizadas
@@ -548,4 +548,5 @@ A conclusão geral aqui é que você pode compilar seu aplicativo da mesma manei
 
 
 >[!div class="step-by-step"]
-[Anterior] (data-driven-crud-microservice.md) [Próximo] (database-server-container.md)
+[Anterior](data-driven-crud-microservice.md)
+[Próximo](database-server-container.md)

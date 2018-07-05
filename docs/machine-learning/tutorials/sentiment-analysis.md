@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de classificação biná
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314832"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948612"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Usar o ML.NET em um cenário de classificação binária de análise de sentimento
 
@@ -113,13 +113,13 @@ Adicione as seguintes instruções `using` adicionais ao início do arquivo *Pro
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Você precisa criar três variáveis ​​globais para manter o demarcador para os arquivos baixados recentemente:
+Você precisa criar três campos ​​globais para manter o caminho nos arquivos baixados recentemente:
 
 * `_dataPath` tem o demarcador para o conjunto de dados usado para treinar o modelo.
 * `_testDataPath` tem o demarcador para o conjunto de dados usado para avaliar o modelo.
 * `_modelPath` tem o demarcador em que o modelo treinado é salvo.
 
-Adicione o seguinte código à linha logo acima do método `Main` para especificar os arquivos baixados recentemente:
+Adicione o seguinte código à linha logo acima do método `Main` para especificar estes caminhos:
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

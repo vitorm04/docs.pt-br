@@ -1,6 +1,6 @@
 ---
 title: Comportamento de marshaling padrão
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457361"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028065"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  Um ponteiro de função pode ser desreferenciado, assim como qualquer outro ponteiro de função não gerenciada pode ser desreferenciado.  
-  
+
+Neste exemplo, quando os dois representantes realizam marshal como <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, o resultado é um `int` e um ponteiro para um `int`. Como os tipos de delegado estão realizando marshal, `int` representa um ponteiro para um void (`void*`), que é o endereço do delegado na memória. Em outras palavras, esse resultado só ocorre em sistemas Windows de 32 bits, pois `int` representa o tamanho do ponteiro de função.
+
 > [!NOTE]
 >  Uma referência ao ponteiro de função para um representante gerenciado mantido por um código não gerenciado não impede o Common Language Runtime de executar a coleta de lixo no objeto gerenciado.  
   

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574667"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104563"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validação do lado do cliente (validação nas camadas de apresentação)
 
@@ -29,7 +29,7 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validação de aplicativos móveis Xamarin
 
--   **Validar a entrada de texto e exibir erros**
+-   **Validar entrada de texto e mostrar erros**
     [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Chamada de retorno de validação**
@@ -65,4 +65,5 @@ Em resumo, estes são os conceitos mais importantes no que diz respeito à valid
 
 
 >[!div class="step-by-step"]
-[Anterior] (domain-model-layer-validations.md) [Próximo] (domain-events-design-implementation.md)
+[Anterior](domain-model-layer-validations.md)
+[Próximo](domain-events-design-implementation.md)

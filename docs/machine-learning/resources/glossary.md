@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860623"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207712"
 ---
 # <a name="machine-learning-glossary"></a>Glossário de aprendizado de máquina
 
@@ -33,7 +33,7 @@ API do ML.NET relacionada: <xref:Microsoft.ML.Models.BinaryClassificationMetrics
 
 ## <a name="binary-classification"></a>Classificação binária
 
-Um caso de [classificação](#classification), em que o [rótulo](#label) é apenas uma das duas classes. Para obter mais informações, consulte o artigo [Classificação binária](https://en.wikipedia.org/wiki/Binary_classification) na Wikipédia.
+Um caso de [classificação](#classification), em que o [rótulo](#label) é apenas uma das duas classes. Para saber mais, confira a seção [Classificação binária](tasks.md#binary-classification) do tópico [Tarefas de aprendizado de máquina](tasks.md).
 
 ## <a name="classification"></a>Classificação
 
@@ -85,7 +85,7 @@ Tradicionalmente, os parâmetros para a função de previsão. Por exemplo, os p
 
 ## <a name="multiclass-classification"></a>Classificação multiclasse
 
-Um caso de [classificação](#classification) em que o [rótulo](#label) é uma entre três ou mais classes. Para obter mais informações, consulte o artigo [Classificação multiclasse](https://en.wikipedia.org/wiki/Multiclass_classification) na Wikipédia.
+Um caso de [classificação](#classification) em que o [rótulo](#label) é uma entre três ou mais classes. Para saber mais, confira a seção [Classificação multiclasse](tasks.md#multiclass-classification) do tópico [Tarefas de aprendizado de máquina](tasks.md).
 
 ## <a name="n-gram"></a>N-grama
 
@@ -113,7 +113,7 @@ APIs do ML.NET relacionadas: <xref:Microsoft.ML.Models.BinaryClassificationMetri
 
 ## <a name="regression"></a>Regressão
 
-Uma tarefa de [aprendizado de máquina supervisionado](#supervised-machine-learning) em que a saída é um valor real, por exemplo, duplo. Exemplos incluem a previsão de preços de ações.
+Uma tarefa de [aprendizado de máquina supervisionado](#supervised-machine-learning) em que a saída é um valor real, por exemplo, duplo. Exemplos incluem a previsão de preços de ações. Para saber mais, confira a seção [Regressão](tasks.md#regression) do tópico [Tarefas de aprendizado de máquina](tasks.md).
 
 ## <a name="relative-absolute-error"></a>Erro absoluto relativo
 

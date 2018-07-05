@@ -1,6 +1,6 @@
 ---
 title: foreach, in (Referência de C#)
-ms.date: 05/24/2018
+ms.date: 06/29/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 7613590686f7f7ec6439da4a2bb672e524ab01e8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d3ce1122c54c14b1baf35641f28d062a2855d335
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565700"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140262"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referência de C#)
 
@@ -35,7 +35,11 @@ O exemplo a seguir mostra o uso da instrução `foreach` com uma instância do t
 
 O exemplo a seguir usa a instrução `foreach` com uma instância do tipo <xref:System.Span%601?displayProperty=nameWithType>, que não implementa nenhuma interface:
 
-[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+
+A partir do C# 7.3, se a propriedade `Current` do enumerador retornar um [valor retornado da referência](../../programming-guide/classes-and-structs/ref-returns.md) (`ref T`, em que `T` é o tipo do elemento da coleção), será possível declarar a variável de iteração com o modificador `ref` ou `ref readonly`. O exemplo a seguir usa uma variável de iteração `ref` para definir o valor de cada item em uma matriz stackalloc. A versão `ref readonly` itera a coleção para imprimir todos os valores. A declaração `readonly` usa uma declaração de variável local implícita. Declarações de variável implícita podem ser usadas com declarações `ref` ou `ref readonly`, assim como declarações de variável tipadas explicitamente.
+
+[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

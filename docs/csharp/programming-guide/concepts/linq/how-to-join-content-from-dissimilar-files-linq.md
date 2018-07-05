@@ -1,20 +1,21 @@
 ---
 title: Como unir conteúdo de arquivos diferentes (LINQ) (C#)
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319163"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071829"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como unir conteúdo de arquivos diferentes (LINQ) (C#)
+
 Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
   
-### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
+## <a name="to-create-the-data-files"></a>Para criar os arquivos de dados
   
-1.  Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
+1.  Copie as seguintes linhas para um arquivo chamado *scores.csv* e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copie as seguintes linhas para um arquivo chamado names.csv e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
+2.  Copie as seguintes linhas para um arquivo chamado *names.csv* e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,8 +50,12 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
     ```  
   
 ## <a name="example"></a>Exemplo  
-  
-```csharp  
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class JoinStrings  
 {  
     static void Main()  
@@ -78,7 +83,7 @@ class JoinStrings
             let nameFields = name.Split(',')  
             from id in scores  
             let scoreFields = id.Split(',')  
-            where nameFields[2] == scoreFields[0]  
+            where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
             select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
@@ -102,26 +107,32 @@ class JoinStrings
     }  
 }  
 /* Output:  
-Merge two spreadsheets:  
-Adams, 99, 82, 81, 79  
-Fakhouri, 99, 86, 90, 94  
-Feng, 93, 92, 80, 87  
-Garcia, 97, 89, 85, 82  
-Garcia, 35, 72, 91, 70  
-Garcia, 92, 90, 83, 78  
-Mortensen, 88, 94, 65, 91  
-O'Donnell, 75, 84, 91, 39  
-Omelchenko, 97, 92, 81, 60  
-Tucker, 68, 79, 88, 92  
-Tucker, 94, 92, 91, 91  
-Zabokritski, 96, 85, 91, 60  
-12 total names in list  
+Merge two spreadsheets:
+Omelchenko, 97, 92, 81, 60
+O'Donnell, 75, 84, 91, 39
+Mortensen, 88, 94, 65, 91
+Garcia, 97, 89, 85, 82
+Garcia, 35, 72, 91, 70
+Fakhouri, 99, 86, 90, 94
+Feng, 93, 92, 80, 87
+Garcia, 92, 90, 83, 78
+Tucker, 68, 79, 88, 92
+Adams, 99, 82, 81, 79
+Zabokritski, 96, 85, 91, 60
+Tucker, 94, 92, 91, 91
+12 total names in list
  */  
-```  
+```
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+Crie e compile um projeto direcionado para uma das seguintes opções:
+
+- Versão 3.5 do .NET Framework com uma referência ao System.Core.dll.
+- .NET Framework versão 4.0 ou posterior.
+- .NET Core versão 1.0 ou posterior.
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.  
-  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
+
  [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

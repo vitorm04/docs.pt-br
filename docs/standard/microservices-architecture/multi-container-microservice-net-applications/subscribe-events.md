@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592438"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106571"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -319,7 +319,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 -   **Forked eShopOnContainers using NServiceBus (eShopOnContainers ramificado usando NServiceBus) (software específico)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Mensagens controladas por eventos**
+-   **Mensagens controladas por evento**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento**
@@ -331,7 +331,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 -   **Comunicação entre contextos limitados**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Coerência eventual**
+-   **Consistência eventual**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Philip Brown. Estratégias para integrar contextos limitados**
@@ -367,15 +367,16 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 -   **Eric Brewer. CAP doze anos depois: como as "regras" mudaram**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **articipating in External (DTC) Transactions (Participar de transações externas [DTC])** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Participar de transações externas (DTC)** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Barramento de Serviço do Azure. Sistema de mensagens agenciado: detecção duplicada**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Guia de Confiabilidade** (Documentação do RabbitMQ) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Guia de Confiabilidade** (documentação do RabbitMQ) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[Anterior] (rabbitmq-event-bus-development-test-environment.md) [Próximo] (test-aspnet-core-services-web-apps.md)
+[Anterior](rabbitmq-event-bus-development-test-environment.md)
+[Próximo](test-aspnet-core-services-web-apps.md)

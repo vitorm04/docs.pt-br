@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7d173133ab7c803c7ab48b39c50b02ee4f3b1721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578931"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106483"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -86,7 +86,7 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 -   **Teorema de CAP**
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Coerência eventual**
+-   **Consistência eventual**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Primer de consistência de dados**
@@ -109,4 +109,5 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 
 
 >[!div class="step-by-step"]
-[Anterior] (logical-versus-physical-architecture.md) [Próximo] (identify-microservice-domain-model-boundaries.md)
+[Anterior](logical-versus-physical-architecture.md)
+[Próximo](identify-microservice-domain-model-boundaries.md)

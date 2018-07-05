@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579451"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106246"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Criando um modelo de domínio de microsserviço
 
@@ -153,4 +153,5 @@ Para identificar e trabalhar com agregações é necessário fazer pesquisas e t
 
 
 >[!div class="step-by-step"]
-[Anterior] (ddd-oriented-microservice.md) [Próximo] (net-core-microservice-domain-model.md)
+[Anterior](ddd-oriented-microservice.md)
+[Próximo](net-core-microservice-domain-model.md)

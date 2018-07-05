@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: bee9a6215d2952f6c7f71607b1c4b1f44d1c0faf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579126"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106402"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -85,7 +85,7 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Mensagens controladas por eventos**
+-   **Mensagens controladas por evento**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Publicar/assinar canal**
@@ -100,7 +100,7 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 -   **Comunicação entre contextos limitados**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Coerência eventual**
+-   **Consistência eventual**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento**
@@ -108,4 +108,5 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 
 
 >[!div class="step-by-step"]
-[Anterior] (comunicação-em-microsserviço-architecture.md) [Próximo] (manter-microsserviço-apis.md)
+[Anterior](communication-in-microservice-architecture.md)
+[Próximo](maintain-microservice-apis.md)

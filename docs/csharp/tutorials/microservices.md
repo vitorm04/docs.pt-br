@@ -3,12 +3,12 @@ title: Microsserviços hospedados no Docker - C#
 description: Aprenda a criar serviços asp.net core que são executados em contêineres do Docker
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207841"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106344"
 ---
 # <a name="microservices-hosted-in-docker"></a>Microsserviços hospedados no Docker
 
@@ -46,15 +46,17 @@ O Docker pode ser instalado em muitas distribuições do Linux, macOS ou Windows
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
-Agora que você instalou todas as ferramentas, crie um novo aplicativo ASP.NET Core. Para fazer isso, crie um novo diretório chamado "WeatherMicroservice" e execute o seguinte comando nesse diretório em seu shell favorito:
+Agora que você instalou todas as ferramentas, crie um novo aplicativo do ASP.NET Core em um diretório chamado "WeatherMicroservice" executando o seguinte comando no seu shell favorito:
 
 ```console
-dotnet new web
+dotnet new web -o WeatherMicroservice
 ```
 
 O comando `dotnet` executa as ferramentas necessárias para desenvolvimento em .NET. Cada verbo executa um comando diferente.
 
 O comando `dotnet new` é usado para criar projetos do .Net Core.
+
+A opção `-o WeatherMicroservice` após o comando `dotnet new` é usada para fornecer o local para criar o aplicativo do ASP.NET Core.
 
 Para esse microsserviço, queremos o aplicativo Web mais simples e leve possível, portanto, usamos o modelo "ASP.NET Core Vazio", especificando seu nome curto, `web`.
 

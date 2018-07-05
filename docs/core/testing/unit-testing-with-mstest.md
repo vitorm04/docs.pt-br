@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: b76e577d3950dd13b038f47c1b133e3529867c38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216090"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105596"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>C# de teste de unidade com MSTest e .NET Core
 
@@ -17,7 +17,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 ### <a name="creating-the-source-project"></a>Criando o projeto de origem
 
-Abra uma janela do shell. Crie um diretório chamado *unit-testing-using-dotnet-test* para armazenar a solução. Nesse diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste. Em seguida, crie um diretório *PrimeService*. O seguinte esquema mostra a estrutura de arquivo e diretório até aqui:
+Abra uma janela do shell. Crie um diretório chamado *unit-testing-using-mstest* no qual manter a solução. Nesse diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste. Em seguida, crie um diretório *PrimeService*. O seguinte esquema mostra a estrutura de arquivo e diretório até aqui:
 
 ```
 /unit-testing-using-mstest

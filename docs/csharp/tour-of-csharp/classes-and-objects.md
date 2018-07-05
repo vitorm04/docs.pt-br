@@ -3,12 +3,12 @@ title: Classes e objetos em C# - um tour pela linguagem C#
 description: Novato em C#? Leia esta visão geral de classes, objetos e herança
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298286"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140275"
 ---
 # <a name="classes-and-objects"></a>Classes e objetos
 
@@ -55,7 +55,7 @@ O exemplo a seguir fornece uma visão geral dos tipos de membros que uma classe 
 
 ## <a name="accessibility"></a>Acessibilidade
 
-Cada membro de uma classe tem uma acessibilidade associada, que controla as regiões de texto do programa que são capazes de acessar o membro. Há cinco formas possíveis de acessibilidade. Elas são resumidas abaixo.
+Cada membro de uma classe tem uma acessibilidade associada, que controla as regiões de texto do programa que são capazes de acessar o membro. Existem seis formas possíveis de acessibilidade. Elas são resumidas abaixo.
 
 * `public`
     - Acesso não limitado
@@ -64,7 +64,7 @@ Cada membro de uma classe tem uma acessibilidade associada, que controla as regi
 * `internal`
     - Acesso limitado ao assembly atual (.exe, .dll, etc.)
 * `protected internal`
-    - Acesso limitado à classe ou classes recipiente derivadas da classe recipiente
+    - Acesso limitado à classe recipiente, classes derivadas da classe recipiente ou classes dentro do mesmo assembly
 * `private`
     - Acesso limitado a essa classe
 * `private protected`

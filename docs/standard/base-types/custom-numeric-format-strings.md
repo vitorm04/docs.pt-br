@@ -1,6 +1,6 @@
 ---
 title: Cadeias de caracteres de formato numérico personalizado
-ms.date: 03/30/2017
+ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,16 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa1ab1d9a9ff3d652ce97d4fe7e6d04f744aea98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579230"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106522"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
+
 Você pode criar uma cadeia de caracteres de formato numérico personalizado, que consiste em um ou mais especificadores numéricos personalizados, para definir a formatação de dados numéricos. Uma cadeia de caracteres de formato numérico personalizado é qualquer cadeia de caracteres que é não uma [cadeia de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
+
  As cadeias de caracteres de formato numérico personalizado têm suporte de algumas sobrecargas do método `ToString` de todos os tipos numéricos. Por exemplo, você pode fornecer uma cadeia de caracteres de formato numérico para os métodos <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> do tipo <xref:System.Int32>. Cadeias de caracteres de formato numérico personalizado também têm suporte no [recurso de formatação composta](../../../docs/standard/base-types/composite-formatting.md) do .NET Framework, o qual é usado por alguns métodos `Write` e `WriteLine` das classes <xref:System.Console> e <xref:System.IO.StreamWriter>, o método <xref:System.String.Format%2A?displayProperty=nameWithType> e o método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. O recurso de [Interpolação de cadeia de caracteres](../../csharp/language-reference/tokens/interpolated.md) também é compatível com cadeias de caracteres de formato numérico personalizado.  
   
 > [!TIP]
@@ -45,11 +47,13 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
 |"‰"|Espaço reservado por milhar|Multiplica um número por 1000 e insere um símbolo de por milhar localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Notação exponencial|Se seguida por pelo menos um 0 (zero), formata o resultado usando notação exponencial. A caixa de “E” ou “e” indica a caixa do símbolo do expoente na cadeia de caracteres de resultado. O número de zero depois do caractere “E” ou “e” determina o número mínimo de dígitos do expoente. Um sinal de positivo (+) indica que um caractere de sinal sempre precede o expoente. Um sinal de negativo (-) indica que um caractere de sinal precede apenas expoentes negativos.<br /><br /> Mais informações: [Especificadores de formato personalizado "E" e "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|Caractere de escape|Faz com que o próximo caractere seja interpretado como um literal em vez de como um especificador de formato personalizado.<br /><br /> Mais informações: [Caractere de escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
-|'*string*'<br /><br /> "*string*"|Delimitador de cadeia de caracteres literal|Indica que os caracteres delimitados devem ser copiados para a cadeia de caracteres de resultado sem sofrerem alterações.|68 ("# ' graus'") -> 68 graus<br /><br /> 68 ("# ' graus'") -> 68 graus|  
+|'*string*'<br /><br /> "*string*"|Delimitador de cadeia de caracteres literal|Indica que os caracteres delimitados devem ser copiados para a cadeia de caracteres de resultado sem sofrerem alterações.<br/><br/>Para saber mais: [Literais de cadeia de caracteres](#character-literals).|68 ("# ' graus'") -> 68 graus<br /><br /> 68 ("# ' graus'") -> 68 graus|  
 |;|Separador de seção|Define seções com cadeias de caracteres de formato separadas para números positivos, negativos e zero.<br /><br /> Mais informações: [Separador de seção ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|Outros|Todos os outros caracteres|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.|68 ("# °") -> 68 °|  
+|Outros|Todos os outros caracteres|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br/><br/>Para saber mais: [Literais de cadeia de caracteres](#character-literals).|68 ("# °") -> 68 °|  
   
  As seções a seguir fornecem informações detalhadas sobre cada um dos especificadores de formato numérico personalizado.  
+
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Especificador personalizado "0"  
@@ -60,7 +64,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir mostra vários valores formatados com cadeias de caracteres de formato personalizado que incluem espaços reservados de zero.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Voltar à tabela](#table)  
@@ -76,19 +80,19 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir mostra vários valores formatados com cadeias de caracteres de formato personalizado que incluem espaços reservados de dígito.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Para retornar uma cadeia de caracteres de resultado em que dígitos ausentes ou zeros à esquerda são substituídos por espaços, use o recurso de [formatação de composição](../../../docs/standard/base-types/composite-formatting.md) e especifique uma largura de campo, como mostra o exemplo a seguir.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Voltar à tabela](#table)  
   
 <a name="SpecifierPt"></a>   
-## <a name="the--custom-specifier"></a>O "." Especificador Personalizado  
+## <a name="the--custom-specifier"></a>Especificador personalizado "."  
  O especificador de formato personalizado "." insere um separador decimal localizado na cadeia de caracteres resultante. O primeiro caractere de ponto na cadeia de caracteres de formato determina o local do separador decimal no valor formatado; quaisquer caracteres de ponto adicionais são ignorados.  
   
  O caractere que é usado como separador decimal na cadeia de caracteres de resultado é determinado pela propriedade <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> do objeto <xref:System.Globalization.NumberFormatInfo> que controla a formatação.  
@@ -96,7 +100,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir usa o especificador de formato "." para definir a posição do ponto decimal em várias cadeias de caracteres de resultados.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Voltar à tabela](#table)  
@@ -116,13 +120,13 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir ilustra o uso da vírgula como um separador de grupo.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  O exemplo a seguir ilustra o uso da vírgula como um especificador de escala numérica.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Voltar à tabela](#table)  
@@ -134,7 +138,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir define várias cadeias de caracteres de formato personalizado que incluem o especificador personalizado "%".  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Voltar à tabela](#table)  
@@ -146,7 +150,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir define uma cadeia de caracteres de formato personalizado que inclui o especificador personalizado "‰".  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Voltar à tabela](#table)  
@@ -158,13 +162,13 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir formata vários valores numéricos usando os especificadores para notação científica.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Voltar à tabela](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>O caractere de escape "\\"  
+## <a name="the--escape-character"></a>Caractere de escape "\\"  
  Os símbolos “#”, “0 ", “. ”, “,”, “% e "‰" em uma cadeia de caracteres de formato são interpretados como especificadores de formato e não como caracteres literais. Dependendo da sua posição em uma cadeia de caracteres de formato personalizado, o "E" em maiúscula e minúscula, bem como os símbolos + e -, também podem ser interpretados como especificadores de formato.  
   
  Para impedir que um caractere seja interpretado como um especificador de formato, você pode precedê-lo com uma barra invertida, que é o caractere de escape. O caractere de escape significa que o próximo caractere é um literal de caractere que deve ser incluído inalterado na cadeia de caracteres de resultado.  
@@ -177,7 +181,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir usa o caractere de escape para impedir que a operação de formatação interprete os caracteres "#", "0" e "\\" como caracteres de escape ou especificadores de formato. Os exemplos em C# usam uma barra invertida adicional para garantir que uma barra invertida seja interpretada como um caractere literal.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
- [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
  [Voltar à tabela](#table)  
@@ -197,11 +201,43 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir utiliza o especificador de formato ";" para formatar números positivos, negativos e zero de maneira diferente.  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
- [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
  [Voltar à tabela](#table)  
+
+## <a name="character-literals"></a>Literais de caracteres  
+ 
+Os especificadores de formato que aparecem em uma cadeia de caracteres de formato numérica personalizada sempre são interpretados como caracteres de formatação e nunca como caracteres literais. Isso inclui os seguintes caracteres:  
+
+- [0](#Specifier0)
+- [\#](#SpecifierD)
+- [%](#SpecifierPct)
+- [‰](#SpecifierPerMille)
+- '
+- [\\](#SpecifierEscape)
+- [.](#SpecifierPt)
+- [,](#SpecifierTh)
+- [E ou e](#SpecifierExponent), de acordo com a posição na cadeia de caracteres de formato.
+
+Todos os outros caracteres sempre são interpretados como literais de caracteres e, em uma operação de formatação, são incluídos na cadeia de caracteres de resultado inalterada.  Em uma operação de análise, eles devem corresponder exatamente aos caracteres na cadeia de entrada; a comparação diferencia maiúsculas de minúsculas.  
   
+O exemplo a seguir ilustra um uso comum de unidades de caractere literal (neste caso, milhares):
+  
+ [!code-csharp-interactive[literal characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal2.cs#1)]
+ [!code-vb[literal characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal2.vb#1)]  
+  
+ Há duas maneiras de indicar que os caracteres devem ser interpretados como caracteres literais e não como caracteres de formatação, para que possam ser incluídos em uma cadeia de caracteres de resultado ou analisados com êxito em uma cadeia de caracteres de entrada:  
+  
+- Pelo escape de um caractere de formatação. Para saber mais, confira [O caractere de escape "\\"](#SpecifierEscape).
+  
+- Colocando toda a cadeia de caracteres literal entre aspas ou apóstrofos.
+
+O exemplo a seguir usa as duas abordagem para incluir caracteres reservados em uma cadeia de caracteres de formato numérica personalizada.  
+  
+     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
+     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+    
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Observações  
   
@@ -223,13 +259,13 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir demonstra duas cadeias de caracteres de formato numérico personalizado. Em ambos os casos, o espaço reservado de dígito (`#`) exibe os dados numéricos, e todos os outros caracteres são copiados para a cadeia de caracteres de resultado.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
- [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
  [Voltar à tabela](#table)  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Globalization.NumberFormatInfo>  
+ <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
  [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
  [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Como preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  

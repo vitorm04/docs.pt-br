@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578021"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948583"
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 <a name="top"></a> Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
   
 |Âncora|Descrição|  
 |------------|-----------------|  
-|`^`|A correspondência deve ocorrer no início da cadeia de caracteres ou da linha. Para saber mais, veja [Início da cadeia de caracteres ou linha](#Start).|  
-|`$`|A correspondência deve ocorrer no final da cadeia de caracteres ou linha ou antes de `\n` no final da linha ou da cadeia de caracteres. Para saber mais, veja [Fim da cadeia de caracteres ou linha](#End).|  
+|`^`|Por padrão, a correspondência deve ocorrer no início da cadeia de caracteres. No modo multilinha, deve ocorrer no início da linha. Para saber mais, veja [Início da cadeia de caracteres ou linha](#Start).|  
+|`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve ocorrer no fim da linha ou antes de `\n` no fim da linha. Para saber mais, veja [Fim da cadeia de caracteres ou linha](#End).|  
 |`\A`|A correspondência deve ocorrer no início da cadeia de caracteres apenas (sem suporte a multilinha). Para saber mais, veja [Início da cadeia de caracteres apenas](#StartOnly).|  
 |`\Z`|A correspondência deve ocorrer no final da cadeia de caracteres ou antes de `\n` no final da cadeia de caracteres. Para saber mais, veja [Final da Cadeia de Caracteres ou Antes de Terminar Nova Linha](#EndOrNOnly).|  
 |`\z`|A correspondência deve ocorrer apenas no final da cadeia de caracteres. Para saber mais, veja [Fim da cadeia de caracteres apenas](#EndOnly).|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578021"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Início da Cadeia de Caracteres ou Linha: ^  
- A âncora `^` especifica que o seguinte padrão deve começar na posição do primeiro caractere da cadeia de caracteres. Se você usar `^` com a opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (veja [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)), a correspondência deverá ocorrer no início de cada linha.  
+ Por padrão, a âncora `^` especifica que o seguinte padrão deve começar na posição do primeiro caractere da cadeia de caracteres. Se você usar `^` com a opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (veja [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)), a correspondência deverá ocorrer no início de cada linha.  
   
  O exemplo a seguir usa a âncora `^` em uma expressão regular que extrai informações sobre os anos durante os quais algumas equipes de profissionais de beisebol existiram. O exemplo chama duas sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>:  
   

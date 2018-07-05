@@ -4,16 +4,16 @@ description: Saiba mais as alterações de dotnet publish em implantações auto
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d28e81e2ac1b27e7fd89e16d2d906a080fd18b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697203"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071026"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward de tempo de execução de implantação autossuficiente
 
-As [implantações de aplicativo autossuficientes](index.md) do .NET Core incluem as bibliotecas e o tempo de execução do .NET Core. A partir do SDK do .NET Core 2.1.300 (.NET Core 2.1), uma implantação de aplicativo autossuficiente [agora publica o tempo de execução de patch mais recente no computador](https://github.com/dotnet/designs/pull/36). Por padrão, [`dotnet publish`](../tools/dotnet-publish.md) para uma implantação autossuficiente seleciona a última versão instalada como parte do SDK no computador de publicação. Isso permite que o aplicativo implantado seja executado com correções de segurança (e outras correções) disponíveis durante `publish`. O aplicativo precisa ser publicado novamente para obter um novo patch. Os aplicativos autossuficientes são criados pela especificação de `-r <RID>` no comando `dotnet publish`, pela especificação do [RID (identificador de tempo de execução)](../rid-catalog.md) no arquivo de projeto (csproj/vbproj) ou na linha de comando.
+As [implantações de aplicativo autossuficientes](index.md) do .NET Core incluem as bibliotecas e o tempo de execução do .NET Core. A partir do SDK do .NET Core 2.1.300 (.NET Core 2.1), uma implantação de aplicativo autossuficiente [publica o tempo de execução de patch mais recente no computador](https://github.com/dotnet/designs/pull/36). Por padrão, [`dotnet publish`](../tools/dotnet-publish.md) para uma implantação autossuficiente seleciona a última versão instalada como parte do SDK no computador de publicação. Isso permite que o aplicativo implantado seja executado com correções de segurança (e outras correções) disponíveis durante `publish`. O aplicativo precisa ser publicado novamente para obter um novo patch. Os aplicativos autossuficientes são criados pela especificação de `-r <RID>` no comando `dotnet publish`, pela especificação do [RID (identificador de tempo de execução)](../rid-catalog.md) no arquivo de projeto (csproj/vbproj) ou na linha de comando.
 
 ## <a name="patch-version-roll-forward-overview"></a>Visão geral do roll forward da versão de patch
 
@@ -28,15 +28,15 @@ As [implantações de aplicativo autossuficientes](index.md) do .NET Core inclue
 
 A execução de `restore` como parte da operação `publish` pode ser indesejável para seu cenário. Para evitar `restore` durante `publish` ao criar aplicativos autossuficientes, faça o seguinte:
 
-* Defina a propriedade `RuntimeIdentifiers` como uma lista separada por ponto-e-vírgula de todos os [RIDs](../rid-catalog.md) a serem publicados
-* Defina a propriedade `TargetLatestRuntimePatch` como `true`
+* Defina a propriedade `RuntimeIdentifiers` como uma lista separada por ponto e vírgula de todos os [RIDs](../rid-catalog.md) a serem publicados.
+* Defina a propriedade `TargetLatestRuntimePatch` como `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Argumento no-restore com opções dotnet publish
 
 Caso deseje criar aplicativos autossuficientes e [aplicativos dependentes de estrutura](index.md) com o mesmo arquivo de projeto e usar o argumento `--no-restore` com `dotnet publish`, escolha um dos seguintes:
 
-1. Prefira o comportamento dependente de estrutura. Se o aplicativo depende de uma estrutura, esse é o comportamento padrão. Se o aplicativo é autossuficiente e pode usar um tempo de execução local 2.1.0 sem patch, defina o `TargetLatestRuntimePatch` como `false` no arquivo de projeto (csproj/vbproj).
+1. Prefira o comportamento dependente de estrutura. Se o aplicativo depende de uma estrutura, esse é o comportamento padrão. Se o aplicativo for autossuficiente e puder usar um tempo de execução local 2.1.0 sem patch, defina o `TargetLatestRuntimePatch` como `false` no arquivo de projeto.
 
-2. Prefira o comportamento autossuficiente. Se o aplicativo é autossuficiente, esse é o comportamento padrão. Se o aplicativo depende de uma estrutura e exige o último patch instalado, defina `TargetLatestRuntimePatch` como `true` no arquivo de projeto (csproj/vbproj).
+2. Prefira o comportamento autossuficiente. Se o aplicativo é autossuficiente, esse é o comportamento padrão. Se o aplicativo depende de uma estrutura e exige o último patch instalado, defina `TargetLatestRuntimePatch` como `true` no arquivo de projeto.
 
-3. Assuma o controle explícito da versão da estrutura de tempo de execução definindo `RuntimeFrameworkVersion` com a versão de patch específica no arquivo de projeto (csproj/vbproj).
+3. Assuma o controle explícito da versão da estrutura de tempo de execução definindo `RuntimeFrameworkVersion` como a versão de patch específica no arquivo de projeto.
