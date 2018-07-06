@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579763"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071858"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
 <a name="top"></a> O retrocesso ocorre quando um padrão de expressão regular contém [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) opcionais ou [constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) e o mecanismo de expressões regulares retorna a um estado salvo anterior para retomar sua pesquisa por uma correspondência. O retrocesso é indispensável para o poder das expressões regulares, ele permite que as expressões sejam poderosas e flexíveis e correspondam a padrões muito complexos. No entanto, todo esse poder tem um custo. O retrocesso muitas vezes é o fator individual que mais afeta o desempenho do mecanismo de expressões regulares. Felizmente, o desenvolvedor tem controle sobre o comportamento do mecanismo de expressões regulares e como ele usa o retrocesso. Este tópico explica como o retrocesso funciona e como ele pode ser controlado.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579763"
 |`[-.\w]*`|Corresponde a zero, uma ou mais ocorrências de um hífen, ponto ou caractere de palavra.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico.|  
 |`([-.\w]*[0-9A-Z])*`|Corresponde a zero ou mais ocorrências da combinação de zero ou mais hífens, pontos ou caracteres de palavra, seguidos por um caractere alfanumérico. Este é o primeiro grupo de captura.|  
-|`@`|Corresponde a um sinal de arroba (“@").|  
+|`@`|Corresponde a um sinal ("\@").|  
   
  O segundo padrão de expressão regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa uma asserção lookbehind positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579763"
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
 |`[-.\w]*`|Corresponde a zero ou mais ocorrências de um hífen, ponto ou caractere de palavra.|  
 |`(?<=[0-9A-Z])`|Examina de volta o último caractere correspondente e continua a correspondência se ele é alfanumérico. Observe que os caracteres alfanuméricos são um subconjunto do conjunto que consiste em pontos, hífens e todos os caracteres de palavra.|  
-|`@`|Corresponde a um sinal de arroba (“@").|  
+|`@`|Corresponde a um sinal ("\@").|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>Asserções lookahead  
