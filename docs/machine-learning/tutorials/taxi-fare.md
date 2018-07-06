@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314959"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948625"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Tutorial: Usar o ML.NET para prever tarifas de táxi em Nova York (regressão)
 
@@ -82,7 +82,7 @@ Crie classes para os dados de entrada e as previsões:
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Novo Item**.
 1. Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *TaxiTrip.cs*. Em seguida, selecione o botão **Adicionar**.
-1. Inclua as seguintes instruções `using` no novo arquivo:
+1. Adicione as seguintes diretivas `using` ao novo arquivo:
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ A classe `TaxiTripFarePrediction` é usada para representar os resultados previs
 
 ## <a name="define-data-and-model-paths"></a>Definir dados e caminhos de modelo
 
-Volte para o arquivo *Program.cs* e crie três constantes globais para manter os caminhos nos arquivos com conjuntos de dados e salvar o modelo:
+Volte para o arquivo *Program.cs* e adicione três campos para conter os caminhos para os arquivos com conjuntos de dados e o arquivo para salvar o modelo:
 
-* `_datapath` tem o demarcador para o conjunto de dados usado para treinar o modelo.
-* `_testdatapath` tem o demarcador para o conjunto de dados usado para avaliar o modelo.
-* `_modelpath` tem o demarcador em que o modelo treinado é armazenado.
+* `_datapath` contém o caminho para o arquivo com o conjunto de dados usado para treinar o modelo.
+* `_testdatapath` contém o caminho para o arquivo com o conjunto de dados usado para avaliar o modelo.
+* `_modelpath` contém o caminho para o arquivo em que o modelo treinado está armazenado.
 
-Adicione o seguinte código à linha logo acima do método `Main` para especificar estes caminhos:
+Adicione o seguinte código logo acima do método `Main` para especificar estes caminhos:
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+Para fazer com que o código anterior seja compilado, adicione as seguintes diretivas `using` ao início do arquivo *Program.cs*:
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>Criar um pipeline de aprendizado
 
-Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*:
+Adicione as seguintes diretivas `using` adicionais ao início do arquivo *Program.cs*:
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Carregar e transformar dados
 
-A primeira etapa executada pelo pipeline de aprendizado é carregar os dados do conjunto de dados de treinamento. Neste caso, o conjunto de dados de treinamento é armazenado no arquivo de texto com um caminho definido pela constante `_datapath`. Esse arquivo contém o cabeçalho com os nomes de coluna, então, a primeira linha deve ser ignorada enquanto os dados são carregados. As colunas no arquivo são separadas por uma vírgula (","). Adicione o seguinte código ao método `Train`:
+A primeira etapa executada pelo pipeline de aprendizado é carregar os dados do conjunto de dados de treinamento. Em nosso caso, o conjunto de dados de treinamento é armazenado no arquivo de texto com um caminho definido pelo campo `_datapath`. Esse arquivo contém o cabeçalho com os nomes de coluna, então, a primeira linha deve ser ignorada enquanto os dados são carregados. As colunas no arquivo são separadas por uma vírgula (","). Adicione o seguinte código ao método `Train`:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ Usar um `await` no método `Main` significa que o método `Main` deve ter o modi
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-Também é preciso adicionar a seguinte instrução `using` à parte superior do arquivo:
+Também é preciso adicionar a seguinte diretiva `using` ao início do arquivo:
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
