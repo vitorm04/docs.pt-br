@@ -22,7 +22,7 @@ Em qualquer ponto dentro do bloco de instrução `for`, você pode sair do loop 
   
 ## <a name="structure-of-the-for-statement"></a>Estrutura da instrução `for`
 
-A instrução `for` define as seções de *inicializador*, *condição* e *iterador*:
+A instrução `for` define as seções *Inicializador*, *Condição* e *Iterador*:
   
 ```csharp
 for (initializer; condition; iterator)  
@@ -35,9 +35,9 @@ A exemplo a seguir mostra a instrução `for` com todas as seções definidas:
 
 [!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
 
-### <a name="the-initializer-section"></a>A seção *inicializador*
+### <a name="the-initializer-section"></a>A seção *Inicializador*
 
-As instruções na seção de *inicializador* são executadas apenas uma vez, antes de entrar no loop. A seção *inicializador* é uma das seguintes:
+As instruções na seção *Inicializador* são executadas apenas uma vez, antes de entrar no loop. A seção *Inicializador* é uma das seguintes:
 
 - A declaração e a inicialização de uma variável de loop local, que não pode ser acessada de fora do loop.
 
@@ -55,25 +55,25 @@ As instruções na seção de *inicializador* são executadas apenas uma vez, an
 
   - expressão [await](await.md)
 
-A seção *inicializador* no exemplo acima declara e inicializa a variável de loop local `i`:
+A seção *Inicializador* no exemplo acima declara e inicializa a variável de loop local `i`:
 
 ```csharp
 int i = 0
 ```
 
-### <a name="the-condition-section"></a>A seção *condição*
+### <a name="the-condition-section"></a>A seção *Condição*
 
-A seção *condição*, se presente, deverá ser uma expressão booliana. Essa expressão é avaliada antes de cada iteração do loop. Se a seção *condição* não estiver presente ou a expressão booliana for avaliada como `true`, a próxima iteração do loop será executada; caso contrário, o loop será finalizado.
+A seção *Condição*, se presente, deverá ser uma expressão booliana. Essa expressão é avaliada antes de cada iteração do loop. Se a seção *Condição* não estiver presente ou a expressão booliana for avaliada como `true`, a próxima iteração do loop será executada; caso contrário, o loop será finalizado.
 
-A seção *condição* no exemplo acima determina se o loop será encerrado com base no valor da variável de loop local:
+A seção *Condição* no exemplo acima determina se o loop será encerrado com base no valor da variável de loop local:
 
 ```csharp
 i < 5
 ```
 
-### <a name="the-iterator-section"></a>A seção *iterador*
+### <a name="the-iterator-section"></a>A seção *Iterador*
 
-A seção *iterador* define o que acontece depois de cada iteração do corpo do loop. A seção *iterador* contém zero ou mais das seguintes expressões de instrução, separadas por vírgulas:  
+A seção *Iterador* define o que acontece depois de cada iteração do corpo do loop. A seção *Iterador* contém zero ou mais das seguintes expressões de instrução, separadas por vírgulas:  
 
 - instrução de [atribuição](../operators/assignment-operator.md)
 
@@ -87,7 +87,7 @@ A seção *iterador* define o que acontece depois de cada iteração do corpo do
 
 - expressão [await](await.md)
 
-A seção *iterador* no exemplo acima incrementa a variável de loop local:
+A seção *Iterador* no exemplo acima incrementa a variável de loop local:
 
 ```csharp
 i++
@@ -95,7 +95,7 @@ i++
 
 ## <a name="examples"></a>Exemplos
 
-O exemplo a seguir ilustra vários usos menos comuns das seções de instrução `for`: atribuir um valor a uma variável de loop externa na seção *inicializador*, invocar um método inicializa nas seções de *inicializador* e de *iterador* e alterar os valores de duas variáveis na seção de *iterador*. Selecione **Executar** para executar o código de exemplo. Depois disso, você pode modificar o código e executá-lo novamente.
+O exemplo a seguir ilustra vários usos menos comuns das seções de instrução `for`: atribuir um valor a uma variável de loop externa na seção *Inicializador*, invocar um método inicializa nas seções *Inicializador* e *Iterador* e alterar os valores de duas variáveis na seção *Iterador*. Selecione **Executar** para executar o código de exemplo. Depois disso, você pode modificar o código e executá-lo novamente.
   
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   

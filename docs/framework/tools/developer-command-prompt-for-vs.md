@@ -28,11 +28,11 @@ O Prompt de Comando do Desenvolvedor do Visual Studio define automaticamente as 
 
 ## <a name="searching-for-the-command-prompt-on-your-machine"></a>Procurar o prompt de comando no computador
 
-Você pode ver muitos prompts de comando, dependendo da versão do Visual Studio e de quaisquer SDKs adicionais que você tenha instalado. Por exemplo, as versões 64 bits do Visual Studio oferecem prompts de comando 32 e 64 bits. (As versões 32 e 64 bits da maioria das ferramentas são iguais; porém, algumas ferramentas fazem alterações específicas em ambientes 32 e 64 bits.) Se as etapas abaixo não funcionarem, você poderá tentar [Localizar manualmente os arquivos em seu computador](#manually-locating-the-files-on-your-machine) ou [Executar o prompt de comando de dentro do Visual Studio](#running-command-prompt-from-inside-visual-studio).
+Você pode ver vários prompts de comando, dependendo da versão do Visual Studio e dos SDKs adicionais instalados. Por exemplo, as versões 64 bits do Visual Studio oferecem prompts de comando 32 e 64 bits. (As versões de 32 e 64 bits da maioria das ferramentas são iguais; porém, algumas ferramentas fazem alterações específicas em ambientes de 32 e 64 bits.) Se as etapas abaixo não funcionarem, você poderá tentar [Localizar manualmente os arquivos em seu computador](#manually-locating-the-files-on-your-machine) ou [Executar o prompt de comando de dentro do Visual Studio](#running-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>No Windows 10
 
-1. Na caixa de pesquisa na barra de tarefas, comece a digitar o nome da ferramenta, como `dev` ou `developer command prompt`. Isso exibirá uma lista de aplicativos instalados que correspondem ao seu padrão de pesquisa. Se você estiver procurando por um prompt de comando diferente, experimente digitar um termo de pesquisa diferente, como `prompt`.
+1. Na caixa de pesquisa da barra de tarefas, comece a digitar o nome da ferramenta, por exemplo, `dev` ou `developer command prompt`. Será exibida uma lista dos aplicativos instalados que correspondem ao padrão de pesquisa. Se você estiver procurando por um prompt de comando diferente, experimente digitar um termo de pesquisa diferente, como `prompt`.
 
 2. Escolha o **Prompt de Comando do Desenvolvedor** (ou o prompt de comando que você deseja usar).
 
@@ -64,7 +64,7 @@ Se você tiver outros SDKs instalados, como o [SDK do Windows 10](https://develo
 
 ## <a name="manually-locating-the-files-on-your-machine"></a>Localizar manualmente os arquivos em seu computador
 
-Normalmente, os atalhos para os prompts de comando que você instalou serão colocados na pasta **Menu Iniciar** do Visual Studio, como em C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools. Porém, se por algum motivo a pesquisa do prompt de comando não gerar os resultados esperados, você poderá tentar localizar manualmente o atalho em seu computador. Tente pesquisar pelo nome do arquivo do prompt de comando, como *VsDevCmd.bat* ou acesse a pasta Tools, como C:\Arquivos de Programas (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (o caminho mudará conforme seu local de instalação, edição e versão do Visual Studio).
+Normalmente, os atalhos para os prompts de comando que você instalou são colocados na pasta **Menu Iniciar** do Visual Studio, como em C:\ProgramData\Microsoft\Windows\MenuIniciar\Programas\Visual Studio 2017\Visual Studio Tools. Porém, se por algum motivo a pesquisa do prompt de comando não gerar os resultados esperados, você poderá tentar localizar manualmente o atalho em seu computador. Tente pesquisar pelo nome do arquivo do prompt de comando, como *VsDevCmd.bat* ou acesse a pasta Tools, como C:\Arquivos de Programas (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (o caminho mudará conforme seu local de instalação, edição e versão do Visual Studio).
 
 ## <a name="running-command-prompt-from-inside-visual-studio"></a>Executar o prompt de comando de dentro do Visual Studio
 
