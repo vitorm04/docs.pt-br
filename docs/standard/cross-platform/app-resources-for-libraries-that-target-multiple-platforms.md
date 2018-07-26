@@ -1,6 +1,6 @@
 ---
 title: Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578200"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245465"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
-Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para garantir que os recursos em suas bibliotecas de classe podem ser acessados em várias plataformas de projeto. Esse tipo de projeto está disponível em [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] e tem como alvo o subconjunto portátil da biblioteca de classes do .NET Framework. Usar um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garante que a biblioteca possa ser acessada de aplicativos da área de trabalho, Silverlight, Windows Phone e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para garantir que os recursos em suas bibliotecas de classe podem ser acessados em várias plataformas de projeto. Esse tipo de projeto está disponível no [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] e tem como alvo o subconjunto portátil da biblioteca de classes do .NET Framework. Usar um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garante que a biblioteca possa ser acessada de aplicativos da área de trabalho, Silverlight, Windows Phone e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  O projeto [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] disponibiliza somente um subconjunto muito limitado dos tipos no namespace <xref:System.Resources> para o seu aplicativo, mas permite que você use a classe <xref:System.Resources.ResourceManager> para recuperar recursos. No entanto, se estiver criando um aplicativo com o Visual Studio, você deverá usar o wrapper fortemente tipado criado pelo Visual Studio em vez de usar a classe <xref:System.Resources.ResourceManager> diretamente.  
   
- Para criar um wrapper com rigidez de tipos no Visual Studio, defina o arquivo de recurso principal **modificador de acesso** no Designer de recursos Visual Studio para **público**. Isso cria um arquivo [resourceFileName].designer.cs ou [resourceFileName].designer.vb que contém o wrapper ResourceManager fortemente tipado. Para obter mais informações sobre como usar um wrapper de recursos fortemente tipados, consulte a seção "Gerar um fortemente tipado classe de recurso" a [Resgen.exe (gerador de arquivo)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) tópico.  
+ Para criar um wrapper fortemente tipado no Visual Studio, defina o arquivo de recurso principal **modificador de acesso** no Visual Studio Resource Designer para **público**. Isso cria um arquivo [resourceFileName].designer.cs ou [resourceFileName].designer.vb que contém o wrapper ResourceManager fortemente tipado. Para obter mais informações sobre como usar um wrapper de recurso fortemente tipado, consulte a seção "Gerando uma classe fortemente tipada recursos" a [Resgen.exe (gerador de arquivo de recurso)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) tópico.  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>Gerenciador de Recursos no [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
  Em um projeto do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], todos os acessos a recursos são tratados pela classe <xref:System.Resources.ResourceManager>. Como tipos no namespace <xref:System.Resources>, como <xref:System.Resources.ResourceReader> e <xref:System.Resources.ResourceSet>, não são acessíveis a partir de um projeto do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], eles não podem ser usados para acessar recursos.  
@@ -65,7 +67,7 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 |NameLength|25|  
 |Título|Employee Database|  
   
- O código a seguir define uma `UILibrary` classe que usa o wrapper do Gerenciador de recursos denominado `resources` gerado pelo Visual Studio quando o **modificador de acesso** para o arquivo é alterado para **público** . A classe UILibrary analisa os dados de cadeia de caracteres conforme o necessário. . Observe que a classe está no namespace `MyCompany.Employees`.  
+ O código a seguir define uma `UILibrary` classe que usa o wrapper do Gerenciador de recursos chamado `resources` gerado pelo Visual Studio quando o **modificador de acesso** para o arquivo é alterado para **público** . A classe UILibrary analisa os dados de cadeia de caracteres conforme o necessário. . Observe que a classe está no namespace `MyCompany.Employees`.  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
@@ -80,7 +82,7 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Exemplo: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizado  
- O exemplo do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizado a seguir inclui recursos para francês (França) e inglês (Estados Unidos). A cultura do inglês (Estados Unidos) é a cultura padrão do aplicativo seus recursos são mostrados na tabela de [seção anterior](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). O arquivo de recursos para francês (França) é chamado LibResources.fr-FR.resx e consiste nos recursos de cadeia de caracteres listados na tabela a seguir. O código-fonte para a classe `UILibrary` é o mesmo mostrado na seção anterior.  
+ O exemplo do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizado a seguir inclui recursos para francês (França) e inglês (Estados Unidos). A cultura do inglês (Estados Unidos) é a cultura do aplicativo padrão; seus recursos são mostrados na tabela a [seção anterior](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). O arquivo de recursos para francês (França) é chamado LibResources.fr-FR.resx e consiste nos recursos de cadeia de caracteres listados na tabela a seguir. O código-fonte para a classe `UILibrary` é o mesmo mostrado na seção anterior.  
   
 |Nome do recurso|Valor do recurso|  
 |-------------------|--------------------|  

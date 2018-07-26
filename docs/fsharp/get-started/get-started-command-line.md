@@ -1,52 +1,52 @@
 ---
-title: 'Introdução ao F # com as ferramentas de linha de comando'
+title: 'Introdução ao F # com ferramentas de linha de comando'
 description: 'Saiba como criar uma solução multiprojeto simples em F # usando a CLI do .NET Core em qualquer sistema operacional (Windows, macOs ou Linux).'
 ms.date: 03/26/2018
-ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562031"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875008"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução à linguagem F # com o .NET Core CLI
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F # com a CLI do .NET Core
 
-Este artigo aborda como você pode começar com F # em qualquer sistema operacional (Windows, macOS ou Linux) com o .NET Core CLI. Ele passa pelo criando uma solução multiprojeto com uma biblioteca de classe que é chamada por um aplicativo de console.
+Este artigo aborda como você pode começar com o F # em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core. Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para começar, você deve instalar o [.NET Core SDK 1.0 ou posterior](https://www.microsoft.com/net/download/). Não é necessário desinstalar uma versão anterior do SDK .NET Core, pois ele oferece suporte a instalações lado a lado.
+Para começar, você deve instalar a versão mais recente [SDK do .NET Core](https://www.microsoft.com/net/download/).
 
-Este artigo pressupõe que você sabe como usar uma linha de comando e tem um texto preferencial editor. Se você já não usá-lo, [código do Visual Studio](https://code.visualstudio.com) é uma ótima opção como um editor de texto para F #. Para obter o incríveis recursos como IntelliSense, melhor realce de sintaxe e muito mais, você pode baixar o [Ionide extensão](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).
+Este artigo pressupõe que você sabe como usar uma linha de comando e tiver um texto preferido de editor. Se você não usá-lo, já [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto para F #.
 
-## <a name="build-a-simple-multi-project-solution"></a>Criar uma solução multiprojeto simple
+## <a name="build-a-simple-multi-project-solution"></a>Crie uma solução multiprojeto simples
 
-Abra um prompt de comando/terminal e use o [dotnet novo](../../core/tools/dotnet-new.md) comando para criar um novo arquivo de solução chamado `FSNetCore`:
+Abra um prompt de comando/terminal e use o [dotnet new](../../core/tools/dotnet-new.md) comando para criar um novo arquivo de solução chamado `FSNetCore`:
 
-```
+```console
 dotnet new sln -o FSNetCore
 ```
 
-A seguinte estrutura de diretório é gerada depois de executar o comando anterior:
+A seguinte estrutura de diretório é produzida depois de executar o comando anterior:
 
-```
+```console
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a>Gravar uma biblioteca de classes
+### <a name="write-a-class-library"></a>Escrever uma biblioteca de classes
 
 Altere os diretórios para *FSNetCore*.
 
-Use o `dotnet new` de comando, crie um projeto de biblioteca de classe no **src** pasta denominada biblioteca.
+Use o `dotnet new` de comando, crie um projeto de biblioteca de classes na **src** pasta denominada biblioteca.
 
-```
+```console
 dotnet new lib -lang F# -o src/Library
 ```
 
-A seguinte estrutura de diretório é gerada depois de executar o comando anterior:
+A seguinte estrutura de diretório é produzida depois de executar o comando anterior:
 
-```
+```console
 └── FSNetCore
     ├── FSNetCore.sln
     └── src
@@ -66,31 +66,31 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-Adicione o pacote NuGet newtonsoft. JSON para o projeto de biblioteca.
+Adicione o pacote do NuGet newtonsoft. JSON ao projeto de biblioteca.
 
-```
+```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Adicionar o `Library` de projeto para o `FSNetCore` solução usando o [dotnet sln adicionar](../../core/tools/dotnet-sln.md) comando:
+Adicione a `Library` do projeto para o `FSNetCore` solução usando o [dotnet sln adicionar](../../core/tools/dotnet-sln.md) comando:
 
-```
+```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-Restaure as dependências do NuGet usando o `dotnet restore` comando ([consulte a Observação](#dotnet-restore-note)) e execute `dotnet build` para compilar o projeto.
+Executar `dotnet build` para compilar o projeto. Dependências não resolvidas serão restauradas ao compilar.
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>Escrever um aplicativo de console que consome a biblioteca de classes
 
-Use o `dotnet new` de comando, crie um aplicativo de console no **src** pasta denominada de aplicativo.
+Use o `dotnet new` de comando, crie um aplicativo de console na **src** pasta aplicativo de chamada.
 
-```
+```console
 dotnet new console -lang F# -o src/App
 ```
 
-A seguinte estrutura de diretório é gerada depois de executar o comando anterior:
+A seguinte estrutura de diretório é produzida depois de executar o comando anterior:
 
-```
+```console
 └── FSNetCore
     ├── FSNetCore.sln
     └── src
@@ -102,7 +102,7 @@ A seguinte estrutura de diretório é gerada depois de executar o comando anteri
             └── Library.fsproj
 ```
 
-Substitua o conteúdo do `Program.fs` arquivo com o código a seguir:
+Substitua o conteúdo do `Program.fs` arquivo pelo código a seguir:
 
 ```fsharp
 open System
@@ -119,35 +119,36 @@ let main argv =
     0 // return an integer exit code
 ```
 
-Adicione uma referência para o `Library` projeto usando [dotnet adicionar referência](../../core/tools/dotnet-add-reference.md).
+Adicione uma referência para o `Library` projeto usando o [dotnet adicionar referência](../../core/tools/dotnet-add-reference.md).
 
-```
+```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-Adicionar o `App` de projeto para o `FSNetCore` solução usando o `dotnet sln add` comando:
+Adicione a `App` do projeto para o `FSNetCore` solução usando o `dotnet sln add` comando:
 
-```
+```console
 dotnet sln add src/App/App.fsproj
 ```
 
-Restaure as dependências do NuGet, `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) e execute `dotnet build` para compilar o projeto.
+Restaure as dependências do NuGet `dotnet restore` ([veja Observação](#dotnet-restore-note)) e execute `dotnet build` para compilar o projeto.
 
 Altere o diretório para o `src/App` projeto de console e executar o projeto passando `Hello World` como argumentos:
 
-```
+```console
 cd src/App
 dotnet run Hello World
 ```
 
 Você verá os seguintes resultados:
 
-```
+```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:
 
 I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="next-steps"></a>Próximas etapas
+
+Em seguida, confira a [Tour do F #](../tour.md) para saber mais sobre os diferentes recursos do F #.

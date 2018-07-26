@@ -5,89 +5,89 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591866"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245642"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
-Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` membros a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite personalizar o comportamento do modelo de aplicativo e adicione chamadas para seus próprios métodos quando o aplicativo é iniciado e desligado.  
+Você pode adicionar funcionalidade ao modelo de aplicativo, substituindo o `Overridable` os membros de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Essa técnica permite que você personalize o comportamento do modelo de aplicativo e adicionar chamadas para seus próprios métodos quando o aplicativo é inicializado e desligado.  
   
 ## <a name="visual-overview-of-the-application-model"></a>Visão geral do modelo de aplicativo  
  Esta seção apresenta visualmente a sequência de chamadas de função no modelo de aplicativo do Visual Basic. A próxima seção descreve a finalidade de cada função em detalhes.  
   
- O gráfico a seguir mostra a sequência de chamadas de modelo de aplicativo em um aplicativo Visual Basic Windows Forms normal. A sequência começa quando o `Sub Main` chamadas de procedimento de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
+ O gráfico a seguir mostra a sequência de chamadas de modelo de aplicativo em um aplicativo de formulários do Windows Visual Basic normal. A sequência começa quando o `Sub Main` chamadas de procedimento o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
   
- ![Modelo de aplicativo do Visual Basic &#45; &#45; executar](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Modelo de aplicativo do Visual Basic &#45; &#45; execute](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
- O modelo de aplicativo do Visual Basic também fornece o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos. Os gráficos a seguir mostram o mecanismo para disparar esses eventos.  
+ O modelo de aplicativo do Visual Basic também fornece o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventos. Os gráficos a seguir mostram o mecanismo para acionar esses eventos.  
   
- ![Modelo de aplicativo do Visual Basic &#45; &#45; próxima instância](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Modelo de aplicativo do Visual Basic &#45; &#45; seguida da instância](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Exceção sem tratamento do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
 ## <a name="overriding-the-base-methods"></a>Substituindo os métodos Base  
- O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método define a ordem na qual o `Application` métodos executados. Por padrão, o `Sub Main` procedimento para um aplicativo Windows Forms chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
+ O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método define a ordem na qual o `Application` métodos executados. Por padrão, o `Sub Main` chamadas de procedimento para um aplicativo Windows Forms a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método.  
   
- Se o aplicativo é um aplicativo normal (aplicativo de múltiplas instâncias), ou a primeira instância de um aplicativo de instância única, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método executa o `Overridable` métodos na seguinte ordem:  
+ Se o aplicativo é um aplicativo normal (aplicativo de várias instâncias) ou a primeira instância de um aplicativo de instância única, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> método executa o `Overridable` métodos na seguinte ordem:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Por padrão, esse método define os estilos visuais, estilos de exibição de texto e a entidade de segurança atual para o segmento de aplicativo principal (se o aplicativo usa a autenticação do Windows) e chama `ShowSplashScreen` se nem `/nosplash` nem `-nosplash` é usado como um argumento de linha de comando.  
+1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Por padrão, esse método define os estilos visuais, estilos de exibição de texto e a entidade de segurança atual para o thread principal do aplicativo (se o aplicativo usa a autenticação do Windows) e chama `ShowSplashScreen` se nem `/nosplash` nem `-nosplash` é usado como um argumento de linha de comando.  
   
-     A sequência de inicialização do aplicativo será cancelada se esta função retornará `False`. Isso pode ser útil se houver circunstâncias em que o aplicativo não deve executar.  
+     A sequência de inicialização do aplicativo será cancelada se essa função retorna `False`. Isso pode ser útil se há circunstâncias em que o aplicativo não deve executar.  
   
      O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> método chama os métodos a seguir:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina se o aplicativo tem uma tela inicial definida e se tiver, exibe a tela inicial em um thread separado.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Determina se o aplicativo tem uma tela inicial definida e, em caso afirmativo, exibe a tela inicial em um thread separado.  
   
-         O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> método contém o código que exibe a tela de tela para pelo menos o número de milissegundos especificado pelo <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> propriedade. Para usar essa funcionalidade, você deve adicionar a tela inicial para seu aplicativo usando o **Project Designer** (que define o `My.Application.MinimumSplashScreenDisplayTime` propriedade como dois segundos), ou defina o `My.Application.MinimumSplashScreenDisplayTime` propriedade em um método que substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> ou <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
+         O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> método contém o código que exibe na tela inicial de tela para pelo menos o número de milissegundos especificado pelo <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> propriedade. Para usar essa funcionalidade, você deve adicionar a tela inicial para seu aplicativo usando o **Designer de projeto** (que define o `My.Application.MinimumSplashScreenDisplayTime` propriedade como dois segundos), ou defina o `My.Application.MinimumSplashScreenDisplayTime` propriedade em um método que substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> ou <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite que um designer emitir código que inicializa a tela inicial.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permite que um designer emita o código que inicializa a tela inicial.  
   
-         Por padrão, esse método não fará nada. Se você selecionar uma tela inicial para seu aplicativo no Visual Basic **Project Designer**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriedade para uma nova instância do formulário da tela inicial .  
+         Por padrão, esse método não fará nada. Se você selecionar uma tela inicial para seu aplicativo no Visual Basic **Designer de projeto**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriedade para uma nova instância do formulário de tela inicial .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornece um ponto de extensibilidade para disparar o `Startup` evento. A sequência de inicialização do aplicativo para se essa função retorna `False`.  
+2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornece um ponto de extensibilidade para disparar o `Startup` eventos. A sequência de inicialização do aplicativo para se essa função retorna `False`.  
   
-     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> evento. Se o manipulador de eventos define o <xref:System.ComponentModel.CancelEventArgs.Cancel> propriedade do argumento do evento para `True`, o método retorna `False` para cancelar a inicialização do aplicativo.  
+     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> eventos. Se o manipulador de eventos define o <xref:System.ComponentModel.CancelEventArgs.Cancel> propriedade do argumento do evento para `True`, o método retorna `False` para cancelar a inicialização do aplicativo.  
   
 3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fornece o ponto de partida para quando o aplicativo principal está pronto para começar a ser executado, após a inicialização ser feita.  
   
      Por padrão, antes de entrar no loop de mensagem do Windows Forms, este método chama o `OnCreateMainForm` (para criar o formulário principal do aplicativo) e `HideSplashScreen` (para fechar a tela inicial) métodos:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornece uma maneira para um designer emitir código que inicializa o formulário principal.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornece uma maneira para um designer emita o código que inicializa o formulário principal.  
   
-         Por padrão, esse método não fará nada. No entanto, quando você seleciona um formulário principal para o seu aplicativo no Visual Basic **Project Designer**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propriedade para uma nova instância do formulário principal.  
+         Por padrão, esse método não fará nada. No entanto, quando você seleciona um formulário principal para o seu aplicativo no Visual Basic **Designer de projeto**, o designer substitui o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> método com um método que define o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propriedade para uma nova instância do formulário principal.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se o aplicativo tem uma tela inicial definida e estiver aberto, este método fecha a tela inicial.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se o aplicativo tem uma tela inicial definida e ele estiver aberto, esse método fecha a tela inicial.  
   
          Por padrão, esse método fecha a tela inicial.  
   
 4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fornece uma maneira de personalizar como um aplicativo de instância única se comporta quando outra instância do aplicativo é iniciado.  
   
-     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> evento.  
+     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> eventos.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fornece um ponto de extensibilidade para disparar o `Shutdown` evento. Este método não é executado se ocorrer uma exceção sem tratamento no aplicativo principal.  
+5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fornece um ponto de extensibilidade para disparar o `Shutdown` eventos. Esse método não será executado se ocorrer uma exceção sem tratamento no aplicativo principal.  
   
-     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento.  
+     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> eventos.  
   
 6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Executado se uma exceção não tratada ocorrer em qualquer um dos métodos listados acima.  
   
-     Por padrão, esse método dispara o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> evento desde que um depurador não está anexado e o aplicativo está tratando o `UnhandledException` evento.  
+     Por padrão, esse método dispara a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> evento, desde que um depurador não está anexado e o aplicativo está manuseando o `UnhandledException` eventos.  
   
- Se o aplicativo é um aplicativo de instância única, e o aplicativo já está em execução, a instância subsequente do aplicativo chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> método na instância original do aplicativo e, em seguida, sai.  
+ Se o aplicativo é um aplicativo de instância única e o aplicativo já está em execução, a instância subsequente do aplicativo chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> método na instância original do aplicativo e, em seguida, sai.  
  
- O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> construtor chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para determinar qual mecanismo de renderização de texto a ser usado para formulários do aplicativo. Por padrão, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade retorna `False`, indicando que o mecanismo de renderização de texto GDI usados, que é o padrão em [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Você pode substituir o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para retornar `True`, indicando que o mecanismo de renderização de texto GDI+ ser usada, que é o padrão no Visual Basic .NET 2002 e Visual Basic .NET 2003.  
+ O <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> construtor chama o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para determinar qual mecanismo de renderização de texto a ser usado para formulários do aplicativo. Por padrão, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade retorna `False`, indicando que o mecanismo de renderização de texto GDI usados, que é o padrão em [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Você pode substituir a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriedade para retornar `True`, indicando que o mecanismo de renderização de texto GDI+ ser usada, que é o padrão no Visual Basic .NET 2002 e Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configurando o aplicativo  
- Como parte do modelo de aplicativo do Visual Basic, a <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fornece propriedades protegidas que configuram o aplicativo. Essas propriedades devem ser definidas no construtor de classe de implementação.  
+ Como parte do modelo de aplicativo do Visual Basic, o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fornece propriedades protegidas que configuram o aplicativo. Essas propriedades devem ser definidas no construtor da classe de implementação.  
   
- Em um projeto do Windows Forms, o **Project Designer** cria código para definir as propriedades com as configurações de designer. As propriedades são usadas somente quando o aplicativo está sendo iniciado; configurá-los após o início do aplicativo não tem nenhum efeito.  
+ Em um projeto do Windows Forms, o **Designer de projeto** cria código para definir as propriedades com as configurações de designer. As propriedades são usadas somente quando o aplicativo está sendo iniciado; defini-los depois que o aplicativo é iniciado não tem nenhum efeito.  
   
 |Propriedade|Determina|Configuração no painel Application do Project Designer|  
 |---|---|---|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Se o aplicativo é executado como um aplicativo de instância única ou várias instâncias.|**Tornar o aplicativo de instância única** caixa de seleção|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Se o aplicativo usará estilos visuais que correspondam a Windows XP.|**Habilitar estilos visuais XP** caixa de seleção|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Se o aplicativo salva automaticamente as alterações de configurações do usuário do aplicativo quando o aplicativo termina.|**Salvar My. Settings no desligamento** caixa de seleção|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Se o aplicativo usará estilos visuais que correspondem ao Windows XP.|**Habilitar estilos visuais XP** caixa de seleção|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Se o aplicativo salva automaticamente as alterações de configurações do usuário do aplicativo quando o aplicativo é encerrado.|**Salvar My. Settings no desligamento** caixa de seleção|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|O que faz com que o aplicativo seja finalizado, como quando fecha o formulário de inicialização ou quando o último formulário fecha.|**Modo de desligamento** lista|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,22 +1,22 @@
 ---
-title: 'Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão de restrição: &lt;lista&gt;'
+title: 'Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão redutora: &lt;lista&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
-ms.openlocfilehash: 5ed692ffaa22f82eda0c675dafaa1cb64a4d31f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c298f996322f5ad80b4e76ecf2dd33b4205e3f42
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636533"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244358"
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão de restrição: &lt;lista&gt;
-Um método sobrecarregado foi chamado, mas o método não pode ser compatível com a lista dos argumentos fornecidos sem uma conversão de restrição.  
+# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão redutora: &lt;lista&gt;
+Um método sobrecarregado foi chamado, mas o método não pode ser correspondido com a lista de argumentos fornecidos sem uma conversão de estreitamento.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Especifique `Option``Strict` `Off`.  
+1.  Especifique `Option Strict Off`.
   
 2.  Altere os argumentos para corresponder a uma assinatura do método sobrecarregado.  
   

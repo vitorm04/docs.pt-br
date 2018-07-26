@@ -1,15 +1,15 @@
 ---
-title: 'Como: unir duas coleções (LINQ para XML) (Visual Basic)'
+title: 'Como: unir duas coleções (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 3ceb9cf7dfdd1d18a07e93d15624fd8fac045d07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643686"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245692"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Como: unir duas coleções (LINQ para XML) (Visual Basic)
+# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Como: unir duas coleções (LINQ to XML) (Visual Basic)
 Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referência a outro elemento ou atributo. Por exemplo, o documento XML [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) contém uma lista de clientes e uma lista de pedidos. Cada elemento `Customer` contém um atributo `CustomerID`. Cada elemento `Order` contém um atributo `CustomerID`. O elemento `CustomerID` em cada pedido faz referência ao atributo `CustomerID` em um cliente.  
   
  O tópico [Arquivo XSD de exemplo: clientes e pedidos](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contém um XSD que pode ser usado para validar esse documento. Usa os recursos de XSD `xs:key` e `xs:keyref` para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave, e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order`, e o atributo `CustomerID` em cada elemento `Customer`.  
@@ -18,7 +18,7 @@ Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referênc
   
  Observe que como não existe nenhum índice disponível, essa junção terá um desempenho inadequado em tempo de execução.  
   
- Para obter mais informações sobre `Join`, consulte [operações Join (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ Para obter mais informações sobre `Join`, consulte [operações de junção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir une os elementos `Customer` aos elementos `Order` e gera um novo documento XML que inclui o elemento `CompanyName` nos pedidos.  
@@ -136,4 +136,4 @@ Attempting to validate, custOrdDoc validated
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

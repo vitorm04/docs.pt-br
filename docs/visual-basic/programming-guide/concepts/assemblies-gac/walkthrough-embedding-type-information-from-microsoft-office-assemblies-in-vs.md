@@ -3,11 +3,11 @@ title: 'Passo a passo: Inserindo informações de tipo de Assemblies do Microsof
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643816"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244040"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Passo a passo: Inserindo informações de tipo de Assemblies do Microsoft Office no Visual Studio (Visual Basic)
 Se inserir informações de tipo em um aplicativo que faz referência a objetos COM, você poderá eliminar a necessidade de um PIA (assembly de interoperabilidade primário). Além disso, as informações de tipo inseridas permitem que você conquiste a independência de versão para seu aplicativo. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca COM sem precisar especificar um PIA específico para cada versão. Esse é um cenário comum para aplicativos que usam objetos de bibliotecas do Microsoft Office. Inserir informações de tipo possibilita que a mesma build de um programa funcione com diferentes versões do Microsoft Office em diferentes computadores sem precisar reimplantar o programa ou o PIA para cada versão do Microsoft Office.  
@@ -29,7 +29,7 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
   
 3.  Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome** insira `CreateExcelWorkbook` e, em seguida, escolha o botão **OK**. O novo projeto é criado.  
   
-4.  Abra o menu de atalho para o projeto CreateExcelWorkbook e, em seguida, escolha **propriedades**. Escolha o **referências** guia. Escolha o botão **Adicionar**.  
+4.  Abra o menu de atalho para o projeto de CreateExcelWorkbook e, em seguida, escolha **propriedades**. Escolha o **referências** guia. Escolha o botão **Adicionar**.  
   
 5.  Na guia **.NET**, escolha a versão mais recente de `Microsoft.Office.Interop.Excel`. Por exemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Escolha o botão **OK**.  
   
@@ -38,7 +38,7 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
     > [!NOTE]
     >  O aplicativo criado neste passo a passo é executado com diferentes versões do Microsoft Office por conta das informações de tipo de interoperabilidade inseridas. Se a propriedade `Embed Interop Types` estiver definida como `False`, você deve incluir um PIA para cada versão do Microsoft Office com que o aplicativo será executado.  
   
-7.  Abra o arquivo Module1. vb. Substitua o código no arquivo pelo seguinte código:  
+7.  Abra o arquivo Module1.vb. Substitua o código no arquivo pelo seguinte código:  
   
     ```vb  
     Imports Excel = Microsoft.Office.Interop.Excel  

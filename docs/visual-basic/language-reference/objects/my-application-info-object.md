@@ -1,32 +1,32 @@
 ---
-title: Objeto My.Application.Info
+title: Objeto My.Application.Info (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Info object
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-ms.openlocfilehash: b8ec231b402dd4079e2912a845bc76603bde55ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dff32eb29e9299274cc137a07fe1b080911ab420
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594589"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198790"
 ---
 # <a name="myapplicationinfo-object"></a>Objeto My.Application.Info
 Fornece propriedades para obter informações sobre o aplicativo, como o número de versão, descrição, assemblies carregados e assim por diante.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e propriedades do `My.Application.Info` de objeto, consulte <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
+ Para obter informações sobre os métodos e propriedades do `My.Application.Info` do objeto, consulte <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
->  Você pode usar propriedades da <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> classe para obter informações sobre um arquivo no disco.  
+>  Você pode usar propriedades do <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> classe para obter informações sobre um arquivo no disco.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
  **Classe:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+ **Assembly:** biblioteca de tempo de execução do Visual Basic (em VisualBasic)  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto My. Application](../../../visual-basic/language-reference/objects/my-application-object.md)

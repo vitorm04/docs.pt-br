@@ -3,11 +3,11 @@ title: 'Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studi
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644180"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245453"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)
 Se você inserir informações de um assembly gerenciado de nome forte, você poderá acoplar vagamente tipos em um aplicativo para atingir a independência de versão. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca gerenciada sem precisar ser recompilado para cada versão.  
@@ -56,7 +56,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 2.  Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Biblioteca de Classes** no painel **Modelos**. Na caixa **Nome**, digite `TypeEquivalenceInterface` e clique em **OK**. O novo projeto é criado.  
   
-3.  Em **Solution Explorer**, clique no arquivo Class1. vb e clique em **Renomear**. Renomeie o arquivo como `ISampleInterface.vb` e pressione ENTER. Renomear o arquivo também renomeará a classe para `ISampleInterface`. Essa classe representará a interface pública para a classe.  
+3.  Na **Gerenciador de soluções**, o arquivo Class1.vb com o botão direito e clique em **Renomear**. Renomeie o arquivo como `ISampleInterface.vb` e pressione ENTER. Renomear o arquivo também renomeará a classe para `ISampleInterface`. Essa classe representará a interface pública para a classe.  
   
 4.  Clique com o botão direito do mouse no projeto TypeEquivalenceInterface e clique em **Propriedades**. Clique na guia **Compilar**. Defina o caminho de saída para um local válido no computador de desenvolvimento, como `C:\TypeEquivalenceSample`. Esse local também será usado em uma etapa posterior neste passo a passo.  
   
@@ -77,11 +77,11 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 7.  No menu **Ferramentas**, clique em **Criar GUID**. Na caixa de diálogo **Criar GUID**, clique em **Formato do Registro** e clique em **Copiar**. Clique em **Sair**.  
   
-8.  No atributo `Guid`, exclua o GUID de exemplo e cole o GUID que você copiou da caixa de diálogo **Criar GUID**. Remover as chaves ({}) do GUID copiado.  
+8.  No atributo `Guid`, exclua o GUID de exemplo e cole o GUID que você copiou da caixa de diálogo **Criar GUID**. Remova as chaves ({}) do GUID copiado.  
   
 9. No menu **Projeto**, clique em **Mostrar Todos os Arquivos**.  
   
-10. Em **Solution Explorer**, expanda o **meu projeto** pasta. Clique duas vezes o AssemblyInfo. Adicione o seguinte atributo ao arquivo.  
+10. Na **Gerenciador de soluções**, expanda o **My Project** pasta. Clique duas vezes o AssemblyInfo. Adicione o seguinte atributo ao arquivo.  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  
@@ -101,7 +101,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 2.  Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Biblioteca de Classes** no painel **Modelos**. Na caixa **Nome**, digite `TypeEquivalenceRuntime` e clique em **OK**. O novo projeto é criado.  
   
-3.  Em **Solution Explorer**, clique no arquivo Class1. vb e clique em **Renomear**. Renomeie o arquivo como `SampleClass.vb` e pressione ENTER. Renomear o arquivo também renomeia a classe para `SampleClass`. Essa classe implementará a interface `ISampleInterface`.  
+3.  Na **Gerenciador de soluções**, o arquivo Class1.vb com o botão direito e clique em **Renomear**. Renomeie o arquivo como `SampleClass.vb` e pressione ENTER. Renomear o arquivo também renomeia a classe para `SampleClass`. Essa classe implementará a interface `ISampleInterface`.  
   
 4.  Clique com o botão direito do mouse no projeto TypeEquivalenceRuntime e clique em **Propriedades**. Clique na guia **Compilar**. Defina o caminho de saída para o mesmo local usado no projeto TypeEquivalenceInterface, por exemplo, `C:\TypeEquivalenceSample`.  
   
@@ -155,7 +155,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 6.  No **Gerenciador de Soluções**, expanda a pasta **Referências**. Selecione a referência TypeEquivalenceInterface. Na janela Propriedades para a referência de TypeEquivalenceInterface, defina a propriedade **Inserir Tipos de Interoperabilidade** como **True**.  
   
-7.  Adicione o seguinte código ao arquivo Module1. vb para criar o programa cliente.  
+7.  Adicione o seguinte código ao arquivo Module1.vb para criar o programa cliente.  
   
     ```vb  
     Imports TypeEquivalenceInterface  

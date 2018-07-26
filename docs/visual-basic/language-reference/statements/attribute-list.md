@@ -5,15 +5,15 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604062"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936923"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
-Especifica os atributos a serem aplicadas a um elemento de programação declarado. Vários atributos são separados por vírgulas. Esta é a sintaxe para um atributo.  
+Especifica os atributos a ser aplicado a um elemento de programação declarado. Vários atributos são separados por vírgulas. Esta é a sintaxe para um atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -22,26 +22,21 @@ Especifica os atributos a serem aplicadas a um elemento de programação declara
 ```  
   
 ## <a name="parts"></a>Partes  
- `attributemodifier`  
- Necessário para os atributos aplicados no início de um arquivo de origem. Pode ser [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) ou [módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md).  
-  
- `attributename`  
- Necessário. Nome do atributo.  
-  
- `attributearguments`  
- Opcional. Lista de argumentos posicionais para este atributo. Vários argumentos são separados por vírgulas.  
-  
- `attributeinitializer`  
- Opcional. Lista de inicializadores de variável ou propriedade para este atributo. Inicializadores múltiplos são separados por vírgulas.  
+|||
+|---|---|
+|`attributemodifier`|Necessário para os atributos aplicados no início de um arquivo de origem. Pode ser [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) ou [módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
+|`attributename`| Necessário. Nome do atributo.|
+|`attributearguments`|Opcional. Lista de argumentos posicionais para este atributo. Vários argumentos são separados por vírgulas.|
+|`attributeinitializer`|Opcional. Lista de inicializadores de variável ou propriedade para esse atributo. Inicializadores múltiplos são separados por vírgulas.|
   
 ## <a name="remarks"></a>Comentários  
- Você pode aplicar um ou mais atributos para praticamente qualquer elemento de programação (tipos, procedimentos, propriedades e assim por diante). Atributos aparecem nos metadados do assembly, e eles podem ajudar você anotar o código ou especificar como usar um determinado elemento de programação. Você pode aplicar os atributos definidos pelo Visual Basic e o .NET Framework, e você pode definir seus próprios atributos.  
+ Você pode aplicar um ou mais atributos para praticamente qualquer elemento de programação (tipos, procedimentos, propriedades e assim por diante). Atributos aparecem nos metadados do seu assembly, e eles podem ajudar você anotar o código ou especificar como usar um determinado elemento de programação. Você pode aplicar atributos definidos pelo Visual Basic e o .NET Framework, e você pode definir seus próprios atributos.  
 
  Para obter mais informações sobre quando usar atributos, consulte [visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md). Para obter informações sobre nomes de atributo, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="rules"></a>Regras  
   
--   **Posicionamento.** Você pode aplicar atributos para elementos de programação declarados mais. Para aplicar um ou mais atributos, você deve colocar um *bloco de atributo* no início da declaração do elemento. Cada entrada na lista de atributos especifica um atributo que você deseja aplicar, e o modificador e argumentos que você está usando para essa invocação do atributo.  
+-   **Posicionamento.** Você pode aplicar atributos para elementos de programação declarados mais. Para aplicar um ou mais atributos, você coloca um *bloco de atributo* no início da declaração do elemento. Cada entrada na lista de atributos especifica um atributo que você deseja aplicar, e o modificador e os argumentos que você está usando para essa invocação do atributo.  
   
 -   **Colchetes angulares.** Se você fornecer uma lista de atributos, você deve colocá-lo entre colchetes ("`<`"e"`>`").  
   
@@ -52,7 +47,7 @@ Especifica os atributos a serem aplicadas a um elemento de programação declara
 -   **Argumentos.** Todos os argumentos posicionais para um atributo devem preceder qualquer variável ou inicializadores de propriedade.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir se aplica a <xref:System.Runtime.InteropServices.DllImportAttribute> atributo a uma definição de uma `Function` procedimento.  
+ O exemplo a seguir aplica-se a <xref:System.Runtime.InteropServices.DllImportAttribute> atributo a uma definição de esqueleto de um `Function` procedimento.  
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   

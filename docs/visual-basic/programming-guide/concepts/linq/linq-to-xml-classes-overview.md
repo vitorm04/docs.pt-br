@@ -1,15 +1,15 @@
 ---
-title: LINQ para visão geral de Classes XML (Visual Basic)
+title: LINQ to XML visão geral de Classes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649172"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244082"
 ---
-# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ para visão geral de Classes XML (Visual Basic)
+# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML visão geral de Classes (Visual Basic)
 Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no namespace <xref:System.Xml.Linq> e uma breve descrição de cada.  
   
 ## <a name="linq-to-xml-classes"></a>Classes LINQ to XML  
@@ -78,7 +78,7 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](~/includes/sql
  <xref:System.Xml.Linq.XObjectChange> especifica o tipo de evento quando um evento é gerado para um <xref:System.Xml.Linq.XObject>.  
   
 ### <a name="xobjectchangeeventargs-class"></a>Classe XObjectChangeEventArgs  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> fornece dados para os eventos <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs> fornece dados para os eventos de <xref:System.Xml.Linq.XObject.Changing> e de <xref:System.Xml.Linq.XObject.Changed>.  
   
 ### <a name="xprocessinginstruction-class"></a>Classe XProcessingInstruction  
  <xref:System.Xml.Linq.XProcessingInstruction> representa uma instrução de processamento XML. Uma instrução de processamento comunica informações a um aplicativo que processa o XML.  
@@ -87,4 +87,4 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](~/includes/sql
  <xref:System.Xml.Linq.XText> representa um nó de texto. Na maioria dos casos, você não tem que usar esta classe. Essa classe é usada principalmente para conteúdo misto.  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ para visão geral da programação XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+ [LINQ to XML visão geral da programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

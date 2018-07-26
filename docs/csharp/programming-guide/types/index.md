@@ -12,11 +12,11 @@ helpviewer_keywords:
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
 ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338712"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961528"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 ## <a name="types-variables-and-values"></a>Tipos, variáveis e valores  

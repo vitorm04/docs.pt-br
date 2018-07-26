@@ -6,18 +6,18 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653540"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244884"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Como criar uma expressão lambda (Visual Basic)
-Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. Uma expressão lambda pode ser usada sempre que um tipo delegado é válido.  
+Um *expressão lambda* é uma função ou sub-rotina que não tem um nome. Uma expressão lambda pode ser usada sempre que um tipo de delegado é válido.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Para criar uma função de expressão lambda de linha única  
   
-1.  Em qualquer situação em que um tipo delegate pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir:  
+1.  Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir:  
   
      `Dim add1 =`   `Function`  
   
@@ -25,21 +25,21 @@ Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. U
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3.  Após a lista de parâmetros, digite uma única expressão como o corpo da função. O valor que a expressão é avaliada como é o valor retornado pela função. Você não usar um `As` cláusula para especificar o tipo de retorno.  
+3.  A seguir a lista de parâmetros, digite uma única expressão como corpo da função. O valor que avalia a expressão é o valor retornado pela função. Você não usar um `As` cláusula para especificar o tipo de retorno.  
   
      [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
-     Para chamar a expressão lambda, passando um argumento inteiro.  
+     Para chamar a expressão lambda, passando um argumento de inteiro.  
   
      [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
   
-4.  Como alternativa, o mesmo resultado é realizado com o exemplo a seguir:  
+4.  Como alternativa, o mesmo resultado é realizado pelo exemplo a seguir:  
   
      [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Para criar uma sub-rotina de expressão lambda de linha única  
   
-1.  Em qualquer situação em que um tipo delegate pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir.  
+1.  Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir.  
   
      `Dim add1 =`   `Sub`  
   
@@ -47,7 +47,7 @@ Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. U
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3.  Após a lista de parâmetros, digite uma única instrução no corpo da sub-rotina.  
+3.  A seguir a lista de parâmetros, digite uma única instrução, como o corpo da sub-rotina.  
   
      [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
   
@@ -55,9 +55,9 @@ Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. U
   
      [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>Para criar uma função de expressão lambda de várias linhas  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>Para criar uma função de expressão lambda com várias linhas  
   
-1.  Em qualquer situação em que um tipo delegate pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir.  
+1.  Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir.  
   
      `Dim add1 =`   `Function`  
   
@@ -71,13 +71,13 @@ Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. U
   
      [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
   
-     Para chamar a expressão lambda, passando um argumento inteiro.  
+     Para chamar a expressão lambda, passando um argumento de inteiro.  
   
      [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Para criar uma sub-rotina de expressão lambda de várias linhas  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Para criar uma sub-rotina de expressão lambda com várias linhas  
   
-1.  Em qualquer situação em que um tipo delegate pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir:  
+1.  Em qualquer situação em que um tipo de delegado pode ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir:  
   
      `Dim add1 =`   `Sub`  
   
@@ -87,7 +87,7 @@ Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. U
   
 3.  Pressione ENTER. O `End Sub` instrução é adicionada automaticamente.  
   
-4.  Dentro do corpo da função, adicione o seguinte código para executar quando a sub-rotina é invocada.  
+4.  Dentro do corpo da função, adicione o seguinte código para ser executado quando a sub-rotina é invocada.  
   
      [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
   
@@ -96,11 +96,11 @@ Um *expressão lambda* é uma função ou uma sub-rotina que não tem um nome. U
      [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## <a name="example"></a>Exemplo  
- Um uso comum de expressões lambda é para definir uma função que pode ser passada como argumento para um parâmetro cujo tipo é `Delegate`. No exemplo a seguir, o <xref:System.Diagnostics.Process.GetProcesses%2A> método retorna uma matriz dos processos em execução no computador local. O <xref:System.Linq.Enumerable.Where%2A> método do <xref:System.Linq.Enumerable> classe requer um `Boolean` representante como seu argumento. A expressão lambda no exemplo é usada para essa finalidade. Ele retorna `True` para cada processo que tem apenas um segmento, e aqueles selecionados na `filteredList`.  
+ Um uso comum de expressões lambda é definir uma função que pode ser passada como o argumento para um parâmetro cujo tipo é `Delegate`. No exemplo a seguir, o <xref:System.Diagnostics.Process.GetProcesses%2A> método retorna uma matriz de processos em execução no computador local. O <xref:System.Linq.Enumerable.Where%2A> método a partir de <xref:System.Linq.Enumerable> classe requer um `Boolean` delegar como seu argumento. A expressão lambda no exemplo é usada para essa finalidade. Ele retorna `True` para cada processo que tem apenas um thread, e eles estão selecionados em `filteredList`.  
   
  [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
- O exemplo anterior é equivalente ao código a seguir, que está escrito na [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sintaxe:  
+ O exemplo anterior é equivalente ao código a seguir, que é escrito em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sintaxe:  
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   

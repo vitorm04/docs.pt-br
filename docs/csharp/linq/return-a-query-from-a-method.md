@@ -3,12 +3,12 @@ title: Retornar uma consulta de um método
 description: Como retornar uma consulta.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274944"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404142"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Como retornar uma consulta de um método (Guia de Programação em C#)
 Este exemplo mostra como retornar uma consulta de um método como o valor retornado e como um parâmetro `out`.  
@@ -18,7 +18,7 @@ Este exemplo mostra como retornar uma consulta de um método como o valor retorn
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, o primeiro método retorna uma consulta como um valor retornado e o segundo método retorna uma consulta como um parâmetro `out`. Observe que em ambos os casos é uma consulta que é retornada, não os resultados da consulta.  
   
- [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>Consulte também  
- [Expressões de consulta LINQ](index.md)
+ [LINQ (Consulta Integrada à Linguagem)](index.md)
