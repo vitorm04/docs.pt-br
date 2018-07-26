@@ -1,1 +1,1 @@
-<span data-ttu-id="8ab82-101">PInvoke</span><span class="sxs-lookup"><span data-stu-id="8ab82-101">PInvoke</span></span>
+<span data-ttu-id="0c543-101">PInvoke</span><span class="sxs-lookup"><span data-stu-id="0c543-101">PInvoke</span></span>
