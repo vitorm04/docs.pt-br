@@ -1,17 +1,17 @@
 ---
 title: Restrições (F#)
-description: 'Saiba mais sobre F # restrições que se aplicam aos parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou função.'
+description: 'Saiba mais sobre restrições de F # que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f0722cafe27a4e2c38dfbf091973edb136cf5228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562304"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936859"
 ---
 # <a name="constraints"></a>Restrições
 
-Este tópico descreve as restrições que você pode aplicar a genérico parâmetros para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função de tipo.
+Este tópico descreve as restrições que você pode aplicar a genérica parâmetros para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função de tipo.
 
 
 ## <a name="syntax"></a>Sintaxe
@@ -21,30 +21,30 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Comentários
-Há várias restrições diferentes, que você pode aplicar para limitar os tipos que podem ser usados em um tipo genérico. A tabela a seguir lista e descreve essas restrições.
+Há várias restrições diferentes que você pode aplicar para limitar os tipos que podem ser usados em um tipo genérico. A tabela a seguir lista e descreve essas restrições.
 
 |Restrição|Sintaxe|Descrição|
 |----------|------|-----------|
 |Restrição de tipo|*parâmetro de tipo* :&gt; *tipo*|O tipo fornecido deve ser igual ou derivada do tipo especificado ou, se o tipo é uma interface, o tipo fornecido deve implementar a interface.|
-|Restrição de nulos|*parâmetro de tipo* : nulo|O tipo fornecido deve dar suporte o literal nulo. Isso inclui todos os tipos de objeto do .NET, mas não F # lista, tupla, função, classe, registro ou tipos de união.|
-|Restrição de membro explícito|[()]*parâmetro de tipo* [ou... ou *parâmetro de tipo*)]: (* assinatura de membro *)|Pelo menos um dos argumentos de tipo fornecidos deve ter um membro que tem a assinatura especificada; não se destina para uso comum. Membros devem ser seja explicitamente definidos no tipo ou em parte de uma extensão de tipo implícito alvo válido de uma restrição de membro explícito.|
+|Restrição de nulos|*parâmetro de tipo* : nulo|O tipo fornecido deve suportar o literal nulo. Isso inclui todos os tipos de objeto do .NET, mas não F # lista, tupla, função, classe, registro ou tipos de união.|
+|Restrição de membro explícito|[()]*parâmetro de tipo* [ou... ou *parâmetro de tipo*)]: (*assinatura do membro*)|Pelo menos um dos argumentos de tipo fornecidos deve ter um membro que tem a assinatura especificada; não se destina para uso comum. Membros devem ser seja explicitamente definidos no tipo ou parte de uma extensão de tipo implícito alvos válidos de uma restrição explícita do membro.|
 |Restrição de construtor|*parâmetro de tipo* : (novo: unidade -&gt; ' um)|O tipo fornecido deve ter um construtor padrão.|
-|Restrição de tipo de valor|: struct|O tipo fornecido deve ser um tipo de valor de .NET.|
+|Restrição de tipo de valor|: struct|O tipo fornecido deve ser um tipo de valor do .NET.|
 |Restrição de tipo de referência|: não struct|O tipo fornecido deve ser um tipo de referência do .NET.|
-|Restrição de tipo de enumeração|: enum&lt;*tipo subjacente*&gt;|O tipo fornecido deve ser um tipo enumerado que tem o tipo base especificado. não se destina para uso comum.|
-|Restrição de representante|: Delegar&lt;*tipo de parâmetro de tupla*, *tipo de retorno*&gt;|O tipo fornecido deve ser um tipo de delegado que tenha os argumentos especificados e retornar o valor. não se destina para uso comum.|
-|Restrição de comparação|: comparação|O tipo fornecido deve oferecer suporte a comparação.|
-|Restrição de igualdade|: igualdade|O tipo fornecido deve dar suporte a igualdade.|
-|Restrição não gerenciada|: não gerenciado|O tipo fornecido deve ser um tipo não gerenciado. Tipos não gerenciados são determinados tipos de primitivo (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, ou `decimal`), tipos de enumeração, `nativeptr&lt;_&gt;`, ou uma estrutura genérica não cujos campos são todos os tipos não gerenciados.|
-Você precisa adicionar uma restrição quando seu código precisa usar um recurso que está disponível no tipo de restrição mas não em tipos em geral. Por exemplo, se você usar a restrição de tipo para especificar um tipo de classe, você pode usar qualquer um dos métodos da classe no tipo ou função genérica.
+|Restrição de tipo de enumeração|: enum&lt;*tipo subjacente*&gt;|O tipo fornecido deve ser um tipo enumerado que tem o tipo subjacente especificado. não se destina para uso comum.|
+|Restrição de delegado|: Delegar&lt;*tipo de parâmetro de tupla*, *tipo de retorno*&gt;|O tipo fornecido deve ser um tipo de delegado que tem os argumentos especificados e retornar o valor; não se destina para uso comum.|
+|Restrição de comparação|: comparação|O tipo fornecido deve oferecer suporte à comparação.|
+|Restrição de igualdade|: igualdade|O tipo fornecido deve dar suporte à igualdade.|
+|Restrição não gerenciada|: não gerenciado|O tipo fornecido deve ser um tipo não gerenciado. Tipos não gerenciados são determinados tipos de primitivos (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, ou `decimal`), tipos de enumeração, `nativeptr&lt;_&gt;`, ou uma estrutura de não-genérica cujos campos são todos os tipos não gerenciados.|
+Você precisa adicionar uma restrição quando seu código precisa usar um recurso que está disponível no tipo de restrição mas não em tipos em geral. Por exemplo, se você usar a restrição de tipo para especificar um tipo de classe, você pode usar qualquer um dos métodos da classe na função genérica ou tipo.
 
-Especificando restrições às vezes é necessária ao gravar os parâmetros de tipo explicitamente, porque sem uma restrição, o compilador não tem como verificar que os recursos que você está usando estejam disponíveis em qualquer tipo que pode ser fornecido em tempo de execução para o tipo parâmetro.
+Especifica as restrições às vezes, é necessário ao escrever os parâmetros de tipo explicitamente, porque sem uma restrição, o compilador tem uma forma de verificar que os recursos que você está usando serão disponibilizado em qualquer tipo que pode ser fornecido em tempo de execução para o tipo de parâmetro.
 
-As restrições mais comuns que usar no código F # são restrições de tipo que especificar classes base ou interfaces. As outras restrições são usadas pela biblioteca F # para implementar determinadas funcionalidades, como a restrição de membro explícito, que é usada para implementar o sobrecarregamento de operadores aritméticos ou é fornecida principalmente como F # oferece suporte completo conjunto de restrições que é compatível com o common language runtime.
+As restrições mais comuns que você usa no código F # são restrições de tipo que especificam a interfaces ou classes base. As outras restrições são usadas pela biblioteca de F # para implementar algumas funcionalidades, como a restrição de membro explícito, que é usada para implementar o sobrecarregamento de operadores aritméticos ou é fornecida principalmente como F # oferece suporte completo conjunto de restrições que é compatível com o common language runtime.
 
 Durante o processo de inferência de tipo, algumas restrições são inferidas automaticamente pelo compilador. Por exemplo, se você usar o `+` operador em uma função, o compilador infere uma restrição de membro explícito em tipos de variáveis que são usadas na expressão.
 
-O código a seguir mostra algumas declarações de restrição.
+O código a seguir ilustra algumas declarações de restrição.
 
 ```fsharp
 // Base Type Constraint
