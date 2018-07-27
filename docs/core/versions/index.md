@@ -4,12 +4,12 @@ description: Compreenda como o controle de versão do .NET Core funciona.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298234"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792316"
 ---
 # <a name="net-core-versioning"></a>Controle de versão do .NET Core
 
@@ -32,6 +32,15 @@ No .NET Core 2.0, os downloads mostram um único número de versão em seu nome 
 * O metapacote `Microsoft.NETCore.App`.
 
 O uso de um único número de versão facilita para os usuários saberem qual versão do SDK instalar em seus computadores de desenvolvimento e qual deverá ser a versão correspondente da estrutura compartilhada quando for o momento de provisionar um ambiente de produção. Ao baixar um SDK ou tempo de execução, o número de versão que você verá será o mesmo.
+
+### <a name="version-selection"></a>Seleção de versão
+
+O .NET Core aplica a um conjunto de políticas que determinam quais versões do SDK e do tempo de execução do .NET Core são usadas em vários cenários. Esses cenários e políticas são abordados com todos os detalhes no artigo sobre [seleção de versão](selection.md).
+
+Você pode considerar essas políticas como a execução das seguintes funções:
+
+* Permitir a implantação fácil e eficiente do .NET Core, incluindo atualizações de segurança e confiabilidade.
+* Permitir que os desenvolvedores usem as ferramentas e os comandos mais recentes independentemente do tempo de execução de destino.
 
 ### <a name="installers"></a>Instaladores
 
