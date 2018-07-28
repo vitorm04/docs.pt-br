@@ -6,14 +6,14 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655265"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332867"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
-Enquanto você pode visualizar um projeto do Visual Studio como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas são orientados a eventos, que significa que o fluxo de execução é determinado pelas externas ocorrências chamadas *eventos*.  
+Enquanto você visualiza um projeto do Visual Studio como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas são orientados a eventos — ou seja, o fluxo de execução é determinado pelas ocorrências externas chamadas *eventos*.  
   
  Um evento é um sinal que informa a um aplicativo que algo importante ocorreu. Por exemplo, quando um usuário clica em um controle em um formulário, o formulário pode lançar um evento `Click` e chamar um procedimento que manipula o evento. Os eventos também permitem que tarefas separadas se comuniquem. Por exemplo, digamos que seu aplicativo executa uma tarefa de classificação separadamente do aplicativo principal. Se um usuário cancelar a classificação, seu aplicativo poderá enviar um evento de cancelamento instruindo o processo de classificação para parar.  
   
@@ -26,7 +26,7 @@ Enquanto você pode visualizar um projeto do Visual Studio como uma série de pr
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Acionando eventos  
- Um evento é como uma mensagem anunciando que algo importante ocorreu. O ato de transmitir a mensagem é chamado para *acionar* o evento. No Visual Basic, você dispara eventos com a `RaiseEvent` instrução, como no exemplo a seguir:  
+ Um evento é como uma mensagem anunciando que algo importante ocorreu. O ato de transmitir a mensagem é chamado para *acionar* o evento. No Visual Basic, você aciona eventos com o `RaiseEvent` instrução, como no exemplo a seguir:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -55,7 +55,7 @@ Enquanto você pode visualizar um projeto do Visual Studio como uma série de pr
   
 -   Não é possível usar uma variável `WithEvents` como uma variável de objeto. Ou seja, você não pode declará-la como `Object`— você deve especificar o nome da classe quando declarar a variável.  
   
--   Como eventos compartilhados não estão vinculados a instâncias de classe, você não pode usar `WithEvents` para manipular eventos compartilhados declarativamente. Da mesma forma, você não pode usar `WithEvents` ou `Handles` para manipular eventos de um `Structure`. Em ambos os casos, você pode usar a instrução `AddHandler` para manipular esses eventos.  
+-   Como eventos compartilhados não são ligados às instâncias de classe, é possível usar `WithEvents` para manipular eventos compartilhados declarativamente. Da mesma forma, você não pode usar `WithEvents` ou `Handles` para manipular eventos de um `Structure`. Em ambos os casos, você pode usar a instrução `AddHandler` para manipular esses eventos.  
   
 -   Não é possível criar matrizes de variáveis `WithEvents`.  
   
@@ -63,7 +63,7 @@ Enquanto você pode visualizar um projeto do Visual Studio como uma série de pr
   
  Embora a cláusula `Handles` seja a maneira padrão de associar um evento a um manipulador de eventos, ela é limitada a associar eventos a manipuladores de eventos em tempo de compilação.  
   
- Em alguns casos, como com os eventos associados a formulários ou controles, Visual Basic automaticamente extingue um manipulador de eventos em branco e o associa com um evento. Por exemplo, quando você clicar duas vezes um botão de comando em um formulário no modo de design, o Visual Basic cria um manipulador de eventos em branco e um `WithEvents` variável para o botão de comando, como no código a seguir:  
+ Em alguns casos, como com os eventos associados aos formulários ou controles, Visual Basic automaticamente extingue um manipulador de eventos vazio e a associa com um evento. Por exemplo, quando você clique duas vezes em um botão de comando em um formulário no modo de design, o Visual Basic cria um manipulador de eventos vazio e um `WithEvents` variável para o botão de comando, como no código a seguir:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   

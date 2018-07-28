@@ -1,15 +1,15 @@
 ---
-title: 'Como: fragmentos XML de um XmlReader (Visual Basic) de fluxo'
+title: 'Como: Stream fragmentos XML de um XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
 ms.openlocfilehash: 38a81e83421dffc997a2cbfd6d0996da5ece18d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643327"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332695"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Como: fragmentos XML de um XmlReader (Visual Basic) de fluxo
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Como: Stream fragmentos XML de um XmlReader (Visual Basic)
 Quando você tem que processa grandes arquivos XML, talvez não seja possível carregar a árvore inteira XML na memória. Este tópico mostra como passar informações usando <xref:System.Xml.XmlReader>.  
   
  Um dos modos de efetivas usar <xref:System.Xml.XmlReader> para ler objetos de <xref:System.Xml.Linq.XElement> é escrever seu próprio método personalizado do eixo. Um método do eixo normalmente retorna uma coleção como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, conforme mostrado no exemplo neste tópico. No método personalizado do eixo, depois de criar o fragmento XML chamando o método <xref:System.Xml.Linq.XNode.ReadFrom%2A> , retornar a coleção usando `yield return`. Isso fornece a semântica de execução adiada ao método personalizado do eixo.  
@@ -18,9 +18,9 @@ Quando você tem que processa grandes arquivos XML, talvez não seja possível c
   
  Se você desejar criar uma árvore parcial, você pode criar uma instância <xref:System.Xml.XmlReader>, posiciona o leitor no nó que você deseja converter a <xref:System.Xml.Linq.XElement> uma árvore e em seguida, cria o objeto de <xref:System.Xml.Linq.XElement> .  
   
- O tópico [como: fragmentos XML de fluxo com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contém informações e um exemplo de como transmitir um documento mais complexo.  
+ O tópico [como: fragmentos de XML de Stream com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contém informações e um exemplo de como transmitir um documento mais complexo.  
   
- O tópico [como: executar Streaming de transformação de grandes documentos XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contém um exemplo de como usar o LINQ to XML para transformar documentos XML muito grandes, mantendo um espaço de memória pequenos.  
+ O tópico [como: realizar Streaming de transformação de grandes documentos XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contém um exemplo de como usar o LINQ to XML para transformar documentos XML muito grandes, mantendo uma pegada pequena de memória.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo cria um método personalizado do eixo. Você pode consultá-lo usando uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. O método de eixo personalizado `StreamRootChildDoc` é um método que foi projetado especificamente para ler um documento que tenha um elemento `Child` de repetição.  
@@ -147,4 +147,4 @@ ccc
   
 ## <a name="see-also"></a>Consulte também  
  [Passo a passo: Implementando IEnumerable(Of T) no Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
- [Análise de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+ [Analisando XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

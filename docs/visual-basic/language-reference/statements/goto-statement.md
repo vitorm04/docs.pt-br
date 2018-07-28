@@ -1,5 +1,5 @@
 ---
-title: Instrução GoTo
+title: Instrução GoTo (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604738"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332981"
 ---
 # <a name="goto-statement"></a>Instrução GoTo
 Branch incondicionalmente para uma linha especificada em um procedimento.  
@@ -34,25 +34,25 @@ GoTo line
  Necessário. Qualquer rótulo de linha.  
   
 ## <a name="remarks"></a>Comentários  
- O `GoTo` instrução pode ramificar somente para linhas no procedimento no qual ele aparece. A linha deve ter uma linha de rótulo que `GoTo` pode consultar. Para obter mais informações, consulte [como: instruções de rótulo](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ O `GoTo` instrução pode ramificar somente para linhas no procedimento no qual ele aparece. A linha deve ter uma linha do rótulo que `GoTo` pode consultar. Para obter mais informações, consulte [como: instruções de rótulo](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo` instruções podem tornar o código difíceis de ler e manter. Sempre que possível, use uma estrutura de controle. Para obter mais informações, consulte [fluxo de controle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` instruções podem tornar o código difícil de ler e manter. Sempre que possível, use uma estrutura de controle. Para obter mais informações, consulte [fluxo de controle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
  Não é possível usar um `GoTo` instrução para ramificar de fora de um `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, ou `Using`... `End Using` construção para um rótulo dentro.  
   
 ## <a name="branching-and-try-constructions"></a>Ramificações e construções Try  
- Dentro de um `Try`... `Catch`... `Finally` construção, as seguintes regras se aplicam a ramificação com a `GoTo` instrução.  
+ Dentro de um `Try`... `Catch`... `Finally` construção, as seguintes regras se aplicam a ramificação com o `GoTo` instrução.  
   
-|Bloco ou região|Ramificação de fora|Ramificação fora de dentro de|  
+|Bloco ou região|Ramificação em de fora|Ramificação fora do dentro|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` Bloco|Somente de um `Catch` blocos de construção mesmo <sup>1</sup>|Somente para fora da construção inteira|  
-|`Catch` Bloco|Nunca permitidos|Somente para fora da construção inteira ou para o `Try` blocos de construção mesmo <sup>1</sup>|  
+|`Try` Bloco|Somente de um `Catch` bloco de construção mesmo <sup>1</sup>|Somente a fora da construção inteira|  
+|`Catch` Bloco|Nunca permitidos|Somente a fora da construção inteira, ou para o `Try` bloco de construção mesmo <sup>1</sup>|  
 |`Finally` Bloco|Nunca permitidos|Nunca permitidos|  
   
- <sup>1</sup> se `Try`... `Catch`... `Finally` estiver aninhada dentro de outra, uma `Catch` bloco pode ramificar para o `Try` bloco no seu próprio nível de aninhamento, mas não para qualquer outro `Try` bloco. Uma construção `Try`... `Catch`... `Finally` construção deve estar contida completamente em uma `Try` ou `Catch` bloco de construção no qual ele está aninhado.  
+ <sup>1</sup> se um `Try`... `Catch`... `Finally` estiver aninhada dentro de outra, uma `Catch` bloco pode ramificar para o `Try` bloco no seu próprio nível de aninhamento, mas não para qualquer outro `Try` bloco. Aninhado `Try`... `Catch`... `Finally` construção deve estar contida completamente em um `Try` ou `Catch` bloco de construção dentro do qual ele está aninhado.  
   
- A ilustração a seguir mostra uma `Try` aninhada em outra. Várias ramificações entre os blocos das duas construções são indicadas como válido ou inválido.  
+ A ilustração a seguir mostra uma `Try` aninhada em outra. Várias ramificações entre os blocos das duas construções são indicadas como válidas ou inválidas.  
   
  ![Diagrama gráfico de ramificações em construções Try](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
 Ramificações válidas e inválidas em construções Try  

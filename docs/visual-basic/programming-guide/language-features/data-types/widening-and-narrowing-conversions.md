@@ -20,18 +20,18 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: e574c20ec259953fea4b11d8f65e546373a4fe8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655413"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332568"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversões de Widening e Narrowing (Visual Basic)
-Uma consideração importante com uma conversão de tipo é se o resultado da conversão está dentro do intervalo do tipo de dados de destino.  
+Uma consideração importante com uma conversão de tipo é se o resultado da conversão é dentro do intervalo do tipo de dados de destino.  
   
- Um *conversões ampliadoras* altera um valor para um tipo de dados que pode permitir que qualquer possível valor dos dados originais.  Conversões ampliadoras preservar o valor de origem, mas podem alterar sua representação. Isso ocorre se você converter de um tipo integral para `Decimal`, ou de `Char` para `String`.  
+ Um *conversão de ampliação* altera um valor para um tipo de dados que pode permitir que qualquer valor possível dos dados originais.  Conversões de ampliação preservam o valor de origem, mas podem alterar sua representação. Isso ocorre se você converter de um tipo integral para `Decimal`, ou de `Char` para `String`.  
   
- Um *conversão de estreitamento* altera um valor para um tipo de dados que pode não ser capaz de armazenar alguns dos possíveis valores. Por exemplo, um valor fracionário é arredondado quando ele é convertido em um tipo integral e um tipo numérico sendo convertido em `Boolean` é reduzido para `True` ou `False`.  
+ Um *conversão de estreitamento* altera um valor para um tipo de dados que pode não ser capaz de armazenar alguns dos possíveis valores. Por exemplo, um valor fracionário é arredondado quando ele é convertido em um tipo integral e um tipo numérico que está sendo convertido em `Boolean` é reduzido para `True` ou `False`.  
   
 ## <a name="widening-conversions"></a>Conversões de expansão  
  A tabela a seguir mostra as conversões ampliadoras padrão.  
@@ -49,54 +49,54 @@ Uma consideração importante com uma conversão de tipo é se o resultado da co
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Simples](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[Duplo](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|Qualquer tipo enumerado ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Seu tipo integral subjacente e qualquer tipo ao qual o tipo subjacente será ampliada.|  
+|Qualquer tipo enumerado ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Seu tipo integral subjacente e qualquer tipo ao qual o tipo subjacente amplia.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
 |Matriz `Char`|`Char` matriz, `String`|  
 |Qualquer tipo|[Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Qualquer tipo derivado|Qualquer tipo do qual ele é derivado de base <sup>3</sup>.|  
 |Qualquer tipo|Qualquer interface que ele implementa.|  
-|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Qualquer tipo de dados ou tipo de objeto.|  
+|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Qualquer tipo de dados ou o tipo de objeto.|  
   
  <sup>1</sup> por definição, cada tipo de dados amplia a mesmo.  
   
- <sup>2</sup> conversões de `Integer`, `UInteger`, `Long`, `ULong`, ou `Decimal` para `Single` ou `Double` pode resultar em perda de precisão, mas nunca na perda de magnitude. Nesse sentido, não incorrer em perda de informações.  
+ <sup>2</sup> conversões de `Integer`, `UInteger`, `Long`, `ULong`, ou `Decimal` para `Single` ou `Double` pode resultar em perda de precisão, mas nunca na perda de magnitude. Nesse sentido, elas não provocam perda de informações.  
   
- <sup>3</sup> pode parecer estranho que uma conversão de um tipo derivado em um dos seus tipos base é ampliação. A justificativa é que o tipo derivado contém todos os membros do tipo base, para que ela se qualificar como uma instância do tipo base. Na direção oposta, o tipo base não contém quaisquer novos membros definidos pelo tipo derivado.  
+ <sup>3</sup> pode parecer surpreendente que uma conversão de um tipo derivado em um dos seus tipos base é de ampliação. A justificação é que o tipo derivado contém todos os membros do tipo base, para que ela se qualificar como uma instância do tipo base. Na direção oposta, o tipo base não contém quaisquer novos membros definidos por um tipo derivado.  
   
- Conversões ampliadoras sempre são bem-sucedidas em tempo de execução e nunca provocam perda de dados. Você pode sempre executá-las implicitamente, se o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) define o tipo de comutador para a verificação `On` ou `Off`.  
+ Conversões de ampliação sempre ter êxito em tempo de execução e nunca incorrerá em perda de dados. Você sempre pode executá-los implicitamente, se o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) define o tipo de comutador para a verificação `On` ou a `Off`.  
   
 ## <a name="narrowing-conversions"></a>Conversões de redução  
  As conversões de estreitamento padrão incluem o seguinte:  
   
--   As direções inversas das conversões ampliadoras na anterior tabela (exceto pelo fato de cada tipo amplia a mesmo)  
+-   As direções inversas das conversões ampliadoras anteriormente na tabela (exceto pelo fato de cada tipo amplia a mesmo)  
   
--   Conversões em ambas as direções entre [booliano](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualquer tipo numérico  
+-   Conversões em ambas as direções entre [Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualquer tipo numérico  
   
--   Conversões de qualquer tipo numérico para qualquer tipo de enumeração (`Enum`)  
+-   Conversões de qualquer tipo numérico para qualquer tipo de enumerado (`Enum`)  
   
 -   Conversões em ambas as direções entre [cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualquer tipo numérico, `Boolean`, ou [data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Conversões de um tipo de dados ou objeto de tipo para um tipo derivado dele  
+-   As conversões de um tipo de dados ou objeto de tipo para um tipo derivado dele  
   
- Conversões de estreitamento nem sempre bem-sucedidas em tempo de execução e podem falhar ou provoca perda de dados. Ocorrerá um erro se o tipo de dados de destino não pode receber o valor sendo convertido. Por exemplo, uma conversão numérica pode resultar em um estouro. O compilador não permite a você realizar conversões de estreitamento implicitamente, a menos que o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) define o tipo de verificação alternar para `Off`.  
+ Conversões de estreitamento nem sempre ter êxito em tempo de execução e pode falhar ou causar a perda de dados. Ocorrerá um erro se o tipo de dados de destino não puder receber o valor que está sendo convertido. Por exemplo, uma conversão numérica pode resultar em um estouro. O compilador não permite que você execute conversões redutoras implicitamente, a menos que o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) define o tipo de verificação de alternar para `Off`.  
   
 > [!NOTE]
->  O erro de conversão de estreitamento é suprimido para conversões de elementos em um `For Each…Next` coleção para a variável de controle de loop. Para obter mais informações e exemplos, consulte a seção "Conversões de estreitamento" [para cada um... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+>  O erro de conversão de estreitamento será suprimido para conversões de elementos em um `For Each…Next` coleção para a variável de controle de loop. Para obter mais informações e exemplos, consulte a seção "Conversões de estreitamento" [para cada um... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ### <a name="when-to-use-narrowing-conversions"></a>Quando usar conversões de estreitamento  
- Você usa uma conversão de restrição quando você souber que o valor de origem pode ser convertido para o tipo de dados de destino sem erro ou perda de dados. Por exemplo, se você tiver um `String` que você sabe que contém "Verdadeiro" ou "False", você pode usar o `CBool` palavra-chave para convertê-lo para `Boolean`.  
+ Quando você souber que o valor de origem pode ser convertido no tipo de dados de destino sem erro ou perda de dados, você usar uma conversão de estreitamento. Por exemplo, se você tiver um `String` que você saiba que contém "True" ou "False", você pode usar o `CBool` palavra-chave para convertê-lo para `Boolean`.  
   
 ## <a name="exceptions-during-conversion"></a>Exceções durante conversão  
- Como conversões ampliadoras sempre são bem-sucedida, elas não lançam exceções. Conversões de restrição, quando elas falham, mais comumente lançam as seguintes exceções:  
+ Como conversões ampliadoras sempre ter êxito, eles não geram exceções. Conversões de redução, quando ocorre uma falha, mais comumente lançam as seguintes exceções:  
   
 -   <xref:System.InvalidCastException> — Se nenhuma conversão é definida entre os dois tipos  
   
--   <xref:System.OverflowException> — (tipos integral somente) se o valor convertido é muito grande para o tipo de destino  
+-   <xref:System.OverflowException> — (tipos integral somente) se o valor convertido for muito grande para o tipo de destino  
   
- Se uma classe ou estrutura define um [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para servir como um operador de conversão para ou de classe ou estrutura, que `CType` pode acionar qualquer exceção que achar apropriada. Além disso, que `CType` pode chamar funções do Visual Basic ou [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que por sua vez, podem acionar uma variedade de exceções.  
+ Se uma classe ou estrutura define um [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para servir como um operador de conversão para ou de classe ou estrutura, que `CType` pode lançar qualquer exceção que achar apropriado. Além disso, que `CType` pode chamar funções do Visual Basic ou [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que por sua vez, podem acionar uma variedade de exceções.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Alterações durante conversões de tipo de referência  
- Uma conversão de um *fazem referência a tipo* copia apenas o ponteiro para o valor. O valor em si não é copiado nem alterado de alguma forma. A única coisa que pode mudar é o tipo de dados da variável que contém o ponteiro. No exemplo a seguir, o tipo de dados é convertido da classe derivada para sua classe base, mas o objeto que ambas as variáveis apontam está inalterado.  
+ Uma conversão de um *tipo de referência* copia somente o ponteiro para o valor. O valor em si não é copiado nem alterado de alguma forma. A única coisa que pode alterar é o tipo de dados da variável que contém o ponteiro. No exemplo a seguir, o tipo de dados é convertido da classe derivada em sua classe base, mas o objeto que as duas variáveis agora apontam para permanece inalterado.  
   
 ```  
 ' Assume class cSquare inherits from class cShape.  
