@@ -1,28 +1,28 @@
 ---
-title: Objeto My.Computer
+title: Objeto My. Computer (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597341"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323034"
 ---
 # <a name="mycomputer-object"></a>Objeto My.Computer
 Fornece propriedades para manipular componentes do computador, como o áudio, o relógio, o teclado, o sistema de arquivos e assim por diante.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e propriedades do `My.Computer` de objeto, consulte <xref:Microsoft.VisualBasic.Devices.Computer>. A classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos.  
+ Para obter informações sobre os métodos e propriedades do `My.Computer` do objeto, consulte <xref:Microsoft.VisualBasic.Devices.Computer>. A classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Classe:** <xref:Microsoft.VisualBasic.Devices.Computer> (a classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos).  
   
- **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+ **Assembly:** biblioteca de tempo de execução do Visual Basic (em VisualBasic)  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto My.Computer.Audio](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)  
