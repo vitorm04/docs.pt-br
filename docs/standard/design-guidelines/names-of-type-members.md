@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575343"
 ---
 # <a name="names-of-type-members"></a>Nomes de membros de tipo
-São feitas tipos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomeação de membros de tipo.  
+Tipos são compostos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomenclatura de membros de tipo.  
   
 ## <a name="names-of-methods"></a>Nomes de métodos  
- Como os métodos são os meios de executar uma ação, as diretrizes de design requerem que os nomes de método verbos ou frases de verbo. Seguir essa orientação também serve para distinguir os nomes de método de nomes de propriedade e o tipo, que são frases nominais ou adjetivo.  
+ Como os métodos são os meios para executar uma ação, as diretrizes de design exigem que os nomes de métodos sejam verbos ou frases verbais. Seguir essa diretriz também serve para distinguir os nomes de métodos de nomes de propriedades e tipos, que são substantivos ou frases adjetivas.  
   
- **FAZER ✓** atribuir nomes de métodos que são verbos ou frases de verbo.  
+ **✓ DO** nomeie os métodos que são verbos ou frases verbais.  
   
 ```  
 public class String {  
@@ -38,24 +38,24 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>Nomes de propriedades  
- Ao contrário de outros membros, propriedades devem ser dadas locução ou nomes de adjetivo. Isso ocorre porque uma propriedade refere-se aos dados e o nome da propriedade reflete que. PascalCasing sempre é usado para nomes de propriedade.  
+ Diferentemente de outros membros, as propriedades devem ser nomeadas com uma frase substantivada ou um adjetivo. Isso porque uma propriedade se refere a dados, e o nome da propriedade reflete isso. PascalCasing sempre é usado para nomes de propriedade.  
   
- **FAZER ✓** propriedades usando um substantivo, locução ou adjetivo nomes.  
+ **✓ DO** nomeie as propriedades usando um substantivo, uma frase substantivada ou um adjetivo.  
   
- **X não** têm propriedades que correspondem ao nome de "Get" métodos como no exemplo a seguir:  
+ **X DO NOT** não tenha propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Esse padrão geralmente indica que a propriedade deve ser realmente um método.  
+ Esse padrão geralmente indica que a propriedade deveria realmente ser um método.  
   
- **FAZER ✓** nome propriedades de coleção com plural frase que descreve os itens na coleção em vez de usar uma frase singular seguida por "List" ou "Coleção".  
+ **✓ DO** nomeie as propriedades de coleção com uma frase no plural que descreva os itens na coleção em vez de usar uma frase no singular seguida por "List" ou "Collection".  
   
- **FAZER ✓** nome propriedades Boolianas com uma frase afirmativa (`CanSeek` em vez de `CantSeek`). Opcionalmente, você também poderá colocar propriedades Boolianas com "É", "pode" ou "Tem", mas somente quando ele agrega valor.  
+ **✓ DO** nomeie as propriedades boolianas com uma frase afirmativa (`CanSeek` em vez de `CantSeek`). Opcionalmente, você também pode prefixar as propriedades boolianas com "Is", "Can" ou "Has", mas somente quando adicionar valor.  
   
- **✓ CONSIDERE** fornecendo uma propriedade o mesmo nome de seu tipo.  
+ **✓ CONSIDER** nomeie uma propriedade com o mesmo nome de seu tipo.  
   
- Por exemplo, a seguinte propriedade corretamente obtém e define um valor de enumeração denominado `Color`, portanto, a propriedade é denominada `Color`:  
+ Por exemplo, a seguinte propriedade obtém e define corretamente um valor de enumeração denominado `Color`, portanto, a propriedade é chamada `Color`:  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>Nomes de eventos  
- Sempre consultem eventos alguma ação, que está acontecendo ou que ocorreu. Portanto, como com métodos, eventos são nomeados com verbos e indicativo de verbo é usado para indicar o momento quando o evento é gerado.  
+ Eventos sempre fazem referência a uma ação, seja uma ação que está acontecendo ou que já ocorreu. Portanto, assim como acontece com os métodos, os eventos são nomeados com verbos e o tempo verbal é usado para indicar o horário em que o evento é acionado.  
   
- **FAZER ✓** nome eventos com um verbo ou uma frase de verbo.  
+ **✓ DO** nomeie os eventos com um verbo ou uma frase verbal.  
   
- Os exemplos incluem `Clicked`, `Painting`, `DroppedDown`e assim por diante.  
+ Os exemplos incluem `Clicked`, `Painting`, `DroppedDown`, etc.  
   
- **FAZER ✓** atribuir nomes de eventos com um conceito de antes e depois, usando o presente e tempos de passado.  
+ **✓ DO** nomeie os eventos com um conceito de antes e depois, usando os tempos verbais Pretérito e Presente.  
   
- Por exemplo, um evento de fechamento é gerado antes de fechar uma janela será chamado `Closing`, e que é gerado depois que a janela for fechada será chamado `Closed`.  
+ Por exemplo, um evento de fechamento gerado antes de uma janela ser fechada seria chamado de `Closing`, e um gerado após a janela ser fechada seria chamado de `Closed`.  
   
- **X não** usar "Antes" ou "Depois" prefixos ou postfixes para indicar pré e pós-eventos. Use presente e tempos de passado como acabou de ser descrita.  
+ **X DO NOT** não use os sufixos ou prefixos "Before" ou "After" para indicar eventos anteriores e posteriores. Use os tempos verbais Pretérito e Presente conforme descrito.  
   
- **FAZER ✓** nome manipuladores de eventos (delegados são usados como tipos de eventos) com o sufixo "EventHandler", conforme mostrado no exemplo a seguir:  
+ **✓ DO** nomeie manipuladores de eventos (delegados usados como tipos de eventos) com o sufixo "EventHandler", conforme mostrado no exemplo a seguir:  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **FAZER ✓** usa dois parâmetros nomeados `sender` e `e` em manipuladores de eventos.  
+ **✓ DO** use dois parâmetros nomeados `sender` e `e` nos manipuladores de eventos.  
   
- O parâmetro do remetente representa o objeto que gerou o evento. O parâmetro do remetente normalmente é do tipo `object`, mesmo que seja possível usar um tipo mais específico.  
+ O parâmetro do remetente representa o objeto que acionou o evento. O parâmetro do remetente normalmente é do tipo `object`, mesmo se for possível empregar um tipo mais específico.  
   
- **FAZER ✓** nome do evento de classes de argumento com o sufixo "EventArgs".  
+ **✓ DO** nomeie classes de argumento de evento com o sufixo "EventArgs".  
   
 ## <a name="names-of-fields"></a>Nomes de campos  
- As diretrizes de nomenclatura de campo se aplicam a campos protegidos e públicos estáticos. Campos internos e privados não são cobertos pelas diretrizes e campos de instância público ou protegido não são permitidos pelo [diretrizes de design do membro](../../../docs/standard/design-guidelines/member.md).  
+ As diretrizes de nomenclatura de campo se aplicam a campos públicos e protegidos estáticos. Campos particulares e internos não são cobertos pelas diretrizes, e campos de instância pública ou protegida não são permitidos pelas [diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md).  
   
- **FAZER ✓** use PascalCasing em nomes de campo.  
+ **✓ DO** use PascalCasing nos nomes de campos.  
   
- **FAZER ✓** nome campos usando um substantivo, locução ou adjetivo.  
+ **✓ DO** nomeie os campos usando um substantivo, uma frase substantivada ou um adjetivo.  
   
- **X não** use um prefixo para nomes de campo.  
+ **X DO NOT** não use um prefixo para nomes de campos.  
   
- Por exemplo, não use "g _" ou "s _" para indicar campos estáticos.  
+ Por exemplo, não use "g_" ou "s_" para indicar campos estáticos.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
