@@ -10,11 +10,11 @@ helpviewer_keywords:
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336551"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296137"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversões cast e conversões de tipo (Guia de Programação em C#)
 Depois que uma variável é declarada, ela não pode ser declarada novamente ou usada para armazenar valores de outro tipo, a menos que esse tipo possa ser convertido para o tipo da variável, pois a C# é tipada estaticamente no tempo de compilação. Por exemplo, não há conversão de um inteiro para qualquer cadeia de caracteres arbitrária. Portanto, depois de declarar `i` como um inteiro, você não pode atribuir a cadeia de caracteres "Hello" a ela, conforme mostrado no código a seguir.  
