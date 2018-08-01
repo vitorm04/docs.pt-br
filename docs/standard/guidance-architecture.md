@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet
-ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570486"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404168"
 ---
 # <a name="net-architecture-guidance"></a>Diretrizes para arquitetura do .NET
 
@@ -28,4 +28,8 @@ Este guia é uma introdução à arquitetura, ao design e aos processos de impla
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[Arquitetando aplicativos baseados em contêineres e em microsserviços](microservices-architecture/index.md)
 
-Este guia é uma introdução ao desenvolvimento de aplicativos com base em microsserviços e ao gerenciamento deles usando contêineres. Ele discute as abordagens de design de arquitetura e de implementação usando o .NET Core e os contêineres do Docker. 
+Este guia é uma introdução ao desenvolvimento de aplicativos com base em microsserviços e ao gerenciamento deles usando contêineres. Ele discute as abordagens de design de arquitetura e de implementação usando o .NET Core e os contêineres do Docker.
+
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Aplicativos sem servidor: arquitetura, padrões e implementação no Azure](serverless-architecture/index.md)
+
+Este é um guia para a criação de aplicativos sem servidor com exemplos usando o Azure. Ele trata de várias abordagens de arquitetura e design e dos benefícios e desafios que acompanham a computação sem servidor e fornece cenários e casos de uso para aplicativos sem servidor.

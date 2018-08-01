@@ -3,20 +3,18 @@ title: Tecnologias da Web comuns do lado do cliente
 description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Tecnologias da Web comuns do lado do cliente
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106756"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404600"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns do lado do cliente
 
 > "Os sites devem ter uma bela aparência em todo lugar."  
 > _- Paul Cookson_
-
-## <a name="summary"></a>Resumo
 
 Os aplicativos ASP.NET Core são aplicativos Web e normalmente se baseiam em tecnologias da Web do lado do cliente como HTML, CSS e JavaScript. Ao separar o conteúdo da página (o HTML) de seu layout e estilo (o CSS) e seu comportamento (por meio do JavaScript), os aplicativos Web complexos podem aproveitar o princípio da Separação de Interesses. As alterações futuras na estrutura, no design ou no comportamento do aplicativo podem ser feitas com mais facilidade quando esses interesses não são entrelaçados.
 
@@ -36,9 +34,9 @@ O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o la
 
 É melhor manter os estilos em seus próprios arquivos de folha de estilos separados e usar a cascata baseada em seleção para implementar estilos consistentes e reutilizáveis dentro do aplicativo. A colocação das regras de estilo em HTML deve ser evitada e a aplicação de estilos a elementos individuais específicos (em vez de classes inteiras de elementos ou elementos que tiveram determinada classe CSS aplicada a eles) deve ser uma exceção, não a regra.
 
-### <a name="css-preprocessors"></a>Pré-processadores do CSS
+### <a name="css-preprocessors"></a>Pré-processadores de CSS
 
-As folhas de estilos CSS não têm suporte para lógica condicional, variáveis e outros recursos de linguagem de programação. Portanto, folhas de estilos grandes geralmente incluem um lote de repetição, pois a mesma cor, fonte ou outra configuração é aplicada a muitas variações diferentes de elementos HTML e classes CSS. Os pré-processadores do CSS podem ajudar as folhas de estilos a seguirem o [princípio DRY](http://deviq.com/don-t-repeat-yourself/), com a adição de suporte para variáveis e lógica.
+As folhas de estilos CSS não têm suporte para lógica condicional, variáveis e outros recursos de linguagem de programação. Portanto, folhas de estilos grandes geralmente incluem um lote de repetição, pois a mesma cor, fonte ou outra configuração é aplicada a muitas variações diferentes de elementos HTML e classes CSS. Os pré-processadores do CSS podem ajudar as folhas de estilos a seguirem o [princípio DRY](https://deviq.com/don-t-repeat-yourself/), com a adição de suporte para variáveis e lógica.
 
 Os pré-processadores do CSS mais populares são o Sass e LESS. Ambos estendem o CSS e são compatíveis com versões anteriores dele, o que significa que um arquivo CSS simples é um arquivo do Sass ou LESS válido. O Sass é baseado em Ruby e o LESS é baseado em JavaScript e ambos costumam ser executados como parte do processo de desenvolvimento local. Os dois têm ferramentas de linha de comando disponíveis, bem como suporte interno no Visual Studio para executá-las com tarefas do Gulp ou Grunt.
 
@@ -48,17 +46,17 @@ O JavaScript é uma linguagem de programação dinâmica e interpretada que foi 
 
 Ao trabalhar com o JavaScript no aplicativo Web, há algumas tarefas que você geralmente precisará executar:
 
--   Selecionar um elemento HTML e recuperar e/ou atualizar seu valor
+- Selecionar um elemento HTML e recuperar e/ou atualizar seu valor.
 
--   Consultar dados em uma API Web
+- Consultar dados em uma API Web.
 
--   Enviar um comando para uma API Web (e responder a um retorno de chamada com seu resultado)
+- Enviando um comando para uma API Web (e respondendo a um retorno de chamada com seu resultado).
 
--   Realizar a validação
+- Executando a validação.
 
 Você pode executar todas essas tarefas apenas com o JavaScript, mas muitas bibliotecas existem para facilitar essas tarefas. Uma das primeiras e mais bem-sucedidas dessas bibliotecas é o jQuery, que continua sendo uma opção popular para simplificar essas tarefas em páginas da Web. Para SPAs (Aplicativos de Página Única), o jQuery não fornece muitos dos recursos desejados oferecidos pelo Angular e React.
 
-### <a name="legacy-web-apps-with-jquery"></a>Aplicativos Web herdados com o jQuery
+### <a name="legacy-web-apps-with-jquery"></a>Aplicativos Web herdados com jQuery
 
 Embora seja antigo de acordo com os padrões de estrutura do JavaScript, o jQuery continua sendo uma biblioteca muito usada para trabalhar com HTML/CSS e criar aplicativos que fazem chamadas AJAX a APIs Web. No entanto, o jQuery opera no nível do DOM (Modelo de Objeto do Documento) do navegador e, por padrão, oferece apenas um modelo de imperativo, em vez de declarativo.
 
@@ -100,9 +98,9 @@ Os componentes são definidos com a função de decorador @Component, que usa me
 
 Trabalhando com componentes e modelos, em vez de elementos DOM, os aplicativos do Angular podem operar em um nível superior de abstração e com menos código geral comparado aos aplicativos escritos apenas com JavaScript (também chamado "JS baunilha") ou com o jQuery. O Angular também impõe uma ordem de como organizar os arquivos de script do lado do cliente. Por convenção, os aplicativos do Angular usam uma estrutura de pastas comum, com arquivos de script de módulo e componente localizados em uma pasta do aplicativo. Os scripts do Angular referentes à criação, à implantação e ao teste do aplicativo geralmente estão localizados em uma pasta de nível superior.
 
-O Angular também faz intenso uso de ferramentas de CLI (interface de linha de comando). A introdução ao desenvolvimento local com o Angular (supondo que você já tenha instalado o GIT e o npm) consiste em simplesmente clonar um repositório do GitHub e executar \`npm install\` e \`npm start\`. Além disso, o Angular fornece sua própria ferramenta de CLI que pode criar projetos, adicionar arquivos e ajudar com tarefas de teste, agrupamento e implantação. Essa facilidade de utilização das ferramentas de CLI tornam o Angular especialmente compatível com o ASP.NET Core, que também apresenta compatibilidade excelente com a CLI.
+O Angular também faz intenso uso de ferramentas de CLI (interface de linha de comando). Para começar o desenvolvimento local com o Angular (supondo que você já tenha instalado o GIT e o npm) basta clonar um repositório do GitHub e executar `npm install` e `npm start`. Além disso, o Angular fornece sua própria ferramenta de CLI que pode criar projetos, adicionar arquivos e ajudar com tarefas de teste, agrupamento e implantação. Essa facilidade de utilização das ferramentas de CLI tornam o Angular especialmente compatível com o ASP.NET Core, que também apresenta compatibilidade excelente com a CLI.
 
-A Microsoft desenvolveu um aplicativo de referência, o [eShopOnContainers](http://aka.ms/MicroservicesArchitecture), que inclui uma implementação SPA do Angular. Esse aplicativo inclui módulos do Angular para gerenciar a cesta de compras da loja online, carregar e exibir itens do catálogo e manipular a criação de ordens. Exiba e baixe o aplicativo de exemplo no [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
+A Microsoft desenvolveu um aplicativo de referência, o [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), que inclui uma implementação SPA do Angular. Esse aplicativo inclui módulos do Angular para gerenciar a cesta de compras da loja online, carregar e exibir itens do catálogo e manipular a criação de ordens. Exiba e baixe o aplicativo de exemplo no [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ Como o React não é uma estrutura completa, geralmente, você desejará ter out
 
 Ao considerar qual estrutura de JavaScript funcionará melhor para dar suporte ao SPA, tenha em mente as seguintes considerações:
 
--   Sua equipe está familiarizada com a estrutura e suas dependências (incluindo o TypeScript em alguns casos)?
+- Sua equipe está familiarizada com a estrutura e suas dependências (incluindo o TypeScript em alguns casos)?
 
--   Quão "teimosa" é a estrutura e você concorda com sua forma padrão de fazer as coisas?
+- Quão "teimosa" é a estrutura e você concorda com sua forma padrão de fazer as coisas?
 
--   Ela (ou uma biblioteca complementar) inclui todos os recursos necessários para seu aplicativo?
+- Ela (ou uma biblioteca complementar) inclui todos os recursos necessários para seu aplicativo?
 
--   Ela está bem documentada?
+- Ela está bem documentada?
 
--   Quão ativa é sua comunidade? A criação de novos projetos é feita com ela?
+- Quão ativa é sua comunidade? A criação de novos projetos é feita com ela?
 
--   Quão ativa é sua equipe principal? Os problemas estão sendo resolvidos e novas versões são fornecidas regularmente?
+- Quão ativa é sua equipe principal? Os problemas estão sendo resolvidos e novas versões são fornecidas regularmente?
 
 As estruturas de JavaScript continuam evoluindo em uma velocidade vertiginosa. Use as considerações listadas acima para ajudar a atenuar o risco de escolher uma estrutura da qual mais tarde você se arrependerá de ter uma dependência. Caso você seja particularmente avesso a riscos, considere uma estrutura que oferece suporte comercial e/ou que está sendo desenvolvida por uma empresa grande.
 

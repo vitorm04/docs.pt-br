@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591319"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874781"
 ---
 # <a name="threading-objects-and-features"></a>Threading de objetos e funcionalidades
 O .NET Framework fornece uma série de objetos que ajudam você a criar e gerenciar aplicativos multi-thread. Os threads gerenciados são representados pela classe <xref:System.Threading.Thread>. A classe <xref:System.Threading.ThreadPool> oferece fácil criação e gerenciamento de tarefas em segundo plano multi-thread. A classe <xref:System.ComponentModel.BackgroundWorker> faz o mesmo para tarefas que interagem com a interface do usuário. A classe <xref:System.Threading.Timer> executa tarefas em segundo plano em intervalos regulares.  
@@ -25,7 +25,7 @@ O .NET Framework fornece uma série de objetos que ajudam você a criar e gerenc
  Explica a classe **ThreadPool**, que permite que você solicite um thread para executar uma tarefa sem ter que fazer qualquer gerenciamento de thread por conta própria.  
   
  [Temporizadores](../../../docs/standard/threading/timers.md)  
- Explica como usar um **Temporizador** para especificar um delegado a ser chamado em um horário especificado.  
+ Descreve os temporizadores que podem ser usados em um ambiente multi-threaded.  
   
  [Monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  Explica como usar a classe **Monitor** para sincronizar o acesso a um membro ou criar seus próprios tipos de gerenciamento de threads.  

@@ -3,13 +3,13 @@ title: Tratando falha parcial
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Tratando falha parcial
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105189"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875177"
 ---
 # <a name="handling-partial-failure"></a>Tratando falha parcial
 
@@ -27,7 +27,7 @@ Em um aplicativo grande baseado em microsserviços, falhas parciais poderão ser
 
 **Figura 10-2**. O impacto de ter um design incorreto com longas cadeias de solicitações HTTP
 
-A falha intermitente será praticamente garantida em um sistema distribuído e baseado na nuvem, mesmo se cada dependência em si tiver excelente disponibilidade. Isso deve ser um fato que você precisa considerar.
+A falha intermitente é garantida em um sistema distribuído e baseado em nuvem, mesmo quando cada dependência têm uma disponibilidade excelente. Esse é um fato que você precisa considerar.
 
 Se você não criar nem implementar técnicas para garantir a tolerância a falhas, até mesmo pequenos tempos de inatividade poderão ser amplificados. Por exemplo, 50 dependências, cada uma com 99,99% de disponibilidade, poderia resultar em várias horas de tempo de inatividade por mês devido a esse efeito de ondulação. Quando uma dependência de microsserviço falhar ao manipular um alto volume de solicitações, essa falha poderá saturar rapidamente todos os threads de solicitação disponíveis em cada serviço e causar uma pane em todo o aplicativo.
 
@@ -35,7 +35,7 @@ Se você não criar nem implementar técnicas para garantir a tolerância a falh
 
 **Figura 10-3**. Falha parcial amplificada por microsserviços com longas cadeias de chamadas HTTP síncronas
 
-Para minimizar esse problema, na seção "*A integração do microsserviço assíncrono impõe a autonomia do microsserviço*" (no capítulo de arquitetura), é recomendável usar a comunicação assíncrona entre microsserviços internos. Explicaremos mais resumidamente na próxima seção.
+Para minimizar esse problema, na seção "*A integração do microsserviço assíncrono impõe a autonomia do microsserviço*" (no capítulo de arquitetura), essa diretriz indica o uso da comunicação assíncrona entre os microsserviços internos. 
 
 Além disso, é essencial que você crie seus aplicativos cliente e microsserviços para lidar com falhas parciais — ou seja, para criar microsserviços resilientes e aplicativos cliente.
 

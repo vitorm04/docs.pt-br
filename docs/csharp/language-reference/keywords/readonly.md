@@ -1,64 +1,103 @@
 ---
-title: readonly (Referência de C#)
-ms.date: 07/20/2015
+title: Palavra-chave readonly (referência de C#)
+ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 96607f1dd7f019169446e29a08496fb54e1ed493
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172627"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961177"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
-A palavra-chave `readonly` é um modificador que pode ser usado nos campos. Quando uma declaração de campo incluir um modificador `readonly`, atribuições aos campos introduzidas pela declaração podem ocorrer apenas como parte da declaração ou em um construtor na mesma classe.  
-  
+
+A palavra-chave `readonly` é um modificador que pode ser usado em três contextos:
+
+- Em uma [declaração de campo](#readonly-field-example), `readonly` indica que a atribuição ao campo só pode ocorrer como parte da declaração ou em um construtor na mesma classe.
+- Em uma [definição `readonly struct`](#readonly-struct-example), `readonly` indica que o `struct` é imutável.
+- Em um [retorno de método `ref readonly`](#ref-readonly-return-example), o modificador `readonly` indica que o método retorna uma referência e que as gravações não são permitidas para essa referência.
+
+Os dois contextos finais foram adicionados no C# 7.2.
+
 ## <a name="readonly-field-example"></a>Exemplo de campo readonly  
- Neste exemplo, o valor do campo `year` não pode ser alterado no método `ChangeYear`, ainda que seja atribuído a ele um valor no construtor da classe:  
+
+Neste exemplo, o valor do campo `year` não pode ser alterado no método `ChangeYear`, ainda que seja atribuído a ele um valor no construtor da classe:  
   
- [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
+[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]  
   
- Você pode atribuir um valor a um campo `readonly` apenas nos seguintes contextos:  
+Você pode atribuir um valor a um campo `readonly` apenas nos seguintes contextos:  
   
--   Quando a variável é inicializada na declaração, por exemplo:  
-  
-    ```csharp  
-    public readonly int y = 5;  
-    ```  
-  
--   Para um campo de instância, nos construtores de instância da classe que contém a declaração do campo ou para um campo estático, no construtor estático da classe que contém a declaração do campo. Esses também são os únicos contextos em que é válido passar um campo `readonly` como um parâmetro [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) ou [ref](../../../csharp/language-reference/keywords/ref.md).  
+- Quando a variável é inicializada na declaração, por exemplo:  
+
+```csharp
+public readonly int y = 5;  
+```
+
+- Em um construtor de instância da classe que contém a declaração de campo de instância.
+- No construtor estático da classe que contém a declaração do campo estático.
+
+Esses contextos de construtor também são os únicos em que é válido passar um campo `readonly` como um parâmetro [out](out-parameter-modifier.md) ou [ref](ref.md).  
   
 > [!NOTE]
->  A palavra-chave `readonly` é diferente da palavra-chave [const](../../../csharp/language-reference/keywords/const.md). O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser inicializado na declaração ou em um construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, enquanto um campo `const` é uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de tempo de execução, como no exemplo a seguir:  
-  
-```csharp  
+> A palavra-chave `readonly` é diferente da palavra-chave [const](const.md). O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser inicializado na declaração ou em um construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, enquanto um campo `const` é uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de tempo de execução, como no exemplo a seguir:  
+
+```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
-```  
+```
+
+[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]  
   
-## <a name="comparing-readonly-and-non-readonly-instance-fields"></a>Comparando os campos de instância readonly e os que não são readonly  
- [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
+No exemplo anterior, se você usar uma instrução semelhante ao seguinte exemplo:  
   
- No exemplo anterior, se você usar uma instrução como esta:  
+`p2.y = 66;        // Error`  
   
- `p2.y = 66;        // Error`  
+você receberá a mensagem de erro do compilador:  
   
- você receberá a mensagem de erro do compilador:  
+`The left-hand side of an assignment must be an l-value`  
   
- `The left-hand side of an assignment must be an l-value`  
-  
- que é o mesmo erro que você recebe quando tenta atribuir um valor a uma constante.  
-  
+que é o mesmo erro que você recebe quando tenta atribuir um valor a uma constante.  
+
+## <a name="readonly-struct-example"></a>Exemplo de struct readonly
+
+O modificador `readonly` em uma definição `struct` declara que o struct é **imutável**. Cada campo da instância de `struct` precisa ser marcado como `readonly`, conforme é mostrado no exemplo a seguir:
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]  
+
+O exemplo anterior usa as [propriedades automáticas de readonly](../../properties.md#read-only) para declarar seu armazenamento. Isso instrui o compilador a criar campos de suporte `readonly` para essas propriedades. Você também pode declarar campos `readonly` diretamente:
+
+```csharp
+public readonly struct Point
+{
+    public readonly double X;
+    public readonly double Y;
+
+    public Point(double x, double y) => (X, Y) = (x, y);
+
+    public override string ToString() => $"({X}, {Y})";
+}
+```
+
+Adicionar um campo não marcado como `readonly` gera o erro do compilador `CS8340`: "Os campos da instância de structs readonly devem ser readonly."
+
+## <a name="ref-readonly-return-example"></a>Exemplo de retorno de readonly de ref
+
+O modificador `readonly` em um `ref return` indica que a referência retornada não pode ser modificada. O exemplo a seguir retorna uma referência para a origem. Ele usa o modificador `readonly` para indicar que os chamadores não podem modificar a origem:
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]  
+O tipo retornado não precisa ser um `readonly struct`. Qualquer tipo que possa ser retornado por `ref` pode ser retornado por `ref readonly`
+
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
- [const](../../../csharp/language-reference/keywords/const.md)  
- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
+[Referência de C#](../../../csharp/language-reference/index.md)  
+[Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+[Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+[Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
+[const](../../../csharp/language-reference/keywords/const.md)  
+[Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)

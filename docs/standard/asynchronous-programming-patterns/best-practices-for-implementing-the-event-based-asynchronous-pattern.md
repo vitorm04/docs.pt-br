@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578415"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937108"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
 O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de expor o comportamento assíncrono nas classes, com evento familiar e semântica de representante. Para implementá-lo, você deve seguir alguns requisitos de comportamento específicos. As seções a seguir descrevem os requisitos e as diretrizes a serem considerados ao implementar uma classe que segue o padrão assíncrono baseado em eventos.  
@@ -28,14 +28,14 @@ O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de ex
  Se implementar o padrão assíncrono baseado em eventos, você deve fornecer diversas garantias para assegurar que a classe se comportará corretamente e que os clientes da classe podem confiar nesse comportamento.  
   
 ### <a name="completion"></a>Conclusão  
- Sempre invoque o manipulador de eventos *MethodName***Completed** quando houver uma conclusão com êxito, um erro ou um cancelamento. Os aplicativos nunca devem permanecer inativos sem que a conclusão ocorra. Uma exceção a essa regra é se a própria operação assíncrona for projetada para nunca concluir.  
+ Sempre invoque o manipulador de eventos <em>MethodName</em>**Completed** quando houver uma conclusão com êxito, um erro ou um cancelamento. Os aplicativos nunca devem permanecer inativos sem que a conclusão ocorra. Uma exceção a essa regra é se a própria operação assíncrona for projetada para nunca concluir.  
   
 ### <a name="completed-event-and-eventargs"></a>Evento e argumentos de eventos concluídos  
- Para cada método separado *MethodName***Async**, aplique estes requisitos de design:  
+ Para cada método <em>MethodName</em>**Async** separado, aplique estes requisitos de design:  
   
--   Defina um evento *MethodName***Completed** na mesma classe que o método.  
+-   Defina um evento <em>MethodName</em>**Completed** na mesma classe que o método.  
   
--   Defina uma classe <xref:System.EventArgs> e o representante de acompanhamento para o evento *MethodName***Completed** que deriva da classe <xref:System.ComponentModel.AsyncCompletedEventArgs>. O nome padrão da classe deve seguir a forma *MethodName***CompletedEventArgs**.  
+-   Defina uma classe <xref:System.EventArgs> e o delegado de acompanhamento para o evento <em>MethodName</em>**Completed** que é derivado da classe <xref:System.ComponentModel.AsyncCompletedEventArgs>. O nome padrão da classe deve seguir a forma *MethodName***CompletedEventArgs**.  
   
 -   Verifique se a classe <xref:System.EventArgs> é específica aos valores retornados do método *MethodName*. Ao usar a classe <xref:System.EventArgs>, você nunca deve solicitar que os desenvolvedores convertam o resultado.  
   

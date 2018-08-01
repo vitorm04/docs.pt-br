@@ -1,17 +1,17 @@
 ---
-title: Implementando conexões SQL resilientes do Entity Framework Core
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando conexões SQL resilientes do Entity Framework Core
+title: Implementar conexões SQL resilientes com o Entity Framework Core
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando conexões SQL resilientes do Entity Framework Core. Essa técnica é importante principalmente ao usar o Banco de Dados SQL do Azure na nuvem.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 79f115a2d897463c213eda6f4d6951ff0cbeb3ca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: c1324eafc9dc0286128e8e942f95ad7c4c0a5d98
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105469"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874930"
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Implementando conexões SQL resilientes do Entity Framework Core
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementar conexões SQL resilientes com o Entity Framework Core
 
 Para o BD SQL do Azure, o Entity Framework Core já fornece resiliência interna de conexão de banco de dados e lógica de repetição. Mas será necessário habilitar a estratégia de execução de Entity Framework para cada conexão DbContext se desejar ter [conexões do EF Core resilientes](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).
 
@@ -25,13 +25,13 @@ public class Startup
     public IServiceProvider ConfigureServices(IServiceCollection services)
     {
         // ...
-        services.AddDbContext<OrderingContext>(options =>
+        services.AddDbContext<CatalogContext>(options =>
         {
             options.UseSqlServer(Configuration["ConnectionString"],
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
+                maxRetryCount: 10,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
             });
@@ -43,7 +43,7 @@ public class Startup
 
 ## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Estratégias de execução e transações explícitas que usam BeginTransaction e várias DbContexts
 
-Quando novas tentativas são habilitadas em conexões do EF Core, cada operação executada que usa o EF Core se torna sua própria operação repetível. Cada consulta e cada chamada a SaveChanges serão repetidas como uma unidade se ocorrer uma falha temporária.
+Quando as repetições estão habilitadas nas conexões do EF Core, cada operação executada que usa o EF Core se torna sua própria operação repetível. Cada consulta e cada chamada a SaveChanges serão repetidas como uma unidade se ocorrer uma falha temporária.
 
 No entanto, se seu código iniciar uma transação usando BeginTransaction, você estará definindo seu próprio grupo de operações que precisam ser tratadas como uma unidade – tudo dentro da transação precisará ser revertido se ocorrer uma falha. Você verá uma exceção como a seguinte se tentar executar essa transação ao usar uma estratégia de execução do EF (política de repetição) e incluirá várias chamadas SaveChanges de várias DbContexts na transação.
 
@@ -85,13 +85,13 @@ A primeira DbContext é \_catalogContext e a segunda DbContext está dentro do o
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
+-   **Resiliência de conexão do EF** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+
 -   **Resiliência de conexão e interceptação de comando com o Entity Framework**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Cesar de la Torre. Usando conexões e transações SQL resilientes do Entity Framework Core**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
-
 >[!div class="step-by-step"]
-[Anterior](implement-retries-exponential-backoff.md)
-[Próximo](implement-custom-http-call-retries-exponential-backoff.md)
+[Anterior](implement-retries-exponential-backoff.md) [Next]explore-custom-http-call-retries-exponential-backoff.md)

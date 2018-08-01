@@ -3,13 +3,13 @@ title: Processo de desenvolvimento para o Azure
 description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Processo de desenvolvimento para o Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106847"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404383"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
 
@@ -40,21 +40,19 @@ Seja qual for sua preferência, um IDE avançado e completo ou um editor leve e 
 
 [Baixar o Visual Studio Code](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos ASP.NET Core hospedados no Azure
 
 O ciclo de vida de desenvolvimento do aplicativo começa no computador de cada desenvolvedor, codificando o aplicativo com sua linguagem preferencial e testando-o localmente. Os desenvolvedores podem escolher seu sistema de controle do código-fonte preferencial e podem configurar a CI (integração contínua) e/ou a CD (implantação/entrega contínua) usando um servidor de build ou com base em recursos internos do Azure.
 
 Para começar a desenvolver um aplicativo ASP.NET Core usando a CI/CD, use o Visual Studio Team Services ou o próprio TFS (Team Foundation Server) de sua organização.
 
-### <a name="initial-setup"></a>Instalação inicial
+### <a name="initial-setup"></a>Configuração inicial
 
 Para criar um pipeline de lançamento para seu aplicativo, você precisa ter o código do aplicativo no controle do código-fonte. Configure um repositório local e conecte-o a um repositório remoto em um projeto de equipe. Siga estas instruções:
 
--   [Compartilhar o código com o GIT e o Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
+- [Compartilhar o código com o GIT e o Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
 
--   [Compartilhar o código com o TFVC e o Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [Compartilhar o código com o TFVC e o Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Crie um Serviço de Aplicativo do Azure no qual você implantará o aplicativo. Crie um aplicativo Web acessando a folha Serviços de Aplicativos no Portal do Azure. Clique em +Adicionar, selecione o modelo de Aplicativo Web, clique em Criar e forneça um nome e outros detalhes. O aplicativo Web estará acessível em {name}.azurewebsites.net.
 
@@ -86,23 +84,23 @@ Depois de configurar sua conta do Azure e o processo de CI/CD, o desenvolvimento
 
 O desenvolvimento de seu aplicativo ASP.NET Core para implantação no Azure não é diferente do desenvolvimento do aplicativo de outro modo. Use o ambiente de desenvolvimento local com o qual você está familiarizado, seja o Visual Studio 2017 ou a CLI do dotnet e o Visual Studio Code ou seu editor preferido. Você pode codificar, executar e depurar as alterações, executar testes automatizados e fazer confirmações locais no controle do código-fonte até que esteja pronto para enviar por push as alterações ao repositório de controle do código-fonte compartilhado.
 
-#### <a name="step-2-application-code-repository"></a>Etapa 2. Repositório de códigos do aplicativo
+#### <a name="step-2-application-code-repository"></a>Etapa 2. Repositório de código do aplicativo
 
 Sempre que estiver pronto para compartilhar o código com sua equipe, envie por push as alterações do repositório de origem local para o repositório de origem compartilhado de sua equipe. Se você estiver trabalhando em um branch personalizado, esta etapa geralmente envolverá a mesclagem do código em um branch compartilhado (talvez por meio de uma [solicitação de pull](https://docs.microsoft.com/vsts/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Etapa 3. Servidor de build: integração contínua. Criar, testar, empacotar
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Etapa 3. Servidor de build: integração contínua. compilar, testar, agrupar
 
 Um novo build é disparado no servidor de build sempre que uma nova confirmação é feita no repositório de códigos compartilhados do aplicativo. Como parte do processo de CI, esse build deve compilar o aplicativo por completo e executar testes automatizados para confirmar se tudo está funcionando conforme esperado. O resultado final do processo de CI deve ser uma versão empacotada do aplicativo Web, pronta para implantação.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Etapa 4. Servidor de build: Entrega Contínua
+#### <a name="step-4-build-server-continuous-delivery"></a>Etapa 4. Servidor de build: entrega contínua
 
 Depois que um build for bem-sucedido, o processo de CD selecionará os artefatos de build produzidos. Isso incluirá um pacote de implantação da Web. O servidor de build implantará esse pacote no Serviço de Aplicativo do Azure, substituindo o serviço existente pelo recém-criado. Normalmente, esta etapa é direcionada a um ambiente de preparo, mas alguns aplicativos são implantados diretamente em produção por meio de um processo de CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Etapa 5. Serviço de Aplicativo do Azure. Aplicativo Web.
+#### <a name="step-5-azure-app-service-web-app"></a>Etapa 5. Aplicativo Web do Serviço de Aplicativo do Azure
 
 Depois de implantado, o aplicativo ASP.NET Core é executado dentro do contexto de um Aplicativo Web do Serviço de Aplicativo do Azure. Esse Aplicativo Web pode ser monitorado e configurado em mais detalhes por meio do Portal do Azure.
 
-#### <a name="step-6-production-monitoring-and-diagnostics"></a>Etapa 6. Monitoramento da produção e diagnóstico
+#### <a name="step-6-production-monitoring-and-diagnostics"></a>Etapa 6. Monitoramento de produção e diagnóstico
 
 Durante a execução do Aplicativo Web, você pode monitorar a integridade do aplicativo e coletar dados de diagnóstico e de comportamento do usuário. O Application Insights é incluído no Visual Studio e oferece instrumentação automática para aplicativos ASP.NET. Ele pode fornecer informações sobre uso, exceções, solicitações, desempenho e logs.
 
@@ -110,7 +108,6 @@ Durante a execução do Aplicativo Web, você pode monitorar a integridade do ap
 
 **Criar e implantar seu aplicativo ASP.NET Core no Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [Anterior](test-asp-net-core-mvc-apps.md)

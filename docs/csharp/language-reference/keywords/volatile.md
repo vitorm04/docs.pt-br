@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 7f3aafc1255667f2a3917c6e171ce4ddf0343b41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64bd5ce7d7dfe3265c3c645467493ab7d8792172
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272578"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936872"
 ---
 # <a name="volatile-c-reference"></a>volatile (Referência de C#)
-A palavra-chave `volatile` indica que um campo pode ser modificado por vários threads que estão em execução ao mesmo tempo. Os campos que são declarados `volatile` não estão sujeitos a otimizações do compilador que assumem o acesso por um único thread. Isso garante que o valor mais recente esteja presente no campo em todos os momentos.  
+A palavra-chave `volatile` indica que um campo pode ser modificado por vários threads que estão em execução ao mesmo tempo. Os campos que são declarados `volatile` não estão sujeitos a otimizações do compilador que assumem o acesso por um único thread. Essas restrições garantem que todos os threads observem as gravações voláteis executadas por qualquer outro thread na ordem em que elas foram realizadas. Não há nenhuma garantia de uma única ordenação total de gravações voláteis como visto em todos os threads de execução.  
   
  O modificador `volatile` geralmente é usado para um campo que é acessado por vários threads sem usar a instrução [block](../../../csharp/language-reference/keywords/lock-statement.md) para serializar o acesso.  
   
@@ -41,7 +41,7 @@ A palavra-chave `volatile` indica que um campo pode ser modificado por vários t
  [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como um thread de trabalho ou auxiliar pode ser criado e usado para executar o processamento em paralelo com o do thread primário. Para obter informações gerais sobre multithreading, confira [Threading (C#)](../../../standard/threading/index.md) e [Threading gerenciado](../../programming-guide/concepts/threading/index.md).  
+ O exemplo a seguir demonstra como um thread de trabalho ou auxiliar pode ser criado e usado para executar o processamento em paralelo com o do thread primário. Para obter informações detalhadas sobre multithreading, confira [Threading gerenciado](../../../standard/threading/index.md) e [Threading (C#)](../../programming-guide/concepts/threading/index.md).  
   
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   

@@ -7,29 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a72624d5702ec12bfda98d49a16474cc84205ff0
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696388"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245746"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
-A palavra-chave `ref` indica um valor que é passado por referência. Ele é usado em três contextos diferentes: 
+A palavra-chave `ref` indica um valor que é passado por referência. Ela é usada em quatro contextos diferentes:
 
 - Em uma assinatura de método e em uma chamada de método, para passar um argumento a um método por referência. Consulte [Passar um argumento por referência](#passing-an-argument-by-reference) para obter mais informações.
-
 - Em uma assinatura de método para retornar um valor para o chamador por referência. Para obter mais informações, consulte [Valores retornados por referência](#reference-return-values).
-
 - Em um corpo de membro, para indicar que um valor retornado por referência é armazenado localmente como uma referência que o chamador pretende modificar ou, em geral, uma variável local acessa outro valor por referência. Consulte [Ref locals](#ref-locals) para obter mais informações.
+- Em uma declaração `struct` para declarar um `ref struct` ou um `ref readonly struct`. Confira [Declarações de struct ref](#ref-struct-declarations) para obter mais informações.
 
 ## <a name="passing-an-argument-by-reference"></a>Passando um argumento por referência
 
 Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. O efeito de passar por referência é que qualquer alteração no argumento do método chamado será refletida no método chamado. Por exemplo, se o chamador passa uma expressão variável local ou uma expressão de acesso do elemento de matriz e o método chamado substituir o objeto ao qual o parâmetro ref se refere, então a variável local do chamador ou o elemento da matriz fará agora referência ao novo objeto quando o método retornar.
 
 > [!NOTE]
->  Não confunda o conceito de passar por referência com o conceito de tipos de referência. Os dois conceitos não são iguais. Um parâmetro de método pode ser modificado por `ref`, independentemente de ele ser um tipo de valor ou um tipo de referência. Não há nenhuma conversão boxing de um tipo de valor quando ele é passado por referência.  
+> Não confunda o conceito de passar por referência com o conceito de tipos de referência. Os dois conceitos não são iguais. Um parâmetro de método pode ser modificado por `ref`, independentemente de ele ser um tipo de valor ou um tipo de referência. Não há nenhuma conversão boxing de um tipo de valor quando ele é passado por referência.  
 
 Para usar um parâmetro `ref`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `ref`, como mostrado no exemplo a seguir.  
 
@@ -48,6 +47,7 @@ class CS0663_Example
     public void SampleMethod(ref int i) { }
 }
 ```
+
 No entanto, os métodos podem ser sobrecarregados quando um método tem um parâmetro `ref`, `in` ou `out` e o outro tem um parâmetro de valor, conforme é mostrado no exemplo a seguir.
   
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
@@ -65,7 +65,7 @@ No entanto, os métodos podem ser sobrecarregados quando um método tem um parâ
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: um exemplo
 
-Os exemplos anteriores passam tipos de valor por referência. Você também pode usar a palavra-chave `ref` para passar tipos de referência por referência. Passar um tipo de referência por referência permite que o método chamado substitua o objeto ao qual se refere o parâmetro de referência no chamador. O local de armazenamento do objeto é passado para o método como o valor do parâmetro de referência. Se você alterar o valor no local de armazenamento do parâmetro (para apontar para um novo objeto), irá alterar também o local de armazenamento ao qual se refere o chamador. O exemplo a seguir passa uma instância de um tipo de referência como um parâmetro `ref`.   
+Os exemplos anteriores passam tipos de valor por referência. Você também pode usar a palavra-chave `ref` para passar tipos de referência por referência. Passar um tipo de referência por referência permite que o método chamado substitua o objeto ao qual se refere o parâmetro de referência no chamador. O local de armazenamento do objeto é passado para o método como o valor do parâmetro de referência. Se você alterar o valor no local de armazenamento do parâmetro (para apontar para um novo objeto), irá alterar também o local de armazenamento ao qual se refere o chamador. O exemplo a seguir passa uma instância de um tipo de referência como um parâmetro `ref`.
   
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
@@ -73,22 +73,23 @@ Para obter mais informações sobre como passar tipos de referência por valor e
   
 ## <a name="reference-return-values"></a>Valores retornados por referência
 
-Valores retornados por referência (ou ref returns) são valores que um método retorna por referência para o chamador. Ou seja, o chamador pode modificar o valor retornado por um método e essa alteração será refletida no estado do objeto que contém o método. 
+Valores retornados por referência (ou ref returns) são valores que um método retorna por referência para o chamador. Ou seja, o chamador pode modificar o valor retornado por um método e essa alteração será refletida no estado do objeto que contém o método.
 
 Um valor retornado por referência é definido usando a palavra-chave `ref`:
 
-- Na assinatura do método. Por exemplo, a seguinte método assinatura indica por que o método `GetCurrentPrice` retorna um valor <xref:System.Decimal> por referência.
+- Na assinatura do método. Por exemplo, a assinatura de método a seguir indica que o método `GetCurrentPrice` retorna um valor <xref:System.Decimal> por referência.
 
-   ```csharp
-   public ref decimal GetCurrentValue()
-   ``` 
+```csharp
+public ref decimal GetCurrentValue()
+```
+
 - Entre o token `return` e a variável retornada em uma instrução `return` no método. Por exemplo:
- 
-   ```csharp
-   return ref DecimalArray[0];
-   ``` 
 
-Para que o chamador modifique o estado do objeto, o valor retornado de referência deve ser armazenado em uma variável que é definida explicitamente como um [ref local](#ref-locals). 
+```csharp
+return ref DecimalArray[0];
+```
+
+Para que o chamador modifique o estado do objeto, o valor retornado de referência deve ser armazenado em uma variável que é definida explicitamente como um [ref local](#ref-locals).
 
 Para obter um exemplo, consulte [Um exemplo de ref returns e ref locals](#a-ref-returns-and-ref-locals-example)
 
@@ -96,7 +97,7 @@ Para obter um exemplo, consulte [Um exemplo de ref returns e ref locals](#a-ref-
 
 Uma variável de ref local é usada para fazer referência a valores retornados usando `return ref`.  Uma variável de ref local deve ser inicializada e atribuída a um valor retornado ref local. Todas as modificações ao valor do ref local são refletidas no estado do objeto cujo método retornou o valor por referência.
 
-Você define um ref local usando a palavra-chave `ref` antes da declaração de variável, bem como imediatamente antes da chamada para o método que retorna o valor por referência. 
+Você define um ref local usando a palavra-chave `ref` antes da declaração de variável, bem como imediatamente antes da chamada para o método que retorna o valor por referência.
 
 Por exemplo, a instrução a seguir define um valor de ref local que é retornado por um método chamado `GetEstimatedValue`:
 
@@ -110,8 +111,8 @@ Você pode acessar um valor por referência da mesma maneira. Em alguns casos, a
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Observe que, nos dois exemplos, a palavra-chave `ref` deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "Não é possível inicializar uma variável por referência com um valor". 
- 
+Observe que, nos dois exemplos, a palavra-chave `ref` deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "Não é possível inicializar uma variável por referência com um valor".
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Um exemplo de ref returns e ref locals
 
 O exemplo a seguir define uma classe `Book` que tem dois campos <xref:System.String>, `Title` e `Author`. Ele também define uma classe `BookCollection` que inclui uma matriz privada de objetos `Book`. Objetos de catálogo individuais são retornados por referência chamando o respectivo método `GetBookByTitle`.
@@ -122,10 +123,14 @@ Quando o chamador armazena o valor retornado pelo método `GetBookByTitle` como 
 
 [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="ref-struct-declarations"></a>Declarações de struct ref
+
+## <a name="c-language-specification"></a>Especificação da Linguagem C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
+
  [Semântica de referência com tipos de valor](../../reference-semantics-with-value-types.md)  
  [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)  
  [Parâmetros de método](method-parameters.md)  

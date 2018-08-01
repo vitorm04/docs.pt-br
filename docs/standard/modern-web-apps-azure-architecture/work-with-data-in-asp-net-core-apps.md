@@ -1,23 +1,21 @@
 ---
 title: Trabalhar com os dados em aplicativos ASP.NET Core
-description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | trabalhando com os dados no ASP
+description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Trabalhando com os dados em aplicativos ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106169"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404652"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
 > "Os dados são uma coisa preciosa e vão durar mais do que os próprios sistemas."
-
-Tim Berners-Lee
-
-## <a name="summary"></a>Resumo
+>
+> Tim Berners-Lee
 
 O acesso a dados é uma parte importante de praticamente qualquer aplicativo de software. O ASP.NET Core é compatível com uma variedade de opções de acesso a dados, incluindo o Entity Framework Core (e também o Entity Framework 6) e pode trabalhar com qualquer estrutura de acesso a dados do .NET. A escolha de qual estrutura de acesso a dados usar depende das necessidades do aplicativo. A abstração dessas opções dos projetos de ApplicationCore e de interface do usuário e o encapsulamento dos detalhes de implementação na Infraestrutura ajudam a produzir um software testável e com acoplamento flexível.
 
@@ -35,7 +33,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>O DbContext
 
-Para trabalhar com o EF Core, você precisa de uma subclasse de DbContext. Essa classe contém propriedades que representam coleções de entidades com as quais seu aplicativo trabalhará. A amostra de eShopOnWeb inclui um CatalogContext com coleções de itens, marcas e tipos:
+Para trabalhar com o EF Core, você precisa de uma subclasse de <xref:Microsoft.EntityFrameworkCore.DbContext>. Essa classe contém propriedades que representam coleções de entidades com as quais seu aplicativo trabalhará. A amostra de eShopOnWeb inclui um CatalogContext com coleções de itens, marcas e tipos:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -116,7 +114,7 @@ O EF Core é compatível com métodos síncronos e assíncronos para busca e sal
 
 ### <a name="fetching-related-data"></a>Buscando dados relacionados
 
-Quando o EF Core recupera entidades, ele popula todas as propriedades armazenadas diretamente nessa entidade no banco de dados. Propriedades de navegação, como listas de entidades relacionadas, não são populadas e podem ter seu valor definido como nulo. Isso garante que o EF Core não busca mais dados do que necessário, o que é especialmente importante para aplicativos Web, que devem processar solicitações e retornar respostas de uma maneira eficiente e com agilidade. Para incluir relações com uma entidade usando o *carregamento adiantado*, especifique a propriedade usando o método de extensão Include na consulta, conforme mostrado:
+Quando o EF Core recupera entidades, ele popula todas as propriedades armazenadas diretamente nessa entidade no banco de dados. Propriedades de navegação, como listas de entidades relacionadas, não são populadas e podem ter seu valor definido como nulo. Isso garante que o EF Core não busca mais dados do que necessário, o que é especialmente importante para aplicativos Web, que devem processar solicitações e retornar respostas de uma maneira eficiente e com agilidade. Para incluir relações com uma entidade usando o _carregamento adiantado_, especifique a propriedade usando o método de extensão Include na consulta, conforme mostrado:
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -127,13 +125,15 @@ var brandsWithItems = await _context.CatalogBrands
 
 Você pode incluir várias relações e também incluir sub-relações usando ThenInclude. O EF Core executará uma única consulta para recuperar o conjunto resultante de entidades.
 
-Outra opção para carregar dados relacionados é usar o *carregamento explícito*. O carregamento explícito permite carregar dados adicionais em uma entidade que já foi recuperada. Como isso envolve uma solicitação separada para o banco de dados, isso não é recomendado para aplicativos Web, que devem minimizar o número de viagens de ida e volta de banco de dados feitas por solicitação.
+Outra opção para carregar dados relacionados é usar o _carregamento explícito_. O carregamento explícito permite carregar dados adicionais em uma entidade que já foi recuperada. Como isso envolve uma solicitação separada para o banco de dados, isso não é recomendado para aplicativos Web, que devem minimizar o número de viagens de ida e volta de banco de dados feitas por solicitação.
 
-O *carregamento lento* é um recurso que carrega automaticamente os dados relacionados conforme eles são referenciados pelo aplicativo. Atualmente, não há compatibilidade com ele no EF Core, mas assim como ocorre com o carregamento explícito, normalmente, ele deve ser desabilitado para aplicativos Web.
+O _carregamento lento_ é um recurso que carrega automaticamente os dados relacionados conforme eles são referenciados pelo aplicativo. Foi adicionado o suporte para carregamento lento na versão 2.1 do EF Core. O carregamento lento não está habilitado por padrão e requer a instalação do `Microsoft.EntityFrameworkCore.Proxies`. Assim como acontece com o carregamento explícito, o carregamento lento normalmente deve estar desabilitado para aplicativos Web, pois seu uso resulta em mais consultas de banco de dados em cada solicitação da Web. Infelizmente, a sobrecarga causada pelo carregamento lento muitas vezes passa despercebida no momento do desenvolvimento, quando a latência é pequena e, geralmente, os conjuntos de dados usados para teste também são pequenos. No entanto, na produção, com mais usuários, mais dados e mais latência, as solicitações de banco de dados adicionais podem resultar em baixo desempenho dos aplicativos Web que usam o carregamento lento de forma intensiva.
+
+[Avoid Lazy Loading Entities in Web Applications](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications) (Evitar entidades de carregamento lento em aplicativos Web)
 
 ### <a name="resilient-connections"></a>Conexões resilientes
 
-Recursos externos, como bancos de dados SQL, ocasionalmente, podem não estar disponíveis. Em caso de indisponibilidade temporária, os aplicativos podem usar a lógica de repetição para evitar gerar uma exceção. Em geral, essa técnica é conhecida como *resiliência de conexão*. Implemente sua [própria técnica de repetição com retirada exponencial](https://docs.microsoft.com/azure/architecture/patterns/retry) pela tentativa de repetição com um tempo de espera aumentando exponencialmente, até atingir um número máximo de repetições. Essa técnica aceita o fato de que os recursos de nuvem podem estar intermitentemente não disponíveis por curtos períodos, resultando na falha de algumas solicitações.
+Recursos externos, como bancos de dados SQL, ocasionalmente, podem não estar disponíveis. Em caso de indisponibilidade temporária, os aplicativos podem usar a lógica de repetição para evitar gerar uma exceção. Em geral, essa técnica é conhecida como _resiliência de conexão_. Implemente sua [própria técnica de repetição com retirada exponencial](https://docs.microsoft.com/azure/architecture/patterns/retry) pela tentativa de repetir com um tempo de espera que aumenta exponencialmente, até atingir um número máximo de repetições. Essa técnica aceita o fato de que os recursos de nuvem podem estar intermitentemente não disponíveis por curtos períodos, resultando na falha de algumas solicitações.
 
 Para o BD SQL do Azure, o Entity Framework Core já fornece resiliência interna de conexão de banco de dados e lógica de repetição. Mas você precisará habilitar a estratégia de execução do Entity Framework para cada conexão de DbContext, caso deseje ter conexões do EF Core resilientes.
 
@@ -153,19 +153,19 @@ public class Startup
         {
             sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
-            maxRetryDelay: TimeSpan.FromSeconds(30), 
-            errorNumbersToAdd: null); 
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
         });
     });
 }
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Estratégias de execução e transações explícitas que usam BeginTransaction e várias DbContexts 
-  
-  Quando novas tentativas são habilitadas em conexões do EF Core, cada operação executada que usa o EF Core se torna sua própria operação repetível. Cada consulta e cada chamada a SaveChanges serão repetidas como uma unidade se ocorrer uma falha temporária.
-  
-  No entanto, se seu código iniciar uma transação usando BeginTransaction, você estará definindo seu próprio grupo de operações que precisam ser tratadas como uma unidade – tudo dentro da transação precisará ser revertido se ocorrer uma falha. Você verá uma exceção como a mostrada a seguir se tentar executar essa transação ao usar uma estratégia de execução do EF (política de repetição) e incluir várias chamadas SaveChanges de diversos DbContexts na transação.
+#### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Estratégias de execução e transações explícitas que usam BeginTransaction e várias DbContexts
+
+Quando novas tentativas são habilitadas em conexões do EF Core, cada operação executada que usa o EF Core se torna sua própria operação repetível. Cada consulta e cada chamada a SaveChanges serão repetidas como uma unidade se ocorrer uma falha temporária.
+
+No entanto, se seu código iniciar uma transação usando BeginTransaction, você estará definindo seu próprio grupo de operações que precisam ser tratadas como uma unidade – tudo dentro da transação precisará ser revertido se ocorrer uma falha. Você verá uma exceção como a mostrada a seguir se tentar executar essa transação ao usar uma estratégia de execução do EF (política de repetição) e incluir várias chamadas SaveChanges de diversos DbContexts na transação.
 
 System.InvalidOperationException: a estratégia de execução configurada 'SqlServerRetryingExecutionStrategy' não dá suporte a transações iniciadas pelo usuário. Use a estratégia de execução retornada por 'DbContext.Database.CreateExecutionStrategy()' para executar todas as operações na transação como uma unidade repetível.
 
@@ -176,7 +176,7 @@ A solução é invocar manualmente a estratégia de execução do EF com um dele
 // within an explicit transaction
 // See:
 // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-var strategy = _catalogContext.Database.CreateExecutionStrategy(); 
+var strategy = _catalogContext.Database.CreateExecutionStrategy();
 await strategy.ExecuteAsync(async () =>
 {
     // Achieving atomicity between original Catalog database operation and the
@@ -185,7 +185,7 @@ await strategy.ExecuteAsync(async () =>
     {
         _catalogContext.CatalogItems.Update(catalogItem);
         await _catalogContext.SaveChangesAsync();
-        
+
         // Save to EventLog only if product price changed
         if (raiseProductPriceChangedEvent)
         await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
@@ -197,12 +197,13 @@ await strategy.ExecuteAsync(async () =>
 O primeiro DbContext é o \_catalogContext e o segundo DbContext está dentro do objeto \_integrationEventLogService. Por fim, a ação de Confirmação é executada em vários DbContexts e usando uma Estratégia de Execução do EF.
 
 > ### <a name="references--entity-framework-core"></a>Referências – Entity Framework Core
+>
 > - **Documentação do EF Core**  
-> <https://docs.microsoft.com/ef/>
+>   <https://docs.microsoft.com/ef/>
 > - **EF Core: Dados relacionados**  
-> <https://docs.microsoft.com/ef/core/querying/related-data>
+>   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Evitar entidades de carregamento lento em aplicativos ASP.NET**  
-> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+>   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core ou micro-ORM?
 
@@ -270,8 +271,7 @@ Normalmente, os bancos de dados NoSQL não impõem o [ACID](https://en.wikipedia
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-O Azure DocumentDB é um serviço de banco de dados NoSQL totalmente gerenciado que oferece armazenamento de dados sem esquemas baseado em nuvem. O DocumentDB foi criado para desempenho rápido e previsível, alta disponibilidade, dimensionamento elástico e distribuição global. Apesar de ser um banco de dados NoSQL, os desenvolvedores podem usar funcionalidades avançadas e conhecidas de consultas SQL em dados JSON. Todos os recursos do DocumentDB são armazenados como documentos JSON. Os recursos são gerenciados como *itens*, que são documentos que contém metadados, e *feeds*, que são coleções de itens. A Figura 8-2 mostra a relação entre os diferentes recursos do DocumentDB.
-
+O Azure DocumentDB é um serviço de banco de dados NoSQL totalmente gerenciado que oferece armazenamento de dados sem esquemas baseado em nuvem. O DocumentDB foi criado para desempenho rápido e previsível, alta disponibilidade, dimensionamento elástico e distribuição global. Apesar de ser um banco de dados NoSQL, os desenvolvedores podem usar funcionalidades avançadas e conhecidas de consultas SQL em dados JSON. Todos os recursos do DocumentDB são armazenados como documentos JSON. Os recursos são gerenciados como _itens_, que são documentos que contém metadados, e _feeds_, que são coleções de itens. A Figura 8-2 mostra a relação entre os diferentes recursos do DocumentDB.
 
 ![A relação hierárquica entre os recursos do DocumentDB, um banco de dados JSON NoSQL](./media/image8-2.png)
 
@@ -281,25 +281,25 @@ A linguagem de consulta do DocumentDB é uma interface simples mas avançada par
 
 **Referências – DocumentDB**
 
--   Introdução ao DocumentDB\
-    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Introdução ao DocumentDB\
+  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Outras opções de persistência
 
 Além das opções de armazenamento relacional e NoSQL, os aplicativos ASP.NET Core podem usar o Armazenamento do Azure para armazenar uma variedade de formatos de dados e arquivos de forma escalonável e baseada em nuvem. O Armazenamento do Azure é altamente escalonável e, portanto, você pode começar armazenando pequenas quantidades de dados e aumentar até armazenar centenas ou terabytes, caso seu aplicativo precise. O Armazenamento do Azure é compatível com quatro tipos de dados:
 
--   Armazenamento de Blobs para armazenamento de texto não estruturado ou binário, também conhecido como armazenamento de objeto.
+- Armazenamento de Blobs para armazenamento de texto não estruturado ou binário, também conhecido como armazenamento de objeto.
 
--   Armazenamento de Tabelas para conjuntos de dados estruturados, acessíveis por meio de chaves de linha.
+- Armazenamento de Tabelas para conjuntos de dados estruturados, acessíveis por meio de chaves de linha.
 
--   Armazenamento de Filas para mensagens confiáveis baseadas em fila.
+- Armazenamento de Filas para mensagens confiáveis baseadas em fila.
 
--   Armazenamento de Arquivos para acesso a arquivos compartilhados entre aplicativos locais e as máquinas virtuais do Azure.
+- Armazenamento de Arquivos para acesso a arquivos compartilhados entre aplicativos locais e as máquinas virtuais do Azure.
 
 **Referências – Armazenamento do Azure**
 
--   Introdução ao Armazenamento do Azure\
-    <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Introdução ao Armazenamento do Azure\
+  <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Cache
 
@@ -315,16 +315,17 @@ O ASP.NET Core é compatível com dois níveis de cache de resposta. O primeiro 
     [ResponseCache(Duration = 60)]
     public IActionResult Contact()
     { }
-    
+
     ViewData["Message"] = "Your contact page.";
     return View();
 }
+```
 
-The above example will result in the following header being added to the response, instructing clients to cache the result for up to 60 seconds.
+O exemplo anterior resultará no seguinte cabeçalho que está sendo adicionado à resposta, instruindo os clientes a armazenarem o resultado em cache por até 60 segundos.
 
 Cache-Control: public,max-age=60
 
-In order to add server-side in-memory caching to the application, you must reference the Microsoft.AspNetCore.ResponseCaching NuGet package, and then add the Response Caching middleware. This middleware is configured in both ConfigureServices and Configure in Startup:
+Para adicionar cache na memória do lado do servidor ao aplicativo, referencie o pacote NuGet Microsoft.AspNetCore.ResponseCaching e, em seguida, adicione o middleware de cache de resposta. Este middleware é configurado em ConfigureServices e na Configuração de Inicialização:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -338,11 +339,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-O middleware de cache de resposta armazenará em cache automaticamente as respostas baseadas em um conjunto de condições, que pode ser personalizado. Por padrão, apenas respostas 200 (OK) solicitadas por meio de métodos GET ou HEAD são armazenadas em cache. Além disso, as solicitações devem ter uma resposta com um cabeçalho público Cache-Control: e não pode incluir cabeçalhos de Authorization ou Set-Cookie. Consulte uma [lista completa das condições de cache usadas pelo middleware de cache de resposta](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching).
+O middleware de cache de resposta armazenará em cache automaticamente as respostas baseadas em um conjunto de condições, que pode ser personalizado. Por padrão, apenas respostas 200 (OK) solicitadas por meio de métodos GET ou HEAD são armazenadas em cache. Além disso, as solicitações devem ter uma resposta com um cabeçalho público Cache-Control: e não pode incluir cabeçalhos de Authorization ou Set-Cookie. Consulte uma [lista completa das condições de cache usadas pelo middleware de cache de resposta](/aspnet/core/performance/caching/middleware#conditions-for-caching).
 
 ### <a name="data-caching"></a>Cache de dados
 
-Em vez de (ou além de) armazenar em cache as respostas da Web completas, você pode armazenar em cache os resultados de consultas de dados individuais. Para isso, você pode usar o cache em memória no servidor Web ou usar [um cache distribuído](https://docs.microsoft.com/aspnet/core/performance/caching/distributed). Esta seção demonstrará como implementar o cache em memória.
+Em vez de (ou além de) armazenar em cache as respostas da Web completas, você pode armazenar em cache os resultados de consultas de dados individuais. Para isso, você pode usar o cache em memória no servidor Web ou usar [um cache distribuído](/aspnet/core/performance/caching/distributed). Esta seção demonstrará como implementar o cache em memória.
 
 Adicione suporte para o cache em memória (ou distribuído) em ConfigureServices:
 
@@ -373,7 +374,7 @@ public class CachedCatalogService : ICatalogService
         _cache = cache;
         _catalogService = catalogService;
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetBrands()
     {
         return await _cache.GetOrCreateAsync(_brandsKey, async entry =>
@@ -382,7 +383,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetBrands();
         });
     }
-    
+
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
         string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
@@ -392,7 +393,7 @@ public class CachedCatalogService : ICatalogService
             return await _catalogService.GetCatalogItems(pageIndex, itemsPage, brandID, typeId);
         });
     }
-    
+
     public async Task<IEnumerable<SelectListItem>> GetTypes()
     {
         return await _cache.GetOrCreateAsync(_typesKey, async entry =>
@@ -414,7 +415,7 @@ services.AddScoped<CatalogService>();
 
 Com isso em vigor, as chamadas de banco de dados para buscar os dados de catálogo serão feitas apenas uma vez por minuto, em vez de a cada solicitação. Dependendo do tráfego para o site, isso pode ter um impacto muito significativo no número de consultas feitas para o banco de dados e no tempo médio de carregamento de página da home page que atualmente depende de todas as três consultas expostas por esse serviço.
 
-Um problema que ocorre quando o cache é implementado são *dados obsoletos* – ou seja, dados que foram alterados na fonte, mas cuja versão desatualizada permanece no cache. Uma maneira simples de atenuar esse problema é usar pequenas durações de cache, pois há benefícios adicionais limitados em estender a duração de armazenamento em cache dos dados para um aplicativo ocupado. Por exemplo, considere uma página que faz uma consulta de banco de dados individual e é solicitada 10 vezes por segundo. Se essa página for armazenada em cache por um minuto, isso resultará no número de consultas de banco de dados feitas por minuto para reduzir de 600 para 1, uma redução de 99,8%. Se, em vez disso, a duração do cache foi feita em uma hora, a redução geral é de 99,997%, mas agora, a probabilidade e a idade potencial dos dados obsoletos são aumentadas consideravelmente.
+Um problema que ocorre quando o cache é implementado são _dados obsoletos_ – ou seja, dados que foram alterados na fonte, mas cuja versão desatualizada permanece no cache. Uma maneira simples de atenuar esse problema é usar pequenas durações de cache, pois há benefícios adicionais limitados em estender a duração de armazenamento em cache dos dados para um aplicativo ocupado. Por exemplo, considere uma página que faz uma consulta de banco de dados individual e é solicitada 10 vezes por segundo. Se essa página for armazenada em cache por um minuto, isso resultará no número de consultas de banco de dados feitas por minuto para reduzir de 600 para 1, uma redução de 99,8%. Se, em vez disso, a duração do cache foi feita em uma hora, a redução geral é de 99,997%, mas agora, a probabilidade e a idade potencial dos dados obsoletos são aumentadas consideravelmente.
 
 Outra abordagem é remover as entradas de cache de forma proativa quando os dados que elas contêm são atualizados. As entradas individuais podem ser removidas se sua chave é conhecida:
 
@@ -435,6 +436,8 @@ new CancellationChangeToken(cts.Token));
 // elsewhere, expire the cache by cancelling the token\
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
+
+O cache pode melhorar consideravelmente o desempenho das páginas da Web que solicitam repetidamente os mesmos valores do banco de dados. Meça o desempenho da página e o acesso a dados antes de aplicar o cache e somente aplique o cache quando houver necessidade de melhoria. O cache consome recursos de memória do servidor Web e aumenta a complexidade do aplicativo, portanto, é importante que você não se apresse em otimizar usando essa técnica.
 
 >[!div class="step-by-step"]
 [Anterior](develop-asp-net-core-mvc-apps.md)

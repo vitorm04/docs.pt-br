@@ -3,20 +3,18 @@ title: Princípios de arquitetura
 description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Princípios de arquitetura
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105853"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404432"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
 > "Se os construtores construíssem edifícios da maneira como os programadores escrevem programas, o primeiro pica-pau que surgisse destruiria a civilização."  
 > _\- Gerald Weinberg_
-
-## <a name="summary"></a>Resumo
 
 Você deve projetar e criar soluções de software com a facilidade de manutenção em mente. Os princípios descritos nesta seção podem ajudar a orientá-lo em direção à tomada de decisões de arquitetura que resultarão em aplicativos limpos e de fácil manutenção. Em geral, esses princípios orientarão você para a criação de aplicativos fora de componentes discretos que não têm um acoplamento rígido com outras partes do aplicativo, mas que, em vez disso, se comunicam por meio de interfaces explícitas ou sistemas de mensagens.
 
@@ -64,7 +62,7 @@ Em um aplicativo monolítico, podemos aplicar o princípio da responsabilidade �
 
 Quando esse princípio é aplicado à arquitetura do aplicativo e levado para seu ponto de extremidade lógico, você obtém os microsserviços. Um microsserviço específico deve ter uma única responsabilidade. Caso você precise estender o comportamento de um sistema, será melhor fazer isso adicionando outros microsserviços, em vez de pela adição de responsabilidade a um existente.
 
-[Saiba mais sobre a arquitetura de microsserviços](http://aka.ms/MicroservicesEbook)
+[Saiba mais sobre a arquitetura de microsserviços](https://aka.ms/MicroservicesEbook)
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY (Don't Repeat Yourself)
 
@@ -81,17 +79,17 @@ A **PI** (ignorância de persistência) refere-se aos tipos que precisam ser per
 
 Alguns exemplos de violações desse princípio incluem:
 
--   Uma classe base obrigatória
+- Uma classe base necessária.
 
--   Uma implementação de interface obrigatória
+- Uma implementação de interface necessária.
 
--   Classes responsáveis por salvar a si mesmas (como o padrão de Registro Ativo)
+- Classes responsáveis por salvar a si mesmas (como o padrão de Registro Ativo).
 
--   Construtor padrão obrigatório
+- Construtor padrão necessário.
 
--   Propriedades que exigem uma palavra-chave virtual
+- Propriedades que exigem uma palavra-chave virtual.
 
--   Atributos obrigatórios específicos à persistência
+- Atributos necessário específicos da persistência.
 
 O requisito de que as classes tenham um dos recursos ou comportamentos acima adiciona um acoplamento entre os tipos a serem persistidos e a opção de tecnologia de persistência, dificultando a adoção de novas estratégias de acesso a dados no futuro.
 
@@ -103,19 +101,20 @@ No mínimo, os aplicativos Web individuais devem tentar ser seu próprio context
 
 > ### <a name="references--modern-web-applications"></a>Referências – Aplicativos Web modernos
 > - **Separação de interesses**  
-> <http://deviq.com/separation-of-concerns/>
-> - **Encapsulamento** <http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **Encapsulamento**  
+> <https://deviq.com/encapsulation/>
 > - **Princípio da inversão de dependência**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **Princípio de Dependências Explícitas**  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **Don't Repeat Yourself**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **Ignorância de persistência**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **Contexto limitado**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [Anterior](choose-between-traditional-web-and-single-page-apps.md)
 [Próximo](common-web-application-architectures.md)

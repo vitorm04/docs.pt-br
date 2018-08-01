@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207528"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404587"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -18,7 +18,7 @@ Qual era a aparência da linguagem nas primeiras versões? E como ela evoluiu co
 
 Ao olhar para o passado, a C# versão 1.0 parecia muito com o Java. Como [parte de suas metas de design declaradas para ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
 
-Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Ela não tinha os recursos internos assíncronos nem algumas das funcionalidades úteis relacionadas a genéricos que costumam estar presentes. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam anos para serem lançadas.
+Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Carecia das funcionalidades assíncronas internas e algumas das funcionalidades relacionadas a genéricos que você nem valoriza. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam alguns anos para sair.
 
 A versão 1.0 do C# parecia ter poucos recursos, em comparação com os dias de hoje. Você teria que escrever código um tanto detalhado. Mas, ainda assim, você poderia iniciar em algum lugar. A versão 1.0 do C# era uma alternativa viável ao Java na plataforma Windows.
 
@@ -53,11 +53,11 @@ Outros recursos do C# 2.0 adicionaram funcionalidades a recursos existentes:
 - Classes estáticas
 - Inferência de delegado
 
-Embora C# possa ter começado como uma linguagem OO (orientada a objeto) genérica, a versão 2.0 do C# tratou de mudar isso rapidamente. Depois de se acostumarem com a ideia da linguagem OO, os desenvolvedores começaram a sofrer com vários pontos problemáticos graves. E tentaram resolver os problemas de maneira significativa.
+Embora C# possa ter começado como uma linguagem OO (orientada a objeto) genérica, a versão 2.0 do C# tratou de mudar isso rapidamente. Depois de se acostumarem com a ideia da linguagem OO, os desenvolvedores começaram a sofrer com vários pontos problemáticos graves. E os procuraram de maneira significativa.
 
-Com genéricos, tipos e métodos, é possível operar em um tipo arbitrário e, ao mesmo tempo, manter a segurança de tipos. Por exemplo, ter um <xref:System.Collections.Generic.List%601> permite que você tenha `List<string>` ou `List<int>` e execute operações fortemente tipadas nessas cadeias de caracteres ou inteiros enquanto itera neles. Usar genéricos é melhor que criar `ListInt` que deriva de `ArrayList` ou converter de `Object` para cada operação.
+Com genéricos, tipos e métodos podem operar em um tipo arbitrário enquanto ainda mantêm a segurança de tipos. Por exemplo, ter um <xref:System.Collections.Generic.List%601> permite que você tenha `List<string>` ou `List<int>` e execute operações fortemente tipadas nessas cadeias de caracteres ou inteiros enquanto itera neles. Usar genéricos é melhor que criar `ListInt` que deriva de `ArrayList` ou converter de `Object` para cada operação.
 
-A versão 2.0 do C# trouxe iteradores. Em resumo, o iteradores permitem que você examine todos os itens em um `List` (ou outros tipos Enumeráveis) com um loop `foreach`. Ter iteradores como uma parte importante da linguagem aprimorou de forma impressionante a legibilidade da linguagem e a capacidade das pessoas de raciocinar a respeito do código.
+A versão 2.0 do C# trouxe iteradores. Em resumo, o iteradores permitem que você examine todos os itens em um `List` (ou outros tipos Enumeráveis) com um loop `foreach`. Ter iteradores como uma parte importante da linguagem aprimorou drasticamente a legibilidade da linguagem e a capacidade das pessoas de raciocinar a respeito do código.
 
 E ainda assim, o C# continuava na tentativa de alcançar o mesmo nível do Java. O Java já tinha liberado versões que incluíam genéricos e iteradores. Mas isso seria alterado logo, pois as linguagens continuaram a evoluir separadamente.
 
@@ -73,7 +73,7 @@ O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, p
 - [Métodos de extensão](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Variáveis locais implicitamente tipadas](../language-reference/keywords/var.md)
 - [Métodos parciais](../language-reference/keywords/partial-method.md)
-- Inicializadores de coleção e de objeto
+- [Inicializadores de objeto e de coleção](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Numa retrospectiva, muitos desses recursos parecerem inevitáveis e inseparáveis. Todos eles se encaixam estrategicamente. Costuma-se pensar que o recurso irresistível dessa versão do C# foi a expressão de consulta, também conhecida como LINQ (consulta integrada à linguagem).
 
@@ -98,7 +98,7 @@ Os tipos de interoperabilidade inseridos atenuaram um problema de implantação.
 
 O recurso principal foi a introdução da palavra-chave `dynamic`. A palavra-chave `dynamic` introduziu na versão 4.0 do C# a capacidade de substituir o compilador na tipagem em tempo de compilação. Com o uso da palavra-chave dinâmica, você pode criar constructos semelhantes a linguagens dinamicamente tipadas, como JavaScript. Você pode criar um `dynamic x = "a string"` e, em seguida, adicionar seis a ela, deixando que o tempo de execução decida o que acontece em seguida.
 
-A associação dinâmica pode induzi-lo a erros, mas também é bastante eficaz na linguagem.
+Associação dinâmica tem potencial de erros, mas também grande eficiência na linguagem.
 
 ## <a name="c-version-50"></a>C# versão 5.0
 
@@ -113,7 +113,7 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 ## <a name="c-version-60"></a>C# versão 6.0
 
-Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Na versão 6.0, em vez de introduzir apenas um recurso principal dominante, foram liberados vários recursos menores que tornaram a programação em C# mais produtiva. Aqui estão alguns deles:
+Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Na versão 6.0, ele abre mão de um recurso arrasador dominante liberando, em vez disso, muitos recursos menores que tornam a programação em C# mais produtiva. Aqui estão alguns deles:
 
 - [Importações estáticas](../language-reference/keywords/using-static.md)
 - [Filtros de exceção](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)

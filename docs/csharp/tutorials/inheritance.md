@@ -3,14 +3,14 @@ title: Herança em C#
 description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/16/2017
+ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 646602c4bab311e6d6078378fe423741a1dd38e1
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365755"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875218"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -32,7 +32,6 @@ Para criar e executar os exemplos neste tutorial, use o utilitário [dotnet](../
   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Insira o comando [dotnet run](../../core/tools/dotnet-run.md) para compilar e executar o exemplo.
-
 
 ## <a name="background-what-is-inheritance"></a>Informações: O que é a herança?
 
@@ -58,7 +57,7 @@ Enquanto todos os outros membros de uma classe base são herdados por classes de
 
 - Membros [Internos](../language-reference/keywords/internal.md) são visíveis apenas em classes derivadas localizadas no mesmo assembly que a classe base. Eles não são visíveis em classes derivadas localizadas em um assembly diferente da classe base.
 
-- Membros [Públicos](../language-reference/keywords/public.md) são visíveis em classes derivadas e fazem parte da interface pública da classe derivada. Membros herdados público podem ser chamados como se tivessem sido definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
+- Membros [Públicos](../language-reference/keywords/public.md) são visíveis em classes derivadas e fazem parte da interface pública da classe derivada. Os membros públicos herdados podem ser chamados como se estivessem definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
@@ -99,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-A herança se aplica apenas a classes e interfaces. Outras categorias de tipo (structs, delegados e enumerações) não dão suporte à herança. Por isso, a tentativa de compilar o código da seguinte maneira produz um erro de compilador CS0527: "O tipo 'ValueType' na lista de interface não é uma interface". A mensagem de erro indica que, embora você possa definir as interfaces implementadas por um struct, não há suporte para a herança.
+A herança se aplica apenas a classes e interfaces. Outras categorias de tipo (structs, delegados e enumerações) não dão suporte à herança. Devido a essas regras, a tentativa de compilar o código como no exemplo a seguir produz o erro do compilador CS0527: "O tipo 'ValueType' na lista de interfaces não é uma interface". A mensagem de erro indica que, embora você possa definir as interfaces implementadas por um struct, não há suporte para a herança.
 
 ```csharp
 using System;
@@ -111,13 +110,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>Herança implícita
 
-Apesar dos tipos possíveis de herança por meio de herança única, todos os tipos no sistema de tipo .NET herdam implicitamente de <xref:System.Object> ou de um tipo derivado dele. Isso garante a disponibilidade de funcionalidades comuns para qualquer tipo.
+Apesar dos tipos possíveis de herança por meio de herança única, todos os tipos no sistema de tipo .NET herdam implicitamente de <xref:System.Object> ou de um tipo derivado dele. A funcionalidade comum de <xref:System.Object> está disponível para qualquer tipo.
 
 Para ver o que significa herança implícita, vamos definir uma nova classe, `SimpleClass`, que é simplesmente uma definição de classe vazia:
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-Podemos usar reflexão (o que nos permite inspecionar os metadados de um tipo para obter informações sobre o tipo) para obter uma lista dos membros que pertencem ao tipo `SimpleClass`. Embora não tenhamos definido membros em nossa classe `SimpleClass`, a saída do exemplo indica que ele tem nove membros na verdade. Um deles é um construtor sem parâmetros (ou padrão) fornecido automaticamente para o tipo `SimpleClass` pelo compilador em C#. Os oito são membros do <xref:System.Object>, o tipo do qual todas as classes e interfaces no sistema do tipo .NET herdam implicitamente.
+É possível usar reflexão (o que permite inspecionar os metadados de um tipo para obter informações sobre esse tipo) para obter uma lista dos membros que pertencem ao tipo `SimpleClass`. Embora você ainda não tenha definido membros na classe `SimpleClass`, a saída do exemplo indica que, na verdade, ela tem nove membros. Um desses membros é um construtor sem parâmetros (ou padrão) que é fornecido automaticamente para o tipo `SimpleClass` pelo compilador de C#. Os oito são membros do <xref:System.Object>, o tipo do qual todas as classes e interfaces no sistema do tipo .NET herdam implicitamente.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
@@ -135,7 +134,7 @@ A herança implícita da classe <xref:System.Object> torna esses métodos dispon
 
 - O método protegido <xref:System.Object.MemberwiseClone%2A>, que cria um clone superficial do objeto atual.
 
-Devido à herança implícita, podemos chamar qualquer membro herdado de um objeto `SimpleClass` como se fosse um membro definido na classe `SimpleClass`. Por exemplo, o exemplo a seguir chama o método `SimpleClass.ToString`, que `SimpleClass` herda de <xref:System.Object>.
+Devido à herança implícita, você pode chamar qualquer membro herdado de um objeto `SimpleClass` como se ele fosse, na verdade, um membro definido na classe `SimpleClass`. Por exemplo, o exemplo a seguir chama o método `SimpleClass.ToString`, que `SimpleClass` herda de <xref:System.Object>.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
@@ -155,11 +154,11 @@ Normalmente, a herança é usada para expressar um relacionamento "é um(a)" ent
 > [!NOTE]
 > Uma classe ou struct pode implementar uma ou mais interfaces. Embora a implementação da interface seja apresentada geralmente como uma alternativa para herança única, ou como uma forma de usar a herança com structs, ela tem como objetivo expressar um relacionamento diferente (um relacionamento "pode fazer") entre uma interface e seu tipo de implementação em comparação com a herança. Uma interface define um subconjunto de funcionalidades (como a capacidade de testar a igualdade, comparar ou classificar objetos ou dar suporte à formatação e análise sensível à cultura) que disponibiliza para seus tipos de implementação.
 
-Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Make`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. Nossa classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
+Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Make`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. A classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-Nesse caso, não devemos depender da herança para representar marcas e modelos de carro específicos. Por exemplo, não precisamos definir um tipo `Packard` para representar automóveis fabricados pela empresa Packard Motor Car Company. Em vez disso, podemos representá-los criando um objeto `Automobile` com os valores apropriados passados ao construtor de classe, como o exemplo a seguir.
+Nesse caso, você não deve depender da herança para representar marcas e modelos de carro específicos. Por exemplo, você não precisa definir um tipo `Packard` para representar automóveis fabricados pela empresa Packard Motor Car. Nesse caso, é possível representá-los criando um objeto `Automobile` com os valores apropriados passados ao construtor de classe, como no exemplo a seguir.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
@@ -167,35 +166,37 @@ Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Criação da classe base e das classes derivadas
 
-Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, definiremos uma classe base, `Publication`, que representa uma publicação de qualquer tipo, como um livro, revista, jornal, diário, artigo etc. Também definiremos uma classe `Book` que deriva de `Publication`. Poderíamos ampliar facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
+Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma classe base, a `Publication`, que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um diário, um artigo etc. Você também definirá uma classe `Book` derivada de `Publication`. É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>A classe base de Publicação
 
-Ao criar nossa classe `Publication`, precisamos tomar várias decisões de design:
+Em projetar a classe `Publication`, você precisa tomar várias decisões de design:
 
-- Quais membros incluir em nossa classe base `Publication` e se os membros `Publication` fornecem implementações de método, ou se `Publication` é uma classe base abstrata que serve como modelo para suas classes derivadas.
+- Quais membros devem ser incluídos na classe base `Publication` e se os membros de `Publication` fornecem implementações de método, ou se `Publication` é uma classe base abstrata que funciona como um modelo para suas classes derivadas.
 
   Nesse caso, a classe `Publication` fornecerá implementações de método. A seção [Criação de classes base abstratas e de suas classes derivadas](#abstract) contém um exemplo que usa uma classe base abstrata para definir os métodos que as classes derivadas devem substituir. As classes derivadas são livres para fornecer qualquer implementação adequada ao tipo derivado.
 
-  A capacidade de reutilizar o código (ou seja, várias classes derivadas compartilham a declaração e a implementação dos métodos de classe base, e não é necessário substituí-las) é uma vantagem das classes base não abstratas. Portanto, devemos acrescentar membros a `Publication` se houver a probabilidade do código deles ser compartilhado por um ou mais tipos `Publication` especializados. Se não conseguirmos fazer isso de forma eficiente, poderemos precisar fornecer implementações de membro praticamente idênticas em classes derivadas, em vez de uma única implementação na classe base. A necessidade de manter o código duplicado em vários locais é uma possível fonte de bugs.
+  A capacidade de reutilizar o código (ou seja, várias classes derivadas compartilham a declaração e a implementação dos métodos de classe base, e não é necessário substituí-las) é uma vantagem das classes base não abstratas. Portanto, você deverá adicionar membros à `Publication` se o código precisar ser compartilhado por um ou mais tipos `Publication` especializados. Se você não conseguir fornecer implementações da classe base de forma eficiente, será necessário fornecer implementações de membro praticamente idênticas em classes derivadas em vez de uma única implementação na classe base. A necessidade de manter o código duplicado em vários locais é uma possível fonte de bugs.
 
-  Para maximizar a reutilização do código e criar uma hierarquia de herança lógica e intuitiva, queremos garantir a inclusão na classe `Publication` apenas dos dados e da funcionalidade comuns a todos ou à maioria das publicações. Depois, as classes derivadas implementam os membros exclusivos a determinados tipos de publicação que eles representam.
+  Para maximizar a reutilização do código e criar uma hierarquia de herança lógica e intuitiva, inclua na classe `Publication` apenas dos dados e a funcionalidade comuns a todas as publicações ou à maioria delas. Depois, as classes derivadas implementam os membros exclusivos a determinados tipos de publicação que eles representam.
 
-- O quanto devemos ampliar nossa hierarquia de classe. Queremos desenvolver uma hierarquia de três ou mais classes, em vez de simplesmente uma classe base e uma ou mais classes derivadas? Por exemplo, `Publication` poderia ser uma classe base de `Periodical`, que por sua vez é uma classe base de `Magazine`, `Journal` e `Newspaper`.
+- O quanto devemos ampliar a hierarquia de classe. Você deseja desenvolver uma hierarquia de três ou mais classes, em vez de simplesmente uma classe base e uma ou mais classes derivadas? Por exemplo, `Publication` poderia ser uma classe base de `Periodical`, que por sua vez é uma classe base de `Magazine`, `Journal` e `Newspaper`.
 
-  Para nosso exemplo, usaremos a hierarquia simples de uma classe `Publication` e uma única classe derivada, `Book`. Poderíamos ampliar facilmente o exemplo para criar algumas classes adicionais derivadas de `Publication`, como `Magazine` e `Article`.
+  Para o seu exemplo, você usará a hierarquia pequena de uma classe `Publication` e uma única classe derivada, a `Book`. É possível ampliar o exemplo facilmente para criar várias classes adicionais derivadas de `Publication`, como `Magazine` e `Article`.
 
-- Se faz sentido instanciar a classe base. Se não fizer, deveremos aplicar a palavra-chave [abstract](../language-reference/keywords/abstract.md) à classe. Se for feita uma tentativa de instanciar uma classe marcada com a palavra-chave `abstract` por uma chamada direta para o construtor de classe, o compilador de C# gerará o erro CS0144, "Não é possível criar uma instância da classe abstrata ou interface". Se for feita uma tentativa de instanciar a classe por meio da reflexão, o método de reflexão lançará um <xref:System.MemberAccessException>. Caso contrário, nossa classe `Publication` poderá ser instanciada chamando seu construtor de classe.
+- Se faz sentido instanciar a classe base. Se não fizer, você deverá aplicar a palavra-chave [abstract](../language-reference/keywords/abstract.md) à classe. Caso contrário, a instância da classe `Publication` poderá ser criada chamando seu construtor de classe. Se for feita uma tentativa de instanciar uma classe marcada com a palavra-chave `abstract` por uma chamada direta para o construtor de classe, o compilador de C# gerará o erro CS0144, "Não é possível criar uma instância da classe abstrata ou interface". Se for feita uma tentativa de instanciar a classe por meio da reflexão, o método de reflexão lançará um <xref:System.MemberAccessException>.
 
-  Por padrão, uma classe base pode ser instanciada chamando seu construtor de classe. Observe que não precisamos definir explicitamente um construtor de classe. Se não houver um presente no código-fonte da classe base, o compilador de C# fornecerá automaticamente um construtor (sem parâmetros) padrão.
+  Por padrão, uma classe base pode ser instanciada chamando seu construtor de classe. Você não precisa definir um construtor de classe explicitamente. Se não houver um presente no código-fonte da classe base, o compilador de C# fornecerá automaticamente um construtor (sem parâmetros) padrão.
 
-  Para nosso exemplo, marcaremos a classe `Publication` como [abstract](../language-reference/keywords/abstract.md), para que não possa ser instanciada.
+  No seu exemplo, você marcará a classe `Publication` como [abstract](../language-reference/keywords/abstract.md), para que não seja possível criar uma instância dela.  Uma classe `abstract` sem nenhum método `abstract` indica que essa classe representa um conceito abstrato que é compartilhado entre várias classes concretas (como `Book`, `Journal`).
 
-- Se as classes derivadas devem herdar a implementação da classe base de membros específicos, ou se têm a opção de substituir a implementação da classe base. Precisamos usar a palavra-chave [virtual](../language-reference/keywords/virtual.md) para permitir que classes derivadas substituam um método de classe base. Por padrão, os métodos definidos na classe base *não* são substituíveis.
+- Se as classes derivadas precisam herdar a implementação de membros específicos da classe base, se elas têm a opção de substituir a implementação da classe base ou se precisam fornecer uma implementação. Use a palavra-chave [abstract](../language-reference/keywords/abstract.md) para forçar as classes derivadas a fornecer uma implementação. Use a palavra-chave [virtual](../language-reference/keywords/virtual.md) para permitir que as classes derivadas substituam um método de classe base. Por padrão, os métodos definidos na classe base *não* são substituíveis.
 
-- Se uma classe derivada representa a classe final na hierarquia de herança e não pode se ser usada como uma classe base para outras classes derivadas. Por padrão, qualquer classe pode servir como classe base. Podemos aplicar a palavra-chave [sealed](../language-reference/keywords/sealed.md) para indicar que uma classe não pode servir como classe base para quaisquer classes adicionais. A tentativa de derivar de uma classe selada gerou o erro do compilador CS0509, "não é possível derivar do tipo sealed <typeName>".
+ A classe `Publication` não tem nenhum método `abstract`, mas a classe em si é `abstract`.
 
-  Para nosso exemplo, marcaremos nossa classe derivada como `sealed`.
+- Se uma classe derivada representa a classe final na hierarquia de herança e não pode se ser usada como uma classe base para outras classes derivadas. Por padrão, qualquer classe pode servir como classe base. Você pode aplicar a palavra-chave [sealed](../language-reference/keywords/sealed.md) para indicar que uma classe não pode funcionar como uma classe base para quaisquer classes adicionais. A tentativa de derivar de uma classe selada gerou o erro do compilador CS0509, "não é possível derivar do tipo sealed <typeName>".
+
+  No seu exemplo, você marcará a classe derivada como `sealed`.
 
 O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como uma enumeração `PublicationType` que é retornada pela propriedade `Publication.PublicationType`. Além dos membros herdados de <xref:System.Object>, a classe `Publication` define os seguintes membros exclusivos e substituições de membro:
 
@@ -203,7 +204,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
 - Um construtor
 
-  Como a classe `Publication` é `abstract`, ela não pode ser instanciada diretamente no código, conforme exibido a seguir:
+  Como a classe `Publication` é `abstract`, sua instância não pode ser criada diretamente no código, com no exemplo a seguir:
 
   ```csharp
   var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
@@ -234,7 +235,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
   Se um tipo não substituir o método <xref:System.Object.ToString%2A?displayProperty=nameWithType>, ele retornará o nome totalmente qualificado do tipo, que é de pouca utilidade na diferenciação de uma instância para outra. A classe `Publication` substitui <xref:System.Object.ToString%2A?displayProperty=nameWithType> para retornar o valor da propriedade `Title`.
 
-A figura a seguir ilustra o relacionamento entre nossa classe base `Publication` e sua classe <xref:System.Object> herdada implicitamente.
+A figura a seguir ilustra o relacionamento entre a classe base `Publication` e sua classe herdada implicitamente <xref:System.Object>.
 
 ![As classes Object e Publication](media/publication-class.jpg)
 
@@ -250,7 +251,7 @@ Além dos membros herdados de `Publication`, a classe `Book` define os seguintes
 
   Os dois construtores `Book` compartilham três parâmetros comuns. Dois, *title* e *publisher*, correspondem aos parâmetros do construtor `Publication`. O terceiro é *author*, que é armazenado como um campo `authorName` privado. Um construtor inclui um parâmetro *isbn*, que é armazenado na propriedade automática `ISBN`.
 
-  O primeiro construtor usa a palavra-chave [this](../language-reference/keywords/this.md) para chamar o outro construtor. Este é um padrão comum ao definir construtores. Construtores com menos parâmetros fornecem valores padrão ao chamar o construtor com o maior número de parâmetros.
+  O primeiro construtor usa a palavra-chave [this](../language-reference/keywords/this.md) para chamar o outro construtor. O encadeamento do construtor é um padrão comum na definição de construtores. Construtores com menos parâmetros fornecem valores padrão ao chamar o construtor com o maior número de parâmetros.
 
   O segundo construtor usa a palavra-chave [base](../language-reference/keywords/base.md) para passar o título e o nome do publicador para o construtor da classe base. Se você não fizer uma chamada explícita para um construtor de classe base em seu código-fonte, o compilador de C# fornecerá automaticamente uma chamada para a classe base padrão ou para o construtor sem parâmetros.
 
@@ -260,38 +261,38 @@ Além dos membros herdados de `Publication`, a classe `Book` define os seguintes
 
 - Duas propriedades somente leitura relacionadas ao preço, `Price` e `Currency`. Seus valores são fornecidos como argumentos em uma chamada do método `SetPrice`. O preço é armazenado em um campo privado, `bookPrice`. A propriedade `Currency` é o símbolo de moeda ISO de três dígitos (por exemplo, USD para dólar americano) e é armazenada no campo `ISOCurrencySymbol` privado. Símbolos de moeda ISO podem ser obtidos da propriedade <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.
 
-- Um método `SetPrice`, que define os valores dos campos `bookPrice` e `ISOCurrencySymbol`. Estes são os valores retornados pela propriedade `Price` e `Currency`.
+- Um método `SetPrice`, que define os valores dos campos `bookPrice` e `ISOCurrencySymbol`. Esses valores são retornados pelas propriedades `Price` e `Currency`.
 
 - Substitui o método `ToString` (herdado de `Publication`) e os métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> e <xref:System.Object.GetHashCode%2A> (herdados de <xref:System.Object>).
 
-  A menos que seja substituído, o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> testa a igualdade de referência. Ou seja, duas variáveis de objeto são consideradas iguais se fizerem referência ao mesmo objeto. No caso da classe `Book`, por outro lado, dois objetos `Book` devem ser iguais se eles tiverem o mesmo ISBN.
+  A menos que seja substituído, o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> testa a igualdade de referência. Ou seja, duas variáveis de objeto são consideradas iguais se fizerem referência ao mesmo objeto. Na classe `Book`, por outro lado, dois objetos `Book` devem ser iguais quando têm o mesmo ISBN.
 
-  Ao substituir o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, substitua também o método <xref:System.Object.GetHashCode%2A>, que retorna um valor usado pelo tempo de execução para armazenar itens em coleções de hash para uma recuperação eficiente. O código de hash deve retornar um valor que é consistente com o teste de igualdade. Como substituímos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> para retornar `true`, se as propriedades ISBN de dois objetos `Book` forem iguais, retornaremos o código hash computado chamando o método <xref:System.String.GetHashCode%2A> da cadeia de caracteres retornada pela propriedade `ISBN`.
+  Ao substituir o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, substitua também o método <xref:System.Object.GetHashCode%2A>, que retorna um valor usado pelo tempo de execução para armazenar itens em coleções de hash para uma recuperação eficiente. O código de hash deve retornar um valor que é consistente com o teste de igualdade. Como você substituiu <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> para retornar `true`, se as propriedades de ISBN de dois objetos `Book` forem iguais, retorne o código hash computado chamando o método <xref:System.String.GetHashCode%2A> da cadeia de caracteres retornada pela propriedade `ISBN`.
 
 A figura a seguir ilustra o relacionamento entre a classe `Book` e `Publication`, sua classe base.
 
 ![Classes Publication e Book](media/book-class.jpg)
 
-Agora podemos instanciar um objeto `Book`, chamar seus membros exclusivos e herdados e passá-lo como um argumento para um método que espera um parâmetro do tipo `Publication` ou do tipo `Book`, como mostra o exemplo a seguir.
+Agora você pode criar a instância de um objeto `Book`, invocar seus membros exclusivos e herdados e passá-lo como um argumento a um método que espera um parâmetro do tipo `Publication` ou do tipo `Book`, como mostra o exemplo a seguir.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Criando classes base abstratas e suas classes derivadas
 <a name="abstract"></a>
 
-No exemplo anterior, definimos uma classe base que forneceu uma implementação para diversos métodos, a fim de permitir que classes derivadas compartilhem código. Em muitos casos, no entanto, não espera-se que a classe base forneça uma implementação. Em vez disso, a classe base é uma *classe abstrata*; ela serve como um modelo que define os membros que cada classe derivada deve implementar. Normalmente, no caso de uma classe base abstrata, a implementação de cada tipo derivado é exclusiva para esse tipo.
+No exemplo anterior, você definiu uma classe base que forneceu uma implementação de diversos métodos para permitir que classes derivadas compartilhem código. Em muitos casos, no entanto, não espera-se que a classe base forneça uma implementação. Nesse caso, a classe base é uma *classe abstrata* que declara *métodos abstratos*. Ela funciona como um modelo que define os membros que cada classe derivada precisa implementar. Normalmente em uma classe base abstrata, a implementação de cada tipo derivado é exclusiva para esse tipo. Você marcou a classe com a palavra-chave abstract porque não fazia sentido criar uma instância de um objeto `Publication`, embora a classe fornecesse implementações de funcionalidades comuns para publicações.
 
-Por exemplo, cada forma geométrica bidimensional fechada inclui duas propriedades: área, a extensão interna da forma; e perímetro, ou a distância entre as bordas da forma. A maneira com a qual essas propriedades são calculadas, no entanto, depende completamente da forma específica. Por exemplo, a fórmula para calcular o perímetro (ou circunferência) de um círculo, é muito diferente de um triângulo.
+Por exemplo, cada forma geométrica bidimensional fechada inclui duas propriedades: área, a extensão interna da forma; e perímetro, ou a distância entre as bordas da forma. A maneira com a qual essas propriedades são calculadas, no entanto, depende completamente da forma específica. A fórmula para calcular o perímetro (ou a circunferência) de um círculo, por exemplo, é diferente da fórmula de um triângulo. A classe `Shape` é uma classe `abstract` com métodos `abstract`. Isso indica que as classes derivadas compartilham a mesma funcionalidade, mas essas classes derivadas implementam essa funcionalidade de forma diferente.
 
-O exemplo a seguir define uma classe base abstrata denominada `Shape` que define duas propriedades: `Area` e `Perimeter`. Observe que, além de marcar a classe com a palavra-chave [abstract](../language-reference/keywords/abstract.md), cada membro de instância também é marcado com a palavra-chave [abstract](../language-reference/keywords/abstract.md). Nesse caso, o `Shape` também substitui o método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para retornar o nome do tipo, em vez de seu nome totalmente qualificado. E define dois membros estáticos, `GetArea` e `GetPerimeter`, que permitem a recuperação fácil da área e do perímetro de uma instância de qualquer classe derivada. Quando passamos uma instância de uma classe derivada para qualquer um desses métodos, o tempo de execução chama a substituição do método da classe derivada.
+O exemplo a seguir define uma classe base abstrata denominada `Shape` que define duas propriedades: `Area` e `Perimeter`. Além da classe ser marcada com a palavra-chave [abstract](../language-reference/keywords/abstract.md), cada membro da instância também é marcado com a palavra-chave [abstract](../language-reference/keywords/abstract.md). Nesse caso, o `Shape` também substitui o método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para retornar o nome do tipo, em vez de seu nome totalmente qualificado. E define dois membros estáticos, `GetArea` e `GetPerimeter`, que permitem a recuperação fácil da área e do perímetro de uma instância de qualquer classe derivada. Quando você passa uma instância de uma classe derivada para um desses métodos, o tempo de execução chama a substituição do método da classe derivada.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-Em seguida, podemos derivar algumas classes de `Shape` que representam formas específicas. O exemplo a seguir define três classes, `Triangle`, `Rectangle` e `Circle`. Cada uma usa uma fórmula exclusiva para essa forma específica para calcular a área e o perímetro. Algumas das classes derivadas também definem propriedades, como `Rectangle.Diagonal` e `Circle.Diameter`, que são exclusivas para a forma que representam.
+Em seguida, você pode derivar algumas classes de `Shape` que representam formas específicas. O exemplo a seguir define três classes, `Triangle`, `Rectangle` e `Circle`. Cada uma usa uma fórmula exclusiva para essa forma específica para calcular a área e o perímetro. Algumas das classes derivadas também definem propriedades, como `Rectangle.Diagonal` e `Circle.Diameter`, que são exclusivas para a forma que representam.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de objetos derivados de `Shape` e chama os métodos estáticos da classe `Shape`, que retorna valores de propriedade `Shape`. Observe que o tempo de execução recupera os valores das propriedades substituídas dos tipos derivados. O exemplo também converte cada objeto `Shape` na matriz ao seu tipo derivado e, se a conversão for bem-sucedida, recupera as propriedades dessa subclasse específica de `Shape`. 
+O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de objetos derivados de `Shape` e chama os métodos estáticos da classe `Shape`, que retorna valores de propriedade `Shape`. O tempo de execução recupera os valores das propriedades substituídas dos tipos derivados. O exemplo também converte cada objeto `Shape` na matriz ao seu tipo derivado e, se a conversão for bem-sucedida, recupera as propriedades dessa subclasse específica de `Shape`. 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

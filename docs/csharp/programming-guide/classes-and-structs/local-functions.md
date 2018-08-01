@@ -5,12 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 2f21dd80de8f9df612ab460b9375bf5c1dfae1ce
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805614"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792303"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
@@ -30,7 +30,7 @@ No entanto, as funções locais não podem ser declaradas dentro de um membro ap
 > [!NOTE]
 > Em alguns casos, você pode usar uma expressão lambda para implementar uma funcionalidade que também tem suporte por uma função local. Para obter uma comparação, consulte [Funções locais comparadas com expressões Lambda](../../local-functions-vs-lambdas.md).
 
-Funções locais tornam a intenção do seu código clara. Qualquer pessoa que leia o código poderá ver que o método não pode ser chamado, exceto pelo método que o contém. Para projetos de equipe, elas também impossibilitam que outro desenvolvedor, por engano, chame o método diretamente de qualquer outro lugar na classe ou struct.
+Funções locais tornam a intenção do seu código clara. Qualquer pessoa que leia o código poderá ver que o método não pode ser chamado, exceto pelo método que o contém. Para projetos de equipe, elas também impossibilitam que outro desenvolvedor chame o método por engano diretamente de qualquer outro lugar na classe ou no struct.
  
 ## <a name="local-function-syntax"></a>Sintaxe de função local
 

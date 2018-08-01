@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570972"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198855"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidindo quando implementar o padrão assíncrono baseado em evento
 O Padrão assíncrono baseado em evento oferece um padrão para expor o comportamento assíncrono de uma classe. Com a introdução deste padrão, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dois padrões para expor o comportamento assíncrono: o Padrão assíncrono baseado na interface de <xref:System.IAsyncResult?displayProperty=nameWithType> e o padrão baseado no evento. Este tópico descreve quando é apropriado implementar os dois padrões.  
   
- Para saber mais sobre a programação assíncrona com a interface de <xref:System.IAsyncResult>, confira [Padrão assíncrono baseado em evento (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Para obter mais informações sobre a programação assíncrona com a interface <xref:System.IAsyncResult>, confira [APM (modelo de programação assíncrona)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
 ## <a name="general-principles"></a>Noções básicas gerais  
  Em geral, você deve expor recursos assíncronos usando o Padrão assíncrono baseado em evento sempre que possível. No entanto, há alguns requisitos que o padrão baseado em evento não pode atender. Nesses casos, talvez seja necessário implementar o padrão <xref:System.IAsyncResult> além do padrão baseado em evento.  

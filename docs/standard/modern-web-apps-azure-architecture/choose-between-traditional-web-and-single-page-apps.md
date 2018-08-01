@@ -1,40 +1,38 @@
 ---
 title: Escolha entre aplicativos Web tradicionais e aplicativos de página única
-description: Projetar aplicativos Web modernos com o ASP.NET Core e o Microsoft Azure
+description: Saiba como escolher entre aplicativos Web tradicionais e SPAs (aplicativos de única página) ao criar aplicativos Web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104760"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404139"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Escolher entre aplicativos Web tradicionais e SPAs (aplicativos de página única)
 
 > "Lei de Atwood: qualquer aplicativo que pode ser escrito em JavaScript será, em última análise, escrito em JavaScript."  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>Resumo
-
 Há duas abordagens gerais para a criação de aplicativos Web hoje: os aplicativos Web tradicionais que executam a maior parte da lógica do aplicativo no servidor e os SPAs (aplicativos de página única) que executam a maior parte da lógica da interface do usuário em um navegador da Web, comunicando-se com o servidor Web principalmente por meio de APIs Web. Uma abordagem híbrida também é possível, e a mais simples é hospedar um ou mais subaplicativos avançados semelhantes ao SPA dentro de um aplicativo Web tradicional maior.
 
 Você deve usar os aplicativos Web tradicionais quando:
 
--   Os requisitos do lado do cliente do aplicativo são simples ou até mesmo somente leitura.
+- Os requisitos do lado do cliente do aplicativo são simples ou até mesmo somente leitura.
 
--   Seu aplicativo precisa funcionar em navegadores sem suporte a JavaScript.
+- Seu aplicativo precisa funcionar em navegadores sem suporte a JavaScript.
 
--   Sua equipe não está familiarizada com as técnicas de desenvolvimento do JavaScript ou do TypeScript.
+- Sua equipe não está familiarizada com as técnicas de desenvolvimento do JavaScript ou do TypeScript.
 
 Você deve usar um SPA quando:
 
--   Seu aplicativo precisa expor uma interface do usuário avançada com muitos recursos.
+- Seu aplicativo precisa expor uma interface do usuário avançada com muitos recursos.
 
--   Sua equipe está familiarizada com o desenvolvimento do JavaScript e/ou do TypeScript.
+- Sua equipe está familiarizada com o desenvolvimento do JavaScript e/ou do TypeScript.
 
--   Seu aplicativo já deve expor uma API para outros clientes (internos ou públicos).
+- Seu aplicativo já deve expor uma API para outros clientes (internos ou públicos).
 
 Além disso, as estruturas de SPA exigem um maior conhecimento em arquitetura e segurança. Elas passam por uma maior variação devido a atualizações frequentes e novas estruturas comparado aos aplicativos Web tradicionais. A configuração de processos de compilação e de implantação automatizados e a utilização de opções de implantação como contêineres são mais difíceis com aplicativos SPA do que com aplicativos Web tradicionais.
 
@@ -71,10 +69,11 @@ Observe que, com frequência, os SPAs precisam implementar recursos internos de 
 A configuração de SPAs exige familiaridade com o JavaScript e/ou o TypeScript e bibliotecas e técnicas de programação do lado do cliente. Sua equipe deve ser competente na escrita de JavaScript moderno usando uma estrutura de SPA como o Angular.
 
 > ### <a name="references--spa-frameworks"></a>Referências – Estruturas de SPA
+>
 > - **Angular**  
-> <https://angular.io>
+>   <https://angular.io>
 > - **Comparação de Estruturas em JavaScript**  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **Seu aplicativo já deve expor uma API para outros clientes (internos ou públicos)**
 
@@ -84,12 +83,12 @@ Caso você já esteja dando suporte a uma API Web para uso por outros clientes, 
 
 A tabela de decisão a seguir resume alguns dos fatores básicos a serem considerados ao escolher entre um aplicativo Web tradicional e um SPA.
 
-  | **Fator** | **Aplicativo Web tradicional** | **Aplicativo de página única** |
-  |---|---|---|
-  | É necessária a familiaridade da equipe com JavaScript/TypeScript | **Mínima** | **Necessária** |
-  | Suporte a navegadores sem scripts | **Com suporte** | **Não compatível** |
-  | Comportamento mínimo do aplicativo do lado do cliente | **Apropriado** | **Exagero** |
-  | Requisitos avançados e complexos de interface do usuário | **Limitado** | **Apropriado** |
+| **Fator**                                           | **Aplicativo Web tradicional** | **Aplicativo de página única** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| É necessária a familiaridade da equipe com JavaScript/TypeScript | **Mínima**             | **Necessária**                |
+| Suporte a navegadores sem scripts                   | **Com suporte**           | **Não compatível**           |
+| Comportamento mínimo do aplicativo do lado do cliente             | **Apropriado**         | **Exagero**                |
+| Requisitos avançados e complexos de interface do usuário            | **Limitado**             | **Apropriado**             |
 
 >[!div class="step-by-step"]
 [Anterior](modern-web-applications-characteristics.md)

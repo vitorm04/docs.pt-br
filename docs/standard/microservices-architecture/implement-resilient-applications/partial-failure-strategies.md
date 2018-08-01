@@ -3,13 +3,13 @@ title: Estratégias para tratar falhas parciais
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Estratégias para tratar falhas parciais
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: ac82f6d506213614c7a4079e0f55f798f26a6550
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104203"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874397"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Estratégias para tratar falhas parciais
 
@@ -25,7 +25,7 @@ As estratégias para lidar com falhas parciais incluem o seguinte.
 
 **Fornecer fallbacks**. Nessa abordagem, o processo de cliente executa a lógica de fallback quando uma solicitação falha, como retornar dados armazenados em cache ou um valor padrão. Essa é uma abordagem adequada para consultas e é mais complexa para atualizações ou comandos.
 
-**Limitar o número de solicitações na fila**. Os clientes também devem impor um limite superior no número de solicitações pendentes que um microsserviço cliente pode enviar para um serviço específico. Se o limite tiver sido atingido, provavelmente será ineficaz fazer solicitações adicionais, e essas tentativas devem falhar imediatamente. Em termos de implementação, a política [Isolamento bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead) da Polly pode ser usada para atender a esse requisito. Essa abordagem é essencialmente uma restrição de paralelização com <xref:System.Threading.SemaphoreSlim> como a implementação. Ela também permite uma "fila" fora do bulkhead. É possível lançar proativamente uma carga excessiva mesmo antes da execução (por exemplo, devido à capacidade ser considerada cheia). Isso torna sua resposta a determinados cenários de falha mais rápida do que um disjuntor seria, uma vez que o disjuntor aguarda as falhas. O objeto BulkheadPolicy na Polly expõe o quão cheios o bulkhead e a fila estão e oferece eventos em estouro para que também possam ser usados para promover a colocação em escala horizontal automatizada.
+**Limitar o número de solicitações na fila**. Os clientes também devem impor um limite superior no número de solicitações pendentes que um microsserviço cliente pode enviar para um serviço específico. Se o limite tiver sido atingido, provavelmente será ineficaz fazer solicitações adicionais, e essas tentativas devem falhar imediatamente. Em termos de implementação, a política [Isolamento do bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead) da Polly pode ser usada para atender a esse requisito. Essa abordagem é essencialmente uma restrição de paralelização com <xref:System.Threading.SemaphoreSlim> como a implementação. Ela também permite uma "fila" fora do bulkhead. É possível lançar proativamente uma carga excessiva mesmo antes da execução (por exemplo, devido à capacidade ser considerada cheia). Isso torna sua resposta a determinados cenários de falha mais rápida do que um disjuntor seria, uma vez que o disjuntor aguarda as falhas. O objeto BulkheadPolicy na Polly expõe o quão cheios o bulkhead e a fila estão e oferece eventos em estouro para que também possam ser usados para promover a colocação em escala horizontal automatizada.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
