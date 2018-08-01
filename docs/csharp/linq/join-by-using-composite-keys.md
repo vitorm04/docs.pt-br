@@ -1,41 +1,43 @@
 ---
-title: Unir usando chaves compostas
-description: Como unir usando chaves compostas.
+title: Unir usando chaves compostas (LINQ em C#)
+description: Saiba como unir usando chaves compostas em LINQ.
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: e40f4d147886c07913c761bb5df83ee34d23eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd3f5e949b5c1bc6abc592dc135e73a91be801e9
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271208"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404022"
 ---
-# <a name="join-by-using-composite-keys"></a><span data-ttu-id="e18e8-103">Unir usando chaves compostas</span><span class="sxs-lookup"><span data-stu-id="e18e8-103">Join by using composite keys</span></span>
+# <a name="join-by-using-composite-keys"></a><span data-ttu-id="ca054-103">Unir usando chaves compostas</span><span class="sxs-lookup"><span data-stu-id="ca054-103">Join by using composite keys</span></span>
 
-<span data-ttu-id="e18e8-104">Este exemplo mostra como realizar operações de junção nas quais você deseja usar mais de uma chave para definir uma correspondência.</span><span class="sxs-lookup"><span data-stu-id="e18e8-104">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="e18e8-105">Isso é realizado por meio de uma chave composta.</span><span class="sxs-lookup"><span data-stu-id="e18e8-105">This is accomplished by using a composite key.</span></span> <span data-ttu-id="e18e8-106">Uma chave composta é criada como um tipo anônimo ou como um tipo nomeado com os valores que você deseja comparar.</span><span class="sxs-lookup"><span data-stu-id="e18e8-106">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="e18e8-107">Se a variável de consulta será passada entre limites de método, use um tipo nomeado que substitui <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> para a chave.</span><span class="sxs-lookup"><span data-stu-id="e18e8-107">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="e18e8-108">Os nomes das propriedades e a ordem em que elas ocorrem, devem ser idênticas em cada chave.</span><span class="sxs-lookup"><span data-stu-id="e18e8-108">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="e18e8-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e18e8-109">Example</span></span>  
- <span data-ttu-id="e18e8-110">O exemplo a seguir demonstra como usar uma chave composta para unir dados de três tabelas:</span><span class="sxs-lookup"><span data-stu-id="e18e8-110">The following example demonstrates how to use a composite key to join data from three tables:</span></span>  
-  
-```csharp  
-var query = from o in db.Orders  
-    from p in db.Products  
-    join d in db.OrderDetails   
-        on new {o.OrderID, p.ProductID} equals new {d.OrderID,        d.ProductID} into details  
-        from d in details  
-        select new {o.OrderID, p.ProductID, d.UnitPrice};  
-```  
-  
- <span data-ttu-id="e18e8-111">A inferência de tipos em chaves compostas depende dos nomes das propriedades nas chaves e da ordem em que elas ocorrem.</span><span class="sxs-lookup"><span data-stu-id="e18e8-111">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="e18e8-112">Se as propriedades nas sequências de origem não têm os mesmos nomes, você deve atribuir novos nomes nas chaves.</span><span class="sxs-lookup"><span data-stu-id="e18e8-112">If the properties in the source sequences do not have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="e18e8-113">Por exemplo, se a tabela `Orders` e a tabela `OrderDetails` usaram nomes diferentes para suas colunas, você poderia criar chaves compostas ao atribuir nomes idênticos nos tipos anônimos:</span><span class="sxs-lookup"><span data-stu-id="e18e8-113">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>  
-  
-```csharp  
-join...on new {Name = o.CustomerName, ID = o.CustID} equals   
-    new {Name = d.CustName, ID = d.CustID }  
-```  
-  
- <span data-ttu-id="e18e8-114">As chaves compostas também podem ser usadas em uma cláusula `group`.</span><span class="sxs-lookup"><span data-stu-id="e18e8-114">Composite keys can be also used in a `group` clause.</span></span>  
+<span data-ttu-id="ca054-104">Este exemplo mostra como realizar operações de junção nas quais você deseja usar mais de uma chave para definir uma correspondência.</span><span class="sxs-lookup"><span data-stu-id="ca054-104">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="ca054-105">Isso é realizado por meio de uma chave composta.</span><span class="sxs-lookup"><span data-stu-id="ca054-105">This is accomplished by using a composite key.</span></span> <span data-ttu-id="ca054-106">Uma chave composta é criada como um tipo anônimo ou como um tipo nomeado com os valores que você deseja comparar.</span><span class="sxs-lookup"><span data-stu-id="ca054-106">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="ca054-107">Se a variável de consulta será passada entre limites de método, use um tipo nomeado que substitui <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> para a chave.</span><span class="sxs-lookup"><span data-stu-id="ca054-107">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="ca054-108">Os nomes das propriedades e a ordem em que elas ocorrem, devem ser idênticas em cada chave.</span><span class="sxs-lookup"><span data-stu-id="ca054-108">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e18e8-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e18e8-115">See also</span></span>  
- [<span data-ttu-id="e18e8-116">Expressões de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="e18e8-116">LINQ query expressions</span></span>](index.md)  
- [<span data-ttu-id="e18e8-117">Cláusula join</span><span class="sxs-lookup"><span data-stu-id="e18e8-117">join clause</span></span>](../language-reference/keywords/join-clause.md)  
- [<span data-ttu-id="e18e8-118">Cláusula group</span><span class="sxs-lookup"><span data-stu-id="e18e8-118">group clause</span></span>](../language-reference/keywords/group-clause.md)
+## <a name="example"></a><span data-ttu-id="ca054-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ca054-109">Example</span></span>
+
+<span data-ttu-id="ca054-110">O exemplo a seguir demonstra como usar uma chave composta para unir dados de três tabelas:</span><span class="sxs-lookup"><span data-stu-id="ca054-110">The following example demonstrates how to use a composite key to join data from three tables:</span></span>
+
+```csharp
+var query = from o in db.Orders
+    from p in db.Products
+    join d in db.OrderDetails
+        on new {o.OrderID, p.ProductID} equals new {d.OrderID, d.ProductID} into details
+        from d in details
+        select new {o.OrderID, p.ProductID, d.UnitPrice};
+```
+
+<span data-ttu-id="ca054-111">A inferência de tipos em chaves compostas depende dos nomes das propriedades nas chaves e da ordem em que elas ocorrem.</span><span class="sxs-lookup"><span data-stu-id="ca054-111">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="ca054-112">Quando as propriedades nas sequências de origem não têm os mesmos nomes, você precisa atribuir novos nomes nas chaves.</span><span class="sxs-lookup"><span data-stu-id="ca054-112">If the properties in the source sequences don't have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="ca054-113">Por exemplo, se a tabela `Orders` e a tabela `OrderDetails` usaram nomes diferentes para suas colunas, você poderia criar chaves compostas ao atribuir nomes idênticos nos tipos anônimos:</span><span class="sxs-lookup"><span data-stu-id="ca054-113">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>
+
+```csharp
+join...on new {Name = o.CustomerName, ID = o.CustID} equals
+    new {Name = d.CustName, ID = d.CustID }
+```
+
+<span data-ttu-id="ca054-114">As chaves compostas também podem ser usadas em uma cláusula `group`.</span><span class="sxs-lookup"><span data-stu-id="ca054-114">Composite keys can be also used in a `group` clause.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ca054-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca054-115">See also</span></span>
+
+[<span data-ttu-id="ca054-116">LINQ (Consulta Integrada à Linguagem)</span><span class="sxs-lookup"><span data-stu-id="ca054-116">Language Integrated Query (LINQ)</span></span>](index.md)  
+[<span data-ttu-id="ca054-117">Cláusula join</span><span class="sxs-lookup"><span data-stu-id="ca054-117">join clause</span></span>](../language-reference/keywords/join-clause.md)  
+[<span data-ttu-id="ca054-118">Cláusula group</span><span class="sxs-lookup"><span data-stu-id="ca054-118">group clause</span></span>](../language-reference/keywords/group-clause.md)  
