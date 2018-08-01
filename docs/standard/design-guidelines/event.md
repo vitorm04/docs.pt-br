@@ -24,48 +24,48 @@ Os eventos são a forma mais usada de retornos de chamada (construções que per
   
  É importante observar que há dois grupos de eventos: eventos gerado antes de um estado das alterações do sistema, chamado pré-eventos e eventos gerados depois de um estado de alterações, chamado pós-eventos. Um exemplo de um pré-evento de seria `Form.Closing`, que é gerado antes de um formulário é fechado. Um exemplo de um pós-evento de seria `Form.Closed`, que é gerado depois que um formulário é fechado.  
   
- **FAZER ✓** usam o termo "raise" eventos em vez de "fire" ou "disparar".  
+ **✓ DO** usam o termo "raise" eventos em vez de "fire" ou "disparar".  
   
- **FAZER ✓** use <xref:System.EventHandler%601?displayProperty=nameWithType> em vez de criar manualmente novas delegados para serem usados como manipuladores de eventos.  
+ **✓ DO** use <xref:System.EventHandler%601?displayProperty=nameWithType> em vez de criar manualmente novas delegados para serem usados como manipuladores de eventos.  
   
- **✓ CONSIDERE** usando uma subclasse de <xref:System.EventArgs> como o argumento do evento, a menos que seja absolutamente-se de que o evento não será necessário executar todos os dados para o método de manipulação de eventos caso em que você pode usar o `EventArgs` digitados diretamente.  
+ **✓ CONSIDER** usando uma subclasse de <xref:System.EventArgs> como o argumento do evento, a menos que seja absolutamente-se de que o evento não será necessário executar todos os dados para o método de manipulação de eventos caso em que você pode usar o `EventArgs` digitados diretamente.  
   
  Se você enviar usando uma API `EventArgs` diretamente, você nunca poderá adicionar dados a ser executado com o evento sem perder a compatibilidade. Se você usar uma subclasse, mesmo se inicialmente completamente vazio, você poderá adicionar propriedades a subclasse quando necessário.  
   
- **FAZER ✓** usar um método virtual protegido para gerar cada evento. Isso só é aplicável para eventos não estáticos nas classes sem lacre, não para structs, classes lacradas ou eventos estáticos.  
+ **✓ DO** usar um método virtual protegido para gerar cada evento. Isso só é aplicável para eventos não estáticos nas classes sem lacre, não para structs, classes lacradas ou eventos estáticos.  
   
  A finalidade do método é fornecer uma maneira para uma classe derivada para manipular o evento de uso de uma substituição. Substituindo é uma maneira mais flexível, mais rápida e mais natural para tratar eventos de classe base em classes derivadas. Por convenção, o nome do método deve começar com "On" e ser seguido pelo nome do evento.  
   
  A classe derivada pode optar por não chamar a implementação base do método na sua substituição. Esteja preparado para isso, não incluindo nenhum processamento no método que é necessário para a classe base funcionar corretamente.  
   
- **FAZER ✓** ter um parâmetro para o método protegido que gera um evento.  
+ **✓ DO** ter um parâmetro para o método protegido que gera um evento.  
   
  O parâmetro deve ser nomeado `e` e deve ser digitado como a classe de argumento do evento.  
   
- **X não** passar nulo como o remetente quando gerar um evento não estático.  
+ **X DO NOT** passar nulo como o remetente quando gerar um evento não estático.  
   
- **FAZER ✓** passar nulo como o remetente ao gerar um evento estático.  
+ **✓ DO** passar nulo como o remetente ao gerar um evento estático.  
   
- **X não** passar nulo como o parâmetro de dados de evento ao gerar um evento.  
+ **X DO NOT** passar nulo como o parâmetro de dados de evento ao gerar um evento.  
   
  Você deve passar `EventArgs.Empty` se você não deseja transmitir os dados para o método de manipulação de eventos. Os desenvolvedores espera que esse parâmetro não deve ser nulo.  
   
- **✓ CONSIDERE** gerando eventos que o usuário final pode cancelar. Isso só se aplica a pré eventos.  
+ **✓ CONSIDER** gerando eventos que o usuário final pode cancelar. Isso só se aplica a pré eventos.  
   
  Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> ou suas subclasses como o argumento do evento para permitir que o usuário final cancelar eventos.  
   
 ### <a name="custom-event-handler-design"></a>Design do manipulador de eventos personalizados  
  Há casos em que `EventHandler<T>` não pode ser usado, como quando o framework precisa trabalhar com versões anteriores do CLR, o que não oferecia suporte a genéricos. Nesses casos, você precisará criar e desenvolver um representante do manipulador de eventos personalizados.  
   
- **FAZER ✓** usar um tipo de retorno de void para manipuladores de eventos.  
+ **✓ DO** usar um tipo de retorno de void para manipuladores de eventos.  
   
  Um manipulador de eventos pode chamar vários métodos, possivelmente em vários objetos de manipulação de eventos. Se os métodos de manipulação de eventos foram permitidos para retornar um valor, seria vários valores de retorno para cada invocação de eventos.  
   
- **FAZER ✓** usar `object` como o tipo do primeiro parâmetro do manipulador de eventos e chamá-la `sender`.  
+ **✓ DO** usar `object` como o tipo do primeiro parâmetro do manipulador de eventos e chamá-la `sender`.  
   
- **FAZER ✓** usar <xref:System.EventArgs?displayProperty=nameWithType> ou suas subclasses como o tipo do segundo parâmetro do manipulador de eventos e chamá-la `e`.  
+ **✓ DO** usar <xref:System.EventArgs?displayProperty=nameWithType> ou suas subclasses como o tipo do segundo parâmetro do manipulador de eventos e chamá-la `e`.  
   
- **X não** ter mais de dois parâmetros em manipuladores de eventos.  
+ **X DO NOT** ter mais de dois parâmetros em manipuladores de eventos.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

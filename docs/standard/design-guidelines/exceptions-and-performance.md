@@ -21,7 +21,7 @@ ms.locfileid: "33575330"
 # <a name="exceptions-and-performance"></a>Desempenho e exceções
 Uma preocupação comuns relacionada às exceções é que, se as exceções são usadas para código rotineiramente falha, o desempenho da implementação será inaceitável. Isso é uma preocupação válida. Quando um membro lança uma exceção, o desempenho pode ser mais lentas ordens de magnitude. No entanto, é possível atingir um bom desempenho ao estritamente aderindo às diretrizes de exceção que não é permitido usar códigos de erro. Dois padrões descritos nesta seção sugerem maneiras de fazer isso.  
   
- **X não** usar códigos de erro devido a questões que exceções podem afetar negativamente o desempenho.  
+ **X DO NOT** usar códigos de erro devido a questões que exceções podem afetar negativamente o desempenho.  
   
  Para melhorar o desempenho, é possível usar o testador mal-intencionado padrão ou o padrão de análise Try, descrito nas próximas duas seções.  
   
@@ -45,7 +45,7 @@ if(!numbers.IsReadOnly){
   
  O membro usado para testar uma condição, que, em nosso exemplo, é a propriedade `IsReadOnly`, é conhecido como o teste. O membro usado para executar uma operação potencialmente sendo lançada, o `Add` método em nosso exemplo, é conhecido como o mal-intencionado.  
   
- **✓ CONSIDERE** o padrão de mal-intencionado Testador de membros que podem lançar exceções em comum em cenários para evitar problemas de desempenho relacionados a exceções.  
+ **✓ CONSIDER** o padrão de mal-intencionado Testador de membros que podem lançar exceções em comum em cenários para evitar problemas de desempenho relacionados a exceções.  
   
 ## <a name="try-parse-pattern"></a>Tente a análise padrão  
  Para desempenho extremamente sensíveis APIs, um padrão ainda mais rápido do que o padrão de testador mal-intencionado descrito na seção anterior deve ser usado. O padrão de chamadas para ajustar o nome do membro para fazer um teste bem definido caso uma parte da semântica de membros. Por exemplo, <xref:System.DateTime> define um <xref:System.DateTime.Parse%2A> método que gera uma exceção se a análise de uma cadeia de caracteres falhar. Ele também define correspondente <xref:System.DateTime.TryParse%2A> método que tenta analisar, mas retornará false se a análise for bem-sucedida e retorna o resultado de uma análise com êxito usando um `out` parâmetro.  
@@ -63,11 +63,11 @@ public struct DateTime {
   
  Ao usar esse padrão, é importante definir a funcionalidade de tente em termos estritos. Se o membro falhar por algum motivo que não seja o tente bem definido, o membro ainda deve lançar uma exceção correspondente.  
   
- **✓ CONSIDERE** o padrão de Try-análise para os membros que podem lançar exceções em comum em cenários para evitar problemas de desempenho relacionados a exceções.  
+ **✓ CONSIDER** o padrão de Try-análise para os membros que podem lançar exceções em comum em cenários para evitar problemas de desempenho relacionados a exceções.  
   
- **FAZER ✓** usam o prefixo "Try" e Boolean tipo de retorno para métodos de implementar esse padrão.  
+ **✓ DO** usam o prefixo "Try" e Boolean tipo de retorno para métodos de implementar esse padrão.  
   
- **FAZER ✓** fornecem um membro geradoras de exceções para cada membro usando o padrão de análise de Try.  
+ **✓ DO** fornecem um membro geradoras de exceções para cada membro usando o padrão de análise de Try.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

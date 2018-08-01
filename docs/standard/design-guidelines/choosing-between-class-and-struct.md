@@ -36,9 +36,9 @@ Uma das decisões de design básico que faces cada designer de estrutura é um t
   
  Como regra geral, a maioria dos tipos em uma estrutura deve ser classes. No entanto, há algumas situações em que as características de um tipo de valor torná-lo mais apropriado usar estruturas.  
   
- **✓ CONSIDERE** definindo um struct, em vez de uma classe, se as instâncias do tipo são pequena e geralmente curta duração ou geralmente são inseridas em outros objetos.  
+ **✓ CONSIDER** definindo um struct, em vez de uma classe, se as instâncias do tipo são pequena e geralmente curta duração ou geralmente são inseridas em outros objetos.  
   
- **X Evite** definindo uma estrutura, a menos que o tipo tem todas as seguintes características:  
+ **X AVOID** definindo uma estrutura, a menos que o tipo tem todas as seguintes características:  
   
 -   Representa um único valor, semelhante aos tipos primitivos logicamente (`int`, `double`, etc.).  
   

@@ -19,7 +19,7 @@ ms.locfileid: "33571655"
 # <a name="unsealed-classes"></a>Classes não lacradas
 Classes sealed não podem ser herdadas e impedem que extensibilidade. Por outro lado, que podem ser herdadas de classes são chamados de classes sem lacre.  
   
- **✓ CONSIDERE** usar classes não lacradas sem nenhum adicionado membros virtuais ou protegidos como uma ótima maneira de fornecer mais barato ainda muito mais valioso extensibilidade para uma estrutura.  
+ **✓ CONSIDER** usar classes não lacradas sem nenhum adicionado membros virtuais ou protegidos como uma ótima maneira de fornecer mais barato ainda muito mais valioso extensibilidade para uma estrutura.  
   
  Os desenvolvedores geralmente desejam herdar de classes não lacradas para adicionar membros de conveniência como construtores personalizados, novos métodos ou sobrecargas do método. Por exemplo, `System.Messaging.MessageQueue` é sem lacre e, portanto, permite aos usuários criar filas personalizadas esse padrão para um caminho de fila particular ou adicione métodos personalizados que simplificam a API para cenários específicos.  
   

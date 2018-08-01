@@ -27,24 +27,24 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **FAZER ✓** nomes de namespace com um nome de empresa para evitar namespaces de empresas diferentes tenham o mesmo nome do prefixo.  
+ **✓ DO** nomes de namespace com um nome de empresa para evitar namespaces de empresas diferentes tenham o mesmo nome do prefixo.  
   
- **FAZER ✓** usar um nome de produto estável, independente de versão no segundo nível de um nome de namespace.  
+ **✓ DO** usar um nome de produto estável, independente de versão no segundo nível de um nome de namespace.  
   
- **X não** usar hierarquias organizacionais como a base para nomes em hierarquias de namespace, como nomes de grupo em corporações tendem a ter vida curta. Organize a hierarquia de namespaces em torno de grupos de tecnologias relacionadas.  
+ **X DO NOT** usar hierarquias organizacionais como a base para nomes em hierarquias de namespace, como nomes de grupo em corporações tendem a ter vida curta. Organize a hierarquia de namespaces em torno de grupos de tecnologias relacionadas.  
   
- **FAZER ✓** usar PascalCasing e componentes do namespace separado com pontos (por exemplo, `Microsoft.Office.PowerPoint`). Se a marca emprega maiusculas e minúsculas não tradicional, você deve seguir o uso de maiusculas e minúsculas definido por sua marca, mesmo se ele tiver um desvio de maiusculas e minúsculas do namespace normal.  
+ **✓ DO** usar PascalCasing e componentes do namespace separado com pontos (por exemplo, `Microsoft.Office.PowerPoint`). Se a marca emprega maiusculas e minúsculas não tradicional, você deve seguir o uso de maiusculas e minúsculas definido por sua marca, mesmo se ele tiver um desvio de maiusculas e minúsculas do namespace normal.  
   
- **✓ CONSIDERE** usando nomes de namespace no plural quando apropriado.  
+ **✓ CONSIDER** usando nomes de namespace no plural quando apropriado.  
   
  Por exemplo, use `System.Collections` em vez de `System.Collection`. Nomes de marca e acrônimos são exceções a essa regra, no entanto. Por exemplo, use `System.IO` em vez de `System.IOs`.  
   
- **X não** usar o mesmo nome de um namespace e um tipo no namespace.  
+ **X DO NOT** usar o mesmo nome de um namespace e um tipo no namespace.  
   
  Por exemplo, não use `Debug` como um namespace do nome e, em seguida, também fornecem uma classe denominada `Debug` no mesmo namespace. Alguns compiladores exigem tipos totalmente qualificados.  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>Namespaces e conflitos de nome de tipo  
- **X não** apresentar nomes de tipo genérico como `Element`, `Node`, `Log`, e `Message`.  
+ **X DO NOT** apresentar nomes de tipo genérico como `Element`, `Node`, `Log`, e `Message`.  
   
  Há uma probabilidade muito alta que fazer isso levará para o nome de tipo está em conflito em comum cenários. Você deve qualificar os nomes de tipo genérico (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
@@ -57,7 +57,7 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X não** atribuir o mesmo nome para tipos em namespaces dentro de um modelo de aplicativo único.  
+     **X DO NOT** atribuir o mesmo nome para tipos em namespaces dentro de um modelo de aplicativo único.  
   
      Por exemplo, não adicione um tipo chamado `Page` para o <xref:System.Web.UI.Adapters?displayProperty=nameWithType> namespace, porque o <xref:System.Web.UI?displayProperty=nameWithType> namespace já contém um tipo chamado `Page`.  
   
@@ -69,7 +69,7 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
   
      Namespaces básicos incluem todos os `System` namespaces, excluindo espaços para nome dos modelos de aplicativo e os namespaces de infraestrutura. Namespaces básicos incluem, entre outros, `System`, `System.IO`, `System.Xml`, e `System.Net`.  
   
-     **X não** fornecem tipos de nomes que entraria em conflito com qualquer tipo nos namespaces Core.  
+     **X DO NOT** fornecem tipos de nomes que entraria em conflito com qualquer tipo nos namespaces Core.  
   
      Por exemplo, nunca use `Stream` como um nome de tipo. Ela entraria em conflito com <xref:System.IO.Stream?displayProperty=nameWithType>, um tipo muito usados.  
   
@@ -77,9 +77,9 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
   
      Essa categoria inclui todos os namespaces com os dois primeiros nós de namespace mesmo `(<Company>.<Technology>*`), como `Microsoft.Build.Utilities` e `Microsoft.Build.Tasks`. É importante que tipos que pertencem a uma única tecnologia não entrem em conflito entre si.  
   
-     **X não** atribuir nomes de tipo que entraria em conflito com outros tipos em uma única tecnologia.  
+     **X DO NOT** atribuir nomes de tipo que entraria em conflito com outros tipos em uma única tecnologia.  
   
-     **X não** apresentam conflitos de nome de tipo entre os tipos nos namespaces de tecnologia e um namespace do modelo de aplicativo (a menos que a tecnologia não se destina a ser usado com o modelo de aplicativo).  
+     **X DO NOT** apresentam conflitos de nome de tipo entre os tipos nos namespaces de tecnologia e um namespace do modelo de aplicativo (a menos que a tecnologia não se destina a ser usado com o modelo de aplicativo).  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

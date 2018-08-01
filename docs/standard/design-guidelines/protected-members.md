@@ -24,9 +24,9 @@ Membros protegidos por si só não fornecem nenhuma extensibilidade, mas eles po
   
  Designers de Framework precisam ter cuidado com membros protegidos, porque o nome "protegido" pode dar uma falsa sensação de segurança. Qualquer pessoa que é capaz de subclasse de uma classe não lacrada e membros de acesso protegido e então as mesmas as práticas de codificação usadas para membros públicos se aplica a membros protegidos.  
   
- **✓ CONSIDERE** usando membros para a personalização avançada protegidos.  
+ **✓ CONSIDER** usando membros para a personalização avançada protegidos.  
   
- **FAZER ✓** tratar membros protegidos em classes não lacradas como public para fins de análise de segurança, documentação e compatibilidade.  
+ **✓ DO** tratar membros protegidos em classes não lacradas como public para fins de análise de segurança, documentação e compatibilidade.  
   
  Qualquer pessoa pode herdar de uma classe e acessar os membros protegidos.  
   

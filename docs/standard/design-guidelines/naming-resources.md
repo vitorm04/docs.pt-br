@@ -21,15 +21,15 @@ ms.locfileid: "33571180"
 # <a name="naming-resources"></a>Nomenclatura de recursos
 Como recursos localizáveis podem ser referenciados por meio de determinados objetos, como se fossem propriedades, as diretrizes de nomeação para os recursos são semelhantes às diretrizes de propriedade.  
   
- **FAZER ✓** usar PascalCasing em chaves de recurso.  
+ **✓ DO** usar PascalCasing em chaves de recurso.  
   
- **FAZER ✓** fornecer descritivo em vez de identificadores curtos.  
+ **✓ DO** fornecer descritivo em vez de identificadores curtos.  
   
- **X não** usar palavras-chave das linguagens CLR principais.  
+ **X DO NOT** usar palavras-chave das linguagens CLR principais.  
   
- **FAZER ✓** use somente caracteres alfanuméricos e sublinhados em nomes de recursos.  
+ **✓ DO** use somente caracteres alfanuméricos e sublinhados em nomes de recursos.  
   
- **FAZER ✓** usam a seguinte convenção de nomenclatura para os recursos de mensagem de exceção.  
+ **✓ DO** usam a seguinte convenção de nomenclatura para os recursos de mensagem de exceção.  
   
  O identificador de recurso deve ser o nome do tipo de exceção mais um identificador curto da exceção:  
   

@@ -17,11 +17,11 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570380"
 ---
 # <a name="arrays"></a>Matrizes
-**FAZER ✓** preferir usar coleções em matrizes em APIs públicas. O [coleções](../../../docs/standard/design-guidelines/guidelines-for-collections.md) seção fornece detalhes sobre como escolher entre coleções e matrizes.  
+**✓ DO** preferir usar coleções em matrizes em APIs públicas. O [coleções](../../../docs/standard/design-guidelines/guidelines-for-collections.md) seção fornece detalhes sobre como escolher entre coleções e matrizes.  
   
- **X não** usar campos de matriz de somente leitura. O próprio campo é somente leitura e não pode ser alterado, mas os elementos da matriz podem ser alterados.  
+ **X DO NOT** usar campos de matriz de somente leitura. O próprio campo é somente leitura e não pode ser alterado, mas os elementos da matriz podem ser alterados.  
   
- **✓ CONSIDERE** usando matrizes denteadas em vez de matrizes multidimensionais.  
+ **✓ CONSIDER** usando matrizes denteadas em vez de matrizes multidimensionais.  
   
  Uma matriz denteada é uma matriz com elementos também são matrizes. As matrizes que compõem os elementos podem ser de tamanhos diferentes, resultando em menos perda de espaço para alguns conjuntos de dados (por exemplo, matriz esparsa) em comparação comparada matrizes multidimensionais. Além disso, o CLR otimiza as operações de índice em matrizes denteadas, para que eles podem apresentar melhor desempenho de tempo de execução em alguns cenários.  
   

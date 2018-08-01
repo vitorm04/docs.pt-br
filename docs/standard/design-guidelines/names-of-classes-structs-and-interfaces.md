@@ -24,32 +24,32 @@ ms.locfileid: "33576136"
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomes de Classes, estruturas e Interfaces
 As diretrizes de nomenclatura que sigam se aplicam a nomenclatura do tipo geral.  
   
- **FAZER ✓** nome classes e estruturas com substantivos e frases nominais, usando PascalCasing.  
+ **✓ DO** nome classes e estruturas com substantivos e frases nominais, usando PascalCasing.  
   
  Isso distingue os nomes de tipo de métodos que são nomeados com expressões de verbo.  
   
- **FAZER ✓** nome interfaces adjetivas frases ou ocasionalmente com substantivos e frases nominais.  
+ **✓ DO** nome interfaces adjetivas frases ou ocasionalmente com substantivos e frases nominais.  
   
  Substantivos e frases nominais raramente devem ser usados e podem indicar que o tipo deve ser uma classe abstrata e não uma interface.  
   
- **X não** dar nomes de classe um prefixo (por exemplo, "C").  
+ **X DO NOT** dar nomes de classe um prefixo (por exemplo, "C").  
   
- **✓ CONSIDERE** encerrar o nome de classes derivadas com o nome de classe base.  
+ **✓ CONSIDER** encerrar o nome de classes derivadas com o nome de classe base.  
   
  Isso é muito legível e explica a relação claramente. Alguns exemplos de código são: `ArgumentOutOfRangeException`, que é um tipo de `Exception`, e `SerializableAttribute`, que é um tipo de `Attribute`. No entanto, é importante usar razoável julgamento na aplicação dessa diretriz; Por exemplo, o `Button` classe é um tipo de `Control` evento, embora `Control` não aparecem em seu nome.  
   
- **FAZER ✓** nomes de interface de prefixo com a letra que, para indicar que o tipo é uma interface.  
+ **✓ DO** nomes de interface de prefixo com a letra que, para indicar que o tipo é uma interface.  
   
  Por exemplo, `IComponent` (substantivo descritivo) `ICustomAttributeProvider` (locução), e `IPersistable` (adjetivo) são nomes de interface apropriada. Assim como acontece com outros nomes de tipo, evite abreviações.  
   
- **FAZER ✓** Certifique-se de que os nomes diferem somente por "I" prefixo no nome da interface quando você está definindo um par de classe – interface em que a classe é uma implementação padrão da interface.  
+ **✓ DO** Certifique-se de que os nomes diferem somente por "I" prefixo no nome da interface quando você está definindo um par de classe – interface em que a classe é uma implementação padrão da interface.  
   
 ## <a name="names-of-generic-type-parameters"></a>Nomes de parâmetros de tipo genérico  
  Genéricos foram adicionados ao .NET Framework 2.0. O recurso introduzido um novo tipo de identificador chamado *parâmetro de tipo*.  
   
- **FAZER ✓** nome parâmetros de tipo genérico com nomes descritivos, a menos que o nome de um única letra é totalmente auto-explicativo e um nome descritivo não seria adicionar valor.  
+ **✓ DO** nome parâmetros de tipo genérico com nomes descritivos, a menos que o nome de um única letra é totalmente auto-explicativo e um nome descritivo não seria adicionar valor.  
   
- **✓ CONSIDERE** usando `T` como o nome do parâmetro de tipo para tipos com um parâmetro de tipo de letra único.  
+ **✓ CONSIDER** usando `T` como o nome do parâmetro de tipo para tipos com um parâmetro de tipo de letra único.  
   
 ```  
 public int IComparer<T> { ... }  
@@ -57,7 +57,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }  
 ```  
   
- **FAZER ✓** prefixo nomes de parâmetro de tipo descritivo com `T`.  
+ **✓ DO** prefixo nomes de parâmetro de tipo descritivo com `T`.  
   
 ```  
 public interface ISessionChannel<TSession> where TSession : ISession{  
@@ -65,37 +65,37 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 }  
 ```  
   
- **✓ CONSIDERE** indicando a restrições colocadas em um parâmetro de tipo no nome do parâmetro.  
+ **✓ CONSIDER** indicando a restrições colocadas em um parâmetro de tipo no nome do parâmetro.  
   
  Por exemplo, um parâmetro é restrito a `ISession` pode ser chamado `TSession`.  
   
 ## <a name="names-of-common-types"></a>Nomes dos tipos comuns  
- **FAZER ✓** siga as diretrizes descritas na tabela a seguir ao nomear tipos derivados de ou implementar certos tipos do .NET Framework.  
+ **✓ DO** siga as diretrizes descritas na tabela a seguir ao nomear tipos derivados de ou implementar certos tipos do .NET Framework.  
   
 |Tipo de base|Diretriz de tipo derivado/implementação|  
 |---------------|------------------------------------------|  
-|`System.Attribute`|**FAZER ✓** adicionar o sufixo "Atributo" em nomes de classes de atributos personalizados.|  
-|`System.Delegate`|**FAZER ✓** adicionar o sufixo "EventHandler" em nomes de representantes que são usados em eventos.<br /><br /> **FAZER ✓** adicionar o sufixo "Retorno de chamada" para nomes de representantes de diferentes dos usados como manipuladores de eventos.<br /><br /> **X não** adicionar o sufixo "Representante" a um delegado.|  
-|`System.EventArgs`|**FAZER ✓** adicionar o sufixo "EventArgs".|  
-|`System.Enum`|**X não** derivar desta classe; use a palavra-chave com suporte em vez disso, o idioma; por exemplo, no c#, use o `enum` palavra-chave.<br /><br /> **X não** adicionar o sufixo "Enum" ou "Sinalizador".|  
-|`System.Exception`|**FAZER ✓** adicionar o sufixo "Exception".|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**FAZER ✓** adicionar o sufixo "Dicionário". Observe que `IDictionary` é um tipo específico da coleção, mas essa diretriz tem precedência sobre a orientação mais geral de coleções que segue.|  
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**FAZER ✓** adicionar o sufixo "Coleção".|  
-|`System.IO.Stream`|**FAZER ✓** adicionar o sufixo "Fluxo".|  
-|`CodeAccessPermission IPermission`|**FAZER ✓** adicionar o sufixo "Permissão".|  
+|`System.Attribute`|**✓ DO** adicionar o sufixo "Atributo" em nomes de classes de atributos personalizados.|  
+|`System.Delegate`|**✓ DO** adicionar o sufixo "EventHandler" em nomes de representantes que são usados em eventos.<br /><br /> **✓ DO** adicionar o sufixo "Retorno de chamada" para nomes de representantes de diferentes dos usados como manipuladores de eventos.<br /><br /> **X DO NOT** adicionar o sufixo "Representante" a um delegado.|  
+|`System.EventArgs`|**✓ DO** adicionar o sufixo "EventArgs".|  
+|`System.Enum`|**X DO NOT** derivar desta classe; use a palavra-chave com suporte em vez disso, o idioma; por exemplo, no c#, use o `enum` palavra-chave.<br /><br /> **X DO NOT** adicionar o sufixo "Enum" ou "Sinalizador".|  
+|`System.Exception`|**✓ DO** adicionar o sufixo "Exception".|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** adicionar o sufixo "Dicionário". Observe que `IDictionary` é um tipo específico da coleção, mas essa diretriz tem precedência sobre a orientação mais geral de coleções que segue.|  
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** adicionar o sufixo "Coleção".|  
+|`System.IO.Stream`|**✓ DO** adicionar o sufixo "Fluxo".|  
+|`CodeAccessPermission IPermission`|**✓ DO** adicionar o sufixo "Permissão".|  
   
 ## <a name="naming-enumerations"></a>Enumerações de nomenclatura  
  Nomes de tipos de enumeração (também chamados de enums) em geral devem seguir as padrão de nomenclatura do tipo de regras (PascalCasing, etc.). No entanto, há diretrizes adicionais que se aplicam especificamente para enums.  
   
- **FAZER ✓** usar um nome de tipo singular para uma enumeração, a menos que seus valores são os campos de bits.  
+ **✓ DO** usar um nome de tipo singular para uma enumeração, a menos que seus valores são os campos de bits.  
   
- **FAZER ✓** usar um nome de tipo no plural para uma enumeração com campos de bits como valores, também chamados de enum de sinalizadores.  
+ **✓ DO** usar um nome de tipo no plural para uma enumeração com campos de bits como valores, também chamados de enum de sinalizadores.  
   
- **X não** use um sufixo "Enum" em nomes de tipo de enum.  
+ **X DO NOT** use um sufixo "Enum" em nomes de tipo de enum.  
   
- **X não** usar "Sinalizador" ou nomes de tipo sufixos "Sinalizadores" em enum.  
+ **X DO NOT** usar "Sinalizador" ou nomes de tipo sufixos "Sinalizadores" em enum.  
   
- **X não** usar um prefixo nos nomes de valor de enumeração (por exemplo, "ad" para ADO enums.), "rtf" para enums RTF, etc.  
+ **X DO NOT** usar um prefixo nos nomes de valor de enumeração (por exemplo, "ad" para ADO enums.), "rtf" para enums RTF, etc.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

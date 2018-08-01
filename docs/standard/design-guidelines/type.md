@@ -32,7 +32,7 @@ Da perspectiva do CLR, há apenas duas categorias de tipos — referenciar tipos
   
  Delegados, exceções, atributos, matrizes e coleções são todos os casos especiais de tipos de referência que se destina para usos específicos e diretrizes de design e uso são discutidas em outro lugar neste livro.  
   
- **FAZER ✓** Certifique-se de que cada tipo é um conjunto bem definido de membros relacionados, não apenas um conjunto aleatório de funcionalidades relacionadas.  
+ **✓ DO** Certifique-se de que cada tipo é um conjunto bem definido de membros relacionados, não apenas um conjunto aleatório de funcionalidades relacionadas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Escolhendo entre a classe e Struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  

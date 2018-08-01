@@ -41,15 +41,15 @@ Todos os programas adquirem um ou mais recursos do sistema, como memória, manip
   
  A principal motivação para o padrão é para reduzir a complexidade da implementação do <xref:System.Object.Finalize%2A> e <xref:System.IDisposable.Dispose%2A> métodos. Reduz a complexidade do fato de que os métodos compartilham algumas, mas nem todos os caminhos de código (as diferenças são descritas posteriormente no capítulo). Além disso, há razões históricas para alguns elementos do padrão relacionadas a evolução de suporte ao idioma para o gerenciamento de recursos determinística.  
   
- **FAZER ✓** implementar o padrão de Dispose básico em tipos que contém instâncias de tipos descartáveis. Consulte o [padrão Dispose básico](#basic_pattern) seção para obter detalhes sobre o padrão básico.  
+ **✓ DO** implementar o padrão de Dispose básico em tipos que contém instâncias de tipos descartáveis. Consulte o [padrão Dispose básico](#basic_pattern) seção para obter detalhes sobre o padrão básico.  
   
  Se um tipo é responsável pelo tempo de vida de outros objetos descartáveis, os desenvolvedores precisam de uma maneira de descartá-los, muito. Usando o contêiner `Dispose` método é uma maneira conveniente para que isso aconteça.  
   
- **FAZER ✓** implementar o padrão de Dispose básico e fornecer um finalizador em tipos de recursos de retenção que precisam ser liberados explicitamente e que não tenham finalizadores.  
+ **✓ DO** implementar o padrão de Dispose básico e fornecer um finalizador em tipos de recursos de retenção que precisam ser liberados explicitamente e que não tenham finalizadores.  
   
  Por exemplo, o padrão deve ser implementado em tipos de armazenamento de buffers de memória não gerenciada. O [tipos finalizáveis](#finalizable_types) seção discute as diretrizes relacionadas à implementação finalizadores.  
   
- **✓ CONSIDERE** Implementando o padrão de Dispose básico em classes que se não mantém os recursos não gerenciados ou objetos descartáveis mas serão prováveis que os subtipos que fazer.  
+ **✓ CONSIDER** Implementando o padrão de Dispose básico em classes que se não mantém os recursos não gerenciados ou objetos descartáveis mas serão prováveis que os subtipos que fazer.  
   
  Um ótimo exemplo disso é a <xref:System.IO.Stream?displayProperty=nameWithType> classe. Embora seja uma classe base abstrata que não contêm todos os recursos, a maioria de suas subclasses fazer e por isso, ele implementa esse padrão.  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Além disso, esta seção se aplica a classes com uma base que não implementa o padrão Dispose. Se você estiver herdando de uma classe que já implementa o padrão, basta substituir a `Dispose(bool)` método para fornecer lógica de limpeza de recursos adicionais.  
   
- **FAZER ✓** declarar um `protected virtual void Dispose(bool disposing)` método centralizar toda a lógica relacionado à liberação de recursos não gerenciados.  
+ **✓ DO** declarar um `protected virtual void Dispose(bool disposing)` método centralizar toda a lógica relacionado à liberação de recursos não gerenciados.  
   
  Limpeza de todos os recursos deve ocorrer nesse método. O método é chamado de ambos o finalizador e `IDisposable.Dispose` método. O parâmetro será false se o que está sendo chamado de dentro de um finalizador. Ele deve ser usado para garantir que qualquer código em execução durante a finalização não está acessando a outros objetos finalizáveis. Detalhes de implementação de finalizadores são descritos na próxima seção.  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```  
   
- **FAZER ✓** implementar o `IDisposable` interface simplesmente chamando `Dispose(true)` seguido por `GC.SuppressFinalize(this)`.  
+ **✓ DO** implementar o `IDisposable` interface simplesmente chamando `Dispose(true)` seguido por `GC.SuppressFinalize(this)`.  
   
  A chamada para `SuppressFinalize` deve ocorrer somente se `Dispose(true)` for executado com êxito.  
   
@@ -108,7 +108,7 @@ public void Dispose(){
 }  
 ```  
   
- **X não** fazer o sem parâmetros `Dispose` método virtual.  
+ **X DO NOT** fazer o sem parâmetros `Dispose` método virtual.  
   
  O `Dispose(bool)` método é o que deve ser substituído por subclasses.  
   
@@ -126,11 +126,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X não** declarar qualquer sobrecargas do `Dispose` método diferente do `Dispose()` e `Dispose(bool)`.  
+ **X DO NOT** declarar qualquer sobrecargas do `Dispose` método diferente do `Dispose()` e `Dispose(bool)`.  
   
  `Dispose` deve ser considerada uma palavra reservada para ajudar a codificar esse padrão e evitar confusão entre implementadores, usuários e compiladores. Alguns idiomas podem optar por implementar esse padrão automaticamente em determinados tipos.  
   
- **FAZER ✓** permitir a `Dispose(bool)` método a ser chamado mais de uma vez. O método pode optar por não fazer nada após a primeira chamada.  
+ **✓ DO** permitir a `Dispose(bool)` método a ser chamado mais de uma vez. O método pode optar por não fazer nada após a primeira chamada.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X Evite** lançar uma exceção no `Dispose(bool)` exceto sob críticas situações em que o processo contendo está corrompido (vazamentos, estado compartilhado inconsistente, etc.).  
+ **X AVOID** lançar uma exceção no `Dispose(bool)` exceto sob críticas situações em que o processo contendo está corrompido (vazamentos, estado compartilhado inconsistente, etc.).  
   
  Os usuários esperam que uma chamada para `Dispose` não gerará uma exceção.  
   
  Se `Dispose` pode gerar uma exceção, a lógica de limpeza de bloco finally adicional não será executado. Para contornar isso, o usuário teria que encapsulam cada chamada para `Dispose` (dentro do bloco finally!) em um bloco try, o que leva para manipuladores de limpeza muito complexos. Se a execução de um `Dispose(bool disposing)` método, nunca lançar uma exceção se disposing é false. Ao fazer isso, o processo será encerrado se a execução dentro de um contexto de finalizador.  
   
- **FAZER ✓** lançar um <xref:System.ObjectDisposedException> de qualquer membro que não pode ser usado depois que o objeto foi descartado.  
+ **✓ DO** lançar um <xref:System.ObjectDisposedException> de qualquer membro que não pode ser usado depois que o objeto foi descartado.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ CONSIDERE** fornecendo método `Close()`, além de `Dispose()`, se fechar é terminologia padrão na área.  
+ **✓ CONSIDER** fornecendo método `Close()`, além de `Dispose()`, se fechar é terminologia padrão na área.  
   
  Ao fazer isso, é importante que você faça a `Close` implementação idêntica ao `Dispose` e considere implementar a `IDisposable.Dispose` método explicitamente.  
   
@@ -230,15 +230,15 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **X Evite** fazer tipos finalizáveis.  
+ **X AVOID** fazer tipos finalizáveis.  
   
  Considere cuidadosamente algum caso no qual você acha que é necessário um finalizador. Há um real custo associado com instâncias com finalizadores, do ponto de vista de complexidade de um desempenho e de código. Preferir usar wrappers de recursos, como <xref:System.Runtime.InteropServices.SafeHandle> para encapsular recursos não gerenciados, sempre que possível, caso em que um finalizador é desnecessário porque o wrapper é responsável por sua própria limpeza de recursos.  
   
- **X não** tornar os tipos de valor finalizáveis.  
+ **X DO NOT** tornar os tipos de valor finalizáveis.  
   
  Somente os tipos de referência, na verdade, obtenham finalizados pelo CLR, e, portanto, qualquer tentativa de colocar um finalizador em um tipo de valor será ignorada. O c# e C++ compiladores impõem essa regra.  
   
- **FAZER ✓** fazer um tipo finalizáveis se o tipo é responsável pela liberação de um recurso não gerenciado que não tem seu próprio finalizador.  
+ **✓ DO** fazer um tipo finalizáveis se o tipo é responsável pela liberação de um recurso não gerenciado que não tem seu próprio finalizador.  
   
  Ao implementar o finalizador, simplesmente chamar `Dispose(false)` e coloque a lógica de limpeza todos os recursos dentro de `Dispose(bool disposing)` método.  
   
@@ -255,25 +255,25 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **FAZER ✓** implementar o padrão de Dispose básico em cada tipo finalizável.  
+ **✓ DO** implementar o padrão de Dispose básico em cada tipo finalizável.  
   
  Isso fornece aos usuários do tipo um meio para executar explicitamente a limpeza determinística desses recursos mesmo para os quais o finalizador é responsável.  
   
- **X não** acessar quaisquer objetos finalizáveis no caminho de código do finalizador, porque não há risco significativo que eles serão já ter sido finalizados.  
+ **X DO NOT** acessar quaisquer objetos finalizáveis no caminho de código do finalizador, porque não há risco significativo que eles serão já ter sido finalizados.  
   
  Por exemplo, um objeto finalizável A que tem uma referência a outro objeto finalizável B confiável não é possível usar B do finalizador, ou vice-versa. Os finalizadores são chamados em uma ordem aleatória (com pouca uma garantia de ordenação fraca finalização crítico).  
   
  Além disso, lembre-se de que os objetos armazenados em variáveis estáticas obter coletados em determinados pontos durante um descarregamento de domínio de aplicativo ou ao sair do processo. Acessando uma variável estática que se refere a um objeto finalizável (ou chamar um método estático que pode usar os valores armazenados em variáveis estáticas) pode não ser seguro se <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> retorna true.  
   
- **FAZER ✓** fazer sua `Finalize` método protegido.  
+ **✓ DO** fazer sua `Finalize` método protegido.  
   
  Os desenvolvedores do c#, C++ e VB.NET não precisa se preocupar com isso, porque os compiladores de ajudam a impor essa diretriz.  
   
- **X não** escape permitem exceções da lógica finalizador, exceto para falhas críticas do sistema.  
+ **X DO NOT** escape permitem exceções da lógica finalizador, exceto para falhas críticas do sistema.  
   
  Se uma exceção é gerada a partir de um finalizador, o CLR desligará o processo inteiro (a partir do .NET Framework versão 2.0), impedindo que outros finalizadores executando e recursos do que está sendo liberado de forma controlada.  
   
- **✓ CONSIDERE** criando e usando um objeto finalizável crítico (um tipo com uma hierarquia de tipo que contém <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) para situações em que um finalizador absolutamente deve executar mesmo em caso de thread e os descarregamentos de domínio de aplicativo forçada será anulada.  
+ **✓ CONSIDER** criando e usando um objeto finalizável crítico (um tipo com uma hierarquia de tipo que contém <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) para situações em que um finalizador absolutamente deve executar mesmo em caso de thread e os descarregamentos de domínio de aplicativo forçada será anulada.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

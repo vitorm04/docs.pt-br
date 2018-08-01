@@ -43,9 +43,9 @@ As diretrizes neste capítulo dispor de um método simples para o uso de caso qu
  `ioStream`  
  `htmlTag`  
   
- **FAZER ✓** usar PascalCasing para todos os membros, tipo e namespace nomes públicos consiste em várias palavras.  
+ **✓ DO** usar PascalCasing para todos os membros, tipo e namespace nomes públicos consiste em várias palavras.  
   
- **FAZER ✓** usar camelCasing para nomes de parâmetro.  
+ **✓ DO** usar camelCasing para nomes de parâmetro.  
   
  A tabela a seguir descreve as regras de maiusculas e minúsculas para diferentes tipos de identificadores.  
   
@@ -64,7 +64,7 @@ As diretrizes neste capítulo dispor de um método simples para o uso de caso qu
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Palavras compostas de maiusculas e termos comuns  
  A maioria dos termos compostos são tratados como palavras individuais para fins de maiusculas e minúsculas.  
   
- **X não** cada palavra em palavras compostas de forma fechada chamadas em maiuscula.  
+ **X DO NOT** cada palavra em palavras compostas de forma fechada chamadas em maiuscula.  
   
  Esses são gravadas como uma única palavra, como ponto de extremidade de palavras compostas. Para fins de diretrizes de maiusculas e minúsculas, trate uma palavra composta de forma fechada como uma única palavra. Use um dicionário atual para determinar se uma palavra composta é gravada na forma fechada.  
   
@@ -99,7 +99,7 @@ As diretrizes neste capítulo dispor de um método simples para o uso de caso qu
 ## <a name="case-sensitivity"></a>Diferenciação de maiúsculas e minúsculas  
  Idiomas que podem ser executados no CLR não são necessários para dar suporte a diferenciação de maiusculas e minúsculas, embora alguns fazer. Mesmo se o seu idioma oferece suporte a ele, outros idiomas que podem acessar a estrutura não. Quaisquer APIs que são acessíveis, portanto, não pode depender caso sozinho para distinguir entre os dois nomes no mesmo contexto.  
   
- **X não** suponha que todas as linguagens de programação diferenciam maiusculas de minúsculas. Eles não são. Nomes não podem diferir somente maiusculas e minúsculas.  
+ **X DO NOT** suponha que todas as linguagens de programação diferenciam maiusculas de minúsculas. Eles não são. Nomes não podem diferir somente maiusculas e minúsculas.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

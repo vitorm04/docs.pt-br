@@ -26,21 +26,21 @@ Um tipo aninhado é um tipo definido dentro do escopo de outro tipo, que é cham
   
  Tipos aninhados são mais adequados para modelar os detalhes de implementação dos seus tipos de delimitadores. O usuário final deve ter raramente para declarar variáveis de um tipo aninhado e quase nunca deve ter que instanciar explicitamente os tipos aninhados. Por exemplo, o enumerador de uma coleção pode ser um tipo aninhado de coleção. Enumeradores são instanciados geralmente por seu tipo delimitador e como muitos idiomas oferecem suporte a instrução foreach, variáveis de enumerador raramente têm de ser declarada pelo usuário final.  
   
- **FAZER ✓** usar tipos aninhados quando a relação entre o tipo aninhado e seu tipo externo é tal que a semântica de acessibilidade de membros é desejável.  
+ **✓ DO** usar tipos aninhados quando a relação entre o tipo aninhado e seu tipo externo é tal que a semântica de acessibilidade de membros é desejável.  
   
- **X não** tipos aninhados públicos em uso como um agrupamento lógico construir; use namespaces para isso.  
+ **X DO NOT** tipos aninhados públicos em uso como um agrupamento lógico construir; use namespaces para isso.  
   
- **X Evite** exposto publicamente tipos aninhados. A única exceção a isso é se as variáveis do tipo aninhado precisam ser declarado apenas em cenários raros, como subclasses ou outros cenários de personalização avançada.  
+ **X AVOID** exposto publicamente tipos aninhados. A única exceção a isso é se as variáveis do tipo aninhado precisam ser declarado apenas em cenários raros, como subclasses ou outros cenários de personalização avançada.  
   
- **X não** usar tipos aninhados, se o tipo é provavelmente serão mencionados fora do tipo recipiente.  
+ **X DO NOT** usar tipos aninhados, se o tipo é provavelmente serão mencionados fora do tipo recipiente.  
   
  Por exemplo, um enum passado para um método definido em uma classe não deve ser definido como um tipo aninhado na classe.  
   
- **X não** usar tipos aninhados se eles precisam ser instanciado pelo código do cliente.  Se um tipo tem um construtor público, ele provavelmente não deve ser aninhado.  
+ **X DO NOT** usar tipos aninhados se eles precisam ser instanciado pelo código do cliente.  Se um tipo tem um construtor público, ele provavelmente não deve ser aninhado.  
   
  Se um tipo pode ser instanciado, parece que indicam o tipo tem um lugar no framework em seu próprio (você pode criá-lo, trabalhar com ele e destruí-lo sem nunca usando o tipo externo) e, portanto, não devem ser aninhados. Tipos internos não devem ser reutilizados amplamente fora do tipo externo sem qualquer relação qualquer que seja o tipo externo.  
   
- **X não** definir um tipo aninhado como um membro de uma interface. Muitos idiomas não dão suporte a esse uma construção.  
+ **X DO NOT** definir um tipo aninhado como um membro de uma interface. Muitos idiomas não dão suporte a esse uma construção.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

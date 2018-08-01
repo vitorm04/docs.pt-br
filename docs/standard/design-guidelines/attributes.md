@@ -26,25 +26,25 @@ ms.locfileid: "33574628"
   
  Propriedades que não precisam necessariamente ser especificado quando o atributo é aplicado são chamadas propriedades opcionais (ou argumentos opcionais). Eles são representados por propriedades configuráveis. Compiladores de fornecem uma sintaxe especial para definir essas propriedades quando um atributo é aplicado. Por exemplo, o <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> propriedade representa um argumento opcional.  
   
- **FAZER ✓** nome classes de atributos personalizados com o sufixo "Atributo".  
+ **✓ DO** nome classes de atributos personalizados com o sufixo "Atributo".  
   
- **FAZER ✓** se aplicam a <xref:System.AttributeUsageAttribute> para os atributos personalizados.  
+ **✓ DO** se aplicam a <xref:System.AttributeUsageAttribute> para os atributos personalizados.  
   
- **FAZER ✓** fornecem propriedades configuráveis para argumentos opcionais.  
+ **✓ DO** fornecem propriedades configuráveis para argumentos opcionais.  
   
- **FAZER ✓** fornecem propriedades somente obtenção para os argumentos necessários.  
+ **✓ DO** fornecem propriedades somente obtenção para os argumentos necessários.  
   
- **FAZER ✓** fornecer parâmetros de construtor para inicializar propriedades correspondentes para os argumentos necessários. Cada parâmetro deve ter o mesmo nome (embora com diferenciam maiusculas de minúsculas) como a propriedade correspondente.  
+ **✓ DO** fornecer parâmetros de construtor para inicializar propriedades correspondentes para os argumentos necessários. Cada parâmetro deve ter o mesmo nome (embora com diferenciam maiusculas de minúsculas) como a propriedade correspondente.  
   
- **X Evite** fornecendo os parâmetros do construtor para inicializar propriedades correspondentes para os argumentos opcionais.  
+ **X AVOID** fornecendo os parâmetros do construtor para inicializar propriedades correspondentes para os argumentos opcionais.  
   
  Em outras palavras, não têm propriedades que podem ser definidas com um construtor e um setter. Esta diretriz torna muito explícitas que os argumentos são opcionais que são necessárias, e evita a necessidade de duas maneiras de fazer a mesma coisa.  
   
- **X Evite** sobrecarga construtores de atributo personalizado.  
+ **X AVOID** sobrecarga construtores de atributo personalizado.  
   
  Claramente ter apenas um construtor se comunica com o usuário que são necessários e opcionais.  
   
- **FAZER ✓** lacrar classes de atributo personalizado, se possível. Isso torna a pesquisa para o atributo mais rapidamente.  
+ **✓ DO** lacrar classes de atributo personalizado, se possível. Isso torna a pesquisa para o atributo mais rapidamente.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

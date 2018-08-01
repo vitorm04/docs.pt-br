@@ -24,11 +24,11 @@ Estritamente falando, uma classe torna-se uma classe base quando outra classe é
   
  Como discutido anteriormente, as classes base podem fornecer ajuda inestimável para usuários que precisam implementar abstrações, mas ao mesmo tempo podem ser um risco significativo. Eles Adicionar área da superfície e aumentam a profundidade das hierarquias de herança e portanto conceitualmente complicam a estrutura. Portanto, as classes base devem ser usados somente se eles fornecem valor significativo para os usuários do framework. Eles devem ser evitados se eles fornecem valor apenas para os implementadores do framework, no qual caso delegação para uma implementação interna em vez de herança de uma classe base deve ser considerada altamente.  
   
- **✓ CONSIDERE** abstrato as classes base tornando mesmo se eles não contêm membros abstratos. Isso claramente se comunica com os usuários que a classe destina-se exclusivamente a ser herdada.  
+ **✓ CONSIDER** abstrato as classes base tornando mesmo se eles não contêm membros abstratos. Isso claramente se comunica com os usuários que a classe destina-se exclusivamente a ser herdada.  
   
- **✓ CONSIDERE** colocando classes base em um namespace separado dos tipos de cenário principal. Por definição, as classes base destinam-se para cenários de extensibilidade avançada e, portanto, não são interessantes para a maioria dos usuários.  
+ **✓ CONSIDER** colocando classes base em um namespace separado dos tipos de cenário principal. Por definição, as classes base destinam-se para cenários de extensibilidade avançada e, portanto, não são interessantes para a maioria dos usuários.  
   
- **X Evite** nomeando classes base com um sufixo "Base" se a classe é destinada para uso em APIs públicas.  
+ **X AVOID** nomeando classes base com um sufixo "Base" se a classe é destinada para uso em APIs públicas.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

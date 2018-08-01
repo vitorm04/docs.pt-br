@@ -21,29 +21,29 @@ ms.locfileid: "33571011"
 # <a name="equality-operators"></a>Operadores de igualdade
 Esta seção discute a sobrecarga de operadores de igualdade e refere-se ao `operator==` e `operator!=` como operadores de igualdade.  
   
- **X não** sobrecarregar os operadores de igualdade e não o outro.  
+ **X DO NOT** sobrecarregar os operadores de igualdade e não o outro.  
   
- **FAZER ✓** Certifique-se de que <xref:System.Object.Equals%2A?displayProperty=nameWithType> e os operadores de igualdade têm exatamente a mesma semântica e as características de desempenho semelhante.  
+ **✓ DO** Certifique-se de que <xref:System.Object.Equals%2A?displayProperty=nameWithType> e os operadores de igualdade têm exatamente a mesma semântica e as características de desempenho semelhante.  
   
  Isso geralmente significa que `Object.Equals` precisa ser substituído quando os operadores de igualdade estão sobrecarregados.  
   
- **X Evite** Lançando exceções de operadores de igualdade.  
+ **X AVOID** Lançando exceções de operadores de igualdade.  
   
  Por exemplo, retornará false se um dos argumentos for nulo, em vez de gerar `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Operadores de igualdade em tipos de valor  
- **FAZER ✓** sobrecarregar os operadores de igualdade em tipos de valor, se a igualdade é significativa.  
+ **✓ DO** sobrecarregar os operadores de igualdade em tipos de valor, se a igualdade é significativa.  
   
  Na maioria das linguagens de programação, não há nenhuma implementação padrão de `operator==` para tipos de valor.  
   
 ## <a name="equality-operators-on-reference-types"></a>Operadores de igualdade em tipos de referência  
- **X Evite** sobrecarregar os operadores de igualdade em tipos de referência mutável.  
+ **X AVOID** sobrecarregar os operadores de igualdade em tipos de referência mutável.  
   
  Muitos idiomas tem operadores de igualdade internos para tipos de referência. Os operadores internos geralmente implementam a igualdade de referência e muitos desenvolvedores estão surpresos quando o comportamento padrão é alterado para a igualdade de valor.  
   
  Esse problema é reduzido para tipos de referência imutável porque imutabilidade torna muito mais difícil observar a diferença entre a igualdade de referência e de igualdade de valor.  
   
- **X Evite** sobrecarregar os operadores de igualdade em tipos de referência, se a implementação seria significativamente mais lenta do que o de igualdade de referência.  
+ **X AVOID** sobrecarregar os operadores de igualdade em tipos de referência, se a implementação seria significativamente mais lenta do que o de igualdade de referência.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

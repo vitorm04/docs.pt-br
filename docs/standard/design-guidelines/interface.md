@@ -23,23 +23,23 @@ Embora a maioria das APIs melhor são modelados usando classes e estruturas, há
   
  A outra situação em que define uma interface é apropriada está na criação de uma interface comum que pode ser compatível com vários tipos, incluindo alguns tipos de valor. Tipos de valor não podem herdar de tipos diferentes de <xref:System.ValueType>, mas elas podem implementar interfaces, portanto, usar uma interface é a única opção para fornecer um tipo de base comum.  
   
- **FAZER ✓** definir uma interface, se você precisar de algum API comuns para serem suportados por um conjunto de tipos que inclui os tipos de valor.  
+ **✓ DO** definir uma interface, se você precisar de algum API comuns para serem suportados por um conjunto de tipos que inclui os tipos de valor.  
   
- **✓ CONSIDERE** define uma interface, se você precisar oferecer suporte a sua funcionalidade em tipos que herdam já algum outro tipo.  
+ **✓ CONSIDER** define uma interface, se você precisar oferecer suporte a sua funcionalidade em tipos que herdam já algum outro tipo.  
   
- **X Evite** usando as interfaces do marcador (interfaces com nenhum membro).  
+ **X AVOID** usando as interfaces do marcador (interfaces com nenhum membro).  
   
  Se você precisa marcar uma classe como tendo uma característica específica (marcador), em geral, use um atributo personalizado em vez de uma interface.  
   
- **FAZER ✓** fornecer pelo menos um tipo que é uma implementação de uma interface.  
+ **✓ DO** fornecer pelo menos um tipo que é uma implementação de uma interface.  
   
  Fazer isso ajuda a validar o design da interface. Por exemplo, <xref:System.Collections.Generic.List%601> é uma implementação do <xref:System.Collections.Generic.IList%601> interface.  
   
- **FAZER ✓** fornecer pelo menos uma API que consome cada interface que você definir (um método de interface como um parâmetro ou uma propriedade digitada como a interface).  
+ **✓ DO** fornecer pelo menos uma API que consome cada interface que você definir (um método de interface como um parâmetro ou uma propriedade digitada como a interface).  
   
  Fazer isso ajuda a validar o design de interface. Por exemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consome o <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interface.  
   
- **X não** adicionar membros a uma interface que tiver enviado anteriormente.  
+ **X DO NOT** adicionar membros a uma interface que tiver enviado anteriormente.  
   
  Isso interrompe implementações da interface. Você deve criar uma nova interface para evitar problemas de controle de versão.  
   

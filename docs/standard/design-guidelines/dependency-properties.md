@@ -17,26 +17,26 @@ Uma propriedade de dependência (DP) é uma propriedade que armazena o valor em 
   
  Uma propriedade de dependência anexado é um tipo de propriedade de dependência modelada como métodos Get e Set estáticos que representa "propriedades", que descrevem relações entre seus contêineres e objetos (por exemplo, a posição de um `Button` do objeto em um `Panel` contêiner).  
   
- **FAZER ✓** fornecem as propriedades de dependência, se você precisar que as propriedades para oferecer suporte a recursos do WPF, como o estilo, gatilhos, associação de dados, animações, recursos dinâmicos e herança.  
+ **✓ DO** fornecem as propriedades de dependência, se você precisar que as propriedades para oferecer suporte a recursos do WPF, como o estilo, gatilhos, associação de dados, animações, recursos dinâmicos e herança.  
   
 ## <a name="dependency-property-design"></a>Design de propriedade de dependência  
- **FAZER ✓** herdam <xref:System.Windows.DependencyObject>, ou um de seus subtipos, ao implementar propriedades de dependência. O tipo fornece uma implementação muito eficiente de um repositório de propriedade e automaticamente dá suporte à associação de dados do WPF.  
+ **✓ DO** herdam <xref:System.Windows.DependencyObject>, ou um de seus subtipos, ao implementar propriedades de dependência. O tipo fornece uma implementação muito eficiente de um repositório de propriedade e automaticamente dá suporte à associação de dados do WPF.  
   
- **FAZER ✓** fornecem uma propriedade CLR e o campo estático público somente leitura armazenar uma instância de <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> para cada propriedade de dependência.  
+ **✓ DO** fornecem uma propriedade CLR e o campo estático público somente leitura armazenar uma instância de <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> para cada propriedade de dependência.  
   
- **FAZER ✓** implementar propriedades de dependência chamando métodos de instância <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> e <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
+ **✓ DO** implementar propriedades de dependência chamando métodos de instância <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> e <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
   
- **FAZER ✓** nome do campo de propriedade de dependência estática colocando o sufixo do nome da propriedade com "Property".  
+ **✓ DO** nome do campo de propriedade de dependência estática colocando o sufixo do nome da propriedade com "Property".  
   
- **X não** definir valores padrão das propriedades de dependência explicitamente no código; defini-las nos metadados.  
+ **X DO NOT** definir valores padrão das propriedades de dependência explicitamente no código; defini-las nos metadados.  
   
  Se você definir um padrão de propriedade explicitamente, você pode impedir que essa propriedade sendo definida de alguma maneira implícita, como um estilo.  
   
- **X não** coloque o código nos acessadores de propriedade que não seja o código padrão para acessar o campo estático.  
+ **X DO NOT** coloque o código nos acessadores de propriedade que não seja o código padrão para acessar o campo estático.  
   
  Se código não irá executar se a propriedade é definida por meio de implícita, como um estilo, porque o estilo usa o campo estático diretamente.  
   
- **X não** usar propriedades de dependência para armazenar dados seguros. Propriedades de dependência até mesmo podem ser acessadas publicamente.  
+ **X DO NOT** usar propriedades de dependência para armazenar dados seguros. Propriedades de dependência até mesmo podem ser acessadas publicamente.  
   
 ## <a name="attached-dependency-property-design"></a>Design de propriedade de dependência anexado  
  Propriedades de dependência descritas na seção anterior representam propriedades intrínsecas do tipo de declaração; Por exemplo, o `Text` é uma propriedade do `TextButton`, que declara. Um tipo especial de propriedade de dependência é a propriedade de dependência anexado.  
@@ -82,15 +82,15 @@ public class Grid {
   
  Infelizmente acessadores de propriedade de dependência não podem conter código de validação arbitrária. Em vez disso, lógica de validação de propriedade de dependência deve ser especificado durante o registro de propriedade.  
   
- **X não** colocar a lógica de validação de propriedade de dependência em acessadores de propriedade. Em vez disso, passar um retorno de chamada de validação para `DependencyProperty.Register` método.  
+ **X DO NOT** colocar a lógica de validação de propriedade de dependência em acessadores de propriedade. Em vez disso, passar um retorno de chamada de validação para `DependencyProperty.Register` método.  
   
 ## <a name="dependency-property-change-notifications"></a>Notificações de alteração de propriedade de dependência  
- **X não** implementar a lógica de notificação de alteração em acessadores de propriedade de dependência. Propriedades de dependência tem um recurso de notificações de alteração interna que deve ser usado, fornecendo um retorno de chamada de notificação de alteração para o <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** implementar a lógica de notificação de alteração em acessadores de propriedade de dependência. Propriedades de dependência tem um recurso de notificações de alteração interna que deve ser usado, fornecendo um retorno de chamada de notificação de alteração para o <xref:System.Windows.PropertyMetadata>.  
   
 ## <a name="dependency-property-value-coercion"></a>Coerção de valor de propriedade de dependência  
  Coerção de propriedade ocorre quando o valor fornecido para um setter de propriedade for modificado pela setter antes que o armazenamento de propriedades, na verdade, é modificado.  
   
- **X não** implementar a lógica de coerção em acessadores de propriedade de dependência.  
+ **X DO NOT** implementar a lógica de coerção em acessadores de propriedade de dependência.  
   
  Propriedades de dependência tem um recurso de coerção interna e ele pode ser usado, fornecendo um retorno de chamada de coerção para o `PropertyMetadata`.  
   

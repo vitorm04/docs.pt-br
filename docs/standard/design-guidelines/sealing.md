@@ -22,7 +22,7 @@ Um dos recursos orientados a objeto estruturas é que os desenvolvedores podem e
   
  Um mecanismo avançado que impede a extensibilidade é lacrar. Você pode lacrar classe ou membros individuais. Lacrar uma classe impede que os usuários de herdar da classe. Lacrar um membro impede que os usuários ignorem um determinado membro.  
   
- **X não** lacrar classes sem ter uma boa razão para isso.  
+ **X DO NOT** lacrar classes sem ter uma boa razão para isso.  
   
  Não é uma boa razão lacrar uma classe, porque você não pode pensar em um cenário de extensibilidade. Como os usuários do Framework herdar das classes por várias razões nonobvious, como a adição de membros de conveniência. Consulte [Classes não lacradas](../../../docs/standard/design-guidelines/unsealed-classes.md) para obter exemplos dos motivos nonobvious usuários desejam herdar de um tipo.  
   
@@ -36,11 +36,11 @@ Um dos recursos orientados a objeto estruturas é que os desenvolvedores podem e
   
 -   A classe é um atributo que requer a pesquisa de tempo de execução muito rápido. Atributos lacrados têm níveis de desempenho ligeiramente maiores que sem lacre. consulte [atributos](../../../docs/standard/design-guidelines/attributes.md).  
   
- **X não** declarar membros virtuais ou protegidos em tipos lacrados.  
+ **X DO NOT** declarar membros virtuais ou protegidos em tipos lacrados.  
   
  Por definição, tipos lacrados não podem ser herdados de. Isso significa que membros protegidos em tipos lacrados não podem ser chamados e métodos virtuais em tipos lacrados não podem ser substituídos.  
   
- **✓ CONSIDERE** lacrar membros que você substituir.  
+ **✓ CONSIDER** lacrar membros que você substituir.  
   
  Problemas que podem resultar de introduzir membros virtuais (discutido na [membros virtuais](../../../docs/standard/design-guidelines/virtual-members.md)) se aplicam a substituições, embora a um nível um pouco menor. Lacrar uma substituição protege contra esses problemas a partir desse ponto na hierarquia de herança.  
   

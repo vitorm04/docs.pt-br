@@ -18,20 +18,20 @@ ms.locfileid: "33570480"
 # <a name="naming-parameters"></a>Parâmetros de nomeação
 Além do motivo óbvio de legibilidade, é importante seguir as diretrizes para nomes de parâmetro porque os parâmetros são exibidos na documentação e no designer quando as ferramentas de design visual fornecem Intellisense e a funcionalidade de navegação de classe.  
   
- **FAZER ✓** use camelCasing em nomes de parâmetro.  
+ **✓ DO** use camelCasing em nomes de parâmetro.  
   
- **FAZER ✓** usam nomes de parâmetro descritivo.  
+ **✓ DO** usam nomes de parâmetro descritivo.  
   
- **✓ CONSIDERE** usando nomes com base no significado do parâmetro em vez do tipo do parâmetro.  
+ **✓ CONSIDER** usando nomes com base no significado do parâmetro em vez do tipo do parâmetro.  
   
 ### <a name="naming-operator-overload-parameters"></a>Parâmetros de sobrecarga de operador de nomenclatura  
- **FAZER ✓** usar `left` e `right` para nomes de parâmetro de sobrecarga de operador binário se não houver nenhum significado para os parâmetros.  
+ **✓ DO** usar `left` e `right` para nomes de parâmetro de sobrecarga de operador binário se não houver nenhum significado para os parâmetros.  
   
- **FAZER ✓** usar `value` para unário operador sobrecarregar os nomes de parâmetro se não houver nenhum significado para os parâmetros.  
+ **✓ DO** usar `value` para unário operador sobrecarregar os nomes de parâmetro se não houver nenhum significado para os parâmetros.  
   
- **✓ CONSIDERE** nomes significativos para o operador de sobrecarga parâmetros se isso adiciona valor significativo.  
+ **✓ CONSIDER** nomes significativos para o operador de sobrecarga parâmetros se isso adiciona valor significativo.  
   
- **X não** use abreviações ou índices numéricos para o operador sobrecarregar os nomes de parâmetro.  
+ **X DO NOT** use abreviações ou índices numéricos para o operador sobrecarregar os nomes de parâmetro.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

@@ -25,13 +25,13 @@ Membros virtuais podem ser substituídos, portanto, alterar o comportamento da s
   
  Membros virtuais, como retornos de chamada (e talvez mais de retornos de chamada), são caros criar, testar e manter, porque qualquer chamada para um membro virtual pode ser substituída de forma imprevisível e pode executar código arbitrário. Além disso, muito mais esforço geralmente é necessário definir claramente o contrato de membros virtuais, portanto, o custo de projetar e documentá-los é maior.  
   
- **X não** tornar membros virtuais, a menos que você tem uma boa razão para isso e você está ciente de todos os custos relacionados à criação, teste e manutenção membros virtuais.  
+ **X DO NOT** tornar membros virtuais, a menos que você tem uma boa razão para isso e você está ciente de todos os custos relacionados à criação, teste e manutenção membros virtuais.  
   
  Membros virtuais são menos tolerante com em termos de alterações que podem ser feitas a eles sem perder a compatibilidade. Além disso, eles são mais lentos do que os membros não virtual, principalmente como chamadas para membros virtuais não são embutidas.  
   
- **✓ CONSIDERE** limitando extensibilidade apenas o que é absolutamente necessário.  
+ **✓ CONSIDER** limitando extensibilidade apenas o que é absolutamente necessário.  
   
- **FAZER ✓** prefira acessibilidade protegida acessibilidade pública para membros virtuais. Membros públicos devem fornecer extensibilidade (se necessário) por chamar um membro virtual protegido.  
+ **✓ DO** prefira acessibilidade protegida acessibilidade pública para membros virtuais. Membros públicos devem fornecer extensibilidade (se necessário) por chamar um membro virtual protegido.  
   
  Os membros públicos de uma classe devem fornecer o conjunto certo de funcionalidade para consumidores diretos dessa classe. Membros virtuais são projetados para ser substituído em subclasses e acessibilidade protegida é uma ótima maneira de definir o escopo de todos os pontos de extensibilidade virtual onde eles podem ser usados.  
   

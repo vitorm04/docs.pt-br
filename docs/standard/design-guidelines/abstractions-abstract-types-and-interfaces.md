@@ -28,11 +28,11 @@ Uma abstração é um tipo que descreve um contrato, mas não fornece uma implem
   
  No entanto, abstrações fornecem extensibilidade extremamente eficiente que geralmente não podem corresponder a outros mecanismos de extensibilidade. Eles são a essência de vários padrões de arquitetura, como plug-ins, inversão de controle (IoC), pipelines e assim por diante. Eles também são extremamente importantes para a capacidade de teste de estruturas. BOM abstrações possibilitam o stub dependências intensa para fins de teste de unidade. Em resumo, as abstrações são responsáveis pela riqueza procurada a estruturas moderna e orientada a objeto.  
   
- **X não** fornecem abstrações, a menos que eles são testados com o desenvolvimento de várias implementações concretas e APIs, as abstrações de consumo.  
+ **X DO NOT** fornecem abstrações, a menos que eles são testados com o desenvolvimento de várias implementações concretas e APIs, as abstrações de consumo.  
   
- **FAZER ✓** escolha cuidadosamente entre uma classe abstrata e uma interface ao projetar uma abstração.  
+ **✓ DO** escolha cuidadosamente entre uma classe abstrata e uma interface ao projetar uma abstração.  
   
- **✓ CONSIDERE** fornecendo testes de referência para implementações concretas das abstrações. Esses testes devem permitir que os usuários testar se suas implementações implementam corretamente o contrato.  
+ **✓ CONSIDER** fornecendo testes de referência para implementações concretas das abstrações. Esses testes devem permitir que os usuários testar se suas implementações implementam corretamente o contrato.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

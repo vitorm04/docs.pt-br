@@ -34,23 +34,23 @@ public static class Console {
   
  Sobrecarga é uma das técnicas mais importantes para melhorar a legibilidade de bibliotecas reutilizáveis, produtividade e usabilidade. Sobrecarga no número de parâmetros torna possível fornecer versões mais simples de construtores e métodos. Sobrecarga no tipo de parâmetro torna possível usar o mesmo nome de membro para executar operações idênticas em um conjunto selecionado de tipos diferentes de membros.  
   
- **FAZER ✓** tente usar nomes de parâmetro descritivo para indicar o padrão usado por sobrecargas mais curto.  
+ **✓ DO** tente usar nomes de parâmetro descritivo para indicar o padrão usado por sobrecargas mais curto.  
   
- **X Evite** arbitrariamente diversos nomes de parâmetro em sobrecargas. Se um parâmetro em uma sobrecarga representa a mesma entrada como um parâmetro em outra sobrecarga, os parâmetros devem ter o mesmo nome.  
+ **X AVOID** arbitrariamente diversos nomes de parâmetro em sobrecargas. Se um parâmetro em uma sobrecarga representa a mesma entrada como um parâmetro em outra sobrecarga, os parâmetros devem ter o mesmo nome.  
   
- **X Evite** inconsistentes na ordem de parâmetros na sobrecarga membros. Parâmetros com o mesmo nome devem aparecer na mesma posição em todas as sobrecargas.  
+ **X AVOID** inconsistentes na ordem de parâmetros na sobrecarga membros. Parâmetros com o mesmo nome devem aparecer na mesma posição em todas as sobrecargas.  
   
- **FAZER ✓** fazer somente a maior sobrecarga virtual (se extensibilidade é necessária). Sobrecargas menores devem simplesmente chamar por meio de uma sobrecarga maior.  
+ **✓ DO** fazer somente a maior sobrecarga virtual (se extensibilidade é necessária). Sobrecargas menores devem simplesmente chamar por meio de uma sobrecarga maior.  
   
- **X não** usar `ref` ou `out` modificadores para sobrecarregar membros.  
+ **X DO NOT** usar `ref` ou `out` modificadores para sobrecarregar membros.  
   
  Alguns idiomas não é possível resolver chamadas para sobrecargas assim. Além disso, essas sobrecargas geralmente tem semântica completamente diferente e provavelmente não devem ser sobrecargas mas dois métodos separados em vez disso.  
   
- **X não** têm sobrecargas com parâmetros na mesma posição e tipos semelhantes, mas com semânticas diferentes.  
+ **X DO NOT** têm sobrecargas com parâmetros na mesma posição e tipos semelhantes, mas com semânticas diferentes.  
   
- **FAZER ✓** permitir `null` a serem passados para os argumentos opcionais.  
+ **✓ DO** permitir `null` a serem passados para os argumentos opcionais.  
   
- **FAZER ✓** usar membro sobrecarga em vez de definir membros com argumentos padrão.  
+ **✓ DO** usar membro sobrecarga em vez de definir membros com argumentos padrão.  
   
  Argumentos padrão não são compatível com CLS.  
   

@@ -21,44 +21,44 @@ ms.locfileid: "33574589"
 Esta seção descreve as exceções padrão fornecidas pela estrutura e os detalhes de uso. A lista não é exaustiva. Consulte a documentação de referência do .NET Framework para o uso de outros tipos de exceção do Framework.  
   
 ## <a name="exception-and-systemexception"></a>Exceção e SystemException  
- **X não** gerar <xref:System.Exception?displayProperty=nameWithType> ou <xref:System.SystemException?displayProperty=nameWithType>.  
+ **X DO NOT** gerar <xref:System.Exception?displayProperty=nameWithType> ou <xref:System.SystemException?displayProperty=nameWithType>.  
   
- **X não** catch `System.Exception` ou `System.SystemException` no código do framework, a menos que você pretende relançar.  
+ **X DO NOT** catch `System.Exception` ou `System.SystemException` no código do framework, a menos que você pretende relançar.  
   
- **X Evite** capturando `System.Exception` ou `System.SystemException`, exceto em manipuladores de exceção de nível superior.  
+ **X AVOID** capturando `System.Exception` ou `System.SystemException`, exceto em manipuladores de exceção de nível superior.  
   
 ## <a name="applicationexception"></a>ApplicationException  
- **X não** lançar ou derivam de <xref:System.ApplicationException>.  
+ **X DO NOT** lançar ou derivam de <xref:System.ApplicationException>.  
   
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
- **FAZER ✓** lançar um <xref:System.InvalidOperationException> se o objeto está em um estado inadequado.  
+ **✓ DO** lançar um <xref:System.InvalidOperationException> se o objeto está em um estado inadequado.  
   
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException ArgumentNullException e ArgumentOutOfRangeException  
- **FAZER ✓** gerar <xref:System.ArgumentException> ou um de seus subtipos se argumentos inválidos são passados para um membro. Prefira o tipo de exceção mais derivado, se aplicável.  
+ **✓ DO** gerar <xref:System.ArgumentException> ou um de seus subtipos se argumentos inválidos são passados para um membro. Prefira o tipo de exceção mais derivado, se aplicável.  
   
- **FAZER ✓** definir o `ParamName` propriedade ao lançar uma destas subclasses de `ArgumentException`.  
+ **✓ DO** definir o `ParamName` propriedade ao lançar uma destas subclasses de `ArgumentException`.  
   
  Esta propriedade representa o nome do parâmetro que causou a exceção seja lançada. Observe que a propriedade pode ser definida usando uma das sobrecargas de construtor.  
   
- **FAZER ✓** usar `value` para o nome do parâmetro de valor implícito de setters de propriedade.  
+ **✓ DO** usar `value` para o nome do parâmetro de valor implícito de setters de propriedade.  
   
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException IndexOutOfRangeException e AccessViolationException  
- **X não** permitir que APIs publicamente que pode ser chamado explicitamente ou implicitamente gerar <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, ou <xref:System.IndexOutOfRangeException>. Essas exceções são reservadas e gerada pelo mecanismo de execução e, na que maioria dos casos indicar um bug.  
+ **X DO NOT** permitir que APIs publicamente que pode ser chamado explicitamente ou implicitamente gerar <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, ou <xref:System.IndexOutOfRangeException>. Essas exceções são reservadas e gerada pelo mecanismo de execução e, na que maioria dos casos indicar um bug.  
   
  Fazer a verificação para evitar gerar essas exceções de argumento. Gerar essas exceções expõe detalhes de implementação do seu método que pode ser alterado ao longo do tempo.  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X não** lançar explicitamente <xref:System.StackOverflowException>. A exceção deve ser explicitamente lançada apenas pelo CLR.  
+ **X DO NOT** lançar explicitamente <xref:System.StackOverflowException>. A exceção deve ser explicitamente lançada apenas pelo CLR.  
   
- **X não** catch `StackOverflowException`.  
+ **X DO NOT** catch `StackOverflowException`.  
   
  É quase impossível escrever código gerenciado que permaneça consistente na presença de estouro de pilha arbitrário. As partes não gerenciadas do CLR permanecem consistentes usando testes para mover o estouro de pilha para locais bem definidos, em vez recuando de estouro de pilha arbitrário.  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X não** lançar explicitamente <xref:System.OutOfMemoryException>. Essa exceção é lançada apenas pela infraestrutura do CLR.  
+ **X DO NOT** lançar explicitamente <xref:System.OutOfMemoryException>. Essa exceção é lançada apenas pela infraestrutura do CLR.  
   
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException SEHException e ExecutionEngineException  
- **X não** lançar explicitamente <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, e <xref:System.Runtime.InteropServices.SEHException>. Essas exceções devem ser lançada apenas pela infraestrutura do CLR.  
+ **X DO NOT** lançar explicitamente <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, e <xref:System.Runtime.InteropServices.SEHException>. Essas exceções devem ser lançada apenas pela infraestrutura do CLR.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

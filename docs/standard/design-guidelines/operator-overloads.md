@@ -22,25 +22,25 @@ Sobrecargas de operador permitem que os tipos de estrutura apareçam como se fos
   
  Embora permitido e útil em algumas situações, as sobrecargas de operador devem ser usadas com cautela. Há muitos casos, no qual operador sobrecarga tem sido seja explorada, como quando os designers do framework iniciado usar operadores para operações que devem ser métodos simples. As diretrizes a seguir devem ajudar a decidir quando e como usar sobrecarga de operador.  
   
- **X Evite** definindo sobrecargas de operador, exceto em tipos que devem se parecer com os tipos primitivos (internos).  
+ **X AVOID** definindo sobrecargas de operador, exceto em tipos que devem se parecer com os tipos primitivos (internos).  
   
- **✓ CONSIDERE** definindo sobrecargas de operador em um tipo que deve se parecer com um tipo primitivo.  
+ **✓ CONSIDER** definindo sobrecargas de operador em um tipo que deve se parecer com um tipo primitivo.  
   
  Por exemplo, <xref:System.String?displayProperty=nameWithType> tem `operator==` e `operator!=` definido.  
   
- **FAZER ✓** definir sobrecargas de operador em estruturas que representam números (como <xref:System.Decimal?displayProperty=nameWithType>).  
+ **✓ DO** definir sobrecargas de operador em estruturas que representam números (como <xref:System.Decimal?displayProperty=nameWithType>).  
   
- **X não** ser bonita ao definir sobrecargas de operador.  
+ **X DO NOT** ser bonita ao definir sobrecargas de operador.  
   
  Sobrecarga de operador é útil em casos em que é imediatamente óbvio qual será o resultado da operação. Por exemplo, faz sentido para poder subtrair um <xref:System.DateTime> de outro `DateTime` e obter um <xref:System.TimeSpan>. No entanto, não é apropriado usar o operador de união lógico para consultas união de dois bancos de dados ou usar o operador de deslocamento para gravar em um fluxo.  
   
- **X não** fornecer sobrecargas de operador, a menos que pelo menos um dos operandos é do tipo que define a sobrecarga.  
+ **X DO NOT** fornecer sobrecargas de operador, a menos que pelo menos um dos operandos é do tipo que define a sobrecarga.  
   
- **FAZER ✓** sobrecarregar os operadores de forma simétrica.  
+ **✓ DO** sobrecarregar os operadores de forma simétrica.  
   
  Por exemplo, se você sobrecarregar o `operator==`, você também deve sobrecarregar o `operator!=`. Da mesma forma, se você sobrecarregar o `operator<`, você também deve sobrecarregar o `operator>`, e assim por diante.  
   
- **✓ CONSIDERE** fornecer métodos com nomes amigáveis que correspondem a cada operador sobrecarregado.  
+ **✓ CONSIDER** fornecer métodos com nomes amigáveis que correspondem a cada operador sobrecarregado.  
   
  Muitos idiomas não dão suporte a sobrecarga de operador. Por esse motivo, é recomendável que tipos de operadores de sobrecarga incluem um método secundário com um nome específico do domínio apropriado que fornece funcionalidade equivalente.  
   
@@ -93,21 +93,21 @@ Sobrecargas de operador permitem que os tipos de estrutura apareçam como se fos
 ### <a name="conversion-operators"></a>Operadores de conversão  
  Operadores de conversão são operadores unários que permitem que a conversão de um tipo para outro. Os operadores devem ser definidos como membros estáticos em um operando ou o tipo de retorno. Há dois tipos de operadores de conversão: implícitas e explícitas.  
   
- **X não** fornecer um operador de conversão se tal conversão não é esperado claramente pelos usuários finais.  
+ **X DO NOT** fornecer um operador de conversão se tal conversão não é esperado claramente pelos usuários finais.  
   
- **X não** definir operadores de conversão fora do domínio do tipo.  
+ **X DO NOT** definir operadores de conversão fora do domínio do tipo.  
   
  Por exemplo, <xref:System.Int32>, <xref:System.Double>, e <xref:System.Decimal> são todos os tipos numéricos, enquanto <xref:System.DateTime> não é. Portanto, não deve haver nenhum operador de conversão para converter um `Double(long)` para um `DateTime`. Um construtor é preferido nesse caso.  
   
- **X não** fornecer um operador de conversão implícita, se a conversão é potencialmente com perdas.  
+ **X DO NOT** fornecer um operador de conversão implícita, se a conversão é potencialmente com perdas.  
   
  Por exemplo, não deve haver uma conversão implícita de `Double` para `Int32` porque `Double` tem um intervalo maior que `Int32`. Um operador de conversão explícita pode ser fornecido, mesmo se a conversão é potencialmente com perdas.  
   
- **X não** lançam exceções de conversões implícitas.  
+ **X DO NOT** lançam exceções de conversões implícitas.  
   
  É muito difícil para os usuários finais entender o que está acontecendo, porque ele podem não estar ciente de que uma conversão está ocorrendo.  
   
- **FAZER ✓** gerar <xref:System.InvalidCastException?displayProperty=nameWithType> se uma chamada para um operador de conversão resulta em uma conversão de perdas e o contrato do operador não permite conversões com perdas.  
+ **✓ DO** gerar <xref:System.InvalidCastException?displayProperty=nameWithType> se uma chamada para um operador de conversão resulta em uma conversão de perdas e o contrato do operador não permite conversões com perdas.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

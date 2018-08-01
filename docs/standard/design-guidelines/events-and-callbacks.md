@@ -22,23 +22,23 @@ Retornos de chamada são os pontos de extensibilidade que permitem que uma estru
   
  Os eventos são um caso especial de retornos de chamada que dá suporte à sintaxe consistente e conveniente para fornecer o delegado (um manipulador de eventos). Além disso, a conclusão de instrução e designers de Visual Studio fornecem ajuda usando APIs com base em eventos. (Consulte [evento Design](../../../docs/standard/design-guidelines/event.md).)  
   
- **✓ CONSIDERE** usando retornos de chamada para permitir que os usuários forneçam um código personalizado a ser executado pelo framework.  
+ **✓ CONSIDER** usando retornos de chamada para permitir que os usuários forneçam um código personalizado a ser executado pelo framework.  
   
- **✓ CONSIDERE** usando eventos para permitir que os usuários personalizar o comportamento de uma estrutura sem a necessidade de Noções básicas sobre o design orientado a objeto.  
+ **✓ CONSIDER** usando eventos para permitir que os usuários personalizar o comportamento de uma estrutura sem a necessidade de Noções básicas sobre o design orientado a objeto.  
   
- **FAZER ✓** eventos prefira retornos de chamada comum, pois eles são mais familiares para uma variedade maior de desenvolvedores e integram-se a conclusão de instrução do Visual Studio.  
+ **✓ DO** eventos prefira retornos de chamada comum, pois eles são mais familiares para uma variedade maior de desenvolvedores e integram-se a conclusão de instrução do Visual Studio.  
   
- **X Evite** usando retornos de chamada nas APIs de desempenho confidenciais.  
+ **X AVOID** usando retornos de chamada nas APIs de desempenho confidenciais.  
   
- **FAZER ✓** usar o novo `Func<...>`, `Action<...>`, ou `Expression<...>` tipos em vez de delegados personalizados, ao definir APIs com retornos de chamada.  
+ **✓ DO** usar o novo `Func<...>`, `Action<...>`, ou `Expression<...>` tipos em vez de delegados personalizados, ao definir APIs com retornos de chamada.  
   
  `Func<...>` e `Action<...>` representar delegados genéricos. `Expression<...>` representa as definições de função que podem ser compiladas e subsequentemente invocadas em tempo de execução, mas também ser serializadas e passadas para processos remotos.  
   
- **FAZER ✓** medir e compreender as implicações de desempenho do uso de `Expression<...>`, em vez de usar `Func<...>` e `Action<...>` delegados.  
+ **✓ DO** medir e compreender as implicações de desempenho do uso de `Expression<...>`, em vez de usar `Func<...>` e `Action<...>` delegados.  
   
  `Expression<...>` tipos são na maioria dos casos logicamente equivalente à `Func<...>` e `Action<...>` delegados. A principal diferença entre eles é que os delegados destinam-se a ser usado em cenários de processo local; expressões são voltadas para casos onde é possível avaliar a expressão em um computador ou um processo remoto e útil.  
   
- **FAZER ✓** entender que, ao chamar um delegado, que está executando código arbitrário e que pode ter repercussões de segurança, a exatidão e a compatibilidade.  
+ **✓ DO** entender que, ao chamar um delegado, que está executando código arbitrário e que pode ter repercussões de segurança, a exatidão e a compatibilidade.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

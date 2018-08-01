@@ -23,19 +23,19 @@ O princípio de encapsulamento é um dos conceitos mais importantes no design or
   
  Excluímos constantes e estáticos campos somente leitura dessa restrição estrito, porque esses campos, quase por definição, nunca devem alterar.  
   
- **X não** fornecem campos de instância público ou protegido.  
+ **X DO NOT** fornecem campos de instância público ou protegido.  
   
  Você deve fornecer as propriedades para acessar os campos em vez de torná-los público ou protegido.  
   
- **FAZER ✓** usar campos de constantes para constantes que nunca serão alterado.  
+ **✓ DO** usar campos de constantes para constantes que nunca serão alterado.  
   
  O compilador Superexpõe os valores dos campos constantes diretamente no código de chamada. Portanto, os valores constantes nunca podem ser alterados sem o risco de perder a compatibilidade.  
   
- **FAZER ✓** usar estático público `readonly` campos para instâncias de objeto predefinido.  
+ **✓ DO** usar estático público `readonly` campos para instâncias de objeto predefinido.  
   
  Se houver instâncias predefinidas do tipo, declará-los como somente leitura estáticos campos públicos do próprio tipo.  
   
- **X não** atribuir instâncias dos tipos mutáveis para `readonly` campos.  
+ **X DO NOT** atribuir instâncias dos tipos mutáveis para `readonly` campos.  
   
  Um tipo mutável é um tipo com instâncias que podem ser modificados depois que eles são instanciados. Por exemplo, os fluxos, a maioria das coleções e matrizes são tipos mutáveis, mas <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, e <xref:System.String?displayProperty=nameWithType> são todos imutável. O modificador de somente leitura em um campo de tipo de referência impede que a instância armazenada no campo seja substituído, mas não impede que dados da instância do campo que está sendo modificado chamando membros alterando a instância.  
   

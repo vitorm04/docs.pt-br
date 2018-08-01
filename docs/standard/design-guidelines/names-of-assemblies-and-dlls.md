@@ -20,11 +20,11 @@ ms.locfileid: "33570400"
 # <a name="names-of-assemblies-and-dlls"></a>Nomes de DLLs e Assemblies
 Um assembly é a unidade de implantação e a identidade de programas de código gerenciado. Embora os assemblies podem abranger um ou mais arquivos, normalmente um assembly mapeia um para um com uma DLL. Portanto, esta seção descreve somente DLL convenções de nomenclatura, que podem ser mapeadas para convenções de nomenclatura do assembly.  
   
- **FAZER ✓** Escolha nomes do seu conjunto de DLLs que sugerem grandes blocos de funcionalidade, como System. Data.  
+ **✓ DO** Escolha nomes do seu conjunto de DLLs que sugerem grandes blocos de funcionalidade, como System. Data.  
   
  Nomes de assembly e a DLL não precisam corresponder aos nomes de namespace, mas é aconselhável ao nomear assemblies, siga o nome do namespace. Uma boa regra prática é nomear a DLL com base no prefixo comum dos namespaces contidos no assembly. Por exemplo, um assembly com dois namespaces, `MyCompany.MyTechnology.FirstFeature` e `MyCompany.MyTechnology.SecondFeature`, poderia ser chamado `MyCompany.MyTechnology.dll`.  
   
- **✓ CONSIDERE** nomenclatura DLLs de acordo com o seguinte padrão:  
+ **✓ CONSIDER** nomenclatura DLLs de acordo com o seguinte padrão:  
   
  `<Company>.<Component>.dll`  
   
