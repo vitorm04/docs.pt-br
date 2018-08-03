@@ -1,54 +1,56 @@
 ---
 title: Mapeamento de tipo SQL-CLR
-ms.date: 03/30/2017
+ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33365521"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
   
- Para converter dados entre o modelo de objeto e o banco de dados, um *mapeamento de tipo* devem ser definidas. O LINQ to SQL usa um mapeamento de tipo para corresponder a cada tipo CLR (Common Language Runtime) com um tipo específico de SQL Server. Você pode definir mapeamentos de tipo e outras informações de mapeamento, como estrutura de banco de dados e relações de tabela, dentro do modelo de objeto com mapeamento baseado em atributos. Como alternativa, você pode especificar as informações de mapeamento fora do modelo de objeto com um arquivo de mapeamento externo. Para obter mais informações, consulte [mapeamento baseado no atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) e [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Para converter dados entre o modelo de objeto e o banco de dados, uma *mapeamento de tipo* deve ser definido. O LINQ to SQL usa um mapeamento de tipo para corresponder a cada tipo CLR (Common Language Runtime) com um tipo específico de SQL Server. Você pode definir mapeamentos de tipo e outras informações de mapeamento, como estrutura de banco de dados e relações de tabela, dentro do modelo de objeto com mapeamento baseado em atributos. Como alternativa, você pode especificar as informações de mapeamento fora do modelo de objeto com um arquivo de mapeamento externo. Para obter mais informações, consulte [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) e [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  Este tópico aborda os seguintes pontos:  
   
 -   [Mapeamento de tipo padrão](#DefaultTypeMapping)  
   
--   [Tipo de mapeamento de matriz de comportamento de tempo de execução](#BehaviorMatrix)  
+-   [Matriz de comportamento de tempo de execução de mapeamento de tipo](#BehaviorMatrix)  
   
--   [Diferenças de comportamento entre o CLR e execução SQL](#BehaviorDiffs)  
+-   [Diferenças de comportamento entre CLR e a execução de SQL](#BehaviorDiffs)  
   
--   [Mapeamento de enum](#EnumMapping)  
+-   [Mapeamento Enum](#EnumMapping)  
   
 -   [Mapeamento numérico](#NumericMapping)  
   
--   [Mapeamento de XML e texto](#TextMapping)  
+-   [Mapeamento de texto e XML](#TextMapping)  
   
--   [Data e hora de mapeamento](#DateMapping)  
+-   [Data e hora do mapeamento](#DateMapping)  
   
--   [Mapeamento de binário](#BinaryMapping)  
+-   [Mapeamento binário](#BinaryMapping)  
   
--   [Mapeamento de diverso](#MiscMapping)  
+-   [Mapeamento variado](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Mapeamento de tipo padrão  
- Você pode criar o modelo de objeto ou arquivo de mapeamento externo automaticamente com o Object Relational Designer (Designer Relacional de Objetos) ou a ferramenta de linha de comando SQLMetal. Os mapeamentos de tipo padrão para essas ferramentas definem quais tipos CLR são escolhidos para mapear colunas dentro do banco de dados do SQL Server. Para obter mais informações sobre como usar essas ferramentas, consulte [criação do modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
+ Você pode criar o modelo de objeto ou arquivo de mapeamento externo automaticamente com o Object Relational Designer (Designer Relacional de Objetos) ou a ferramenta de linha de comando SQLMetal. Os mapeamentos de tipo padrão para essas ferramentas definem quais tipos CLR são escolhidos para mapear colunas dentro do banco de dados do SQL Server. Para obter mais informações sobre como usar essas ferramentas, consulte [criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- Você também pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para criar um banco de dados do SQL Server com base nas informações de mapeamento no modelo de objeto ou no arquivo de mapeamento externo. Os mapeamentos de tipo padrão para o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definem quais tipos de colunas do SQL Server são criados para mapear para os tipos CLR no modelo de objeto. Para obter mais informações, consulte [como: criar dinamicamente um banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ Você também pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para criar um banco de dados do SQL Server com base nas informações de mapeamento no modelo de objeto ou no arquivo de mapeamento externo. Os mapeamentos de tipo padrão para o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definem quais tipos de colunas do SQL Server são criados para mapear para os tipos CLR no modelo de objeto. Para obter mais informações, consulte [como: criar um banco de dados de forma dinâmica](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matriz de comportamento em tempo de execução de mapeamento de tipo  
  O diagrama a seguir mostra o comportamento em tempo de execução esperado de mapeamentos de tipo específico quando os dados são recuperados de ou salvos no banco de dados. Com exceção da serialização, o LINQ to SQL não oferece suporte a mapeamento entre qualquer tipo de dados CLR ou SQL Server que não for especificado nesta matriz. Para obter mais informações sobre o suporte de serialização, consulte [serialização binária](#BinarySerialization).  
-  
+ 
+![SQL Server para a tabela de mapeamento de tipo de dados SQL CLR](media/sql-clr-type-mapping.png)
+
 > [!NOTE]
 >  Alguns mapeamentos de tipo podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados.  
   
 ### <a name="custom-type-mapping"></a>Mapeamento de tipo personalizado  
- Com o LINQ to SQL, você não está limitado aos mapeamentos de tipo padrão usados pelo Designer Relacional de Objetos, pelo SQLMetal e pelo método <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Você pode criar mapeamentos de tipo personalizados explicitamente especificando-os em um arquivo DBML. Em seguida, você pode usar esse arquivo DBML para criar o código do modelo de objeto e o arquivo de mapeamento. Para obter mais informações, consulte [mapeamentos de tipo CLR SQL personalizado](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ Com o LINQ to SQL, você não está limitado aos mapeamentos de tipo padrão usados pelo Designer Relacional de Objetos, pelo SQLMetal e pelo método <xref:System.Data.Linq.DataContext.CreateDatabase%2A>. Você pode criar mapeamentos de tipo personalizados explicitamente especificando-os em um arquivo DBML. Em seguida, você pode usar esse arquivo DBML para criar o código do modelo de objeto e o arquivo de mapeamento. Para obter mais informações, consulte [mapeamentos de tipo personalizado de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
   
 <a name="BehaviorDiffs"></a>   
 ## <a name="behavior-differences-between-clr-and-sql-execution"></a>Diferenças de comportamento entre CLR e a execução de SQL  
@@ -77,9 +79,9 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 > [!NOTE]
 >  Ao mapear tipos de texto do SQL para um <xref:System.Enum?displayProperty=nameWithType> CLR, inclua somente os nomes dos membros do <xref:System.Enum> na coluna SQL mapeada. Outros valores não têm suporte na coluna SQL mapeada para <xref:System.Enum>.  
   
- A ferramenta de linha de comando do Designer Relacional de Objetos e do SQLMetal não pode mapear automaticamente um tipo SQL para uma classe <xref:System.Enum> CLR. Você deve configurar explicitamente esse mapeamento personalizando um arquivo DBML para ser usado pelo Designer Relacional de Objetos e pelo SQLMetal. Para obter mais informações sobre o mapeamento de tipo personalizado, consulte [personalizado mapeamentos de tipo CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ A ferramenta de linha de comando do Designer Relacional de Objetos e do SQLMetal não pode mapear automaticamente um tipo SQL para uma classe <xref:System.Enum> CLR. Você deve configurar explicitamente esse mapeamento personalizando um arquivo DBML para ser usado pelo Designer Relacional de Objetos e pelo SQLMetal. Para obter mais informações sobre o mapeamento de tipo personalizado, consulte [mapeamentos de tipo personalizado de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
   
- Como uma coluna SQL destinada a enumeração será o mesmo tipo de outras colunas numéricas e de texto; Essas ferramentas não reconhecerá a intenção e padrão para o mapeamento de conforme descrito a seguir [de mapeamento numérico](#NumericMapping) e [texto e mapeamento de XML](#TextMapping) seções. Para obter mais informações sobre a geração de código com o arquivo DBML, consulte [geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Porque uma coluna SQL destinada para enumeração será do mesmo tipo que outras colunas numéricas e de texto; Essas ferramentas não vão reconhecer sua intenção e o padrão para mapeamento conforme descrito a seguir [mapeamento numérico](#NumericMapping) e [mapeamento de XML e texto](#TextMapping) seções. Para obter mais informações sobre como gerar código com o arquivo DBML, consulte [geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
  O método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> cria uma coluna SQL do tipo numérico para mapear um tipo <xref:System.Enum?displayProperty=nameWithType> CLR.  
   
@@ -117,10 +119,10 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 |<xref:System.Single?displayProperty=nameWithType>|`REAL`|  
 |<xref:System.Double?displayProperty=nameWithType>|`FLOAT`|  
   
- Há muitos outros mapeamentos numéricos que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo mapeamento executar tempo comportamento matriz](#BehaviorMatrix).  
+ Há muitos outros mapeamentos numéricos que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Tipos de decimal e dinheiro  
- A precisão padrão do SQL Server `DECIMAL` tipo (18 dígitos decimais à esquerda e à direita do ponto decimal) é muito menor do que a precisão do CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` tipo que ele é emparelhado com por padrão. Isso pode levar na perda de precisão quando você salva dados no banco de dados. No entanto, apenas o oposto pode acontecer se o tipo `DECIMAL` do SQL Server é configurado com mais de 29 dígitos de precisão. Quando um tipo `DECIMAL` do SQL Server tiver sido configurado com uma precisão maior do que o <xref:System.Decimal?displayProperty=nameWithType> CLR, a perda de precisão poderá ocorrer ao recuperar dados do banco de dados.  
+ A precisão padrão do SQL Server `DECIMAL` tipo (18 dígitos decimais à esquerda e à direita do ponto decimal) é muito menor do que a precisão do CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` tipo que ele está associado, por padrão. Isso pode levar na perda de precisão quando você salva dados no banco de dados. No entanto, apenas o oposto pode acontecer se o tipo `DECIMAL` do SQL Server é configurado com mais de 29 dígitos de precisão. Quando um tipo `DECIMAL` do SQL Server tiver sido configurado com uma precisão maior do que o <xref:System.Decimal?displayProperty=nameWithType> CLR, a perda de precisão poderá ocorrer ao recuperar dados do banco de dados.  
   
  Os tipos `MONEY` e `SMALLMONEY` do SQL Server, que também são emparelhados com o tipo <xref:System.Decimal?displayProperty=nameWithType> CLR por padrão, têm uma precisão muito menor, que pode resultar em estouro ou exceções de perda de dados ao salvar dados no banco de dados.  
   
@@ -147,7 +149,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
 |Tipo personalizado implementando `Parse()` e `ToString()`|`NVARCHAR(MAX)`|  
   
- Há muitos outros mapeamentos XML e baseados em texto que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo mapeamento executar tempo comportamento matriz](#BehaviorMatrix).  
+ Há muitos outros mapeamentos XML e baseados em texto que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
 ### <a name="xml-types"></a>Tipos XML  
  O tipo de dados `XML` do SQL Server está disponível a partir do Microsoft SQL Server 2005. Você pode mapear o tipo de dados `XML` do SQL Server para <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> ou <xref:System.String>. Se a coluna armazena os fragmentos XML que não podem ser lidos no <xref:System.Xml.Linq.XElement>, a coluna deverá ser mapeada para <xref:System.String> para evitar erros em tempo de execução. Os fragmentos XML que devem ser mapeados para <xref:System.String> incluem o seguinte:  
@@ -160,10 +162,10 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
   
 -   Comentários  
   
- Embora você pode mapear <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> para o SQL Server, conforme mostrado no [matriz de comportamento do tipo de mapeamento executar tempo](#BehaviorMatrix), o <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> método não tem nenhum mapeamento de tipo do SQL Server padrão para esses tipos.  
+ Embora você possa mapear <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> para o SQL Server, conforme mostrado na [matriz de comportamento do tempo de execução de mapeamento de tipo](#BehaviorMatrix), o <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> método não tem nenhum mapeamento de tipo de SQL Server padrão para esses tipos.  
   
 ### <a name="custom-types"></a>Tipos personalizados  
- Se uma classe implementa `Parse()` e `ToString()`, você pode mapear o objeto para qualquer tipo de texto do SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). O objeto é armazenado no banco de dados enviando o valor retornado por `ToString()` para a coluna mapeada do banco de dados. O objeto é reconstruído chamando `Parse()` na cadeia de caracteres retornada pelo banco de dados.  
+ Se uma classe implementa `Parse()` e `ToString()`, você pode mapear o objeto para qualquer tipo de texto SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). O objeto é armazenado no banco de dados enviando o valor retornado por `ToString()` para a coluna mapeada do banco de dados. O objeto é reconstruído chamando `Parse()` na cadeia de caracteres retornada pelo banco de dados.  
   
 > [!NOTE]
 >  O LINQ to SQL não dá suporte à serialização usando <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>.  
@@ -189,7 +191,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
 |<xref:System.TimeSpan?displayProperty=nameWithType>|`TIME`|  
   
- Há muitos outros mapeamentos de data e hora que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo mapeamento executar tempo comportamento matriz](#BehaviorMatrix).  
+ Há muitos outros mapeamentos de data e hora que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
 > [!NOTE]
 >  Os tipos de dados `DATETIME2`, `DATETIMEOFFSET`, `DATE` e `TIME` do SQL Server estão disponíveis a partir do Microsoft SQL Server 2008. O LINQ to SQL oferece suporte ao mapeamento para esses novos tipos a partir do .NET Framework versão 3.5 SP1.  
@@ -197,7 +199,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 ### <a name="systemdatetime"></a>System.Datetime  
  O intervalo e a precisão do tipo <xref:System.DateTime?displayProperty=nameWithType> CLR são maiores do que o intervalo e a precisão do tipo `DATETIME` do SQL Server, que é o mapeamento de tipo padrão para o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Para ajudar a evitar exceções relacionadas a datas fora do intervalo de `DATETIME`, use `DATETIME2`, que está disponível a partir do Microsoft SQL Server 2008. `DATETIME2` pode corresponder o intervalo e a precisão do CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- As datas do SQL Server não têm nenhum conceito de <xref:System.TimeZone>, um recurso que tem suporte de modo avançado no CLR. Os valores <xref:System.TimeZone> são salvos como estão no banco de dados sem conversão de <xref:System.TimeZone>, independentemente das informações de <xref:System.DateTimeKind> originais. Quando os valores <xref:System.DateTime> são recuperados do banco de dados, eles são carregados como estão em um <xref:System.DateTime> com um <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obter mais informações sobre suporte <xref:System.DateTime?displayProperty=nameWithType> métodos, consulte [métodos de System. DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ As datas do SQL Server não têm nenhum conceito de <xref:System.TimeZone>, um recurso que tem suporte de modo avançado no CLR. Os valores <xref:System.TimeZone> são salvos como estão no banco de dados sem conversão de <xref:System.TimeZone>, independentemente das informações de <xref:System.DateTimeKind> originais. Quando os valores <xref:System.DateTime> são recuperados do banco de dados, eles são carregados como estão em um <xref:System.DateTime> com um <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obter mais informações sobre o suporte <xref:System.DateTime?displayProperty=nameWithType> métodos, consulte [métodos de System. DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  O Microsoft SQL Server 2008 e o .NET Framework 3.5 SP1 permitem mapear o tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR para o tipo `TIME` do SQL Server. No entanto, há uma grande diferença entre o intervalo ao qual o <xref:System.TimeSpan?displayProperty=nameWithType> CLR dá suporte e a que o tipo `TIME` do SQL Server dá suporte. Os valores de mapeamento menores que 0 ou maiores que 23:59:59,9999999 horas para `TIME` do SQL resultará em exceções de estouro. Para obter mais informações, consulte [métodos de System. TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
@@ -225,12 +227,12 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Runtime.Serialization.ISerializable?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
   
- Há muitos outros mapeamentos binários que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo mapeamento executar tempo comportamento matriz](#BehaviorMatrix).  
+ Há muitos outros mapeamentos binários que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  O atributo `FILESTREAM` para colunas `VARBINARY(MAX)` está disponível a partir do Microsoft SQL Server 2008; você pode mapeá-lo com o LINQ to SQL a partir do .NET Framework versão 3.5 SP1.  
   
- Embora você possa mapear colunas `VARBINARY(MAX)` com o atributo `FILESTREAM` para objetos <xref:System.Data.Linq.Binary>, o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> não é capaz de criar automaticamente colunas com o atributo `FILESTREAM`. Para obter mais informações sobre `FILESTREAM`, consulte [visão geral de FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) nos Manuais Online do Microsoft SQL Server.  
+ Embora você possa mapear colunas `VARBINARY(MAX)` com o atributo `FILESTREAM` para objetos <xref:System.Data.Linq.Binary>, o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> não é capaz de criar automaticamente colunas com o atributo `FILESTREAM`. Para obter mais informações sobre `FILESTREAM`, consulte [visão geral do FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) nos Manuais Online do Microsoft SQL Server.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Serialização binária  
@@ -252,7 +254,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
   
- O LINQ to SQL não dá suporte a nenhum outro mapeamentos de tipo para esses tipos variados.  Para obter mais informações, consulte o [tipo mapeamento executar tempo comportamento matriz](#BehaviorMatrix).  
+ O LINQ to SQL não dá suporte a nenhum outro mapeamentos de tipo para esses tipos variados.  Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  

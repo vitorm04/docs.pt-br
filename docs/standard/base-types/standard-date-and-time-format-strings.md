@@ -17,10 +17,10 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579802"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
@@ -29,12 +29,14 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
 -   Para definir a cadeia de caracteres que resulta de uma operação de formatação.  
   
 -   Para definir a representação de texto de um valor de data e hora que possa ser convertido em valor de <xref:System.DateTime> ou <xref:System.DateTimeOffset> por uma operação de análise.  
-  
- Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto com valores <xref:System.DateTime> quanto <xref:System.DateTimeOffset>.  
-  
+
 > [!TIP]
 >  É possível baixar o [Utilitário de Formatação](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), um aplicativo que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado.  
+
+Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto com valores <xref:System.DateTime> quanto <xref:System.DateTimeOffset>.  
   
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+
 <a name="table"></a> A tabela a seguir descreve os especificadores de formato de data e hora padrão. Salvo indicação em contrário, um determinado especificador de formato de data e hora padrão produz uma representação de cadeia de caracteres idêntica independente de ela ser usada com um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset>. Consulte a seção [Observações](#Notes) para obter informações adicionais sobre como usar as cadeias de caracteres de formato de data e hora padrão.  
   
 |Especificador de formato|Descrição|Exemplos|  
@@ -63,17 +65,17 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
 -   Você pode usar a cultura padrão (ou atual). O exemplo a seguir exibe uma data usando o formato de data abreviada da cultura atual. Nesse caso, a cultura atual é en-US.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
 -   Você pode passar um objeto <xref:System.Globalization.CultureInfo> que representa a cultura cuja formatação deve ser usada para um método que possua um parâmetro <xref:System.IFormatProvider>. O exemplo a seguir exibe uma data usando o formato de data abreviada da cultura pt-BR.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   Você pode passar um objeto <xref:System.Globalization.DateTimeFormatInfo> que fornece informações de formatação para um método que possua um parâmetro <xref:System.IFormatProvider>. O exemplo a seguir exibe uma data usando o formato de data abreviada de um objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura hr-HR.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -90,7 +92,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  As cadeias de caracteres de formato padrão também podem ser usadas em operações de análise com os métodos <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, o que exige que uma cadeia de caracteres de entrada atenda com exatidão a um padrão específico para que a operação de análise seja bem-sucedida. Muitas cadeias de caracteres de formato padrão são mapeadas em muitas cadeias de caracteres de formato personalizado. Assim, um valor de data e hora poderá ser representado em vários formatos e a operação de análise ainda terá êxito. Você pode determinar a cadeia ou as cadeias de caracteres de formato que correspondem a uma cadeia de formato padrão ao chamar o método <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType>. O exemplo a seguir exibe as cadeias de caracteres de formato personalizado que são mapeados para a cadeia de caracteres de formato padrão “d” (padrão de data abreviada).  
   
- [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  As seções a seguir descrevem os especificadores de formato padrão para valores <xref:System.DateTime> e <xref:System.DateTimeOffset>.  
@@ -101,14 +103,14 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Define a cadeia de caracteres que separa o ano, o mês e os componentes de dia de uma data.|  
   
  O exemplo a seguir utiliza o especificador de formato "d" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [Voltar à tabela](#table)  
@@ -119,7 +121,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define os nomes de dias localizados que podem aparecer na cadeia de caracteres de resultado.|  
@@ -127,7 +129,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "D" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [Voltar à tabela](#table)  
@@ -138,7 +140,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define o formato do componente de data da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|  
@@ -150,7 +152,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "f" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [Voltar à tabela](#table)  
@@ -161,7 +163,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define os nomes de dias localizados que podem aparecer na cadeia de caracteres de resultado.|  
@@ -172,7 +174,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "F" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [Voltar à tabela](#table)  
@@ -183,7 +185,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato que é retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define o formato do componente de data da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|  
@@ -194,7 +196,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "g" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [Voltar à tabela](#table)  
@@ -205,7 +207,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato que é retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define o formato do componente de data da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|  
@@ -216,7 +218,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "G" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [Voltar à tabela](#table)  
@@ -227,14 +229,14 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define os nomes dos meses localizados que podem aparecer na cadeia de caracteres de resultado.|  
   
  O exemplo a seguir utiliza o especificador de formato "m" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [Voltar à tabela](#table)  
@@ -259,12 +261,12 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir usa o especificador de formato "o" para exibir uma série de valores <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema no fuso horário do Pacífico dos EUA.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  O exemplo a seguir usa o especificador do formato “o” para criar uma cadeia de caracteres formatada e, em seguida, restaurar o valor de data e hora original ao chamar um método `Parse` de data e hora.  
   
- [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [Voltar à tabela](#table)  
@@ -275,7 +277,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A cadeia de caracteres de resultado é afetada pelas seguintes propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> que representa a cultura invariável.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Define o formato da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Define os nomes de dias abreviados que podem aparecer na cadeia de caracteres de resultado.|  
@@ -285,7 +287,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir usa o especificador de formato "r" para exibir um <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema no Fuso horário do Pacífico.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
   
  [Voltar à tabela](#table)  
@@ -300,7 +302,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir usa o especificador de formato "s" para exibir um <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> em um sistema no Fuso horário do Pacífico.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
   
  [Voltar à tabela](#table)  
@@ -311,7 +313,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define a cadeia de caracteres que separa os componentes de hora, minuto e segundo de uma hora.|  
@@ -320,7 +322,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "t" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [Voltar à tabela](#table)  
@@ -331,7 +333,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define a cadeia de caracteres que separa os componentes de hora, minuto e segundo de uma hora.|  
@@ -340,7 +342,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "T" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [Voltar à tabela](#table)  
@@ -353,7 +355,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "u" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Standard#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#13)]  
   
  [Voltar à tabela](#table)  
@@ -364,7 +366,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algumas culturas não pode usar todas as propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define os nomes de dias localizados que podem aparecer na cadeia de caracteres de resultado.|  
@@ -377,7 +379,7 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  O exemplo a seguir utiliza o especificador de formato "U" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [Voltar à tabela](#table)  
@@ -388,14 +390,14 @@ Uma cadeia de caracteres de formato de data e hora padrão usa um especificador 
   
  A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define os nomes dos meses localizados que podem aparecer na cadeia de caracteres de resultado.|  
   
  O exemplo a seguir utiliza o especificador de formato "y" para exibir um valor de data e hora.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [Voltar à tabela](#table)  

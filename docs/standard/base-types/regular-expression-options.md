@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579646"
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
@@ -275,7 +275,7 @@ ms.locfileid: "33579646"
   
 -   O espaço em branco dentro de uma classe de caractere sempre é interpretado literalmente. Por exemplo, o padrão da expressão regular `[ .,;:]` corresponde a qualquer caractere de espaço em branco, ponto, vírgula, dois pontos ou ponto e vírgula único.  
   
--   O espaço em branco não é permitido dentro de um quantificador entre colchetes, como `{`*n*`}`, `{`*n*`,}` e `{`*n*`,`*m*`}`. Por exemplo, o padrão de expressão regular `\d{1. 3}` falha ao corresponder quaisquer sequências de dígitos de um a três dígitos porque contém um caractere de espaço em branco.  
+-   O espaço em branco não é permitido dentro de um quantificador entre colchetes, como `{`*n*`}`, `{`*n*`,}` e `{`*n*`,`*m*`}`. Por exemplo, o padrão de expressão regular `\d{1, 3}` falha ao corresponder quaisquer sequências de dígitos de um a três dígitos porque contém um caractere de espaço em branco.  
   
 -   Não é permitido espaço em branco dentro da sequência de caracteres que introduz um elemento de linguagem. Por exemplo:  
   
