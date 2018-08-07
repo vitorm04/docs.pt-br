@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827333"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Criando imagens do Docker para .NET Core Applications
@@ -83,6 +83,17 @@ Versões mais recentes de cada variante:
 * [Este exemplo do Docker no ASP.NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) demonstra um padrão de prática recomendada para compilação de imagens do Docker para aplicativos ASP.NET Core para produção. O exemplo funciona com contêineres do Linux e do Windows.
 
 * Este exemplo do Docker no .NET Core demonstra um padrão de prática recomendada para [compilação de imagens do Docker para aplicativos .NET Core para produção.](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>Encaminhar o esquema da solicitação e o endereço IP original
+
+Servidores proxy, balanceadores de carga e outros dispositivos de rede geralmente ocultam informações sobre a solicitação antes de elas alcançarem o aplicativo em contêiner:
+
+* Quando solicitações HTTPS são passadas por proxy por HTTP, o esquema original (HTTPS) é perdido e deve ser encaminhado em um cabeçalho.
+* Como um aplicativo recebe uma solicitação do proxy, e não de sua origem verdadeira na Internet ou rede corporativa, o endereço IP do cliente original também deve ser encaminhado em um cabeçalho.
+
+Essas informações podem ser importantes no processamento de solicitações, por exemplo, em redirecionamentos, autenticação, geração de link, avaliação de política e localização geográfica do cliente.
+
+Para encaminhar o esquema e o endereço IP original para um aplicativo ASP.NET Core em contêiner, use o Middleware de Cabeçalhos Encaminhados. Para obter mais informações, veja [Configurar o ASP.NET Core para trabalhar com servidores proxy e balanceadores de carga](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>Seu primeiro aplicativo ASP.NET Core do Docker
 
@@ -258,7 +269,6 @@ Parabéns! Você acabou de:
 > * Executar o aplicativo ASP.NET de exemplo localmente
 > * Compilar e executar a amostra com o Docker para contêineres do Linux
 > * Compilar e executar a amostra com o Docker para contêineres do Windows
-
 
 **Próximas Etapas**
 

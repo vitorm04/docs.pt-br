@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208134"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
@@ -67,7 +67,7 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Usando Cadeias de Caracteres de Formato Numérico Padrão  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 Uma cadeia de caracteres de formato numérico padrão pode ser usada para definir a formatação de um valor numérico em uma de duas formas:  
   
@@ -166,7 +166,7 @@ Uma cadeia de caracteres de formato numérico padrão pode ser usada para defini
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>O Especificador de Formato de Ponto Fixo ("F")  
- O especificador de formato de ponto fixo ("F") converte um número em uma cadeia de caracteres no formato "-ddd.ddd…" em que cada "d" indica um dígito (0-9). A cadeia de caracteres é iniciada com um sinal de negativo se o número é negativo.  
+ O especificador de formato de ponto fixo ("F") converte um número em uma cadeia de caracteres no formato "-ddd.ddd…", em que cada "d" indica um dígito (0-9). A cadeia de caracteres é iniciada com um sinal de negativo se o número é negativo.  
   
  O especificador de precisão indica o número de casas decimais desejadas. Quando o especificador de precisão é omitido, a propriedade <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> atual fornece a precisão numérica.  
   
@@ -350,7 +350,7 @@ Para valores <xref:System.Double>, o especificador de formato "R" em alguns caso
   
 ## <a name="example"></a>Exemplo  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  O exemplo a seguir formata um inteiro e um valor numérico de ponto flutuante usando a cultura en-US e todos os especificadores de formato numérico padrão. Este exemplo usa dois tipos numéricos específicos, (<xref:System.Double> e <xref:System.Int32>), mas poderia produzir resultados semelhantes para qualquer um dos tipos base numéricos (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> e <xref:System.Single>).  
   

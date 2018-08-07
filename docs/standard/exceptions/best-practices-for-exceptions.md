@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578073"
 ---
 # <a name="best-practices-for-exceptions"></a>Práticas recomendadas para exceções
@@ -104,17 +104,19 @@ Por exemplo, em implementações do .NET que dão suporte a Domínios de Aplicat
 
 - Se os domínios não compartilham uma base de aplicativos comum, assine o assembly que contém as informações de exceção com um nome forte e implante o assembly no cache de assembly global.
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>Incluir uma cadeia de caracteres de descrição localizada em cada exceção
-
-A mensagem de erro que o usuário recebe é derivada da cadeia de caracteres de descrição da exceção que foi gerada, em vez do nome da classe de exceção.
-
 ## <a name="use-grammatically-correct-error-messages"></a>Usar mensagens de erro gramaticalmente corretas
 
-Escreva frases claras e inclua pontuação final. Cada sentença em uma cadeia de caracteres descrição de uma exceção deve terminar com um ponto final. Por exemplo, "A tabela de log estourou". seria uma cadeia de caracteres de descrição apropriada.
+Escreva frases claras e inclua pontuação final. Cada sentença na cadeia de caracteres atribuída à propriedade <xref:System.Exception.Message?displayProperty=nameWithType> deve terminar com um ponto. Por exemplo, "A tabela de log estourou". seria uma cadeia de caracteres de mensagem adequada.
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>Incluir uma mensagem de cadeia de caracteres localizada em cada exceção
+
+A mensagem de erro que o usuário recebe é derivada da propriedade <xref:System.Exception.Message?displayProperty=nameWithType> da exceção que foi gerada, e não do nome da classe de exceção. Normalmente, você atribui um valor à propriedade <xref:System.Exception.Message?displayProperty=nameWithType> passando a cadeia de caracteres de mensagem para o argumento `message` de um [Construtor de exceção](xref:System.Exception.%23ctor%2A). 
+
+Para aplicativos localizados, você deverá fornecer uma cadeia de caracteres de mensagem localizada para toda exceção que seu aplicativo puder gerar. Use arquivos de recurso para fornecer mensagens de erro localizadas. Para obter informações sobre como localizar aplicativos e recuperar cadeias de caracteres localizadas, veja [Recursos em aplicativos de área de trabalho](../../framework/resources/index.md) e <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Em exceções personalizadas, forneça propriedades adicionais conforme necessário
 
-Forneça propriedades adicionais para uma exceção (além da cadeia de caracteres de descrição) somente quando houver um cenário programático no qual as informações adicionais serão úteis. Por exemplo, o <xref:System.IO.FileNotFoundException> fornece a propriedade <xref:System.IO.FileNotFoundException.FileName>.
+Forneça propriedades adicionais para uma exceção (além da cadeia de caracteres de mensagem personalizada) somente quando houver um cenário programático no qual as informações adicionais serão úteis. Por exemplo, o <xref:System.IO.FileNotFoundException> fornece a propriedade <xref:System.IO.FileNotFoundException.FileName>.
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Posicionar instruções throw de modo que o rastreamento de pilha seja útil
 

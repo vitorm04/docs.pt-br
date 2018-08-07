@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314692"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
 O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este tópico explica como compilar uma solução do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
 
-Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa e uma cadeia de caracteres de texto do usuário, conta o número de vezes que a palavra de pesquisa aparece na cadeia de caracteres usando um método em uma biblioteca de classes e depois retorna o resultado ao usuário. A solução também inclui um teste de unidade para a biblioteca de classes, como uma introdução aos conceitos de TDD (desenvolvimento orientado a testes). Se você preferir acompanhar o tutorial com um exemplo completo, baixe o [exemplo de solução](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa e uma cadeia de caracteres de texto do usuário, conta o número de vezes que a palavra de pesquisa aparece na cadeia de caracteres usando um método em uma biblioteca de classes e depois retorna o resultado ao usuário. A solução também inclui um teste de unidade para a biblioteca de classes como uma introdução aos conceitos de teste de unidade. Se você preferir acompanhar o tutorial com um exemplo completo, baixe o [exemplo de solução](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
@@ -106,15 +106,15 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
    ![Teste de unidade inicial para verificar GetWordCount na janela principal do IDE](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   Ao usar o TDD é importante fazer um novo teste falhar uma vez a fim de confirmar que a lógica do teste está correta. O método passa o nome "Jack" (maiúsculo) e uma cadeia de caracteres com "Jack" e "jack" (letras maiúsculas e minúsculas). Se o método `GetWordCount` estiver funcionando corretamente, ele retornará uma contagem de duas instâncias da palavra de pesquisa. Para falhar de propósito nesse teste, primeiro implemente o teste declarando que duas instâncias da palavra de pesquisa "Jack" não foram retornadas pelo método `GetWordCount`. Vá para a próxima etapa para falhar no teste de propósito.
+   É importante fazer um novo teste falhar uma vez a fim de confirmar que a lógica do teste está correta. O método passa o nome "Jack" (maiúsculo) e uma cadeia de caracteres com "Jack" e "jack" (letras maiúsculas e minúsculas). Se o método `GetWordCount` estiver funcionando corretamente, ele retornará uma contagem de duas instâncias da palavra de pesquisa. Para falhar de propósito nesse teste, primeiro implemente o teste declarando que duas instâncias da palavra de pesquisa "Jack" não foram retornadas pelo método `GetWordCount`. Vá para a próxima etapa para falhar no teste de propósito.
 
 1. Abra o painel **Testes de Unidade** no lado direito da tela.
 
-![Painel Testes de Unidade](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![Painel Testes de Unidade](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. Clique no ícone **Dock** para manter o painel aberto.
 
-![Ícone do dock do painel Testes de Unidade](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![Ícone do dock do painel Testes de Unidade](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Clique no botão **Executar Tudo**.
    
