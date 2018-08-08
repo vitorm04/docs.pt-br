@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
 ms.openlocfilehash: 3a85d915d02f7e2cd2290b6cfc8446c271edf3b0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641060"
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="d9210-102">Como: serializar usando XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9210-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
 <span data-ttu-id="d9210-103">Este tópico mostra um exemplo que serialize e desserializa usando <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="d9210-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  

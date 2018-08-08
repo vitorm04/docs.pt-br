@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
 ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597422"
 ---
 # <a name="in-generic-modifier-visual-basic"></a><span data-ttu-id="0750f-102">In (modificador genérico) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0750f-102">In (Generic Modifier) (Visual Basic)</span></span>
 <span data-ttu-id="0750f-103">Para parâmetros de tipo genérico, a palavra-chave `In` especifica que o parâmetro de tipo é contravariante.</span><span class="sxs-lookup"><span data-stu-id="0750f-103">For generic type parameters, the `In` keyword specifies that the type parameter is contravariant.</span></span>  

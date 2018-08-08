@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
 ms.openlocfilehash: ab7d37e91a99fe4190a4741b495f5206b25738aa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594907"
 ---
 # <a name="overflow-visual-basic-error"></a><span data-ttu-id="327b4-102">Estouro (erro do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="327b4-102">Overflow (Visual Basic Error)</span></span>
 <span data-ttu-id="327b4-103">Um valor literal representa um valor fora dos limites do tipo de dados ao qual ela está sendo atribuída.</span><span class="sxs-lookup"><span data-stu-id="327b4-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  

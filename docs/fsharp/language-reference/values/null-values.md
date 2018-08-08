@@ -4,8 +4,10 @@ description: 'Saiba como o valor nulo é usado em F # linguagem de programação
 ms.date: 05/16/2016
 ms.openlocfilehash: 7367b35cb6e910f926179e52992d5533e5cdda0e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563903"
 ---
 # <a name="null-values"></a><span data-ttu-id="1a1c1-103">Valores nulos</span><span class="sxs-lookup"><span data-stu-id="1a1c1-103">Null Values</span></span>
 

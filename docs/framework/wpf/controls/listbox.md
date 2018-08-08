@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551681"
 ---
 # <a name="listbox"></a><span data-ttu-id="45619-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="45619-102">ListBox</span></span>
 <span data-ttu-id="45619-103">Um <xref:System.Windows.Controls.ListBox> controle fornece aos usuários uma lista de itens selecionáveis.</span><span class="sxs-lookup"><span data-stu-id="45619-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  

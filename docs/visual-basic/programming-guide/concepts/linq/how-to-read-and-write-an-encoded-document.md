@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
 ms.openlocfilehash: 6e768f26313da93076807f5fabe18a26333ebab8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641322"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="3d6b9-102">Como: ler e gravar um documento codificado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d6b9-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
 <span data-ttu-id="3d6b9-103">Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration> à árvore XML, definindo a codificação para o nome da página de código desejada.</span><span class="sxs-lookup"><span data-stu-id="3d6b9-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  

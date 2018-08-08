@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
 ms.openlocfilehash: 3db168b2c2971c3b44e54aefc24a9e08edb232d3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640437"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a><span data-ttu-id="49ad9-102">Criando um documento de origem Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49ad9-102">Creating the Source Office Open XML Document (Visual Basic)</span></span>
 <span data-ttu-id="49ad9-103">Este tópico mostra como criar o documento do Office Open XML WordprocessingML que os outros exemplos neste tutorial uso.</span><span class="sxs-lookup"><span data-stu-id="49ad9-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="49ad9-104">Se você segue essas declarações, a saída corresponderão a saída fornecida em cada exemplo.</span><span class="sxs-lookup"><span data-stu-id="49ad9-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  

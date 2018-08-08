@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
 ms.openlocfilehash: 86d28f5974e30a9b7f1a1e830cd40c3cd916e8ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643007"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a><span data-ttu-id="82a4e-102">Adicionando elementos, atributos e nós em uma árvore XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82a4e-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>
 <span data-ttu-id="82a4e-103">Você pode adicionar conteúdo (elementos, atributos, comentários, instruções de processamento, texto e CDATA) a uma árvore XML existente.</span><span class="sxs-lookup"><span data-stu-id="82a4e-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  

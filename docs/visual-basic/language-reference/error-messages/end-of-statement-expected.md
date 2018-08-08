@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
 ms.openlocfilehash: 7b91d13cbcb9d211d4ca18c8e48c7494bf6eccc6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588074"
 ---
 # <a name="end-of-statement-expected"></a><span data-ttu-id="ecb3b-102">Fim de instrução esperado</span><span class="sxs-lookup"><span data-stu-id="ecb3b-102">End of statement expected</span></span>
 <span data-ttu-id="ecb3b-103">A instrução está sintaticamente completa, mas um elemento de programação adicional vem depois do elemento que conclui a declaração.</span><span class="sxs-lookup"><span data-stu-id="ecb3b-103">The statement is syntactically complete, but an additional programming element follows the element that completes the statement.</span></span> <span data-ttu-id="ecb3b-104">Um terminador de linha é necessário no final de cada instrução.</span><span class="sxs-lookup"><span data-stu-id="ecb3b-104">A line terminator is required at the end of every statement.</span></span>

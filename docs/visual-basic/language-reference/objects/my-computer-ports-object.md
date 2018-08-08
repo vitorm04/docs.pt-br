@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
 ms.openlocfilehash: a3d551c6591b16480bb8a8ae772a1cddbd59cbd9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595934"
 ---
 # <a name="mycomputerports-object"></a><span data-ttu-id="7b172-102">Objeto My.Computer.Ports</span><span class="sxs-lookup"><span data-stu-id="7b172-102">My.Computer.Ports Object</span></span>
 <span data-ttu-id="7b172-103">Fornece uma propriedade e um método para acessar portas seriais do computador.</span><span class="sxs-lookup"><span data-stu-id="7b172-103">Provides a property and a method for accessing the computer's serial ports.</span></span>  

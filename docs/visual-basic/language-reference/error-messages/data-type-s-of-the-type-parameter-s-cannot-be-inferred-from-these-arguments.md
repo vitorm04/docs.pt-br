@@ -12,8 +12,10 @@ helpviewer_keywords:
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
 ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586806"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a><span data-ttu-id="add3b-102">Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos</span><span class="sxs-lookup"><span data-stu-id="add3b-102">Data type(s) of the type parameter(s) cannot be inferred from these arguments</span></span>
 <span data-ttu-id="add3b-103">Tipos de dados dos parâmetros de tipo não podem ser inferidos a partir destes argumentos.</span><span class="sxs-lookup"><span data-stu-id="add3b-103">Data type(s) of the type parameter(s) cannot be inferred from these arguments.</span></span> <span data-ttu-id="add3b-104">Especificando os dados tipos explicitamente talvez corrija esse erro.</span><span class="sxs-lookup"><span data-stu-id="add3b-104">Specifying the data type(s) explicitly might correct this error.</span></span>  

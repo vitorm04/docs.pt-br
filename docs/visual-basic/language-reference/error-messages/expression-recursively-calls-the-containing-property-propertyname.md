@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
 ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588837"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a><span data-ttu-id="0ff53-102">A expressão chama recursivamente a propriedade recipiente &#39; &lt;propertyname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="0ff53-102">Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39;</span></span>
 <span data-ttu-id="0ff53-103">Uma instrução no `Set` procedimento com uma definição de propriedade armazena um valor para o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="0ff53-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
 ms.openlocfilehash: b305f7a59a9865ebeb6b6f53607757b719fb4d41
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586618"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a><span data-ttu-id="e337e-102">Propriedade padrão &#39; &lt;propertyname1&gt; &#39; está em conflito com a propriedade padrão &#39; &lt;propertyname2&gt; &#39; na &#39; &lt;classname&gt; &#39;e, portanto, deve ser declarado como &#39;sombras&#39;</span><span class="sxs-lookup"><span data-stu-id="e337e-102">Default property &#39;&lt;propertyname1&gt;&#39; conflicts with default property &#39;&lt;propertyname2&gt;&#39; in &#39;&lt;classname&gt;&#39; and so should be declared &#39;Shadows&#39;</span></span>
 <span data-ttu-id="e337e-103">Uma propriedade é declarada com o mesmo nome de uma propriedade definida na classe base.</span><span class="sxs-lookup"><span data-stu-id="e337e-103">A property is declared with the same name as a property defined in the base class.</span></span> <span data-ttu-id="e337e-104">Nessa situação, a propriedade nessa classe deve sombrear a propriedade de classe base.</span><span class="sxs-lookup"><span data-stu-id="e337e-104">In this situation, the property in this class should shadow the base class property.</span></span>  

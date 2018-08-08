@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
 ms.openlocfilehash: bccbbbeb79f38790a4664b0152ca3378fb55448d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587378"
 ---
 # <a name="bad-file-mode"></a><span data-ttu-id="d311c-102">Modo de arquivo inválido</span><span class="sxs-lookup"><span data-stu-id="d311c-102">Bad file mode</span></span>
 <span data-ttu-id="d311c-103">Instruções usadas na manipulação de conteúdo do arquivo devem ser apropriadas para o modo no qual o arquivo foi aberto.</span><span class="sxs-lookup"><span data-stu-id="d311c-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="d311c-104">Possíveis causas incluem:</span><span class="sxs-lookup"><span data-stu-id="d311c-104">Possible causes include:</span></span>  

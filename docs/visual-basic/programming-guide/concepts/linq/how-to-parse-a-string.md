@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
 ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640235"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="2a248-102">Como: analisar uma cadeia de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a248-102">How to: Parse a String (Visual Basic)</span></span>
 <span data-ttu-id="2a248-103">Este tópico mostra como criar uma árvore XML em c#.</span><span class="sxs-lookup"><span data-stu-id="2a248-103">This topic shows how to create an XML tree in C#.</span></span>  

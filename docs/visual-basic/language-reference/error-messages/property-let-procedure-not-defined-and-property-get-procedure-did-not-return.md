@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
 ms.openlocfilehash: ac0a7b7d409ca2273b9d56adbfe054afebb6ddda
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596600"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a><span data-ttu-id="e4d79-102">Procedimento let de propriedade não definido e procedimento get de propriedade não retornou um objeto</span><span class="sxs-lookup"><span data-stu-id="e4d79-102">Property let procedure not defined and property get procedure did not return an object</span></span>
 <span data-ttu-id="e4d79-103">Certas propriedades, métodos e operações só podem se aplicam a `Collection` objetos.</span><span class="sxs-lookup"><span data-stu-id="e4d79-103">Certain properties, methods, and operations can only apply to `Collection` objects.</span></span> <span data-ttu-id="e4d79-104">Você especificou uma operação ou propriedade que é exclusiva a coleções, mas o objeto não é uma coleção.</span><span class="sxs-lookup"><span data-stu-id="e4d79-104">You specified an operation or property that is exclusive to collections, but the object is not a collection.</span></span>  

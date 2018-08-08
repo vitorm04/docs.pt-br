@@ -6,8 +6,10 @@ helpviewer_keywords:
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
 ms.openlocfilehash: 9778978bff90d21fd5976f35f3407de400afdb4c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597533"
 ---
 # <a name="errors-summary-visual-basic"></a><span data-ttu-id="56e39-102">Resumo de erros (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56e39-102">Errors Summary (Visual Basic)</span></span>
 <span data-ttu-id="56e39-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="56e39-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  

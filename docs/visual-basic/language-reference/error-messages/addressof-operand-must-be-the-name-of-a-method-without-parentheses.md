@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
 ms.openlocfilehash: 701d86e03d9b14236eec8436d99ec40cebbbcd44
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583806"
 ---
 # <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a><span data-ttu-id="fbe92-102">&#39;AddressOf&#39; operando deve ser o nome de um método (sem parênteses)</span><span class="sxs-lookup"><span data-stu-id="fbe92-102">&#39;AddressOf&#39; operand must be the name of a method (without parentheses)</span></span>
 <span data-ttu-id="fbe92-103">O `AddressOf` operador cria uma instância de delegado de procedimento que faz referência a um procedimento específico.</span><span class="sxs-lookup"><span data-stu-id="fbe92-103">The `AddressOf` operator creates a procedure delegate instance that references a specific procedure.</span></span> <span data-ttu-id="fbe92-104">A sintaxe é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="fbe92-104">The syntax is as follows.</span></span>  

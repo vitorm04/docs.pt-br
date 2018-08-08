@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
 ms.openlocfilehash: 535704cb2cb5a702c524f306e561b1154f4b2e1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642698"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="98ec7-102">Como: gerar XML de arquivos CSV (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="98ec7-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
 <span data-ttu-id="98ec7-103">Este exemplo mostra como usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gerar um arquivo XML de um arquivo CSV (valores separados por vírgulas).</span><span class="sxs-lookup"><span data-stu-id="98ec7-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  

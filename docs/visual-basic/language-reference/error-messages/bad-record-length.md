@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: b4b311e2eb504c485772091ed126b3beb71729cb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585964"
 ---
 # <a name="bad-record-length"></a><span data-ttu-id="2c324-102">Comprimento de registro inválido</span><span class="sxs-lookup"><span data-stu-id="2c324-102">Bad record length</span></span>
 <span data-ttu-id="2c324-103">Entre as causas possíveis desse erro são:</span><span class="sxs-lookup"><span data-stu-id="2c324-103">Among the possible causes of this error are:</span></span>  

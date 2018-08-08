@@ -4,8 +4,10 @@ description: 'Saiba mais sobre a segurança de tipo de provedor em F #, incluind
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a873a32029d706f1f6fab50dd4f93bc29bca03
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563539"
 ---
 # <a name="type-provider-security"></a><span data-ttu-id="82580-103">Segurança do provedor de tipos</span><span class="sxs-lookup"><span data-stu-id="82580-103">Type Provider Security</span></span>
 

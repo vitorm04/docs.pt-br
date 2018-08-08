@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
 ms.openlocfilehash: 7e2b59f758ef236717a912694576b514e2ae8a60
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590033"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a><span data-ttu-id="2e5c1-102">Parâmetros genéricos usados como tipos de parâmetro opcionais devem ter a classe restrita</span><span class="sxs-lookup"><span data-stu-id="2e5c1-102">Generic parameters used as optional parameter types must be class constrained</span></span>
 <span data-ttu-id="2e5c1-103">Um procedimento é declarado com um parâmetro opcional que usa um parâmetro de tipo que não está restrita a conter um tipo de referência.</span><span class="sxs-lookup"><span data-stu-id="2e5c1-103">A procedure is declared with an optional parameter that uses a type parameter that is not constrained to be a reference type.</span></span>  

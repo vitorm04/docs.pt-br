@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 0f4cc4b9-361d-4de2-b4c3-be7cbd5dd47b
 ms.openlocfilehash: e40f15789454abcd6fc4b9dd9aeb30399c5161e1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644908"
 ---
 # <a name="reference-linq-to-xml"></a><span data-ttu-id="4c9d6-102">Referência (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4c9d6-102">Reference (LINQ to XML)</span></span>
 <span data-ttu-id="4c9d6-103">Este tópico contém links para tópicos de referência LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="4c9d6-103">This topic contains links to the LINQ to XML reference topics.</span></span>  

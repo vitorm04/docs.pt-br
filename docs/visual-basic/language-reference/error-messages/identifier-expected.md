@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
 ms.openlocfilehash: ddbb0481ed51d9daad1eedff72fbdb9f6b4a9a35
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586124"
 ---
 # <a name="identifier-expected"></a><span data-ttu-id="fb88f-102">Identificador esperado</span><span class="sxs-lookup"><span data-stu-id="fb88f-102">Identifier expected</span></span>
 <span data-ttu-id="fb88f-103">Um elemento de programação que não é um nome de elemento declarado reconhecível ocorre quando o contexto requer um nome de elemento.</span><span class="sxs-lookup"><span data-stu-id="fb88f-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="fb88f-104">Uma causa possível é que um atributo foi especificado em algum lugar diferente no início da instrução.</span><span class="sxs-lookup"><span data-stu-id="fb88f-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  

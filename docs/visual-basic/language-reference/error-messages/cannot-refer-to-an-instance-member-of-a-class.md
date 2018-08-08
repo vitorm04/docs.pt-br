@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
 ms.openlocfilehash: 368539ed24d9819c8d1ddbbb9e3e0dff21d27c32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590177"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a><span data-ttu-id="69edd-102">Não é possível fazer referência a um membro da instância de uma classe de dentro de um método compartilhado ou inicializador de membro compartilhado sem uma instância explícita da classe</span><span class="sxs-lookup"><span data-stu-id="69edd-102">Cannot refer to an instance member of a class from within a shared method or shared member initializer without an explicit instance of the class</span></span>
 <span data-ttu-id="69edd-103">Você tentou fazer referência a um membro não compartilhado de uma classe de dentro de um procedimento compartilhado.</span><span class="sxs-lookup"><span data-stu-id="69edd-103">You have tried to refer to a non-shared member of a class from within a shared procedure.</span></span> <span data-ttu-id="69edd-104">O exemplo a seguir demonstra essa situação.</span><span class="sxs-lookup"><span data-stu-id="69edd-104">The following example demonstrates such a situation.</span></span>  

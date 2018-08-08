@@ -10,8 +10,10 @@ helpviewer_keywords:
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
 ms.openlocfilehash: 55b3a8201940a6fec351327aaa88e4ac1ee9246a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603594"
 ---
 # <a name="-operator-visual-basic"></a><span data-ttu-id="8c1da-102">Operador = (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c1da-102">= Operator (Visual Basic)</span></span>
 <span data-ttu-id="8c1da-103">Atribui um valor a uma variável ou propriedade.</span><span class="sxs-lookup"><span data-stu-id="8c1da-103">Assigns a value to a variable or property.</span></span>  

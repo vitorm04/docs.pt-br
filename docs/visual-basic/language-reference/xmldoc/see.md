@@ -7,8 +7,10 @@ helpviewer_keywords:
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
 ms.openlocfilehash: e790f8abd216e198ff5077beab6f857e39981d2b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602074"
 ---
 # <a name="ltseegt-visual-basic"></a><span data-ttu-id="3f646-102">&lt;consulte&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f646-102">&lt;see&gt; (Visual Basic)</span></span>
 <span data-ttu-id="3f646-103">Especifica um link para outro membro.</span><span class="sxs-lookup"><span data-stu-id="3f646-103">Specifies a link to another member.</span></span>  

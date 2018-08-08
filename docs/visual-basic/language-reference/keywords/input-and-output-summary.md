@@ -8,8 +8,10 @@ helpviewer_keywords:
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
 ms.openlocfilehash: 50664c271e4d6e1f13d7705299e2ba756b2d242f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595655"
 ---
 # <a name="input-and-output-summary-visual-basic"></a><span data-ttu-id="254e4-102">Resumo de entrada e saída (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="254e4-102">Input and Output Summary (Visual Basic)</span></span>
 <span data-ttu-id="254e4-103">Palavras-chave de linguagem Visual Basic e membros de biblioteca de tempo de execução são organizados por propósito e uso.</span><span class="sxs-lookup"><span data-stu-id="254e4-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
 ms.openlocfilehash: 2d1a934fa970c54430b1ea0ff3b1a7f7290a1eb1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586445"
 ---
 # <a name="identifier-is-too-long"></a><span data-ttu-id="c1f5b-102">O identificador é muito longo</span><span class="sxs-lookup"><span data-stu-id="c1f5b-102">Identifier is too long</span></span>
 <span data-ttu-id="c1f5b-103">O nome ou identificador de cada elemento de programação é limitado a 1023 caracteres.</span><span class="sxs-lookup"><span data-stu-id="c1f5b-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="c1f5b-104">Além disso, um nome totalmente qualificado não pode exceder 1023 caracteres.</span><span class="sxs-lookup"><span data-stu-id="c1f5b-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="c1f5b-105">Isso significa que a cadeia de caracteres do identificador inteiro (`<namespace>.<...>.<namespace>.<class>.<element>`) não pode ter mais de 1.023 caracteres, incluindo o operador de acesso de membro (`.`) caracteres.</span><span class="sxs-lookup"><span data-stu-id="c1f5b-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  

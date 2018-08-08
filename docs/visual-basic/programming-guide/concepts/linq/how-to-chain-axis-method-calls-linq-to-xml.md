@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
 ms.openlocfilehash: b90cd757429639483f11427e2747c7dd3db9e07b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643296"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a><span data-ttu-id="05e36-102">Como: encadear chamadas de método do eixo (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="05e36-102">How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="05e36-103">Um padrão comum que você usar em seu código é chamar um método do eixo, então chama um dos eixos do método de extensão.</span><span class="sxs-lookup"><span data-stu-id="05e36-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  

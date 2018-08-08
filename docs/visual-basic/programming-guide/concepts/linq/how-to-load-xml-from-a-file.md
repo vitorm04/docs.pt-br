@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
 ms.openlocfilehash: fce4ebee075f5e622de17bd5227dd6e4ae9cccd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641433"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a><span data-ttu-id="a70a0-102">Como: carregar XML de um arquivo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a70a0-102">How to: Load XML from a File (Visual Basic)</span></span>
 <span data-ttu-id="a70a0-103">Este tópico mostra como carregar XML de um URI usando o método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a70a0-103">This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> method.</span></span>  

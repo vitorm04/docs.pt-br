@@ -6,8 +6,10 @@ f1_keywords:
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 ms.openlocfilehash: e39be5913fe877cf7b3396e4f13f4440288cb8f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593279"
 ---
 # <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="ce8cb-102">Sem espaço na pilha (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce8cb-102">Out of stack space (Visual Basic)</span></span>
 <span data-ttu-id="ce8cb-103">A pilha é uma área de trabalho de memória aumenta e diminui dinamicamente com as demandas do seu programa em execução.</span><span class="sxs-lookup"><span data-stu-id="ce8cb-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="ce8cb-104">Os limites foram excedidos.</span><span class="sxs-lookup"><span data-stu-id="ce8cb-104">Its limits have been exceeded.</span></span>  

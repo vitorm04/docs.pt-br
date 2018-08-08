@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
 ms.openlocfilehash: 028445cbf5e3a498fc831d15ea435955e6834544
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643423"
 ---
 # <a name="element-operations-visual-basic"></a><span data-ttu-id="934e2-102">Operações de elemento (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="934e2-102">Element Operations (Visual Basic)</span></span>
 <span data-ttu-id="934e2-103">Operações de elemento retornam um único elemento específico de uma sequência.</span><span class="sxs-lookup"><span data-stu-id="934e2-103">Element operations return a single, specific element from a sequence.</span></span>  

@@ -9,8 +9,10 @@ helpviewer_keywords:
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
 ms.openlocfilehash: eb8596c43bf6232eec4bcb844e6202c5de373404
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602717"
 ---
 # <a name="continue-statement-visual-basic"></a><span data-ttu-id="114de-102">Instrução Continue (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="114de-102">Continue Statement (Visual Basic)</span></span>
 <span data-ttu-id="114de-103">Transfere controle imediatamente para a próxima iteração de um loop.</span><span class="sxs-lookup"><span data-stu-id="114de-103">Transfers control immediately to the next iteration of a loop.</span></span>  

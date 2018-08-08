@@ -4,8 +4,10 @@ ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643452"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a><span data-ttu-id="4b428-102">Variação em Interfaces genéricas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4b428-102">Variance in Generic Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="4b428-103">O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes.</span><span class="sxs-lookup"><span data-stu-id="4b428-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="4b428-104">O suporte à variação possibilita a conversão implícita de classes que implementam essas interfaces.</span><span class="sxs-lookup"><span data-stu-id="4b428-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="4b428-105">As seguintes interfaces agora são variantes:</span><span class="sxs-lookup"><span data-stu-id="4b428-105">The following interfaces are now variant:</span></span>  
