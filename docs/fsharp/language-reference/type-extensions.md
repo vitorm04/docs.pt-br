@@ -1,105 +1,174 @@
 ---
 title: Extensões de tipo (F#)
-description: 'Saiba como extensões de tipo de F # permitem que você adiciona novos membros a um tipo de objeto definida anteriormente.'
-ms.date: 05/16/2016
+description: 'Saiba como o F #, extensões de tipo permitem que você adicionar novos membros a um tipo de objeto definido anteriormente.'
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566880"
 ---
 # <a name="type-extensions"></a>Extensões de tipo
 
-Extensões de tipo permitem que você adicionar novos membros a um tipo de objeto definida anteriormente.
+As extensões de tipo (também chamado de _acréscimos_) são uma família de recursos que permitem que você adicione novos membros a um tipo de objeto definido anteriormente. Os três recursos são:
+
+* Extensões de tipo intrínseco
+* Extensões de tipo opcional
+* Métodos de extensão
+
+Cada um pode ser usada em cenários diferentes e tem diferentes vantagens e desvantagens.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a>Comentários
-Há duas formas de extensões de tipo que tem o comportamento e sintaxe ligeiramente diferente. Um *extensões intrínsecas* é uma extensão que aparece no mesmo namespace ou módulo, no mesmo arquivo de origem e no mesmo assembly (DLL ou arquivo executável) como o tipo que está sendo estendido. Um *extensão opcional* é uma extensão que aparece fora do módulo, namespace ou assembly do tipo que está sendo estendido original. Extensões intrínsecas aparecem no tipo quando o tipo é examinado por reflexão, mas não extensões opcionais. Extensões opcionais devem estar em módulos e são somente no escopo quando o módulo que contém a extensão está aberto.
+## <a name="intrinsic-type-extensions"></a>Extensões de tipo intrínseco
 
-Na sintaxe anterior, *typename* representa o tipo que está sendo estendido. Pode ser estendido a qualquer tipo que possa ser acessado, mas o nome do tipo deve ser um nome de tipo real, não é uma abreviação de tipo. Você pode definir vários membros na extensão de um tipo. O *identificador Self* representa a instância do objeto que está sendo invocado, assim como membros comuns.
+Uma extensão de tipo intrínseco é uma extensão de tipo que estende um tipo definido pelo usuário.
 
-O `end` palavra-chave é opcional em sintaxe leve.
+Extensões intrínsecas de tipo devem ser definidas no mesmo arquivo **e** no mesmo namespace ou módulo, como o tipo que estão estendendo. Qualquer outra definição resultará no que está sendo [extensões de tipo opcional](type-extensions.md#optional-type-extensions).
 
-Membros definidos em extensões de tipo podem ser usados exatamente como outros membros em um tipo de classe. Como outros membros, podem ser estáticos ou membros de instância. Esses métodos também são conhecidos como *métodos de extensão*; propriedades são conhecidas como *propriedades de extensão*, e assim por diante. Membros de extensão opcional são compilados para membros estáticos para o qual a instância do objeto é passada implicitamente como o primeiro parâmetro. No entanto, eles atuam como se fossem membros de instância ou membros estáticos de acordo com como elas são declaradas. Membros de extensão implícitas são incluídos como membros do tipo e podem ser usados sem restrição.
-
-Métodos de extensão não podem ser métodos virtuais ou abstratos. Ele podem sobrecarregar outros métodos de mesmo nome, mas o compilador dá preferência a métodos de extensão não no caso de uma chamada ambígua.
-
-Se várias extensões de tipo intrínseco existirem para um tipo, todos os membros devem ser exclusivos. Para as extensões de tipo opcionais, membros de extensões de tipo diferente para o mesmo tipo podem ter os mesmos nomes. Erros de ambiguidade ocorrer somente se o código de cliente abre dois escopos diferentes que definem os mesmos nomes de membro.
-
-No exemplo a seguir, um tipo em um módulo tem uma extensão de tipo intrínseco. Para o código do cliente fora do módulo, a extensão do tipo aparece como um membro regular do tipo em todos os aspectos.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-Você pode usar extensões de tipo intrínseco para separar a definição de um tipo em seções. Isso pode ser útil no gerenciamento de definições de tipo grande, por exemplo, para manter o código gerado pelo compilador e o código criado separada ou agrupar código criado por pessoas diferentes ou associado a uma funcionalidade diferente.
-
-No exemplo a seguir, uma extensão de tipo opcionais estende o `System.Int32` tipo com um método de extensão `FromString` que chama o membro estático `Parse`. O `testFromString` método demonstra que o novo membro é chamado, assim como qualquer membro de instância.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-O novo membro de instância será exibida como qualquer outro método do `Int32` tipo do IntelliSense, mas somente quando o módulo que contém a extensão está aberto ou não no escopo.
-
-## <a name="generic-extension-methods"></a>Métodos de extensão genérico
-Antes de F # 3.1, o compilador F # não suporta o uso de c#-estilo de métodos de extensão com um tipo de função do F # como o parâmetro "this", tipo de matriz, tipo de tupla ou uma variável de tipo genérico. 3.1 F # suporta o uso desses membros de extensão.
-
-Por exemplo, no código F # 3.1, você pode usar métodos de extensão com assinaturas que são semelhantes à seguinte sintaxe no c#:
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-Essa abordagem é particularmente útil quando o parâmetro de tipo genérico é restrito. Além disso, você pode declarar membros de extensão como esta no código F # e definir um conjunto de métodos de extensão adicional, semanticamente avançado. Em F #, você geralmente definir membros de extensão como mostra o exemplo a seguir:
+Extensões de tipo intrínseco, às vezes, são uma maneira mais limpa para separar a funcionalidade da declaração de tipo. O exemplo a seguir mostra como definir uma extensão de tipo intrínseco:
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+Usar uma extensão de tipo permite que você separe cada um dos seguintes:
+
+* A declaração de um `Variant` tipo
+* A funcionalidade para imprimir o `Variant` classe dependendo de sua "forma"
+* Uma maneira de acessar a funcionalidade de impressão com estilo de objeto `.`-notação
+
+Essa é uma alternativa para definir tudo como um membro em `Variant`. Embora não seja uma abordagem melhor inerentemente, ele pode ser uma representação mais clara de funcionalidade em algumas situações.
+
+Extensões de tipo intrínseco são compiladas como membros do tipo eles aumentam e aparecem no tipo quando o tipo é examinado por reflexão.
+
+## <a name="optional-type-extensions"></a>Extensões de tipo opcional
+
+Uma extensão de tipo opcional é uma extensão que aparece fora do módulo, namespace ou assembly do tipo que está sendo estendido original.
+
+Extensões de tipo opcionais são úteis para estender um tipo que você não definiu por conta própria. Por exemplo:
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-No entanto, para um tipo genérico, a variável de tipo pode não ser restritos. Agora você pode declarar um c#-membro de extensão de estilo em F # para contornar essa limitação. Quando você combinar esse tipo de declaração com o recurso de linha de F #, você pode apresentar algoritmos genéricos como membros de extensão.
+Agora você pode acessar `RepeatElements` como se fosse um membro do <xref:System.Collections.Generic.IEnumerable%601> desde que o `Extensions` módulo é aberto no escopo que você está trabalhando no.
 
-Considere a declaração a seguir:
+As extensões opcionais não aparecem no tipo estendido quando examinado por reflexão. As extensões opcionais devem estar em módulos, e eles são somente no escopo quando o módulo que contém a extensão está aberto ou caso contrário, está no escopo.
+
+Membros opcionais de extensão são compilados a membros estáticos para o qual a instância do objeto é transmitida implicitamente como primeiro parâmetro. No entanto, eles atuam como se fossem membros de instância ou os membros estáticos de acordo com como elas são declaradas.
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitação genérica de extensões de tipo intrínseco e opcionais
+
+É possível declarar uma extensão de tipo em um tipo genérico, em que a variável de tipo é restrito. O requisito é que a restrição da declaração de extensão corresponde à restrição do tipo declarado.
+
+No entanto, mesmo quando as restrições são compatíveis entre um tipo de declaração e uma extensão de tipo, é possível para uma restrição ser inferido pelo corpo de um membro estendido que impõe um requisito diferente no parâmetro de tipo que o tipo declarado. Por exemplo:
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+Não há nenhuma maneira de obter esse código funcione com uma extensão de tipo opcionais:
+
+* Como é, o `Sum` membro tem uma restrição diferente no `'T` (`static member get_Zero` e `static member (+)`) que o que define a extensão de tipo.
+* Modificando a extensão de tipo para ter a mesma restrição como `Sum` não será mais correspondente a restrição definida na `IEnumerable<'T>`.
+* Fazer a alteração de membro a ser `member inline Sum` fornecerão um erro que restrições de tipo são incompatíveis
+
+O que é desejado são métodos estáticos que "flutuem no espaço de" e podem ser apresentados como se eles estiverem estendendo um tipo. Isso é onde os métodos de extensão tornam-se necessário.
+
+## <a name="extension-methods"></a>Métodos de extensão
+
+Por fim, os métodos de extensão (às vezes chamados de "membros de extensão do estilo C#") podem ser declarados em F # como um método de membro estático em uma classe.
+
+Métodos de extensão são úteis para quando você deseja definir as extensões em um tipo genérico que restringe a variável de tipo. Por exemplo:
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-Usando esta declaração, você pode escrever código que se parece com o exemplo a seguir.
+Quando usado, esse código irá fazer com que pareça como se `Sum` é definido em <xref:System.Collections.Generic.IEnumerable%601>, desde que os `Extensions` foi aberto ou está no escopo.
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a>Outros comentários
 
-Nesse código, o mesmo código de aritmético genérico é aplicado às listas de dois tipos sem sobrecarga, definindo um membro único de extensão.
+Extensões de tipo também tem os seguintes atributos:
 
+* Pode ser estendido a qualquer tipo que pode ser acessado.
+* Extensões de tipo intrínseco e opcional podem definir _qualquer_ tipo de membro, não apenas métodos. Portanto, as propriedades de extensão também são possíveis, por exemplo.
+* O `self-identifier` token em de [sintaxe](type-extensions.md#syntax) representa a instância do tipo que está sendo invocado, assim como os membros comuns.
+* Membros estendidos podem ser estáticos ou membros de instância.
+* Variáveis de tipo em uma extensão de tipo devem corresponder as restrições do tipo declarado.
+
+Também existem as seguintes limitações para extensões de tipo:
+
+* Extensões de tipo não têm suporte para métodos virtuais ou abstratos.
+* Extensões de tipo não dão suporte a métodos de substituição como acréscimos.
+* Extensões de tipo não têm suporte [estaticamente parâmetros de tipo resolvidos](generics/statically-resolved-type-parameters.md).
+* As extensões de tipo opcionais não têm suporte para construtores como acréscimos.
+* Extensões de tipo não podem ser definidas [abreviações de tipo](type-abbreviations.md).
+* Extensões de tipo não são válidas para `byref<'T>` (embora eles podem ser declarados).
+* Extensões de tipo não são válidas para os atributos (embora eles podem ser declarados).
+* Você pode definir as extensões que sobrecarregam outros métodos de mesmo nome, mas o compilador F # dá preferência a métodos sem extensão se não houver uma chamada ambígua.
+
+Por fim, se existirem várias extensões de tipo intrínseco para um tipo, todos os membros devem ser exclusivos. Para extensões de tipo opcionais, membros em diferentes extensões de tipo para o mesmo tipo podem ter os mesmos nomes. Erros de ambiguidade surgem somente se o código do cliente abrir dois escopos diferentes que definem os mesmos nomes de membro.
 
 ## <a name="see-also"></a>Consulte também
+
 [Referência da Linguagem F#](index.md)
 
 [Membros](members/index.md)

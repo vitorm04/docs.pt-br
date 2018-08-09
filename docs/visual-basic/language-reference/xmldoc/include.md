@@ -6,14 +6,14 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33602730"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;incluir&gt; (Visual Basic)
-Refere-se a outro arquivo que descreve os tipos e membros no código-fonte.  
+Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,22 +29,22 @@ Refere-se a outro arquivo que descreve os tipos e membros no código-fonte.
  Necessário. O caminho das marcas em `filename` que leva à marca `name`. Coloque o caminho entre aspas duplas ("").  
   
  `name`  
- Necessário. O especificador de nome na marca que precede os comentários. `Name` será necessário um `id`.  
+ Necessário. O especificador de nome na marca que precede os comentários. `Name` terá um `id`.  
   
  `id`  
  Necessário. A ID da marca que precede os comentários. Coloque a ID entre aspas simples (' ').  
   
 ## <a name="remarks"></a>Comentários  
- Use o `<include>` marca Consulte comentários em outro arquivo que descrevem os tipos e membros no código-fonte. Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.  
+ Use o `<include>` marca para fazer referência a comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte. Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.  
   
- O `<include>` marca usa a recomendação do W3C XML Path Language (XPath) versão 1.0. Para obter mais informações sobre como personalizar o `<include>` uso está disponível em http://www.w3.org/TR/xpath.  
+ O `<include>` marca usa a recomendação do W3C XML Path Language (XPath) versão 1.0. Para obter mais informações de maneiras de personalizar seu `<include>` uso está disponível em http://www.w3.org/TR/xpath.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `<include>` marca para importar os comentários de documentação do membro de um arquivo chamado `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- O formato da `commentFile.xml` é o seguinte.  
+ O formato do `commentFile.xml` é da seguinte maneira.  
   
 ```xml  
 <Docs>  
