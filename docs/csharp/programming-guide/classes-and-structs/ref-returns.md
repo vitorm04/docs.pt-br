@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339612"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
@@ -35,16 +35,19 @@ Além disso, valores retornados de referência não são permitidos em métodos 
  
 ## <a name="defining-a-ref-return-value"></a>Definindo um valor retornado ref
 
-Você define um valor retornado ref adicionando a palavra-chave [ref](../../language-reference/keywords/ref.md) ao tipo de retorno da assinatura de método. Por exemplo, a assinatura a seguir indica que a propriedade `GetContactInformation` retorna uma referência a um objeto `Person` ao chamador:
+Um método que retorna um *valor retornado de referência* deve satisfazer as duas condições a seguir:
+
+- A assinatura do método inclui a palavra-chave [ref](../../language-reference/keywords/ref.md) na frente do tipo de retorno.
+- Cada instrução [return](../../language-reference/keywords/return.md) no corpo do método inclui a palavra-chave [ref](../../language-reference/keywords/ref.md) antes do nome da instância retornada.
+
+O exemplo a seguir mostra um método que satisfaz essas condições e retorna uma referência a um objeto `Person` chamado `p`:
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-Além disso, o nome do objeto retornado por cada instrução [return](../../language-reference/keywords/return.md) no corpo do método deve ser precedida pela palavra-chave [ref](../../language-reference/keywords/ref.md). Por exemplo, a instrução `return` a seguir retorna uma referência a um objeto `Person` chamado `p`:
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>Consumindo um valor retornado ref
