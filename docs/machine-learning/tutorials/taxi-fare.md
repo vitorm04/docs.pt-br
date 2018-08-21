@@ -64,7 +64,7 @@ Para prever a tarifa de táxi, selecione primeiro a tarefa de aprendizado de má
 
 3. Abra o conjunto de dados **taxi-fare-train.csv** e observe os cabeçalhos de coluna na primeira linha. Dê uma olhada em cada uma das colunas. Compreenda os dados e decida quais colunas são **recursos** e qual é o **rótulo**.
 
-O **rótulo** é o identificador da coluna que você quer prever. Os **recursos** identificados são usados para prever o rótulo.
+O **rótulo** é o identificador da coluna que você quer prever. Os **recursos** identificados são usados ​​para prever o rótulo.
 
 O conjunto de dados fornecido contém as seguintes colunas:
 
