@@ -23,22 +23,22 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655896"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754223"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: como os objetos são criados e destruídos (Visual Basic)
-Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos chamados *construtores* (métodos especiais que permitem o controle sobre inicialização).  
+Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos denominados *construtores* (métodos especiais que permitem o controle sobre a inicialização).  
   
- Depois que um objeto sai do escopo, ele é liberado pelo common language runtime (CLR). Visual Basic controla a versão de recursos do sistema usando os procedimentos chamados *destruidores*. Juntos, os construtores e os destruidores oferecem suporte à criação de bibliotecas de classe robusta e previsível.  
+ Depois que um objeto sai do escopo, ele é liberado pelo common language runtime (CLR). Visual Basic controla o lançamento dos recursos do sistema usando procedimentos denominados *destruidores*. Juntos, os construtores e os destruidores oferecem suporte à criação de bibliotecas de classe robusta e previsível.  
   
 ## <a name="using-constructors-and-destructors"></a>Usando construtores e destruidores  
- Os construtores e os destruidores controlam a criação e a destruição de objetos. O `Sub New` e `Sub Finalize` procedimentos no Visual Basic inicializam em destruir objetos; eles substituem o `Class_Initialize` e `Class_Terminate` métodos usados no Visual Basic 6.0 e versões anteriores.  
+ Os construtores e os destruidores controlam a criação e a destruição de objetos. O `Sub New` e `Sub Finalize` procedimentos no Visual Basic inicializam e destroem objetos; eles substituem as `Class_Initialize` e `Class_Terminate` métodos usados no Visual Basic 6.0 e versões anteriores.  
   
 ### <a name="sub-new"></a>Sub New  
- O construtor `Sub New` pode ser executado apenas uma vez quando uma classe é criada. Não pode ser chamado explicitamente em qualquer lugar que não seja na primeira linha do código de outro construtor da mesma classe ou de uma classe derivada. Além disso, o código no método `Sub New` sempre é executado antes de qualquer outro código em uma classe. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] e versões posteriores implicitamente criam um `Sub New` construtor em tempo de execução se você não definir explicitamente uma `Sub New` procedimento para uma classe.  
+ O construtor `Sub New` pode ser executado apenas uma vez quando uma classe é criada. Não pode ser chamado explicitamente em qualquer lugar que não seja na primeira linha do código de outro construtor da mesma classe ou de uma classe derivada. Além disso, o código no método `Sub New` sempre é executado antes de qualquer outro código em uma classe. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] e versões posteriores implicitamente criam um `Sub New` construtor em tempo de execução se você não definir explicitamente um `Sub New` procedimento para uma classe.  
   
  Para criar um construtor para uma classe, crie um procedimento denominado `Sub New` em qualquer lugar na definição de classe. Para criar um construtor com parâmetros, especifique os nomes e tipos de dados dos argumentos para `Sub New` exatamente como você faria para qualquer outro procedimento, como no seguinte código:  
   
@@ -56,7 +56,7 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
  Antes da liberação de objetos, o CLR chama automaticamente o método `Finalize` para objetos que definem um procedimento `Sub Finalize`. O método `Finalize` pode conter códigos que precisam ser executados antes que um objeto seja destruído, como o código para fechar arquivos e salvar as informações de estado. Há uma pequena perda de desempenho para executar `Sub Finalize`, portanto, você deve definir um método `Sub Finalize` somente quando precisar liberar objetos explicitamente.  
   
 > [!NOTE]
->  O coletor de lixo do CLR não (e não pode) descartar *não gerenciado objetos*, objetos que o sistema operacional é executado diretamente, fora do ambiente do CLR. Isso ocorre porque diferentes objetos não gerenciados devem ser descartados de maneiras diferentes. Essas informações não estão diretamente associadas ao objeto não gerenciado; devem ser encontradas na documentação do objeto. Uma classe que usa objetos não gerenciados deve descartá-los em seu método `Finalize`.  
+>  O coletor de lixo no CLR não considera (e não pode) descarto *unmanaged objetos*, objetos que o sistema operacional executa diretamente, fora do ambiente do CLR. Isso ocorre porque diferentes objetos não gerenciados devem ser descartados de maneiras diferentes. Essas informações não estão diretamente associadas ao objeto não gerenciado; devem ser encontradas na documentação do objeto. Uma classe que usa objetos não gerenciados deve descartá-los em seu método `Finalize`.  
   
  O destruidor `Finalize` é um método protegido que pode ser chamado somente da classe à qual pertence ou de classes derivadas. O sistema automaticamente chama `Finalize` quando um objeto é destruído, assim, você não deve chamar explicitamente o `Finalize` de fora de uma implementação `Finalize` de classe derivada.  
   
@@ -140,15 +140,15 @@ End Sub
  Uma classe derivada não deve substituir os métodos <xref:System.IDisposable.Dispose%2A> e `Finalize` da classe base. Quando esses métodos são chamados de uma instância da classe derivada, a implementação da classe base desses métodos chamam a substituição da classe derivada do método `Dispose(disposing)`.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>A coleta de lixo e o destruidor de finalização  
- O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa o *coleta de lixo de referência de rastreamento* sistema periodicamente liberar recursos não utilizados. Visual Basic 6.0 e versões anteriores usado outro sistema chamado *contagem de referência* para gerenciar recursos. Embora os dois sistemas executem a mesma função automaticamente, existem algumas diferenças importantes.  
+ O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa o *coleta de lixo de rastreamento de referência* sistema para liberar periodicamente recursos não utilizados. Visual Basic 6.0 e versões anteriores usaram um sistema diferente denominado *contagem de referência* para gerenciar recursos. Embora os dois sistemas executem a mesma função automaticamente, existem algumas diferenças importantes.  
   
- O CLR destrói periodicamente objetos quando o sistema determina que esses objetos não são mais necessários. Os objetos são liberados mais rapidamente quando os recursos de sistema estão em fornecimento pequeno e, em caso contrário, menos frequente. O atraso entre quando um objeto perde o escopo e quando o CLR libera, significa que, diferente dos objetos no Visual Basic 6.0 e versões anteriores, você não pode determinar exatamente quando o objeto será destruído. Em tal situação, os objetos são considerados ter *tempo de vida não determinístico*. Na maioria dos casos, o tempo de vida não determinístico não altera o modo como você grava aplicativos, desde que você se lembre de que o destruidor `Finalize` pode não ser executado imediatamente quando um objeto perde o escopo.  
+ O CLR destrói periodicamente objetos quando o sistema determina que esses objetos não são mais necessários. Os objetos são liberados mais rapidamente quando os recursos de sistema estão em fornecimento pequeno e, em caso contrário, menos frequente. O atraso entre quando um objeto perde o escopo e quando o CLR libera, significa que, diferente dos objetos no Visual Basic 6.0 e versões anteriores, você não pode determinar exatamente quando o objeto será destruído. Nessa situação, os objetos são considerados como tendo *tempo de vida não determinístico*. Na maioria dos casos, o tempo de vida não determinístico não altera o modo como você grava aplicativos, desde que você se lembre de que o destruidor `Finalize` pode não ser executado imediatamente quando um objeto perde o escopo.  
   
  Outra diferença entre os sistemas de coleta de lixo envolve o uso de `Nothing`. Para aproveitar a contagem de referência no Visual Basic 6.0 e em versões anteriores, os programadores às vezes atribuem `Nothing` para as variáveis de objeto para liberar as referências que essas variáveis mantinham. Se a variável mantiver a última referência ao objeto, os recursos do objeto são lançados imediatamente. Em versões posteriores do Visual Basic, embora haja casos em que esse procedimento ainda é importante, executá-lo nunca faz com que o objeto referenciado libere seus recursos imediatamente. Para liberar recursos imediatamente, use o método <xref:System.IDisposable.Dispose%2A> do objeto, se disponível. A única vez em que você deve definir uma variável para `Nothing` é quando seu tempo de vida é longo em relação ao tempo que o coletor de lixo leva para detectar objetos órfãos.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IDisposable.Dispose%2A>  
- [Inicialização e encerramento de componentes](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [Inicialização e término de componentes](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [Operador New](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Limpando recursos não gerenciados](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

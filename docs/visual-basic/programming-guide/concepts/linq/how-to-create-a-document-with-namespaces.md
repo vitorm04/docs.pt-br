@@ -3,11 +3,11 @@ title: 'Como: Crie um documento com namespaces (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643072"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754057"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Como: Crie um documento com namespaces (LINQ to XML) (Visual Basic)
 Este tópico mostra como criar um documento com namespaces no Visual Basic.  
@@ -18,7 +18,7 @@ Este tópico mostra como criar um documento com namespaces no Visual Basic.
   
  Você define dois namespaces padrão e namespaces com um prefixo usando a palavra-chave `Imports` .  
   
- Para obter mais informações, consulte [Introdução a literais de XML no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
+ Para obter mais informações, consulte [Introdução aos literais XML no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
  Observe que o namespace XML padrão se aplica somente aos elementos e não a atributos. Atributos são sempre por padrão em qualquer namespace. No entanto, você pode usar um prefixo de namespace para colocar um atributo em um namespace.  
   

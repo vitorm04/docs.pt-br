@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462410"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754604"
 ---
 # <a name="execnotificationquerywmi-function"></a>Função ExecNotificationQueryWmi
-Executa uma consulta para receber eventos. A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos assim que elas chegam. Liberar o enumerador retornado cancela a consulta.  
+Executa uma consulta para receber eventos. A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos à medida que eles chegam. Liberar enumerador retornado cancela a consulta.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -49,24 +49,24 @@ HRESULT ExecNotificationQueryWmi (
 ## <a name="parameters"></a>Parâmetros
 
 `strQueryLanguage`    
-[in] Uma cadeia de caracteres com a linguagem de consulta válido com suporte de gerenciamento do Windows. Ele deve ser "WQL", o acrônimo para a linguagem de consulta WMI.
+[in] Uma cadeia de caracteres com a linguagem de consulta válida com suporte pelo gerenciamento do Windows. Ele deve ser "WQL", o acrônimo de linguagem de consulta WMI.
 
 `strQuery`  
 [in] O texto da consulta. O parâmetro não pode ser `null`.
 
 `lFlags`   
-[in] Uma combinação dos seguintes dois sinalizadores que afetam o comportamento dessa função. Esses valores são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código. 
+[in] Uma combinação dos seguintes dois sinalizadores que afetam o comportamento dessa função. Esses valores são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código. 
 
 | Constante | Valor  | Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador faz com que uma chamada semi-síncrona. Se este sinalizador não for definido, a chamada falhará. Isso é porque os eventos são recebidos continuamente, que significa que o usuário deve sondar o enumerador retornado. Bloquear essa chamada indefinidamente, que torna impossível. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador de somente avanço. Normalmente, os enumeradores de somente avanço são mais rápidos e usam menos memória do que os enumeradores convencionais, mas não permitem chamadas para [Clone](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador faz com que uma chamada semissíncrona. Se este sinalizador não for definido, a chamada falhará. Isso é porque os eventos são recebidos continuamente, que significa que o usuário deve sondar o enumerador retornado. Essa chamada de bloqueio por tempo indeterminado, que torna impossível. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador de somente avanço. Normalmente, os enumeradores de somente avanço são mais rápidos e usam menos memória do que os enumeradores convencionais, mas eles não permitem chamadas para [Clone](clone.md). |
 
 `pCtx`  
-[in] Normalmente, esse valor é `null`. Caso contrário, é um ponteiro para um [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) instância pode ser usada pelo provedor que está fornecendo os eventos solicitados. 
+[in] Normalmente, esse valor é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instância que pode ser usada pelo provedor que está fornecendo os eventos solicitados. 
 
 `ppEnum`  
-[out] Se nenhum erro ocorrer, recebe o ponteiro para o enumerador que permite que o chamador recuperar as instâncias no conjunto de resultados da consulta. Consulte o [comentários](#remarks) para obter mais informações.
+[out] Se nenhum erro ocorrer, recebe o ponteiro para o enumerador que permite que o chamador recuperar as instâncias no conjunto de resultados da consulta. Consulte a [comentários](#remarks) seção para obter mais informações.
 
 `authLevel`  
 [in] O nível de autorização.
@@ -74,20 +74,20 @@ HRESULT ExecNotificationQueryWmi (
 `impLevel` [in] O nível de representação.
 
 `pCurrentNamespace`   
-[in] Um ponteiro para um [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objeto que representa o namespace atual.
+[in] Um ponteiro para um [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto que representa o namespace atual.
 
 `strUser`   
-[in] O nome de usuário. Consulte o [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+[in] O nome de usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
 `strPassword`   
-[in] A senha. Consulte o [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+[in] A senha. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
 `strAuthority`   
-[in] O nome de domínio do usuário. Consulte o [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+[in] O nome de domínio do usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -95,33 +95,33 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 | `WBEM_E_FAILED` | 0x80041001 | Ocorreu um erro não especificado. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | A consulta especifica uma classe que não existe. |
-| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Muita precisão na entrega de eventos foi solicitado. Uma maior tolerância de sondagem deve ser especificada. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | A consulta requess mais informações de gerenciamento do Windows podem fornecer. Isso `HRESULT` é retornado quando uma consulta de evento resulta em uma solicitação para pesquisar todos os objetos em um namespace. |
+| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Muita precisão na entrega de eventos foi solicitada. Uma maior tolerância de sondagem deve ser especificada. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | A consulta requess mais informações de gerenciamento do Windows podem fornecer. Isso `HRESULT` é retornado quando uma consulta de evento resulta em uma solicitação de sondagem de todos os objetos em um namespace. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | A consulta teve um erro de sintaxe. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | O idioma de consulta solicitado não tem suporte. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | A consulta é muito complexa. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chamar [ConnectServerWmi](connectserverwmi.md) novamente. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chame [ConnectServerWmi](connectserverwmi.md) novamente. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | A consulta não pode ser analisada. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemServices::ExecNotificationQuery](https://msdn.microsoft.com/library/aa392105(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) método.
 
-Depois que a função retorna, o chamador periodicamente passa retornado `ppEnum` o objeto para o [próximo](next.md) função para verificar se todos os eventos disponíveis.
+Depois que a função retornar, o chamador periodicamente passa retornado `ppEnum` do objeto para o [próxima](next.md) função para ver se todos os eventos estão disponíveis.
 
-Há limites para o número de `AND` e `OR` palavras-chave que podem ser usadas em consultas WQL. Grandes números das palavras-chave WQL usadas em uma consulta complexa podem fazer com que o WMI retornar o `WBEM_E_QUOTA_VIOLATION` (ou 0x8004106c) código de erro como uma `HRESULT` valor. O limite de palavras-chave WQL depende a consulta é complexo.
+Há limites para o número de `AND` e `OR` palavras-chave que podem ser usadas em consultas WQL. Grande número de palavras-chave WQL usadas em uma consulta complexa pode fazer com que o WMI retornar os `WBEM_E_QUOTA_VIOLATION` (ou 0x8004106c) código de erro como um `HRESULT` valor. O limite de palavras-chave WQL depende complexas como a consulta é.
 
 Se a chamada de função falhar, você pode obter informações adicionais sobre erros chamando o [GetErrorInfo](geterrorinfo.md) função.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -2,22 +2,23 @@
 title: 'Comunicações principais: Suporte de Webhost'
 ms.date: 03/30/2017
 ms.assetid: 034c501f-96f9-4ef7-9602-3ac21788fd3e
-ms.openlocfilehash: 724dc2eb66d058920fda07af899cd7464182c438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee107ffcb9fab629541ce004d1c587fcad652c8
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471671"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754587"
 ---
 # <a name="core-communications-webhost-support"></a>Comunicações principais: Suporte de Webhost
-Este tópico lista todas as exceções geradas pelo suporte de Webhost.  
-  
-## <a name="exception-list"></a>Lista de exceções  
-  
-|Código do recurso|Cadeia de caracteres de recurso|  
-|-------------------|---------------------|  
-|Hosting_CompatibilityServiceNotHosted|Esse serviço requer compatibilidade com ASP.NET. Ele também deve ser hospedado no IIS. Hospede o serviço no IIS com compatibilidade com ASP.NET ativada em Web. config ou defina a propriedade AspNetCompatibilityRequirementsAttribute AspNetCompatibilityRequirementsMode para um valor diferente Required.|  
-|Hosting_ListenerNotFoundForActivationInRecycling|Nenhum canal ativamente está escutando no endereço especificado. Se a reciclagem de um aplicativo, o serviço está fechado.|  
-|Hosting_NonHTTPInCompatibilityMode|Somente os protocolos que têm suporte na compatibilidade com ASP.NET são HTTP e HTTPS. Remova o ponto de extremidade especificado ou desativar a compatibilidade com ASP.NET para o aplicativo.|  
-|Hosting_ProcessNotExecutingUnderHostedContext|O processcannot de hospedagem especificado ser chamado dentro do ambiente de hospedagem atual. Esta API exige que o aplicativo de chamada ser hospedados em serviços de informações da Internet ou o serviço de ativação de processos do Windows.|  
-|Hosting_ServiceCompatibilityRequire|O serviço não pode ser ativado porque ele requer compatibilidade com ASP.NET. Compatibilidade com ASP.NET não está habilitada para este aplicativo. Habilitar compatibilidade com ASP.NET no arquivo Web. config ou defina o AspNetCompatibilityRequirementsAttribute.AspNetCompatibility.|
+
+Este tópico lista todas as exceções geradas pelo suporte de Webhost.
+
+## <a name="exception-list"></a>Lista de exceções
+
+|Código do recurso|Cadeia de caracteres de recurso|
+|-------------------|---------------------|
+|Hosting_CompatibilityServiceNotHosted|Este serviço requer compatibilidade do ASP.NET. Ele também deve ser hospedado no IIS. A hospedar o serviço no IIS com compatibilidade com ASP.NET ativada no Web. config ou defina a propriedade de AspNetCompatibilityRequirementsAttribute para um valor diferente de necessário.|
+|Hosting_ListenerNotFoundForActivationInRecycling|Nenhum canal está escutando ativamente no endereço especificado. Se a reciclagem de um aplicativo, o serviço será fechado.|
+|Hosting_NonHTTPInCompatibilityMode|Somente os protocolos que têm suporte de compatibilidade do ASP.NET são HTTP e HTTPS. Remova o ponto de extremidade especificado ou desabilite a compatibilidade do ASP.NET para o aplicativo.|
+|Hosting_ProcessNotExecutingUnderHostedContext|O processo de hospedagem especificado não pode ser invocado dentro do ambiente de hospedagem atual. Essa API requer que o aplicativo de chamada hospedado no Internet Information Services ou o serviço de ativação de processos do Windows.|
+|Hosting_ServiceCompatibilityRequire|O serviço não pode ser ativado porque ele requer compatibilidade do ASP.NET. Compatibilidade do ASP.NET não está habilitada para este aplicativo. Habilitar a compatibilidade do ASP.NET no arquivo Web. config ou defina o AspNetCompatibilityRequirementsAttribute.AspNetCompatibility.|

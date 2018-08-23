@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b197aa539e60a9dbcee55cf190c44b45da3a5fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402009"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754605"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>Função _AxlGetIssuerPublicKeyHash
 Recupera o hash SHA-1 da chave pública associada à chave privada usada para assinar o certificado especificado.  
@@ -31,7 +31,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 #### <a name="parameters"></a>Parâmetros  
  `pChainContext`  
- [in] O blob da chave pública CSP. Consulte o [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) estrutura.  
+ [in] O blob da chave pública CSP. Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.  
   
  `ppwszPublicKeyHash`  
  [out] Um ponteiro para WCHAR * para receber o token de chave pública com codificação hexadecimal.  

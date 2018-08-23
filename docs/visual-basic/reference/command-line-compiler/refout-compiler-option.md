@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21cea76f31bdf2ac5fcf434ee759f874f917617b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653527"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754090"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -30,15 +30,15 @@ A opção **-refout** especifica um caminho de arquivo em que o assembly de refe
 
 ## <a name="arguments"></a>Arguments
 
- `filepath` O caminho e nome do arquivo do assembly de referência. Geralmente, ele deve ser em uma subpasta do assembly principal. A convenção recomendada (usada pelo MSBuild) é colocar o assembly de referência em uma subpasta "ref/" em relação ao assembly principal. Todas as pastas no `filepath` devem existir; o compilador não criá-los. 
+ `filepath` O caminho e nome de arquivo do assembly de referência. Em geral, ele deve ser em uma subpasta do assembly principal. A convenção recomendada (usada pelo MSBuild) é colocar o assembly de referência em uma subpasta "ref/" em relação ao assembly principal. Todas as pastas no `filepath` deve existir; o compilador não criá-los. 
 
 ## <a name="remarks"></a>Comentários
 
-Visual Basic oferece suporte a `-refout` alternar a partir da versão 15,3.
+Visual Basic oferece suporte a `-refout` alternar a partir da versão 15.3.
 
-Assemblies de referência são somente metadados assemblies que contêm metadados, mas nenhum código de implementação. Eles incluem informações de tipo e membro para tudo, exceto tipos anônimos. O corpo de método é substituído por um único `throw null` instrução. O motivo para usar `throw null` corpos de método (em vez de nenhum corpo) é que PEVerify pode executar e passar (Validando a integridade dos metadados).
+Assemblies de referência são assemblies somente de metadados que contêm metadados, mas nenhum código de implementação. Eles incluem informações de tipo e membro para tudo, exceto tipos anônimos. Seus corpos de método são substituídos por um único `throw null` instrução. O motivo para usar `throw null` corpos de método (em vez de nenhum corpo) é que PEVerify pode executar e passar (Validando, assim, a integridade dos metadados).
 
-Assemblies de referência incluem um nível de conjunto [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo. Esse atributo pode ser especificado na origem (assim, o compilador não precisará sintetizá-lo). Devido a esse atributo, tempos de execução recusam carregar assemblies de referência de execução (mas ainda pode ser carregados em um contexto exclusivo de reflexão). Ferramentas que refletem em assemblies precisam garantir que eles carregam assemblies de referência como somente reflexão; Caso contrário, o tempo de execução gera um <xref:System.BadImageFormatException>.
+Assemblies de referência incluem um nível de conjunto [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo. Esse atributo pode ser especificado na origem (assim, o compilador não precisará sintetizá-lo). Devido a esse atributo, tempos de execução recusam carregar assemblies de referência para a execução (mas ainda podem ser carregados em um contexto de somente reflexão). As ferramentas que refletem nos assemblies precisam garantir que elas carreguem assemblies de referência como somente reflexão; Caso contrário, o tempo de execução gera uma <xref:System.BadImageFormatException>.
 
 As opções `-refout` e [`-refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
 

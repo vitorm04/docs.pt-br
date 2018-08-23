@@ -2,37 +2,196 @@
 title: Funções agregadas canônicas
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 04b7d9c20373a465c073d55a090f1c2fd7fc6e07
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761929"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754638"
 ---
 # <a name="aggregate-canonical-functions"></a>Funções agregadas canônicas
 
 Agregados são as expressões em que reduz uma série de valores de entrada, por exemplo, um único valor. Agregados são normalmente usadas em conjunto com o cláusula GROUP BY de expressão SELECT, e há restrições em onde eles podem ser usados.
 
-A tabela a seguir mostra a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] agregado funções canônicas.
+## <a name="aggegate-entity-sql-canonical-functions"></a>Funções canônicas de Aggegate Entity SQL
 
-| Função | Descrição |
-| -------- | ----------- |
-| `Avg(expression)` | Retorna a média dos valores não anuláveis.<br><br>**Argumentos**<br><br>Um `Int32`, `Int64`, `Double`, e `Decimal`.<br><br>**Valor retornado**<br><br>O tipo de `expression`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] [!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)] |
-| `BigCount(expression)` | Retorna o tamanho do agregado que inclui valores nulos e duplicados.<br><br>**Argumentos**<br><br>Qualquer tipo.<br><br>**Valor retornado**<br><br>Um `Int64`.<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)] |
-| `Count(expression)` | Retorna o tamanho do agregado que inclui valores nulos e duplicados.<br><br>**Argumentos**<br><br>Qualquer tipo.<br><br>**Valor retornado**<br><br>Um `Int32`.<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)] [!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)] |
-| `Max(expression)` | Retorna o máximo dos valores não anuláveis.<br><br>**Argumentos**<br><br>`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.<br><br>**Valor retornado**<br><br>O tipo de `expression`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)] [!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)] |
-| `Min(expression)` | Retorna o mínimo dos valores não anuláveis.<br><br>**Argumentos**<br><br>`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.<br><br>**Valor retornado**<br><br>O tipo de `expression`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)] [!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)] |
-| `StDev(expression)` | Retorna o desvio padrão de valores não anuláveis.<br><br>**Argumentos**<br><br>`Int32`, `Int64`, `Double`, `Decimal`.<br><br>**Valor retornado**<br><br>Um `Double`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)] [!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)] |
-| `StDevP(expression)` | Retorna o desvio padrão para a população de todos os valores.<br><br>**Argumentos**<br><br>`Int32`, `Int64`, `Double`, `Decimal`.<br><br>**Valor retornado**<br><br>Um `Double`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)] [!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)] |
-| `Sum(expression)` | Retorna a soma dos valores não anuláveis.<br><br>**Argumentos**<br><br>`Int32`, `Int64`, `Double`, `Decimal`.<br><br>**Valor retornado**<br><br>Um `Double`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)] [!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)] |
-| `Var(expression)` | Retorna a variação de todos os valores não anuláveis.<br><br>**Argumentos**<br><br>`Int32`, `Int64`, `Double`, `Decimal`.<br><br>**Valor retornado**<br><br>Um `Double`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)] [!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)] |
-| `VarP(expression)` | Retorna a variação para a população de todos os valores não anuláveis.<br><br>**Argumentos**<br><br>`Int32`, `Int64`, `Double`, `Decimal`.<br><br>**Valor retornado**<br><br>Um `Double`. `Null`, se todos os valores de entrada são valores de `null` .<br><br>**Exemplo**[!code-csharp[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)] [!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] |
+A seguir estão as funções canônicas agregadas do Entity SQL.
+
+### <a name="avgexpression"></a>Avg (expressão)
+
+Retorna a média dos valores não anuláveis.
+
+**Argumentos**
+
+Uma `Int32`, `Int64`, `Double`, e `Decimal`.
+
+**Valor retornado**
+
+O tipo de `expression`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
+
+### <a name="bigcountexpression"></a>BigCount (expressão)
+
+Retorna o tamanho do agregado que inclui valores nulos e duplicados.
+
+**Argumentos**
+
+Qualquer tipo.
+
+**Valor retornado**
+
+Um `Int64`.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
+
+### <a name="countexpression"></a>Contagem (expressão) 
+
+Retorna o tamanho do agregado que inclui valores nulos e duplicados.
+
+**Argumentos**
+
+Qualquer tipo.
+
+**Valor retornado**
+
+Um `Int32`.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)]
+[!code-sql[DP EntityServices Concepts#EDM_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]
+
+### <a name="maxexpression"></a>Máximo (expressão)
+
+Retorna o máximo dos valores não anuláveis.
+
+**Argumentos**
+
+`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+
+**Valor retornado**
+
+O tipo de `expression`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)]
+[!code-sql[DP EntityServices Concepts#EDM_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]
+
+### <a name="minexpression"></a>Minuto (expressão)
+
+Retorna o mínimo dos valores não anuláveis.
+
+**Argumentos**
+
+`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
+
+**Valor retornado**
+
+O tipo de `expression`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)]
+[!code-sql[DP EntityServices Concepts#EDM_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]
+
+### <a name="stdevexpression"></a>StDev (expressão)
+
+Retorna o desvio padrão de valores não anuláveis.
+
+**Argumentos**
+
+`Int32`, `Int64`, `Double`, `Decimal`.
+
+**Valor retornado**
+
+Um `Double`. `Null`, se todos os valores de entrada são valores de `null` .
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)]
+[!code-sql[DP EntityServices Concepts#EDM_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]
+
+### <a name="stdevpexpression"></a>StDevP (expressão)
+
+Retorna o desvio padrão para a população de todos os valores.
+
+**Argumentos**
+
+`Int32`, `Int64`, `Double`, `Decimal`.
+
+**Valor retornado**
+
+Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)]
+[!code-sql[DP EntityServices Concepts#EDM_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]
+
+### <a name="sumexpression"></a>Soma (expressão)
+
+Retorna a soma dos valores não anuláveis.
+
+**Argumentos**
+
+`Int32`, `Int64`, `Double`, `Decimal`.
+
+**Valor retornado**
+
+Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)]
+[!code-sql[DP EntityServices Concepts#EDM_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]
+
+### <a name="varexpression"></a>Var (expressão)
+
+Retorna a variação de todos os valores não anuláveis.
+
+**Argumentos**
+
+`Int32`, `Int64`, `Double`, `Decimal`.
+
+**Valor retornado**
+
+Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)]
+[!code-sql[DP EntityServices Concepts#EDM_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]
+
+### <a name="varpexpression"></a>VarP (expressão)
+
+Retorna a variação para a população de todos os valores não anuláveis.
+
+**Argumentos**
+
+`Int32`, `Int64`, `Double`, `Decimal`.
+
+**Valor retornado**
+
+Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+
+**Exemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
 
 Funcionalidade equivalente está disponível no provedor gerenciado cliente do Microsoft SQL. Para obter mais informações, consulte [SqlClient para funções de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
-## <a name="collection-based-aggregates"></a>Agregações de coleção
+## <a name="collection-based-aggregates"></a>Agregações baseadas em coleção
 
-Agregados coleção com base (funções de coleção) operam em coleções e retornam um valor. Por exemplo se pedidos é uma coleção de todos os pedidos, você pode calcular a data de remessa com a seguinte expressão:
+Agregados coleção com base (funções de coleção) operam em coleções e retornam um valor. Por exemplo se os ORDENS são uma coleção de todos os pedidos, você pode calcular a data de remessa mais antiga com a seguinte expressão:
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -51,7 +210,7 @@ select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-É possível ter uma agregação baseado em grupos sem uma cláusula group-by explícita na expressão SELECT. Nesse caso, todos os elementos são tratados como um único grupo. Isso é equivalente a especificar um agrupamento com base em uma constante. Tomada, por exemplo, a expressão a seguir:
+É possível ter uma agregação grupo-base sem um explícito grupo-pela cláusula SELECT na expressão. Nesse caso, todos os elementos são tratados como um único grupo. Isso é equivalente a especificar um agrupamento com base em uma constante. Tomada, por exemplo, a expressão a seguir:
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -65,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 As expressões na agregação grupo- base são avaliadas dentro do escopo de resolução que seria visível para a cláusula WHERE expressão.
 
-Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregações de grupo também podem especificar todos ou modificador distinto. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.  
+Como em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregações baseadas em grupo também podem especificar um todos ou modificador DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.  
 
 ## <a name="see-also"></a>Consulte também
 

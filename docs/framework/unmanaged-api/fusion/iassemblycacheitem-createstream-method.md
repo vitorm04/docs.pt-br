@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429495"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754646"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>Método IAssemblyCacheItem::CreateStream
 Cria um fluxo com o nome especificado e o formato.  
@@ -51,20 +51,20 @@ HRESULT CreateStream (
  [in] O formato do arquivo a ser transmitido.  
   
  `dwFormatFlags`  
- [in] Sinalizadores de formato específicos definidos no Fusion.idl.  
+ [in] Sinalizadores de formato específicos definidos em Fusion.idl.  
   
  `ppIStream`  
- [out] Um ponteiro para o endereço do retornado [IStream](https://msdn.microsoft.com/library/aa380034.aspx) instância.  
+ [out] Um ponteiro para o endereço do retornado [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instância.  
   
  `puliMaxSize`  
- [in, opcional] O tamanho máximo do fluxo referenciado por `ppIStream`.  
+ [in, opcional] O tamanho máximo do fluxo referenciado pelo `ppIStream`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

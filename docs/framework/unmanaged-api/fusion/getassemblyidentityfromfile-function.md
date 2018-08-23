@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ea151417a1cb53104ec29fff1e76e21f82ec9bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431637"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754603"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>Função GetAssemblyIdentityFromFile
 Obtém um ponteiro para um `IUnknown` objeto com especificado `IID` no assembly no caminho de arquivo especificado.  
@@ -46,15 +46,15 @@ HRESULT GetAssemblyIdentityFromFile (
  [in] O `IID` da interface para retornar.  
   
  `ppIdentity`  
- [out] O ponteiro de interface retornado.  
+ [out] O ponteiro de interface retornada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- <<!--zzxref:IUnknown --> `IUnknown`>  
+ [IUnknown](/cpp/atl/iunknown)  
  [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
