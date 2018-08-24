@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36208134"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42753598"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
@@ -55,7 +55,7 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 |----------------------|----------|-----------------|--------------|  
 |"C" ou "c"|Moeda|Resultado: um valor de moeda.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de moeda ("C")](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" ou "d"|Decimal|Resultado: dígitos inteiros com sinal negativo opcional.<br /><br /> Compatível com: somente tipos integrais.<br /><br /> Especificador de precisão: número mínimo de dígitos.<br /><br /> Especificador de precisão padrão: número mínimo de dígitos necessários.<br /><br /> Para saber mais: [especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|"E" ou "e"|Exponencial (científica)|Resultado: notação Exponencial.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: 6.<br /><br /> Para saber mais: [especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
+|"E" ou "e"|Exponencial (científica)|Resultado: notação Exponencial.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: 6.<br /><br /> Para saber mais: [especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
 |"F" ou "f"|Ponto fixo|Resultado: dígitos integrais e decimais com sinal negativo opcional.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de ponto fixo ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" ou "g"|Geral|Resultado: a mais compacta entre notação de ponto fixo ou científica.<br /><br /> Suporte por: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de dígitos significativos.<br /><br /> Especificador de precisão padrão: depende do tipo numérico.<br /><br /> Para saber mais: [especificador de formato geral ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" ou "n"|Número|Resultado: dígitos integrais e decimais, separadores de grupo e um separador decimal com sinal negativo opcional.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais desejadas.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato numérico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
