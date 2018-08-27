@@ -12,55 +12,56 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9938db3f4a3d054fde52139c166fb6a2e2a402df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5594166081c36fbda1e5d1a62e017aaceb7a553d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388050"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912108"
 ---
-# <a name="pinvokestackimbalance-mda"></a>MDA pInvokeStackImbalance
-O MDA (Assistente de Depuração Gerenciado) de `pInvokeStackImbalance` é ativado quando o CLR detecta que a profundidade da pilha após uma chamada de invocação de plataforma não corresponde à profundidade da pilha esperada, dada a convenção de chamada especificada no atributo <xref:System.Runtime.InteropServices.DllImportAttribute>, bem como a declaração dos parâmetros na assinatura gerenciada.  
-  
+# <a name="pinvokestackimbalance-mda"></a>MDA PInvokeStackImbalance
+
+O `PInvokeStackImbalance` Assistente para depuração gerenciada (MDA) é ativado quando o CLR detecta que a profundidade da pilha após uma invocação de plataforma chamada não coincide com a profundidade da pilha esperada, dada a convenção de chamada especificada no <xref:System.Runtime.InteropServices.DllImportAttribute> atributo e o declaração dos parâmetros na assinatura gerenciada.
+
+O MDA `PInvokeStackImbalance` é implementado somente para plataformas x86 de 32 bits.
+
 > [!NOTE]
->  O MDA `pInvokeStackImbalance` é implementado somente para plataformas x86 de 32 bits.  
-  
-> [!NOTE]
->  No .NET Framework versão 3.5, o MDA `pInvokeStackImbalance` é desabilitado por padrão. Quando você usar a versão 3.5 do .NET Framework com Visual Studio 2005, o MDA de `pInvokeStackImbalance` aparecerá na lista **Assistentes de Depuração Gerenciados** na caixa de diálogo **Exceções** (que é exibida quando você clica em **Exceções** no menu **Depurar**). No entanto, marcar ou desmarcar a caixa de seleção **Geradas** para `pInvokeStackImbalance` não habilita nem desabilita o MDA, apenas controla se o Visual Studio gera ou não uma exceção quando o MDA é ativado.  
-  
-## <a name="symptoms"></a>Sintomas  
- Um aplicativo encontra uma violação de acesso ou uma corrupção de memória ao fazer uma chamada de invocação de plataforma ou em seguida a ela.  
-  
-## <a name="cause"></a>Causa  
- A assinatura gerenciada da chamada de invocação de plataforma pode não corresponder à assinatura não gerenciada do método que está sendo chamado.  Essa incompatibilidade pode ser causada devido à assinatura gerenciada não declarar o número correto de parâmetros ou não especificar o tamanho apropriado para eles.  O MDA também pode ser ativado porque a convenção de chamada, possivelmente especificada pelo atributo <xref:System.Runtime.InteropServices.DllImportAttribute>, não corresponde à convenção de chamada não gerenciada.  
-  
-## <a name="resolution"></a>Resolução  
- Examine a assinatura de invocação e convenção de chamada da plataforma gerenciada para confirmar que ela corresponde à assinatura e convenção de chamada do destino nativo.  Tente especificar explicitamente a convenção de chamada tanto no lado gerenciado quanto no não gerenciado. Também é possível, embora mais improvável, que a função não gerenciada tenha desequilibrado a pilha por algum outro motivo, assim como um bug no compilador não gerenciado.  
-  
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
- Força todas as chamadas de invocação de plataforma a usar o caminho não otimizado no CLR.  
-  
-## <a name="output"></a>Saída  
- A mensagem MDA fornece o nome da chamada de método de invocação de plataforma que está causando o desequilíbrio na pilha.  Uma mensagem de exemplo de uma chamada de invocação de plataforma no método `SampleMethod` é:  
-  
-```  
-A call to PInvoke function 'SampleMethod' has unbalanced the stack.   
-This is likely because the managed PInvoke signature does not match   
-the unmanaged target signature. Check that the calling convention and   
-parameters of the PInvoke signature match the target unmanaged signature.  
-```  
-  
-## <a name="configuration"></a>Configuração  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <pInvokeStackImbalance />  
-  </assistants>  
-</mdaConfig>  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+> O `PInvokeStackImbalance` MDA é desabilitado por padrão. No Visual Studio 2017, o `PInvokeStackImbalance` MDA aparece no **assistentes para depuração gerenciada** lista o **configurações de exceção** caixa de diálogo (que é exibido quando você seleciona **depurar**  >  **Windows** > **configurações de exceção**). No entanto, marcando ou desmarcando as **quebrar quando lançada** caixa de seleção não habilite ou desabilite o MDA; apenas controla se o Visual Studio gera uma exceção quando o MDA é ativado.
+
+## <a name="symptoms"></a>Sintomas
+
+Um aplicativo encontra uma violação de acesso ou uma corrupção de memória ao fazer uma chamada de invocação de plataforma ou em seguida a ela.
+
+## <a name="cause"></a>Causa
+
+A assinatura gerenciada da chamada de invocação de plataforma pode não corresponder à assinatura não gerenciada do método que está sendo chamado.  Essa incompatibilidade pode ser causada devido à assinatura gerenciada não declarar o número correto de parâmetros ou não especificar o tamanho apropriado para eles.  O MDA também pode ser ativado porque a convenção de chamada, possivelmente especificada pelo atributo <xref:System.Runtime.InteropServices.DllImportAttribute>, não corresponde à convenção de chamada não gerenciada.
+
+## <a name="resolution"></a>Resolução
+
+Examine a assinatura de invocação e convenção de chamada da plataforma gerenciada para confirmar que ela corresponde à assinatura e convenção de chamada do destino nativo.  Tente especificar explicitamente a convenção de chamada tanto no lado gerenciado quanto no não gerenciado. Também é possível, embora mais improvável, que a função não gerenciada tenha desequilibrado a pilha por algum outro motivo, assim como um bug no compilador não gerenciado.
+
+## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução
+
+Força todas as chamadas de invocação de plataforma a usar o caminho não otimizado no CLR.
+
+## <a name="output"></a>Saída
+
+A mensagem MDA fornece o nome da chamada de método de invocação de plataforma que está causando o desequilíbrio na pilha. Uma mensagem de exemplo de uma chamada de invocação de plataforma no método `SampleMethod` é:
+
+**Uma chamada para a função PInvoke 'SampleMethod' tem tenha desequilibrado a pilha. Isso provavelmente ocorre porque a assinatura gerenciada de PInvoke não coincide com a assinatura de destino não gerenciado. Verifique se a convenção de chamada e os parâmetros da assinatura PInvoke correspondem a assinatura não gerenciada de destino.**
+
+## <a name="configuration"></a>Configuração
+
+```xml
+<mdaConfig>
+  <assistants>
+    <pInvokeStackImbalance />
+  </assistants>
+</mdaConfig>
+```
+
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)

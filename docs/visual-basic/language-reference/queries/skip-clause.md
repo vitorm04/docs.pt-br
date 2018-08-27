@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 1810bf4a6573c6fa36f1d8149bf341d45cfd6f52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602821"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925431"
 ---
 # <a name="skip-clause-visual-basic"></a>Cláusula Skip (Visual Basic)
 Ignora um número especificado de elementos em uma coleção e, em seguida, retorna os elementos restantes.  
@@ -26,14 +26,14 @@ Skip count
   
 ## <a name="parts"></a>Partes  
  `count`  
- Necessário. Um valor ou uma expressão que é avaliada como o número de elementos da sequência de ignorar.  
+ Necessário. Um valor ou uma expressão que é avaliada como o número de elementos da sequência a ignorar.  
   
 ## <a name="remarks"></a>Comentários  
- O `Skip` cláusula faz com que uma consulta ignorar os elementos no início de uma lista de resultados e retorna os elementos restantes. O número de elementos a serem ignorados é identificado pelo `count` parâmetro.  
+ O `Skip` cláusula faz com que uma consulta ignorar a elementos no início de uma lista de resultados e retornar os elementos restantes. O número de elementos a serem ignorados é identificado pelo `count` parâmetro.  
   
  Você pode usar o `Skip` cláusula com o `Take` cláusula para retornar um intervalo de dados de qualquer segmento de uma consulta. Para fazer isso, passe o índice do primeiro elemento do intervalo para o `Skip` cláusula e o tamanho do intervalo para o `Take` cláusula.  
   
- Quando você usa o `Skip` cláusula em uma consulta, você também precisará garantir que os resultados são retornados em uma ordem que permitirá a `Skip` cláusula para ignorar os resultados desejados. Para obter mais informações sobre a ordenação de resultados da consulta, consulte [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Quando você usa o `Skip` cláusula em uma consulta, você também precisará garantir que os resultados são retornados em uma ordem que permitirá que o `Skip` cláusula para ignorar os resultados pretendidos. Para obter mais informações sobre a ordenação de resultados da consulta, consulte [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
  Você pode usar o `SkipWhile` cláusula para especificar que somente determinados elementos são ignorados, dependendo de uma condição fornecida.  
   
@@ -44,7 +44,7 @@ Skip count
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/index.md)  
  [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  

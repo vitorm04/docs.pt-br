@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
 ms.openlocfilehash: b1a6ab513420081ef4629eac93a5b5c568fc57b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339388"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42907785"
 ---
 # <a name="inside-a-c-program"></a>Por dentro de um programa em C#
 A seção discute a estrutura geral de um programa em C# e inclui o exemplo padrão "Olá, mundo!" .  

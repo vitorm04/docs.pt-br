@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb7793c1c510c9b1b303e6b568f105a958c27cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578578"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42907754"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 Os eventos no .NET Framework são baseados no modelo de representante. O modelo de representante segue o padrão de design do observador, que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.  
   
- Para saber mais sobre como manipular eventos em aplicativos da Windows 8.x Store, confira [Visão geral de eventos e eventos roteados](/previous-versions/windows/apps/hh758286(v=win.10)).  
+ Para saber mais sobre como manipular eventos em aplicativos da Windows 8.x Store, confira [Visão geral de eventos e eventos roteados](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Eventos  
  Um evento é uma mensagem enviada por um objeto para sinalizar a ocorrência de uma ação. A ação pode ser causada pela interação do usuário, como o clique em um botão, ou pode ser acionada por alguma outra lógica de programa, como a alteração do valor de uma propriedade. O objeto que aciona o evento é chamado de *remetente do evento*. O remetente do evento não sabe qual objeto ou método receberá (identificador) os eventos que ele aciona. O evento normalmente é membro do remetente do evento. Por exemplo, o evento <xref:System.Web.UI.WebControls.Button.Click> é membro da classe <xref:System.Web.UI.WebControls.Button> e o evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> é membro da classe que implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged>.  

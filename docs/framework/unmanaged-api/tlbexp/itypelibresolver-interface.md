@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9eda0d90e4db7638e3733d0b7a7cc265f4deba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454841"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925877"
 ---
 # <a name="itypelibresolver-interface"></a>Interface ITypeLibResolver
 Fornece o [método ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), que resolve o caminho do arquivo de uma biblioteca de tipos.  
@@ -30,17 +30,17 @@ Fornece o [método ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbe
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Resolve o nome simple de uma biblioteca de tipos, retornando o caminho totalmente qualificado.|  
+|[Método ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Resolve o nome simples de uma biblioteca de tipos, retornando seu caminho totalmente qualificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef.idl, TlbRef.h  
   
  **Biblioteca:** TlbRef.lib  
   
- **Versão do .NET framework:** 4, 3.5, 3.0, 2.0  
+ **Versão do .NET framework:** 4, 3.5, 3.0 e 2.0  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções auxiliares do Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [Função LoadTypeLibEx](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)
+ [Função LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

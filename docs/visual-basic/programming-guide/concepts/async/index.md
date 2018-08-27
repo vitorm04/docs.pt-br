@@ -3,11 +3,11 @@ title: Programação assíncrona com Async e Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753520"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925236"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programação assíncrona com Async e Await (Visual Basic)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
@@ -140,14 +140,14 @@ Dim urlContents As String = Await client.GetStringAsync()
 ##  <a name="BKMK_APIAsyncMethods"></a> Métodos de assíncronos da API  
  Você pode estar curioso para saber onde encontrar métodos como `GetStringAsync` que oferecem suporte à programação assíncrona. O .NET Framework 4.5 ou superior contém muitos membros que funcionam com `Async` e `Await`. É possível identificar esses membros pelo sufixo “Async” que é acrescentado ao nome do membro e um tipo de retorno de <xref:System.Threading.Tasks.Task> ou de <xref:System.Threading.Tasks.Task%601>. Por exemplo, a classe `System.IO.Stream` contém métodos como <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, juntamente com os métodos síncronos <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> e <xref:System.IO.Stream.Write%2A>.  
   
- O Windows Runtime também contém vários métodos que você pode usar com `Async` e `Await` em aplicativos do Windows. Para obter mais informações e métodos de exemplo, consulte [chamar APIs assíncronas em c# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [(aplicativos do Windows Runtime) de programação assíncrona](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), e [WhenAny: ponte entre o .NET Estrutura e o tempo de execução do Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)).  
+ O Windows Runtime também contém vários métodos que você pode usar com `Async` e `Await` em aplicativos do Windows. Para obter mais informações e métodos de exemplo, consulte [chamar APIs assíncronas em c# ou Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [programação assíncrona (aplicativos de tempo de execução do Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), e [WhenAny: ponte entre o .NET Estrutura e o tempo de execução do Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)).  
   
 ##  <a name="BKMK_Threads"></a> Threads  
  Os métodos assíncronos destinam-se a ser operações não causadoras de bloqueios. Uma expressão `Await` em um método assíncrono não bloqueia o thread atual enquanto a tarefa aguardada está em execução. Em vez disso, a expressão anterior assina o restante do método como uma continuação e retorna o controle para o chamador do método assíncrono.  
   
  As palavras-chave `Async` e `Await` não fazem com que threads adicionais sejam criados. Os métodos assíncronos não exigem multithreading, pois um método assíncrono não executa em seu próprio thread. O método é executado no contexto de sincronização atual e usa tempo no thread somente quando o método está ativo. É possível usar <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> para mover o trabalho de CPU associado a um thread em segundo plano, mas um thread em segundo plano não ajuda com um processo que está apenas aguardando que os resultados tornem-se disponíveis.  
   
- A abordagem baseada em async para a programação assíncrona é preferível às abordagens existentes em quase todos os casos. Em particular, essa abordagem é melhor que <xref:System.ComponentModel.BackgroundWorker> para operações vinculada à e/S porque o código é mais simples e você não precisa se proteger contra condições de concorrência. Em combinação com <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>, a programação async é melhor do que <xref:System.ComponentModel.BackgroundWorker> para operações associadas à CPU porque a programação async separa os detalhes de coordenação da execução do seu código do trabalho que `Task.Run` transfere ao threadpool.  
+ A abordagem baseada em async para a programação assíncrona é preferível às abordagens existentes em quase todos os casos. Em particular, essa abordagem é melhor do que <xref:System.ComponentModel.BackgroundWorker> para operações de vinculado à e/S porque o código é mais simples e você não precisa se proteger contra condições de corrida. Em combinação com <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>, a programação async é melhor do que <xref:System.ComponentModel.BackgroundWorker> para operações associadas à CPU porque a programação async separa os detalhes de coordenação da execução do seu código do trabalho que `Task.Run` transfere ao threadpool.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async e Await  
  Se especificar que um método é um método assíncrono usando um modificador [Async](../../../../visual-basic/language-reference/modifiers/async.md), você habilitará os dois recursos a seguir.  

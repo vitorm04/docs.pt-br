@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766222"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911994"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco de dados: simultaneidade otimista e simultaneidade pessimista. O objeto <xref:System.Data.DataSet> é criado para incentivar o uso da simultaneidade otimista para atividades de execução longa, como a comunicação remota de dados e a interação com dados.  
@@ -30,7 +30,7 @@ Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco 
   
  Às 13h00, o Usuário1 lê uma linha do banco de dados com os seguintes valores:  
   
- **CustID sobrenome nome**  
+ **CustID LastName FirstName**  
   
  Bob de Smith 101  
   
@@ -42,7 +42,7 @@ Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco 
   
  Às 13h01, o Usuário2 lê a mesma linha.  
   
- Às 13:03. Usuário2 altera **FirstName** de "Bob" para "Robert" e atualiza o banco de dados.  
+ Às 13:03. o Usuário2 altera **FirstName** de "Bob" para "Robert" e atualiza o banco de dados.  
   
 |Nome da coluna|Valor original|Valor atual|Valor no banco de dados|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -71,7 +71,7 @@ Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco 
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Para testar uma violação de concorrência otimista ao atualizar uma linha em **Table1**, execute a seguinte instrução de atualização:  
+ Para testar uma violação de simultaneidade otimista ao atualizar uma linha na **Table1**, você emitiria a seguinte instrução de atualização:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  Você também pode optar por aplicar critérios menos restritivos ao usar um modelo de simultaneidade otimista. Por exemplo, o uso apenas das colunas de chave primária na cláusula WHERE faz com que os dados sejam substituídos, independentemente da atualização ou não das outras colunas desde a última consulta. Você também pode aplicar uma cláusula WHERE apenas a colunas específicas, resultando na substituição de dados, a menos que campos específicos tenham sido atualizados desde sua última consulta.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>O evento DataAdapter.RowUpdated  
- O **RowUpdated** evento o <xref:System.Data.Common.DataAdapter> objeto pode ser usado em conjunto com as técnicas descritas anteriormente, para fornecer notificação para seu aplicativo de violações de simultaneidade otimista. **RowUpdated** ocorre após cada tentativa de atualizar um **modificadas** de linha de um **conjunto de dados**. Isso o habilita a adicionar código de manipulação especial, incluindo o processamento quando ocorre uma exceção, a adicionar informações de erro personalizadas, a adicionar a lógica de repetição e assim por diante. O <xref:System.Data.Common.RowUpdatedEventArgs> objeto retorna um **RecordsAffected** propriedade que contém o número de linhas afetadas por um comando de atualização específica de uma linha modificada em uma tabela. Definindo o comando de atualização para testar a simultaneidade otimista, o **RecordsAffected** propriedade, como resultado, retornará um valor de 0 quando ocorreu uma violação de concorrência otimista, porque não há registros foram atualizados. Se esse for o caso, uma exceção será gerada. O **RowUpdated** evento permite lidar com essa ocorrência e evitar a exceção, definindo um apropriado **RowUpdatedEventArgs.Status** valor, como  **UpdateStatus.SkipCurrentRow**. Para obter mais informações sobre o **RowUpdated** evento, consulte [manipulando eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ O **RowUpdated** evento do <xref:System.Data.Common.DataAdapter> objeto pode ser usado em conjunto com as técnicas descritas anteriormente, para fornecer uma notificação ao seu aplicativo de violações de simultaneidade otimista. **RowUpdated** ocorre após cada tentativa de atualizar um **modificado** de linha de uma **conjunto de dados**. Isso o habilita a adicionar código de manipulação especial, incluindo o processamento quando ocorre uma exceção, a adicionar informações de erro personalizadas, a adicionar a lógica de repetição e assim por diante. O <xref:System.Data.Common.RowUpdatedEventArgs> objeto retorna um **RecordsAffected** propriedade contendo o número de linhas afetadas por um comando de atualização específica para uma linha modificada em uma tabela. Definindo o comando de atualização para testar a simultaneidade otimista, o **RecordsAffected** propriedade, como resultado, retornará um valor de 0 quando ocorreu uma violação de simultaneidade otimista, pois nenhum registro foi atualizado. Se esse for o caso, uma exceção será gerada. O **RowUpdated** evento permite que você a tratar esta ocorrência e evitar a exceção, definindo um apropriado **Rowupdatedeventargs** valor, como  **Skipcurrentrow**. Para obter mais informações sobre o **RowUpdated** evento, consulte [manipulação de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Opcionalmente, você pode definir **DataAdapter.ContinueUpdateOnError** para **true**, antes de chamar **atualização**e responder às informações de erro armazenadas na **RowError** propriedade de uma determinada linha quando o **atualização** é concluída. Para obter mais informações, consulte [informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Opcionalmente, você pode definir **DataAdapter. Continueupdateonerror** à **verdadeiro**, antes de chamar **atualização**e responder às informações de erro armazenadas do **RowError** propriedade de uma determinada linha quando o **atualização** é concluída. Para obter mais informações, consulte [informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Exemplo de simultaneidade otimista  
- A seguir está um exemplo simple que define o **UpdateCommand** de um **DataAdapter** para testar a simultaneidade otimista e, em seguida, usa o **RowUpdated** evento para testar violações de simultaneidade otimista. Quando uma violação de concorrência otimista é encontrada, o aplicativo define o **RowError** da linha que a atualização foi emitida para refletir uma violação de concorrência otimista.  
+ A seguir está um exemplo simples que define o **UpdateCommand** de uma **DataAdapter** para testar a simultaneidade otimista e, em seguida, usa o **RowUpdated** eventos para testar violações de simultaneidade otimista. Quando uma violação de simultaneidade otimista é encontrada, o aplicativo define a **RowError** da linha que a atualização foi emitida para refletir uma violação de simultaneidade otimista.  
   
- Observe que os valores de parâmetro passados para a cláusula WHERE do comando de atualização são mapeados para o **Original** valores de suas respectivas colunas.  
+ Observe que os valores de parâmetro passados para a cláusula WHERE do comando UPDATE são mapeados para o **Original** valores de suas respectivas colunas.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  

@@ -1,84 +1,116 @@
 ---
-title: Introdução à tinta
-ms.date: 03/30/2017
+title: Criar um InkCanvas em um aplicativo do WPF no Visual Studio
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546231"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925038"
 ---
-# <a name="getting-started-with-ink"></a>Introdução à tinta
-Incorporar tinta digital a seus aplicativos ficou ainda mais fácil. A tinta evolui de ser corolário para os métodos de programação de COM e os Windows Forms para atingir integração total com o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Você não precisa instalar SDKs nem bibliotecas de tempo de execução separados.  
-  
-## <a name="prerequisites"></a>Pré-requisitos  
- Para usar os exemplos a seguir, você deve primeiro instalar o Microsoft Visual Studio 2005 e o [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Você também deve compreender como escrever aplicativos para o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obter mais informações sobre como começar com o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [passo a passo: meu primeiro aplicativo de área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
-  
-## <a name="quick-start"></a>Início rápido  
- Esta seção ajuda a escrever um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] simples que coleta tinta.  
-  
- Se você ainda não tiver feito isso, instale o Microsoft Visual Studio 2005 e o [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. Os aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geralmente devem ser compilados antes que você possa exibi-los, mesmo que consistem inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. No entanto, o [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] inclui um aplicativo, XamlPad, projetado para acelerar o processo de implementar uma interface do usuário baseada em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Você pode usar esse aplicativo para exibir e ajustar os primeiros exemplos neste documento. O processo de criação de aplicativos compilados com base em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é abordado mais adiante neste documento.  
-  
- Para iniciar XAMLPad, clique o **iniciar** , aponte para **todos os programas**, aponte para **SDK do Microsoft Windows**, aponte para **ferramentas**e clique em **XAMLPad**. No painel de renderização, XAMLPad processa o código XAML escrito no painel de código. Você pode editar o código XAML e as alterações imediatamente aparecerão no painel de renderização.  
-  
-#### <a name="got-ink"></a>Tem tinta?  
- Para iniciar seu primeiro aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que dê suporte a tinta:  
-  
-1.  Abra o Microsoft Visual Studio 2005  
-  
-2.  Criar novos **Aplicativos do Windows (WPF)**  
-  
-3.  Digite `<InkCanvas/>` entre as marcas `<Grid>`  
-  
-4.  Pressione **F5** para inicializar o aplicativo no depurador  
-  
-5.  Usando uma caneta ou o mouse, escreva **Olá, Mundo** na janela  
-  
- Você escreveu o equivalente em tinta de um aplicativo "Olá, Mundo" com apenas 12 pressionamentos de tecla!  
-  
-#### <a name="spice-up-your-application"></a>Aprimore seu aplicativo  
- Vamos aproveitar alguns recursos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Substitua tudo entre as marcas de abertura \<Window> e fechamento \</Window> marcas com a marcação a seguir para obter uma tela de fundo de pincel de gradiente na superfície de tinta.  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a>Usando animação  
- Por diversão, vamos animar as cores do pincel do gradiente. Adicione o seguinte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] após a marca `</InkCanvas>` de fechamento, mas antes da marca `</Page>` de fechamento.  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a>Adicionando algum código por trás de XAML  
- Embora XAML torne muito fácil projetar a interface do usuário, qualquer aplicativo do mundo real precisa adicionar código para manipular eventos. Aqui está um exemplo simples que ampliará a tinta em resposta a um clique com o botão direito do mouse:  
-  
- Definir o manipulador `MouseRightButtonUp` no seu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- No Gerenciador de Soluções do Visual Studio, expanda Windows1.xaml e abra o arquivo code-behind, Window1.xaml.cs ou Window1.xaml.vb, se você estiver usando Visual Basic. Adicione o seguinte código do manipulador de eventos:  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- Agora execute seu aplicativo. Adicione alguma tinta e clique com o botão direito do mouse ou execute uma ação de pressionar e segurar equivalente com uma caneta.  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a>Usando código de procedimento, em vez de XAML  
- Você pode acessar todos os recursos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do código de procedimento. Aqui está um aplicativo "Olá, Mundo da Tinta" para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que não usa nenhum [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Cole o código abaixo em um Aplicativo de Console vazio no Visual Studio. Adicione referências aos assemblies PresentationCore, PresentationFramework e WindowsBase e compile o aplicativo pressionando **F5**:  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a>Consulte também  
- [Tinta digital](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [Coletando tinta](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [Reconhecimento de manuscrito](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [Armazenando a tinta](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a>Introdução a tinta no WPF
+
+Windows Presentation Foundation (WPF) tem um recurso de tinta que facilita a incorporar tinta digital em seu aplicativo.
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+Para usar os exemplos a seguir, primeiro [instalar o Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ele também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda na introdução ao WPF, consulte [instruções passo a passo: meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+
+## <a name="quick-start"></a>Início rápido
+
+Esta seção ajuda você a escrever um aplicativo WPF simple que coleta tinta.
+
+### <a name="got-ink"></a>Tem tinta?
+
+Para criar um aplicativo WPF que dê suporte a tinta:
+
+1. Abra o Visual Studio.
+
+2. Criar um novo **aplicativo WPF**.
+
+   No **novo projeto** caixa de diálogo, expanda o **instalado** > **Visual C#** ou **Visual Basic**  >   **Área de trabalho do Windows** categoria. Em seguida, selecione a **aplicativo WPF (.NET Framework)** modelo de aplicativo. Insira um nome e, em seguida, selecione **Okey**.
+
+   O Visual Studio cria o projeto, e *MainWindow. XAML* abre no designer.
+
+3. Tipo de `<InkCanvas/>` entre o `<Grid>` marcas.
+
+   ![Designer XAML com marca InkCanvas](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. Pressione **F5** para iniciar o aplicativo no depurador.
+
+5. Usando um mouse ou caneta, escrever **Olá, mundo** na janela.
+
+Você escreveu o equivalente em tinta de um aplicativo "Olá, Mundo" com apenas 12 pressionamentos de tecla!
+
+### <a name="spice-up-your-app"></a>Aprimore seu aplicativo
+
+Vamos aproveitar alguns recursos do WPF. Substitua tudo entre a abertura e fechamento \<Janela > marcas com a seguinte marcação:
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+Esse XAML cria um plano de fundo de pincel de gradiente na superfície de tinta.
+
+![Cores de gradiente na superfície no aplicativo WPF de tinta](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a>Adicionar algum código por trás de XAML
+
+Embora XAML torne muito fácil projetar a interface do usuário, qualquer aplicativo do mundo real precisa adicionar código para manipular eventos. Aqui está um exemplo simples que ampliará a tinta em resposta a um clique com botão direito do mouse.
+
+1. Defina o `MouseRightButtonUp` manipulador no seu XAML:
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. Na **Gerenciador de soluções**, expanda MainWindow. XAML e abra o arquivo code-behind (MainWindow.xaml.cs ou. XAML. vb). Adicione o seguinte código do manipulador de eventos:
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. Execute o aplicativo. Adicione alguma tinta e, em seguida, clique com o mouse ou executar uma ação de pressionar e segurar equivalente com uma caneta.
+
+   A exibição amplia cada vez que você clicar com o botão direito do mouse.
+
+### <a name="use-procedural-code-instead-of-xaml"></a>Use o código de procedimento em vez de XAML
+
+Você pode acessar todos os recursos do WPF do código de procedimento. Siga estas etapas para criar um aplicativo "Olá, mundo da tinta" para o WPF que não usa qualquer XAML em todos os.
+
+1. Crie um novo projeto de aplicativo de console no Visual Studio.
+
+   No **novo projeto** caixa de diálogo, expanda o **instalado** > **Visual C#** ou **Visual Basic**  >   **Área de trabalho do Windows** categoria. Em seguida, selecione a **aplicativo de Console (.NET Framework)** modelo de aplicativo. Insira um nome e, em seguida, selecione **Okey**.
+
+1. Cole o código a seguir no arquivo Program.cs ou Program. vb:
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. Adicione referências aos assemblies PresentationCore, PresentationFramework e WindowsBase clicando **referências** na **Gerenciador de soluções** e escolhendo **Add Reference**.
+
+   ![Gerenciador de referências mostrando PresentationCore e PresentationFramework](media/getting-started-with-ink/references.png)
+
+1. Compile o aplicativo pressionando **F5**.
+
+## <a name="see-also"></a>Consulte também
+
+- [Tinta digital](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [Coletando tinta](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [Reconhecimento de manuscrito](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [Armazenando a tinta](../../../../docs/framework/wpf/advanced/storing-ink.md)
