@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c1d4674c84fad1b7ae6021c4868e7f5a053c5a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577610"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935620"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  
@@ -54,7 +54,7 @@ Tipos de armazenamento isolado
  Observe que, exceto pelos armazenamentos móveis, o armazenamento isolado é sempre implicitamente isolado por computador, pois usa os recursos de armazenamento locais para determinado computador.  
   
 > [!IMPORTANT]
->  O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API [!INCLUDE[wrt](../../../includes/wrt-md.md)] para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
+>  O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API [!INCLUDE[wrt](../../../includes/wrt-md.md)] para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento por usuário e assembly  

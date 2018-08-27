@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: 5cc3cd2cfc932646e5b2dd6ec034555b07582379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1333f9d06e2804029550e6364a225558e096431
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271244"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925292"
 ---
 # <a name="-operator-c-reference"></a>Operador ^ (Referência de C#)
 Os operadores binários `^` são predefinidos para os tipos integrais e `bool`. Para os tipos integrais, o `^` computa o OR exclusivo bit a bit de seus operandos. Para operandos `bool`, o `^` computa o OR exclusivo lógico de seus operandos; ou seja, o resultado será `true` se e somente se exatamente um dos operandos for `true`.  
@@ -31,7 +31,8 @@ Os operadores binários `^` são predefinidos para os tipos integrais e `bool`. 
   
  O resultado do OR exclusivo é `1100 0111`, que é igual a C7 em hexadecimal.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Operadores do C#](../../../csharp/language-reference/operators/index.md)

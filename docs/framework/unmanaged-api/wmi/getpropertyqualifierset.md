@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461471"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935694"
 ---
 # <a name="getpropertyqualifierset-function"></a>Função GetPropertyQualifierSet
 Recupera o qualificador definido para uma determinada propriedade.
@@ -45,17 +45,17 @@ HRESULT GetPropertyQualifierSet (
 [in] Esse parâmetro é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
+[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
 `wszMethod`  
-[in] O nome da propriedade. `wszProperty` deve apontar para um válida `LPCWSTR`. 
+[in] O nome da propriedade. `wszProperty` deve apontar para um válido `LPCWSTR`. 
 
 `ppQualSet`  
-[out] Recebe o ponteiro de interface que permite acessar os qualificadores da propriedade. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é definido para apontar para `null`. 
+[out] Recebe o ponteiro de interface que permite o acesso para os qualificadores de propriedade. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é definido para apontar para `null`. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -63,25 +63,25 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 | `WBEM_E_NOT_FOUND` | 0x80041002 | O método especificado não existe. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro é `null`. |
-| `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | A função tenta obter qualificadores de uma propriedade de sistema. |
+| `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | A função tenta obter qualificadores de uma propriedade do sistema. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyQualifierSet](https://msdn.microsoft.com/library/aa391450(v=vs.85).aspx) método. 
+Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) método. 
 
-Uma chamada para essa função tem suporte apenas se o objeto atual é uma definição de classe do CIM. Manipulação de método não está disponível para [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponters que apontam para instâncias CIM.
+Uma chamada para essa função tem suporte apenas se o objeto atual é uma definição de classe do CIM. Manipulação de método não está disponível para [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters que apontam para instâncias CIM.
 
-Como cada método pode ter seus próprio qualificadores de [IWbemQualifierSet ponteiro](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) permite que o chamador adicionar, editar ou excluir esses qualificadores.
+Porque cada método pode ter seus próprio qualificadores, o [IWbemQualifierSet ponteiro](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicionar, editar ou excluir esses qualificadores.
 
-Como as propriedades de sistema não ter nenhum qualificador, a função retorna `WBEM_E_SYSTEM_PROPERTY` se você tentar obter um [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) ponteiro para uma propriedade do sistema.
+Como as propriedades do sistema não têm nenhum qualificador, a função retornará `WBEM_E_SYSTEM_PROPERTY` se você tentar obter uma [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) ponteiro para uma propriedade do sistema.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

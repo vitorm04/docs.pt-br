@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
-ms.openlocfilehash: 4d9d84752c91e6c31685a074a33cd19a97f90248
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 30a8be7e81bae65e565d2a3ed28e225ac3094f13
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028182"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999288"
 ---
 # <a name="equals-c-reference"></a>equals (Referência de C#)
 
@@ -26,4 +26,4 @@ O exemplo a seguir mostra o uso da palavra-chave `equals` em uma cláusula `join
 
 ## <a name="see-also"></a>Consulte também
 
-[LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)

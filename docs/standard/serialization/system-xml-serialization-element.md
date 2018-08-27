@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: e26a12facb92147d7660ae266ea5e1b090d7e198
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf84c412c2d5e3c75cfdc752eeb70239f23d9245
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583767"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933823"
 ---
 # <a name="ltsystemxmlserializationgt-element"></a>Elemento &lt;system.xml.serialization&gt;
 O elemento de nível superior para controlar a serialização XML. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -68,4 +68,4 @@ O elemento de nível superior para controlar a serialização XML. Para obter ma
  [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
  Elemento [\<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)  
  Elemento [\<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- [Elemento \<add> para \<xmlSchemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)
+ [\<Adicionar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

@@ -2,12 +2,12 @@
 title: SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360707"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935078"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server e ADO.NET
 Esta seção descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -38,7 +38,7 @@ Esta seção descreve os recursos e os comportamentos que são específicos ao P
   
  Para obter a documentação completa do Mecanismo de Banco de Dados do SQL Server, consulte os Manuais Online do SQL Server relativos à versão do SQL Server que você está usando.  
   
- [SQL Server Books Online](http://msdn.microsoft.com/library/ms130214.aspx) (Guias online do SQL Server)  
+ [SQL Server Books Online](/sql/sql-server/sql-server-technical-documentation) (Guias online do SQL Server)  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  

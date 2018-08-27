@@ -18,11 +18,11 @@ helpviewer_keywords:
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
 ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333034"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42752047"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operações de consulta LINQ básica (C#)
 Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  

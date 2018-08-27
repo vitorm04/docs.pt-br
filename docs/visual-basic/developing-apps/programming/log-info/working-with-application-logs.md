@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 9e62224ba4d53e09416819ca68004063dd189551
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592035"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000024"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabalhando com logs de aplicativo no Visual Basic
 Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informações de registro em log e rastreamento em logs.  
@@ -102,4 +102,4 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/index.md)

@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e422e6ff65439d105020a6305b66a8192586a8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8810508bc61f6fd625b1485f199249a96b2686e6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591483"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931502"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novidades no .NET Standard
 
@@ -55,7 +55,7 @@ Algumas das adições ao namespace <xref:System> no .NET Standard 2.0 incluem:
 
 ### <a name="support-for-net-framework-libraries"></a>Suporte a bibliotecas do .NET Framework
 
-A grande maioria das bibliotecas são direcionadas ao .NET Framework em vez do .NET Standard. No entanto, a maioria das chamadas nessas bibliotecas são para APIs incluídas no .NET Standard 2.0. A partir do .NET Standard 2.0, você pode acessar bibliotecas do .NET Framework de uma biblioteca do .NET Standard usando uma [shim de compatibilidade](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Essa camada de compatibilidade é transparente para os desenvolvedores; você não precisa fazer nada para tirar proveito das bibliotecas do .NET Framework.
+A grande maioria das bibliotecas são direcionadas ao .NET Framework em vez do .NET Standard. No entanto, a maioria das chamadas nessas bibliotecas são para APIs incluídas no .NET Standard 2.0. A partir do .NET Standard 2.0, você pode acessar bibliotecas do .NET Framework de uma biblioteca do .NET Standard usando uma [shim de compatibilidade](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification). Essa camada de compatibilidade é transparente para os desenvolvedores; você não precisa fazer nada para tirar proveito das bibliotecas do .NET Framework.
 
 O único requisito é que as APIs chamadas pela biblioteca de classes .NET Framework estejam incluídas no .NET Standard 2.0.
 

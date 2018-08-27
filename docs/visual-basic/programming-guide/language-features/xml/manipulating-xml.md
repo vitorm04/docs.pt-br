@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 4be24afe17e60c6c849530f1b892651a1f78399c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650407"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931098"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipulando XML no Visual Basic
-Você pode usar *literais XML* ao carregar o XML de uma fonte externa, como uma cadeia de caracteres, arquivo ou fluxo. Você pode usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular o XML e usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] para consultar o XML.  
+Você pode usar *literais XML* ao carregar XML de uma fonte externa, como uma cadeia de caracteres, arquivo ou fluxo. Você pode usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular o XML e usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] para consultar o XML.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como carregar XML de um arquivo, cadeia de caracteres ou fluxo](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Demonstra como carregar XML em um <xref:System.Xml.Linq.XDocument> ou <xref:System.Xml.Linq.XElement> objeto a partir de um arquivo de texto, uma cadeia de caracteres ou um fluxo.  
+ Demonstra como carregar XML em um <xref:System.Xml.Linq.XDocument> ou <xref:System.Xml.Linq.XElement> objeto a partir de um arquivo de texto, cadeia de caracteres ou fluxo.  
   
  [Como transformar XML usando LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
  Demonstra como transformar o conteúdo de um <xref:System.Xml.Linq.XDocument> objeto em um novo documento XML.  
@@ -27,7 +27,7 @@ Você pode usar *literais XML* ao carregar o XML de uma fonte externa, como uma 
  Demonstra como modificar os elementos, atributos e valores em um literal XML.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Propriedades do Eixo XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Propriedades do Eixo XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
  Fornece links para seções que descrevem as várias propriedades de acesso do XML.  
   
  [Visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  

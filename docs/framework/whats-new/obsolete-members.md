@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508768"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999475"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membros obsoletos no .NET Framework
 As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.5 e em versões posteriores, organizados por assembly. Use os links a seguir para ver uma lista dos membros obsoletos e as alternativas recomendadas em cada assembly. Este tópico não lista os membros de tipos obsoletos. Para obter uma lista de tipos obsoletos, consulte [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -593,7 +593,7 @@ As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.
   
 |Tipo|Membro|Mensagem|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Esta propriedade está obsoleta. Para habilitar Http <xref:System.Net.CookieContainer>, use a propriedade <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies` em seu lugar.|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Esta propriedade está obsoleta. Para habilitar http <xref:System.Net.CookieContainer>, use a propriedade <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> em seu lugar.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O recurso de canal par está obsoleto e será removido no futuro.|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O uso desse tipo gera um erro do compilador.<br /><br /> Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O uso desse tipo gera um erro do compilador.<br /><br /> Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.|  
@@ -778,7 +778,7 @@ As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.
   
 |Tipo|Membro|Mensagem|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Usado somente para compatibilidade com versões anteriores à versão 3.5.|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Usado somente para compatibilidade com versões anteriores à versão 3.5.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>Assembly: Microsoft.VisualBasic.dll  

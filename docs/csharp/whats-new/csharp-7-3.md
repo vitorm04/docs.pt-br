@@ -2,12 +2,12 @@
 title: Novidades no C# 7.3
 description: Uma visão geral dos novos recursos no C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 135351fa06a498e4aa90cb4d9372880b8119de0f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106769"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42907728"
 ---
 # <a name="whats-new-in-c-73"></a>Novidades no C# 7.3
 
@@ -178,7 +178,7 @@ public class B
 
 public class D : B
 {
-   public D(int i) : B(i, out var j)
+   public D(int i) : base(i, out var j)
    {
       Console.WriteLine($"The value of 'j' is {j}");
    }

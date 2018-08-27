@@ -2,12 +2,12 @@
 title: Criptografia de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358362"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932738"
 ---
 # <a name="data-encryption-in-sql-server"></a>Criptografia de dados no SQL Server
 O SQL Server fornece funções para criptografar e descriptografar dados usando um certificado, uma chave assimétrica ou uma chave simétrica. Ele gerencia todos eles em um repositório de certificados interno. O repositório usa uma hierarquia de criptografia que protege os certificados e as chaves em um nível com a camada acima deles na hierarquia. Essa área de recurso do SQL Server é chamada Armazenamento Secreto.  
@@ -19,15 +19,15 @@ O SQL Server fornece funções para criptografar e descriptografar dados usando 
   
  No escopo de uma conexão de banco de dados, o SQL Server pode manter várias chaves simétricas abertas. Uma chave aberta é recuperada do repositório e está disponível para descriptografar dados. Quando uma parte de dados é descriptografada, não há necessidade de especificar a chave simétrica a ser usada. Cada valor criptografado contém o identificador da chave (GUID) da chave usada para criptografa. O mecanismo corresponde ao fluxo de bytes criptografado com uma chave simétrica aberta, se a chave correta tiver sido descriptografada e estiver aberta. Essa chave é usada para executar a descriptografia e retornar os dados. Se a chave correta não estiver aberta, NULL será retornado.  
   
- Para obter um exemplo que mostra como trabalhar com dados criptografados em um banco de dados, consulte [como: criptografar uma coluna de dados](http://go.microsoft.com/fwlink/?LinkID=128559) nos Manuais Online do SQL Server.  
+ Para obter um exemplo que mostra como trabalhar com dados criptografados em um banco de dados, consulte [criptografar uma coluna de dados](/sql/relational-databases/security/encryption/encrypt-a-column-of-data).
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações sobre criptografia de dados, consulte os seguintes recursos.  
   
-|||  
+|Recurso|Descrição|  
 |-|-|  
-|[Criptografia do SQL Server](http://msdn.microsoft.com/library/bb510663.aspx) nos Manuais Online do SQL Server|Fornece uma visão geral de criptografia no SQL Server. Este tópico inclui links para tópicos adicionais e instruções passo a passo.|  
-|[Hierarquia de criptografia](http://msdn.microsoft.com/library/ms189586.aspx) e [tópicos de instruções de criptografia](http://msdn.microsoft.com/library/aa337557.aspx) nos Manuais Online do SQL Server|Fornece uma visão geral de criptografia no SQL Server. Este tópico fornece links para tópicos adicionais e instruções passo a passo.|  
+|[Criptografia do SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption)|Fornece uma visão geral de criptografia no SQL Server. Este tópico inclui links para artigos adicionais.|  
+|[Hierarquia de criptografia](/sql/relational-databases/security/encryption/encryption-hierarchy)|Fornece uma visão geral de criptografia no SQL Server. Este tópico fornece links para artigos adicionais.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  

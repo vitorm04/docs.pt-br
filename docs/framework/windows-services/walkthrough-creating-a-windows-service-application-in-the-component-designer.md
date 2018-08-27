@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520507"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925796"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Instruções passo a passo: criando um aplicativo de Serviço Windows no Designer de Componente
 Este artigo demonstra como criar um aplicativo simples de serviço Windows no Visual Studio que grava mensagens em um log de eventos. Aqui estão as etapas básicas que podem ser executadas para criar e usar o serviço:  
@@ -161,7 +161,7 @@ Este artigo demonstra como criar um aplicativo simples de serviço Windows no Vi
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>Definindo o status de serviço  
- Serviços relatam seu status para o Gerenciador de Controle de Serviço, para que os usuários possam determinar se um serviço está funcionando corretamente. Por padrão, os serviços herdados de <xref:System.ServiceProcess.ServiceBase> relatam um conjunto limitado de configurações de status, inclusive Interrompido, Pausado e Em execução. Se um serviço demora um pouco para inicializar, ele pode ser útil relatar um status Iniciar pendente. Você também pode implementar as configurações de status Iniciar Pendente e Parar Pendente, adicionando o código que chama a [função SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) do Windows.  
+ Serviços relatam seu status para o Gerenciador de Controle de Serviço, para que os usuários possam determinar se um serviço está funcionando corretamente. Por padrão, os serviços herdados de <xref:System.ServiceProcess.ServiceBase> relatam um conjunto limitado de configurações de status, inclusive Interrompido, Pausado e Em execução. Se um serviço demora um pouco para inicializar, ele pode ser útil relatar um status Iniciar pendente. Você também pode implementar as configurações de status Iniciar Pendente e Parar Pendente, adicionando o código que chama a [função SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) do Windows.  
   
 #### <a name="to-implement-service-pending-status"></a>Para implementar o status pendente do serviço  
   
@@ -225,7 +225,7 @@ Este artigo demonstra como criar um aplicativo simples de serviço Windows no Vi
     End Structure  
     ```  
   
-3.  Agora, na classe `MyNewService`, declare a [função SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) usando a inovação de plataforma:  
+3.  Agora, na classe `MyNewService`, declare a [função SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) usando a inovação de plataforma:  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,7 +271,7 @@ Este artigo demonstra como criar um aplicativo simples de serviço Windows no Vi
 6.  (Opcional) Repita esse procedimento para o método <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
 > [!CAUTION]
->  O [Gerenciador de Controle de Serviço](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) usa os membros `dwWaitHint` e `dwCheckpoint` da [estrutura SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) para determinar o tempo de espera para que um Serviço Windows seja iniciado ou desligado. Se os métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> tiverem uma execução longa, o serviço poderá solicitar mais tempo chamando [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) novamente com um valor de `dwCheckPoint` incrementado.  
+>  O [Gerenciador de Controle de Serviço](/windows/desktop/Services/service-control-manager) usa os membros `dwWaitHint` e `dwCheckpoint` da [estrutura SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) para determinar o tempo de espera para que um Serviço Windows seja iniciado ou desligado. Se os métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> tiverem uma execução longa, o serviço poderá solicitar mais tempo chamando [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) novamente com um valor de `dwCheckPoint` incrementado.  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>Adicionando instaladores ao serviço  

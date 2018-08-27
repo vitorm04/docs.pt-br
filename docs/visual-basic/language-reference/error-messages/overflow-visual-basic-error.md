@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: ab7d37e91a99fe4190a4741b495f5206b25738aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecd209fbff85256b35f6e940cdcc37a2cdf8c246
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594907"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932879"
 ---
 # <a name="overflow-visual-basic-error"></a>Estouro (erro do Visual Basic)
-Um valor literal representa um valor fora dos limites do tipo de dados ao qual ela está sendo atribuída.  
+Um literal representa um valor fora dos limites do tipo de dados ao qual ele está sendo atribuído.  
   
  **ID do erro:** BC30036  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Consulte o intervalo de valores para o tipo de dados e reconfigurar o literal de acordo com o intervalo de destino.  
+-   Consulte o intervalo de valores para o tipo de dados e reescrever o literal de acordo com esse intervalo de destino.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)

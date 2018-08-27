@@ -1,6 +1,6 @@
 ---
 title: Função GetPropertyOrigin (referência de API Unmnaged)
-description: A função GetPropertyOrigin determina a classe na qual uma propriedade é declarada.
+description: A função GetPropertyOrigin determina a classe em que uma propriedade é declarada.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyOrigin
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f16bc5ce23e6bf110a140d10f0e787935070dbcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461091"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933511"
 ---
 # <a name="getpropertyorigin-function"></a>Função GetPropertyOrigin
-Determina a classe na qual uma propriedade é declarada.
+Determina a classe em que uma propriedade é declarada.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -45,17 +45,17 @@ HRESULT GetPropertyOrigin (
 [in] Esse parâmetro é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
+[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
 `wszMethodName`  
-[in] O nome da propriedade para o objeto de classe cuja propriedade está sendo solicitado. 
+[in] O nome da propriedade para o objeto cuja classe proprietária está sendo solicitado. 
 
 `pstrClassName`  
-[out] Recebe o nome da classe que possui a propriedade.
+[out] Recebe o nome da classe que é proprietário da propriedade.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -67,18 +67,18 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyOrigin](https://msdn.microsoft.com/library/aa391449(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) método.
 
-Porque uma classe pode herdar propriedades de uma ou mais classes base, os desenvolvedores geralmente desejam determinar a propriedade na qual um determinado método está definido.
+Porque uma classe pode herdar as propriedades de um ou mais classes base, os desenvolvedores geralmente querem determinar a propriedade na qual um determinado método está definido.
 
-O `pstrClassName` parâmetro não deve apontar para um válida `BSTR` antes da função é chamada porque este é um `out` parâmetro; esse ponteiro não é desalocado depois que a função retorna.
+O `pstrClassName` parâmetro não deve apontar para um válido `BSTR` antes da função é chamada como esta é uma `out` parâmetro; esse ponteiro não é desalocado depois que a função retorna.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

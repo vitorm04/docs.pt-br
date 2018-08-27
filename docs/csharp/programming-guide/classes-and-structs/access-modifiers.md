@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199208"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752056"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acesso (Guia de Programação em C#)
 Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla se podem ser usados de outro código no seu assembly ou outros assemblies. Você pode usar os modificadores de acesso a seguir para especificar a acessibilidade de um tipo ou membro quando você o declarar:  
@@ -43,7 +43,7 @@ Todos os tipos e membros de tipo têm um nível de acessibilidade, que controla 
   
  Classes derivadas não podem ter acessibilidade maior do que seus tipos base. Em outras palavras, você não pode ter uma classe pública `B` que deriva de uma classe interna `A`. Se isso fosse permitido, teria o efeito de tornar `A` público, pois todos os membros internos ou protegidos de `A` são acessíveis da classe derivada.  
   
- Você pode permitir que outros assemblies específicos acessem seus tipos internos usando o InternalsVisibleToAttribute. Para obter mais informações, consulte [Assemblies amigáveis](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Você pode permitir que outros assemblies específicos acessem seus tipos internos usando o InternalsVisibleToAttribute. Para obter mais informações, consulte [Assemblies amigáveis](../concepts/assemblies-gac/friend-assemblies.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Acessibilidade de membro de classe e struct  
  Os membros de classe (incluindo as classes e os structs aninhados) podem ser declarados com qualquer um dos seis tipos de acesso. Membros de struct não podem ser declarados como protegidos porque os structs não têm suporte à herança.  

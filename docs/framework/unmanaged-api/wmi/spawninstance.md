@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460454"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930221"
 ---
 # <a name="spawninstance-function"></a>Função SpawnInstance
 Cria uma nova instância de uma classe.    
@@ -44,7 +44,7 @@ HRESULT SpawnInstance (
 [in] Esse parâmetro é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
+[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
 `lFlags`  
 [in] Reservado. Esse parâmetro deve ser 0.
@@ -54,32 +54,32 @@ HRESULT SpawnInstance (
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` não é uma definição de classe válido e não é possível gerar novas instâncias. O está incompleto ou não foi registrado com o Windows Management chamando [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` não é uma definição de classe válido e não é possível gerar novas instâncias. O está incompleto ou não foi registrado com o gerenciamento do Windows, chamando [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` é `null`. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemclassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemclassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) método.
 
-`ptr` deve ser uma definição de classe obtida do gerenciamento do Windows. (Observe que há suporte para a geração de uma instância de uma instância, mas a instância retornada está vazia). Você usar essa definição de classe para criar novas instâncias. Uma chamada para o [PutInstanceWmi](putinstancewmi.md) função é necessária se você pretende gravar a instância de gerenciamento do Windows.
-
-
+`ptr` deve ser uma definição de classe obtida de gerenciamento do Windows. (Observe que ao gerar uma instância de uma instância é suportado, mas a instância retornada estiver vazia.) Você, em seguida, usar essa definição de classe para criar novas instâncias. Uma chamada para o [PutInstanceWmi](putinstancewmi.md) função é necessária se você pretende gravar a instância de gerenciamento do Windows.
 
 
-O novo objeto retornado `ppNewClass` automaticamente se torna uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
+
+
+O novo objeto retornado no `ppNewClass` automaticamente se torna uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

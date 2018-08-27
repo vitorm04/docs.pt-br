@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 974e0c3ab29da582e7b22c909650a61d179ec3f7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961398"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931160"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#) #
 
@@ -147,9 +147,10 @@ Observe que, se *expr* for `null`, a expressão `is` ainda será verdadeira e at
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
- [as](../../../csharp/language-reference/keywords/as.md)  
- [Palavras-chave do operador](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [as](../../../csharp/language-reference/keywords/as.md)  
+- [Palavras-chave do operador](../../../csharp/language-reference/keywords/operator-keywords.md)

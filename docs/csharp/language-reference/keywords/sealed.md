@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: bd4fe2cfe80930c121a11d03c848b2c4eca152d6
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: be13e04dce12dfb60a1179e05a0a47eca1df1af4
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172117"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752002"
 ---
 # <a name="sealed-c-reference"></a>sealed (Referência de C#)
 Quando aplicado a uma classe, o modificador `sealed` impede que outras classes herdem dela. No exemplo a seguir, a classe `B` herda da classe `A`, mas nenhuma classe pode herdar da classe `B`.  
@@ -50,7 +50,7 @@ sealed class B : A {}
   
  O resultado é uma mensagem de erro:  
   
- `'MyDerivedC' cannot inherit from sealed class 'SealedClass'.`  
+ `'MyDerivedC': cannot derive from sealed type 'SealedClass'`  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

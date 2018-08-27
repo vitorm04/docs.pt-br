@@ -8,11 +8,11 @@ helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
 ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171935"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908024"
 ---
 # <a name="typeof-c-reference"></a>typeof (Referência de C#)
 Usado para obter o objeto `System.Type` para um tipo. Uma expressão `typeof` usa o seguinte formato:  

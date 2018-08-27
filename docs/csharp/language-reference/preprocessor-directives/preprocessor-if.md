@@ -1,17 +1,17 @@
 ---
 title: '#Diretiva de pré-processamento "if" (referência do C#)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287677"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000931"
 ---
 # <a name="if-c-reference"></a>#if (Referência de C#)
 
@@ -33,9 +33,9 @@ Uma diretiva condicional que começa com uma diretiva `#if` deverá ser explicit
 
 A diretiva `#define` permite definir um símbolo. Ao usar o símbolo como a expressão passada para a diretiva `#if`, a expressão será avaliada como `true`.
 
-Também é possível definir um símbolo com a opção do compilador [/define](../compiler-options/define-compiler-option.md). É possível excluir um símbolo com [#undef](preprocessor-undef.md).
+Você também pode definir um símbolo com a opção do compilador [-define](../compiler-options/define-compiler-option.md). É possível excluir um símbolo com [#undef](preprocessor-undef.md).
 
-Um símbolo definido com `/define` ou com `#define` não entra em conflito com uma variável do mesmo nome. Ou seja, um nome de variável não deve ser passado para uma diretiva de pré-processamento e um símbolo pode ser avaliado apenas por uma diretiva de pré-processamento.
+Um símbolo definido com `-define` ou com `#define` não entra em conflito com uma variável do mesmo nome. Ou seja, um nome de variável não deve ser passado para uma diretiva de pré-processamento e um símbolo pode ser avaliado apenas por uma diretiva de pré-processamento.
 
 O escopo de um símbolo criado com `#define` é o arquivo no qual ele foi definido.
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de C#](../../../csharp/language-reference/index.md)  
-[Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-[Diretivas do pré-processador do C#](index.md)  
-[Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Diretivas do pré-processador do C#](index.md)  
+- [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).

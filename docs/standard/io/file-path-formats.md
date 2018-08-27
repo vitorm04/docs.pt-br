@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107025"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933599"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -181,7 +181,7 @@ Alguns outros caracteres são removidos durante a normalização junto com os se
 
 ## <a name="skipping-normalization"></a>Ignorar a normalização
 
-Normalmente, qualquer caminho passado para uma API do Windows é (efetivamente) passado para a [função GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) e normalizado. Há uma exceção importante: um caminho de dispositivo que começa com um ponto de interrogação em vez de um ponto final. A menos que o caminho comece exatamente com `\\?\` (observe o uso da barra invertida canônica), ele é normalizado.
+Normalmente, qualquer caminho passado para uma API do Windows é (efetivamente) passado para a [função GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) e normalizado. Há uma exceção importante: um caminho de dispositivo que começa com um ponto de interrogação em vez de um ponto final. A menos que o caminho comece exatamente com `\\?\` (observe o uso da barra invertida canônica), ele é normalizado.
 
 Por que ignorar a normalização? Existem três motivos principais:
 
@@ -196,9 +196,9 @@ Por que ignorar a normalização? Existem três motivos principais:
 
 Ignorar a normalização e as verificações de tamanho do caminho é a única diferença entre as duas sintaxes de caminho de dispositivo. Caso contrário, elas serão idênticas. Tenha cuidado ao ignorar a normalização, pois é fácil criar caminhos de difícil tratamento para aplicativos "normais".
 
-Os caminhos que começam com `\\?\` ainda serão normalizados se você os passar explicitamente para a [função GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx).
+Os caminhos que começam com `\\?\` ainda serão normalizados se você os passar explicitamente para a [função GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Observe que é possível criar caminhos com mais de `MAX_PATH` caracteres para [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
+Observe que é possível criar caminhos com mais de `MAX_PATH` caracteres para [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiúsculas, minúsculas e o sistema de arquivos do Windows
 

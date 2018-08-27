@@ -22,39 +22,39 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687c235be76ef522758658fd1c5fe0cb1dbeb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b3970aad08f2be98d175b4175ef06711bcaf609
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591360"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935436"
 ---
 # <a name="long-data-type-visual-basic"></a>Tipo de dados Long (Visual Basic)
 
-Armazena inteiros de 64 bits (8 bytes) cujo valor varia de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 (9.2 … E + 18).  
+Armazena inteiros de 64 bits (8 bytes) cujo valor varia de -9.223.372.036.854.775.808 por meio de 9.223.372.036.854.775.807 (9.2... E + 18).  
   
 ## <a name="remarks"></a>Comentários
 
- Use o `Long` tipo de dados para conter números inteiros que são muito grandes para caber no `Integer` tipo de dados.  
+ Use o `Long` tipo de dados para conter os números inteiros que são muito grandes para caber `Integer` tipo de dados.  
   
  O valor padrão de `Long` é 0.
 
 ## <a name="literal-assignments"></a>Atribuições de literal 
 
-Você pode declarar e inicializar uma `Long` variável atribuindo a ele um literal decimal, hexadecimal literal, um literal octal, ou (começando com Visual Basic 2017) um literal binário. Se o literal inteiro estiver fora do intervalo de `Long` (ou seja, se for menor que <xref:System.Int64.MinValue?displayProperty=nameWithType> ou maior que <xref:System.Int64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilação.
+Você pode declarar e inicializar um `Long` variável atribuindo a ela um literal decimal, um literal hexadecimal, um literal octal, ou (começando com o Visual Basic 2017) um literal binário. Se o literal inteiro estiver fora do intervalo de `Long` (ou seja, se for menor que <xref:System.Int64.MinValue?displayProperty=nameWithType> ou maior que <xref:System.Int64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilação.
 
 No exemplo a seguir, inteiros iguais a 4.294.967.296 representados como literais decimais, hexadecimais e binários são atribuídos a valores `Long`.
   
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
 
 > [!NOTE]
-> Use o prefixo `&h` ou `&H` para denotar um hexadecimal literal, o prefixo `&b` ou `&B` para denotar um literal binário e o prefixo `&o` ou `&O` para denotar um literal octal. Literais decimais não têm nenhum prefixo.
+> Use o prefixo `&h` ou `&H` a fim de denotar um literal hexadecimal, o prefixo `&b` ou `&B` para indicar um literal binário e o prefixo `&o` ou `&O` para denotar um literal octal. Literais decimais não têm nenhum prefixo.
 
-A partir do Visual Basic de 2017, você também pode usar o caractere de sublinhado, `_`, como um separador de dígito para melhorar a legibilidade, como o exemplo a seguir mostra.
+Começando com o Visual Basic 2017, você pode também usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como o exemplo a seguir mostra.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-A partir do Visual Basic 15,5, você também pode usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos hexadecimais, binários ou octais. Por exemplo:
+Começando com o Visual Basic 15.5, você pode também usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos octais, hexadecimais ou binários. Por exemplo:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -70,7 +70,7 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Dicas de programação
 
--   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos de automação ou COM, lembre-se de que `Long` tem uma largura de dados diferente (32 bits) em outros ambientes. Se você estiver passando um argumento de 32 bits para tal componente, declare-o como `Integer` em vez de `Long` no seu novo código do Visual Basic.  
+-   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, lembre-se de que `Long` tem uma largura de dados diferente (32 bits) em outros ambientes. Se você estiver passando um argumento de 32 bits para tal componente, declare-o como `Integer` em vez de `Long` no seu novo código do Visual Basic.  
   
 -   **Ampliação.** O `Long` tipo de dados amplia a `Decimal`, `Single`, ou `Double`. Isso significa que você pode converter `Long` em qualquer um desses tipos sem a ocorrência de um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
   
@@ -81,7 +81,7 @@ Dim number = &H_0FAC_0326_1489_D68CL
 ## <a name="see-also"></a>Consulte também
 
 <xref:System.Int64>
-[Tipos de dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+[Tipos de dados](../../../visual-basic/language-reference/data-types/index.md)   
 [Tipo de dados inteiro](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
 [Tipo de dados Short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
 [Funções de conversão de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   

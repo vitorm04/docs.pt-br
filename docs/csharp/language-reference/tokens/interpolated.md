@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000970"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 
@@ -88,12 +88,13 @@ O exemplo a seguir usa a conversão implícita em <xref:System.FormattableString
 
 Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o guia de início rápido [Interpolação de cadeia de caracteres no C#](../../quick-starts/interpolated-strings.yml). Para obter mais exemplos, confira o tutorial [Interpolação de cadeia de caracteres no C#](../../tutorials/string-interpolation.md).
 
-## <a name="see-also"></a>Consulte também  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [Formatação de composição](../../../standard/base-types/composite-formatting.md)  
- [Cadeias de Caracteres](../../programming-guide/strings/index.md)  
- [Guia de Programação em C#](../../programming-guide/index.md)  
- [Caracteres especiais de C#](index.md)  
- [Referência de C#](../index.md)  
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Formatação de composição](../../../standard/base-types/composite-formatting.md)
+- [Cadeias de Caracteres](../../programming-guide/strings/index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Caracteres especiais de C#](index.md)
+- [Referência de C#](../index.md)

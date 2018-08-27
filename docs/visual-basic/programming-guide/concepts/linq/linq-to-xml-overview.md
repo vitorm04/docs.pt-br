@@ -1,15 +1,15 @@
 ---
-title: LINQ para visão geral XML (Visual Basic)
+title: LINQ para visão geral do XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 3818177c2ed14b1159b8e63e324894d7e89b72b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649081"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932397"
 ---
-# <a name="linq-to-xml-overview-visual-basic"></a>LINQ para visão geral XML (Visual Basic)
+# <a name="linq-to-xml-overview-visual-basic"></a>LINQ para visão geral do XML (Visual Basic)
 O XML tem sido amplamente adotado como um modo de formatar dados em muitos contextos. Por exemplo, você pode encontrar XML na Web, em arquivos de configuração, em arquivos do Microsoft Office Word e em bancos de dados.  
   
  O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é uma abordagem atualizada e redesenhada para a programação com XML. Ele oferece os recursos de modificação de documentos na memória do DOM (Document Object Model), bem como o suporte a expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Embora essas expressões de consulta sejam sintaticamente diferentes de XPath, elas oferecem uma funcionalidade semelhante.  
@@ -22,9 +22,9 @@ O XML tem sido amplamente adotado como um modo de formatar dados em muitos conte
 ## <a name="what-is-linq-to-xml"></a>O que é o LINQ to XML?  
  O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é uma interface de programação XML na memória e habilitada para LINQ que permite que você trabalhe com XML de dentro das linguagens de programação [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é como o DOM (Modelo de Objeto do Documento) no sentido de levar o documento XML para a memória. Você pode consultar e modificar o documento e, depois de modificá-lo, pode salvá-lo em um arquivo ou serializá-lo e enviá-lo pela Internet. No entanto, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] difere do DOM: fornece um novo modelo de objeto que é mais leve e fácil de trabalhar, e que tira proveito dos recursos de linguagem no Visual Basic.  
+ O [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é como o DOM (Modelo de Objeto do Documento) no sentido de levar o documento XML para a memória. Você pode consultar e modificar o documento e, depois de modificá-lo, pode salvá-lo em um arquivo ou serializá-lo e enviá-lo pela Internet. No entanto, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] difere do DOM: ele fornece um novo modelo de objeto que é mais leve e fácil de trabalhar, e que tira proveito dos recursos de linguagem do Visual Basic.  
   
- A vantagem mais importante do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é sua integração com o [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Essa integração permite que você escreva consultas no documento XML na memória para recuperar coleções de elementos e atributos. O recurso de consulta do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é comparável em funcionalidade (embora não em sintaxe) a XPath e XQuery. A integração do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] no Visual Basic fornece mais forte digitação, tempo de compilação a verificação e maior suporte do depurador.  
+ A vantagem mais importante do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é sua integração com o [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Essa integração permite que você escreva consultas no documento XML na memória para recuperar coleções de elementos e atributos. O recurso de consulta do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é comparável em funcionalidade (embora não em sintaxe) a XPath e XQuery. A integração do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] no Visual Basic oferece tipagem mais forte, compilação-tempo verificando e melhor suporte de depuração.  
   
  Outra vantagem do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é a capacidade de usar resultados da consulta como parâmetros para construtores de objeto <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>, o que permite uma abordagem eficiente para a criação de árvores XML. Essa abordagem, chamada de *construção funcional*, permite que os desenvolvedores transformem com facilidade árvores XML de uma forma em outra.  
   
@@ -83,7 +83,7 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- O compilador do Visual Basic converte os literais XML em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chamadas de método.  
+ O compilador do Visual Basic converte literais XML em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chamadas de método.  
   
  Para obter mais informações, consulte [criando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   

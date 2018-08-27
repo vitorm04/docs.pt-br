@@ -2,12 +2,12 @@
 title: Habilitando o acesso entre bancos de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 22fa2b48d795fb81b4740ce882f9bff632deabbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e041a6c90940ad33e17d83e5f0400d05c645ada
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353456"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934557"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Habilitando o acesso entre bancos de dados no SQL Server
 O encadeamento de propriedade entre bancos de dados ocorre quando um procedimento em um banco de dados depende dos objetos em outro banco de dados. Uma cadeia de propriedade entre bancos de dados funciona como a cadeia de propriedade dentro de um único banco de dados, exceto que uma cadeia de propriedade exige que todos os proprietários de objetos sejam mapeados para a mesma conta de logon. Se o objeto de origem no banco de dados de origem e os objetos de destino nos bancos de dados de destino forem de propriedade da mesma conta de logon, o SQL Server não verificará permissões nos objetos de destino.  
@@ -41,14 +41,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>SQL dinâmico  
- O encadeamento de propriedades entre bancos de dados não funciona nos casos em que as instruções SQL criadas dinamicamente são executadas a menos que o mesmo usuário exista em ambos os bancos de dados. Você pode contornar isso no SQL Server criando um procedimento armazenado que acessa dados em outro banco de dados e o procedimento com um certificado que existe em ambos os bancos de dados de assinatura. Isso concede acesso de usuários aos recursos de banco de dados usados pelo procedimento sem conceder-lhes o acesso ao banco de dados ou permissões.  
+ O encadeamento de propriedades entre bancos de dados não funciona nos casos em que as instruções SQL criadas dinamicamente são executadas a menos que o mesmo usuário exista em ambos os bancos de dados. Resolva isso no SQL Server criando um procedimento armazenado que acessa os dados em outro banco de dados e assinando o procedimento armazenado com um certificado existente em ambos os bancos de dados. Isso concede acesso de usuários aos recursos de banco de dados usados pelo procedimento sem conceder-lhes o acesso ao banco de dados ou permissões.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Estendendo a representação de banco de dados usando EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) e [opção Cross DB Ownership Chaining](http://msdn.microsoft.com/library/ms188694.aspx)Manuais Online do SQL Server.|Tópicos descrevem como configurar o encadeamento de bancos de dados para uma instância do SQL Server.|  
+|[Estendendo a representação de banco de dados com EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) e [opção Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)Manuais Online do SQL Server.|Tópicos descrevem como configurar o encadeamento de bancos de dados para uma instância do SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  

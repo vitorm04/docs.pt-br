@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: ee91513ef94e2abbe01d3ac09796b7fdf8e129ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597377"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930022"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Exceção de comentário XML deve ter um &#39;cref&#39; atributo
-O \<exceção > marca fornece uma maneira para documentar as exceções que podem ser acionadas por um método. Obrigatório `cref` atributo designa o nome de um membro, que é verificado pelo gerador de documentação. Se o membro existe, ele é convertido para o nome canônico de elemento no arquivo de documentação.  
+O \<exceção > marca fornece uma maneira de documentar as exceções que podem ser lançadas por um método. Necessário `cref` atributo designa o nome de um membro, que é verificado pelo gerador de documentação. Se o membro existe, ele é convertido para o nome de elemento canônico no arquivo de documentação.  
   
  **ID do erro:** BC42319  
   
@@ -30,4 +30,4 @@ O \<exceção > marca fornece uma maneira para documentar as exceções que pode
 ## <a name="see-also"></a>Consulte também  
  [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)  
  [Como criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

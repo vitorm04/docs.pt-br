@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 2da8211ac21a5016478e7b881e7f2f9925b49cef
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243620"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001328"
 ---
 # <a name="protected-c-reference"></a>protected (Referência de C#)
 A palavra-chave `protected` é um modificador de acesso de membro. 
@@ -46,14 +46,15 @@ Para obter uma comparação de `protected` com os outros modificadores de acesso
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [Questões de segurança de palavras-chave virtuais internas](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+## 
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [Questões de segurança de palavras-chave virtuais internas](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

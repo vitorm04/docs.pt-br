@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105278"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001434"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usando o Azure Key Vault para proteger segredos no momento da produção
 
@@ -19,7 +19,7 @@ O pacote Microsoft.Extensions.Configuration.AzureKeyVault permite que um aplicat
 
 Primeiro, registre seu aplicativo como um aplicativo Azure AD. (O acesso a cofres de chaves é gerenciado pelo Azure AD). Isso pode ser feito por meio do Portal de Gerenciamento do Azure.
 
-Ou, se você desejar que seu aplicativo seja autenticado usando um certificado em vez de um segredo do cliente ou senha, será possível usar o cmdlet do PowerShell [AzureRmADApplication novo](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication). O certificado que você registrar com o Azure Key Vault precisa apenas de sua chave pública. (O aplicativo usará a chave privada.)
+Ou, se você desejar que seu aplicativo seja autenticado usando um certificado em vez de um segredo do cliente ou senha, será possível usar o cmdlet do PowerShell [AzureRmADApplication novo](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication). O certificado que você registrar com o Azure Key Vault precisa apenas de sua chave pública. (O aplicativo usará a chave privada.)
 
 Segundo, conceda ao aplicativo registrado acesso ao cofre de chaves criando uma nova entidade de serviço. É possível fazer isso usando os seguintes comandos do PowerShell:
 

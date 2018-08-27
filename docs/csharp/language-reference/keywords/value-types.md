@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172206"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754963"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 Os tipos de valor consistem em duas categorias principais:  
@@ -29,8 +29,6 @@ Os tipos de valor consistem em duas categorias principais:
     -   [Tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
   
     -   [Tipos de ponto flutuante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
-    -   [decimal](../../../csharp/language-reference/keywords/decimal.md)  
   
 -   [bool](../../../csharp/language-reference/keywords/bool.md)  
   
@@ -105,4 +103,5 @@ Point p = new Point(); // Invoke default constructor for the struct.
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
  [Tipos](../../../csharp/language-reference/keywords/types.md)  
  [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)
+ [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)  
+ [Tipos que permitem valor nulo](../../programming-guide/nullable-types/index.md)  

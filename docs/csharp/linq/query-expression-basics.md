@@ -3,12 +3,12 @@ title: Noções básicas sobre expressões de consulta (LINQ em C#)
 description: Apresenta os conceitos relacionados a expressões de consulta
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 9533fcb76e0c06e7fd20cb4c7ffc6e4980cfc30f
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404535"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933275"
 ---
 # <a name="query-expression-basics"></a>Noções básicas sobre expressões de consulta
 
@@ -174,7 +174,7 @@ Para obter mais informações, consulte [Como executar uma subconsulta em uma op
 
 ## <a name="see-also"></a>Consulte também
 
-[Guia de programação em C#](../programming-guide/index.md)  
-[LINQ (Consulta Integrada à Linguagem)](index.md)  
-[Palavras-chave de consulta (LINQ)](../language-reference/keywords/query-keywords.md)  
-[Visão geral de operadores de consulta padrão](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Guia de programação em C#](../programming-guide/index.md)  
+- [LINQ (Consulta Integrada à Linguagem)](index.md)  
+- [Palavras-chave de consulta (LINQ)](../language-reference/keywords/query-keywords.md)  
+- [Visão geral de operadores de consulta padrão](../programming-guide/concepts/linq/standard-query-operators-overview.md)  

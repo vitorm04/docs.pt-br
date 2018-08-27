@@ -3,11 +3,11 @@ title: Criando árvores XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
 ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999403"
 ---
 # <a name="creating-xml-trees-c"></a>Criando árvores XML (C#)
 Uma das tarefas XML mais comuns é construir uma árvore XML. Esta seção descreve várias maneiras de criá-las.  

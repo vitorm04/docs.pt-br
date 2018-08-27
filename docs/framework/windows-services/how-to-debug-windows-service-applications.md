@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518044"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935681"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Como depurar aplicativos de Serviço Windows
 Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle de Serviços, em vez de dentro do Visual Studio. Por esse motivo, depurar um serviço não é tão simples como depurar outros tipos de aplicativos do Visual Studio. Para depurar um serviço, você deve iniciar o serviço e, em seguida, anexar um depurador ao processo no qual ele está sendo executado. Em seguida, você pode depurar seu aplicativo usando todas as funcionalidades de depuração padrão do Visual Studio.  
@@ -33,7 +33,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
 >  Depurar o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> pode ser difícil porque o Gerenciador de controle de Serviços impõe um limite de 30 segundos em todas as tentativas de iniciar um serviço. Para obter mais informações, confira [Solução de problemas: depuração de Serviços Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Para obter informações significativas para depuração, o depurador do Visual Studio deve localizar os arquivos de símbolo para os binários que estão sendo depurados. Se você estiver depurando um serviço que você criou no Visual Studio, os arquivos de símbolo (arquivos .pdb) estarão na mesma pasta que o executável ou biblioteca, e o depurador os carregará automaticamente. Se você estiver depurando um serviço que não criou, deve primeiro localizar símbolos para o serviço e certificar-se de que eles podem ser encontrados pelo depurador. Confira [Especificar arquivos de símbolo (.pdb) e de origem no Depurador do Visual Studio](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Se você estiver depurando um processo do sistema ou se desejar ter símbolos para chamadas do sistema em seus serviços, você deve adicionar os Servidores de Símbolo Microsoft. Confira [Depurando símbolos](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).  
+>  Para obter informações significativas para depuração, o depurador do Visual Studio deve localizar os arquivos de símbolo para os binários que estão sendo depurados. Se você estiver depurando um serviço que você criou no Visual Studio, os arquivos de símbolo (arquivos .pdb) estarão na mesma pasta que o executável ou biblioteca, e o depurador os carregará automaticamente. Se você estiver depurando um serviço que não criou, deve primeiro localizar símbolos para o serviço e certificar-se de que eles podem ser encontrados pelo depurador. Confira [Especificar arquivos de símbolo (.pdb) e de origem no Depurador do Visual Studio](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Se você estiver depurando um processo do sistema ou se desejar ter símbolos para chamadas do sistema em seus serviços, você deve adicionar os Servidores de Símbolo Microsoft. Confira [Depurando símbolos](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Para depurar um serviço  
   
@@ -80,7 +80,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
 1.  Adicione um método para o serviço que executa os métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
-    ```  
+    ```csharp  
     internal void TestStartupAndStop(string[] args)  
     {  
         this.OnStart(args);  
@@ -91,18 +91,19 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
   
 2.  Reescreva o método `Main` da seguinte maneira:  
   
-    ```  
+    ```csharp  
     static void Main(string[] args)  
-            {  
-                if (Environment.UserInteractive)  
-                {  
-                    MyNewService service1 = new MyNewService(args);  
-                    service1.TestStartupAndStop(args);  
-                }  
-                else  
-                {  
-                    // Put the body of your old Main method here.  
-                }  
+    {  
+        if (Environment.UserInteractive)  
+        {  
+            MyNewService service1 = new MyNewService(args);  
+            service1.TestStartupAndStop(args);  
+        }  
+        else  
+        {  
+            // Put the body of your old Main method here.  
+        }  
+    }
     ```  
   
 3.  Na guia **Aplicativo** das propriedades do projeto, defina o **Tipo de saída** para **Aplicativo de Console**.  
@@ -117,4 +118,4 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
  [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [Como iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Depurando um serviço](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)
+ [Depurando um serviço](/windows/desktop/Services/debugging-a-service)

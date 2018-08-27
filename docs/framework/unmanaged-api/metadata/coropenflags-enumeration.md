@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445439"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933216"
 ---
 # <a name="coropenflags-enumeration"></a>Enumeração CorOpenFlags
 Contém valores de sinalizadores que controlam o comportamento dos metadados ao abrir arquivos de manifesto.  
@@ -58,8 +58,8 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|Indica se o arquivo deve ser lido na memória. Os metadados devem manter sua própria cópia.|  
 |`ofCacheImage`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofManifestMetadata`|Obsoleto. Este sinalizador é ignorado.|  
-|`ofReadOnly`|Indica que o arquivo deve ser aberto para leitura e que uma chamada para `QueryInterface` para um [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) não podem ser feitas.|  
-|`ofTakeOwnership`|Indica que a memória foi alocada usando uma chamada para [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) e será liberado pelos metadados.|  
+|`ofReadOnly`|Indica se o arquivo deve ser aberto para leitura e se uma chamada para `QueryInterface` para um [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) não pode ser feita.|  
+|`ofTakeOwnership`|Indica que a memória foi alocada usando uma chamada para [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) e será liberada pelos metadados.|  
 |`ofNoTypeLib`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofNoTransform`|Indica se as transformações automáticas de arquivos .winmd devem ser desabilitadas. Em outras palavras, a projeção de um tipo de Tempo de Execução do Windows para um tipo de .NET Framework deve ser desabilitada. Para obter mais informações, consulte [sob o escopo com o .NET e o tempo de execução do Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Reservado para uso interno.|  
@@ -67,11 +67,11 @@ typedef enum CorOpenFlags
 |`ofReserved`|Reservado para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** corhdr. H  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

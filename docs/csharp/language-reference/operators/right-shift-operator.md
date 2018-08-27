@@ -7,12 +7,12 @@ helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-ms.openlocfilehash: 061a69250ef5524fa6b5f7bb4b9527057dd86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a2992befcacfdc1d9bb968b611051e15702cca8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285883"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924818"
 ---
 # <a name="gtgt-operator-c-reference"></a>Operador &gt;&gt; (Referência de C#)
 O operador de deslocamento para a direita (`>>`) desloca o primeiro operando à direita pelo número de bits especificado pelo seu segundo operando.  
@@ -29,7 +29,8 @@ O operador de deslocamento para a direita (`>>`) desloca o primeiro operando à 
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-operator_1.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Operadores do C#](../../../csharp/language-reference/operators/index.md)

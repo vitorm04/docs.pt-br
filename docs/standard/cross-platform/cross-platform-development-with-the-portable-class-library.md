@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314933"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933697"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  
@@ -147,7 +147,7 @@ Caixa de diálogo Alterar Destinos no Visual Studio 2012
  Requer ➌ [bibliotecas de cliente HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) pacote  
   
 > [!WARNING]
->  Você pode encontrar erros ao fazer referência a [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) e [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) pacotes a partir de uma biblioteca portátil usada por um aplicativo do Windows Phone Silverlight 8.1. Para obter mais informações, consulte [compatibilidade de plataforma e alterações interruptivas para aplicativos Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
+>  Você pode encontrar erros ao fazer referência a [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) e [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) pacotes a partir de uma biblioteca portátil usada por um aplicativo do Windows Phone Silverlight 8.1. Para obter mais informações, consulte [compatibilidade de plataforma e alterações interruptivas para aplicativos Windows Phone Silverlight 8.1](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Tipos e membros com suporte  

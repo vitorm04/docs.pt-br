@@ -3,11 +3,11 @@ title: Analisando XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
 ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321698"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933976"
 ---
 # <a name="parsing-xml-c"></a>Analisando XML (C#)
 Os tópicos nesta seção descrevem como analisar documentos XML.  
