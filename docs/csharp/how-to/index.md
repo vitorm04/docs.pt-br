@@ -2,12 +2,12 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549369"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999557"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -68,7 +68,7 @@ Talvez seja necessário converter um objeto em um tipo diferente.
 - [Use `as` e `is` para converter, com segurança, em um tipo diferente](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
 - [Defina operadores de conversão para `struct` tipos](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Determine se um tipo é um tipo de valor anulável](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Converta entre tipos de valor anuláveis e não anuláveis](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).
+- [Converta entre tipos de valor anuláveis e não anuláveis](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Comparações de ordem e igualdade
 
@@ -126,7 +126,7 @@ Programas modernos geralmente usam operações assíncronas. Esses artigos o aju
 
 - [Melhore o desempenho assíncrono usando `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 - [Faça várias solicitações da Web paralelamente usando `async` e `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
-- [Use um pool de thread](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md).
+- [Use um pool de thread](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Argumentos da linha de comando para o programa
 
