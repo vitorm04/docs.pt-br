@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569896"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931853"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
@@ -38,7 +38,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
   
 |Caractere ou sequência|Descrição|  
 |---------------------------|-----------------|  
-|Todos os caracteres, exceto pelos seguintes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Caracteres diferentes dos listados na coluna **Caractere ou sequência** não têm significado especial em expressões regulares; eles correspondem a si mesmos.<br /><br /> Os caracteres incluídos na coluna **Caractere ou sequência** são elementos especiais na linguagem de expressão regular. Para que seja feita a correspondência com eles em uma expressão regular, eles devem receber um escape ou ser incluídos em um [grupo de caracteres positivo](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por exemplo, a expressão regular `\$\d+` ou `[$]\d+` corresponde a "$1200".|  
+|Todos os caracteres, exceto pelos seguintes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Caracteres diferentes dos listados na coluna **Caractere ou sequência** não têm significado especial em expressões regulares; eles correspondem a si mesmos.<br /><br /> Os caracteres incluídos na coluna **Caractere ou sequência** são elementos especiais na linguagem de expressão regular. Para que seja feita a correspondência com eles em uma expressão regular, eles devem receber um escape ou ser incluídos em um [grupo de caracteres positivo](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por exemplo, a expressão regular `\$\d+` ou `[$]\d+` corresponde a "$1200".|  
 |`\a`|Corresponde a um caractere de sino (alarme), `\u0007`.|  
 |`\b`|Em uma classe de caracteres `[`*character_group*`]`, corresponde a uma barra invertida, `\u0008`.  (Confira [Classes de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)). Fora de uma classe de caracteres, `\b` é uma âncora que corresponde a um limite de palavra. (Confira [Âncoras](../../../docs/standard/base-types/anchors-in-regular-expressions.md)).|  
 |`\t`|Corresponde a uma tabulação, `\u0009`.|  

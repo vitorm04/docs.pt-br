@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc1d3ffc34cd74d68bf10cb677b68f0a75bb7c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444224"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998897"
 ---
 # <a name="startupflags-enumeration"></a>Enumeração STARTUP_FLAGS
-Contém valores que indicam o comportamento de inicialização do common language runtime (CLR). Por padrão, a coleta de lixo é não simultânea e somente é carregar a biblioteca de classe base para a área de um domínio neutro.  
+Contém valores que indicam o comportamento de inicialização do common language runtime (CLR). Por padrão, a coleta de lixo é não simultânea e somente a biblioteca de classe base é carregada para a área de domínio neutro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,31 +57,31 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Especifica que a coleta de lixo simultânea deve ser usada. Se o chamador solicita a criação do servidor e a coleta de lixo simultânea em um computador com processador único, a criação de estação de trabalho e a coleta de lixo não simultânea são executados em vez disso. **Observação:** não há suporte para a coleta de lixo simultânea em aplicativos que estão executando o WOW64 x86 emulador em sistemas de 64 bits que implementam a arquitetura Intel Itanium (anteriormente chamado de IA-64). Para obter mais informações sobre como usar o WOW64 em sistemas de 64 bits do Windows, consulte [aplicativos em execução de 32 bits](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).|  
-|`STARTUP_LOADER_OPTIMIZATION_MASK`|Especifica que otimização carregador deve ocorrer.|  
-|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Especifica que nenhum assembly é carregados como domínios neutros.|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Especifica que todos os assemblies são carregados como domínios neutros.|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Especifica que todos os assemblies de nomes fortes são carregados como domínios neutros.|  
-|`STARTUP_LOADER_SAFEMODE`|Especifica que diretiva de versão do CLR não será aplicada para a versão passada. A versão exata especificada do CLR será carregada. A correção não avalia a política para determinar a versão compatível mais recente.|  
-|`STARTUP_LOADER_SETPREFERENCE`|Especifica que o tempo de execução preferencial será definido, mas na verdade não iniciado.|  
+|`STARTUP_CONCURRENT_GC`|Especifica que a coleta de lixo simultânea deve ser usada. Se o chamador solicita a compilação do servidor e coleta de lixo simultânea em um computador de processador único, a compilação de estação de trabalho e a coleta de lixo não simultânea são executadas em vez disso. **Observação:** coleta de lixo simultânea não é suportada em aplicativos que estão executando o WOW64 x86 emulator em sistemas de 64 bits que implementam a arquitetura Intel Itanium (chamada anteriormente de IA-64). Para obter mais informações sobre como usar WOW64 em sistemas Windows de 64 bits, consulte [aplicativos de 32 bits em execução](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_LOADER_OPTIMIZATION_MASK`|Especifica que a otimização do carregador deverá ocorrer.|  
+|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Especifica que nenhum assembly é carregados como domínio neutro.|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Especifica que todos os assemblies são carregados como domínio neutro.|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Especifica que todos os assemblies de nome forte são carregados como domínio neutro.|  
+|`STARTUP_LOADER_SAFEMODE`|Especifica que a política de versão CLR não será aplicada para a versão passada. A versão exata especificada do CLR será carregada. O shim não avalia a política para determinar a versão mais recente compatível.|  
+|`STARTUP_LOADER_SETPREFERENCE`|Especifica que o tempo de execução preferencial será definido, mas na verdade não é iniciado.|  
 |`STARTUP_SERVER_GC`|Especifica que a coleta de lixo do servidor será usada.|  
 |`STARTUP_HOARD_GC_VM`|Especifica que a coleta de lixo manterá o endereço virtual usado.|  
 |`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Especifica que a combinação de uma interface de hospedagem não será permitida.|  
-|`STARTUP_LEGACY_IMPERSONATION`|Especifica a representação não deve fluir pelos pontos assíncronos por padrão.|  
-|`STARTUP_DISABLE_COMMITTHREADSTACK`|Especifica que a pilha do thread total não deve ser confirmada quando o thread é iniciado.|  
-|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Especifica que a invocação de representações gerenciadas e representações obtidas por meio de plataforma será fluxo pelos pontos assíncronos. Por padrão, somente as representações gerenciadas fluirá pelos pontos assíncronos.|  
-|`STARTUP_TRIM_GC_COMMIT`|Especifica que a coleta de lixo usará espaço menor confirmado quando a memória do sistema é insuficiente. Consulte `gcTrimCommitOnLowMemory` na [otimização da hospedagem Web compartilhada](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Especifica que o rastreamento de eventos para Windows (ETW) está habilitado para eventos de tempo de execução de linguagem comum. Começando com o Windows Vista, o rastreamento de eventos está sempre habilitado, portanto esse sinalizador não tem nenhum efeito. Consulte [controlando o log do .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Especifica que o monitoramento de recursos do domínio de aplicativo está habilitado. Consulte o <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> propriedade e [ \<appDomainResourceMonitoring > elemento](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_LEGACY_IMPERSONATION`|Especifica a representação não deve fluir entre pontos assíncronos por padrão.|  
+|`STARTUP_DISABLE_COMMITTHREADSTACK`|Especifica que a pilha completa de threads não deve ser confirmada quando o thread for executado.|  
+|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Especifica que as representações gerenciadas e as representações obtidas por meio da plataforma de invocação será flua entre pontos assíncronos. Por padrão, somente as representações gerenciadas fluirão entre pontos assíncronos.|  
+|`STARTUP_TRIM_GC_COMMIT`|Especifica que a coleta de lixo usará menos espaço comprometido quando a memória do sistema é insuficiente. Ver `gcTrimCommitOnLowMemory` na [otimização para hospedagem na Web compartilhada](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_ETW`|Especifica que o rastreamento de eventos para Windows (ETW) é habilitado para eventos do common language runtime. Começando com o Windows Vista, o rastreamento de eventos está sempre habilitado, portanto, esse sinalizador não tem nenhum efeito. Ver [controlando o log do .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Especifica que o monitoramento de recursos de domínio do aplicativo está habilitado. Consulte a <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> propriedade e [ \<appDomainResourceMonitoring > elemento](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** mscoree. H  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

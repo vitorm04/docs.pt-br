@@ -1,6 +1,6 @@
 ---
 title: Como verificar se cadeias de caracteres estão em um formato de email válido
-ms.date: 03/30/2017
+ms.date: 08/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,19 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172313"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753868"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se cadeias de caracteres estão em um formato de email válido
 O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de caracteres está no formato de email válido.  
 
-> [!NOTE]
->  É recomendável usar a classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> para verificar se uma cadeia de caracteres está no formato de endereço de email válido. Para fazer isso, passe a cadeia de caracteres de endereço de email no construtor de classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>, que gera uma <xref:System.FormatException> caso a cadeia de caracteres tenha um formato não reconhecido.  
-  
 ## <a name="example"></a>Exemplo  
  O exemplo define um método `IsValidEmail`, que retornará `true` se a cadeia de caracteres contiver um endereço de email válido e `false` se não contiver, mas não realiza outra ação.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579826"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925718"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 <a name="top"></a> O mecanismo de expressões regulares no .NET é uma ferramenta poderosa e repleta de recursos que processa o texto com base em correspondências de padrões em vez de em comparar e corresponder o texto literal. Na maioria dos casos, ele realiza a correspondência de padrões de forma rápida e eficiente. No entanto, em alguns casos, o mecanismo de expressões regulares pode parecer ser muito lento. Em casos extremos, pode até mesmo parecer parar de responder enquanto processa uma entrada relativamente pequena em um período de horas ou até mesmo dias.  
@@ -190,7 +190,7 @@ ms.locfileid: "33579826"
   
  Como um limite de palavra não é o mesmo que ou um subconjunto de, um caractere de palavra, não há nenhuma possibilidade de o mecanismo de expressões regulares cruzar um limite de palavra ao corresponder caracteres de palavra. Isso significa que, para esta expressão regular, o retrocesso nunca pode contribuir para o êxito total de qualquer correspondência – ele só pode prejudicar o desempenho, pois o mecanismo de expressões regulares é forçado a salvar o estado para cada correspondência preliminar bem-sucedida de um caractere de palavra.  
   
- Se você determinar que o retrocesso não é necessário, poderá desativá-lo usando o elemento de linguagem `(?>``subexpression``)`. O exemplo a seguir analisa uma cadeia de caracteres de entrada usando duas expressões regulares. A primeira, `\b\p{Lu}\w*\b`, depende do retrocesso. A segunda, `\b\p{Lu}(?>\w*)\b`, desabilita o retrocesso. Conforme mostrado pela saída do exemplo, ambas produzem o mesmo resultado.  
+ Se você determinar que o retrocesso não é necessário, poderá desativá-lo usando o elemento de linguagem `(?>subexpression)`. O exemplo a seguir analisa uma cadeia de caracteres de entrada usando duas expressões regulares. A primeira, `\b\p{Lu}\w*\b`, depende do retrocesso. A segunda, `\b\p{Lu}(?>\w*)\b`, desabilita o retrocesso. Conforme mostrado pela saída do exemplo, ambas produzem o mesmo resultado.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579826"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- Quando você usa subexpressões apenas para aplicar quantificadores a elas e não está interessado em texto capturado, desabilite as capturas de grupo. Por exemplo, o elemento de linguagem `(?:``subexpression``)` evita que o grupo ao qual ele se aplica capture subcadeias de caracteres correspondidas. No exemplo a seguir, o padrão de expressão regular do exemplo anterior é alterado para `\b(?:\w+[;,]?\s?)+[.?!]`. Conforme mostrado pela saída, ele impede que o mecanismo de expressões regulares preencha as coleções <xref:System.Text.RegularExpressions.GroupCollection> e de <xref:System.Text.RegularExpressions.CaptureCollection>.  
+ Quando você usa subexpressões apenas para aplicar quantificadores a elas e não está interessado em texto capturado, desabilite as capturas de grupo. Por exemplo, o elemento de linguagem `(?:subexpression)` evita que o grupo ao qual ele se aplica capture subcadeias de caracteres correspondidas. No exemplo a seguir, o padrão de expressão regular do exemplo anterior é alterado para `\b(?:\w+[;,]?\s?)+[.?!]`. Conforme mostrado pela saída, ele impede que o mecanismo de expressões regulares preencha as coleções <xref:System.Text.RegularExpressions.GroupCollection> e de <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  É possível desabilitar as capturas de uma das seguintes formas:  
   
--   Use o elemento de linguagem `(?:``subexpression``)`. Esse elemento impede a captura de subcadeias de caracteres correspondidas no grupo ao qual se ele aplica. Ele não desabilita capturas de subcadeias de caracteres em grupos aninhados.  
+-   Use o elemento de linguagem `(?:subexpression)`. Esse elemento impede a captura de subcadeias de caracteres correspondidas no grupo ao qual se ele aplica. Ele não desabilita capturas de subcadeias de caracteres em grupos aninhados.  
   
--   Use a opção <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Ela desabilita todas as capturas sem nome ou implícitas no padrão de expressão regular. Quando você usa essa opção, somente as subcadeias de caracteres que correspondem aos grupos nomeados definidos com o elemento de linguagem `(?<``name``>``subexpression``)` podem ser capturadas. O sinalizador <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> pode ser passado para o parâmetro `options` de um construtor de classe <xref:System.Text.RegularExpressions.Regex> ou para o parâmetro `options` de um método de correspondência estática <xref:System.Text.RegularExpressions.Regex>.  
+-   Use a opção <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Ela desabilita todas as capturas sem nome ou implícitas no padrão de expressão regular. Quando você usa essa opção, somente as subcadeias de caracteres que correspondem aos grupos nomeados definidos com o elemento de linguagem `(?<name>subexpression)` podem ser capturadas. O sinalizador <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> pode ser passado para o parâmetro `options` de um construtor de classe <xref:System.Text.RegularExpressions.Regex> ou para o parâmetro `options` de um método de correspondência estática <xref:System.Text.RegularExpressions.Regex>.  
   
 -   Use a opção `n` no elemento de linguagem `(?imnsx)`. Esta opção desabilita todas as capturas sem nome ou implícitas a partir do ponto no padrão de expressão regular em que o elemento aparece. As capturas são desabilitadas até o final do padrão ou até a opção `(-n)` permitir capturas sem nome ou implícitas. Para saber mais, confira [Constructos diversos](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Use a opção `n` no elemento de linguagem `(?imnsx:``subexpression``)`. Esta opção desativa todas as capturas sem nome ou implícitas em `subexpression`. As capturas por grupos de capturas aninhadas sem nome ou implícitas também são desabilitadas.  
+-   Use a opção `n` no elemento de linguagem `(?imnsx:subexpression)`. Esta opção desativa todas as capturas sem nome ou implícitas em `subexpression`. As capturas por grupos de capturas aninhadas sem nome ou implícitas também são desabilitadas.  
   
  [Voltar ao início](#top)  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410449"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998460"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se você já estiver familiarizado com o WCF (Windows Communication Foundation), saberá que um cliente WCF já é baseado em federação. Configurando um cliente WCF com uma <xref:System.ServiceModel.WSFederationHttpBinding> ou uma associação personalizada semelhante, você pode habilitar a autenticação federada em um serviço.  
@@ -34,10 +34,10 @@ Se você já estiver familiarizado com o WCF (Windows Communication Foundation),
 > [!TIP]
 >  Qual é a diferença entre ActAs e OnBehalfOf?  
 >   
->  Do ponto de vista do protocolo WS-Trust:  
+>  Do ponto de vista de protocolo WS-Trust:  
 >   
->  1.  Um elemento RST ActAs indica que o solicitante deseja obter um token que contém declarações sobre duas entidades distintas: o solicitante e uma entidade externa representada pelo token no elemento ActAs.  
-> 2.  Um elemento RST OnBehalfOf indica que o solicitante deseja obter um token que contém declarações somente sobre uma entidade: a entidade externa representada pelo token no elemento OnBehalfOf.  
+> 1. Um elemento RST ActAs indica que o solicitante deseja obter um token que contém declarações sobre duas entidades distintas: o solicitante e uma entidade externa representada pelo token no elemento ActAs.  
+> 2. Um elemento RST OnBehalfOf indica que o solicitante deseja obter um token que contém declarações somente sobre uma entidade: a entidade externa representada pelo token no elemento OnBehalfOf.  
 >   
 >  O recurso ActAs normalmente é usado em cenários que exigem a delegação de composição, em que o destinatário final do token emitido pode inspecionar a cadeia inteira de delegação e ver não apenas o cliente, mas todos os intermediários. Isso permite que ele execute o controle de acesso, a auditoria e outras atividades relacionadas, com base na cadeia inteira de delegação de identidade. O recurso ActAs normalmente é usado em sistemas de várias camadas para autenticar e transmitir informações sobre identidades entre as camadas, sem precisar passar essas informações na camada do aplicativo/lógica de negócios.  
 >   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362264"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003080"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Espelhamento de banco de dados no SQL Server
 O espelhamento de banco de dados no SQL Server permite que você mantenha uma cópia, ou o espelho, de um banco de dados do SQL Server em um servidor em espera. O espelhamento garante que duas cópias separadas dos dados existam o tempo todo, fornecendo a alta disponibilidade e a redundância completa de dados. O provedor de dados .NET para o SQL Server fornece suporte implícito para espelhamento de banco de dados, de modo que o desenvolvedor não precisa realizar nenhuma ação ou gravar código quando tiver sido configurado para um banco de dados do SQL Server. Além disso, o objeto <xref:System.Data.SqlClient.SqlConnection> oferece suporte a um modo de conexão explícita que permite fornecer o nome de um servidor de parceiro de failover no <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -40,7 +40,7 @@ O espelhamento de banco de dados no SQL Server permite que você mantenha uma c�
 ## <a name="retrieving-the-current-server-name"></a>Recuperando o nome do servidor atual  
  No caso de um failover, você poderá recuperar o nome do servidor ao qual a conexão atual está realmente conectada usando a propriedade <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> de um objeto <xref:System.Data.SqlClient.SqlConnection>. O fragmento de código a seguir recupera o nome do servidor ativo, supondo que a variável de conexão referencie uma <xref:System.Data.SqlClient.SqlConnection> aberta.  
   
- Quando ocorre um evento de failover e a conexão é alternado para o servidor espelho, o **DataSource** propriedade é atualizada para refletir o nome do espelho.  
+ Quando ocorre um evento de failover e a conexão é alternado para o servidor espelho, o **fonte de dados** propriedade é atualizada para refletir o nome do espelho.  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,17 +51,17 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>Comportamento de espelhamento SqlClient  
- O cliente sempre tenta se conectar ao servidor principal atual. Se ele falhar, tentará o parceiro de failover. Se o banco de dados espelho já tiver sido alternado para a função principal no servidor de parceiro, a conexão será bem-sucedida e o novo mapeamento da entidade de segurança espelho será enviado ao cliente e armazenado em cache para o tempo de vida do <xref:System.AppDomain> de chamada. Ele não é armazenado no armazenamento persistente e não está disponível para conexões subsequentes em outro **AppDomain** ou processo. No entanto, ele está disponível para conexões subsequentes dentro do mesmo **AppDomain**. Observe que outra **AppDomain** ou processo em execução na mesma ou em outro computador sempre terá seu pool de conexões e as conexões não são redefinidas. Nesse caso, se o banco de dados primário falhar, cada processo ou **AppDomain** falhar uma vez e o pool será desmarcado automaticamente.  
+ O cliente sempre tenta se conectar ao servidor principal atual. Se ele falhar, tentará o parceiro de failover. Se o banco de dados espelho já tiver sido alternado para a função principal no servidor de parceiro, a conexão será bem-sucedida e o novo mapeamento da entidade de segurança espelho será enviado ao cliente e armazenado em cache para o tempo de vida do <xref:System.AppDomain> de chamada. Ele não é armazenado no armazenamento persistente e não está disponível para conexões subsequentes em um local diferente **AppDomain** ou processo. No entanto, ele está disponível para conexões subsequentes dentro do mesmo **AppDomain**. Observe que outro **AppDomain** ou processo em execução na mesma ou em um computador diferente sempre tem o pool de conexões, e essas conexões não são redefinidas. Nesse caso, se o banco de dados primário ficar inativo, cada processo ou **AppDomain** falhar uma vez e o pool será desmarcado automaticamente.  
   
 > [!NOTE]
 >  O suporte a espelhamento no servidor é configurado em cada banco de dados. Se as operações de manipulação de dados forem executadas em outros bancos de dados não incluídos no conjunto de entidade de segurança/espelho, usando nomes com várias partes ou alterando o banco de dados atual, as alterações feitas a esses outros bancos de dados não serão propagadas no caso de falha. Nenhum erro é gerado quando os dados são modificados em um banco de dados que não está espelhado. O desenvolvedor deve avaliar o impacto possível dessas operações.  
   
 ## <a name="database-mirroring-resources"></a>Recursos de espelhamento de banco de dados  
- Para obter a documentação conceitual e as informações sobre como configurar, implantar e administrar o espelhamento, consulte os seguintes recursos nos Manuais Online do SQL Server.  
+ Para a documentação conceitual e informações sobre como configurar, implantar e administrar o espelhamento, consulte os seguintes recursos na documentação do SQL Server.  
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Espelhamento de banco de dados](http://msdn.microsoft.com/library/bb934127.aspx) nos Manuais Online do SQL Server|Descreve como configurar o espelhamento no SQL Server.|  
+|[Espelhamento de banco de dados](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Descreve como configurar o espelhamento no SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

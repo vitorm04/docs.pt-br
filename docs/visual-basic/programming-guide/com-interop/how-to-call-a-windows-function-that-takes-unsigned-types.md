@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643020"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999903"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Como chamar uma função do Windows que use tipos não assinados (Visual Basic)
-Se você está consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com o Visual Basic.  
+Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com o Visual Basic.  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para chamar uma função do Windows que usa um tipo não assinado  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para chamar uma função do Windows que usa um tipo sem sinal  
   
-1.  Use um [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para instruir o Visual Basic qual biblioteca contém a função, o que é o nome nessa biblioteca, o que é a sequência de chamada e como converter cadeias de caracteres quando chamá-lo.  
+1.  Use uma [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para informar ao Visual Basic qual biblioteca contém a função, o que seu nome é nessa biblioteca, o que é a sua sequência de chamada e como converter cadeias de caracteres ao chamá-la.  
   
-2.  No `Declare` instrução, use `UInteger`, `ULong`, `UShort`, ou `Byte` conforme apropriado para cada parâmetro com um tipo não assinado.  
+2.  No `Declare` instrução, use `UInteger`, `ULong`, `UShort`, ou `Byte` conforme apropriado para cada parâmetro com um tipo sem sinal.  
   
-3.  Consulte a documentação para a função do Windows que é chamados para localizar os nomes e valores de constantes que são usadas. Muitos desses são definidos no arquivo WinUser.  
+3.  Consulte a documentação para a função do Windows chamado para localizar os nomes e valores de constantes que são usadas. Muitos deles são definidos no arquivo WinUser h.  
   
-4.  Declare as constantes necessário em seu código. Muitas constantes do Windows são valores sem sinal de 32 bits, e você deve declarar essas `As``UInteger`.  
+4.  Declare constantes necessárias em seu código. As constantes de Windows muitos são valores sem sinal de 32 bits, e você deve declarar essas `As``UInteger`.  
   
-5.  Chame a função da maneira normal. O exemplo a seguir chama a função do Windows `MessageBox`, que usa um argumento de número inteiro sem sinal.  
+5.  Chame a função da maneira normal. O exemplo a seguir chama a função do Windows `MessageBox`, que leva um argumento de inteiro sem sinal.  
   
     ```  
     Public Class windowsMessage  
@@ -69,16 +69,16 @@ Se você está consumindo uma classe, módulo ou estrutura que tem membros de ti
     ```  
   
     > [!CAUTION]
-    >  O `UInteger`, `ULong`, `UShort`, e `SByte` tipos de dados não são parte do [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), então um código compatível com CLS não pode consumir um componente que usa-los.  
+    >  O `UInteger`, `ULong`, `UShort`, e `SByte` tipos de dados não são parte do [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), então um código compatível com CLS não pode consumir um componente que usa-los.  
   
     > [!IMPORTANT]
-    >  Fazer uma chamada para código não gerenciado, como a interface de programação de aplicativo (API) do Windows expõe seu código para possíveis riscos à segurança.  
+    >  Fazer uma chamada para código não gerenciado, como a interface de programação de aplicativo (API) do Windows expõe seu código possíveis riscos de segurança.  
   
     > [!IMPORTANT]
-    >  Chamar a API do Windows requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Chamar a API do Windows requer a permissão de código não gerenciado, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)  
  [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [Tipo de Dados UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
