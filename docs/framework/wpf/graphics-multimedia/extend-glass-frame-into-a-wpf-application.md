@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557500"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931534"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estender quadro com efeito de transparência em um aplicativo WPF
-Este tópico demonstra como estender o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] quadro transparente para a área cliente de um aplicativo do Windows Presentation Foundation (WPF).  
+Este tópico demonstra como estender o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] quadro de vidro na área do cliente de um aplicativo Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
 >  Este exemplo só funcionará em um computador [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] que executa o DWM (Gerenciador de Janelas da Área de Trabalho) com efeito de transparência habilitado. O [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic edition não dá suporte ao efeito de transparência. Áreas que normalmente seriam renderizadas com efeito de transparência nas outras edições do [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] são renderizadas opacas.  
@@ -62,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) é a função de DWM que estende o quadro para a área de cliente. Ela recebe dois parâmetros: um identificador de janela e uma estrutura [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx). [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) é usado para instruir o DWM sobre quanto a mais o quadro deve ser estendido para a área de cliente.  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) é a função de DWM que estende o quadro para a área de cliente. Ela recebe dois parâmetros: um identificador de janela e uma estrutura [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins). [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) é usado para instruir o DWM sobre quanto a mais o quadro deve ser estendido para a área de cliente.  
   
 ## <a name="example"></a>Exemplo  
- Para usar a função [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx), é necessário obter um identificador de janela. Em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], o identificador de janela pode ser obtido o <xref:System.Windows.Interop.HwndSource.Handle%2A> propriedade de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área cliente sobre o <xref:System.Windows.FrameworkElement.Loaded> eventos da janela.  
+ Para usar a função [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), é necessário obter um identificador de janela. Na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], o identificador de janela pode ser obtido de <xref:System.Windows.Interop.HwndSource.Handle%2A> propriedade de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área de cliente sobre o <xref:System.Windows.FrameworkElement.Loaded> eventos da janela.  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -150,6 +150,6 @@ void OnLoaded(object sender, RoutedEventArgs e)
  ![Quadro com efeito de transparência estendido em um aplicativo WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral do Gerenciador de janelas da área de trabalho](https://msdn.microsoft.com/library/aa969540.aspx)  
- [Visão geral do Gerenciador de janelas da área de trabalho Desfoque](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [Visão geral do Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)  
+ [Visão geral de desfoque do Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
