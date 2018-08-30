@@ -3,12 +3,12 @@ title: Funções locais vs. expressões lambda
 description: Saiba porque as funções locais podem ser uma escolha melhor que as expressões lambda.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 4fb8ea78b783871a19a8d5578d571e00da37642a
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472601"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931570"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Funções locais comparadas com expressões lambda
 
@@ -24,7 +24,7 @@ Compare essa implementação com uma versão que usa expressões lambda:
 
 As funções locais têm nomes. As expressões lambda são métodos anônimos que são atribuídos a variáveis dos tipos `Func` ou `Action`. Quando você declara uma função local, os tipos de argumento e o tipo de retorno fazem parte da declaração da função. Em vez de fazer parte do corpo da expressão lambda, os tipos de argumento e o tipo de retorno são parte da declaração de tipo de variável da expressão lambda. Essas duas diferenças podem resultar em um código mais claro.
 
-As funções locais têm diferentes regras para atribuição definida em relação às expressões lambda. Uma declaração de função local pode ser referenciada em qualquer local do código em que ela esteja no escopo. Uma expressão lambda deve ser atribuída a uma variável delegada antes de ser acessada (ou chamada por meio do delegado que faz referência à expressão lambda). Observe que a versão usando a expressão lambda deve declarar e inicializar a expressão lambda, `nthFactorial` antes de defini-la. Não fazer isso resulta em um erro em tempo de compilação para referenciar `nthFactorial` antes de atribuí-lo.
+As funções locais têm diferentes regras para atribuição definida em relação às expressões lambda. Uma declaração de função local pode ser referenciada em qualquer local do código em que ela esteja no escopo. Uma expressão lambda precisa ser atribuída a uma variável delegada para que possa ser acessada (ou chamada por meio do delegada que referencia a expressão lambda). Observe que a versão usando a expressão lambda deve declarar e inicializar a expressão lambda, `nthFactorial` antes de defini-la. Não fazer isso resulta em um erro em tempo de compilação para referenciar `nthFactorial` antes de atribuí-lo.
 Essas diferenças significam que os algoritmos recursivos são mais fáceis de criar usando funções locais. Você pode declarar e definir uma função local que chame a si mesma. As expressões lambda devem ser declaradas e atribuídas a um valor padrão antes que possam ser reatribuídas a um corpo que referencie a mesma expressão lambda.
 
 As regras de atribuição definidas também afetam as variáveis que são capturadas pela função local ou pela expressão lambda. As regras das funções locais e das expressões lambda exigem que as variáveis capturadas sejam definitivamente atribuídas no momento em que a expressão lambda ou a função local é convertida em um delegado. A diferença é que as expressões lambda são convertidas em delegados no momento em que são declaradas. As funções locais são convertidas em delegados somente quando usadas como um delegado. Se você declarar uma função local e só referenciá-la ao chamá-la como um método, ela não será convertida em um delegado. Essa regra permite que você declare uma função local em qualquer local conveniente no respectivo escopo delimitador. É comum declarar funções locais ao final do método pai, depois das instruções de retorno.
@@ -42,7 +42,7 @@ int M()
 }
 ```
 
-O compilador pode determinar que `LocalFunction` definitivamente atribua `y` quando chamada. Como `LocalFunction` é chamada antes da instrução `return`, `y` é atribuído definitivamente na instrução `return`.
+O compilador pode determinar que `LocalFunction` definitivamente atribua `y` quando chamada. Como a `LocalFunction` é chamada antes da instrução `return`, `y` é atribuído definitivamente na instrução `return`.
 
 Essa análise de exemplo permite a quarta diferença.
 Dependendo do uso, as funções locais podem evitar as alocações de heap que são sempre necessárias nas expressões lambda. Se uma função local nunca é convertida em um delegado, e nenhuma das variáveis capturadas pela função local é capturada por outros lambdas ou funções locais que são convertidas em delegados, o compilador pode evitar alocações de heap. 

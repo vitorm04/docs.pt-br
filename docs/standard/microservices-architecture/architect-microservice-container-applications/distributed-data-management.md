@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106483"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998678"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -45,7 +45,7 @@ Como mencionado anteriormente, os dados pertencentes a cada microsserviço são 
 
 Para analisar o problema, vamos examinar um exemplo do [Aplicativo de referência eShopOnContainers](http://aka.ms/eshoponcontainers). O microsserviço de catálogo mantém informações sobre todos os produtos, incluindo o nível de estoque. O microsserviço de pedidos gerencia os pedidos e precisa verificar se um novo pedido não excede o estoque de produtos disponíveis no catálogo. (Ou o cenário poderá envolver uma lógica que abranja produtos pendentes). Em uma versão monolítica hipotética deste aplicativo, o subsistema de pedidos pode simplesmente usar uma transação de ACID (atomicidade, consistência, isolamento, durabilidade) para verificar o estoque disponível, criar o pedido na tabela de pedidos e atualizar o estoque disponível na tabela de produtos.
 
-No entanto, em um aplicativo baseado em microsserviços, as tabelas de pedido e de produto pertencem aos seus respectivos microsserviços. Um microsserviço nunca deve incluir bancos de dados pertencentes a outro microsserviço em suas próprias transações ou consultas, conforme é mostrado na Figura 4-9.
+No entanto, em um aplicativo baseado em microsserviços, as tabelas Pedido e Produto pertencem aos seus respectivos microsserviços. Um microsserviço nunca deve incluir bancos de dados pertencentes a outro microsserviço em suas próprias transações ou consultas, conforme é mostrado na Figura 4-9.
 
 ![](./media/image9.PNG)
 

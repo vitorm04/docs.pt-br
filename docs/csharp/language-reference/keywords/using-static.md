@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285129"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929672"
 ---
 # <a name="using-static-directive-c-reference"></a>Diretiva using static (Referência de C#)
 
-A diretiva `using static` designa um tipo cujos membros estáticos você pode acessar sem especificar um nome de tipo. A sintaxe é:
+A diretiva `using static` designa um tipo cujos membros estáticos e tipos aninhados você pode acessar sem especificar um nome de tipo. A sintaxe é:
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-em que *fully-qualified-type-name* é o nome do tipo cujos membros estáticos podem ser referenciados sem especificar um nome de tipo. Se você não fornecer um nome de tipo totalmente qualificado (o nome do namespace completo juntamente com o nome de tipo), o C# gerará o erro de compilador CS0246: “O nome do namespace ou tipo '<type-name>' não pôde ser encontrado”.
+em que *fully-qualified-type-name* é o nome do tipo cujos membros estáticos e tipos aninhados podem ser referenciados sem especificar um nome de tipo. Se você não fornecer um nome de tipo totalmente qualificado (o nome do namespace completo juntamente com o nome do tipo), o C# gerará o erro de compilador [CS0246](../compiler-messages/cs0246.md): “O tipo ou o nome do namespace 'type/namespace' não pôde ser encontrado (uma diretiva using ou uma referência de assembly está ausente?)”.
 
-A diretiva `using static` se aplica a qualquer tipo que tem membros estáticos, mesmo que ele também tem membros de instância. No entanto, os membros da instância podem ser invocados apenas por meio de instância de tipo.
+A diretiva `using static` aplica-se a qualquer tipo que tenha membros estático (ou tipos aninhados), mesmo que ele também tenha membros de instância. No entanto, os membros da instância podem ser invocados apenas por meio de instância de tipo.
 
 A diretiva `using static` foi introduzida no C# 6.
 
@@ -53,9 +53,9 @@ No exemplo, a diretiva `using static` também poderia ter sido aplicada ao tipo 
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretiva using](using-directive.md)   
-[Referência de C#](../../../csharp/language-reference/index.md)   
-[Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
-[Usando namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[Namespaces](../../../csharp/programming-guide/namespaces/index.md)   
+- [Diretiva using](using-directive.md)
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Usando namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)

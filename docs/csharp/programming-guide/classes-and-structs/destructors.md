@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960505"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925812"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
 Finalizadores são usados para destruir instâncias de classes.  
@@ -57,7 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 >  Finalizadores vazios não devem ser usados. Quando uma classe contém um finalizador, uma entrada é criada na fila `Finalize`. Quando o finalizador é chamado, o coletor de lixo é invocado para processar a fila. Um finalizador vazio apenas resulta na perda de desempenho desnecessária.  
   
- O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto. Os finalizadores também são chamados quando o programa é encerrado.  
+ O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto. 
+ 
+ Em aplicativos .NET Framework (mas não em aplicativos .NET Core), os finalizadores também são chamados quando o programa é encerrado. 
   
  É possível forçar a coleta de lixo chamando <xref:System.GC.Collect%2A>, mas na maioria das vezes, isso deve ser evitado porque pode criar problemas de desempenho.  
   

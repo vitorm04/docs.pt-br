@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106441"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935387"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -340,7 +340,7 @@ Isso significa que você pode complementar a API com uma ótima interface do usu
 
 O Gerenciador de API não é o mais importante aqui. Quando a API Web consegue se descrever nos metadados do Swagger, ela pode ser usada diretamente por meio das ferramentas baseadas no Swagger, incluindo geradores de código de classe de proxy de cliente que podem direcionar a várias plataformas. Por exemplo, conforme mencionado, o [AutoRest](https://github.com/Azure/AutoRest) gera as classes de cliente do .NET automaticamente. Mas ferramentas adicionais como [swagger-codegen](https://github.com/swagger-api/swagger-codegen) também estão disponíveis, permitindo automaticamente a geração de código das bibliotecas clientes da API, de stubs de servidor e da documentação.
 
-Atualmente, o Swashbuckle consiste em dois pacotes NuGet internos sob o meta-pacote de alto nível [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) versão 1.0.0 ou posterior para aplicativos ASP.NET Core.
+Atualmente, o Swashbuckle consiste em vários pacotes NuGet internos no metapacote de alto nível [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) versão 1.0.0 ou posteriores para aplicativos ASP.NET Core.
 
 Depois de instalar esses pacotes NuGet em seu projeto de API Web, você precisará configurar o Swagger na classe de inicialização, como no código a seguir:
 

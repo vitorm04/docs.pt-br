@@ -1,6 +1,6 @@
 ---
 title: Práticas recomendadas para o uso de cadeias de caracteres no .NET
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579724"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000145"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  
@@ -121,7 +121,10 @@ ms.locfileid: "33579724"
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Os Detalhes de Comparação da Cadeia de Caracteres  
  A comparação de cadeia de caracteres é o centro de muitas operações relacionadas à cadeia de caracteres, especialmente a classificação e teste de igualdade. As cadeias de caracteres são classificadas em uma determinada ordem: se “my” aparece antes de “string” em uma lista classificada de cadeias de caracteres, “my” deve comparar menos que ou igual a “string”. Além disso, a comparação define implicitamente a igualdade. A operação de comparação retorna zero para cadeias de caracteres que considerar iguais. Uma boa interpretação é que nenhuma cadeia de caracteres é menor que a outra. Operações mais significativas envolvendo cadeias de caracteres incluem um ou ambos destes procedimentos: comparação com outra cadeia de caracteres e execução de uma operação de classificação bem definida.  
-  
+
+> [!NOTE]
+> Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/en-us/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows.
+
  No entanto, avaliar duas cadeias de caracteres quanto à igualdade ou ordem de classificação não gera um único resultado correto, o resultado depende dos critérios usados para comparar as cadeias de caracteres. Em particular, as comparações de cadeia de caracteres ordinais ou baseadas no uso de maiúsculas e minúsculas e convenções classificação da cultura atual ou da cultura invariável (uma cultura independente de localidade com base no idioma inglês) podem gerar resultados diferentes.  
   
 <a name="current_culture"></a>   
@@ -153,7 +156,7 @@ ms.locfileid: "33579724"
   
  Bugs sutis e não tão sutis podem surgir quando dados de cadeias de caracteres não linguísticas são interpretados linguisticamente ou quando os dados da cadeia de caracteres de uma cultura específica são interpretados usando as convenções de outra cultura. O exemplo canônico é o problema do I turco.  
   
- Para quase todos os alfabetos latinos, incluindo o do inglês dos EUA, o caractere "i" (\u0069) é a versão em letra minúscula do caractere "I" (\u0049). Essa regra de maiúsculas e minúsculas rapidamente se torna o padrão para alguém programando em tal cultura. No entanto, o alfabeto turco ("tr-TR") inclui um caractere "I com um ponto", "İ" (\u0130), que é a versão maiúscula de "i". O turco também inclui um caractere minúsculo "i sem um ponto", "ı" (\u0131), que em maiúscula é “I”. Esse comportamento também ocorre na cultura azerbaidjana ("az").  
+ Para quase todos os alfabetos latinos, incluindo o do inglês dos EUA, o caractere "i" (\u0069) é a versão em letra minúscula do caractere "I" (\u0049). Essa regra de maiúsculas e minúsculas rapidamente se torna o padrão para alguém programando em tal cultura. No entanto, o alfabeto turco ("tr-TR") inclui um caractere "I com um ponto", "İ" (\u0130), que é a versão maiúscula de "i". O turco também inclui um caractere minúsculo "i sem um ponto", "ı" (\u0131), que em maiúscula é “I”. Esse comportamento também ocorre na cultura azerbaijana ("az").  
   
  Portanto, as suposições feitas sobre a colocação do "i" em maiúscula ou do "I" em minúscula não são válidas entre todas as culturas. Se você usar as sobrecargas padrão para rotinas de comparação de cadeias de caracteres, elas estarão sujeitas à variação entre culturas. Se os dados a serem comparados são forem linguísticos, o uso das sobrecargas padrão pode gerar resultados indesejáveis, como a tentativa a seguir de realizar uma comparação que não diferencia maiúsculas de minúsculas das cadeias de caracteres “file” e “FILE” ilustra.  
   

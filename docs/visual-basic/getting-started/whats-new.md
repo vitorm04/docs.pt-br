@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592542"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925605"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -23,33 +23,33 @@ Este tópico lista os nomes das principais funcionalidades para cada versão do 
   
 ## <a name="current-version"></a>Versão atual
 
-Visual Basic 15.5   
+Visual Basic 15.5/Visual Studio 2017 versão 15.5  
 Para as novas funcionalidades, consulte [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Versões anteriores
 
-Visual Basic 15.3   
+Visual Basic 15.3/Visual Studio 2017 versão 15.3  
 Para as novas funcionalidades, consulte [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017   
+Visual Basic 2017/Visual Studio 2017  
 Para as novas funcionalidades, consulte [Visual Basic 2017](#visual-basic-2017)
 
-Visual Basic / Visual Studio .NET 2015   
+Visual Basic/Visual Studio 2015   
 Para as novas funcionalidades, consulte [Visual Basic 14](#visual-basic-14)
 
-Visual Basic / Visual Studio .NET 2013  
+Visual Basic/Visual Studio 2013  
 Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
 
-Visual Basic / Visual Studio .NET 2012   
+Visual Basic/Visual Studio 2012   
 palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador
 
-Visual Basic, Visual Studio .NET 2010   
+Visual Basic, Visual Studio 2010   
 Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global
 
-Visual Basic / Visual Studio .NET 2008   
+Visual Basic/Visual Studio 2008   
 LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável  
 
-Visual Basic / Visual Studio .NET 2005   
+Visual Basic/Visual Studio 2005   
 O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)
 
 Visual Basic / Visual Studio .NET 2003   
@@ -123,7 +123,7 @@ Você pode definir um literal binário usando o prefixo `&B` ou `&b`. Além diss
 
 Para obter mais informações, consulte a seção "Atribuições de literal" dos tipos de dados [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) e [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-**Suporte para valores retornados de referência do C#**
+[**Suporte para valores retornados por referência em C#**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Começando com o C# 7.0, o C# é compatível com valores retornados de referência. Isto é, quando o método de chamada recebe um valor retornado por referência, ele pode alterar o valor da referência. O Visual Basic não permite a criação de métodos com valores retornados de referência, mas isso não permite o consumo e a modificação de valores de retorno de referência.
 
@@ -156,43 +156,43 @@ Para obter mais informações, consulte [Reference return values](../programming
 [Acesso de membro nulo condicional e indexação](../../csharp/language-reference/operators/null-conditional-operators.md)  
 Você pode testar a nulidade de uma maneira sintática muito simples antes de executar uma operação de acesso de membro (`?.`) ou índice (`?[]`).  Esses operadores ajudam a escrever menos código para lidar com verificações de nulidade, especialmente para entrar em estruturas de dados.  Se a referência de objeto ou o operando esquerdo for nulo, as operações retornarão valores nulos.  
   
-[Literais de cadeia de caracteres multilinha](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+[Literais de cadeia multilinha](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Literais de cadeia de caracteres podem conter sequências de nova linha.  Você não precisa da solução alternativa antiga de usar `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
   
-Comentários  
-É possível colocar comentários após continuações de linha implícitas, em expressões de inicializador e entre termos de expressão do LINQ.  
+**Comentários**  
+É possível colocar comentários após continuações de linha implícitas em expressões inicializadora e entre termos de expressão LINQ.  
   
- Resolução de nome totalmente qualificado mais inteligente  
+**Resolução de nome totalmente qualificado mais inteligente**  
  Dado um código como `Threading.Thread.Sleep(1000)`, o Visual Basic pesquisava o namespace "Threading", descobria que ele era ambíguo entre System.Threading e System.Windows.Threading e, então, relatava um erro.  Agora, o Visual Basic considera os dois namespaces possíveis juntos.  Se você mostrar a lista de conclusão, o editor do Visual Studio listará membros dos dois tipos na lista de conclusão.  
   
- Literais de data do primeiro ano  
+ **Literais de data com o ano primeiro**  
  Você pode ter literais de data no formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`.  
   
- Propriedades de interface readonly  
+ **Propriedades de interface readonly**  
  Você pode implementar propriedades de interface readonly usando uma propriedade readwrite.  A interface garante a funcionalidade mínima e não impede que uma classe de implementação permita que a propriedade seja definida.  
   
  [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)  
  Para facilitar a leitura do seu código, agora você pode usar `TypeOf` com `IsNot`.  
   
- [#Disable Warning \<ID> e #Enable Warning \<ID>](../../visual-basic/language-reference/directives/directives.md)  
+ [#Disable Warning \<ID> e #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)  
  É possível desabilitar e habilitar avisos específicos para regiões dentro de um arquivo de origem.  
   
- Aprimoramentos de comentário de documento XML  
+ **Melhorias no comentário da documentação XML**  
  Ao escrever comentários de documento, você obtém o editor inteligente e suporte de build para validar nomes de parâmetro, tratamento adequado de `crefs` (genéricos, operadores etc.), coloração e refatoração.  
   
- [Definições de interface e módulo parcial](../../visual-basic/language-reference/modifiers/partial.md)  
+ [Definições de interfaces e módulos parciais](../../visual-basic/language-reference/modifiers/partial.md)  
  Além das classes e structs, você pode declarar interfaces e módulos parciais.  
   
- [Diretivas #Region dentro de corpos de método](../../visual-basic/language-reference/directives/region-directive.md)  
+ [As diretivas #Region dentro de corpos de método](../../visual-basic/language-reference/directives/region-directive.md)  
  Você pode colocar delimitadores #Region...#End Region em qualquer lugar em um arquivo, dentro de funções e até mesmo estendê-los por corpos de função.  
   
- [Definições de substituição são sobrecargas implicitamente](../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Definições de substituição são implicitamente sobrecargas](../../visual-basic/language-reference/modifiers/overrides.md)  
  Se você adicionar o modificador `Overrides` a uma definição, o compilador adicionará implicitamente `Overloads`, para que você possa digitar menos código em casos comuns.  
   
- CObj permitido em argumentos de atributos  
+ **CObj permitido em argumentos de atributos**  
  O compilador apresentava um erro de que CObj(...) não era uma constante quando usado em construções de atributo.  
   
- Declarando e consumindo métodos ambíguos de interfaces diferentes  
+ **Declarando e consumindo métodos ambíguos de diferentes interfaces**  
  Anteriormente, o código a seguir gerava erros que impediam você de declarar `IMock` ou chamar `GetDetails` (se eles tivessem sido declarados em C#):  
   
 ```vb  

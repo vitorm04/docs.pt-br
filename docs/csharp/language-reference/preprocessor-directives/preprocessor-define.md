@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 305d52c26fb2592874d06f2c9a75ec63b472a812
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143473"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933058"
 ---
 # <a name="define-c-reference"></a>#define (Referência de C#)
 Use `#define` para definir um símbolo. Quando você usa o símbolo como a expressão passada para a diretiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), a expressão será avaliada como `true`, conforme mostra o exemplo a seguir:  
@@ -25,7 +25,7 @@ Use `#define` para definir um símbolo. Quando você usa o símbolo como a expre
 > [!NOTE]
 >  A diretiva `#define` não pode ser usada para declarar valores constantes como normalmente é feito em C e C++. As constantes em C# são mais bem definidas como membros estáticos de uma classe ou struct. Se você tiver várias dessas constantes, considere criar uma classe "Constantes" separada para guardá-las.  
   
- Os símbolos podem ser usados para especificar condições para compilação. É possível testar o símbolo com [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ou [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Também é possível usar o atributo `conditional` para executar a compilação condicional.  
+ Os símbolos podem ser usados para especificar condições para compilação. É possível testar o símbolo com [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ou [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Você também pode usar o <xref:System.Diagnostics.ConditionalAttribute> para executar uma compilação condicional.  
   
  É possível definir um símbolo, mas não é possível atribuir um valor a um símbolo. A diretiva `#define` deve ser exibida no arquivo antes de usar as instruções que também não são diretivas de pré-processador.  
   
@@ -63,11 +63,12 @@ public class TestDefine
   
  Para obter um exemplo de como excluir um símbolo, consulte [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
- [const](../../../csharp/language-reference/keywords/const.md)  
- [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [const](../../../csharp/language-reference/keywords/const.md)  
+- [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

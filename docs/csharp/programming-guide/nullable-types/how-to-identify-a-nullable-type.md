@@ -1,51 +1,39 @@
 ---
-title: Como identificar um tipo anulável (Guia de Programação em C#)
-ms.date: 07/20/2015
+title: Como identificar um tipo que permite valor nulo (Guia de programação em C#)
+description: Saiba como determinar se um tipo ou uma instância é de um tipo que permite valor nulo
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333177"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754950"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Como identificar um tipo anulável (Guia de Programação em C#)
-É possível usar o operador [typeof](../../../csharp/language-reference/keywords/typeof.md) do C# para criar um objeto <xref:System.Type> que representa um tipo que permite valor nulo:  
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Como identificar um tipo que permite valor nulo (Guia de programação em C#)
+
+O exemplo a seguir mostra como determinar se uma instância de <xref:System.Type?displayProperty=nameWithType> representa um tipo que permite valor nulo:
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+Como mostra o exemplo, o operador [typeof](../../language-reference/keywords/typeof.md) é usado para criar um objeto <xref:System.Type?displayProperty=nameWithType>.  
   
-```  
-System.Type type = typeof(int?);  
-```  
+Se você quiser determinar se uma instância é de um tipo que permite valor nulo, não use o método <xref:System.Object.GetType%2A?displayProperty=nameWithType> para obter uma instância <xref:System.Type> a ser testada com o código anterior. Quando você chama o método <xref:System.Object.GetType%2A?displayProperty=nameWithType> em uma instância de um tipo que permite valor nulo, a instância passa pela [conversão boxing](using-nullable-types.md#boxing-and-unboxing) em <xref:System.Object>. Como a conversão boxing de uma instância não nula de um tipo que permite valor nulo é equivalente à conversão boxing de um valor do tipo subjacente, <xref:System.Object.GetType%2A> retorna um objeto <xref:System.Type> que representa o tipo subjacente de um tipo que permite valor nulo:
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+Não use o operador [is](../../language-reference/keywords/is.md) para determinar se uma instância é de um tipo que permite valor nulo. Como mostra o exemplo a seguir, não é possível distinguir os tipos de instâncias de um tipo que permite valor nulo e seu tipo subjacente usando o operador `is`:
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+Você pode usar o código apresentado no exemplo a seguir para determinar se uma instância é de um tipo que permite valor nulo:
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- Também é possível usar as classes e métodos do namespace <xref:System.Reflection> para gerar objetos <xref:System.Type> que representam tipos que permitem valor nulo. No entanto, se você tentar obter informações de tipo de variáveis que permitem valor nulo em tempo de execução usando o método <xref:System.Object.GetType%2A> ou o operador `is`, o resultado será um objeto <xref:System.Type> que representa o tipo subjacente e não o próprio tipo que permite valor nulo.  
-  
- Chamar `GetType` em um tipo que permite valor nulo faz com que uma operação de conversão boxing seja executada quando o tipo for convertido implicitamente para <xref:System.Object>. Portanto, <xref:System.Object.GetType%2A> sempre retorna um objeto <xref:System.Type> que representa o tipo subjacente e não o tipo que permite valor nulo.  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- O operador [is](../../../csharp/language-reference/keywords/is.md) do C# também opera no tipo subjacente de um anulável. Portanto, não é possível usar `is` para determinar se uma variável é um tipo que permite valor nulo. O exemplo a seguir mostra que o operador `is` trata uma variável anulável\<int> como um int.  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- Use o código a seguir para determinar se um objeto <xref:System.Type> representa um tipo que permite valor nulo. Lembre-se de que esse código sempre retorna false se o objeto `Type` tiver sido retornado de uma chamada para <xref:System.Object.GetType%2A>, conforme explicado anteriormente neste tópico.  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)  
- [Conversão boxing de tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a>Consulte também
+
+[Tipos que permitem valor nulo](index.md)  
+[Usando tipos que permitem valor nulo](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028234"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932904"
 ---
 # <a name="float-c-reference"></a>float (Referência de C#)
 
@@ -21,7 +21,7 @@ A palavra-chave `float` indica um tipo simples que armazena valores de ponto flu
 
 |Tipo|Intervalo aproximado|Precisão|Tipo .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|-3,4 × 10<sup>38</sup> to +3,4 × 10<sup>38</sup>|7 dígitos|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|7 dígitos|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Literais
 
@@ -37,9 +37,9 @@ Se você não usar o sufixo na declaração anterior, obterá um erro de compila
 
 Você pode misturar tipos integrais numéricos e tipos de ponto flutuante em uma expressão. Nesse caso, os tipos integrais são convertidos em tipos de ponto flutuante. A avaliação da expressão é executada de acordo com as regras a seguir:
 
-- Se um dos tipos de ponto flutuantes for [double](double.md), a expressão será avaliada como [double](double.md) ou [bool](bool.md) em expressões relacionais ou boolianas.
+- Se um dos tipos de ponto flutuante for [duplo](double.md), a expressão será avaliada como [double](double.md) ou [booliana](bool.md) em comparações relacionais ou de igualdade.
 
-- Se não houver um tipo [double](double.md) na expressão, ela será avaliada como `float` ou [bool](bool.md) em expressões relacionais ou boolianas.
+- Se não houver nenhum tipo [double](double.md) na expressão, a expressão será avaliada como `float` ou como [booliana](bool.md) em comparações relacionais ou de igualdade.
 
 Uma expressão de ponto flutuante pode conter os seguintes conjuntos de valores:
 
@@ -65,12 +65,12 @@ No exemplo a seguir, um [int](int.md), um [short](short.md) e um `float` são in
 
 ## <a name="see-also"></a>Consulte também
 
-<xref:System.Single>  
-[Referência de C#](../index.md)  
-[Guia de Programação em C#](../../programming-guide/index.md)  
-[Transmissões e conversões de tipo](../../programming-guide/types/casting-and-type-conversions.md)  
-[Palavras-chave do C#](index.md)  
-[Tabela de tipos integrais](integral-types-table.md)  
-[Tabela de tipos internos](built-in-types-table.md)  
-[Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md)  
-[Tabela de conversões numéricas explícitas](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>  
+- [Referência de C#](../index.md)  
+- [Guia de Programação em C#](../../programming-guide/index.md)  
+- [Transmissões e conversões de tipo](../../programming-guide/types/casting-and-type-conversions.md)  
+- [Palavras-chave do C#](index.md)  
+- [Tabela de tipos integrais](integral-types-table.md)  
+- [Tabela de tipos internos](built-in-types-table.md)  
+- [Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md)  
+- [Tabela de conversões numéricas explícitas](explicit-numeric-conversions-table.md)  

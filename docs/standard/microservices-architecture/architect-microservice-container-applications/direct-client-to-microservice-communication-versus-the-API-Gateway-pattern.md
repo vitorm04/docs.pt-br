@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 83ec054239814ba20ebeec1f3d50b9f7e6dcdd87
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106272"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000065"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de Gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -23,7 +23,7 @@ Uma abordagem possível é usar uma arquitetura de comunicação direta de clien
 
 **Figura 4-12**. Usando uma arquitetura de comunicação direta de cliente com microsserviço
 
-Nesta abordagem, cada microsserviço tem um ponto de extremidade público, às vezes, com uma porta TCP diferente para cada microsserviço. Um exemplo de uma URL para um serviço específico pode ser a URL a seguir no Azure:
+Nessa abordagem, cada microsserviço tem um ponto de extremidade público, às vezes, com uma porta TCP diferente para cada microsserviço. Um exemplo de uma URL para um serviço específico pode ser a URL a seguir no Azure:
 
 <http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 
@@ -96,11 +96,11 @@ A imagem anterior mostra uma arquitetura simplificada com vários Gateways de AP
 
 Um Gateway de API pode oferecer vários recursos. Dependendo do produto, ele pode oferecer recursos mais avançados ou mais simples, no entanto, os recursos mais importantes e fundamentais para qualquer Gateway de API são os seguintes padrões de design:
 
-**Proxy reverso ou roteamento de gateway**. O Gateway de API oferece um proxy reverso para redirecionar ou rotear solicitações (roteamento da camada 7, geralmente solicitações HTTP) para os terminais dos microsserviços internos. O gateway fornece um único ponto de extremidade ou URL para os aplicativos clientes e, em seguida, mapeia internamente as solicitações para um grupo de microsserviços internos. Esse recurso de roteamento ajuda a desacoplar os aplicativos cliente dos microsserviços, mas também é muito conveniente na modernização de uma API monolítica colocando o Gateway de API entre a API monolítica e os aplicativos cliente. Assim, você pode adicionar novas APIs como novos microsserviços enquanto ainda usa a API monolítica herdada até que ela seja dividida em muitos microsserviços no futuro. Por causa do Gateway de API, os aplicativos cliente não notarão se as APIs em uso forem implementadas como microsserviços internos ou uma API monolítica. Mais importante é o fato que, ao evoluir e refatorar a API monolítica em microsserviços, graças ao roteamento do Gateway de API, os aplicativos cliente não serão afetados por nenhuma alteração de URI.
+**Proxy reverso ou roteamento de gateway**. O Gateway de API oferece um proxy reverso para redirecionar ou encaminhar solicitações (roteamento da camada 7, geralmente solicitações HTTP) para os pontos de extremidade dos microsserviços internos. O gateway fornece um único ponto de extremidade ou URL para os aplicativos clientes e, em seguida, mapeia internamente as solicitações para um grupo de microsserviços internos. Esse recurso de roteamento ajuda a desacoplar os aplicativos cliente dos microsserviços, mas também é muito conveniente na modernização de uma API monolítica colocando o Gateway de API entre a API monolítica e os aplicativos cliente. Assim, você pode adicionar novas APIs como novos microsserviços enquanto ainda usa a API monolítica herdada até que ela seja dividida em muitos microsserviços no futuro. Por causa do Gateway de API, os aplicativos cliente não notarão se as APIs em uso forem implementadas como microsserviços internos ou uma API monolítica. Mais importante é o fato que, ao evoluir e refatorar a API monolítica em microsserviços, graças ao roteamento do Gateway de API, os aplicativos cliente não serão afetados por nenhuma alteração de URI.
 
 Para saber mais, confira [Padrão de roteamento do gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
-**Solicitações de agregação**. Como parte do padrão de gateway, é possível agregar várias solicitações de clientes (geralmente solicitações de HTTP) direcionadas a vários microsserviços internos em uma única solicitação de cliente. Esse padrão é especialmente conveniente quando uma página/tela do cliente precisa de informações de vários microsserviços. Com essa abordagem, o aplicativo cliente envia uma única solicitação ao Gateway da API, que envia várias solicitações aos microsserviços internos e, em seguida, agrega os resultados e envia tudo de volta ao aplicativo cliente. O principal benefício e objetivo desse padrão de design é reduzir o caos entre os aplicativos cliente e a API de back-end, o que é especialmente importante para aplicativos remotos do datacenter em que os microsserviços residem, como aplicativos móveis ou solicitações provenientes de aplicativos SPA de Javascript em navegadores remotos do cliente. Para aplicativos Web comuns que executam as solicitações no ambiente do servidor (como um aplicativo Web ASP.NET Core MVC), esse padrão não é tão importante, já que a latência é muito menor do que em aplicativos cliente remotos.
+**Solicitações de agregação**. Como parte do padrão de gateway, é possível agregar várias solicitações de cliente (geralmente solicitações HTTP) direcionadas a vários microsserviços internos em uma única solicitação de cliente. Esse padrão é especialmente conveniente quando uma página/tela do cliente precisa de informações de vários microsserviços. Com essa abordagem, o aplicativo cliente envia uma única solicitação ao Gateway da API, que envia várias solicitações aos microsserviços internos e, em seguida, agrega os resultados e envia tudo de volta ao aplicativo cliente. O principal benefício e objetivo desse padrão de design é reduzir o caos entre os aplicativos cliente e a API de back-end, o que é especialmente importante para aplicativos remotos do datacenter em que os microsserviços residem, como aplicativos móveis ou solicitações provenientes de aplicativos SPA de Javascript em navegadores remotos do cliente. Para aplicativos Web comuns que executam as solicitações no ambiente do servidor (como um aplicativo Web ASP.NET Core MVC), esse padrão não é tão importante, já que a latência é muito menor do que em aplicativos cliente remotos.
 
 Dependendo do produto do Gateway de API usado, ele poderá executar essa agregação. No entanto, em muitos casos, é mais flexível criar microsserviços de agregação no escopo do Gateway de API, para que você defina a agregação no código (ou seja, código C#).
 

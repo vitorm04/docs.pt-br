@@ -1,6 +1,6 @@
 ---
 title: Marshaling de dados com invocação de plataforma
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391310"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911725"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling de dados com invocação de plataforma
 Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativo do .NET Framework requer um protótipo de função em código gerenciado que representa a função não gerenciada. Para criar um protótipo que habilita a invocação de plataforma a realizar marshaling de dados corretamente, você deve fazer o seguinte:  
@@ -33,7 +33,8 @@ Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativ
   
 |Tipo não gerenciado em Wtypes.h|Tipo de linguagem C não gerenciado|Nome de classe gerenciada|Descrição|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**IDENTIFICADOR**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits em Sistemas Operacionais Windows 32 bits, 64 bits em Sistemas Operacionais Windows 64 bits.|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Aplicado a uma função que não retorna um valor.|
+|**IDENTIFICADOR**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits em Sistemas Operacionais Windows 32 bits, 64 bits em Sistemas Operacionais Windows 64 bits.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 bits|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bits|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 bits|  
@@ -45,10 +46,10 @@ Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativ
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bits|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Decore com ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Decore com Unicode.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 bits|  
 |**DOUBLE**|**Duplo**|<xref:System.Double?displayProperty=nameWithType>|64 bits|  
   

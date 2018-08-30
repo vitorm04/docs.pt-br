@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392184"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932843"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -47,7 +47,7 @@ Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#
 
 - O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas versões de ponto são compilados de maneira incremental no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Quando você instala o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ou suas versões de ponto, em um sistema que tem o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] instalado, os assemblies da versão 4 são substituídos pelas versões mais recentes.
 
-- Se você estiver referenciando a um [pacote fora de banda](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) da Microsoft em seu aplicativo, o assembly será incluído no pacote do aplicativo.
+- Se você estiver referenciando a um [pacote fora de banda](../get-started/the-net-framework-and-out-of-band-releases.md) da Microsoft em seu aplicativo, o assembly será incluído no pacote do aplicativo.
 
 - Você deve ter privilégios de administrador para instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas versões de ponto.
 
@@ -80,7 +80,7 @@ Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#
 |Tamanho do download|Menor (inclui somente o instalador para a plataforma de destino)*|Maior*|
 |Pacotes de idiomas|Inclusos**|Devem ser [instalados separadamente](#chain_langpack), a menos que você use o pacote destinado a todos os sistemas operacionais|
 |Método de implantação|Oferece suporte a todos os métodos:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX (Windows Installer XML)](#wix)<br />- [Instalação manual](#installing_manually)<br />- [Instalação personalizada (encadeamento)](#chaining)|Oferece suporte a todos os métodos:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX (Windows Installer XML)](#wix)<br />- [Instalação manual](#installing_manually)<br />- [Instalação personalizada (encadeamento)](#chaining)|
-|Local do download para implantação do ClickOnce|Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Seu próprio servidor ou o Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Local do download para implantação do ClickOnce|Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Seu próprio servidor ou o Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* O instalador offline é maior porque ele contém os componentes para todas as plataformas de destino. Ao terminar de executar a instalação, o sistema operacional Windows armazena em cache somente o instalador que foi utilizado. Se o instalador offline for excluído após a instalação, o espaço em disco usado será o mesmo que aquele usado pelo instalador da Web. Se a ferramenta usada (por exemplo, [InstallAware](#installaware-deployment) ou [InstallShield](#installshield-deployment)) para criar o programa de instalação do seu aplicativo oferecer uma pasta de arquivo de instalação que é removida após a instalação, o instalador offline poderá ser excluído automaticamente colocando-o na pasta de instalação.
 
@@ -247,14 +247,14 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Versão|Valor da liberação de DWORD|
 |-------------|--------------------------------|
-|.NET Framework 4.7.2 instalado na Atualização de abril de 2018 do Windows 10|461808|
-|.NET Framework 4.7.2 instalado em todas as versões do sistema operacional que não a Atualização de abril de 2018 do Windows 10|461814|
-|.NET Framework 4.7.1 instalado no Windows 10 Falls Creators Update|461308|
-|.NET Framework 4.7.1 instalado em todas as versões do sistema operacional que não na Windows 10 Fall Creators Update|461310|
+|O .NET framework 4.7.2 instalado na Atualização de abril de 2018 para o Windows 10 e no Windows Server, versão 1803|461808|
+|O .NET framework 4.7.2 instalado em todas as versões de sistema operacional diferentes da Atualização de abril de 2018 para o Windows 10 e do Windows Server, versão 1803|461814|
+|O .NET framework 4.7.1 instalado no Windows 10 Fall Creators Update e no Windows Server, versão 1709|461308|
+|O .NET framework 4.7.1 instalado em todas as versões de sistema operacional diferentes do Windows 10 Fall Creators Update e do Windows Server, versão 1709|461310|
 |.NET Framework 4.7 instalado no Windows 10 Creators Update|460798|
 |.NET Framework 4.7 instalado em todas as versões do sistema operacional que não a Atualização do Windows 10 para Criadores|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado na Edição de Aniversário do Windows 10|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado em todas as versões do sistema operacional que não a Edição de Aniversário do Windows 10|394806|
+|O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado na Edição de Aniversário do Windows 10 e no Windows Server 2016|394802|
+|O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado em todas as versões do sistema operacional diferentes da Edição de Aniversário do Windows 10 e do Windows Server 2016|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado na Atualização de novembro do Windows 10|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado em todas as versões do sistema operacional que não a Atualização de novembro do Windows 10|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado no Windows 10|393295|

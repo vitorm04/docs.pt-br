@@ -1,103 +1,101 @@
 ---
-title: Usando tipos anuláveis (Guia de Programação em C#)
-ms.date: 07/20/2015
+title: Usando tipos que permitem valor nulo (Guia de programação em C#)
+description: Saiba como trabalhar com tipos que permitem valor nulo do C#
+ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336915"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933116"
 ---
-# <a name="using-nullable-types-c-programming-guide"></a>Usando tipos anuláveis (Guia de Programação em C#)
-Os tipos que permitem valor nulo podem representar todos os valores de um tipo subjacente e um valor adicional [null](../../../csharp/language-reference/keywords/null.md) . Os tipos que permitem valor nulo são declarados em uma das duas maneiras:  
+# <a name="using-nullable-types-c-programming-guide"></a>Usando tipos que permitem valor nulo (Guia de programação em C#)
+
+Os tipos que permitem valor nulo representam todos os valores de um tipo de valor subjacente `T` e um valor [null](../../language-reference/keywords/null.md) adicional. Para obter mais informações, confira o tópico [Tipos que permitem valor nulo](index.md).
+
+Você pode se referir a um tipo que permite valor nulo de uma destas formas: `Nullable<T>` ou `T?`. Essas duas formas são intercambiáveis.  
   
- `System.Nullable<T> variable`  
+## <a name="declaration-and-assignment"></a>Declaração e atribuição
+
+Como um tipo de valor pode ser convertido implicitamente no tipo que permite valor nulo correspondente, você pode atribuir um valor a um tipo que permite valor nulo como faria para seu tipo de valor subjacente. Você também pode atribuir o valor `null`.  Por exemplo:
   
- -ou-  
+[!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
+
+## <a name="examination-of-a-nullable-type-value"></a>Exame de um valor de tipo que permite valor nulo
+
+Use as seguintes propriedades readonly para examinar se uma instância de um tipo que permite valor nulo é nula e recuperar um valor de um tipo subjacente:  
   
- `T? variable`  
+- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> Indica se uma instância de um tipo que permite valor nulo tem um valor de seu tipo subjacente.
   
- `T` é o tipo subjacente do tipo que permite valor nulo. `T` pode ser qualquer tipo de valor incluindo `struct`. Ele não pode ser um tipo de referência.  
+- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> obtém o valor de um tipo subjacente quando <xref:System.Nullable%601.HasValue%2A> é `true`. Quando <xref:System.Nullable%601.HasValue%2A> é `false`, a propriedade <xref:System.Nullable%601.Value%2A> gera uma <xref:System.InvalidOperationException>.
   
- Para um exemplo de quando é possível usar um tipo que permite valor nulo, considere como uma variável booliana comum pode ter dois valores: true e false. Não há nenhum valor que significa "indefinido". Em muitas aplicações em programação, principalmente nas interações de banco de dados, as variáveis podem ocorrer em um estado indefinido. Por exemplo, um campo em um banco de dados pode conter os valores true ou false, mas também pode não conter nenhum valor. Da mesma forma, os tipos de referência podem ser definidos como `null` para indicar que eles não estão inicializados.  
+O código no exemplo a seguir usa a propriedade `HasValue` para testar se a variável contém um valor antes de exibi-lo:
   
- Esta disparidade pode criar trabalho extra de programação, com variáveis adicionais usadas para armazenar informações de estado, o uso de valores especiais e assim por diante. O modificador de tipo que permite valor nulo habilita o C# a criar variáveis de tipo de valor que indicam um valor indefinido.  
+[!code-csharp-interactive[use HasValue](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#2)]
   
-## <a name="examples-of-nullable-types"></a>Exemplos de tipos que permitem valor nulo  
- Qualquer tipo de valor pode ser usado como base para um tipo que permite valor nulo. Por exemplo:  
+Você também pode comparar uma variável de tipo que permite valor nulo com `null` em vez de usar a propriedade `HasValue`, como mostra o exemplo a seguir:  
   
- [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+[!code-csharp-interactive[use comparison with null](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#3)]
+
+Começando no C# 7.0, você pode usar [correspondência de padrões](../../pattern-matching.md) tanto examinar e obter um valor de um tipo que permite valor nulo:
+
+[!code-csharp-interactive[use pattern matching](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#4)]
+
+## <a name="conversion-from-a-nullable-type-to-an-underlying-type"></a>Conversão de um tipo que permite valor nulo em um tipo subjacente
+
+Se você precisar atribuir um valor de tipo que permite valor nulo a um tipo que não permite valor nulo, use o [operador de união nula `??`](../../language-reference/operators/null-coalescing-operator.md) para especificar o valor a ser atribuído quando um valor de tipo que permite valor nulo for nulo (você também poderá usar o método <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> para fazer isso):
   
-## <a name="the-members-of-nullable-types"></a>Os membros de tipos que permitem valor nulo  
- Cada instância de um tipo que permite valor nulo tem duas propriedades públicas somente leitura:  
+[!code-csharp-interactive[?? operator](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#5)]
+
+Use o método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> se o valor a ser usado quando um valor de tipo que permite valor nulo é nulo deve ser o valor padrão do tipo de valor subjacente.
   
--   `HasValue`  
+Você pode converter explicitamente um tipo que permite valor nulo em um tipo que não permite valor nulo. Por exemplo:  
   
-     `HasValue` é do tipo `bool`. Ele é definido como `true` quando a variável contém um valor não nulo.  
+[!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
+
+No tempo de execução, quando o valor de um tipo que permite valor nulo é nulo, a conversão explícita gera um <xref:System.InvalidOperationException>.
+
+Um tipo de valor que não permite valor nulo é convertido implicitamente no tipo que permite valor nulo correspondente.
   
--   `Value`  
+## <a name="operators"></a>Operadores
+
+Os operadores unários e binários predefinidos e os operadores definidos pelo usuário que existem para tipos de valor também podem ser usados por tipos que permitem valor nulo. Esses operadores produzem um valor nulo quando um ou ambos os operandos são nulos. Caso contrário, o operador usa os valores contidos para calcular o resultado. Por exemplo:  
   
-     `Value` é do mesmo tipo que o tipo subjacente. Se `HasValue` for `true`, `Value` conterá um valor significativo. Se `HasValue` for `false`, o acesso a `Value` lançará uma <xref:System.InvalidOperationException>.  
+[!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
- Neste exemplo, o membro `HasValue` é usado para testar se a variável contém um valor antes de tentar exibi-la.  
+Para os operadores relacionais (`<`, `>`, `<=` e `>=`), quando um ou ambos os operandos são nulos, o resultado é `false`. Não presuma que como uma comparação (por exemplo, `<=`) retorna `false`, a comparação oposta (`>`) retorna `true`. O exemplo a seguir mostra que 10
+
+- não é maior nem igual a nulo,
+- nem menor que nulo.
   
- [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+[!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
- O teste de um valor também pode ser feito como no exemplo a seguir:  
+O exemplo acima também mostra que uma comparação de igualdade de dois tipos que permitem valor nulo e são nulos é avaliada como `true`.
+
+## <a name="boxing-and-unboxing"></a>Conversões boxing e unboxing
+
+Um tipo de valor que permite valor nulo passa pela [conversão boxing](../types/boxing-and-unboxing.md) por meio das seguintes regras:
+
+- Se <xref:System.Nullable%601.HasValue%2A> retorna `false`, a referência nula é produzida.  
+- Se <xref:System.Nullable%601.HasValue%2A> retorna `true`, um valor do tipo de valor subjacente `T` passa pela conversão boxing, não a instância de <xref:System.Nullable%601>.
+
+Você pode aplicar a conversão unboxing no tipo de valor que passou pela conversão boxing convertendo-a no tipo que permite valor nulo correspondente, como mostra o exemplo a seguir:
+
+[!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
+
+## <a name="the-bool-type"></a>O tipo bool?
+
+O tipo que permite valor nulo `bool?` pode conter três valores diferentes: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) e [null](../../language-reference/keywords/null.md). O tipo `bool?` é como o tipo de variável booliano que é usado em SQL. Para garantir que os resultados produzidos pelos operadores `&` e `|` são consistentes com o tipo booliano de três valores no SQL, os seguintes operadores predefinidos são fornecidos:
+
+- `bool? operator &(bool? x, bool? y)`  
+- `bool? operator |(bool? x, bool? y)`  
   
- [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+A semântica desses operadores é definida pela tabela a seguir:  
   
-## <a name="explicit-conversions"></a>Conversões explícitas  
- Um tipo que permite valor nulo pode ser convertido em um tipo regular, explicitamente com uma conversão ou usando a propriedade `Value`. Por exemplo:  
-  
- [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
-  
- Se uma conversão definida pelo usuário for definida entre dois tipos de dados, a mesma conversão também poderá ser usada com as versões que permitem valor nulo desses tipos de dados.  
-  
-## <a name="implicit-conversions"></a>Conversões implícitas  
- Uma variável do tipo que permite valor nulo pode ser definida como null com a palavra-chave `null`, conforme mostrado no exemplo a seguir:  
-  
- [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
-  
- A conversão de um tipo comum para um tipo que permite valor nulo, é implícita.  
-  
- [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
-  
-## <a name="operators"></a>Operadores  
- Os operadores unários e binários predefinidos e os operadores definidos pelo usuário que existem para tipos de valor também podem ser usados por tipos que permitem valor nulo. Esses operadores produzem um valor nulo se os operandos são nulos. Caso contrário, o operador usa o valor contido para calcular o resultado. Por exemplo:  
-  
- [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
-  
- Quando você realiza comparações com tipos que permitem valor nulo, se o valor de um dos tipos que permitem valor nulo for nulo e o outro não, todas as comparações serão avaliadas como `false`, exceto `!=` (não igual). É importante não presumir que porque uma comparação retorna `false`, o caso oposto retornará `true`. No exemplo a seguir, 10 não é maior que, menor que nem igual a null. Somente `num1 != num2` é avaliado como `true`.  
-  
- [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
-  
- Uma comparação de igualdade de dois tipos que permitem valor nulo, em que ambos são null, é avaliada como `true`.  
-  
-## <a name="the--operator"></a>O operador ?? Operador  
- O operador `??` define um valor padrão que é retornado quando um tipo que permite valor nulo é atribuído a um tipo que não permite valor nulo.  
-  
- [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
-  
- Este operador também pode ser usado com vários tipos que permitem valor nulo. Por exemplo:  
-  
- [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
-  
-## <a name="the-bool-type"></a>O tipo bool?  
- O tipo que permite valor nulo `bool?` pode conter três valores diferentes: [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) e [null](../../../csharp/language-reference/keywords/null.md). Para obter informações sobre como converter de um bool? para um bool, consulte [Como converter bool? em bool com segurança](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).  
-  
- Os boolianos que permitem valor nulo são como o tipo de variável booliana que é usada no SQL. Para garantir que os resultados produzidos pelos operadores `&` e `|` são consistentes com o tipo booliano de três valores no SQL, os seguintes operadores predefinidos são fornecidos:  
-  
- `bool? operator &(bool? x, bool? y)`  
-  
- `bool? operator |(bool? x, bool? y)`  
-  
- Os resultados desses operadores estão listados na tabela a seguir:  
-  
-|X|y|x&y|x&#124;y|  
+|x|y|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|false|false|true|  
@@ -108,9 +106,11 @@ Os tipos que permitem valor nulo podem representar todos os valores de um tipo s
 |nulo|true|nulo|true|  
 |nulo|false|false|nulo|  
 |nulo|nulo|nulo|nulo|  
+
+Observe que esses dois operadores não seguem as regras descritas na seção [Operadores](#operators): o resultado de uma avaliação de operador pode ser não nulo, mesmo quando um dos operandos é nulo.
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)  
- [Conversão boxing de tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>Consulte também
+
+ [Tipos que permitem valor nulo](index.md)  
+ [Guia de Programação em C#](../../programming-guide/index.md)  
+ [O que exatamente "levantado" significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

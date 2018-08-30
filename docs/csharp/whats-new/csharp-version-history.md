@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404587"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752170"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -105,7 +105,11 @@ Associação dinâmica tem potencial de erros, mas também grande eficiência na
 O C# versão 5.0 era uma versão focada da linguagem. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
 
 - [Membros assíncronos](../async.md)
-- [Atributos de informações do chamador](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Atributos de informações do chamador](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>Consulte também
+
+* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Code Project: Atributos de informações do chamador em C# 5.0)
 
 O atributo de informações do chamador permite facilmente recuperar informações sobre o contexto no qual você está executando sem recorrer a uma infinidade de código de reflexão clichê. Ele tem muitos usos em diagnóstico e tarefas de registro em log.
 

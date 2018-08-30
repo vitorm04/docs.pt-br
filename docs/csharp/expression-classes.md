@@ -3,22 +3,22 @@ title: Tipos de Framework com suporte a árvores de expressão
 description: Saiba mais sobre tipos de estrutura com suporte a árvores de expressão, criando árvores de expressão e técnicas para trabalhar com APIs de árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214939"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934786"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de Framework com suporte a árvores de expressão
 
 [Anterior – Árvores de expressão explicadas](expression-trees-explained.md)
 
 Há uma grande lista de classes do .NET Core Framework que funcionam com árvores de expressão.
-Você pode ver a lista completa [aqui](/dotnet/core/api/System.Linq.Expressions).
+Veja a lista completa em <xref:System.Linq.Expressions>.
 Em vez de percorrer a lista completa, vamos entender como as classes de estrutura foram projetadas.
 
-No design de linguagem, uma expressão é um corpo de código que calcula e retorna um valor. As expressões podem ser muito simples: a expressão constante `1` retorna o valor constante de 1. Elas podem ser mais complicados: a expressão `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` retorna uma raiz de uma equação quadrática (no caso em que a equação tem uma solução).  
+No design de linguagem, uma expressão é um corpo de código que calcula e retorna um valor. As expressões podem ser muito simples: a expressão constante `1` retorna o valor constante de 1. Elas podem ser mais complicados: a expressão `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` retorna uma raiz de uma equação quadrática (no caso em que a equação tem uma solução).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Tudo começa com System.Linq.Expression
 

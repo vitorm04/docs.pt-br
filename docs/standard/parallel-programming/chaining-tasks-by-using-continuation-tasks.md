@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591931"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912036"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
 Na programação assíncrona, é muito comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, isso foi feito usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
@@ -44,7 +44,7 @@ Na programação assíncrona, é muito comum para uma operação assíncrona, ap
  Uma continuação é um <xref:System.Threading.Tasks.Task> e não bloqueia o thread em que é iniciada. Chame o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para bloquear até que a tarefa de continuação seja concluída.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Criação de uma continuação para uma única antecessora  
- Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (por questões de clareza, o tratamento de exceções será omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora termina, a tarefa de continuação, `taskB`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado.  
+ Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (para esclarecer, o tratamento de exceções é omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora é concluída, a tarefa de continuação, `continuation`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado.  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: e8bb7782fc60a3af20d5926e609a5edea68fd1a3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 6efcdb720e0d83e69df647c5176feaa9dcc9b023
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027974"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42753990"
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
 
