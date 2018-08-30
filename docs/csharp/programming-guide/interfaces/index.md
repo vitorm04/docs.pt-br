@@ -13,7 +13,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33337581"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
-Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../../csharp/language-reference/keywords/class.md) ou um [struct](../../../csharp/language-reference/keywords/struct.md) pode implementar.  
+Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../../csharp/language-reference/keywords/class.md) ou um [struct](../../../csharp/language-reference/keywords/struct.md) podem implementar.  
   
  Usando interfaces, você pode, por exemplo, incluir o comportamento de várias fontes em uma classe. Essa funcionalidade é importante em C# porque a linguagem não dá suporte a várias heranças de classes. Além disso, use uma interface se você deseja simular a herança para structs, pois eles não podem herdar de outro struct ou classe.  
   
