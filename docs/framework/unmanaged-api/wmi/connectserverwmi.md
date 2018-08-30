@@ -1,6 +1,6 @@
 ---
 title: Função ConnectServerWmi (referência de API não gerenciada)
-description: A função ConnectServerWmi usa DCOM para criar uma conexão a um namespace do WMI.
+description: A função ConnectServerWmi usa DCOM para criar uma conexão a um namespace WMI.
 ms.date: 11/06/2017
 api_name:
 - ConnectServerWmi
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238476"
 ---
 # <a name="connectserverwmi-function"></a>Função ConnectServerWmi
 Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado.  
@@ -46,15 +46,15 @@ HRESULT ConnectServerWmi (
 ```  
 ## <a name="parameters"></a>Parâmetros
 
-`strNetworkResource` [in] Ponteiro para um válida `BSTR` que contém o caminho do namespace WMI correto. Consulte o [comentários](#remarks) para obter mais informações.
+`strNetworkResource` [in] Ponteiro para um válido `BSTR` que contém o caminho do objeto do namespace WMI correto. Consulte a [comentários](#remarks) seção para obter mais informações.
 
-`strUser` [in] Um ponteiro para um válida `BSTR` que contém o nome de usuário. Um `null` valor indica o contexto de segurança atual. Se o usuário for de um domínio diferente do ano atual, `strUser` também pode conter o nome de usuário e domínio separado por uma barra invertida. `strUser` pode também ser usuário nome principal (UPN) Formatar, suhc como *userName@domainName*. Consulte o [comentários](#remarks) para obter mais informações.
+`strUser` [in] Um ponteiro para um válido `BSTR` que contém o nome de usuário. Um `null` valor indica o contexto de segurança atual. Se o usuário for de um domínio diferente daquele atual, `strUser` também pode conter o nome de usuário e domínio separados por uma barra invertida. `strUser` também pode ser usuário nome principal (UPN) Formatar, suhc como *userName@domainName*. Consulte a [comentários](#remarks) seção para obter mais informações.
 
-`strPassword` [in] Um ponteiro para um válida `BSTR` que contém a senha. A `null` indica o contexto de segurança atual. Uma cadeia de caracteres vazia ("") indica uma senha válida de comprimento zero.
+`strPassword` [in] Um ponteiro para um válido `BSTR` que contém a senha. Um `null` indica o contexto de segurança atual. Uma cadeia de caracteres vazia ("") indica uma senha válida de comprimento zero.
 
-`strLocale` [in] Um ponteiro para um válida `BSTR` que indica o local correto para recuperação de informações. Identificadores de localidade da Microsoft, o formato da cadeia de caracteres é "MS\_*xxx*", onde *xxx* é uma cadeia de caracteres em formato hexadecimal que indica o identificador de localidade (LCID). Se for especificado um local inválido, o método retorna `WBEM_E_INVALID_PARAMETER` , exceto no Windows 7, em que a localidade padrão do servidor é usada em vez disso. Se ' null1, a localidade atual é usado. 
+`strLocale` [in] Um ponteiro para um válido `BSTR` que indica a localidade correta para a recuperação de informações. Identificadores de localidade da Microsoft, o formato da cadeia de caracteres é "MS\_*xxx*", onde *xxx* é uma cadeia de caracteres em formato hexadecimal que indica o identificador de localidade (LCID). Se um local inválido for especificado, o método retorna `WBEM_E_INVALID_PARAMETER` exceto no Windows 7, em que a localidade padrão do servidor é usada em vez disso. Se ' null1, a localidade atual é usado. 
  
-`lSecurityFlags` [in] Sinalizadores para passar para o `ConnectServerWmi` método. Um valor de zero (0) para esse parâmetro resulta na chamada para `ConnectServerWmi` retornando somente depois que uma conexão com o servidor é estabelecida. Isso pode resultar em um aplicativo não está respondendo indefinidamente se o servidor será interrompido. Os outros valores válidos são:
+`lSecurityFlags` [in] Sinalizadores a serem passados para o `ConnectServerWmi` método. Um valor de zero (0) para esse parâmetro resulta na chamada para `ConnectServerWmi` retornando somente após o estabelecimento de uma conexão ao servidor. Isso pode resultar em um aplicativo não está respondendo indefinidamente se o servidor será interrompido. Os outros valores válidos são:
 
 | Constante  | Valor  | Descrição  |
 |---------|---------|---------|
@@ -65,15 +65,15 @@ HRESULT ConnectServerWmi (
 
 | Valor | Descrição |
 |---------|---------|
-| Em branco | A autenticação NTLM é usada e o domínio NTLM do usuário atual será usado. Se `strUser` Especifica o domínio (o local recomendado), ele não deve ser especificado aqui. A função retorna `WBEM_E_INVALID_PARAMETER` se você especificar o domínio em ambos os parâmetros. |
-| Kerberos:*nome principal* | A autenticação Kerberos é usada e este parâmetro contém um nome principal Kerberos. |
-| NTLMDOMAIN:*nome de domínio* | Autenticação NT LAN Manager é usada e este parâmetro contém um nome de domínio NTLM. |
+| em branco | A autenticação NTLM é usada e o domínio NTLM do usuário atual será usado. Se `strUser` Especifica o domínio (o local recomendado), ele não deve ser especificado aqui. A função retorna `WBEM_E_INVALID_PARAMETER` se você especificar o domínio em ambos os parâmetros. |
+| Kerberos:*nome da entidade* | A autenticação Kerberos é usada, e este parâmetro contém um nome principal Kerberos. |
+| NTLMDOMAIN:*nome de domínio* | Autenticação NT LAN Manager é usada, e este parâmetro contém um nome de domínio do NTLM. |
 
 `pCtx`   
-[in] Normalmente, esse parâmetro é `null`. Caso contrário, é um ponteiro para um [IWbemContext](https://msdn.microsoft.com/library/aa391465%28v=vs.85%29.aspx) objeto exigido por um ou mais provedores de classe dinâmica. 
+[in] Normalmente, esse parâmetro é é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto exigido por um ou mais provedores de classe dinâmica. 
 
 `ppNamespace`  
-[out] Quando a função retornar, recebe um ponteiro para um [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objeto associado ao namespace especificado. Ele é definido para apontar para `null` quando há um erro.
+[out] Quando a função retornar, recebe um ponteiro para um [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto associado ao namespace especificado. Ele é definido para apontar para `null` quando ocorre um erro.
 
 `impLevel`  
 [in] O nível de representação.
@@ -83,7 +83,7 @@ HRESULT ConnectServerWmi (
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -96,17 +96,17 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 
 Essa função encapsula uma chamada para o [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) método.
 
- Para acesso local ao namespace padrão, `strNetworkResource` pode ser um caminho de objeto simples: "root\default" ou "\\.\root\default". Para acessar o namespace padrão em um computador remoto usando redes COM ou compatível com a Microsoft, que incluem o nome do computador: "\\myserver\root\default". O nome do computador também pode ser um nome DNS ou endereço IP. O `ConnectServerWmi` função também pode se conectar com computadores que executam o IPv6 usando um endereço IPv6.
+ Para acesso local para o namespace padrão, `strNetworkResource` pode ser um caminho de objeto simples: "root\default" ou "\\.\root\default". Para acessar o namespace padrão em um computador remoto usando a rede COM ou compatível com a Microsoft, que incluem o nome do computador: "\\myserver\root\default". O nome do computador também pode ser um nome DNS ou endereço IP. O `ConnectServerWmi` função também pode se conectar com computadores que executam o IPv6 usando um endereço IPv6.
 
-`strUser` não pode ser uma cadeia de caracteres vazia. Se o domínio for especificado em `strAuthority`, ela também não deve ser incluída no `strUser`, ou a função retornará `WBEM_E_INVALID_PARAMETER`.
+`strUser` não pode ser uma cadeia de caracteres vazia. Se o domínio é especificado na `strAuthority`, ela também não deve ser incluída no `strUser`, ou a função retornará `WBEM_E_INVALID_PARAMETER`.
 
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
