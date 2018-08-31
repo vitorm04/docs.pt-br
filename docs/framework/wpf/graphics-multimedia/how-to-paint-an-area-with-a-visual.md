@@ -9,15 +9,15 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: ef6774f669e3fc0694ac743bf2b76d78adcf37a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05014042c9e46232d02114f22ee8798d895e8559
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559795"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331818"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Como pintar uma área com um visual
-Este exemplo mostra como usar o <xref:System.Windows.Media.VisualBrush> classe para pintar uma área com um <xref:System.Windows.Media.Visual>.  
+Este exemplo mostra como usar o <xref:System.Windows.Media.VisualBrush> classe pintar uma área com um <xref:System.Windows.Media.Visual>.  
   
  No exemplo a seguir, vários controles e um painel são usados como plano de fundo de um retângulo.  
   
@@ -27,9 +27,9 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.VisualBrush> classe p
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- Para obter mais informações sobre <xref:System.Windows.Media.VisualBrush> e exemplos adicionais, consulte o [pintura com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) visão geral.  
+ Para obter mais informações sobre <xref:System.Windows.Media.VisualBrush> e obter exemplos adicionais, consulte a [pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) visão geral.  
   
- Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Media.VisualBrush> classe. Para o exemplo completo, consulte o [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049).  
+ Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Media.VisualBrush> classe. Para o exemplo completo, consulte o [exemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
 ## <a name="see-also"></a>Consulte também  
  [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

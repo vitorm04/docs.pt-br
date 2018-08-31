@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455413"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332741"
 ---
 # <a name="strongnameerrorinfo-function"></a>Função StrongNameErrorInfo
 Obtém o último código de erro que foi gerado por uma das funções de nome forte.  
@@ -42,16 +42,16 @@ HRESULT StrongNameErrorInfo ();
  O último COM código de erro definido por uma das funções de nome forte.  
   
 ## <a name="remarks"></a>Comentários  
- A maioria dos métodos de nome forte retorna um simples `true` ou `false` indicação da conclusão com êxito. Use o `StrongNameErrorInfo` função para recuperar o HRESULT que especifica o último erro gerado pelas funções de nome forte.  
+ A maioria dos métodos de nome forte retorna um simples `true` ou `false` indicação da conclusão bem-sucedida. Use o `StrongNameErrorInfo` função para recuperar um HRESULT que especifica o último erro gerado pelas funções de nome forte.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Fortes nomes funções estáticas globais](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Funções estáticas globais de nomenclatura forte](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

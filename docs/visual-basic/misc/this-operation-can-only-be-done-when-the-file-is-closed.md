@@ -2,15 +2,15 @@
 title: Esta operação só pode ser feita quando o arquivo é fechado
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: b737275b2f18adadc5e9d4b5888d26cc595720d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a7f6afc7f9ecb232e24d5536d2274db57d1d820
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640274"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331922"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>Esta operação só pode ser feita quando o arquivo é fechado
-Quando um arquivo estiver aberto, foi feita uma tentativa para executar uma operação que pode ser executada apenas quando o arquivo seja fechado.  
+Quando um arquivo estiver aberto, tem sido feita uma tentativa para executar uma operação que só pode ser executada quando o arquivo é fechado.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -19,4 +19,4 @@ Quando um arquivo estiver aberto, foi feita uma tentativa para executar uma oper
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Security.Permissions.FileIOPermission>  
  <xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>  
- [Como: obter informações sobre um arquivo no Visual Basic](http://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
+ [Como: obter informações sobre um arquivo no Visual Basic](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)

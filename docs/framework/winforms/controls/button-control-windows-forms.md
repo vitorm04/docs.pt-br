@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525077"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332013"
 ---
 # <a name="button-control-windows-forms"></a>Controle de botão (Windows Forms)
 O controle `Button` dos Windows Forms permite que o usuário clique nele para realizar uma ação. O controle `Button` pode exibir texto e imagens. Quando o botão é clicado, ele se parece como se estivesse sendo empurrado e solto.  
@@ -41,4 +41,4 @@ O controle `Button` dos Windows Forms permite que o usuário clique nele para re
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
- Consulte também [Entrada do usuário em caixas de diálogo](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) e [Como fechar caixas de diálogo e manter a entrada do usuário](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Consulte também [Entrada do usuário em caixas de diálogo](https://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) e [Como fechar caixas de diálogo e manter a entrada do usuário](https://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).

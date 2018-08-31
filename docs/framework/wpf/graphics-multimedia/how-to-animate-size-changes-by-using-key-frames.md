@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 0c2828215527a285943a79920de51fa42fe7a8a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69845d1d75f81042bbeb20ee6b1015f5c2f53b81
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559886"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332088"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Como animar alterações de tamanho usando quadros-chave
 Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.  
@@ -19,15 +19,15 @@ Esse exemplo demonstra como animar alterações de tamanho usando quadros-chave.
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Media.ArcSegment.Size%2A> propriedade de um <xref:System.Windows.Media.ArcSegment>. Essa animação usa três quadros-chave da seguinte maneira:  
   
-1.  Durante a primeira metade de segundo da animação, usa uma instância do <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> classe gradualmente aumentar o tamanho do arco. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> criam uma transição linear suave entre valores.  
+1.  Durante o primeiro meio segundo da animação, usa uma instância da <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> classe para aumentar gradualmente o tamanho do arco. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> criam uma transição linear suave entre valores.  
   
-2.  No final do próximo meio segundo, usa uma instância do <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> classe repentinamente aumentar o tamanho do arco. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> criar saltos repentinos entre valores, ou seja, as alterações de tamanho ocorrem repentinamente e não são sutis.  
+2.  No final do próximo meio segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> classe, de repente, aumentar o tamanho do arco. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> criam saltos repentinos entre valores, ou seja, as alterações de tamanho ocorrem repentinamente e não são sutis.  
   
-3.  Sobre os últimos dois segundos, usa uma instância do <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> classe para aumentar o tamanho do arco. Quadros-chave spline como <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> criar uma transição de variável entre valores de acordo com os valores de <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o tamanho do arco aumenta lentamente no início e aumenta exponencialmente até o final do segmento de tempo.  
+3.  Sobre os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> classe para aumentar o tamanho do arco. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> criam uma transição variável entre valores de acordo com os valores da <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o tamanho do arco aumenta lentamente no início e aumenta exponencialmente até o final do segmento de tempo.  
   
  [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
- Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>  

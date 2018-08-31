@@ -2,15 +2,15 @@
 title: Inferindo tabelas
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757821"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332847"
 ---
 # <a name="inferring-tables"></a>Inferindo tabelas
-Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML, ADO.NET primeiro determina quais elementos XML representam as tabelas. Estruturas XML a seguir resultam em uma tabela para o **DataSet** esquema:  
+Quando inferindo um esquema para um <xref:System.Data.DataSet> de um documento XML, ADO.NET primeiro determina quais elementos XML representam tabelas. Estruturas XML a seguir resultam em uma tabela para o **conjunto de dados** esquema:  
   
 -   Elementos com atributos  
   
@@ -19,7 +19,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 -   Elementos repetidos  
   
 ## <a name="elements-with-attributes"></a>Elementos com atributos  
- Elementos que têm atributos especificados no-los resultar em inferido tabelas. Por exemplo, considere o seguinte XML:  
+ Elementos que têm atributos especificados em que elas resultam em inferido tabelas. Por exemplo, considere o seguinte XML:  
   
 ```xml  
 <DocumentElement>  
@@ -28,7 +28,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 </DocumentElement>  
 ```  
   
- O processo de inferência produz uma tabela denominada "Element1".  
+ O processo de inferência produz uma tabela chamada "Element1".  
   
  **Conjunto de dados:** DocumentElement  
   
@@ -50,7 +50,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 </DocumentElement>  
 ```  
   
- O processo de inferência produz uma tabela denominada "Element1".  
+ O processo de inferência produz uma tabela chamada "Element1".  
   
  **Conjunto de dados:** DocumentElement  
   
@@ -60,7 +60,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 |-------------------|  
 |Texto1|  
   
- O resultado de elemento do documento ou raiz, em uma tabela deduzido se ele tem atributos ou elementos filho que são inferidos como colunas. Se o elemento do documento sem atributos e não há elementos filho que poderiam ser inferidos como colunas, o elemento é inferido como um **conjunto de dados**. Por exemplo, considere o seguinte XML:  
+ O resultado de elemento do documento ou raiz, em uma tabela inferida se ele tiver atributos ou elementos filho que são inferidos como colunas. Se o elemento de documento tiver sem atributos e nenhum elemento filho que seria inferido como colunas, o elemento é inferido como uma **conjunto de dados**. Por exemplo, considere o seguinte XML:  
   
 ```xml  
 <DocumentElement>  
@@ -69,13 +69,13 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 </DocumentElement>  
 ```  
   
- O processo de inferência produz uma tabela denominada "DocumentElement."  
+ O processo de inferência produz uma tabela chamada "DocumentElement".  
   
  **Conjunto de dados:** NewDataSet  
   
  **Tabela:** DocumentElement  
   
-|Element1|Element2|  
+|element1|element2|  
 |--------------|--------------|  
 |Texto1|Texto2|  
   
@@ -87,7 +87,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 </DocumentElement>  
 ```  
   
- O processo de inferência produz um **DataSet** chamado "DocumentElement" que contém uma tabela chamada "Element1".  
+ O processo de inferência produz um **conjunto de dados** denominado "DocumentElement" que contém uma tabela chamada "Element1".  
   
  **Conjunto de dados:** DocumentElement  
   
@@ -98,7 +98,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 |value1|value2|  
   
 ## <a name="repeating-elements"></a>Elementos de repetição  
- Elementos que se repetem resultará em uma única tabela inferida. Por exemplo, considere o seguinte XML:  
+ Elementos que se repetem o resultado em uma única tabela inferido. Por exemplo, considere o seguinte XML:  
   
 ```xml  
 <DocumentElement>  
@@ -107,7 +107,7 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
 </DocumentElement>  
 ```  
   
- O processo de inferência produz uma tabela denominada "Element1".  
+ O processo de inferência produz uma tabela chamada "Element1".  
   
  **Conjunto de dados:** DocumentElement  
   
@@ -124,4 +124,4 @@ Quando inferir um esquema para um <xref:System.Data.DataSet> de um documento XML
  [Carregando informações de esquema de conjunto de dados de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

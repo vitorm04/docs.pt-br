@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c87f53bcaa167dd7b3b039c70129efca43742c1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d44a132f4bc4982ba0df437a56859de1a6fe441a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497601"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332783"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Sessões seguras e conversas seguras
-Um recurso do Windows Communication Foundation (WCF) é a capacidade de estabelecer sessões seguras entre dois pontos de extremidade que autentiquem uns aos outros e concordem com um processo de criptografia e assinatura digital. Por exemplo, o ponto de extremidade de serviço pode exigir um ponto de extremidade do cliente para enviar um token de segurança com base em um certificado x. 509 para autenticação. Depois que o cliente é autenticado, o ponto de extremidade de serviço retorna um token de contexto de segurança (SCT) para o cliente que é usado para proteger todas as mensagens subsequentes na sessão. Estabelecer essa sessão segura permite que o conjunto de mensagens trocadas entre os dois pontos de extremidade para ser mais eficiente, porque o SCT tem uma chave simétrica. Chaves assimétricas, os certificados x. 509 se baseiam, exigem mais potência computacional que as chaves simétricas quando gerar uma assinatura digital ou criptografar um conjunto de dados.  
+Um recurso do Windows Communication Foundation (WCF) é a capacidade de estabelecer sessões seguras entre dois pontos de extremidade que se autenticam e concordem com um processo de criptografia e assinatura digital. Por exemplo, o ponto de extremidade de serviço pode exigir um ponto de extremidade do cliente para enviar um token de segurança com base em um certificado X.509 para autenticação. Quando o cliente é autenticado, o ponto de extremidade de serviço retorna um token de contexto de segurança (SCT) volta ao cliente que é usado para proteger todas as mensagens subsequentes dentro da sessão. Estabelecer essa sessão segura permite que o conjunto de mensagens trocadas entre os dois pontos de extremidade a ser mais eficiente, porque o SCT tem uma chave simétrica. Chaves assimétricas, quais certificados x. 509 se baseiam, exigem significativamente mais capacidade de computação do que as chaves simétricas quando gerar uma assinatura digital ou criptografar um conjunto de dados.  
   
- A política de inicialização (definidos na seção 6.2.7 o [WS-SecurityPolicy](http://go.microsoft.com/fwlink/?LinkId=99817) padrão) contém as declarações de segurança de mensagem usadas para proteger o canal e autenticar o cliente antes da primeira/SCT e RSTR/SCT troca. Determinadas associações padrão do WCF tem um `Security.Message.EstablishSecurityContext` propriedade que controla se proteger a conversa é usada. Ao usar associações personalizadas a inicialização é indicada pelo aninhamento elementos de associação de segurança, por meio de [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) no arquivo de configuração, ou chamando <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A> no código.  
+ A política de bootstrap (definido na seção 6.2.7 a [WS-SecurityPolicy](https://go.microsoft.com/fwlink/?LinkId=99817) standard) contém as declarações de segurança de mensagem usadas para proteger o canal e autenticar o cliente antes da troca SCT/RST e RSTR/SCT. Determinadas associações padrão do WCF têm um `Security.Message.EstablishSecurityContext` propriedade que controla se proteger de conversa é usada. Ao usar associações personalizadas o bootstrap é indicado pelo aninhamento elementos de associação de segurança, por meio [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) no arquivo de configuração, ou chamando <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A> no código.  
   
  Para obter mais informações sobre as sessões, consulte [sessões usando](../../../../docs/framework/wcf/using-sessions.md).  
   

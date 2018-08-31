@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: b87c46b2182884f90b427498b9af696d14acac96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542032"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331792"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Instruções passo a passo: depurando controles dos Windows Forms na hora do design
 Quando criar um controle personalizado, frequentemente você achará necessário depurar seu comportamento em tempo de design. Isso será especialmente válido se você estiver criando um designer personalizado para seu controle personalizado. Para obter detalhes, consulte [Instruções passo a passo: criando um controle dos Windows Forms que aproveite os recursos de tempo de design do Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -44,14 +44,14 @@ Quando criar um controle personalizado, frequentemente você achará necessário
  Quando tiver terminado, você compreenderá as tarefas necessárias para depurar o comportamento de tempo de design de um controle personalizado.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
  A primeira etapa é criar o projeto do aplicativo. Você usará este projeto para criar o aplicativo que hospeda o controle personalizado.  
   
 #### <a name="to-create-the-project"></a>Para criar o projeto  
   
--   Crie um projeto de aplicativo do Windows chamado "DebuggingExample". Para obter detalhes, consulte [Como criar um projeto de aplicativo do Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Crie um projeto de aplicativo do Windows chamado "DebuggingExample" (**arquivo** > **New** > **projeto**  >  **Visual c#** ou **Visual Basic** > **área de trabalho clássica** > **aplicativo de formulários do Windows**).  
   
 ## <a name="creating-a-control-library-project"></a>Criar um Projeto de Biblioteca de Controle  
  A etapa seguinte é criar o projeto de biblioteca de controle e configurar o controle personalizado.  
@@ -60,9 +60,9 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 1.  Adicione um projeto de **Biblioteca de controle do Windows** à solução.  
   
-2.  Adicione um novo item **UserControl** ao projeto DebugControlLibrary. Para obter detalhes, consulte [NIB: como adicionar novos itens de projeto](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Dê ao novo arquivo de origem o nome base "DebugControl".  
+2.  Adicione um novo item **UserControl** ao projeto DebugControlLibrary. Para obter detalhes, consulte [NIB: como adicionar novos itens de projeto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Dê ao novo arquivo de origem o nome base "DebugControl".  
   
-3.  Usando o **Gerenciador de Soluções**, exclua o controle padrão do projeto excluindo o arquivo de código com o nome de base "`UserControl1`". Para obter detalhes, consulte [NIB: como remover, apagar e excluir itens](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Usando o **Gerenciador de Soluções**, exclua o controle padrão do projeto excluindo o arquivo de código com o nome de base "`UserControl1`". Para obter detalhes, consulte [NIB: como remover, apagar e excluir itens](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Compile a solução.  
   
@@ -166,7 +166,7 @@ Quando criar um controle personalizado, frequentemente você achará necessário
 ## <a name="next-steps"></a>Próximas etapas  
  Agora que você pode depurar seus controles personalizados em tempo de design, há muitas possibilidades para expandir a interação do controle com o IDE do Visual Studio.  
   
--   Você pode usar o <xref:System.ComponentModel.Component.DesignMode%2A> propriedade o <xref:System.ComponentModel.Component> classe para escrever um código que será executado somente em tempo de design. Para obter detalhes, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.  
+-   Você pode usar o <xref:System.ComponentModel.Component.DesignMode%2A> propriedade do <xref:System.ComponentModel.Component> classe para escrever um código que será executado somente em tempo de design. Para obter detalhes, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.  
   
 -   Há vários atributos que você pode aplicar a propriedades do controle para manipular a interação do seu controle personalizado com o designer. Você pode encontrar esses atributos no <xref:System.ComponentModel?displayProperty=nameWithType> namespace.  
   
@@ -174,5 +174,5 @@ Quando criar um controle personalizado, frequentemente você achará necessário
   
 ## <a name="see-also"></a>Consulte também  
  [Passo a passo: criando um controle dos Windows Forms que aproveita os recursos de tempo de design do Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- [Como: acessar os serviços de tempo de Design](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [Como acessar o suporte em tempo de design nos Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+ [Como: acessar os serviços de tempo de Design](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
+ [Como acessar o suporte em tempo de design nos Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

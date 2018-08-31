@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 18b03468646a4d016e383f5662d9827551d1141c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: deb1b6ca5c6fc996a015e32dd5e0c7b9bd6530fa
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519601"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332697"
 ---
 # <a name="how-to-create-an-activity"></a>Como criar uma atividade
 As atividades são a unidade principal de comportamento no [!INCLUDE[wf1](../../../includes/wf1-md.md)]. A lógica de execução de uma atividade pode ser implementada em código gerenciado ou pode ser implementada usando outras atividades. Este tópico demonstra como criar duas atividades. A primeira atividade é uma atividade simples que usa o código para implementar a sua lógica de execução. A implementação da segunda atividade é definida usando outras atividades. Essas atividades são usadas nas seguintes etapas no tutorial.  
   
 > [!NOTE]
->  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-activity-library-project"></a>Para criar o projeto de biblioteca de atividade  
   
-1.  Abra [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e escolha **novo**, **projeto** do **arquivo** menu.  
+1.  Abra [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e escolha **New**, **projeto** do **arquivo** menu.  
   
-2.  Expanda o **outros tipos de projetos** nó o **instalado**, **modelos** e selecione **soluções do Visual Studio**.  
+2.  Expanda o **Other Project Types** nó na **instalado**, **modelos** e selecione **soluções do Visual Studio**.  
   
-3.  Selecione **solução em branco** do **soluções do Visual Studio** lista. Certifique-se de que **.NET Framework 4.5** está selecionado na lista suspensa de versão do .NET Framework. Tipo `WF45GettingStartedTutorial` no **nome** caixa e, em seguida, clique em **Okey**.  
+3.  Selecione **solução em branco** da **soluções do Visual Studio** lista. Certifique-se de que **.NET Framework 4.5** está selecionado na lista suspensa de versão do .NET Framework. Tipo de `WF45GettingStartedTutorial` no **nome** caixa e, em seguida, clique em **Okey**.  
   
-4.  Clique com botão direito **WF45GettingStartedTutorial** na **Solution Explorer** e escolha **adicionar**, **novo projeto**.  
+4.  Clique com botão direito **WF45GettingStartedTutorial** na **Gerenciador de soluções** e escolha **Add**, **novo projeto**.  
   
     > [!TIP]
-    >  Se o **Solution Explorer** janela não for exibida, selecione **Solution Explorer** do **exibição** menu.  
+    >  Se o **Gerenciador de soluções** janela não for exibida, selecione **Gerenciador de soluções** do **exibição** menu.  
   
-5.  No **instalado** nó, selecione **Visual C#**, **fluxo de trabalho** (ou **Visual Basic**, **fluxo de trabalho**). Certifique-se de que **.NET Framework 4.5** está selecionado no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lista suspensa de versão. Selecione **biblioteca de atividades** do **fluxo de trabalho** lista. Tipo `NumberGuessWorkflowActivities` no **nome** caixa e, em seguida, clique em **Okey**.  
+5.  No **Installed** nó, selecione **Visual c#**, **fluxo de trabalho** (ou **Visual Basic**, **fluxo de trabalho**). Certifique-se de que **.NET Framework 4.5** está selecionado no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lista suspensa de versão. Selecione **biblioteca de atividades** da **fluxo de trabalho** lista. Tipo de `NumberGuessWorkflowActivities` no **nome** caixa e, em seguida, clique em **Okey**.  
   
     > [!NOTE]
-    >  Dependendo da linguagem de programação que é configurada como linguagem primária no Visual Studio, o **Visual C#** ou **Visual Basic** nó pode estar sob o **outras linguagens** nó de **instalado** nó.  
+    >  Dependendo da linguagem de programação configurada como linguagem primária no Visual Studio, o **Visual c#** ou **Visual Basic** nó pode estar abaixo de **outros idiomas** nó de **instalado** nó.  
   
-6.  Clique com botão direito **activity1** na **Solution Explorer** e escolha **excluir**. Clique em **Okey** para confirmar.  
+6.  Clique com botão direito **Activity1.xaml** na **Gerenciador de soluções** e escolha **excluir**. Clique em **Okey** para confirmar.  
   
 ### <a name="to-create-the-readint-activity"></a>Para criar a atividade de ReadInt  
   
-1.  Escolha **Adicionar Novo Item** do **projeto** menu.  
+1.  Escolher **Adicionar Novo Item** da **projeto** menu.  
   
-2.  No **instalado**, **itens comuns** nó, selecione **fluxo de trabalho**. Selecione **atividade de código** do **fluxo de trabalho** lista.  
+2.  No **Installed**, **itens comuns** nó, selecione **fluxo de trabalho**. Selecione **atividade de código** da **fluxo de trabalho** lista.  
   
-3.  Tipo `ReadInt` para o **nome** caixa e, em seguida, clique em **adicionar**.  
+3.  Tipo de `ReadInt` para o **nome** caixa e, em seguida, clique em **Add**.  
   
 4.  Substitua a definição existente de `ReadInt` pela seguinte definição.  
   
@@ -58,53 +58,53 @@ As atividades são a unidade principal de comportamento no [!INCLUDE[wf1](../../
   
 1.  Pressione CTRL+SHIFT+B para criar o projeto. Compilar o projeto permite que a atividade `ReadInt` neste projeto seja usada para criar a atividade personalizada dessa etapa.  
   
-2.  Escolha **Adicionar Novo Item** do **projeto** menu.  
+2.  Escolher **Adicionar Novo Item** da **projeto** menu.  
   
-3.  No **instalado**, **itens comuns** nó, selecione **fluxo de trabalho**. Selecione **atividade** do **fluxo de trabalho** lista.  
+3.  No **Installed**, **itens comuns** nó, selecione **fluxo de trabalho**. Selecione **atividade** da **fluxo de trabalho** lista.  
   
-4.  Tipo `Prompt` para o **nome** caixa e, em seguida, clique em **adicionar**.  
+4.  Tipo de `Prompt` para o **nome** caixa e, em seguida, clique em **Add**.  
   
-5.  Clique duas vezes em **Prompt.xaml** na **Solution Explorer** para exibi-lo no designer caso ainda não esteja sendo exibido.  
+5.  Clique duas vezes em **prompt** na **Gerenciador de soluções** para exibi-lo no designer caso ainda não esteja sendo exibido.  
   
 6.  Clique em **argumentos** no lado inferior esquerdo do designer de atividade para exibir o **argumentos** painel.  
   
 7.  Clique em **criar argumento**.  
   
-8.  Tipo `BookmarkName` no **nome** caixa, selecione **na** do **direção** lista suspensa, selecione **cadeia de caracteres** da **Tipo de argumento** lista suspensa e, em seguida, pressione ENTER para salvar o argumento.  
+8.  Tipo `BookmarkName` para o **nome** caixa, selecione **no** do **direção** lista suspensa, selecione **cadeia de caracteres** da **Tipo de argumento** lista suspensa e pressione ENTER para salvar o argumento.  
   
 9. Clique em **criar argumento**.  
   
-10. Tipo `Result` para o **nome** caixa sob recém-adicionado `BookmarkName` argumento, selecione **Out** do **direção** lista suspensa, selecione **Int32** do **tipo de argumento** lista suspensa e, em seguida, pressione ENTER.  
+10. Tipo `Result` para o **nome** caixa que está embaixo recém-adicionada `BookmarkName` argumento, selecione **Out** do **direção** lista suspensa, selecione **Int32** da **tipo de argumento** lista suspensa e pressione ENTER.  
   
 11. Clique em **criar argumento**.  
   
-12. Tipo `Text` no **nome** caixa, selecione **na** do **direção** lista suspensa, selecione **cadeia de caracteres** da **Tipo de argumento** lista suspensa e, em seguida, pressione ENTER para salvar o argumento.  
+12. Tipo `Text` para o **nome** caixa, selecione **no** do **direção** lista suspensa, selecione **cadeia de caracteres** da **Tipo de argumento** lista suspensa e pressione ENTER para salvar o argumento.  
   
      Esses três argumentos são associados aos argumentos correspondentes das atividades <xref:System.Activities.Statements.WriteLine> e `ReadInt` que são adicionadas à atividade `Prompt` nas seguintes etapas.  
   
 13. Clique em **argumentos** no lado inferior esquerdo do designer de atividade para fechar o **argumentos** painel.  
   
-14. Arraste um **sequência** atividade do **fluxo de controle** seção o **caixa de ferramentas** e solte-a para o **descartar atividade aqui** rótulo da **Prompt** designer de atividade.  
+14. Arraste um **sequência** a atividade do **fluxo de controle** seção o **caixa de ferramentas** e solte-o no **soltar atividade aqui** rótulo da **Prompt** designer de atividade.  
   
     > [!TIP]
     >  Se o **caixa de ferramentas** janela não for exibida, selecione **caixa de ferramentas** do **exibição** menu.  
   
-15. Arraste um **WriteLine** atividade do **primitivos** seção o **caixa de ferramentas** e solte-a para o **descartar atividade aqui** rótulo da **Sequência** atividade.  
+15. Arraste um **WriteLine** a atividade do **primitivos** seção o **caixa de ferramentas** e solte-o no **soltar atividade aqui** rótulo da **Sequência** atividade.  
   
-16. Associar o **texto** argumento do **WriteLine** atividade para o **texto** argumento do **Prompt** atividade digitando `Text` para o **insira uma expressão de c#** ou **insira uma expressão VB** caixa o **propriedades** janela e, em seguida, pressione a guia chave duas vezes. Isso fecha a janela dos membros da lista do IntelliSense e salva o valor da propriedade removendo a seleção da propriedade. Essa propriedade também pode ser definida digitando `Text` para o **insira uma expressão de c#** ou **insira uma expressão VB** caixa sobre a atividade em si.  
+16. Associar o **texto** argumento do **WriteLine** atividade para o **texto** argumento do **Prompt** atividade digitando `Text` na **insira uma expressão c#** ou **insira uma expressão de VB** caixa a **propriedades** janela e, em seguida, pressione a guia chave duas vezes. Isso fecha a janela dos membros da lista do IntelliSense e salva o valor da propriedade removendo a seleção da propriedade. Essa propriedade também pode ser definida digitando `Text` para o **inserir uma expressão c#** ou **insira uma expressão VB** caixa na própria atividade.  
   
     > [!TIP]
-    >  Se o **janela propriedades** não é exibida, selecione **janela propriedades** do **exibição** menu.  
+    >  Se o **janela de propriedades** não for exibido, selecione **janela propriedades** do **exibição** menu.  
   
-17. Arraste um **ReadInt** atividade do **NumberGuessWorkflowActivities** seção o **caixa de ferramentas** e solte-o no **sequência** atividade para que ela siga a **WriteLine** atividade.  
+17. Arraste uma **ReadInt** a atividade do **NumberGuessWorkflowActivities** seção o **caixa de ferramentas** e solte-o no **sequência** atividade para que ela siga a **WriteLine** atividade.  
   
-18. Associar o **BookmarkName** argumento do **ReadInt** atividade para o **BookmarkName** argumento do **Prompt** atividade digitando `BookmarkName` no **insira uma expressão VB** caixa à direita do **BookmarkName** argumento o **janela propriedades**e, em seguida, pressione a tecla TAB duas vezes para fechar a janela de membros de lista do IntelliSense e salvar a propriedade.  
+18. Associar o **BookmarkName** argumento do **ReadInt** atividade para o **BookmarkName** argumento do **Prompt** atividade digitando `BookmarkName` no **inserir uma expressão de VB** caixa à direita do **BookmarkName** argumento no **janela propriedades**e, em seguida, pressione a tecla TAB duas vezes para fechar a janela de membros de lista do IntelliSense e salvar a propriedade.  
   
-19. Associar o **resultados** argumento do **ReadInt** atividade para o **resultados** argumento do **Prompt** atividade digitando `Result` no **insira uma expressão VB** caixa à direita do **resultados** argumento no **janela propriedades**e, em seguida, pressione a tecla TAB duas vezes.  
+19. Associar o **resultado** argumento do **ReadInt** atividade para o **resultados** argumento do **Prompt** atividade digitando `Result` na **insira uma expressão VB** caixa à direita do **resultado** argumento no **janela propriedades**e, em seguida, pressione a tecla TAB duas vezes.  
   
 20. Pressione CTRL+SHIFT+B para criar a solução.  
   
-     Para obter instruções sobre como criar um fluxo de trabalho com essas atividades, consulte a próxima etapa no tutorial, [como: criar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).  
+     Para obter instruções sobre como criar um fluxo de trabalho por meio dessas atividades, consulte a próxima etapa no tutorial, [como: criar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Activities.CodeActivity>  

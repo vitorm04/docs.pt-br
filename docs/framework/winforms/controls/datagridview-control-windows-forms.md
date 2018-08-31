@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 3c642a2a0eccc5a2b08cee71ca719515b115b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529919"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332501"
 ---
 # <a name="datagridview-control-windows-forms"></a>Controle DataGridView (Windows Forms)
 O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibir dados em um formato de tabela. Você pode usar o controle `DataGridView` para mostrar as exibições somente leitura de uma pequena quantidade de dados ou pode ajustar a escala para mostrar exibições editáveis de grandes conjuntos de dados.  
@@ -73,14 +73,14 @@ O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibi
  [Diferenças entre os controles DataGridView e DataGrid dos Windows Forms ](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  Descreve como o `DataGridView` controle aprimora e substitui o <xref:System.Windows.Forms.DataGrid> controle.  
   
- Consulte também [Usando o designer com o controle DataGridView do Windows Forms](http://msdn.microsoft.com/library/ms171593\(v=vs.110\)).  
+ Consulte também [Usando o designer com o controle DataGridView do Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.DataGridView>  
  Fornece documentação de referência para o <xref:System.Windows.Forms.DataGridView> controle.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Fornece documentação de referência para o <xref:System.Windows.Forms.BindingSource> componente. O <xref:System.Windows.Forms.DataGridView> controle e o <xref:System.Windows.Forms.BindingSource> componente são projetados para trabalhar juntos.  
+ Fornece documentação de referência para o <xref:System.Windows.Forms.BindingSource> componente. O <xref:System.Windows.Forms.DataGridView> controle e o <xref:System.Windows.Forms.BindingSource> componente são projetados para funcionar juntos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

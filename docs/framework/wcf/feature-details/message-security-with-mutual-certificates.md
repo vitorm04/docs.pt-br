@@ -7,28 +7,28 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494170"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332181"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Segurança de mensagem com certificados mútuos
-O cenário a seguir mostra um serviço Windows Communication Foundation (WCF) e um cliente protegido usando o modo de segurança de mensagem. O cliente e o serviço são autenticadas com certificados.  
+O cenário a seguir mostra um serviço Windows Communication Foundation (WCF) e o cliente protegido usando o modo de segurança de mensagem. O cliente e o serviço são autenticados com certificados.  
   
- Esse cenário é interoperável porque ele usa o WS-Security com o perfil de token do certificado x. 509.  
+ Esse cenário é interoperável, porque ele usa o WS-Security com o perfil de token X.509 do certificado.  
   
 > [!NOTE]
->  Esse cenário não realiza a negociação do certificado de serviço. O certificado de serviço deve ser fornecido ao cliente antes de qualquer comunicação. O certificado do servidor pode ser distribuído com o aplicativo ou fornecido em uma comunicação de fora da banda.  
+>  Esse cenário não realiza a negociação do certificado de serviço. O certificado de serviço deve ser fornecido ao cliente com antecedência sobre qualquer comunicação. O certificado do servidor pode ser distribuído com o aplicativo ou fornecido em uma comunicação fora da banda.  
   
- ![Segurança com certificados mútuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![Mensagem de segurança com certificados mútuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|Sim, com serviços e clientes do compatíveis de perfil de token do certificado x. 509 e WS-Security.|  
-|Autenticação|Autenticação mútua do cliente e servidor.|  
+|Interoperabilidade|Sim, com serviços e clientes compatíveis do perfil de token de certificado X.509 e WS-Security.|  
+|Autenticação|Autenticação mútua do servidor e cliente.|  
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
 |Transporte|HTTP|  
@@ -39,10 +39,10 @@ O cenário a seguir mostra um serviço Windows Communication Foundation (WCF) e 
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- Mostra o seguinte código cria um ponto de extremidade de serviço que usa segurança de mensagem. O serviço requer um certificado para se autenticar.  
+ Mostra o código a seguir cria um ponto de extremidade de serviço que usa segurança de mensagem. O serviço requer um certificado para se autenticar.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
@@ -162,5 +162,5 @@ O cenário a seguir mostra um serviço Windows Communication Foundation (WCF) e 
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [Como: criar e instalar certificados temporários no WCF para segurança de transporte durante o desenvolvimento](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [Como: criar e instalar certificados temporários no WCF para segurança de transporte durante o desenvolvimento](https://go.microsoft.com/fwlink/?LinkId=244264)

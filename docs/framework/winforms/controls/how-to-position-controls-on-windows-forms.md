@@ -15,18 +15,18 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 6db021f2b1a29c3ef52a182c45bbc7878feebb97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6843c22fec964de92c41760f1108d1c83e1f5bf8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538706"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332475"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Como posicionar controles nos Windows Forms
-Para posicionar controles, use o Designer de formulários do Windows ou especificar o <xref:System.Windows.Forms.Control.Location%2A> propriedade.  
+Para posicionar controles, use o Designer de formulários do Windows ou especifique o <xref:System.Windows.Forms.Control.Location%2A> propriedade.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Posicionar um controle na superfície de design do Designer de Formulários do Windows  
   
@@ -39,16 +39,16 @@ Para posicionar controles, use o Designer de formulários do Windows ou especifi
   
 1.  Clique no controle que você deseja posicionar.  
   
-2.  No **propriedades** janela, os valores de tipo para o <xref:System.Windows.Forms.Control.Location%2A> propriedade, separada por uma vírgula, para posicionar o controle dentro do respectivo contêiner.  
+2.  No **propriedades** janela, os valores de tipo para o <xref:System.Windows.Forms.Control.Location%2A> propriedade, separada por uma vírgula, para posicionar o controle dentro de seu contêiner.  
   
      O primeiro número (X) é a distância entre a borda esquerda do contêiner; o segundo número (Y) é a distância entre a borda superior da área do recipiente, medida em pixels.  
   
     > [!NOTE]
-    >  Você pode expandir o <xref:System.Windows.Forms.Control.Location%2A> propriedade para o tipo de **X** e **Y** valores individualmente.  
+    >  Você pode expandir a <xref:System.Windows.Forms.Control.Location%2A> propriedade para o tipo de **X** e **Y** valores individualmente.  
   
 ### <a name="to-position-a-control-programmatically"></a>Posicionar um controle com programação  
   
-1.  Definir o <xref:System.Windows.Forms.Control.Location%2A> propriedade do controle para um <xref:System.Drawing.Point>.  
+1.  Defina as <xref:System.Windows.Forms.Control.Location%2A> propriedade do controle para um <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ Para posicionar controles, use o Designer de formulários do Windows ou especifi
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Alterar a coordenada X do local do controle usando o <xref:System.Windows.Forms.Control.Left%2A> subpropriedade.  
+2.  Altere a coordenada X do local do controle usando o <xref:System.Windows.Forms.Control.Left%2A> subpropriedade.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ Para posicionar controles, use o Designer de formulários do Windows ou especifi
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>Incrementar o local de um controle com programação  
   
-1.  Definir o <xref:System.Windows.Forms.Control.Left%2A> subpropriedade para incrementar a coordenada X do controle.  
+1.  Defina o <xref:System.Windows.Forms.Control.Left%2A> subpropriedade para incrementar a coordenada X do controle.  
   
     ```vb  
     Button1.Left += 200  
@@ -93,7 +93,7 @@ Para posicionar controles, use o Designer de formulários do Windows ou especifi
     ```  
   
     > [!NOTE]
-    >  Use o <xref:System.Windows.Forms.Control.Location%2A> posições de propriedade para definir um controle X e Y simultaneamente. Para definir uma posição individualmente, use o controle <xref:System.Windows.Forms.Control.Left%2A> (**X**) ou <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subpropriedade. Não tente definir implicitamente as coordenadas X e Y do <xref:System.Drawing.Point> estrutura que representa o local do botão, porque essa estrutura contém uma cópia de coordenadas do botão.  
+    >  Use o <xref:System.Windows.Forms.Control.Location%2A> posiciona de propriedade para definir um controle X e Y simultaneamente. Para definir uma posição individualmente, use o controle <xref:System.Windows.Forms.Control.Left%2A> (**X**) ou <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subpropriedade. Não tente definir implicitamente as coordenadas X e Y do <xref:System.Drawing.Point> estrutura que representa o local do botão, pois essa estrutura contém uma cópia das coordenadas do botão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
@@ -104,4 +104,4 @@ Para posicionar controles, use o Designer de formulários do Windows ou especifi
  [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Controles dos Windows Forms por função](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Como configurar o local da tela dos Windows Forms](http://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+ [Como configurar o local da tela dos Windows Forms](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

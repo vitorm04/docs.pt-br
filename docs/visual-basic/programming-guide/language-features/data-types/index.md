@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 855e32463284604fc27d4b73331ae48967dddefb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650446"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330939"
 ---
 # <a name="data-types-in-visual-basic"></a>Tipos de dados no Visual Basic
 O *tipo de dados* de um elemento de programação se refere a que tipo de dados ele pode armazenar e como ele armazena esses dados. Os tipos de dados se aplicam a todos os valores que podem ser armazenados na memória do computador ou participam da avaliação de uma expressão. Cada variável, literal, constante, enumeração, propriedade, parâmetro de procedimento, argumento de procedimento e valor retornado do procedimento tem um tipo de dados.  
@@ -32,7 +32,7 @@ O *tipo de dados* de um elemento de programação se refere a que tipo de dados 
 |Argumento de procedimento|No código de chamada. Cada argumento é um elemento de programação que já foi declarado ou uma expressão que contém elementos declarados<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |Valor retornado do procedimento|Em uma [instrução Function](../../../../visual-basic/language-reference/statements/function-statement.md) ou [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
- Para obter uma lista dos tipos de dados do Visual Basic, consulte [Tipos de dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Para obter uma lista dos tipos de dados do Visual Basic, consulte [Tipos de dados](../../../../visual-basic/language-reference/data-types/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
@@ -44,5 +44,5 @@ O *tipo de dados* de um elemento de programação se refere a que tipo de dados 
  [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Tuplas](tuples.md)     
  [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)  
  [Uso Eficiente de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
