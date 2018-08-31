@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525772"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257917"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos em controles dos Windows Forms
 O .NET Framework fornece uma variedade de atributos que podem se aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  
@@ -27,7 +27,7 @@ O .NET Framework fornece uma variedade de atributos que podem se aplicados aos m
 |<xref:System.ComponentModel.CategoryAttribute>|Especifica o nome da categoria na qual grupo de propriedade ou evento quando exibido em uma <xref:System.Windows.Forms.PropertyGrid> controle definido como <xref:System.Windows.Forms.PropertySort.Categorized> modo.|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|Especifica o valor padrão de uma propriedade.|  
 |<xref:System.ComponentModel.DescriptionAttribute>|Especifica uma descrição de uma propriedade ou evento.|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|Especifica o nome de exibição de uma propriedade, evento ou método `public``void` que não usa argumentos.|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|Especifica o nome de exibição de uma propriedade, evento ou método `public void` que não usa argumentos.|  
 |<xref:System.ComponentModel.EditorAttribute>|Especifica o editor que deve ser usado para alterar uma propriedade.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Especifica que uma propriedade ou método é visível em um editor.|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Especifica a palavra-chave de contexto de uma classe ou membro.|  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: e790f8abd216e198ff5077beab6f857e39981d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78311651593d3d4a47c723f64a9a74d4660f7c90
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602074"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254056"
 ---
 # <a name="ltseegt-visual-basic"></a>&lt;consulte&gt; (Visual Basic)
 Especifica um link para outro membro.  
@@ -26,14 +26,14 @@ Especifica um link para outro membro.
  Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome do elemento no XML de saída. `member` deve ser exibido entre aspas duplas (" ").  
   
 ## <a name="remarks"></a>Comentários  
- Use o `<see>` marca para especificar um link de dentro do texto. Use [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) para indicar o texto que você pode aparecer em uma seção "Consulte também".  
+ Use o `<see>` marca para especificar um link de dentro do texto. Use [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) para indicar o texto que você talvez queira aparecem em uma seção "Consulte também".  
   
  Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<see>` marca no `UpdateRecord` seção para se referir a comentários de `DoesRecordExist` método.  
+ Este exemplo usa o `<see>` marcar na `UpdateRecord` seção para se referir a comentários de `DoesRecordExist` método.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

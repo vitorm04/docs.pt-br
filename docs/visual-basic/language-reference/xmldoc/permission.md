@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 4fafebf94be350951672f01f2d17bd00d4bab69a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcec5d968f5d0c5400c28e772df151b164888a47
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601989"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257429"
 ---
 # <a name="ltpermissiongt-visual-basic"></a>&lt;permissão&gt; (Visual Basic)
 Especifica uma permissão necessária para o membro.  
@@ -34,9 +34,9 @@ Especifica uma permissão necessária para o membro.
  Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<permission>` marcas para descrever que o <xref:System.Security.Permissions.FileIOPermission> é necessária para o `ReadFile` método.  
+ Este exemplo usa o `<permission>` marca para descrever o que o <xref:System.Security.Permissions.FileIOPermission> é necessária para o `ReadFile` método.  
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

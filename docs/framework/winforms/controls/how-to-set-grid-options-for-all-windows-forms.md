@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 663e816cdc31ed7854f7ebd060bffcfa5b85f475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535019"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253346"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Como definir opções de grade para todos os Windows Forms
-Conforme você fica acostumado a trabalhar no ambiente de desenvolvimento do Visual Studio, você pode definir preferências para todos os projetos que você trabalha com e formulários no Designer de formulários do Windows.  
+Quando você se acostumar a trabalhar no ambiente de desenvolvimento do Visual Studio, você pode definir preferências para todos os formulários e projetos que você trabalha com no Designer de formulários do Windows.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-global-windows-forms-options"></a>Para definir opções globais dos Windows Forms  
   
@@ -31,7 +31,7 @@ Conforme você fica acostumado a trabalhar no ambiente de desenvolvimento do Vis
   
 ## <a name="see-also"></a>Consulte também  
  [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Geral, Designer de formulários do Windows, a caixa de diálogo Opções](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Geral, Designer de formulários do Windows, caixa de diálogo Opções](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Como Adicionar Controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Organizando Controles nos Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  

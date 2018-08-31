@@ -9,34 +9,34 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: d4351e88de896f366ae2c4050f0e1c32aa0188a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527493"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253715"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Como criar formulários filho MDI
 Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interface MDI](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), pois esses formulários são o centro da interação do usuário.  
   
- No procedimento a seguir, você criará um formulário MDI filho que exibe um <xref:System.Windows.Forms.RichTextBox> controle, semelhante a aplicativos de processamento de texto. Substituindo o <xref:System.Windows.Forms> controle com outros controles, como o <xref:System.Windows.Forms.DataGridView> controle ou uma mistura de controles permite que você crie janelas filho MDI (e, por extensão, aplicativos MDI) com diversas possibilidades.  
+ No procedimento a seguir, você criará um formulário filho MDI que exibe um <xref:System.Windows.Forms.RichTextBox> controle, semelhante aos aplicativos de processamento de texto. Substituindo o <xref:System.Windows.Forms> controlar com outros controles, como o <xref:System.Windows.Forms.DataGridView> controle ou uma mistura de controles permite que você crie janelas filho MDI (e, por extensão, aplicativos MDI) com diversas possibilidades.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-mdi-child-forms"></a>Para criar formulários filho MDI  
   
-1.  Criar um novo projeto dos Windows Forms. Em **janelas propriedades** para o formulário, defina seu <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade `true`e sua `WindowsState` propriedade `Maximized`.  
+1.  Criar um novo projeto dos Windows Forms. No **as propriedades do Windows** para o formulário, defina seu <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade a ser `true`e seu `WindowsState` propriedade `Maximized`.  
   
      Isso designa o formulário como um recipiente MDI para janelas filho.  
   
-2.  Do `Toolbox`, arraste um <xref:System.Windows.Forms.MenuStrip> controle no formulário. Defina sua propriedade `Text` para o **Arquivo**.  
+2.  Dos `Toolbox`, arraste um <xref:System.Windows.Forms.MenuStrip> controle ao formulário. Defina sua propriedade `Text` para o **Arquivo**.  
   
 3.  Clique nas reticências (...) ao lado da propriedade **Itens** e clique em **Adicionar** para adicionar dois itens de menu filho da faixa de ferramentas. Defina a propriedade `Text` para esses itens como **Novo** e **Janela**.  
   
 4.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e selecione **Adicionar novo item**.  
   
-5.  No **Adicionar Novo Item** caixa de diálogo, selecione **Windows Form** (no Visual Basic ou no Visual c#) ou **aplicativos de formulários do Windows (.NET)** (em [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) da  **Modelos de** painel. Na caixa **Nome**, dê o nome **Form2** ao formulário. Clique no botão **Abrir** para adicionar o formulário ao projeto.  
+5.  No **Adicionar Novo Item** caixa de diálogo, selecione **formulário do Windows** (no Visual Basic ou no Visual c#) ou **aplicativo de formulários do Windows (.NET)** (em [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) do  **Modelos** painel. Na caixa **Nome**, dê o nome **Form2** ao formulário. Clique no botão **Abrir** para adicionar o formulário ao projeto.  
   
     > [!NOTE]
     >  O formulário MDI filho criado nesta etapa é um formulário padrão do Windows. Como tal, ele tem um <xref:System.Windows.Forms.Form.Opacity%2A> propriedade, que permite que você controle a transparência do formulário. No entanto, o <xref:System.Windows.Forms.Form.Opacity%2A> propriedade foi projetada para janelas de nível superior. Não use-a com formulários filho MDI, pois podem ocorrer problemas de pintura.  
@@ -51,12 +51,12 @@ Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interfa
   
      Isso faz com que o <xref:System.Windows.Forms.RichTextBox> controle para preencher completamente a área do formulário filho MDI, mesmo quando o formulário é redimensionado.  
   
-8.  Clique duas vezes o **novo** item de menu para criar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos para ele.  
+8.  Clique duas vezes o **New** item de menu para criar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos para ele.  
   
 9. Insira um código semelhante ao seguinte para criar um novo formulário filho MDI quando o usuário clicar no item de menu **Novo**.  
   
     > [!NOTE]
-    >  No exemplo a seguir, o manipulador de eventos controla o <xref:System.Windows.Forms.Control.Click> evento `MenuItem2`. Lembre-se de que, dependendo das especificidades da arquitetura de seu aplicativo, seu item de menu **Novo** não poderá ser `MenuItem2`.  
+    >  No exemplo a seguir, o manipulador de eventos manipula o <xref:System.Windows.Forms.Control.Click> evento para `MenuItem2`. Lembre-se de que, dependendo das especificidades da arquitetura de seu aplicativo, seu item de menu **Novo** não poderá ser `MenuItem2`.  
   
     ```vb  
     Protected Sub MDIChildNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click  
@@ -97,14 +97,14 @@ Os formulários filho MDI são um elemento essencial dos [Aplicativos de Interfa
     #include "Form2.h"  
     ```  
   
-10. Na lista suspensa na parte superior do **propriedades** janela, selecione a faixa de menu que corresponde ao **arquivo** faixa de menu e defina o <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade na janela <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Na lista suspensa na parte superior da **propriedades** janela, selecione a faixa de menu que corresponde à **arquivo** faixa do menu e defina o <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propriedade na janela <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
      Isso permitirá que o menu **Janela** mantenha uma lista de janelas filho MDI abertas com uma marca de seleção próxima à janela filho ativa.  
   
 11. Pressione F5 para executar o aplicativo. Ao selecionar **Novo** do menu **Arquivo**, você pode criar novos formulários filho MDI, que são mantidos no item de menu **Janela**.  
   
     > [!NOTE]
-    >  Quando um formulário MDI filho tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, com uma estrutura de itens de menu) e ele é aberto em um formulário pai MDI que tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, com uma estrutura de itens de menu), o menu itens mesclará automaticamente Se você tiver configurado o <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade (e, opcionalmente, o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade). Definir o <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade do <xref:System.Windows.Forms.MainMenu> componentes e todos os itens de menu do formulário filho para <xref:System.Windows.Forms.MenuMerge.MergeItems>. Além disso, defina o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade para que os itens de menu de ambos os menus apareçam na ordem desejada. Além disso, tenha em mente que, quando você fecha um formulário pai MDI, cada um dos filhos MDI formulários gera um <xref:System.Windows.Forms.Form.Closing> evento antes do <xref:System.Windows.Forms.Form.Closing> é gerado para o pai MDI. Cancelando um filho MDI <xref:System.Windows.Forms.Form.Closing> evento não impedirá que o pai MDI <xref:System.Windows.Forms.Form.Closing> evento seja gerado; no entanto, o <xref:System.ComponentModel.CancelEventArgs> argumento para o pai MDI <xref:System.Windows.Forms.Form.Closing> evento agora será definido como `true`. Você pode forçar o pai MDI e todos os filhos MDI a definindo o <xref:System.ComponentModel.CancelEventArgs> argumento `false`.  
+    >  Quando um formulário MDI filho tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, uma estrutura de menu de itens de menu) e ele é aberto em um formulário pai MDI que tem um <xref:System.Windows.Forms.MainMenu> componente (com, geralmente, uma estrutura de menu de itens de menu), o menu itens mesclará automaticamente Se você tiver definido o <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade (e, opcionalmente, o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade). Defina as <xref:System.Windows.Forms.MenuItem.MergeType%2A> propriedade de ambos <xref:System.Windows.Forms.MainMenu> componentes e todos os itens de menu do formulário filho para <xref:System.Windows.Forms.MenuMerge.MergeItems>. Além disso, defina o <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> propriedade para que os itens de menu de ambos os menus aparecem na ordem desejada. Além disso, tenha em mente que, quando você fecha um formulário pai MDI, cada um dos filhos MDI forms gera uma <xref:System.Windows.Forms.Form.Closing> evento antes do <xref:System.Windows.Forms.Form.Closing> é gerado para o pai da MDI. Cancelando um filho MDI <xref:System.Windows.Forms.Form.Closing> evento não impedirá que o pai MDI <xref:System.Windows.Forms.Form.Closing> evento seja gerado; no entanto, o <xref:System.ComponentModel.CancelEventArgs> argumento para o pai MDI <xref:System.Windows.Forms.Form.Closing> evento agora será definido como `true`. Você pode forçar o pai MDI e todos os filhos MDI, configurando o <xref:System.ComponentModel.CancelEventArgs> argumento para `false`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicativos da interface MDI (Interface de Vários Documentos)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  

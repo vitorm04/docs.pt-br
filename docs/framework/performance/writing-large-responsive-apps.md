@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457544"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254347"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#.  
@@ -23,7 +23,7 @@ Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do
   
  Ao interagir com o aplicativo, os usuários finais esperam que ele seja ágil na resposta.  A digitação ou a manipulação de comandos jamais deve ser bloqueada.  A Ajuda deverá ser exibida rapidamente ou fechada se o usuário continuar digitando.  O aplicativo deve evitar o bloqueio do thread da interface do usuário com computações longas, que aparentemente deixam o aplicativo lento.  
   
- Para obter mais informações sobre Roslyn compiladores, visite o [dotnet/roslyn](https://github.com/dotnet/roslyn) repositório no GitHub.
+ Para obter mais informações sobre como os compiladores Roslyn, visite o [dotnet/roslyn](https://github.com/dotnet/roslyn) repositório no GitHub.
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Aos fatos  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- A primeira versão de `WriteFormattedDocComment()` alocava uma matriz, diversas subcadeias de caracteres e uma subcadeia de caracteres cortada com uma matriz `params` vazia.  Ela também verificava `"///"`.  O código revisado usa apenas a indexação e não aloca nada.  Ele encontra o primeiro caractere que não é um espaço em branco e verifica caractere por caractere para ver se a cadeia de caracteres começa com `"///"`.  O novo código usa `IndexOfFirstNonWhiteSpaceChar` em vez de <xref:System.String.TrimStart%2A> para retornar o primeiro índice (depois de um índice inicial especificado) em que ocorre um caractere diferente de espaço em branco.  A correção não está completa, mas é possível ver como aplicar correções semelhantes para uma solução completa.  Aplicando essa abordagem em todo o código, é possível remover todas as alocações em `WriteFormattedDocComment()`.  
+ A primeira versão de `WriteFormattedDocComment()` alocava uma matriz, diversas subcadeias de caracteres e uma subcadeia de caracteres cortada com uma matriz `params` vazia.  Ela também verificava `"///"`.  O código revisado usa apenas a indexação e não aloca nada.  Ele encontra o primeiro caractere que não é um espaço em branco e verifica caractere por caractere para ver se a cadeia de caracteres começa com `"///"`.  O novo código utiliza `IndexOfFirstNonWhiteSpaceChar` em vez de <xref:System.String.TrimStart%2A> para retornar o primeiro índice (depois de um índice inicial especificado) em que um caractere de espaço em branco não ocorre.  A correção não está completa, mas é possível ver como aplicar correções semelhantes para uma solução completa.  Aplicando essa abordagem em todo o código, é possível remover todas as alocações em `WriteFormattedDocComment()`.  
   
  **Exemplo 4: StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Essa estratégia de cache simples respeita o bom design de cache porque tem um limite de tamanho.  Porém, há mais código agora do que havia originalmente, o que significa mais custos com manutenção.  Você só deverá adotar a estratégia de cache se tiver encontrado um problema de desempenho e o PerfView tiver mostrado que as alocações de <xref:System.Text.StringBuilder> são um fator significativo.  
   
 ### <a name="linq-and-lambdas"></a>LINQ e lambdas  
- O uso de expressões LINQ (Consulta Integrada à Linguagem) e lambda é um ótimo exemplo de uso de recursos produtivos que talvez você ache necessário para gravar novamente, caso o código tenha um impacto significativo sobre o desempenho.  
+Integrada à linguagem LINQ (consulta), junto com as expressões lambda, é um exemplo de um recurso de produtividade. No entanto, seu uso pode ter um impacto significativo no desempenho ao longo do tempo, e você pode achar que precisa reescrever o código.
   
  **Exemplo 5: Lambdas, List\<T> e IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Na primeira linha, a [expressão lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[fecha](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) a variável local `name`.  Isso significa que, além de alocar um objeto para o [representante](~/docs/csharp/language-reference/keywords/delegate.md) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`.  O compilador gera um código semelhante ao seguinte:  
+ Na primeira linha, o [expressão lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [fecha sobre](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) variável local `name`.  Isso significa que, além de alocar um objeto para o [representante](~/docs/csharp/language-reference/keywords/delegate.md) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`.  O compilador gera um código semelhante ao seguinte:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -412,7 +412,7 @@ class Compilation { /*...*/
   
  **Correção para o exemplo 6**  
   
- Para remover concluído <xref:System.Threading.Tasks.Task> alocação, você pode armazenar em cache o objeto de tarefa com o resultado concluído:  
+ Para remover a <xref:System.Threading.Tasks.Task> alocação, você pode armazenar em cache o objeto de tarefa com resultado completo:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -467,7 +467,7 @@ class Compilation { /*...*/
  [Desempenho](../../../docs/framework/performance/index.md)  
  [Dicas de desempenho do .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
  [Ferramenta de análise de desempenho do Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Encontrar afunilamentos do aplicativo com o criador de perfil do Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Channel 9 tutoriais de PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Encontre afunilamentos de aplicativos com o Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Canal 9 tutoriais do PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
  [Dicas de desempenho de alto nível](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [dotnet/roslyn repositório no GitHub](https://github.com/dotnet/roslyn)
+ [repositório do roslyn/dotnet no GitHub](https://github.com/dotnet/roslyn)

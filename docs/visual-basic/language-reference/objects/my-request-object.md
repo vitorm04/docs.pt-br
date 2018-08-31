@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
 ms.openlocfilehash: f2c43afb723944293907d0efbb4cf3cc66a40e1e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932544"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253497"
 ---
 # <a name="myrequest-object"></a>Objeto My.Request
 Obtém o objeto <xref:System.Web.HttpRequest> para a página solicitada.  

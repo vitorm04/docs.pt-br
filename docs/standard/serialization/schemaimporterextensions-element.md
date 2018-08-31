@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: c9f4f6800c2718c3b2c2b9b5b2b6d97e1114dbcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8bcd8abb138c645f61bf833b49cda2631d1778dd
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581323"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255623"
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>Elemento &lt;schemaImporterExtensions&gt;
 Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -21,14 +21,14 @@ Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImpor
 ```xml  
 <schemaImporterExtensions>  
     <!-- Add types -->  
-</SchemaImporterExtension>  
+</schemaImporterExtensions>  
 ```  
   
 ## <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[Elemento \<add> para \<xmlSchemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)|Adiciona tipos que são usados pela <xref:System.Xml.Serialization.XmlSchemaImporter> para criar mapeamentos.|  
+|[\<Adicionar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Adiciona tipos que são usados pela <xref:System.Xml.Serialization.XmlSchemaImporter> para criar mapeamentos.|  
   
 ## <a name="parent-elements"></a>Elementos pai  
   
@@ -47,7 +47,7 @@ Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImpor
         System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,   
         PublicKeyToken = b03f5f6f11d40a3a" />  
     </schemaImporterExtensions>  
-/system.sxml.serializaiton>  
+</system.xml.serialization>  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
@@ -55,5 +55,5 @@ Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImpor
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
  [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
  Elemento [\<dateTimeSerialization>](../../../docs/standard/serialization/datetimeserialization-element.md)  
- [Elemento \<add> para \<xmlSchemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
+ [\<Adicionar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
  [\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

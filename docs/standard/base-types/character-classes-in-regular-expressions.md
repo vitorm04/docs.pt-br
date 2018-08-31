@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579685"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931174"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 <a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
@@ -168,7 +168,7 @@ ms.locfileid: "33579685"
 > [!NOTE]
 >  Como ela corresponde a qualquer caractere, exceto `\n`, a classe de caracteres `.` também corresponde a `\r` (o caractere de retorno de carro, \u000D).  
   
--   Em um grupo de caracteres positivos ou negativos, um ponto é tratado como um caractere de ponto literal e não como uma classe de caracteres. Para saber mais, confira [Grupo de caracteres positivos](#PositiveGroup) e [Grupo de caracteres negativos](#NegativeGroup) anteriormente neste tópico. O exemplo a seguir fornece uma ilustração ao definir uma expressão regular que inclui o caractere de ponto (`.`) como uma classe de caracteres e como um membro de um grupo de caracteres positivos. A expressão regular `\b.*[.?!;:](\s|\z)` começa em um limite de palavra, corresponde a qualquer caractere até encontrar um de quatro sinais de pontuação, incluindo um ponto e corresponde a um caractere de espaço em branco ou ao final da cadeia de caracteres.  
+-   Em um grupo de caracteres positivos ou negativos, um ponto é tratado como um caractere de ponto literal e não como uma classe de caracteres. Para saber mais, confira [Grupo de caracteres positivos](#PositiveGroup) e [Grupo de caracteres negativos](#NegativeGroup) anteriormente neste tópico. O exemplo a seguir fornece uma ilustração ao definir uma expressão regular que inclui o caractere de ponto (`.`) como uma classe de caracteres e como um membro de um grupo de caracteres positivos. A expressão regular `\b.*[.?!;:](\s|\z)` começa em um limite de palavra, corresponde a qualquer caractere até encontrar um de cinco sinais de pontuação, incluindo um ponto, e corresponde a um caractere de espaço em branco ou ao final da cadeia de caracteres.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -188,7 +188,7 @@ ms.locfileid: "33579685"
   
  corresponde a qualquer caractere que pertence a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
- O exemplo a seguir usa o constructo `\p{`*name*`}` para corresponder a uma categoria de Unicode geral (nesse caso, a categoria `Pd`, ou Pontuação, Traço) e um bloco nomeado (os blocos nomeados `IsGreek` e `IsBasicLatin`).  
+ O exemplo a seguir usa o constructo `\p{`*name*`}` para corresponder a uma categoria de Unicode geral (nesse caso, a categoria `Pd` ou Pontuação, Traço) e a um bloco nomeado (os blocos nomeados `IsGreek` e `IsBasicLatin`).  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697112"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257364"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -65,7 +65,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
 ### <a name="disabling-chain-trust"></a>Desabilitando a cadeia de confiança  
  Ao criar um novo serviço, você pode usar um certificado que não seja emitido por um certificado raiz confiável ou o próprio certificado de emissão pode não estar no repositório das Autoridades de Certificação Confiáveis. Somente para a finalidade de desenvolvimento, você pode desativar temporariamente o mecanismo que verifica a cadeia de confiança para um certificado. Para fazer isso, defina a propriedade `CertificateValidationMode` para `PeerTrust` ou `PeerOrChainTrust`. Qualquer um dos modos especifica que o certificado pode ser emitido por conta própria (confiança de par) ou parte de uma cadeia de confiança. Você pode definir a propriedade em qualquer uma das seguintes classes.  
   
-|Classe|propriedade|  
+|Classe|Propriedade|  
 |-----------|--------------|  
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
@@ -102,9 +102,9 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
  As perguntas comuns sobre certificados são qual certificado usar e por quê. A resposta depende de se você está programando um cliente ou serviço. As informações a seguir fornecem uma orientação geral e não são uma resposta completa a essas perguntas.  
   
 ### <a name="service-certificates"></a>Certificados de serviço  
- Os certificados de serviço têm a tarefa principal de autenticar o servidor para clientes. Uma das verificações iniciais feitas quando um cliente autentica um servidor é comparar o valor do campo **Entidade** com o URI (Uniform Resource Identifier) usado para contatar o serviço: o DNS de ambos deve ser correspondente. Por exemplo, se o URI do serviço é "http://www.contoso.com/endpoint/", o campo **Entidade** também precisa conter o valor "www.contoso.com".  
+ Os certificados de serviço têm a tarefa principal de autenticar o servidor para clientes. Uma das verificações iniciais feitas quando um cliente autentica um servidor é comparar o valor do campo **Entidade** com o URI (Uniform Resource Identifier) usado para contatar o serviço: o DNS de ambos deve ser correspondente. Por exemplo, se o URI do serviço está `http://www.contoso.com/endpoint/` e em seguida, o **assunto** campo também deve conter o valor `www.contoso.com`.  
   
- Observe que o campo pode conter vários valores, cada um prefixado com uma inicialização para indicar o valor. Mais comumente, a inicialização é “CN” para o nome comum, por exemplo, "CN = www.contoso.com". Também é possível que o campo **Entidade** fique em branco. Nesse caso, o campo **Nome Alternativo da Entidade** pode conter o valor do **Nome DNS**.  
+ Observe que o campo pode conter vários valores, cada um prefixado com uma inicialização para indicar o valor. Normalmente, a inicialização é "CN" para o nome comum, por exemplo, `CN = www.contoso.com`. Também é possível que o campo **Entidade** fique em branco. Nesse caso, o campo **Nome Alternativo da Entidade** pode conter o valor do **Nome DNS**.  
   
  Observe também que o valor do campo **Finalidades** do certificado deve incluir um valor apropriado, como "Autenticação do Servidor" ou "Autenticação do Cliente".  
   
