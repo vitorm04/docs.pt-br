@@ -1,171 +1,171 @@
 ---
-title: Como criar um serviço do WCF habilitado pelo AJAX em um cliente do ASP.NET que acessa o serviço
-ms.date: 03/30/2017
+title: Criar um serviço WCF habilitado para AJAX e um cliente do ASP.NET no Visual Studio
+ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490624"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384280"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="9a137-102">Como criar um serviço do WCF habilitado pelo AJAX em um cliente do ASP.NET que acessa o serviço</span><span class="sxs-lookup"><span data-stu-id="9a137-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
-<span data-ttu-id="9a137-103">Este tópico mostra como usar o Visual Studio 2008 para criar um serviço habilitado para AJAX Windows Communication Foundation (WCF) e um cliente do ASP.NET que acessa o serviço.</span><span class="sxs-lookup"><span data-stu-id="9a137-103">This topic shows how to use Visual Studio 2008 to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span> <span data-ttu-id="9a137-104">O código para o serviço e para o cliente são fornecidos na seção de exemplo, após as etapas para criá-los são descritas na seção de procedimentos.</span><span class="sxs-lookup"><span data-stu-id="9a137-104">The code for the service and for the client are provided in the Example section after the steps for creating them are described in the Procedures section.</span></span>  
-  
-### <a name="to-create-the-aspnet-client-application"></a><span data-ttu-id="9a137-105">Para criar o aplicativo de cliente do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="9a137-105">To create the ASP.NET client application</span></span>  
-  
-1.  <span data-ttu-id="9a137-106">Abra [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a137-106">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
-  
-2.  <span data-ttu-id="9a137-107">Do **arquivo** menu, selecione **novo**, em seguida, **projeto**, em seguida, **Web**e, em seguida, selecione **doaplicativodeWebdoASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="9a137-107">From the **File** menu, select **New**, then **Project**, then **Web**, and then select **ASP.NET Web Application**.</span></span>  
-  
-3.  <span data-ttu-id="9a137-108">Nomeie o projeto `SandwichServices` e clique em **Okey**.</span><span class="sxs-lookup"><span data-stu-id="9a137-108">Name the Project `SandwichServices` and click **OK**.</span></span>  
-  
-### <a name="to-create-the-wcf-ajax-enabled-service"></a><span data-ttu-id="9a137-109">Para criar o serviço WCF AJAX habilitado</span><span class="sxs-lookup"><span data-stu-id="9a137-109">To create the WCF AJAX-enabled service</span></span>  
-  
-1.  <span data-ttu-id="9a137-110">Com o botão direito do `SandwichServices` project no **Gerenciador de soluções** janela e selecione **adicionar**, em seguida, **Novo Item**e, em seguida, **serviço do WCF habilitado para AJAX** .</span><span class="sxs-lookup"><span data-stu-id="9a137-110">Right-click the `SandwichServices` project in the **Solution Explorer** window and select **Add**, then **New Item**, and then **AJAX-enabled WCF Service**.</span></span>  
-  
-2.  <span data-ttu-id="9a137-111">O serviço de nomes `CostService` no **nome** caixa e clique em **adicionar**.</span><span class="sxs-lookup"><span data-stu-id="9a137-111">Name the service `CostService` in the **Name** box and click **Add**.</span></span>  
-  
-3.  <span data-ttu-id="9a137-112">Abra o arquivo CostService.svc.cs.</span><span class="sxs-lookup"><span data-stu-id="9a137-112">Open the CostService.svc.cs file.</span></span>  
-  
-4.  <span data-ttu-id="9a137-113">Especifique o `Namespace` para <xref:System.ServiceModel.ServiceContractAttribute> como `SandwichService`:</span><span class="sxs-lookup"><span data-stu-id="9a137-113">Specify the `Namespace` for <xref:System.ServiceModel.ServiceContractAttribute> as `SandwichService`:</span></span>  
-  
-    ```  
-    namespace SandwichServices  
-    {  
-      [ServiceContract(Namespace = "SandwichServices")]  
-      [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-       public class CostService  
-       {  
-         …  
-       }  
-     }  
-    ```  
-  
-5.  <span data-ttu-id="9a137-114">Implemente as operações no serviço.</span><span class="sxs-lookup"><span data-stu-id="9a137-114">Implement the operations in the service.</span></span> <span data-ttu-id="9a137-115">Adicionar o <xref:System.ServiceModel.OperationContractAttribute> para cada uma das operações para indicar que fazem parte do contrato.</span><span class="sxs-lookup"><span data-stu-id="9a137-115">Add the <xref:System.ServiceModel.OperationContractAttribute> to each of the operations to indicate that they are part of the contract.</span></span> <span data-ttu-id="9a137-116">O exemplo a seguir implementa um método que retorna o custo de uma determinada quantidade de pizzas.</span><span class="sxs-lookup"><span data-stu-id="9a137-116">The following example implements a method that returns the cost of a given quantity of sandwiches.</span></span>  
-  
-    ```  
-    public class CostService  
-    {  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-    // Add more operations here and mark them with [OperationContract]  
-    }  
-    ```  
-  
-### <a name="to-configure-the-client-to-access-the-service"></a><span data-ttu-id="9a137-117">Para configurar o cliente para acessar o serviço</span><span class="sxs-lookup"><span data-stu-id="9a137-117">To configure the client to access the service</span></span>  
-  
-1.  <span data-ttu-id="9a137-118">Abra a página Default.aspx e selecione o **Design** exibição.</span><span class="sxs-lookup"><span data-stu-id="9a137-118">Open the Default.aspx page and select the **Design** view.</span></span>  
-  
-2.  <span data-ttu-id="9a137-119">Do **exibição** menu, selecione **caixa de ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="9a137-119">From the **View** menu, select **Toolbox**.</span></span>  
-  
-3.  <span data-ttu-id="9a137-120">Expanda o **extensões AJAX** nó e arrastar e soltar uma **ScriptManager** na página Default.aspx.</span><span class="sxs-lookup"><span data-stu-id="9a137-120">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** on to the Default.aspx page.</span></span>  
-  
-4.  <span data-ttu-id="9a137-121">Clique com botão direito do **ScriptManager** e selecione **propriedades**.</span><span class="sxs-lookup"><span data-stu-id="9a137-121">Right-click the **ScriptManager** and select **Properties**.</span></span>  
-  
-5.  <span data-ttu-id="9a137-122">Expanda o **serviços** coleção no **propriedades** janela para abrir o **Editor de coleção ServiceReference** janela.</span><span class="sxs-lookup"><span data-stu-id="9a137-122">Expand the **Services** collection in the **Properties** window to open up the **ServiceReference Collection Editor** window.</span></span>  
-  
-6.  <span data-ttu-id="9a137-123">Clique em **adicionar**, especifique `CostService.svc` como o **caminho** referenciados e, em seguida, clique em **Okey**.</span><span class="sxs-lookup"><span data-stu-id="9a137-123">Click **Add**, specify `CostService.svc` as the **Path** referenced, and click **OK**.</span></span>  
-  
-7.  <span data-ttu-id="9a137-124">Expanda o **HTML** nó o **caixa de ferramentas** e arraste e solte um **entrada (botão)** na página Default.aspx.</span><span class="sxs-lookup"><span data-stu-id="9a137-124">Expand the **HTML** node in the **Toolbox** and drag and drop an **Input (Button)** on to the Default.aspx page.</span></span>  
-  
-8.  <span data-ttu-id="9a137-125">Clique com botão direito do **botão** e selecione **propriedades**.</span><span class="sxs-lookup"><span data-stu-id="9a137-125">Right-click the **Button** and select **Properties**.</span></span>  
-  
-9. <span data-ttu-id="9a137-126">Alterar o **valor** campo `Price for 3 Sandwiches`.</span><span class="sxs-lookup"><span data-stu-id="9a137-126">Change the **Value** field to `Price for 3 Sandwiches`.</span></span>  
-  
-10. <span data-ttu-id="9a137-127">Clique duas vezes o **botão** para acessar o código JavaScript.</span><span class="sxs-lookup"><span data-stu-id="9a137-127">Double-click the **Button** to access the JavaScript code.</span></span>  
-  
-11. <span data-ttu-id="9a137-128">Passe o seguinte código JavaScript dentro de <`script`> elemento.</span><span class="sxs-lookup"><span data-stu-id="9a137-128">Pass in the following JavaScript code within the <`script`> element.</span></span>  
-  
-    ```  
-    function Button1_onclick() {  
-    var service = new SandwichServices.CostService();  
-    service.CostOfSandwiches(3, onSuccess, null, null);  
-    }  
-  
-    function onSuccess(result){  
-    alert(result);  
-    }  
-    ```  
-  
-### <a name="to-access-the-service-from-the-client"></a><span data-ttu-id="9a137-129">Para acessar o serviço do cliente</span><span class="sxs-lookup"><span data-stu-id="9a137-129">To access the service from the client</span></span>  
-  
-1.  <span data-ttu-id="9a137-130">Use Ctrl + F5 para iniciar o serviço e o cliente da Web.</span><span class="sxs-lookup"><span data-stu-id="9a137-130">Use Ctrl +F5 to launch the service and the Web client.</span></span> <span data-ttu-id="9a137-131">Clique o **preço para 3 pizzas grelhado** botão para gerar a saída esperada do "3,75".</span><span class="sxs-lookup"><span data-stu-id="9a137-131">Click the **Price for 3 Grilled Sandwiches** button to generate the expected output of "3.75".</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="9a137-132">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9a137-132">Example</span></span>  
- <span data-ttu-id="9a137-133">Este exemplo contém o código de serviço contido no arquivo WCFService.svc.cs e o código do cliente contidos no arquivo default. aspx.</span><span class="sxs-lookup"><span data-stu-id="9a137-133">This example contains the service code contained in the WCFService.svc.cs file and the client code contained in the Default.aspx file.</span></span>  
-  
-```  
-//The service code contained in the CostService.svc.cs file.  
-  
-using System;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.ServiceModel.Activation;  
-using System.ServiceModel.Web;  
-  
-namespace SandwichServices  
-{  
-    [ServiceContract(Namespace="SandwichServices")]  
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-    public class CostService  
-    {  
-        // Add [WebGet] attribute to use HTTP GET  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-        // Add more operations here and mark them with [OperationContract]  
-    }  
-}  
-//The code for hosting the service is contained in the CostService.svc file.  
-  
-<%@ ServiceHost Language="C#" Debug="true" Service="SandwichServices.CostService" CodeBehind="CostService.svc.cs" %>  
-  
-//The client code contained in the Default.aspx file.  
-  
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SandwichServices._Default" %>  
-  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-  
-<html >  
-<head runat="server">  
-    <title>Untitled Page</title>  
-<script language="javascript" type="text/javascript">  
-// <!CDATA[  
-  
-function Button1_onclick() {  
-var service = new SandwichServices.CostService();  
-service.CostOfSandwiches(3, onSuccess, null, null);  
-}  
-  
-function onSuccess(result){  
-alert(result);  
-}  
-  
-// ]]>  
-</script>  
-</head>  
-<body>  
-    <form id="form1" runat="server">  
-    <div>  
-  
-    </div>  
-    <asp:ScriptManager ID="ScriptManager1" runat="server">  
-        <services>  
-            <asp:servicereference Path="CostService.svc" />  
-        </services>  
-    </asp:ScriptManager>  
-    </form>  
-    <p>  
-        <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
-</body>  
-</html>  
-```     
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="ff69b-102">Como criar um serviço do WCF habilitado pelo AJAX em um cliente do ASP.NET que acessa o serviço</span><span class="sxs-lookup"><span data-stu-id="ff69b-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
+
+<span data-ttu-id="ff69b-103">Este tópico mostra como usar o Visual Studio para criar um serviço habilitado para AJAX Windows Communication Foundation (WCF) e um cliente do ASP.NET que acessa o serviço.</span><span class="sxs-lookup"><span data-stu-id="ff69b-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
+
+## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="ff69b-104">Criar um aplicativo Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ff69b-104">Create an ASP.NET web app</span></span>
+
+1. <span data-ttu-id="ff69b-105">Abra o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ff69b-105">Open Visual Studio.</span></span>
+
+1. <span data-ttu-id="ff69b-106">Dos **arquivo** menu, selecione **New** > **projeto**</span><span class="sxs-lookup"><span data-stu-id="ff69b-106">From the **File** menu, select **New** > **Project**</span></span>
+
+1. <span data-ttu-id="ff69b-107">No **novo projeto** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione **aplicativo Web ASP.NET (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
+
+1. <span data-ttu-id="ff69b-108">Nomeie o projeto **SandwichServices** e clique em **Okey**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-108">Name the Project **SandwichServices** and click **OK**.</span></span>
+
+1. <span data-ttu-id="ff69b-109">No **novo aplicativo Web ASP.NET** caixa de diálogo, selecione **vazia** e, em seguida, selecione **Okey**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
+
+   ![Diálogo do tipo de aplicativo do ASP.NET web no Visual Studio](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+
+## <a name="add-a-web-form"></a><span data-ttu-id="ff69b-111">Adicionar um formulário da web</span><span class="sxs-lookup"><span data-stu-id="ff69b-111">Add a web form</span></span>
+
+1. <span data-ttu-id="ff69b-112">Clique com botão direito no projeto SandwichServices no **Gerenciador de soluções** e selecione **Add** > **Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+
+1. <span data-ttu-id="ff69b-113">No **Adicionar Novo Item** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione o **Web Form** modelo.</span><span class="sxs-lookup"><span data-stu-id="ff69b-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
+
+1. <span data-ttu-id="ff69b-114">Aceite o nome padrão (**WebForm1**) e, em seguida, selecione **Add**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
+
+   <span data-ttu-id="ff69b-115">*WebForm1.aspx* é aberto no **origem** modo de exibição.</span><span class="sxs-lookup"><span data-stu-id="ff69b-115">*WebForm1.aspx* opens in **Source** view.</span></span>
+
+1. <span data-ttu-id="ff69b-116">Adicione a seguinte marcação dentro de  **\<corpo >** marcas:</span><span class="sxs-lookup"><span data-stu-id="ff69b-116">Add the following markup inside the **\<body>** tags:</span></span>
+
+   ```html
+   <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
+   <br />
+   <span id="additionResult"></span>
+   ```
+
+## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="ff69b-117">Criar um serviço WCF habilitado pelo AJAX</span><span class="sxs-lookup"><span data-stu-id="ff69b-117">Create an AJAX-enabled WCF service</span></span>
+
+1. <span data-ttu-id="ff69b-118">Clique com botão direito no projeto SandwichServices no **Gerenciador de soluções** e selecione **Add** > **Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+
+1. <span data-ttu-id="ff69b-119">No **Adicionar Novo Item** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione o **serviço do WCF (habilitado para AJAX)** modelo.</span><span class="sxs-lookup"><span data-stu-id="ff69b-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
+
+   ![Modelo de item (habilitado para AJAX) do serviço WCF no Visual Studio](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+
+1. <span data-ttu-id="ff69b-121">Nomeie o serviço **CostService** e, em seguida, selecione **Add**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-121">Name the service **CostService** and then select **Add**.</span></span>
+
+   <span data-ttu-id="ff69b-122">*CostService.svc.cs* abre no editor.</span><span class="sxs-lookup"><span data-stu-id="ff69b-122">*CostService.svc.cs* opens in the editor.</span></span>
+
+1. <span data-ttu-id="ff69b-123">Implemente a operação no serviço.</span><span class="sxs-lookup"><span data-stu-id="ff69b-123">Implement the operation in the service.</span></span> <span data-ttu-id="ff69b-124">Adicione o seguinte método à classe CostService para calcular o custo de uma quantidade de pizzas:</span><span class="sxs-lookup"><span data-stu-id="ff69b-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
+
+    ```csharp
+    [OperationContract]
+    public double CostOfSandwiches(int quantity)
+    {
+        return 1.25 * quantity;
+    }
+    ```
+
+## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="ff69b-125">Configurar o cliente para acessar o serviço</span><span class="sxs-lookup"><span data-stu-id="ff69b-125">Configure the client to access the service</span></span>
+
+1. <span data-ttu-id="ff69b-126">Abra o *WebForm1.aspx* do arquivo e selecione o **Design** modo de exibição.</span><span class="sxs-lookup"><span data-stu-id="ff69b-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
+
+2. <span data-ttu-id="ff69b-127">Dos **modo de exibição** menu, selecione **caixa de ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-127">From the **View** menu, select **Toolbox**.</span></span>
+
+3. <span data-ttu-id="ff69b-128">Expanda o **extensões AJAX** nó e arraste e solte um **ScriptManager** para o formulário.</span><span class="sxs-lookup"><span data-stu-id="ff69b-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
+
+4. <span data-ttu-id="ff69b-129">Volta a **fonte** exiba, adicione o seguinte código entre o  **\<ScriptManager >** marcas para especificar o caminho para o serviço WCF:</span><span class="sxs-lookup"><span data-stu-id="ff69b-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
+
+    ```html
+    <Services>
+       <asp:ServiceReference Path="~/CostService.svc" />
+    </Services>
+    ```
+
+1. <span data-ttu-id="ff69b-130">Adicione o código para a função Javascript `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="ff69b-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="ff69b-131">Coloque o seguinte código na **head** seção do formulário da web:</span><span class="sxs-lookup"><span data-stu-id="ff69b-131">Place the following code in the **head** section of the web form:</span></span>
+
+    ```javascript
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+    ```
+
+   <span data-ttu-id="ff69b-132">Esse código chama o método de CostService para calcular o preço para três pizzas e, em seguida, exibe o resultado no período chamado **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
+
+## <a name="run-the-program"></a><span data-ttu-id="ff69b-133">Execute o programa</span><span class="sxs-lookup"><span data-stu-id="ff69b-133">Run the program</span></span>
+
+<span data-ttu-id="ff69b-134">Certifique-se de que *WebForm1.aspx* tem o foco e pressione **iniciar** botão para iniciar o cliente web.</span><span class="sxs-lookup"><span data-stu-id="ff69b-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="ff69b-135">O botão tem um triângulo verde e diz algo como **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="ff69b-136">Ou, você pode pressionar **F5**.</span><span class="sxs-lookup"><span data-stu-id="ff69b-136">Or, you can press **F5**.</span></span> <span data-ttu-id="ff69b-137">Clique o **preço de 3 pizzas** botão para gerar a saída esperada do "3,75".</span><span class="sxs-lookup"><span data-stu-id="ff69b-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
+
+## <a name="example-code"></a><span data-ttu-id="ff69b-138">Exemplo de código</span><span class="sxs-lookup"><span data-stu-id="ff69b-138">Example code</span></span>
+
+<span data-ttu-id="ff69b-139">A seguir está o código completo na *CostService.svc.cs* arquivo:</span><span class="sxs-lookup"><span data-stu-id="ff69b-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
+
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+namespace SandwichServices
+{
+    [ServiceContract(Namespace = "")]
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class CostService
+    {
+        [OperationContract]
+        public double CostOfSandwiches(int quantity)
+        {
+            return 1.25 * quantity;
+        }
+    }
+}
+```
+
+<span data-ttu-id="ff69b-140">A seguir está o conteúdo completo do *WebForm1.aspx* página:</span><span class="sxs-lookup"><span data-stu-id="ff69b-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
+
+```aspx-csharp
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/CostService.svc" />
+            </Services>
+        </asp:ScriptManager>
+
+        <input type="button" value="Price of 3 sandwiches" onclick="Calculate()" />
+        <br />
+        <span id="additionResult"></span>
+    </form>
+</body>
+</html>
+```
